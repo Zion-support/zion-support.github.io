@@ -37,12 +37,10 @@ function write_section() {
   try {
   const editionParam = (req && req.query.edition as string) || 'full';
 
-=======
 
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
@@ -53,15 +51,12 @@ function write_section() {
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
@@ -73,32 +68,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
-<<<<<<< HEAD
-  res && res.setHeader('Content-Type', 'application/pdf');
-  res && res.setHeader(
-    'Content-Disposition',
-    `attachment; filename="zion-protocol-${edition}.pdf"`
-  );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  const editionParam = (req && req.query.edition as string) || 'full';
-  const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
-  res && res.setHeader('Content-Typeapplication/pdf');
-  res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
-  const doc = new (PDFDocument as any)({ autoFirstPage: false });
-  doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
-  doc && doc.info.Author = 'Zion Protocol';
-  doc && doc.pipe(res);
-  // Cover page
-
-
-  // End
-  doc && doc.addPage();
-  doc && doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
-
-
-  doc && doc.end()
-=======
 
 
 
@@ -206,7 +175,6 @@ function handler() {
 }
 
 
-=======
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   doc.moveDown(0.5);
@@ -216,4 +184,3 @@ function handler() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

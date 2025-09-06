@@ -3,7 +3,6 @@ import { ServiceVariant } from '../types / service - variants';
 
 export interface AdvancedFintechSolution2025 {
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -36,7 +35,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     popular: true,
     icon: '💳',
 
-=======
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -105,7 +103,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     popular: true,
     icon: '⛓️',
 
-=======
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / blockchain - payment - processing - platform',
@@ -148,7 +145,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   },
   {
 
-=======
     id: 'quantum - financial - modeling - platform',
     name: 'Quantum Financial Modeling Platform',
     tagline: 'Quantum computing for advanced financial modeling',
@@ -172,7 +168,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     popular: false,
     icon: '⚛️',
 
-=======
     color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - financial - modeling - platform',
@@ -217,7 +212,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   },
   {
 
-=======
     id: 'ai - powered - insurance - underwriting',
     name: 'AI - Powered Insurance Underwriting',
     tagline: 'Intelligent insurance risk assessment and pricing',
@@ -241,7 +235,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     popular: true,
     icon: '🛡️',
 
-=======
     color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - powered - insurance - underwriting',
@@ -286,7 +279,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
   },
   {
 
-=======
     id: 'regtech - compliance - automation - platform',
     name: 'RegTech Compliance Automation Platform',
     tagline: 'Automated regulatory compliance and reporting',
@@ -325,8 +317,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       website: 'https://ziontechgroup.com'
     }
 
-=======
-=======
     color: 'from - gray - 600 via - slate - 600 to - zinc - 600',
     text_color: 'text - gray - 400',
     link: 'https://ziontechgroup.com / regtech - compliance - automation - platform',
@@ -366,7 +356,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4 && 4.5,
     reviews: 52,
   },
-=======
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
@@ -421,22 +410,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
-=======
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -451,10 +430,8 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4 && 4.5,
     reviews: 52
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -542,23 +519,12 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.5,
     reviews: 52;
 
-=======
 
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -816,11 +782,5 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89,;
     rating: 4.5;
     reviews: 52;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

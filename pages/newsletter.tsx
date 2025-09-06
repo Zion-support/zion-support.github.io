@@ -70,22 +70,12 @@ import {;
   Clock,;
 
 } from "lucide-react";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Clock,
-=======
   Clock,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
   Clock
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   ArrowRight
@@ -105,7 +95,6 @@ import {;
   Clock
 } from "lucide-react";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const benefits = [
   {
     title: "Exclusive Content"
@@ -128,11 +117,9 @@ const benefits = [;
 
     title: "Webinar Invitations"
 
-=======
   {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -178,14 +165,8 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
@@ -196,7 +177,6 @@ const testimonials = [;
 
   {
 
-=======
 
 
     name: "Sarah Johnson"
@@ -241,10 +221,6 @@ export default function NewsletterPage() {
     rating: 5
   }
 ];
-<<<<<<< HEAD
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-=======
 
 
 
@@ -314,14 +290,12 @@ export default function NewsletterPage() {;
     setIsLoading(true);
 
 
-=======
 
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 
-=======
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsSubscribed(true);
@@ -331,13 +305,10 @@ export default function NewsletterPage() {;
 
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50">
-=======
     <Layout>;
       <Head>;
         <title>Newsletter - Zion Tech Group</title>;
@@ -359,15 +330,8 @@ export default function NewsletterPage() {;
               </p>
               
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -434,10 +398,8 @@ export default function NewsletterPage() {;
 
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -586,7 +548,6 @@ function NewsletterPage() {
                     {benefit.description}
                   </p>
 
-=======
                   key={benefit.title}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -601,7 +562,6 @@ function NewsletterPage() {
                   </h3>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </motion.div>
               ))}
             </div>
@@ -647,10 +607,8 @@ function NewsletterPage() {
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -675,10 +633,8 @@ function NewsletterPage() {
 
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -720,10 +676,8 @@ function NewsletterPage() {
 
                 Don't just take our word for it. Here's what our community has to say.
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -810,7 +764,6 @@ function NewsletterPage() {
 
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
 
-=======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 What Our Subscribers Say;
@@ -827,19 +780,8 @@ function NewsletterPage() {
                   className="bg-gray-50 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
-                  <div className="flex items-center mb-4">;
-                    {[...Array(testimonial && testimonial.rating)].map((_, i) => (;
-                      <Star
-                        key={i}
-                        className="w-4 h-4 text-yellow-400 fill-current"
-                      />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -873,15 +815,8 @@ function NewsletterPage() {
               </p>
               
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -1002,7 +937,6 @@ function NewsletterPage() {
 
 }
 
-=======
             </motion.div>;
           </div>;
         </section>;

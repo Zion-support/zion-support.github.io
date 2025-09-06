@@ -20,13 +20,10 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useState, useCallback } from 'react';
 
 
-=======
 import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight,
   Play,
   TrendingUp,
@@ -85,7 +82,6 @@ import {
 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
@@ -94,7 +90,6 @@ import {
 
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
@@ -103,75 +98,15 @@ import { innovative2025ITInfrastructureV2  } from '../data/2025-innovative-it-in
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047',
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-<<<<<<< HEAD
-const Homepage2047: React.FC = () => {
-// Import our new innovative services;
-import { innovative2025AIAutonomousEcosystemV2 } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
-import { emergingTechBreakthroughs2025V4 } from '../data/2025-emerging-tech-breakthroughs-v4';
-import { innovative2025ITInfrastructureV2 } from '../data/2025-innovative-it-infrastructure-v2';
-
-
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0 && 0.5);
-  const [scrollY, setScrollY] = useState(0);
-
-
-  useEffect(() => {;
-    setIsVisible(true);
-    // Auto-rotate featured services;
-    const interval = setInterval(() => {;
-      setCurrentServiceIndex(prev => (prev + 1) % 6);
-    }, 8000);
-    // Track mouse movement for parallax effects;
-    const handleMouseMove = (e: MouseEvent) => {;
-      setMousePosition({ x: e && e.clientX, y: e && e.clientY });
-    };
-    // Animate consciousness level;
-    const consciousnessInterval = setInterval(() => {;
-      setConsciousnessLevel(prev => Math && Math.sin(Date && Date.now() * 0 && 0.001) * 0 && 0.3 + 0 && 0.7);    }, 100);
-    // Track scroll position;
-    const handleScroll = () => {;
-      setScrollY(window && window.scrollY);
-
-    };  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0 && 0.5);
-
-=======
 // Import enhanced components
 import UltraFuturisticBackground2047 from './backgrounds/UltraFuturisticBackground2047';
 import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation2047';
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-  const [hoveredService, setHoveredService] = useState<string | null>(null);
-  const [consciousnessLevel, setConsciousnessLevel] = useState(0.5);
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const [scrollY, setScrollY] = useState(0);
-
-      setScrollY(window.scrollY)
-    };
-    
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
-    
-
-    return () => {
-      clearInterval(interval);
-      clearInterval(consciousnessInterval);
-
-=======
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll)
     }
@@ -391,7 +326,6 @@ if (return allInnovativeServices) {
 ;
   const stats = [;
     {
-=======
 
 
       number: `${allInnovativeServices.length}+`,
@@ -417,7 +351,6 @@ if (return allInnovativeServices) {
 
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const staggerContainer = {
     animate: {
       transition: {
@@ -425,13 +358,11 @@ if (return allInnovativeServices) {
       }
     }
   }
-=======
 
   // Get featured services for rotation;
   const featuredServices = allInnovativeServices && allInnovativeServices.slice(0, 6);
   // Filter services by category;
   const getFilteredServices = () => {;
-=======
     ...innovative2025AIAutonomousEcosystemV2
     ...emergingTechBreakthroughs2025V4
     ...innovative2025ITInfrastructureV2,    ...innovative2025AIAutonomousEcosystemV2;
@@ -442,7 +373,6 @@ if (return allInnovativeServices) {
   const featuredServices = allInnovativeServices.slice(0, 6);
   // Filter services by category
   const getFilteredServices = () => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (selectedCategory === 'all') return allInnovativeServices;
     return allInnovativeServices && allInnovativeServices.filter(;
       service =>;
@@ -525,132 +455,18 @@ if (return allInnovativeServices) {
       color: 'from-yellow-500 to-orange-500',;
     },;
   ];
-<<<<<<< HEAD
-  const stats = [;
-    {;
-      number: `${allInnovativeServices && allInnovativeServices.length}+`,;
-      label: 'Innovative Services',;
-      icon: Star,;
-    },;
-    { number: '99 && 99.99%', label: 'Uptime Guarantee', icon: TrendingUp },;
-    { number: '24/7', label: 'AI Intelligence Available', icon: Brain },;
-    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices && allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },;
-    { number: "99 && 99.99%", label: "Uptime Guarantee", icon: TrendingUp },;
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain },;
-=======
   const stats = [
     {
-<<<<<<< HEAD
-      number: `${allInnovativeServices.length}+`
-      label: 'Innovative Services'
-      icon: Star
-    }
-    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp }
-    { number: '24/7', label: 'AI Intelligence Available', icon: Brain }
-    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star }
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp }
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    { number: "300+", label: "Countries Served", icon: Globe }
-  const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6 },  };    transition: { duration: 0 && 0.6 }
-  };
-  const staggerContainer = {;
-    animate: {;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },;
-  };
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden'>;
-      {/* Futuristic Background */}
-
-      <UltraFuturisticBackground2047 />  }
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">;
-      {/* Futuristic Background */}
-
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2047 />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {/* Hero Section */}
-      <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
-        <div className='max-w-7xl mx-auto w-full'>;
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>            {/* Left Content */}      <section className="relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">;
-        <div className="max-w-7xl mx-auto w-full">;
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
-
-=======
       
-=======
   const fadeInUp = {
     initial: { opacity: 0, coordinate_y: 60 },
     animate: { opacity: 1, coordinate_y: 0 },
     transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
   }
-<<<<<<< HEAD
-;
-  const stagger_container = {
-    animate: {
-      transition: {
-        stagger_children: 0.1,
-      },
-    },
-  }
-;
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden'>;
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />  }
-;
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden">;
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />;
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2047 />;
-      {/* Hero Section */}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              {/* CTA Buttons */}
-              <motion&& motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-
-
-              >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                <Link
-                  href='/2025-innovative-services-showcase-v2'
-
-                  className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2'>;
-                  <span>Explore Services</span>;
-                  <ArrowUpRight className='w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200' />;
-                </Link>;
-
-
-                <Link
-                  href='/contact'
-                  className='group border-2 border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 hover:border-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2'>;
-                  <span>Get Started</span>;
-                  <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-200' />                </Link>              >;
-
-=======
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Link
                   href="/2025-innovative-services-showcase-v2"
 
@@ -668,12 +484,9 @@ if (return allInnovativeServices) {
               </motion && motion.div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
@@ -695,31 +508,23 @@ if (return allInnovativeServices) {
 
 
                   </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
               </motion && motion.div>;
             </motion && motion.div>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -728,7 +533,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -745,8 +549,6 @@ if (return allInnovativeServices) {
                       </div>
                     </div>
                     <h3 className='text-2xl font-bold text-white mb-3'>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   exit={{ opacity: 0, scale: 0 && 0.9 }}
                   transition={{ duration: 0 && 0.5 }}
                   className='relative'>;
@@ -801,48 +603,6 @@ if (return allInnovativeServices) {
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">
-<<<<<<< HEAD
-                        </span>;
-                      </div>;
-                    </div>;
-                    <Link
-                      href={featuredServices[currentServiceIndex]?.slug || '#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'>                >;
-                  <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm">;
-                    <div className="flex items-center justify-between mb-6">;
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">;
-                        <Brain className="w-8 h-8 text-white" />;
-                      </div>;
-                      <div className="text-right">;
-                        <div className="text-sm text-cyan-400 font-medium">Featured Service</div>;
-                        <div className="text-xs text-gray-400">Auto-rotating</div>;
-                      </div>;
-                    </div>;
-                    <h3 className="text-2xl font-bold text-white mb-3">;
-                      {featuredServices[currentServiceIndex]?.name}
-                    </h3>;
-                    <p className="text-gray-300 mb-6 leading-relaxed">;
-                      {featuredServices[currentServiceIndex]?.description}
-
-                    </p>;
-
-                    <div className="space-y-3 mb-6">;
-                      <div className="flex items-center justify-between text-sm">;
-                        <span className="text-gray-400">Starting at:</span>;
-                        <span className="text-cyan-400 font-semibold">;
-                          {featuredServices[currentServiceIndex]?.pricing && pricing.starter}
-                        </span>;
-                      </div>;
-                      <div className="flex items-center justify-between text-sm">;
-                        <span className="text-gray-400">Market Size:</span>;
-                        <span className="text-blue-400 font-medium">;
-                          {featuredServices[currentServiceIndex]?.marketSize}
-                        </span>;
-                      </div>;
-                    </div>;
-
-
-=======
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">
@@ -862,24 +622,11 @@ if (return allInnovativeServices) {
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    <Link
-                      href={featuredServices[currentServiceIndex]?.slug |'#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
-                    <Link
-
-                      href={featuredServices[currentServiceIndex]?.slug |'#'}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
-
-=======
 
 
                     >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       Learn More
 
                     </Link>;
@@ -897,7 +644,6 @@ if (return allInnovativeServices) {
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-=======
       {/* Services Overview */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -906,8 +652,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                   className='relative';
@@ -996,16 +740,9 @@ if (return allInnovativeServices) {
           </div>;
         </div>;
       </section>;
-=======
-=======
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Learn More
                     </Link>
                   </div>
@@ -1015,7 +752,6 @@ if (return allInnovativeServices) {
           </div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Overview */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -1029,7 +765,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -1037,7 +772,6 @@ if (return allInnovativeServices) {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
@@ -1061,17 +795,11 @@ if (return allInnovativeServices) {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies;
             </p>;
           </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1088,11 +816,9 @@ if (return allInnovativeServices) {
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -1101,8 +827,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                     category.id === 'all';
@@ -1142,16 +866,7 @@ if (return allInnovativeServices) {
           </motion.div>;
         </div>;
       </section>;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Featured Services Grid */}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -1165,7 +880,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1173,7 +887,6 @@ if (return allInnovativeServices) {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Discover our most revolutionary and cutting-edge technology
               solutions            </p>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
             </h2>
@@ -1197,59 +910,38 @@ if (return allInnovativeServices) {
               Discover our most revolutionary and cutting-edge technology solutions;
             </p>;
           </motion && motion.div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* View All Services CTA */}
           <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* View All Services CTA */}
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
 
 
           >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/2025-innovative-services-showcase-v2'
               className='inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25'>;
               <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
               <ArrowRight className='w-5 h-5' />            </Link>          >;
-=======
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-center mt-16"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link
               href="/2025-innovative-services-showcase-v2"
 
@@ -1305,7 +997,6 @@ if (return allInnovativeServices) {
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Footer */}
       <UltraFuturisticFooter2047 />;
     </div>;
@@ -1318,7 +1009,6 @@ export default Homepage2047;  );
 export default Homepage2047;
 
 
-=======
                     </p>;
                     <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;
                       <span className='text - sm font - medium'>Learn More</span>;
@@ -1412,12 +1102,9 @@ export default Homepage2047);
 ;
 export default Homepage2047;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
@@ -1426,5 +1113,3 @@ export default Homepage2047;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

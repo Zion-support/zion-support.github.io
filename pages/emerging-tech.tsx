@@ -3,7 +3,6 @@
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
@@ -11,25 +10,17 @@ export default function EmergingTechPage() {
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Layout from '../components/layout/Layout',;
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -45,9 +36,7 @@ export default function EmergingTechPage() {_const _features = [
     {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
   return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -68,7 +57,6 @@ export default function EmergingTechPage() {_const _features = [
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </header>
           <section>
@@ -86,9 +74,6 @@ export default function EmergingTechPage() {_const _features = [
 }
             </div>
           </section>
-<<<<<<< HEAD
-<section>
-=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -101,7 +86,6 @@ export default function EmergingTechPage() {_const _features = [
   );
 };
 
-=======
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -110,10 +94,8 @@ export default function EmergingTechPage() {_const _features = [
 
 }
 
-=======
 }
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -168,19 +150,14 @@ function EmergingTechPage() {
                   <div className="text - gray - 200 font - semibold mb - 2">{s.name}</div>;
                   <p className="text - gray - 300 text - sm">Learn more</p>;
                 </a>))}
-=======
-=======
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;
@@ -196,4 +173,3 @@ function EmergingTechPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

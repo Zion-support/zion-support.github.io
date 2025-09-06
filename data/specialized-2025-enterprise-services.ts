@@ -63,7 +63,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface SpecializedEnterpriseService {
   id: string, name: string,
@@ -96,7 +95,6 @@ const contact = {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
@@ -116,7 +114,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -315,7 +312,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.8,
     reviews: 56,
 
-=======
     benefits: [;
       'Future - proof security',
       'Quantum - resistant algorithms',
@@ -395,7 +391,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.9,
     reviews: 8,
 
-=======
     benefits: [;
       '400% operation optimization',
       '60% mission cost reduction',
@@ -475,7 +470,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 5 && 5.0,
     reviews: 5,
 
-=======
     benefits: [;
       'Revolutionary medical applications',
       'Breakthrough research capabilities',
@@ -555,7 +549,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     rating: 4 && 4.7,
     reviews: 45,
 
-=======
     benefits: [;
       '70% management cost reduction',
       '50% operational efficiency',
@@ -575,31 +568,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   },
   // Advanced Analytics Services;
   {
-<<<<<<< HEAD
-    id: 'predictive - analytics - engine',
-    name: 'Predictive Analytics Engine',
-    tagline: 'AI - powered predictive insights and forecasting',
-    price: '$2, 199',
-    period: '/month',
-    description:;
-      'Advanced predictive analytics platform that uses machine learning and AI to provide accurate forecasts, trend analysis, and business intelligence insights.',
-    features: [;
-
-      'Advanced ML algorithms',
-      'Predictive modeling',
-      'Time series forecasting',
-      'Trend analysis',
-      'Anomaly detection',
-      'Scenario modeling',
-      'Real - time predictions',
-      'Custom model development',
-      'Performance analytics',
-      'Expert data consultation',
-    ],
-    popular: true,
-    icon: '📊',
-
-=======
     color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / predictive - analytics - engine',
@@ -644,7 +612,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
-=======
     benefits: [;
       '60% decision accuracy improvement',
       '35% operational cost reduction',
@@ -662,7 +629,6 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     market_advantage:;
       'Advanced predictive analytics platform with custom ML model development',
   },
-=======
     id: 'predictive-analytics-engine'
     name: 'Predictive Analytics Engine'
     tagline: 'AI-powered predictive insights and forecasting'
@@ -730,14 +696,8 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Advanced predictive analytics platform with custom ML model development'
-  }
-=======
       'Advanced predictive analytics platform with custom ML model development',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
 ;
 export default specializedEnterpriseServices;    id: 'quantum - machine - learning - platform';
@@ -1059,13 +1019,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default specializedEnterpriseServices;
 
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default specializedEnterpriseServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,6 +1,5 @@
 
 
-=======
 
 import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
@@ -10,7 +9,6 @@ import type { GrantApplication } from '../../types/grants';
 
 export default function GrantDetailPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -25,7 +23,6 @@ export default function GrantDetailPage() {;
     setLoading(true);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -42,7 +39,6 @@ export default function GrantDetailPage() {;
     }
   }
   if (loading)
-=======
 
   const addUpdate = async () => {;
     if (!id || !updateContent && updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r && r.json()).then((d) => setItem(d && d.record)).finally(() => setLoading(false));
@@ -209,80 +205,6 @@ if (
                         className='text-blue-600'
                         href={l}
                         target='_blank'
-<<<<<<< HEAD
-                        rel='noreferrer'>;
-                        {l}
-                      </a>;
-                    </li>;
-                  ))}                </ul>              <div className="mt-2">;
-                <div className="text-sm font-medium">Supporting Links</div>;
-                <ul className="list-disc list-inside text-sm">;
-                  {item && item.supportingLinks.map((l, i) => <li key={i}><a className="text-blue-600" href={l} target="_blank" rel="noreferrer">{l}</a></li>)}
-              </div>;
-
-            )}
-
-                  <span
-                    className={`mt-1 inline-block h-3 w-3 rounded-full ${m && m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`}
-                  />;
-                  <div>;
-                    <div className='font-medium'>{m && m.title}</div>;
-                    {m && m.description && (;
-                      <div className='text-gray-600'>{m && m.description}</div>;
-                    )}
-                    {m && m.trancheAmount ? (;
-                      <div className='text-xs text-gray-600'>;
-                        Tranche: {m && m.trancheAmount} {m && m.trancheCurrency}
-                      </div>;
-                    ) : null}
-                    {m && m.dueDate && (;
-                      <div className='text-xs text-gray-600'>;
-                        Due: {new Date(m && m.dueDate).toLocaleDateString()}
-                      </div>;
-                    )}
-                  </div>;
-                </li>;
-              ))}
-
-              </div>
-            </div>
-          </section>
-        </div>
-<aside className="space-y-4">
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
-            <h3 className="font-medium mb-2">Milestones</h3>
-            <ul className="space-y-2">
-              {(item.milestones || []).map((m) => (
-                <li key={m.id} className="text-sm flex items-start gap-2">
-                  <span className={`mt-1 inline-block h-3 w-3 rounded-full ${m.completed ? 'bg-emerald-500' : 'bg-gray-400'}`} />
-                  <div>
-
-                    <div className="font-medium">{m.title}</div>
-                    {m.description && <div className="text-gray-600">{m.description}</div>}
-                    {m.trancheAmount ? <div className="text-xs text-gray-600">Tranche: {m.trancheAmount} {m.trancheCurrency}</div> : null}
-                    {m.dueDate && <div className="text-xs text-gray-600">Due: {new Date(m.dueDate).toLocaleDateString()}</div>}
-                  </div>
-                </li>
-              ))}
-              {(!item.milestones |item.milestones.length === 0) && <div className="text-sm text-gray-600">Milestones will appear here.</div>}
-            </ul>
-            <div className="mt-3 text-sm">Funds Released: {item.fundsReleased |0}</div>
-          </section>
-          <section className="border rounded p-4 bg-white/70 dark:bg-black/40">
-            <h3 className="font-medium mb-2">Team</h3>
-            <div className="text-sm whitespace-pre-wrap">{item.teamInfo}</div>
-          </section>
-        </aside>
-      </div>
-    </EnhancedLayout>
-
-
-    </EnhancedLayout>
-  );
-
-
-}
-=======
               {(!item && item.milestones || item && item.milestones.length === 0) && (;
                 <div className='text-sm text-gray-600'>;
                   Milestones will appear here.;
@@ -459,4 +381,3 @@ if (
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

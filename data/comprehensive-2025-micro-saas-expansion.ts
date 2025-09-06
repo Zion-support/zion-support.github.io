@@ -1,6 +1,5 @@
 
 
-=======
 
 import { ServiceVariant } from '../types/service-variants',
 
@@ -11,7 +10,6 @@ marketAdvantage: 'First platform to combine content creation, optimization, and 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -393,14 +391,11 @@ customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
 
-=======
 
-=======
 import { ServiceVariant } from '../types/service-variants',
 
 
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -698,12 +693,5 @@ benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalabi
 capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
 }];
-<<<<<<< HEAD
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

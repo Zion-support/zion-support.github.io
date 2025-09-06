@@ -13,7 +13,6 @@ export default async function handler(
 
       "placeholder-key";
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -22,7 +21,6 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -65,17 +63,13 @@ if ( {) {
 
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -99,7 +93,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
   } catch (e: any) {
@@ -122,17 +115,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status (200).json ({ partners: data });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message });
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -154,32 +141,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', 'GET');
       res.status(405).end('Method Not Allowed');
     }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-    const supabase = getServerSupabase();
-    const { data, error } = await supabase
-      .from("partners")
-      .select(
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at",
-      )
-      .order("created_at", { ascending: false });
-
-    if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data });
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }

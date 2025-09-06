@@ -22,14 +22,10 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 
@@ -111,7 +107,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-=======
   ArrowRight,
   Phone,
   Mail,
@@ -126,8 +121,6 @@ const stats = [
   BarChart3,
   Cloud,
   Shield;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 const caseStudies = [;
   {;
@@ -609,15 +602,6 @@ function CaseStudiesPage() {
 
   );
 }
-<<<<<<< HEAD
-import Head from 'next/head';
-export default function CaseStudiesPage() {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 import Head from 'next/head';
 
 
@@ -633,28 +617,18 @@ export default function CaseStudiesPage() {;
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
-=======
 import Head from 'next/head';
 
 
-=======
-=======
-=======
 import Head from 'next/head';
 
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
  </Head> </section> </Layout>
-=======
 export default function CaseStudiesPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	return (
 		<Layout>
 			<Head>
@@ -697,9 +671,6 @@ export default function CaseStudiesPage() {
 	);
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -778,9 +749,5 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

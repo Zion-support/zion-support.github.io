@@ -40,7 +40,6 @@ type RoadmapInputs = {
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
   priorities: string;
 },
 type Stage = {
@@ -84,7 +83,6 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { id, name, theme, objective, highlights, metrics }
   });
 }
@@ -104,11 +102,8 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 
-=======
 function defaultOperatorPrompt (): string {
-=======
 
-=======
 
 type RoadmapInputs = {
   milestones: string;
@@ -193,7 +188,6 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
     () => generateStages({ milestones, keywords, priorities });
@@ -208,10 +202,8 @@ Validation:;
       setCopied(true);
 
       setTimeout(() => setCopied(false), 1500)
-=======
       await navigator.clipboard.writeText(operatorPrompt)
       setCopied(true)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       setTimeout(() => setCopied(false), 1500)
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
@@ -314,7 +306,6 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -334,8 +325,6 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -357,7 +346,6 @@ export default function RoadmapPage (): JSX.Element {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'  } catch (error) {
@@ -389,7 +377,6 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                   <div className="mt-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Metrics</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       {stage.metrics.map((m, i) => (
@@ -410,7 +397,6 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                   <div className="mt-3">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <p className="font-semibold">Validation</p>
                     <ul className="mt-1 list-disc space-y-1 pl-5 text-gray-800">
                       <li>Leading indicator movement on activation and retention</li>
@@ -420,17 +406,12 @@ export default function RoadmapPage (): JSX.Element {
                   </div>
                 </article>
 
-=======
 }
 
-=======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
-=======
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
   return (;
     <>;
@@ -503,64 +484,11 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   placeholder="e.g., governance, scale, regional expansion";
                 />;
               </div>;
             </div>;
           </section>;
-<<<<<<< HEAD
-          <section className="mb - 12">;
-            <div className="mb - 3 flex items - center justify - between gap - 3">;
-              <h2 className="text - xl font - semibold">Operator Prompt</h2>;
-              <button;
-                on_click={copy_prompt}
-                className="rounded - md bg - black px - 3 py - 2 text - sm font - semibold text - white shadow - sm hover:bg - gray - 900";
-              >;
-                {copied ? 'Copied' : 'Copy'}
-              </button>;
-            </div>;
-            <pre className="whitespace - pre - wrap rounded - lg border border - gray - 200 bg - gray - 50 p - 4 text - sm text - gray - 800">{operator_prompt}</pre>;
-          </section>;
-          <section>;
-            <h2 className="mb - 4 text - xl font - semibold">Zion v1 → v10</h2>;
-            <div className="grid gap - 6 md:grid - cols - 2">;
-              {stages.map ((stage) => (
-                <article key={stage.id} className="rounded - lg border border - gray - 200 p - 5 shadow - sm">;
-                  <h3 className="text - lg font - bold">{stage.name} — {stage.theme}</h3>;
-                  <p className="mt - 2 text - gray - 700"><span className="font - semibold">Objective:</span> {stage.objective}</p>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Highlights</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      {stage.highlights.map ((h, i) => (
-                        <li key={i}>{h}</li>))}
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Metrics</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      {stage.metrics.map ((m, i) => (
-                        <li key={i}>{m}</li>))}
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Risks</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      <li > Scope creep, unclear ownership</li>;
-                      <li > Model hallucinations or bias affecting matches</li>;
-                      <li > Regulatory and payment - compliance variability</li>;
-                    </ul>;
-                  </div>;
-                  <div className="mt - 3">;
-                    <p className="font - semibold">Validation</p>;
-                    <ul className="mt - 1 list - disc space - y-1 pl - 5 text - gray - 800">;
-                      <li > Leading indicator movement on activation and retention</li>;
-                      <li > Faster time - to - hire and time - to - pay</li>;
-                      <li > Positive contributor NPS and dispute resolution rates</li>;
-                    </ul>;
-                  </div>;
-                </article>))}
-=======
           <section className="mb-12">;
             <div className="mb-3 flex items-center justify-between gap-3">;
               <h2 className="text-xl font-semibold">Operator Prompt</h2>;
@@ -634,17 +562,9 @@ export default function RoadmapPage (): JSX.Element {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

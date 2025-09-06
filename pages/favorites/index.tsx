@@ -17,17 +17,6 @@ if ( {) {
     return <EmptyState title=&quot;Nothing here yet...&quot; message=&quot;Save profiles to revisit them easily.&quot; cta_label=&quot;Browse Talent & quot; cta_href=&quot;/talent & quot; />;
 
   }
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-    <div>;
-      <h2 className=&quot;text - xl font - semibold mb - 4&quot;>Favorites</h2>;
-      <ul className=&quot;list - disc pl - 6&quot;>;
-        {favorites.map (function => <li key={f}>{f}</li>)}
-      </ul>;
-    </div>);
-}
-=======
 
   if (!favorites.length) {
     return <EmptyState title="Nothing here yet..." message="Save profiles to revisit them easily." ctaLabel="Browse Talent" ctaHref="/talent" />
@@ -39,4 +28,3 @@ if ( {) {
 
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

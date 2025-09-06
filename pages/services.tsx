@@ -1,29 +1,19 @@
 
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
 
 import React from 'react';
 
-=======
 
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
-=======
 import Link from 'next / link';
 ;
 type Service = {
@@ -1505,24 +1495,12 @@ const itServices: Service[] = [;
     pricing: 'Typical: $75k–$500k project',;
     link: 'https://ziontechgroup && ziontechgroup.com/it-services'}
 ];
-<<<<<<< HEAD
-export default function Services(): any (): React && React.JSX.Element {;
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (;
-    <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>;
-      <divstyle={{ 
-        display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
-=======
-<<<<<<< HEAD
-export default function Services(): React.JSX.Element {
-=======
 
 export default function Services(): React.JSX.Element {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         paddingBottom: 12, borderBottom: `2px solid ${color}20`
       }}>;
         <divstyle={{ 
@@ -1579,7 +1557,6 @@ export default function Services(): React.JSX.Element {;
   );
   return (
 
-=======
 
   }, []);
 
@@ -1704,13 +1681,11 @@ export default function Services(): React.JSX.Element {;
 
 
 
-=======
 
 
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
 
@@ -1857,22 +1832,13 @@ function Services() {
 
 
 
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </section>
 
 
 
-=======
 
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -1929,10 +1895,8 @@ function Services() {
               ))}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -1987,7 +1951,6 @@ count: '150+',
   };
 
 
-=======
 
       id: 'ai-automation',
       title: 'AI Automation Platform',
@@ -2022,16 +1985,12 @@ count: '150+',
     },
     {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
 
-=======
 
-=======
 
 
       <ErrorBoundary level='page'>
@@ -2139,7 +2098,6 @@ export default function Services() {;
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
 
-=======
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -2155,12 +2113,9 @@ export default function Services() {;
 
                 Our Services
               </h1>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p
 
-=======
 
-=======
 
 
           </section>
@@ -2214,7 +2169,6 @@ export default function Services() {;
                       <div className="flex items-center justify-between mb-6">
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
 
-=======
                   </div>;
                   <button className="w - full bg - blue - 600 text - white px - 4 py - 2 rounded - lg hover:bg - blue - 700 transition - colors">;
                     Learn More;
@@ -2460,7 +2414,6 @@ function Services() {
                         View All {category && category.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <svg
                           className='ml-2 w-4 h-4'
                           fill='none'
@@ -2571,9 +2524,7 @@ function Services() {
     </>
 
 
->>>>>>> origin/automation-improvements-final
   );
-=======
                       
                       <p className="text-slate-300 mb-6">
                         {category.description}
@@ -2703,12 +2654,10 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                 </Link>
 
               </div>
-=======
 
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
         </main>
@@ -2718,8 +2667,6 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
 
 
   )
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
@@ -2748,7 +2695,6 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                   href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`}
                   className='px - 8 py - 3 bg - purple - 600 hover:bg - purple - 700 rounded - lg font - semibold transition - colors';
                 >;
-=======
                 What We Offer
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -2791,21 +2737,10 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
                   </button>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
@@ -2844,27 +2779,11 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
         </div>
       </section>
     </main>
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -2879,142 +2798,9 @@ export default function Services() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Our Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to transform your business and drive growth.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Pricing
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What We Offer
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <service.icon className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {service.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="text-blue-600 font-semibold mb-4">
-                    {service.pricing}
-                  </div>
-                  <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Learn More
-                  </button>
-                </motion.div>
-              ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
-      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
-      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
-      
-      {/* CTA Section */}
-      <section style={{ 
-        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
-        textAlign: 'center', background: 'white', marginTop: 40,
-        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
-      }}>
-        <h2 style={{ 
-          fontSize: 32, fontWeight: 700, marginBottom: 16,
-          color: '#1e293b'
-        }}>Ready to Get Started?</h2>
-        <p style={{ 
-          fontSize: 18, color: '#64748b', marginBottom: 32,
-          maxWidth: 600, margin: '0 auto 32px auto'
-        }}>
-          Contact our experts to discuss your project requirements and discover 
-          how our innovative solutions can drive your business forward.
-        </p>
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/contact" style={{
-            display: 'inline-block', 
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
-            color: 'white', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            transition: 'all 0.3s ease'
-          }}>Request a Quote</Link>
-          <a href="tel:+13024640950" style={{
-            display: 'inline-block', 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
-            fontWeight: 700, textDecoration: 'none', fontSize: 16,
-            border: '2px solid #22c55e', transition: 'all 0.3s ease'
-          }}>Call +1 302 464 0950</a>
-        </div>
-      </section>
-    </main>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -3050,11 +2836,6 @@ export default function Services() {
                   </p>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -3062,58 +2843,6 @@ import Footer from '../components/Footer';
 export default function Services() {
   const serviceCategories = [
     {
-<<<<<<< HEAD
-      title: 'Micro SaaS Products'
-      description:
-        'Innovative, focused software solutions for modern businesses'
-      count: '150+'
-      color: 'blue'
-      services: [
-        'AI-Powered Video Clip Maker'
-        'Smart Contract Analyzer'
-        'Cybersecurity Threat Intelligence'
-        'Multi-Language Website Translator'
-        'Predictive Inventory Optimizer'
-        'Real-Time Analytics Dashboard'
-        'Automated Customer Support'
-        'Blockchain Transaction Monitor'
-      ]
-      href: '/micro-saas'
-    }
-    {
-      title: 'AI Services'
-      description:
-        'Advanced artificial intelligence solutions for enterprise needs'
-      count: '100+'
-      color: 'purple'
-      services: [
-        'Autonomous AI Agents'
-        'AI-Powered Financial Trading'
-        'AI Legal Document Analysis'
-        'AI-Powered Voice Analytics'
-        'AI-Powered Search & Discovery'
-        'Machine Learning Model Training'
-        'Natural Language Processing'
-        'Computer Vision Solutions'
-      ]
-      href: '/ai-services'
-    }
-    {
-      id: 'it-services'
-      name: 'IT & Cloud Services'
-      description: 'Comprehensive IT solutions for enterprise-grade operations'
-      services: [
-        'Quantum Computing Consulting'
-        'Blockchain & Web3 Solutions'
-        'DevSecOps & Security Automation'
-        'Enterprise Data Platform'
-        'High-Performance Computing'
-        'Cloud Migration Services'
-        'Infrastructure as Code'
-        'Disaster Recovery Solutions'
-      ]
-      href: '/it-services'
-=======
       id: 'ai-automation',
       title: 'AI Automation Platform',
       description: 'Intelligent automation solutions that streamline business processes and reduce manual work.',
@@ -3146,49 +2875,6 @@ export default function Services() {
 }
     },
     {
-<<<<<<< HEAD
-      id: 'it-services',
-      name: 'IT & Cloud Services',
-      description: 'Comprehensive IT solutions for enterprise-grade operations',
-      services: [
-        'Quantum Computing Consulting',
-        'Blockchain & Web3 Solutions',
-        'DevSecOps & Security Automation',
-        'Enterprise Data Platform',
-        'High-Performance Computing',
-        'Cloud Migration Services',
-        'Infrastructure as Code',
-        'Disaster Recovery Solutions',
-      ],
-      href: '/it-services',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    },  ];
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: {
-        bg: 'bg-blue-600'
-        hover: 'hover:bg-blue-700'
-        text: 'text-blue-400'
-        border: 'border-blue-500/40'
-        ring: 'focus:ring-blue-500'
-      }
-      purple: {        bg: 'bg-purple-600'
-        hover: 'hover:bg-purple-700'
-        text: 'text-purple-400'
-        border: 'border-purple-500/40'
-        ring: 'focus:ring-purple-500'
-      },      green: {
-<<<<<<< HEAD
-        bg: 'bg-green-600'
-        hover: 'hover:bg-green-700'
-        text: 'text-green-400'
-        border: 'border-green-500/40'
-        ring: 'focus:ring-green-500'
-      }
-    }
-    return colors[color as keyof typeof colors] |colors.blue;  }
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
         text: 'text-green-400',
@@ -3198,10 +2884,6 @@ export default function Services() {
     };
     return colors[color as keyof typeof colors] || colors.blue;  };
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
       id: 'micro-saas',
       title: 'Micro SaaS Development',
       description: 'Focused software solutions that address specific business needs with minimal complexity.',
@@ -3271,30 +2953,12 @@ export default function Services() {
 }
   ];
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
-        <main className="text-center max-w-4xl px-4">
-          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            At Zion Tech Group, we offer a comprehensive suite of IT and AI services designed to propel your business forward.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
-              <p className="text-gray-400">
-                Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -3303,9 +2967,6 @@ export default function Services() {
               <h1
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
-<<<<<<< HEAD
-=======
-=======
       <div className="min-h-screen bg-slate-950 text-white">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -3317,60 +2978,14 @@ export default function Services() {
           <div className="relative container mx-auto px-4 py-20">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Our Services
               </h1>
               <p
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 350+ Innovative Solutions for Modern Businesses
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Cloud Solutions</h3>
-              <p className="text-gray-400">
-                Scalable and secure cloud infrastructure, migration, and management services.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Web & Mobile Development</h3>
-              <p className="text-gray-400">
-                Crafting modern, responsive, and high-performance web and mobile applications.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Cybersecurity</h3>
-              <p className="text-gray-400">
-                Robust security solutions to protect your digital assets from evolving threats.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">Data Analytics</h3>
-              <p className="text-gray-400">
-                Transforming raw data into actionable insights for strategic business growth.
-              </p>
-            </div>
-            <div className="card">
-              <h3 className="text-2xl font-semibold mb-3">IT Consulting</h3>
-              <p className="text-gray-400">
-                Expert guidance and strategic planning to optimize your technology landscape.
-              </p>
-            </div>
-          </div>
-          <Link href="/contact" className="btn-primary">
-            Get a Free Consultation
-          </Link>
-        </main>
-      </div>
-    </>
-  );
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -3537,59 +3152,17 @@ export default function Services() {
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
                 >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   Call {contact.phone}
                 </a>;
                 <a;
                   href={`mailto:${contact.email}`}
-<<<<<<< HEAD
-                  className='px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors'                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-    </>);
-;
-        <section className="py - 16 px - 4 bg - slate - 900 / 40">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <h2 className="text - 3xl md:text - 4xl font - bold mb - 8">;
-              Ready to Get Started?;
-            </h2>;
-            <p className="text - lg text - slate - 300 mb - 8">;
-              Contact our experts to discuss your project requirements and discover;
-              how our solutions can drive your business forward.;
-            </p>;
-            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
-              <Link href="/contact" className="btn - primary">;
-                Get a Quote;
-              </Link>;
-              <Link href="/contact" className="btn - secondary">;
-
-                Schedule Consultation;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </main>;
-      <Footer />;
-
-
-=======
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

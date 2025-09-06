@@ -9,7 +9,6 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
-=======
         price: 49,
         period: 'month',
         features: [;
@@ -101,7 +100,6 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
-=======
         price: 79,
         period: 'month',
         features: [;
@@ -193,7 +191,6 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
-=======
         price: 39,
         period: 'month',
         features: [;
@@ -241,7 +238,6 @@ export const innovativeMicroSaasSolutions2025 = [
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
-=======
     market_size: '$6.7B',
     target_audience:;
       'Small to medium businesses, enterprise companies, accounting firms, financial departments',
@@ -382,7 +378,6 @@ export const innovativeMicroSaasSolutions2025 = [
     pricing: {
       starter: {
 
-=======
         price: 59,
         period: 'month',
         features: [;
@@ -433,11 +428,6 @@ export const innovativeMicroSaasSolutions2025 = [
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
-<<<<<<< HEAD
-      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
-      'Multi-language supportAPI access for custom integrations'
-
-=======
     market_size: '$22.1B',
     target_audience:;
       'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
@@ -451,12 +441,9 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization',
     ],
     integrations: [;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'CRM systems',
       'E - commerce platforms',
-=======
       'AI-powered demand forecasting with 92.4% accuracy'
       'Real-time inventory tracking and monitoring'
       'Automated reorder point calculations'
@@ -784,19 +771,8 @@ export const innovativeMicroSaasSolutions2025 = [
       'Marketing ROI optimization'
     ]
     integrations: [
-<<<<<<< HEAD
-      'CRM systems'
-      'E-commerce platforms'
-      'Analytics tools'
-      'Social media platforms'
-      'Marketing tools'
-    ]
-    compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
-  }
-=======
       'CRM systems',
       'E-commerce platforms',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',
@@ -804,7 +780,6 @@ export const innovativeMicroSaasSolutions2025 = [
 
 ];      'Email campaign automation_customer segmentation and personalization_conversion rate optimization_subscriber engagement improvement_marketing ROI optimization';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['CRM systems_e - commerce platforms_analytics tools_social media platforms_marketing tools'];
     compliance: ['CAN - SPAMGDPRCCPAEmail marketing regulations'];
@@ -812,10 +787,7 @@ export const innovativeMicroSaasSolutions2025 = [
 ];
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations'],
   },;
 
@@ -825,7 +797,6 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
 
 
-=======
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;
@@ -1033,8 +1004,5 @@ export const innovativeMicroSaasSolutions2025 = [;
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations'];
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

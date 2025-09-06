@@ -1,7 +1,5 @@
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -330,13 +328,11 @@ children ;
 export default MobileOptimizer;
 
 export default MobileOptimizer;
-=======
 export default MobileOptimizer;
 export default MobileOptimizer;
 
 
 
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -961,7 +957,6 @@ className="w-full px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm
   )
 };
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default MobileOptimizer;
 images.for_each (img => {
   // Check condition
@@ -971,20 +966,9 @@ if (img.loading = 'lazy') {
 // Check condition
 if (img.decoding = 'async') {
   $2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-setIsMobile (isMobileDevice);
-=======
  setIsMobile (isMobileDevice);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 setIsMobile (isMobileDevice);
-=======
  setIsMobile (isMobileDevice);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -996,7 +980,6 @@ window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {
   if (e.touches.length === 1) {
   touchStartRef.current = {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 });
 //Optimize fonts fonts.for_each (font => {
@@ -1020,32 +1003,10 @@ if (return) {
   $2
 }
 //Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
-<<<<<<< HEAD
-window.addEventListener ('resize', handle_resize);
-//Set up orientation change detection const media_query = window.match_media (' (orientation: portrait) ');
-const handleMediaQueryChange = (e: MediaQueryListEvent) =>: any {
-  setCurrentOrientation (e.matches ? 'portrait' : 'landscape');
-=======
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-<<<<<<< HEAD
-  setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-// Check condition
-if (return null) {
-  $2
-}
-}
-const getStatusIcon = (status: string) =>: any {
-  switch (status) {
-}
-<<<<<<< HEAD
-children;
-=======
 children
-=======
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
@@ -1057,8 +1018,6 @@ const getStatusIcon = (status: string) => {
 
 };
 children 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }{
   /* Mobile Optimization Panel */;
 }<AnimatePresence> {
@@ -1075,6 +1034,3 @@ children
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

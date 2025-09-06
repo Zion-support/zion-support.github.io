@@ -96,11 +96,6 @@ import React, { useState } from 'react';
   }
 }
   }),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
         />;
@@ -111,7 +106,6 @@ import React, { useState } from 'react';
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       <SmartHeader />
 
@@ -141,7 +135,6 @@ import React, { useState } from 'react';
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -157,7 +150,6 @@ import React, { useState } from 'react';
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View All Services
 
               </button>
@@ -190,7 +182,6 @@ import React, { useState } from 'react';
 
       {/* Search and Filters */}
 
-=======
 
       {/* Search and Filters */  } catch (error) {
     console.error("Error:", error);
@@ -202,21 +193,6 @@ import React, { useState } from 'react';
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-<<<<<<< HEAD
-              {/* Search */}
-              <div className="flex-1 max-w-md">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  <input
-                    type="text"
-                    placeholder="Search categories..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-=======
               {/* Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -225,11 +201,6 @@ import React, { useState } from 'react';
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -243,10 +214,8 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
 
@@ -267,7 +236,6 @@ import React, { useState } from 'react';
               <div className="flex items-center gap-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <select
                   value={sortBy}
 
@@ -275,22 +243,12 @@ import React, { useState } from 'react';
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-=======
-<<<<<<< HEAD
-              {/* Sort Options */}
-              <div className='flex items-center gap-4'>
-=======
               {/* Sort Options */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex items-center gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <select
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
@@ -302,7 +260,6 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -425,7 +382,6 @@ import React, { useState } from 'react';
 
 
       {/* Featured Services */}
-=======
 
       {/* Featured Services */  } catch (error) {
     console.error("Error:", error);
@@ -440,16 +396,6 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 className="mb-12"
-=======
-<<<<<<< HEAD
-      {/* Featured Services */}
-      <section className='px-6 pb-16'>
-        <div className='max-w-7xl mx-auto'>          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='mb-12'
-=======
       {/* Featured Services */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -477,7 +423,6 @@ className="mb-12"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -486,127 +431,8 @@ className="mb-12"
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredServices.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-              <motion.div
-
-            transition={{ duration: 0 && 0.6 }}
-            className='mb-12'>;
-            <h2 className='text-3xl font-bold text-white mb-4'>;
-              Featured Services;
-            </h2>;
-            <p className='text-white/60'>              Explore our most innovative and cutting-edge technology solutions;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
-              <motion&& motion.div
-                key={service && service.id}
-
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-4 flex items-center justify-center`}>;
-                    <service && service.icon className='w-8 h-8 text-white' />;
-                  </div>;
-                  <div className='flex items-center justify-between mb-3'>;
-
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        service && service.status === 'active'
-                          ? 'bg-green-500/20 text-green-300'
-                          : service && service.status === 'beta'
-                            ? 'bg-yellow-500/20 text-yellow-300'
-                            : 'bg-blue-500/20 text-blue-300'
-
-      {/* Featured Services */}
-      <section className='px - 6 pb - 16'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='mb - 12';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4'>;
-              Featured Services;
-            </h2>;
-            <p className='text - white / 60'>              Explore our most innovative and cutting - edge technology solutions;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
-              <motion.div;
-                key={service.id}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                className='group relative p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-              >;
-                <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
-                <div className='relative z - 10'>;
-                  <div;
-                    className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br ${service.color} p - 4 mb - 4 flex items - center justify - center`}
-                  >;
-                    <service.icon className='w - 8 h - 8 text - white' />;
-                  </div>;
-                  <div className='flex items - center justify - between mb - 3'>;
-                    <span;
-                      className={`px - 2 py - 1 rounded - full text - xs font - medium ${
-                        service.status === 'active';
-                          ? 'bg - green - 500 / 20 text - green - 300';
-                          : service.status === 'beta';
-                            ? 'bg - yellow - 500 / 20 text - yellow - 300';
-                            : 'bg - blue - 500 / 20 text - blue - 300';
-
-                      }`}
-                    >;
-                      {service.status}
-                    </span>;
-                    <span className='text - xs text - white / 40'>;
-                      {service.category}
-
-                    </span>;
-                  </div>;
-                  <h3 className='text - lg font - bold mb - 2 text - white'>;
-
-                    {service.title}
-                  </h3>;
-                  <p className='text - sm text - white / 70 mb - 4 leading - relaxed'>;
-                    {service.description}
-
-                      }`}>;
-                      {service && service.status}
-                    </span>;
-                    <span className='text-xs text-white/40'>;
-                      {service && service.category}
-                    </span>;
-                  </div>;
-                  <h3 className='text-lg font-bold mb-2 text-white'>;
-                    {service && service.title}
-                  </h3>;
-                  <p className='text-sm text-white/70 mb-4 leading-relaxed'>;
-                    {service && service.description}
-                  </p>;
-                  <div className='mb-4'>;
-                    <span className='text-xl font-bold text-cyan-400'>;
-                      {service && service.price}
-                    </span>;
-                  </div>;
-
-
-                  <a
-                    href={`/services#${service && service.id}`}
-                    className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
-                    Learn More;
-                    <ChevronRight className='w-4 h-4 ml-1' />                  </a>;
-                </div>;
-              </motion && motion.div>;
-
-=======
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-=======
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -630,7 +456,6 @@ className="mb-12"
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
@@ -658,7 +483,6 @@ className="mb-12"
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
                   <div className="mb-4">
@@ -666,16 +490,9 @@ className="mb-12"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <a
                     href={`/services#${service.id}`}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <a
                     href={`/services#${service.id}`  } catch (error) {
@@ -683,17 +500,10 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1" />
-<<<<<<< HEAD
-                  </a>
-                </div>
-              </motion.div>
-
-=======
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -719,7 +529,6 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 className="mb-12"
-=======
           </div>
         </div>
       </section>
@@ -730,7 +539,6 @@ className="mb-12"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='mb-12'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -772,175 +580,8 @@ className="mb-12"
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-<<<<<<< HEAD
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              <motion.div
-            transition={{ duration: 0 && 0.6 }}
-            className='mb-12'>;
-            <h2 className='text-3xl font-bold text-white mb-4'>;
-              Technology Categories;
-            </h2>;
-            <p className='text-white/60'>              {sortedCategories && sortedCategories.length} categories available for exploration;
-            </p>;
-          </motion && motion.div>;
-          <AnimatePresence mode='wait'>            {sortedCategories && sortedCategories.length === 0 ? (;
-              <motion&& motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-
-                  </p>;
-                  <div className='mb - 4'>;
-                    <span className='text - xl font - bold text - cyan - 400'>;
-                      {service.price}
-                    </span>;
-                  </div>;
-                  <a;
-                    href={`/services#${service.id}`}
-                    className='inline - flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 300 text - sm font - medium';
-                  >;
-                    Learn More;
-                    <ChevronRight className='w - 4 h - 4 ml - 1' />                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Categories Grid */}
-      <section className='px - 6 pb - 20'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            className='mb - 12';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4'>;
-              Technology Categories;
-            </h2>;
-            <p className='text - white / 60'>              {sorted_categories.length} categories available for exploration;
-            </p>;
-          </motion.div>;
-          <AnimatePresence mode='wait'>            {sorted_categories.length === 0 ? (
-              <motion.div;
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className='text - center py - 20';
-              >;
-                <div className='w - 24 h - 24 mx - auto mb - 6 rounded - full bg - white / 10 flex items - center justify - center'>;
-                  <Search className='w - 12 h - 12 text - white / 40' />;
-                </div>;
-                <h3 className='text - 2xl font - semibold text - white mb - 2'>;
-                  No categories found;
-                </h3>;
-                <p className='text - white / 60 mb - 6'>                  Try adjusting your search terms;
-                </p>;
-                <button;
-                  on_click={() => setSearchTerm ('')}
-                  className='px - 6 py - 3 bg - cyan - 500 hover:bg - cyan - 600 rounded - lg font - medium transition - colors'                >;
-                  Clear Search;
-                </button>;
-              </motion.div>) : (
-              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>                {sorted_categories.map ((category, index) => (
-                  <motion.div;
-                    key={category.id}
-                    initial={{ opacity: 0, coordinate_y: 20 }}
-                    animate={{ opacity: 1, coordinate_y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className='group relative p - 8 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl cursor - pointer';
-                    on_click={() =>;
-                      (window.location.href = `/category/${category.id}`);
-                    }
-                  >;
-                    <div className='absolute inset - 0 bg - gradient - to - br from - white / 0 via - cyan - 400 / 5 to - white / 0 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 rounded - 2xl' />;
-                    <div className='relative z - 10'>;
-                      {/* Featured Badge */}
-                      {category.featured && (
-                        <div className='absolute top - 4 right - 4'>;
-                          <span className='px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white'>                            ⭐ Featured;
-                          </span>;
-                        </div>)}
-                      {/* Category Icon */}
-                      <div;
-                        className={`w - 20 h - 20 rounded - 2xl bg - gradient - to - br ${category.color} p - 5 mb - 6 flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
-                      >;
-                        <category.icon className='w - 10 h - 10 text - white' />;
-                      </div>;
-
-                      {/* Category Info */}
-                      <h3 className='text - 2xl font - bold mb - 3 text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                        {category.name}
-                      </h3>;
-                      <p className='text - white / 70 leading - relaxed mb - 6'>;
-                        {category.description}
-
-                      </p>;
-
-                      {/* Stats */}
-                      <div className='flex items - center justify - between mb - 6'>;
-                        <div className='text - center'>;
-                          <div className='text - 2xl font - bold text - cyan - 400'>;
-                            {category.service_count}
-                          </div>;
-                          <div className='text - xs text - white / 60'>Services</div>;
-                        </div>;
-                        <div className='text - center'>;
-                          <div className='text - 2xl font - bold text - purple - 400'>;
-                            {category.featured ? '⭐' : '🚀'}
-
-                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category && category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>;
-                        <category && category.icon className='w-10 h-10 text-white' />;
-                      </div>;
-                      {/* Category Info */}
-                      <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>;
-                        {category && category.name}
-                      </h3>;
-                      <p className='text-white/70 leading-relaxed mb-6'>;
-                        {category && category.description}
-                      </p>;
-                      {/* Stats */}
-                      <div className='flex items-center justify-between mb-6'>;
-                        <div className='text-center'>;
-                          <div className='text-2xl font-bold text-cyan-400'>;
-                            {category && category.serviceCount}
-                          </div>;
-                          <div className='text-xs text-white/60'>Services</div>;
-                        </div>;
-                        <div className='text-center'>;
-                          <div className='text-2xl font-bold text-purple-400'>;
-                            {category && category.featured ? '⭐' : '🚀'}
-                          </div>;
-                          <div className='text-xs text-white/60'>                            {category && category.featured ? 'Featured' : 'Active'}
-                          </div>;
-                        </div>;
-                      </div>;
-
-
-                      {/* CTA */}
-                      <div className='flex items-center justify-between'>;
-                        <span className='text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'>;
-                          Explore Category;
-                        </span>;
-                        <ChevronRight className='w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1' />                      </div>;
-                    </div>;
-                  </motion && motion.div>;
-
-=======
-<<<<<<< HEAD
-          <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
-=======
-          <AnimatePresence mode="wait">
-            {sortedCategories.length === 0 ? (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.div
                 initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
@@ -957,7 +598,6 @@ className="mb-12"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -968,27 +608,18 @@ className="mb-12"
                   Try adjusting your search terms
                 </p>
                 <button
-<<<<<<< HEAD
-                  onClick={() => setSearchTerm('')}
-className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
-=======
                   onClick={() => setSearchTerm('')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   Clear Search
                 </button>
               </motion.div>
             ) : (
-<<<<<<< HEAD
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {sortedCategories.map((category, index) => (
                   <motion.div
 
@@ -996,12 +627,10 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
-=======
                     className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer'
                     onClick={() =>
                       (window.location.href = `/category/${category.id}`)
                     }
-=======
                     key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1028,11 +657,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -1041,7 +665,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {category.featured && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
@@ -1073,30 +696,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                         {category.description}
                       </p>
                       {/* Stats */}
-=======
-<<<<<<< HEAD
-                      )}
-                      {/* Category Icon */}
-                      <div
-                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        <category.icon className='w-10 h-10 text-white' />
-                      </div>
-                      {/* Category Info */}
-                      <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>
-                        {category.name}
-                      </h3>
-                      <p className='text-white/70 leading-relaxed mb-6'>
-                        {category.description}
-                      </p>
-                      {/* Stats */}
-                      <div className='flex items-center justify-between mb-6'>
-                        <div className='text-center'>
-                          <div className='text-2xl font-bold text-cyan-400'>
-                            {category.serviceCount}
-                          </div>
-                          <div className='text-xs text-white/60'>Services</div>
-=======
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1135,7 +734,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
@@ -1143,7 +741,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -1169,7 +766,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -1177,7 +773,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     </div>
                   </motion.div>
 
-=======
 
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -1198,7 +793,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
 
-=======
 
       {/* Technology Trends */}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -1211,7 +805,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
             viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -1225,8 +818,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
               <motion.div
                 key={trend.title}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Emerging Technology Trends;
@@ -1289,7 +880,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 key={trend && trend.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
@@ -1311,7 +901,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 </div>
                 <p className="text-white/70 leading-relaxed">{trend.description}</p>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </div>
         </div>
@@ -1374,7 +963,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Get Expert Guidance
               </a>
             </div>
@@ -1396,13 +984,10 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
     </div>;
   );
 
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   )
 }
                   </span>;
@@ -1439,17 +1024,10 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               <a;
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >;
-=======
       <SmartFooter />
     </div>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
@@ -1470,7 +1048,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                 href="mailto:kleber@ziontechgroup.com";
                 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
               >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 Get Expert Guidance;
               </a>;
             </div>;
@@ -1489,4 +1066,3 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

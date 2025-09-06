@@ -38,8 +38,5 @@ export function AppHeader() {;
         </div>;
       </div>;
     </header>);
-<<<<<<< HEAD:backup-problematic-files/src/layout/AppHeader.jsx
-'"
-=======
 
 '"

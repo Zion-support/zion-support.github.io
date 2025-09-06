@@ -51,40 +51,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<UrlShortenerResponse>
 ) {
-<<<<<<< HEAD
-  if (req && req.method === 'POST') {
-    // Create short URL
-    try {
-
-      const { originalUrl, customCode }: UrlShortenerRequest = req && req.body;
-      if (!originalUrl) {
-        return res && res.status(400).json({
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    // Create short URL;
-    try {
-      const { original_url, custom_code }: UrlShortenerRequest = req.body;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        return res.status (400).json ({
-
-          success: false,
-          error: 'Original URL is required',
-        });      }
-
-=======
           success: false,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           error: 'Original URL is required'
         })
       }
@@ -126,11 +94,9 @@ if ( {) {
       let shortCode = customCode |generateShortCode();
           success: true;
 
-=======
         return res.status(200).json({
           success: true,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           data: existingUrl
         })
       }
@@ -227,7 +193,6 @@ if ( {) {
         data: short_url;
       });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (error) {
       console.error ('URL shortening error:', error);
       res.status (500).json ({
@@ -252,13 +217,11 @@ if ( {) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
-=======
   params: { shortCode: string };
 }) {  const shortCode = params && params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params && params.shortCode;
   const shortUrl = urlStorage && urlStorage.get(shortCode);
 
-=======
       data: urls as any
     })
   } else {
@@ -292,13 +255,11 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   return {
     redirect: {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       permanent: false
     }
 }
 
 
-=======
 // Handle redirects for short URLs;
 export async /**
  * getServerSideProps - Function description
@@ -314,7 +275,6 @@ function getServerSideProps() {
 if ( {) {
   $2
 }
-=======
       console.error('URL shortening error:', error);
       res.status(500).json({
         success: false
@@ -335,21 +295,13 @@ if ( {) {
   }
 // Handle redirects for short URLs
 export async function getServerSideProps({
-<<<<<<< HEAD
-  params
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-=======
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return {
       not_found: true,    }      not_found: true;
     }
@@ -361,20 +313,8 @@ export async function getServerSideProps({
   // Redirect to original URL;
   return {
     redirect: {
-<<<<<<< HEAD
-      destination: short_url.original_url,
-      permanent: false,
-    },
-  }      destination: short_url.original_url;
-      permanent: false;
-    }
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       destination: shortUrl.originalUrl,
       permanent: false,
     },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

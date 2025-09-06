@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-export type Real2036InnovativeService = {
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string, price: string,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-  marketSize?: string;
-  targetAudience?: string;
-  competitiveAdvantage?: string;
-  integration?: string[];
-
-
-    category: 'AI & Data',
-    price: '$299',
-    period: '/month',
-      'AI - powered data pattern recognition',
-      'Predictive analytics and forecasting',
-      'Natural language query interface',
-      'Automated report generation',
-      'Real - time data visualization',
-      'Multi - source data integration',
-      'Custom dashboard builder',
-      'Mobile - responsive interface',
-    ],
-
-=======
     link: 'https://ziontechgroup.com / services / ai - business - intelligence - platform - pro',
     launch_date: '2036 - 01 - 20',
     rating: 4.8,
@@ -117,7 +86,6 @@ export type Real2036InnovativeService = {
       'Comprehensive monitoring',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / autonomous - devops - platform - enterprise',
     launch_date: '2036 - 01 - 30',
     rating: 4.7,
@@ -206,7 +174,6 @@ export type Real2036InnovativeService = {
       'Custom security policies',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / ai - cybersecurity - suite - enterprise',
     launch_date: '2036 - 02 - 10',
     rating: 4.8,
@@ -250,7 +217,6 @@ export type Real2036InnovativeService = {
       'Expert consultation',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - machine - learning - platform',
     launch_date: '2036 - 02 - 15',
     rating: 4.9,
@@ -428,7 +394,6 @@ export type Real2036InnovativeService = {
       'Performance analytics',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / autonomous - manufacturing - platform',
     launch_date: '2036 - 03 - 05',
     rating: 4.7,
@@ -516,7 +481,6 @@ export type Real2036InnovativeService = {
       'Expert consultation',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / ai - healthcare - diagnostics - platform',
     launch_date: '2036 - 03 - 15',
     rating: 4.8,
@@ -558,7 +522,6 @@ export type Real2036InnovativeService = {
       'Custom mining strategies',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / space - resource - mining - platform',
     launch_date: '2036 - 03 - 20',
     rating: 4.7,
@@ -600,7 +563,6 @@ export type Real2036InnovativeService = {
       'Performance analytics',
     ],
 
-=======
     link: 'https://ziontechgroup.com / services / quantum - financial - trading - platform',
     launch_date: '2036 - 03 - 25',
     rating: 4.9,
@@ -623,97 +585,7 @@ export type Real2036InnovativeService = {
   },
   // AI - Powered Supply Chain Optimization;
   {
-<<<<<<< HEAD
-    id: 'ai - supply - chain - optimization - platform',
-    name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain management and optimization',
-    description:;
-      'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',
-    category: 'AI & Data',
-    price: '$699',
-    period: '/month',
-    features: [;
-
-      'Demand forecasting',
-      'Inventory optimization',
-      'Route optimization',
-      'Supplier management',
-      'Risk assessment',
-      'Real - time tracking',
-      'Performance analytics',
-      'Custom workflows',
-    ],
-
-    ];
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
-    launchDate: '2036-03-30';
-
-    ];
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform', launchDate: '2036-03-25',
-    rating: 4.9, marketSize: '$7.8B',
-    targetAudience: 'Investment banks, Hedge funds, Trading firms',
-    competitiveAdvantage: 'Quantum advantage, High-frequency capabilities, Advanced algorithms',
-    integration: ['Trading platformsMarket data feedsRisk systemsCompliance platforms'],
-    useCases: ['Algorithmic tradingRisk managementPortfolio optimizationMarket analysis']
-  };
-  // AI-Powered Supply Chain Optimization
-  {
-    id: 'ai-supply-chain-optimization-platform', name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain management and optimization',
-    description: 'Comprehensive platform that uses AI to optimize supply chain operations, predict demand, manage inventory, and improve logistics efficiency.',
-    category: 'AI & Data', price: '$699',
-    period: '/month',
-    features: [
-      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
-    ];
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform', launchDate: '2036-03-30',
-    rating: 4.7, marketSize: '$28.4B',
-    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',
-    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],
-    useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
-  }
-];
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
-    launch_date: '2036 - 03 - 30',
-    rating: 4.7,
-    market_size: '$28.4B',
-    target_audience:;
-      'Manufacturing companies, Retail businesses, Logistics providers',
-    competitive_advantage:;
-      'AI optimization, Real - time insights, Comprehensive coverage',
-    integration: [;
-      'ERP systems',
-      'WMS platforms',
-      'TMS solutions',
-      'IoT devices',
-      'Cloud services',
-    ],
-    use_cases: [;
-      'Demand planning',
-      'Inventory management',
-      'Logistics optimization',
-      'Risk management',
-    ],
-  },
-];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
-    ];
-    link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
-    launch_date: '2036 - 03 - 30';
-    rating: 4.7;
-    market_size: '$28.4B',
-    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers';
-    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage';
-    integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
-    use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];
-  }
-];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 export type Real2036InnovativeService = {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -6,74 +6,11 @@ export interface DeployTemplateResult {
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
-<<<<<<< HEAD
-    nodes: []
-    edges: []
-  }
-
-}
-export function getGitStatus() {
-  return {
-<<<<<<< HEAD
-    connected: false
-    branch: 'main'
-  }
-}
-
-  return nodes && nodes.map(markExistenceRecursive);
-
-
-function buildZionSourceMap(): SourceNode[] {
-  return [
-    {
-      id: 'src',
-      name: 'src',
-      type: 'directory',
-      path: 'src',
-      exists: false,
-      children: [
-        {
-          id: 'components',
-          name: 'components',
-          type: 'directory',
-          path: 'src/components',
-          exists: false
-        },
-        {
-          id: 'pages',
-          name: 'pages',
-          type: 'directory',
-          path: 'src/pages',
-          exists: false
-        },
-        {
-          id: 'utils',
-          name: 'utils',
-          type: 'directory',
-          path: 'src/utils',
-          exists: false
-        }
-      ]
-    }
-  ];
-}
-
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path);
-  return {
-    ...node,
-    exists,
-    children: node.children?.map(markExistenceRecursive)
-  };
-}
-
-=======
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
-=======
 
     nodes: [],
     edges: [];
@@ -95,10 +32,8 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 
 export interface DeployTemplateResult {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   createdPaths: string[];
   skippedPaths: string[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
     fs && fs.mkdirSync(dirPath, { recursive: true });
@@ -135,17 +70,14 @@ export function deployBasicTemplateForPath(
   }
 
   return { createdPaths, skippedPaths }
-=======
 
 
 
   return { createdPaths, skippedPaths };
 
 }
-=======
   return { createdPaths, skippedPaths }
 
-=======
 
 
   created_paths: string[];
@@ -166,8 +98,4 @@ export function ensure_directory (dir_path: string): void {
   return { created_paths, skipped_paths }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -60,7 +60,6 @@ const EnhancedFuturisticBackground: React.FC<;
   animationSpeed = 1,}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({;
 
 
-=======
   font_size;
 }px monospace`;
 ;
@@ -73,8 +72,6 @@ const EnhancedFuturisticBackground: React.FC<;
   color_scheme = 'quantum',
   particle_count = 100,
   animation_speed = 1, }) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   children;
   class_name = '';
   intensity = 'medium';
@@ -92,7 +89,6 @@ const EnhancedFuturisticBackground: React.FC<;
 
       x: number;
       y: number;
-=======
       background: 'rgba (10, 10, 30, 0.9)',
       particles: [;
         '#ff6b6b',
@@ -141,7 +137,6 @@ if (return) {
     class Particle {
       coordinate_x: number;
       coordinate_y: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       vx: number;
       vy: number;
       size: number;
@@ -153,7 +148,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-=======
       max_life: number;      coordinate_x: number,
       coordinate_y: number,
 
@@ -187,18 +181,15 @@ if (return) {
 
         }
       }
-=======
 
           this.opacity *= 0.95;        }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -218,14 +209,8 @@ if (return) {
         
 
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
 
@@ -233,17 +218,14 @@ if (return) {
       }
 
     }
-=======
 
         return this.life <= 0 || this.opacity < 0.01;      }        
 
         ctx.restore()
-=======
         return this.life <= 0 || this.opacity < 0.01;      }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -251,9 +233,7 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Connection lines between particles
-=======
       max_life: number,
         this.coordinate_x = Math.random () * canvas.width;
         this.coordinate_y = Math.random () * canvas.height;
@@ -331,7 +311,6 @@ if ( {) {
         return this.life <= 0 || this.opacity < 0.01;
     }
     // Connection lines between particles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     class Connection {
 
       p1: Particle,
@@ -462,10 +441,8 @@ constructor(p1: Particle, p2: Particle) {
     }
           ctx && ctx.restore();
 
-=======
           ctx.restore()
 
-=======
 ;
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1;
@@ -502,8 +479,6 @@ if ( {) {
       }
     }
           ctx.restore ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         }
       }
     }
@@ -547,7 +522,6 @@ if ( {) {
           ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
 
-=======
 ;
     // Initialize particles;
     for (let index = 0; i < settings.particle_count; i++) {
@@ -602,10 +576,7 @@ if (> 0.975) {) {
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       };
       return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
@@ -673,7 +644,6 @@ if (> 0.975) {) {
             Math && Math.pow(particles[i].x - particles[j].x, 2) +;
               Math && Math.pow(particles[i].y - particles[j].y, 2);
 
-=======
         particles.push(new Particle())
       }
 ;
@@ -687,283 +657,12 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-<<<<<<< HEAD
-      }
-<<<<<<< HEAD
-;
-      return draw_matrix;
-    }
-;
-    const draw_matrix = matrix_rain ();
-;
-    // Main animation loop;
-    const animate = () =>: any {
-      // Clear canvas with fade effect;
-      ctx.fill_style = colors.background;
-      ctx.fill_rect (0, 0, canvas.width, canvas.height);
-;
-      // Draw matrix rain;
-      draw_matrix ();
-;
-      // Update and draw particles;
-      particles.for_each (particle => {
-        particle.update ();
-        particle.draw ();      });        particle.draw ();
-      });
-;
-      // Remove dead particles and add new ones;
-      particles = particles.filter (particle => !particle.is_dead ());
-      while (particles.length < settings.particle_count) {
-        particles.push (new Particle ());      }
-      // Create connections between nearby particles;
-      connections = [];
-      for (let index = 0; i < particles.length; i++) {
-        for (let inner_index = i + 1; j < particles.length; j++) {        particles.push (new Particle ());
-
-      }
-      // Create connections between nearby particles;
-      connections = [];
-
-
-          if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math && Math.sqrt(;
-            Math && Math.pow(particles[i].x - particles[j].x, 2) + ;
-            Math && Math.pow(particles[i].y - particles[j].y, 2);
-
-
-          );
-          if (distance < 150) {;
-            connections && connections.push(new Connection(particles[i], particles[j]));
-            connections.push(new Connection(particles[i], particles[j]))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          }
-        }
-      }
-
-      connections = [];
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {        particles.push(new Particle())
-      }
-      // Create connections between nearby particles
-      connections = [];
-
-
-
-          }
-        }
-      }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      // Draw connections
-      connections.forEach(connection => connection.draw());
-      // Add floating geometric shapes
-      if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 20 + 10;
-
-        
-
-        ctx.save();
-        ctx.globalAlpha = 0.1;
-        ctx.strokeStyle = colors.accent;
-        ctx.lineWidth = 1;
-
-        
-
-        if (Math.random() < 0.5) {
-          // Draw triangle
-          ctx.beginPath();
-          ctx.moveTo(x, y - size);
-          ctx.lineTo(x - size, y + size);
-          ctx.lineTo(x + size, y + size);
-          ctx.closePath();
-
-      for (let index = 0; i < particles.length; i++) {
-        for (let inner_index = i + 1; j < particles.length; j++) {
-          const distance = Math.sqrt (
-            Math.pow (particles[i].x - particles[j].x, 2) +;
-              Math.pow (particles[i].y - particles[j].y, 2));
-          // Check condition
-if ( {) {
-  $2
-}
-            connections.push (new Connection (particles[i], particles[j]));          }          const distance = Math.sqrt (
-            Math.pow (particles[i].x - particles[j].x, 2) +;
-            Math.pow (particles[i].y - particles[j].y, 2));
-          // Check condition
-if ( {) {
-  $2
-}
-            connections.push (new Connection (particles[i], particles[j]));
-          }
-        }
-      }
-      // Draw connections;
-      connections.for_each (connection => connection.draw ());
-;
-      // Add floating geometric shapes;
-      // Check condition
-if (< 0.02) {) {
-  $2
-}
-        const coordinate_x = Math.random () * canvas.width;
-        const coordinate_y = Math.random () * canvas.height;
-        const size = Math.random () * 20 + 10;
-;
-        ctx.save ();
-        ctx.global_alpha = 0.1;
-        ctx.stroke_style = colors.accent;
-        ctx.line_width = 1;
-;
-        // Check condition
-if (< 0.5) {) {
-  $2
-}
-          // Draw triangle;
-          ctx.begin_path ();
-          ctx.move_to (x, y - size);
-          ctx.line_to (x - size, y + size);
-          ctx.line_to (x + size, y + size);
-          ctx.close_path ();
-          ctx.stroke ();
-
-        } else {
-          // Draw square;
-          ctx.stroke_rect (x - size, y - size, size * 2, size * 2);
-        }
-
-
-      // Draw connections;
-      connections && connections.forEach(connection => connection && connection.draw());
-      // Add floating geometric shapes;
-      if (Math && Math.random() < 0 && 0.02) {;
-        const x = Math && Math.random() * canvas && canvas.width;
-        const y = Math && Math.random() * canvas && canvas.height;
-        const size = Math && Math.random() * 20 + 10;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = 0 && 0.1;
-        ctx && ctx.strokeStyle = colors && colors.accent;
-        ctx && ctx.lineWidth = 1;
-        if (Math && Math.random() < 0 && 0.5) {;
-          // Draw triangle;
-          ctx && ctx.beginPath();
-          ctx && ctx.moveTo(x, y - size);
-          ctx && ctx.lineTo(x - size, y + size);
-          ctx && ctx.lineTo(x + size, y + size);
-          ctx && ctx.closePath();
-          ctx && ctx.stroke();
-        } else {;
-          // Draw square;
-          ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-        for (let i = 0, i < drops.length, i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)]
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
-
-=======
       return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0
           }
           drops[i]++
         }
-<<<<<<< HEAD
-      },
-
-      return drawMatrix
-    },
-
-    const drawMatrix = matrixRain()
-
-    // Main animation loop
-    const animate = () => {
-      // Clear canvas with fade effect
-      ctx.fillStyle = colors.background,
-      ctx.fillRect(0, 0, canvas.width, canvas.height),
-
-      // Draw matrix rain
-      drawMatrix(),
-
-      // Update and draw particles
-      particles.forEach(particle => {
-        particle.update(),
-        particle.draw()
-      }),
-
-      // Remove dead particles and add new ones
-      particles = particles.filter(particle => !particle.isDead()),
-      while (particles.length < settings.particleCount) {
-        particles.push(new Particle())
-      }
-
-      // Create connections between nearby particles
-      connections = [],
-      for (let i = 0, i < particles.length, i++) {
-        for (let j = i + 1, j < particles.length, j++) {
-          const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
-          ),
-          if (distance < 150) {
-            connections.push(new Connection(particles[i], particles[j]))
-          }
-
-        }
-      }
-
-      // Draw connections
-      connections.forEach(connection => connection.draw()),
-
-      // Add floating geometric shapes
-      if (Math.random() < 0.02) {
-        const x = Math.random() * canvas.width
-        const y = Math.random() * canvas.height
-        const size = Math.random() * 20 + 10
-        
-        ctx.save(),
-        ctx.globalAlpha = 0.1,
-        ctx.strokeStyle = colors.accent,
-        ctx.lineWidth = 1,
-        
-        if (Math.random() < 0.5) {
-          // Draw triangle
-          ctx.beginPath(),
-          ctx.moveTo(x, y - size),
-          ctx.lineTo(x - size, y + size),
-          ctx.lineTo(x + size, y + size),
-          ctx.closePath(),
-
-          ctx.stroke()
-        } else {
-          // Draw square
-          ctx.strokeRect(x - size, y - size, size * 2, size * 2)
-
-        }
-
-        ctx && ctx.restore();
-      }
-      // Respect reduced motion;
-      const prefersReduced = window && window.matchMedia(;
-        '(prefers-reduced-motion: reduce)';
-      ).matches;
-      if (prefersReduced) {;
-        // Slow down updates;
-        setTimeout(() => {;
-          animationRef && animationRef.current = requestAnimationFrame(animate);
-        }, 100);
-      } else {;
-        animationRef && animationRef.current = requestAnimationFrame(animate);      }        } else {;
-          // Draw square;
-          ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2);
-        }
-
-
-        ctx && ctx.restore();
-=======
 
       }
 
@@ -978,12 +677,10 @@ if (< 0.5) {) {
         animationRef && animationRef.current = requestAnimationFrame(animate);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     animate();
 
-=======
         cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
@@ -1025,12 +722,9 @@ if (< 0.5) {) {
 export default EnhancedFuturisticBackground;
 
 
-=======
 
 export default EnhancedFuturisticBackground;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
         }}
       />;
@@ -1041,4 +735,3 @@ export default EnhancedFuturisticBackground;
 ;
 export default EnhancedFuturisticBackground;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

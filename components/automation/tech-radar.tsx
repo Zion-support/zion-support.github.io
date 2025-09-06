@@ -3,7 +3,6 @@
  
 
 
-=======
 
 import fs from 'fs';
 import path from 'path';
@@ -36,13 +35,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
         crates: data && data.ecosystems.crates || [],;
         github: data && data.ecosystems.github || {}},;
 
-=======
 
         pypi: data.ecosystems.pypi || [],
         crates: data.ecosystems.crates || [],
         github: data.ecosystems.github || {}},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
@@ -69,7 +66,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className="text-xs text-gray-500">Downloads: {it.downloads.toLocaleString()}</div>
-=======
 };
 export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   const langs = Object && Object.keys(github);
@@ -87,7 +83,6 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
               <a href={it && it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it && it.name}</a>;
               {typeof it && it.downloads === 'number' && (;
                 <div className="text-xs text-gray-500">Downloads: {it && it.downloads.toLocaleString()}</div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </li>;
           ))}
@@ -124,7 +119,6 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
   );
 }
 
-=======
 }
 ;
 export default /**
@@ -191,14 +185,8 @@ export default function TechRadar({ pypi, crates, github }: Props) {
               <a href={it.url} target=&quot;_blank&quot; rel=&quot;noreferrer&quot; className=&quot;font-medium text-blue-600 dark:text-cyan-400&quot;>{it.name}</a>
               {typeof it.downloads === 'number' && (
                 <div className=&quot;text-xs text-gray-500&quot;>Downloads: {it.downloads.toLocaleString()}</div>
-=======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

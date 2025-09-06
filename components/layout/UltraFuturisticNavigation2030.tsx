@@ -35,11 +35,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu,
   X,
   ChevronDown,
@@ -130,7 +127,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -139,11 +135,9 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
   { name: 'Blog', href: '/blog', icon: MessageCircle }
-=======
 ];
 
 const mainNavigation = [
-=======
     services: [;
       {
         name: 'Space Mining Automation Platform',
@@ -213,7 +207,6 @@ const mainNavigation = [
     ];
   }
 const main_navigation = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
   { name: 'Solutions', href: '/solutions', icon: Layers },
@@ -221,7 +214,6 @@ const main_navigation = [;
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
   { name: 'Blog', href: '/blog', icon: MessageCircle },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
 
@@ -229,26 +221,22 @@ const main_navigation = [;
 
 
 export default function UltraFuturisticNavigation2030() {
-=======
 
 
 export default function UltraFuturisticNavigation2030() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
 
-=======
       setIsScrolled(window.scrollY > 20)
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -318,7 +306,6 @@ export default function UltraFuturisticNavigation2030() {;
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>;
       {/* Top Contact Bar */}
@@ -338,7 +325,6 @@ export default function UltraFuturisticNavigation2030() {;
             </div>
             <div className='flex items-center space-x-2'>
               <Globe className='w-4 h-4 text-cyan-400' />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
 
       <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm">
@@ -349,7 +335,6 @@ export default function UltraFuturisticNavigation2030() {;
               <span>{contactInfo.mobile}</span>
 
             </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4 text-cyan-400" />
               <span>{contactInfo.email}</span>
@@ -369,143 +354,6 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-href={contactInfo && contactInfo.website}
-                className='hover:text-cyan-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}              <span>{contactInfo && contactInfo.mobile}</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Mail className="w-4 h-4 text-cyan-400" />;
-              <span>{contactInfo && contactInfo.email}</span>;
-            </div>;
-          </div>;
-          <div className="flex items-center space-x-4">;
-            <div className="flex items-center space-x-2">;
-              <MapPin className="w-4 h-4 text-cyan-400" />;
-              <span>{contactInfo && contactInfo.address}</span>;
-            </div>;
-            <div className="flex items-center space-x-2">;
-              <Globe className="w-4 h-4 text-cyan-400" />;
-              <a href={contactInfo && contactInfo.website} className="hover:text-cyan-400 transition-colors">;
-                {contactInfo && contactInfo.website.replace('https://', '')}
-;
-const quick_links = [;
-  {
-    name: 'AI Services',
-    href: '/services / ai',
-    icon: Brain,
-    color: 'from - purple - 500 to - pink - 500',
-  },
-  {
-    name: 'Quantum Tech',
-    href: '/services / quantum',
-    icon: Atom,
-    color: 'from - blue - 500 to - cyan - 500',
-  },
-  {
-    name: 'Biotech Solutions',
-    href: '/services / biotech',
-    icon: Microscope,
-    color: 'from - green - 500 to - emerald - 500',
-  },
-  {
-    name: 'Space Technology',
-    href: '/services / space',
-    icon: Rocket,
-    color: 'from - indigo - 500 to - purple - 500',
-  },
-  {
-    name: 'Enterprise IT',
-    href: '/services / enterprise',
-    icon: Cpu,
-    color: 'from - gray - 500 to - slate - 500',
-  },
-  {
-    name: 'Micro SAAS',
-    href: '/services / micro - saas',
-    icon: Target,
-    color: 'from - orange - 500 to - red - 500',
-  }, ];  { name: 'AI Services', href: '/services / ai', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
-  { name: 'Quantum Tech', href: '/services / quantum', icon: Atom, color: 'from - blue - 500 to - cyan - 500' },
-  { name: 'Biotech Solutions', href: '/services / biotech', icon: Microscope, color: 'from - green - 500 to - emerald - 500' },
-  { name: 'Space Technology', href: '/services / space', icon: Rocket, color: 'from - indigo - 500 to - purple - 500' },
-  { name: 'Enterprise IT', href: '/services / enterprise', icon: Cpu, color: 'from - gray - 500 to - slate - 500' },
-  { name: 'Micro SAAS', href: '/services / micro - saas', icon: Target, color: 'from - orange - 500 to - red - 500' }
-export default /**
- * UltraFuturisticNavigation2030 - Function description
- */
-function UltraFuturisticNavigation2030() {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_category, setActiveCategory] = useState < number | null>(null);
-  const [is_scrolled, setIsScrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 20);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);  }, []);      setIsScrolled (window.scroll_y > 20);
-    }
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  const toggle_menu = () =>: any setIsOpen (!is_open);
-  const close_menu = () =>: any setIsOpen (false);
-;
-  return (
-    <>;
-      {/* Top Contact Bar */}
-      <div className='bg - gradient - to - r from - slate - 900 via - purple - 900 to - slate - 900 text - white py - 2 px - 4 text - sm'>;
-        <div className='max - w-7xl mx - auto flex flex - wrap items - center justify - between'>;
-          <div className='flex items - center space - x-6'>;
-            <div className='flex items - center space - x-2'>;
-              <Phone className='w - 4 h - 4 text - cyan - 400' />;
-              <span>{contact_info.mobile}</span>;
-            </div>;
-            <div className='flex items - center space - x-2'>;
-              <Mail className='w - 4 h - 4 text - cyan - 400' />;
-              <span>{contact_info.email}</span>;
-            </div>;
-          </div>;
-          <div className='flex items - center space - x-4'>;
-            <div className='flex items - center space - x-2'>;
-              <MapPin className='w - 4 h - 4 text - cyan - 400' />;
-              <span>{contact_info.address}</span>;
-            </div>;
-            <div className='flex items - center space - x-2'>;
-              <Globe className='w - 4 h - 4 text - cyan - 400' />;
-              <a;
-                href={contact_info.website}
-                className='hover:text - cyan - 400 transition - colors';
-              >                {contact_info.website.replace ('https://', '')}              <span>{contact_info.mobile}</span>;
-            </div>;
-            <div className="flex items - center space - x-2">;
-              <Mail className="w - 4 h - 4 text - cyan - 400" />;
-              <span>{contact_info.email}</span>;
-            </div>;
-          </div>;
-          <div className="flex items - center space - x-4">;
-            <div className="flex items - center space - x-2">;
-              <MapPin className="w - 4 h - 4 text - cyan - 400" />;
-              <span>{contact_info.address}</span>;
-            </div>;
-            <div className="flex items - center space - x-2">;
-              <Globe className="w - 4 h - 4 text - cyan - 400" />;
-              <a href={contact_info.website} className="hover:text - cyan - 400 transition - colors">;
-                {contact_info.website.replace ('https://', '')}
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
-          : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
-      }`}>
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-
-=======
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -513,8 +361,6 @@ function UltraFuturisticNavigation2030() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Logo */}
             <div className='flex items-center space-x-4'>;
               <Link href='/' className='flex items-center space-x-3 group'>;
@@ -597,7 +443,6 @@ function UltraFuturisticNavigation2030() {
                   key={item.name}
                   href={item.href}
 className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
-=======
       {/* Main Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -608,14 +453,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Logo */}
             <div className='flex items-center space-x-4'>
               <Link href='/' className='flex items-center space-x-3 group'>
@@ -696,7 +534,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                   key={item.name}
                   href={item.href}
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 >
                   <item.icon className="w-4 h-4 group-hover:text-purple-400 transition-colors" />
                   <span>{item.name}</span>
@@ -715,7 +552,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
                 {/* Mega Menu */}
 
-=======
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4">
                   <div className="p-8">
                     <div className="grid grid-cols-2 gap-8">
@@ -737,14 +573,11 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                                 href={service.href}
 
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             ))}
                           </div>;
                         </div>;
                       ))}
 
-=======
       {/* Main Navigation */}
       <nav;
         className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
@@ -902,11 +735,9 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <button
                 onClick={toggleMenu}
                 className='p-2 rounded-lg text-gray-400 hover:text-white hover:bg-purple-500/20 transition-colors duration-200'>;
@@ -926,12 +757,9 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -943,7 +771,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
             >
               <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Navigation Links */}
                 <div className='space-y-4'>;
                   {mainNavigation && mainNavigation.map(item => (                    <Link
@@ -967,7 +794,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                       <span>{item && item.name}</span>;
                     </Link>;
 
-=======
               className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20"
             >
               <div className="px-4 py-6 space-y-6">
@@ -984,15 +810,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 {/* Mobile Navigation Links */}
                 <div className='space - y-4'>;
                   {main_navigation.map (item => (                    <Link;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -1001,20 +819,12 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Navigation Links */}
                 <div className='space-y-4'>
                   {mainNavigation.map(item => (                    <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}
@@ -1024,17 +834,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               <div className="px - 4 py - 6 space - y-6">;
 
                 {/* Mobile Navigation Links */}
-<<<<<<< HEAD
-                <div className="space - y-4">;
-                  {main_navigation.map ((item) => (
-                    <Link;
-                      key={item.name}
-                      href={item.href}
-
-                </div>;
-
-
-=======
 
 
                     </Link>
@@ -1042,8 +841,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white px-3'>;
@@ -1081,8 +878,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
 
 
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       >;
                         <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
                         <span className='text-sm font-medium'>{link && link.name}</span>                      </Link>                          link && link.color.includes('from-') ;
@@ -1097,7 +892,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                         <span className="text-sm font-medium">{link.name}</span>
                       </Link>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </div>;
@@ -1107,7 +901,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 {/* Mobile CTA */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1126,7 +919,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                     className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'                    href="/pricing"
                     onClick={closeMenu}
                     className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200">;
-=======
                       on_click={close_menu}
                       className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - purple - 500 / 10 transition - colors duration - 200';
                     >;
@@ -1191,11 +983,8 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 </div>;
               </div>;
 
-=======
                 <div className="space-y-3 pt-4 border-t border-purple-500/20">
-=======
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
-=======
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>
 
                       </Link>
@@ -1207,12 +996,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 {/* Mobile CTA */}
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Link
                     href="/contact"
                     onClick={closeMenu}
@@ -1231,7 +1014,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               </div>
             </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </AnimatePresence>;
@@ -1245,12 +1027,9 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
     </>;
   );
 }
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
@@ -1266,8 +1045,5 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
     </>);
 }
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

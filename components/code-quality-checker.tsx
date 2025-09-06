@@ -26,11 +26,8 @@ import React, { useState } from 'react';
 
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 
-=======
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -51,7 +48,6 @@ import {
   Clock,;
   TrendingUp,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -68,7 +64,6 @@ export default function CodeQualityCheckerPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const pricing = [
     {
       name: 'Developer'
@@ -110,13 +105,11 @@ export default function CodeQualityCheckerPage() {;
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
       gradient: 'from-purple-400 to-indigo-500',;
     },;
-=======
         '100 code analyses/monthBasic quality metrics5 programming languagesEmail supportBasic reportingCommunity rules'
       ];
       popular: false
     };
     {
-=======
   const pricing = [;
     {
       name: 'Developer',
@@ -136,7 +129,6 @@ export default function CodeQualityCheckerPage() {;
       ];
       popular: false;
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       name: 'Team',
       price: '$79',
       period: '/month',
@@ -232,7 +224,6 @@ export default function CodeQualityCheckerPage() {;
           { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
         ];
-=======
 
             type: 'error',
             message: 'Missing semicolon at end of statement',
@@ -304,10 +295,8 @@ export default function CodeQualityCheckerPage() {;
           'Add proper error handling for better robustness',;
           'Consider adding JSDoc comments for better documentation',;
         ],;
-=======
           securityScore: '92%'
         }
-=======
             type: 'error',
             message: 'Missing semicolon at end of statement',
             line: 18,
@@ -321,14 +310,12 @@ export default function CodeQualityCheckerPage() {;
           testCoverage: '85%',
           securityScore: '92%',
         },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
           'Add proper error handling for better robustness'
           'Consider adding JSDoc comments for better documentation'
         ]
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       });
       setIsAnalyzing(false);
     }, 3000);  };      setIsAnalyzing(false);
@@ -454,7 +441,6 @@ export default function CodeQualityCheckerPage() {;
             </Button>;
             <Button
 
-=======
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -472,7 +458,6 @@ href="/contact"
               className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
             >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
 
             </Button>;
@@ -611,13 +596,11 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -669,22 +652,18 @@ href="/contact"
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Supported Languages Section */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -694,7 +673,6 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
-=======
           </div>;
         </div>;
       </section>;
@@ -712,7 +690,6 @@ href="/contact"
           </div>;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {supportedLanguages && supportedLanguages.map((language, index) => (;
-=======
                       {feature.icon}
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
@@ -723,15 +700,9 @@ href="/contact"
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
-=======
 
                       {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -740,27 +711,13 @@ href="/contact"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -770,7 +727,6 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {supportedLanguages.map((language, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Card
                 key={index}
                 className='card-hover border-gradient-teal'
@@ -824,7 +780,6 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -906,19 +861,10 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -984,7 +930,6 @@ href="/contact"
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Quality Score */}
               <Card className="border-gradient-teal text-center">;
                 <h3 className="text-2xl font-bold mb-6 text-white">Overall Quality Score</h3>;
@@ -1027,14 +972,12 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Quality Metrics */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -1053,7 +996,6 @@ href="/contact"
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
                     </span>                  </div>                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>
@@ -1081,7 +1023,6 @@ href="/contact"
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
                   </div>
-=======
             {/* Recommendations */}
             <Card className='border-gradient-teal'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1098,7 +1039,6 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>
             </Card>
@@ -1116,15 +1056,12 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricing.map((plan, index) => (              Simple Pricing
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Choose the code quality analysis plan that best fits your development needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1328,7 +1265,6 @@ href="/contact"
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
 
-=======
 
                 className={`card-hover border-gradient-teal ${plan.popular ? 'ring-2 ring-teal-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -1375,15 +1311,12 @@ href="/contact"
 
                       {feature}
                     </li>;
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
@@ -1393,26 +1326,12 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
-=======
                       {feature}
-=======
-<<<<<<< HEAD
-
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<Button
-                  href="/contact"
-=======
                 <Button
                   href="/contact"
                   size="lg"
@@ -1421,7 +1340,6 @@ href="/contact"
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-=======
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -1432,10 +1350,7 @@ href="/contact"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -1455,14 +1370,12 @@ href="/contact"
 
             Ready to Improve Your Code Quality?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
             better, safer, and more maintainable code.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               size='lg'
@@ -1476,7 +1389,6 @@ href="/contact"
               size='lg'
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
@@ -1484,19 +1396,8 @@ href="/contact"
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

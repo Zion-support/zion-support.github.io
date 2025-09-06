@@ -28,11 +28,9 @@ import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
 
-=======
 import { 
   Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -96,206 +94,12 @@ export default function ComprehensiveServicesShowcase() {
     ...comprehensiveMicroSaasServices,;
     ...specializedEmergingTechServices,;
   ];
-=======
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
-<<<<<<< HEAD
-      }
-    });
-
-
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
-    {;
-      id: 'AI & Machine Learning',;
-      name: 'AI & ML',;
-      icon: '🧠',;
-      count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning');
-        .length,;
-    },;
-    {;
-      id: 'Healthcare AI',;
-      name: 'Healthcare',;
-      icon: '🏥',;
-      count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length,;
-    },;
-    {;
-      id: 'Fintech AI',;
-      name: 'Fintech',;
-      icon: '💰',;
-      count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length,;
-    },;
-    {;
-      id: 'Cybersecurity',;
-      name: 'Security',;
-      icon: '🛡️',;
-      count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length,;
-    },;
-    {;
-      id: 'IoT & Smart Cities',;
-      name: 'Smart Cities',;
-      icon: '🏙️',;
-      count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities');
-        .length,;
-    },;
-    {;
-      id: 'Blockchain & DeFi',;
-      name: 'Blockchain',;
-      icon: '🔗',;
-      count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length,;
-    },;
-    {;
-      id: 'Quantum Computing',;
-      name: 'Quantum',;
-      icon: '⚛️',;
-      count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length,;
-    },;
-    {;
-      id: 'Space Technology',;
-      name: 'Space Tech',;
-      icon: '🚀',;
-      count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length,;
-    },;
-    {;
-      id: 'Autonomous Systems',;
-      name: 'Autonomous',;
-      icon: '🤖',;
-      count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems');
-        .length,;
-    },;
-    {;
-      id: 'AR/VR & Metaverse',;
-      name: 'AR/VR',;
-      icon: '🥽',;
-      count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length,;
-    },;
-    {;
-      id: '5G/6G Networks',;
-      name: '5G/6G',;
-      icon: '📡',;
-      count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length,;
-    },;
-    {;
-      id: 'Biotechnology AI',;
-      name: 'Biotech',;
-      icon: '🧬',;
-      count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length,;
-    },;
-    {;
-      id: 'Renewable Energy',;
-      name: 'Energy',;
-      icon: '⚡',;
-      count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length,;
-    },;
-    {;
-      id: 'Edge Computing',;
-      name: 'Edge',;
-      icon: '🌐',;
-      count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length,;
-    },;
-    {;
-      id: 'Quantum Internet',;
-      name: 'Q-Internet',;
-      icon: '🌍',;
-      count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length,;
-    },;
-    {;
-      id: 'Neuromorphic Computing',;
-      name: 'Neuro',;
-      icon: '🧠',;
-      count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing');
-        .length,;
-    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'AI & Machine Learning').length },;
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices && allServices.filter(s => s && s.category === 'Healthcare AI').length },;
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices && allServices.filter(s => s && s.category === 'Fintech AI').length },;
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices && allServices.filter(s => s && s.category === 'Cybersecurity').length },;
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices && allServices.filter(s => s && s.category === 'IoT & Smart Cities').length },;
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices && allServices.filter(s => s && s.category === 'Blockchain & DeFi').length },;
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices && allServices.filter(s => s && s.category === 'Quantum Computing').length },;
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices && allServices.filter(s => s && s.category === 'Space Technology').length },;
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices && allServices.filter(s => s && s.category === 'Autonomous Systems').length },;
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices && allServices.filter(s => s && s.category === 'AR/VR & Metaverse').length },;
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices && allServices.filter(s => s && s.category === '5G/6G Networks').length },;
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices && allServices.filter(s => s && s.category === 'Biotechnology AI').length },;
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices && allServices.filter(s => s && s.category === 'Renewable Energy').length },;
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices && allServices.filter(s => s && s.category === 'Edge Computing').length },;
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices && allServices.filter(s => s && s.category === 'Quantum Internet').length },;
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices && allServices.filter(s => s && s.category === 'Neuromorphic Computing').length }
-  // Filter and sort services;
-  const filteredServices = allServices;
-    .filter(service => {;
-      const matchesCategory =;
-        selectedCategory === 'all' || service && service.category === selectedCategory;
-      const matchesSearch =;
-        service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;    })      const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
-      const matchesSearch = service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-                           service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    .sort((a, b) => {;
-      switch (sortBy) {;
-        case 'popularity':;
-          return b && b.popular ? 1 : -1;
-        case 'price':;
-          return (
-            parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
-            parseFloat(b && b.price.replace('$', '').replace(',', ''));
-          );
-        case 'rating':;
-          return b && b.rating - a && a.rating;
-        case 'newest':;
-          return (
-            new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
-          );
-        default:;
-          return 0;      }          return parseFloat(a && a.price.replace('$', '').replace(, '')) - parseFloat(b && b.price.replace('$', '').replace(, ''));
-        case 'rating':;
-          return b && b.rating - a && a.rating;
-        case 'newest':;
-          return new Date(b && b.launchDate).getTime() - new Date(a && a.launchDate).getTime();
-        default: return 0;
-    });
-
-
-
-
-
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category);
-
-
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = categories && categories.find(cat => cat && cat.id === category);
-    return categoryData?.icon || '🚀';
-  };
-
-  const formatPrice = (price: string) => {;
-    return price && price.replace('$', '').replace(',', '');
-  };
-
-  return (
-    <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>;
-      <div className='max-w-7xl mx-auto'>        {/* Header */}  };
-
-
-  const formatPrice = (price: string) => {;
-    return price && price.replace('$', '').replace(, '');
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-  return (
-
-
-        {/* Header */}
-        <motion&& motion.div
-=======
 
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>        {/* Header */}
@@ -304,7 +108,6 @@ export default function ComprehensiveServicesShowcase() {
 
 
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -478,13 +281,9 @@ export default function ComprehensiveServicesShowcase() {
           </div>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -495,7 +294,6 @@ export default function ComprehensiveServicesShowcase() {
 
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5' />
@@ -511,12 +309,10 @@ export default function ComprehensiveServicesShowcase() {
 
             {/* Sort and View Controls */}
 
-=======
           className="mb-12"
         >
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Search */}
             <div className="relative flex-1 max-w-md">;
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />;
@@ -913,8 +709,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                 </button>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
           </div>
@@ -928,13 +722,9 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           </div>;
         </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Category Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -943,7 +733,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
           viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category.id}
                 on_click={() => setSelectedCategory (category.id)}
                 className={`px - 6 py - 3 rounded - full font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -959,7 +748,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion && motion.div>;
 
 
-=======
 
 
             ))}
@@ -967,8 +755,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion.div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Display */}
         {viewMode === 'grid' ? (;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -976,26 +762,15 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filteredServices && filteredServices.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.id}
-=======
                 <span className='text-xs bg-white/20 px-2 py-1 rounded-full'>
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </motion.div>
-=======
 
             ))}
           </div>
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Display */}
         {viewMode === 'grid' ? (
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            <AnimatePresence>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1003,7 +778,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
@@ -1041,7 +815,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
 
 
-=======
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
@@ -1049,9 +822,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   )}
                   {/* Service Content */}
 
@@ -1083,29 +854,18 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
-=======
                         </div>;
                       </div>;
                     </div>;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
-=======
                         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       {service.name}
                     </h3>;
                     <p className='text - white / 70 text - sm mb - 4'>;
@@ -1175,36 +935,23 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                     <div className='grid grid - cols - 3 gap - 4 mb - 6 text - center'>;
                       <div>;
                         <div className='text - lg font - bold text - blue - 400'>;
-=======
 
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.rating}
 
                     </div>
-<<<<<<< HEAD
-                    {/* Stats */}
-                    <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-=======
 
                     {/* Stats */}
                     <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           {service.rating}
                     </div>
                     {/* Stats */}
@@ -1256,17 +1003,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                         <div className="text-xs text-white/60">Trial</div>;
                       </div>;
                     </div>;
-=======
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
                     {/* CTA */}
                     <a
 
@@ -1284,19 +1025,11 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           Popular
 
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </div>
-<<<<<<< HEAD
-{/* Center - Service Details */}
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-=======
                     {/* Center - Service Details */}
                     <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
-=======
                         <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full text-center'>                          Popular
 
                           Popular
@@ -1312,7 +1045,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -1331,7 +1063,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                           <div className='text-white/60'>{service.period}</div>                        </div>
                       </div>
                       {/* Features Grid */}                        <div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-white/70 text-lg mb-3">{service.tagline}</p>
                           <p className="text-white/60 text-sm">{service.description}</p>
@@ -1384,28 +1115,20 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                             {service.rating} ({service.reviews} reviews)
                           </span>
                         </div>                        </div>
-=======
                       <div className="grid grid-cols-2 gap-2 mb-4">
                         {service.features.slice(0, 6).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="truncate">{feature}</span>
                           </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>
-=======
 
                           </div>
 
                         ))}
                       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Stats Row */}
                       <div className="flex items-center gap-6 text-sm text-white/60">
                         <div className="flex items-center gap-2">
@@ -1478,7 +1201,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                       </div>;
                       <a
 
-=======
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1491,7 +1213,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   </div>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 </AnimatePresence>;
           </div>;
@@ -1508,7 +1229,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             animate={{ opacity: 1 }}
 
 
-=======
             className='text-center py-20'
           >
             <div className='text-6xl mb-4'>🔍</div>
@@ -1519,30 +1239,19 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               Try adjusting your search or filter criteria
 
 
-=======
             </p>          </motion.div>
 
           </motion.div>
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             </p>          </motion.div>
 
           </motion.div>
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Contact CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -1561,7 +1270,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               SAAS services to drive innovation and growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='mailto:kleber@ziontechgroup.com'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2'
@@ -1581,7 +1289,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 
-=======
           className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -1593,39 +1300,7 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
-<<<<<<< HEAD
-                href="mailto:kleber@ziontechgroup && ziontechgroup.com"
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2">;
-                Contact Sales Team;
-                <ArrowRight className="w-5 h-5" />;
-              </a>;
-              <a
-                href="tel:+13024640950"
-
-
-                Call +1 302 464 0950;
-              </a>;
-            </div>;
-          </div>;
-
-
-}
-        </motion.div>;
-      </div>;
-    </section>);
-              <a
-                href=&quot;mailto:kleber@ziontechgroup.com&quot;
-                className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
-              >
-                Contact Sales Team
-                <ArrowRight className=&quot;w-5 h-5&quot; />
-              </a>
-              <a
-                href=&quot;tel:+13024640950&quot;
-                className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
-=======
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
               >
@@ -1635,7 +1310,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
               <a
                 href="tel:+13024640950"
                 className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 Call +1 302 464 0950
               </a>
@@ -1644,16 +1318,5 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-  )
-
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

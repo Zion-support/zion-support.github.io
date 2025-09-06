@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -24,27 +5,6 @@ import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Trending
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { DollarSign, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, TrendingUp, Lock, CreditCard, Database, FileText, Users } from 'lucide-react';;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import { DollarSign, 
   Brain, 
   Shield, 
@@ -55,7 +15,6 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   DollarSign,
   Brain,
@@ -67,36 +26,14 @@ import {
   Lock,
   CreditCard,
   Database,
-<<<<<<< HEAD
-import { DollarSign, ;
-  Brain, ;
-  Shield, ;
-  BarChart3, ;
-import {;
-  DollarSign,;
-  Brain,;
-  Shield,;
-  BarChart3,;
-  CheckCircle,;
-  ArrowRight,;
-  TrendingUp,;
-  Lock,;
-  CreditCard,;
-  Database,;
-  FileText,;
-=======
   FileText,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Users;
 } from 'lucide-react';
 import Layout from '../../components/Layout';';
 const services = [;
   {}
-<<<<<<< HEAD
-=======
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -183,10 +120,6 @@ const benefits = [;
     title: 'Enhanced Security,',;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
-<<<<<<< HEAD
-    icon: Shield,;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];
 const benefits = [;
   {;
@@ -296,8 +229,6 @@ export default function FinancePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 ];
 export default function FinancePage() {
   return (
@@ -345,17 +276,13 @@ export default function FinancePage() {
             </motion.div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Section */}
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -368,13 +295,10 @@ export default function FinancePage() {
                 Comprehensive fintech solutions designed for banks, financial institutions, ;
                 and fintech startups.;
               </p>;
-<<<<<<< HEAD
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -460,12 +384,6 @@ export default function FinancePage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -487,10 +405,7 @@ export default function FinancePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -503,13 +418,10 @@ export default function FinancePage() {
                 Our financial technology solutions deliver enhanced security, improved efficiency, ;
                 and regulatory compliance for financial institutions.;
               </p>;
-<<<<<<< HEAD
-=======
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -555,12 +467,6 @@ export default function FinancePage() {
             </div>,
           </div>;
         </section>;
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -582,10 +488,7 @@ export default function FinancePage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Financial Services?;

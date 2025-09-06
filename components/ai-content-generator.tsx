@@ -4,9 +4,7 @@ import React from 'react';
     },  ];        'Unlimited wordsAll templates + customFull SEO suiteDedicated supportUnlimited API accessAdvanced analyticsWhite-label solutionCustom integrations';
         'SLA guarantee';
 
-=======
     {
-=======
       features: [;
         '10, 000 words per month',
         '25+ content templates',
@@ -180,7 +178,6 @@ import React from 'react';
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },;
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },;
 
-=======
       features: [;
         'Unlimited words',
         'All templates + custom',
@@ -188,100 +185,15 @@ import React from 'react';
         'Dedicated support',
         'Unlimited API access',
         'Advanced analytics',
-<<<<<<< HEAD
-        'White - label solution',
-=======
         'White-label solution',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         'Custom integrations',
         'SLA guarantee',
       ],
       popular: false,
-<<<<<<< HEAD
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700',
-    },  ];        'Unlimited words_all templates + custom_full SEO suite_dedicated support_unlimited API access_advanced analytics_white - label solution_custom integrations';
-        'SLA guarantee';
-      ];
-      popular: false,
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700';
-    }
-  const use_cases = [;
-    {
-      title: 'Blog Writing',
-      description:;
-        'Generate engaging blog posts, articles, and long - form content in minutes.',
-      examples: [;
-        'Tech reviews',
-        'How - to guides',
-        'Industry insights',
-        'Product comparisons',
-      ],
-    },
-    {
-      title: 'Marketing Copy',
-      description:;
-        'Create compelling ad copy, landing pages, and marketing materials.',
-      icon: '🎯',
-      examples: [;
-        'Facebook ads',
-        'Google ads',
-        'Landing pages',
-        'Email campaigns',
-      ],
-    },
-    {
-      title: 'Social Media',
-      description:;
-        'Generate engaging social media posts, captions, and hashtag suggestions.',
-      icon: '📱',
-      examples: [;
-        'Instagram posts',
-        'Twitter threads',
-        'LinkedIn articles',
-        'TikTok captions',
-      ],
-    },
-    {
-      title: 'E - commerce',
-      description:;
-        'Write product descriptions, category pages, and promotional content.',
-      icon: '🛍️',
-      examples: [;
-        'Product descriptions',
-        'Category pages',
-        'Promotional emails',
-        'FAQ sections',
-      ],
-    },  ];
-;
-  const integrations = [;
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },      examples: ['Product descriptions_category pages_promotional emailsFAQ sections'];
-    }
-  ];
-;
-  const integrations = [;
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-    {
-      name: 'Shopify',
-      icon: '🛒',
-      description: 'E - commerce content automation',
-    },
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '🛒', description: 'E - commerce content automation' },
-    { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
-    { name: 'Slack', icon: '💬', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
 
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <Head>;
@@ -396,7 +308,6 @@ import React from 'react';
                 </p>;
               </Card>;
 
-=======
               Everything you need to create exceptional content at scale
             </p>
           </div>
@@ -594,18 +505,14 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </p>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -677,7 +584,6 @@ import React from 'react';
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
 
-=======
               Versatile content creation for every industry and purpose
             </p>
           </div>
@@ -701,19 +607,13 @@ import React from 'react';
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {example}
-<<<<<<< HEAD
-                        </div>;
-=======
 
 
                           {example}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </div>;
                   </div>;
@@ -725,7 +625,6 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -893,7 +792,6 @@ import React from 'react';
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
                 className={`relative group ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''} border ${plan.color} hover:border-purple-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
@@ -953,16 +851,13 @@ import React from 'react';
                 </Button>;
               </Card>;
 
-=======
                       {feature}
-=======
 
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </li>
                   ))}
                 </ul>
@@ -976,15 +871,12 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1043,7 +935,6 @@ import React from 'react';
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
 
-=======
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -1060,15 +951,11 @@ import React from 'react';
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
               </Card>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           </div>;
@@ -1087,7 +974,6 @@ import React from 'react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1095,7 +981,6 @@ import React from 'react';
             every day with AI-powered content generation.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1117,20 +1002,17 @@ import React from 'react';
           </p>;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
-=======
       <section className="py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Content Creation?
           </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join thousands of content creators who are already saving hours every day with AI-powered content generation.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <Button
               href="/contact"
               variant="secondary"
@@ -1153,7 +1035,6 @@ import React from 'react';
 
   );
 }
-=======
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1169,7 +1050,5 @@ import React from 'react';
     </>);
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

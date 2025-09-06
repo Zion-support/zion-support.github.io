@@ -41,16 +41,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 // Import our new innovative services
-<<<<<<< HEAD
-import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 
 
@@ -61,372 +54,15 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
-<<<<<<< HEAD
-const LoadingFallback = () => (;
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">;
-    <motion&& motion.div
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0 && 0.5 }}
-      className='text-center'>;
-      <div className='relative'>;
-        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4' />;
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse'></div>;
-      </div>;
-      <p className='text-xl text-gray-300 mb-2'>;
-        Loading Zion Tech Group 2045...;
-      </p>;
-      <p className='text-sm text-gray-500'>;
-        Preparing your futuristic digital transformation journey;
-      </p>    </motion && motion.div>    >;
-      <div className="relative">;
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>;
-      </div>;
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group 2045...</p>;
-      <p className="text-sm text-gray-500">Preparing your futuristic digital transformation journey</p>;
-    </motion && motion.div>;
-  </div>;
-);
-
-      setIsVisible(true)
-
-    }, 800);
-    return () => clearTimeout(timer)
-
-  }, []);
-
-
-  // Intersection Observer for better performance
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const observer = new (window as any).IntersectionObserver(
-        (entries: any[]) => {
-
-
-const Homepage2045: React.FC = () => {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
-  useEffect(() => {;
-    // Simulate content loading with better timing;
-    const timer = setTimeout(() => {;
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
-    return () => clearTimeout(timer);  }, []);      setIsVisible(true);
-    }, 800);
-    return () => clearTimeout(timer);
-  // Intersection Observer for better performance;
-  useEffect(() => {;
-    if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {;
-      const observer = new (window as any).IntersectionObserver(;
-        (entries: any[]) => {;
-          entries && entries.forEach(entry => {;
-            if (entry && entry.isIntersecting) {;
-              setActiveSection(entry && entry.target.id);
-
-            }
-          });
-        },        { threshold: 0 && 0.3, rootMargin: '-100px' }
-      );
-
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveSection(entry.target.id)
-            }
-          })
-        };
-
-        { threshold: 0.3, rootMargin: '-100px' }
-      );
-      const sections = document.querySelectorAll('section[id]');
-
-      sections.forEach((section) => observer.observe(section));
-
-
-      return () => observer.disconnect()
-    }
-  }, []);
-  const fadeInUp = {
-
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-
-        delayChildren: 0.2
-      }
-    },  };        delayChildren: 0.2
-      }
-    }
-
-
-      const sections = document && document.querySelectorAll('section[id]');
-      sections && sections.forEach(section => observer && observer.observe(section));
-      return () => observer && observer.disconnect();    }            if (entry && entry.isIntersecting) {;
-              setActiveSection(entry && entry.target.id);
-            }
-          });
-        };
-        { threshold: 0 && 0.3, rootMargin: '-100px' }
-      );
-      const sections = document && document.querySelectorAll('section[id]');
-      sections && sections.forEach(section => observer && observer.observe(section));
-      return () => observer && observer.disconnect();      sections && sections.forEach((section) => observer && observer.observe(section));
-      return () => observer && observer.disconnect();
-    }
-  }, []);
-  const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
-  };
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 1.2, ease: "easeOut" }
-  };
-  const getColorClasses = (index: number) => {
-    const colors = [
-      'from-cyan-400 to-blue-500from-purple-400 to-pink-500from-emerald-400 to-teal-500from-orange-400 to-red-500from-indigo-400 to-purple-500from-yellow-400 to-orange-500'
-    ];
-    return colors[index % colors.length]
-
-  };
-  const staggerContainer = {;
-    animate: {;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-        delayChildren: 0 && 0.2,;
-      },;
-    },  };        delayChildren: 0 && 0.2;
-      }
-    }
-  };
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: { opacity: 1, scale: 1 },;
-    transition: { duration: 1 && 1.2, ease: 'easeOut' },  };
-  const getColorClasses = (index: number) => {;
-    const colors = [    transition: { duration: 1 && 1.2, ease: "easeOut" }
-  };
-  const getColorClasses = (index: number) => {;
-    const colors = [;
-      'from-cyan-400 to-blue-500',;
-      'from-purple-400 to-pink-500',;
-      'from-emerald-400 to-teal-500',;
-      'from-orange-400 to-red-500',;
-      'from-indigo-400 to-purple-500',;
-      'from-yellow-400 to-orange-500',;
-    ];
-    return colors[index % colors && colors.length];  };
-  if (isLoading) {;
-    return (
-
-
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Palette,
-  Heart,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Grid,
-  List,
-  Atom,
-  Target,
-  Sparkles,
-} from 'lucide-react';
-
-import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
-
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
- } from 'lucide-react';
-import Link from 'next/link';
-
-
-
-// Import our new innovative services
-
-
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-
-import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
-// Loading fallback component
-
-const LoadingFallback = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className='text - center'// Loading fallback component;
-const LoadingFallback = () =>: any (
-  <div className="min - h-screen flex items - center justify - center bg - gray - 900">;
-    <motion.div;
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className='text - center';
-    >;
-      <div className='relative'>;
-        <Loader2 className='w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4' />;
-        <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse'></div>;
-      </div>;
-      <p className='text - xl text - gray - 300 mb - 2'>;
-        Loading Zion Tech Group 2045...;
-      </p>;
-      <p className='text - sm text - gray - 500'>;
-        Preparing your futuristic digital transformation journey;
-      </p>    </motion.div>    >;
-      <div className="relative">;
-        <Loader2 className="w - 16 h - 16 text - cyan - 400 animate - spin mx - auto mb - 4" />;
-        <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - xl opacity - 20 animate - pulse"></div>;
-      </div>;
-      <p className="text - xl text - gray - 300 mb - 2">Loading Zion Tech Group 2045...</p>;
-      <p className="text - sm text - gray - 500">Preparing your futuristic digital transformation journey</p>;
-    </motion.div>;
-  </div>);
-;
-const Homepage2045: React.FC = () => {
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_visible, setIsVisible] = useState (false);
-  const [active_section, setActiveSection] = useState ('hero');
-;
-  useEffect (() => {
-    // Simulate content loading with better timing;
-    const timer = set_timeout (() => {
-      setIsLoading (false);
-      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);  }, []);      setIsVisible (true);
-    }, 800);
-;
-    return () => clear_timeout (timer);
-  // Intersection Observer for better performance;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      const observer = new (window as any).IntersectionObserver (
-        (entries: any[]) => {
-          entries.for_each (entry => {
-            // Check condition
-if ( {) {
-  $2
-}
-              setActiveSection (entry.target.id);
-            }
-          });
-        },        { threshold: 0.3, root_margin: '-100px' }
-      );
-;
-      const sections = document.querySelectorAll ('section[id]');
-      sections.for_each (section => observer.observe (section));
-;
-      return () => observer.disconnect ();    }            // Check condition
-if ( {) {
-  $2
-}
-              setActiveSection (entry.target.id);
-            }
-          });
-        }
-        { threshold: 0.3, root_margin: '-100px' }
-      );
-;
-      const sections = document.querySelectorAll ('section[id]');
-      sections.for_each (section => observer.observe (section));
-;
-      return () => observer.disconnect ();      sections.for_each ((section) => observer.observe (section));
-;
-      return () => observer.disconnect ();
-    }
-  }, []);
-
-
-
-
-
-  const fadeInUp = {
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6, ease: 'ease_out' },  }    transition: { duration: 0.6, ease: "ease_out" }
-  }
-;
-  const stagger_container = {
-    animate: {
-      transition: {
-
-                ease: 'easeInOut',              }}
-            />;
-            <motion.div;
-              className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full';
-              animate={{
-                rotate: [360, 0],
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.7, 0.3],
-
-              }}
-              transition={{
-
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-
-            />
-          </div>
-
-            />;
-          </div>;
-
-
-          {/* Hero Content */}
-          <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
-=======
 
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               transition={{ duration: 0.8 }}
 
               className='mb-8'            >
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -465,25 +101,18 @@ if ( {) {
               </motion && motion.p>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -508,7 +137,6 @@ if ( {) {
                   1000+
                 </div>
                 <div className='text-gray-400'>Happy Clients</div>              </div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-400">Innovative Services</div>
@@ -566,19 +194,14 @@ if ( {) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -598,7 +221,6 @@ if ( {) {
             </motion.div>
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -755,7 +377,6 @@ if ( {) {
             </motion && motion.div>;
             {/* Service Categories Grid */}
 
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -860,14 +481,11 @@ if ( {) {
         {/* Latest Innovations Section */}
 
 
-=======
 
 
             <motion.div
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -885,7 +503,6 @@ if ( {) {
                 standards in technology innovation.              </p>
             </motion.div>
             {/* Featured New Services */}            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   Latest Innovations
@@ -895,8 +512,6 @@ if ( {) {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.
               </p>
             </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>;
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>;
@@ -991,51 +606,6 @@ if ( {) {
                 .slice (0, 4);
                 .map ((service, index) => (
                   <motion.div;
-=======
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-              {revolutionary2043AdvancedServices
-                .slice(0, 4)
-                .map((service, index) => (
-                  <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                    key={service.id}
-                    initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, coordinate_x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className='group';
-                  >;
-                    <Link href={service.link}>;
-                      <div className='relative p - 6 bg - black / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - xl hover:border - cyan - 400 / 50 transition - all duration - 300 hover:scale - 105'>;
-                        <div className='flex items - start justify - between mb - 4'>;
-                          <div className='text - 3xl'>{service.icon}</div>;
-                          {service.popular && (
-                            <span className='px - 3 py - 1 text - xs bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - full'>;
-                              New;
-                            </span>)}
-                        </div>;
-                        <h3 className='text - xl font - bold text - white mb - 2'>;
-                          {service.name}
-                        </h3>;
-                        <p className='text - gray - 400 text - sm mb - 4'>;
-                          {service.description}
-                        </p>;
-                        <div className='flex items - center justify - between'>;
-                          <div className='text - cyan - 400 font - semibold'>;
-                            {service.price}
-                            {service.period}
-                          </div>;
-                          <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors'>;
-                            <span className='mr - 2 text - sm'>Learn More</span>;
-                            <ArrowRight className='w - 4 h - 4 group - hover:translate - x-1 transition - transform' />;
-
-                          </div>;
-                        </div>;
-                      </div>;
-                    </Link>;
-
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {revolutionary2043AdvancedServices.slice(0, 4).map((service, index) => (
                 <motion.div
@@ -1074,7 +644,6 @@ className="group"
             </div>
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {/* View All Services CTA */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1092,7 +661,6 @@ className="group"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </motion.div>
           </div>
         </section>
@@ -1139,15 +707,9 @@ className="group"
 };export default Homepage2045;export default Homepage2045;
 
 
-=======
 
               </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </motion.div>
           </div>
         </section>
@@ -1155,7 +717,6 @@ className="group"
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-=======
         <section id='contact-cta' className='py-20 relative'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1164,7 +725,6 @@ className="group"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1295,7 +855,6 @@ export default Homepage2045;
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
 }</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }</div> {
   /* View All Services CTA */;
 }<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
@@ -1316,7 +875,6 @@ export default Homepage2045;
 
 export default Homepage2045;
 
-=======
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
@@ -1326,4 +884,3 @@ export default Homepage2045;
 export default Homepage2045;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

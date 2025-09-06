@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import Layout from '../../components/Layout';
 import {DollarSign,, Shield,, TrendingUp,, Users,, Database} from 'lucide-react';
 import React from 'react';
@@ -53,74 +32,6 @@ import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRigh
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import {motion} from 'framer-motion';
-import {DollarSign,, Shield,, TrendingUp,, Users,, Database,, CheckCircle,, ArrowRight} from 'lucide-react';
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: DollarSign,;
-    title: 'Financial Data Management,',;
-    description: 'Secure, real-time financial data processing and analytics for informed decision making.',;
-  },;
-  {}
-    icon: Shield,;
-    title: 'Regulatory Compliance,',;
-    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',;
-  },;
-  {}
-    icon: TrendingUp,;
-    title: 'Risk Management,',;
-    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'';
-  },;
-  {}
-    icon: Users,;
-    title: 'Customer Experience,',;
-    description: 'Digital banking and financial services platforms that enhance customer engagement.'';
-  },;
-  {}
-    icon: Database,;
-    title: 'Fraud Detection,',;
-    description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, Database } from 'lucide-react';
-import React from 'react';
-import Layout from '../../components/Layout';';
-import { DollarSign, Shield, TrendingUp, Users, Database, CheckCircle, ArrowRight } from 'lucide-react';
-const features = [;
-  {}
-    icon: DollarSign,
-    title: 'Financial Data Management,',
-    description: 'Secure, real-time financial data processing and analytics for informed decision making.',
-  },
-  {}
-    icon: Shield,
-    title: 'Regulatory Compliance,',
-    description: 'SOX, PCI DSS, and other financial compliance solutions to meet industry standards.',
-  },
-  {}
-    icon: TrendingUp,
-    title: 'Risk Management,',
-    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'';
-  },
-  {}
-    icon: Users,
-    title: 'Customer Experience,',
-    description: 'Digital banking and financial services platforms that enhance customer engagement.'';
-  },
-  {}
-    icon: Database,
-    title: 'Fraud Detection,',
-    description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
-import Layout from '../../components/Layout';
-import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import { motion } from 'framer-motion';
 import { 
   DollarSign, 
@@ -132,7 +43,6 @@ import {
   ArrowRight 
 } from 'lucide-react';
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const features = [
   {
     icon: DollarSign,
@@ -266,15 +176,6 @@ const benefits = [;
   'Reduced operational costs',;
   'Faster transaction processing';
 ];
-<<<<<<< HEAD
-export default function FinanceSolutions() {;
-    title: 'User Management',;
-    description: 'Secure user management with role-based access control',;
-    benefits: ['User provisioning', 'Role management', 'Access control', 'Audit logs'];
-  }
-];
-export default function FinanceSolutionsPage() {;
-=======
 export default function FinanceSolutions() {
     title: 'User Management',
     description: 'Secure user management with role-based access control',
@@ -283,7 +184,6 @@ export default function FinanceSolutions() {
 ];
 
 export default function FinanceSolutionsPage() {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <Layout
       title="Finance Solutions - Zion Tech Group"
@@ -520,11 +420,6 @@ export default function FinanceSolutions() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -693,27 +588,6 @@ export default function FinanceSolutions() {;
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-<<<<<<< HEAD
-                </ul>;
-              </div>;
-              <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">;
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Finance?</h3>;
-                <p className="text-lg mb-6">;
-                  Let our financial technology experts help you implement secure,;
-                  compliant solutions that drive growth and innovation.;
-                </p>;
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
-                  Schedule Consultation;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </button>;
-              </div>;
-                  <h3 className="text-xl font-semibold mb-2">{feature && feature.title}</h3>;
-                  <p className="text-gray-600 mb-4">{feature && feature.description}</p>;
-                  <div className="space-y-2">;
-                    {feature && feature.benefits.map((benefit, benefitIndex) => (;
-                      <div key={benefitIndex} className="flex items-center text-sm text-gray-600">;
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-=======
                 </ul>
               </div>
               <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">
@@ -733,228 +607,12 @@ export default function FinanceSolutions() {;
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         {benefit}
                       </div>;
                     ))}
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">;
-                    {feature && feature.title}
-                  </h3>;
-                  <p className="text-gray-600">;
-                    {feature && feature.description}
-                  </p>;
-                </div>;
-              ))}
-            </div>,;
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">";
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto">";
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";
-                Our Financial Services Solutions;
-              </h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions && solutions.map((solution, index) => (,;
-                  <div key={index} className="flex items-center space-x-3">";
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>";
-                  </div>;
-                ))}
-              </div>,;
-            </div>;
-          </div>;
-        </section>;
-        {/* Compliance Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gray-800/50 rounded-2xl p-12">";
-              <div className="text-center mb-12">";
-                <h2 className="text-4xl font-bold text-white mb-4">";
-                  Regulatory Compliant & Secure;
-                </h2>;
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our financial solutions are built with security and compliance in mind, ;
-                  ensuring your financial data is protected and your organization meets regulatory requirements.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Shield className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">PCI DSS Compliant</h3>";
-                  <p className="text-gray-300">Built to meet all PCI DSS requirements for payment data protection.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Database className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">SOX Compliant</h3>";
-                  <p className="text-gray-300">Enterprise-grade security measures to meet Sarbanes-Oxley requirements.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <TrendingUp className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Real-time Monitoring</h3>";
-                  <p className="text-gray-300">Continuous monitoring and alerting for security and performance.</p>";
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
-                Ready to Transform Financial Services?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our financial technology experts help you implement solutions that;
-                enhance security, improve efficiency, and ensure regulatory compliance.,;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Financial Guide;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
-        {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-              <div>;
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
-                  Transforming Financial Services;
-                </h2>;
-                <p className="text-xl text-gray-600 mb-8">;
-                  Our finance solutions help financial institutions modernize their operations,;
-                  enhance security, and improve customer experiences.;
-                </p>;
-                <ul className="space-y-4">;
-                  {benefits && benefits.map((benefit, index) => (;
-                    <li key={index} className="flex items-start">;
-                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />;
-                      <span className="text-gray-700">{benefit}</span>;
-                    </li>;
-                  ))}
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>,
-          </div>;
-        </section>;
-        {/* Solutions List */}
-        <section className="py-20 bg-gray-800/30">"
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto">";
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";
-                Our Financial Services Solutions;
-              </h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
-                {solutions.map((solution, index) => (,
-                  <div key={index} className="flex items-center space-x-3">"
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
-                    <span className="text-gray-300 text-lg">{solution}</span>"
-                  </div>;
-                ))}
-              </div>,
-            </div>;
-          </div>;
-        </section>;
-        {/* Compliance Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="bg-gray-800/50 rounded-2xl p-12">";
-              <div className="text-center mb-12">";
-                <h2 className="text-4xl font-bold text-white mb-4">";
-                  Regulatory Compliant & Secure;
-                </h2>;
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  All our financial solutions are built with security and compliance in mind, 
-                  ensuring your financial data is protected and your organization meets regulatory requirements.;
-                </p>;
-              </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Shield className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">PCI DSS Compliant</h3>";
-                  <p className="text-gray-300">Built to meet all PCI DSS requirements for payment data protection.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Database className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">SOX Compliant</h3>";
-                  <p className="text-gray-300">Enterprise-grade security measures to meet Sarbanes-Oxley requirements.</p>";
-                </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <TrendingUp className="w-8 h-8 text-white" />";
-                  </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Real-time Monitoring</h3>";
-                  <p className="text-gray-300">Continuous monitoring and alerting for security and performance.</p>";
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
-                Ready to Transform Financial Services?;
-              </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
-                Let our financial technology experts help you implement solutions that;
-                enhance security, improve efficiency, and ensure regulatory compliance.,
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
-                  Schedule Consultation;
-                </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Financial Guide;
-                </ul>;
-              </div>;
-              <div className="bg-gradient-to-r from-blue-600 to-green-700 p-8 rounded-xl text-white">;
-                <h3 className="text-2xl font-bold mb-6">Ready to Modernize Finance?</h3>;
-                <p className="text-lg mb-6">;
-                  Let our financial technology experts help you implement secure,;
-                  compliant solutions that drive growth and innovation.;
-                </p>;
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">;
-                  Schedule Consultation;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </button>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
           </div>
         </section>
@@ -984,9 +642,3 @@ export default function FinanceSolutions() {;
     </Layout>
     </>
     </>
-<<<<<<< HEAD
-    </Layout>
-  );
-};
-
-export default Finance;

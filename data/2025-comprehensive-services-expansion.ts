@@ -13,7 +13,6 @@ export interface ComprehensiveService {
 
 ;
 const contact = {
-=======
 
 
   mobile: '+1 302 464 0950',
@@ -35,7 +34,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -71,7 +69,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
 
@@ -169,7 +166,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     popular: true,
     icon: '🚨',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / intelligent - incident - response',
@@ -255,7 +251,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'autonomous - devops - orchestrator',
     name: 'Autonomous DevOps Orchestrator',
     tagline:;
@@ -313,7 +308,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'edge - ai - inference - platform',
     name: 'Edge AI Inference Platform',
     tagline:;
@@ -337,7 +331,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     popular: false,
     icon: '🌐',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / edge - ai - inference - platform',
@@ -368,7 +361,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'blockchain - governance - automation',
     name: 'Blockchain Governance Automation',
     tagline:;
@@ -424,7 +416,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'ai - powered - customer - success - platform',
     name: 'AI - Powered Customer Success Platform',
     tagline:;
@@ -480,7 +471,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline:;
@@ -537,7 +527,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'intelligent - supply - chain - optimizer',
     name: 'Intelligent Supply Chain Optimizer',
     tagline: 'AI - driven supply chain optimization and risk management',
@@ -647,7 +636,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'ai - powered - content - creation - suite',
     name: 'AI - Powered Content Creation Suite',
     tagline:;
@@ -703,7 +691,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'intelligent - data - governance - platform',
     name: 'Intelligent Data Governance Platform',
     tagline: 'Automated data quality, compliance, and lifecycle management',
@@ -758,7 +745,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'quantum - financial - trading - engine',
     name: 'Quantum Financial Trading Engine',
     tagline:;
@@ -782,7 +768,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     popular: false,
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - amber - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - engine',
@@ -871,7 +856,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'intelligent - iot - platform',
     name: 'Intelligent IoT Platform',
     tagline: 'AI - powered IoT device management, analytics, and automation',
@@ -983,7 +967,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   },
   {
 
-=======
     id: 'ai - powered - sales - intelligence - platform',
     name: 'AI - Powered Sales Intelligence Platform',
     tagline:;
@@ -1038,60 +1021,11 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 178,
   },
 
-=======
     id: 'ai-powered-code-review-assistant', name: 'AI-Powered Code Review Assistant',
     tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
     price: '$199', period: '/month',
     description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
     features: [
-<<<<<<< HEAD
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)';
-      'Performance impact analysis'
-    ];
-    popular: true, icon: '🔍',
-    color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',
-    targetAudience: 'Development teams, DevOps engineers, CTOs',
-    trialDays: 14, setupTime: '2 hours',
-    category: 'Development & DevOps', realService: true,
-    technology: ['AI/ML, Static Analysis, Security Scanning'];
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'];
-    useCases: ['Code quality improvement, Security compliance, Team productivity'];
-    roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
-    competitors: ['SonarQube, CodeClimate, Snyk'];
-    marketSize: '$8B code quality tools', growthRate: '35% YoY',
-    variant: 'ai-futuristic', contactInfo: contact,
-    realImplementation: true, implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
-    launchDate: '2025-01-15', customers: 156,
-    rating: 4.8,
-=======
-<<<<<<< HEAD
-      'Automated security vulnerability detection'
-      'Code quality scoring and metrics'
-      'Best practice recommendations'
-      'Integration with GitHub/GitLab'
-      'Custom rule configuration'
-      'Team performance analytics'
-      'Automated PR comments'
-      'Compliance checking (SOC2, HIPAA)'
-      'Performance impact analysis'
-    ]
-    popular: true
-    icon: '🔍'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-code-review-assistant'
-    marketPosition:
-      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.'
-    targetAudience: 'Development teams, DevOps engineers, CTOs'
-    trialDays: 14
-    setupTime: '2 hours'
-    category: 'Development & DevOps'
-    realService: true
-    technology: ['AI/ML, Static Analysis, Security Scanning']
-    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack']
-=======
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -1116,7 +1050,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -1132,7 +1065,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     launchDate: '2025-01-15'
     customers: 156
     rating: 4.8
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     reviews: 89
   };
   {
@@ -1564,7 +1496,6 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     features: [
       'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Real-time insights dashboard'
     ];
     popular: true;
@@ -1615,33 +1546,20 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     rating: 4 && 4.8,
 
     reviews: 178
-<<<<<<< HEAD
-  }
-];
-
-
-=======
     rating: 4.8
     reviews: 178
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     rating: 4.8,
     reviews: 178;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -2336,11 +2254,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

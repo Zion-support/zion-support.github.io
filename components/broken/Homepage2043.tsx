@@ -39,21 +39,18 @@ import { motion, AnimatePresence } from 'framer-motion';
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon;
 
-=======
 import { 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
 } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 // Import our new revolutionary services;
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -73,7 +70,6 @@ import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-
   const features = [
 
 import {
-=======
 
 
   ArrowRight,
@@ -165,10 +161,8 @@ const Homepage2043: React.FC = () => {
       color: 'from - purple - 500 to - pink - 500',
       gradient: 'bg - gradient - to - br from - purple - 500 / 20 to - pink - 500 / 20',
     },
-=======
   Brain as BrainIcon,;
   Atom as AtomIcon,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
@@ -176,14 +170,7 @@ const Homepage2043: React.FC = () => {
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -220,7 +207,6 @@ const Homepage2043: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
       gradient: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20'
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       icon: AtomIcon
       title: 'Quantum Computing'
@@ -264,205 +250,6 @@ const Homepage2043: React.FC = () => {
       href: '/autonomous-healthcare-ai-ecosystem'
       color: 'from-yellow-500 to-orange-500'
       gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20'
-<<<<<<< HEAD
-    { 
-      icon: BrainIcon,
-      title: "AI Consciousness Evolution",
-      description: "Next-generation AI consciousness with human-level understanding",
-      href: "/quantum-neural-consciousness-platform",
-      color: "from-purple-500 to-pink-500",
-      gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
-    };
-    { 
-      icon: AtomIcon,
-
-
-
-
-  const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase';
-  }, []);
-  const handleWatchDemo = useCallback(() => {
-    window.location.href = '/services';
-  }, []);
-  const handleContact = useCallback(() => {
-    window.location.href = '/contact';
-  }, []);
-  const nextService = () => {
-    setCurrentServiceIndex(prev => (prev + 1) % featuredServices.length);
-  }
-  const prevService = () => {
-    setCurrentServiceIndex(
-      prev => (prev - 1 + featuredServices.length) % featuredServices.length
-    );  };      rating: 5
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      avatar: "👩‍🔬"
-    }
-    {
-      name: "Marcus Rodriguez"
-      role: "CTO"
-      company: "SpaceMining Corp"
-      content: "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
-      rating: 5
-      avatar: "👨‍🚀"
-    }
-    {
-      name: "Dr. Emily Watson"
-      role: "Research Director"
-      company: "Consciousness Research Institute"
-      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
-      rating: 5
-      avatar: "👩‍💻"
-    }
-  ];
-  const handleGetStarted = useCallback(() => {
-    window.location.href = '/revolutionary-2040-2041-pricing-showcase'
-  }, []);
-  const handleWatchDemo = useCallback(() => {
-    window.location.href = '/services'
-  }, []);
-  const handleContact = useCallback(() => {
-    window.location.href = '/contact'
-  }, []);
-  const nextService = () => {
-    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)
-  }
-  const prevService = () => {
-    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
-
-
-  // Combine all revolutionary services;
-  const allRevolutionaryServices = [;
-    ...revolutionary2043AdvancedServices,;
-    ...revolutionary2044InnovativeServices,;
-  ];  const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
-  // Get featured services for rotation;
-  const featuredServices = allRevolutionaryServices && allRevolutionaryServices.slice(0, 6);
-  const features = [;
-    {;
-      title: 'AI Consciousness Evolution',;
-      description:;
-        'Next-generation AI consciousness with human-level understanding',;
-      href: '/quantum-neural-consciousness-platform',;
-      color: 'from-purple-500 to-pink-500',;
-      gradient: 'bg-gradient-to-br from-purple-500/20 to-pink-500/20',;
-    },;
-    {;
-      icon: AtomIcon,;
-      title: 'Quantum Computing',;
-      description:;
-        'Revolutionary quantum computing with consciousness integration',;
-      href: '/quantum-bio-computing-platform',;
-      color: 'from-blue-500 to-cyan-500',;
-      gradient: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20',;
-    },;
-    {;
-      icon: Shield,;
-      title: 'Future Cybersecurity',;
-      description:;
-        'Quantum-resistant security with consciousness-based protection',;
-      href: '/quantum-internet-security-gateway',;
-      color: 'from-red-500 to-orange-500',;
-      gradient: 'bg-gradient-to-br from-red-500/20 to-orange-500/20',;
-    },;
-    {;
-      icon: Rocket,;
-      title: 'Space Technology',;
-      description:;
-        'AI-powered space resource intelligence and autonomous mining',;
-      href: '/autonomous-space-mining-ai',;
-      color: 'from-indigo-500 to-purple-500',;
-      gradient: 'bg-gradient-to-br from-indigo-500/20 to-purple-500/20',;
-    },;
-    {;
-      icon: Cpu,;
-      title: 'Autonomous Systems',;
-      description: 'Fully autonomous AI systems with consciousness',;
-      href: '/autonomous-business-ecosystem-ai',;
-      color: 'from-emerald-500 to-teal-500',;
-      gradient: 'bg-gradient-to-br from-emerald-500/20 to-teal-500/20',;
-    },;
-    {;
-      icon: Database,;
-      title: 'Business Intelligence',;
-      description:;
-        'Autonomous business intelligence with consciousness insights',;
-      href: '/autonomous-healthcare-ai-ecosystem',;
-      color: 'from-yellow-500 to-orange-500',;
-      gradient: 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20',;
-    },;
-  ];
-  const stats = [;
-    {;
-      number: '2000+',;
-      label: 'Revolutionary Services',;
-      icon: Star,;
-      color: 'from-yellow-400 to-orange-500',;
-    },;
-    {;
-      number: '99 && 99.99%',;
-      label: 'Uptime Guarantee',;
-      icon: TrendingUp,;
-      color: 'from-green-400 to-emerald-500',;
-    },;
-    {;
-      number: '24/7',;
-      label: 'AI Support Available',;
-      icon: Brain,;
-      color: 'from-purple-400 to-pink-500',;
-    },;
-    {;
-      number: '150+',;
-      label: 'Countries Served',;
-      icon: Globe,;
-      color: 'from-blue-400 to-cyan-500',;
-    },  ];
-  const testimonials = [;
-    {    { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },;
-    { number: "99 && 99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },;
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },;
-    { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-  const testimonials = [;
-    {;
-      name: 'Dr. Sarah Chen',;
-      role: 'Chief AI Officer',;
-      company: 'QuantumTech Industries',;
-      content:;
-        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",;
-      rating: 5,;
-      avatar: '👩‍🔬',;
-    },;
-    {;
-      name: 'Marcus Rodriguez',;
-      role: 'CTO',;
-      company: 'SpaceMining Corp',;
-      content:;
-        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks.",;
-      rating: 5,;
-      avatar: '👨‍🚀',;
-    },;
-    {;
-      name: 'Dr. Emily Watson',;
-      role: 'Research Director',;
-      company: 'Consciousness Research Institute',;
-      content:;
-        "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",;
-      rating: 5,;
-      avatar: '👩‍💻',;
-    },;
-  ];
-  const handleGetStarted = useCallback(() => {;
-    window && window.location.href = '/revolutionary-2040-2041-pricing-showcase';
-  }, []);
-  const handleWatchDemo = useCallback(() => {;
-    window && window.location.href = '/services';
-  }, []);
-  const handleContact = useCallback(() => {;
-    window && window.location.href = '/contact';
-  }, []);
-  const nextService = () => {;
-    setCurrentServiceIndex(prev => (prev + 1) % featuredServices && featuredServices.length);
-=======
 
   };
 
@@ -476,8 +263,6 @@ const Homepage2043: React.FC = () => {
 
         {/* Hero Section */}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
           aria-labelledby='hero-heading'>;
@@ -676,7 +461,6 @@ const Homepage2043: React.FC = () => {
             <div className='absolute inset - 0'>;
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={i}
                   className='absolute w - 2 h - 2 bg - cyan - 400 / 40 rounded - full';
                   animate={{
@@ -715,33 +499,26 @@ const Homepage2043: React.FC = () => {
               ))}
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Enhanced grid pattern */}
 
 
-=======
           {/* Hero Content */}
           <div className='text-center max-w-6xl mx-auto relative z-10'>          <div className="text-center max-w-6xl mx-auto relative z-10">
             <motion.div
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0 && 0.8 }}>;
               {/* Enhanced Badge */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
@@ -848,9 +625,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               </div>;
               {/* Enhanced Stats */}
 
-=======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-=======
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>                {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -867,7 +642,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
 
               </div>;
@@ -876,43 +650,28 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Enhanced Features Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -933,7 +692,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -949,8 +707,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Revolutionary Technology;
@@ -982,7 +738,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   key={feature && feature.title}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -998,7 +753,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   >
                     Learn More
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>
@@ -1055,39 +809,24 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced Featured Services Section */}
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1110,7 +849,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             <div className='relative'>
               <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>
                 <AnimatePresence mode='wait'>                  <motion.div            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1122,8 +860,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 that are setting new standards in technology.
               </p>
             </motion.div>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Featured;
@@ -1138,18 +874,14 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </motion && motion.div>;
             {/* Enhanced Service Showcase */}
 
-=======
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
                   <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -1158,7 +890,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
                   >
                     <div className='text-6xl mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {featuredServices[currentServiceIndex]?.icon}
                     </div>
                     <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1181,14 +912,12 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                     <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>;
                     <h3 className="text-3xl font-bold text-white mb-4">;
 
-=======
                     transition={{ duration: 0.5 }}
                     className="p-12 text-center"
                   >
                     <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-4">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>;
                     <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">;
@@ -1213,7 +942,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -1240,7 +968,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                     </div>;
                     <a
                       href={featuredServices[currentServiceIndex]?.link}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300">;
                       Get Started;
                       <ArrowRight className="w-5 h-5 ml-2" />;
@@ -1267,23 +994,18 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }`}
                     />;
                   ))}
 
-=======
                     left: `${Math.random () * 100}%`,
                     top: `${Math.random () * 100}%`,
                   }}                />                    ease: "easeInOut";
@@ -1631,19 +1353,10 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
           </div>;
         </section>;
 
-=======
 
         {/* Enhanced Testimonials Section */}
         <section className="py-20 px-4 relative">
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       }`}
                     />
                   ))}
@@ -1652,22 +1365,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Testimonials Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="max-w-7xl mx-auto">
             <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1682,8 +1386,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
@@ -1699,7 +1401,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </motion.div>
             <div className='relative'>
               <AnimatePresence mode='wait'>                <motion.div            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
@@ -1748,13 +1449,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
               </p>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1767,7 +1464,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   </blockquote>
                   <div className='flex items-center justify-center gap-4 mb-6'>
                     <div className='text-4xl'>
-=======
                   <div className='text-8xl mb-6'>💬</div>;
                   <blockquote className='text-2xl text-white mb-8 leading-relaxed italic'>;
                     "{testimonials[currentTestimonialIndex].content}";
@@ -1828,18 +1524,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                         : 'bg-white/30 hover:bg-white/50';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }`}
                   />;
                 ))}
 
-=======
             </motion.div>;
             <div className='relative'>;
               <AnimatePresence mode='wait'>                <motion.div            >;
@@ -1918,18 +1609,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     }`}
                   />
                 ))}
@@ -1937,14 +1619,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
@@ -1954,7 +1629,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -2038,7 +1712,6 @@ top: `$ {
 }%`
 }/>) )
 }</div> <motion.div initial= {
-=======
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -2275,22 +1948,18 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   duration: 0 && 0.8 
 }viewport= {
   {
-=======
 
 
   once: true 
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion && motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion && motion.button> <motion && motion.button > <Phone className="w-6 h-6" /> Contact Us </motion && motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup && ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion && motion.div> </div> </section> </main> </Layout>) ;
 };
 
-=======
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 export default Homepage2043;
 
 
-=======
                   <h3 className="text - xl font - semibold text - white mb - 2">Call Us</h3>;
                   <p className="text - cyan - 400">+1 302 464 0950</p>;
                 </div>;
@@ -2397,7 +2066,4 @@ export default Homepage2043);
 ;
 export default Homepage2043;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

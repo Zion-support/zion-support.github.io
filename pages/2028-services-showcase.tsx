@@ -1,7 +1,6 @@
 
 
 
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -65,16 +64,13 @@ const serviceCategories = [
     icon: Car,
     color: 'from-red-600 to-pink-600',
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 
-=======
 
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
@@ -83,7 +79,6 @@ import {;
   Building, Factory, Camera, Video, Music, Gamepad2;
 } from 'lucide-react',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
@@ -95,126 +90,10 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
   website: 'https://ziontechgroup.com'
 };
 const serviceCategories = [
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
-  Building, Factory, Camera, Video, Music, Gamepad2;
-} from 'lucide-react',
-import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturisticNavigation2028',
-import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028',
-import { futuristic2028Services } from '../data / 2028 - futuristic - innovations',
-import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services',
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com';
-},
-const service_categories = [;
-
-  {
-    title: '🚀 2028 Futuristic Innovations',
-    description: 'Beyond the future of technology',
-    icon: Rocket,
-
-
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    description: 'Intelligent urban solutions',
-    icon: Building,
-
-
-  {
-    title: '⚛️ Quantum & Advanced Tech',
-    description: 'Quantum computing and beyond',
-    icon: Atom,
-
-
-  {
-    title: '🤖 AI & Machine Learning',
-    description: 'Next - generation AI solutions',
-    icon: Brain,
-
-
-  {
-    title: '⛓️ Blockchain & Web3',
-    description: 'Decentralized solutions',
-    icon: Globe,
-
-
-  {
-    title: '🚗 Autonomous & Mobility',
-<<<<<<< HEAD
-    description: 'Self - driving and mobility solutions',
-    icon: Car,
-
-
-const contactInfo = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
-const serviceCategories = [;
-  {;
-    title: '🚀 2028 Futuristic Innovations';
-    description: 'Beyond the future of technology';
-    icon: Rocket;
-    color: 'from-violet-600 to-purple-600';
-    services: futuristic2028Services.slice(0, 4);
-  },;
-  {;
-    title: '🏙️ Smart City & Infrastructure',;
-    description: 'Intelligent urban solutions',;
-    icon: Building,;
-    color: 'from-blue-600 to-cyan-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4);
-  },;
-  {;
-    title: '⚛️ Quantum & Advanced Tech',;
-    description: 'Quantum computing and beyond',;
-    icon: Atom,;
-    color: 'from-indigo-600 to-blue-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4);
-  },;
-  {;
-    title: '🤖 AI & Machine Learning',;
-    description: 'Next-generation AI solutions',;
-    icon: Brain,;
-    color: 'from-emerald-600 to-teal-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4);
-  },;
-  {;
-    title: '⛓️ Blockchain & Web3',;
-    description: 'Decentralized solutions',;
-    icon: Globe,;
-    color: 'from-orange-600 to-red-600',;
-    services: emergingTech2028Services.filter(s => s.category.includes('Blockchain')).slice(0, 4);
-  },;
-  {;
-    title: '🚗 Autonomous & Mobility',;
-    description: 'Self-driving and mobility solutions',;
-    icon: Car,;
-    color: 'from-red-600 to-pink-600',;
-    services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-  }
-=======
     color: 'from - red - 600 to - pink - 600',
     services: futuristic2028Services.filter (string => s.category.includes ('Autonomous')).slice (0, 4);
   }
 
-=======
 ],
 export default /**
  * ServicesShowcase2028 - Function description
@@ -236,7 +115,6 @@ function ServicesShowcase2028() {
 
       {/* Hero Section */}
       <section className="relative min - h-screen flex items - center justify - center bg - gradient - to - br from - black via - purple - 900 / 20 to - blue - 900 / 20 overflow - hidden">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Animated Background */}
 
 
@@ -253,7 +131,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -280,7 +157,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="space-y-8"
           >
             <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
@@ -326,7 +202,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
               <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">50+</div>
@@ -357,7 +232,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -464,7 +338,6 @@ function ServicesShowcase2028() {
                 viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="group relative"
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -497,7 +370,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
                     >
                       <span>Explore More</span>
@@ -523,7 +395,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -590,7 +461,6 @@ function ServicesShowcase2028() {
                 viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="group relative"
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -628,7 +498,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
@@ -642,7 +511,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         className="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
                       >
                         Learn More
@@ -672,7 +540,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="py-20 bg-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -709,7 +576,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
             >
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
@@ -719,13 +585,9 @@ function ServicesShowcase2028() {
 
                 Our services target markets with exponential growth potential,
 
-=======
                 Our services target markets with exponential growth potential, 
-=======
                 Our services target markets with exponential growth potential,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -756,7 +618,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
@@ -796,7 +657,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
@@ -815,7 +675,6 @@ function ServicesShowcase2028() {
         </div>
       </section>
 
-=======
                 className="group relative";
               >;
                 <div className="relative p - 8 bg - black / 40 backdrop - blur - sm border border - purple - 500 / 30 rounded - 2xl hover:border - purple - 500 / 60 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -965,7 +824,6 @@ function ServicesShowcase2028() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -1014,10 +872,8 @@ function ServicesShowcase2028() {
       <UltraFuturisticFooter2028 />
     </>
 
-=======
 }
 
-=======
             className="space - y-8";
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold text - white mb - 6">;
@@ -1087,46 +943,23 @@ export default function ServicesShowcase2028() {_return (_<>
         </div>
 
         <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-=======
     description: 'Self-driving and mobility solutions',
     icon: Car,
     color: 'from-red-600 to-pink-600',
     services: futuristic2028Services.filter(s => s.category.includes('Autonomous')).slice(0, 4)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale
-  Building, Factory, Camera, Video, Music, Gamepad2
-} from 'lucide-react'
-=======
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,;
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,;
   Building, Factory, Camera, Video, Music, Gamepad2;
 } from 'lucide-react',;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-<<<<<<< HEAD
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

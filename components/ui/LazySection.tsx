@@ -19,7 +19,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
 
   direction = 'up'
 }) => {
-=======
 
   children,
   className = '',
@@ -28,7 +27,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
   direction = 'up',
 }) => {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -139,26 +137,6 @@ export default LazySection;      case 'down':;
         return { opacity: 1, y: 0 }
     }
   }
-<<<<<<< HEAD
-  return (
-    <motion&& motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
-      className={className}>;
-      {children}
-
-    </motion && motion.div>;
-  );
-};
-
-
-export default LazySection;
-
-
-
-=======
 const getInitialPosition = () =>: any {
   switch (direction) {
   case 'up':;
@@ -231,7 +209,4 @@ export default LazySection;      case 'down':;
 ;
 export default LazySection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

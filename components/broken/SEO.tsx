@@ -89,11 +89,6 @@ const SEO: React.FC<SEOProps> = ({;
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
   image = '/images/zion-tech-group-og-image && image.jpg';
   url = 'https: //ziontechgroup && ziontechgroup.com', type = 'website',  publishedTime;
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   /* Robots Meta */
 }{
@@ -127,21 +122,6 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
-<<<<<<< HEAD
-  publishedTime
-}/>
-}{
-  modifiedTime && <meta property="article:modified time" content= {
-  modifiedTime
-}/>
-}{
-  author && <meta property="article:author" content= {
-  author
-}/>
-}{
-  section && <meta property="article:section" content= {
-  section
-=======
   publishedTime 
 }/>
 }{
@@ -155,21 +135,14 @@ const SEO: React.FC<SEOProps> = ({;
 }{
   section && <meta property="article:section" content= {
   section 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
-<<<<<<< HEAD
-  tag
-}/>
-}</>)
-=======
   tag 
 }/>
 }</>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
 }<script
@@ -203,7 +176,6 @@ const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
   image = '/images/zion-tech-group-og-image.jpg';
   url = 'https: //ziontechgroup.com', type = 'website',  publishedTime;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   modifiedTime;
   author = 'Zion Tech Group';
   section;
@@ -323,7 +295,6 @@ const SEO: React.FC < SEOProps> = ({
       />;
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
-=======
   noindex = false
   nofollow = false}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -340,7 +311,6 @@ const SEO: React.FC < SEOProps> = ({
       />
       <meta name='author' content={author} />
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -388,20 +358,6 @@ const SEO: React.FC < SEOProps> = ({
       <meta
         name='viewport'
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
-<<<<<<< HEAD
-      />;
-      <meta name='theme-color' content='#000000' />;
-      <meta name='msapplication-TileColor' content='#000000' />;
-      <meta name='apple-mobile-web-app-capable' content='yes' />;
-      <meta
-        name='apple-mobile-web-app-status-bar-style'
-        content='black-translucent'
-
-      />;
-      <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />;
-
-
-=======
       <meta property='og:title' content={full_title} />;
       <meta property='og:description' content={description} />;
       <meta property='og:type' content={type} />;
@@ -441,13 +397,9 @@ const SEO: React.FC < SEOProps> = ({
         content='black - translucent';
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -585,9 +537,7 @@ const SEO: React.FC < SEOProps> = ({
                 }
                 {
                   '@type': 'Offer'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -598,72 +548,6 @@ const SEO: React.FC < SEOProps> = ({
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Space Technology Solutions'
-<<<<<<< HEAD
-          ))}
-        </>
-      )}
-      
-      {/* Additional Meta Tags */}
-      <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot; />
-      <meta name=&quot;theme-color&quot; content=&quot;#000000&quot; />
-      <meta name=&quot;msapplication-TileColor&quot; content=&quot;#000000&quot; />
-      <meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; />
-      <meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; />
-      <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Zion Tech Group&quot; />
-      
-      {_/* Structured Data */}
-      <script
-        type=&quot;application/ld+json&quot;
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            &quot;@context&quot;: &quot;https://schema.org&quot;,
-            &quot;@type&quot;: &quot;Organization&quot;,
-            &quot;name&quot;: &quot;Zion Tech Group&quot;,
-            &quot;url&quot;: &quot;https://ziontechgroup.com&quot;,
-            &quot;logo&quot;: &quot;https://ziontechgroup.com/images/zion-tech-group-logo.png&quot;,
-            &quot;description&quot;: description,
-            &quot;foundingDate&quot;: &quot;2020&quot;,
-            &quot;sameAs&quot;: [
-              &quot;https://www.linkedin.com/company/zion-tech-group&quot;,
-              &quot;https://twitter.com/ziontechgroup&quot;,
-              &quot;https://github.com/Zion-Holdings&quot;
-            ],
-            &quot;contactPoint&quot;: {
-              &quot;@type&quot;: &quot;ContactPoint&quot;,
-              &quot;telephone&quot;: &quot;+1-800-ZION-TECH&quot;,
-              &quot;contactType&quot;: &quot;customer service&quot;,
-              &quot;availableLanguage&quot;: &quot;English&quot;
-            },
-            &quot;address&quot;: {
-              &quot;@type&quot;: &quot;PostalAddress&quot;,
-              &quot;addressCountry&quot;: &quot;US&quot;
-            },
-            &quot;hasOfferCatalog&quot;: {
-              &quot;@type&quot;: &quot;OfferCatalog&quot;,
-              &quot;name&quot;: &quot;Technology Services&quot;,
-              &quot;itemListElement&quot;: [
-                {
-                  &quot;@type&quot;: &quot;Offer&quot;,
-                  &quot;itemOffered&quot;: {
-                    &quot;@type&quot;: &quot;Service&quot;,
-                    &quot;name&quot;: &quot;AI & Machine Learning Solutions&quot;
-                  }
-                },
-                {
-                  &quot;@type&quot;: &quot;Offer&quot;,
-                  &quot;itemOffered&quot;: {
-                    &quot;@type&quot;: &quot;Service&quot;,
-                    &quot;name&quot;: &quot;Quantum Computing Services&quot;
-                  }
-                },
-                {
-                  &quot;@type&quot;: &quot;Offer&quot;,
-                  &quot;itemOffered&quot;: {
-                    &quot;@type&quot;: &quot;Service&quot;,
-                    &quot;name&quot;: &quot;Space Technology Solutions&quot;
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   }
                 }
               ]
@@ -679,16 +563,11 @@ const SEO: React.FC < SEOProps> = ({
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <link
         rel='apple-touch-icon'
         sizes='180x180'
@@ -750,12 +629,9 @@ export default SEO;  );
 export default SEO;
 
 
-=======
 
     </Head>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',
@@ -867,4 +743,3 @@ export default SEO);
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

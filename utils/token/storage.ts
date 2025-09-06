@@ -4,25 +4,6 @@
 
 
 export interface TokenConfig {
-=======
-<<<<<<< HEAD
-export interface TokenConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  tokenName: string;
-  tokenSymbol: string;
-  decimals: number;
-  totalSupply: number;
-  issueRate: number;
-  redeemRate: number;
-  minIssueAmount: number;
-  maxIssueAmount: number;
-}
-
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
-
-
-=======
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -35,7 +16,6 @@ class TokenStore {
     maxIssueAmount: 10000;
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
@@ -56,11 +36,9 @@ class TokenStore {
 
   }
 export interface TokenStoreData {
-=======
   };
 
 export interface TokenStoreData {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -69,17 +47,11 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
 
-=======
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

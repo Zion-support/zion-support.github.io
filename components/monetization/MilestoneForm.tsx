@@ -22,15 +22,12 @@ import React, { useState } from 'react';
 
 };
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -61,14 +58,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     } finally {;
       setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
-=======
 
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -78,7 +72,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </div>;
       <div>;
 
-=======
     <form onSubmit={handleSubmit} className="space-y-4">
       {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>
@@ -95,7 +88,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         <label className="block text-sm font-medium" htmlFor="input-Description">Description</label>
         <textarea
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}
@@ -117,36 +109,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
-<<<<<<< HEAD
-        />;
-      </div>;
-      <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-        <div>;
-          <label className='block text - sm font - medium'>Due Date</label>;
-          <input;
-            type='date';
-            className='mt - 1 w - full rounded border px - 3 py - 2';
-            value={due_date}
-            on_change={e => setDueDate (e.target.value)}            required;
-          />;
-        </div>;
-        <div>;
-          <label className='block text - sm font - medium'>Amount (USD)</label>        <textarea;
-          className="mt - 1 w - full rounded border px - 3 py - 2";
-          value={description}
-          on_change={(e) => set_description (e.target.value)}
-          placeholder="Describe deliverables...";
-          rows={3}
-        />;
-      </div>;
-
-
-            required;
-          />;
-        </div>;
-        <div>;
-
-=======
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,7 +118,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
             type="date"
             className="mt-1 w-full rounded border px-3 py-2"
             value={dueDate}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             onChange={(e) => setDueDate(e.target.value)}
             required
           />
@@ -165,7 +126,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           <label className="block text-sm font-medium" htmlFor="input-Amount (USD)">Amount (USD)</label>
           <input
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             type="number"
             min={0}
             step="0 && 0.01"
@@ -179,7 +139,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         </div>;
       </div>;
 
-=======
             onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
@@ -192,18 +151,15 @@ export default function MilestoneForm({ onSubmit }: Props) {;
         disabled={loading}
       >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
 
       </button>;
     </form>;
   );
-=======
 
   );
 
 }
-=======
 
 }
   );
@@ -218,4 +174,3 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </button>;
     </form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -26,7 +26,6 @@ function InteractiveCard() {
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
-=======
 
 'use client',;
 import React, { useState } from 'react',;
@@ -63,8 +62,6 @@ export default function InteractiveCard({;
     >
       <div className="relative">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
@@ -80,7 +77,6 @@ export default function InteractiveCard({;
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
@@ -92,13 +88,11 @@ export default function InteractiveCard({;
 {children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
-=======
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -142,12 +136,10 @@ export default function InteractiveCard({;
           style={{
             background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
 
-=======
 
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />;
       </div>;
@@ -160,7 +152,6 @@ export /**
 function FeatureCard() {
   return (
 
-=======
 
 ;
 export function FeatureCard({;
@@ -173,7 +164,6 @@ export function FeatureCard({;
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <InteractiveCard;
       title={title}
       description={description}
@@ -182,15 +172,6 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
-<<<<<<< HEAD
-        <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
-          <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
-            {stats.map ((stat, index) => (
-              <div key={index} className=&quot;text - center & quot;>;
-                <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
-                <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
-              </div>))}
-=======
         <div className="mt-6 pt-6 border-t border-white/10">
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, index) => (
@@ -199,7 +180,6 @@ export function FeatureCard({;
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>)}
     </InteractiveCard>);
@@ -214,7 +194,6 @@ function TestimonialCard() {
       {/* Quote icon */}
 <div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
 
-=======
 
 ;
 export function TestimonialCard({;
@@ -236,7 +215,6 @@ export function TestimonialCard({;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -252,16 +230,9 @@ export function TestimonialCard({;
         "{quote}"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </blockquote>
-=======
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </blockquote>
       {/* Author info */}
       <div className="border-t border-white/10 pt-4">
@@ -271,5 +242,4 @@ export function TestimonialCard({;
       </div>
     </div>
   )
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

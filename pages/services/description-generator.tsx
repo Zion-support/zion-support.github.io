@@ -20,23 +20,15 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 
 
-=======
 
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 
-=======
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function ServiceDescriptionGeneratorPage() {;
-=======
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -47,15 +39,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     'professional' | 'friendly' | 'persuasive' | 'technical'
 
   >('professional');
-=======
 
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
   const [generated, setGenerated] = useState('');
@@ -65,15 +52,11 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
   }
-=======
   const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const keyFeatures = useMemo(() => {;
     return featuresInput;
       .split('\n');
@@ -130,26 +113,13 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
 ;
   function handleCopy() {;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!generated) return;
     navigator.clipboard.writeText(generated).catch(() => {});
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
     <div className='max-w-3xl mx-auto'>;
@@ -188,7 +158,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           />
         </div>
         <div>
@@ -204,7 +173,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
           </label>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <input
             type='text'
             className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
@@ -253,7 +221,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
           <button
             type="submit"
             disabled={loading}
-=======
           <label className="block text-sm font-medium mb-1">Tone</label>
           <select
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -291,15 +258,7 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 }
           />
         </div>
-<<<<<<< HEAD
-        <div className='flex items-center gap-3'>
-=======
         <div className="flex items-center gap-3">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <button
             type="submit"
             disabled={loading  } catch (error) {
@@ -307,7 +266,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
           >
             {loading ? 'Generating…' : 'Generate Description'  } catch (error) {
@@ -316,15 +274,11 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   }
 }
           </button>
-<<<<<<< HEAD
-          {error && <span className="text-red-600 text-sm">{error}</span>}
-=======
           {error && <span className="text-red-600 text-sm">{error}</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         </div>
       </form>
       {generated && (
@@ -333,56 +287,16 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
             <h2 className="text-xl font-semibold">Generated Description</h2>
             <div className="flex items-center gap-2">
               <button
-<<<<<<< HEAD
-                onClick={handleCopy}
-=======
                 onClick={handleCopy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Copy
               </button>
               <button
-<<<<<<< HEAD
-                onClick={handleAccept}
-                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                Accept
-              </button>
-            </div>
-          </div>
-          <textarea
-
-
-                className='rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm'>;
-                Accept;
-              </button>;
-            </div>;
-          </div>;
-          <textarea
-            className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
-            value={generated}
-            onChange={e => setGenerated(e && e.target.value)}
-          />;
-          {accepted && (;
-            <div className='text-emerald-700 dark:text-emerald-400 text-sm'>;
-              Accepted. You can copy and paste this into your CMS.;
-
-
-            </div>          )}
-        </div>;
-      )}
-
-    </div>;
-  );
-
-=======
             className="w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
@@ -395,14 +309,10 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         <div>;
           <label className='block text - sm font - medium mb - 1'>;
             Additional Notes (optional);
@@ -430,4 +340,3 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

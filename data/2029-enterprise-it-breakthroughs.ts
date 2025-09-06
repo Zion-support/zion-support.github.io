@@ -1,9 +1,7 @@
 
-=======
 import { ServiceVariant } from '../types / service - variants';
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export interface EnterpriseITBreakthroughService2029 {
 
 
@@ -45,7 +43,6 @@ export interface EnterpriseITBreakthroughService2029 {;
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -79,7 +76,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '⚙️',
 
-=======
       color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -149,7 +145,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '☁️',
 
-=======
       color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -194,7 +189,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     },
     {
 
-=======
       id: 'ai - powered - enterprise - security',
       name: 'AI - Powered Enterprise Security',
       tagline: 'AI - driven threat detection and response automation',
@@ -218,7 +212,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🛡️',
 
-=======
       color: 'from - red - 500 via - pink - 500 to - rose - 500',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / ai - powered - enterprise - security',
@@ -263,7 +256,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     },
     {
 
-=======
       id: 'autonomous - it - operations - center',
       name: 'Autonomous IT Operations Center',
       tagline: 'Self - managing IT infrastructure with AI operations',
@@ -287,7 +279,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       popular: true,
       icon: '🏢',
 
-=======
       color: 'from - slate - 600 via - gray - 600 to - zinc - 600',
       text_color: 'text - slate - 400',
       link: 'https://ziontechgroup.com / autonomous - it - operations - center',
@@ -326,11 +317,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       implementation_details:;
         'Advanced autonomous IT operations center with AI - powered management, self - healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launch_date: '2025 - 01 - 15',
-=======
 
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launchDate: '2025-01-15',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 180,
       rating: 4 && 4.9,
       reviews: 95,
@@ -340,7 +329,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -373,7 +361,6 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     description: 'Revolutionary autonomous DevOps platform that uses AI to automatically manage, optimize, and scale infrastructure, deployments, and operations without human intervention.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Autonomous infrastructure managementAI-powered deployment automationSelf-healing systemsPredictive scalingAutomated monitoringIntelligent incident responsePerformance optimizationSecurity automation';
       'Compliance monitoringAnalytics dashboard'
   ];    features: [;
@@ -432,11 +419,8 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     reviews: 95
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -449,14 +433,9 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseITBreakthroughService2029 {;
   id: string,;
@@ -671,11 +650,5 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     customers: 180,;
     rating: 4.9;
     reviews: 95;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

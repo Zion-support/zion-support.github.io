@@ -4,7 +4,6 @@ import { ServiceVariant } from '../types / service - variants';
 export interface AdvancedITInfrastructureService {
 
         'Hybrid quantum-classical computing',
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -48,7 +47,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud - infrastructure',
@@ -97,7 +95,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 15,
     },
 
-=======
     // Autonomous Edge Computing Network;
     {
       id: 'autonomous - edge - computing - network',
@@ -190,7 +187,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 28,
     },
 
-=======
     // Zero - Trust Security Architecture;
     {
       id: 'zero - trust - security - architecture',
@@ -224,7 +220,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -287,7 +282,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - red - 600 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture',
@@ -462,7 +456,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 22,
     },
 
-=======
     // Quantum Networking Platform;
     {
       id: 'quantum - networking - platform',
@@ -497,7 +490,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ]
       useCases: [
 
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - networking - platform',
@@ -546,7 +538,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 12,
     },
 
-=======
     // New Advanced IT Infrastructure Services for 2025;
     {
       id: 'quantum - cloud - infrastructure - platform',
@@ -572,7 +563,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '☁️',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
@@ -639,7 +629,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 4,
     },
 
-=======
     // Edge Computing Orchestration Platform;
     {
       id: 'edge - computing - orchestration - platform',
@@ -665,7 +654,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - green - 500 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / edge - computing - orchestration - platform',
@@ -735,7 +723,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 16,
     },
 
-=======
     // Zero Trust Security Architecture Platform;
     {
       id: 'zero - trust - security - architecture - platform',
@@ -761,7 +748,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🛡️',
 
-=======
       color: 'from - red - 500 to - orange - 600',
       text_color: 'text - red - 400',
       link: 'https://ziontechgroup.com / zero - trust - security - architecture - platform',
@@ -789,7 +775,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Active Directory',
         'LDAP',
@@ -829,7 +814,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 12,
     },
 
-=======
     // Autonomous Data Center Platform;
     {
       id: 'autonomous - data - center - platform',
@@ -855,7 +839,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🏢',
 
-=======
       color: 'from - indigo - 500 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / autonomous - data - center - platform',
@@ -916,7 +899,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 6,
     },
 
-=======
     // Quantum Networking Infrastructure;
     {
       id: 'quantum - networking - infrastructure',
@@ -942,7 +924,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: true,
       icon: '🌐',
 
-=======
       color: 'from - cyan - 500 to - blue - 600',
       text_color: 'text - cyan - 400',
       link: 'https://ziontechgroup.com / quantum - networking - infrastructure',
@@ -1028,7 +1009,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       popular: false,
       icon: '🤖',
 
-=======
       color: 'from - purple - 500 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - powered - infrastructure - management',
@@ -1096,94 +1076,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
         'Multi-cloud orchestration and management',
     // Hybrid Cloud Orchestration Platform;
     {
-<<<<<<< HEAD
-      id: 'hybrid - cloud - orchestration - platform',
-      name: 'Hybrid Cloud Orchestration Platform',
-      tagline: 'Seamless multi - cloud and hybrid cloud management',
-      price: '$9, 500',
-      period: '/month',
-      description:;
-        'Advanced hybrid cloud orchestration platform that provides seamless management, optimization, and integration across multiple cloud providers and on - premises infrastructure.',
-      features: [;
-        'Multi - cloud orchestration and management',
-
-        'Hybrid cloud integration and optimization',
-        'Intelligent workload placement',
-        'Cross - cloud resource optimization',
-        'Unified monitoring and analytics',
-        'Automated cloud migration',
-        'Custom cloud workflows',
-        'Integration with cloud platforms',
-        'Advanced cloud analytics',
-        'Comprehensive cloud management',
-      ],
-      popular: true,
-      icon: '☁️',
-
-        'Multi-cloud management',
-      color: 'from - blue - 500 to - indigo - 600',
-      text_color: 'text - blue - 400',
-      link: 'https://ziontechgroup.com / hybrid - cloud - orchestration - platform',
-      market_position:;
-        'Advanced hybrid cloud orchestration platform with seamless multi - cloud management and comprehensive optimization capabilities.',
-      target_audience: [;
-        'Cloud architects',
-        'DevOps teams',
-        'IT operations',
-        'Technology companies',
-        'Multi - cloud organizations',
-      ],
-      trial_days: 30,
-      setup_time: '6 - 8 weeks',
-      category: 'Hybrid Cloud Management',
-      real_service: true,
-      technology: [;
-        'Cloud Computing',
-        'Multi - Cloud Management',
-        'Container Orchestration',
-        'Kubernetes',
-        'Python',
-        'Terraform',
-        'React',
-      ],
-      integrations: [;
-        'AWS',
-        'Azure',
-        'Google Cloud',
-        'IBM Cloud',
-        'Oracle Cloud',
-        'On - premises systems',
-      ],
-      use_cases: [;
-        'Multi - cloud management',
-
-        'Hybrid cloud integration',
-        'Workload optimization',
-        'Cloud migration',
-        'Resource optimization',
-      ],
-      roi: 'Multi - cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.',
-      competitors: ['Terraform', 'Kubernetes', 'Cloud Foundry', 'OpenShift'],
-
-      market_size: '$15.2B hybrid cloud market',
-      growth_rate: '28% annual growth',
-      variant: 'hybrid - cloud',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Comprehensive hybrid cloud orchestration platform with seamless multi - cloud management, optimization, and comprehensive cloud platform integration.',
-      launch_date: '2025 - 05 - 01',
-=======
 
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
@@ -1193,7 +1088,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1228,7 +1122,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     features: [
       'Hybrid quantum-classical computingQuantum algorithm optimizationAdvanced AI model trainingReal-time quantum simulationMulti-cloud orchestrationQuantum-secure encryptionAutonomous resource scalingPerformance monitoring';
       'Cost optimizationGlobal edge computing network'
-=======
       id: 'hybrid-cloud-orchestration-platform'
       name: 'Hybrid Cloud Orchestration Platform'
       tagline: 'Seamless multi-cloud and hybrid cloud management'
@@ -1303,25 +1196,15 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
-      launchDate: '2025-05-01'
-      customers: 32
-      rating: 4.7
-      reviews: 24
-    }
-=======
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
       customers: 32,
       rating: 4.7,
       reviews: 24,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Multi-cloud orchestration and managementHybrid cloud integration and optimizationIntelligent workload placementCross-cloud resource optimizationUnified monitoring and analyticsAutomated cloud migrationCustom cloud workflowsIntegration with cloud platforms';
       'Advanced cloud analyticsComprehensive cloud management'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
@@ -1640,10 +1523,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4 && 4.7;
     reviews: 24
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -1732,23 +1613,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     rating: 4.7;
     reviews: 24;
 
-=======
 
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -2377,11 +2247,5 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32,;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

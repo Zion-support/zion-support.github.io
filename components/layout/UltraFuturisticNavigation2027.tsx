@@ -2,12 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 
-=======
 
 import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -58,7 +56,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
-=======
 import { 
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
@@ -222,7 +219,6 @@ const companyLinks = [
   { name: '🔧 Solutions', href: '/solutions', icon: Layers }
   { name: '💼 Careers', href: '/careers', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },];  { name: '📞 Contact', href: '/contact', icon: MessageCircle }
-=======
 ];
 
 const _serviceCategories = [
@@ -331,7 +327,6 @@ const company_links = [;
   { name: '⭐ Ultimate 2028', href: '/ultimate - 2028 - services - showcase', icon: Star },
   { name: '💰 2028 Pricing', href: '/revolutionary - 2028 - pricing', icon: DollarSign },
   { name: '📊 Case Studies', href: '/case - studies', icon: Briefcase },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   { name: '📚 Blog & Resources', href: '/blog', icon: BookOpen },
   { name: '📈 Reports', href: '/reports', icon: TrendingUp },
   { name: '🔧 Solutions', href: '/solutions', icon: Layers },
@@ -998,7 +993,6 @@ icon: <Target className="w-5 h-5" />,
       color: 'from-orange-500 to-red-600',
       children: [
         { 
-=======
 
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
@@ -1558,7 +1552,6 @@ icon: <Building className="w-5 h-5" />,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1566,12 +1559,10 @@ icon: <Building className="w-5 h-5" />,
                   <div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1583,7 +1574,6 @@ icon: <Building className="w-5 h-5" />,
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div
 
           {/* Desktop Navigation */}
@@ -1619,130 +1609,6 @@ icon: <Building className="w-5 h-5" />,
                       animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                       exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-<<<<<<< HEAD
-                      className='absolute top - full left - 0 mt - 2 w - 96 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
-                    >;
-                      <div className='p - 4'>;
-                        <div className='flex items - center space - x-3 mb - 4'>;
-                          <div;
-                            className={`p - 3 rounded - xl bg - gradient - to - br ${item.color} shadow - lg`}
-                          >;
-
-                            {item.icon}
-                          </div>;
-                          <div>;
-                            <h3 className='text - lg font - semibold text - white'>;
-                              {item.name}
-                            </h3>;
-                            <p className='text - sm text - gray - 400'>;
-                              {item.description}
-
-                            </p>;
-                          </div>;
-                        </div>;
-                        <div className='space - y-2'>;
-                          {item.children.map (child => (
-                            <Link;
-
-                              key={child.name}
-                              href={child.href}
-                              className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group';
-                            >;
-                              <span className='text - 2xl'>{child.icon}</span>;
-                              <div className='flex - 1'>;
-                                <div className='font - medium text - white group - hover:text - cyan - 300 transition - colors'>;
-                                  {child.name}
-                                </div>;
-                                <div className='text - sm text - gray - 400'>;
-                                  {child.description}
-                                </div>;
-                              </div>;
-                              <div className='text - right'>;
-                                <div className='text - sm font - medium text - cyan - 400'>;
-                                  {child.price}
-
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
-                    >
-
-                      <div className="p-4">
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} shadow-lg`}>
-                            {item.icon}
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-semibold text-white">{item.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                            <p className="text-sm text-gray-400">{item.description}</p>
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          {item.children.map((child) => (
-
-                            className={`p-3 rounded-xl bg-gradient-to-br ${item && item.color} shadow-lg`}>;
-                            {item && item.icon}
-                          </div>;
-                          <div>;
-                            <h3 className='text-lg font-semibold text-white'>;
-                              {item && item.name}
-                            </h3>;
-                            <p className='text-sm text-gray-400'>;
-                              {item && item.description}
-                            </p>;
-                          </div>;
-                        </div>;
-
-                        <div className='space-y-2'>;
-                          {item && item.children.map(child => (;
-                            <Link
-                              key={child && child.name}
-                              href={child && child.href}
-                              className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group'>;
-                              <span className='text-2xl'>{child && child.icon}</span>;
-                              <div className='flex-1'>;
-                                <div className='font-medium text-white group-hover:text-cyan-300 transition-colors'>;
-                                  {child && child.name}
-                                </div>;
-                                <div className='text-sm text-gray-400'>;
-                                  {child && child.description}
-                                </div>;
-                              </div>;
-                              <div className='text-right'>;
-                                <div className='text-sm font-medium text-cyan-400'>;
-                                  {child && child.price}
-                                </div>;
-                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >;
-                      <div className="p-4">;
-                        <div className="flex items-center space-x-3 mb-4">;
-                          <div className={`p-3 rounded-xl bg-gradient-to-br ${item && item.color} shadow-lg`}>;
-                            {item && item.icon}
-                          </div>;
-                          <div>;
-                            <h3 className="text-lg font-semibold text-white">{item && item.name}</h3>;
-                            <p className="text-sm text-gray-400">{item && item.description}</p>;
-                          </div>;
-                        </div>;
-                        <div className="space-y-2">;
-                          {item && item.children.map((child) => (;
-
-                            <Link
-                              key={child && child.name}
-                              href={child && child.href}
-                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group">;
-                              <span className="text-2xl">{child && child.icon}</span>;
-                              <div className="flex-1">;
-                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">;
-                                  {child && child.name}
-                                </div>;
-                                <div className="text-sm text-gray-400">{child && child.description}</div>;
-                              </div>;
-                              <div className="text-right">;
-                                <div className="text-sm font-medium text-cyan-400">{child && child.price}</div>;
-                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />;
-                              </div>;
-                            </Link>;
-=======
                                 </div>
 
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
@@ -1750,9 +1616,7 @@ icon: <Building className="w-5 h-5" />,
                               </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ))}
                         </div>;
                       </div>;
@@ -1763,18 +1627,15 @@ icon: <Building className="w-5 h-5" />,
             ))}
 
           </nav>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Right Side */}
 
           <div className='flex items-center space-x-4'>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>;
               <a
@@ -1804,34 +1665,6 @@ icon: <Building className="w-5 h-5" />,
 
                               key={child.name}
                               href={child.href}
-<<<<<<< HEAD
-                              className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group";
-                            >;
-                              <span className="text - 2xl">{child.icon}</span>;
-                              <div className="flex - 1">;
-                                <div className="font - medium text - white group - hover:text - cyan - 300 transition - colors">;
-                                  {child.name}
-                                </div>;
-                                <div className="text - sm text - gray - 400">{child.description}</div>;
-                              </div>;
-                              <div className="text - right">;
-                                <div className="text - sm font - medium text - cyan - 400">{child.price}</div>;
-                                <ChevronRight className="w - 4 h - 4 text - gray - 500 group - hover:text - cyan - 400 transition - colors" />;
-                              </div>;
-                            </Link>))}
-                        </div>;
-                      </div>;
-                    </motion.div>)}
-                </AnimatePresence>;
-              </div>))}
-          </nav>;
-          {/* Right Side */}
-
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'>;
-                <Mail className='w-4 h-4' />                <span>{contactInfo && contactInfo.email}</span>            {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4 text-sm">;
-=======
                               className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
                             >
                               <span className="text-2xl">{child.icon}</span>
@@ -1845,16 +1678,10 @@ icon: <Building className="w-5 h-5" />,
                                 <div className="text-sm font-medium text-cyan-400">{child.price}</div>
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                               </div>
-=======
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
 
                               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </Link>
                           ))}
                         </div>
@@ -1865,22 +1692,12 @@ icon: <Building className="w-5 h-5" />,
               </div>
             ))}
           </nav>
-<<<<<<< HEAD
-          {/* Right Side */}
-          <div className='flex items-center space-x-4'>
-=======
 
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
@@ -1888,36 +1705,24 @@ icon: <Building className="w-5 h-5" />,
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a
-<<<<<<< HEAD
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
-                <Mail className="w-4 h-4" />;
-                <span>{contactInfo && contactInfo.email}</span>;
-              </a>;
-            </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
                 <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
 
-=======
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-=======
                 href={`mailto:${contactInfo.email}`}
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
               >
@@ -1938,20 +1743,10 @@ icon: <Building className="w-5 h-5" />,
                 <span>{contactInfo.email}</span>
               </a>
             </div>
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-=======
 
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
 
                 href="/contact"
@@ -1963,13 +1758,9 @@ icon: <Building className="w-5 h-5" />,
               </Link>;
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -1981,12 +1772,9 @@ icon: <Building className="w-5 h-5" />,
       </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isMenuOpen && (;
@@ -2014,16 +1802,8 @@ icon: <Building className="w-5 h-5" />,
                     {navigation.map (item => (
                       <div key={item.name}>;
                         <Link;
-=======
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='container mx-auto px-4 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -2036,7 +1816,6 @@ icon: <Building className="w-5 h-5" />,
                     {navigation.map(item => (
                       <div key={item.name}>
                         <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                           href={item.href}
                           className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
                         >;
@@ -2069,11 +1848,9 @@ icon: <Building className="w-5 h-5" />,
 
                   </div>;
                 </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Quick Links & Contact */}
 
                 <div className='space-y-6'>
@@ -2086,7 +1863,6 @@ icon: <Building className="w-5 h-5" />,
                     </h3>
                     <div className='space-y-2'>
                       {quickLinks.map(link => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -2104,7 +1880,6 @@ icon: <Building className="w-5 h-5" />,
                           <span className="text-white">{link && link.name}</span>;
                         </Link>;
 
-=======
 
                 {/* Quick Links & Contact */}
                 <div className="space-y-6">
@@ -2189,190 +1964,8 @@ icon: <Building className="w-5 h-5" />,
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-href={`mailto:${contactInfo && contactInfo.email}`}
-                        className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
-                        <Mail className='w-4 h-4 text-cyan-400' />;
-                        <span className='text-white'>{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className='flex items-center space-x-3 p-3 rounded-xl'>;
-                        <MapPin className='w-4 h-4 text-cyan-400' />;
-                        <span className='text-white text-sm'>;
-                          {contactInfo && contactInfo.address}
-                        </span>                      </div>                        href={`tel:${contactInfo && contactInfo.mobile}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200";
-                      >;
-                        <Phone className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white">{contactInfo && contactInfo.mobile}</span>;
-                      </a>;
-                      <a
-                        href={`mailto:${contactInfo && contactInfo.email}`}
-                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200">;
-                        <Mail className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white">{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className="flex items-center space-x-3 p-3 rounded-xl">;
-                        <MapPin className="w-4 h-4 text-cyan-400" />;
-                        <span className="text-white text-sm">{contactInfo && contactInfo.address}</span>;
-                          <span className="text - white">{link.name}</span>;
-                        </Link>))}
-                    </div>;
-                  </div>;
-                  <div>;
-                    <h3 className='text - lg font - semibold text - white mb - 4'>;
-                      Contact Info;
-                    </h3>;
-                    <div className='space - y-3'>;
-                      <a;
-                        href={`tel:${contact_info.mobile}`}
-                        className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                      >;
-                        <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white'>{contact_info.mobile}</span>;
-                      </a>;
-                      <a;
-                        href={`mailto:${contact_info.email}`}
-                        className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
-                      >;
-                        <Mail className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white'>{contact_info.email}</span>;
-                      </a>;
-                      <div className='flex items - center space - x-3 p - 3 rounded - xl'>;
-                        <MapPin className='w - 4 h - 4 text - cyan - 400' />;
-                        <span className='text - white text - sm'>;
-                          {contact_info.address}
-                        </span>                      </div>                        href={`tel:${contact_info.mobile}`}
-                        className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                      >;
-                        <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white">{contact_info.mobile}</span>;
-                      </a>;
-                      <a;
-                        href={`mailto:${contact_info.email}`}
-                        className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
-                      >;
-                        <Mail className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white">{contact_info.email}</span>;
-                      </a>;
-                      <div className="flex items - center space - x-3 p - 3 rounded - xl">;
-                        <MapPin className="w - 4 h - 4 text - cyan - 400" />;
-                        <span className="text - white text - sm">{contact_info.address}</span>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-
-              {/* Mobile CTA */}
-              <div className='mt - 6 pt - 6 border - t border - gray - 700 / 50'>;
-                <Link;
-                  href='/contact';
-                  className='inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300';
-                >;
-                  <Rocket className='w - 4 h - 4 mr - 2' />                  Get Started Today                <Link;
-                  href="/contact";
-                  className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300";
-                >;
-                  <Rocket className="w - 4 h - 4 mr - 2" />;
-
-                  Get Started Today;
-                </Link>;
-              </div>;
-            </div>;
-
-
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {;
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion && motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <divclassName= {
-  `p-2 rounded-lg bg-gradient-to-br $ {
-  item && item.color 
-}shadow-lg` 
-}> {;
-  item && item.icon ;
-}</div> </motion && motion.button> {;
-  /* Dropdown Menu */ ;
-}<AnimatePresence> </div> </a>) ) ;
-}</div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </div>) ) ;
-}</nav> </a> </div> {;
-  /* CTA Button */ ;
-}<motion&& motion.div whileHover= {
-  {
-  scale: 1 && 1.05 
-}whileTap= {
-  {
-  scale: 0 && 0.95 
-}> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion && motion.div> {;
-  /* Mobile Menu Button */ ;
-}<button </button> </div> </div> </div> {;
-  /* Mobile Menu */ ;
-}<AnimatePresence> > <divclassName= {
-  `p-2 rounded-lg bg-gradient-to-br $ {
-  item && item.color 
-}` 
-}> {;
-  item && item.icon ;
-}</div> <div> </div> </a> </div>) ) ;
-}</div> </div>) ) ;
-}</div> </div> <div> <h3 className="text-lg font-semibold text-white mb-4" >Contact Info</h3> <div className="space-y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300" > <Rocket className="w-4 h-4 mr-2" /> Get Started Today </a> </div> </div> </motion && motion.div>) ;
-}</AnimatePresence> </header>) ;
-};export default UltraFuturisticNavigation2027;  );
-
-};
-export default UltraFuturisticNavigation2027;
-
-
-          </motion.div>)}
-      </AnimatePresence>;
-    </header>);
-;
-`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 500 $ {
-  is_scrolled ? 'bg - gray - 900 / 95 backdrop - blur - xl border - b border - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20' > <Zap className="w - 7 h - 7 text - white" /> </motion.div> <div className="hidden sm:block" > <div className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent group - hover:from - cyan - 300 group - hover:via - purple - 300 group - hover:to - pink - 300 transition - all duration - 300" > Zion Tech Group </div> <div className="text - xs text - gray - 400 group - hover:text - cyan - 300 transition - colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
-  `p - 2 rounded - lg bg - gradient - to - br $ {
-  item.color;
-}shadow - lg`;
-}> {
-  item.icon;
-}</div> </motion.button> {
-  /* Dropdown Menu */;
-}<AnimatePresence> </div> </a>) );
-}</div> </div> </motion.div>);
-}</AnimatePresence> </div>) );
-}</nav> </a> </div> {
-  /* CTA Button */;
-}<motion.div while_hover= {
-  {
-  scale: 1.05;
-}while_tap= {
-  {
-  scale: 0.95;
-}> <Link href="/contact" className="hidden lg:inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - cyan - 500 / 40 transition - all duration - 300" > <Rocket className="w - 4 h - 4" /> <span > Get Started</span> </a> </motion.div> {
-  /* Mobile Menu Button */;
-}<button </button> </div> </div> </div> {
-  /* Mobile Menu */;
-}<AnimatePresence> > <div className= {
-  `p - 2 rounded - lg bg - gradient - to - br $ {
-  item.color;
-}`;
-}> {
-  item.icon;
-}</div> <div> </div> </a> </div>) );
-}</div> </div>) );
-}</div> </div> <div> <h3 className="text - lg font - semibold text - white mb - 4" >Contact Info</h3> <div className="space - y-3" > <a </div> </div> </div> </div> </div> <Link href="/contact" className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300" > <Rocket className="w - 4 h - 4 mr - 2" /> Get Started Today </a> </div> </div> </motion.div>);
-}</AnimatePresence> </header>);
-}export default UltraFuturisticNavigation2027);
-}
-;
-export default UltraFuturisticNavigation2027;
-;
-
-=======
 
 export default UltraFuturisticNavigation2027;
 
-=======
 export default UltraFuturisticNavigation2027;
-=======
 export default UltraFuturisticNavigation2027;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

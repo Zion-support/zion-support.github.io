@@ -29,15 +29,10 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
-<<<<<<< HEAD
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-=======
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
-=======
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -48,7 +43,6 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -67,7 +61,6 @@ export function requireRoles(
   return identity;
 
 }
-=======
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -202,7 +195,6 @@ export function getClientIp(req: any): string {
          'unknown';
 }
 
-=======
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -237,10 +229,5 @@ if ( {) {
   }
   return identity;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

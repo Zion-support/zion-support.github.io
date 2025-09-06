@@ -1,10 +1,8 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Head from 'next/head';
 
 import Link from 'next/link';
-=======
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
@@ -60,10 +58,8 @@ const it_services = [{
     category: 'Cloud',
     popular: true;
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
 
-=======
 
 
     title: 'Cybersecurity Solutions'
@@ -75,7 +71,6 @@ const it_services = [{
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     popular: true
   }
   {
@@ -578,7 +573,6 @@ const supportLevels = [{
     description: 'Dedicated support team and SLA guarantees'
     features: ['Dedicated Team', 'SLA Guarantees', 'Custom Monitoring', 'Real-time Reports']
     pricing: 'Custom Pricing'
-=======
 import {;
   Server,;
   Shield,;
@@ -1084,66 +1078,12 @@ title: 'AI-Powered IT Operations (AIOps)',;
     pricing: '$15,000 - $75,000/project',;
     category: 'Disaster Recovery',;
     popular: true;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-<<<<<<< HEAD
-  Server
-  Shield
-  Cloud
-  Database
-  Network
-  Monitor
-  Settings
-  CheckCircle
-  ArrowRight
-  Clock
-  Award
-  Star
-  Zap
-  TrendingUp
-  Users
-  Sprout
-  Eye
-  Bot
-  Lock
-  Globe
-  Cpu
-  HardDrive
-  Wifi
-  Smartphone
-  Laptop
-  MessageSquare
-  Mail
-  Building
-  BarChart3
-  Code
-  Search
-  ShoppingCart
-  BookOpen
-  Brain
-  DollarSign
-  Rocket
-=======
   Server,
   Shield,
   Cloud,
@@ -1180,7 +1120,6 @@ import {
   Brain,
   DollarSign,
   Rocket;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management'
@@ -1192,26 +1131,12 @@ const itServices = [{
     popular: true
   }
   {
-<<<<<<< HEAD
-    title: 'Cybersecurity Solutions',
-    description: 'Enterprise-grade security services to protect your digital assets and data.',
-    icon: Shield,
-    features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
-    pricing: '$5,000 - $40,000/project',
-<<<<<<< HEAD
-    category: 'Security',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
     icon: Shield
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     popular: true
   }
   {
@@ -1663,7 +1588,6 @@ title: 'AI-Powered IT Operations (AIOps)'
     pricing: '$15,000 - $75,000/project'
     category: 'Disaster Recovery'
     popular: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 ];
 const technologies = [{ name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },;
@@ -2259,29 +2183,6 @@ function ITServicesPage() {
                   <Server className="h - 16 w - 16 text - green - 400 mr - 4" />;
                   <h1 className="text - 4xl md:text - 6xl font - bold">;
                 IT{' '}
-<<<<<<< HEAD
-                <span className="bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent">;
-
-                  Services;
-                </span>;
-</h1>;
-                  </div>;
-
-                  <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
-              Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we & apos;ve got you covered.;
-            </p>;
-                  <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Link href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - green - 500 to - emerald - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold">;
-                Get IT Consultation;
-              </Link>;
-                  <Link href="/services" className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - gray - 900 transition - all duration - 300 font - semibold">;
-                View All Services;
-              </Link>;
-                  </div>;
-                  </motion.div>;
-                  </div>;
-                  </section>;
-=======
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Services
                 </span>
@@ -2301,7 +2202,6 @@ function ITServicesPage() {
                   </motion.div>
                   </div>
                   </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Services Grid */}
       <section className="py - 20 bg - gray - 50">;
                   <div className="container mx - auto px - 4">;
@@ -2332,20 +2232,13 @@ import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
 
-=======
 
-=======
 import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Server, 
   Shield, 
@@ -2402,7 +2295,6 @@ import {
   Star,
   Zap,
 
-=======
   Search, 
   ShoppingCart, 
   BookOpen, 
@@ -2448,10 +2340,7 @@ import {
 
 
 
-=======
   Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Laptop;
 } from 'lucide-react';
 
@@ -2491,14 +2380,10 @@ const it_services = [;
   {
 
 
->>>>>>> origin/automation-improvements-final
-=======
 
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -2516,15 +2401,7 @@ const it_services = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     link: '/contact'
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     link: '/contact'
     pricing: '$1, 500 - $8, 000 / month',
     category: 'Security',
@@ -2577,21 +2454,13 @@ export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
-=======
 ];
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export default function ITServices() {
-=======
 export default function ITServices() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
@@ -2616,9 +2485,7 @@ export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-=======
 
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -2899,94 +2766,10 @@ export default function ITServices(req, res) {
       ],;
     },;
   ];
-<<<<<<< HEAD
-  const filteredServices =;
-    selectedCategory === 'all';
-      ? services;
-      : services && services.filter(service => service && service.category === selectedCategory);
-  return (
-
-    <>
-
-
-      <Head>
-        <title>IT Services - Zion Tech Group</title>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        <meta
-          name='description'
-          content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
-        />;
-        <meta
-          name='keywords'
-          content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
-
-        />;
-        <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
-        <meta name='robots' content='index, follow' />;
-        <link rel='canonical' href={`${contact && contact.site}/it-services`} />;
-      </Head>;
-      <ErrorBoundary level='page'>;
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
-
-          {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>;
-            <div className='max-w-4xl mx-auto'>;
-              <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >;
-                IT Services;
-              </h1>;
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                100+ Comprehensive IT Solutions;
-              </p>;
-              <p
-
-                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                Transform your business with our enterprise-grade IT services.;
-                From cloud infrastructure to quantum computing, we provide;
-                cutting-edge technology solutions that scale with your business;
-                and drive innovation.              </p>;
-            </div>;
-          </section>;
-
-
-          {/* Category Filter */}
-          <section className='py-8 px-4'>;
-            <div className='max-w-6xl mx-auto'>;
-              <div className='flex flex-wrap justify-center gap-4 mb-8'>;
-                {categories && categories.map(category => (                  <button
-                    key={category && category.id}
-                    onClick={() => setSelectedCategory(category && category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
-                      selectedCategory === category && category.id;
-                        ? 'bg-green-600 text-white';
-                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-
-                    }`}
-                  >;
-                    {category && category.name} ({category && category.count});
-                  </button>;
-                ))}
-
-                {filteredServices.map((service, index) => (
-                  <div                    key={service.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {service.popular && (
-                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
-                        Popular
-                      </div>
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </div>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -3150,10 +2933,8 @@ export default function ITServices(req, res) {
               </p>;
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -3161,198 +2942,6 @@ export default function ITServices(req, res) {
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
-<<<<<<< HEAD
-                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
-                  Call {contact && contact.phone}
-                </a>;
-                <a
-
-                  href={`mailto:${contact && contact.email}`}
-                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
-        {/* Services Grid */}
-        <section className="py-16 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-
-              className="text-center mb-12">;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>;
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-                Comprehensive IT solutions designed to enhance your business operations and security.;
-              </p>;
-            </motion && motion.div>;
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {itServices && itServices.map((service, index) => (;
-                <motion&& motion.div
-
-                  key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}
-
-whileHover={{ y: -5 }} ">;
-                  <div className="flex items-center justify-between mb-4">;
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">;
-                  <IconComponent className="w-10 h-10" />;
-                  </div>;
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">;
-                      {service && service.category}
-                    </span>;
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">;
-                    {service && service.title}
-                  </h3>;
-                  <p className="text-gray-600 mb-4 leading-relaxed">;
-                    {service && service.description}
-                  </p>;
-                  <div className="mb-4">;
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>;
-                  <ul className="space-y-1">;
-                      {service && service.features.map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">;
-                  <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
-
-                          {feature}
-                        </li>;
-                      ))}
-                    </ul>;
-                  </div>;
-                  <div className="mb-4">;
-                  <span className="text-sm font-semibold text-green-600">{service && service.pricing}</span>;
-                  </div>;
-                  <Link
-                    href="/contact"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors inline-flex items-center justify-center text-sm">;
-                    <span>Get Quote</span>;
-                  <ArrowRight className="w-3 h-3 ml-1" />;
-                  </Link>;
-                  </motion && motion.div>;
-              );
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Technologies Section */}
-      <section className="py-20 bg-white">;
-                  <div className="container mx-auto px-4">;
-                  <motion&& motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Technologies We Work With</h2>;
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-              We leverage cutting-edge technologies to deliver robust IT solutions.;
-            </p>;
-                  </motion && motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {technologies && technologies.map((tech, index) => {;
-              const IconComponent = tech && tech.icon;
-              return (
-                <motion&& motion.div
-                  key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }} viewport={{ once: true }}">;
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <IconComponent className="w-8 h-8 text-green-600" />;
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">;
-                    {tech && tech.name}
-                  </h3>;
-                  <p className="text-gray-600">;
-                    {tech && tech.description}
-                  </p>;
-                  </motion && motion.div>;
-              );
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">;
-                  <div className="container mx-auto px-4">;
-                  <motion&& motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h2>;
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-              Proven expertise and measurable results for your technology infrastructure.;
-            </p>;
-                  </motion && motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {benefits && benefits.map((benefit, index) => {;
-              const IconComponent = benefit && benefit.icon;
-              return (
-                <motion&& motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  viewport={{ once: true }}>;
-                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <IconComponent className="w-8 h-8 text-green-600" />;
-                  </div>;
-                  <div className="text-3xl font-bold text-green-600 mb-2">;
-                    {benefit && benefit.stat}
-                  </div>;
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">;
-                    {benefit && benefit.title}
-                  </h3>;
-                  <p className="text-gray-600">;
-                    {benefit && benefit.description}
-                  </p>;
-                  </motion && motion.div>;
-              );
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Support Levels Section */}
-      <section className="py-20 bg-white">;
-                  <div className="container mx-auto px-4">;
-                  <motion&& motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Support Levels</h2>;
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
-              Choose the support level that best fits your business needs.;
-            </p>;
-                  </motion && motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {supportLevels && supportLevels.map((level, index) => (;
-              <motion&& motion.div
-                key={index}
-                className={`p-8 rounded-xl shadow-lg ${
-                  index === 1 ? 'bg-green-50 border-2 border-green-200' : 'bg-white'
-                }`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -3374,37 +2963,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
-<<<<<<< HEAD
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-};
-  const categories = [
-    { id: 'all', name: 'All IT Services', count: 100 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 },
-    { id: 'security', name: 'Cybersecurity', count: 20 },
-    { id: 'devops', name: 'DevOps & Automation', count: 15 },
-    { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
-    { id: 'quantum', name: 'Quantum Computing', count: 10 },
-    { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
-];
-  const services = [
-    {
-      id: 1,
-      name: 'Quantum Computing Consulting',
-
-      description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
-      category: 'quantum',
-      features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
-      price: 'Custom Pricing',
-      popular: true,
-      benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 2,
       name: 'Blockchain & Web3 Solutions',
@@ -3414,29 +2973,17 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
       description: 'Integrated development, security, and operations with automated security testing and deployment.',
-<<<<<<< HEAD
-category: 'devops',
-=======
     category: 'devops',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
       popular: false,
       benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 4,
       name: 'Enterprise Data Platform',
@@ -3446,11 +2993,7 @@ category: 'devops',
       price: '$299/month',
       popular: true,
       benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 5,
       name: 'High-Performance Computing Solutions',
@@ -3460,11 +3003,7 @@ category: 'devops',
       price: '$399/month',
       popular: false,
       benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 6,
       name: 'Cloud Migration Services',
@@ -3474,11 +3013,7 @@ category: 'devops',
       price: 'Custom Pricing',
       popular: true,
       benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 7,
       name: 'Infrastructure as Code',
@@ -3488,11 +3023,7 @@ category: 'devops',
       price: '$149/month',
       popular: false,
       benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 8,
       name: 'Disaster Recovery Solutions',
@@ -3502,11 +3033,7 @@ category: 'devops',
       price: '$179/month',
       popular: true,
       benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 9,
       name: 'Cybersecurity Assessment',
@@ -3516,11 +3043,7 @@ category: 'devops',
       price: '$249/month',
       popular: false,
       benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 10,
       name: 'API Development & Integration',
@@ -3530,11 +3053,7 @@ category: 'devops',
       price: '$129/month',
       popular: true,
       benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 11,
       name: 'Microservices Architecture',
@@ -3544,11 +3063,7 @@ category: 'devops',
       price: '$199/month',
       popular: false,
       benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
-<<<<<<< HEAD
-};
-=======
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       id: 12,
       name: 'Edge Computing Solutions',
@@ -3559,19 +3074,12 @@ category: 'devops',
       popular: true,
       benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
     }
-<<<<<<< HEAD
-];
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-=======
   ];
 
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <>
       <Head>
@@ -3582,238 +3090,18 @@ category: 'devops',
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/it-services`} />
       </Head>
-<<<<<<< HEAD
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
-<<<<<<< HEAD
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 IT Services
               </h1>
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-              >
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  {level.name}
-                </h3>
-                  <p className="text-gray-600 mb-6">
-                  {level.description}
-                </p>
-                  <div className="text-3xl font-bold text-green-600 mb-6">
-                  {level.pricing}
-                </div>
-                  <ul className="space-y-3 mb-8">
-                  {level.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                  <Link
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
-                >
-                  <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                  </motion.div>
-            ))}
-          </div>
-                  </div>
-                  </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
-                  <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you build a robust, secure, and scalable IT environment.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Get IT Assessment
-              </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-      {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Started with IT Services Today
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
-              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
-              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
-                Call Now: +1 302 464 0950
-              </a>
-            </motion.div>
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
-                kleber@ziontechgroup.com
-              </a>
-            </motion.div>
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="w-8 h-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
-              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
-              <address className="text-green-600 font-semibold not-italic">
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709
-              </address>
-            </motion.div>
-          </div>
-          <motion.div
-            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-lg mb-6">
-              Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Start Building
-              </Link>
-              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-            </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-              >
-                IT Services
-              </h1>
-<<<<<<< HEAD
-              <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                100+ Comprehensive IT Solutions
-              </p>
-              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                Transform your business with our enterprise-grade IT services. From cloud infrastructure 
-<<<<<<< HEAD
-                to quantum computing, we provide cutting-edge technology solutions that scale with your
 
-  const _filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory),
-
-  return (_<>
-      <Head>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.&quot; />
-        <meta name=&quot;keywords&quot; content=&quot;IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure&quot; />
-        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
-        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
-        <link rel=&quot;canonical&quot; href={`${contact.site}/it-services`} />
-      </Head>
-      
-      <ErrorBoundary level=&quot;page&quot;>
-        <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
-          {/* Hero Section */}
-          <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot;>
-            <div className=&quot;max-w-4xl mx-auto&quot;>
-              <h1 
-                className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >
-                IT Services
-              </h1>
-              <p className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                100+ Comprehensive IT Solutions
-              </p>
-              <p className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                Transform your business with our enterprise-grade IT services. From cloud infrastructure 
-                to quantum computing, _we provide cutting-edge technology solutions that scale with your 
-
-                business and drive innovation.
-              </p>
-            </div>
-
-
-
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-
-
-
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           </section>
 
           {/* Category Filter */}
@@ -4164,7 +3452,6 @@ function ITServices() {
                       selected_category === category.id;
                         ? 'bg - green - 600 text - white';
                         : 'bg - slate - 800 text - slate - 300 hover:bg - slate - 700';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }`}
                   >;
                     {category.name} ({category.count});
@@ -4180,7 +3467,6 @@ function ITServices() {
                   {level.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-=======
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}>;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">;
@@ -4609,11 +3895,9 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
       </div>
     </Layout>
 
->>>>>>> origin/automation-improvements-final
   );
 }
 
-=======
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -4659,7 +3943,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                     </div>
                     
                     <button className=&quot;w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors&quot;>
-=======
                   >
                     {category.name} ({category.count})
                   </button>
@@ -4701,129 +3984,13 @@ className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold tran
                   Email Us
                 </Link>
 
-=======
-<<<<<<< HEAD
-          <section className='py-16 px-4 bg-slate-900/40'>
-            <div className='max-w-6xl mx-auto'>
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
-                Our Technology Stack
-              </h2>
-
-              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-                <div className='text-center'>
-                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <svg
-                      className='w-8 h-8 text-white'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-                      />
-                    </svg>
-                  </div>
-                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
-                  <p className='text-slate-400'>
-                    AWS, Azure, GCP, and hybrid cloud solutions
-                  </p>
->>>>>>> origin/automation-improvements-final
-                </div>
-                  <ul className="space-y-3 mb-8">
-                  {level.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-600">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                  <Link
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
-                    index === 1
-? 'bg-green-600 hover: bg-green-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
-                >
-                  <span>Choose Plan</span>
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                  </motion.div>
-            ))}
-          </div>
-                  </div>
-                  </section>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-<div className="container mx-auto px-4 text-center">
-                  <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Let our expert team help you build a robust, secure, and scalable IT environment.
-            </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                Get IT Assessment
-              </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                View All Services
-              </Link>
-                  </div>
-                  </motion.div>
-                  </div>
-                  </section>
-      {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Started with IT Services Today
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <motion.div
-              className="text-center p-6 bg-white rounded-lg shadow-lg"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageSquare className="w-8 h-8 text-green-600" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </div>
-            </div>
-
-=======
 
 
   );
 
             </div>
-=======
             </div>
 
-=======
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </section>
         </main>
       </ErrorBoundary>
@@ -4868,7 +4035,6 @@ className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold tran
   );
 }
 
-=======
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
                   <motion.div;
@@ -4991,7 +4157,4 @@ className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold tran
 }
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

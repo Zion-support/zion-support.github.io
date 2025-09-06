@@ -22,10 +22,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
-=======
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
 import { ;
@@ -73,7 +71,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
   showInternalNav = true,;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
-=======
 import { 
   ArrowRight, Star, Brain, Atom, Shield, Zap;
   Users, Globe, TrendingUp, Rocket, Cpu, Lock;
@@ -86,9 +83,6 @@ interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -139,7 +133,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
     .slice(0, 12);
 
-=======
 
   useEffect(() => {
     setIsVisible(true);
@@ -244,7 +237,6 @@ if ( {) {
     .filter (service => service.popular);
     .slice (0, 12);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -260,7 +252,6 @@ if ( {) {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
-=======
 ;
   const featured_services = all_services.filter (service => service.popular).slice (0, 12);
   const navigation_sections = [;
@@ -314,7 +305,6 @@ if ( {) {
     animate: {
       transition: {
 
-=======
 
         staggerChildren: 0.1,
       },
@@ -503,12 +493,10 @@ if ( {) {
                 <div className="hidden lg:flex space - x-8">;
                   {navigation_sections.map ((section) => (
                     <button;
-=======
 
                   {navigationSections.map(section => (                    <button  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -520,12 +508,9 @@ if ( {) {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Contact Info */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -551,12 +536,9 @@ if ( {) {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
                 {isMobileMenuOpen && (;
@@ -572,8 +554,6 @@ if ( {) {
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -608,7 +588,6 @@ if ( {) {
 
 
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -619,7 +598,6 @@ if ( {) {
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
-=======
                     >;
                       <span>{section.icon}</span>;
                       <span>{section.label}</span>;
@@ -727,12 +705,7 @@ if ( {) {
             </div>;
           </nav>;
         </>)}
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section;
         id='hero';
@@ -746,45 +719,9 @@ if ( {) {
             <motion.div;
               animate={{ coordinate_y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
-<<<<<<< HEAD
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'            >      <section id="hero" className="relative min - h-screen flex items - center justify - center px - 4 sm:px - 6 lg:px - 8 pt - 16">;
-        <div className="text - center z - 10 max - w-6xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className='text - center max - w-6xl mx - auto relative z - 10'            className="text - center max - w-6xl mx - auto relative z - 10";
-          >;
-            <motion.div;
-              animate={{ coordinate_y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className='w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center'              className="w - 6 h - 10 border - 2 border - cyan - 400 rounded - full flex justify - center";
-            >;
-              <motion.div;
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
-                className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm'>;
-                <Star className='w-5 h-5' />;
-                <span>Innovation Leader 2025-2026</span>;
-              </motion && motion.div>;
-
-              <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
-                Zion Tech Group;
-              </h1>;
-              <p className='text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed'>;
-                Pioneering the future of technology with innovative solutions;
-                that drive business transformation;
-              </p>;
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Enhanced CTA Section */}
               <motion&& motion.div
                 variants={itemVariants}
@@ -896,13 +833,9 @@ if ( {) {
               </motion && motion.div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -915,19 +848,14 @@ if ( {) {
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -961,8 +889,6 @@ if ( {) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -989,13 +915,10 @@ if ( {) {
               <motion&& motion.div
                 key={index}
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8"
-=======
 
                 className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 p-8'                initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1023,12 +946,9 @@ if ( {) {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 40 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Enhanced Services Preview */}
       <section className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -1039,8 +959,6 @@ if ( {) {
             initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileInView={{ opacity: 1, y: 0 }}
 
                 className='inline - flex items - center space - x-2 px - 6 py - 3 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 border border - cyan - 400 / 30 rounded - full text - cyan - 400 text - lg font - medium backdrop - blur - sm';
@@ -1218,186 +1136,18 @@ if ( {) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-          >;
-            <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
-              Our Revolutionary 2026 Services;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              From AI - powered business intelligence to quantum computing and;
-              emerging technologies, we're building the future today;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-            {[;
-              {
-                title: 'AI Business Intelligence',
-                description:;
-                  'Transform data into actionable insights with AI - powered analytics',
-                icon: Brain,
-                gradient: 'from - purple - 500 to - pink - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-              {
-                title: 'Cloud Infrastructure',
-                description:;
-                  'Automate cloud infrastructure deployment and management',
-                icon: Cloud,
-                gradient: 'from - cyan - 500 to - blue - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-              {
-                title: 'Cybersecurity Intelligence',
-                description: 'Advanced threat detection and response with AI',
-                icon: Shield,
-                gradient: 'from - red - 500 to - orange - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-              {
-                title: 'Data Engineering',
-                description: 'Streamline data pipelines and analytics with AI',
-                icon: BarChart3,
-                gradient: 'from - emerald - 500 to - teal - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-              {
-                title: 'Quantum Computing',
-                description: 'Access quantum computing power through the cloud',
-                icon: Atom,
-                gradient: 'from - indigo - 500 to - purple - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-              {
-                title: 'Blockchain Intelligence',
-                description:;
-                  'Intelligent blockchain analytics and DeFi optimization',
-                icon: Lock,
-                gradient: 'from - yellow - 500 to - orange - 500',
-                link: '/comprehensive - services - showcase - 2026',
-              },
-            ].map ((service, index) => (
-              <motion.div;
-
-                key={index}
-                className='group relative overflow - hidden rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - sm border border - white / 10 cursor - pointer'                initial={{ opacity: 0, coordinate_y: 40 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Revolutionary 2026 Services
-
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" }
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" }
-            transition={{ duration: 0 && 0.6 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
-              Our Revolutionary 2026 Services;
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-              From AI-powered business intelligence to quantum computing and;
-              emerging technologies, we're building the future today;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-            {[;
-              {;
-                title: 'AI Business Intelligence',;
-                description:;
-                  'Transform data into actionable insights with AI-powered analytics',;
-                icon: Brain,;
-                gradient: 'from-purple-500 to-pink-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-              {;
-                title: 'Cloud Infrastructure',;
-                description:;
-                  'Automate cloud infrastructure deployment and management',;
-                icon: Cloud,;
-                gradient: 'from-cyan-500 to-blue-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-              {;
-                title: 'Cybersecurity Intelligence',;
-                description: 'Advanced threat detection and response with AI',;
-                icon: Shield,;
-                gradient: 'from-red-500 to-orange-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-              {;
-                title: 'Data Engineering',;
-                description: 'Streamline data pipelines and analytics with AI',;
-                icon: BarChart3,;
-                gradient: 'from-emerald-500 to-teal-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-              {;
-                title: 'Quantum Computing',;
-                description: 'Access quantum computing power through the cloud',;
-                icon: Atom,;
-                gradient: 'from-indigo-500 to-purple-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-              {;
-                title: 'Blockchain Intelligence',;
-                description:;
-                  'Intelligent blockchain analytics and DeFi optimization',;
-                icon: Lock,;
-                gradient: 'from-yellow-500 to-orange-500',;
-                link: '/comprehensive-services-showcase-2026',;
-              },;
-            ].map((service, index) => (;
-              <motion&& motion.div
-                key={index}
-                className='group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer'                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                whileHover={{ y: -10, scale: 1 && 1.02 }}
-                onClick={() => (window && window.location.href = service && service.link)}              Our Revolutionary 2026 Services;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-              From AI-powered business intelligence to quantum computing and emerging technologies, we're building the future today;
-            </p>;
-          </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {[;
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-500 to-pink-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-500 to-blue-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-500 to-orange-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-500 to-teal-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-500 to-purple-500", link: "/comprehensive-services-showcase-2026" },;
-              { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-500 to-orange-500", link: "/comprehensive-services-showcase-2026" }
-            ].map((service, index) => (;
-              <motion&& motion.div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
-=======
                 whileHover={{ y: -10, scale: 1.02 }}
 
                 onClick={() => (window.location.href = service.link)}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -1405,7 +1155,6 @@ if ( {) {
             <a
 
 
-=======
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -1416,15 +1165,12 @@ if ( {) {
             initial={{ opacity: 0, y: 40 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             whileInView={{ opacity: 1, y: 0 }}
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
 
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Get in touch with our team to discuss how our innovative services can help you achieve your goals.
             </p>
@@ -1554,12 +1300,10 @@ if ( {) {
                 className='bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'                href="tel:+13024640950"
 
             className="text-center"
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1574,7 +1318,6 @@ if ( {) {
               </a>
               <a
                 href="tel:+13024640950"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -1583,29 +1326,6 @@ if ( {) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
-                Call Us;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-      {/* Footer */}
-
-
-              Website;
-            </a>;
-          </div>;
-        </div>;
-      </footer>;
-
-
-};
-export default Homepage2025;
-
-
-=======
     </UltraFuturisticBackground2026>);
 }
 ;
@@ -1614,11 +1334,7 @@ export default Homepage2025);
 ;
 export default Homepage2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

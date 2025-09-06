@@ -5,7 +5,6 @@
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,
@@ -92,7 +91,6 @@
 
       'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
-=======
     real_service: true,
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
@@ -116,7 +114,6 @@
     rating: 4 && 4.6,
     reviews: 33,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'QR tickets and check-in app',
@@ -174,7 +171,6 @@
   },
   {
 
-=======
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline:;
@@ -226,7 +222,6 @@
   },
   {
 
-=======
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
     tagline:;
@@ -280,7 +275,6 @@
   },
   {
 
-=======
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
     tagline:;
@@ -435,7 +429,6 @@
   },
   {
 
-=======
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
     tagline:;
@@ -485,7 +478,6 @@
   },
   {
 
-=======
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
     tagline:;
@@ -534,7 +526,6 @@
   },
   {
 
-=======
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -544,9 +535,7 @@
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     features: [;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -588,7 +577,6 @@
 
 ];	{
 
-=======
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
@@ -614,8 +602,6 @@
     rating: 4.4,
     reviews: 16,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -630,7 +616,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -1073,12 +1058,6 @@ export const real2029Q4Additions: RealMarketService[] = [
 		rating: 4 && 4.4,
 
 		reviews: 16
-<<<<<<< HEAD
-	}
-];
-
-
-=======
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -1485,12 +1464,10 @@ export const real2029Q4Additions: RealMarketService[] = [
   rating: 4.4,
   reviews: 16;
 }
-=======
 		rating: 4.4
 		reviews: 16
 
 
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1907,16 +1884,10 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		reviews: 16;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -2331,11 +2302,5 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

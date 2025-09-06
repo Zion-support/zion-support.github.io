@@ -17,7 +17,6 @@ interface ContentItem {id: string;
   tags: string[];
   source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
-=======
 import React, { useState, useEffect, useMemo } from 'react',
 import { 
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
@@ -39,7 +38,6 @@ interface ContentItem {
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 interface ContentCategory {id: string;
   name: string;
@@ -142,7 +140,6 @@ const ContentCategorizer: React.FC = () => {;
       source: 'behavior-analyzer',;
       type: 'insight';
 
-=======
 
 const ContentCategorizer: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -234,7 +231,6 @@ const contentItems: ContentItem[] = [
       type: 'insight'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     {id: '2';
       title: 'Security Vulnerability Scan Results';
@@ -397,7 +393,6 @@ const contentItems: ContentItem[] = [
           break;
 
 
-=======
   ],
 
   const filteredItems = useMemo(() => {
@@ -427,7 +422,6 @@ filtered.sort((a, b) => {
           break
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -483,7 +477,6 @@ value={selectedCategory}
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
@@ -496,7 +489,6 @@ value={selectedCategory}
           {_/* Subcategory Filter */}
           <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -515,7 +507,6 @@ value={selectedSubcategory}
           {_/* Content Type Filter */}
           <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -533,7 +524,6 @@ value={selectedType}
           {_/* Relevance Filter */}
           <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -550,7 +540,6 @@ value={selectedRelevance}
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -577,34 +566,10 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Clear All Filters
           </button>
         </div>
       </div>
-<<<<<<< HEAD:components/ContentCategorizer.tsx
-      {/* Category Pills */}
-      <div>
-        <div className=&quot;flex flex-wrap gap-2&quot;>
-          {categories.map(category => (
-            <button
-              key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
-              }`}
->
-              <category.icon className=&quot;w-4 h-4&quot; />
-              {category.name}
-              <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-                {category.count}
-              </span>;
-            </button>;
-          ))}
-        </div>;
-      </div>;
-=======
 
 
       {_/* Category Pills */}
@@ -628,7 +593,6 @@ key={category.id}
       </div>;
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -643,7 +607,6 @@ key={category.id}
                   {item.type}
                 </div>;
               </div>;
-=======
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
           const CategoryIcon = getCategoryIcon(item.category),
           const TypeIcon = getTypeIcon(item.type),
@@ -685,7 +648,6 @@ key={category.id}
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -696,7 +658,6 @@ key={category.id}
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -712,7 +673,6 @@ key={category.id}
               </div>;
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -736,7 +696,6 @@ key={category.id}
 
         })}
       </div>;
-=======
                 <a,
 href={item.href} 
                   target="blank" 
@@ -757,7 +716,6 @@ href={item.href}
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>

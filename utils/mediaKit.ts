@@ -5,14 +5,11 @@
 
   }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
 
-=======
 
 
       path: '',
@@ -43,7 +40,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
 
 ;
@@ -57,18 +53,12 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
-<<<<<<< HEAD
-  type: PressReleaseType
-  params: {
-    company_name: string;
-=======
 export function buildPressRelease(
 
   type: PressReleaseType,
   params: {;
 
     companyName: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
     raiseAmount?: string;
     tokenName?: string;
@@ -90,8 +80,6 @@ export function buildPressRelease(
   return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
 
 
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>;
     new Date(d.getFullYear(), d.getMonth(), d.getDate() + days);
@@ -109,7 +97,6 @@ export function buildTimeline(startDate: Date) {
 
 function titleCase(s: string) {
 
-=======
   return s && s.replace(
     /\w\S*/g,
     w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
@@ -117,13 +104,8 @@ function titleCase(s: string) {
   );}
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
@@ -155,5 +137,3 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   Menu,
   ChevronDown,
@@ -64,20 +61,9 @@ import {
   Linkedin,
   Twitter,
   Github,
-<<<<<<< HEAD
-  Youtube,
-  MapPin,
-} from 'lucide-react';
-;
-interface NavigationItem {
-  name: string;
-  href: string;  icon?: React.ReactNode;import {
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-=======
   Youtube,;
   MapPin,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Menu,
@@ -232,7 +218,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
 
-=======
 import {
   Menu,
   ChevronDown,
@@ -297,16 +282,11 @@ import {
 interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   href: string;  icon?: React.ReactNode;import { ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -322,8 +302,6 @@ interface NavigationItem {
   name: string,
   href: string,
   icon?: React.ReactNode;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   description?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -332,7 +310,6 @@ interface NavigationItem {
   category?: string;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const navigationItems: NavigationItem[] = [
   {
 
@@ -350,7 +327,6 @@ const navigationItems: NavigationItem[] = [
       {
 
   color?: string
-=======
   color?: string;  color?: string;
 
 }
@@ -442,7 +418,6 @@ const navigation_items: NavigationItem[] = [;
     badge: 'Featured',
     category: 'services',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -475,7 +450,6 @@ const navigation_items: NavigationItem[] = [;
 
     window && window.addEventListener('resize', handleResize);
     return () => window && window.removeEventListener('resize', handleResize);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -504,10 +478,8 @@ const navigation_items: NavigationItem[] = [;
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Zion Tech Group
               </span>
             </Link>
@@ -521,7 +493,6 @@ const navigation_items: NavigationItem[] = [;
               </div>;
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">;
 
-=======
     <nav className='relative bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50 z - 50'>;
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
         <div className='flex justify - between items - center h - 16'>;
@@ -545,7 +516,6 @@ const navigation_items: NavigationItem[] = [;
               </div>;
               <span className="text - xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Zion Tech Group;
               </span>;
             </Link>;
@@ -557,14 +527,12 @@ const navigation_items: NavigationItem[] = [;
             {navigationItems && navigationItems.map(item => (;
               <div key={item && item.name} className='relative group'>;
 
-=======
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigationItems.map((item) => (
               <div key={item.name} className="relative group">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <button
                   onClick={() => handleDropdownToggle(item.name)}
                   className='flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200'
@@ -582,7 +550,6 @@ const navigation_items: NavigationItem[] = [;
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <Link
                             key={child.name}
                             href={child.href}
@@ -700,14 +667,11 @@ const navigation_items: NavigationItem[] = [;
 
                                 )}
 
-=======
                               </div>
                               <p className="text-sm text-gray-400 mt-1">{child.description}</p>
                             </div>
 
                           </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </div>;
                     </motion && motion.div>;
@@ -719,12 +683,9 @@ const navigation_items: NavigationItem[] = [;
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
@@ -747,7 +708,6 @@ const navigation_items: NavigationItem[] = [;
 
               </a>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
               href='/contact'
 
@@ -777,7 +737,6 @@ const navigation_items: NavigationItem[] = [;
           </div>;
           {/* Mobile menu button */}
 
-=======
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -789,7 +748,6 @@ const navigation_items: NavigationItem[] = [;
               ) : (
                 <Menu className="block h-6 w-6" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               )}
 
 
@@ -798,13 +756,11 @@ const navigation_items: NavigationItem[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </button>
           </div>
         </div>
       </div>
 
-=======
                                   <span className="px - 2 py - 1 text - xs font - medium bg - gradient - to - r from - purple - 500 to - pink - 500 text - white rounded - full">;
                                     Featured;
                                   </span>)}
@@ -876,7 +832,6 @@ const navigation_items: NavigationItem[] = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -890,7 +845,6 @@ const navigation_items: NavigationItem[] = [;
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
                 <div key={item.name}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <button
                     onClick={() => handleDropdownToggle(item && item.name)}
                     className='w-full text-left flex items-center justify-between px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200';
@@ -906,7 +860,6 @@ const navigation_items: NavigationItem[] = [;
             <div className="px-2 pt-2 pb-3 space-y-1">;
               {navigationItems && navigationItems.map((item) => (;
                 <div key={item && item.name}>;
-=======
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50"
           >
@@ -936,81 +889,24 @@ const navigation_items: NavigationItem[] = [;
       <AnimatePresence>;
         {is_open && (
           <motion.div;
-=======
-=======
 
               )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
-          >;
-            <div className='px - 2 pt - 2 pb - 3 space - y-1'>;
-              {navigation_items.map (item => (
-                <div key={item.name}>;
-                  <button;
-                    on_click={() => handleDropdownToggle (item.name)}
-                    className='w - full text - left flex items - center justify - between px - 3 py - 2 text - base font - medium text - gray - 300 hover:text - white hover:bg - slate - 700 / 50 rounded - md transition - colors duration - 200';
-                  >;
-                    <div className='flex items - center space - x-2'>;
-                      {item.icon}
-                      <span>{item.name}</span>;
-                    </div>;
-                    <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown === item.name ? 'rotate - 180' : ''}`}
-                    />;
-                  </button>          >;
-            <div className="px - 2 pt - 2 pb - 3 space - y-1">;
-              {navigation_items.map ((item) => (
-                <div key={item.name}>;
-                  <button;
-                    on_click={() => handleDropdownToggle (item.name)}
-                    className="w - full text - left flex items - center justify - between px - 3 py - 2 text - base font - medium text - gray - 300 hover:text - white hover:bg - slate - 700 / 50 rounded - md transition - colors duration - 200";
-                  >;
-                    <div className="flex items - center space - x-2">;
-                      {item.icon}
-                      <span>{item.name}</span>;
-                    </div>;
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${active_dropdown === item.name ? 'rotate - 180' : ''}`} />;
-                  </button>;
-                  <AnimatePresence>;
-                    {active_dropdown === item.name && (
-                      <motion.div;
-=======
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -1043,12 +939,10 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
 
-=======
                         transition={{ duration: 0.2 }}
 
                           <Link
@@ -1057,12 +951,9 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                             className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           >
                             {child.name}
                           </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </motion && motion.div>;
                     )}
@@ -1129,7 +1020,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </div>
                 </div>
                 <div className="px-3 pt-2">
-=======
               <div className="pt-4 pb-3 border-t border-slate-700/50">;
                 <div className="px-3 py-2 text-sm text-gray-400">;
                   <div className="flex items-center space-x-2 mb-2">;
@@ -1150,39 +1040,17 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </div>;
                 </div>;
                 <div className="px-3 pt-2">;
-=======
                         className='ml-4 mt-2 space-y-1'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.children?.map(child => (
                           <Link
                             key={child.name}
                             href={child.href}
-<<<<<<< HEAD
-                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
-                        {item.children?.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
-                            onClick={closeMenu}
-=======
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
 
                             onClick={closeMenu}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             {child.name}
                           </Link>
@@ -1192,10 +1060,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -1250,7 +1115,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </div>
                 </div>
                 <div className="px-3 pt-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <Link
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
@@ -1348,7 +1212,6 @@ export default UltraFuturisticNavigation2047;  );
 export default UltraFuturisticNavigation2047;
 
 
-=======
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
@@ -1359,12 +1222,8 @@ export default UltraFuturisticNavigation2047);
 ;
 export default UltraFuturisticNavigation2047;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -24,13 +24,10 @@ import React, { useEffect, useState } from 'react';
 import { useWallet } from '../../hooks/useWallet';
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -45,11 +42,9 @@ export default function TokenIntegrationsPage() {;
       await connect();
       return;    }      return;
 
-=======
       await connect();
       return
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
@@ -70,8 +65,6 @@ export default function TokenIntegrationsPage() {;
 
 
 
-=======
-=======
 
 
 
@@ -79,8 +72,6 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data);
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='space-y-8'>;
@@ -134,7 +125,6 @@ export default function TokenIntegrationsPage() {;
 
 
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
     <div className="space-y-8">;
@@ -160,12 +150,10 @@ export default function TokenIntegrationsPage() {;
                 <span>{r && r.network} — {r && r.reason}</span>;
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
@@ -231,7 +219,6 @@ export default function TokenIntegrationsPage() {;
             {suggestion && suggestion.alternatives && (;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
 
-=======
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -241,14 +228,8 @@ export default function TokenIntegrationsPage() {;
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
-=======
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
@@ -293,7 +274,6 @@ export default function TokenIntegrationsPage() {;
                   .map((a: any) => a.chain.name)
                   .join(', ')}
               </div>            )}          </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
             <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -308,7 +288,6 @@ export default function TokenIntegrationsPage() {;
             {suggestion.alternatives && (
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         )}
@@ -349,12 +328,9 @@ export default function TokenIntegrationsPage() {;
       </section>
     </div>
 
-=======
 
   );
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';
@@ -556,4 +532,3 @@ function run_operator() {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

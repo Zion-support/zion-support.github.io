@@ -24,10 +24,7 @@ import { motion } from 'framer-motion';
 } from 'lucide-react';
 interface PerformanceMetrics {;
   loadTime: number;
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Zap,
   Clock,
   TrendingUp,
@@ -268,7 +265,6 @@ if ( {) {
           font-family: 'Orbitron';
           font-display: swap;
 
-=======
           font-family: 'Inter',
           font-display: swap
 
@@ -336,7 +332,6 @@ if ( {) {
     } finally {;
       setIsOptimizing(false);
 
-=======
       
       // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800))
@@ -499,7 +494,6 @@ if ( {) {
     } finally {
       setIsOptimizing(false)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, []);
 
@@ -549,10 +543,8 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2 && 2.5s;
               console && console.warn('LCP is too slow:', lcp);
 
-=======
       
       // Monitor for performance issues
-=======
   }, [optimizeImages, optimizeFonts, optimizeCode, measurePerformance]);
   // Initialize performance monitoring
   useEffect(() => {
@@ -570,7 +562,6 @@ if ( {) {
           }
         }
       });      // Monitor for performance issues
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
@@ -578,7 +569,6 @@ if ( {) {
             if (lcp > 2500) { // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp)
 
-=======
         document.head.append_child (link);
       });
 ;
@@ -666,8 +656,6 @@ if ( { // LCP should be under 2.5s) {
   $2
 }
               console.warn ('LCP is too slow:', lcp);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
         }
@@ -682,12 +670,10 @@ if ( { // LCP should be under 2.5s) {
     }
 
   }, [measurePerformance]);
-=======
   }, [measurePerformance]);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getPerformanceScore = (): number => {
     let score = 100;
 
@@ -720,19 +706,15 @@ if ( { // LCP should be under 2.5s) {
     return Math && Math.max(0, score);  };    ;
     return Math && Math.max(0, score);
 
-=======
     
     return Math.max(0, score)
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
   const getPerformanceGrade = (score: number): string => {;
-=======
     return Math.max(0, score);  }
     return Math.max(0, score)
   }
   const getPerformanceGrade = (score: number): string => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -771,15 +753,6 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
-<<<<<<< HEAD
-          className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'          className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300";
-        >;
-          {showMetrics ? 'Hide' : 'Show'} Metrics;
-        </button>;
-      </div>;
-      {/* Performance Score */}
-
-=======
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
           <span className="text-white/70">Performance Score</span>
@@ -788,14 +761,12 @@ if ( { // LCP should be under 2.5s) {
         <div className="w-full bg-white/10 rounded-full h-3">
           <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             className="h-3 bg-gradient-to-r from-red-500 via-yellow-500 to-green-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${performanceScore}%` }}
             transition={{ duration: 1, ease: "easeOut" }}
 
 
-=======
           />
         </div>
         <div className='text-right mt-1'>
@@ -807,8 +778,6 @@ if ( { // LCP should be under 2.5s) {
       </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -919,19 +888,15 @@ if ( { // LCP should be under 2.5s) {
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
 
-=======
           </div>
         </motion.div>
       )}
 
         <button
-=======
 
 
       {/* Optimization Controls */}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -1020,22 +985,14 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
-=======
 
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
 
 
         )}
@@ -1052,8 +1009,6 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -1261,165 +1216,12 @@ if (return 'D') {
       </div>;
     </div>);
 }export default PerformanceOptimizer;}
-=======
   );
-<<<<<<< HEAD
-};export default PerformanceOptimizer;}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      // Preload critical resources;
-      preload_images.for_each (image => {
-addResourceHint (image, 'image');
-'      });';
-      preload_fonts.for_each (font => {
-        addResourceHint (font, 'style');
-'      });'    }}, [preload_images, preload_fonts]);
-  return (
-    <Head>;
-<<<<<<< HEAD
-      {/* Critical CSS inlined for above - the - fold content */}
-      {criticalCSS && (
-        <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />)}
-=======
       {/* Critical CSS inlined for above-the-fold content */}
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-{/* Preload critical resources */}
-      {preload_images.map ((image, index) => (
-        <link;
-key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-      {preload_fonts.map ((font, index) => (
-        <link;
-key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
-            const link = document.query_selector (link[href="${font}"]`);
-"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
-  $2
-}
-}'          }}`        />))}
-      {/* Performance hints */}
-      <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
-      <script;
-        dangerouslySetInnerHTML={{
-          __html:             // Check condition
-if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
-  $2
-}
-'                  })'                  .catch (function (registration_error) {
-                    console.log ('SW registration failed: ', registration_error);'                  });'              });
-}
-          ``        }}/>;
-    </Head>);
-}
-  );
-}
-;
-export default PerformanceOptimizer;
-;
-interface PerformanceMetrics {
-
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memory?: {;
-    used: number;
-    total: number;
-    limit: number;
-  }
-}
-
-
-interface PerformanceOptimizerProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enable_reporting?: boolean;
-}
-
-
-interface PerformanceOptimizerProps {;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enableReporting?: boolean;
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({;
-  onMetricsUpdate,;
-  enableReporting = false;
-}) => {;
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {;
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const navigation = performance && performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance && performance.getEntriesByType('paint');
-    // Core Web Vitals;
-    const fcp = paint && paint.find(entry => entry && entry.name === 'first-contentful-paint')?.startTime || 0;
-    const lcp = performance && performance.getEntriesByType('largest-contentful-paint')[0]?.startTime || 0;
-    const ttfb = navigation && navigation.responseStart - navigation && navigation.requestStart;
-    // Memory usage (if available);
-    const memory = (performance as any).memory ? {;
-      used: (performance as any).memory && memory.usedJSHeapSize,;
-      total: (performance as any).memory && memory.totalJSHeapSize,;
-      limit: (performance as any).memory && memory.jsHeapSizeLimit;
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {;
-      fcp,;
-      lcp,;
-      fid: 0, // First Input Delay - would need user interaction to measure;
-      cls: 0, // Cumulative Layout Shift - would need observer;
-      ttfb,;
-      memory;
-    };
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {;
-      onMetricsUpdate(newMetrics);
-    }
-    if (enableReporting && process && process.env.NODE_ENV === 'development') {;
-      console && console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
-  useEffect(() => {;
-    if (document && document.readyState === 'complete') {;
-
-      measureWebVitals();
-    } else {;
-      window && window.addEventListener('load', measureWebVitals);
-    }
-
-
-    return () => {;
-      window && window.removeEventListener('load', measureWebVitals);
-    };
-  }, [measureWebVitals]);
-  // Monitor for performance issues;
-  useEffect(() => {;
-
-    if (!metrics) return;
-    const warnings: string[] = [];
-
-
-    if (metrics && metrics.fcp > 1800) warnings && warnings.push('First Contentful Paint is slow (>1 && 1.8s)');
-    if (metrics && metrics.lcp > 2500) warnings && warnings.push('Largest Contentful Paint is slow (>2 && 2.5s)');
-    if (metrics && metrics.ttfb > 600) warnings && warnings.push('Time to First Byte is slow (>600ms)');
-    if (metrics && metrics.memory) {;
-      const memoryUsage = (metrics && metrics.memory.used / metrics && metrics.memory.limit) * 100;
-      if (memoryUsage > 80) warnings && warnings.push('High memory usage detected');
-    }
-    if (warnings && warnings.length > 0 && enableReporting) {;
-      console && console.warn('Performance Issues Detected:', warnings);
-
-    }
-  }, [metrics, enableReporting]);
-  return null;
-
-}
-
-export default PerformanceOptimizer;
-
-=======
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
   onMetricsUpdate,
   enable_reporting = false;
@@ -1523,10 +1325,7 @@ if ( {) {
 ;
 export default PerformanceOptimizer;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

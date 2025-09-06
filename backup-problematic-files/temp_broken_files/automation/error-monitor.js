@@ -45,10 +45,7 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Initial health check
     await this.performHealthCheck();
 
@@ -92,10 +89,6 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
         timestamp: new Date().toISOString()
-<<<<<<< HEAD
-        timestamp: new Date().toISOString()
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         timestamp: new Date().toISOString(),
       });
     }
@@ -175,9 +168,6 @@ class ErrorMonitor {
       'src/App.tsx',
       'src/pages/index.tsx',
     ];
-<<<<<<< HEAD
-     is missing`,
-=======
 
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
@@ -186,7 +176,6 @@ class ErrorMonitor {
           type: 'missing_critical_file',
           file: file,
           message: `Critical file ${file} is missing`,
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -197,15 +186,6 @@ class ErrorMonitor {
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-<<<<<<< HEAD
-            timestamp: new Date().toISOString()
-            timestamp: new Date().toISOString(),
-          });
-    );
-        }
-      }
-    }
-=======
 
     for (const line of lines) {
       if (line.includes('error TS')) {
@@ -226,15 +206,12 @@ class ErrorMonitor {
       }
     }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return errors;
   }
 
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-<<<<<<< HEAD
-=======
 
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
@@ -245,25 +222,15 @@ class ErrorMonitor {
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           message: match[4].trim(),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           timestamp: new Date().toISOString()
         });
       }
     }
-<<<<<<< HEAD
-    );
-      }
-    }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           timestamp: new Date().toISOString(),
         });
       }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return errors;
   }
 
@@ -291,12 +258,6 @@ class ErrorMonitor {
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-<<<<<<< HEAD
-    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
-    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
-    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -315,13 +276,8 @@ class ErrorMonitor {
       const ErrorFixerAutomation = require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
-<<<<<<< HEAD
-      console.log('✅ Error fixer completed');
-      console.log('✅ Error fixer completed');
-=======
       console.log('✅ Error fixer completed');
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
@@ -329,10 +285,6 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
         timestamp: new Date().toISOString()
-<<<<<<< HEAD
-        timestamp: new Date().toISOString()
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         timestamp: new Date().toISOString(),
       });
     }
@@ -362,10 +314,7 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 
@@ -411,19 +360,12 @@ class ErrorMonitor {
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-<<<<<<< HEAD
-module.exports = ErrorMonitor;
-=======
 }
 
 module.exports = ErrorMonitor;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

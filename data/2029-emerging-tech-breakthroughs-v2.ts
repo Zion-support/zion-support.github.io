@@ -86,7 +86,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'space-futuristic'
       contactInfo: {
 
-=======
       color: 'from - purple - 600 via - pink - 600 to - rose - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / brain - computer - interface - enterprise',
@@ -130,7 +129,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 12,
     },
 
-=======
     // Quantum Internet Gateway;
     {
       id: 'quantum - internet - gateway - enterprise',
@@ -174,7 +172,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'quantum-futuristic'
       contactInfo: {
 
-=======
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / quantum - internet - gateway - enterprise',
@@ -218,7 +215,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 18,
     },
 
-=======
     // Synthetic Biology Platform;
     {
       id: 'synthetic - biology - platform - enterprise',
@@ -263,7 +259,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'biotech-futuristic'
       contactInfo: {
 
-=======
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / synthetic - biology - platform - enterprise',
@@ -351,7 +346,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'quantum-energy-revolutionary'
       contactInfo: {
 
-=======
       color: 'from - yellow - 600 via - orange - 600 to - red - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / fusion - energy - management - platform',
@@ -395,7 +389,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 6,
     },
 
-=======
     // Space Mining Operations Platform;
     {
       id: 'space - mining - operations - platform',
@@ -439,7 +432,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'space-futuristic'
       contactInfo: {
 
-=======
       color: 'from - purple - 600 via - indigo - 600 to - blue - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / space - mining - operations - platform',
@@ -483,7 +475,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       reviews: 3,
     },
 
-=======
     // Quantum AI Consciousness Platform;
     {
       id: 'quantum - ai - consciousness - platform',
@@ -525,7 +516,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'ai-futuristic'
       contactInfo: {
 
-=======
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform',
@@ -560,9 +550,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launch_date: '2025 - 06 - 01',
       customers: 3,
@@ -574,7 +562,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 
   ];    features: [
 
-=======
 export interface EmergingTechBreakthroughServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -609,7 +596,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     features: [
       'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems';
       'Advanced analytics and insights24/7 technical support'
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -617,25 +603,15 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
-      launchDate: '2025-06-01'
-      customers: 3
-      rating: 5.0
-      reviews: 2
-    }
-=======
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launchDate: '2025-06-01',
       customers: 3,
       rating: 5.0,
       reviews: 2,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
@@ -711,10 +687,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1025,18 +999,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1343,11 +1307,5 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,;
     rating: 5.0;
     reviews: 2;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

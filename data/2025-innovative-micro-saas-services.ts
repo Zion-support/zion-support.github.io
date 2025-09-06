@@ -33,7 +33,6 @@
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -91,7 +90,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'WordPress',
         'Shopify',
@@ -181,7 +179,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Salesforce',
         'HubSpot',
@@ -247,7 +244,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '🧠',
 
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / decision - engine - platform',
@@ -304,7 +300,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 78,
     },
 
-=======
     // E - commerce Optimization Platform;
     {
       id: 'ecommerce - optimization - platform',
@@ -353,7 +348,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Shopify',
         'WooCommerce',
@@ -394,7 +388,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 95,
     },
 
-=======
     // HR Automation Platform;
     {
       id: 'hr - automation - platform',
@@ -444,7 +437,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'ATS platforms',
         'HRIS systems',
@@ -481,7 +473,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 58,
     },
 
-=======
     // Financial Analytics Platform;
     {
       id: 'financial - analytics - platform',
@@ -508,7 +499,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '💰',
 
-=======
       color: 'from - yellow - 500 to - amber - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / financial - analytics - platform',
@@ -565,7 +555,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 52,
     },
 
-=======
     // Supply Chain Intelligence Platform;
     {
       id: 'supply - chain - intelligence',
@@ -592,7 +581,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: false,
       icon: '🚚',
 
-=======
       color: 'from - gray - 500 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / supply - chain - intelligence',
@@ -653,7 +641,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 38,
     },
 
-=======
     // Marketing Automation Platform;
     {
       id: 'marketing - automation - platform',
@@ -703,7 +690,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Email platforms',
         'Social media tools',
@@ -743,58 +729,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 82,
     },
 
-=======
     // Project Management Intelligence Platform;
     {
-<<<<<<< HEAD
-      id: 'project - management - intelligence',
-      name: 'AI Project Management Intelligence Platform',
-      tagline:;
-        'Intelligent project management with AI - powered optimization and insights',
-      price: '$28, 000',
-      period: '/month',
-      description:;
-        'Revolutionary platform that uses AI to optimize project planning, resource allocation, risk management, and performance tracking for improved project success rates.',
-      features: [;
-
-        'AI project planning',
-        'Resource optimization',
-        'Risk assessment',
-        'Performance tracking',
-        'Automated reporting',
-        'Team collaboration',
-        'Timeline optimization',
-        'Budget management',
-        'Integration capabilities',
-        'Custom dashboards',
-      ],
-      popular: false,
-      icon: '📋',
-
-        'AI/ML',
-      color: 'from - indigo - 500 to - purple - 600',
-      text_color: 'text - indigo - 400',
-      link: 'https://ziontechgroup.com / project - management - intelligence',
-      market_position:;
-        'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.',
-      target_audience:;
-        'Project managers, Construction companies, Software development teams, Consulting firms, Government agencies, Large enterprises',
-      trial_days: 21,
-      setup_time: '6 - 8 weeks',
-      category: 'Project Management',
-      real_service: true,
-      technology: [;
-        'AI / ML',
-
-        'Project Management',
-        'Resource Optimization',
-        'Risk Management',
-        'Python',
-        'React',
-        'Node && Node.js',
-      ],
-
-=======
       integrations: [;
         'Project management tools',
         'Time tracking systems',
@@ -827,9 +763,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launch_date: '2025 - 03 - 05',
       customers: 75,
@@ -841,7 +775,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -877,7 +810,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     features: [
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
-=======
       id: 'project-management-intelligence'
       name: 'AI Project Management Intelligence Platform'
       tagline:
@@ -951,25 +883,15 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
-      launchDate: '2025-03-05'
-      customers: 75
-      rating: 4.8
-      reviews: 45
-    }
-=======
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launchDate: '2025-03-05',
       customers: 75,
       rating: 4.8,
       reviews: 45,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management';
       'Integration capabilitiesCustom dashboards'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '📝',
     color: 'from-blue-500 to-cyan-600', textColor: 'text-blue-400',
@@ -1033,10 +955,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
   }
 
-=======
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1479,18 +1399,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1929,11 +1839,5 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     customers: 75,;
     rating: 4.8;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

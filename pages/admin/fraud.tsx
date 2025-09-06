@@ -26,7 +26,6 @@ export default function FraudAdminPage() {
     try {
 
 
-=======
 export default /**
  * FraudAdminPage - Function description
  */
@@ -51,7 +50,6 @@ function FraudAdminPage() {
       set_items (json.items || []);
     } catch (e: any) {
       set_error (e.message || 'Failed to load');
-=======
 
   id: string
   userId: string | null
@@ -67,47 +65,6 @@ function FraudAdminPage() {
   }
 }
 export default function FraudAdminPage() {
-<<<<<<< HEAD
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-
-    const saved = localStorage.getItem('admin-token') |''
-    setAdminToken(saved)
-  }, [])
-  const fetchItems = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} })
-      const json = await res.json()
-      if (!res.ok) throw new Error(json.error |'Failed to load')
-      setItems(json.items |[])
-    } catch (e: any) {
-      setError(e.message |'Failed to load')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    } finally {
-
-      set_loading (false);
-
-    }
-
-    fetchItems();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]);
-  const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken);
-
-    fetchItems()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken])
-  const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken)
-    fetchItems()
-  }
-=======
 export default function FraudAdminPage() {
 
   const [items, setItems] = useState<FraudItem[]>([]);
@@ -145,9 +102,7 @@ export default function FraudAdminPage() {
     fetchItems();
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
@@ -164,7 +119,6 @@ export default function FraudAdminPage() {
   };
 
 
-=======
         'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})
       },
@@ -174,8 +128,6 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -197,7 +149,6 @@ export default function FraudAdminPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
@@ -206,7 +157,6 @@ export default function FraudAdminPage() {
 
 
 
-=======
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -220,7 +170,6 @@ export default function FraudAdminPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -257,7 +206,6 @@ export default function FraudAdminPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -289,10 +237,8 @@ export default function FraudAdminPage() {
       </div>
     </div>
 
-=======
 }
 
-=======
   },
   useEffect (() => {
     fetch_items (),
@@ -375,9 +321,6 @@ export default function FraudAdminPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 
   } catch (error) {
@@ -385,4 +328,3 @@ export default function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

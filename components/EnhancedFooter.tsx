@@ -17,7 +17,6 @@ import {
 
 
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-=======
 import React from 'react';
 
 
@@ -118,11 +117,9 @@ const EnhancedFooter: React.FC = () => {;
     },;
 
 
-=======
 
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -178,7 +175,6 @@ const EnhancedFooter: React.FC = () => {;
 
           {/* Footer Sections */}
 
-=======
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
@@ -188,172 +184,19 @@ const EnhancedFooter: React.FC = () => {;
                     <Link
 import Link from 'next / link';
 import {
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
-  Brain
-  Mail
-  Phone
-  MapPin
-  Globe
-  Github
-  Linkedin
-  Twitter;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
   Mail,
   Phone,
   MapPin,
   Globe,
   Github,
-<<<<<<< HEAD
-  Linkedin,
-  Twitter,
-} from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-const EnhancedFooter: React.FC = () => {
-  const current_year = new Date ().getFullYear (),
-  const footer_sections = [;
-    {
-      title: 'Services',
-      links: [;
-        { name: 'AI Business Intelligence', href: '/ai - business - intelligence' },
-        { name: 'Quantum Cybersecurity', href: '/quantum - cybersecurity' },
-        { name: 'Edge Computing', href: '/edge - computing - orchestration' },
-        { name: 'Space Technology', href: '/space - technology' },
-        {
-          name: 'View All Services',
-          href: '/comprehensive - 2025 - services - showcase',
-        },
-      ],
-    },    {        { name: 'View All Services', href: '/comprehensive - 2025 - services - showcase' }
-      ];
-    }
-    {
-      title: 'Company',
-      links: [;
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Work', href: '/portfolio' },
-        { name: 'Blog & Insights', href: '/blog' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' },
-      ],
-    },    {        { name: 'Contact', href: '/contact' }
-      ];
-    }
-    {
-      title: 'Resources',
-      links: [;
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Support Center', href: '/support' },
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-      ],
-    },  ];
-;
-  const social_links = [;
-    { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },        { name: 'Terms of Service', href: '/terms' }
-      ];
-    }
-  ];
-;
-  const social_links = [;
-    { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com / company / ziontechgroup',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com / ziontechgroup',
-      icon: Twitter,
-    },
-  return (
-    <footer className='bg - slate - 950 border - t border - white / 10'>;
-      <div className='max - w-7xl mx - auto px - 6 py - 16'>;
-        {/* Main Footer Content */}
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 5 gap - 8 mb - 12'>;
-          {/* Company Info */}
-          <div className='lg:col - span - 2'>;
-            <div className='flex items - center space - x-3 mb - 6'>;
-              <div className='w - 10 h - 10 rounded - xl bg - gradient - to - br from - blue - 600 to - cyan - 600 flex items - center justify - center'>;
-                <Brain className='w - 6 h - 6 text - white' />;
-              </div>;
-              <span className='text - xl font - bold bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
-                Zion Tech Group;
-              </span>;
-            </div>;
-            <p className='text - white / 70 mb - 6 max - w-md'>;
-              Leading - edge technology solutions and autonomous innovation;
-              platform. Empowering businesses with cutting - edge AI, quantum;
-              computing, and digital transformation.;
-            </p>;
-            {/* Contact Info */}
-            <div className='space - y-3'>;
-              <div className='flex items - center space - x-3 text - white / 70'>;
-                <Mail className='w - 4 h - 4' />;
-                <a;
-                  href='mailto:kleber@ziontechgroup.com';
-                  className='hover:text - white transition - colors';
-                >;
-                  kleber@ziontechgroup.com;
-                </a>;
-              </div>;
-              <div className='flex items - center space - x-3 text - white / 70'>;
-                <Phone className='w - 4 h - 4' />;
-                <a;
-                  href='tel:+13024640950';
-                  className='hover:text - white transition - colors';
-                >;
-                  +1 (302) 464 - 0950;
-                </a>;
-              </div>;
-              <div className='flex items - center space - x-3 text - white / 70'>;
-                <MapPin className='w - 4 h - 4' />                <span > Global Operations</span>              <div className="flex items - center space - x-3 text - white / 70">;
-                <MapPin className="w - 4 h - 4" />;
-                <span > Global Operations</span>;
-              </div>;
-            </div>;
-          </div>;
-          {/* Footer Sections */}
-          {footer_sections.map (section => (
-            <div key={section.title}>;
-              <h3 className='text - white font - semibold mb - 4'>{section.title}</h3>;
-              <ul className='space - y-2'>;
-                {section.links.map (link => (
-                  <li key={link.name}>;
-                    <Link;
-                      href={link.href}
-                      className='text - white / 70 hover:text - white transition - colors duration - 200'                    >            <div key={section.title}>;
-              <h3 className="text - white font - semibold mb - 4">{section.title}</h3>;
-              <ul className="space - y-2">;
-                {section.links.map ((link) => (
-                  <li key={link.name}>;
-                    <Link;
-
-                      href={link.href}
-                      className="text - white / 70 hover: text - white transition - colors duration - 200";
-                    >;
-                      {link.name}
-
-        </div>;
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>;
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>;
@@ -483,7 +326,6 @@ function EnhancedFooter() {
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">,;
 
-=======
   const footer_links = {}, ";
       { name: "IT Services", href: "/services / it - services" }, ";
       { name: "Micro SaaS", href: "/services / micro - saas" }, ";
@@ -750,7 +592,6 @@ company updates.;
 
                 Subscribe,;
 
-=======
                     className="text - gray - 400 hover: text - white transition - colors text - sm">,
                     {link.name}
                   </Link>;
@@ -814,7 +655,6 @@ company updates.;
     </footer>,;
   )}"';
 
-=======
         <div className="border - t border - gray - 800 pt - 8">";
           <div className="flex flex - col md: flex - row justify - between items - center">";
             <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
@@ -840,13 +680,9 @@ company updates.;
       </button>,
     </footer>,
   )}"';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 };export default EnhancedFooter;  )
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

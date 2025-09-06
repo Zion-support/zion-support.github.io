@@ -99,7 +99,6 @@ export default function CareersPage() {;
       description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
       requirements: [;
 
-=======
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
@@ -252,7 +251,6 @@ export default function CareersPage() {;
       description: "Lead product strategy and development for our technology solutions portfolio",;
       requirements: [;
 
-=======
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000";
@@ -408,20 +406,14 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
-=======
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -558,7 +550,6 @@ export default function CareersPage() {;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
                       </div>
                     </div>
                   </div>
@@ -573,21 +564,13 @@ export default function CareersPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -703,7 +686,6 @@ export default function CareersPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -738,7 +720,6 @@ export default function CareersPage() {;
   );
 }
 
-=======
               </motion.div>))}
           </div>;
         </div>;
@@ -775,9 +756,6 @@ export default function CareersPage() {;
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

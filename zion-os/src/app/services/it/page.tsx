@@ -5,22 +5,15 @@ export default function ITServicesPage() {;
 
 
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-=======
 export default /**
  * ITServicesPage - Function description
  */
 function ITServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
-=======
-<<<<<<< HEAD
-export default function ITServicesPage() {return (;
-=======
 export default function ITServicesPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
@@ -102,11 +95,9 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Accelerate your software delivery with automated deployment pipelines,
 
-=======
 
                 Accelerate your software delivery with automated deployment pipelines,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -152,11 +143,9 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Protect your business with comprehensive cybersecurity solutions including security audits,
 
-=======
 
                 Protect your business with comprehensive cybersecurity solutions including security audits,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
@@ -288,11 +277,9 @@ export default function ITServicesPage() {;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Guide your organization through end - to - end digital transformation with strategic consulting,
 
-=======
 
                 Guide your organization through end-to-end digital transformation with strategic consulting,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;

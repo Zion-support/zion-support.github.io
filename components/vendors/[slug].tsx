@@ -1,17 +1,12 @@
 import type { GetServerSideProps } from 'next';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function VendorProfilePage({ vendor }: Props) {
-=======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
-=======
 type Props = { vendor: Vendor | null };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -35,7 +30,6 @@ export default function VendorProfilePage({ vendor }: Props) {
     } finally {;
       setLoading(false);
 
-=======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ vendorId: vendor.id, title })});
@@ -157,7 +151,6 @@ function submit_lead() {
       )}
 
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
           </div>
         </div>
@@ -191,7 +184,6 @@ function submit_lead() {
             {loading ? 'Submitting...' : 'Send'}
           </button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div className="text-sm">{message}</div>}
 
         </form>;
@@ -200,17 +192,6 @@ function submit_lead() {
     </div>;
   );
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
-  const slug = String(ctx && ctx.params?.slug || '');
-
-  const { getVendorBySlug } = await import('../../utils/vendor-store');
-  const vendor = slug ? getVendorBySlug(slug) |null : null;
-  return { props: { vendor } }
-
-};
-
-=======
       set_loading (false);
     }
   }
@@ -347,16 +328,6 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
       <div className="text - center text - xs text - gray - 500">Powered by Zion</div>;
     </div>);
 }
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
-  const slug = String (ctx.params?.slug || '');
-  const { getVendorBySlug } = await import ('../../utils / vendor - store');
-  const vendor = slug ? getVendorBySlug (slug) || null : null;
-  return { props: { vendor } }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         </form>
       </div>
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
@@ -365,4 +336,3 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

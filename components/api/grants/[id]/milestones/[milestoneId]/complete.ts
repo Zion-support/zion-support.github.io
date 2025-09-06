@@ -43,69 +43,6 @@ function isAuthorized(req: NextApiRequest) {
     token === process && process.env.ZION_ADMIN_TOKEN
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
-
-}
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;
-  }
-
-  }
-  const { id, milestoneId } = req.query as { id: string, milestoneId: string }
-  if (!id |!milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' });
-    return
-  }
-  if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
-    res.status(405).end('Method Not Allowed');
-
-
-  const { id, milestoneId } = req && req.query as { id: string; milestoneId: string };
-  if (!id || !milestoneId) {
-    res && res.status(400).json({ error: 'Missing id or milestoneId' });
-    return;
-    return
-
-  }
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    res && res.status(405).end('Method Not Allowed');
-    return;  }  }
-  }
-
-
-  const ms = existing.milestones || [];
-  const idx = ms.findIndex((m) => m.id === milestoneId);
-
-  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
-  ms[idx].completed = true;
-  ms[idx].completedAt = new Date().toISOString();
-  const tranche = ms[idx].trancheAmount |0;
-  existing.fundsReleased = (existing.fundsReleased |0) + tranche;
-  existing.milestones = ms;
-  existing.updatedAt = new Date().toISOString();
-
-  if (!existing) return res && res.status(404).json({ error: 'Not found' });
-  const ms = existing && existing.milestones || [];
-  const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
-  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });
-  ms[idx].completed = true;
-  ms[idx].completedAt = new Date().toISOString();
-  const tranche = ms[idx].trancheAmount || 0;
-  existing && existing.fundsReleased = (existing && existing.fundsReleased || 0) + tranche;
-  existing && existing.milestones = ms;
-  existing && existing.updatedAt = new Date().toISOString();
-  writeGrant(existing);
-
-}
-
-=======
   res.status(200).json({ record: existing })
 }
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
@@ -198,12 +135,6 @@ write_grant (existing);
   existing.milestones = ms,
   existing.updatedAt = new Date().toISOString(),
 
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

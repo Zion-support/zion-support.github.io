@@ -4,32 +4,6 @@ import { ServiceVariant } from '../types / service - variants';
 export interface PracticalBusinessSolution2029 {
 
   {
-<<<<<<< HEAD
-    id: 'ai - business - intelligence - suite',
-    name: 'AI Business Intelligence Suite',
-    tagline:;
-      'Intelligent insights and predictive analytics for business growth',
-    price: '$2, 499',
-    period: '/month',
-    description:;
-      'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-    features: [;
-      'Real - time data analytics',
-      'Predictive business modeling',
-      'Automated report generation',
-      'Custom dashboard creation',
-      'Data visualization tools',
-      'Business trend analysis',
-      'Performance benchmarking',
-      'ROI tracking automation',
-      'Market opportunity identification',
-      'Competitive intelligence',
-    ],
-    popular: true,
-    icon: '📊',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-suite';
-    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
-=======
 
     id: 'ai-business-intelligence-suite'
     name: 'AI Business Intelligence Suite'
@@ -586,7 +560,6 @@ export interface PracticalBusinessSolution2029 {
 export const getPopularPracticalBusinessSolutions2029 = () => {
 
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
-=======
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
@@ -602,7 +575,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -613,7 +585,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     variant: 'ai-futuristic'
     contactInfo: {
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -625,19 +596,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     reviews: 198;
   }
 ];
-<<<<<<< HEAD
-;
-export const getPopularPracticalBusinessSolutions2029 = () =>: any {
-  return practicalBusinessSolutions2029.filter (service => service.popular);
-=======
-<<<<<<< HEAD
-export const getPopularPracticalBusinessSolutions2029 = () => {
-=======
 
 export const getPopularPracticalBusinessSolutions2029 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return practicalBusinessSolutions2029.filter(service => service.popular);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
@@ -697,7 +658,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '🎯',
 
-=======
     color: 'from - green - 500 via - emerald - 500 to - teal - 500',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / services / intelligent - customer - experience - platform',
@@ -741,7 +701,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 134,
   },
 
-=======
   // Smart Supply Chain Optimization;
   {
     id: 'smart - supply - chain - optimization',
@@ -767,7 +726,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '🚚',
 
-=======
     color: 'from - orange - 500 via - red - 500 to - pink - 500',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / services / smart - supply - chain - optimization',
@@ -837,7 +795,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '👥',
 
-=======
     color: 'from - purple - 500 via - violet - 500 to - indigo - 500',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / services / intelligent - hr - management - system',
@@ -879,7 +836,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 189,
   },
 
-=======
   // Smart Financial Management Platform;
   {
     id: 'smart - financial - management - platform',
@@ -905,7 +861,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '💼',
 
-=======
     color: 'from - emerald - 500 via - teal - 500 to - cyan - 500',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / services / smart - financial - management - platform',
@@ -947,7 +902,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 156,
   },
 
-=======
   // Intelligent Marketing Automation;
   {
     id: 'intelligent - marketing - automation',
@@ -973,7 +927,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '📢',
 
-=======
     color: 'from - pink - 500 via - rose - 500 to - red - 500',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / services / intelligent - marketing - automation',
@@ -1015,7 +968,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 234,
   },
 
-=======
   // Smart Project Management;
   {
     id: 'smart - project - management',
@@ -1090,7 +1042,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     reviews: 312,
   },
 
-=======
   // Intelligent Sales Optimization;
   {
     id: 'intelligent - sales - optimization',
@@ -1116,7 +1067,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     popular: true,
     icon: '💰',
 
-=======
     color: 'from - yellow - 500 via - orange - 500 to - red - 500',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / services / intelligent - sales - optimization',
@@ -1166,32 +1116,21 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
-<<<<<<< HEAD
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
-    service => service && service.category === category
-=======
   return practicalBusinessSolutions2029.filter(
     service => service.category === category;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
-    const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
-=======
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -1323,7 +1262,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       website: 'https://ziontechgroup.com'
     },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     realImplementation: true,
     implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
     launchDate: "2024-07-01",
@@ -1703,10 +1641,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 
 };
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
   id: string,;
@@ -2119,5 +2054,3 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

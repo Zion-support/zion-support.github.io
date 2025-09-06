@@ -1,19 +1,15 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
 }) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
@@ -65,7 +61,6 @@ else score += 25
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -85,16 +80,11 @@ interface PerformanceMetrics {
   networkLatency?: number
 
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default PerformanceMonitor;
 
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
   //Wait for page to be fully loaded // Check condition
 if ( {) {
@@ -237,4 +227,3 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

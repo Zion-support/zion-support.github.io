@@ -10,48 +10,8 @@ export default define_config ({
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
       on('before:browser:launch', (browser = {}, launchOptions) => {
-<<<<<<< HEAD
-        if (browser && browser.family === 'chromium') {
-          launchOptions && launchOptions.args.push('--disable-ipv6');
-    base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts',
-    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          launch_options.args.push ('--disable - ipv6');
-        }
-        return launch_options;
-      });export default define_config ({
-  e2e: {
-
-
-import { defineConfig } from 'cypress',;
-export default defineConfig({;
-  e2e: {;
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-    supportFile: 'cypress/support/e2e.ts',;
-    experimentalModifyObstructiveThirdPartyCode: true,;
-    // Disable IPv6 in Chromium-based browsers to avoid socket errors;
-    setupNodeEvents(on, config) {;
-      on('before:browser:launch', (browser = {}, launchOptions) => {;
-
-        if (browser.family === 'chromium') {;
-          launchOptions.args.push('--disable-ipv6');
-        }
-        return launchOptions;
-
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
-
-
-=======
-    baseUrl: 'http://localhost:3000', // Standard Next.js port;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     supportFile: 'cypress/support/e2e.ts';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -121,7 +81,6 @@ export default defineConfig({;
     mochaFile: 'cypress/results/junit-[hash].xml',
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     toConsole: true
   }
 });
@@ -139,7 +98,6 @@ if ( {) {
 }
           launch_options.args.push ('--disable - ipv6');        }
         return launch_options;
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -153,8 +111,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
 
 
       });
@@ -203,4 +159,3 @@ export default defineConfig({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

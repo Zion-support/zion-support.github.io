@@ -2,18 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-=======
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
-=======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 
 
 import fs from 'fs';
 import path from 'path';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -53,44 +49,19 @@ import {
   Search,
 
 interface LogEntry {
-=======
 
-=======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
-=======
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
-=======
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue;
-} from '@/components/ui/select';
-import {
-  AlertTriangle
-  Info
-  AlertCircle
-  XCircle
-  Search
-  Download
-  RefreshCw;
-=======
   Select,
   SelectContent,
   SelectItem,
@@ -105,15 +76,11 @@ import {
   Search,
   Download,;
   RefreshCw,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
-=======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { logErrorToProduction } from '@/utils/productionLogger';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LogEntry {
 interface LogEntry {;
   id: string;
@@ -157,8 +124,6 @@ interface LogEntry {
     memory?: number;
   }
 interface LogsPageProps {;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -166,7 +131,6 @@ interface LogsPageProps {;
 
   lastUpdated: string;
 
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -194,7 +158,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   lastUpdated,;
 
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-=======
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
 ;
@@ -217,7 +180,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {;
   }
 }
 },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
   const colors = {;
     debug: 'bg-blue-100 text-blue-800',;
@@ -236,7 +198,6 @@ export default function LogsPage(): any ({;
   lastUpdated,;
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
-=======
     cause?: unknown
   };
   performance?: {
@@ -284,11 +245,8 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -302,11 +260,9 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
-=======
 
   const categories = Array && Array.from(new Set(logs && logs.map(log => log && log.category))).filter(;
     Boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
   const sources = Array && Array.from(new Set(logs && logs.map(log => log && log.source))).filter(;
     Boolean;
@@ -366,12 +322,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     const dataUri =;
 
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
 
 
 
-=======
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -447,8 +401,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
@@ -505,7 +457,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardContent>
             <div className='text-2xl font-bold'>{totalCount}</div>
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>
-=======
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
@@ -576,76 +527,33 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
   },;
   const exportLogs = () => {;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
-<<<<<<< HEAD
-    linkElement.click()
-  };
-const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString()
-  };
-=======
     linkElement.click();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  const formatPerformance = (performance?: LogEntry['performance']) => {
-    if (!performance) return null;
-    const parts = [];
-    if (performance.memory) {
-      parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
-    }
-    if (performance.timing) {
-      parts.push(`Timing: ${performance.timing}ms`)
-    }
-    if (performance.fps) {
-      parts.push(`FPS: ${performance.fps}`)
-    }
-<<<<<<< HEAD
-    return parts.length > 0 ? parts.join() : null
-=======
 
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
 
   };
-=======
     return parts.length > 0 ? parts.join(', ') : null;
   }
   const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
-<<<<<<< HEAD
-=======
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -655,12 +563,6 @@ const formatTimestamp = (timestamp: string) => {
 }
     return parts.length > 0 ? parts.join() : null
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -684,7 +586,6 @@ const formatTimestamp = (timestamp: string) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -789,7 +690,6 @@ const formatTimestamp = (timestamp: string) => {
       </div>;
       {/* Filters */}
 
-=======
 
       {/* Filters */  } catch (error) {
     console.error("Error:", error);
@@ -798,29 +698,17 @@ const formatTimestamp = (timestamp: string) => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD
-<div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-=======
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Search logs..."
                 className="pl-8"
-<<<<<<< HEAD
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-<Select value={levelFilter} onValueChange={setLevelFilter}>
-=======
                 value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -834,7 +722,6 @@ const formatTimestamp = (timestamp: string) => {
               />
             </div>
             <Select value={levelFilter} onValueChange={setLevelFilter}>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
@@ -850,13 +737,11 @@ const formatTimestamp = (timestamp: string) => {
                 <SelectItem value="critical">Critical</SelectItem>
               </SelectContent>
 
-=======
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
 
 
               <SelectTrigger>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
               <SelectContent>
@@ -1235,7 +1120,6 @@ if ( {) {
                             </pre>;
                           </details>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -1253,29 +1137,6 @@ if ( {) {
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && (
                         <Badge variant="outline">{log.component}</Badge>
-<<<<<<< HEAD
-                      )}
-                    </div>
-                    <span className="text-sm text-muted-foreground">
-                      {formatTimestamp(log.timestamp)}
-                    </span>
-                  </div>
-
-
-                  <div className="text-sm font-medium">{log.message}</div>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {log.context && Object.keys(log.context).length > 0 && (
-                    <details className="text-xs">
-                      <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
-                        View Context
-                      </summary>
-
-
-
-
-=======
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
     console.error("Error:", error);
@@ -1292,9 +1153,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {log.error && (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
                         View Error Details
@@ -1317,120 +1176,16 @@ if ( {) {
               </div>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </div>;
               ));
             ) : (;
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
               </div>;
-=======
               <div className="text-center text-muted-foreground py-8">
                 No logs found matching the current filters.
               </div>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            )}
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
 
-
-            }
-          }
-        } catch (fileError) {;
-                            </pre>;
-                          </details>)}
-                        <div className="flex items - center justify - between text - xs text - gray - 500">;
-                          <div>;
-                            {log.session_id && <span > Session: {log.session_id}</span>}
-                            {log.user_id && <span> • User: {log.user_id}</span>}
-                          </div>;
-                          {log.performance && (
-                            <div>{format_performance (log.performance)}</div>)}
-                        </div>;
-                      </div>;
-                      <div className="text - xs text - gray - 500 ml - 4">;
-                        {new Date (log.timestamp).toLocaleString ()}
-                      </div>;
-                    </details>)}
-                  <div className='flex items - center justify - between text - xs text - muted - foreground'>                    <div>;
-                      Session: {log.session_id}
-                      {log.user_id && ` • User: ${log.user_id}`}
-                    </div>;
-                  </div>;
-                  {log.url && (
-                    <div className='text - xs text - muted - foreground truncate'>                      URL: {log.url}
-                    </div>)}
-                </div>))) : (
-              <div className='text - center text - muted - foreground py - 8'>                No logs found matching the current filters.;
-              </div>)}
-          </div>;
-        </div>;
-      </main>;
-    </>);
-}
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const logs_dir = path.join (process.cwd (), 'logs');
-    const logs: LogEntry[] = [];
-              // Skip malformed log entries;
-            }
-          }
-        } catch (file_error) {
-          // Skip problematic files;
-        }
-      }
-    }
-
-
-    // Sort logs by timestamp (newest first)
-    logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-    // Calculate statistics
-    const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
-    const warningCount = logs.filter(log => log.level === 'warn').length;
-
-    const totalCount = logs.length;
-    return {
-      props: {
-        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-
-    // Sort logs by timestamp (newest first);
-    logs.sort (
-      (a, b) =>;
-        new Date (b.timestamp).get_time () - new Date (a.timestamp).get_time ());
-;
-    // Calculate statistics;
-    const error_count = logs.filter (
-      log => log.level === 'error' || log.level === 'critical').length;    const warning_count = logs.filter (log => log.level === 'warn').length;
-    const total_count = logs.length;
-;
-    return {
-      props: {
-        logs: logs.slice (0, 1000), // Limit to most recent 1000 logs;
-        error_count,
-        warning_count,
-        total_count,
-        last_updated: new Date ().toISOString (),
-      },
-
-    }
-  } catch (error) {
-    logErrorToProduction ('Error reading logs:', error);    return {
-      props: {
-<<<<<<< HEAD
-        logs: []
-        errorCount: 0
-        warningCount: 0
-        totalCount: 0
-        lastUpdated: new Date().toISOString()
-      }
-    }
-=======
-
-=======
 
         logs: [],
         errorCount: 0,
@@ -1440,7 +1195,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       },
     };
 
-=======
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1504,7 +1258,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Sort logs by timestamp (newest first);
     logs && logs.sort(;
       (a, b) =>;
@@ -1538,28 +1291,3 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 }
 
-<<<<<<< HEAD
-    return {_props: {
-        logs: logs.slice(0, _1000), _// Limit to most recent 1000 logs
-        errorCount, _warningCount, _totalCount, _lastUpdated: new Date().toISOString()}};
-  } catch (error) {_logErrorToProduction('Error reading logs:', _error);
-    return {
-      props: {
-        logs: logs.slice(0, 1000), // Limit to most recent 1000 logs
-
-        errorCount;
-        warningCount;
-        totalCount;
-        lastUpdated: new Date().toISOString()}}
-  } catch (error) {
-            logErrorToProduction('Error reading logs:', error);
-    return {
-      props: {
-        logs: [],
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

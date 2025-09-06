@@ -27,7 +27,6 @@
     popular: true,
     icon: '🚗',
 
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
@@ -85,7 +84,6 @@
   },
   {
 
-=======
     id: 'biotech - ai - platform',
     name: 'Biotech AI Platform',
     tagline: 'AI - powered drug discovery and genetic engineering',
@@ -109,7 +107,6 @@
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / biotech - ai',
@@ -166,7 +163,6 @@
   },
   {
 
-=======
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',
@@ -190,7 +186,6 @@
     popular: true,
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading',
@@ -247,7 +242,6 @@
   },
   {
 
-=======
     id: 'space - technology - platform',
     name: 'Space Technology Platform',
     tagline: 'Complete space mission management and satellite operations',
@@ -271,7 +265,6 @@
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / space - technology',
@@ -352,7 +345,6 @@
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - pink - 600 to - purple - 700',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / metaverse - ai - development - platform',
@@ -409,7 +401,6 @@
   },
   {
 
-=======
     id: 'quantum - robotics - platform',
     name: 'Quantum Robotics Platform',
     tagline: 'Quantum AI - powered robotics and automation',
@@ -433,7 +424,6 @@
     popular: true,
     icon: '🤖',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - robotics',
@@ -510,7 +500,6 @@
     popular: true,
     icon: '🔒',
 
-=======
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity',
@@ -567,7 +556,6 @@
   },
   {
 
-=======
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
     tagline: 'Quantum - secured internet infrastructure',
@@ -591,7 +579,6 @@
     popular: true,
     icon: '🌍',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - internet - security - platform',
@@ -648,7 +635,6 @@
   },
   {
 
-=======
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -672,7 +658,6 @@
     popular: true,
     icon: '📦',
 
-=======
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -773,7 +758,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     tagline: 'Revolutionary quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     features: [
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
@@ -1131,18 +1115,9 @@ export const innovativeAIServices: InnovativeAIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-    },
-    realImplementation: true, implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
-    launchDate: '2024-08-01', customers: 67,
-    rating: 4.7,
-    reviews: 34;
-
-=======
 
 export interface InnovativeAIService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 

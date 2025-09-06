@@ -4,7 +4,6 @@
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
 } from 'lucide-react',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AutonomousBusinessOperationsPlatform = () => {
   const features = [
     {
@@ -66,7 +65,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Risk assessment",
 
 
-=======
     "Compliance automation"
   ],
 
@@ -117,8 +115,6 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -140,7 +136,6 @@ const AutonomousBusinessOperationsPlatform = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
@@ -148,8 +143,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
       description: "Boost in operational efficiency";
     },
     {
@@ -183,7 +176,6 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com / autonomous - business - operations - platform" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
@@ -196,13 +188,9 @@ const AutonomousBusinessOperationsPlatform = () => {
 
                 Transform your business with AI-powered autonomous operations that work 24/7,
 
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7, 
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -218,8 +206,6 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </section>
 
-=======
-=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -397,7 +383,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -425,7 +410,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -459,7 +443,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -469,7 +452,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50 hover:border - blue - 500 / 50 transition - all duration - 300";
                 >;
                   <div className={`inline - flex p - 3 bg - gradient - to - r ${feature.color} rounded - lg mb - 4`}>;
@@ -530,7 +512,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -564,14 +545,12 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
                 </motion.div>
 
-=======
                   className="flex items - center space - x-3";
                 >;
                   <CheckCircle className="w - 6 h - 6 text - blue - 400 flex - shrink - 0" />;
@@ -629,7 +608,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -665,7 +643,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -678,7 +655,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   </div>
                 </motion.div>
 
-=======
                   className="text - center";
                 >;
                   <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 6 rounded - xl border border - slate - 700 / 50">;
@@ -742,7 +718,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -776,7 +751,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   viewport={{ once: true }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -799,7 +773,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -807,8 +780,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 p - 8 rounded - xl border border - slate - 700 / 50";
                 >;
                   <h3 className="text - 2xl font - semibold text - white mb - 4">{industry.title}</h3>;
@@ -817,7 +788,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* CTA Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -832,16 +802,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 export default AutonomousBusinessOperationsPlatform;
 
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export default AutonomousBusinessOperationsPlatform,;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AutonomousBusinessOperationsPlatform,
             >;
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
@@ -867,9 +828,6 @@ export default AutonomousBusinessOperationsPlatform,
 },
 export default AutonomousBusinessOperationsPlatform,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

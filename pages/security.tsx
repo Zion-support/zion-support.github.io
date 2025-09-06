@@ -22,7 +22,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -39,27 +38,6 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-<<<<<<< HEAD
-
-  return (
-    <Layout
-      title="Security - Zion Tech Group"
-      description="Learn about our comprehensive security measures and how we protect your data and systems."
-      keywords="security, data protection, encryption, compliance, cybersecurity"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-
-
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-          </div>
-          <div className="container mx-auto px-4 relative z-10">
-
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -464,7 +442,6 @@ function SecurityPage() {
                 </div>;
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
-=======
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 p - 6";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -483,19 +460,8 @@ function SecurityPage() {
                         <li key={idx} className="flex items - center text - sm text - gray - 600">;
                           <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {detail}
-<<<<<<< HEAD
-                        </li>))}
-                    </ul>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-=======
                         </li>
                       ))}
-<<<<<<< HEAD
-=======
                     </ul>
                   </div>
                 </motion.div>
@@ -503,7 +469,6 @@ function SecurityPage() {
             </div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Compliance Section */}
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -555,7 +520,6 @@ function SecurityPage() {
         </section>;
 
 
-=======
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -584,25 +548,19 @@ function SecurityPage() {
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
               </div>
             </motion.div>
           </div>
         </section>
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -618,27 +576,21 @@ function SecurityPage() {
   );
 
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   );
 }
 
-=======
   )
 }
         {/* CTA Section */}
@@ -678,4 +630,3 @@ function SecurityPage() {
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

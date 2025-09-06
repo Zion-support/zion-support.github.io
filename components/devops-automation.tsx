@@ -26,7 +26,6 @@ import React from 'react';
 
   GitPullRequest,;
   Cpu,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
@@ -41,88 +40,15 @@ import React from 'react';
       icon: <Shield className="w-6 h-6" />
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   GitBranch,
   Zap,
   Shield,
   BarChart3,
   Check,
   Star,
-<<<<<<< HEAD
-  GitPullRequest,
-  Cpu,
-} from 'lucide-react';
-export default /**
- * DevOpsAutomationPage - Function description
- */
-function DevOpsAutomationPage() {
-  const features = [;
-    {
-      icon: <GitBranch className='w - 6 h - 6' />, import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-export default /**
- * DevOpsAutomationPage - Function description
- */
-function DevOpsAutomationPage() {
-  const features = [;
-    {
-      icon: <GitBranch className='w - 6 h - 6' />,      title: 'CI / CD Pipelines',
-      description: 'Automated build, test, and deployment workflows';
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600';
-    }
-
-    {
-      icon: <Zap className="w - 6 h - 6" />,
-      title: 'Infrastructure as Code',
-
-      description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';
-    }
-
-    {
-      icon: <Shield className="w - 6 h - 6" />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600';
-    }
-    {
-      icon: <BarChart3 className="w - 6 h - 6" />,
-      title: 'Performance Monitoring',
-      description: 'Real - time performance insights and optimization',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-    },
-      title: 'CI / CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-    },
-    {
-      icon: <Zap className='w - 6 h - 6' />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-    },
-    {
-      icon: <Shield className='w - 6 h - 6' />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-    },
-    {
-      icon: <BarChart3 className='w - 6 h - 6' />,
-      title: 'Performance Monitoring',
-      description: 'Real - time performance insights and optimization',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-    },  ];      color: 'bg - gradient - to - br from - orange - 500 to - red - 600';
-
-    }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default function DevOpsAutomationPage() {
   const features = [
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ];
 
 ;
@@ -361,13 +287,11 @@ export default function DevOpsAutomationPage() {_const _features = [
 
     }
   ];
-=======
     }
   ];
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
         />;
@@ -412,7 +336,6 @@ export default function DevOpsAutomationPage() {_const _features = [
               </Button>
               <Button
 
-=======
     <>
       <Head>
         <title>DevOps Automation - Zion Tech Group | Professional CI/CD & Infrastructure Automation</title>
@@ -454,10 +377,8 @@ export default function DevOpsAutomationPage() {_const _features = [
                 className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Watch Demo
 
-=======
       color: 'from - blue - 500 to - cyan - 600',
     },    {
       title: 'Infrastructure Management',
@@ -566,7 +487,6 @@ export default function DevOpsAutomationPage() {_const _features = [
               </p>;
             </div>;
 
-=======
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -611,7 +531,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -630,7 +549,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -639,14 +557,12 @@ export default function DevOpsAutomationPage() {_const _features = [
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {automationExamples.map((example, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Card
                   key={index}
                   className='text-center group hover:scale-105 transition-transform duration-300'
                 >
                   <div
 
-=======
         <section className="py-24 bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -699,7 +615,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
             </div>;
@@ -766,15 +681,11 @@ export default function DevOpsAutomationPage() {_const _features = [
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-=======
 
 
 
@@ -787,8 +698,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -808,7 +717,6 @@ export default function DevOpsAutomationPage() {_const _features = [
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${
                     plan.popular ? 'ring-2 ring-blue-500' : ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   }`}
                 >;
                   {plan.popular && (
@@ -820,13 +728,11 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
                         </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </ul>;
                     <Button
 
 
-=======
                     <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                       <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
                       </span>;
@@ -871,22 +777,17 @@ export default function DevOpsAutomationPage() {_const _features = [
                       className={`w - full ${
                         plan.popular;
                           ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                         plan.popular
 
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 
-=======
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
                           : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }`}
                     >;
                       {plan.cta}
@@ -926,8 +827,6 @@ export default function DevOpsAutomationPage() {_const _features = [
                     <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;
                     <div className="flex items-center justify-center mb-2">;
 
-=======
-=======
 
 
 
@@ -938,7 +837,6 @@ export default function DevOpsAutomationPage() {_const _features = [
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
@@ -949,7 +847,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See why Zion DevOps is the smart choice for automation.
@@ -958,7 +855,6 @@ export default function DevOpsAutomationPage() {_const _features = [
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
                 <Card key={index} className="p-6">
-=======
                     </Button>
                   </div>
                 </Card>
@@ -966,28 +862,14 @@ export default function DevOpsAutomationPage() {_const _features = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
                 How We Compare to the Competition
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -1001,13 +883,10 @@ export default function DevOpsAutomationPage() {_const _features = [
                       {competitor.competitor}
                     </h3>
                     <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
                       {[...Array(5)].map((_, i) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         <Star
                           key={i}
                           className={`w-5 h-5 ${
@@ -1042,7 +921,6 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -1051,14 +929,12 @@ export default function DevOpsAutomationPage() {_const _features = [
                 <Card key={index} className='p-6'>
                   <div className='flex items-center mb-4'>
                     {[...Array(testimonial.rating)].map((_, i) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <Star
                         key={i}
                         className='w-5 h-5 text-yellow-400 fill-current'
                       />
                     ))}
 
-=======
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -1066,7 +942,6 @@ export default function DevOpsAutomationPage() {_const _features = [
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <Card key={index} className="p-6">
@@ -1081,7 +956,6 @@ export default function DevOpsAutomationPage() {_const _features = [
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                     <p className="text-sm text-blue-400">{testimonial.company}</p>
                   </div>
-=======
                   </div>
                   <p className='text-gray-300 mb-6 italic'>
                     "{testimonial.content}"
@@ -1100,10 +974,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
@@ -1122,14 +993,12 @@ export default function DevOpsAutomationPage() {_const _features = [
 
               Ready to Automate Your DevOps?
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
               needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 href='#signup'
                 variant='secondary'
@@ -1142,7 +1011,6 @@ export default function DevOpsAutomationPage() {_const _features = [
                 variant='outline'
                 size='lg'
 
-=======
                 className='border-white text-white hover:bg-white hover:text-blue-600'              >                href="#signup"
                 variant="secondary"
                 size="lg"
@@ -1152,10 +1020,8 @@ export default function DevOpsAutomationPage() {_const _features = [
 
               <Button
 
-=======
 ;
 
-=======
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
@@ -1167,31 +1033,16 @@ export default function DevOpsAutomationPage() {_const _features = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="#signup"
-=======
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
               Ready to Automate Your DevOps?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
@@ -1210,209 +1061,11 @@ export default function DevOpsAutomationPage() {_const _features = [
                 variant='outline'
                 size='lg'
                 className='border-white text-white hover:bg-white hover:text-blue-600'              >                href="#signup"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 Start Free Trial
               </Button>
-<<<<<<< HEAD
-              <Button
-href="/contact"
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
-<<<<<<< HEAD
-              >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                Contact Sales
-                    </Button>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Market Comparison Section */}
-        <section className='py - 24 bg - gray - 800'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-                See why Zion DevOps is the smart choice for automation.;
-              </p>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {market_comparison.map ((competitor, index) => (
-                <Card key={index} className='p - 6'>;
-                  <div className='text - center mb - 6'>;
-                    <h3 className='text - xl font - bold text - white mb - 2'>;
-                      {competitor.competitor}
-                    </h3>;
-                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p - 6">;
-                  <div className="text - center mb - 6">;
-                    <h3 className="text - xl font - bold text - white mb - 2">{competitor.competitor}</h3>;
-                    <div className="flex items - center justify - center mb - 2">;
-                        <Star;
-                          key={i}
-                          className={`w - 5 h - 5 ${
-                            i < Math.floor (parse_float (competitor.rating));
-                              ? 'text - yellow - 400 fill - current';
-                              : 'text - gray - 400';
-                          }`}
-                        />))}
-                    </div>;
-                    <p className='text - sm text - gray - 400'>{competitor.rating}</p>;
-                  </div>;
-                  <div className='mb - 4'>;
-                    <p className='text - lg font - semibold text - white mb - 1'>;
-                      Pricing: {competitor.pricing}
-                    </p>;
-                    <p className='text - sm text - gray - 400'>;
-                      Repositories: {competitor.repositories}
-                    </p>;
-                  </div>;
-                  <div className='space - y-2'>;
-                    <div>;
-                      <p className='text - sm font - medium text - green - 400 mb - 1'>;
-                        Pros:;
-                      </p>;
-                      <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.pros.map ((pro, pro_index) => (
-                          <li key={pro_index} className='flex items - center'>;
-                            <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
-                  <div className="mb - 4">;
-                    <p className="text - lg font - semibold text - white mb - 1">Pricing: {competitor.pricing}</p>;
-                    <p className="text - sm text - gray - 400">Repositories: {competitor.repositories}</p>;
-                  </div>;
-                  <div className="space - y-2">;
-                    <div>;
-                      <p className="text - sm font - medium text - green - 400 mb - 1">Pros:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.pros.map ((pro, pro_index) => (
-                          <li key={pro_index} className="flex items - center">;
-                            <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
-                            {pro}
-                          </li>))}
-                      </ul>;
-                    </div>;
-                    <div>;
-                      <p className='text - sm font - medium text - red - 400 mb - 1'>;
-                        Cons:;
-                      </p>;
-                      <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.cons.map ((con, con_index) => (
-                          <li key={con_index} className='flex items - center'>;
-                            <span className='w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0'>;
-                              ×;
-                            </span>                            {con}                      <p className="text - sm font - medium text - red - 400 mb - 1">Cons:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.cons.map ((con, con_index) => (
-                          <li key={con_index} className="flex items - center">;
-                            <span className="w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0">×</span>;
-                          </li>))}
-                      </ul>;
-                    </div>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Testimonials Section */}
-        <section className='py - 24 bg - gray - 900'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-                Trusted by DevOps Teams Worldwide;
-              </h2>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {testimonials.map ((testimonial, index) => (
-                <Card key={index} className='p - 6'>;
-                  <div className='flex items - center mb - 4'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star;
-                        key={i}
-                        className='w - 5 h - 5 text - yellow - 400 fill - current';
-                      />))}
-                  </div>;
-                  <p className='text - gray - 300 mb - 6 italic'>;
-                    "{testimonial.content}";
-                  </p>;
-                  <div>;
-                    <p className='font - semibold text - white'>;
-                      {testimonial.name}
-                    </p>;
-                    <p className='text - sm text - gray - 400'>{testimonial.role}</p>;
-                    <p className='text - sm text - blue - 400'>;
-                      {testimonial.company}
-                    </p>                  </div>                Trusted by DevOps Teams Worldwide;
-              </h2>;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {testimonials.map ((testimonial, index) => (
-                <Card key={index} className="p - 6">;
-                  <div className="flex items - center mb - 4">;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
-                  </div>;
-                  <p className="text - gray - 300 mb - 6 italic">"{testimonial.content}"</p>;
-                  <div>;
-                    <p className="font - semibold text - white">{testimonial.name}</p>;
-                    <p className="text - sm text - gray - 400">{testimonial.role}</p>;
-                    <p className="text - sm text - blue - 400">{testimonial.company}</p>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className='py - 24 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-            </h2>;
-            <p className='text - xl text - blue - 100 mb - 12'>;
-              Join thousands of teams who trust Zion for their DevOps automation;
-              needs.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Button;
-                href='#signup';
-                variant='secondary';
-                size='lg';
-                className='bg - white text - blue - 600 hover:bg - gray - 100'              >;
-                Start Free Trial;
-              </Button>;
-              <Button;
-                href='/contact';
-                variant='outline';
-                size='lg';
-                className='border - white text - white hover:bg - white hover:text - blue - 600'              >                href="#signup";
-                variant="secondary";
-                size="lg";
-                className="bg - white text - blue - 600 hover:bg - gray - 100";
-                Start Free Trial;
-              </Button>;
-              <Button;
-                href='/contact';
-                variant='outline';
-                size='lg';
-                className='border - white text - white hover:bg - white hover:text - blue - 600'                href="/contact";
-                variant="outline";
-                size="lg";
-                className="border - white text - white hover:bg - white hover:text - blue - 600";
-                Contact Sales;
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-
-}
-
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

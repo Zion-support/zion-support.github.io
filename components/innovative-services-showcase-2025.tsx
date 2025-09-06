@@ -2,18 +2,15 @@
 import React, { useState } from 'react';
 import Head from 'next / head';
 
-=======
 
 import React, { useState } from 'react';
 
 import Head from 'next/head';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 import { 
   Search, Filter, Star, CheckCircle, ArrowRight, 
 
-=======
   Search,
   Filter,
   Star,
@@ -45,7 +42,6 @@ import {
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight, ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -74,7 +70,6 @@ const contactInfo = {
 };
 
 const serviceCategories = [
-=======
   Search,
   Filter,
   Star,
@@ -507,7 +502,6 @@ export default function InnovativeServicesShowcase2025() {;
       default:;
         return 0;    }      default: return 0;
 
-=======
     gradient: 'from - teal - 500 / 20 to - green - 500 / 20',
     badge: 'Popular',
   }, ];    badge: 'Popular';
@@ -549,8 +543,6 @@ function InnovativeServicesShowcase2025() {
         return a.category.locale_compare (b.category);
       default:;
         return 0;    }      default: return 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   });
 
@@ -640,7 +632,6 @@ function InnovativeServicesShowcase2025() {
                 99.9%
               </div>
               <div className='text-gray-400'>Uptime</div>            </div>          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                 {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
@@ -668,8 +659,6 @@ function InnovativeServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'>;
             <div className='text-center'>;
@@ -728,13 +717,11 @@ function InnovativeServicesShowcase2025() {
       </section>;
       {/* Search and Filter Section */}
 
-=======
       <section className="py-16 bg-gradient-to-b from-black to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Search */}
-=======
       {/* Search and Filter Section */}
       <section className='py-16 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -748,20 +735,6 @@ function InnovativeServicesShowcase2025() {
                   placeholder='Search services...'
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
-                  className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />              {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-
-
-=======
                   onChange={e => setSearchTerm(e.target.value)}
 
                   className='w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50'                />
@@ -771,8 +744,6 @@ function InnovativeServicesShowcase2025() {
               </div>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Category Filter */}
               <div>;
                 <select
@@ -785,12 +756,9 @@ function InnovativeServicesShowcase2025() {
               </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Sort By */}
               <div>;
                 <select
@@ -807,7 +775,6 @@ function InnovativeServicesShowcase2025() {
         </div>;
       </section>;
 
-=======
       {/* Services Grid */}
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -816,7 +783,6 @@ function InnovativeServicesShowcase2025() {
               <motion.div
                 key={service.id}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -824,14 +790,12 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Service Header */}
 
                 className="group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
 
                 {/* Service Header */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -904,10 +868,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                 </div>
-=======
                 <div className='mb-6'>;
                   <div className='flex items-center justify-between mb-4'>;
                     <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center'>;
@@ -947,23 +909,14 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   </p>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Features */}
 
-=======
-=======
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
 
                     {service.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                 </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide">Key Features</h4>
@@ -981,7 +934,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                         +{service.features.length - 3} more features
                       </li>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     )}
 
 
@@ -991,7 +943,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -1004,7 +955,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                       {service.targetAudience}
                     </div>                  </div>
                 </div>
-=======
                   </ul>;
                 </div>;
                 {/* Market Info */}
@@ -1026,25 +976,14 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   <a
 
                 <div className="mb-6 grid grid-cols-2 gap-4 text-sm">
-=======
                       </li>
                     )}
                   </ul>
                 </div>
-<<<<<<< HEAD
-                {/* Market Info */}
-                <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
-=======
 
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <div>
 
                     <div className="text-gray-400">Market Size</div>
@@ -1080,13 +1019,9 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   <a
 
                     href={`mailto:${service.contact.email}`}
-<<<<<<< HEAD
-                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
-=======
                     className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
                   >
                     <Mail className='w-5 h-5' />                  </a>                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   >
                     <Mail className="w-5 h-5" />
                   </a>
@@ -1099,10 +1034,8 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {sortedServices.length === 0 && (
             <motion.div
-=======
           </div>;
 
           {sortedServices && sortedServices.length === 0 && (;
@@ -1111,42 +1044,32 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               animate={{ opacity: 1 }}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
 
         </div>;
       </section>;
-=======
         </div>
       </section>
-=======
               </div>            </motion.div>
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
 
-=======
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1163,7 +1086,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -1196,13 +1118,9 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1215,7 +1133,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -1223,8 +1140,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Phone className='w-8 h-8 text-white' />;
@@ -1250,7 +1165,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
@@ -1258,8 +1172,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className='text-center'>;
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
                 <Mail className='w-8 h-8 text-white' />;
@@ -1280,23 +1192,14 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
 
 
             >
-=======
               className='text-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
@@ -1307,7 +1210,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
         </div>
       </section>
     </Layout>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
                   </p>;
@@ -1495,7 +1397,5 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
     </Layout>);
 }
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

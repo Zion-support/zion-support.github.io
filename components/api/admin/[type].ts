@@ -11,18 +11,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
-<<<<<<< HEAD
-  };    search;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    sort;
-    order: (order as any) |'desc';
-    page: page ? Number(page) : 0;
-    pageSize: pageSize ? Number(pageSize) : 20;
-=======
 
     search,
     sort,
@@ -32,7 +21,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     filters,
     format: (format as any) || undefined,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     filters
     format: (format as any) |undefined}
@@ -70,7 +58,6 @@ export default async function handler(
 
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
-=======
     return '"' + s.replace(/"/g, '""') + '"'
   };
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
@@ -103,7 +90,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const useSupabase = isSupabaseConfigured();
 
   if (req && req.method === 'GET') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const params = parseListParams(req);
     if (useSupabase) {
       const table = type;
@@ -132,16 +118,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
-=======
-<<<<<<< HEAD
-=======
     filters,
     format: (format as any) || undefined}
 }
-=======
   };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     filters
     format: (format as any) |undefined}
@@ -160,33 +140,20 @@ function toCsv(rows: any[]): string {
     rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
-) {
-  const type = (req.query.type as AdminType) |'';
-=======
 ) {;
   const type = (req.query.type as AdminType) || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = (req.query.type as AdminType) |'';
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as AdminType) || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured();
   if (req.method === 'GET') {
@@ -234,7 +201,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).send(toCsv(data |[]))
       }
       return res.status(200).json({ items: data |[], total: count |0 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
@@ -243,7 +209,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
 
@@ -269,8 +234,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
       }
-=======
-=======
 
       }
 
@@ -279,42 +242,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
       updates: Record<string, any>;
     }
     if (!id) return res.status(400).json({ error: 'Missing id' });
-=======
 
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
-=======
         return res.status(200).send(toCsv(pageItems));
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return res.status(200).json({ items: pageItems, total });
-    }
-  }
-=======
 
       }
-=======
-=======
 
       }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ items: pageItems, total });
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       id: string;
       updates: Record<string, any>;
     };
@@ -340,13 +287,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       return res.status(200).json({ item: updated })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
 
 
-=======
       return res.status(200).json({ item: updated });    }
 
     }
@@ -356,8 +301,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -369,25 +312,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       return res.status(200).json({ item: updated });    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (useSupabase) {
       const { error } = await client && client.from(type).delete().eq('id', id);
       if (error) return res && res.status(500).json({ error: error && error.message });
@@ -505,12 +438,8 @@ return res.status (405).json ({ error: 'Method not allowed' });
   if (req.method === 'PATCH') {
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

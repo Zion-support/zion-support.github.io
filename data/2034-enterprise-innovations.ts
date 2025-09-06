@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'ai - autonomous - devops - platform',
     name: 'AI Autonomous DevOps Platform',
     description:;
@@ -81,7 +80,6 @@
   },
   {
 
-=======
     id: 'quantum - edge - computing - orchestrator',
     name: 'Quantum Edge Computing Orchestrator',
     description:;
@@ -124,7 +122,6 @@
       'Edge security',
     ],
 
-=======
     market_size: '$35.7B by 2035',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU'],
     competitive_advantage:;
@@ -154,7 +151,6 @@
   },
   {
 
-=======
     id: 'ai - powered - it - operations - center',
     name: 'AI - Powered IT Operations Center',
     description:;
@@ -197,7 +193,6 @@
       'Real - time processing',
     ],
 
-=======
     market_size: '$42.1B by 2035',
     competitors: ['ServiceNow', 'BMC', 'IBM'],
     competitive_advantage:;
@@ -228,7 +223,6 @@
   },
   {
 
-=======
     id: 'quantum - blockchain - infrastructure',
     name: 'Quantum Blockchain Infrastructure Platform',
     description:;
@@ -271,7 +265,6 @@
       'Advanced cryptography',
     ],
 
-=======
     market_size: '$52.3B by 2035',
     competitors: ['Ethereum', 'Hyperledger', 'Corda'],
     competitive_advantage:;
@@ -309,7 +302,6 @@
   },
   {
 
-=======
     id: 'ai - autonomous - data - center',
     name: 'AI Autonomous Data Center Platform',
     description:;
@@ -352,7 +344,6 @@
       'Real - time monitoring',
     ],
 
-=======
     market_size: '$38.9B by 2035',
     competitors: ['VMware', 'Microsoft', 'Dell'],
     competitive_advantage:;
@@ -377,13 +368,6 @@
       'Energy efficiency',
       'Security compliance',
     ],
-<<<<<<< HEAD
-    security: ['AI - powered security', 'Physical security', 'Access controls'],
-    scalability: 'Unlimited data center management',
-    uptime: '99 && 99.999% data center platform availability',
-    contact: '+1 302 464 0950',
-
-=======
   id: string, name: string,
   description: string, category: string,
   price: string, features: string[],
@@ -400,7 +384,6 @@
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     marketSize: '$38 && 38.9B by 2035';
     website: 'https://ziontechgroup.com / ai - autonomous - data - center',
@@ -425,17 +408,12 @@
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center'
 
-=======
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com / ai - autonomous - data - center';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 ];
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -463,12 +441,8 @@
   website: string;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface EnterpriseService2034 {;
 
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

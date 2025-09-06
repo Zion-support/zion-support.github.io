@@ -23,17 +23,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   );
   return res && res.status(200).json({ results: text });
 
-=======
   const { jobDescription, resumes } = req.body || {};
   if (!jobDescription || !Array.isArray(resumes)) return res.status(400).json({ error: 'jobDescription and resumes[] required' });
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const prompt = `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
     `Job Description:\n${jobDescription}\n\n` +
 
     `Resumes:\n${resumes && resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
-=======
 
 
   const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
@@ -41,7 +38,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 
 
-=======
 import { authenticate_request } from '@/utils / auth';
 import { generate_text } from '@/utils / ai';
 ;
@@ -89,13 +85,6 @@ function handler() {
   const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status (200).json ({ results: text });
 
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

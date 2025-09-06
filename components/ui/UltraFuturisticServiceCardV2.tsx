@@ -25,8 +25,6 @@ import { motion } from 'framer-motion';
 } from 'lucide-react';
 interface ServiceCardProps {
   service: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   ArrowRight,;
   Star,;
@@ -39,42 +37,17 @@ import {;
 } from 'lucide-react';
 interface ServiceCardProps {;
   service: {;
-=======
   Globe,;
   Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface ServiceCardProps {
   service: {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: string;
     name: string;
     tagline: string;
     description: string;
     category: string;
-<<<<<<< HEAD
-    price: {;
-      monthly: number;
-      yearly: number;
-      currency: string;
-
-      trial_days: number;
-      setup_time: string;
-      enterprise?: number;
-    }
-
-    features: string[];
-    benefits: string[];
-    target_audience: string[];
-    market_position: string;
-    competitors: string[];
-    tech_stack: string[];
-    real_implementation: boolean;
-    implementation_details: string;
-    roi: string;
-    use_cases: string[];
-=======
     price: {
       monthly: number;
       yearly: number;
@@ -95,7 +68,6 @@ interface ServiceCardProps {
     implementationDetails: string;
     roi: string;
     useCases: string[];
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     integrations: string[];
     support: string;
     compliance: string[];
@@ -103,40 +75,6 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
-<<<<<<< HEAD
-    launch_date: string;
-    customers: number;
-    rating: number;
-    reviews: number;
-
-    marketSize?: string;
-
-    growthRate?: string;
-  };
-  index: number;
-
-
-
-
-const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({;
-  service,;
-  index,;
-}) => {;
-  const getCategoryIcon = (category: string) => {;
-    switch (category && category.toLowerCase()) {;
-      case 'ai & consciousness':;
-
-        return <Zap className='w-5 h-5' />;
-      case 'quantum & emerging tech':;
-        return <Rocket className='w-5 h-5' />;
-      case 'enterprise it':;
-        return <Shield className='w-5 h-5' />;
-      case 'space & metaverse':;
-        return <Globe className='w-5 h-5' />;
-      case 'micro saas':;
-        return <TrendingUp className='w-5 h-5' />;
-
-=======
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 interface ServiceCardProps {
   service: {
@@ -186,7 +124,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
         return <Zap className="w-5 h-5" />;
       case 'quantum & emerging tech':
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         return <Rocket className="w-5 h-5" />;
       case 'enterprise it':;
         return <Shield className="w-5 h-5" />;
@@ -201,7 +138,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       default:
 
 
-=======
         return <Zap className='w-5 h-5' />;    }
 
     }
@@ -211,8 +147,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
 
@@ -224,7 +158,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
     >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
-=======
   };
   const getGradientClass = (color: string) => {;
     if (color && color.includes('from-') && color && color.includes('to-')) {;
@@ -388,7 +321,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
               </div>
@@ -429,7 +361,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
             {service.tagline}
 
-=======
 
 
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}
@@ -437,8 +368,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             {service.tagline}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>
         </div>
         {/* Stats */}
@@ -492,7 +421,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-pink-400'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {service.reviews}
 
         <div className="relative z-10 mb-6">
@@ -554,7 +482,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
         </div>;
         {/* Pricing */}
 
-=======
         <div className="relative z-10 mb-6">
           <div className="bg-gray-800/50 rounded-xl p-4 border border-gray-600/30">
             <div className="flex items-center justify-between mb-2">
@@ -580,7 +507,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 </span>
               </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -600,7 +526,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
@@ -613,11 +538,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 +{service.features.length - 3} more features
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
           </div>;
@@ -637,59 +558,22 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
-                transition={{ delay: 0 && 0.8 + idx * 0 && 0.1 }}
-                className='flex items-center space-x-2 text-sm'>;
-                <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>;
-                <span className='text-gray-300'>{benefit}</span>              </motion && motion.div>                className="flex items-center space-x-2 text-sm";
-              >;
-                <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>;
-                <span className="text-gray-300">{benefit}</span>;
 
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
               </motion.div>
             ))}
             {service.features.length > 3 && (
-<<<<<<< HEAD
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
-                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
-                <span className="text-gray-300">{feature}</span>
-              </motion.div>
-            ))}
-            {service.features.length > 3 && (
-              <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features
-=======
               <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features
 
                 +{service.features.length - 3} more features
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits */}
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
@@ -741,7 +625,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -754,22 +637,16 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </div>;
-=======
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -788,7 +665,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
         )}
 
         {/* Market info */}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {service && service.marketSize && service && service.growthRate && (;
           <div className='relative z-10 mb-6'>;
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>;
@@ -814,22 +690,17 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             </div>;
           </div>;
         )}
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Button */}
 
         <div className="relative z-10">
 
-=======
 
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
@@ -846,24 +717,7 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
-<<<<<<< HEAD
-        <div className='relative z-10'>          <motion&& motion.a
-            href={service && service.link}
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">;
-          <motion&& motion.a
-            href={service && service.link}
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}
-            className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'>;
-            <span className='relative z-10 flex items-center space-x-2'>;
-              <span>Learn More</span>;
-              <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />;
-            </span>;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>          </motion && motion.a>          >;
@@ -875,13 +729,10 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>;
           </motion && motion.a>;
         </div>;
-=======
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Hover overlay */}
         <motion&& motion.div
           initial={{ opacity: 0 }}
@@ -891,7 +742,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
 export default UltraFuturisticServiceCardV2;
 
 
-=======
                 className='flex items - center space - x-2 text - sm';
               >;
                 <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
@@ -969,12 +819,9 @@ export default UltraFuturisticServiceCardV2;        />;
 ;
 export default UltraFuturisticServiceCardV2;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </motion.div>
@@ -983,5 +830,3 @@ export default UltraFuturisticServiceCardV2;
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

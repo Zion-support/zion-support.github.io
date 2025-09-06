@@ -147,14 +147,12 @@ import Button from '../components/ui/Button';
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-xs'>{contactInfo && contactInfo.address}</span>;
 
-=======
 
 
 }
 }
 
 
-=======
               <Button;
                 href='/contact';
                 variant='quantum';
@@ -175,19 +173,10 @@ import Button from '../components/ui/Button';
                 <div className='flex items - center space - x-2'>;
                   <MapPin className='w - 4 h - 4 text - green - 400' />;
                   <span className='text - xs'>{contact_info.address}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </div>              </div>;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import NextHead from 'next/head';
 import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
@@ -247,19 +236,14 @@ export default function AIFinancialRiskPage(req, res) {
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>;
               </div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>;
           </div>;
         </div>;
       </div>;
 
 
-=======
     </UltraAdvancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -268,5 +252,3 @@ export default function AIFinancialRiskPage(req, res) {
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

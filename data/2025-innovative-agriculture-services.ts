@@ -13,7 +13,6 @@ export interface InnovativeAgricultureService {
 
 ;
 const contact = {
-=======
 
 
   mobile: '+1 302 464 0950',
@@ -35,7 +34,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -71,14 +69,12 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
 
   {
 
-=======
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
     tagline:;
@@ -173,7 +169,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     popular: true,
     icon: '🍎',
 
-=======
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - powered - food - safety - monitoring',
@@ -237,7 +232,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     popular: false,
     icon: '🔗',
 
-=======
     color: 'from - purple - 600 to - violet - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / blockchain - food - traceability',
@@ -300,7 +294,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     popular: true,
     icon: '🏗️',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - powered - vertical - farming',
@@ -329,7 +322,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
     launchDate: '2025-02-02',
-=======
     market_size: '$9.3B+ vertical farming market',
     growth_rate: '280% YoY',
     variant: 'ai - futuristic',
@@ -491,18 +483,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4 && 4.6,
 
     reviews: 89
-<<<<<<< HEAD
-  }
-];
-
-
-=======
     rating: 4.6
     reviews: 89
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
       'Compliance management';
     ];
@@ -536,15 +520,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -783,11 +762,5 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123,;
     rating: 4.6;
     reviews: 89;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

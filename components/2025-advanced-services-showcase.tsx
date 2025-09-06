@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -180,10 +178,7 @@ const allServices = [;
 
 
 
-=======
 export default function AdvancedServicesShowcase() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -834,7 +829,6 @@ if ( {) {
 
       {/* Contact Information Banner */}
 
-=======
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -854,7 +848,6 @@ if ( {) {
             </div>
             <div className="flex items-center gap-4">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -927,92 +920,15 @@ if ( {) {
                   {category && category.name}
                 </button>;
 
-=======
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          {/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-<<<<<<< HEAD
-                <button
-      {/* Main Content */}
-      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
-        {/* Filters and Search */}
-        <div className='mb - 8'>;
-          <div className='flex flex - col lg:flex - row gap - 6 items - start lg:items - center justify - between'>;
-            <div className='flex - 1'>;
-              <div className='relative max - w-md'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
-                <input;
-                  type='text';
-                  placeholder='Search services...';
-                  value={search_term}
-                  on_change={e => setSearchTerm (e.target.value)}
-                  className='w - full pl - 10 pr - 4 py - 3 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 800 text - gray - 900 dark:text - white placeholder - gray - 500 dark:placeholder - gray - 400 focus:ring - 2 focus:ring - blue - 500 focus:border - transparent';
-                />;
-              </div>;
-            </div>;
-            <div className='flex items - center gap - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <button;
-                  on_click={() => setViewMode ('grid')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'grid';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <Grid className='w - 5 h - 5' />                </button>                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'grid';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <Grid className="w - 5 h - 5" />;
-                </button>;
-                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'list';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <List className='w - 5 h - 5' />                </button>;
-              </div>;
-            </div>;
-          </div>                    view_mode === 'list';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <List className="w - 5 h - 5" />;
-              </div>;
-            </div>;
-          </div>;
-          {/* Category Filters */}
-          <div className='mt - 6'>;
-            <div className='flex flex - wrap gap - 3'>;
-              {categories.map (category => (                <button;
-          {/* Category Filters */}
-          <div className="mt - 6">;
-            <div className="flex flex - wrap gap - 3">;
-              {categories.map ((category) => (
-
-=======
 
 
                 <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -1029,12 +945,9 @@ if ( {) {
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Results Summary */}
 
 
@@ -1044,7 +957,6 @@ if ( {) {
           </div>;
         </div>;
 
-=======
         <div className="space-y-6">
           {filteredServices.length === 0 ? (
             <div className="text-center py-12">
@@ -1060,7 +972,6 @@ if ( {) {
             <AnimatePresence>
               {viewMode === 'grid' ? (
 
-=======
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                   {filteredServices.map(service => (
                     <ServiceCard key={service.id} service={service} />
@@ -1074,8 +985,6 @@ if ( {) {
                     <ServiceList key={service.id} service={service} />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
@@ -1085,12 +994,9 @@ if ( {) {
         </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -1112,14 +1018,7 @@ if ( {) {
               <a
 
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
@@ -1132,119 +1031,6 @@ if ( {) {
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-<<<<<<< HEAD
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'>;
-                <Phone className='w-5 h-5' />                Call Now;
-        {/* Services Grid / List */}
-        <div className='space - y-6'>;
-          {filtered_services.length === 0 ? (
-            <div className='text - center py - 12'>;
-              <div className='text - gray - 400 dark:text - gray - 500 text - 6xl mb - 4'>;
-                🔍;
-              </div>;
-              <h3 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 2'>;
-                No services found;
-              </h3>;
-              <p className='text - gray - 600 dark:text - gray - 400'>                Try adjusting your search terms or category filters.          {filtered_services.length === 0 ? (
-            <div className="text - center py - 12">;
-              <div className="text - gray - 400 dark:text - gray - 500 text - 6xl mb - 4">🔍</div>;
-              <h3 className="text - xl font - semibold text - gray - 900 dark:text - white mb - 2">;
-                No services found;
-              </h3>;
-              <p className="text - gray - 600 dark:text - gray - 400">;
-                Try adjusting your search terms or category filters.;
-              </p>;
-            </div>) : (
-            <AnimatePresence>;
-              {view_mode === 'grid' ? (
-                <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-                  {filtered_services.map (service => (
-                    <ServiceCard key={service.id} service={service} />))}
-                </div>) : (
-                <div className='space - y-6'>;
-                  {filtered_services.map (service => (                    <ServiceList key={service.id} service={service} />                <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-                          {filtered_services.map ((service) => (
-          <ServiceCard key={service.id} service={service} />))}
-                </div>) : (
-                <div className="space - y-6">;
-                  {filtered_services.map ((service) => (
-                  ))}
-                </div>)}
-            </AnimatePresence>)}
-        </div>;
-        {/* Call to Action */}
-        <div className='mt - 16 text - center'>;
-          <div className='bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - 2xl p - 12 text - white'>;
-            <h2 className='text - 3xl md:text - 4xl font - bold mb - 6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto'>;
-              Our team of experts is ready to help you implement these;
-              cutting - edge solutions. Get in touch today to discuss your;
-              specific needs and discover how we can drive your success.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
-              <a;
-                href={`mailto:${contact_info.email}?subject = Business Transformation Consultation`}
-                className='inline - flex items - center gap - 2 bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - gray - 100 transition - all duration - 300 transform hover:scale - 105';
-              >;
-                Start Your Transformation;
-                <ArrowRight className='w - 5 h - 5' />;
-              </a>;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className='inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300';
-              >;
-                <Phone className='w - 5 h - 5' />                Call Now;
-              </a>;
-            </div>;
-          </div>              Ready to Transform Your Business?;
-            </h2>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <a
-                href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
-                Start Your Transformation;
-                <ArrowRight className="w-5 h-5" />;
-              </a>;
-              <a
-
-
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
-                <Phone className="w-5 h-5" />;
-            <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-              Our team of experts is ready to help you implement these cutting - edge solutions.;
-              Get in touch today to discuss your specific needs and discover how we can drive your success.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
-              <a;
-                href={`mailto:${contact_info.email}?subject = Business Transformation Consultation`}
-                className="inline - flex items - center gap - 2 bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - gray - 100 transition - all duration - 300 transform hover:scale - 105";
-              >;
-                Start Your Transformation;
-                <ArrowRight className="w - 5 h - 5" />;
-              </a>;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className="inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover: bg - white hover:text - blue - 600 transition - all duration - 300";
-              >;
-                <Phone className="w - 5 h - 5" />;
-                Call Now;
-              </a>;
-            </div>;
-          </div>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-
-}
-
-=======
           <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
             Get Started Today;
           </button>;
@@ -1254,10 +1040,6 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

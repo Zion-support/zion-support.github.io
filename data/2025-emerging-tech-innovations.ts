@@ -1,15 +1,10 @@
 
 
 export interface EmergingTechInnovationService {
-=======
 
 export interface EmergingTechInnovationService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export interface EmergingTechInnovationService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -73,7 +68,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
 
-=======
 export interface EmergingTechInnovation {
   id: string, name: string,
   tagline: string, price: string,
@@ -105,16 +99,13 @@ const contact = {
 
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-=======
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
@@ -122,7 +113,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -590,13 +580,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1062,11 +1049,5 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

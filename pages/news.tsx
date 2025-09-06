@@ -6,28 +6,6 @@ import {
   User, 
   Tag, 
   ArrowRight, 
-<<<<<<< HEAD
-ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
-  Zap
-} from 'lucide-react'
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import React from 'react',
-import Head from 'next / head',
-import { motion } from 'framer-motion',
-import {
-  Newspaper,
-  Calendar,
-  User,
-  Tag,
-  ArrowRight,
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   ExternalLink,
   TrendingUp,
   Award,
@@ -47,7 +25,6 @@ const NewsPage: React.FC = () => {
 
 
 
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -112,8 +89,6 @@ const NewsPage: React.FC = () => {;
 
 
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const latestNews = [
     {
       id: 4
@@ -291,14 +266,12 @@ export default function NewsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-=======
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1
@@ -322,7 +295,6 @@ export default function NewsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -394,11 +366,9 @@ excerpt: 'Recognition as one of the world's most innovative AI companies highlig
       tags: ['RecognitionForbesAI LeadershipInnovation'];
     },
     {
-=======
   Zap
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
@@ -436,11 +406,6 @@ const NewsPage: React.FC = () => {
       image: '/images/news/quantum-azure-partnership.jpg'
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
-<<<<<<< HEAD
-  ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -501,12 +466,7 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const latestNews = [
     {
       id: 4
@@ -533,194 +493,10 @@ const NewsPage: React.FC = () => {;
       tags: ['RecognitionForbesAI LeadershipInnovation']
     }
     {
-<<<<<<< HEAD
-      id: 6
-      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"'
-      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.'
-      category: 'research'
-      date: '2025-01-03'
-      author: 'Dr. Michael Rodriguez'
-      readTime: '8 min read'
-      featured: false
-      image: '/images/news/quantum-drug-discovery.jpg'
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
       category: 'research',
-<<<<<<< HEAD
-      date: '2025 - 01 - 03',
-      author: 'Dr. Michael Rodriguez',
-      read_time: '8 min read',
-      featured: false,
-      image: '/images / news / quantum - drug - discovery.jpg',
-      tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare'];
-    },
-    {
-      id: 7,
-      title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
-      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.',
-      category: 'partnerships',
-date: '2024 - 12 - 28',
-      author: 'Zion Tech Group',
-      read_time: '3 min read',
-      featured: false,
-      image: '/images / news / deloitte - partnership.jpg',
-      tags: ['PartnershipDeloitteEnterpriseAI Implementation'];
-    },
-    {
-      id: 8,
-      title: 'AI Autonomous Business Operations Platform Beta Launch',
-excerpt: 'Revolutionary platform enables fully autonomous business management with AI - driven decision making and process optimization.',
-      category: 'product',
-      date: '2024 - 12 - 20',
-      author: 'Zion Tech Group',
-      read_time: '6 min read',
-      featured: false,
-      image: '/images / news / ai - autonomous - business.jpg',
-      tags: ['AIAutonomous OperationsBusinessPlatform'];
-    },
-    {
-      id: 9,
-      title: 'Zion Tech Group Expands to European Markets',
-      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.',
-      category: 'company',
-date: '2024 - 12 - 15',
-      author: 'Zion Tech Group',
-      read_time: '3 min read',
-      featured: false,
-      image: '/images / news / european - expansion.jpg',
-      tags: ['ExpansionEuropeInternationalGrowth'];
-    }
-  ],
-  const press_releases = [;
-    {
-      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
-      date: '2025 - 01 - 15',
-      summary: 'Major milestone in artificial intelligence research with implications for human - AI collaboration and consciousness studies.';
-    },
-    {
-      title: 'Series C Funding Round: $250M Investment for Global Expansion',
-      date: '2025 - 01 - 10',
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.';
-    },
-    {
-      title: 'Quantum - Secure Cloud Partnership with Microsoft Azure',
-      date: '2025 - 01 - 05',
-      summary: 'World's first quantum - secure cloud infrastructure for enterprise customers.';
-    }
-  ],
-  const media_resources = [;
-    {
-      title: 'Company Fact Sheet',
-      description: 'Key facts, figures, and company information for media and investors.',
-      type: 'PDF',
-      size: '2.1 MB',
-download: '/media / zion - tech - group - fact - sheet.pdf';
-    },
-    {
-      title: 'Executive Biographies',
-      description: 'Professional backgrounds and photos of Zion Tech Group leadership team.',
-      type: 'ZIP',
-      size: '15.3 MB',
-download: '/media / executive - bios.zip';
-    },
-    {
-      title: 'Company Logo Package',
-      description: 'High - resolution logos and brand assets for media use.',
-      type: 'ZIP',
-      size: '8.7 MB',
-      download: '/media / logo - package.zip';
-    },
-    {
-      title: 'Product Screenshots',
-      description: 'High - quality screenshots of our AI and quantum computing platforms.',
-      type: 'ZIP',
-      size: '25.1 MB',
-      download: '/media / product - screenshots.zip';
-    }
-  ],
-  const filtered_news = [...featured_news, ...latest_news].filter (news => {
-    const category_match = selected_category === 'all' || news.category === selected_category,
-    const search_match = search_query === '' ||;
-      news.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      news.excerpt.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      news.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())),
-    return category_match && search_match;
-  }),
-  const format_date = (date_string: string) =>: any {
-    const date = new Date (date_string),
-    return date.toLocaleDateString ('en - US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric';
-    });
-  },
-import React from 'react',
-import SEO from '../components / SEO',
-export default /**
- * NewsPage - Function description
- */
-function NewsPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>;
-          <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />;
-        </Head>;
-        {/* Hero Section */}
-        <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto text - center">;
-            <motion.h1;
-              className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center";
-            >;
-              <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - indigo - 500 to - purple - 600 bg - clip - text text - transparent mb - 6">;
-                Latest News & Updates;
-              </div>;
-              <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - blue - 400 via - cyan - 400 to - indigo - 400 bg - clip - text text - transparent mb - 6">;
-                News & Press;
-              </h1>;
-              <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
-                Stay updated with the latest developments, breakthroughs, and innovations;
-                from Zion Tech Group and the technology industry.;
-              </p>;
-            </motion.div>;
-
-        {/* Category Filter */}
-        <section className="py - 10 px - 4">;
-          <div className="container mx - auto max - w-6xl">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex - wrap justify - center gap - 4";
-            >;
-              {categories.map ((category, index) => (
-                <button;
-                  key={category}
-
-
-
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((category, index) => (
-                <button
-                  key={category  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                    category === "All News"
-                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-
-=======
 
 export default function NewsPage() {
   const newsItems = [
@@ -800,7 +576,6 @@ export default function NewsPage() {
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -955,7 +730,6 @@ function NewsPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -973,7 +747,6 @@ function NewsPage() {
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
 
-=======
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -990,7 +763,6 @@ function NewsPage() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -999,7 +771,6 @@ function NewsPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
@@ -1007,7 +778,6 @@ function NewsPage() {
       </section>
 
             className="mb - 8";
-=======
 
       {/* Featured News */  } catch (error) {
     console.error("Error:", error);
@@ -1252,7 +1022,6 @@ export default function NewsPage(req, res) {
   }
 }
             className="mb-8";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6">;
               News & Press;
@@ -1302,7 +1071,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -1381,8 +1149,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </span>
                         <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
                           Featured
@@ -1557,8 +1323,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
@@ -1639,8 +1403,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{item.title}</h3>
@@ -1718,8 +1480,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Read More
@@ -1729,7 +1489,6 @@ export default function NewsPage(req, res) {
                     </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                 </motion.div>
               ))}
@@ -1761,7 +1520,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -1847,8 +1605,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">{article.title}</h3>
@@ -1873,7 +1629,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -1883,7 +1638,6 @@ export default function NewsPage(req, res) {
                 </motion.article>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Newsletter Signup */}
               <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
                 Stay Updated;
@@ -1936,7 +1690,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -2035,7 +1788,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-gray-400 text-sm">{release.readTime}</span>
                   </div>
@@ -2054,8 +1806,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
@@ -2121,7 +1871,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2265,8 +2014,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2351,7 +2098,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-gray-400 text-sm">{news.readTime}</span>
                   </div>
@@ -2370,8 +2116,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -2386,7 +2130,6 @@ export default function NewsPage(req, res) {
                 </motion.article>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Media Contact */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -2435,7 +2178,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
@@ -2445,13 +2187,9 @@ export default function NewsPage(req, res) {
 
                 For press inquiries, media interviews, or additional information,
 
-=======
                 For press inquiries, media interviews, or additional information, 
-=======
                 For press inquiries, media interviews, or additional information,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -2466,7 +2204,6 @@ export default function NewsPage(req, res) {
                 </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <a
                   href="/press"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
@@ -2479,7 +2216,6 @@ export default function NewsPage(req, res) {
         </section>
       </div>
 
-=======
             >;
               <h2 className="text - 4xl font - bold text - white mb - 4">;
                 Media Inquiries;
@@ -2508,7 +2244,6 @@ export default function NewsPage(req, res) {
         </section>;
       </div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* CTA Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -2549,7 +2284,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
@@ -2588,7 +2322,6 @@ export default function NewsPage(req, res) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-=======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6">;
               Ready to Stay Informed?;
@@ -2687,7 +2420,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
@@ -2736,8 +2468,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2854,8 +2584,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
                       <span>{formatDate(news.date)}</span>
@@ -2885,7 +2613,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
@@ -2961,7 +2688,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -3052,7 +2778,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </span>
                     <a
                       href="/contact"
@@ -3128,7 +2853,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -3172,7 +2896,6 @@ export default function NewsPage(req, res) {
                     <div className="flex items - center gap - 4 text - sm text - gray - 400">;
                       <span className="px - 2 py - 1 bg - gray - 700 / 50 rounded">;
                         {resource.type}
-=======
 
                   key={resource.title  } catch (error) {
     console.error("Error:", error);
@@ -3215,7 +2938,6 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -3226,7 +2948,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </span>;
                       <span>{resource.size}</span>;
                     </div>;
@@ -3239,7 +2960,6 @@ export default function NewsPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
@@ -3253,7 +2973,6 @@ export default function NewsPage(req, res) {
                     </a>;
                   </div>;
                 </motion.div>))}
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -3357,7 +3076,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />
       <div className="max-w-3xl mx-auto">
@@ -3368,7 +3086,6 @@ export default function NewsPage(req, res) {
     </div>
   )
 
-=======
 
 };
 ;
@@ -3376,10 +3093,7 @@ export default function NewsPage(req, res) {
 
 }
 
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className="min - h-[60vh] px - 6 py - 24">;
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
       <div className="max - w-3xl mx - auto">;
@@ -3394,4 +3108,3 @@ export default function NewsPage(req, res) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

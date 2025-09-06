@@ -41,15 +41,11 @@ import React from 'react';
   FileText, ;
   BarChart3, ;
   Users, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Brain,
   MessageSquare,
   Image,
@@ -73,7 +69,6 @@ import {
   FileText,
   BarChart3,
   Users,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Zap;
   ArrowRight;
   Star;
@@ -813,7 +808,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -836,7 +830,6 @@ export default function AIBusinessToolsPage() {;
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>            </div>                {aiTools.length}+
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">AI Tools</div>
             </div>
             <div className="text-center group">
@@ -1072,7 +1065,6 @@ export default function AIBusinessToolsPage() {;
         </div>;
       </section>;
 
-=======
 
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
@@ -1080,14 +1072,11 @@ export default function AIBusinessToolsPage() {;
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
 
-=======
 
 
               <button
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1105,12 +1094,9 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Tools Grid */}
 
 
@@ -1122,7 +1108,6 @@ export default function AIBusinessToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-=======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
               {selectedCategory === 'All';
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.';
@@ -1204,7 +1189,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1213,7 +1197,6 @@ export default function AIBusinessToolsPage() {;
                         {tool.features
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
-=======
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
                       {tool && tool.icon}
                     </div>;
@@ -1280,7 +1263,6 @@ export default function AIBusinessToolsPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1326,7 +1308,6 @@ export default function AIBusinessToolsPage() {;
                 AI-powered chatbots, personalization, and automation create
                 seamless, personalized experiences for your customers.              </p>              Why Choose AI Tools?
             </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
             </p>
@@ -1362,8 +1343,6 @@ export default function AIBusinessToolsPage() {;
           </div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1559,7 +1538,6 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Explore More Tools;
             </Button>;
           </div>;
@@ -1567,19 +1545,8 @@ export default function AIBusinessToolsPage() {;
       </section>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

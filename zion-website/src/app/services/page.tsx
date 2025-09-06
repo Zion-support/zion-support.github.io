@@ -102,22 +102,9 @@ const reasonsToChoose = [;
     description: 'Access to the latest AI research and technology innovations.',
     icon: LightBulbIcon},
   {
-<<<<<<< HEAD
-    name: 'Global Support',
-    description: '24 / 7 support and maintenance services across multiple time zones.',
-    icon: GlobeAltIcon}];
-export default /**
- * ServicesPage - Function description
- */
-function ServicesPage() {
-
-  return (
-    <div className=&quot;bg - black & quot;>;
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -179,7 +166,6 @@ function ServicesPage() {
                 </div>
               </div>
             ))}
-=======
               <span className=&quot;bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent & quot;>;
                 AI Services;
               </span>;
@@ -229,24 +215,13 @@ function ServicesPage() {
                   </Link>;
                 </div>;
               </div>))}
-=======
     name: 'Global Support'
     description: '24/7 support and maintenance services across multiple time zones.'
     icon: GlobeAltIcon}]
-<<<<<<< HEAD
-export default function ServicesPage() {
-=======
 
-<<<<<<< HEAD
-export default function ServicesPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
 const Page: React.FC<PageProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -257,13 +232,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 AI Services
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              From strategy to implementation, our comprehensive AI services help you navigate
-=======
             <p className="mt-6 text-lg leading-8 text-gray-300">
               From strategy to implementation, our comprehensive AI services help you navigate 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -276,13 +246,8 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
-<<<<<<< HEAD
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We offer end-to-end AI services designed to accelerate your digital transformation
-=======
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We offer end-to-end AI services designed to accelerate your digital transformation 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             and drive measurable business outcomes.
           </p>
         </div>
@@ -314,7 +279,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
@@ -322,7 +286,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
 
 
 
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -334,8 +297,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             from your AI investment.
           </p>
         </div>
@@ -356,7 +317,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
-=======
 <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
           <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Process</h2>;
@@ -383,33 +343,14 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
                 </div>;
               </div>))}
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-            How We Deliver Results
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our proven methodology ensures successful project delivery and maximum value
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             How We Deliver Results
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             from your AI investment.
           </p>
         </div>
@@ -430,7 +371,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </div>;
         </div>;
       </div>;
@@ -455,29 +395,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
               <div key={reason.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {reason.name}
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
                   <p className=&quot;flex - auto & quot;>{reason.description}</p>;
                 </dd>;
               </div>))}
-=======
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -497,7 +424,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </dd>
               </div>
             ))}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </dl>;
         </div>;
       </div>;
@@ -532,4 +458,3 @@ const Page: React.FC<PageProps> = ({ className }) => {
 };
 
 export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,7 +5,6 @@
 
 
 type Experiment = {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,12 +50,9 @@ import fs from "fs";
 import path from "path";
 type Experiment = {
   title: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
   title: string,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -167,7 +163,6 @@ function CurationPage() {
             Nothing to show yet.;
           </div>;
 
-=======
 };
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -193,8 +188,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
-<<<<<<< HEAD
-=======
   return (
 
 };
@@ -202,7 +195,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
 
-=======
               </div>
             )}
           </div>
@@ -210,7 +202,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
         {!items.length && (
           <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
             Nothing to show yet.
-=======
 
 
 
@@ -227,8 +218,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
 
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
       </div>;
     </main>;
@@ -243,11 +232,6 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw);
     return {
       props: {
-<<<<<<< HEAD
-        updatedAt: parsed.updatedAt || null,
-        items: parsed.items || []},
-
-=======
             </div>;
             {(exp.hypothesis || exp.metric) && (
               <div className='mt - 2 text - sm text - gray - 700'>;
@@ -310,7 +294,6 @@ function getStaticProps() {
       },
       revalidate: 300,
     }        items: parsed.items || []},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       revalidate: 300}
   } catch {
     return {
@@ -361,16 +344,12 @@ export async function getStaticProps() {;
   }        items: []},;
 
 
-=======
         updatedAt: null,
         items: []},
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       revalidate: 300}
 }
 
 
-=======
         updatedAt: null,
         items: [],
       },
@@ -383,8 +362,6 @@ export async function getStaticProps() {;
 
         updatedAt: null,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         updated_at: null,
         items: [],
       },
@@ -394,4 +371,3 @@ export async function getStaticProps() {;
       revalidate: 300}
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

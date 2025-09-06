@@ -119,13 +119,6 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  );
-}}
-
-=======
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       {value && (
@@ -142,7 +135,6 @@ function InteractiveSearch() {
         </button>
       )}
     </motion.div>
-=======
     </motion.div>
 
 
@@ -159,5 +151,3 @@ function InteractiveSearch() {
       </div>;
     </form>);
 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

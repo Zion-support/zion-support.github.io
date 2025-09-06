@@ -34,11 +34,9 @@ import {;
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
@@ -59,7 +57,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -178,7 +175,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
         const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
         return bRoi - aRoi;
@@ -328,14 +324,12 @@ if ( {) {
       color: 'from-yellow-500 to-orange-600'
     }
   ];
-=======
 
 
   ];
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -467,7 +461,6 @@ if ( {) {
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
-=======
 
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -588,9 +581,7 @@ if ( {) {
       },;
     },  };        staggerChildren: 0 && 0.1;
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
   };
@@ -670,14 +661,11 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-=======
                 transition={{ duration: 0.8 }}
               >
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -708,7 +696,6 @@ if ( {) {
                 animate={{ opacity: 1, y: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -747,7 +734,6 @@ if ( {) {
                   </div>;
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
-=======
                 <div className='text-center'>
                   <div className='text-3xl font-bold text-cyan-400 mb-2'>
                     {revolutionaryMicroSaasServices.length}+
@@ -772,7 +758,6 @@ if ( {) {
                   </div>
                   <div className='text-gray-400'>Average ROI</div>                </div>
               </motion.div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -910,7 +895,6 @@ if ( {) {
               variants={containerVariants}
               initial="hidden"
 
-=======
               whileInView="visible"
               viewport={{ once: true }}
             >
@@ -918,7 +902,6 @@ if ( {) {
                 <motion.div
                   key={category.name}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
@@ -931,7 +914,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Popular Services Showcase */}
 
         <section className="py-16">
@@ -942,14 +924,11 @@ if ( {) {
 
               initial={{ opacity: 0, y: 20 }}
 
-=======
 
 
               initial={{ opacity: 0, y: 20 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -989,11 +968,9 @@ if ( {) {
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
 
 
-=======
 
             <motion.div 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -1007,95 +984,7 @@ if ( {) {
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
-<<<<<<< HEAD
-                    size='large';
-                    className='h - full cursor - pointer';
-                    on_click={() => setSelectedService (service)}
-                  >;
-                    <div className='text - center mb - 6'>;
-                      <div className='text - 4xl mb - 4'>{service.icon}</div>;
-                      <h3 className='text - 2xl font - bold text - white mb - 2'>;
-
-                        {service.name}
-                      </h3>;
-                      <p className='text - gray - 300 mb - 4'>{service.tagline}</p>;
-                      <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
-                        {service.price}
-                      </div>;
-                      <div className='text - sm text - gray - 400'>;
-                        {service.period}
-
-                  >;
-                    <div className='text-center mb-6'>;
-                      <div className='text-4xl mb-4'>{service && service.icon}</div>;
-                      <h3 className='text-2xl font-bold text-white mb-2'>;
-                        {service && service.name}
-                      </h3>;
-                      <p className='text-gray-300 mb-4'>{service && service.tagline}</p>;
-                      <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                        {service && service.price}
-                      </div>;
-                      <div className='text-sm text-gray-400'>;
-                        {service && service.period}
-                      </div>;
-                    </div>;
-                    <div className='space-y-3 mb-6'>;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className='flex items-center gap-2'>;
-                          <Check className='w-4 h-4 text-green-400 flex-shrink-0' />;
-                          <span className='text-sm text-gray-300'>;
-
-                            {feature}
-                          </span>                        </div>;
-
-                      ))}
-                    </div>;
-                    variant={service.variant as any}
-                    size="large"
-                    className="h-full cursor-pointer"
-
-                    onClick={() => setSelectedService(service)}
-
-                  >;
-                    <div className="text-center mb-6">;
-                      <div className="text-4xl mb-4">{service && service.icon}</div>;
-                      <h3 className="text-2xl font-bold text-white mb-2">{service && service.name}</h3>;
-                      <p className="text-gray-300 mb-4">{service && service.tagline}</p>;
-                      <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
-                      <div className="text-sm text-gray-400">{service && service.period}</div>;
-                    </div>;
-                    <div className="space-y-3 mb-6">;
-                      {service && service.features.slice(0, 4).map((feature, idx) => (;
-                        <div key={idx} className="flex items-center gap-2">;
-                          <Check className="w-4 h-4 text-green-400 flex-shrink-0" />;
-                          <span className="text-sm text-gray-300">{feature}</span>;
-                        </div>;
-                      ))}
-<<<<<<< HEAD
-                    </div>;
-                    <div className='text-center'>;
-=======
                     </div>
-<<<<<<< HEAD
-                    <div className='text-center'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      <Button
-                        variant='primary'
-                        size='md'
-                        onClick={() => window && window.open(service && service.link, '_blank')}
-                        className='w-full';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml-2 w-4 h-4' />;
-                      </Button>                    </div>                    <div className="text-center">;
-                                                 <Button
-                    <div className="text-center">
-                                                 <Button 
-
-                             variant="primary" 
-                             size="md"
-
-=======
                              onClick={() => window.open(service.link, '_blank')}
                              className="w-full"
                            >
@@ -1106,7 +995,6 @@ if ( {) {
                   </UltraFuturisticCard>
                 </motion.div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </motion && motion.div>;
@@ -1117,14 +1005,12 @@ if ( {) {
         {/* Services Grid */}
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
-=======
                   </UltraFuturisticCard>
                 </motion.div>
               ))}
             </motion.div>
           </div>
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Services Grid */}
         <section id="services-grid" className="py-16">
           <div className="container mx-auto px-4">
@@ -1139,7 +1025,6 @@ if ( {) {
               className="mb-8"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1216,7 +1101,6 @@ if ( {) {
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     </button>;
                   </div>;
                 </div>;
@@ -1224,13 +1108,10 @@ if ( {) {
 
 
               className={viewMode === 'grid' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -1242,8 +1123,6 @@ if ( {) {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1288,11 +1167,9 @@ if ( {) {
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
-=======
             </motion.div>
             {filteredServices.length === 0 && (
               <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
@@ -1300,56 +1177,6 @@ if ( {) {
                 className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0 && 0.6 }}>;
-                <div className='text-6xl mb-4'>🔍</div>;
-                <h3 className='text-2xl font-bold text-white mb-2'>;
-                  No Services Found;
-                </h3>;
-                <p className='text-gray-400 mb-6'>;
-                  Try adjusting your search criteria or filters.;
-                </p>;
-                <Button
-                  variant='primary'
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setSelectedCategory('All');
-                    setPriceRange('All');
-                  }}
-
-
-                >;
-                  Clear Filters;
-                </Button>              </motion && motion.div>                <div className="text-6xl mb-4">🔍</div>;
-                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
-                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                                         <Button
-                           variant="primary"
-                           onClick={() => {;
-                             setSearchQuery('');
-                             setSelectedCategory('All');
-
-                             setPriceRange('All');
-
-                           }}
-
-
-            )}
-
-          </div>;
-        </section>;
-
-
-        {/* Service Details Modal */}
-        <AnimatePresence>;
-          {selectedService && (;
-            <motion&& motion.div
-              className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-
-=======
 
         {/* Service Details Modal */}
         <AnimatePresence>
@@ -1357,13 +1184,9 @@ if ( {) {
             <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1371,100 +1194,6 @@ if ( {) {
 
 
                             ))}
-<<<<<<< HEAD
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.features.map((feature, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{feature}</span>;
-                              </div>;
-                            ))}
-
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                            Benefits;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
-
-                              <div
-                                key={idx}
-                                className='flex items-center gap-2 text-sm'>;
-                                <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
-                                <span className='text-gray-300'>{benefit}</span>                              </div>;
-                        <div>
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
-                          <div className="space-y-2">
-                            {selectedService.benefits.map((benefit, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                                <span className="text-gray-300">{benefit}</span>
-                              </div>
-                            ))}
-<<<<<<< HEAD
-                          </div>;
-                        </div>                        <div>;
-                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{benefit}</span>;
-                              </div>;
-                            ))}
-
-                          </div>;
-                        </div>;
-                        <div>;
-                          <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                            Capabilities;
-                          </h4>;
-                          <div className='space-y-2'>;
-                            {selectedService && selectedService.capabilities.map(;
-                              (capability, idx) => (;
-
-                                <div
-                                  key={idx}
-                                  className='flex items-center gap-2 text-sm'>;
-                                  <Zap className='w-3 h-3 text-cyan-400 flex-shrink-0' />;
-                                  <span className='text-gray-300'>;
-                                    {capability}
-                                  </span>;
-                                </div>;
-                              );
-                            )}                          </div>                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>;
-                          <div className="space-y-2">;
-                            {selectedService && selectedService.capabilities.map((capability, idx) => (;
-                              <div key={idx} className="flex items-center gap-2 text-sm">;
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />;
-                                <span className="text-gray-300">{capability}</span>;
-                              </div>;
-                            ))}
-
-                        
-                        <div>
-                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
-                          <div className="space-y-2">
-                            {selectedService.capabilities.map((capability, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-sm">
-                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                                <span className="text-gray-300">{capability}</span>
-                              </div>
-                            ))}
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-=======
                   <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
                       <h3 className='text - xl font - semibold text - cyan - 400 mb - 4'>;
                         Service Details;
@@ -1632,7 +1361,6 @@ if ( {) {
                            variant="futuristic"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </motion.div>
           </div>
@@ -1713,7 +1441,6 @@ if ( {) {
   );  );
 }
 
-=======
   )
 }
                   <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
@@ -1871,10 +1598,6 @@ if ( {) {
       </div>;
     </UltraFuturisticBackground>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

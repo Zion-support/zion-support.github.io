@@ -2,17 +2,14 @@
 import React from 'react';
 import Link from 'next / link';
 
-=======
 
 import React from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 import { 
 
-=======
 
   Phone,
   Mail,
@@ -37,7 +34,6 @@ import {
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -193,41 +189,11 @@ const serviceCategories = [;
       { name: 'DataVault Hub', href: '/data-vault-hub' },
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Phone
-  Mail
-  MapPin
-  Star
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Zap
-  Globe
-  Database
-  Lock
-  Cloud
-  BarChart3
-  Twitter
-  Linkedin
-  Github
-  Youtube
-  Instagram;} from 'lucide-react';import {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Phone,
   Mail,
   MapPin,
@@ -248,151 +214,9 @@ import {
   Twitter,
   Linkedin,
   Github,
-<<<<<<< HEAD
-  Youtube,
-  Instagram,} from 'lucide-react';import {
-  Phone, Mail, MapPin, Star, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Zap, Globe, Database, Lock, Cloud, BarChart3;
-  Twitter, Linkedin, Github, Youtube, Instagram;
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
-}
-;
-const service_categories = [;
-  {
-    title: 'AI & Consciousness',
-    icon: Brain,
-
-    services: [;
-      {
-        name: 'AI Consciousness Evolution',
-        href: '/ai - consciousness - evolution - 2029',
-      },
-      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
-      {
-        name: 'Multimodal AI Orchestrator',
-        href: '/multimodal - ai - orchestrator',
-      },
-      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' },
-    ],
-  },  {      { name: 'Quantum AI Fusion', href: '/quantum - ai - fusion' },
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal - ai - orchestrator' },
-      { name: 'AI Autonomous Ecosystem', href: '/ai - autonomous - ecosystem' },
-      { name: 'AI Ethics & Governance', href: '/ai - ethics - governance' }
-    ];
-  }
-  {
-    title: 'Quantum & Emerging Tech',
-    icon: Atom,
-    services: [;
-      { name: 'Space Mining Platform', href: '/space - mining - platform' },
-      { name: 'Quantum Bio - Computing', href: '/quantum - bio - computing' },
-      { name: 'Brain - Computer Interface', href: '/brain - computer - interface' },
-      { name: 'Quantum Energy Platform', href: '/quantum - energy - platform' },
-      { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' },
-    ],
-  },  {
-    title: 'Enterprise IT',
-    icon: Shield,
-    services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous - vehicle - ai' }
-    ];
-  }
-  {
-    title: 'Enterprise IT',
-    icon: Shield,
-    services: [;
-      {
-        name: 'Quantum Cloud Infrastructure',
-        href: '/quantum - cloud - infrastructure',
-      },
-      {
-        name: 'Edge Computing Orchestrator',
-        href: '/edge - computing - orchestrator',
-      },
-      {
-        name: 'Zero Trust Security Platform',
-        href: '/zero - trust - security - platform',
-      },
-      {
-        name: 'Blockchain Enterprise Platform',
-        href: '/blockchain - enterprise - platform',
-      },
-      { name: 'AI - Powered DevOps', href: '/ai - powered - devops' },
-    ],
-  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum - cloud - infrastructure' },
-      { name: 'Edge Computing Orchestrator', href: '/edge - computing - orchestrator' },
-      { name: 'Zero Trust Security Platform', href: '/zero - trust - security - platform' },
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain - enterprise - platform' },
-      { name: 'AI - Powered DevOps', href: '/ai - powered - devops' }
-    ];
-  }
-    title: 'Micro SAAS',
-    icon: Target,
-    services: [;
-      { name: 'AI Content Factory Pro', href: '/ai - content - factory' },
-      { name: 'Quantum CRM Suite', href: '/quantum - crm' },
-      { name: 'CyberShield Pro', href: '/cyber - shield - pro' },
-      { name: 'DataVault Hub', href: '/data - vault - hub' },
-      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' },
-    ],
-  }, ];      { name: 'DevOps Automation Studio', href: '/devops - automation - studio' }
-    ];
-  }
-];
-;
-const company_links = [;
-  { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
-  { name: 'News', href: '/news' },
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog', href: '/blog' },
-
-  { name: 'Resources', href: '/resources' }, ];  { name: 'Resources', href: '/resources' }
-
-];
-;
-const legal_links = [;
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-
-
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">;
-            {/* Company Info */}
-
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-pink-400" />
-                  <span className="text-sm">{contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -429,8 +253,6 @@ const legal_links = [;
                 </div>
                 <div className="space-y-2">
                   {category.services.map((service) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='space-y-4'>;
                 <div className='flex items-center space-x-3'>;
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -444,8 +266,6 @@ const legal_links = [;
                   {category && category.services.map(service => (;
                     <Link
 
-=======
-=======
               {/* Contact Info */}
               <div className='space - y-3'>;
                 <div className='flex items - center space - x-3 text - gray - 300'>;
@@ -548,27 +368,21 @@ const legal_links = [;
                       href={service.href}
                       className="block text - gray - 400 hover:text - cyan - 400 transition - colors duration - 200 text - sm";
                     >;
-=======
 
                       className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
 
                     >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.name}
 
           </div>;
-=======
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Additional Links */}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Company</h4>;
@@ -576,7 +390,6 @@ const legal_links = [;
                 {companyLinks && companyLinks.map(link => (;
                   <Link
 
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50">
             {/* Company Links */}
             <div>
@@ -609,7 +422,6 @@ const legal_links = [;
                     href={link.href}
                     className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
                   >;
-=======
                     key={link.name}
                     href={link.href}
 
@@ -618,8 +430,6 @@ const legal_links = [;
                   >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {link.name}
 
               </div>;
@@ -635,23 +445,17 @@ const legal_links = [;
                     className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {link.name}
                   </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
               </div>;
             </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social Links */}
 
 
@@ -667,10 +471,8 @@ const legal_links = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
 
-=======
                   </Link>))}
               </div>;
             </div>;
@@ -718,16 +520,12 @@ const legal_links = [;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Newsletter Section */}
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -738,8 +536,6 @@ const legal_links = [;
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
@@ -753,8 +549,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.;
@@ -764,7 +558,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
               <motion&& motion.div
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -772,7 +565,6 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 
 
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <input
                   type='email'
                   placeholder='Enter your email'
@@ -780,11 +572,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
 
-=======
                 className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
               >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <input
                   type="email"
                   placeholder="Enter your email"
@@ -798,15 +588,12 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
         </div>;
       </div>;
 
-=======
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 export default EnhancedFooter2025;
 
 
-=======
     </footer>);
 }
 ;
@@ -815,11 +602,7 @@ export default EnhancedFooter2025);
 ;
 export default EnhancedFooter2025;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

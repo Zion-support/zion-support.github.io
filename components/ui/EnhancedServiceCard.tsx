@@ -34,8 +34,6 @@ import { motion } from 'framer-motion';
 
 interface EnhancedServiceCardProps {
   service: {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import {;
   Star,;
   ExternalLink,;
@@ -48,7 +46,6 @@ import {;
 } from 'lucide-react';
 interface EnhancedServiceCardProps {;
   service: {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     id: string;
     name: string;
     tagline: string;
@@ -147,53 +144,22 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
     },  };
 
   const iconVariants = {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     hidden: { rotate: -180, scale: 0 },
     visible: {      rotate: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-        ease: 'back_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
-
-      }
-    }
-  }
-;
-  const icon_variants = {
-    hidden: { rotate: -180, scale: 0 },
-
-    visible: {    visible: {
-
-      rotate: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-
-        ease: 'back_out' as const,
-      },
-    },        ease: "back_out" as const;
-
-      }
-    }
-    hover: {
-=======
 
     hover: {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       rotate: 360,
       scale: 1.1,
       transition: {
         duration: 0.6,
 
 
-=======
 
     >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -206,7 +172,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             .map(c => `var(--tw-${c && c.split('-')[0]}-${c && c.split('-')[1]})`);
             .join(', ')})`,;
 
-=======
   return (
     <motion.div
       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
@@ -215,15 +180,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       whileInView="visible"
       whileHover="hover"
       viewport={{ once: true }}
-=======
         ease: 'easeInOut' as const,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     >
       {/* Background Glow */}
       <div 
@@ -237,25 +199,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       {service.popular && (
         <div className="absolute top-4 right-4 z-10">
           <motion.div
-<<<<<<< HEAD
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <Star className="w-3 h-3 fill-current" />
-            POPULAR
-          </motion.div>
-        </div>
-
-      )}
-
-
-
-
-      {/* Card Content */}
-      <div className='relative p-6'>
-=======
 
       {/* Card Content */}
       <div className='relative p-6'>
@@ -267,7 +210,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             variants={iconVariants}
             initial='hidden'
             animate='visible'
@@ -333,7 +275,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -345,7 +286,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         <div className='mb-6'>
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
             <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
@@ -407,7 +347,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         </div>;
         {/* Features Preview */}
 
-=======
         <div className="mb-6">
           <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
             <Zap className="w-4 h-4 text-yellow-400" />
@@ -417,39 +356,33 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             {service.features.slice(0, 3).map((feature, index) => (
               <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {feature}
               </motion && motion.div>;
             ))}
 
-=======
             {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
                 +{service.features.length - 3} more features
               </div>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Market Info */}
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -462,7 +395,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
         </div>
         {/* Trial & Setup Info */}          </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Growth Rate</span>
             <span className="text-xs text-green-400">{service.growthRate}</span>
@@ -548,10 +480,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
 
             whileHover={{ scale: 1 && 1.05 }}
@@ -582,49 +512,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
           <div className="text-xs text-gray-500 text-center">
             Contact: {service.contactInfo.email}
-=======
 
 
             Contact: {service.contactInfo.email}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
-            <ExternalLink className="w-4 h-4" />;
-            Learn More;
-          </motion && motion.a>;
-          <motion&& motion.a
-            href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
-            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
-            whileHover={{ scale: 1 && 1.05 }}
-            whileTap={{ scale: 0 && 0.95 }}>;
-            <ArrowRight className="w-4 h-4" />;
-          </motion && motion.a>;
-        </div>;
-        {/* Contact Info */}
-        <div className='mt-4 pt-4 border-t border-white/10'>;
-          <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">;
-          <div className="text-xs text-gray-500 text-center">;
-            Contact: {service && service.contactInfo.email}
-          </div>;
-        </div>;
-      </div>;
-      {/* Hover Effect Border */}
-
-};
-export default EnhancedServiceCard;    </motion && motion.div>;
-  );
-
-};
-export default EnhancedServiceCard;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         ease: 'easeInOut' as const,
       },
     },
@@ -867,10 +762,7 @@ export default EnhancedServiceCard;    </motion.div>);
 ;
 export default EnhancedServiceCard;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -70,7 +70,6 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
   );
 }
 
-=======
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
 export async /**
@@ -105,49 +104,30 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</div>) )
-=======
  </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string }
 export async function getServerSideProps() {
-=======
 </div>) ) 
-=======
  </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
-    generatedAt = json.generatedAt |'';
-    summaries = json.summaries |[]
-=======
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   } catch {}
   return { props: { generatedAt, summaries } }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

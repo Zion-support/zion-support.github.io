@@ -1,15 +1,10 @@
 
 
 export interface CuttingEdge2029Service {
-=======
 
 export interface CuttingEdge2029Service {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
 export interface CuttingEdge2029Service {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   tagline: string;
@@ -54,7 +49,6 @@ export interface CuttingEdge2029Service {;
 
   {
 
-=======
     id: 'quantum - consciousness - computing',
     name: 'Quantum Consciousness Computing Platform',
     tagline: 'Quantum computing meets AI consciousness',
@@ -78,7 +72,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - consciousness - computing',
@@ -120,7 +113,6 @@ export interface CuttingEdge2029Service {;
     reviews: 5,
   },
 
-=======
   // Space Technology & Colonization;
   {
     id: 'space - colonization - automation - platform',
@@ -146,7 +138,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - teal - 600 via - emerald - 600 to - green - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / space - colonization - automation - platform',
@@ -214,7 +205,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 via - yellow - 600 to - orange - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / dna - computing - platform - 2029',
@@ -256,7 +246,6 @@ export interface CuttingEdge2029Service {;
     reviews: 7,
   },
 
-=======
   // Metaverse & Digital Reality;
   {
     id: 'metaverse - consciousness - platform',
@@ -282,7 +271,6 @@ export interface CuttingEdge2029Service {;
     popular: true,
     icon: '🌌',
 
-=======
     color: 'from - purple - 600 via - pink - 600 to - rose - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / metaverse - consciousness - platform',
@@ -324,7 +312,6 @@ export interface CuttingEdge2029Service {;
     reviews: 15,
   },
 
-=======
   // Autonomous Business & Operations;
 {
     id: 'autonomous - business - ecosystem - 2029',
@@ -371,12 +358,10 @@ export interface CuttingEdge2029Service {;
     rating: 4.9
 
 
-=======
     reviews: 6
 
 
 
-=======
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - business - ecosystem - 2029',
@@ -441,7 +426,6 @@ export interface CuttingEdgeInnovation2029V2 {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
   // AI Consciousness & Evolution Services
@@ -471,24 +455,11 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision - making, and self - optimizing operations.';
-    launch_date: '2029 - 01 - 10';
-    customers: 8;
-    rating: 4.9,
-    reviews: 6;
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Advanced quantum consciousness computing platform with real-time quantum consciousness processing and validation.'
@@ -739,21 +710,12 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.'
-    launchDate: '2029-01-10'
-    customers: 8
-    rating: 4.9
-    reviews: 6
-  }
-=======
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
     customers: 8,
     rating: 4.9,
     reviews: 6,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -766,12 +728,6 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     rating: 4.9
 
     reviews: 6
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeInnovation2029V2 {;
   id: string,;
@@ -1077,11 +1033,5 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [;
     customers: 8,;
     rating: 4.9;
     reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

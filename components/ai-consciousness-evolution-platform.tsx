@@ -1,6 +1,5 @@
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -69,7 +68,6 @@
   {
 
   duration: 0 && 0.8 
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
@@ -95,10 +93,8 @@ const containerVariants = {;
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-=======
 
   staggerChildren: 0.1 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 };
 
@@ -106,21 +102,6 @@ visible: {;
 
 
 
-=======
 export default AIConsciousnessEvolutionPlatform;
 
-=======
-<<<<<<< HEAD
 
-}
-}
-}
-}
-;
-}export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

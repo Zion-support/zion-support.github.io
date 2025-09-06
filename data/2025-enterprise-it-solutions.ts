@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
     tagline:;
@@ -25,7 +24,6 @@
     popular: true,
     icon: '🔌',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 300',
     link: 'https://ziontechgroup.com / services / enterprise - api - governance - platform',
@@ -38,7 +36,6 @@
     setup_time: '7 - 10 days',
     category: 'Enterprise API Management',
 
-=======
     real_service: true,
     technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'],
     integrations: [;
@@ -106,7 +103,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - purple - 600 to - pink - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / services / enterprise - identity - access - management - suite',
@@ -187,7 +183,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 300',
     link: 'https://ziontechgroup.com / services / enterprise - workflow - automation - platform',
@@ -227,7 +222,6 @@
   },
   {
 
-=======
     id: 'enterprise - monitoring - and - observability - suite',
     name: 'Enterprise Monitoring & Observability Suite',
     tagline:;
@@ -268,7 +262,6 @@
     realImplementation: true
     implementationDetails:
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
     link: 'https://ziontechgroup.com / services / enterprise - monitoring - and - observability - suite',
@@ -298,9 +291,7 @@
     real_implementation: true,
     implementation_details:;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launch_date: '2025 - 01 - 18',
     customers: 56,
@@ -312,23 +303,12 @@
 
 ];	{
 
-=======
-<<<<<<< HEAD
-      'Enterprise platform with monitoring engine, observability tools, and alerting system.'
-    launchDate: '2025-01-18'
-    customers: 56
-    rating: 4.8
-    reviews: 38
-  }
-=======
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -343,7 +323,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
     features: [
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
@@ -550,12 +529,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4 && 4.8,
 
 		reviews: 38
-<<<<<<< HEAD
-	}
-];
-
-
-=======
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';
@@ -740,12 +713,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 38;
 }
-=======
 		rating: 4.8
 		reviews: 38
 
 
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -940,16 +911,10 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		reviews: 38;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
 ;
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { MicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1142,11 +1107,5 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 		customers: 56,;
 		rating: 4.8;
 		reviews: 38;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

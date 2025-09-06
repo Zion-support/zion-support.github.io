@@ -1,14 +1,10 @@
 
 
-=======
 
  export default function AIServices () {
-=======
 export default function AIServices () {
-=======
  export default function AIServices () {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
 }</div>) ) 
@@ -17,7 +13,6 @@ export default function AIServices () {
 }</div> </div> </section> <motion.div initial= {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function AIServices () {
 }> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
@@ -32,7 +27,6 @@ export default function AIServices () {
 }transition= {
   {
 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Target, Shield, Rocket, Atom, Cpu, Users, Star, ArrowRight } from 'lucide-react';
@@ -163,13 +157,9 @@ export default function AIServices() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -226,12 +216,9 @@ export default function AIServices() {
         </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -268,9 +255,6 @@ export default function AIServices() {
   ),;
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * AIServices - Function description
  */
@@ -385,40 +369,6 @@ function AIServices() {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                Ready to Transform Your Business with AI?;
-              </h2>;
-              <p className="text - xl text - gray - 400 mb - 8">;
-                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className="bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:shadow - 2xl transition - all duration - 300";
-                >;
-                  Schedule Consultation;
-                </motion.button>;
-                <motion.button;
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className="border border - cyan - 500 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold text - lg hover: bg - cyan - 500 hover:text - white transition - all duration - 300";
-                >;
-                  View Case Studies;
-                </motion.button>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </>),
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   ),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

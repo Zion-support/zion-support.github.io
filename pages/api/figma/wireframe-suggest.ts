@@ -7,7 +7,6 @@ import OpenAI from 'openai';
     const completion = await openai.chat.completions.create({;
       model: 'gpt-4o-mini',;
 
-=======
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
@@ -128,18 +127,8 @@ export default async function handler(req, res) {
       model: 'gpt-4o-mini';
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       messages: [;
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },;
         { role: 'user', content: prompt }];
       temperature: 0.4;
       max_tokens: 400});
-<<<<<<< HEAD
-    const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.';
-    res.status(200).json({ suggestion });
-
-
-  }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -4,22 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Authentication utilities
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-export interface User {
-  id: string;
-  email: string;
-  role: string;
-  isAdmin: boolean;
-=======
 export interface User {;
   id: string;
   email: string;
@@ -40,7 +26,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
   try {;
@@ -49,7 +34,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-=======
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -81,8 +65,6 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -104,7 +86,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   }
   
   return { id: 'user-1', email: 'user@zion.os', role: 'user' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
@@ -127,16 +108,10 @@ export function ensureAdmin(user: User): void {
   }
 }
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-<<<<<<< HEAD
-
-  try {
-=======
   try {;
     const user = parseUserFromRequest(req);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ensureAdmin(user);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -146,10 +121,8 @@ export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed
 // Additional auth utilities for login;
 
 export interface DemoUser {
-=======
 // Additional auth utilities for login
 export interface DemoUser {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   id: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
@@ -198,7 +171,6 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
 
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
-=======
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -253,13 +225,10 @@ if (return null) {
     expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   };
 }
-=======
 
   }
 }
 
-=======
-=======
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -273,7 +242,6 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 
 
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -281,7 +249,4 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

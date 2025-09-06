@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-
-describe('Basic Test', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});
-=======
 const { describe, it, expect, vi, beforeEach } = require(
 
 
@@ -65,7 +55,4 @@ describe(
     expect(mockedSend).toHaveBeenCalled();
     expect(res._getStatusCode()).toBe(200)})});
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     "await"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

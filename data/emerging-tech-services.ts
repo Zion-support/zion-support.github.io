@@ -26,7 +26,6 @@
     popular: true,
     icon: '🛰️',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - space - communications',
@@ -50,7 +49,6 @@
       'Custom quantum hardware',
     ],
 
-=======
     integrations: [;
       'Satellite systems',
       'Ground stations',
@@ -116,7 +114,6 @@
     popular: true,
     icon: '🧬',
 
-=======
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - biotech - drug - discovery',
@@ -141,7 +138,6 @@
       'Biotech tools',
     ],
 
-=======
     integrations: [;
       'Lab equipment',
       'Research databases',
@@ -210,7 +206,6 @@
     popular: true,
     icon: '🏭',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / autonomous - ai - factory',
@@ -235,7 +230,6 @@
       'Manufacturing systems',
     ],
 
-=======
     integrations: [;
       'ERP systems',
       'MES systems',
@@ -299,7 +293,6 @@
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   reviews: number
 }
 export const emergingTechServices: EmergingTechService[] = [
@@ -330,32 +323,17 @@ export const emergingTechServices: EmergingTechService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.';
-    launch_date: '2024 - 09 - 01';
-    customers: 35;
-    rating: 4.8,
-    reviews: 28;
-
-  }
-
-=======
 
 export interface EmergingTechService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
@@ -1111,21 +1089,12 @@ export interface EmergingTechService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
-    launchDate: '2024-09-01'
-    customers: 35
-    rating: 4.8
-    reviews: 28
-  }
-=======
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01',
     customers: 35,
     rating: 4.8,
     reviews: 28,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1138,14 +1107,7 @@ export interface EmergingTechService {;
     rating: 4.8
 
     reviews: 28
-<<<<<<< HEAD
-  }
-];
-=======
 export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1667,11 +1629,5 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,36 +1,6 @@
 
 
 }
-<<<<<<< HEAD
- canvas && canvas.width = window && window.innerWidth;
-canvas && canvas.height = window && window.innerHeight;
-let animationId: number;
-let particles: Array< {;
-const UltraFuturisticBackground2030: React.FC<;
-  UltraFuturisticBackground2030Props;
-> = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-
-
-
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2030Props {;
-  children: React && React.ReactNode;
-}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-
-
-    let animationId: number;
-    let particles: Array<{;
-      x: number;
-      y: number;
-=======
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animation_id: number;
@@ -61,7 +31,6 @@ if (return) {
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
-=======
 const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props> = ({ children }) => {
 
   useEffect(() => {
@@ -75,7 +44,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     let particles: Array<{
       x: number;
       y: number;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       vx: number;
       vy: number;
       size: number;
@@ -85,7 +53,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
     let particles: Array<{
       x: number,
       y: number,
-=======
       opacity: number;    }> = [];      coordinate_x: number,
       coordinate_y: number,
 
@@ -173,7 +140,6 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               ctx && ctx.stroke();
 
 
-=======
       opacity: number;
     // Initialize particles;
     const init_particles = () =>: any {
@@ -249,8 +215,6 @@ if ( {) {
               ctx.global_alpha = ((100 - distance) / 100) * 0.3;
               ctx.line_width = 0.5;
               ctx.stroke ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }
           }
         });
@@ -258,7 +222,6 @@ if ( {) {
 
 
     };
-=======
       ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate);    };              ctx.lineWidth = 0.5;
               ctx.stroke()
@@ -269,7 +232,6 @@ if ( {) {
       ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate)
     }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     initParticles();
     animate();
 
@@ -284,7 +246,6 @@ if ( {) {
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
-=======
 ;
       ctx.global_alpha = 1;
       animation_id = requestAnimationFrame (animate);    }              ctx.line_width = 0.5;
@@ -337,10 +298,8 @@ if ( {) {
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, [])
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">;
-=======
       initParticles();    };      initParticles()
     }
     window.addEventListener('resize', handleResize);
@@ -370,7 +329,6 @@ if ( {) {
               'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, []);
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -438,41 +396,8 @@ if ( {) {
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-<<<<<<< HEAD
-        />;
-        <motion.div;
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30";
-          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{
-            rotate: -360
-            scale: [1, 0.9, 1];
-
-        />;
-        <motion&& motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
-          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{
-            rotate: -360,
-            scale: [1, 0 && 0.9, 1]
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
-
-        {/* Floating Circles */}
-        <motion&& motion.div
-          className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
-          animate={{
-
-            y: [0, -20, 0],
-            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4],          }}
-
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-
-=======
             opacity: [0.3, 0.6, 0.3];
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
           transition={{
             duration: 25,
@@ -568,7 +493,6 @@ ease: "easeInOut"
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
         />;
         {/* Animated Lines */}
@@ -613,7 +537,6 @@ ease: "easeInOut"
             repeat: Infinity,
             ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
         />;
@@ -642,46 +565,26 @@ ease: "easeInOut"
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
-=======
-=======
             duration: 8,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Bottom gradient */}
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent' />;
         {/* Left gradient */}
@@ -739,12 +642,10 @@ ease: "easeInOut"
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
 
-=======
 
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             }}
             animate={{
               y: [0, -100, 0]
@@ -814,13 +715,11 @@ ease: "easeInOut"
 
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
-=======
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
               ease: "easeInOut"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             }}
           />;
         ))}
@@ -844,16 +743,6 @@ export default UltraFuturisticBackground2030;      </div>;
 
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default UltraFuturisticBackground2030;      </div>
-    </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  )
-};
-export default UltraFuturisticBackground2030;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;
             }}
@@ -885,15 +774,10 @@ export default UltraFuturisticBackground2030;      </div>;
 ;
 export default UltraFuturisticBackground2030;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
@@ -916,5 +800,3 @@ export default UltraFuturisticBackground2030;
 
 export default UltraFuturisticBackground2030;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

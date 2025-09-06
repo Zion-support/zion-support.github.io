@@ -35,20 +35,10 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
-=======
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-<<<<<<< HEAD
-      destination: '/developers/docs'
-      permanent: true
-    }
-  };      permanent: true}}
-}
-
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

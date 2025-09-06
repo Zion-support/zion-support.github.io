@@ -2,7 +2,6 @@
 
   {
 
-=======
     id: 'edge - computing - platform',
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -26,7 +25,6 @@
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
@@ -51,7 +49,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'AWS IoT',
       'Azure IoT',
@@ -98,7 +95,6 @@
   },
   {
 
-=======
     id: 'quantum - computing - as - a-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -122,7 +118,6 @@
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - purple - 500 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
@@ -146,7 +141,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Jupyter Notebooks',
       'Python',
@@ -217,7 +211,6 @@
     popular: true,
     icon: '🔗',
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -242,7 +235,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'Ethereum',
       'Hyperledger',
@@ -339,7 +331,6 @@
       'AWS',
     ],
 
-=======
     integrations: [;
       'GitHub',
       'GitLab',
@@ -388,7 +379,6 @@
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -436,32 +426,17 @@ export const innovativeITServices: InnovativeITService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.';
-    launch_date: '2024 - 01 - 20';
-    customers: 2500;
-    rating: 4.7,
-    reviews: 1250;
-
-  }
-
-=======
 
 export interface InnovativeITService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -813,21 +788,12 @@ export interface InnovativeITService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
-    launchDate: '2024-01-20'
-    customers: 2500
-    rating: 4.7
-    reviews: 1250
-  }
-=======
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
     customers: 2500,
     rating: 4.7,
     reviews: 1250,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -840,14 +806,7 @@ export interface InnovativeITService {;
     rating: 4.7
 
     reviews: 1250
-<<<<<<< HEAD
-  }
-];
-=======
 export interface InnovativeITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1103,11 +1062,5 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500,;
     rating: 4.7,;
     reviews: 1250;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

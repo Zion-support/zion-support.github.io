@@ -4,8 +4,6 @@
       return browserClient;
     }
 
-=======
-=======
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 
@@ -29,11 +27,8 @@ export function getSupabaseClient(): ZionSupabase {;
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
@@ -44,16 +39,10 @@ export function getSupabaseClient(): ZionSupabase {;
 
 }
 
-=======
     // Server - side: create a new client per call to avoid cross - request state;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {
     return undefined;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -61,4 +50,3 @@ export function getSupabaseClient(): ZionSupabase {;
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

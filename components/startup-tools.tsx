@@ -31,8 +31,6 @@ import React from 'react';
   Mail, ;
   Calendar, ;
   Shield, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -52,159 +50,6 @@ import {
   TrendingUp,
   Zap,
   Target,
-<<<<<<< HEAD
-  Lightbulb,
-  BookOpen,} from 'lucide-react';import {
-  Rocket;
-  DollarSign,
-  Users,
-  BarChart3,
-  Mail,
-  Calendar,
-  Shield,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  Globe;
-  ArrowRight;
-  Star;
-  Check;
-  ExternalLink;
-  TrendingUp;
-  Zap;
-  Target;
-  Lightbulb;
-
-
-
-
-      name: 'HubSpot',
-      description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
-    category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      features: [
-        'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
-      ];
-      website: 'https://hubspot.com',
-      useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
-      cons: ['Can get expensiveComplex for small teamsLimited customization'],
-
-      bestFor: 'B2B startups, SaaS companies, marketing teams'
-    }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    {
-      name: 'Mailchimp'
-      description:
-        'Email marketing platform that helps businesses create, send, and track email campaigns with ease.'
-      category: 'Email Marketing'
-      pricing: 'Free - $59/month'
-      rating: 4.5
-      users: '12M+'
-      icon: <Mail className='w-8 h-8 text-yellow-400' />
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
-      features: [
-        'Email templates'
-        'Automation workflows'
-        'A/B testing'
-        'Analytics & reporting'
-        'Integration ecosystem'
-        'Free tier available'
-      ]
-      website: 'https://mailchimp.com'
-      useCase:
-        'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.'
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive']
-      bestFor: 'E-commerce, content creators, small businesses'
-    }
-    {
-
-      name: 'Calendly',
-      description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
-  BookOpen;
-export default /**
- * StartupToolsPage - Function description
- */
-function StartupToolsPage() {
-  const startup_tools = [;
-    {
-      name: 'HubSpot',
-      description:;
-        'All - in - one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
-      pricing: 'Free - $45 / month',
-      rating: 4.7,
-      users: '135K+',
-      icon: <Target className='w - 8 h - 8 text - orange - 400' />,
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      features: [;
-        'CRM system',
-        'Email marketing',
-        'Lead generation',
-        'Analytics & reporting',
-        'Marketing automation',
-        'Free tier available',
-      ],
-      website: 'https://hubspot.com',
-      use_case:;
-        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
-      pros: [;
-        'Free tier',
-        'All - in - one solution',
-        'Great for beginners',
-        'Excellent support',
-      ],
-      cons: [;
-        'Can get expensive',
-        'Complex for small teams',
-        'Limited customization',
-      ],
-      best_for: 'B2B startups, SaaS companies, marketing teams',
-    },
-    {
-      name: 'Mailchimp',
-      description:;
-        'Email marketing platform that helps businesses create, send, and track email campaigns with ease.',
-      category: 'Email Marketing',
-      pricing: 'Free - $59 / month',
-      rating: 4.5,
-      users: '12M+',
-      icon: <Mail className='w - 8 h - 8 text - yellow - 400' />,
-      color: 'bg - gradient - to - br from - yellow - 500 to - orange - 600',
-      features: [;
-        'Email templates',
-        'Automation workflows',
-        'A / B testing',
-        'Analytics & reporting',
-        'Integration ecosystem',
-        'Free tier available',
-      ],
-      website: 'https://mailchimp.com',
-      use_case:;
-        'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.',
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
-      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],
-      best_for: 'E - commerce, content creators, small businesses',
-    },
-    {
-      name: 'Calendly',
-      description:;
-        'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',      category: 'Productivity',
-      pricing: 'Free - $12 / month',
-      rating: 4.8,
-      users: '10M+',
-      icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,      description: 'Scheduling automation platform that eliminates the back - and - forth of scheduling meetings and calls.',
-
-      category: 'Productivity',
-      pricing: 'Free - $12 / month',
-      rating: 4.8,
-      users: '10M+',
-
-      name: 'Canva',
-      description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
-=======
       icon: <Calendar className='w - 8 h - 8 text - blue - 400' />,
       features: [;
         'Automated scheduling',
@@ -254,7 +99,6 @@ function StartupToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ];
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
@@ -487,7 +331,6 @@ function StartupToolsPage() {
                 {startupTools.length}+
 
               </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="text-gray-400 text-sm">Essential Tools</div>
             </div>
             <div className="text-center group">
@@ -755,7 +598,6 @@ function StartupToolsPage() {
         </div>;
       </section>;
 
-=======
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -763,7 +605,6 @@ function StartupToolsPage() {
             {categories.map((category) => (
               <button
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -886,149 +727,13 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-size='sm'>                Start Learning;
-              </Button>;
-            </Card>;
-            <Card className='text-center'>;
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
-                <TrendingUp className='w-8 h-8 text-white' />              </div>;
-              <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>;
-              <p className="text-gray-400 mb-4">;
-                Access free courses from platforms like Coursera, edX, and startup-specific learning resources.;
-              </p>;
-              <Button href="https://www && www.coursera.org" variant="outline" size="sm">;
-                Start Learning;
-              </Button>;
-            </Card>;
-            <Card className='text-center'>;
-              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
-                <TrendingUp className='w-8 h-8 text-white' />;
-              </div>;
-              <h3 className='text-xl font-bold mb-4 text-white'>;
-                Growth Strategies;
-              </h3>;
-              <p className='text-gray-400 mb-4'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - blue - 500 to - indigo - 600'>;
-                <Users className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - bold mb - 4 text - white'>;
-                Startup Communities;
-              </h3>;
-              <p className='text - gray - 400 mb - 4'>;
-                Join startup communities like Y Combinator Startup School, Indie;
-                Hackers, and local startup meetups.;
-              </p>;
-              <Button;
-                href='https://www.startupschool.org';
-                variant='outline';
-                size='sm';
-              >                Explore Communities;
-              </Button>;
-            </Card>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - green - 500 to - emerald - 600'>;
-                <BookOpen className='w - 8 h - 8 text - white' />              Additional Startup Resources;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              Beyond tools, here are additional resources to help your startup succeed.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <Card className="text - center">;
-              <div className="w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - blue - 500 to - indigo - 600">;
-                <Users className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - bold mb - 4 text - white">Startup Communities</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.;
-              </p>;
-              <Button href="https://www.startupschool.org" variant="outline" size="sm">;
-                Explore Communities;
-              </Button>;
-            </Card>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - green - 500 to - emerald - 600'>;
-                <BookOpen className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - bold mb - 4 text - white'>;
-                Educational Resources;
-              </h3>;
-              <p className='text - gray - 400 mb - 4'>;
-                Access free courses from platforms like Coursera, ed_x, and;
-                startup - specific learning resources.;
-              </p>;
-              <Button;
-                href='https://www.coursera.org';
-                variant='outline';
-                size='sm';
-              >                Start Learning;
-              </Button>;
-            </Card>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - purple - 500 to - pink - 600'>;
-                <TrendingUp className='w - 8 h - 8 text - white' />              </div>;
-              <h3 className="text - xl font - bold mb - 4 text - white">Educational Resources</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Access free courses from platforms like Coursera, ed_x, and startup - specific learning resources.;
-              </p>;
-              <Button href="https://www.coursera.org" variant="outline" size="sm">;
-                Start Learning;
-              </Button>;
-            </Card>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - purple - 500 to - pink - 600'>;
-                <TrendingUp className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - bold mb - 4 text - white'>;
-                Growth Strategies;
-              </h3>;
-              <p className='text - gray - 400 mb - 4'>;
-                Learn proven growth strategies from successful entrepreneurs and;
-                growth hackers.;
-              </p>;
-              <Button href='/resources' variant='outline' size='sm'>                View Resources              </div>;
-
-              <h3 className="text - xl font - bold mb - 4 text - white">Growth Strategies</h3>;
-              <p className="text - gray - 400 mb - 4">;
-
-                Learn proven growth strategies from successful entrepreneurs and growth hackers.;
-              </p>;
-              <Button href="/resources" variant="outline" size="sm">;
-                View Resources;
-              </Button>;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-
-
-              Explore More Tools;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
-=======
 );
-<<<<<<< HEAD
-=======
 import React from 'react';
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react';
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

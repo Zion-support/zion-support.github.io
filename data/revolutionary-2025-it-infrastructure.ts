@@ -582,7 +582,6 @@ export default revolutionary2025ITServices;
     growthRate: '800% annual growth'
     contactInfo: {
 
-=======
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -613,7 +612,6 @@ export default revolutionary2025ITServices;
     reviews: 145,
   },
 
-=======
   // ☁️ Quantum Cloud Infrastructure Services;
   {
     id: 'quantum - cloud - infrastructure',
@@ -637,7 +635,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '☁️',
 
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -710,7 +707,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / autonomous - devops - platform',
@@ -764,7 +760,6 @@ export default revolutionary2025ITServices;
     reviews: 198,
   },
 
-=======
   // 🧠 AI - Powered Data Management Services;
   {
     id: 'ai - data - management - platform',
@@ -788,7 +783,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🧠',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - data - management - platform',
@@ -842,7 +836,6 @@ export default revolutionary2025ITServices;
     reviews: 145,
   },
 
-=======
   // 🌐 Edge Computing & IoT Orchestration Services;
   {
     id: 'edge - computing - orchestrator',
@@ -866,7 +859,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🌐',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / edge - computing - orchestrator',
@@ -920,7 +912,6 @@ export default revolutionary2025ITServices;
     reviews: 95,
   },
 
-=======
   // 🔐 Blockchain & Web3 Infrastructure Services;
   {
     id: 'blockchain - web3 - infrastructure',
@@ -944,7 +935,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🔐',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / blockchain - web3 - infrastructure',
@@ -966,7 +956,6 @@ export default revolutionary2025ITServices;
       'Ethereum',
     ],
 
-=======
     integrations: [;
       'DeFi protocols',
       'NFT marketplaces',
@@ -1001,7 +990,6 @@ export default revolutionary2025ITServices;
     reviews: 67,
   },
 
-=======
   // 🎯 API Management & Integration Services;
   {
     id: 'api - management - integration',
@@ -1025,7 +1013,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🎯',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / api - management - integration',
@@ -1079,7 +1066,6 @@ export default revolutionary2025ITServices;
     reviews: 178,
   },
 
-=======
   // 📊 Business Intelligence & Analytics Services;
   {
     id: 'business - intelligence - analytics',
@@ -1103,7 +1089,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '📊',
 
-=======
     color: 'from - teal - 600 to - cyan - 700',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / business - intelligence - analytics',
@@ -1157,7 +1142,6 @@ export default revolutionary2025ITServices;
     reviews: 234,
   },
 
-=======
   // 🚀 Digital Transformation & Innovation Services;
   {
     id: 'digital - transformation - innovation',
@@ -1181,7 +1165,6 @@ export default revolutionary2025ITServices;
     popular: true,
     icon: '🚀',
 
-=======
     color: 'from - violet - 600 to - purple - 700',
     text_color: 'text - violet - 400',
     link: 'https://ziontechgroup.com / digital - transformation - innovation',
@@ -1258,7 +1241,6 @@ export interface Revolutionary2025ITService {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
@@ -1269,8 +1251,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     period: '/month',
     description: 'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.',
     features: [
-<<<<<<< HEAD
-=======
       'Quantum encryption algorithms'
       'AI-powered threat detection'
       'Zero-trust architecture'
@@ -1317,13 +1297,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
     marketSize: '$200B cybersecurity market',    features: [
-<<<<<<< HEAD
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
-=======
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ];
     popular: true, icon: '🔒',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
@@ -1610,8 +1584,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025ITServices;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -24,7 +24,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-=======
 
 import React from 'react';
 
@@ -39,7 +38,6 @@ import {
   ArrowRight,;
   Smartphone,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -49,16 +47,13 @@ import { extraServices } from '../data/extra-services';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
-=======
 
 export default function MDMPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/mdm-mobile-device-management');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
@@ -143,21 +138,14 @@ export default function MDMPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import Head from 'next / head';
 import {
   Phone,
   Mail,
   MapPin,
   Check,
-<<<<<<< HEAD
-  ArrowRight,
-  Smartphone,
-=======
   ArrowRight,;
   Smartphone,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
@@ -265,32 +253,20 @@ if (return null) {
         </div>;
       </div>;
 
-=======
 }
 
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MDMPage() {
-<<<<<<< HEAD
-=======
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function MDMPage() {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
   if (!service) return null;
 
@@ -325,7 +301,6 @@ export default function MDMPage() {;
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
-=======
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -397,7 +372,6 @@ export default function MDMPage() {;
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -414,10 +388,7 @@ export default function MDMPage() {;
 }
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

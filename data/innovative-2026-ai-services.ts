@@ -5,7 +5,6 @@ export interface Innovative2026AIService {
 
   {
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -30,7 +29,6 @@ export interface Innovative2026AIService {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
@@ -60,7 +58,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
       
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -73,8 +70,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     reviews: 950;
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIService {;
   id: string,;
@@ -337,11 +332,5 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     customers: 1900,;
     rating: 4.8;
     reviews: 950;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

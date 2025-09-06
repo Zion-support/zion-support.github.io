@@ -22,7 +22,6 @@ function StatusIcon(): any ({;
     </span>;
   );
 
-=======
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
@@ -33,12 +32,9 @@ interface ConnectionMap {;
   [key: string]: boolean,;
 
 
-=======
 
 import { useEffect, useMemo, useState } from 'react';
-=======
 import React, { useState } from 'react';
-=======
 import { useEffect, useMemo, useState } from 'react';
 
 
@@ -61,7 +57,6 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
@@ -177,8 +172,6 @@ export default function AdminIntegrationsPage() {
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
-=======
-=======
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
@@ -200,13 +193,10 @@ export default function AdminIntegrationsPage() {
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
   function RulesModal() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   function RulesModal() {;
     if (!selected) return null;
@@ -227,7 +217,6 @@ export default function AdminIntegrationsPage() {
                             pushNotesMode: 'manual',;
                           });
 
-=======
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -377,18 +366,10 @@ export default function AdminIntegrationsPage() {
 
         </section>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </section>
       </main>
       <RulesModal />
@@ -401,11 +382,9 @@ export default function AdminIntegrationsPage() {
             </li>          </ul>;
         </section>;
 
-=======
   )
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <section>;
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
@@ -415,7 +394,6 @@ export default function AdminIntegrationsPage() {
     </>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
@@ -434,15 +412,7 @@ function ManualOverrideForm() {;
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -463,57 +433,7 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
-    <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
-      <div className='grid grid-cols-1 gap-3'>;
-        <label className='text-sm'>;
-          Job/Post ID;
-          <input
-            value={jobId}
-            onChange={e => setJobId(e && e.target.value)}
-            placeholder='job_123';
-            className='w-full mt-1 px-3 py-2 rounded border bg-transparent';
-          />;
-        </label>;
-        <label className='flex items-center gap-2 text-sm'>;
-          <input
-            type='checkbox'
-            checked={disableCrmSync}
-            onChange={e => setDisableCrmSync(e && e.target.checked)}
-          />{' '}
-          Disable CRM sync;
-        </label>;
-        <label className='flex items-center gap-2 text-sm'>;
-          <input
-            type='checkbox'
-            checked={disableAtsSync}
-            onChange={e => setDisableAtsSync(e && e.target.checked)}
-          />{' '}
-          Disable ATS sync;
-        </label>;
-        <div className='flex items-center gap-2'>;
-          <button
-            onClick={save}
-
-            className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
-            Save Override;
-          </button>;
-          <div className='text-sm text-gray-500'>{message}</div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID
@@ -639,8 +559,6 @@ function save() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 }
@@ -650,7 +568,6 @@ function save() {
 }
 }
 
-=======
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -659,5 +576,3 @@ function save() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
