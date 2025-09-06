@@ -16,7 +16,7 @@ import {
   Cloud,
   Smartphone,
   Building,
-  Phone,
+  Phone;
   Mail;
   MapPin} from "lucide-react";
 
@@ -37,7 +37,7 @@ const staggerContainer = {
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
-    ...advancedMicroSaasExpansion2025V2,
+    ...advancedMicroSaasExpansion2025V2;
     ...advancedITServices2025;
     ...advancedAIServices2025];
 
