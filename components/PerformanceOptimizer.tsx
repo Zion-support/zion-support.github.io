@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -9,13 +10,19 @@ import { motion } from 'framer-motion';
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion  } from 'framer-motion';
 import { Zap, Clock, TrendingUp, Activity, Gauge, Cpu, Database, Network } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Zap
   Clock
   TrendingUp
@@ -34,6 +41,7 @@ import {
   Network,;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -43,8 +51,10 @@ import {
 
 interface PerformanceMetrics {;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface PerformanceMetrics {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   loadTime: number;
   Zap,
   Clock,
@@ -69,35 +79,12 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  cumulativeLayoutShift: number
-  firstInputDelay: number
-//Add responsive sizes if not present // Check condition
-if ( {) {
-  $2
-}
-  optimized_count++;
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
-  class_name = '',
-}) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
-interface PerformanceMetrics {
-  load_time: number,
-  firstContentfulPaint: number,
-  largestContentfulPaint: number,
-  cumulativeLayoutShift: number,
-  firstInputDelay: number,
-=======
   className = '',
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   preloadImages = [], preloadFonts = [
     'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
   ], criticalCSS
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -107,17 +94,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     firstInputDelay: 0,
 timeToInteractive: 0,
   timeToInteractive: number
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 interface PerformanceOptimizerProps {
   class_name?: string;
 }
-<<<<<<< HEAD
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-=======
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className;
   });
@@ -137,7 +118,7 @@ const navigation = performance.getEntriesByType(
         entry => entry.name === 'first-contentful-paint'
       );
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const newMetrics: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.loadEventStart
         firstContentfulPaint: fcp ? fcp.startTime : 0
@@ -145,18 +126,25 @@ const navigation = performance.getEntriesByType(
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API
         firstInputDelay: 0, // Would need to be measured with FID API
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 timeToInteractive:
           navigation.domContentLoadedEventEnd - navigation.navigationStart,
       };
 
       setMetrics(newMetrics);
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }, []);
   // Optimize images
   const optimizeImages = useCallback(async () => {
@@ -169,6 +157,7 @@ timeToInteractive:
         if (img.complete && img.naturalWidth > 0) {
           // Add lazy loading
           img.loading = 'lazy';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -247,6 +236,8 @@ if ( {) {
         }
       }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Add responsive sizes if not present
           if (!img.sizes) {
             img.sizes =
@@ -260,21 +251,11 @@ if ( {) {
 // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       setOptimizationStatus('Image optimization complete');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
       setOptimizationStatus ('Image optimization failed');
       console.error ('Image optimization error:', error);
     } finally {
-<<<<<<< HEAD
-      setIsOptimizing (false);
-    }
-  }, []);
-          font-display: swap;        }          font-family: 'Orbitron',;
-          font-display: swap;
-        }
-      `;
-      document && document.head.appendChild(style);
-=======
       setIsOptimizing(false);
     }
   }, []);
@@ -305,19 +286,13 @@ font-family: 'Inter';
       setOptimizationStatus('Font optimization complete');
 // Simulate optimization delay
       await new Promise(resolve => setTimeout(resolve, 800));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch (error) {
       setOptimizationStatus ('Font optimization failed');
       console.error ('Font optimization error:', error);
     } finally {
-<<<<<<< HEAD
-      ];
-
-      preloadLinks && preloadLinks.forEach(linkAttrs => {;
-      setIsOptimizing (false);
-=======
       setIsOptimizing(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, []);
 ;
@@ -327,25 +302,6 @@ font-family: 'Inter';
     setOptimizationStatus ('Optimizing code...');
 ;
     try {
-<<<<<<< HEAD
-      // Add resource hints for critical resources;
-      const preload_links = [;
-        {
-          rel: 'preload',
-          href: '/fonts / inter - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
-          crossorigin: 'anonymous',
-        },
-        {
-          rel: 'preload',
-          href: '/fonts / jetbrains - mono - var.woff2',
-          as: 'font',
-          type: 'font / woff2',
-          crossorigin: 'anonymous',
-        },      ];        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
-        { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
-=======
       // Add resource hints for critical resources
       const preloadLinks = [
 {
@@ -362,7 +318,7 @@ font-family: 'Inter';
           type: 'font/woff2',
           crossorigin: 'anonymous',
         },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ];
 ;
       preload_links.for_each (link_attrs => {
@@ -383,6 +339,7 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
 '      }';
       // Resource hints for better performance;
 <<<<<<< HEAD
+<<<<<<< HEAD
       const addResourceHint = (href: string, as: string, type?: string) => {;
         const link = document && document.createElement('link');
         Object && Object.entries(linkAttrs).forEach(([key, value]) => {;
@@ -396,6 +353,8 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const addResourceHint = (href: string, as: string, type?: string) => {const link = document.createElement('link');
         Object.entries(linkAttrs).forEach(([key, value]) => {
           if (key === 'crossorigin') {
@@ -450,6 +409,7 @@ setOptimizationStatus('All optimizations complete!');
             if (lcp > 2500) {
               // LCP should be under 2.5s
               console.warn('LCP is too slow:', lcp);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             }
@@ -473,6 +433,12 @@ setOptimizationStatus('All optimizations complete!');
         window.removeEventListener('load', measurePerformance);
         observer.disconnect()
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+            }
+          }
+        }
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       })
 
       try {
@@ -480,7 +446,7 @@ setOptimizationStatus('All optimizations complete!');
       } catch (e) {
         // Fallback for browsers that don&apos;t support all entry types''
         console.log('Performance monitoring not fully supported')
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
 <<<<<<< HEAD
 
@@ -495,7 +461,6 @@ setOptimizationStatus('All optimizations complete!');
 
     
 
-=======
 observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
       return () => {
@@ -507,12 +472,13 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] });
   const getPerformanceScore = (): number => {
     let score = 100;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (metrics.firstContentfulPaint > 1800) score -= 20;
     if (metrics.largestContentfulPaint > 2500) score -= 25;
     if (metrics.loadTime > 3000) score -= 15;
 <<<<<<< HEAD
     if (metrics.timeToInteractive > 3500) score -= 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -563,16 +529,23 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return Math.max(0, score);
   };
 
   const getPerformanceGrade = (score: number): string => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
     if (score >= 60) return 'D';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -580,6 +553,8 @@ return Math.max(0, score);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return 'F';
   };
 
@@ -595,12 +570,17 @@ return 'F';
         <button
           onClick={() => setShowMetrics(!showMetrics)}
 className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           {showMetrics ? 'Hide' : 'Show'} Metrics
         </button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -631,6 +611,8 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Performance Score */}
 <div className='mb-6'>
         <div className='flex items-center justify-between mb-2'>
@@ -651,8 +633,12 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
           <span className='text-sm text-white/60'>{performanceScore}/100</span>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
@@ -660,6 +646,7 @@ className='text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
@@ -676,6 +663,11 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
         >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
+        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -716,6 +708,7 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
             <div className='text-lg font-bold text-white'>
               {Math.round(metrics.firstInputDelay)}ms
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='text-xs text-white/60'>FID</div>          </div>
           className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
@@ -823,12 +816,18 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='text-xs text-white/60'>FID</div>
           </div>
         </motion.div>
       )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Optimization Controls */}
 <div className='space-y-3'>
         <button
@@ -846,6 +845,7 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
             isOptimizing
               ? 'bg-gray-600 cursor-not-allowed'
               : 'bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 hover:scale-105'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           } flex items-center justify-center gap-2`}
@@ -923,6 +923,8 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           } flex items-center justify-center gap-2`}
         >
           {isOptimizing ? (
@@ -941,8 +943,12 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
 <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <div className='text-sm text-white/80'>{optimizationStatus}</div>
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         )}
       </div>
 
@@ -960,6 +966,7 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
         </h4>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -973,6 +980,10 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
         <ul className='text-xs text-white/60 space-y-1'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <ul className='text-xs text-white/60 space-y-1'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -981,6 +992,7 @@ className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
         </ul>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1231,9 +1243,11 @@ if ( {'              window.addEventListener ('load', function () {'            
 }
 ;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default PerformanceOptimizer;
 ;
 interface PerformanceMetrics {
@@ -1257,6 +1271,7 @@ interface PerformanceOptimizerProps {
       window && window.addEventListener('load', measureWebVitals);
     }
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1284,3 +1299,6 @@ export default PerformanceOptimizer;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

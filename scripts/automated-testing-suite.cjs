@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -15,16 +16,16 @@ console.log('=====');
 <<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
 console.log('🧪 Automated Testing Suite');
 console.log('==========================');
 
@@ -76,17 +77,17 @@ async function runTests() {
     }
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -106,20 +107,19 @@ runTests().catch(console.error);
   
   return report;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 runTests().catch(console.error);
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
 
+<<<<<<< HEAD
 runTests().catch(console.error);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -522,5 +522,9 @@ if (require.main === module) {
 }
 
 module.exports = AutomatedTestingSuite;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

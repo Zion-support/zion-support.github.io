@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 =======
@@ -10,31 +11,41 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 
 }</div>) import { useEffect, useState } from 'react';
 
-=======
 import { useEffect, useState  } from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function AutomationStatusPage() {
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 }</div>) import { useEffect, useState } from 'react';
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -55,14 +66,22 @@ export default function AutomationStatusPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
+<<<<<<< HEAD
+=======
+  }, []);
+  return (
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
@@ -75,6 +94,7 @@ export default function AutomationStatusPage() {;
       ) : (;
         <div className="text-sm text-gray-500">No status available yet.</div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -92,6 +112,13 @@ export default function AutomationStatusPage() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+  }, []);
+  return (
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 =======
 
@@ -126,6 +153,7 @@ function AutomationStatusPage() {
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,10 +165,15 @@ function AutomationStatusPage() {
 =======
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -168,3 +201,12 @@ function AutomationStatusPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+    </div>
+);
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

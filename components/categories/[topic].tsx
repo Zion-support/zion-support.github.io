@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import type { GetServerSideProps, NextPage } from 'next',
@@ -12,11 +13,15 @@ import type { GetServerSideProps, NextPage } from 'next';
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import type { GetServerSideProps, NextPage } from 'next';
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -24,14 +29,18 @@ import type { GetServerSideProps, NextPage } from 'next';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,10 +86,14 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -88,12 +101,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
         <meta name='description' content={`Articles about ${topic}`} />;
         <meta property='og:title' content={`${topic} - Zion Blog`} />;
         <meta property='og:description' content={`Articles about ${topic}`} />;
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -103,12 +121,20 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+        <meta property='og:image' content='/images / og / topic - default.jpg' />;
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         <meta property='og:type' content='website' />;
         <meta name='twitter:card' content='summary_large_image' />;
         <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
         <meta name='twitter:description' content={`Articles about ${topic}`} />;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             onShare={network =>;
               fetch('/api/analytics/share', {;
@@ -126,12 +152,17 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
               }).catch(() => {});
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }
           />;
         </div>;
@@ -204,6 +235,7 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -244,6 +276,9 @@ export default TopicPage;
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
@@ -260,11 +295,16 @@ export default TopicPage;
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -279,6 +319,7 @@ export default TopicPage;      </Head>;
         <div className="mb-6">;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -287,11 +328,18 @@ export default TopicPage;      </Head>;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <PageShareButtons
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion && zion.app/categories/${encodeURIComponent(topic)}` : window && window.location.href}
             description={`Articles about ${topic}`}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
           />;
         </div>;
@@ -299,6 +347,7 @@ export default TopicPage;      </Head>;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
@@ -317,6 +366,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         </div>;
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
@@ -324,24 +375,37 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         <meta name='twitter:description' content={`Articles about ${topic}`} />
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
 <<<<<<< HEAD
+<<<<<<< HEAD
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic))
+=======
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
 
   const topic = String(ctx.params?.topic || '');
+<<<<<<< HEAD
 =======
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
@@ -349,6 +413,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 }
 export default TopicPage;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -370,6 +435,14 @@ export default TopicPage;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+  return { props: { topic, posts } }
+}
+export default TopicPage;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>);
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -411,6 +484,12 @@ export default TopicPage;
 ;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
     <div>
       <Head>
@@ -446,9 +525,8 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
-=======
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>
@@ -512,18 +590,15 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx.params?.topic || '');
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-<<<<<<< HEAD
-  return { props: { topic, posts } }
-}
-export default TopicPage;      </Head>
-      <div className="mx-auto max-w-6xl">
-        <h1 className="text-4xl font-bold mb-3">{topic}</h1>
-        <div className="mb-6">
-};
+=======
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
+
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
@@ -572,9 +647,16 @@ export default TopicPage;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return { props: { topic, posts } };
 };
 
 export default TopicPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

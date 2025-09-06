@@ -181,5 +181,8 @@ export function TabsContent({ children, value, className = '', activeTab }) {
       {children}
     </div>
   )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }

@@ -183,6 +183,7 @@ describe('talent detail page', () => {
       "body": {
         id: 't-123',
 <<<<<<< HEAD
+<<<<<<< HEAD
         "full_name": 'Cypress Talent',
         "bio": 'Testing bio',
         "skills": ['Cypress']}}).as('getTalent');
@@ -257,6 +258,10 @@ describe('talent detail page',() => { it('loads profile from API',() => { cy.int
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         full_name: 'Cypress Talent',
         bio: 'Testing bio',
         skills: ['Cypress'],
@@ -267,7 +272,12 @@ describe('talent detail page',() => { it('loads profile from API',() => { cy.int
     cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent');
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

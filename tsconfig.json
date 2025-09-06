@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "target": "es5",
     "lib": ["dom", "dom.iterable", "es6"],
 =======
@@ -11,16 +12,16 @@
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "target": "ES2020",
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "lib": [
       "dom",
       "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
+<<<<<<< HEAD
+      "ES2020"
+=======
+      "esnext"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     ],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,9 +32,11 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
+<<<<<<< HEAD
 <<<<<<< HEAD
     "module": "esnext",
 <<<<<<< HEAD
@@ -45,10 +48,13 @@
     "module": "ESNext",
     "moduleResolution": "node",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    "module": "esnext",
+    "moduleResolution": "bundler",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -56,6 +62,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -119,6 +126,33 @@
     },
     "allowSyntheticDefaultImports": true
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      "@/*": ["./*"]
+    }
+=======
+      "@/*": [
+        "./*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/styles/*": [
+        "./styles/*"
+      ],
+      "@/utils/*": [
+        "./utils/*"
+      ],
+      "@/types/*": [
+        "./types/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -136,13 +170,14 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   "include": [
     "next-env.d.ts",
+    ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules"
   ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -153,3 +188,6 @@
 =======
 }
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log(' Starting Analytics Collection...')
   fs.writeFileSync('analytics-report.json')
   console.log(' Analytics collected and saved to analytics-report.json')
@@ -29,6 +37,7 @@ console.log(' Starting Analytics Collection...')
     '.env.example'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     'next.config.js'
@@ -42,3 +51,8 @@ console.log(' Starting Analytics Collection...')
     'next.config.js'
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    'next.config.js'
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

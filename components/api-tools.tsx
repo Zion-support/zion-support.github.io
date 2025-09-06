@@ -5,6 +5,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -79,6 +80,8 @@ import {
   Bot,
   BarChart3,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Code;
   Database;
   Globe;
@@ -86,7 +89,7 @@ import { Code;
   Zap;
   Bot;
   BarChart3;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Lock;
   ArrowRight;
   CheckCircle;
@@ -95,6 +98,7 @@ import { Code;
   Play;
   BookOpen;
   Github;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -324,6 +328,8 @@ export default function ApiToolsPage() {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Terminal
  } from 'lucide-react';
 export default function ApiToolsPage() {
@@ -534,24 +540,26 @@ rating: 4.8,
         'Scheduled reports and alerts'
       ]
       pricing: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
       },
-<<<<<<< HEAD
-      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
-=======
       category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       website: 'https://encrypt.api',
       docs: 'https://docs.encrypt.api',
       github: 'https://github.com/encrypt-api',
       status: 'Live',
       users: '4,200+',
+<<<<<<< HEAD
 <<<<<<< HEAD
       responseTime: '<20ms',
     },;
@@ -570,6 +578,12 @@ rating: 4.9,
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+rating: 4.9,
+      responseTime: '<20ms',
+    },
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const categories = [
     'All'
@@ -582,6 +596,7 @@ rating: 4.9,
     'Analytics'
   ];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: 'CodeGen API - AI-Powered Code Generation',
@@ -1300,6 +1315,8 @@ function ApiToolsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const filteredTools =
     selectedCategory === 'All'
       ? apiTools
@@ -1350,8 +1367,12 @@ function ApiToolsPage() {
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (
               <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1444,6 +1465,7 @@ function ApiToolsPage() {
                             {tool.rating}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1485,6 +1507,8 @@ function ApiToolsPage() {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </span>
                         </div>
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>
@@ -1512,8 +1536,12 @@ function ApiToolsPage() {
                     <div className='grid grid-cols-3 gap-4 mb-6'>
                       <div className='text-center p-3 bg-gray-800/50 rounded-lg'>
                         <div className='text-lg font-bold text-indigo-400'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {tool.users}
                         </div>;
                         <div className='text - xs text - gray - 500'>Users</div>;
@@ -1541,6 +1569,7 @@ function ApiToolsPage() {
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='bg-indigo-600 hover:bg-indigo-700'>;
                         <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
@@ -1626,6 +1655,12 @@ function ApiToolsPage() {
                         <ExternalLink className='w-4 h-4 mr-2' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                        className='bg-indigo-600 hover:bg-indigo-700'
+                      >
+                        <ExternalLink className='w-4 h-4 mr-2' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         Visit API
                       </Button>
                         className="bg-indigo-600 hover:bg-indigo-700">;
@@ -1633,6 +1668,7 @@ function ApiToolsPage() {
                         Visit API;
                       </Button>;
                       <Button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         href={tool.docs}
@@ -1667,6 +1703,8 @@ variant="ghost"
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={tool.docs}
 variant='outline'
                         size='sm'
@@ -1699,12 +1737,16 @@ variant='ghost'
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Developer Resources */}
 <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1798,6 +1840,7 @@ variant='ghost'
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               View Documentation
             </Button>
@@ -1883,6 +1926,8 @@ variant='ghost'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1917,5 +1962,9 @@ variant='ghost'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

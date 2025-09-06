@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -56,45 +57,34 @@ import {
 } from 'lucide-react';
 ;
 const sitemap_data = [;
+=======
+import { GetServerSideProps } from 'next';
+
+const sitemap_data = [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     category: 'Main Pages',
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },
-      { name: 'About', url: '/about', icon: Users },
-      { name: 'Contact', url: '/contact', icon: Globe },
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
+    pages: [
+      { name: 'Home', url: '/', icon: 'Home' },
+      { name: 'About', url: '/about', icon: 'Users' },
+      { name: 'Contact', url: '/contact', icon: 'Globe' },
+      { name: 'Services', url: '/services', icon: 'Settings' }
+    ]
   },
   {
     category: 'Services',
-    pages: [;
-      { name: 'AI Services', url: '/ai - services', icon: Brain },
-      { name: 'IT Services', url: '/it - services', icon: Network },
-      { name: 'Micro SaaS', url: '/micro - saas', icon: Target },
-      { name: 'Cloud Services', url: '/services / cloud', icon: Cloud },
-      { name: 'Cybersecurity', url: '/services / cybersecurity', icon: Shield },
-      { name: 'Data Analytics', url: '/services / data - analytics', icon: BarChart3 }
-    ];
-  },
-  {
-    category: 'Solutions',
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions / cloud - migration', icon: Cloud },
-      { name: 'Digital Transformation', url: '/solutions / digital - transformation', icon: Settings },
-      { name: 'Custom Solutions', url: '/solutions / custom', icon: Target }
-    ];
-  },
-  {
-    category: 'Resources',
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },
-      { name: 'API Documentation', url: '/api - docs', icon: Settings },
-      { name: 'Guides', url: '/guides', icon: Globe },
-      { name: 'FAQ', url: '/faq', icon: Users }
-    ];
+    pages: [
+      { name: 'AI Services', url: '/ai-services', icon: 'Brain' },
+      { name: 'IT Services', url: '/it-services', icon: 'Network' },
+      { name: 'Micro SaaS', url: '/micro-saas', icon: 'Target' },
+      { name: 'Cloud Services', url: '/services/cloud', icon: 'Cloud' },
+      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: 'Shield' },
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' }
+    ]
   }
 ];
 
+<<<<<<< HEAD
 export default function SitemapPage() {
   return (
     <>
@@ -2543,3 +2533,44 @@ export default function SitemapPage() {
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+function generateSiteMap() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+     ${sitemap_data
+       .flatMap(category => category.pages)
+       .map(page => {
+         return `
+       <url>
+           <loc>https://ziontechgroup.com${page.url}</loc>
+           <lastmod>${new Date().toISOString()}</lastmod>
+           <changefreq>weekly</changefreq>
+           <priority>0.8</priority>
+       </url>
+     `;
+       })
+       .join('')}
+   </urlset>
+ `;
+}
+
+function SiteMap() {
+  // getServerSideProps will do the heavy lifting
+}
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  // We generate the XML sitemap with the posts data
+  const sitemap = generateSiteMap();
+
+  res.setHeader('Content-Type', 'text/xml');
+  // we send the XML to the browser
+  res.write(sitemap);
+  res.end();
+
+  return {
+    props: {},
+  };
+};
+
+export default SiteMap;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

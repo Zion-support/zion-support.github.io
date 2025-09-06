@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   Star,
   Zap,
@@ -17,13 +18,19 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Star
   Zap
   Shield
@@ -166,6 +173,7 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
       email: string;
       address: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       website: string;
     }
@@ -190,6 +198,8 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
     initial: { opacity: 0.5, scale: 1 },
     animate: {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       website: string
     },
     realImplementation: boolean;
@@ -203,13 +213,14 @@ const QuantumHolographicCard: React.FC < QuantumHolographicCardProps> = ({
 }
 
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
       opacity: 1
       x: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -288,6 +299,8 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   };
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         delay: i * 0.1,
         duration: 0.5,
 ease: 'easeOut' as const,
@@ -296,7 +309,7 @@ ease: 'easeOut' as const,
   };
 
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Holographic glow effect */}
@@ -348,6 +361,7 @@ ease: 'easeOut' as const,
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -392,12 +406,18 @@ ease: 'easeOut' as const,
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className='w-3 h-3 fill-current' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <span>Popular</span>
 
               </motion.div>
@@ -441,6 +461,7 @@ ease: 'easeOut' as const,
           </div>
 
           {/* Price and trial */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex items-center justify-between mb-4">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -642,6 +663,8 @@ ease: 'easeOut' as const,
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center justify-between mb-4'>
             <div className='flex items-center space-x-2'>
               <span className='text-3xl font-bold text-white'>
@@ -698,8 +721,12 @@ ease: 'easeOut' as const,
                 >
                   <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
                   <span>{feature}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               ))}
@@ -717,6 +744,7 @@ ease: 'easeOut' as const,
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Market data */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -776,6 +804,8 @@ ease: 'easeOut' as const,
 =======
           {/* ROI and competitors */}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
             <div className='flex items-center justify-between mb-2'>
               <span className='text-sm font-semibold text-blue-300'>
@@ -807,11 +837,12 @@ ease: 'easeOut' as const,
               </div>
               <div className='text-xs text-gray-300'>
                 {service.competitors.slice(0, 2).join(', ')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
           {/* Contact information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </h4>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -834,6 +865,8 @@ ease: 'easeOut' as const,
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
               <Shield className='w-4 h-4 text-blue-400' />
@@ -851,8 +884,12 @@ ease: 'easeOut' as const,
               <div className='flex items-center space-x-2'>
                 <span className='text-purple-400'>📍</span>
                 <span className='text-xs'>{service.contactInfo.address}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </div>
           </div>
@@ -961,6 +998,7 @@ ease: 'easeOut' as const,
           <motion.a
             href={service.link}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
 <<<<<<< HEAD
@@ -980,6 +1018,10 @@ ease: 'easeOut' as const,
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -1005,6 +1047,7 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           {/* Learn more link */}
           <div className='text-center mt-4'>;
             <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1084,6 +1127,8 @@ export default QuantumHolographicCard;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
             >
@@ -1098,5 +1143,9 @@ export default QuantumHolographicCard;
 };
 
 export default QuantumHolographicCard;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -19,11 +19,14 @@ export default function EndpointDetail({
 
 import TryItConsole from './TryItConsole';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   endpoint,
 }: {;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { EndpointSpec } from '../../data/api-docs/types';
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
   return (
@@ -31,7 +34,7 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 export default function EndpointDetail({
   endpoint
 }: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   endpoint: EndpointSpec;
 }) {
 
@@ -39,10 +42,7 @@ export default function EndpointDetail({
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <div className='space-y-4'>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
           {endpoint.title}
@@ -59,6 +59,7 @@ export default function EndpointDetail({
           </code>
           <span className='px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'>
             {endpoint.visibility}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           </span>        </div>
@@ -169,6 +170,8 @@ export default function EndpointDetail(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </span>
         </div>
       </div>
@@ -178,12 +181,17 @@ export default function EndpointDetail(): any ({;
       </div>
       <div>
 <div className='font-medium mb-2'>Try It</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <TryItConsole
           method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
           requiresAuth={
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -211,6 +219,8 @@ export default function EndpointDetail(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             (endpoint.auth |[]).includes('jwt') |
             (endpoint.auth |[]).includes('wallet')
           }
@@ -226,7 +236,7 @@ export default function EndpointDetail(): any ({;
                 {r.burst ? `, burst ${r.burst}` : ''}
               </li>
             ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>
         </div>
       )}
@@ -236,6 +246,7 @@ export default function EndpointDetail(): any ({;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
@@ -288,14 +299,17 @@ export default function EndpointDetail(): any ({;
 
       {endpoint.errors && endpoint.errors.length > 0 && (
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {endpoint.errors && endpoint.errors.length > 0 && (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
           <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
             {endpoint.errors.map(e => (
               <li key={e.code}>
                 <strong>{e.code}</strong> ({e.httpStatus}) - {e.message}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </li>            ))}          <div className="font-medium mb-2">Error Codes</div>
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
@@ -310,8 +324,10 @@ export default function EndpointDetail(): any ({;
             ))}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           </ul>
@@ -319,6 +335,7 @@ export default function EndpointDetail(): any ({;
       )}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -395,6 +412,9 @@ export default function EndpointDetail(): any ({;
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 <<<<<<< HEAD
 }

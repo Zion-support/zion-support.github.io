@@ -21,6 +21,7 @@ const { execSync } = require('child_process')
         { "pattern": /expect\(screen\.getByTestId\('([^']+)'\)\)\.toBeInTheDocument\(\)/g, "replacement": 'expect(screen.getByTestId("$1"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
@@ -34,3 +35,8 @@ const { execSync } = require('child_process')
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
     content = content.replace(conflictRegex, (match, headContent, originContent) => {
       modified = true;
       // Clean up the head content
@@ -15,6 +16,22 @@
 
     // Remove any remaining conflict markers
     content = content.replace(/
+=======
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Remove merge conflict markers and keep the HEAD version (first part)
+    content = content.replace(/[^\n]+\n?/g, '');
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     // Clean up HTML entities
     content = content.replace(/&apos;/g, "'");
@@ -114,8 +131,8 @@ try {
   console.log('Build error:', error.message);
 }
 
-<<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 console.log('\n✨ Merge conflict resolution script completed!');
@@ -127,3 +144,7 @@ console.log('\n✨ Merge conflict resolution script completed!');
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

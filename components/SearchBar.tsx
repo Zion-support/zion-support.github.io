@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -29,6 +30,38 @@ interface SearchResult {
   type: 'service' | 'page' | 'category';
 }
 
+=======
+
+const SearchBar: React.FC = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Mock search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = [
+    {
+      title: 'Micro SaaS Products',
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
+      url: '/micro-saas',
+      type: 'category',
+    },
+    {
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai-services',
+      type: 'category',
+    },
+    {
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it-services',
+      type: 'category',
+    },
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -178,6 +211,7 @@ interface SearchResult {
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 interface SearchResult {
@@ -190,12 +224,27 @@ interface SearchResult {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
+=======
+interface SearchResult {
+  title: string, description: string
+  url: string, type: 'service' | 'page' | 'category'
+
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+origin/cursor/analyze-improve-and-deploy-application-0a01
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
   className?: string;
+<<<<<<< HEAD
 
+=======
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({
@@ -205,6 +254,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 }) => {
   const [query, setQuery] = useState('');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -327,6 +377,8 @@ export default SearchBar;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
 
   const handleClear = () => {
@@ -351,7 +403,6 @@ export default SearchBar;
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-=======
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -382,39 +433,8 @@ export default SearchBar;
     setQuery('');
     setResults([]);
     setIsOpen(false);
-<<<<<<< HEAD
-    setSelectedIndex(-1);
-  }, []);
-
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (!isOpen || results.length === 0) return;
-
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setSelectedIndex(prev => (prev + 1) % results.length);
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setSelectedIndex(prev => prev <= 0 ? results.length - 1 : prev - 1);
-        break;
-      case 'Enter':
-        e.preventDefault();
-        if (selectedIndex >= 0 && selectedIndex < results.length) {
-          window.location.href = results[selectedIndex].url;
-          handleResultClick();
-        }
-        break;
-      case 'Escape':
-        setIsOpen(false);
-        setSelectedIndex(-1);
-        break;
-    }
-  }, [isOpen, results, selectedIndex, handleResultClick]);
-
-=======
   }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   return (
     <div className="relative w-full max-w-md">
       <div className="relative">
@@ -465,9 +485,13 @@ export default SearchBar;
               role="option"
               aria-selected={index === selectedIndex}
               tabIndex={-1}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0a01
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+origin/cursor/analyze-improve-and-deploy-application-0a01
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <X className="w-4 h-4" />
             </button>
@@ -480,6 +504,7 @@ export default SearchBar;
 
 export default SearchBar;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -489,3 +514,7 @@ export default SearchBar;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

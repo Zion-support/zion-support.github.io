@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import js from '@eslint/js';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,12 +148,16 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import typescript from '@typescript-eslint/eslint-plugin';
+=======
+import js from '@eslint/js';
+import typescriptEslint from '@typescript-eslint/eslint-plugin';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
+import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
+<<<<<<< HEAD
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
@@ -172,9 +177,11 @@ import globals from 'globals';
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default [
-  ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -280,11 +287,22 @@ export default [
 =======
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     languageOptions: {
-      ecmaVersion: 2020,
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        },
+        ecmaVersion: 'latest',
+        sourceType: 'module'
+      },
       globals: {
         ...globals.browser,
         ...globals.node,
+<<<<<<< HEAD
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -304,12 +322,17 @@ export default [
           jsx: true,
         },
       },
+=======
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
+      '@typescript-eslint': typescriptEslint,
+      'react': reactPlugin,
+      'react-hooks': reactHooksPlugin
     },
 <<<<<<< HEAD
     rules: {
@@ -458,32 +481,30 @@ export default [
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     rules: {
-      ...typescript.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react/display-name': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      'no-unused-vars': 'off',
-      'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'prefer-const': 'error',
-      'no-debugger': 'warn',
+      ...js.configs.recommended.rules,
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'no-undef': 'off',
+      'no-console': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'warn'
     },
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
+<<<<<<< HEAD
     files: ['**/*.js'],
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     languageOptions: {
@@ -1109,3 +1130,22 @@ export default [
 =======
 ];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      'coverage/',
+      '*.config.js',
+      '*.config.ts',
+      'scripts/',
+      'automation/',
+      'netlify/',
+      'src/',
+      'apps/'
+    ]
+  }
+];
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

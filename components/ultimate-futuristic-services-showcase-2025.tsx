@@ -10,12 +10,9 @@ import Head from 'next/head';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-
-=======
 import { Star, TrendingUp, Users, Award, Clock, Heart;
   Brain, Atom, Shield, Rocket, Zap, Globe;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Star
   TrendingUp
@@ -70,6 +67,7 @@ import {
   Play as PlayIcon;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart
@@ -192,6 +190,8 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -199,8 +199,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 website: 'https://ziontechgroup.com',
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -210,6 +214,7 @@ website: 'https://ziontechgroup.com',
   CpuIcon, DollarSign, Phone, Mail, MapPin;
   Dna, Target as TargetIcon, Shield as ShieldIcon;
   BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -226,6 +231,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Brain as BrainIcon, Play as PlayIcon
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
@@ -271,12 +278,17 @@ const stats = [
 ];
 
 export default function UltimateFuturisticServicesShowcase2025() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -327,6 +339,8 @@ export default function UltimateFuturisticServicesShowcase2025() {
           parseFloat(a && a.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
 const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -343,10 +357,11 @@ const matchesSearch =
 return (
           parseFloat(a.price.replace(/[^0-9.]/g, '')) -
           parseFloat(b.price.replace(/[^0-9.]/g, ''))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         );
       case 'price-high':;
         return (
+<<<<<<< HEAD
 <<<<<<< HEAD
           parseFloat(b && b.price.replace(/[^0-9.]/g, '')) -;
           parseFloat(a && a.price.replace(/[^0-9.]/g, ''));
@@ -443,6 +458,8 @@ return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           parseFloat(b.price.replace(/[^0-9.]/g, '')) -
           parseFloat(a.price.replace(/[^0-9.]/g, ''))
         );
@@ -534,12 +551,17 @@ duration: 0.5,
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {stats.map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'
@@ -586,6 +608,8 @@ duration: 0.5,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20'
                 >
                   <stat.icon className={`w-6 h-6 ${stat.color}`} />
@@ -601,8 +625,12 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Search and Filter Section */}
 <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -632,6 +660,7 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 type='text'
                 placeholder='Search futuristic services...'
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={e => setSearchTerm(e.target.value)}
@@ -677,6 +706,8 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
@@ -690,7 +721,7 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
               >
                 <option value='all'>All Categories</option>
                 {serviceCategories.map(category => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <option key={category.title} value={category.title}>
             <div className='flex flex-wrap gap-3'>
 
@@ -767,6 +798,7 @@ onChange={e => setSortBy(e.target.value)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* View Mode Toggle */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>                <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
@@ -789,6 +821,8 @@ onChange={e => setSortBy(e.target.value)}
               <div className="flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1">
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 <button
@@ -821,14 +855,19 @@ onChange={e => setSortBy(e.target.value)}
                     <div className='bg-current rounded-sm h-0.5'></div>
                     <div className='bg-current rounded-sm h-0.5'></div>
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -862,6 +901,8 @@ onChange={e => setSortBy(e.target.value)}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Services Grid */}
 <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -875,8 +916,12 @@ onChange={e => setSortBy(e.target.value)}
                 : 'space-y-6'
             }
           >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -889,6 +934,7 @@ onChange={e => setSortBy(e.target.value)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 variants={itemVariants}
                 className={`group relative ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   viewMode === 'grid'                    ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'                  viewMode === 'grid'
@@ -947,6 +993,8 @@ onChange={e => setSortBy(e.target.value)}
                 <div
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 viewMode === 'grid'
                     ? 'bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:scale-105'
                     : 'bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300'
@@ -970,6 +1018,7 @@ viewMode === 'grid'
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -977,6 +1026,9 @@ viewMode === 'grid'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {service.icon}
                     </div>
                   </div>
@@ -996,32 +1048,17 @@ viewMode === 'grid'
                     <div className='flex items - center justify - center space - x-2 mb - 4'>;
                       <span className='text - 3xl font - bold text - white'>;
                         {service.price}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                  <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
-                    {/* Price */}
-                    <div className="flex items-center justify-center space-x-2 mb-4">
-                      <span className="text-3xl font-bold text-white">{service.price}</span>
-                      <span className="text-gray-400">{service.period}</span>
-=======
                       </span>
                       <span className='text-gray-400'>{service.period}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                 </div>
                 {/* Description */}
-<<<<<<< HEAD
-=======
 <p className='text-gray-300 mb-6 leading-relaxed'>
                   {service.description}
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Features */}
                 <div className='mb-6'>;
                   <h4 className='text-white font-semibold mb-3 flex items-center'>;
@@ -1032,6 +1069,7 @@ viewMode === 'grid'
                     {service && service.features.slice(0, 4).map((feature, idx) => (;
                       <div
                         key={idx}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='flex items-center text-sm text-gray-300'>;
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />                        {feature}
@@ -1107,6 +1145,8 @@ viewMode === 'grid'
                     {service.features.length > 4 && (
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='flex items-center text-sm text-gray-300'
                       >
                         <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
@@ -1120,7 +1160,7 @@ viewMode === 'grid'
                     )}
                   </div>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {/* Service Details */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -1197,6 +1237,7 @@ viewMode === 'grid'
                     <span className='text-white font-medium'>
                       {service.customers}+
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </span>                  </div>
                 </div>
                 {/* ROI and Market Info */}                  </div>
@@ -1226,6 +1267,8 @@ viewMode === 'grid'
                   <div className='text-sm'>;
                     <div className='text-gray-300 mb-2'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </span>
                   </div>
                 </div>
@@ -1233,7 +1276,7 @@ viewMode === 'grid'
 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>
                   <div className='text-sm'>
                     <div className='text-gray-300 mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span className='font-semibold text-white'>ROI:</span>{' '}
                       {service && service.roi}
                     </div>;
@@ -1241,6 +1284,7 @@ viewMode === 'grid'
                       <span className='font-semibold text-white'>;
                         Market Size:;
                       </span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="text-sm">
                     <div className="text-gray-300 mb-2">
@@ -1324,6 +1368,8 @@ viewMode === 'grid'
                     <p>Contact us for custom pricing and implementation</p>;
                     <div className='flex items-center justify-center space-x-4 mt-2'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {service.marketSize}
                     </div>
                   </div>
@@ -1345,7 +1391,7 @@ viewMode === 'grid'
                   <div className='text-center text-sm text-gray-400'>
                     <p>Contact us for custom pricing and implementation</p>
                     <div className='flex items-center justify-center space-x-4 mt-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
                         href={`tel:${contactInfo && contactInfo.mobile}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
@@ -1353,6 +1399,7 @@ viewMode === 'grid'
                         {contactInfo && contactInfo.mobile}
                       </a>;
                       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'>;
@@ -1374,13 +1421,19 @@ viewMode === 'grid'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={`mailto:${contactInfo.email}`}
                         className='flex items-center text-purple-400 hover:text-purple-300'
                       >
                         <Mail className='w-4 h-4 mr-1' />
                         {contactInfo.email}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </a>
                     </div>
                   </div>
@@ -1395,12 +1448,15 @@ viewMode === 'grid'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
           {/* No Results */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {sortedServices.length === 0 && (
             <div className='text-center py-16'>
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {sortedServices.length === 0 && (
 <div className='text-center py-16'>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1445,9 +1501,10 @@ viewMode === 'grid'
 =======
               <button
                 onClick={() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   setSearchTerm('');
                 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300";
@@ -1456,6 +1513,8 @@ viewMode === 'grid'
               </button>;
             </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'
                   setSelectedCategory('all')
                 }}
@@ -1464,7 +1523,7 @@ viewMode === 'grid'
                 Clear Filters
               </button>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
@@ -1486,6 +1545,7 @@ viewMode === 'grid'
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1783,6 +1843,8 @@ viewMode === 'grid'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Experience the Future?
             </h2>
@@ -1811,5 +1873,9 @@ href='/pricing'
     </Layout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

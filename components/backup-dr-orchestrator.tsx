@@ -37,6 +37,7 @@ import { extraServices } from '../data/extra-services';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function BackupDROrchestratorPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const service = extraServices.find(s =>
     s.link.endsWith('/backup-dr-orchestrator')
@@ -59,6 +60,8 @@ export default function BackupDROrchestratorPage() {;
         <title>{service && service.name} - Zion Tech Group</title>;
         <meta name='description' content={service && service.description} />;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
   if (!service) return null;
   return (
@@ -66,7 +69,7 @@ export default function BackupDROrchestratorPage() {;
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/backup-dr-orchestrator'
@@ -118,6 +121,7 @@ export default function BackupDROrchestratorPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full'>;
                 Start Trial;
@@ -282,6 +286,8 @@ if (return null) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='w-full'
               >
                 Start Trial
@@ -301,13 +307,18 @@ if (return null) {
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -328,6 +339,8 @@ if (return null) {
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 }
 
@@ -335,8 +348,14 @@ if (return null) {
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

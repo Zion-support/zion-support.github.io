@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -156,6 +157,8 @@ if (return '/docs / zion - protocol.pdf') {
         </Link>;
       </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
 import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
@@ -229,11 +232,12 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
             <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>
               {s.contentMd}
             </article>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </section>
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
@@ -257,8 +261,10 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
       </div>;
     </div>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159

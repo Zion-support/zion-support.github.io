@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -79,11 +80,15 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {;
 export function getDisputeUploadDir(caseId: string): string {;
   return path.join(UPLOADS_ROOT, caseId);
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 }
@@ -136,6 +141,8 @@ export function read_json < T>(file_path: string, default_value: T): T {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -159,8 +166,12 @@ export function generateCaseId(): string {
   return `DSP-${y}${m}${d}-${suffix}`;
 
 async function ensureBaseFiles() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
     const fs = require("fs");
     if (fs.existsSync(filePath)) {
@@ -168,6 +179,7 @@ async function ensureBaseFiles() {
       return JSON.parse(content);
     }
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -180,17 +192,19 @@ async function ensureBaseFiles() {
 =======
 =======
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     }
   } catch (error) {
     console.error('Error reading file:', error);
-=======
 
   await writeAllDisputes(all);
   } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -202,6 +216,7 @@ export function writeJson<T>(filePath: string, data: T): void {
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
+<<<<<<< HEAD
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
   } catch (error) {
     console.error("Error writing file:", error);    console.error("Error:", error);
@@ -210,12 +225,31 @@ export function writeJson<T>(filePath: string, data: T): void {
   }
 }
 
+=======
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+
+main
+  }
+}
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
 
+<<<<<<< HEAD
 export function read_json < T>(file_path: string, default_value: T): T {
   try {
     const fs = require ('fs'),
@@ -278,20 +312,41 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 
   return path && path.join(UPLOADS_ROOT, caseId);
 
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  const all = await readAllDisputes();
+  all && all.push(dispute);
+  await writeAllDisputes(all);
+}
+
+  return path && path.join(UPLOADS_ROOT, caseId);
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 // File system database utilities
 import * as fs from 'fs';
@@ -307,6 +362,9 @@ export interface FSDocument {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface FSCollection {
   name: string;
@@ -515,6 +573,7 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
   return dir;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -529,3 +588,10 @@ export async function ensureDisputeUploadDir (case_id: string): Promise < string
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

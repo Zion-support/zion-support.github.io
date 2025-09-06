@@ -11,6 +11,7 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
@@ -120,10 +121,15 @@ import {
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2, Eye;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon;
@@ -235,6 +241,8 @@ export default function UltimateServicesShowcase2029() {;
     { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },;
     { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon
  } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
@@ -245,7 +253,7 @@ import { advancedAIAutonomousServices2028  } from '../data/2028-advanced-ai-auto
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
   const allServices = null;
                   setSelectedPriceRange('all')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesCategory =;
@@ -272,70 +280,6 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
       service && service.category.some(c =>;
         c && c.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );
-<<<<<<< HEAD
-    const matchesPrice =;
-      selectedPriceRange === 'all' ||;
-      (selectedPriceRange === 'low' &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
-      (selectedPriceRange === 'medium' &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
-      (selectedPriceRange === 'high' &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
-      (selectedPriceRange === 'premium' &&;
-        parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
-    return matchesCategory && matchesSearch && matchesPrice;  });    const matchesCategory = selectedCategory === 'all' || ;
-      (selectedCategory === 'cutting-edge' && cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.includes(service)) ||;
-      (selectedCategory === 'business' && practicalBusinessSolutions2028 && practicalBusinessSolutions2028.includes(service)) ||;
-      (selectedCategory === 'ai-autonomous' && advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.includes(service)) ||;
-      (selectedCategory === 'quantum-space' && quantumSpaceInnovations2028 && quantumSpaceInnovations2028.includes(service)) ||;
-      (selectedCategory === 'ai' && service && service.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))) ||;
-      (selectedCategory === 'quantum' && service && service.category.some(c => c && c.includes('Quantum'))) ||;
-      (selectedCategory === 'enterprise' && service && service.category.some(c => c && c.includes('Enterprise')));
-    const matchesPrice = selectedPriceRange === 'all' ||;
-      (selectedPriceRange === 'low' && parseFloat(service && service.price.replace(/[$]/g, '')) < 5000) ||;
-      (selectedPriceRange === 'medium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 15000) ||;
-      (selectedPriceRange === 'high' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 15000 && parseFloat(service && service.price.replace(/[$]/g, '')) < 30000) ||;
-      (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000);
-  const containerVariants = {;
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-      },;
-    },  };        staggerChildren: 0 && 0.1;
-      }
-    }
-        stagger_children: 0.1,
-      },
-    },  }        stagger_children: 0.1;
-      }
-    }
-  }
-;
-  const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 },
-    visible: {
-      opacity: 1,
-      coordinate_y: 0,
-      transition: {
-      }
-    }
-  }
-;
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    <>;
-      <Head>;
-        <title>;
-          2029 Ultimate Services Showcase - Zion Tech Group | Revolutionary;
-          Technology Solutions;
-        </title>;
-=======
     const matchesPrice =
       selectedPriceRange === 'all' |
       (selectedPriceRange === 'low' &&
@@ -400,7 +344,7 @@ website: 'https://ziontechgroup.com',
           rel='canonical'
           href='https://ziontechgroup.com/2029-ultimate-services-showcase'
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -421,6 +365,7 @@ website: 'https://ziontechgroup.com',
         <meta
           name='twitter:description'
           content='Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems.'
+<<<<<<< HEAD
 <<<<<<< HEAD
         />      </Head>        {/* Open Graph */}
         {/* Twitter */}
@@ -475,6 +420,8 @@ website: 'https://ziontechgroup.com',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
       </Head>
       <UltraFuturisticNavigation2029 />
@@ -524,8 +471,12 @@ className='max-w-4xl mx-auto'
               <Link
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Started Today
               </Link>
@@ -563,25 +514,6 @@ href='/pricing'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Stats */}
-<<<<<<< HEAD
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
-                <div className="text-gray-400">Revolutionary Services</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">$500M+</div>
-                <div className="text-gray-400">Market Valuation</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-400">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">24/7</div>
-                <div className="text-gray-400">Support Available</div>
-=======
 <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -606,12 +538,13 @@ href='/pricing'
                   24/7
                 </div>
                 <div className='text-gray-400'>Support Available</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -696,6 +629,8 @@ href='/pricing'
                 placeholder="Search services..."
                 value={searchTerm}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Filters Section */}
 <section className='py-16 bg-gray-900/50 border-b border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -711,7 +646,7 @@ href='/pricing'
                 className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200'
               />
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Category Filter */}
 <div className='flex flex-wrap items-center space-x-2'>
               {categories.map(category => (
@@ -726,11 +661,14 @@ href='/pricing'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
 <div className='flex items-center space-x-2'>
                     <category.icon className='h-4 w-4' />
@@ -740,8 +678,12 @@ href='/pricing'
                     </span>
                   </div>
                 </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
             </div>
 
@@ -798,6 +740,7 @@ href='/pricing'
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -893,6 +836,9 @@ href='/pricing'
                           key={cat}
                           className="px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20"
 =======
+=======
+      {/* Services Grid */}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <motion.div
@@ -937,7 +883,7 @@ className='group relative'
                           key={cat}
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {cat}
                         </span>
                       ))}
@@ -1061,6 +1007,7 @@ className='group relative'
                       )}
                   {/* Market Info */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                   <div className="mb-6 space-y-2">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1112,6 +1059,8 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
                       <span className='text-gray-400'>Market Size:</span>
@@ -1138,8 +1087,12 @@ className='group relative'
                   </div>
                   {/* Hover Effect */}
 <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </motion.div>
             ))}
@@ -1167,20 +1120,6 @@ className='group relative'
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           {/* No Results */}
-<<<<<<< HEAD
-          {filteredServices && filteredServices.length === 0 && (;
-            <div className='text-center py-20'>;
-              <div className='w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6'>;
-                <Search className='w-12 h-12 text-gray-400' />;
-              </div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                No services found;
-              </h3>;
-              <p className='text-gray-400 mb-8'>;
-                Try adjusting your search criteria or browse all services;
-              </p>              <button
-                onClick={() => {;
-=======
           {filteredServices.length === 0 && (
 <div className='text-center py-20'>
               <div className='w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6'>
@@ -1194,11 +1133,12 @@ className='group relative'
               </p>
               <button
                 onClick={() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   setSelectedCategory('all');
                   setSearchTerm('');
 setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1220,8 +1160,10 @@ setSelectedPriceRange('all');
                   setSearchTerm('');
                   setSelectedPriceRange('all')
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 }}
 <<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all')
@@ -1248,6 +1190,7 @@ setSelectedPriceRange('all');
           )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact CTA */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>;
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">;
@@ -1293,6 +1236,8 @@ setSelectedPriceRange('all');
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5 text-cyan-400" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
           <motion.div
@@ -1323,7 +1268,7 @@ setSelectedPriceRange('all');
                 </div>
                 <div className='flex items-center space-x-2'>
                   <Mail className='h-5 w-5 text-cyan-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{contactInfo.email}</span>
                 </div>
               </div>
@@ -1331,6 +1276,7 @@ setSelectedPriceRange('all');
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1397,3 +1343,9 @@ setSelectedPriceRange('all');
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <UltraFuturisticFooter2029 />
+    </>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

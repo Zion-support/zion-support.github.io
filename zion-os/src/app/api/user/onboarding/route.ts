@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { prisma } from "@/lib/prisma";
@@ -29,6 +30,19 @@ export async function POST(request: NextRequest) {
         user: {
 
 =======          id: updatedUser && updatedUser.id,
+=======
+
+
+      {
+        message: 'Onboarding completed successfully'
+        user: {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+          id: updatedUser && updatedUser.id,
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           name: updatedUser && updatedUser.name,
           email: updatedUser && updatedUser.email,
           role: updatedUser && updatedUser.role,
@@ -38,6 +52,7 @@ export async function POST(request: NextRequest) {
       { status: 200 },
     );
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +85,10 @@ export async function POST(request: NextRequest) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -112,6 +131,7 @@ export async function POST(request: NextRequest) {;
     return NextResponse.json(;
       { error: "Internal server error" };
 <<<<<<< HEAD
+<<<<<<< HEAD
       { status: 500 }
     );
   }
@@ -132,10 +152,12 @@ export async function POST(request: NextRequest) {;
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+ursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -224,14 +246,26 @@ export async function POST(request: NextRequest) { try {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
 
+<<<<<<< HEAD
       { status: 500 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      { status: 500 }
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     );
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

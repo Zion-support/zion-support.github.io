@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -32,11 +33,15 @@
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 }}; async checkSystemResources() {try {; this.log('💻 Checking system resources...'); const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' }); // Parse memory info; const memLines = memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3]; // Parse disk info; const diskLines = diskInfo.split('\n'); const rootDisk = diskLines.find(line = > line.includes('/')); const diskUsage = rootDisk ? rootDisk.split(/\s+/)[4].replace('%', ''): '0'; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0; return {success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree)
-=======
 }};
 ; async checkSystemResources() {; try {; this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -45,7 +50,7 @@
 ; // Parse CPU info; const cpuUsage = cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
 ; return {; success: true, memory: {
       , total: parseInt(memTotal), used: parseInt(memUsed), free: parseInt(memFree),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     usagePercent: Math.round((parseInt(memUsed) / parseInt(memTotal)) * 100)
     }
     disk: {
@@ -63,6 +68,7 @@
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 };
@@ -314,6 +320,11 @@ module.exports = HealthMonitor;
 } catch (error) {this.log(`❌ Error running health monitor: ${error.message}`); process.exit(1)}}}
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
+=======
+
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,6 +332,7 @@ const healthMonitor = new HealthMonitor();
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
+<<<<<<< HEAD
 ; // Parse memory info; const memLines = memInfo && memInfo.split('\n'); const memTotal = memLines[1].split(/\s+/)[1]; const memUsed = memLines[1].split(/\s+/)[2]; const memFree = memLines[1].split(/\s+/)[3];
 ; // Parse disk info; const diskLines = diskInfo && diskInfo.split('\n'); const rootDisk = diskLines && diskLines.find(line = > line && line.includes('/')); const diskUsage = rootDisk ? rootDisk && rootDisk.split(/\s+/)[4].replace('%', ''): '0';
 ; // Parse CPU info; const cpuUsage = cpuInfo && cpuInfo.includes('id') ?; (100 - parseFloat(cpuInfo && cpuInfo.split('id')[0].split(',')[3].replace('%id', '').trim())): 0;
@@ -3796,3 +3808,7 @@ healthMonitor.run().catch(error => {_;
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

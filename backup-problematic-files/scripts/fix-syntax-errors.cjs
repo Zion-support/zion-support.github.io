@@ -109,6 +109,7 @@ const path = require('path')
     // Fix missing semicolons
     content = content.replace(/([^;}])\n/g, '$1;\n');
     // Fix merge conflict markers
+<<<<<<< HEAD
     content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -203,3 +204,5 @@ module.exports = SyntaxErrorFixer;
 =======
       this.log(`� Syntax error fixing "failed"`)
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -108,6 +109,8 @@ import Link from "next/link";
 interface EnhancedNavigationProps {;
   className?: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ursor/automate-test-fix-improve-and-merge-code-48f3
   const [servicesOpen, setServicesOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
@@ -296,7 +299,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       </div>
     </nav>
   )
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({

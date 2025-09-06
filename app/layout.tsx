@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -44,11 +45,78 @@ export const metadata = {
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
+=======
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Navigation from '@/components/Navigation';
+import Footer from '@/components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group',
+      },
+    ],
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
+<<<<<<< HEAD
+=======
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Transform your business with cutting-edge AI and technology solutions.',
+    images: ['/og-image.jpg'],
+  },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#000000',
+};
+
+=======
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+=======
+import React from 'react';
+import Link from 'next/link';
+import './globals.css';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+
+export const metadata = {
+  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   },
@@ -85,8 +153,33 @@ function Header() {
       </nav>
     </header>
   );
+
 }
 
+<<<<<<< HEAD
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+<<<<<<< HEAD
+        <Navigation />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
+=======
+        {children}
+      </body>
+    </html>
+  )
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
 function Footer() {
   return (
     <footer className="border-t border-gray-200 mt-10 py-6 bg-gray-50">
@@ -95,14 +188,18 @@ function Footer() {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
             <div className="space-y-2">
               <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
               <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               <Link href="/services/ai-services" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Services</Link>
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Link href="/services/blockchain" className="block text-gray-600 hover:text-blue-600 transition-colors">Blockchain</Link>
@@ -122,6 +219,9 @@ function Footer() {
 =======
             </div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            </div>
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
@@ -156,9 +256,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+
       </body>
     </html>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,3 +301,7 @@ function RootLayout() { return ( <html lang="en"> <body className="min - h-scree
 =======
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

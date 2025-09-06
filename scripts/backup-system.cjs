@@ -43,6 +43,7 @@ const { execSync } = require("child_process")
   case "list"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
@@ -56,3 +57,8 @@ const { execSync } = require("child_process")
   "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  "default": console.log("Usage: node backup-system.cjs [create|restore|list] [backup-name]")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

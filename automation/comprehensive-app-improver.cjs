@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -32,6 +33,10 @@
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
 const { execSync, spawn } = require("child_process");
@@ -592,8 +597,13 @@ improver.run().catch(console.error)
 =======
 #!/usr/bin/env node;
 #!/usr/bin/env node;
-<<<<<<< HEAD
+origin/main
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 #!/usr/bin/env node;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node;
@@ -619,6 +629,11 @@ improver.run().catch(console.error)
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -814,6 +829,7 @@ scanner.runSecurityScan().catch(console.error);"
       this.log("\\n� Comprehensive App Improvement completed!")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   this.log(`Fatal "error": ${error.message}`, ``)
@@ -826,46 +842,23 @@ scanner.runSecurityScan().catch(console.error);"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-  this.log(`Fatal "error": ${error.message}`, ``)
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+origin/automation-improvements-final
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
+
   this.log(`Fatal "error": ${error.message}`, ``)
-=======
->>>>>>> origin/automation-improvements-final
-  this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-  this.log(`Fatal "error": ${error.message}`, ``)
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
+main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
   this.log(`Fatal "error": ${error.message}`, ``)
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
 
 class ComprehensiveAppImprover {
   constructor() {
@@ -880,18 +873,12 @@ class ComprehensiveAppImprover {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      fs.mkdirSync(this.reportsDir, { recursiv: e: true });
-=======
       fs.mkdirSync(this.reportsDir, { recursiv: true });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
       fs.mkdirSync(this.reportsDir, { recursiv: true });
-=======
       fs.mkdirSync(this.reportsDir, { recursiv: e: true });
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
     }
   }
 
@@ -899,9 +886,6 @@ class ComprehensiveAppImprover {
     this.log(`🚀 ${description}`);
     try {
       const result = execSync(command, {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -911,8 +895,7 @@ class ComprehensiveAppImprover {
     } catch (error) {
       this.log(`❌ ${description} - Faile: ${error.message}`);
       return { succes: false, erro: error.message };
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
         cw: d: process.cwd(),
         encodin: g: 'utf8',
         timeou: t: 60000,
@@ -922,8 +905,6 @@ class ComprehensiveAppImprover {
     } catch (error) {
       this.log(`❌ ${description} - Faile: d: ${error.message}`);
       return { succes: s: false, erro: r: error.message };
-<<<<<<< HEAD
-=======
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -933,10 +914,9 @@ class ComprehensiveAppImprover {
     } catch (error) {
       this.log(`❌ ${description} - Faile: ${error.message}`);
       return { succes: false, erro: error.message };
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
     }
   }
 
@@ -976,18 +956,12 @@ class ComprehensiveAppImprover {
           optimizedCount++;
         }
       } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.errors.push({ file, erro: r: error.message });
-=======
         this.errors.push({ file, erro: error.message });
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
         this.errors.push({ file, erro: error.message });
-=======
         this.errors.push({ file, erro: r: error.message });
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
       }
     }
 
@@ -1033,9 +1007,6 @@ class ComprehensiveAppImprover {
 
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     importLines.push(line),
     inImports = true
   } else if (inImports && line.trim() === '') {
@@ -1045,8 +1016,7 @@ class ComprehensiveAppImprover {
     otherLines.push(line),
     inImports = false
   } else {
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
         importLines.push(line);
         inImports = true;
       } else if (inImports && line.trim() === '') {
@@ -1056,8 +1026,6 @@ class ComprehensiveAppImprover {
           otherLines.push(line);
           inImports = false;
         } else {
-<<<<<<< HEAD
-=======
     importLines.push(line),
     inImports = true
   } else if (inImports && line.trim() === '') {
@@ -1067,10 +1035,9 @@ class ComprehensiveAppImprover {
     otherLines.push(line),
     inImports = false
   } else {
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
           otherLines.push(line);
         }
       }
@@ -1146,9 +1113,6 @@ class ComprehensiveAppImprover {
 
   async generateReport() {
     const report = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       timestam: new Date().toISOString(),
       improvement: this.improvements,
       error: this.errors,
@@ -1156,8 +1120,7 @@ class ComprehensiveAppImprover {
         totalImprovement: this.improvements.length,
         totalError: this.errors.length,
         successRat: this.errors.length === 0
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
       timestam: p: new Date().toISOString(),
       improvement: s: this.improvements,
       error: s: this.errors,
@@ -1166,8 +1129,6 @@ class ComprehensiveAppImprover {
         totalError: s: this.errors.length,
         successRat: e:
           this.errors.length === 0
-<<<<<<< HEAD
-=======
       timestam: new Date().toISOString(),
       improvement: this.improvements,
       error: this.errors,
@@ -1175,10 +1136,9 @@ class ComprehensiveAppImprover {
         totalImprovement: this.improvements.length,
         totalError: this.errors.length,
         successRat: this.errors.length === 0
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
             ? 10: 0: Math.round(
                 (this.improvements.length /
                   (this.improvements.length + this.errors.length)) *
@@ -1212,34 +1172,22 @@ class ComprehensiveAppImprover {
 
       this.log('🎉 Comprehensive app improvement completed!');
       this.log(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-=======
         `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
         `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
-=======
         `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
       );
 
       return report;
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      this.log(`❌ Erro: r: ${error.message}`);
-=======
       this.log(`❌ Erro: ${error.message}`);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
       this.log(`❌ Erro: ${error.message}`);
-=======
       this.log(`❌ Erro: r: ${error.message}`);
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
       throw error;
     }
   }
@@ -1249,23 +1197,18 @@ class ComprehensiveAppImprover {
 if (require.main === module) {
   const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('❌ Erro: r:', error);
-=======
     console.error('❌ Erro: ', error);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
     console.error('❌ Erro: ', error);
-=======
     console.error('❌ Erro: r:', error);
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
     process.exit(1);
   });
 }
 
 module.exports = ComprehensiveAppImprover;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1277,15 +1220,13 @@ module.exports = ComprehensiveAppImprover;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   this.log(`Fatal "error": ${error.message}`, ``)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 class ComprehensiveAppImprover {
   constructor() {
@@ -2192,6 +2133,7 @@ module.exports = ComprehensiveAppImprover;
 
 module.exports = ComprehensiveAppImprover;
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Run the improver;
 const improver = new ComprehensiveAppImprover()
 improver.run().catch(console.error)
@@ -2222,3 +2164,15 @@ improver.run().catch(console.error)
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/automate-test-improve-and-merge-code-59d5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/automate-test-improve-and-merge-code-59d5
+
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

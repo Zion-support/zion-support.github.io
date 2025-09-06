@@ -24,6 +24,15 @@
 /// <reference types="next" />
 /// <reference types="next/image-types/global" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+// NOTE: This file should not be edited
+// see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,16 +103,24 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 /// <reference types="next/navigation-types/compat/navigation" />
 
 // NOTE: This file should not be edited
 // see https://nextjs.org/docs/app/building-your-application/configuring/typescript for more information.
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-191f
 =======
@@ -114,4 +131,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

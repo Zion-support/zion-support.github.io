@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
 import React from 'react';
@@ -16,7 +18,10 @@ import type { ReviewsSummary } from '../../types / reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='enhanced-card flex items-center justify-between'>;
       <div>;
@@ -36,6 +41,7 @@ import {Star} from 'lucide-react';
       </div>;
     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 };
 
@@ -48,6 +54,8 @@ export default ReviewSummary
 
 export default ReviewSummary;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 
         <div className="flex items-center gap-3">
@@ -56,7 +64,6 @@ export default ReviewSummary;
         </div>
         <div className="text-sm text-gray-600 mt-1">
           <span className="mr-3">{summary.totalReviews} reviews</span>
-=======
 import React from 'react';
 import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
@@ -75,11 +82,12 @@ export default ReviewSummary;
         </div>
         <div className='text-sm text-gray-600 mt-1'>
           <span className='mr-3'>{summary.totalReviews} reviews</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -87,6 +95,12 @@ export default ReviewSummary;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+};
+
+export default ReviewSummary;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   summary: ReviewsSummary;
 const ReviewSummary: React.FC < Props> = ({ summary }) => {
   return (
@@ -128,6 +142,7 @@ export default ReviewSummary);
 export default ReviewSummary;
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -135,9 +150,16 @@ export default ReviewSummary;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default ReviewSummary;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

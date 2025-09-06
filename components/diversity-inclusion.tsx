@@ -124,6 +124,7 @@ export default function DiversityInclusionPage() {;
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
       <Head>;
@@ -230,4 +231,10 @@ function DiversityInclusionPage() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

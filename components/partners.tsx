@@ -47,6 +47,7 @@ export default function PartnersPage() {
           content='Technology and go-to-market partners powering our customer outcomes.'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
@@ -79,6 +80,8 @@ export default function PartnersPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -163,6 +166,8 @@ function PartnersPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         />
         <link rel='canonical' href='https://ziontechgroup.com/partners' />
       </Head>
@@ -189,5 +194,9 @@ function PartnersPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

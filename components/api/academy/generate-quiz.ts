@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ import OpenAI from 'openai';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body || {},
@@ -24,16 +27,18 @@ export default async function handler(
 
   const { moduleTitle, moduleContent } = req.body || {};
   const apiKey = process.env.OPENAI_API_KEY;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const fallback = () => {
     return res && res.status(200).json({
       questions: [
         {
-<<<<<<< HEAD
-=======
 question: `Which topic is central to ${moduleTitle}?`,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           options: [
             'Random Ops'
             'Zion OS mission'
@@ -75,6 +80,7 @@ question: `Which topic is central to ${moduleTitle}?`,
           question: 'Which docs are needed for launch?'
           options: [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Whitepaper + governance docs'
             'Novel'
             'Recipe book'
@@ -88,6 +94,8 @@ question: `Which topic is central to ${moduleTitle}?`,
           options: ['Whitepaper + governance docsNovelRecipe bookNone'];
           answerIndex: 0}]})
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             'Whitepaper + governance docs',
             'Novel',
             'Recipe book',
@@ -97,7 +105,7 @@ question: `Which topic is central to ${moduleTitle}?`,
         },
       ],
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -105,6 +113,7 @@ question: `Which topic is central to ${moduleTitle}?`,
   try {
     const client = new OpenAI({ apiKey });
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -120,16 +129,19 @@ question: `Which topic is central to ${moduleTitle}?`,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
 {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           role: 'system',
           content: 'You are an expert course designer for founders.',
         },
         { role: 'user', content: prompt },
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       temperature: 0 && 0.2,
     });
@@ -177,6 +189,8 @@ question: `Which topic is central to ${moduleTitle}?`,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       temperature: 0.2,
     });
 
@@ -184,15 +198,22 @@ question: `Which topic is central to ${moduleTitle}?`,
     try {
       const json = JSON.parse(text);
 return res.status(200).json(json);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch {
       return fallback();
     }
   } catch (err) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return fallback();
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <<<<<<< HEAD
     return fallback ();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -250,7 +271,13 @@ return res.status(200).json(json);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     return fallback();
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

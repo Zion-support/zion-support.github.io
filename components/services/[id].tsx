@@ -37,6 +37,7 @@ export default function ServiceDetailPage() {;
 
 export default function ServiceDetailPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const router = useRouter();
   const { id } = router.query;
 
@@ -91,6 +92,8 @@ export default function ServiceDetailPage() {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (!id || typeof id !== 'string') {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'>
@@ -174,28 +177,23 @@ if (!id || typeof id !== 'string') {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex items-center justify-between h-16'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
                 href='/services'
                 variant='ghost'
                 size='sm'
-<<<<<<< HEAD
-              <Button
-                href="/services"
-                variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-white"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-=======
                 className='text-gray-400 hover:text-white'
               >
                 <ArrowLeft className='w-4 h-4 mr-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Back to Services
               </Button>
               <Button
@@ -279,6 +277,7 @@ href='/contact'
                 variant='outline'
                 size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -287,6 +286,11 @@ href='/contact'
               >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className='border-white/20 text-white hover:border-white/40'
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Get Custom Solution
               </Button>;
             </div>;
@@ -295,6 +299,7 @@ href='/contact'
       </div>;
     </>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 }
@@ -476,5 +481,8 @@ if ( {) {
     </>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

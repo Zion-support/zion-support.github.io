@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -28,6 +29,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Globe;
@@ -36,8 +39,12 @@ import { Mail, Phone, MapPin, Globe;
   Shield, Users, BookOpen, Briefcase, Atom
  } from 'lucide-react';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Mail
   Phone
   MapPin
@@ -60,10 +67,7 @@ import {
 =======
 
 } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -104,18 +108,6 @@ interface FooterLink {;
   label: string;
   href: string;
   description?: string;
-<<<<<<< HEAD
-interface FooterSection {
-interface FooterSection {;
-  title: string;
-  links: FooterLink[];} from 'lucide-react';
-    ]
-  }
-  {
-
-    title: 'Solutions'
-
-=======
   links: FooterLink[];
 
   external?: boolean
@@ -172,7 +164,7 @@ const footerSections: FooterSection[] = [
   }
   {
     title: 'Solutions';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     links: [
       {
         label: 'Healthcare & Biotech'
@@ -207,8 +199,6 @@ const footerSections: FooterSection[] = [
   {
     title: 'Solutions'
     links: [
-<<<<<<< HEAD
-=======
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
       { label: 'Financial Services', href: '/solutions?industry;
     links: [
@@ -226,7 +216,7 @@ const footerSections: FooterSection[] = [
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
     title: 'Solutions'
     links: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
       { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
@@ -242,12 +232,6 @@ const footerSections: FooterSection[] = [
       { label: 'Careers', href: '/careers', description: 'Join our team' }
       { label: 'Contact', href: '/contact', description: 'Get in touch' }
     ]
-<<<<<<< HEAD
-  {
-    title: 'Resources',
-    links: [;
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-=======
   }
   {
     title: 'Resources'
@@ -320,13 +304,11 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
 window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const footerSections = [
     {
       title: 'Services'
       items: [
-<<<<<<< HEAD
-=======
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
@@ -336,31 +318,23 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     {
       title: 'Solutions'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       items: [
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
         { label: 'Micro SAAS', href: '/micro-saas' },
         { label: 'IT Services', href: '/it-services' },
         { label: 'Innovation Lab', href: '/innovation-lab' },
-<<<<<<< HEAD
-=======
 { label: 'Research & Development', href: '/research-development' },
       ],
     },
     {
       title: 'Company'
       items: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
-<<<<<<< HEAD
-  ];
-    visible: {
-      opacity: 1
-      transition: {
-=======
 { label: 'Press & Media', href: '/press' },
       ],
     },
@@ -400,13 +374,14 @@ staggerChildren: 0.1,
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface FooterSection {;
@@ -672,6 +647,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 duration: 0.5,
       },
     },
@@ -681,11 +658,12 @@ duration: 0.5,
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 -z-10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
             key={i}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
@@ -711,6 +689,8 @@ duration: 0.5,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
               x: [0, Math.random() * 1000, 0],
@@ -723,12 +703,17 @@ className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-f
               repeat: -1,
               delay: Math.random() * 8,
 ease: 'easeInOut',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }}
           />;
         ))}
         {/* Main Footer Content */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">;
           <motion&& motion.div
@@ -787,6 +772,8 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
           <motion.div
             variants={containerVariants}
@@ -843,13 +830,18 @@ ease: 'easeInOut',
                     href='https://ziontechgroup.com'
                     className='hover:text-white transition-colors duration-200'
                   >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     ziontechgroup.com
                   </a>
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             {/* Footer Sections */}
@@ -882,6 +874,8 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <ul className="space-y-3">
                   {section.items.map((item) => (
                     <li key={item.label}>
@@ -1021,6 +1015,8 @@ ease: 'easeInOut',
                         className="text - gray - 300 hover:text - white transition - colors duration - 200 hover:translate-x-1 inline-block";
                       >;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -1046,7 +1042,7 @@ ease: 'easeInOut',
                         href={item.href}
                         className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'
                       >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {item.label}
             {/* Footer Sections */}
             {footerSections && footerSections.map((section, index) => (;
@@ -1095,6 +1091,7 @@ ease: 'easeInOut',
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1109,6 +1106,10 @@ ease: 'easeInOut',
 className='mt-16 pt-12 border-t border-gray-800/50'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mt-16 pt-12 border-t border-gray-800/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -1134,6 +1135,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                     rel='noopener noreferrer'
                     className='w-10 h-10 bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-purple-500 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200 hover:scale-110'
                     whileHover={{ y: -2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     whileTap={{ scale: 0.95 }}
@@ -1175,14 +1177,20 @@ className='mt-16 pt-12 border-t border-gray-800/50'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     whileTap={{ scale: 0.95 }}
                   >
                     <social.icon className='w-5 h-5' />
                   </motion.a>
                 ))}
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Newsletter Signup */}
 <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -1202,6 +1210,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                   <motion.button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1215,6 +1224,10 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1348,6 +1361,7 @@ className='mt-16 pt-12 border-t border-gray-800/50'
           viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
@@ -1365,8 +1379,10 @@ className='mt-16 pt-12 border-t border-gray-800/50'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1384,6 +1400,7 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Privacy Policy;
                 </Link>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1439,6 +1456,8 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                   <Rocket className="w-4 h-4 text-pink-400" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <Link
                   href='/terms'
                   className='hover:text-white transition-colors duration-200 ml-2'
@@ -1459,7 +1478,7 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
                 <span>•</span>
                 <div className='flex items-center space-x-2'>
                   <Rocket className='w-4 h-4 text-pink-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>Space Technology</span>
                 </div>
               </div>
@@ -1469,6 +1488,7 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1476,6 +1496,8 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='hover:text-white transition-colors duration-200 ml-2'>;
                   Terms of Service;
                 </Link>;
@@ -1538,12 +1560,18 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
 className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -1552,11 +1580,14 @@ className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-
       >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
@@ -1603,6 +1634,8 @@ export default UltraAdvancedFuturisticFooter2025;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <ArrowUp className='w-6 h-6 mx-auto' />
       </motion.button>
     </footer>
@@ -1610,5 +1643,9 @@ export default UltraAdvancedFuturisticFooter2025;
 };
 
 export default UltraAdvancedFuturisticFooter2025;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

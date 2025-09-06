@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </header>
   );
 }
@@ -175,6 +176,9 @@ export default function Header() {;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 'use client';
+=======
+'use client';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import React, { useState } from 'react';
@@ -747,6 +751,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Link from 'next/link';
@@ -1006,3 +1011,6 @@ export default Header;
 =======
 export default Header;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default Header;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

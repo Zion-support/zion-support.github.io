@@ -215,6 +215,7 @@ const packagePath = path.join(this.projectRoot, "package.json")
   console.log("Smart Build Optimization completed successfully")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error("Smart Build Optimization "failed")
@@ -228,3 +229,8 @@ const packagePath = path.join(this.projectRoot, "package.json")
   console.error("Smart Build Optimization "failed")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error("Smart Build Optimization "failed")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

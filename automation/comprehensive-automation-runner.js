@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -52,6 +53,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
@@ -61,6 +66,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ComprehensiveAutomationRunner {;
   constructor() {;
@@ -1067,6 +1073,9 @@ export default ComprehensiveAutomationRunner;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"); this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(),
     tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
@@ -1090,7 +1099,12 @@ class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const runner = new ComprehensiveAutomationRunner(); runner.runAll().catch(console.error)};
 ;
 export default ComprehensiveAutomationRunner;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

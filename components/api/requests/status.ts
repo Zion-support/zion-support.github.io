@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -54,6 +55,8 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
   try {
     return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'));
@@ -78,12 +81,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id || !status)
     return res.status(400).json({ error: 'Missing id or status' });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const items = readAll();
   const idx = items.findIndex((r: any) => r.id === id);
   if (idx === -1) return res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
   writeAll(items);
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -159,6 +163,12 @@ if (return res.status (404).json ({ error: 'Not found' })) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   res.status(200).json({ ok: true });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

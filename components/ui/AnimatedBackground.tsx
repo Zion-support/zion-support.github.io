@@ -48,6 +48,7 @@ export default AnimatedBackground;
           }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       `}</style>;
     </div>;
   );  return (
@@ -160,8 +161,14 @@ function AnimatedBackground() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       `}</style>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

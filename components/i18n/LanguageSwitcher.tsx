@@ -41,6 +41,7 @@ import {supportedLocales, isRtl} from '../../utils/i18n';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 const localeToFlag: Record<string, string> = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   en: 'us'
@@ -59,12 +60,15 @@ const localeLabelKey: Record<string, string> = {
   pt: 'br',
   es: 'es',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   en: 'us';
   pt: 'br';
   es: 'es';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   en: 'lang.english',
@@ -81,6 +85,8 @@ export default function LanguageSwitcher() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';
@@ -102,8 +108,12 @@ const localeLabelKey: Record<string, string> = {
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -143,11 +153,9 @@ setOpen(false);
             <li key={lng}>;
               <button
                 role='option'
-<<<<<<< HEAD
-=======
                 aria-selected={current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="relative">;
       <button
@@ -174,11 +182,9 @@ setOpen(false);
       )}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     </div>
-<<<<<<< HEAD
-);
-}
   );
 }
+<<<<<<< HEAD
 import {use_translation} from 'react - i18next';
 import i18n from '../../utils / i18n';
 import {supported_locales, is_rtl} from '../../utils / i18n';
@@ -319,4 +325,10 @@ function LanguageSwitcher() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

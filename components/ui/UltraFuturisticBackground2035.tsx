@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -57,6 +58,8 @@ import { motion } from 'framer-motion';
   enableNeonEffects = true,;
   enableSpaceTime = true;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
@@ -74,7 +77,7 @@ interface UltraFuturisticBackground2035Props {
 
 const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
   intensity;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
@@ -135,10 +138,13 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#ff00ff',
           accent: '#ffff00',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           background: 'rgba(0, 0, 0, 0.95)',
 glow: 'rgba(0, 255, 255, 0.3)',
         };
@@ -187,14 +193,19 @@ glow: 'rgba(0, 255, 255, 0.3)',
 canvas.height = window.innerHeight;
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
 <<<<<<< HEAD
       particlesRef.current = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -269,6 +280,8 @@ canvas.height = window.innerHeight;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 for (let i = 0; i < particleCount; i++) {
         particlesRef.current.push({
           x: Math.random() * canvas.width,
@@ -304,8 +317,12 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -325,6 +342,7 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
           ctx.fill();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -333,11 +351,16 @@ particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
 ctx.shadowBlur = 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.shadowBlur = 0;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         } else {
           // Normal particle
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fillStyle = particle.color;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -348,10 +371,15 @@ ctx.shadowBlur = 0;
 ctx.fill();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.fill();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
       });
       // Draw holographic grid
       if (enableHolographic) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -359,6 +387,8 @@ ctx.fill();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 drawHolographicGrid(ctx, colors);
       }
 
@@ -375,12 +405,17 @@ drawSpaceTimeEffects(ctx, colors);
       animationRef.current = requestAnimationFrame(animate);
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -409,6 +444,8 @@ drawSpaceTimeEffects(ctx, colors);
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {;
     const gridSize = 50;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 cancelAnimationFrame(animationRef.current);
       }
     }
@@ -432,7 +469,7 @@ cancelAnimationFrame(animationRef.current);
 
 for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.beginPath();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.moveTo(x, 0);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       ctx.lineTo(x, ctx.canvas.height);
@@ -445,6 +482,7 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.lineTo(ctx.canvas.width, y);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -453,10 +491,15 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.stroke();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     // Animated diagonal lines
     ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -467,10 +510,15 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
 for (let i = 0; i < 5; i++) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+for (let i = 0; i < 5; i++) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const offset = (time + i * 0.5) * 100;
       ctx.beginPath();
       ctx.moveTo(offset, 0);
       ctx.lineTo(offset + 200, ctx.canvas.height);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -481,10 +529,15 @@ for (let i = 0; i < 5; i++) {
 ctx.stroke();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Neon orbs
 <<<<<<< HEAD
@@ -494,9 +547,11 @@ ctx.stroke();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     for (let i = 0, i < 3, i++) {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Neon orbs
     for (let i = 0; i < 3; i++) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
@@ -512,6 +567,7 @@ ctx.stroke();
       ctx.beginPath();
       ctx.arc(x, y, size * 0.6, 0, Math.PI * 2);
       ctx.fillStyle = colors.primary;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -544,6 +600,8 @@ ctx.stroke();
       const y = centerY + Math && Math.sin(angle) * radius;
       const alpha = 1 - i / 20;      const alpha = 1 - (i / 20);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.fill();
     }
   }
@@ -579,7 +637,7 @@ ctx.fill();
           background: colors.background
         }}
       />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>;
         {/* Quantum energy field */}
@@ -587,6 +645,7 @@ ctx.fill();
           className='absolute inset-0'
           animate={{
             background: [
+<<<<<<< HEAD
 <<<<<<< HEAD
             ],          }}
           transition={{
@@ -602,6 +661,8 @@ ctx.fill();
             repeat: Infinity
             ease: 'easeInOut'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
@@ -611,7 +672,7 @@ ctx.fill();
             duration: 8,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 <<<<<<< HEAD
 
@@ -641,6 +702,7 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               }}
               animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
@@ -681,9 +743,11 @@ ease: 'easeInOut',
               animate={{
                 opacity: [0, 1, 0];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
 
               transition={{
@@ -707,6 +771,7 @@ ease: 'easeInOut',
             />
 
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 ease: "easeInOut"
 
@@ -772,6 +837,8 @@ export default UltraFuturisticBackground2035;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
       </div>
     </div>
@@ -779,5 +846,9 @@ export default UltraFuturisticBackground2035;
 };
 
 export default UltraFuturisticBackground2035;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

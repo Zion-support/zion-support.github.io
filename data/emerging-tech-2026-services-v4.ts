@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -615,6 +616,8 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
   contactInfo: {
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     mobile: string;
     email: string;
     address: string;
@@ -667,7 +670,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     rating: 4.9;
     reviews: 12
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -722,7 +725,12 @@ export interface EmergingTech2026ServiceV4 {
     mobile: string, email: string,
     address: string,
     website: string
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     },
 =======
   contactInfo: {    },
@@ -739,6 +747,7 @@ export interface EmergingTech2026ServiceV4 {
   };
   // Quantum Internet Security Gateway
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'quantum-internet-security-gateway', name: 'Quantum Internet Security Gateway',
     tagline: 'Unbreakable quantum encryption for the future internet', price: '$899',
@@ -986,6 +995,17 @@ export interface EmergingTech2026ServiceV4 {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    reviews: 25;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -1382,6 +1402,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
@@ -1393,17 +1414,18 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+ursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-<<<<<<< HEAD
-=======
 
 ;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1412,6 +1434,10 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'quantum-internet-security-gateway',
     name: 'Quantum Internet Security Gateway',
     tagline: 'Unbreakable quantum encryption for the future internet',
@@ -1957,5 +1983,9 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     reviews: 25
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -3,6 +3,7 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 =======
@@ -74,18 +75,21 @@ import {
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
   Twitter, Linkedin, Github, Youtube, Instagram
  } from 'lucide-react';
 const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const serviceCategories = [
   {
     title: 'AI & Consciousness'
     icon: Brain
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -365,6 +369,8 @@ const serviceCategories = [
   }
 ];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-2029',
@@ -460,16 +466,19 @@ const EnhancedFooter2025: React.FC = () => {
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>
       <div className='relative z-10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12'>
             {/* Company Info */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='lg:col-span-1'>
               <div className='flex items-center space-x-3 mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center'>
@@ -665,8 +674,12 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -675,6 +688,7 @@ const EnhancedFooter2025: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -689,6 +703,10 @@ const EnhancedFooter2025: React.FC = () => {
 className='space-y-4'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-4'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -703,6 +721,7 @@ className='space-y-4'
                     <Link
                       key={service.name}
                       href={service.href}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -830,6 +849,11 @@ className='space-y-4'
                     >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'
+                    >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {service.name}
                     </Link>
                   ))}
@@ -847,6 +871,7 @@ className='space-y-4'
           </div>;
 
           {/* Additional Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
@@ -876,38 +901,20 @@ className='space-y-4'
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Company Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Company</h4>;
               <div className='space-y-2'>;
                 {companyLinks && companyLinks.map(link => (;
                   <Link
-<<<<<<< HEAD
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <div className="space-y-2">
-                {companyLinks.map((link) => (
-                  <Link
-                    </Link>))}
-                </div>;
-              </motion.div>))}
-          </div>;
-          {/* Additional Links */}
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12 pt - 8 border - t border - gray - 800 / 50'>;
-            {/* Company Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Company</h4>;
-              <div className='space - y-2'>;
-                {company_links.map (link => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-=======
                     key={link.name}
                     href={link.href}
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
@@ -949,23 +956,11 @@ className='space-y-4'
                   >;
                 ))}
             {/* Legal Links */}
-<<<<<<< HEAD
-            <div>;
-              <h4 className='text-white font-semibold mb-4'>Legal</h4>;
-              <div className='space-y-2'>;
-                {legalLinks && legalLinks.map(link => (;
-                  <Link
-                    key={link && link.name}
-                    href={link && link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'>              <h4 className="text-white font-semibold mb-4">Legal</h4>;
-              <div className="space-y-2">;
-                {legalLinks && legalLinks.map((link) => (;
-=======
             <div>
 <h4 className='text-white font-semibold mb-4'>Legal</h4>
               <div className='space-y-2'>
                 {legalLinks.map(link => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <Link
                     key={link.name}
                     href={link.href}
@@ -1026,6 +1021,7 @@ className='space-y-4'
                   >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <social.icon className="w-5 h-5" />
                   </a>
 
@@ -1044,11 +1040,17 @@ className='space-y-4'
                   </a>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<social.icon className='w-5 h-5' />
+                  </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ))}
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1096,17 +1098,24 @@ className='space-y-4'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Newsletter Section */}
 <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
             <div className='text-center'>
               <motion.h3
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1127,6 +1136,10 @@ className='space-y-4'
 className='text-2xl md:text-3xl font-bold text-white mb-4'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-2xl md:text-3xl font-bold text-white mb-4'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -1135,6 +1148,7 @@ className='text-2xl md:text-3xl font-bold text-white mb-4'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1162,8 +1176,10 @@ className='text-2xl md:text-3xl font-bold text-white mb-4'
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-gray-400 mb-6 max-w-2xl mx-auto'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -1187,6 +1203,7 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto'
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1203,11 +1220,16 @@ className='text-gray-400 mb-6 max-w-2xl mx-auto'
 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <input
                   type='email'
                   placeholder='Enter your email'
                   className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
@@ -1295,6 +1317,8 @@ export default EnhancedFooter2025
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   Subscribe
@@ -1330,5 +1354,9 @@ export default EnhancedFooter2025
 };
 
 export default EnhancedFooter2025;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

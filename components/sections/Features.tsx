@@ -3,6 +3,7 @@
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   icon: React.ReactNode;
 =======
@@ -10,8 +11,10 @@ import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface Feature {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
@@ -49,6 +52,7 @@ import { Zap } from 'lucide-react';
   description: string;
   color: string;
   gradient: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   delay?: number;
@@ -153,6 +157,8 @@ const Features: React.FC<FeaturesProps> = ({
           </h2>;
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>            {subtitle}          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   delay?: number
 }
 
@@ -161,7 +167,7 @@ interface FeaturesProps {
   subtitle: string;
   features: Feature[];
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {subtitle}
           </p>;
         </div>;
@@ -176,6 +182,7 @@ interface FeaturesProps {
           {features && features.map((feature, index) => (;
             <Card
               key={index}
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -209,6 +216,8 @@ export default Features;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
             >
@@ -235,5 +244,9 @@ className='text-center group bg-gray-900/50 border border-gray-800 hover:border-
 };
 
 export default Features;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

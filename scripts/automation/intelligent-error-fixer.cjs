@@ -118,6 +118,7 @@ console.log("🤖 Starting intelligent error fixer...")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const sourceDirs = ["src", "components", "pages"]
@@ -131,3 +132,8 @@ console.log("🤖 Starting intelligent error fixer...")
   const sourceDirs = ["src", "components", "pages"]
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  const sourceDirs = ["src", "components", "pages"]
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

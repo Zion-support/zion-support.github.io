@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useEffect, useMemo, useState} from 'react';
 
 =======
@@ -51,6 +52,8 @@ export default function Assistant() {
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useEffect, useMemo, useState } from 'react';
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -68,7 +71,7 @@ export default function Assistant() {
   const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [messages, setMessages] = useState<Message[]>([
 {
       role: 'assistant',
@@ -101,6 +104,7 @@ export default function Assistant() {
     [];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
@@ -168,6 +172,8 @@ export default function Assistant() {
       return;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   async function handleAsk(question: string) {
     const lower = question.toLowerCase();
@@ -179,7 +185,7 @@ setMessages(prev => [
         { role: 'assistant', content: faqs[faq] },
       ]);
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     ]);
   }
@@ -203,6 +209,7 @@ setMessages(prev => [
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
 <<<<<<< HEAD
+<<<<<<< HEAD
             }>            {m && m.content}    }
     // Basic fallback;
     setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }]);
@@ -210,6 +217,8 @@ setMessages(prev => [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }
           >
             {m.content}
@@ -226,8 +235,12 @@ className='p-3 border-t flex gap-2'
           }
         }}
       >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
           placeholder="Ask about the role..."
@@ -248,9 +261,8 @@ className='p-3 border-t flex gap-2'
         </button>
       </form>
     </div>
-<<<<<<< HEAD
-}
   );
+<<<<<<< HEAD
   );
 
   );
@@ -434,4 +446,10 @@ if ( {) {
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

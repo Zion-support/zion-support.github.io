@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -19,6 +20,8 @@ interface Service {;
     yearly?: number;
     currency?: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -30,11 +33,12 @@ interface Service {;
     trialDays?: number;
     setupTime?: string
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   period?: string;
   pricing?: any;
   features: string[],;
   popular?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   competitors?: string[];
   targetMarket?: string;
@@ -568,6 +572,8 @@ export default UltraFuturisticServiceCard2026;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   category: string;
   icon: string;
   marketPrice?: string;
@@ -583,5 +589,9 @@ interface ServiceCardProps {
 }
 
 const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -12,9 +13,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { agendaItems } from '../../../../data/expo/agenda';
 
-=======
 import { agendaItems } from '../../../../data/expo/agenda';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string };
@@ -22,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ) {
   const { id } = req.query as { id?: string }
 ) {;
@@ -32,6 +34,7 @@ export default async function handler(
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00:00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
   res.setHeader('Content-Type', 'text/plain');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -47,10 +50,14 @@ export default async function handler(
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -59,6 +66,10 @@ export default async function handler(
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const item = agendaItems.find(i => i.id === id);
   if (!item) return res.status(404).send('Not found');
   const transcript = `Transcript for ${item.title} (Track: ${item.track}, Time: ${item.time})\n\n[00: 00] Intro...\n[05:00] Key points...\n[15:00] Q&A...`;
@@ -67,11 +78,16 @@ export default async function handler(
   res.status(200).send(transcript)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 =======
 
 =======
+=======
+
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   try {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -89,9 +105,16 @@ export default async function handler(
   res && res.setHeader('Content-Typetext/plain'),
   res && res.status(200).send(transcript)
 <<<<<<< HEAD
+<<<<<<< HEAD
 }import { agenda_items } from '../../../../data / expo / agenda';
 =======
 }
+=======
+}
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { agenda_items } from '../../../../data / expo / agenda';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -123,6 +146,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -139,23 +163,34 @@ function handler() {
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 }
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 }
@@ -164,6 +199,7 @@ function handler() {
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -182,3 +218,11 @@ function handler() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  res.status(200).send(transcript);
+  res.status(200).send(transcript)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

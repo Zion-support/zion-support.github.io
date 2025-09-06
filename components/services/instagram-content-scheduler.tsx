@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -7,6 +8,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
@@ -22,6 +25,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = Record<string, never>;
+<<<<<<< HEAD
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -32,6 +36,12 @@ type Props = Record<string, never>;
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+//Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const ServicePage: NextPage<Props> = () => {
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
     <>
@@ -48,6 +58,11 @@ const ServicePage: NextPage<Props> = () => {
   )
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
  //Using an explicit empty object type for props to satisfy lint rules type Props = Record<string never>;
 const ServicePage: NextPage<Props> = () => {;
   return (<> <Head> <title>Instagram Content Scheduler | Services</title> <meta name="description" content="Auto-generate posts from blog feeds and schedule with analytics." /> </Head> <main> <h1>InstagramContentScheduler</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default ServicePage;  return (
@@ -68,8 +83,11 @@ const ServicePage: NextPage<Props> = () => {;
 export default ServicePage;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 //Using an explicit empty object type for props to satisfy lint rules type Props = Record < string never>;
 const ServicePage: NextPage < Props> = () => {
@@ -89,6 +107,7 @@ const ServicePage: NextPage < Props> = () => {
 ;
 export default ServicePage;
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -97,9 +116,14 @@ export default ServicePage;
 <<<<<<< HEAD
 ;
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+export default ServicePage;
+
+
+export default ServicePage;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+ursor/fix-website-loading-errors-and-merge-6662
 export default ServicePage;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -133,6 +157,7 @@ export default ServicePage
 
 export default ServicePage;
 export default ServicePage;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -148,9 +173,18 @@ export default ServicePage;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextPage } from 'next';
 import Head from 'next/head';
 // Using an explicit empty object type for props to satisfy lint rules
 type Props = any;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -47,6 +47,7 @@ interface ContentCardProps {;
   glow: string;
   date?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,6 +56,8 @@ interface ContentCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   category?: string
 }
 
@@ -81,8 +84,12 @@ const ContentCard: React.FC<ContentCardProps> = ({
 
         {category && (
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {category}
           </span>;
         )}
@@ -114,6 +121,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Content */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
       {/* Footer */}
@@ -133,19 +141,26 @@ const ContentCard: React.FC<ContentCardProps> = ({
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>
         {title}
       </h3>
 
       <p className='text-white/70 leading-relaxed mb-6 line-clamp-3'>
         {description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </p>
       {/* Footer */}
 <div className='flex items-center justify-between'>
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>
           Read More
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -216,6 +231,8 @@ const ContentCard: React.FC<ContentCardProps> = ({
   )
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
             →
           </span>
@@ -228,12 +245,13 @@ const ContentCard: React.FC<ContentCardProps> = ({
       {/* Hover Effects */}
 <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
     </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
 
 export default ContentCard;
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='flex items - start justify - between mb - 6'>;
         <div;
@@ -305,3 +323,6 @@ export default ContentCard;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

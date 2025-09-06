@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -14,6 +15,12 @@ import Link from 'next/link';
 type EpisodeListItem = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+type EpisodeListItem = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 useEffect ( () => {
   const load = async () => {
   try {
@@ -46,15 +53,9 @@ useEffect ( () => {
                   <a
                     href={ep && ep.audio.mp3Url}
                     className='px-3 py-2 bg-blue-600 text-white rounded'
-<<<<<<< HEAD
-                    download>                    MP3;
-                  </a>;
-                )}
-                {ep && ep.audio?.wavUrl && (  if (loading) return <div>Loading episodes…</div>;
-=======
                     download
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <div className="flex items-center justify-between">;
@@ -77,6 +78,7 @@ useEffect ( () => {
                     MP3;
                   </a>;
                 )}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {ep && ep.audio?.wavUrl && (;
                   <a
@@ -197,6 +199,8 @@ useEffect ( () => {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {ep.audio?.wavUrl && (
 <a
                     href={ep.audio.wavUrl}
@@ -241,11 +245,16 @@ useEffect ( () => {
               </Link>
             </div>
           </li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         ))}
 
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -358,5 +367,8 @@ if (return <div > Loading episodes…</div>) {
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

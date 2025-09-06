@@ -17,6 +17,7 @@ const { execSync } = require('child_process')
     console.log(`Bundle "Size": ${bundleSize.success ? `${bundleSize.sizeInMB} MB``)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.log(`"Dependencies"`)
@@ -30,3 +31,8 @@ const { execSync } = require('child_process')
     console.log(`"Dependencies"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    console.log(`"Dependencies"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

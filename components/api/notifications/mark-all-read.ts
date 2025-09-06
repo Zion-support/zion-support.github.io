@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -54,6 +55,12 @@ function getUserId(req: NextApiRequest): string {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+    return res.status(405).json({ error: 'Method not allowed' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -61,6 +68,7 @@ function getUserId(req: NextApiRequest): string {
       .update({ read_status: true })
       .eq('user_id', userId)
       .eq('read_status', false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -91,13 +99,15 @@ function getUserId(req: NextApiRequest): string {
     return res && res.status(500).json({ error: 'Unexpected error' });
   }    return res && res.status(200).json({ ok: true })
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     if (error) return res.status(200).json({ ok: true });
 
 return res.status(200).json({ ok: true });
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' })
   };
@@ -106,6 +116,7 @@ return res.status(200).json({ ok: true });
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -113,3 +124,7 @@ return res.status(200).json({ ok: true });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

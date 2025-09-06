@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
@@ -185,31 +186,19 @@ const nextConfig = {
   // Webpack configuration to exclude problematic directories
   },
 
+=======
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ignoreBuildErrors: true
-  }
-  pageExtensions: ["tsx", "ts", "jsx", "js"]
-  trailingSlash: true
-  images: {
-    domains: [
-      "localhost"
-      "ziontechgroup.com"
-      "images.unsplash.com"
-      "via.placeholder.com"
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-    ]
-    formats: ["image/webp", "image/avif"]
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-    minimumCacheTTL: 31536000
-  }
-
-    minimumCacheTTL: 31536000
-=======
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
-=======
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
   experimental: {
+<<<<<<< HEAD
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
@@ -393,44 +382,16 @@ export default nextConfig;
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
 =======
-  }
 =======
-	reactStrictMode: false,
-	trailingSlash: true,
-	output: 'export',
-	images: {
-		unoptimized: true
-	},
-	eslint: {
-		ignoreDuringBuilds: true
-	},
-	async redirects() {
-		return [
-			{ source: '/api-documentation', destination: '/api-docs', permanent: true },
-			{ source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
-		];
-	},
-	webpack: (config, { isServer }) => {
-		// Exclude problematic directories from webpack compilation
-		config.watchOptions = {
-			...config.watchOptions,
-			ignored: ['**/apps/**', '**/temp_conflicts/**', '**/node_modules/**']
-		};
-
-		// Add custom webpack rule to ignore apps directory
-		config.module.rules.push({
-			test: /\.(ts|tsx|js|jsx)$/,
-			include: /apps\//,
-			use: 'ignore-loader'
-		});
-
-		return config;
-	}
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+    esmExternals: false
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  }
 };
 
 export default nextConfig;
 =======
+<<<<<<< HEAD
   reactStrictMode: true,
   experimental: {
     optimizePackageImports: ['@radix-ui/react-icons'],
@@ -545,13 +506,16 @@ export default nextConfig;
   },
   images: {
     domains: ['ziontechgroup.com'],
+=======
+  },
+  images: {
+    domains: ['ziontechgroup.com', 'localhost', 'images.unsplash.com', 'via.placeholder.com'],
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     unoptimized: true,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
   webpack: (config, { dev, isServer }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!dev && !isServer) {
       config.optimization.splitChunks.cacheGroups = {
@@ -573,6 +537,9 @@ export default nextConfig;
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
     // Completely exclude problematic directories from the build
+=======
+    // Exclude problematic directories from the build
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -600,16 +567,14 @@ export default nextConfig;
 
     return config;
   },
-  // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  onDemandEntries: {
-    // period (in ms) where the server will keep pages in the buffer
-    maxInactiveAge: 25 * 1000,
-    // number of pages that should be kept simultaneously without being disposed
-    pagesBufferLength: 2,
-  },
 };
 
+<<<<<<< HEAD
 export default nextConfig;
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+module.exports = nextConfig;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

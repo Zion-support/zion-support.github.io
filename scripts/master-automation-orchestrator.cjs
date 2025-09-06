@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -36,6 +37,15 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -49,49 +59,7 @@ const metricsResult = runCommand('Metrics Generation', 'echo "Generating final m
 <<<<<<< HEAD
 =======
   console.log('\n "Recommendations")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
-  console.log('\n "Recommendations")
-  console.log('\n "Recommendations")
-#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class MasterAutomationOrchestrator {
-  constructor() {
-    this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.startTime = new Date();
-    this.results = {
-      scripts: [],
-      tests: { passed: 0, failed: 0 },
-      builds: { success: false },
-      improvements: [],
-      errors: []
-    };
-  }
-
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = {
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'
-    }[type] || 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
-
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
-=======
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
     this.logFile = path.join(this.reportsDir, 'master-automation.log');
     this.ensureDirectories();
@@ -112,7 +80,7 @@ class MasterAutomationOrchestrator {
 
   async runCommand(command, description) {
     this.log(`🚀 Starting: ${description}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -120,44 +88,6 @@ class MasterAutomationOrchestrator {
         encoding: 'utf8',
         ...options,
       });
-<<<<<<< HEAD
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-      };
-    }
-  }
-
-  async runScript(scriptPath, description) {
-    this.log(`\n🔄 Running: ${description}`);
-    
-    try {
-      const result = await this.runCommand(`node ${scriptPath}`, description);
-      
-      this.results.scripts.push({
-        name: description,
-        path: scriptPath,
-        success: result.success,
-        error: result.error
-      });
-      
-      if (result.success) {
-        this.log(`✅ ${description} completed successfully`, 'SUCCESS');
-      } else {
-        this.log(`❌ ${description} failed: ${result.error}`, 'ERROR');
-        this.results.errors.push(`${description}: ${result.error}`);
-      }
-      
-      return result;
-    } catch (error) {
-      this.log(`❌ Error running ${description}: ${error.message}`, 'ERROR');
-      this.results.errors.push(`${description}: ${error.message}`);
-=======
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
     } catch (error) {
@@ -388,7 +318,7 @@ class MasterAutomationOrchestrator {
       return { success, report, failedAutomations };
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       return { success: false, error: error.message };
     }
   }
@@ -592,12 +522,6 @@ class MasterAutomationOrchestrator {
   }
 }
 
-<<<<<<< HEAD
-// Run the master automation orchestrator
-if (require.main === module) {
-  const orchestrator = new MasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-=======
 // Run the automation
 if (require.main === module) {
   const automation = new MasterAutomationOrchestrator();
@@ -610,10 +534,11 @@ if (require.main === module) {
       process.exit(1);
     }
   });
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 module.exports = MasterAutomationOrchestrator;
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
 <<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -625,3 +550,8 @@ module.exports = MasterAutomationOrchestrator;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

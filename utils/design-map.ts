@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type DesignMapSection = {;
   id: string;
   title: string;
@@ -235,6 +236,8 @@ export interface TokenSet {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface TokenSet {;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type DesignMapSection = {
   id: string;
   title: string;
@@ -506,7 +509,7 @@ export function getZionDesignMap(): DesignMap {
   };
 
 export type TokenSet = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -523,6 +526,7 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -530,6 +534,8 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
   tokens: TokenSet;
@@ -554,7 +560,7 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -656,7 +662,14 @@ export function buildUIKit(kind: UIKitKind): Record<string, string> {
         'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
       'components/Card && Card.tsx':
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+<<<<<<< HEAD
 =======    };
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    };
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   if (kind === 'chakra') {
     return {
@@ -683,6 +696,7 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     if (!res && res.ok) return null;
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
+<<<<<<< HEAD
     return null
 };
   };
@@ -696,6 +710,85 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     const designSystem = this.designSystems.get(designSystemId);
     if (!designSystem) return false;  const tokens = await buildTokenSet(fileId);
   return {
+=======
+    return null;
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+// Design mapping utilities
+export interface DesignElement {
+  id: string;
+  type: 'component' | 'layout' | 'style' | 'asset';
+  name: string;
+  figmaId?: string;
+  properties: Record<string, any>;
+  children?: DesignElement[];
+  parent?: string;
+}
+
+export interface DesignSystem {
+  id: string;
+  name: string;
+  version: string;
+  components: DesignElement[];
+  tokens: Record<string, any>;
+  assets: DesignElement[];
+  lastUpdated: Date;
+}
+
+export interface FigmaNode {
+  id: string;
+  name: string;
+  type: string;
+  children?: FigmaNode[];
+  absoluteBoundingBox?: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  fills?: Array<{
+    type: string;
+    color?: {
+      r: number;
+      g: number;
+      b: number;
+      a: number;
+    };
+  }>;
+  effects?: Array<{
+    type: string;
+    radius?: number;
+    color?: {
+      r: number;
+      g: number;
+      b: number;
+      a: number;
+    };
+  }>;
+  characters?: string;
+  style?: {
+    fontFamily?: string;
+    fontSize?: number;
+    fontWeight?: number;
+    textAlignHorizontal?: string;
+    textAlignVertical?: string;
+  };
+}
+
+  const tokens = await buildTokenSet(fileId);
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    };
+  };
+}
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+
+  const tokens = await buildTokenSet(fileId);
+  return {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -878,6 +971,7 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 =======
@@ -886,6 +980,10 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -905,11 +1003,14 @@ export async function buildTokenSet (file_id: string): Promise < TokenSet> {
       lg: 24,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       xl: 32,
 =======
 <<<<<<< HEAD
       xl: 32,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       xl: 32;
     }
   }
@@ -922,15 +1023,9 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           padding: tokens.spacing.md;
         }
       }
-<<<<<<< HEAD
-}
-  };
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
-}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+main
     },
 <<<<<<< HEAD
     tokens;
@@ -939,6 +1034,7 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
   return {;
     'README.md': '# Zion OS React UI Kit\n\nFramework-agnostic React components.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"}
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {;
@@ -957,6 +1053,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   };
 }
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export async function buildUIKit(
   fileId: string,
@@ -968,6 +1066,7 @@ export async function buildUIKit(
     components: {
       button: {
         primary: {
+<<<<<<< HEAD
 <<<<<<< HEAD
           backgroundColor: tokens.colors.primary,
           padding: tokens.spacing.md,
@@ -992,6 +1091,12 @@ export async function buildUIKit(
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           backgroundColor: tokens.colors.primary
           padding: tokens.spacing.md
         }
@@ -1047,5 +1152,9 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   } catch {
     return null;
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -11,30 +11,36 @@ console.log('=');
 
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
 <<<<<<< HEAD:scripts/resolve-final-conflicts.cjs
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+:scripts/resolve-final-conflicts.cjs
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('🔧 Resolving Final Conflicts');
 console.log('============================');
 
 // Function to resolve merge conflicts by keeping the first version
 function resolveMergeConflicts(content) {
   return content
-    .replace(/>>>>>>> [a-f0-9]+/g, '');
+    .replace(/[a-f0-9]+/g, '');
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/resolve-final-conflicts.cjs
 =======
 <<<<<<< HEAD:backup-problematic-files/scripts/final-build-fix.cjs
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('🔧 Final Build Fix');
 console.log('====');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
+:backup-problematic-files/scripts/final-build-fix.cjs
+:scripts/resolve-final-conflicts.cjs
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 // Function to fix all remaining syntax errors
@@ -148,6 +154,7 @@ for (const file of filesToFix) {
 
     let content = fs.readFileSync(file, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/ultimate-syntax-fix.cjs
     const originalContent = content;
 
@@ -160,6 +167,8 @@ for (const file of filesToFix) {
 
     // Check for merge conflict markers
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const originalContent = content;
     
     content = fixAllSyntax(content);
@@ -219,6 +228,7 @@ console.log('\n🎉 Ultimate syntax fix completed!');
 =======
 
 console.log('\n🎉 Final build fix completed!');
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -230,3 +240,10 @@ console.log('\n🎉 Final build fix completed!');
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:scripts/resolve-final-conflicts.cjs
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+:backup-problematic-files/scripts/final-build-fix.cjs
+    let modified = false;
+
+    // Check for merge conflict markers
+:scripts/resolve-final-conflicts.cjs
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

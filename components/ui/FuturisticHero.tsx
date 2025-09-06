@@ -18,6 +18,7 @@ export default function FuturisticHero() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
       <div className='text-center max-w-4xl mx-auto'>;
@@ -66,6 +67,8 @@ function FuturisticHero() {
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Talent marketplace • Project accelerators • Secure contracts • Integrated AI toolchain
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <section className='relative py-20 sm:py-28'>
       <AnimatedBackground />
       <div className='text-center max-w-4xl mx-auto'>
@@ -92,7 +95,7 @@ function FuturisticHero() {
           <p className='text-sm text-gray-700 dark:text-gray-300'>
             Talent marketplace • Project accelerators • Secure contracts •
             Integrated AI toolchain
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </div>
@@ -102,6 +105,7 @@ function FuturisticHero() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <div className='mt - 10 mx - auto max - w-3xl p - 6 rounded - 2xl bg - white / 70 dark:bg - black / 40 backdrop - blur border border - gray - 200 dark:border - gray - 800 shadow'>;
@@ -134,6 +138,9 @@ function FuturisticHero() {
     </section>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 <<<<<<< HEAD
 

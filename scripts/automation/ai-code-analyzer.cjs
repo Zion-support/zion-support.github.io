@@ -188,6 +188,7 @@ if ( {})
     analyzer.run().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AICodeAnalyzer;
@@ -201,3 +202,8 @@ module.exports = AICodeAnalyzer;
 module.exports = AICodeAnalyzer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = AICodeAnalyzer;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

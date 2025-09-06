@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 export default function AutomationsPage() {
@@ -42,17 +43,20 @@ import Link from 'next/link';
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import Link from 'next/link';
 
 export default function AutomationsPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <a
               href='https://github.com/Zion-Holdings/zion.app/actions'
               target='_blank'
               rel='noreferrer'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'            >              href="https://github.com/Zion-Holdings/zion.app/actions"
@@ -68,10 +72,16 @@ export default function AutomationsPage() {
             >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              className='rounded-md border border-gray-200 px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50'
+            >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               View Live Runs
             </a>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +117,8 @@ export default function AutomationsPage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <div className='rounded-xl border border-gray-200 bg-white p-6 shadow-sm'>
           <h2 className='text-lg font-semibold text-gray-900'>
@@ -122,14 +134,19 @@ export default function AutomationsPage() {
                 View Curated Output
               </a>
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </div>
       </div>
     </main>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -140,3 +157,6 @@ export default function AutomationsPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node;
@@ -13,6 +14,11 @@
 #!/usr/bin/env node;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -34,6 +40,7 @@ const path = require("path")
       "pages/pricing.tsx"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       "
@@ -47,3 +54,8 @@ const path = require("path")
       "
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      "
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

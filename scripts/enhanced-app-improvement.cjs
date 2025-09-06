@@ -65,6 +65,7 @@ const path = require('path')
         execSync(step, { "stdio"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(` Process "failed"`)
@@ -78,3 +79,8 @@ const path = require('path')
       this.log(` Process "failed"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log(` Process "failed"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

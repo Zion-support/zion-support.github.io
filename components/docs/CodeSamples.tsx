@@ -25,6 +25,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface Props {
   samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 =======
@@ -55,6 +56,8 @@ export default function CodeSamples({ samples }: Props) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface Props {
 samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
 
@@ -67,13 +70,18 @@ const tabs: Array<{
   { key: 'python', label: 'Python' }
 ];
 export default function CodeSamples({ samples }: Props) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
     <div className='w-full'>
       <div className='flex gap-2 mb-2'>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {tabs.map(t => (          <button
 <<<<<<< HEAD
@@ -136,13 +144,15 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   { key: 'curl', label: 'cURL' },
   { key: 'javascript', label: 'JavaScript' },
   { key: 'python', label: 'Python' }];
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
@@ -177,13 +187,8 @@ export default function CodeSamples({ samples }: Props) {
       </pre>
     </div>
   );
-<<<<<<< HEAD
-}      <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm">
-        <code>{sampleMap[active] |''}</code>
-      </pre>
-    </div>
-);
 }
+<<<<<<< HEAD
 
           <button
             key={t && t.key}
@@ -280,3 +285,6 @@ function CodeSamples() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

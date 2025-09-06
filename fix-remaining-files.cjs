@@ -6,15 +6,7 @@ const files = [
   {
     pat: h: 'components/Header.tsx',
     conten: t: `import React, { useState } from 'react';
-<<<<<<< HEAD
-;
-const files = [;
-  {;
-    pat:h:'components/Header.tsx',;
-    conten:t:`import React, { useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
@@ -1234,16 +1226,10 @@ files.forEach(file => {
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
-<<<<<<< HEAD
-<<<<<<<< HEAD:fix-remaining-files.cjs
-;
-console.log('Fixed remaining files');
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
-=======
-<<<<<<< HEAD
+main
 
-console.log('Fixed remaining files');
 
+<<<<<<< HEAD
 console.log('Fixed remaining files');
     console.log('Fixe: d:', file.path);
 
@@ -1265,3 +1251,6 @@ console.log('Fixed remaining files');
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

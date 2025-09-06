@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 
@@ -33,6 +34,11 @@ import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head';
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Search,
   Filter,
   Star,
@@ -49,7 +55,10 @@ import Head from 'next/head';
   Atom,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Sparkles,;
   Target,;
 
@@ -85,15 +94,18 @@ import {;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   Sparkles,
   Target,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -145,6 +157,8 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
       const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const allServices = null;
                 emerging technologies, and comprehensive IT solutions
   ];
@@ -159,11 +173,12 @@ const matchesSearch =
         selectedCategory === 'all' |
         service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD
         default:;
           return a.name.locale_compare (b.name);      }      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
@@ -185,16 +200,23 @@ const matchesSearch =
             parse_float (b.price.replace (/[^0 - 9.]/g, '')));          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
         case 'rating':;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return (
             parseFloat(a.price.replace(/[^0-9.]/g, '')) -
             parseFloat(b.price.replace(/[^0-9.]/g, ''))
           );
         case 'rating':
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         default:
@@ -404,6 +426,8 @@ return (
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 default:
           return a.name.localeCompare(b.name);
       }
@@ -516,7 +540,7 @@ website: 'https://ziontechgroup.com',
                 quantum computing, emerging technologies, and comprehensive IT
                 solutions
               </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>;
@@ -548,6 +572,7 @@ website: 'https://ziontechgroup.com',
                     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -564,9 +589,11 @@ website: 'https://ziontechgroup.com',
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                   <div className='text-gray-400 text-sm'>Emerging Tech</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -590,6 +617,7 @@ website: 'https://ziontechgroup.com',
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -679,6 +707,8 @@ website: 'https://ziontechgroup.com',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Search and Filter Section */}
 <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -707,17 +737,17 @@ website: 'https://ziontechgroup.com',
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     ))}
                 {/* Sort By */}
-<<<<<<< HEAD
-                <div className='relative'>;
-                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
-=======
 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'
@@ -786,6 +816,7 @@ className='group'
                 {/* Sort By */}
 
                     {/* Service Title */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -857,6 +888,8 @@ className='group'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
                     </h3>
@@ -868,8 +901,12 @@ className='group'
 <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
                         <span className='text-gray-400 text-lg font-normal'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {service.period}
                         </span>;
                       </div>;
@@ -877,6 +914,7 @@ className='group'
                         <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                         <span className='text - white text - sm'>;
                           {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -903,6 +941,8 @@ className='group'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>;
 
                     {/* Service Title */}
@@ -973,6 +1013,8 @@ className='group'
                             {feature}
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                         </span>
                         <span className='text-gray-400 text-sm'>
                           ({service.reviews})
@@ -996,7 +1038,7 @@ className='group'
                           >
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
                             {feature}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </li>
                         ))}
                       </ul>
@@ -1030,6 +1072,7 @@ className='group'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     {/* Category and Technology */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div className="flex items-center justify-between mb-4">
@@ -1068,6 +1111,8 @@ className='group'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
                         {service.category}
@@ -1080,8 +1125,12 @@ className='group'
                     <a
                       href={service.link}
 className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     >
                       Learn More
                     </a>
@@ -1106,6 +1155,7 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
                 animate={{ opacity: 1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -1127,6 +1177,8 @@ className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-s
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -1140,7 +1192,7 @@ className='text-center py-16'
             )}
           </div>
         </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Contact Section */}
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -1244,6 +1296,7 @@ className='text-center py-16'
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1351,6 +1404,8 @@ className='text-center py-16'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 0.8 }}
 className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
             >
@@ -1385,7 +1440,7 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 bord
                 >
                   Contact Us Now
                 </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
 href='/pricing'
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
@@ -1400,9 +1455,13 @@ href='/pricing'
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
                   View Pricing;
@@ -1498,7 +1557,13 @@ href='/pricing'
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 }
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -53,6 +54,8 @@ useEffect ( () => {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface LazyImageProps {
@@ -69,12 +72,17 @@ export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
   className;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
           setIsInView(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
           observer && observer.disconnect();
         }
@@ -109,6 +117,8 @@ if ( {) {
 }
       observer.observe (img_ref.current);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 observer.disconnect();
         }
       },
@@ -116,29 +126,19 @@ observer.disconnect();
     );
     if (imgRef.current) {
 observer.observe(imgRef.current);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return () => observer.disconnect ();
   }, [threshold]);
-<<<<<<< HEAD
-;
-  const handle_load = () =>: any {
-    setIsLoaded (true);  }    }
-    return () => observer.disconnect ();
-  }, [threshold]);
-;
-  const handle_load = () =>: any {
-    setIsLoaded (true);
-  }
-=======
   const handleLoad = () => {
     setIsLoaded(true);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className={`relative overflow - hidden ${class_name}`}>;
       {/* Placeholder */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -149,12 +149,19 @@ observer.observe(imgRef.current);
 alt=''
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      <img
+        src={placeholder}
+alt=''
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,6 +182,9 @@ alt=''
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -183,6 +193,7 @@ alt=''
           src={src}
           alt={alt}
           onLoad={handleLoad}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 alt=''        className={`absolute inset - 0 w - full h - full object - cover transition - opacity duration - 500 ${        alt="";
@@ -212,15 +223,18 @@ alt=''        className={`absolute inset - 0 w - full h - full object - cover tr
 export default LazyImage;          className="w-full h-full object-cover";
           loading="lazy";
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
 className='w-full h-full object-cover'
           loading='lazy'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           style={{ width, height }}
         />;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>;
   );
@@ -247,10 +261,16 @@ export default LazyImage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
 );
 };
 
 export default LazyImage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

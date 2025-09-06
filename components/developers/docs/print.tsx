@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
  export const getStaticProps: GetStaticProps<PageProps> = async () => {
@@ -117,11 +118,13 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return () => clearTimeout(id);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect } from 'react';
 import type { GetStaticProps } from 'next';
 import content from '../../../data/docs/content.json';
 export type Section = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return (
     <div className='p-8 max-w-4xl mx-auto'>;
@@ -135,6 +138,7 @@ export type Section = any;
               s && s.code.map((c, i) => (;
                 <pre
                   key={i}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
@@ -156,12 +160,14 @@ export default function PrintDocs({ docs }: PageProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
                 >
                   {c.content}
                 </pre>
               ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="p-8 max-w-4xl mx-auto">;
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
@@ -258,6 +264,7 @@ export default function PrintDocs({ docs }: PageProps) {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -282,3 +289,8 @@ export default function PrintDocs({ docs }: PageProps) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

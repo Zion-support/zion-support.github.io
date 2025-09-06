@@ -1,0 +1,352 @@
+<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
+import { Check, Pencil } from 'lucide-react'
+
+interface GeneratedDescriptionDisplayProps {
+  description: string,
+  onSave: (editedDescription: string) => void
+}
+
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast(),
+  const [isEditing, setIsEditing] = useState(false),
+  const [editedDescription, setEditedDescription] = useState(description),
+=======
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardFooter,;
+} from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
+import { Check, Pencil } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+
+interface GeneratedDescriptionDisplayProps {,
+  description: string;
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {,
+  description: string,;
+  onSave: (editedDescription: string,) => void;
+}
+
+export function GeneratedDescriptionDisplay(): any ({;
+  description,;
+  onSave,;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast();
+  const [isEditing, setIsEditing] = useState(false);
+  const [editedDescription, setEditedDescription] = useState(description);
+<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+<<<<<<< HEAD
+
+  const handleSave = () => {;
+    onSave(editedDescription);
+    setIsEditing(false);
+    toast({;
+      title: 'Description Saved',,
+  description: 'Your edited description has been saved.',;
+    })
+};
+
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+  const handleSave = null;
+import React, { useState } from 'react'
+import { useToast } from '@/hooks/use-toast'
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardFooter
+} from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Check, Pencil } from 'lucide-react'
+interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
+  description: string
+  onSave: (editedDescription: string,) => void
+}
+export function GeneratedDescriptionDisplay({
+  description
+  onSave
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast()
+  const [isEditing, setIsEditing] = useState(false)
+  const [editedDescription, setEditedDescription] = useState(description)
+  const handleSave = () => {
+    onSave(editedDescription)
+    setIsEditing(false)
+    toast({
+      title: 'Description Saved'
+      description: 'Your edited description has been saved.'
+    })
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+  return (
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">
+      <CardHeader>
+        <CardTitle className="text-white flex items-center justify-between">
+          Generated Description
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+          >
+            {isEditing ? (
+              <>
+                <Check className="h-4 w-4 mr-1" />
+                Done
+              </>
+            ) : (
+              <>
+                <Pencil className="h-4 w-4 mr-1" />
+                Edit
+              </>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Check, Pencil } from 'lucide-react';
+interface GeneratedDescriptionDisplayProps {,
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({;
+  description,;
+  onSave;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+    toast({;
+      title: "Description Saved",
+  description: "Your edited description has been saved.";
+    })
+};
+  return (;
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center justify-between">;
+          Generated Description;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white";
+          >;
+            {isEditing ? (;
+              <>;
+                <Check className='h-4 w-4 mr-1' />;
+                Done;
+              </>;
+            ) : (;
+              <>;
+                <Pencil className='h-4 w-4 mr-1' />;
+                Edit;
+              </>;
+            )}
+          </Button>;
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        {isEditing ? (;
+          <Textarea;
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+          />
+        ) : (
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+            {editedDescription}
+          </div>;
+        )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+          <Button;
+=======
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+=======
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+=======
+          <Button;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+
+            onClick={handleSave}
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+            onClick={handleSave}
+=======
+      </CardContent>;
+      {isEditing && (;
+        <CardFooter>;
+          <Button            onClick={handleSave}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+          >
+
+            Save Changes
+          </Button>
+        </CardFooter>
+      )}
+<<<<<<< HEAD
+    </Card>;
+  );
+}
+=======
+
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) 
+}</Card>) 
+}'"
+};
+
+    </Card>;
+  );
+
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+}</Button> </CardTitle> </CardHeader> <CardContent> {;
+  isEditing ? (<Textareavalue= {
+  editedDescription 
+}</div>) ;
+}</CardContent> {;
+  isEditing && (<CardFooter> <ButtononClick={
+  handleSave "
+<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+<<<<<<< HEAD
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"> Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'";
+}
+
+        {is_editing ? (
+          <Textarea;
+            value={edited_description}
+            on_change={e => setEditedDescription (e.target.value)}
+            className='bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none'          />) : (
+          <div className='bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap'>;
+            {edited_description}
+          </div>)}
+      </CardContent>;
+      {is_editing && (
+        <CardFooter>;
+          <Button;
+            on_click={handle_save}
+            className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white'          >;
+            Save Changes;
+          </Button>;
+        </CardFooter>)}
+    </Card>);
+  is_editing ? (<> <Check className="h - 4 w - 4 mr-1" /> Done </>) : (<> <Pencil className="h - 4 w - 4 mr-1" /> Edit </>);
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  is_editing ? (<Textarea value= {
+  edited_description;
+}</div>);
+}</CardContent> {
+  is_editing && (<CardFooter> <Button on_click={
+  handle_save ";
+}className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text-white" > Save Changes </Button> </CardFooter>);
+}</Card>);
+}'";
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+;
+=======
+;
+=======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308:src_backup/components/services/GeneratedDescriptionDisplay.tsx
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>)
+}</Card>)
+}'"
+<<<<<<< HEAD:src/components/services/GeneratedDescriptionDisplay.tsx
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508:src_backup/components/services/GeneratedDescriptionDisplay.tsx

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Header() {
@@ -66,6 +67,10 @@ const Header: React.FC = () => {
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Menu, X } from 'lucide-react';
 <<<<<<< HEAD
 =======
@@ -84,6 +89,7 @@ const Header: React.FC = () => {
     { name: 'Contact', href: '/contact' }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const toggleMenu = () => {
@@ -108,10 +114,26 @@ const Header: React.FC = () => {
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
           </Link>
+=======
+  return (
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+          </div>
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div key={item.name} className="relative">
                 {item.dropdown ? (
@@ -313,16 +335,19 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
           {/* Mobile Menu Button */}
@@ -447,16 +472,58 @@ const Header: React.FC = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          {/* Desktop CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              Call Us
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Email
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
+            >
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
+<<<<<<< HEAD
                   className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
+=======
+                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </nav>
 <<<<<<< HEAD
@@ -470,6 +537,27 @@ const Header: React.FC = () => {
           )}
         </AnimatePresence>
 >>>>>>> fc9ad33614067110319e944190e4534fa8fe3115
+=======
+              <div className="pt-4 border-t border-gray-200">
+                <a
+                  href="tel:+13024640950"
+                  className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mb-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Call Us: +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Email: kleber@ziontechgroup.com
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </div>
 <<<<<<< HEAD
 
@@ -894,6 +982,7 @@ export default Header;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 <<<<<<< HEAD
@@ -932,3 +1021,6 @@ export default Header;
 =======
 export default Header;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default Header;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

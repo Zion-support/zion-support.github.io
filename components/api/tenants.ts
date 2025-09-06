@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { authenticateRequest } from '@/utils/auth';
 
 =======
@@ -12,6 +13,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { authenticateRequest } from '@/utils/auth';
 import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -24,8 +27,12 @@ import {
 } from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (method === 'GET') {
     return res && res.status(200).json({ tenants: getTenants() });
   }
@@ -188,6 +195,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { branding } = req.body || {};
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -199,17 +207,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (!branding?.name)
       return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   if (method === 'PUT') {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+<<<<<<< HEAD
 <<<<<<< HEAD
     const result = updateTenant(tenantId, update || {});
 <<<<<<< HEAD
@@ -234,6 +249,8 @@ if (!branding?.name)
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const result = updateTenant(tenantId, update |{});
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 return res.status(200).json({ tenant: result });
@@ -249,12 +266,17 @@ if (!tenantId || !rotateKey)
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return res.status(200).json({ tenant: result })
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -272,3 +294,6 @@ return res.status(405).json({ error: 'Method not allowed' });
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

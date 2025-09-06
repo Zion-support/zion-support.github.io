@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -48,6 +49,8 @@ export default function Button({
         {children}
       </Link>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
     | 'default'
@@ -100,7 +103,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       />
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     );
   }
   
@@ -110,20 +113,23 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     </button>
   );
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import React from "react";
 
-=======
 import React from 'react';
 import Link from 'next/link';
 import React from "react";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ButtonProps {;
   children: React && React.ReactNode;
@@ -222,6 +228,10 @@ if ( {) {
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
@@ -247,46 +257,10 @@ const Button: React.FC<ButtonProps> = ({
   };
 const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-<<<<<<< HEAD
-  const content = (
-    <>
-      {/* Shine effect for primary buttons */}
-      {variant === 'primary' && (
-        <div className='absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-1000' />
-      )}
-
-      {icon && iconPosition === 'left' && (
-        <span className='mr-2 transition-transform duration-200 group-hover:scale-110'>
-          {icon}
-        </span>
-      )}
-      <span className='relative z-10'>{children}</span>
-      {icon && iconPosition === 'right' && (
-        <span className='ml-2 transition-transform duration-200 group-hover:scale-110'>
-          {icon}
-        </span>
-      )}
-    </>
-  );
-
-  if (href) {
-    return (
-      <Link href={href} className={classes} style={style}>
-        {content}
-      </Link>
-    );
-  }
-
-  
-    >
-      {content}
-    </button>
-  );
-};
-
-export default Button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export { Button };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

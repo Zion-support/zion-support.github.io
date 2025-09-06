@@ -29,6 +29,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
@@ -131,6 +132,8 @@ import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, Trend
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon  } from 'lucide-react';
 import Button from '../components/ui/Button',
 import Card from '../components/ui/Card',
@@ -139,14 +142,19 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -174,6 +182,8 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
@@ -183,14 +193,19 @@ import {
 } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('innovation');
   const [showFilters, setShowFilters] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     { value: '1001-2000', label: '$1,001 - $2,000' };
@@ -371,6 +386,8 @@ export default function InnovativeServicesPage() {;
     filteredServices = getInnovativeServicesByPriceRange(min, max);
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     { value: 'All', label: 'All Prices' },
 { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2000', label: '$1,001 - $2,000' },
@@ -411,7 +428,7 @@ filteredServices = filteredServices.filter(
     );
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -476,6 +493,7 @@ if ( {) {
       case 'category':;
         return a.category.locale_compare (b.category);
       case 'roi': {
+<<<<<<< HEAD
 <<<<<<< HEAD
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 }
@@ -609,6 +627,8 @@ if ( {) {
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0);
         }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
 return bRoi - aRoi;
@@ -630,12 +650,13 @@ return bRoi - aRoi;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 website: 'https://ziontechgroup.com',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   };
 
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>;
                 </div>;
@@ -692,6 +713,8 @@ website: 'https://ziontechgroup.com',
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <>
       <Head>
         <title>Innovative Micro SAAS Services - Zion Tech Group</title>
@@ -820,8 +843,12 @@ website: 'https://ziontechgroup.com',
                   </div>
                   {/* Price Range Filter */}
 <div className='flex-shrink-0'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
@@ -857,17 +884,24 @@ website: 'https://ziontechgroup.com',
                         </option>
                       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </select>
                   </div>
                   {/* Sort Options */}
 <div className='flex-shrink-0'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
@@ -912,6 +946,7 @@ website: 'https://ziontechgroup.com',
                   </div>
                   {/* View Mode Toggle */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className='flex-shrink-0'>;
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>;
 
@@ -922,8 +957,10 @@ website: 'https://ziontechgroup.com',
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex-shrink-0'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -936,11 +973,14 @@ website: 'https://ziontechgroup.com',
                         }`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                       >
                         <Grid className="w-5 h-5" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       >
                         <Grid className='w-5 h-5' />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -970,14 +1010,19 @@ viewMode === 'list'
 =======
                         <List className='w-5 h-5' />
                       </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1036,6 +1081,8 @@ viewMode === 'list'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Services Grid/List */}
 <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-7xl mx-auto'>
@@ -1079,8 +1126,12 @@ viewMode === 'list'
                             </div>
                           )}
                         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         {/* Tagline */}
 <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
@@ -1100,6 +1151,7 @@ viewMode === 'list'
                         </p>;
 
                         {/* Innovation Level */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <div className='mb-4'>;
                           <div className='flex items-center space-x-2 mb-2'>;
@@ -1195,6 +1247,8 @@ viewMode === 'list'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         <div className='mb-4'>
                           <div className='flex items-center space-x-2 mb-2'>
                             <Sparkles className='w-4 h-4 text-yellow-400' />
@@ -1264,8 +1318,12 @@ viewMode === 'list'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -1276,6 +1334,7 @@ viewMode === 'list'
                             <div className='text-gray-400'>Growth Rate</div>
                             <div className='text-white font-medium'>
                               {service.growthRate}
+<<<<<<< HEAD
 <<<<<<< HEAD
                             </div>                          </div>
                         </div>
@@ -1342,6 +1401,8 @@ viewMode === 'list'
                       </div>;
                     </QuantumHolographicCard>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </div>
                           </div>
                         </div>
@@ -1372,7 +1433,7 @@ viewMode === 'list'
                         </div>
                       </div>
                     </QuantumHolographicCard>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   ))}
                 </div>;
               )}
@@ -1446,6 +1507,7 @@ viewMode === 'list'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     variant='primary'
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}
                   </Button>;
@@ -1488,6 +1550,8 @@ viewMode === 'list'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'
                   >
                     <Phone className='w-5 h-5 mr-2' />
@@ -1505,8 +1569,12 @@ variant='secondary'
                 <div className='mt-8 text-sm text-gray-400'>
                   <div>Address: {contactInfo.address}</div>
                   <div className='mt-1'>Website: {contactInfo.website}</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1514,6 +1582,7 @@ variant='secondary'
         </div>
       </QuantumHolographicBackground>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1777,5 +1846,9 @@ variant='secondary'
 =======
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

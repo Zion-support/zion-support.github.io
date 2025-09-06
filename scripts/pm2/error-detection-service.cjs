@@ -19,17 +19,21 @@ const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -38,6 +42,7 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -53,6 +58,11 @@ class ErrorDetectionService {}
     
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -76,6 +86,7 @@ class ErrorDetectionService {}
       data,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       "service": 'error-detection-service'
     };
@@ -83,17 +94,18 @@ class ErrorDetectionService {}
 
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "service": 'error-detection-service'
     };
 
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      "service": 'error-detection-service'
-    };
 
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -141,15 +153,18 @@ class ErrorDetectionService {}
       this.startFileWatching();
       
       this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -165,17 +180,21 @@ class ErrorDetectionService {}
       'temp'
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -394,17 +413,21 @@ class ErrorDetectionService {}
         'tailwind.config.js'
       ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -436,17 +459,21 @@ class ErrorDetectionService {}
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -507,6 +534,7 @@ class ErrorDetectionService {}
     const closeComments = (content.match(/\*\//g) || []).length;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     
@@ -520,6 +548,11 @@ class ErrorDetectionService {}
     
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -803,6 +836,7 @@ class ErrorDetectionService {}
       report.summary.errorsByType[type] = count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
@@ -816,6 +850,11 @@ class ErrorDetectionService {}
       
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -1035,6 +1074,7 @@ service.start().catch(error => {})
   process.exit(1)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
@@ -1048,3 +1088,8 @@ service.start().catch(error => {})
 });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+});
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

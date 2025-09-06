@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TalentProfile } from '@/types/talent';
 
 import { TalentProfile } from "@/types/talent";
@@ -13,16 +14,23 @@ export const TALENT_PROFILES: TalentProfile[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       {
       },
     ],
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 <<<<<<< HEAD
 
 =======
+=======
+  {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {
 
           'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
@@ -41,7 +49,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
       'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     id: 't - 006',
     user_id: 'user - 006',
@@ -50,8 +58,13 @@ export const TALENT_PROFILES: TalentProfile[] = [
     profile_picture_url:;
       'https://images.unsplash.com / photo - 1494790108377 - be9c29b29330?auto = format & fit = crop & w=200 & h=200',
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
 =======
   {    bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
@@ -185,23 +198,25 @@ export const TALENT_PROFILES: TalentProfile[] = [
     rating_count: 27,
     availability_type: 'project',
 <<<<<<< HEAD
+<<<<<<< HEAD
     is_verified: true,
 <<<<<<< HEAD
-
-          'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
-    id: "t-001", user_id: "user-001",
-    full_name: "Alexandra Chen", professional_title: "Senior AI Engineer & Machine Learning Expert",
-<<<<<<< HEAD
 =======
+    is_verified: true,
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -238,6 +253,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
   },
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -252,17 +268,21 @@ export const TALENT_PROFILES: TalentProfile[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
 ];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
@@ -271,10 +291,18 @@ export const TALENT_PROFILES: TalentProfile[] = [
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "t-001";
     user_id: "user-001";
     full_name: "Alexandra Chen";
     professional_title: "Senior AI Engineer & Machine Learning Expert";
     profile_picture_url: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

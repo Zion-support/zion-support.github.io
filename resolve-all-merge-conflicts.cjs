@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
         content = content.replace(/
 
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ function resolveMergeConflicts(filePath) {
     // Handle incomplete conflicts (missing closing markers)
     content = content.replace(/[\s\S]*?
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('🚀 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve modify/delete conflicts by removing the files
@@ -53,8 +56,6 @@ function resolveModifyDeleteConflicts() {
   }
 }
 
-<<<<<<< HEAD
-=======
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -119,14 +120,16 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g, '');
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         // Clean up any remaining conflict markers
+<<<<<<< HEAD
         content = content.replace(/
         content = content.replace(/
 
+=======
+        
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         // Write the cleaned content
         fs.writeFileSync(file, content);
         execSync(`git add ${file}`);
@@ -161,6 +164,7 @@ function resolveAddAddConflicts() {
         let content = fs.readFileSync(file, 'utf8');
 
         // Remove conflict markers and keep both versions
+<<<<<<< HEAD
         content = content.replace(/
           const parts = match.split('
 =======
@@ -171,3 +175,9 @@ function resolveAddAddConflicts() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+          if (parts.length === 2) {
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -37,6 +38,17 @@ export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+
+import {useState} from 'react';
+
+
+
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter  } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useState  } from 'react';
 import {useState} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -50,6 +62,7 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ApplyGrantPage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -79,6 +92,14 @@ export default function ApplyGrantPage() {
   const router = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
+export default function ApplyGrantPage() {
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -90,6 +111,7 @@ export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -97,6 +119,10 @@ export default function ApplyGrantPage() {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const router = useRouter();
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -109,6 +135,7 @@ export default function ApplyGrantPage() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -139,6 +166,18 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+
+
+
+const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
+    'USDC'
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [supportingLinks, setSupportingLinks] = useState<string>('');
 =======
   const [budgetAmount, setBudgetAmount] = useState<number>(0);  const [supportingLinks, setSupportingLinks] = useState<string>('');
@@ -148,12 +187,16 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       router.push(`/grants/${data.id}`)
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch (e: any) {
       setError(e.message)
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
       setLoading(false)
     }
@@ -161,6 +204,9 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -193,6 +239,17 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
       setError(e && e.message);
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
+<<<<<<< HEAD
+=======
+          program;
+          projectName;
+          teamInfo;
+          proposalSummary;
+          timeline;
+          budgetAmount: Number(budgetAmount || 0),
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           budgetCurrency;
           supportingLinks: supportingLinks;
@@ -221,6 +278,10 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
@@ -261,6 +322,7 @@ const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
           </button>;
           <button
             disabled={loading}
+<<<<<<< HEAD
 <<<<<<< HEAD
             onClick={() => save(true)}  }
 =======
@@ -347,6 +409,10 @@ program,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            onClick={() => save(true)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
 
 
@@ -496,6 +562,7 @@ program,
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
 
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -511,6 +578,22 @@ program,
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+  }
+    }
+
+
+  };
+
+
+  return (
+
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {error && <div className='text-sm text-red-600'>{error}</div>}
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -537,6 +620,7 @@ program,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -548,6 +632,10 @@ program,
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -564,14 +652,12 @@ program,
         </label>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
   );
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }            </select>
@@ -638,14 +724,19 @@ program,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 }
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   );
 
 );
 }
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -666,3 +757,13 @@ program,
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+}
+  );
+}
+
+
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

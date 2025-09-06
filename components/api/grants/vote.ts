@@ -4,6 +4,7 @@ import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -26,6 +27,8 @@ function grantPath(id: string) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -37,8 +40,12 @@ function readGrant(id: string): GrantApplication | null {
   ensureDir();
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function writeGrant(record: GrantApplication) {
   ensureDir();
   fs && fs.writeFileSync(
@@ -61,6 +68,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
 =======
     return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 function writeGrant(record: GrantApplication) {
@@ -218,6 +226,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   const payload = req.body as VotePayload;
   if (!payload?.grantId |!payload?.voter |!payload?.choice) {
@@ -238,5 +248,9 @@ return;
   res.status(200).json({ record: g });
   res.status(200).json({ record: g })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

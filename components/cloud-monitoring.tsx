@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Button from '../components/ui/Button';
@@ -101,6 +102,8 @@ export default function CloudMonitoringPage() {
 export default function CloudMonitoringPage() {
   const features = [
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -108,7 +111,7 @@ import Button from '../components/ui/Button';
 import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
   const features = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       icon: <Activity className='w-8 h-8 text-white' />
       description:
@@ -209,6 +212,7 @@ export default function CloudMonitoringPage() {
       icon: <Shield className='w-6 h-6 text-red-400' />
       metrics: [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Threat Detection'
         'Access Logs'
         'Vulnerability Scans'
@@ -243,6 +247,8 @@ export default function CloudMonitoringPage() {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Threat Detection',
         'Access Logs',
         'Vulnerability Scans',
@@ -250,8 +256,12 @@ export default function CloudMonitoringPage() {
         'Audit Trails',
       ],
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const pricingPlans = [
     {
@@ -260,8 +270,6 @@ export default function CloudMonitoringPage() {
       period: '/month'
       description: 'Perfect for small teams and startups'
       features: [
-<<<<<<< HEAD
-=======
 'Up to 10 servers',
         'Basic monitoring',
         'Email alerts',
@@ -274,13 +282,11 @@ export default function CloudMonitoringPage() {
       buttonColor: 'bg-gray-600 hover:bg-gray-700',
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
-<<<<<<< HEAD
-=======
       features: [
 'Up to 100 servers',
         'Advanced monitoring',
@@ -296,20 +302,11 @@ export default function CloudMonitoringPage() {
       buttonColor: 'bg-blue-600 hover:bg-blue-700',
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Enterprise',
       price: '$599',
       period: '/month',
       description: 'For large organizations',
-<<<<<<< HEAD
-;
-  const use_cases = [;
-    {
-      title: 'DevOps Teams',
-      description:;
-        'Monitor CI / CD pipelines, deployment success rates, and infrastructure health.',
-      benefits: [;
-=======
       features: [
 'Unlimited servers',
         'Full monitoring suite',
@@ -343,7 +340,7 @@ description:
         'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
       icon: '🔄',
       benefits: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Faster deployments',
         'Reduced downtime',
         'Better collaboration',
@@ -352,16 +349,11 @@ description:
     },
     {
       title: 'SaaS Companies',
-<<<<<<< HEAD
-      description:;
-        'Track user experience, application performance, and business metrics.',
-      benefits: [;
-=======
       description:
         'Track user experience, application performance, and business metrics.',
       icon: '💼',
       benefits: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'User satisfaction',
         'Revenue optimization',
         'Competitive advantage',
@@ -369,18 +361,12 @@ description:
       ],
     },
     {
-<<<<<<< HEAD
-      title: 'E - commerce',
-      description:;
-        'Monitor website performance, payment processing, and inventory systems.',
-      benefits: [;
-=======
       title: 'E-commerce',
       description:
         'Monitor website performance, payment processing, and inventory systems.',
       icon: '🛒',
       benefits: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Higher conversion',
         'Faster checkout',
         'Inventory optimization',
@@ -389,21 +375,17 @@ description:
     },
     {
       title: 'Financial Services',
-<<<<<<< HEAD
-      description:;
-        'Ensure compliance, security, and 24 / 7 availability of critical systems.',
-      benefits: [;
-=======
       description:
         'Ensure compliance, security, and 24/7 availability of critical systems.',
       icon: '💰',
       benefits: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Regulatory compliance',
         'Fraud detection',
         'Risk management',
         'Customer trust',
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
     },  ];      benefits: ['Regulatory compliance_fraud detection_risk management_customer trust'];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -460,6 +442,8 @@ description:
               <Play className="w-5 h-5 mr-2" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     },
   ];
   return (
@@ -594,14 +578,19 @@ description:
 
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
                 style={{ animationDelay: `${index * 0 && 0.1 + 0 && 0.2}s` }}>;
                 <div className='relative'>;
                   <div
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
                     {feature && feature.icon}
@@ -634,6 +623,8 @@ description:
 =======
                 <p className="text - gray - 400 leading - relaxed">;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >
                     {feature.icon}
@@ -643,8 +634,12 @@ description:
                   {feature.title}
                 </h3>
                 <p className='text-gray-400 leading-relaxed'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {feature.description}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 </p>
@@ -712,6 +707,7 @@ description:
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {monitoringCapabilities.map((capability, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Monitor every aspect of your infrastructure with detailed metrics;
               and insights;
@@ -735,6 +731,8 @@ description:
               <Card
                 key={index}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300'
@@ -752,7 +750,7 @@ description:
                           className='flex items-center text-sm text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {metric}
                         </div>;
                       ))}
@@ -798,6 +796,7 @@ description:
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -868,6 +867,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300'
@@ -888,8 +889,12 @@ description:
                           className='flex items-center text-sm text-gray-300'
                         >
                           <TrendingUp className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {benefit}
                         </div>
                       ))}
@@ -919,6 +924,7 @@ description:
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Pricing Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section id="pricing" className="py-24 bg-black relative overflow-hidden">
@@ -952,6 +958,8 @@ description:
               <Card
                 key={index}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -978,7 +986,7 @@ description:
                 )}
 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {plan.name}
                   </h3>;
                   <div className='text - 4xl font - bold text - white mb - 2'>;
@@ -1022,13 +1030,10 @@ description:
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-<<<<<<< HEAD
-
-=======
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>;
                   ))}
@@ -1058,6 +1063,7 @@ description:
 =======
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1066,13 +1072,15 @@ description:
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </Card>
             ))}
@@ -1097,6 +1105,7 @@ href='/contact'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Integrations Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1155,6 +1164,8 @@ href='/contact'
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1181,7 +1192,7 @@ href='/contact'
                 <p className='text-sm text-gray-400'>
                   {integration.description}
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 
@@ -1253,6 +1264,7 @@ href='/contact'
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Monitor Your Infrastructure?;
           </h2>;
@@ -1304,6 +1316,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -1315,5 +1329,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

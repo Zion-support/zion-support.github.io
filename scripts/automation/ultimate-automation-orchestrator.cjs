@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'automation', 'logs', 'ultimate-automation.log')
     const dirs = ['automation/logs', 'test-results', 'deployment-reports', 'automation/reports']
@@ -58,6 +66,7 @@ const { execSync } = require('child_process')
       "overallStatus"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(`Ultimate Automation Orchestrator "failed"`)
@@ -71,3 +80,8 @@ const { execSync } = require('child_process')
       this.log(`Ultimate Automation Orchestrator "failed"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log(`Ultimate Automation Orchestrator "failed"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

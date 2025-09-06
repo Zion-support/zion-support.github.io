@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -29,8 +30,10 @@ export type CuttingEdgeAIService = {
   name: string,
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type CuttingEdgeAIService = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   description: string;
@@ -63,6 +66,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai - product - spec - writer',
     name: 'AI Product Spec Writer',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -84,6 +92,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
 =======
@@ -98,6 +107,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-creative-studio'
     name: 'AI Creative Studio'
     description:
@@ -105,13 +116,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity'
     pricing: { starter: '$149/mo' }
     features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
       'Rights management',
     ],
     integrations: ['Canva', 'Figma'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -133,31 +145,50 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     use_cases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
     real_service: true,
 
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
 ];	id: string;
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];	id: string;
 	id: string, name: string,
 	description: string,
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -186,6 +217,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -197,6 +236,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
+<<<<<<< HEAD
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -208,6 +255,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
+<<<<<<< HEAD
 	}
 ];
 	}
@@ -215,10 +263,13 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 
 		realService: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -232,6 +283,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 name: string;
 description: string;
 =======
@@ -296,6 +351,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -314,6 +370,17 @@ export type CuttingEdgeAIService = {;
 
 export type CuttingEdgeAIService = {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export type CuttingEdgeAIService = {;
+	}
+ursor/fix-website-loading-errors-and-merge-6662
+];
+;
+
+export type CuttingEdgeAIService = {;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	id: string,;
 	name: string,,
   description: string,;
@@ -371,6 +438,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		useCases: ['Marketing velocityCost savings'],;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 	}
@@ -592,10 +660,23 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+	}
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

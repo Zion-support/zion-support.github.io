@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -30,6 +34,7 @@ const CybersecurityChat: NextPage = () => {
     <div>
       <Head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -38,6 +43,9 @@ const CybersecurityChat: NextPage = () => {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -47,6 +55,7 @@ const CybersecurityChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="CybersecurityChat blog post" />{" "}
@@ -62,13 +71,17 @@ const CybersecurityChat: NextPage = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+=======
+        <meta name="description" content="CybersecurityChat blog post" />{" "}
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </Head>;
 
 
-<<<<<<< HEAD
-=======
         <meta name="description" content="CybersecurityChat blog post" />
       </Head>
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -77,6 +90,10 @@ const CybersecurityChat: NextPage = () => {
       </Head>;
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -86,9 +103,14 @@ const CybersecurityChat: NextPage = () => {
       </Head>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -100,6 +122,7 @@ const CybersecurityChat: NextPage = () => {
 export default CybersecurityChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         <title>CybersecurityChat - Zion Tech Solutions</title>
@@ -108,21 +131,27 @@ export default CybersecurityChat;
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextPage } from './next';
 =======
         <meta name="description" content="CybersecurityChat blog post" />{" "}import type { NextPage } from './next';
@@ -150,8 +179,11 @@ export default CybersecurityChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>
       <Head>
         <title>CybersecurityChat - Zion Tech Solutions</title>
@@ -196,6 +228,7 @@ export default CybersecurityChat;
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
         <title>CybersecurityChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -212,3 +245,10 @@ export default CybersecurityChat;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

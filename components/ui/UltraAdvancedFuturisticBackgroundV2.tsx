@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedFuturisticBackgroundV2Props {
@@ -42,8 +45,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
 > = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -51,6 +58,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
     if (!ctx) return;
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -88,9 +96,11 @@ if (return) {
 ;
     let animationFrameId: number;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 let animationFrameId: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     let particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
@@ -100,6 +110,7 @@ let animationFrameId: number;
       size: number;
       color: string;
       life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -153,6 +164,8 @@ let animationFrameId: number;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               Math.pow(particle.y - otherParticle.y, 2)
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       maxLife: number;
     }> = [];
     const colors = [
@@ -228,7 +241,7 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
             const distance = Math.sqrt(
 Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             );
             if (distance < 100) {
               ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
@@ -236,6 +249,7 @@ Math.pow(particle.x - otherParticle.x, 2) +
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -274,6 +288,8 @@ Math.pow(particle.x - otherParticle.x, 2) +
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -315,6 +331,8 @@ Math.pow(particle.x - otherParticle.x, 2) +
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 ctx.stroke();
             }
           }
@@ -437,7 +455,7 @@ ease: 'easeInOut',
             duration: 7,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
           transition={{
 <<<<<<< HEAD
@@ -486,6 +504,7 @@ ease: 'easeInOut',
               top: `${Math.random() * 100}%`
             }}
             animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               y: [0, -100, 0]
               opacity: [0, 1, 0]
@@ -536,6 +555,8 @@ ease: 'easeInOut',
             transition={{
               ease: 'easeInOut',            }}              ease: "easeInOut"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0],
@@ -545,7 +566,7 @@ ease: 'easeInOut',
               repeat: Infinity,
               delay: Math.random() * 2,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
         ))}
@@ -577,39 +598,15 @@ ease: 'easeInOut',
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Neural Network Connections */}
-<<<<<<< HEAD
-      <div className='fixed inset-0 pointer-events-none z-30'>;
-        <svg className='w-full h-full'>;
-          <defs>;
-=======
 <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
           <defs>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <linearGradient
               id='neuralGradient'
               x1='0%'
               y1='0%'
               x2='100%'
-<<<<<<< HEAD
-              y2='100%'>;
-              <stop offset='0%' stopColor='#00ffff' stopOpacity='0 && 0.3' />;
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0 && 0.3' />            </linearGradient>      <div className="fixed inset-0 pointer-events-none z-30">;
-        <svg className="w-full h-full">;
-          <defs>;
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0 && 0.3" />;
-              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0 && 0.3" />;
-          </defs>;
-          {[...Array(15)].map((_, i) => (;
-            <motion&& motion.line
-              key={i}
-              x1={Math && Math.random() * 100}
-              y1={Math && Math.random() * 100}
-              x2={Math && Math.random() * 100}
-              y2={Math && Math.random() * 100}
-              stroke='url(#neuralGradient)'
-=======
               y2='100%'
             >
               <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
@@ -624,10 +621,11 @@ ease: 'easeInOut',
               x2={Math.random() * 100}
               y2={Math.random() * 100}
 stroke='url(#neuralGradient)'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               strokeWidth='1'
               opacity='0 && 0.1'
               animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -677,6 +675,8 @@ stroke='url(#neuralGradient)'
                 delay: Math.random() * 2
                 ease: 'easeInOut',              }}                ease: "easeInOut"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0],
               }}
@@ -685,7 +685,7 @@ stroke='url(#neuralGradient)'
                 repeat: Infinity,
                 delay: Math.random() * 2,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
@@ -725,10 +725,13 @@ ease: 'easeInOut',
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </svg>;
       </div>;
 
@@ -817,4 +820,13 @@ export default UltraAdvancedFuturisticBackgroundV2
 
 export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+};
+
+export default UltraAdvancedFuturisticBackgroundV2;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

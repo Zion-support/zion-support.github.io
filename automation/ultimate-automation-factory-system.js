@@ -170,11 +170,6 @@ if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new U
 ;
 export default UltimateAutomationFactory;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -191,11 +186,7 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
   ]; const results = []; for (const automation of automations) {const result = await this.runCommand(automation.command, automation.description); results.push({ ...automation, result })}; this.log('✅ All automations completed'); return results}; async generateComprehensiveReport() {this.log('📊 Generating comprehensive automation report...'); const report = {; timestamp: new Date().toISOString(), automations: await this.runAllAutomations(), summary: {, totalAutomations: 6, successfulAutomations: 0
     failedAutomations: 0}}; // Calculate summary; report.automations.forEach(automation = > {if (automation.result.success) {; report.summary.successfulAutomations++} else {report.summary.failedAutomations++}}); // Save report; const reportFile = path.join(this.logsDir, `ultimate-automation-report-${Date.now()}.json`); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`📄 Comprehensive report saved to: ${reportFile}`); return report}; async start() {this.log('🎯 Starting Ultimate Automation Factory System...'); const report = await this.generateComprehensiveReport(); this.log('🏁 Ultimate Automation Factory completed'); return report}}
 // CLI interface;
-<<<<<<< HEAD
-if (import.meta.url = = = `file: //${process.argv[1]}`) {const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 export default UltimateAutomationFactory;
 import { execSync } from 'child_process';
 <<<<<<< HEAD
@@ -324,6 +315,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -456,3 +448,15 @@ export default UltimateAutomationFactory;
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
+;
+export default UltimateAutomationFactory;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

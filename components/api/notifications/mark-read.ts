@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
@@ -50,6 +51,12 @@ function getUserId(req: NextApiRequest): string {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { supabase } from '../../../utils/supabase/client';
+function getUserId(req: NextApiRequest): string {
+    return res.status(405).json({ error: 'Method not allowed' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
     const userId = getUserId(req);
     const { error } = await supabase
@@ -57,6 +64,7 @@ function getUserId(req: NextApiRequest): string {
       .update({ read_status: true })
       .eq('id', id)
       .eq('user_id', userId);
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
 
@@ -82,14 +90,17 @@ function getUserId(req: NextApiRequest): string {
 
     return res && res.status(200).json({ ok: true });
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 if (error) return res.status(200).json({ ok: true }); // tolerate in dev
 
     return res.status(200).json({ ok: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     return res && res.status(500).json({ error: 'Unexpected error' });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res && res.status(200).json({ ok: true })
   } catch (e) {
@@ -184,3 +195,6 @@ function handler() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

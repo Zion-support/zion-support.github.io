@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -9,6 +10,8 @@ import {useEffect, useState} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -78,14 +81,21 @@ export default function InteractiveStats() {;
 
 export default function InteractiveStats() {;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     let start: number | null;
 export default function InteractiveStats() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Stat label='Successful Hires' value={hires} suffix='+' />;
       <Stat label='AI Experts' value={experts} suffix='+' />;
@@ -118,6 +128,8 @@ export default function InteractiveStats() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
 <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>
       <Stat label='Successful Hires' value={hires} suffix='+' />
@@ -126,7 +138,6 @@ export default function InteractiveStats() {
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />
     </div>
   );
-=======
 import React from 'react';
 interface StatItem {
   label: string;
@@ -161,7 +172,7 @@ export default function InteractiveStats({
           )}
         </div>
       ))}
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     </div>
   );
 }
@@ -172,8 +183,12 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
 );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function Stat({
   label
   value
@@ -224,6 +239,7 @@ function Stat() {
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -232,3 +248,7 @@ function Stat() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 type AdminAction =
 import {readOrgData, writeOrgData} from '../../../utils / org - data';
@@ -13,6 +14,8 @@ type AdminAction =;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {readOrgData, writeOrgData} from '../../../utils/org-data';
 import type { OrgData, BasePerson } from '../../../types/org';
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -20,8 +23,12 @@ type AdminAction = any;
     return res.status(200).json({ ok: true })
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
 type AdminAction =
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote';
@@ -30,6 +37,7 @@ type AdminAction =
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,6 +51,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
@@ -68,11 +78,17 @@ type AdminAction =
 =======
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
 ;
@@ -85,21 +101,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
     // @ts-expect-error Indexing into dynamic section
-<<<<<<< HEAD
-=======
 const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
     if (arr.some(p => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     arr && arr.push({ ...action && action.person, active: true });
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
-<<<<<<< HEAD
-  }
-=======
 return res.status(200).json({ ok: true });
   }
   if (action.type === 'promote') {
@@ -107,7 +118,7 @@ return res.status(200).json({ ok: true });
     // @ts-expect-error Indexing into dynamic section
 const arr: BasePerson[] = data[section] || [];
     const idx = arr.findIndex(p => p.id === action.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates }
 
@@ -123,6 +134,7 @@ const arr: BasePerson[] = data[section] || [];
     writeOrgData(data);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     return res.status(200).json({ ok: true })
@@ -136,6 +148,8 @@ const arr: BasePerson[] = data[section] || [];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return res.status(200).json({ ok: true });
   }
   if (action.type === 'deactivate') {
@@ -143,13 +157,18 @@ return res.status(200).json({ ok: true });
     // @ts-expect-error Indexing into dynamic section
 const arr: BasePerson[] = data[section] || [];
     const idx = arr.findIndex(p => p.id === action.id);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false }
     // @ts-expect-error write back dynamic section
     data[section] = arr as any;
     writeOrgData(data);
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(200).json({ ok: true });
   }
@@ -164,17 +183,24 @@ return res.status(400).json({ error: 'Unknown action' });    return res.status(2
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return res.status(200).json({ ok: true });
   }
 
   return res.status(400).json({ error: 'Unknown action' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   if (action && action.type === 'deactivate') {
@@ -307,3 +333,6 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

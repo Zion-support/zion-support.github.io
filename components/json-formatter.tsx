@@ -45,6 +45,7 @@ import {
   Upload,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   Settings,;
@@ -66,12 +67,18 @@ import { Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Settings,
   Eye,;
 } from 'lucide-react';
 export default function JSONFormatterPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -79,6 +86,7 @@ export default function JSONFormatterPage() {
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -250,6 +258,8 @@ export default function JSONFormatterPage() {
   }
   const downloadJSON = (content: string, filename: string) => {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return;
     }
 
@@ -310,7 +320,7 @@ setErrorMessage('');
   }
   const downloadJSON = (content: string, filename: string) => {
     const blob = new Blob([content], { type: 'application/json' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -318,9 +328,6 @@ setErrorMessage('');
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-<<<<<<< HEAD
-        }
-=======
 URL.revokeObjectURL(url);
   };
 
@@ -336,7 +343,7 @@ name: 'John Doe',
         zipCode: '12345'
       }
       phoneNumbers: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {
           type: 'home',
           number: '555-123-4567',
@@ -358,6 +365,7 @@ name: 'John Doe',
 };
 =======
     setIsValid(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -467,6 +475,8 @@ name: 'John Doe',
 =======
             JSON data with advanced features and real-time validation.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     setErrorMessage('');
   };
 
@@ -505,11 +515,12 @@ return lines.map((_, index) => index + 1).join('\n');
             Format, validate, and beautify JSON with our professional tools.
             Minify, prettify, and analyze JSON data with advanced features and
             real-time validation.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
       {/* JSON Formatter Tool */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -545,6 +556,8 @@ return lines.map((_, index) => index + 1).join('\n');
                   <select
                     value={indentSize}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -567,19 +580,12 @@ return lines.map((_, index) => index + 1).join('\n');
                     onChange={e => setIndentSize(Number(e.target.value))}
                     className='px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
-<<<<<<< HEAD
-                    <option value={2}>2 spaces</option>;
-                    <option value={4}>4 spaces</option>;
-                    <option value={8}>8 spaces</option>;
-                  </select>;
-                </div>;
-=======
 <div className='flex items-center space-x-2'>
                   <input
                     type='checkbox'
@@ -596,7 +602,7 @@ return lines.map((_, index) => index + 1).join('\n');
                   </label>
                 </div>
                 <div className='flex items-center space-x-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -606,6 +612,7 @@ return lines.map((_, index) => index + 1).join('\n');
                   />;
                   <label
                     htmlFor='showLineNumbers'
+<<<<<<< HEAD
 <<<<<<< HEAD
                     Line numbers;
                   </label>;
@@ -650,6 +657,8 @@ return lines.map((_, index) => index + 1).join('\n');
                   <Upload className="w-4 h-4 mr-2" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='text-sm text-gray-300'
                   >
                     Line numbers
@@ -722,8 +731,12 @@ variant='outline'
                   {showLineNumbers && (
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
                       {getLineNumbers(inputJson)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -756,6 +769,7 @@ variant='outline'
                     value={inputJson}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -767,10 +781,16 @@ onChange={e => setInputJson(e.target.value)}
                     placeholder='Paste your JSON data here...'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+onChange={e => setInputJson(e.target.value)}
+                    placeholder='Paste your JSON data here...'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -837,6 +857,8 @@ onChange={e => setInputJson(e.target.value)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   />
                 </div>
                 {!isValid && errorMessage && (
@@ -867,13 +889,14 @@ variant='outline'
                     disabled={!inputJson.trim()}
 variant='outline'
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     Validate
                   </Button>
                 </div>
               </div>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -961,6 +984,8 @@ variant='outline'
                       <Download className="w-4 h-4 mr-2" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Output Section */}
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -1058,8 +1083,12 @@ variant='outline'
 =======
                     </p>
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 )}
               </div>
             </Card>
@@ -1177,6 +1206,7 @@ variant='outline'
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -1196,6 +1226,8 @@ variant='outline'
               </p>
               <ul className="space-y-2 text-gray-300">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Use Cases */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1217,12 +1249,13 @@ variant='outline'
                 files with professional formatting.
               </p>
               <ul className='space-y-2 text-gray-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <li>• API development and testing</li>
                 <li>• Configuration file management</li>
                 <li>• Debug and troubleshooting</li>
               </ul>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1275,6 +1308,8 @@ variant='outline'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
@@ -1321,13 +1356,18 @@ variant='outline'
                 <li>• Documentation examples</li>
                 <li>• API documentation</li>
                 <li>• Technical specifications</li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </ul>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1476,6 +1516,8 @@ variant='outline'
 }
     </>);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -1507,6 +1549,6 @@ variant='outline'
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

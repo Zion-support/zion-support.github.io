@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,17 +11,24 @@ export default function TryItConsole({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   method
   path
   requiresAuth
 }: TryItProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 <<<<<<< HEAD
@@ -50,13 +58,20 @@ interface TryItProps {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -160,6 +175,8 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [token, setToken] = useState('');
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
@@ -195,27 +212,18 @@ const headers: Record<string, string> = {
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
   return (
 <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
-<<<<<<< HEAD
-
-          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
-        </div>
-        <div>
-          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e.target.value)} placeholder="Optional" />
-        </div>
-        <div>
-          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
-=======
           <label className='block text-sm mb-1'>Base URL</label>
           <input
             className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
@@ -239,7 +247,7 @@ const headers: Record<string, string> = {
             value={method}
             readOnly
           />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
@@ -249,10 +257,8 @@ const headers: Record<string, string> = {
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         <div>
-<<<<<<< HEAD
-=======
 <label className='block text-sm mb-1'>Request Body (JSON)</label>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
@@ -342,6 +348,7 @@ const headers: Record<string, string> = {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
     <div className='space-y-2'>
 
@@ -369,3 +376,7 @@ const headers: Record<string, string> = {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

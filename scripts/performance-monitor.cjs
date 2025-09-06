@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -91,14 +92,20 @@ const { execSync } = require('child_process')
 
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+#!/usr/bin/env node
+
+
+main
+
+#!/usr/bin/env node
+
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -124,8 +131,7 @@ fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 console.log('Performance report generated');
 =======
 monitor.run().catch(console.error);
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 console.log('⚡ Starting performance monitoring...');
 
 const performanceMetrics = {
@@ -252,8 +258,6 @@ if (performanceMetrics.recommendations.length > 0) {
 } else {
   console.log('\n✅ No performance issues detected');
 }
-<<<<<<< HEAD
-=======
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -271,10 +275,9 @@ class PerformanceMonitor {
 
 const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
@@ -284,12 +287,17 @@ console.log('\n📄 Performance report saved to performance-metrics.json');
 setTimeout(() => {
   process.exit(0);
 }, 1000);
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+ursor/automate-test-improve-and-merge-code-59d5
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('⚡ Performance Monitor');
 console.log('=====================');
 
@@ -544,5 +552,9 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

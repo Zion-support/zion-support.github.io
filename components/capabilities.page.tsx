@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
@@ -21,6 +22,8 @@ const CAPABILITIES = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];
 
 export default function CapabilitiesPage() {;
@@ -97,11 +100,13 @@ const CAPABILITIES = [
 
 export default function CapabilitiesPage() {;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 const CAPABILITIES = null;
 ];
 export default function CapabilitiesPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold'>Capabilities</h1>
@@ -116,11 +121,9 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-);
-}
   );
 }
+<<<<<<< HEAD
     </EnhancedLayout>;
 );
 }
@@ -133,3 +136,6 @@ export default function CapabilitiesPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

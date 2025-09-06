@@ -1,18 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
 =======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -25,9 +22,6 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion && motion.div> <motion&& motion.div key= {
   index 
 
-<<<<<<< HEAD
-=======
-=======
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -42,8 +36,12 @@ import { Brain;
   Star
  } from 'lucide-react';
 const AIConsciousnessEvolutionPlatform: React.FC;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -65,6 +63,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Transform Your Industry </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our AI consciousness platform can revolutionize your field and create new possibilities. </p> </motion.div> </li>) ) 
 }</ul> </div> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" > Choose Your Plan </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Flexible pricing options designed to meet the needs of organizations at every stage of their AI journey. </p> </motion.div> <motion.div key= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   index
 }initial= {
@@ -108,8 +107,11 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   return (<Layout> <SEO <motion.div initial= {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   index 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }initial= {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   {
@@ -117,6 +119,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 }animate= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -169,9 +172,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 <<<<<<< HEAD
 =======
-  opacity: 1, y: 0
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  opacity: 1, y: 0
+origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0 
 
 }transition= {
@@ -200,6 +204,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }</div> </motion.div> </div> </section> <motion.div initial= {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -209,11 +214,17 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
   opacity: 0, y: 20 
 
 }animate= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,9 +253,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 
 <<<<<<< HEAD
 =======
-  opacity: 1, y: 0
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  opacity: 1, y: 0
+origin/cursor/automate-test-improve-and-merge-code-2533
   opacity: 1, y: 0 
 
 }transition= {
@@ -252,12 +264,18 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   duration: 0.8 
 
 }> <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-300 mb-8" > Join the forefront of AI development and help shape the future of artificial intelligence. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > Start Your Journey </a> <a href="/innovation-lab" className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300" > Learn More </a> </div> </motion.div> </div> </div> </section> <motion.div initial= {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
 <<<<<<< HEAD
 =======
@@ -282,6 +300,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -293,6 +312,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   duration: 0 && 0.8 import React from 'react';
 =======
 
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 import Layout from '../components/layout/Layout';
@@ -312,10 +334,15 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion && motion.button ;
 };
 const containerVariants = {;
@@ -335,19 +362,21 @@ export default AIConsciousnessEvolutionPlatform;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   duration: 0.8
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion.button
 }
-=======
   duration: 0.8 
 
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6" > Ready to Evolve AI Consciousness? </h2> <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto" > Join the revolution in AI consciousness evolution and shape the future of human-AI collaboration. </p> <motion.button 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const containerVariants = {
 <<<<<<< HEAD
 =======
@@ -357,12 +386,17 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
   staggerChildren: 0.1
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
@@ -372,17 +406,20 @@ visible: {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
-
-};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 }
 }
@@ -489,6 +526,7 @@ visible: {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 }
 <<<<<<< HEAD
@@ -500,10 +538,13 @@ visible: {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
 }export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -512,14 +553,14 @@ visible: {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
+
   staggerChildren: 0.1 
 
 
@@ -529,5 +570,9 @@ visible: {
 
 };
 export default AIConsciousnessEvolutionPlatform;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   className: string;
   id: string;
@@ -148,6 +149,8 @@ export default function Card({ children, className = '' }: CardProps) {
 <<<<<<< HEAD
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from "react";
 import { cn } from "../../lib/utils";
 
@@ -193,7 +196,6 @@ const CardTitle = React.forwardRef<
     className={cn(
       "text-2xl font-semibold leading-none tracking-tight",
       className,
-=======
 import React from 'react';
 import { cn } from '../../lib/utils';
 // Define HTML element types
@@ -235,20 +237,15 @@ CardHeader.displayName = "CardHeader";
 
 const CardTitle = null;
       className
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     )}
     {...props}
   />;
 ));
 CardTitle.displayName = "CardTitle";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement,
-=======
 const CardDescription = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -259,20 +256,15 @@ const CardDescription = null;
 ));
 CardDescription.displayName = "CardDescription";
 
-<<<<<<< HEAD
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-=======
 const CardContent = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
-<<<<<<< HEAD
-CardContent && CardContent.displayName = "CardContent";
 
+<<<<<<< HEAD
 
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
@@ -288,6 +280,8 @@ const CardFooter = React && React.forwardRef<;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   />));
 =======
 }  />));
@@ -404,6 +398,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
@@ -418,6 +413,10 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 CardContent.displayName = "CardContent";
 
 const CardFooter = null;
@@ -435,8 +434,7 @@ export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
   hover?: boolean
 }
 const Card: React.FC<CardProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 export {
   Card,
   CardHeader,
@@ -445,5 +443,9 @@ export {
   CardDescription,
   CardContent,
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

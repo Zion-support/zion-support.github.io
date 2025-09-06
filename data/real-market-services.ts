@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   customers: number;
   rating: number;
@@ -13,6 +14,8 @@
   reviews: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -29,6 +32,7 @@ export interface RealMarketService {
 
 ;
 const contact = {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -41,6 +45,12 @@ export const realMarketServices: RealMarketService[] = [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   mobile: '+1 302 464 0950',
 =======
   customers: number;
@@ -54,12 +64,17 @@ export const realMarketServices: RealMarketService[] = [
 export const realMarketServices: RealMarketService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
+<<<<<<< HEAD
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -70,6 +85,8 @@ export const realMarketServices: RealMarketService[] = [;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -87,11 +104,14 @@ export const realMarketServices: RealMarketService[] = [;
   website: 'https://ziontechgroup && ziontechgroup.com',};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {
   id: string;
@@ -135,8 +155,12 @@ export interface RealMarketService {
 }
 
 const contact = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     tagline:
       'Centralize model access, control spend, add observability and guardrails'
     price: '$299'
@@ -160,18 +184,49 @@ const contact = null;
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
     marketPosition:
-<<<<<<< HEAD
-      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.'
-    targetAudience: 'Product teams, platform engineering, data/AI teams'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
 
+<<<<<<< HEAD
 
 =======
 
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string,
+    website: string
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+
+export const realMarketServices: RealMarketService[] = [
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
@@ -210,12 +265,17 @@ export const realMarketServices: RealMarketService[] = [
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
       'Prompt templates and versioning',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -235,15 +295,22 @@ export const realMarketServices: RealMarketService[] = [
       'LangChain / LlamaIndex SDK support',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Latency and cost-aware routing',
       'Batch and streaming inference',
       'Audit logs and RBAC',
       'LangChain/LlamaIndex SDK support',
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Export to data warehouse',
     ],
     popular: true,
@@ -256,9 +323,12 @@ export const realMarketServices: RealMarketService[] = [
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
     targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14,
@@ -266,12 +336,17 @@ export const realMarketServices: RealMarketService[] = [
     category: 'AI & Data',
     realService: true,
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI',
     ],
     useCases: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Centralized LLM access, Governance and compliance, Cost optimization'
     ]
@@ -296,6 +371,44 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+      'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',
+    launchDate: '2024-12-01',
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 400',
+    link: 'https://ziontechgroup.com / llm - gateway',
+    market_position:;
+      'Comparable to OpenRouter (usage - based) and EdenAI; adds enterprise guardrails and governance.',
+    target_audience: 'Product teams, platform engineering, data / AI teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'AI & Data',
+    real_service: true,
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
+    integrations: [;
+      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI',
+    ],
+    use_cases: [;
+      'Centralized LLM access, Governance and compliance, Cost optimization',
+    ],
+    roi: 'Reduce AI spend by 20–40% with routing and caps.',
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],
+    market_size: '$40B+ GenAI platform market',
+    growth_rate: '100% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Multi - tenant gateway with policy engine, provider adapters, and per - project metering.',
+    launch_date: '2024 - 12 - 01',
+
+    customers: 85,
+    rating: 4 && 4.8,
+    reviews: 61,
+  },
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
 
       'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next && Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
@@ -311,7 +424,12 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
       'OpenTelemetry auto - instrumentation',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -321,7 +439,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '📈',
 
       'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',
@@ -350,14 +471,22 @@ export const realMarketServices: RealMarketService[] = [
       'Ready - made Terraform / Grafana dashboards, alerts, and OpenTelemetry setup.',
     launch_date: '2024 - 11 - 10',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     customers: 120,
     rating: 4 && 4.7,
     reviews: 73,
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'SPF/DKIM/DMARC configuration checks',
       'Seed-list deliverability tests',
@@ -372,13 +501,19 @@ export const realMarketServices: RealMarketService[] = [
       'SPF / DKIM / DMARC configuration checks',
       'Seed - list deliverability tests',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Automated sending warmup schedules',
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
       'Alerts to Slack / Email with remediation steps',
     ],
     popular: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     icon: '📧',
@@ -387,6 +522,10 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+    icon: '📧',
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / email - deliverability - monitor',
@@ -409,7 +548,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -425,9 +569,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'affiliate - attribution - hub',
     name: 'Affiliate Attribution & Payouts Hub',
     tagline: 'Track referrals, detect fraud, and automate commission payouts',
@@ -437,7 +583,12 @@ export const realMarketServices: RealMarketService[] = [
       'Cross - device attribution with UTM and first - party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe / PayPal.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'UTM, ref, and coupon tracking',
       'Attribution windows and LTV credit',
       'Fraud detection heuristics',
@@ -447,7 +598,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🤝',
 
     color: 'from - emerald - 600 to - teal - 700',
@@ -455,14 +609,22 @@ export const realMarketServices: RealMarketService[] = [
     link: 'https://ziontechgroup.com / affiliate - attribution - hub',
     market_position:;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
     target_audience: 'SaaS and e_commerce teams',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Growth & Monetization',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     real_service: true,
     technology: ['Next.js, Stripe'],
@@ -475,7 +637,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'growth - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -491,9 +658,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'ai - customer - support - suite',
     name: 'AI Customer Support Suite',
     tagline: 'Unified ticketing, chat, and AI assistants with knowledge sync',
@@ -503,7 +672,12 @@ export const realMarketServices: RealMarketService[] = [
       'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'AI chat and email drafting',
       'RAG over product docs and tickets',
       'Macros and action tools',
@@ -513,7 +687,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🤖',
 
     color: 'from - purple - 600 to - indigo - 700',
@@ -521,19 +698,32 @@ export const realMarketServices: RealMarketService[] = [
     link: 'https://ziontechgroup.com / ai - customer - support - suite',
     market_position:;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Augments existing helpdesks with agent copilots and automation.',
     target_audience: 'Support and success teams',
     trial_days: 14,
     setup_time: '1 day',
     category: 'AI & Data',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     real_service: true,
     technology: ['Next.js, OpenAI, Vector DB'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['Zendesk, Intercom, Freshdesk'],
     use_cases: ['Faster resolution, Deflection via chat, Higher CSAT'],
     roi: 'Reduce handle time 20–40% and raise CSAT 10–20%.',
@@ -557,9 +747,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'smb - analytics - starter',
     name: 'SMB Web Analytics Starter',
     tagline: 'Privacy - first, cookie - lite analytics with actionable insights',
@@ -569,7 +761,12 @@ export const realMarketServices: RealMarketService[] = [
       'Simple dashboards with traffic sources, conversions, and page insights for non - technical teams. Exports and alerts included.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Traffic and conversion funnels',
       'Source / medium and campaigns',
       'Goals and events tracking',
@@ -579,7 +776,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '📊',
 
     color: 'from - amber - 600 to - orange - 700',
@@ -593,7 +793,12 @@ export const realMarketServices: RealMarketService[] = [
     real_service: true,
     technology: ['Next.js, Edge analytics'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['Google Ads, Meta Ads'],
     use_cases: ['Track campaigns, Monitor conversions, Detect anomalies'],
     roi: 'Save setup time and make faster decisions; reduce tooling complexity.',
@@ -617,9 +822,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'cloud - cost - optimizer',
     name: 'Cloud Cost Optimizer',
     tagline:;
@@ -630,7 +837,12 @@ export const realMarketServices: RealMarketService[] = [
       'Automate detection of idle resources, rightsizing, and savings plans across AWS / GCP / Azure with weekly reports and Jira - ready tickets.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Idle resource detection',
       'Rightsizing and reservations',
       'Anomaly detection and alerts',
@@ -641,7 +853,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '💸',
 
       'Read-only billing access, tagging policy checks, automated recommendation engine.',
@@ -670,16 +885,23 @@ export const realMarketServices: RealMarketService[] = [
       'Read - only billing access, tagging policy checks, automated recommendation engine.',
     launch_date: '2024 - 10 - 05',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     customers: 65,
     rating: 4 && 4.6,
     reviews: 48,
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'soc2 - evidence - automation',
     name: 'SOC 2 Evidence Automation',
     tagline:;
@@ -690,7 +912,12 @@ export const realMarketServices: RealMarketService[] = [
       'Automate SOC 2 controls evidence from cloud providers, identity, CI / CD, and ticketing systems with auditor export packs.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Automated evidence collectors',
       'Control mapping (AICPA)',
       'Auditor export packs',
@@ -701,7 +928,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🔐',
 
       'Collectors for major SaaS/Cloud, control mapping engine, audit packs.',
@@ -732,12 +962,18 @@ export const realMarketServices: RealMarketService[] = [
       'Collectors for major SaaS / Cloud, control mapping engine, audit packs.',
     launch_date: '2024 - 09 - 01',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     customers: 42,
     rating: 4 && 4.7,
     reviews: 37,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Provider selection guide'
 =======
@@ -774,6 +1010,9 @@ export const realMarketServices: RealMarketService[] = [
     realImplementation: true
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
@@ -791,6 +1030,7 @@ export const realMarketServices: RealMarketService[] = [
       'Schema and index templates',
       'ETL/ingestion pipelines',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Provider selection guide',
       'Schema and index templates',
       'ETL / ingestion pipelines',
@@ -798,6 +1038,11 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Embeddings and chunking best practices',
 =======
     realImplementation: true      'Embeddings and chunking best practices',
@@ -813,7 +1058,6 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
     marketPosition:;
-=======
       'Centralized LLM access, Governance and compliance, Cost optimization',
     ],
     roi: 'Reduce AI spend by 20–40% with routing and caps.',
@@ -1195,7 +1439,7 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
     marketPosition:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
     targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7,
@@ -1212,6 +1456,7 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1236,11 +1481,12 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
     implementationDetails:
 
-=======
     color: 'from - sky - 600 to - indigo - 700',
     text_color: 'text - sky - 400',
     link: 'https://ziontechgroup.com / vector - search - starter',
@@ -1269,10 +1515,16 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4 && 4.6,
     reviews: 41,
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -1301,6 +1553,7 @@ export const realMarketServices: RealMarketService[] = [
       'CI / CD quality gates',
       'Jira tickets and Slack alerts',
     ],
+<<<<<<< HEAD
     popular: true,      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
     targetAudience: 'Data engineers, platform teams, RevOps'
     trialDays: 14
@@ -1329,6 +1582,622 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+    popular: true,
+    icon: '🛡️',
+
+    color: 'from - rose - 600 to - orange - 700',
+    text_color: 'text - rose - 300',
+    link: 'https://ziontechgroup.com / api - security - scanner',
+    market_position:;
+      'Competes with Salt Security and Noname (enterprise pricing $3k–$10k+/mo). Lightweight, developer - first and CI - friendly.',
+    target_audience: 'Platform and app security teams, backend engineers',
+    trial_days: 14,
+    setup_time: '1–3 days',
+    category: 'Security & Compliance',
+    real_service: true,
+    technology: ['Node.js, Python, OpenAPI, GraphQL'],
+    integrations: ['GitHub Actions, GitLab CI, Jenkins, Jira, Slack'],
+    use_cases: [;
+      'Shift - left API security, Pre - release checks, Continuous scanning',
+    ],
+    roi: 'Catch critical API vulns pre - prod and reduce incidents by 60%',
+    competitors: ['Salt Security, Noname Security, 42Crunch'],
+    market_size: '$5B API security',
+    growth_rate: '25% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
+    launch_date: '2024 - 12 - 05',
+    customers: 54,
+    rating: 4 && 4.7,
+    reviews: 33,
+  },
+  {
+      'Seed inbox placement tests',
+      'Blocklist monitoring',
+      'DMARC aggregate reports (RUA / RUF)',
+      'Alerts and weekly scorecards',
+    ],
+    popular: false,
+    competitors: ['GlockApps, MailGenius, Postmark Monitoring'],
+    market_size: '$3B email tools',
+    growth_rate: '10% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'DNS validators, seed inbox network, blocklist checkers and alerting.',
+    launch_date: '2024 - 09 - 22',
+    customers: 77,
+    rating: 4 && 4.6,
+    reviews: 44,
+  },
+  {
+
+    id: 'domain - dns - monitor',
+    name: 'Domain & DNS Monitor',
+    tagline: 'Track DNS, nameserver and SSL changes with instant alerts',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Watches critical DNS records (A / AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'DNS record drift detection',
+      'TLS and chain changes',
+      'Audit log and diffs',
+      'Slack / Email alerts',
+      'Exportable reports',
+    ],
+    popular: false,
+    integrations: ['Slack, Opsgenie, PagerDuty'],
+    use_cases: ['Prevent hijacks, Change control, Compliance evidence'],
+    roi: 'Avoid costly outages and reputational damage',
+    competitors: ['DNS Spy, UptimeRobot DNS, Detectify DNS'],
+    market_size: '$2B monitoring',
+    growth_rate: '12% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Authoritative resolvers polling, diffs store, TLS probing and alerting.',
+    launch_date: '2024 - 08 - 18',
+    customers: 61,
+    rating: 4 && 4.5,
+    reviews: 36,
+  },
+  {
+      'Latency and availability SLIs',
+      'SLOs and error budgets',
+      'Burn - rate alerts',
+      'Public status pages',
+    ],
+    popular: true,
+    integrations: ['PagerDuty, Opsgenie, Slack'],
+    use_cases: ['SLO rollout, SLA reporting, Incident readiness'],
+    roi: 'Reduce alert fatigue and align on product reliability',
+    competitors: ['Better Uptime, UptimeRobot, Statuspage'],
+    market_size: '$18B observability',
+    growth_rate: '25% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Probers, SLI calculators, error - budget math and alerting integrations.',
+    launch_date: '2024 - 07 - 28',
+    customers: 112,
+    rating: 4 && 4.6,
+    reviews: 58,
+  },
+  {
+
+    id: 'status - pages - slo',
+    name: 'Status Pages & SLO',
+    tagline: 'Customer - facing status pages with SLO metrics baked - in',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Hosted status pages connected to your SLOs and incidents with custom components and history.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Custom components and groups',
+      'Incident timelines',
+      'SLO and uptime widgets',
+      'Subscriptions and webhooks',
+    ],
+    popular: false,
+    integrations: ['PagerDuty, Opsgenie, Slack'],
+    use_cases: ['Transparent comms, SLA evidence, Trust building'],
+    roi: 'Fewer support tickets and faster comms during incidents',
+    competitors: ['Atlassian Statuspage, Better Stack'],
+    market_size: '$1B status',
+    growth_rate: '15% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Static + API hybrid pages, component health, subscriptions.',
+    launch_date: '2024 - 06 - 30',
+    customers: 49,
+    rating: 4 && 4.5,
+    reviews: 27,
+  },
+  {
+
+    id: 'serverless - cron - manager',
+    name: 'Serverless Cron Manager',
+    tagline: 'Reliable scheduled jobs without servers and with retries',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Cron syntax and UI',
+      'Retries with jitter',
+      'Dead - letter queues',
+      'Slack alerts',
+    ],
+    popular: false,
+      'Comparable to EasyCron and CloudWatch Events; adds portable templates and alerts.',
+    target_audience: 'Developers, data engineers, SREs',
+    trial_days: 14,
+    setup_time: '1 hour',
+    category: 'Developer Tools',
+    integrations: ['Slack, Webhook'],
+    use_cases: ['ETL scheduling, Report generation, Cleanup jobs'],
+    roi: 'Reduce ops toil; no servers to manage',
+    competitors: ['EasyCron, AWS EventBridge'],
+    market_size: '$2B dev tooling',
+    growth_rate: '9% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Job store, scheduler, runners and alerting.',
+    launch_date: '2024 - 05 - 12',
+    customers: 73,
+    rating: 4 && 4.5,
+    reviews: 39,
+  },
+  {
+      'Custom fonts and CSS',
+      'Headers / footers, page numbers',
+      'Webhook delivery',
+    ],
+    popular: true,
+    integrations: ['Zapier, Webhook'],
+    use_cases: ['Invoices, Reports, Statements'],
+    roi: 'Save engineering time; consistent documents',
+    competitors: ['PDFMonkey, DocRaptor, Gotenberg'],
+    market_size: '$1B doc gen',
+    growth_rate: '8% YoY',
+    variant: 'data - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Headless Chrome workers, queueing and asset sandboxing.',
+    launch_date: '2024 - 04 - 08',
+    customers: 140,
+    rating: 4 && 4.7,
+    reviews: 91,
+  },
+  {
+
+    id: 'gdpr - dsar - automation',
+    name: 'GDPR DSAR Automation',
+    tagline: 'Automate data subject requests with evidence and workflows',
+    price: '$399',
+    period: '/month',
+    description:;
+      'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor - ready evidence packs.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Request intake portal',
+      'Identity verification',
+      'Connectors to data stores',
+      'Evidence packs and exports',
+    ],
+    popular: true,
+    integrations: ['Snowflake, BigQuery, S3, Postgres'],
+    use_cases: ['Compliance at scale, Reduced manual effort'],
+    roi: 'Cut DSAR handling cost by 60–80%',
+    competitors: ['Transcend, OneTrust, Segment Privacy'],
+    market_size: '$8B privacy ops',
+    growth_rate: '18% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Ticketing workflows, connectors, redaction and audit logs.',
+    launch_date: '2024 - 11 - 01',
+    customers: 31,
+    rating: 4 && 4.6,
+    reviews: 21,
+  },
+  {
+      'Evidence collection links',
+      'Risk scoring and tracking',
+      'Renewal reminders',
+    ],
+    popular: false,
+    integrations: ['Slack, Jira, Email'],
+    use_cases: ['Faster reviews, Evidence reuse, Audit readiness'],
+    roi: 'Shorten vendor onboarding by 30–50%',
+    competitors: ['Whistic, OneTrust VRM'],
+    market_size: '$6B VRM',
+    growth_rate: '16% YoY',
+    variant: 'neural - quantum',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Questionnaire engine, evidence vault, risk scoring and reminders.',
+    launch_date: '2024 - 10 - 15',
+    customers: 26,
+    rating: 4 && 4.5,
+    reviews: 18,
+  },
+  {
+
+    id: 'browser - performance - monitor',
+    name: 'Browser Performance Monitor',
+    tagline: 'Core Web Vitals and RUM with actionable diagnostics',
+    price: '$129',
+    period: '/month',
+    description:;
+      'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code - level fixes with dashboards.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'RUM collection script',
+      'Core Web Vitals (LCP / CLS / INP)',
+      'Regression detection',
+      'Dashboards and alerts',
+    ],
+    popular: false,
+    icon: '⚡',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / browser - performance - monitor',
+    market_position:;
+      'Alternatives: SpeedCurve ($99–$439 / mo). We bundle diagnostics and dev tips.',
+    target_audience: 'Frontend and growth teams',
+    trial_days: 7,
+    setup_time: '1 hour',
+    category: 'Observability',
+    real_service: true,
+    technology: ['JS RUM, Dashboards'],
+    integrations: ['Slack, Datadog'],
+    use_cases: ['Improve conversions, Perf regressions, SEO gains'],
+    roi: 'Increase conversion 2–10% with better vitals',
+    competitors: ['SpeedCurve, Calibre'],
+    market_size: '$1B web perf',
+    growth_rate: '11% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Lightweight RUM SDK, vitals aggregation and alerting.',
+    launch_date: '2024 - 09 - 08',
+    customers: 52,
+    rating: 4 && 4.5,
+    reviews: 29,
+  },
+  {
+
+    id: 'database - performance - monitor',
+    name: 'Database Performance Monitor',
+    tagline: 'Query insights, locks, connection pools and slow query fixes',
+    price: '$299',
+    period: '/month',
+    description:;
+      'Collector agents for Postgres / MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Slow query detection',
+      'Lock contention analysis',
+      'Connection pool saturation',
+      'Advisor recommendations',
+    ],
+    popular: true,
+    category: 'Observability',
+    real_service: true,
+    technology: ['Postgres, MySQL, Agents'],
+    integrations: ['Grafana, Slack'],
+    use_cases: ['Improve DB latency, Reduce deadlocks, Capacity planning'],
+    roi: 'Reduce query latency 20–50% in weeks',
+    competitors: ['pganalyze, Percona PMM'],
+    market_size: '$4B DB tooling',
+    growth_rate: '13% YoY',
+    variant: 'monitoring - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Extension - based metrics collectors and advisors.',
+    launch_date: '2024 - 08 - 01',
+    customers: 39,
+    rating: 4 && 4.6,
+    reviews: 23,
+  },
+  {
+
+    id: 'cloud - platform - managed - kubernetes',
+    name: 'Managed Kubernetes Platform',
+    tagline: 'Production EKS / GKE / AKS with GitOps, SSO and guardrails',
+    price: '$1, 999',
+    period: '/month',
+    description:;
+      'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'IaC blueprints and GitOps',
+      'SSO and RBAC policies',
+      'Cost controls and quotas',
+      'Backup and restore runbooks',
+    ],
+    popular: true,
+    icon: '☁️',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / cloud - platform',
+    market_position:;
+      'Alternatives: Platform9, Rafay (custom pricing). Opinionated, fast time - to - value.',
+    target_audience: 'Platform engineering and DevOps',
+    trial_days: 0,
+    setup_time: '1–3 weeks',
+    category: 'Cloud & FinOps',
+    real_service: true,
+    technology: ['Terraform, Flux / Argo, EKS / GKE / AKS'],
+    integrations: ['Datadog, Grafana, Vault'],
+    use_cases: ['Standardized platform, Security baseline, Developer velocity'],
+    roi: 'Ship platforms 3x faster at lower risk',
+    competitors: ['Platform9, Rafay, DIY'],
+    market_size: '$20B platform engineering',
+    growth_rate: '22% YoY',
+    variant: 'cloud - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Blueprints, policies, GitOps pipelines and SRE runbooks.',
+    launch_date: '2025 - 01 - 10',
+    customers: 17,
+    rating: 4 && 4.7,
+    reviews: 12,
+  },
+  {
+
+    id: 'rum - analytics - starter',
+    name: 'Real User Monitoring (RUM) Analytics Starter',
+    tagline:;
+      'Measure real user performance, Core Web Vitals and conversion impact',
+    price: '$59',
+    period: '/month',
+    description:;
+      'Drop - in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Core Web Vitals (LCP, INP, CLS)',
+      'Conversion impact analysis',
+      'Geo / device breakdowns',
+      'Anomaly alerts to Slack / Email',
+      'Privacy - friendly, cookie - lite',
+    ],
+    popular: false,
+    customers: 26,
+    rating: 4 && 4.6,
+    reviews: 14,
+  },
+  {
+      'CI gate on severity thresholds',
+      'Page template scanning',
+      'Issue tracker export',
+      'Auditor - ready PDF reports',
+    ],
+    popular: true,
+    competitors: ['Deque axe Monitor, Siteimprove'],
+    market_size: '$1B+ accessibility services',
+    growth_rate: '18% YoY',
+    variant: 'monitoring - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Headless scans with rulesets, diffing, and gated pipelines.',
+    launch_date: '2025 - 02 - 12',
+    customers: 31,
+    rating: 4 && 4.7,
+    reviews: 19,
+  },
+  {
+      'Error budget tracking',
+      'Auto - ticket creation',
+      'Slack / PagerDuty alerts',
+      'Weekly drift reports',
+    ],
+    popular: false,
+    icon: '⏱️',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / api - latency - budget - enforcer',
+    market_position:;
+      'Bridges observability and execution; complements Datadog SLO and Grafana.',
+    target_audience: 'SREs, platform and backend teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Observability',
+    real_service: true,
+    technology: ['OpenTelemetry, Prometheus, Grafana'],
+    integrations: ['Datadog, Grafana, PagerDuty, Jira'],
+    use_cases: ['Keep latency in check, Manage reliability, Prioritize work'],
+    roi: 'Cut MTTR by 20–40% via proactive guardrails.',
+    competitors: ['Datadog SLOs, Nobl9'],
+    market_size: '$5B+ reliability tooling',
+    growth_rate: '20% YoY',
+    variant: 'monitoring - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'SLO definitions, budget math, and actionable ownership routes.',
+    launch_date: '2025 - 02 - 18',
+    customers: 18,
+    rating: 4 && 4.5,
+    reviews: 11,
+  },
+  {
+      'Lightweight alternative to manual scans; complements Mozilla Observatory and SSL Labs checks.',
+    target_audience: 'Security and platform teams',
+    trial_days: 7,
+    setup_time: '20 minutes',
+    category: 'Security & Compliance',
+    integrations: ['Slack, Webhooks'],
+    use_cases: [;
+      'Prevent misconfigurations, Detect regressions, Improve posture',
+    ],
+    roi: 'Reduce security regressions and audit time.',
+    competitors: ['Mozilla Observatory, SSL Labs'],
+    market_size: '$3B security testing',
+    growth_rate: '16% YoY',
+    variant: 'security - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Scheduled scans with diffs and playbooks.',
+    launch_date: '2025 - 02 - 20',
+    customers: 44,
+    rating: 4 && 4.6,
+    reviews: 22,
+  },
+  {
+      'Policy page generator',
+      'Audit log export',
+      'Analytics / script blocking',
+      'A / B banner testing',
+    ],
+    popular: false,
+      'Simple alternative to complex CMPs; transparent pricing for SMBs.',
+    target_audience: 'Marketing, legal, and web teams',
+    trial_days: 7,
+    setup_time: '30 minutes',
+    category: 'Security & Compliance',
+    integrations: ['Google Tag, GTM, Segment'],
+    use_cases: ['Compliance, User trust, Region - based rules'],
+    roi: 'Accelerate compliance readiness; reduce legal risk.',
+    competitors: ['Cookiebot, OneTrust CMP'],
+    market_size: '$2B privacy tooling',
+    growth_rate: '15% YoY',
+    variant: 'compliance - futuristic' as any,
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Client + middleware rules with storage & audit.',
+    launch_date: '2025 - 02 - 22',
+    customers: 21,
+    rating: 4 && 4.5,
+    reviews: 10,
+  },
+  {
+      'Drift detection',
+      'Weekly compliance reports',
+      'Auto - ticket workflows',
+    ],
+    popular: false,
+    customers: 12,
+    rating: 4 && 4.5,
+    reviews: 7,
+  },
+  {
+
+      'IAB TCF v2 && v2.2 compatible consent',
+      'Geo-targeted policies (EEA/UK/US states)',
+    id: 'consent - compliance - kit',
+    name: 'Consent & Cookie Compliance Kit',
+    tagline: 'GDPR / CPRA consent banners, geo - targeting, and audit - ready logs',
+    price: '$49',
+    period: '/month',
+    description:;
+      'Deploy IAB TCF v2 compatible consent banners with region - aware policies, capture consent receipts, and export audit logs for GDPR / CPRA. Includes cookie inventory and auto - blocking helpers.',
+    features: [;
+      'IAB TCF v2.2 compatible consent',
+      'Geo - targeted policies (EEA / UK / US states)',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Consent receipts and log exports',
+      'Cookie inventory and auto - blocking',
+      'Policy pages and versioning',
+      'CMP integrations and tag manager hooks',
+    ],
+    popular: false,
+    icon: '🛡️',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: 'https://ziontechgroup.com / services / consent - compliance - kit',
+    market_position:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
+    target_audience: 'Marketing ops, legal / compliance, web teams',
+    trial_days: 7,
+    setup_time: '1 day',
+    category: 'Privacy & Compliance',
+
+    real_service: true,
+    technology: ['Next.js, Tag Manager, IAB TCF v2'],
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    integrations: ['Google Tag Manager, Segment, Cookiebot, OneTrust'],
+    use_cases: ['GDPR / CPRA consent management, Audit exports, Region policies'],
+    roi: 'Reduce compliance risk and legal exposure with verifiable consent logs.',
+    competitors: ['OneTrust, Cookiebot, TrustArc'],
+    market_size: '$2B+ privacy tooling',
+    growth_rate: '18% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Embeddable banner, policy config UI, consent log store, export jobs.',
+    launch_date: '2025 - 08 - 22',
+    customers: 22,
+    rating: 4 && 4.6,
+    reviews: 11,
+  },
+  {
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Terraform and IaC modules, ETL pipelines, sample notebooks.',
     launchDate: '2024-08-20',
@@ -2233,8 +3102,12 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/api-backfill-reconciliation',
     marketPosition:
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -2243,11 +3116,8 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Node.js, Postgres, Redis, Airflow'],
     integrations: ['Salesforce, HubSpot, Stripe, Shopify'],
-<<<<<<< HEAD
-    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],;
-=======
     useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.',
     competitors: ['Fivetran (log-based), custom scripts'],
     marketSize: '$4B data integration',
@@ -2255,15 +3125,16 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -2271,6 +3142,7 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4.7
     reviews: 9
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -2281,6 +3153,10 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'api - backfill - reconciliation',
     name: 'API Backfill & Reconciliation',
     tagline:;
@@ -2321,13 +3197,17 @@ export const realMarketServices: RealMarketService[] = [
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   {
-
 =======
+origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -2344,8 +3224,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
 =======
   {    implementationDetails:
@@ -2357,9 +3241,13 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
@@ -2370,6 +3258,11 @@ export const realMarketServices: RealMarketService[] = [
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -2378,6 +3271,27 @@ export const realMarketServices: RealMarketService[] = [
       'Slack / Jira alerts and reports',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
+    icon: '📊',
+
+    color: 'from - purple - 600 to - pink - 700',
+    text_color: 'text - purple - 300',
+    link: 'https://ziontechgroup.com / services / data - quality - sla - monitor',
+    market_position:;
+      'Lightweight alternative to full data observability platforms for SMBs.',
+    target_audience: 'Analytics, data engineering, product teams',
+    trial_days: 14,
+    setup_time: '2 days',
+    category: 'Data & Analytics',
+    real_service: true,
+    technology: ['dbt, Airflow, Postgres, BigQuery'],
+    integrations: ['Snowflake, BigQuery, Redshift, ClickHouse'],
+    use_cases: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Prevent stale dashboards, Catch pipeline regressions, Improve trust',
     ],
     roi: 'Reduce dashboard breaks; improve data - dependent feature velocity.',
@@ -2389,6 +3303,21 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 13,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'postgres - index - advisor',
+    name: 'Postgres Index Advisor & Tuner',
+    tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Analyze query plans and table stats to recommend and schedule index changes, vacuum / autovacuum tuning, and bloat remediation.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'EXPLAIN plan analysis',
       'Missing / unused index detection',
       'Autovacuum and bloat tuning',
@@ -2416,6 +3345,22 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 8,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'gitops - drift - monitor',
+    name: 'GitOps Policy & Drift Monitor',
+    tagline:;
+      'Detect and correct drift between Git and cluster state with policy gates',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Desired vs live diffing',
       'OPA / Conftest policy gates',
       'Auto - PR remediation',
@@ -2424,6 +3369,35 @@ export const realMarketServices: RealMarketService[] = [
       'Multi - cluster support',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+    icon: '🧭',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / services / gitops - drift - monitor',
+    market_position:;
+      'Complements Argo CD / Flux with governance and auto - remediation workflows.',
+    target_audience: 'Platform engineering, DevOps, SRE',
+    trial_days: 14,
+    setup_time: '2 days',
+    category: 'DevOps',
+    real_service: true,
+    technology: ['Kubernetes, OPA, Argo CD, Flux'],
+    integrations: ['GitHub, GitLab, Slack, Jira'],
+    use_cases: ['Prevent config drift, Enforce policies, Speed up remediations'],
+    roi: 'Cut rollbacks and misconfig incidents by 30–50%.',
+    competitors: ['Argo CD, Flux, Fairwinds Polaris'],
+    market_size: '$6B DevOps tooling',
+    growth_rate: '20% YoY',
+    variant: 'devops - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Cluster collectors, policy engine, reconciler workers, and PR bots.',
     launch_date: '2025 - 08 - 22',
     customers: 14,
@@ -2431,6 +3405,21 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'soc2 - readiness - scanner',
+    name: 'SOC 2 Readiness Scanner',
+    tagline: 'Map controls to TSC, auto - collect evidence, and flag gaps',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Pre - audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor - friendly reports.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Control mapping templates',
       'Evidence collectors and checks',
       'Policy and process coverage',
@@ -2467,6 +3456,24 @@ export const realMarketServices: RealMarketService[] = [
     real_service: true,
     technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],
     integrations: ['Jira, ServiceNow, Slack'],
+<<<<<<< HEAD
+=======
+
+    use_cases: [;
+      'Reduce attack surface, Speed up remediation, Improve visibility',
+    ],
+    roi: 'Lower breach likelihood; improved audit readiness.',
+    competitors: ['Wiz, Prisma Cloud (CSPM)'],
+    market_size: '$8B cloud security',
+    growth_rate: '25% YoY',
+    variant: 'cloud - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'API collectors, exposure heuristics, ticket routing, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 19,
@@ -2474,6 +3481,22 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 9,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'llm - red - team - simulator',
+    name: 'LLM Red Team & Jailbreak Simulator',
+    tagline:;
+      'Automated adversarial prompts, safety tests, and regression dashboards',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Prompt injection libraries',
       'PII / redaction checks',
       'Safety regression tests',
@@ -2481,6 +3504,35 @@ export const realMarketServices: RealMarketService[] = [
       'CI gates and reports',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+    icon: '🧪',
+
+    color: 'from - rose - 600 to - pink - 700',
+    text_color: 'text - rose - 300',
+    link: 'https://ziontechgroup.com / services / llm - red - team - simulator',
+    market_position:;
+      'Proactive LLM safety for production apps; complements guardrails.',
+    target_audience: 'AI platform teams, security engineers',
+    trial_days: 7,
+    setup_time: '1 day',
+    category: 'AI Safety',
+    real_service: true,
+    technology: ['OpenAI, Anthropic, Garak, OWASP Top 10 for LLMs'],
+    integrations: ['GitHub Actions, GitLab CI, CircleCI'],
+    use_cases: ['Catch regressions, Improve safety, Document compliance'],
+    roi: 'Avoid incidents and brand damage due to unsafe responses.',
+    competitors: ['Lakera, Garak'],
+    market_size: '$1B+ LLM safety',
+    growth_rate: '40% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Scenario libraries, orchestrator, CI integration, dashboards.',
     launch_date: '2025 - 08 - 22',
     customers: 17,
@@ -2494,6 +3546,35 @@ export const realMarketServices: RealMarketService[] = [
       'Appeal and review portal',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+    icon: '🛑',
+
+    color: 'from - red - 600 to - rose - 700',
+    text_color: 'text - red - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - fraud - detector',
+    market_position:;
+      'Pairs with attribution hubs to prevent fraud - driven losses.',
+    target_audience: 'Growth teams, finance ops',
+    trial_days: 14,
+    setup_time: '2 days',
+    category: 'Growth & Monetization',
+    real_service: true,
+    technology: ['Python', 'Bayesian modeling', 'dbt'],
+    integrations: ['GA4', 'Facebook Ads', 'Google Ads', 'Shopify'],
+    use_cases: ['Budget optimization', 'Channel ROI', 'Experiment planning'],
+    roi: 'Improve CAC / LTV ratio 10–30%',
+    competitors: ['Recast', 'Google Attribution', 'Rockerbox'],
+    market_size: '$12B+ martech analytics',
+    growth_rate: '20% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
     launch_date: '2025 - 01 - 21',
     customers: 48,
@@ -2537,6 +3618,35 @@ export const realMarketServices: RealMarketService[] = [
       'APIs and dashboards',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+    icon: '🚚',
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 300',
+    link: 'https://ziontechgroup.com / iot - fleet - telemetry',
+    market_position:;
+      'Complements AWS IoT / Azure IoT. Faster SMB onboarding with ready analytics.',
+    target_audience: 'Logistics, Mobility, Field Ops, OEMs',
+    trial_days: 14,
+    setup_time: '2–4 weeks',
+    category: 'IoT & Edge',
+    real_service: true,
+    technology: ['MQTT', 'Timeseries DB', 'Edge SDK'],
+    integrations: ['AWS IoT', 'Azure IoT', 'GCP IoT Core*'],
+    use_cases: ['Predictive maintenance', 'Driver behavior', 'Utilization'],
+    roi: 'Reduce downtime 10–20% and fuel costs 3–8%',
+    competitors: ['Particle', 'ThingsBoard', 'Kaa'],
+    market_size: '$30B+ IoT platforms',
+    growth_rate: '19% YoY',
+    variant: 'edge - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Device registry, stream processors, and feature store for ML.',
     launch_date: '2025 - 01 - 21',
     customers: 21,
@@ -2544,6 +3654,21 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 12,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'api - security - testing',
+    name: 'API Security Testing as a Service',
+    tagline: 'Automated DAST / SAST for APIs with CI / CD integration',
+    price: '$399',
+    period: '/month',
+    description:;
+      'Shift - left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'OWASP API Top 10 checks',
       'Secrets and token leakage detection',
       'CI / CD and PR annotations',
@@ -2551,6 +3676,39 @@ export const realMarketServices: RealMarketService[] = [
       'Reports and Jira tickets',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
+    icon: '🛡️',
+
+    color: 'from - slate - 600 to - gray - 700',
+    text_color: 'text - slate - 300',
+    link: 'https://ziontechgroup.com / api - security - testing',
+    market_position:;
+      'Compared with Snyk / 42Crunch / Burp Suite. We include actionable PR annotations and auto - fix recipes.',
+    target_audience: 'Platform, AppSec, DevSecOps',
+    trial_days: 7,
+    setup_time: '1–3 days',
+    category: 'Security',
+    real_service: true,
+    technology: ['OWASP ZAP', 'SAST', 'SBOM'],
+    integrations: ['GitHub', 'GitLab', 'Jenkins'],
+    use_cases: [;
+      'Shift - left security',
+      'Regulatory compliance',
+      'Audit readiness',
+    ],
+    roi: 'Reduce critical vuln exposure window by 40–60%',
+    competitors: ['Snyk', 'Burp Suite', '42Crunch'],
+    market_size: '$7B+ AppSec tooling',
+    growth_rate: '23% YoY',
+    variant: 'security - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launch_date: '2025 - 08 - 22',
     customers: 13,
@@ -2558,6 +3716,21 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 7,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'cloudflare - turnstile - proxy',
+    name: 'Cloudflare Turnstile & Bot Shield Proxy',
+    tagline: 'Kill signup spam and bot abuse without CAPTCHAs',
+    price: '$39',
+    period: '/month',
+    description:;
+      'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop - in protection for signups, login, and sensitive endpoints.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Turnstile token verification',
       'Reputation and ASN heuristics',
       'IP / device fingerprinting',
@@ -2585,6 +3758,21 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 8,
   },
   {
+<<<<<<< HEAD
+=======
+
+    id: 'reverse - etl - lite',
+    name: 'Reverse ETL Lite',
+    tagline: 'Sync warehouse data to SaaS apps in minutes',
+    price: '$99',
+    period: '/month',
+    description:;
+      'Point - and - click syncs from BigQuery / Snowflake / Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Warehouse connectors',
       'Field mapping UI',
       'Schedules and retries',
@@ -2592,11 +3780,32 @@ export const realMarketServices: RealMarketService[] = [
       'Row - level filters',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
+    icon: '🔄',
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / reverse - etl - lite',
+    market_position:;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Affordable, focused alternative to heavy Reverse ETL suites.',
     target_audience: 'Growth, data engineering, RevOps',
     trial_days: 14,
     setup_time: '1 hour',
     category: 'Data & Analytics',
+<<<<<<< HEAD
+=======
+
+    real_service: true,
+    technology: ['Node.js, Airflow / dbt optional, OAuth'],
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['Snowflake, BigQuery, Postgres, HubSpot, Salesforce'],
     use_cases: ['Activation, Lead scoring, Audiences'],
     roi: 'Ship activation in days; lift campaign ROI 10–20%',
@@ -2619,6 +3828,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 6,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     id: 'ai-rfp-response-copilot'
@@ -2659,8 +3869,10 @@ export const realMarketServices: RealMarketService[] = [
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
-    id: 'ai - rfp - response - copilot',
 =======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    id: 'ai - rfp - response - copilot',
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
     launchDate: '2025-08-22',
@@ -3269,18 +4481,16 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
     id: 'ai-rfp-response-copilot',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'AI RFP Response Copilot',
     tagline: 'Draft RFP answers from your knowledge base with evidence links',
     price: '$129',
     period: '/month',
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 <<<<<<< HEAD
-    description:;
-      'Ingest past proposals, policies, and docs. Draft high - quality RFP responses with citations, track requirements coverage, and export to Word / PDF.',
-    features: [;
-
-=======
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -3299,10 +4509,17 @@ export const realMarketServices: RealMarketService[] = [
     features: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    description:
+      'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',
+    features: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -3311,6 +4528,8 @@ export const realMarketServices: RealMarketService[] = [
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Word/PDF export',
     ],
     popular: true,
@@ -3333,8 +4552,12 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B RFP tooling',
     growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -3352,7 +4575,10 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
       'Word/PDF export',
@@ -3400,7 +4626,6 @@ export const realMarketServices: RealMarketService[] = [
 
     contactInfo: {
 
-=======
     color: 'from - violet - 600 to - fuchsia - 700',
     text_color: 'text - violet - 300',
     link: 'https://ziontechgroup.com / services / ai - rfp - response - copilot',
@@ -3434,10 +4659,9 @@ export const realMarketServices: RealMarketService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
-=======
     id: 'gpt - eval - harness',
     name: 'LLM Evaluation Harness',
     tagline: 'Automated evals with golden sets, judges, and regression gates',
@@ -3447,7 +4671,12 @@ export const realMarketServices: RealMarketService[] = [
       'Define tasks and datasets, run multi - model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Golden sets and prompts',
       'Judge model scoring',
       'Multi - model matrix',
@@ -3456,7 +4685,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🧪',
 
     color: 'from - indigo - 600 to - slate - 700',
@@ -3467,7 +4699,12 @@ export const realMarketServices: RealMarketService[] = [
     trial_days: 7,
     setup_time: '2 hours',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     category: 'AI & Data',
     real_service: true,
     technology: ['OpenAI / Anthropic APIs, Vector DB'],
@@ -3494,7 +4731,10 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Geo rules (EEA/UK/US states)',
     id: 'gdpr - cookie - consent - edge',
@@ -3508,7 +4748,12 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
       'Geo rules (EEA / UK / US states)',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Consent receipts & exports',
       'Auto - blocking for tags',
       'Policy page generator',
@@ -3516,10 +4761,12 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🍪',
 
-=======
     color: 'from - amber - 600 to - orange - 700',
     text_color: 'text - amber - 300',
     link: 'https://ziontechgroup.com / services / gdpr - cookie - consent - edge',
@@ -3540,7 +4787,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3556,9 +4808,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'smart - web - scraper - hub',
     name: 'Smart Web Scraper Hub',
     tagline: 'Rotate, render, and extract with compliance guards and queues',
@@ -3568,7 +4822,12 @@ export const realMarketServices: RealMarketService[] = [
       'Render JS pages, rotate IPs, manage robots / politeness, and extract structured data to warehouses with retries and dedupe.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Headless rendering & queues',
       'IP rotation and backoff',
       'Robots / politeness guards',
@@ -3577,7 +4836,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🕸️',
 
     color: 'from - slate - 600 to - slate - 800',
@@ -3588,7 +4850,12 @@ export const realMarketServices: RealMarketService[] = [
     trial_days: 14,
     setup_time: '2 hours',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     category: 'Developer Tools',
     real_service: true,
     technology: ['Playwright, Queues, Proxies'],
@@ -3597,14 +4864,22 @@ export const realMarketServices: RealMarketService[] = [
     roi: 'Automate scraping while reducing ban rate and toil',
     competitors: ['ScraperAPI, Bright Data'],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: '$1.5B data collection',
     growth_rate: '20% YoY',
     variant: 'data - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3620,9 +4895,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'ecommerce - returns - manager',
     name: 'E‑commerce Returns Manager',
     tagline: 'Automate RMAs, labels, and refund workflows for Shopify / Woo',
@@ -3633,7 +4910,12 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
       'Self‑serve returns portal',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Label generation and tracking',
       'Exchange / repair workflows',
       'Return reasons and defect analytics',
@@ -3642,10 +4924,12 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '📦',
 
-=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / ecommerce - returns - manager',
@@ -3666,7 +4950,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'growth - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3682,9 +4971,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',
@@ -3694,7 +4985,12 @@ export const realMarketServices: RealMarketService[] = [
       'Create multi‑step follow‑up sequences for leads and customers with reply / booking detection, throttling, and deliverability insights.',
     features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Sequence builder and templates',
       'Reply / booking detection and stops',
       'Inbox rotation and throttling',
@@ -3704,7 +5000,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '📨',
 
     color: 'from - sky - 600 to - indigo - 700',
@@ -3712,14 +5011,22 @@ export const realMarketServices: RealMarketService[] = [
     link: 'https://ziontechgroup.com / automated - email - followups',
     market_position:;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Simpler and more compliant than heavy sales engagement suites for SMBs.',
     target_audience: 'SMB sales and success teams',
     trial_days: 7,
     setup_time: '1 day',
     category: 'Growth & Marketing',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     real_service: true,
     technology: ['Next.js', 'IMAP / SMTP', 'Calendars'],
@@ -3727,7 +5034,12 @@ export const realMarketServices: RealMarketService[] = [
     use_cases: ['Lead nurturing', 'Onboarding nudges', 'Renewal reminders'],
 
     roi: 'Lift reply rates by 15–35% and shorten sales cycles.',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     competitors: ['Mailshake', 'Lemlist', 'Apollo'],
     market_size: '$6B sales engagement',
     growth_rate: '20% YoY',
@@ -3748,9 +5060,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'podcast - transcribe - chapters',
     name: 'Podcast Transcribe & Chapters',
     tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',
@@ -3761,7 +5075,12 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
       'High‑accuracy transcription',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Speaker diarization',
       'Summaries and chaptering',
       'Topic and keyword extraction',
@@ -3770,10 +5089,12 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🎙️',
 
-=======
     color: 'from - purple - 600 to - indigo - 700',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / podcast - transcribe - chapters',
@@ -3794,7 +5115,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai - futuristic' as any,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3810,9 +5136,11 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     id: 'freelancer - portfolio - studio',
     name: 'Freelancer Portfolio Studio',
     tagline: 'Stunning portfolios and case studies with leads tracking',
@@ -3823,7 +5151,12 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
 
       'Drag‑and‑drop templates',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Case study generator',
       'Contact and booking forms',
       'Testimonials and logos',
@@ -3832,7 +5165,10 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🖼️',
 
     color: 'from - pink - 600 to - fuchsia - 700',
@@ -3849,7 +5185,12 @@ export const realMarketServices: RealMarketService[] = [
     real_service: true,
     technology: ['Next.js', 'Forms', 'SEO'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['Calendly', 'HubSpot', 'GA4'],
     use_cases: ['Showcase work', 'Capture leads', 'Book meetings'],
     roi: 'Increase inbound leads by 10–25% with polished case studies.',
@@ -3872,6 +5213,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 64,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -3909,6 +5251,8 @@ export const realMarketServices: RealMarketService[] = [
 <<<<<<< HEAD
       'Import / export and tags',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -3917,18 +5261,20 @@ export const realMarketServices: RealMarketService[] = [
       'Simple pipeline stages',
       'Email/SMS nudges',
       'Import/export and tags',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       'Mobile‑friendly UI',
     ],
     popular: true,
     icon: '📇',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
     marketPosition:;
-=======
     id: 'gpt-eval-harness',
     name: 'LLM Evaluation Harness',
     tagline: 'Automated evals with golden sets, judges, and regression gates',
@@ -4296,7 +5642,7 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
     marketPosition:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
     targetAudience: 'Local service businesses',
     trialDays: 14,
@@ -4311,6 +5657,7 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$20B SMB CRM',
     growthRate: '10% YoY',
     variant: 'analytics-futuristic' as any,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -4332,6 +5679,9 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -4340,6 +5690,7 @@ export const realMarketServices: RealMarketService[] = [
     },
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Minimal CRM with reminders and basic pipeline views.'
     launchDate: '2025-02-03'
@@ -4356,6 +5707,9 @@ export const realMarketServices: RealMarketService[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
@@ -4406,7 +5760,10 @@ export const realMarketServices: RealMarketService[] = [
     setup_time: 'Same day',
     category: 'CRM',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     real_service: true,
     technology: ['Next.js', 'SQLite / Postgres'],
@@ -4414,7 +5771,12 @@ export const realMarketServices: RealMarketService[] = [
     use_cases: ['Track customers', 'Follow‑ups', 'Close more deals'],
 
     roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
 =======
 =======    competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
@@ -4439,6 +5801,7 @@ export const realMarketServices: RealMarketService[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -4450,6 +5813,12 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Minimal CRM with reminders and basic pipeline views.',
     launchDate: '2025-02-03',
     customers: 320,
@@ -4465,8 +5834,12 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
     features: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -4484,11 +5857,8 @@ export const realMarketServices: RealMarketService[] = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-<<<<<<< HEAD
-    marketPosition:;
-=======
     marketPosition:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Focused assistant vs. general copy tools; fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,
@@ -4504,6 +5874,7 @@ export const realMarketServices: RealMarketService[] = [
     growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 <<<<<<< HEAD
@@ -4518,6 +5889,13 @@ export const realMarketServices: RealMarketService[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -4526,6 +5904,7 @@ export const realMarketServices: RealMarketService[] = [
     },
     realImplementation: true,
     implementationDetails:
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Prompting templates, scoring heuristics, and ESP exports.'
     launchDate: '2025-02-07'
@@ -4541,6 +5920,8 @@ export const realMarketServices: RealMarketService[] = [
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'subjectline - optimizer - ai',
     name: 'Subject Line Optimizer AI',
     tagline: 'Generate and score email subjects with live benchmarks',
@@ -4549,11 +5930,17 @@ export const realMarketServices: RealMarketService[] = [
     description:;
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A / B tests.',
     features: [;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -4587,6 +5974,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 28,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   {
@@ -4600,8 +5988,12 @@ export const realMarketServices: RealMarketService[] = [
 
 =======
 =======
-    id: 'dev - workflow - analytics',
 =======
+origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    id: 'dev - workflow - analytics',
       'Prompting templates, scoring heuristics, and ESP exports.',
     launchDate: '2025-02-07',
     customers: 95,
@@ -4610,11 +6002,12 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
     id: 'dev-workflow-analytics',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Developer Workflow Analytics',
     tagline: 'Visualize reviews, velocity, and bottlenecks across repos',
     price: '$199',
     period: '/month',
+<<<<<<< HEAD
 <<<<<<< HEAD
     description:;
       'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
@@ -4633,15 +6026,48 @@ export const realMarketServices: RealMarketService[] = [
     features: [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    description:
+      'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
+    features: [
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
       'Repo hotspots and ownership',
       'Team scorecards and alerts',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Jira / Linear linkage',
     ],
     popular: true,
+=======
+    icon: '🧩',
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / dev - workflow - analytics',
+    market_position:;
+      'Actionable insights without surveillance; focused on flow metrics.',
+    target_audience: 'Engineering teams and platform leads',
+    trial_days: 14,
+    setup_time: '3 days',
+    category: 'Dev Productivity',
+    real_service: true,
+    technology: ['GitHub / GitLab APIs', 'CI logs'],
+    integrations: ['GitHub', 'GitLab', 'Jira', 'Linear'],
+    use_cases: ['Improve code review', 'Reduce cycle time', 'Stabilize CI'],
+    roi: 'Shorten cycle time by 10–25% and cut flaky tests.',
+    competitors: ['LinearB', 'Swarmia', 'Velocity'],
+    market_size: '$5B dev analytics',
+    growth_rate: '21% YoY',
+    variant: 'analytics - futuristic' as any,
+    contact_info: {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -4657,11 +6083,14 @@ export const realMarketServices: RealMarketService[] = [
   },
   {
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Geo/rule‑based banners',
     id: 'privacy - consent - manager - smb',
@@ -4674,9 +6103,8 @@ export const realMarketServices: RealMarketService[] = [
     features: [;
       'Geo / rule‑based banners',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       'Jira/Linear linkage',
     ],
     popular: true,
@@ -4723,8 +6151,12 @@ export const realMarketServices: RealMarketService[] = [
       'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
     features: [
       'Geo/rule‑based banners',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Preference center',
       'DSAR intake and workflows',
       'Cookie catalog and scans',
@@ -4733,12 +6165,15 @@ export const realMarketServices: RealMarketService[] = [
     ],
     popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '⚖️',
 
     color: 'from - slate - 700 to - slate - 900',
@@ -4752,9 +6187,14 @@ export const realMarketServices: RealMarketService[] = [
     real_service: true,
     technology: ['Next.js', 'Edge rules'],
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['GTM', 'Segment', 'Tag managers'],
     use_cases: ['Cookie compliance', 'Consent records', 'DSAR intake'],
     roi: 'Faster compliance and fewer legal risks.',
@@ -4778,6 +6218,7 @@ export const realMarketServices: RealMarketService[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+<<<<<<< HEAD
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -4942,6 +6383,9 @@ export const realMarketServices: RealMarketService[] = [;
 
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'llm-gateway-cost-control', name: 'LLM Gateway & Cost Control',
     tagline: 'Centralize model access, control spend, add observability and guardrails',
     price: '$299', period: '/month',
@@ -5023,26 +6467,32 @@ export const realMarketServices: RealMarketService[] = [;
     contactInfo: {
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
 
-=======
     reviews: 36
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Region rules, consent logging, banner / prefs widgets.';
     launch_date: '2025 - 02 - 01';
     customers: 88;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -6701,6 +8151,12 @@ export const realMarketServices: RealMarketService[] = [;
     reviews: 36
   }
 ];
+=======
+    rating: 4.6
+    reviews: 36
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
@@ -8878,19 +10334,29 @@ export const realMarketServices: RealMarketService[] = [;
     reviews: 36;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '⚖️',
     color: 'from-slate-700 to-slate-900',
     textColor: 'text-slate-200',
@@ -8924,5 +10390,9 @@ export const realMarketServices: RealMarketService[] = [;
     reviews: 36,
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

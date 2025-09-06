@@ -5,6 +5,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -79,6 +80,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Zap;
   Shield;
   BarChart3;
@@ -88,12 +91,17 @@ import { Zap;
   TrendingUp;
   Code;
   Database;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Cloud;
   ArrowRight;
   Star;
   Check;
+<<<<<<< HEAD
 <<<<<<< HEAD
   ExternalLink
 
@@ -104,6 +112,8 @@ import { Zap;
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ExternalLink
  } from 'lucide-react';
 export default function SaaSMarketplacePage() {
@@ -318,8 +328,12 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       useCase:
         'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.'
       pros: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Lightning fast'
         'Beautiful design'
         'Great keyboard shortcuts'
@@ -405,6 +419,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
     'Project Management',;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -414,6 +429,8 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
         <title>SaaS Marketplace - Zion Tech Group</title>;
         <meta
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const filteredServices =
     selectedCategory === 'All'
@@ -427,7 +444,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
       <Head>
         <title>SaaS Marketplace - Zion Tech Group</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Discover the best micro SaaS services for your business. Curated selection of tools for automation, productivity, payments, and more.'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -443,6 +460,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 href='/contact'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
 <<<<<<< HEAD
@@ -506,6 +524,11 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 style={{ animationDelay: '0.4s' }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                style={{ animationDelay: '0.4s' }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Recommendations
               </Button>
@@ -542,6 +565,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
 =======
           {/* Stats */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {microSaasServices.length}+
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -565,6 +589,8 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
@@ -592,11 +618,12 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 100K+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -634,14 +661,20 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -791,6 +824,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                         size='sm'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -875,6 +909,8 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                 </div>;
               </Card>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='group-hover:border-blue-500 group-hover:text-blue-400'
                       >
                         Visit Website
@@ -892,7 +928,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>;
         </div>;
@@ -1018,6 +1054,7 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
@@ -1054,6 +1091,8 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               View Our Services
@@ -1064,5 +1103,9 @@ icon: <TrendingUp className='w-8 h-8 text-blue-400' />,
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 export default function Placeholder() {
@@ -57,3 +58,7 @@ function Placeholder() {
 <Head> <title>Services • Landing-page-generator - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <main> <h1>LandingPageGenerator</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<Head> <title>Services • Landing-page-generator - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <main> <h1>LandingPageGenerator</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

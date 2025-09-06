@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -64,6 +65,11 @@ import React from 'react';
 type QA = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+type QA = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -77,6 +83,7 @@ type QA = any;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -96,7 +103,10 @@ function FAQ() {
   // Check condition
 if (return null) {
   $2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
+<<<<<<< HEAD
   return (
     <div className="mt - 10 border - t border - gray - 200 dark:border - gray-800 pt-6">;
       <h2 className="text - lg font-semibold mb-4">Frequently Asked Questions</h2>;
@@ -115,4 +125,10 @@ if (return null) {
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

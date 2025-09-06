@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const fs = require("fs")
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "timestamp"
       summary: { passed: 0, "failed": 0, "warnings"}
 // console.log(" Running Code Quality Checks...")
@@ -60,6 +68,7 @@ const fs = require("fs")
     console.log("=")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.log(`� Report saved "to"`)
@@ -73,3 +82,8 @@ const fs = require("fs")
     console.log(`� Report saved "to"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    console.log(`� Report saved "to"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

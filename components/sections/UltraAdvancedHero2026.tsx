@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -28,6 +29,8 @@ import React from 'react';
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import Link from 'next/link';
@@ -38,8 +41,12 @@ import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-d
 export default function UltraAdvancedHero2026() {
   const totalServices = null;
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ArrowRight
   Star
   TrendingUp
@@ -69,6 +76,7 @@ import {
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function UltraAdvancedHero2026() {
@@ -103,6 +111,8 @@ export default function UltraAdvancedHero2026() {;
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function UltraAdvancedHero2026() {
   const totalServices =
     aiAutonomousServices2026.length +
@@ -114,8 +124,12 @@ export default function UltraAdvancedHero2026() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const containerVariants = {
     hidden: { opacity: 0 }
 <<<<<<< HEAD
@@ -352,22 +366,18 @@ function UltraAdvancedHero2026() {
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-=======
 staggerChildren: 0.1,
       },
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
-<<<<<<< HEAD
-=======
 duration: 0.8,
       },
     },
@@ -388,7 +398,7 @@ duration: 0.8,
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden'
           animate='visible'
@@ -466,6 +476,7 @@ duration: 0.8,
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         stagger_children: 0.1,
@@ -621,6 +632,8 @@ duration: 0.8,
           <motion.div
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
           >
             <div className='text-center p-4 bg-gradient-to-br from-purple-800/20 to-purple-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl'>
@@ -666,6 +679,7 @@ duration: 0.8,
                 1000% ROI Guaranteed
               </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           <motion && motion.div variants={itemVariants} className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30">;
             <Sparkles className="w-5 h-5 text-purple-400" />;
@@ -684,11 +698,15 @@ duration: 0.8,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
               <span className='text-gray-200 font-medium'>
                 24/7 Autonomous Operation
+<<<<<<< HEAD
 <<<<<<< HEAD
               </span>            </div>
           </motion.div>
@@ -733,6 +751,8 @@ duration: 0.8,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </span>
             </div>
           </motion.div>
@@ -754,8 +774,12 @@ duration: 0.8,
               className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
             >
               <Zap className='w-6 h-6 mr-3' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               Get Started Today
             </Link>
           </motion.div>
@@ -802,6 +826,7 @@ duration: 0.8,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Contact Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
@@ -835,6 +860,8 @@ duration: 0.8,
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div
             variants={itemVariants}
             className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'
@@ -870,8 +897,12 @@ duration: 0.8,
                   <div className='text-purple-300 text-sm'>
                     {contactInfo.address}
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </div>
             </div>
@@ -958,12 +989,15 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 
           {/* Trust Indicators */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               <Zap className="w-5 h-5 text-purple-400" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div
             variants={itemVariants}
             className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400'
@@ -977,12 +1011,13 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             </div>
             <div className='flex items-center space-x-2'>
               <Zap className='w-5 h-5 text-purple-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <span>24/7 Support</span>
             </div>
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1010,10 +1045,12 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
         </motion.div>;
         <motion.div;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Floating Elements */}
 <div className='absolute inset-0 pointer-events-none'>
         <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0],
@@ -1067,6 +1104,7 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
             duration: 6
             repeat: Infinity
 <<<<<<< HEAD
+<<<<<<< HEAD
             ease: "easeInOut"
           }}
 <<<<<<< HEAD
@@ -1083,6 +1121,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ease: 'easeInOut'
           }}
           className='absolute top-20 right-20 text-6xl opacity-20'
@@ -1092,13 +1132,18 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
         <motion.div
           animate={{
             y: [0, 20, 0]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             rotate: [0, -5, 0]
           }}
           transition={{
             duration: 8
             repeat: Infinity
+<<<<<<< HEAD
 <<<<<<< HEAD
             ease: "easeInOut"
           }}
@@ -1116,6 +1161,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ease: 'easeInOut'
           }}
           className='absolute bottom-20 left-20 text-6xl opacity-20'
@@ -1125,13 +1172,18 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
         <motion.div
           animate={{
             y: [0, -15, 0]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             rotate: [0, 3, 0]
           }}
           transition={{
             duration: 7
             repeat: Infinity
+<<<<<<< HEAD
 <<<<<<< HEAD
             ease: "easeInOut"
           }}
@@ -1149,6 +1201,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ease: 'easeInOut'
           }}
           className='absolute top-1/3 left-10 text-5xl opacity-20'
@@ -1158,13 +1212,18 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
         <motion.div
           animate={{
             y: [0, 15, 0]
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             rotate: [0, -3, 0]
           }}
           transition={{
             duration: 9
             repeat: Infinity
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1249,6 +1308,8 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ease: 'easeInOut'
           }}
           className='absolute bottom-1/3 right-10 text-5xl opacity-20'
@@ -1261,5 +1322,9 @@ className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan
       </div>
     </section>
 );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface TextAnalysisResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>;
@@ -32,6 +33,8 @@ export default async function handler(
     const charactersNoSpaces = text.replace(/\s/g, '').length;
     const words = text
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 text: string;
   statistics: {
     characters: number;
@@ -89,7 +92,7 @@ return res.status(405).json({ error: 'Method not allowed' });
 
     // Basic statistics
 const words = text
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       .trim()
       .split(/\s+/)
       .filter(word => word && word.length > 0).length;
@@ -98,11 +101,9 @@ const words = text
       .filter(sentence => sentence && sentence.trim().length > 0).length;
     const paragraphs = text
       .split(/\n\s*\n/)
-<<<<<<< HEAD
-=======
       .filter(para => para.trim().length > 0).length;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase();
@@ -110,8 +111,6 @@ const words = text
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-<<<<<<< HEAD
-=======
 return matches ? matches.length : 1;
     };
 
@@ -137,7 +136,7 @@ const fleschReadingEase = Math.max(
     const gunningFog = Math.max(
       0
       0.4 *
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         (words / sentences +
           100 *
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))
@@ -193,8 +192,6 @@ const fleschReadingEase = Math.max(
     else sentimentLabel = 'very-positive';
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-<<<<<<< HEAD
-=======
 text
       .toLowerCase()
       .split(/\s+/)
@@ -212,14 +209,12 @@ text
 word,
         count,
         frequency: Math.round((count / words) * 1000) / 10,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }));
     // Bigrams and trigrams
     const wordsArray = text && text.toLowerCase().split(/\s+/);
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
-<<<<<<< HEAD
-=======
 
 for (let i = 0; i < wordsArray.length - 1; i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
@@ -228,7 +223,7 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
     for (let i = 0; i < wordsArray.length - 2; i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     const bigrams = Array.from(bigramCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -258,6 +253,7 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
     // Language detection (simplified - assume English for demo)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
@@ -276,6 +272,8 @@ for (let i = 0; i < wordsArray.length - 1; i++) {
         speakingTime
       }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
@@ -291,7 +289,7 @@ text,
         readingTime,
         speakingTime,
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100
@@ -310,6 +308,7 @@ text,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       language: {
   } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error('Text analysis error:', error);
     res && res.status(500).json({ error: 'Internal server error' });
@@ -415,11 +414,17 @@ text,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

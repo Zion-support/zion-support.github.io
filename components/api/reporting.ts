@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 interface ReportingData {
@@ -13,24 +11,16 @@ interface ReportingData {
 }
 
 const FILE = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
       updated_at: string;
     }
-<<<<<<< HEAD
-    funnel: { stage: string, count: number }[];
-    timeToHireDays: number;
-    costPerHireUsd?: number
-    updatedAt: string
-  }>
-}
-=======
   >;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,6 +45,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const entry = data.byTenant[tenantId] |{
       funnel: []
       timeToHireDays: 0
@@ -74,6 +65,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateJsonFile<ReportingData>(
       FILE
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const entry = data.byTenant[tenantId] || {
       funnel: [],
       timeToHireDays: 0,
@@ -86,7 +79,7 @@ const entry = data.byTenant[tenantId] || {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
 const updated = updateJsonFile<ReportingData>(
       FILE,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       curr => {
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
@@ -106,6 +99,7 @@ const updated = updateJsonFile<ReportingData>(
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
@@ -208,11 +202,17 @@ return res.status (405).json ({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   return res.status(405).json({ error: 'Method not allowed' });
     return res.status(200).json(updated.byTenant[tenantId])
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

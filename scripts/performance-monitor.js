@@ -89,6 +89,7 @@ const performanceChecks = {
   lighthouseScore: false,
   loadTime: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
   memoryUsage: false;
 };
 <<<<<<< HEAD
@@ -132,9 +133,11 @@ const performanceChecks = {
   "loadTime": false,
   "memoryUsage": false};
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   memoryUsage: false
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 try {
   // Check build size
   if (fs.existsSync('.next')) {
@@ -179,9 +182,6 @@ try {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   performanceChecks.bundleAnalysis = true;
 } catch (error) {
-<<<<<<< HEAD
-  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
-=======
       console.warn('⚠️  Could not collect system metrics:', error.message);
     }
   }
@@ -319,7 +319,7 @@ try {
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 <<<<<<< HEAD
 =======
@@ -629,13 +629,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   score: performanceScore,
   checks: performanceChecks,
-<<<<<<< HEAD
-  recommendations: [];
-};
-=======
   recommendations: []
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
 if (performanceScore < 80) {
 <<<<<<< HEAD
 <<<<<<< HEAD

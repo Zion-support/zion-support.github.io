@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface QuantumSpaceService {
 export interface QuantumSpaceService {;
 =======
@@ -12,9 +13,11 @@ export interface QuantumSpaceService {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface QuantumSpaceService {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -26,6 +29,7 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface QuantumSpaceService {;
     address: string
@@ -55,14 +59,25 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -71,6 +86,7 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
   contactInfo: {
 export const quantumSpaceServices: QuantumSpaceService[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "quantum-computing-platform", name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions", price: "$199/month",
@@ -91,6 +107,8 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -102,12 +120,17 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     tagline: "Next-generation quantum computing solutions";
     price: "$199/month";
     description: "Advanced quantum computing platform for complex calculations and simulations.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
       "Quantum algorithms";
       "Simulation tools";
       "API access";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Documentation";
       "Support services"
@@ -132,6 +155,8 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Documentation",
       "Support services"
     ],
@@ -141,12 +166,17 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +203,8 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "quantum-computing-platform",
     name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions",
@@ -189,9 +221,9 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
     category: "Quantum Computing",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -207,10 +239,15 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -228,3 +265,9 @@ export const quantumSpaceServices: QuantumSpaceService[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 initParticles ();
 // Animation loop // Update and draw particles particlesRef.current.forEach ( (particle, index) => {
   // Update position particle.x += particle.vx;
@@ -36,6 +37,8 @@ export default function UltraFuturisticBackground2029() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface Particle {
@@ -83,8 +86,12 @@ export default function UltraFuturisticBackground2029() {
 canvas.height = window.innerHeight;
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
@@ -93,11 +100,14 @@ canvas.height = window.innerHeight;
       const particleCount = Math.floor((canvas.width * canvas.height) / 20000);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 for (let i = 0; i < particleCount; i++) {
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][
@@ -125,14 +135,19 @@ type,
       particlesRef.current = particles;
     };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     initParticles();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
+<<<<<<< HEAD
 <<<<<<< HEAD
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
@@ -182,6 +197,8 @@ type,
         0;
         canvas.width / 2;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 canvas.width / 2,
         canvas.height / 2,
         0,
@@ -194,7 +211,7 @@ canvas.width / 2,
       gradient.addColorStop(0.6, 'rgba(139, 92, 246, 0.05)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -228,6 +245,7 @@ canvas.width / 2,
             ctx.fill();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -256,6 +274,8 @@ canvas.width / 2,
                 const distance = Math.sqrt(
                   Math.pow(particle.x - partner.x, 2) + Math.pow(particle.y - partner.y, 2)
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner =
@@ -266,7 +286,7 @@ canvas.width / 2,
                 const distance = Math.sqrt(
                   Math.pow(particle.x - partner.x, 2) +
                     Math.pow(particle.y - partner.y, 2)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 );
                 if (distance < 100) {
                   ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - distance / 100)})`;
@@ -274,6 +294,7 @@ canvas.width / 2,
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -291,6 +312,10 @@ canvas.width / 2,
 ctx.stroke();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }
               }
             }
@@ -365,16 +390,6 @@ ctx.stroke();
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fill();
             break;
-<<<<<<< HEAD
-            if (index % 15 === 0) {
-              const connections = particlesRef.current.filter(p =>
-                p.type === 'neural' &&
-                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
-              );
-              connections.forEach(connection => {
-                const distance = Math.sqrt(
-                  Math.pow(particle.x - connection.x, 2) + Math.pow(particle.y - connection.y, 2)
-=======
           case 'neural':
             // Neural particles with network connections
             ctx.fillStyle = particle.color;
@@ -397,13 +412,14 @@ ctx.stroke();
                 const distance = Math.sqrt(
                   Math.pow(particle.x - connection.x, 2) +
                     Math.pow(particle.y - connection.y, 2)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 );
                 ctx.strokeStyle = `rgba(16, 185, 129, ${0.4 * (1 - distance / 80)})`;
                 ctx.lineWidth = 0.5;
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -412,6 +428,8 @@ ctx.stroke();
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.stroke();
               });
             }
@@ -544,12 +562,13 @@ for (let y = 0; y < height; y += 5) {
   }
   return (
 <div className='fixed inset-0 -z-10 overflow-hidden'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Animated gradient overlay */}
       <motion&& motion.div
         className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
         animate={{
           background: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -564,6 +583,8 @@ for (let y = 0; y < height; y += 5) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
         animate={{
           background: [
@@ -589,11 +610,13 @@ for (let y = 0; y < height; y += 5) {
             'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
           ];
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0.3) 50%, rgba(6,182,212,0.2) 100%)',
             'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0.2) 50%, rgba(139,92,246,0.3) 100%)',
           ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
         transition={{
           duration: 8
@@ -849,6 +872,7 @@ for (let y = 0; y < height; y += 5) {
           animate={{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -884,6 +908,8 @@ for (let y = 0; y < height; y += 5) {
           }}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],
           }}
@@ -936,7 +962,7 @@ ease: 'easeInOut',
               y: [0, -20, 0],
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.2, 1],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -951,18 +977,16 @@ ease: 'easeInOut',
 
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
             transition={{
-<<<<<<< HEAD
-              delay: i * 0.3
-=======
               duration: 3 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',
 delay: i * 0.3,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
 =======
           />;
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   )
@@ -992,3 +1016,9 @@ delay: i * 0.3,
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      </div>
+    </div>
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

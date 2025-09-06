@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               <strong className='text-white'>Postgres Index Advisor Pro</strong>{' '}
@@ -47,6 +48,8 @@
                 </li>;
                 <li>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import SEO from '../components/SEO';
 const ext = null;
@@ -322,7 +325,7 @@ export default function ServicesAdvertisingPage() {
                   </a>
                 </li>
                 <li>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   PartnerStack:{' '}
                   </a>;
                 </li>;
@@ -1154,6 +1157,7 @@ export default function ServicesAdvertisingPage() {
             <a
               className='text-cyan-400 underline'
 <<<<<<< HEAD
+<<<<<<< HEAD
               href='/services/ai-contract-risk-analyzer'>;
         <section id='accessibility - scanner' className='space - y-6'>;
           <h2 className='text - 2xl font - semibold text - white'>;
@@ -1198,6 +1202,8 @@ export default function ServicesAdvertisingPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               href='/privacy-request-portal'
             >
               Learn more
@@ -2347,8 +2353,12 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -2361,6 +2371,7 @@ export default function ServicesAdvertisingPage() {
               <li>Typical SMB budget: $79–$499/mo</li>
               <li>
                 References:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 {ext('https://www.cloudflare.com/data-localization/')},{' '}
@@ -8196,6 +8207,8 @@ export default function ServicesAdvertisingPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {ext('https://www.cloudflare.com/data-localization/')},{' '}
                 {ext('https://developers.cloudflare.com/workers/')}
               </li>
@@ -9031,5 +9044,9 @@ export default function ServicesAdvertisingPage() {
 }, {
   ext ('https://valimail.com/pricing/') 
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

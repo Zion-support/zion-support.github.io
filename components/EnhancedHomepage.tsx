@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -7,6 +8,8 @@
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
@@ -29,8 +32,12 @@ import EnhancedNavigation from './layout/EnhancedNavigation',
 import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -88,6 +95,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 visible: {
   opacity: 1, transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
   duration: 0.8, staggerChildren: 0.1
 }
@@ -1143,6 +1151,8 @@ export default EnhancedHomepage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   duration: 0.8, staggerChildren: 0.1 
 
 
@@ -1167,5 +1177,9 @@ import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai
 import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 const EnhancedHomepage: React.FC;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -11,9 +12,11 @@
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface Ultimate2026Service {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -24,6 +27,7 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -104,6 +108,8 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -127,14 +133,24 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       email: "kleber@ziontechgroup.com";
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+      email: "kleber@ziontechgroup.com";
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 <<<<<<< HEAD
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     id: "2026-ultimate-service",
@@ -150,20 +166,23 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
   contactInfo: {
-<<<<<<< HEAD
-=======
     mobile: string, email: string,
     address: string
   }
 }
 export const ultimate2026Services: Ultimate2026Service[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "2026-ultimate-service", name: "2026 Ultimate Service Platform",
     tagline: "The ultimate platform for 2026", price: "$699/month",
@@ -227,6 +246,15 @@ export const ultimate2026Services: Ultimate2026Service[] = [
   }
 ];
 ;    features: [
+=======
+    id: "2026-ultimate-service",
+    name: "2026 Ultimate Service Platform",
+    tagline: "The ultimate platform for 2026",
+    price: "$699/month",
+    description: "The ultimate service platform for 2026, combining all cutting-edge technologies and capabilities.",
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    features: [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Ultimate platform",
       "All technologies",
       "Maximum capabilities",
@@ -236,10 +264,19 @@ export const ultimate2026Services: Ultimate2026Service[] = [
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 =======
@@ -276,3 +313,8 @@ export const ultimate2026Services: Ultimate2026Service[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

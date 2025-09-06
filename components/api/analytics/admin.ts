@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -15,6 +16,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -29,8 +32,12 @@ supabase.from('users').select('id, role, country'),
       supabase.from('quotes').select('id, status'),
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ]);
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
     const users =
@@ -87,6 +94,7 @@ supabase.from('users').select('id, role, country'),
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
@@ -129,6 +137,8 @@ supabase.from('users').select('id, role, country'),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
     ).length;
@@ -167,31 +177,18 @@ usersData.forEach(u => {
         label: country,
         value,
       })),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
     });
   } catch (e: any) {
     res.status (200).json ({
       totals: {
-<<<<<<< HEAD
-        total_users: 4,
-        total_talents: 2,
-        total_clients: 2,
-        jobs_posted: 1,
-        jobs_filled: 2,
-        quotes_sent: 2,
-        quotes_accepted: 1,
-        active_projects: 2,
-      },
-      top_categories: [;
-        { label: 'AI / ML', value: 2 },
-        { label: 'Design', value: 1 },
-      ],
-      referral_conversions: 2,
-      geo: [;
-=======
         totalUsers: 4,
         totalTalents: 2,
         totalClients: 2,
@@ -207,12 +204,13 @@ usersData.forEach(u => {
       ],
       referralConversions: 2,
       geo: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         { label: 'US', value: 2 },
         { label: 'IN', value: 1 },
         { label: 'GB', value: 1 },
       ],
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
   }}
 <<<<<<< HEAD
@@ -238,3 +236,7 @@ usersData.forEach(u => {
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

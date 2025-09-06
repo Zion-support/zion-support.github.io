@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,19 +13,30 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));  if (!fs.existsSync(dir)) return res.status(200).json([]);
+=======
+
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section |"General");
@@ -35,6 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -49,6 +62,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+  if (!fs.existsSync(dir)) return res.status(200).json([]);
+  const files = fs.readdirSync(dir).map((name) => ({ name }));
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const section = String(req && req.query.section || "General");
   const dir = resolveDataPath(path && path.join("dataroom", section));
   if (!fs && fs.existsSync(dir)) return res && res.status(200).json([]);
@@ -59,6 +79,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -78,6 +99,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -102,6 +128,7 @@ function handler() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
@@ -118,11 +145,23 @@ function handler() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const section = String(req.query.section || 'General');
   const dir = resolveDataPath(path.join('dataroom', section));
   if (!fs.existsSync(dir)) return res.status(200).json([]);
 const files = fs.readdirSync(dir).map(name => ({ name }));
   appendAuditLog({ type: 'file_list', section });
   res.status(200).json(files);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

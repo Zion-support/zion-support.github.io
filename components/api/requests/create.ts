@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -74,6 +75,8 @@ async function summarizeWithOpenAI(description: string) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -81,8 +84,12 @@ const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 async function loadRequests(): Promise<any[]> {
   try {
     const raw = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({
@@ -138,6 +145,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
@@ -175,13 +183,15 @@ export default async function handler(
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
     req.body || {};
   if (!name || !email || !description)
     return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -239,6 +249,7 @@ function handler() {
   const id = `req_${Date.now ()}`;
   const record = {
 <<<<<<< HEAD
+<<<<<<< HEAD
     name;
     email;
     budget: normalizedBudget;
@@ -286,6 +297,8 @@ return res.status (200).json ({ id, status: 'ok' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id,
     name,
     email,
@@ -305,5 +318,9 @@ id,
 
   return res.status(200).json({ id, status: 'ok' });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

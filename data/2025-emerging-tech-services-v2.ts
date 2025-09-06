@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
 export interface EmergingTechService {;
 =======
@@ -12,9 +13,11 @@ export interface EmergingTechService {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface EmergingTechService {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string,
   description: string;
@@ -23,6 +26,7 @@ id: string;
     monthly: number;
     yearly: number;
     currency: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     trialDays: number;
@@ -34,11 +38,13 @@ id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     trialDays: number;
     setupTime: string;
     enterprise: number
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   features: string[];
   benefits: string[];
   target_audience: string[];
@@ -60,6 +66,7 @@ id: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
@@ -87,6 +94,18 @@ id: string;
     reviews: 45,
   },
   {
+=======
+
+
+  {
+
+      'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
+    ],
+    realImplementation: true,
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -104,9 +123,13 @@ id: string;
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
 <<<<<<< HEAD
+<<<<<<< HEAD
     compliance: [
 <<<<<<< HEAD
 =======
+=======
+    compliance: [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
@@ -183,7 +206,12 @@ id: string;
     link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
 
     icon: '🧬',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -195,13 +223,21 @@ id: string;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -220,7 +256,10 @@ id: string;
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
@@ -297,7 +336,12 @@ id: string;
     link: 'https://ziontechgroup.com / brain - computer - interface - platform',
 
     icon: '🧠',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 01 - 15',
@@ -309,13 +353,21 @@ id: string;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -334,7 +386,10 @@ id: string;
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
@@ -411,7 +466,12 @@ id: string;
     link: 'https://ziontechgroup.com / quantum - energy - platform',
 
     icon: '⚡',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
     launch_date: '2024 - 02 - 10',
@@ -423,13 +483,21 @@ id: string;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -448,10 +516,16 @@ id: string;
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -465,14 +539,17 @@ id: string;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 =======
     compliance: [];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
   marketSize: string;
   growthRate: string
 }
@@ -495,7 +572,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
       'Risk assessmentRegulatory compliance tools'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -533,9 +610,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     price: {
       monthly: 799,
       yearly: 7990,
@@ -544,6 +625,68 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       setup_time: '12 hours',
       enterprise: 2999,
     },
+<<<<<<< HEAD
+=======
+    features: [;
+      'Advanced computer vision',
+      'Real - time decision making',
+      'Safety systems',
+      'Path planning algorithms',
+      'Traffic prediction',
+      'Weather adaptation',
+      'Fleet management',
+      'Performance monitoring',
+      'Custom AI models',
+      'API for vehicles',
+    ],
+    benefits: [;
+      'Enable autonomous transportation',
+      'Improve road safety',
+      'Reduce transportation costs',
+      'Optimize fleet operations',
+      'Advance mobility technology',
+    ],
+    target_audience: [;
+      'Automotive manufacturers',
+      'Transportation companies',
+      'Logistics providers',
+      'Ride - sharing platforms',
+      'Government agencies',
+      'Technology companies',
+    ],
+    market_position:;
+      'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
+    competitors: [;
+      'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
+    ],
+    tech_stack: [;
+      'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
+    ],
+    real_implementation: true,
+    implementation_details:;
+      'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',
+    roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
+    use_cases: [;
+      'Autonomous driving',
+      'Fleet management',
+      'Safety systems',
+      'Traffic optimization',
+      'Transportation logistics',
+      'Research and development',
+    ],
+    integrations: [;
+      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications',
+    ],
+    support:;
+      '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
+    compliance: [;
+      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
+    ],
+    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -554,6 +697,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
+<<<<<<< HEAD
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -571,6 +715,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -595,7 +742,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 }
 
 
-=======
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
     ];
 
@@ -603,9 +749,14 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -613,6 +764,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -623,6 +775,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 <<<<<<< HEAD
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually';
@@ -632,6 +786,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 
 ];
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -640,6 +795,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string,;
 =======
   }  id: string,;
@@ -680,6 +840,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   marketSize: string,;
   growthRate: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1003,12 +1164,17 @@ export interface EmergingTechService {;
   }
 ];
 ;
+=======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface EmergingTechService {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1027,9 +1193,19 @@ export interface EmergingTechService {;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     marketSize: '$35B autonomous vehicle market';
     growthRate: '75% annually'
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

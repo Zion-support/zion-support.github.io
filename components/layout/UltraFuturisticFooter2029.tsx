@@ -3,6 +3,7 @@
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 =======
@@ -133,19 +134,26 @@ const contactInfo = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
  } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const serviceCategories = [
   {
     title: 'AI & Machine Learning'
     icon: Brain
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {
@@ -222,6 +230,8 @@ const serviceCategories = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-2029',
@@ -306,8 +316,12 @@ const socialLinks = [
   },
 ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const footerSections = [
   {
     title: 'Company'
@@ -317,6 +331,7 @@ const footerSections = [
       { name: 'Leadership Team', href: '/team' },
       { name: 'Careers', href: '/careers' },
       { name: 'Press & Media', href: '/press' },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     title: 'Solutions',
@@ -360,6 +375,8 @@ const UltraFuturisticFooter2029 = () => {
     <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 { name: 'Partnerships', href: '/partnerships' },
     ],
   },
@@ -419,11 +436,15 @@ const UltraFuturisticFooter2029 = () => {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
               technology solutions. Transforming businesses with cutting-edge
@@ -543,6 +564,7 @@ const UltraFuturisticFooter2029 = () => {
 
           {/* Service Categories */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -552,13 +574,19 @@ const UltraFuturisticFooter2029 = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
               Our Services
             </h4>
             <div className='space-y-4'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -567,44 +595,6 @@ const UltraFuturisticFooter2029 = () => {
                   <ul className='space-y-2'>
                     {category.services.map(service => (
                       <li key={service.name}>
-<<<<<<< HEAD
-            {/* Contact Information */}
-            <div className='space-y-3 mb-6'>;
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>;
-                <Phone className='w-4 h-4' />;
-                <a href={`tel:${contactInfo && contactInfo.mobile}`} className='text-sm'>;
-                  {contactInfo && contactInfo.mobile}
-                </a>;
-              </div>;
-              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>;
-                <Mail className='w-4 h-4' />;
-                <a href={`mailto:${contactInfo && contactInfo.email}`} className='text-sm'>;
-                  {contactInfo && contactInfo.email}
-                </a>;
-              </div>;
-              <div className='flex items-center space-x-3 text-gray-400'>;
-                <MapPin className='w-4 h-4' />;
-                <span className='text-sm'>{contactInfo && contactInfo.address}</span>              </div>            </div>;
-
-            {/* Social Links */}
-            {/* Social Links */}
-            <div className='flex space-x-4'>;
-              {socialLinks && socialLinks.map(social => (;
-                <a
-                  key={social && social.name}
-                  href={social && social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social && social.color} transition-all duration-200 hover:bg-slate-700/50`}>;
-                  <social && social.icon className='w-5 h-5' />                </a>                <a
-                  key={social && social.name}
-                  href={social && social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social && social.color} transition-all duration-200 hover:bg-slate-700/50`}>;
-                  <social && social.icon className="w-5 h-5" />;
-                </a>;
-=======
                         <Link
                           href={service.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group'
@@ -616,7 +606,7 @@ const UltraFuturisticFooter2029 = () => {
                     ))}
                   </ul>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
           {/* Service Categories */}
           <div className='lg:col-span-1'>;
@@ -725,6 +715,7 @@ const UltraFuturisticFooter2029 = () => {
                 >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -737,8 +728,10 @@ const UltraFuturisticFooter2029 = () => {
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <link.icon className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{link.name}</span>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -818,6 +811,7 @@ const UltraFuturisticFooter2029 = () => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div key={section.title}>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <h5 className="text-sm font-medium text-gray-300 mb-3">{section.title}</h5>
                   <ul className="space-y-2">
@@ -987,6 +981,8 @@ const UltraFuturisticFooter2029 = () =>: any {
                           className="text - sm text - gray - 400 hover:text - white transition-colors duration-200";
                         >;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
                     {section.title}
                   </h5>
@@ -997,7 +993,7 @@ const UltraFuturisticFooter2029 = () =>: any {
                           href={link.href}
                           className='text-sm text-gray-400 hover:text-white transition-colors duration-200'
                         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {link.name}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Bottom Footer */}
@@ -1056,6 +1052,7 @@ const UltraFuturisticFooter2029 = () =>: any {
               <Link
                 href='/cookies'
 <<<<<<< HEAD
+<<<<<<< HEAD
             </div>
 <<<<<<< HEAD
 
@@ -1070,9 +1067,11 @@ const UltraFuturisticFooter2029 = () =>: any {
               </Link>
               <Link href="/cookies" className="hover:text-white transition-colors">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='hover:text-white transition-colors'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Cookie Policy
               </Link>
             </div>
@@ -1083,6 +1082,7 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       {/* Newsletter Signup */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='bg - gradient - to - r from - purple - 600 / 10 to - blue - 600 / 10 border - t border - slate - 700 / 50'>;
         <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
@@ -1173,6 +1173,8 @@ export default UltraFuturisticFooter2029;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
           <div className='text-center'>
@@ -1202,5 +1204,9 @@ export default UltraFuturisticFooter2029;
 };
 
 export default UltraFuturisticFooter2029;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

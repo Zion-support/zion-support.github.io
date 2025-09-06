@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -7,6 +8,9 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
  setErrors (newErrors);
 }
 setIsSubmitting (true);
@@ -52,6 +56,8 @@ export default EnhancedContactForm;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -129,8 +135,12 @@ const EnhancedContactForm: React.FC = () => {
       icon: Globe,
       color: 'from-gray-500 to-slate-500',
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
@@ -164,16 +174,6 @@ const EnhancedContactForm: React.FC = () => {
       return;
     }
     setIsSubmitting(true);
-<<<<<<< HEAD
-      });
-      setErrors({});
-    } catch (error) {;
-      console && console.error('Error submitting form:', error);
-      showError('Submission FailedThere was an error sending your message. Please try again.');
-    } finally {;
-      setIsSubmitting(false);
-    }
-=======
 
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -233,28 +233,11 @@ const EnhancedContactForm: React.FC = () => {
   };
 
   if (isSubmitted) {
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-        className="text-center py-12">;
-        <div className="w-20 h-20 rounded-full bg-green-500/20 mx-auto mb-6 flex items-center justify-center">;
-          <CheckCircle className="w-10 h-10 text-green-400" />;
-        </div>;
-        <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>;
-        <p className="text-white/70 mb-6">;
-          Thank you for reaching out. We'll get back to you within 24 hours.;
-        </p>;
-        <button
-          onClick={() => setIsSubmitted(false)}
-          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover: from-blue-700 hover:to-cyan-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105";
-        >;
-          Send Another Message;
-        </button>;
-      </div>;
-=======
         className="py-20 bg-gradient-to-br from-green-50 to-emerald-50"
       >
         <div className="container mx-auto px-4 text-center">
@@ -292,10 +275,11 @@ const EnhancedContactForm: React.FC = () => {
           </div>
         </div>
       </motion.div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     );
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -688,14 +672,15 @@ if ( {) {
 =======
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { FormData, FormErrors } from '../types';
 import { useToast } from './ui/Toast';
 const EnhancedContactForm: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <div className="container mx-auto px-4">
         <motion.div
@@ -1081,6 +1066,6 @@ const EnhancedContactForm: React.FC;
   );
 };
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default EnhancedContactForm;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

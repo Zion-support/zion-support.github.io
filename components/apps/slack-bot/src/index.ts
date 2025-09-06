@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import dotenv from 'dotenv';
@@ -28,6 +29,8 @@ function helpText(): string {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { App  } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -64,8 +67,12 @@ headers: { 'content-type': 'application/json', 'x-user-id': userId },
       await respond({
         response_type: 'ephemeral'
         text: `Here is a draft job post for *${role}*:\n\n${data.description}`
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       });
       return;
     }
@@ -100,6 +107,7 @@ headers: { 'content-type': 'application/json', 'x-user-id': userId },
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {
     await respond({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -294,6 +302,8 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       response_type: 'ephemeral',
       text: `Error: ${err.message || 'unknown'}`,
     });
@@ -305,5 +315,9 @@ console.log (`⚡️ Zion Slack bot running on port ${port}`);
   // eslint-disable-next-line no-console
 console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

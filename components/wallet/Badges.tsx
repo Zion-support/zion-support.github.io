@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -24,6 +25,11 @@ import React from "react";
 export type Badge = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from "react";
+export type Badge = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
   id: string;
 label: string;
@@ -120,6 +126,7 @@ if (current = b) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return current;
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
@@ -204,17 +211,20 @@ export default function Badges({ balance }: { balance: number }) {
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">
       {BADGES.map((b) => (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
   return (
 <div className='flex gap-2 items-center flex-wrap'>
       {BADGES.map(b => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <span
           key={b.id}
           className={`px-3 py-1 rounded-full text-xs border ${
             balance >= b.threshold
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -232,12 +242,18 @@ export default function Badges({ balance }: { balance: number }) {
               : 'bg-gray-100 border-gray-200 text-gray-500'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+? 'bg-yellow-100 border-yellow-300 text-yellow-800'
+              : 'bg-gray-100 border-gray-200 text-gray-500'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
       {active && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <span className='ml-2 text-xs text-green-600'>
@@ -251,6 +267,8 @@ export default function Badges({ balance }: { balance: number }) {
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 
 }
@@ -269,11 +287,17 @@ export default function Badges({ balance }: { balance: number }) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <span className='ml-2 text-xs text-green-600'>
           Current: {active.label}
         </span>
       )}
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

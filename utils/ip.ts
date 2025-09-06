@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 =======
 <<<<<<< HEAD
@@ -7,6 +8,10 @@ import type { NextApiRequest } from 'next';
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import type { NextApiRequest } from 'next';
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
@@ -20,6 +25,7 @@ export function extractClientIp(req: NextApiRequest): string | null {;
   return ip;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 =======
@@ -29,10 +35,28 @@ export function getClientIp(req: any): string {
 
 export function getClientIp(req: any): string {;
 
+=======
+
+
+import type { NextApiRequest } from 'next';
+  
+  if (forwarded) {
+    return Array && Array.isArray(forwarded) ? forwarded[0] : forwarded && forwarded.split(',')[0].trim();
+  }
+  
+  return remoteAddress || 'unknown';
+export function getClientIp(req: any): string {
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -40,20 +64,26 @@ export function getClientIp(req: any): string {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+  }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+  return remoteAddress |'unknown';
 <<<<<<< HEAD
 =======
-  return remoteAddress |'unknown';
-=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
   // Check IP reputation
@@ -82,9 +112,6 @@ export function getClientIp(req: any): string {;
     }
   }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   private async checkMockReputation(ip: string): Promise<IpReputation> {
     // Mock reputation data - in production, integrate with real services
     const mockData = {
@@ -260,6 +287,7 @@ if ( {) {
   }
   return remote_address || 'unknown';
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -273,3 +301,9 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

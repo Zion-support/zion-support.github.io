@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Innovative2026MicroSaasV2 {
 <<<<<<< HEAD
   id: string;
@@ -19,6 +20,14 @@ export interface Innovative2026MicroSaasV2 {
 id: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface Innovative2026MicroSaasV2 {
+
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   name: string;
   tagline: string;
   price: string;
@@ -30,6 +39,7 @@ id: string;
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     address: string;
@@ -47,6 +57,10 @@ id: string;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface Innovative2026MicroSaasV2 {;
 =======
 export interface Innovative2026MicroSaasV2 {  id: string;export interface Innovative2026MicroSaasV2 {;
@@ -63,9 +77,13 @@ export interface Innovative2026MicroSaasV2 {  id: string;export interface Innova
   contactInfo: {;
     mobile: string,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     email: string,;
 <<<<<<< HEAD
 =======
+=======
+    email: string,;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string;
   }
 }
@@ -75,14 +93,21 @@ export interface Innovative2026MicroSaasV2 {  id: string;export interface Innova
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     address: string;
   }
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -96,8 +121,12 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
 =======
     email: string,;  }
@@ -130,6 +159,7 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -137,8 +167,9 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
 ];
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 
     id: "2026-micro-saas-v2",
     name: "2026 Micro SAAS Platform V2",
@@ -156,16 +187,25 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
     category: "Innovative 2026 Micro SAAS V2",
     realImplementation: true,
     contactInfo: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -178,6 +218,7 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [;
 }
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,6 +243,8 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -213,8 +256,12 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     tagline: "Enhanced micro SAAS solutions";
     price: "$99/month";
     description: "Enhanced version of the 2026 micro SAAS platform with additional features and improvements.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
 =======
     id: "2026-micro-saas-v2", name: "2026 Micro SAAS Platform V2",
@@ -224,6 +271,7 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
       "Enhanced micro SAAS";
       "Advanced capabilities";
       "Improved performance";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Better integration";
       "Enhanced support"
@@ -236,6 +284,8 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Better integration",
       "Enhanced support"
     ],
@@ -245,13 +295,18 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 <<<<<<< HEAD
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -271,6 +326,8 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "2026-micro-saas-v2",
     name: "2026 Micro SAAS Platform V2",
     tagline: "Enhanced micro SAAS solutions",
@@ -287,9 +344,9 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     category: "Innovative 2026 Micro SAAS V2",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -306,10 +363,16 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ];      address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -323,3 +386,8 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

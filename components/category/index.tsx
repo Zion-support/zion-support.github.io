@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -11,6 +12,14 @@ export default function CategoryIndexPage() {
 =======
 =======
 =======
+=======
+<div className="container mx-auto px-4 py-10">
+export default function CategoryIndexPage() {
+export default /**
+ * CategoryIndexPage - Function description
+ */
+function CategoryIndexPage() {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   return (
 <<<<<<< HEAD
@@ -26,6 +35,7 @@ export default function CategoryIndexPage() {
     </div>;
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +79,8 @@ export default /**
  */
 function CategoryIndexPage() {
   return (
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div className='container mx - auto px - 4 py - 10'>;
       <h1 className='text - 2xl font - semibold'>Categories</h1>;
       <p className='mt - 2 text - gray - 600'>;
@@ -80,18 +92,16 @@ function CategoryIndexPage() {
     </div>);
 }
 
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -108,3 +118,8 @@ function CategoryIndexPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -26,6 +27,8 @@ const UltraAdvancedFuturisticBackground2026: React.FC<;
   enableQuantumEffects = true;
   enableNeuralNetworks = true;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
@@ -48,7 +51,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (!ctx) return;
 
 let animationFrameId: number;
@@ -56,6 +59,7 @@ let animationFrameId: number;
     let neuralNodes: NeuralNode[] = [];
     let quantumFields: QuantumField[] = [];
     let holographicLayers: HolographicLayer[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -83,6 +87,8 @@ let animationFrameId: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       x: number;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       }
     }
@@ -91,7 +97,7 @@ let animationFrameId: number;
     // Particle class
     class Particle {
 x: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
   color_scheme?:;
     | 'neural - network';
@@ -183,6 +189,7 @@ if ( {) {
       life: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       x: number,
       y: number,
@@ -204,6 +211,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       maxLife: number;
       constructor(x: number, y: number) {
         this.x = x;
@@ -215,8 +224,12 @@ if ( {) {
         this.alpha = Math.random() * 0.8 + 0.2;
         this.life = Math.random() * 100 + 50;
 this.maxLife = this.life;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
       update() {
         this.x += this.vx;
@@ -231,10 +244,8 @@ this.maxLife = this.life;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // Fade out
-<<<<<<< HEAD
-=======
 this.alpha = this.life / this.maxLife;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       draw() {
         ctx.save();
@@ -243,6 +254,7 @@ this.alpha = this.life / this.maxLife;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -322,8 +334,10 @@ this.alpha = this.life / this.maxLife;
     // Neural network node class;
     class NeuralNode {;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.restore();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
     // Neural network node class
@@ -337,6 +351,7 @@ x: number;
       y: number;
       connections: NeuralNode[];
       activation: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         ctx.restore()
@@ -409,6 +424,8 @@ constructor(x: number, y: number) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       pulse: number;
       constructor(x: number, y: number) {
         this.x = x;
@@ -446,8 +463,12 @@ ctx.stroke();
         });
         ctx.restore();
       }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 
       draw() {;
@@ -497,45 +518,33 @@ x: number;
       y: number;
       radius: number;
       intensity: number;
-<<<<<<< HEAD
-=======
       phase: number;
       constructor(x: number, y: number) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         this.x = x;
         this.y = y;
         this.radius = Math.random() * 100 + 50;
         this.intensity = Math.random() * 0.8 + 0.2;
-<<<<<<< HEAD
-
-      }
-=======
 this.phase = Math.random() * Math.PI * 2;
       }
       update() {
         this.phase += 0.02 * animationSpeed;
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.1;
-<<<<<<< HEAD
-        
-        for (let i = 0, i < 3, i++) {
-          const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
-          const alpha = this.intensity * (1 - i / 3);
-          
-=======
 for (let i = 0; i < 3; i++) {
           const waveRadius =
             this.radius + Math.sin(this.phase + (i * Math.PI) / 3) * 20;
           const alpha = this.intensity * (1 - i / 3);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -569,12 +578,14 @@ for (let i = 0; i < 3; i++) {
       }
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.stroke();
         }
 
         ctx.restore();
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -744,13 +755,6 @@ if ( {) {
       height: number;
       rotation: number;
       alpha: number;
-<<<<<<< HEAD
-      width: number,
-      height: number,
-      rotation: number,
-      alpha: number,
-      color: string,
-=======
       color: string;
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -765,7 +769,7 @@ this.color = getColorSchemeColor();
       update() {
         this.rotation += 0.005 * animationSpeed;
 this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       draw() {
         ctx.save();
@@ -775,6 +779,7 @@ this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
         ctx.strokeStyle = this.color;
         ctx.lineWidth = 1;
         ctx.setLineDash([5, 5]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         ctx.beginPath();
@@ -806,13 +811,15 @@ this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
         ctx.stroke();
         ctx.restore()
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
 
         ctx.restore();
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     }
@@ -820,16 +827,6 @@ ctx.beginPath();
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
-<<<<<<< HEAD
-      particles.push(new Particle(
-        Math.random() * canvas.width;
-        Math.random() * canvas.height
-      ))
-        neuralNodes.push(new NeuralNode(
-          Math.random() * canvas.width;
-          Math.random() * canvas.height
-        ))
-=======
 'neural-network': ['#00ffff', '#0080ff', '#8000ff', '#ff0080'],
         'quantum-field': ['#00ff80', '#80ff00', '#ff8000', '#ff0080'],
         cyberpunk: ['#ff0066', '#00ffff', '#ffff00', '#ff6600'],
@@ -861,20 +858,11 @@ for (let i = 0; i < 20; i++) {
         );
       }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       // Create connections
       neuralNodes.forEach(node => {
         neuralNodes.forEach(otherNode => {
           if (node !== otherNode && Math.random() < 0.3) {
-<<<<<<< HEAD
-        quantumFields.push(new QuantumField(
-          Math.random() * canvas.width;
-          Math.random() * canvas.height
-        ))
-    }
-    // Initialize holographic layers
-    if (enableHolographic) {
-=======
 node.connections.push(otherNode);
           }
         });
@@ -897,26 +885,13 @@ for (let i = 0; i < 8; i++) {
 for (let i = 0; i < 5; i++) {
         holographicLayers.push(new HolographicLayer());
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
-      const bgColors = {
-        'neural-network': ['rgba(0, 0, 20, 0.8)rgba(0, 20, 40, 0.6)rgba(20, 0, 40, 0.4)'];
-        'quantum-field': ['rgba(0, 20, 0, 0.8)rgba(20, 40, 0, 0.6)rgba(40, 0, 20, 0.4)'];
-        'cyberpunk': ['rgba(40, 0, 20, 0.8)rgba(20, 0, 40, 0.6)rgba(0, 20, 40, 0.4)'];
-        'holographic': ['rgba(40, 0, 40, 0.8)rgba(0, 40, 40, 0.6)rgba(40, 40, 0, 0.4)'];
-        'multidimensional': ['rgba(20, 0, 40, 0.8)rgba(0, 40, 20, 0.6)rgba(40, 20, 0, 0.4)']
-      }
-      const currentBgColors = bgColors[colorScheme] |bgColors['neural-network'];
-      gradient.addColorStop(0, currentBgColors[0]);
-      gradient.addColorStop(0.5, currentBgColors[1]);
-      gradient.addColorStop(1, currentBgColors[2]);
-=======
 canvas.width / 2,
         canvas.height / 2,
         0,
@@ -925,7 +900,7 @@ canvas.width / 2,
         Math.max(canvas.width, canvas.height) / 2
       );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       const bgColors = {
         'neural-network': [
           'rgba(0, 0, 20, 0.8)',
@@ -965,34 +940,25 @@ canvas.width / 2,
       if (enableQuantumEffects) {
         quantumFields.forEach(field => {
           field.update();
-<<<<<<< HEAD
-        })
-=======
 field.draw();
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Update and draw holographic layers
       if (enableHolographic) {
         holographicLayers.forEach(layer => {
           layer.update();
-<<<<<<< HEAD
-        })
-=======
 layer.draw();
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Update and draw neural network
       if (enableNeuralNetworks) {
         neuralNodes.forEach(node => {
           node.update();
-<<<<<<< HEAD
-        })
-=======
 node.draw();
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -1001,19 +967,16 @@ node.draw();
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle(
-<<<<<<< HEAD
-            Math.random() * canvas.height
-          )
-=======
 Math.random() * canvas.width,
             Math.random() * canvas.height
           );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
       });
       // Draw particle connections
       if (intensity === 'extreme' |intensity === 'high') {
         particles.forEach((particle, i) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1076,6 +1039,8 @@ Math.random() * canvas.width,
               ctx.save();
               ctx.globalAlpha = (100 - distance) / 100 * 0.3;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
 Math.pow(particle.x - otherParticle.x, 2) +
@@ -1084,13 +1049,14 @@ Math.pow(particle.x - otherParticle.x, 2) +
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ctx.strokeStyle = getColorSchemeColor();
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               ctx.restore();
@@ -1379,10 +1345,15 @@ if ( {) {
 ctx.restore();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.restore();
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }
           });
         });
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1418,6 +1389,8 @@ ctx.restore();
     enableNeuralNetworks,;
     enableMultidimensional,;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -1436,7 +1409,7 @@ cancelAnimationFrame(animationFrameId);
     enableQuantumEffects
     enableNeuralNetworks
     enableMultidimensional
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ]);
 
     >;
@@ -1456,6 +1429,7 @@ cancelAnimationFrame(animationFrameId);
         <div className='absolute inset-0 pointer-events-none'>;
           <motion&& motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full'
+<<<<<<< HEAD
 <<<<<<< HEAD
       animationFrameId = requestAnimationFrame (animate);    }            }
           });
@@ -1589,6 +1563,8 @@ export default UltraAdvancedFuturisticBackground2026;
             }}
             transition={{
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             animate={{
               scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
@@ -1598,29 +1574,12 @@ export default UltraAdvancedFuturisticBackground2026;
               duration: 8,
               repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
           <motion&& motion.div
             className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
             animate={{
-<<<<<<< HEAD
-            transition={{
-              duration: 10
-              repeat: Infinity
-              ease: 'easeInOut',            }}
-          />;
-        </div>;
-      )}
-              scale: [1, 1.2, 1];
-              rotate: [0, 180, 360];
-              opacity: [0.1, 0.3, 0.1];
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-=======
               scale: [1.2, 1, 1.2],
               rotate: [360, 180, 0],
               opacity: [0.1, 0.3, 0.1],
@@ -1629,7 +1588,7 @@ ease: 'easeInOut',
               duration: 10,
               repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
             }}
@@ -1648,6 +1607,7 @@ ease: 'easeInOut',
 {children}
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export default UltraAdvancedFuturisticBackground2026;      {children}
@@ -1688,3 +1648,9 @@ export default UltraAdvancedFuturisticBackground2026;
 export default UltraAdvancedFuturisticBackground2026;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+
+export default UltraAdvancedFuturisticBackground2026;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

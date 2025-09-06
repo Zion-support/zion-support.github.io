@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
@@ -11,6 +12,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity;
@@ -53,8 +56,12 @@ interface PerformanceRecommendation {
 
 const EnhancedPerformanceMonitor: React.FC;
 //FCP recommendations if (metrics.fcp > 2000) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   recs.push ({
 }return recs;
 }, []);
@@ -89,6 +96,7 @@ if (!performanceData) {;
 }
 }> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCwclassName= {
   `w-4 h-4 $ {
+<<<<<<< HEAD
 <<<<<<< HEAD
 //FCP recommendations // Check condition
 if ( {) {
@@ -150,6 +158,8 @@ if ( {) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   isLoading ? 'animate-spin' : ''
 }`
 }/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement'
@@ -196,5 +206,9 @@ export default EnhancedPerformanceMonitor;
 }</AnimatePresence> </>) 
 };
 export default EnhancedPerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

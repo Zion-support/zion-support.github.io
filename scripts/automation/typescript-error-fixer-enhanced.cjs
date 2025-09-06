@@ -108,6 +108,7 @@ async log(message, type = "INFO")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(""Error": ")
@@ -121,3 +122,8 @@ async log(message, type = "INFO")
   console.error(""Error": ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error(""Error": ")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -16,6 +16,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -89,6 +90,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Rocket;
   DollarSign;
   Users;
@@ -96,8 +99,12 @@ import { Rocket;
   Mail;
   Calendar;
   Shield;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Globe;
   ArrowRight;
   Star;
@@ -107,6 +114,7 @@ import { Rocket;
   Zap;
   Target;
   Lightbulb;
+<<<<<<< HEAD
 <<<<<<< HEAD
   BookOpen
 
@@ -148,6 +156,8 @@ import { Rocket;
       bestFor: 'B2B startups, SaaS companies, marketing teams'
     }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   BookOpen
  } from 'lucide-react';
 export default function StartupToolsPage() {
@@ -176,7 +186,7 @@ export default function StartupToolsPage() {
       ],
       bestFor: 'B2B startups, SaaS companies, marketing teams',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Mailchimp',
       description:
@@ -203,6 +213,7 @@ export default function StartupToolsPage() {
       bestFor: 'E-commerce, content creators, small businesses',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       category: 'Productivity',
@@ -440,6 +451,8 @@ export default function StartupToolsPage() {
     {
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Calendly',
       description:
         'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
@@ -763,13 +776,18 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
                 style={{ animationDelay: '0.4s' }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Startup Advice
               </Button>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -800,6 +818,8 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -828,12 +848,17 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 130M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1097,14 +1122,20 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1114,6 +1145,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 }`}
               >;
                 {category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1176,6 +1208,8 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </button>
             ))}
           </div>
@@ -1347,14 +1381,19 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 growth hackers.
               </p>
               <Button href='/resources' variant='outline' size='sm'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 View Resources
               </Button>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1550,6 +1589,8 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1583,6 +1624,10 @@ return (<> <Head> <title>Startup Tools & Resources - Zion Tech Group</title> <me
       </section>
     </>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }

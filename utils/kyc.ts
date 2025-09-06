@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
@@ -17,11 +18,18 @@ export interface KycDocumentMeta {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export interface KycProfile {
@@ -42,11 +50,22 @@ export interface KycProfile {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export interface KycProfile {
   user_id: string;
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface KycProfile {
+  user_id: string;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface KycProfile {;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   userId: string;
+<<<<<<< HEAD
 export interface KycProfile {
 <<<<<<< HEAD
   user_id: string;
@@ -57,6 +76,10 @@ export interface KycProfile {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   role: KycRole;
 =======
   user_id: string;  role: KycRole;
@@ -77,11 +100,53 @@ export interface KycProfile {
     at: string;
     by: string;
     action: string;
+<<<<<<< HEAD
+=======
+
+    details?: any
+
+  }>;
+
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+
+}
+
+export function getRequiredDocuments (role: KycRole): string[] {
+  // Check condition
+if ( {) {
+  $2
+}
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return ['government_id', 'proof_of_address'];
   } else {
     return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
   }
 }
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return ['bank_statement', 'utility_bill'];
   } else {
     return ['bank_statement', 'utility_bill', 'tax_certificate'];
@@ -100,11 +165,14 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
 <<<<<<< HEAD
     missing.push('name');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -113,12 +181,12 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   return { ok: missing && missing.length === 0, missing };  
   if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
     missing && missing.push('businessRegistrationNumber');
-=======
 
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
@@ -129,6 +197,9 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 =======
     missing.push('name');  }
@@ -136,12 +207,21 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   
   if (!profile && profile.country) {
     missing && missing.push('country');
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
@@ -155,7 +235,10 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ok: missing && missing.length === 0,
 
     missing
@@ -163,8 +246,8 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   }
 
 }
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -175,10 +258,18 @@ export interface KycDocumentMeta {;
 =======
 export interface KycDocumentMeta {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export interface KycDocumentMeta {;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploadedAt: string;
   status: 'pending' | 'approved' | 'rejected';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -186,17 +277,20 @@ export interface KycDocumentMeta {;
 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export interface KycProfile {
 =======
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+}
+
 export interface KycProfile {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   userId: string;
 =======
 }
@@ -224,12 +318,17 @@ export interface KycProfile {  userId: string;
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const missing: string[] = [];
@@ -242,6 +341,7 @@ export function validateKycSubmission (profile: KycProfile): { ok: boolean, miss
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
@@ -289,3 +389,15 @@ if ( {) {
   return { ok: missing.length === 0, missing };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  return { ok: missing.length === 0, missing };
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

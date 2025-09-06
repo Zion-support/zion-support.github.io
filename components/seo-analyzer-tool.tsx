@@ -23,6 +23,7 @@ import Card from '../components/ui/Card';
 
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 
@@ -81,6 +82,8 @@ export default function SEOAnalyzerToolPage() {;
         'Local link building'
       ]
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -171,7 +174,7 @@ icon: <Search className='w-8 h-8 text-white' />,
       icon: '📍',
       color: 'text-orange-400',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const features = [;
     {;
@@ -292,6 +295,7 @@ icon: <Search className='w-8 h-8 text-white' />,
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Search className='w-8 h-8 text-white' />
       description:
         'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
@@ -358,6 +362,8 @@ icon: <Search className='w-8 h-8 text-white' />,
         'Keyword research (100 keywords)',
         'On - page SEO analysis',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Starter'
       price: '$39'
       period: '/month'
@@ -367,11 +373,12 @@ icon: <Search className='w-8 h-8 text-white' />,
         'Basic SEO metrics',
         'Keyword research (100 keywords)',
         'On-page SEO analysis',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Email support',
         'Basic reporting',
       ],
       popular: false,
+<<<<<<< HEAD
 <<<<<<< HEAD
     },    {        '10 website analyses / month_basic SEO metrics_keyword research (100 keywords)On - page SEO analysis_email support_basic reporting';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -397,15 +404,15 @@ icon: <Search className='w-8 h-8 text-white' />,
       color: 'text-orange-400'
     }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Professional',
       price: '$89',
       period: '/month',
       description: 'Ideal for growing businesses and agencies',
-<<<<<<< HEAD
-=======
       features: [
 '50 website analyses/month',
         'Advanced SEO metrics',
@@ -419,11 +426,12 @@ icon: <Search className='w-8 h-8 text-white' />,
       popular: true,
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Enterprise',
       price: '$249',
       period: '/month',
       description: 'For large organizations and SEO agencies',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -543,6 +551,8 @@ icon: <Search className='w-8 h-8 text-white' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       features: [
 'Unlimited analyses',
         'Enterprise SEO metrics',
@@ -560,8 +570,12 @@ icon: <Search className='w-8 h-8 text-white' />,
   const handleAnalyzeSEO = async () => {
     if (!url.trim()) return;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     setIsAnalyzing(true);
     // Simulate SEO analysis
     setTimeout(() => {
@@ -649,6 +663,7 @@ icon: <Search className='w-8 h-8 text-white' />,
 
 =======
       setIsAnalyzing(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 4000);  };        recommendations: [
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -781,6 +796,8 @@ icon: <Search className='w-8 h-8 text-white' />,
                   <>;
                     <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }, 4000);
   };
 
@@ -805,7 +822,7 @@ icon: <Search className='w-8 h-8 text-white' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0 && 0.08),transparent_50%)]" />;
@@ -823,10 +840,6 @@ icon: <Search className='w-8 h-8 text-white' />,
             Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.;
           </p>;
           {/* URL Input */}
-<<<<<<< HEAD
-          <div className="max-w-2xl mx-auto mb-8">;
-            <div className="flex flex-col sm:flex-row gap-4">;
-=======
           <div className='max-w-2xl mx-auto mb-8'>
             <div className='flex flex-col sm:flex-row gap-4'>
               <input
@@ -849,7 +862,7 @@ icon: <Search className='w-8 h-8 text-white' />,
           {/* URL Input */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="flex flex-col sm:flex-row gap-4">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <input
                 type="url"
                 placeholder="Enter your website URL (e && e.g., https://example && example.com)"
@@ -863,6 +876,7 @@ icon: <Search className='w-8 h-8 text-white' />,
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 disabled={isAnalyzing || !url.trim()}
               >
                 {isAnalyzing ? (
@@ -870,6 +884,8 @@ icon: <Search className='w-8 h-8 text-white' />,
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 disabled={isAnalyzing |!url.trim()}
               >
                 {isAnalyzing ? (
@@ -897,26 +913,26 @@ icon: <Search className='w-8 h-8 text-white' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Button
               href='#pricing'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'>;
-              View Pricing;
-            </Button>;
-=======
               className='border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl'
             >
               View Pricing
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";
               variant="outline";
@@ -1123,6 +1139,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
             >
               Schedule Demo
@@ -1166,8 +1184,12 @@ href='/contact'
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </p>
                   </div>
                 </div>
@@ -1212,6 +1234,7 @@ href='/contact'
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1310,6 +1333,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='card-hover border-gradient-green'
@@ -1328,8 +1353,12 @@ href='/contact'
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {factor}
                     </li>
                   ))}
@@ -1350,6 +1379,7 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Demo Analysis Results */}
       {analysisResults && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           </div>;
@@ -1532,6 +1562,8 @@ href='/contact'
               {/* Issues */}
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1604,7 +1636,7 @@ href='/contact'
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Issues */}
 <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1644,6 +1676,7 @@ href='/contact'
                 </div>
               </Card>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   ))}
@@ -1696,6 +1729,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Recommendations and Keywords */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -1717,8 +1752,12 @@ href='/contact'
                   Keyword Opportunities
                 </h3>
                 <div className='space-y-4'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'>;
@@ -1741,6 +1780,7 @@ href='/contact'
                               : keyword && keyword.difficulty === 'medium'
                                 ? 'bg-yellow-500/20 text-yellow-400'
                                 : 'bg-red-500/20 text-red-400'
+<<<<<<< HEAD
 <<<<<<< HEAD
                           }`}>                          {keyword && keyword.difficulty}                      <div className="flex justify-between items-center">;
                         <span className="text-sm text-gray-400">Difficulty: {keyword && keyword.difficulty}</span>;
@@ -1792,14 +1832,17 @@ href='/contact'
                         }`}>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           }`}
                         >
                           {keyword.difficulty}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
                       </div>
                     </div>
                   ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
@@ -2027,6 +2070,8 @@ href='/contact'
             </p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </Card>
             </div>
@@ -2062,12 +2107,13 @@ href='/contact'
                 )}
 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2117,6 +2163,8 @@ href='/contact'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
@@ -2143,8 +2191,12 @@ href='/contact'
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {feature}
 
 
@@ -2160,6 +2212,7 @@ href='/contact'
                 <Button
 href='/contact'
                   size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2190,13 +2243,19 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Card>
             ))}
           </div>
@@ -2282,6 +2341,7 @@ href='/contact'
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
@@ -2320,6 +2380,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
             >
               Schedule Demo
@@ -2330,5 +2392,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

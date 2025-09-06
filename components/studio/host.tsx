@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -26,6 +27,8 @@ type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 type PersonaConfig = any;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -35,11 +38,15 @@ type PersonaConfig = any;
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     voice: 'Visionary'
     language: 'English'
     voice: 'Visionary',
@@ -59,6 +66,7 @@ export default function StudioHostPage() {
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [operatorPrompt, setOperatorPrompt] = useState(
@@ -81,15 +89,18 @@ export default function StudioHostPage() {;
   const [topic, setTopic] = useState('');
   const [operatorPrompt, setOperatorPrompt] = useState('Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
   );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [generating, setGenerating] = useState(false);
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -97,6 +108,8 @@ export default function StudioHostPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const handleGenerate = async () => {
     setGenerating(true);
     try {
@@ -112,12 +125,17 @@ body: JSON.stringify({
       });
       const data = await res.json();
       setEpisode(data.episode);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch (e) {
       console.error (e);
       alert ('Failed to generate episode');
     } finally {
+<<<<<<< HEAD
 <<<<<<< HEAD
       set_generating (false);
     }
@@ -135,6 +153,8 @@ body: JSON.stringify({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setGenerating(false);
     }
   }
@@ -178,8 +198,12 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Voice</label>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <select
               className='mt-1 w-full border rounded p-2'
               value={persona && persona.voice}
@@ -218,21 +242,6 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
               onChange={e =>;
                 setPersona({ ...persona, cloneStyleText: e && e.target.value });
               }
-<<<<<<< HEAD
-            />          </div>;
-        </div>;
-      </section>;
-      <section className='space-y-3'>;
-        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>;
-        </div>;
-      </section>;
-      <section className='space-y-3'>;
-        <h2 className='text-xl font-semibold'>Episode Generator</h2>;
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
-          <div>;
-            <label className='block text-sm font-medium'>Invitee Name</label>;
-=======
             />
           </div>
         </div>
@@ -243,7 +252,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <div>
             <label className='block text-sm font-medium'>Invitee Name</label>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <input
               className='mt-1 w-full border rounded p-2'
               value={inviteeName}
@@ -280,41 +289,14 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
         <button
           className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
-<<<<<<< HEAD
-          disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
-      <section className="space-y-3">;
-        <h2 className="text-xl font-semibold">AI Persona</h2>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-          <div>;
-            <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>;
-            <select
-              className="mt-1 w-full border rounded p-2"
-          <div>
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
-            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
-          </div>
-          <div className="md:col-span-2">
-            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
-          </div>
-          <div className="md:col-span-3">
-            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
-            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
-          </div>
-          <div className="md:col-span-3">
-            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
-            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-          </div>
-        </div>
-        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
-=======
           disabled={generating}
         >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
       {episode && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-xl font-semibold">Episode Draft</h2>
           <div className="border rounded p-4 space-y-3">
@@ -801,6 +783,8 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='space-y-4'>
           <h2 className='text-xl font-semibold'>Episode Draft</h2>
           <div className='border rounded p-4 space-y-3'>
@@ -852,7 +836,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
                 disabled={publishing}
               >
                 {publishing ? 'Publishing…' : 'Update RSS'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </button>
             </div>
             {episode.audio && (
@@ -890,6 +874,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 
@@ -916,3 +901,6 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

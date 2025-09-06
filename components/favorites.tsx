@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { useEffect, useMemo, useState  } from 'react';
@@ -26,6 +27,9 @@ export default function FavoritesPage() {
 =======
 export default function FavoritesPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export default function FavoritesPage() {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
@@ -52,17 +56,20 @@ export default function FavoritesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
   const storageKey = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div>
       <Head>
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,6 +81,8 @@ import { TALENT_PROFILES } from '../data/talent';
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function FavoritesPage() {;
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(;
@@ -159,6 +168,8 @@ function FavoritesPage() {
       </div>;
       <h1 className='text - 2xl font - semibold mb - 4'>Saved Talent</h1>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
@@ -181,7 +192,7 @@ function FavoritesPage() {
 
 <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {profiles.length === 0 ? (
         <div className='rounded - xl border border - gray - 200 dark:border - gray - 800 p - 8 text - center'>;
           <div className='text - gray - 600 dark:text - gray - 300'>;
@@ -200,7 +211,11 @@ function FavoritesPage() {
             <div;
               key={t.slug}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -260,6 +275,8 @@ function FavoritesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='rounded-xl border border-gray-200 dark:border-gray-800 p-5 bg-white/70 dark:bg-black/40'
             >
               <div className='flex items-center justify-between'>
@@ -309,5 +326,9 @@ function FavoritesPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

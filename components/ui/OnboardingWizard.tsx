@@ -109,6 +109,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function OnboardingWizard() {;
 export default function OnboardingWizard() {
   const { role, setRole } = useRole();
@@ -265,6 +266,8 @@ if (return null) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       const has = null;
       }
     } catch {}
@@ -361,5 +364,9 @@ window.localStorage.setItem('zion_has_onboarded', '1');
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -44,12 +45,32 @@ export interface InnovativeNewService2025 {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export interface InnovativeNewService2025 {
+
+
+export interface InnovativeNewService2025 {;
+ursor/fix-website-loading-errors-and-merge-6662
+
+export interface InnovativeNewService2025 {;
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeNewService {
 import { ServiceVariant  } from "../types/service-variants";
 export interface InnovativeNewService2025 {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -81,15 +102,17 @@ export interface InnovativeNewService2025 {
     email: string;
     address: string;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string;
   }
-=======
     website: string
   },
   realImplementation: boolean;
@@ -139,17 +162,33 @@ export interface InnovativeNewService2025 {
     rating: 4.9;
     reviews: 15
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
+<<<<<<< HEAD
+=======
+
+    market_size: '$32.1B financial technology market',
+    growth_rate: '22% annual growth',
+    variant: 'quantum - financial - enterprise',
+    contact_info: {
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -166,11 +205,29 @@ export interface InnovativeNewService2025 {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.';
     launch_date: '2025 - 01 - 08';
+<<<<<<< HEAD
+=======
+
+    customers: 12;
+
+    rating: 4 && 4.9,
+
+    reviews: 6
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
@@ -200,6 +257,7 @@ export interface InnovativeNewService {
   };
   // Quantum-Secure Communication Platform
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: 'quantum-secure-communication', name: 'Quantum-Secure Communication Platform',
     tagline: 'Unbreakable encryption for the quantum computing era', price: '$499',
@@ -352,6 +410,11 @@ export interface InnovativeNewService {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'quantum-secure-communication',
     name: 'Quantum-Secure Communication Platform',
     tagline: 'Unbreakable encryption for the quantum computing era',
@@ -603,11 +666,12 @@ export interface InnovativeNewService {
     reviews: 6,
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     realImplementation: true;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
     launchDate: '2025-01-08';
     customers: 12;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -615,15 +679,21 @@ export interface InnovativeNewService {
     rating: 4.9
 =======
 =======
-    reviews: 6;
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    reviews: 6;
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -889,6 +959,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
@@ -909,12 +980,19 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 ];  }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -924,9 +1002,17 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     rating: 4.9;
     reviews: 6
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

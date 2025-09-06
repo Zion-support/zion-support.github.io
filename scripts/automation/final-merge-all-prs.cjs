@@ -116,6 +116,7 @@ this.log(" Resolved conflicts "in")
         "errors"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       "successRate"
@@ -129,3 +130,8 @@ this.log(" Resolved conflicts "in")
       "successRate"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      "successRate"
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

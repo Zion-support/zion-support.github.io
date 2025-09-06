@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,12 +11,17 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -27,12 +33,18 @@ import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -41,6 +53,8 @@ import { v4 as uuidv4 } from 'uuid';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -48,6 +62,7 @@ async function mockProviderCall<T>(
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const log: SyncLogEntry = {
@@ -80,6 +95,11 @@ export const crm = {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 async function callProvider<T>(
   connection: ProviderConnection,
@@ -100,8 +120,12 @@ async function callProvider<T>(
 
 // CRM actions
 export const crm = {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -130,6 +154,7 @@ export const crm = {
 
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const log: SyncLogEntry = {
@@ -177,6 +202,15 @@ export const crm = {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   async addEmailTouchpoint(
     connection: ProviderConnection
@@ -193,6 +227,7 @@ export const crm = {
 }
 // ATS actions
 export const ats = {
+<<<<<<< HEAD
 <<<<<<< HEAD
   async updateStatus(
 
@@ -226,6 +261,10 @@ export const email = {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 async pushApplicant(
     connection: ProviderConnection,
     applicant: Record<string, any>
@@ -240,12 +279,17 @@ async pushApplicant(
       resumeMeta: { name: resume?.name },
     });
   },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
   ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     connection: ProviderConnection,
     status: Record<string, any>,
@@ -254,6 +298,10 @@ async pushApplicant(
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async sync_contact (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     connection: ProviderConnection,
@@ -277,9 +325,6 @@ async pushApplicant(
   ) {
     return mockProviderCall (connection, "add_project_note", { note });
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const log: SyncLogEntry = {
     id: uuidv4()
     timestamp: Date.now()
@@ -290,6 +335,7 @@ async pushApplicant(
   }
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -318,9 +364,27 @@ export const ats = {
 =======
 <<<<<<< HEAD
 =======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+;
+// ATS actions;
+export const ats = {
+  async update_status (
+    connection: ProviderConnection,
+    status: Record < string, any>,
+  ) {
+    return mockProviderCall (connection, "update_status", { status });
+  },
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 }
 ;
 // ATS actions;
@@ -333,10 +397,16 @@ export const ats = {
   },
 }
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   async createCandidate(
     connection: ProviderConnection,
@@ -345,6 +415,7 @@ export const ats = {
     return executeProviderAction(connection, 'createCandidate', { candidate });
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -357,6 +428,11 @@ export const ats = {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Email actions
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -368,6 +444,7 @@ export const email = {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -392,3 +469,14 @@ export const email = {
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  },
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

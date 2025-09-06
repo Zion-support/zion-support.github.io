@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ]
  ] 
@@ -51,6 +52,8 @@ interface SidebarItem {
   name: string,
   href: string,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -66,14 +69,13 @@ import { X, ChevronRight, Home, Star, Users;
 interface SidebarItem {
   name: string;
   href: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   icon?: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
   isNew?: boolean;
   isHot?: boolean
-=======
 import React, { useState, useEffect               } from 'react'
   'react.ts'
 import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from
@@ -91,9 +93,10 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
    isHot?: boolean
    isPremium?: boolean
    category?: string
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -125,6 +128,8 @@ const sidebarItems: SidebarItem[] = [
       { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' }
       { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap, , color: 'from-cyan-500 to-blue-600, items[, {
   ''
         name: 'AI & Consciousness,'        href: '/ai-services', icon: Brain, , description: 'Advanced AI consciousness and evolution platforms, subItems[, { name: 'AI Consciousness Evolution, href:, /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:, /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:, /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:, /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:, /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
@@ -168,7 +173,7 @@ const sidebarItems: SidebarItem[] = [
   ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
   ' }'        ]
   ''
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     ]
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -660,21 +665,6 @@ const sidebar_items: SidebarItem[] = [;
               {expanded_sections.has (section.title) && (
                 <motion.div;
     ]
-<<<<<<< HEAD
-  }
-],
-
-const resources = [
-
-const supportLinks = [
-  { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
-  { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
-  { name: 'Status Page', href: '/status', description: 'Service status' },
-  { name: 'Training', href: '/training', description: 'Learn our platforms' },
-  { name: 'Community', href: '/community', description: 'Connect with users' }
-],
-=======
   }, {
     title: 'Comp & Resources, '    icon: Users, color:, from-green-500 to-emerald-600
   ', '    items[
@@ -693,7 +683,7 @@ const supportLinks = [
   ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:, /training'}, '          { name: 'Community Forum, href:, /community' },'          { name: 'Knowledge Base, href: '
   '/knowledge-base' }'        ]'      }]  }
 ]
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   };
   {
@@ -1362,6 +1352,7 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                     </button>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div
@@ -1956,6 +1947,8 @@ initial = {{ opacity: 0}}
             onClick="{onClos,e}""return (
     <>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const filteredServices = sidebarSections.flatMap(section =>
     section.items.flatMap(item =>
       item.subItems?.filter(child =>
@@ -1979,7 +1972,7 @@ document.body.style.overflow =
       document.body.style.overflow =
   'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('
     <>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       {/* Backdrop */}
       <AnimatePresence>;
         {isOpen && (;
@@ -2088,17 +2081,13 @@ className="{"fixed" left - 0 top - 0 h - full w - 80 bg - black / 95 backdrop - 
           <div className="space-y-3">"            <div className="flex items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border-gray-700 / 30>              <Phone className="w - 4 h - 4 text - cyan - 400" />              <span className="text-sm" text - gray - 300">{contact_info.mobile}</span>"            </div>            <div className="flex" items - center gap - 3 p - 3 bg - gray - 800 / 30 rounded - lg border border - gray - 700 / 30">"              <Mail className="w-4" h - 4 text - cyan - 400 />"              <span className="text - sm text-gray-300>{contact_info.email}</span>            </div>"          </div>";
         </div>;
       {/* Sidebar */}
-<<<<<<< HEAD
-    damping: 25,'  stiffness: 200 '}}
-className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto}
-=======
       <motion.div
 initial={{ x:, -100%
   ' }}'        animate={{ x: isOpen ? 0 :
   '-100% }}'
 , transition = {''
   { type: 'spring, damping: 25, , stiffness: 200}}className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`'
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6>          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3>              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center>                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20></div>              </div>"              <div>;
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent>                  Zion Tech Group"                </h2>;
@@ -2499,9 +2488,14 @@ Contact Us";
     </>;
 ";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
 const contactInfo = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+const contactInfo = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

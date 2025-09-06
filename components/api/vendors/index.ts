@@ -29,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendors = listVendors();
+<<<<<<< HEAD
   res.status(200).json({ vendors })
 }  const vendors = listVendors();
   res.status(200).json({ vendors })
@@ -37,6 +38,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  res && res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const vendors = listVendors();
+  res && res.status(200).json({ vendors })
+}
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+
+  const vendors = listVendors();
+  res.status(200).json({ vendors })
+}
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { list_vendors } from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -53,6 +69,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -62,25 +79,18 @@ function handler() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 import { listVendors } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const vendors = null;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
-  res.status(200).json({ vendors });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const vendors = listVendors();
-  res.status(200).json({ vendors })
-}
-}
 
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -100,3 +110,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ vendors });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const vendors = listVendors();
+  res.status(200).json({ vendors });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

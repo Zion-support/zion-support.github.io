@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export interface EmergingTechInnovationService {
@@ -9,10 +10,16 @@ export interface EmergingTechInnovationService {
 import { ServiceVariant } from '../types/service-variants';
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface EmergingTechInnovationService {
 
+
 export interface EmergingTechInnovationService {;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -31,9 +38,13 @@ export interface EmergingTechInnovationService {
 
 <<<<<<< HEAD
 =======
-export interface EmergingTechInnovationService {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+ursor/fix-website-loading-errors-and-merge-6662
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+export interface EmergingTechInnovationService {;
+
+<<<<<<< HEAD
 =======
 export interface EmergingTechInnovationService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -51,6 +62,15 @@ export interface EmergingTechInnovation {
 export interface EmergingTechInnovationService {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ServiceVariant } from '../types/service-variants';
+export interface EmergingTechInnovation {
+export interface EmergingTechInnovationService {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -84,11 +104,6 @@ export interface EmergingTechInnovationService {
     address: string;    tagline:
 =======
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     website: string;
   }
 
@@ -96,25 +111,19 @@ export interface EmergingTechInnovationService {
   implementation_details: string;
   launch_date: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   customers: number;
   rating: number;
   reviews: number;
   benefits: string[];
   capabilities: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
   market_advantage: string;
 ;
@@ -124,8 +133,8 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  mobile: '+1 302 464 0950';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
@@ -137,16 +146,11 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   marketAdvantage: string
 }
 
 const contact = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     tagline:
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       'Next-generation quantum internet infrastructure for unbreakable communication'
@@ -605,9 +609,11 @@ const contact = null;
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 export interface EmergingTechInnovation {
   id: string, name: string,
   tagline: string, price: string,
@@ -636,6 +642,7 @@ export interface EmergingTechInnovation {
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 };
@@ -1692,6 +1699,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
@@ -2168,6 +2179,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 
     ];
     market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
@@ -2176,9 +2192,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -2655,6 +2673,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 =======
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -2663,6 +2682,18 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
   }
 ];
 
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -3128,6 +3159,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
+<<<<<<< HEAD
   }
 ];
     benefits: [;
@@ -3168,3 +3200,14 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

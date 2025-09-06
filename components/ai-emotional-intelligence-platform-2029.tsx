@@ -10,11 +10,8 @@ import Head from 'next/head';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-
-=======
 import { Brain, Heart, Eye, MessageCircle, Users, Shield;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
 <<<<<<< HEAD
   Brain
@@ -88,6 +85,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   ShieldCheck,;
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -189,6 +187,8 @@ color: 'from-violet-500 to-purple-600'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 const AIEmotionalIntelligencePlatform2029 = () => {
   const contactInfo = {
@@ -250,75 +250,20 @@ description:
     'Optimize marketing campaigns with emotional insights',
     'Improve mental health support and monitoring',
     'Create empathetic AI interactions and experiences',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Zap, TrendingUp, CheckCircle, ArrowRight, Star;
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
   Smartphone, Database, Cloud, Server, ShieldCheck
  } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-<<<<<<< HEAD
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
-  }
-  const features = [
-    {
-      icon: Brain
-      title: 'Real-time Emotion Detection'
-      description:
-        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time'
-      color: 'from-violet-500 to-purple-600'
-    }
-      icon: Heart
-      title: 'Emotional Response Generation'
-      description:
-        'Intelligent system that generates contextually appropriate emotional responses'
-      color: 'from-pink-500 to-rose-600'
-    }
-    {
-      icon: Eye
-      title: 'Multi-modal Emotion Analysis'
-      description:
-        'Combines visual, auditory, and textual data for comprehensive emotion understanding'
-      color: 'from-blue-500 to-cyan-600'
-    }
-    {
-      icon: MessageCircle
-      title: 'Emotional Intelligence Training'
-      description:
-        'AI-powered training modules to improve emotional intelligence skills'
-      color: 'from-green-500 to-emerald-600'
-    }
-    {
-      icon: TrendingUp
-      title: 'Sentiment Optimization'
-      description:
-        'Optimizes communication and content based on emotional context'
-      color: 'from-orange-500 to-red-600'
-    }
-    {
-      icon: Shield
-      title: 'Emotional Health Monitoring'
-      description:
-        'Tracks emotional patterns and provides insights for mental health support'
-      color: 'from-indigo-500 to-purple-600'
-    }
-  ];
-  const benefits = [
-    'Improve customer satisfaction by 85%'
-    'Reduce customer churn by 60%'
-    'Enhance team collaboration and communication'
-    'Optimize marketing campaigns with emotional insights'
-    'Improve mental health support and monitoring'
-    'Create empathetic AI interactions and experiences',  ];    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'
-=======
 const AIEmotionalIntelligencePlatform2029 = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const useCases = [
     {
@@ -435,6 +380,7 @@ period: '/month',
       description: 'For large organizations with custom needs',
       features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
         'Unlimited emotional interactions'
         'Custom emotion detection models'
         '24/7 dedicated support'
@@ -504,6 +450,8 @@ period: '/month',
         <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>;
         <meta
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Unlimited emotional interactions',
         'Custom emotion detection models',
         '24/7 dedicated support',
@@ -522,7 +470,7 @@ period: '/month',
       <Head>
         <title>AI Emotional Intelligence Platform 2029 | Zion Tech Group</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Revolutionary AI platform that reads, understands, and responds to human emotions in real-time. Improve customer satisfaction by 85% with emotional intelligence.'
         />;
@@ -540,6 +488,7 @@ period: '/month',
         <meta
           property='og:title'
           content='AI Emotional Intelligence Platform 2029'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -572,6 +521,8 @@ period: '/month',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
         <meta
           property='og:description'
@@ -620,8 +571,12 @@ period: '/month',
             transition={{ duration: 1 }}
 className='mb-16'
           >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -713,17 +668,12 @@ className='mb-16'
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-            >
-              <Brain className="w-4 h-4 mr-2" />
-               2029 Revolutionary AI Technology
-=======
               transition={{ duration: 0.8, delay: 0.2 }}
 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'
             >
               <Brain className='w-4 h-4 mr-2' />
               🚀 2029 Revolutionary AI Technology
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'>;
@@ -745,6 +695,7 @@ className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -765,11 +716,17 @@ className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 1, delay: 0.3 }}
+className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 AI Emotional Intelligence
               </span>
               <br />
+<<<<<<< HEAD
 <<<<<<< HEAD
               <span className='text-white'>Platform</span>            </motion.h1>            >
 <<<<<<< HEAD
@@ -785,8 +742,10 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
               <br />
               <span className="text-white">Platform</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <span className='text-white'>Platform</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.h1>
 <<<<<<< HEAD
 
@@ -851,6 +810,7 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 1, delay: 0 && 0.5 }}
               className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Revolutionary AI platform that reads, understands, and responds to;
@@ -870,6 +830,8 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 1, delay: 0.5 }}
 className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
             >
@@ -877,12 +839,17 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
               human emotions in real-time across all communication channels.
               Transform your business with emotional intelligence.
             </motion.p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -898,6 +865,11 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
 className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 1, delay: 0.7 }}
+className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <Link
                 href='/contact'
@@ -917,6 +889,7 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <Link
                 href='#pricing'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'>;
                 <span className='flex items-center'>;
@@ -951,6 +924,8 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'
               >
                 <span className='flex items-center'>
@@ -959,12 +934,17 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
                 </span>
               </Link>
             </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -986,6 +966,11 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 1, delay: 0.9 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <div className='text-center'>
                 <div className='text-3xl font-bold text-violet-400 mb-2'>
@@ -1016,6 +1001,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
                   $8.2B
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
 <<<<<<< HEAD
 
@@ -1040,8 +1026,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
                 <div className="text-3xl font-bold text-blue-400 mb-2">$8.2B</div>
                 <div className="text-sm text-gray-400">Market Size by 2029</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </motion.div>
           </motion.div>
@@ -1112,6 +1100,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1130,9 +1119,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1144,6 +1135,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1184,6 +1176,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1200,7 +1194,7 @@ className='text-center mb-16'
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -1230,6 +1224,7 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1280,6 +1275,10 @@ className='text-center mb-16'
 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -1337,6 +1336,7 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Benefits Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1355,9 +1355,11 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1372,6 +1374,7 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1406,6 +1409,8 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1421,7 +1426,7 @@ className='text-center mb-16'
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {benefits.map((benefit, index) => (
               <motion.div
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -1446,6 +1451,7 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1500,13 +1506,19 @@ className='text-center mb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
               >
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
                 <span className='text-white text-lg'>{benefit}</span>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -1516,13 +1528,9 @@ className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purpl
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Use Cases Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 <<<<<<< HEAD
 
@@ -1537,6 +1545,7 @@ className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purpl
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1576,6 +1585,8 @@ className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purpl
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1591,7 +1602,7 @@ className='text-center mb-16'
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.title}
@@ -1620,6 +1631,7 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1670,6 +1682,10 @@ className='text-center mb-16'
 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className={`flex justify-center mb-6`}>
                   <div
@@ -1727,6 +1743,7 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Pricing Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1745,9 +1762,11 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
       <section id="pricing" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1762,6 +1781,7 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1796,6 +1816,8 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1811,7 +1833,7 @@ className='text-center mb-16'
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {Object.entries(pricing).map(([key, plan], index) => (
               <motion.div
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>;
@@ -1840,6 +1862,7 @@ className='text-center mb-16'
                   plan && plan.popular
                     ? 'border-purple-500 bg-gradient-to-b from-purple-500/10 to-purple-600/5'
                     : 'border-white/10 bg-gradient-to-b from-white/5 to-white/10'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - violet - 500 / 20 to - purple - 500 / 20 border border - purple - 500 / 30 text - purple - 300 text - sm font - medium mb - 8';
@@ -2221,6 +2244,8 @@ className='text-center mb-16'
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }`}
               >
                 {plan.popular && (
@@ -2304,8 +2329,12 @@ className='text-center mb-16'
                 </ul>
                 <Link
 href='/contact'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
                     plan && plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transform hover:scale-105'
@@ -2328,6 +2357,7 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Contact Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -2341,9 +2371,11 @@ href='/contact'
       <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -2358,6 +2390,7 @@ href='/contact'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2375,12 +2408,17 @@ href='/contact'
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Transform
               </span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               Your Business?
@@ -2406,6 +2444,8 @@ className='text-center mb-16'
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               Your Business?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -2416,7 +2456,7 @@ className='text-center mb-16'
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -2503,6 +2543,7 @@ className='text-center mb-16'
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -2528,6 +2569,8 @@ className='text-center mb-16'
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.mobile}</p>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <Phone className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -2536,11 +2579,12 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
             </motion.div>
 
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2563,6 +2607,8 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>;
               <p className="text-gray-300">{contactInfo && contactInfo.email}</p>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -2571,11 +2617,12 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
             </motion.div>
 
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2600,6 +2647,8 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
               <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10'
             >
               <MapPin className='w-12 h-12 text-purple-400 mx-auto mb-4' />
@@ -2608,11 +2657,12 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
             </motion.div>
           </div>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -2769,6 +2819,8 @@ export default AIEmotionalIntelligencePlatform2029;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center'
           >
             <Link
@@ -2789,5 +2841,9 @@ className='text-center'
 };
 
 export default AIEmotionalIntelligencePlatform2029;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

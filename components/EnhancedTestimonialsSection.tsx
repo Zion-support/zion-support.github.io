@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -12,6 +13,12 @@ import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react
 import {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React from 'react';
+import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Star
   Quote
   Users
@@ -43,12 +50,8 @@ import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 } from 'lucide-react';
-<<<<<<< HEAD
-
-interface Testimonial {;
-=======
 interface Testimonial {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   name: string;
   title: string;
@@ -56,13 +59,11 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-<<<<<<< HEAD
-=======
   category: string
 }
 
 const EnhancedTestimonialsSection: React.FC;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   category: string;  id: string
   name: string
   title: string
@@ -71,15 +72,6 @@ const EnhancedTestimonialsSection: React.FC;
   rating: number
   avatar: string
   category: string
-<<<<<<< HEAD
-  category: string;  id: string,
-  name: string,
-  title: string,
-  company: string,
-  content: string,
-  rating: number,
-  avatar: string,
-=======
 }
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
@@ -160,11 +152,12 @@ content:
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         key={i}
         className={`w - 4 h - 4 ${
           i < rating ? 'text - yellow - 400 fill - current' : 'text - gray - 400';
         }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Stats Section */}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>  }
@@ -290,6 +283,8 @@ content:
 =======
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       />
 ));
   };
@@ -330,7 +325,7 @@ content:
         </div>
         {/* Testimonials Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {testimonials.map(testimonial => (
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -345,22 +340,13 @@ content:
               {/* Content */}
               <div className='p-8'>
                 {/* Rating */}
-<<<<<<< HEAD
-                <div className='flex items-center gap-1 mb-4'>                  {renderStars(testimonial.rating)}
-                </div>
-                {/* Testimonial Text */}
-                <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
-                </p>
-
-                {/* Author Info */}
-
-=======
                 <div className='flex items-center gap-1 mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {renderStars(testimonial.rating)}
                 </div>
 
                 {/* Testimonial Text */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -376,6 +362,10 @@ content:
 <p className='text-white/80 text-sm leading-relaxed mb-6'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<p className='text-white/80 text-sm leading-relaxed mb-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -453,6 +443,7 @@ content:
               </div>;
               {/* Hover Effect */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className='text-center mt-16'>;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>;
@@ -472,9 +463,11 @@ content:
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>
 
@@ -497,6 +490,7 @@ content:
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
@@ -537,12 +531,14 @@ content:
                 Start Your Success Story;
               </a>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 href='mailto:kleber@ziontechgroup.com?subject=Client Success Story Discussion'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
               >
                 Start Your Success Story
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
 <<<<<<< HEAD
                 href='tel:+13024640950'
@@ -573,6 +569,7 @@ href='tel:+13024640950'
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -628,6 +625,8 @@ export default EnhancedTestimonialsSection;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Trust Indicators */}
 <div className='mt-16 text-center'>
           <div className='inline-flex items-center gap-8 text-white/60 text-sm'>
@@ -656,5 +655,9 @@ export default EnhancedTestimonialsSection;
 };
 
 export default EnhancedTestimonialsSection;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

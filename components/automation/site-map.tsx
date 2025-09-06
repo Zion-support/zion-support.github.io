@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
@@ -31,12 +32,18 @@ export async function getServerSideProps() {;
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import fs from 'fs';
 import path from 'path';
 type RouteInfo = any;
     generatedAt = json.generatedAt || ''
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -136,6 +143,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 
@@ -171,3 +179,6 @@ function SiteMapIntelPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

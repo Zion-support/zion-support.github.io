@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -56,6 +57,8 @@ import {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -68,8 +71,12 @@ import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } 
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function DemosPage() {
 <<<<<<< HEAD
 
@@ -115,6 +122,7 @@ description:
     },
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -390,6 +398,8 @@ export default function DemosPage() {;
           Interactive Demos | Zion Tech Group - Test Our Micro SaaS Services;
         </title>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <>
       <Head>
@@ -438,7 +448,7 @@ export default function DemosPage() {;
               APIs in action.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
                 href='#demos'
                 size='lg'
@@ -448,6 +458,7 @@ export default function DemosPage() {;
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -556,6 +567,8 @@ export default function DemosPage() {;
             </p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 style={{ animationDelay: '0.4s' }}
               >
                 <Code className='w-5 h-5 mr-2' />
@@ -613,7 +626,7 @@ export default function DemosPage() {;
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             {demos.map(demo => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <button
 <<<<<<< HEAD
                 key={demo.id}
@@ -637,6 +650,7 @@ export default function DemosPage() {;
                     ? 'border-blue-500 bg-blue-500/10';
                     : 'border-gray-700 bg-gray-800/50 hover:border-gray-600 hover:bg-gray-800/80';
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
               >;
                 <div
@@ -688,12 +702,18 @@ export default function DemosPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -703,6 +723,7 @@ export default function DemosPage() {;
                   {demo.description}
                 </p>
                 {activeDemo === demo.id && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>
@@ -734,6 +755,12 @@ export default function DemosPage() {;
                     Active Demo
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  <div className='mt-3 flex items-center text-blue-400 text-sm'>
+                    <CheckCircle className='w-4 h-4 mr-2' />
+                    Active Demo
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                 )}
               </button>;
@@ -771,6 +798,7 @@ export default function DemosPage() {;
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               {activeDemoData?.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
             </h2>;
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>              {activeDemoData?.description}
@@ -872,6 +900,8 @@ export default function DemosPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </h2>
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
               {activeDemoData?.description}
@@ -879,8 +909,12 @@ export default function DemosPage() {;
           </div>
 
 <div className='animate-fade-in'>{activeDemoData?.component}</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
       </section>
       {/* Features */}
@@ -928,6 +962,7 @@ export default function DemosPage() {;
                 API Examples
               </h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                See exact request/response formats for easy integration
               </p>
             </Card>
@@ -952,6 +987,10 @@ export default function DemosPage() {;
               <p className='text-gray-400 leading-relaxed'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <p className='text-gray-400 leading-relaxed'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -963,6 +1002,7 @@ export default function DemosPage() {;
               <h3 className='text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300'>
                 Detailed Results
               </h3>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>                Get comprehensive analysis and insights from each service
               </p>
@@ -1046,6 +1086,8 @@ export default function DemosPage() {;
               </h3>
               <p className="text-gray-400 leading-relaxed">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <p className='text-gray-400 leading-relaxed'>
                 Get comprehensive analysis and insights from each service
               </p>
@@ -1071,13 +1113,14 @@ export default function DemosPage() {;
                 Production Ready
               </h3>
               <p className='text-gray-400 leading-relaxed'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Same infrastructure that powers our production services
               </p>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1163,6 +1206,8 @@ export default function DemosPage() {;
 }
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1195,7 +1240,7 @@ export default function DemosPage() {;
         </div>
       </section>
     </>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

@@ -25,6 +25,7 @@ function readAllGrants(): GrantApplication[] {
     return JSON.parse(raw) as GrantApplication;
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {;
     const { status, sector, region, program } = req.query;
@@ -198,6 +199,8 @@ if ( {) {
 }
         res.status (400).json ({ error: 'Missing required fields' });
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const files = null;
       return (
         (status ? g.status === status : true) &&
@@ -221,15 +224,13 @@ if (
         !payload.timeline
       ) {
         res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         return;
       }
       ensure_dir ();
       const id = uuidv4 ();
       const now = new Date ().toISOString ();
       const record: GrantApplication = {
-<<<<<<< HEAD
-=======
 id,
         program: payload.program || 'grant',
         projectName: payload.projectName,
@@ -258,7 +259,7 @@ id,
       res.status(201).json({ id, record });
     } catch (e: any) {
       res.status(500).json({ error: e?.message |'Failed to create grant' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     return;
   }
@@ -279,6 +280,7 @@ id,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
@@ -307,3 +309,8 @@ id,
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  res.status(405).end('Method Not Allowed')
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

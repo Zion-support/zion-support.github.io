@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -112,14 +113,17 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+origin/cursor/automate-test-improve-and-merge-code-646c
 
 console.log('🔧 Fixing remaining syntax errors...');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -669,6 +673,8 @@ main().catch(console.error);
 console.log(`Fixed ${fixedCount} files`);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fixFile = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -680,7 +686,7 @@ const fixFile = (filePath) => {
     content = content.replace(/\(\s*([^)]+);\s*([^)]+)\s*\)/g, '($1, $2)');
     
     // Fix remaining merge conflict markers
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+    content = content.replace(/[^\n]+\n?/g, '');
     content = content.replace(/=======;/g, '');
     
     // Fix semicolons in wrong places
@@ -769,6 +775,7 @@ console.log(`Fixed ${fixedCount} files`);
 };
 
 main();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -790,3 +797,6 @@ console.log(`Fixed ${fixedCount} files`);
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

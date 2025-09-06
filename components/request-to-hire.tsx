@@ -28,6 +28,7 @@ import { TALENT_PROFILES } from '../data/talent';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function RequestToHirePage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -90,15 +91,18 @@ export default function RequestToHirePage() {;
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string, message: string }>(null),;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const router = null;
   });
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<null | { id: string; message: string }>(
     null
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [error, setError] = useState<string | null>(null);
       setError('Please fill in name, email, and description.');
+<<<<<<< HEAD
 <<<<<<< HEAD
       return;    }      return;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -125,6 +129,8 @@ export default function RequestToHirePage() {;
         </div>;
       </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return;
     }
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '');
@@ -159,7 +165,7 @@ return;
           Confirmation ID: {result.id}
         </div>
       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     );
   }
   return (
@@ -217,6 +223,7 @@ return;
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <button
           disabled={submitting}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
@@ -545,6 +552,8 @@ if ( {) {
 
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           className='px-4 py-2 rounded bg-black text-white'
         >
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -565,5 +574,9 @@ if ( {) {
 =======
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

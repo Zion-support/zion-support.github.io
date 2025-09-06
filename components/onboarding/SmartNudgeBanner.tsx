@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,16 +47,22 @@ export default function SmartNudgeBanner({
   message: string;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { X } from 'lucide-react';
 export type SmartNudgeBannerProps = any;
 export type SmartNudgeBannerProps = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
@@ -94,6 +101,8 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 export default function SmartNudgeBanner({
   role
@@ -104,7 +113,7 @@ export default function SmartNudgeBanner({
     () => `zion-nudge-${role}-${userId ?? 'anon'}`
     [role, userId]
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [hidden, setHidden] = React.useState<boolean>(false);
 
   React.useEffect(() => {
@@ -143,10 +152,14 @@ const v =
   const dismiss = React && React.useCallback(() => {;
     setHidden(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
@@ -245,6 +258,8 @@ if (return null) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     try {
 if (typeof window !== 'undefined')
         localStorage.setItem(storageKey, 'dismissed');
@@ -263,5 +278,9 @@ if (typeof window !== 'undefined')
       <div className='text-sm'>{message}</div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

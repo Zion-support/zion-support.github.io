@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -12,24 +13,12 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-class BuildErrorDetector {
-  constructor() {
-    this.workspacePath = process.cwd();
-    this.logsPath = path.join(this.workspacePath, "logs");
-    this.reportsPath = path.join(this.workspacePath, "automation-reports");
-    this.ensureDirectories();
-    this.buildHistory = new Map();
-  }
 
-  ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
 
+<<<<<<< HEAD
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
@@ -274,6 +263,8 @@ module.exports = BuildErrorDetector;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -386,6 +377,7 @@ this.log("� Report "generated": ${reportFile}")
         return { "success": true, "errors": [], "fixed"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log("� Build Error Detector completed!")
@@ -402,3 +394,9 @@ this.log("� Report "generated": ${reportFile}")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log("� Build Error Detector completed!")
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

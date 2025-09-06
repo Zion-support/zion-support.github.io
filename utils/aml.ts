@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
@@ -65,12 +66,15 @@ export { provider };export type WatchlistMatch = {
 <<<<<<< HEAD
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -83,6 +87,15 @@ export type WatchlistMatch = {;
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -99,6 +112,7 @@ class MockAmlProvider implements AmlProvider {
 
 =======
 export type AmlCheckResult = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,19 +175,26 @@ export type WatchlistMatch = {
 export type AmlCheckResult = {
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 };
 
 export type AmlCheckResult = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   status: 'clear' | 'match' | 'review' | 'unknown';
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 =======
   status: "clear" | "match" | "review" | "unknown";  status: 'clear' | 'match' | 'review' | 'unknown';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: "mock" | "remote"
@@ -196,6 +217,7 @@ export interface AmlProvider {
 }
 <<<<<<< HEAD
 class MockAmlProvider implements AmlProvider {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,21 +343,29 @@ class AmlManager {
     if (!profile) {
       throw new Error('Profile not found');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     const name = params && params.fullLegalName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -503,15 +533,24 @@ class AmlManager {
     // Mock implementation - in production, this would call a real AML service
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     const name = params && params.businessName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test business name detected' } };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 =======
 class MockAmlProvider implements AmlProvider {    }
@@ -534,6 +573,7 @@ class MockAmlProvider implements AmlProvider {    }
     return { status: "clear" };
   }
 }
+<<<<<<< HEAD
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
@@ -543,11 +583,12 @@ export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 <<<<<<< HEAD
 =======
-
-
-
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+
+
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -601,6 +642,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 <<<<<<< HEAD
@@ -641,3 +683,16 @@ export function getAmlProvider(): AmlProvider {
   return provider;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export function getAmlProvider(): AmlProvider {
+  return provider;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

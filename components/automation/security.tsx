@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -11,6 +12,9 @@
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 }
@@ -19,6 +23,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default function SecurityAudit({ report }: Props) {
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 </pre> </div>) ;
@@ -33,6 +38,10 @@ export default function SecurityAudit(): any ({ report }: Props) {;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 </pre> </div>)
  
 };
@@ -52,7 +61,11 @@ export default function SecurityAudit({ report }: Props) {
 
 export default function SecurityAudit({ report }: Props) {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -66,6 +79,7 @@ export default function SecurityAudit({ report }: Props) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
 {JSON.stringify(report, null, 2)}
       </pre>
@@ -76,6 +90,9 @@ export default function SecurityAudit({ report }: Props) {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
     </div>;
@@ -101,6 +118,7 @@ export default function SecurityAudit({ report }: Props) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -111,6 +129,10 @@ export default function SecurityAudit({ report }: Props) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -118,12 +140,17 @@ export default function SecurityAudit({ report }: Props) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 </pre> </div>);
 export default /**
@@ -155,9 +182,12 @@ function SecurityAudit() {
 };
 </pre> </div>) 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -170,8 +200,12 @@ interface AuditReport {
 }
 
 type Props = any;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -197,6 +231,7 @@ export default function SecurityAudit({ report }: Props) {
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -214,3 +249,8 @@ export default function SecurityAudit({ report }: Props) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

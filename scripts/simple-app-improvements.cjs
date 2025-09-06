@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
@@ -27,6 +28,13 @@
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+
+:scripts/simple-app-improvements.cjs
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -328,7 +336,4 @@ improvements.runImprovements().then(() => {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/simple-app-improvements.cjs
   process.exit(1)})
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-app-improvements.cjs
-  process.exit(1)})
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d:scripts/simple-app-improvements.cjs
+:scripts/simple-app-improvements.cjs

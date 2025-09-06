@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
@@ -71,6 +72,8 @@ import {;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {
   Facebook,
   Twitter,
@@ -85,7 +88,7 @@ import {
   FileText,
   HelpCircle,
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -122,25 +125,6 @@ import {;
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
-<<<<<<< HEAD
-const EnhancedFooter: React.FC = () => {;
-  const currentYear = new Date().getFullYear(),;
-
-  const footerSections = [;
-    {;
-      title: 'Services',;
-      links: [;
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },;
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },;
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' },;
-        { name: 'Space Technology', href: '/space-technology' },;
-        {;
-          name: 'View All Services',;
-          href: '/comprehensive-2025-services-showcase',;
-        },;
-      ],;
-    },    {        { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
-=======
 import React from 'react',
 import Link from 'next/link';
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
@@ -180,7 +164,6 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Privacy Policy', href: '/privacy' },
 { name: 'Terms of Service', href: '/terms' },
       ],
-=======
   const footerLinks = {
     services: [
       { name: 'AI Services', href: '/services/ai-services' },
@@ -238,7 +221,7 @@ const EnhancedFooter: React.FC = () => {
       name: 'Instagram',
       icon: Instagram,
       href: 'https://instagram.com/ziontechgroup',
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     },
   ];
 
@@ -256,7 +239,7 @@ const EnhancedFooter: React.FC = () => {
     },
   ];
   const socialLinks = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     {
@@ -283,6 +266,7 @@ const EnhancedFooter: React.FC = () => {
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <footer className='bg-slate-950 border-t border-white/10'>;
       <div className='max-w-7xl mx-auto px-6 py-16'>;
@@ -456,8 +440,9 @@ const EnhancedFooter: React.FC = () => {
                       className="text - white / 70 hover: text - white transition-colors duration-200";
                     >;
 =======
-                  className='hover:text-white transition-colors'
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+                  className='hover:text-white transition-colors'
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -486,11 +471,12 @@ const EnhancedFooter: React.FC = () => {
                 <a
                   href="tel: +13024640950"
                   className="hover:text-white transition-colors"
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 >
                   +1 (302) 464-0950
                 </a>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='flex items-center space-x-3 text-white/70'>
                 <MapPin className='w-4 h-4' />
@@ -548,6 +534,8 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="w-4 h-4" />
                 <a
@@ -682,6 +670,7 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         {/* Bottom Section */}
@@ -713,12 +702,17 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+        {/* Bottom Section */}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             {/* Copyright */}
             <div className='text-white/60 text-sm'>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             {/* Social Links */}
 <div className='flex items-center space-x-4'>
@@ -737,6 +731,8 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               ))}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className="flex items-center space-x-6">
               <div className="flex items-center space-x-4">
                 {socialLinks.map(social => (
@@ -752,12 +748,13 @@ const EnhancedFooter: React.FC = () => {
                   </a>
                 ))}
               </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );
@@ -828,6 +825,11 @@ const EnhancedFooter: React.FC = () => {
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default EnhancedFooter;
 import React from './react';
   FileText,
@@ -1039,6 +1041,7 @@ company updates.;
         <ArrowUp className="w-5 h-5"  />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       </button>
     </footer>
   )}"'
@@ -1103,11 +1106,12 @@ export default EnhancedFooter;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </button>
     </footer>
   )}"'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Scroll to Top Button */}
       <button
         onClick={scrollToTop}
@@ -1119,5 +1123,9 @@ export default EnhancedFooter;
     </footer>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

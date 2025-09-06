@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 canvas.width = window.innerWidth;
@@ -80,6 +81,8 @@ interface UltraFuturisticBackground2045Props {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       x: number;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -123,7 +126,7 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
     // Particle system
     const particles: Array<{
 x: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2, vy: (Math.random () - 0.5) * 2, size: Math.random () * 3 + 1, color: `hsl ($ {
   Math.random () * 360;
@@ -167,6 +170,7 @@ if (return) {
     }> = [];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -178,6 +182,8 @@ if (return) {
       color: string,
       alpha: number,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Create initial particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -192,7 +198,7 @@ color: `hsl(${Math.random() * 360}, 70%, 60%)`,
       });
     }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // Animation loop
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const animate = () => {
@@ -224,10 +230,13 @@ color: `hsl(${Math.random() * 360}, 70%, 60%)`,
           particles[index] = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             x: Math.random() * canvas.width,
             y: Math.random() * canvas.height,
             vx: (Math.random() - 0.5) * 2,
@@ -332,13 +341,18 @@ color: `hsl(${Math.random() * 360}, 70%, 60%)`,
       // Draw connecting lines between nearby particles
       particles.forEach((particle1, i) => {
 particles.slice(i + 1).forEach(particle2 => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           const dx = particle1.x - particle2.x;
           const dy = particle1.y - particle2.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < 150) {
             ctx.save();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -349,12 +363,17 @@ particles.slice(i + 1).forEach(particle2 => {
 ctx.globalAlpha = ((150 - distance) / 150) * 0.3;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ctx.globalAlpha = ((150 - distance) / 150) * 0.3;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ctx.strokeStyle = '#00ffff';
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particle1.x, particle1.y);
             ctx.lineTo(particle2.x, particle2.y);
             ctx.stroke();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -378,6 +397,8 @@ if ( {) {
 }
         cancelAnimationFrame (animation_ref.current);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.restore();
           }
         });
@@ -397,7 +418,7 @@ canvas.height = window.innerHeight;
     return () => {
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>;
@@ -430,6 +451,7 @@ cancelAnimationFrame(animationRef.current);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           }}
           transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             duration: 20
             repeat: Infinity
@@ -535,6 +557,8 @@ cancelAnimationFrame(animationRef.current);
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             duration: 20,
             repeat: Infinity,
             ease: 'linear',
@@ -556,7 +580,7 @@ className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-l
         />
         <motion.div
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             rotate: [360, 0]
             scale: [1, 1.2, 1]
@@ -568,6 +592,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.7, 0 && 0.3],
           transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
             rotate: [360, 0]
@@ -660,6 +685,8 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounde
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             duration: 6,
             repeat: Infinity,
             ease: 'easeInOut',
@@ -677,12 +704,17 @@ className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/30 transf
             ease: 'easeInOut',
           }}
         />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Additional floating elements */}
         <motion.div
 className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             y: [0, -20, 0]
             opacity: [0.2, 0.5, 0.2]
@@ -849,6 +881,8 @@ export default UltraFuturisticBackground2045;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
           }}
@@ -902,7 +936,7 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
 <div className='fixed inset-0 pointer-events-none z-20'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Content */}
       <div className='relative z-30'>{children}</div>;
 
@@ -937,6 +971,7 @@ className='absolute bottom-1/4 right-1/4 w-6 h-6 bg-gradient-to-r from-purple-40
             background_position: ['-200% 0', '200% 0'],
           }}
           transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             duration: 15
             repeat: Infinity
@@ -985,6 +1020,8 @@ export default UltraFuturisticBackground2045;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             duration: 15,
             repeat: Infinity,
             ease: 'linear',
@@ -995,5 +1032,9 @@ export default UltraFuturisticBackground2045;
 );
 };
 export default UltraFuturisticBackground2045;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

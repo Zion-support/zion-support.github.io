@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
@@ -114,6 +115,8 @@ import {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -122,8 +125,12 @@ import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lo
 export default function BusinessToolsPage() {
   const businessTools = null;
             communicate effectively, market their products, and grow their operations. Real pricing and features.
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -168,6 +175,7 @@ description:
             'Visual project management platform with customizable workflows and automation.',
           features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Visual boards'
             'Automation'
             'Time tracking'
@@ -205,6 +213,8 @@ description:
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             'Visual boards',
             'Automation',
             'Time tracking',
@@ -220,8 +230,12 @@ description:
     },
     {
       category: 'Communication & Collaboration',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       tools: [
         {
           name: 'Slack',
@@ -477,6 +491,7 @@ description:
             'Product analytics platform for understanding user behavior and product usage.',
           features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
             'Event tracking'
             'Funnel analysis'
             'Cohort analysis'
@@ -536,6 +551,8 @@ import React from 'react';
         {
           name: 'Google Analytics',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             'Event tracking',
             'Funnel analysis',
             'Cohort analysis',
@@ -550,7 +567,7 @@ import React from 'react';
       ],
     },
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 
@@ -586,6 +603,7 @@ description:
       color: 'text-cyan-400',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'Cloud-Native Platforms'
       description:
@@ -712,6 +730,8 @@ description:
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Discover the most powerful business tools that successful companies use to manage projects, communicate effectively, market their products, and grow their operations. Real pricing and features.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       title: 'Security & Compliance',
       description: 'Tools ensuring data protection and regulatory compliance.',
       trend: '🔒 Critical',
@@ -780,11 +800,12 @@ description:
             Discover the most powerful business tools that successful companies
             use to manage projects, communicate effectively, market their
             products, and grow their operations. Real pricing and features.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
       {/* Business Insights */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               Stay ahead of the curve with our analysis of the business tools;
               landscape and emerging opportunities.;
@@ -823,6 +844,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
@@ -853,8 +876,12 @@ description:
                   {insight.trend}
                 </div>
               </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -885,6 +912,7 @@ description:
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Business Tools */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="section-padding bg-gradient-cursor">
@@ -921,6 +949,8 @@ description:
                         <div className="inline-flex items-center px-3 py-1 rounded-full bg-cursor-blue text-white text-xs font-medium">
                           <Star className="w-3 h-3 mr-1" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -964,7 +994,7 @@ style={{
                       <div
                         className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                       >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {tool.icon}
                       </div>;
                       <h4 className='text - xl font - bold text - white mb - 2'>;
@@ -972,6 +1002,7 @@ style={{
                       </h4>;
                       <p className='text - gray - 400 text - sm leading - relaxed'>;
                         {tool.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <h4 className="text-xl font-bold text-white mb-2">{tool.name}</h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{tool.description}</p>
@@ -989,6 +1020,8 @@ style={{
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </p>
                     </div>
                     <div className='mb-6'>
@@ -1004,8 +1037,12 @@ style={{
                             className='flex items-center text-gray-300 text-sm'
                           >
                             <Check className='w-4 h-4 text-cursor-blue mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             {feature}
                           </li>;
                         ))}
@@ -1199,6 +1236,7 @@ variant='primary'
                 key={index}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className='card-hover border-gradient-blue text-center'
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1231,6 +1269,8 @@ variant='primary'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='card-hover border-gradient-blue text-center'
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1242,8 +1282,12 @@ variant='primary'
                   {tip.description}
                 </p>
               </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -1352,20 +1396,16 @@ variant='primary'
               href='/micro-saas'
               variant='secondary'
               size='lg'
-<<<<<<< HEAD
-              className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'>;
-              Explore Micro SaaS;
-            </Button>;
-=======
               className='bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl'
             >
               Explore Micro SaaS
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1443,6 +1483,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'
             >
               Get Business Consultation
@@ -1453,5 +1495,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

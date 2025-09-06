@@ -46,11 +46,8 @@ let filesProcessed = 0;
 const typeReplacements = {
   // React types
   'any[]': 'React.ReactNode[]',
-<<<<<<< HEAD
-  "any": 'unknown',
-=======
   any: 'unknown',
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   'any)': 'unknown)',
   'any;': 'unknown;',
   'any,': 'unknown,',
@@ -61,34 +58,18 @@ const typeReplacements = {
   'any<': 'unknown<',
   'any}': 'unknown}',
   'any{': 'unknown{',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Specific React component types
   'React.ComponentType<any>': 'React.ComponentType<Record<string, unknown>>',
   'React.FC<any>': 'React.FC<Record<string, unknown>>',
   'React.Component<any>': 'React.Component<Record<string, unknown>>',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Event types
   'React.ChangeEvent<any>': 'React.ChangeEvent<HTMLInputElement>',
   'React.MouseEvent<any>': 'React.MouseEvent<HTMLButtonElement>',
   'React.FormEvent<any>': 'React.FormEvent<HTMLFormElement>',
-<<<<<<< HEAD
-  // Function types
-  '() => any': '() => void',
-  '("value": any)': '(value: unknown)',
-  '("item": any)': '(item: unknown)',
-  '("data": any)': '(data: unknown)',
-  '("props": any)': '(props: Record<string, unknown>)',
-  '("event": any)': '(event: React.SyntheticEvent)',
-  // Array types
-  'any[]': 'unknown[]',
-  'Array<any>': 'Array<unknown>',
-=======
 
   // Function types
   '() => any': '() => void',
@@ -102,7 +83,7 @@ const typeReplacements = {
   'any[]': 'unknown[]',
   'Array<any>': 'Array<unknown>',
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   // Object types
   'Record<string, any>': 'Record<string, unknown>',
   '{ ["key": string]: any }': '{ ["key": string]: unknown }'};
@@ -145,12 +126,9 @@ function improveTypeScriptFile(content, filePath) {
         commonInterfaces +
         '\n' +
         improved.slice(nextLineIndex);
-<<<<<<< HEAD
-      changes++}
-=======
       changes++;
     }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
   // Replace any types with more specific types
   Object.entries(typeReplacements).forEach(([anyType, replacement]) => {
@@ -210,11 +188,6 @@ function improveTypeScriptFile(content, filePath) {
   const apiCallMatches = improved.match(apiCallRegex);
   if (apiCallMatches) {
     improved = improved.replace(apiCallRegex, match => {
-<<<<<<< HEAD
-      return match.replace('"response": any', '"response": Response')});
-    changes += apiCallMatches.length}
-  return { "content": improved, changes }}
-=======
       return match.replace('response: any', 'response: Response');
     });
     changes += apiCallMatches.length;
@@ -223,7 +196,7 @@ function improveTypeScriptFile(content, filePath) {
   return { content: improved, changes };
 }
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Process individual file
 function processFile(filePath) {
   try {
@@ -234,6 +207,7 @@ function processFile(filePath) {
       totalImprovements += result.changes;
       console.log(
         `✅ Improved ${filePath} (${result.changes} type improvements)`
+<<<<<<< HEAD
 <<<<<<< HEAD
       )}
     filesProcessed++} catch (error) {
@@ -255,6 +229,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       );
     }
 
@@ -264,8 +240,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Generate TypeScript improvement report
 function generateTypeScriptReport() {
   const report = {
@@ -280,28 +260,21 @@ function generateTypeScriptReport() {
         'Add JSDoc comments for complex functions',
         'Use const assertions for immutable data',
         'Consider using branded types for IDs',
-<<<<<<< HEAD
-      ]}};
-=======
       ],
     },
   };
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   fs.writeFileSync(
     'typescript-improvement-report.json',
     JSON.stringify(report, null, 2)
   );
   console.log(
-<<<<<<< HEAD
-    '📊 TypeScript improvement report "generated": typescript-improvement-report.json'
-  )}
-=======
     '📊 TypeScript improvement report generated: typescript-improvement-report.json'
   );
 }
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Main improvement function
 async function main() {
   console.log('🔧 Starting TypeScript improvements...\n');
@@ -329,13 +302,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   for (const pattern of patterns) {
     const files = await glob(pattern, {
-<<<<<<< HEAD
-      "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
-=======
       ignore: excludeDirs.map(dir => `**/${dir}/**`),
     });
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     for (const file of files) {
       processFile(file)}
 <<<<<<< HEAD
@@ -353,6 +323,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   console.log("\n✨ TypeScript improvements completed!")}
 // Run the script
 main().catch(console.error);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -391,3 +362,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

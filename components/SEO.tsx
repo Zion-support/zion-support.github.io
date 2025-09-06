@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
 <<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface SEOProps {
   title?: string;
   description?: string;
@@ -37,8 +40,8 @@ export default function SEO({
     </Head>
   );
 }
-=======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -77,6 +80,9 @@ origin/automation-improvements-final
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from './react';
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -198,6 +204,7 @@ export default SEO;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
@@ -211,6 +218,10 @@ export default SEO;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import Head from 'next/head';
 
@@ -287,5 +298,9 @@ const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -30,6 +30,7 @@ export default function LanguageSwitchPrompt() {
 
 const localeLabelKey: Record<string, string> = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   en: "lang.english",
   pt: "lang.portuguese",
   es: "lang.spanish",
@@ -101,6 +102,8 @@ export default function LanguageSwitchPrompt() {;
   }, []);
   if (!suggested) return null;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   en: 'lang.english';
   pt: 'lang.portuguese';
   es: 'lang.spanish';
@@ -137,15 +140,12 @@ localStorage.setItem('langPromptShown', '1');
     document.documentElement.setAttribute(
       "dir"
       isRtl(suggested!) ? "rtl" : "ltr"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
     setSuggested(null);
   }
-<<<<<<< HEAD
-
-=======
   const decline = () => {
     localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
@@ -169,7 +169,7 @@ localStorage.setItem('langPromptShown', '1');
             onClick={decline}
           >
             {t('lang.switch_decline')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">;
       <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">;
@@ -193,6 +193,7 @@ localStorage.setItem('langPromptShown', '1');
 
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     localStorage.setItem('preferredLanguage', suggested!);
@@ -224,6 +225,8 @@ localStorage.setItem('langPromptShown', '1');
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
@@ -308,3 +311,6 @@ if (return null) {
     </div>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

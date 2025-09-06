@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -39,18 +40,18 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, {;
   createContext,;
   useContext,;
   useEffect,;
   useMemo,;
   useState,;} from 'react';} from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, {
   createContext,
   useContext,
@@ -59,11 +60,10 @@ import React, {
 useState,;
 } from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -107,6 +107,7 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   completeOnboarding: () => void;};}
@@ -272,6 +273,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   completeOnboarding: () => void;
 };
 
@@ -285,7 +288,7 @@ id: 'u_001',
 
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   useEffect(() => {
@@ -308,6 +311,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
@@ -422,6 +426,8 @@ export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
       else localStorage.removeItem('zion.user');
     } catch {}
@@ -444,7 +450,12 @@ export function useUser() {
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -44,12 +44,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export const messageChannelHandler = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
 <<<<<<< HEAD
@@ -66,14 +61,6 @@ type MessageHandler = {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 };
-<<<<<<< HEAD
-export const messageChannelHandler: MessageHandler = {
-  sendMessage: (_message) => {
-    // No-op: placeholder for message channel integration
-  },
-  receiveMessage: (_callback) => {
-    // No-op: placeholder for message listener registration
-=======
   sendMessage: (message: string) => {
     // Implementation for sending messages
     // eslint-disable-next-line no-console
@@ -82,7 +69,7 @@ export const messageChannelHandler: MessageHandler = {
     // Implementation for receiving messages
     // eslint-disable-next-line no-console
     console.log('Setting up message receiver');
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -206,6 +193,7 @@ export default MessageChannelHandler;
 =======
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 };
@@ -214,3 +202,6 @@ export default MessageChannelHandler;
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

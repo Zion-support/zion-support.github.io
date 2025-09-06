@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -22,11 +23,16 @@
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -49,6 +55,15 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
 const { exec } = require("child_process");
@@ -63,9 +78,8 @@ const execAsync = promisify(exec);
 =======
 
 const execAsync = promisify(exec);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -74,10 +88,13 @@ const execAsync = promisify(exec);
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -87,13 +104,14 @@ const { execSync } = require('child_process');
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-
 =======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 <<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 <<<<<<< HEAD
@@ -104,6 +122,8 @@ const { execSync } = require('child_process');
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class MasterAutomation {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -119,14 +139,11 @@ class MasterAutomation {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   log(message) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -199,6 +216,11 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
@@ -233,6 +255,7 @@ class MasterAutomation {}
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   async runCommand(command, description) {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -243,15 +266,20 @@ class MasterAutomation {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
   async runCommand(command, description) {
-  async runCommand(command, description) {
-
-
-
-
-  async runCommand(command, description) {
 =======
-<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  async runCommand(command, description) {
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+<<<<<<< HEAD
   async runCommand(command, description) {
   async runCommand(command, description) {
 
@@ -278,6 +306,8 @@ class MasterAutomation {}
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -293,6 +323,7 @@ class MasterAutomation {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -310,10 +341,15 @@ class MasterAutomation {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -324,6 +360,11 @@ class MasterAutomation {}
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
   async runCommand(command, options = {}) {}
     try {}
@@ -335,9 +376,6 @@ class MasterAutomation {}
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
-=======
 class MasterAutomation {
   constructor() {
     this.logFile = path.join(__dirname, "logs", "master-automation.log");
@@ -357,6 +395,7 @@ class MasterAutomation {
         timeout: 30000, 
         ...options 
       });
+<<<<<<< HEAD
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -381,6 +420,14 @@ class MasterAutomation {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+      return { success: true, stdout, stderr };
+    } catch (error) {}
+      this.log(`Command failed: ${command} - ${error.message}`);
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -498,19 +545,7 @@ class MasterAutomation {
       return { success: false, error: error.message };
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -537,6 +572,7 @@ class MasterAutomation {
         return { success: false, results };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -552,6 +588,11 @@ class MasterAutomation {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -564,6 +605,7 @@ class MasterAutomation {
     return { success: true, results };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -593,12 +635,18 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async performHealthCheck() {
     this.log("Performing health check.");
     // Check if PM2 is running
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -777,11 +825,15 @@ class MasterAutomation {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
     } else {
       this.log("All processes are running normally");
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -928,6 +980,10 @@ class MasterAutomation {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     if (runningProcesses < expectedProcesses) {}
       this.log()
@@ -949,8 +1005,6 @@ class MasterAutomation {
         "lintFixer": await this.getPM2Logs('lint-fixer', 20),
         "buildMonitor": await this.getPM2Logs('build-monitor', 20),
         "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
-=======
-=======
       return { 
         success: false, 
         stdout: error.stdout || "", 
@@ -1029,7 +1083,7 @@ class MasterAutomation {
     const pm2Status = await this.checkPM2Status();
     if (!pm2Status) {
       this.log("PM2 is not running, attempting to start processes.");
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+
       await this.startPM2Processes();
       return;
     }
@@ -1039,28 +1093,6 @@ class MasterAutomation {
     const expectedProcesses = this.pm2Processes.length;
     const runningProcesses = processes.length;
 
-<<<<<<< HEAD
-    if (runningProcesses < expectedProcesses) {}
-      this.log()
-        `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
-      );
-      await this.restartPM2Processes();
-    } else {}
-      this.log('All processes are running normally');
-    };
-  };
-  async generateReport() {}
-    this.log('Generating automation report...');
-
-    const report = {}
-      "timestamp": new Date().toISOString(),
-      "processes": await this.monitorProcesses(),
-      "logs": {}
-        errorMonitor: await this.getPM2Logs('error-monitor', 20),
-        "lintFixer": await this.getPM2Logs('lint-fixer', 20),
-        "buildMonitor": await this.getPM2Logs('build-monitor', 20),
-        "gitAutomation": await this.getPM2Logs('git-automation', 20)}};
-=======
     if (runningProcesses < expectedProcesses) {
       this.log(`Only ${runningProcesses}/${expectedProcesses} processes running, restarting.`);
       await this.restartPM2Processes();
@@ -1107,8 +1139,8 @@ class MasterAutomation {
         gitAutomation: await this.getPM2Logs("git-automation", 20)
       }
     };
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
 
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 <<<<<<< HEAD
@@ -1139,12 +1171,6 @@ class MasterAutomation {
 
     this.log(`📄 Report saved to: ${reportFile}`);
     return report;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
   }
   async start() {
 
@@ -1165,8 +1191,12 @@ class MasterAutomation {
       fs.mkdirSync(logsDir, { recursive: true });
     }
     // Start PM2 processes
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
   async start() {}
     this.log('Master Automation started');
@@ -1183,11 +1213,14 @@ class MasterAutomation {
     // Perform initial health check;
     await this.performHealthCheck();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Set up periodic health checks every 30 minutes
     setInterval(async () => {
       await this.performHealthCheck();
@@ -1360,8 +1393,12 @@ if (require.main === module) {
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Set up periodic health checks every 30 minutes;
     setInterval()
       async () => {}
@@ -1393,6 +1430,7 @@ if (require.main === module) {}
   switch (command) {}
     case 'start':
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -1401,6 +1439,8 @@ if (require.main === module) {}
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   async generateReport() {
@@ -1446,97 +1486,52 @@ if (require.main === module) {
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
         process.exit(1);
       }
 });
       break;
-<<<<<<< HEAD
-    case 'stop':
-      automation.stop().catch(error => {})
-        console.error('Failed to stop Master "Automation": ', error);
-=======
-<<<<<<< HEAD
-    case 'stop':
-      automation.stop().catch(error => {})
-        console.error('Failed to stop Master "Automation": ', error);
-=======
     case "stop":
       automation.stop().catch(error => {
         console.error("Failed to stop Master Automation: ", error);
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
         process.exit(1);
       }
 });
       break;
-<<<<<<< HEAD
-    case 'restart':
-      automation.restartPM2Processes().catch(error => {})
-        console.error('Failed to restart "processes": ', error);
-=======
-<<<<<<< HEAD
-    case 'restart':
-      automation.restartPM2Processes().catch(error => {})
-        console.error('Failed to restart "processes": ', error);
-=======
     case "restart":
       automation.restartPM2Processes().catch(error => {
         console.error("Failed to restart processes: ", error);
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
         process.exit(1);
       }
 });
       break;
-<<<<<<< HEAD
-    case 'status':
-      automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
-=======
-<<<<<<< HEAD
-    case 'status':
-      automation.monitorProcesses().catch(error => {})
-        console.error('Failed to get "status": ', error);
-=======
     case "status":
       automation.monitorProcesses().catch(error => {
         console.error("Failed to get status: ", error);
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
         process.exit(1);
       }
 });
       break;
-<<<<<<< HEAD
-    case 'report':
-      automation.generateReport().catch(error => {})
-        console.error('Failed to generate report: ', error);
-=======
-<<<<<<< HEAD
-    case 'report':
-      automation.generateReport().catch(error => {})
-        console.error('Failed to generate report: ', error);
-=======
     case "report":
       automation.generateReport().catch(error => {
         console.error("Failed to generate report: ", error);
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+
+
         process.exit(1);
       }
 });
       break;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     default:
       console.log("Usage: node master-automation.js [start|stop|restart|status|report]");
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
+
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1603,6 +1598,7 @@ class MasterAutomation {
     return { success: true, results };
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1613,6 +1609,10 @@ class MasterAutomation {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   async runQualityChecks() {
     this.log('🔍 Running quality checks...');
@@ -1632,6 +1632,7 @@ class MasterAutomation {
       results.push({ ...check, result });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -1641,6 +1642,27 @@ class MasterAutomation {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  async generateReport() {
+    this.log('📊 Generating automation report...');
+
+    const report = {
+      timestamp: new Date().toISOString(),
+      build: await this.runBuildProcess(),
+      quality: await this.runQualityChecks(),
+      automation: await this.runAutomationScripts(),
+      summary: {
+        totalScripts: 6,
+        successfulScripts: 0,
+        failedScripts: 0,
+      },
+    };
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 
     this.log('✅ Quality checks completed');
@@ -1686,6 +1708,7 @@ class MasterAutomation {
     this.log('✅ Automation scripts completed');
     return { success: true, results };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1766,6 +1789,9 @@ class MasterAutomation {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -1782,6 +1808,7 @@ class MasterAutomation {
       },
     };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1804,6 +1831,12 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (runningProcesses < expectedProcesses) {}
       this.log()
         `Only ${runningProcesses}/${expectedProcesses} processes running, restarting...``
@@ -1826,9 +1859,13 @@ class MasterAutomation {
     const reportFile = path.join(__dirname, "logs", "automation-report.json");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Calculate summary
     if (report.build.success) report.summary.successfulScripts++;
     else report.summary.failedScripts++;
@@ -1847,6 +1884,7 @@ class MasterAutomation {
       this.logsDir,
       `automation-report-${Date.now()}.json`
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1895,6 +1933,15 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  async start() {
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report saved to: ${reportFile}`);
@@ -1914,6 +1961,7 @@ class MasterAutomation {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1927,6 +1975,11 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.log("Master Automation started");
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, "logs");
@@ -1959,6 +2012,7 @@ class MasterAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 
@@ -2041,6 +2095,12 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   async status() {
@@ -2087,6 +2147,7 @@ class MasterAutomation {
     return status;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Handle command line arguments
@@ -2107,6 +2168,10 @@ class MasterAutomation {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   }
 
@@ -2215,13 +2280,11 @@ class MasterAutomation {
 
 =======
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
 <<<<<<< HEAD
-
-
-// CLI interface
-=======
-<<<<<<< HEAD
-
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
@@ -2240,12 +2303,15 @@ class MasterAutomation {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (require.main === module) {
   const automation = new MasterAutomation();
   const command = process.argv[2];
 
   switch (command) {
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2257,12 +2323,10 @@ if (require.main === module) {
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 
-=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 <<<<<<< HEAD
-=======
-=======
-
-
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 =======
@@ -2276,6 +2340,8 @@ if (require.main === module) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     case "start":
       automation.start().catch(error => {
         console.error("Master Automation failed: ", error);
@@ -2314,8 +2380,12 @@ if (require.main === module) {}
     case 'start':
 =======
     case 'start':
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       automation
         .start()
         .then(report => {
@@ -2360,9 +2430,13 @@ if (require.main === module) {}
 module.exports = MasterAutomation;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     case 'start':
       automation
         .start()
@@ -2389,6 +2463,7 @@ module.exports = MasterAutomation;
       break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     default: console.log('Usage: node master-automation.cjs [start|status]'), process.exit(1),
   }
 }
@@ -2410,13 +2485,13 @@ module.exports = MasterAutomation;
 =======
 <<<<<<< HEAD
 =======
-    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
 =======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+    default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
+
     default:
       console.log('Usage: node master-automation.cjs [start|status]');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
+
     default: console.log('Usage: node master-automation.cjs [start|status]'); process.exit(1);
   }
 }
@@ -2427,8 +2502,9 @@ module.exports = MasterAutomation;
 
     default: 
       console.log('Usage: node master-automation.cjs [start|status]');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
       process.exit(1);
+<<<<<<< HEAD
 <<<<<<< HEAD
       break;
 =======
@@ -2474,6 +2550,16 @@ module.exports = MasterAutomation;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+main
+
+  }
+}
+
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     default: console.log()
         'Usage: node master-automation.js [start|stop|restart|status|report]'
       );
@@ -2490,18 +2576,28 @@ module.exports = MasterAutomation;
 <<<<<<< HEAD
 =======
 module.exports = MasterAutomation;
-<<<<<<< HEAD
 module.exports = MasterAutomation;
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-module.exports = MasterAutomation;
-
 =======
 
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+module.exports = MasterAutomation;
+
+
+<<<<<<< HEAD
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -2539,3 +2635,13 @@ module.exports = MasterAutomation;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+module.exports = MasterAutomation;
+
+module.exports = MasterAutomation;
+
+
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

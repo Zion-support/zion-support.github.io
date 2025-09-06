@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Common skills for filtering
 =======
 <<<<<<< HEAD
@@ -13,6 +14,10 @@
 =======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -25,6 +30,7 @@ export const COMMON_SKILLS = [
   'DevOps',
   'Cloud Architecture',;
   'TensorFlow',];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,6 +48,11 @@ export const COMMON_SKILLS = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+// Common skills for filtering
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -55,7 +66,36 @@ export const COMMON_SKILLS = [
   'DevOps'
   'Cloud Architecture'
   'TensorFlow',];
+<<<<<<< HEAD
 // Regionsexport const REGIONS = [  "Machine Learning";
+=======
+// Regions
+// Common skills for filtering;
+export const COMMON_SKILLS = [;
+// Common skills for filtering
+
+export const COMMON_SKILLS = [
+ursor/fix-website-loading-errors-and-merge-6662
+  'Machine Learning',
+  'Python',
+  'JavaScript',
+  'React',
+  'Data Science',
+  'AWS',
+  'Docker',
+  'Kubernetes',
+  'DevOps',
+
+  'TensorFlow', ];
+;
+// Regions;
+
+
+
+
+
+export const REGIONS = [  "Machine Learning";
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   "Python";
   "JavaScript";
   "React";
@@ -64,10 +104,33 @@ export const COMMON_SKILLS = [
   "Docker";
   "Kubernetes";
   "DevOps";
+<<<<<<< HEAD
   "Cloud Architecture";  "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
+=======
+  "Cloud Architecture";
+  "TensorFlow"
+// Regions
+export const REGIONS = [
+  'North America'
+  'Europe'
+  'Asia Pacific'
+  'South America'
+  'Middle East'
+  'Africa',];  "North America";
+
+
+
+  "Europe";
+  "Asia Pacific";
+  "South America";
+  "Middle East";
+  "Africa"
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 // Common skills for filtering
 export const COMMON_SKILLS = [
@@ -135,6 +198,7 @@ export const REGIONS = [;
   "Middle East",;
   "Africa";
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -228,3 +292,11 @@ export const COMMON_SKILLS = [
 export const COMMON_SKILLS = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  "Africa";
+
+
+export const COMMON_SKILLS = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

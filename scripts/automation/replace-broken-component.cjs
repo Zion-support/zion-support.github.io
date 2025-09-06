@@ -261,16 +261,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -280,6 +278,10 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -572,6 +574,7 @@ if (require.main === module) {}
       process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ComponentReplacer;
@@ -585,3 +588,8 @@ module.exports = ComponentReplacer;
 module.exports = ComponentReplacer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = ComponentReplacer;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

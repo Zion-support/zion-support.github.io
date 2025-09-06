@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -62,9 +63,11 @@ function generateSessionId(): any (): string {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 type ChatMessage = any;
 export default function ChatWidget() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -74,6 +77,7 @@ export default function ChatWidget() {
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +86,8 @@ export default function ChatWidget() {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   useEffect(() => {
 sessionIdRef.current = generateSessionId();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -160,14 +166,19 @@ body: JSON.stringify({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch {}
   }
 
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -255,6 +266,8 @@ body: JSON.stringify({
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({
@@ -264,7 +277,7 @@ body: JSON.stringify({
         }),
       });
       setShowEscalation(true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } catch {}
   }
 
@@ -299,8 +312,6 @@ body: JSON.stringify({
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-<<<<<<< HEAD
-=======
 
 const newUserMessage: ChatMessage = {
       role: 'user',
@@ -338,7 +349,7 @@ timestamp: Date.now(),
       }
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -348,6 +359,7 @@ timestamp: Date.now(),
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -374,6 +386,8 @@ timestamp: Date.now(),
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
       if (data?.meta?.intentMatched === false) {
@@ -488,6 +502,8 @@ timestamp: Date.now(),
         </button>;
       )}
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     } catch (e) {
       setMessages(prev => [
         ...prev
@@ -528,7 +544,7 @@ timestamp: Date.now(),
 
 <div className='flex-1 overflow-y-auto p-3 space-y-3'>
             {messages.map((m, idx) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div
                 key={idx}
                 className={
@@ -536,6 +552,7 @@ timestamp: Date.now(),
                 }>;
                 <div
                   className={
+<<<<<<< HEAD
 <<<<<<< HEAD
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
@@ -546,9 +563,11 @@ timestamp: Date.now(),
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 <<<<<<< HEAD
 
@@ -563,11 +582,15 @@ timestamp: Date.now(),
               </div>
             ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {isLoading && (
               <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
                   Thinking…
                 </div>              </div>              <div className="text-sm">
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
                 <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
@@ -601,6 +624,8 @@ timestamp: Date.now(),
                   >
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             {isLoading && (
 <div className='text-sm'>
                 <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>
@@ -619,7 +644,7 @@ timestamp: Date.now(),
                     onClick={() => onSend(q)}
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {q}
                   </button>
                 ))}
@@ -628,11 +653,14 @@ timestamp: Date.now(),
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {q}
@@ -649,9 +677,11 @@ timestamp: Date.now(),
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {!showEscalation ? (
               <div className='flex gap-2'>
 
@@ -681,6 +711,7 @@ timestamp: Date.now(),
                     }
                   }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   placeholder='Ask a question…';
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
                 <button
@@ -708,6 +739,8 @@ timestamp: Date.now(),
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
                       onSend()
@@ -715,12 +748,17 @@ timestamp: Date.now(),
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -746,6 +784,8 @@ timestamp: Date.now(),
                     }
                   }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'
                 >
                   Send
@@ -771,12 +811,17 @@ className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-
                   </a>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             )}
           </div>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   );
@@ -810,3 +855,9 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

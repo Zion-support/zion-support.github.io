@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   answerIndex: number
 }
@@ -11,6 +12,8 @@ export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 type Question = any;
   question: string;
@@ -22,7 +25,7 @@ type Props = {
   onComplete: (score: number) => void;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -60,6 +63,7 @@ const score = questions.reduce(
               <label key={i} className='flex items-center gap-2'>;
                 <input
 <<<<<<< HEAD
+<<<<<<< HEAD
   function submit() {
 <<<<<<< HEAD
     setSubmitted(true);
@@ -88,6 +92,10 @@ export default function Quiz({ questions, onComplete }: Props) {
                   type='radio'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  type='radio'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     onComplete(score)
   }
   return (
@@ -167,23 +175,31 @@ export default function Quiz({ questions, onComplete }: Props) {
           {submitted && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-2 text-sm'>
               {answers[q.id] === q.answerIndex ? (
                 <span className='text-green-600'>Correct</span>
               ) : (
                 <span className='text-red-600'>Incorrect</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               )}
             </div>
           )}
         </div>
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -218,6 +234,8 @@ export default function Quiz({ questions, onComplete }: Props) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -231,5 +249,9 @@ export default function Quiz({ questions, onComplete }: Props) {
       )}
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

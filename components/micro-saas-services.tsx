@@ -5,6 +5,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -79,6 +80,8 @@ import {
   Share2,
   Check,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Brain;
   Monitor;
   Search;
@@ -86,7 +89,7 @@ import { Brain;
   Mail;
   Share2;
   Check;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Star;
   Zap;
   TrendingUp;
@@ -95,8 +98,6 @@ import { Brain;
   Lock;
   BarChart3;
   Calendar;
-<<<<<<< HEAD
-=======
   Target
  } from 'lucide-react';
 export default function MicroSaasServicesPage() {
@@ -118,7 +119,7 @@ export default function MicroSaasServicesPage() {
         'Landing page copy'
         'Newsletter content'
       ]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       pricing: {
 <<<<<<< HEAD
 
@@ -158,8 +159,6 @@ function MicroSaasServicesPage() {
           ],
         },
         enterprise: {
-<<<<<<< HEAD
-=======
           price: 299
           features: [
             'Unlimited generations',
@@ -174,7 +173,7 @@ function MicroSaasServicesPage() {
       website: 'https://ai-content.ziontech.ai',
       demo: 'https://demo.ai-content.ziontech.ai',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       id: 'performance-monitor',
       name: 'Website Performance Monitor',
@@ -238,7 +237,6 @@ function MicroSaasServicesPage() {
       website: 'https://performance.ziontech.ai',
       demo: 'https://demo.performance.ziontech.ai',
     },
-<<<<<<< HEAD
     {
       id: 'seo-analytics',
       name: 'SEO Analytics Dashboard',
@@ -287,6 +285,7 @@ function MicroSaasServicesPage() {
         },
         enterprise: {
           price: 199,
+origin/cursor/automate-test-improve-and-merge-code-2533
           features: [
             'Unlimited keywords',
             'Full SEO suite',
@@ -451,6 +450,7 @@ function MicroSaasServicesPage() {
         'Team collaboration',
         'Performance tracking',
         'Brand consistency',
+<<<<<<< HEAD
       ],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       pricing: {
@@ -834,6 +834,9 @@ function MicroSaasServicesPage() {
         'Performance tracking',
         'Brand consistency',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ],
       pricing: {
         starter: {
@@ -858,6 +861,7 @@ function MicroSaasServicesPage() {
           ],
         },
         enterprise: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           price: 199,
@@ -993,14 +997,17 @@ function MicroSaasServicesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           price: 129,
           features: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             'White - label options',
@@ -1269,6 +1276,8 @@ function MicroSaasServicesPage() {
             Discover our comprehensive suite of micro SaaS services designed for modern businesses.
             From AI-powered content generation to enterprise-grade performance monitoring, we deliver professional solutions with competitive pricing and exceptional value.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             'White-label options',
           ],
         },
@@ -1361,13 +1370,11 @@ description:
             modern businesses. From AI-powered content generation to
             enterprise-grade performance monitoring, we deliver professional
             solutions with competitive pricing and exceptional value.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
       {/* Market Overview */}
-<<<<<<< HEAD
-=======
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -1382,7 +1389,7 @@ description:
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {marketInsights.map((insight, index) => (
               <Card
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 className='card - hover border - gradient - blue text - center';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1397,6 +1404,7 @@ description:
                     </div>;
                     <div className='text - green - 400 font - semibold'>;
                       {insight.growth}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1507,12 +1515,18 @@ description:
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </div>
                   <p className='text-gray-400 text-sm'>{insight.description}</p>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Card>
             ))}
 
@@ -1620,6 +1634,7 @@ description:
                         <h3 className='text - 2xl font - bold text - white'>;
                           {service.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each service is designed to solve specific business challenges with professional-grade features and competitive pricing.
@@ -1690,6 +1705,8 @@ description:
 =======
                     <div className="flex flex-wrap gap-4">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         </h3>
                         <p className='text-gray-400'>{service.description}</p>
                       </div>
@@ -1732,10 +1749,11 @@ description:
                     </div>
 
 <div className='flex flex-wrap gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <Button
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='bg-cursor-blue hover:bg-blue-600'>                    <div className="flex flex-wrap gap-4">;
                       <Button
@@ -1754,6 +1772,8 @@ description:
                         className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='bg-cursor-blue hover:bg-blue-600'
                       >
                         Visit Website
@@ -1843,12 +1863,17 @@ variant='outline'
                           <div className='flex flex-wrap gap-2'>
                             {service.competitors.map(
                               (competitor, compIndex) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 <span
                                   key={compIndex}
                                   className='px-2 py-1 bg-gray-700 rounded text-xs text-gray-300'>;
                                   {competitor}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 </span>;
                               );
@@ -1940,6 +1965,8 @@ variant='outline'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 </span>
                               )
                             )}
@@ -2017,13 +2044,18 @@ variant='outline'
                 <p className='text-gray-400 text-sm'>
                   Worldwide availability with enterprise-grade reliability
                 </p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2066,6 +2098,8 @@ variant='outline'
 
     </>);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
@@ -2098,6 +2132,6 @@ href='/pricing'
       </section>
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

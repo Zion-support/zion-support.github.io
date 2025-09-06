@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 ) )
 }</ul> </section> <section>) )
@@ -65,11 +68,13 @@ export default function ContentMap({ report }: Props) {
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -121,6 +126,7 @@ export default function ContentMap(): any ({ report }: Props) {;
           ))}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         </ul>
       </section>
     </div>
@@ -134,6 +140,8 @@ export default function ContentMap(): any ({ report }: Props) {;
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 ) );
 }</ul> </section> <section>) );
@@ -176,10 +184,16 @@ if (return <div > No content map yet. Check back later.</div>) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         </ul>
       </section>
     </div>
 );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

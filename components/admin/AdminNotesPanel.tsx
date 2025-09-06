@@ -14,11 +14,8 @@ type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-  targetType: string; // e.g., 'user' | 'listing'
-=======
 export type AdminNotesPanelProps = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   targetId: string; // unique identifier for the target
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
@@ -27,6 +24,7 @@ type Note = {
   targetType: string;
   targetId: string;
   text: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   authorId: string;
@@ -71,6 +69,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   authorId: string;
   createdAt: number;
 }
@@ -78,16 +78,18 @@ export default function AdminNotesPanel({
   targetType,
   targetId,
 }: AdminNotesPanelProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
-<<<<<<< HEAD
-=======
   async function fetchNotes() {
     try {
       setLoading(true);
@@ -95,13 +97,14 @@ const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
       );
       if (!res && res.ok) {;
         setNotes([]);
         return;
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -200,13 +203,15 @@ if ( {) {
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const data = await res.json();
       setNotes(data.notes |[]);
     } finally {
       setLoading(false);
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
 if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
@@ -215,17 +220,6 @@ if (isAdmin) fetchNotes();
     setAdding(true);
     try {
       const res = await fetch('/api/admin/notes', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/json'
-          'X-Admin': isAdmin ? 'true' : 'false'
-          'X-Admin-User': adminId
-        }
-        body: JSON.stringify({ targetType, targetId, text })
-    } finally {
-      setAdding(false);    }      if (!res.ok) {
-=======
         method: 'POST',
 headers: {
           'Content-Type': 'application/json',
@@ -235,11 +229,12 @@ headers: {
         body: JSON.stringify({ targetType, targetId, text }),
       });
       if (!res.ok) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         alert('Failed to add note');
         return;
       }
       setText('');
+<<<<<<< HEAD
 <<<<<<< HEAD
       setAdding(false);    }
 
@@ -247,14 +242,20 @@ headers: {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       await fetchNotes();
     } finally {
       setAdding(false);
       await fetchNotes()
     } finally {
       setAdding(false)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
 
@@ -586,6 +587,7 @@ if ( {) {
     </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -897,3 +899,8 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

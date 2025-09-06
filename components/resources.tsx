@@ -11,9 +11,12 @@ export default function ResourcesPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -182,6 +185,8 @@ export default ResourcesPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               <div className='mt-3 text-cyan-300'>Open →</div>
             </Link>
           ))}
@@ -191,5 +196,9 @@ export default ResourcesPage;
 );
 
 export default ResourcesPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -103,13 +104,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
   Rocket, Dna, DollarSign, Lock, Globe
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
  } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface UltraAdvancedServiceCardProps {
 import {;
   ArrowRight,;
@@ -142,6 +145,7 @@ interface UltraAdvancedServiceCardProps {;
     popular: boolean;
     icon: string;
     color: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     text_color: string;
@@ -252,6 +256,8 @@ interface UltraAdvancedServiceCardProps {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     textColor: string;
     link: string;
     marketPosition: string;
@@ -279,14 +285,19 @@ interface UltraAdvancedServiceCardProps {;
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -403,6 +414,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const getCategoryIcon = null;
       return <Brain className='w-4 h-4' />;
     if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
@@ -443,19 +456,19 @@ visible: {
       opacity: 1,
       height: 'auto',
       transition: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.5,
         ease: 'easeOut' as const,
       },
     },
   };
-<<<<<<< HEAD
-
-        onHoverStart={() => setIsHovered(true)}
-=======
       onHoverStart={() => setIsHovered(true)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       onHoverEnd={() => setIsHovered(false)}
     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -503,6 +516,7 @@ visible: {
       >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -510,6 +524,10 @@ visible: {
 <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;
             <div className='flex items - center space - x-3'>;
@@ -523,6 +541,7 @@ visible: {
                 </div>;
                 <h3 className='text - xl font - bold text - white mt - 1'>;
                   {service.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -540,12 +559,15 @@ visible: {
                 </div>
                 <h3 className="text-xl font-bold text-white mt-1">{service.name}</h3>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </h3>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
             {service.popular && (
               <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -615,6 +637,10 @@ visible: {
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -628,6 +654,7 @@ visible: {
             {service.tagline}
           </p>
           {/* Price */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className='flex items-center justify-between mb-4'>
@@ -825,6 +852,8 @@ visible: {
               <Users className="w-4 h-4 text-blue-400" />
               <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex items-center justify-between mb-4'>
             <div className='flex items-baseline space-x-1'>
               <span className='text-2xl font-bold text-white'>
@@ -852,7 +881,7 @@ visible: {
               <span className='text-gray-300'>
                 {service.trialDays} day trial
               </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
           {/* Market Data */}
@@ -863,6 +892,7 @@ visible: {
                 {service.marketSize}
               </span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="flex items-center justify-between text-sm">
               <span className="text-gray-400">Market Size:</span>
@@ -954,14 +984,20 @@ visible: {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='flex items-center justify-between text-sm mt-1'>
               <span className='text-gray-400'>Growth Rate:</span>
               <span className='text-blue-400 font-semibold'>
                 {service.growthRate}
               </span>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
 
 <<<<<<< HEAD
@@ -975,9 +1011,6 @@ visible: {
             {isExpanded && (;
               <motion&& motion.div
                 variants={contentVariants}
-<<<<<<< HEAD
-                {/* Description */}
-=======
 initial='hidden'
                 animate='visible'
                 exit='hidden'
@@ -988,7 +1021,7 @@ initial='hidden'
                   <h4 className='text-white font-semibold mb-2'>Description</h4>
                   <p className='text-gray-300 text-sm leading-relaxed'>
                     {service.description}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
 <<<<<<< HEAD
@@ -1006,6 +1039,7 @@ initial='hidden'
 
                 <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <div className="grid grid-cols-1 gap-2">
                     {service.features.slice(0, 6).map((feature, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm">
@@ -1017,6 +1051,8 @@ initial='hidden'
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h4 className='text-white font-semibold mb-2'>
                     Key Features
                   </h4>
@@ -1028,8 +1064,12 @@ initial='hidden'
                       >
                         <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </div>
                     ))}
 
@@ -1081,36 +1121,12 @@ initial='hidden'
                       <span className='text-gray-400'>Address:</span>
                       <span className='text-white text-xs'>
                         {service.contactInfo.address}
-<<<<<<< HEAD
-                      </span>                    </div>                </div>
-                {/* Contact Info */}
-
-                {/* Contact Info */}
-                <div className="bg-gray-800/50 rounded-lg p-3">;
-                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>;
-                  <div className="space-y-1 text-sm">;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Mobile:</span>;
-                      <span className="text-white">{service && service.contactInfo.mobile}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Email:</span>;
-                      <span className="text-white">{service && service.contactInfo.email}</span>;
-                    </div>;
-                    <div className="flex items-center space-x-2">;
-                      <span className="text-gray-400">Address:</span>;
-                      <span className="text-white text-xs">{service && service.contactInfo.address}</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-=======
                       </span>
                     </div>
                   </div>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 <<<<<<< HEAD
 
@@ -1122,6 +1138,7 @@ initial='hidden'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
@@ -1179,6 +1196,8 @@ initial='hidden'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex space-x-3 mt-6'>
             <motion.button
               className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
@@ -1194,8 +1213,12 @@ initial='hidden'
                 isExpanded
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -1214,6 +1237,7 @@ className='flex justify-center mt-4'
         </div>
       </div>
     </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -1350,9 +1374,15 @@ export default UltraAdvancedServiceCard;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default UltraAdvancedServiceCard;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

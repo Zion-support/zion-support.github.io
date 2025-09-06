@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -24,6 +28,13 @@ import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeBusinessSolution {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeBusinessSolution {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -56,15 +67,17 @@ export interface InnovativeBusinessSolution {
     address: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string;
   }
-=======
     website: string
   },
   realImplementation: boolean;
@@ -114,11 +127,12 @@ export interface InnovativeBusinessSolution {
     rating: 4.8;
     reviews: 48
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   {
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
@@ -154,6 +168,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -174,12 +190,17 @@ export interface InnovativeBusinessSolution {
   launchDate: string, customers: number,
   rating: number,
   reviews: number
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     reviews: 26
@@ -285,6 +306,10 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      website: 'https://ziontechgroup.com';
+    }
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
     realImplementation: true
     implementationDetails:
@@ -693,6 +718,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
     launchDate: '2025-05-01'
     customers: 38
@@ -701,14 +727,20 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 <<<<<<< HEAD
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
     customers: 38,
     rating: 4.7,
     reviews: 26,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      mobile: '+1 302 464 0950';
 =======
   }];      mobile: '+1 302 464 0950';
@@ -725,6 +757,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 
     reviews: 26
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 ];
@@ -734,6 +767,11 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 =======
   }
@@ -1042,6 +1080,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     reviews: 26;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1065,6 +1104,15 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'ai-marketing-automation-platform',
     name: 'AI Marketing Automation Platform',
     tagline: 'Intelligent marketing automation and optimization',
@@ -1558,5 +1606,9 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     reviews: 26
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

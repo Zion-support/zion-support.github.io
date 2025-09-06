@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
@@ -17,8 +20,12 @@ import SEO from '../components/SEO';
 const QuantumAINeuralNetworkPlatform: React.FC;
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Atom
   Brain
   Zap
@@ -136,6 +143,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {;
         ]}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
@@ -212,6 +220,8 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       />
       {/* Hero Section */}
       <section className='relative py-20 overflow-hidden'>
@@ -243,13 +253,14 @@ className='text-center'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 Start Free Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -260,6 +271,10 @@ className='text-center'
 className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Schedule Demo
               </motion.button>
@@ -343,6 +358,7 @@ className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rou
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className='py-20 bg-gray-900/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gray-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -357,9 +373,11 @@ className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rou
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             initial={{ opacity: 0, y: 20 }}
@@ -426,6 +444,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             className='text - center'      <section className="relative py-20 overflow-hidden">;
         <div className="absolute inset - 0 bg - gradient - to - br from - blue - 900 / 20 via - cyan - 900 / 20 to-indigo-900 / 20"></div>;
@@ -528,6 +547,10 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features
@@ -537,6 +560,7 @@ className='text-center mb-16'
               network performance and capabilities.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features.map((feature, index) => (          >
 
@@ -603,6 +627,8 @@ className='text-center mb-16'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
@@ -613,12 +639,17 @@ className='text-center mb-16'
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
 className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <Check className="w-6 h-6 text-white" />
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
               </motion.div>
@@ -700,8 +731,10 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <h3 className='text-lg font-semibold mb-2'>{feature}</h3>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 <<<<<<< HEAD
 
@@ -730,6 +763,7 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -763,6 +797,8 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
             </h2>;
           </motion && motion.div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -773,11 +809,12 @@ className='text-center mb-16'
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
               <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -798,6 +835,11 @@ className='text-center mb-16'
 className='text-center'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+className='text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Star className='w-8 h-8 text-white' />
@@ -868,6 +910,7 @@ className='text-center'
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className='text-center mb-16'
 
 <<<<<<< HEAD
@@ -886,6 +929,10 @@ className='text-center'
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Pricing Plans
@@ -895,6 +942,7 @@ className='text-center mb-16'
               journey.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {Object.entries(pricing).map(([plan, price], index) => (          >
 
@@ -920,9 +968,11 @@ className='text-center mb-16'
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {Object.entries(pricing).map(([plan, price], index) => (
               <motion.div
             transition={{ duration: 0 && 0.8 }}
@@ -970,6 +1020,7 @@ className='text-center mb-16'
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text - center';
               >;
@@ -1062,6 +1113,8 @@ className='text-center mb-16'
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className={`bg-gray-800/50 border rounded-xl p-8 ${
 plan === 'professional'
                     ? 'border-blue-500/50 bg-blue-900/20'
@@ -1085,7 +1138,7 @@ plan === 'professional'
       {/* CTA Section */}
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 
 <<<<<<< HEAD
@@ -1105,24 +1158,18 @@ plan === 'professional'
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready for Quantum AI Revolution?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-              Join the quantum computing revolution and experience exponential AI performance improvements.
-=======
 <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Ready for Quantum AI Revolution?
             </h2>
             <p className='text-xl text-gray-400 mb-8 max-w-3xl mx-auto'>
               Join the quantum computing revolution and experience exponential
               AI performance improvements.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1133,6 +1180,10 @@ plan === 'professional'
 className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl shadow-blue-500/25'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               Start Your Quantum Journey Today
             </motion.button>
@@ -1140,6 +1191,7 @@ className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1278,9 +1330,15 @@ export default QuantumAINeuralNetworkPlatform;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default QuantumAINeuralNetworkPlatform;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -5,6 +5,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AutomationInsightsPage() {
 
   const automationTrends = [
@@ -59,8 +60,10 @@ export default function AutomationInsightsPage() {;
     },      featured: false
     }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const automationTrends = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const automationTools = [;
@@ -73,6 +76,7 @@ export default function AutomationInsightsPage() {;
       complexity: 'Advanced',      type: 'Framework',;
       complexity: 'Advanced';
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'automation - framework',
       title: 'Zion Automation Framework',
@@ -102,6 +106,8 @@ export default function AutomationInsightsPage() {;
     },  ];      complexity: 'Beginner';
     }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       id: 'automation-framework',
       title: 'Zion Automation Framework',
 description:
@@ -124,7 +130,7 @@ description:
       type: 'Process',
 complexity: 'Beginner',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const successMetrics = [;
@@ -141,6 +147,7 @@ complexity: 'Beginner',
       label: 'Uptime',,
   description: 'Reliable automation performance';
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: 'deployment - automation',
       title: 'Deployment Automation',
@@ -237,6 +244,8 @@ complexity: 'Beginner',
             </p>;
           </section>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       metric: '227',
       label: 'Active Automations',
 description: 'Successfully deployed and running',
@@ -306,7 +315,7 @@ description: 'Successfully deployed and running',
                       {item.description}
                     </div>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               </div>;
@@ -362,6 +371,7 @@ description: 'Successfully deployed and running',
                     <Link
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
@@ -387,11 +397,13 @@ description: 'Successfully deployed and running',
 =======
                       Read More <span className="ml-1">→</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
                       Read More <span className='ml-1'>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Read More <span className='ml-1'>→</span>                    </Link>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -564,6 +576,7 @@ description: 'Successfully deployed and running',
                   href='/case-studies'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'                >              </p>
 
               <div className="flex flex-wrap justify-center gap-4">
@@ -622,6 +635,8 @@ description: 'Successfully deployed and running',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
                   View Case Studies
@@ -634,5 +649,9 @@ description: 'Successfully deployed and running',
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

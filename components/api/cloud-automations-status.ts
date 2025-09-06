@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
@@ -39,10 +40,16 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const dir = null;
+          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
       }
     }
   } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // ignore;
@@ -75,3 +82,9 @@ res.status(200).json({ ok: true, data });
 res.status(200).json({ ok: true, data });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    // ignore
+  }
+res.status(200).json({ ok: true, data });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

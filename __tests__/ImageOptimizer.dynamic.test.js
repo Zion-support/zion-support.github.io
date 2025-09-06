@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -31,33 +32,43 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ImageOpt
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
-
-
-=======
 =======
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 describe('ImageOptimizerdynamic', () => {
   test('renders without crashing', () => {
     render(<ImageOptimizerdynamic />);
     expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -80,6 +91,9 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 
@@ -141,6 +155,7 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import ImageOptimizerdynamic from '../components/ImageOptimizer.dynamic'; describe('ImageOptimizerdynamic',() => { test('renders without crashing',() => { render(<ImageOptimizerdynamic />); expect(screen.getByTestId('imageoptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ImageOptimizerdynamic />)}); test('handles user interactions',() => { render(<ImageOptimizerdynamic />)}); test('applies correct styling',() => { render(<ImageOptimizerdynamic />)})});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -162,6 +177,8 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   test('displays correct content', () => {
     render(<ImageOptimizerdynamic />);
@@ -178,7 +195,12 @@ const React from "react"; import { render,screen,fireEvent } from "@testing-libr
     // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

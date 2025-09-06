@@ -142,6 +142,7 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" No missing packages found")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.log(" No missing packages found")
@@ -155,3 +156,8 @@ console.log(`� Starting smart dependency fixer automation...``)
   console.log(" No missing packages found")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.log(" No missing packages found")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

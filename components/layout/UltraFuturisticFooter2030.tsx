@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 
@@ -83,13 +84,15 @@ const serviceCategories = [
   {
     title: '🚀 AI & Consciousness'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
  } from 'lucide-react';
 const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     services: [
       {
         name: 'AI Consciousness Evolution'
@@ -168,6 +171,7 @@ const contactInfo = null;
         href: '/ai-business-intelligence-suite-2030',
       },
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
         name: 'AI HR Management Suite 2030'
         href: '/ai-hr-management-suite-2030'
@@ -375,6 +379,8 @@ const serviceCategories = [;
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: 'AI Customer Experience Platform 2030',
         href: '/ai-customer-experience-platform-2030',
       },
@@ -391,28 +397,29 @@ const serviceCategories = [;
 ];
 
 const quickLinks = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
   { name: 'Solutions', href: '/solutions' },
   { name: 'Pricing', href: '/pricing' },
   { name: 'Resources', href: '/resources' },
-<<<<<<< HEAD
-  { name: 'Case Studies', href: '/case - studies' },
-  { name: 'Blog', href: '/blog' },
-=======
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
 { name: 'Contact', href: '/contact' },
 ];
 const companyInfo = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'Press', href: '/press' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { name: 'Status', href: '/status' }
 ];
@@ -683,6 +690,8 @@ export default function UltraFuturisticFooter2030() {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 { name: 'Status', href: '/status' },
 ];
 
@@ -786,7 +795,7 @@ export default function UltraFuturisticFooter2030() {
                     href={contactInfo.website}
                     className='hover:text-purple-400 transition-colors'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {contactInfo.website.replace('https://', '')}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -794,6 +803,7 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="space-y-6">;
@@ -836,12 +846,18 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Service Categories */}
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -850,6 +866,7 @@ export default function UltraFuturisticFooter2030() {
                     <h5 className='text-sm font-medium text-purple-300'>
                       {category.title}
                     </h5>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
                         <Link
@@ -881,6 +898,8 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <div className='space-y-1'>
                       {category.services.map((service, serviceIndex) => (
                         <Link
@@ -890,8 +909,12 @@ className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'
                         >
                           {service.name}
                         </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       ))}
                     </div>;
                   </div>;
@@ -933,6 +956,7 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             {/* Quick Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -978,6 +1002,8 @@ className="block text-sm text-gray-400 hover:text-cyan-300 transition-colors fle
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Target className='w-5 h-5 text-cyan-400' />
@@ -1006,8 +1032,12 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
                   >
                     {link.name}
                   </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ))}
                 <span>Connect & Trust</span>
               </h4>
@@ -1037,6 +1067,7 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
               </h4>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* Social Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='space-y-3'>;
                 <h5 className='text-sm font-medium text-green-300'>;
@@ -1087,6 +1118,8 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300'>
                   Follow Us
@@ -1105,7 +1138,7 @@ target='_blank'
                   ))}
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Certifications */}
 <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -1130,6 +1163,7 @@ target='_blank'
                     <div
                       key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
                       <CheckCircle className='w-3 h-3 text-green-400' />                      <span>{cert}</span>                  <span>Certifications</span>;
                 </h5>;
@@ -1153,10 +1187,12 @@ target='_blank'
                     <div key={index} className="flex items-center space-x-2 text-xs text-gray-400">
                       <CheckCircle className="w-3 h-3 text-green-400" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       className='flex items-center space-x-2 text-xs text-gray-400'
                     >
                       <CheckCircle className='w-3 h-3 text-green-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{cert}</span>
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1226,6 +1262,7 @@ target='_blank'
                   href='/terms'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <div className="border-t border-purple-500/20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
@@ -1267,6 +1304,8 @@ target='_blank'
                   <span>Made with passion for innovation</span>
                 </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='hover:text-purple-400 transition-colors'
                 >
                   Terms of Service
@@ -1274,7 +1313,7 @@ target='_blank'
               </div>
 
               <div className='flex items-center space-x-4 text-sm text-gray-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center space-x-2'>
                   <Heart className='w-4 h-4 text-red-400' />
                   <span>Made with passion for innovation</span>
@@ -1309,6 +1348,7 @@ target='_blank'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 }
 }
@@ -1325,3 +1365,6 @@ target='_blank'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

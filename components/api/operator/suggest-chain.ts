@@ -1,19 +1,23 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { CHAINS } from '../../../utils/chains';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,19 +39,27 @@ import { CHAINS } from '../../../utils/chains';
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { CHAINS } from '../../../utils/chains';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {},
   const stake = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -79,17 +91,31 @@ export default async function handler(
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+  if (req.method !== 'POST')
+
+  const stake = Number(stakeUsd || 0);
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return res.status(405).json({ error: 'Method not allowed' });
   const { region, stakeUsd } = req.body || {};
   const stake = Number(stakeUsd || 0);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -137,17 +163,18 @@ export default async function handler(
 =======
 
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
-=======
 let candidates = ['polygon', 'bnb', 'avalanche'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
@@ -172,6 +199,7 @@ let candidates = ['polygon', 'bnb', 'avalanche'];
   }
   let candidates = ['polygonbnbavalanche'];
   if (stake > 5000) candidates = ['arbitrumoptimismethereum'];
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -296,3 +324,15 @@ if (||) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
+  res
+    .status(200)
+
+
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

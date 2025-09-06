@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next / head';
@@ -29,6 +30,8 @@ export default function WCAGScannerPage() {;
         <title>{service && service.name} - Zion Tech Group</title>;
         <meta name='description' content={service && service.description} />;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import Head from 'next/head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -43,7 +46,7 @@ export default function WCAGScannerPage() {
       <Head>
         <title>{service.name} - Zion Tech Group</title>
 <meta name='description' content={service.description} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <link
           rel='canonical'
           href='https://ziontechgroup && ziontechgroup.com/wcag-accessibility-scanner'
@@ -95,6 +98,7 @@ export default function WCAGScannerPage() {
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full'>;
                 Start Trial;
@@ -256,6 +260,8 @@ export default function WCAGScannerPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='w-full'
               >
                 Start Trial
@@ -275,13 +281,18 @@ export default function WCAGScannerPage() {;
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,6 +313,8 @@ export default function WCAGScannerPage() {;
 ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 }
 
@@ -309,8 +322,14 @@ export default function WCAGScannerPage() {;
 }
 ;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
@@ -13,6 +14,9 @@
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -22,6 +26,7 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const LazySection: React.FC<LazySectionProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -58,18 +63,18 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, x: -50 }
       default:
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
   className;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-<<<<<<< HEAD
-=======
 return { opacity: 1, y: 0 };
       case 'down':
         return { opacity: 1, y: 0 }
@@ -81,7 +86,7 @@ return { opacity: 1, y: 0 };
         return { opacity: 1, y: 0 }
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -141,6 +146,7 @@ export const LazySection: React.FC<LazySectionProps> = ({;
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 };
 export default LazySection;      case 'down':;
@@ -170,3 +176,9 @@ export default LazySection;      case 'down':;
 export default LazySection;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+
+export default LazySection;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

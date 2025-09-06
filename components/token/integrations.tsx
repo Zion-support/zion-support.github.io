@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -26,6 +27,8 @@ import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import dynamic from 'next/dynamic',
 import React, { useEffect, useState } from 'react';
 import { useWallet  } from '../../hooks/useWallet';
@@ -39,6 +42,7 @@ import {
   calculateRewards
   DepinReward;
 <<<<<<< HEAD
+<<<<<<< HEAD
   fetchDepinActivities,
   calculateRewards,;
   DepinReward,;
@@ -47,11 +51,15 @@ import {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
   () => import('../../components/ui/BridgeForm')
   { ssr: false }
+<<<<<<< HEAD
 <<<<<<< HEAD
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
@@ -74,6 +82,11 @@ export default function TokenIntegrationsPage() {;
 export default function TokenIntegrationsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+export default function TokenIntegrationsPage() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -82,22 +95,30 @@ export default function TokenIntegrationsPage() {
   const [depinsSyncing, setDepinsSyncing] = useState(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async function syncDepin() {
     if (!account) {
       await connect();
 return;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     setDepinsSyncing(true);
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -117,6 +138,8 @@ return;
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setDepinsSyncing(false);
   }
   async function runOperator() {
@@ -125,8 +148,12 @@ setDepinsSyncing(false);
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ region, stakeUsd: stake }),
     });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const data = await res.json();
     setSuggestion(data);
   }
@@ -188,6 +215,7 @@ body: JSON.stringify({ region, stakeUsd: stake }),
             </button>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </div>
         {rewards && (
           <div className='mt-3 space-y-2 text-sm'>
@@ -225,6 +253,8 @@ body: JSON.stringify({ region, stakeUsd: stake }),
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
         {rewards && (
           <div className='mt-3 space-y-2 text-sm'>
@@ -234,8 +264,12 @@ body: JSON.stringify({ region, stakeUsd: stake }),
                   {r.network} — {r.reason}
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     setSuggestion(data)
         </div>;
         {rewards && (;
@@ -353,6 +387,7 @@ body: JSON.stringify({ region, stakeUsd: stake }),
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
@@ -414,6 +449,8 @@ body: JSON.stringify({ region, stakeUsd: stake }),
             {suggestion.alternatives && (
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <section className='space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800'>
         <h2 className='text-lg font-semibold'>Operator AI Actions</h2>
@@ -461,10 +498,11 @@ body: JSON.stringify({ region, stakeUsd: stake }),
                   .map((a: any) => a.chain.name)
                   .join(', ')}
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -704,6 +742,8 @@ function run_operator() {
       </section>;
     </div>);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </section>
 
 <section className='space-y-2 text-xs text-gray-500'>
@@ -719,7 +759,7 @@ function run_operator() {
       </section>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

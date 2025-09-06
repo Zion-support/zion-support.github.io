@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,29 @@
   create_record (record: Omit < FraudRecord, 'id' | 'timestamp'>): FraudRecord {
     const id = Date.now ().to_string ();
     const new_record: FraudRecord = {      ...record,
+=======
+export interface FraudRecord {
+  id: string;
+  type: string;
+  severity: "low" | "medium" | "high" | "critical";
+  description: string;
+  source: string;
+  timestamp: string;
+  status: "pending" | "investigating" | "resolved" | "false_positive";
+  adminId?: string;
+  resolution?: string;
+}
+
+
+class FraudStore {
+  private records: Map<string, FraudRecord> = new Map();
+
+  createRecord(record: Omit<FraudRecord, "id" | "timestamp">): FraudRecord {
+    const id = Date.now().toString();
+    const newRecord: FraudRecord = {
+
+      ...record,
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       id,
       timestamp: new Date().toISOString(),
     };
@@ -51,17 +75,19 @@
     };
   }
 }
+<<<<<<< HEAD
 export const fraud_store = new FraudStore ();
 <<<<<<< HEAD
 export const getFraudStore = () =>: any fraud_store;
 =======
 export const getFraudStore = () =>: any fraud_store;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const fraudStore = new FraudStore();
 export const getFraudStore = () => fraudStore;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -394,5 +420,9 @@ export function newEvent(
     ipAddress: partial.ipAddress ?? null,
     createdAt: partial.createdAt ?? new Date().toISOString(),
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

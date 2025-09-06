@@ -1,4 +1,13 @@
+<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const pages = [
+=======
+
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    const pages = [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       '/'
       '/about'
       '/learn'
@@ -13,6 +22,13 @@
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
+<<<<<<< HEAD
+=======
+
+
+ursor/expand-services-advertise-and-build-project-4b36
+    const owner = process && process.env.GITHUB_OWNER;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
@@ -54,6 +70,12 @@ if ( {) {
         repo,
         path: 'public / sitemap - autogen.xml',
 
+<<<<<<< HEAD
+=======
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token,
@@ -61,16 +83,19 @@ if ( {) {
     }
     return {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ursor/expand-services-advertise-and-build-project-4b36
 exports.handler = async function() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   try {
@@ -92,10 +117,13 @@ exports.handler = async function() {
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: pages.length })
     }
@@ -103,14 +131,28 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
       `</urlset>`,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
 <<<<<<< HEAD
+<<<<<<< HEAD
     const token = process.env.GITHUB_TOKEN,
+=======
+
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Check condition
 if ( {) {
   $2
@@ -118,9 +160,19 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'public / sitemap - autogen.xml', content: xml, message: 'chore (automation): weekly sitemap refresh', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: pages.length }) }
+<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }      statusCode: 200,
+=======
+
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+
+ursor/expand-services-advertise-and-build-project-4b36
+      statusCode: 200,
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }),
     };
   } catch (e) {
@@ -136,6 +188,7 @@ if ( {) {
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
+<<<<<<< HEAD
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
@@ -143,8 +196,25 @@ if ( {) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-},
 =======
+
+
+    if (owner && repo && token) {
+      await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
+    }
+
+
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
+
+ursor/expand-services-advertise-and-build-project-4b36
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+},
     const token = process.env.GITHUB_TOKEN;
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
@@ -154,4 +224,4 @@ if ( {) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533

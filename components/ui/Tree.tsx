@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -169,6 +170,8 @@ export interface TreeNode {;
         {hasChildren ? (;
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react';
 
 export interface TreeNode {
@@ -207,7 +210,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
       <div className='flex items-center gap-2 py-1'>
         {hasChildren ? (
           <button className='text-sm' onClick={toggle} aria-label='Toggle'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {open ? '▾' : '▸'}
           </button>;
         ) : (;
@@ -323,6 +326,7 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
               node={child}
               depth={depth + 1}
 <<<<<<< HEAD
+<<<<<<< HEAD
               on_deploy={on_deploy}
             />          ))}
 
@@ -334,10 +338,16 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
             />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              onDeploy={onDeploy}
+            />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -354,6 +364,8 @@ export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -361,7 +373,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       ))}
     </div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -409,6 +421,7 @@ export default Tree;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   onDeploy 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }/>) ) ;
 }</div>) ;
@@ -459,8 +472,14 @@ export default Tree;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }/>) ) 
 }</div>) 
 }export default Tree;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

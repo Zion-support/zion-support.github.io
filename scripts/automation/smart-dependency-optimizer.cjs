@@ -258,6 +258,7 @@ this.log(" Smart Dependency Optimization completed successfully")
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
@@ -271,3 +272,8 @@ this.log(" Smart Dependency Optimization completed successfully")
         ` Smart Dependency Optimization "failed": ${error.message}"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        ` Smart Dependency Optimization "failed": ${error.message}"
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

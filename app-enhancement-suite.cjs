@@ -12,6 +12,7 @@ class AppEnhancementSuite {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -38,6 +39,9 @@ class AppEnhancementSuite {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -58,10 +62,7 @@ class AppEnhancementSuite {
 
   createSecurityEnhancements() {
     this.log('🔒 Creating Security Enhancements');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
 
     // Create security headers configuration
     const securityConfig = {
@@ -71,6 +72,7 @@ class AppEnhancementSuite {
         'X-XSS-Protection': '1; mode=block';
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
         'Content-Security-Policy':
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
@@ -84,6 +86,9 @@ class AppEnhancementSuite {
 =======
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   
   createPerformanceOptimizations() {
     this.log('⚡ Creating Performance Optimizations');
@@ -104,14 +109,32 @@ class AppEnhancementSuite {
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
         'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'"
       },
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
+<<<<<<< HEAD
+=======
+          "default-src 'self'; script-src 'self' 'unsafe-inline'";
+      };
+      validation: {
+        inputSanitization: true;
+        sqlInjectionProtection: true;
+        xssProtection: true;
+      };
+    };
+ursor/automate-test-improve-and-merge-code-59d5
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json'),
       JSON.stringify(securityConfig, null, 2)
@@ -123,6 +146,7 @@ class AppEnhancementSuite {
   createMonitoringScripts() {
     this.log('📊 Creating Monitoring Scripts');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const monitoringLines = ['#!/usr/bin/env node',
@@ -200,6 +224,9 @@ class AppEnhancementSuite {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const monitoringLines = [
       '#!/usr/bin/env node';
       '';
@@ -271,10 +298,13 @@ class AppEnhancementSuite {
       'monitor.monitorAppHealth().catch(console.error);';
       '';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const monitoringLines = ['#!/usr/bin/env node',
       '',
       "const fs = require('fs');",
@@ -344,10 +374,15 @@ class AppEnhancementSuite {
       'const monitor = new AppMonitor();',
       'monitor.monitorAppHealth().catch(console.error);',
       '',
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ];
     const monitoringScript = monitoringLines.join('\n');
 
@@ -364,6 +399,7 @@ class AppEnhancementSuite {
     this.createMonitoringScripts();
 
     const report = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
@@ -395,6 +431,13 @@ class AppEnhancementSuite {
 =======
 <<<<<<< HEAD
 =======
+=======
+
+
+
+
+    const securityHeaders = {}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
       status: 'completed'
@@ -402,14 +445,20 @@ class AppEnhancementSuite {
     this.log(`Enhancement report: ${JSON.stringify(report, null, 2)}`);
 
     const securityHeaders = {
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
       'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       'Content-Security-Policy': "default-src 'self'"
@@ -421,12 +470,14 @@ class AppEnhancementSuite {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-      'Content-Security-Policy': "default-src 'self''
 =======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      'Content-Security-Policy': "default-src 'self''
       timestamp: new Date().toISOString();
       enhancements: this.enhancements;
       status: 'completed';
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+ursor/automate-test-improve-and-merge-code-59d5
     };
 
     // Write enhancement report
@@ -436,6 +487,7 @@ class AppEnhancementSuite {
     );
 
     // Security headers are already configured in createSecurityEnhancements
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -448,11 +500,19 @@ class AppEnhancementSuite {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      'Content-Security-Policy': "default-src 'self'"
+    };
+    this.log(`Security headers configured: ${Object.keys(securityHeaders).join(', ')}`);
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.enhancements.push('Security headers configuration created');
   }
   createHealthCheck() {
     this.log('🏥 Creating Health Check Endpoint');
     const healthCheckConfig = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       "timestamp": new Date().toISOString(),
@@ -483,6 +543,9 @@ class AppEnhancementSuite {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       timestamp: new Date().toISOString();
       status: 'healthy';
       checks: {
@@ -511,10 +574,13 @@ class AppEnhancementSuite {
       JSON.stringify(healthCheckConfig, null, 2)
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "timestamp": new Date().toISOString(),
       "status": "healthy",
       "checks": {
@@ -537,10 +603,15 @@ class AppEnhancementSuite {
       }
     };
     this.log(`Health check config: ${JSON.stringify(healthCheckConfig, null, 2)}`);
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.enhancements.push('Health check endpoint created');
   }
 }

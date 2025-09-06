@@ -137,6 +137,7 @@ export default function LocationsPage() {;
           </a>{" "}
           or email{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -197,6 +198,8 @@ function LocationsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">
             kleber@ziontechgroup.com
           </a>
@@ -205,5 +208,9 @@ function LocationsPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -49,12 +49,17 @@ export default defineConfig({
     target: 'esnext',
     minify: 'terser',
     sourcemap: true,
+<<<<<<< HEAD
+=======
+    minify: "esbuild",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
+<<<<<<< HEAD
 =======
     host: true
   },
@@ -107,6 +112,8 @@ export default defineConfig({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         },
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
       },

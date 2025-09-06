@@ -57,6 +57,7 @@ import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function DynamicServicePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -216,11 +217,16 @@ export default function DynamicServicePage() {;
   const router = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [slug]);
 <<<<<<< HEAD
@@ -259,6 +265,8 @@ export default function DynamicServicePage() {;
       </UltraAdvancedFuturisticBackground>
     )
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return undefined;
   }, [slug]);
   if (!service) {
@@ -282,13 +290,14 @@ return undefined;
     );
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -355,6 +364,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -362,8 +373,12 @@ if ( {) {
           <div className='text-center mb-10'>
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
               <span className='text-5xl' aria-hidden>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {service.icon}
               </span>;
               {service.name}
@@ -404,6 +419,7 @@ if ( {) {
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full'>;
                 Start Free Trial;
@@ -520,6 +536,8 @@ if ( {) {
 // Static export support: generate root-level pages for service slugs;
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='w-full'
               >
                 Start Free Trial
@@ -545,7 +563,7 @@ if ( {) {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Static export support: generate root-level pages for service slugs
 
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -570,25 +588,9 @@ function normalizeSlug(value: string): string {
   return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
-<<<<<<< HEAD
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
-  if (!link) return null;
-  try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
-    if (path && !path.includes('/')) return path;
-    return null
-  } catch {
-    return null
-  }
-}
-  };
-}
-=======
     .replace(/(^-|-$)/g, '');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {;
 
@@ -700,6 +702,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
   const staticSlugs = new Set<string>();
 <<<<<<< HEAD
+<<<<<<< HEAD
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
@@ -788,6 +791,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   // Exclude any slug that conflicts with an existing root page file
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   try {
 const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
       }
@@ -795,7 +800,7 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
   } catch {}
 
 // Exclude any slug that conflicts with an existing root page file
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
@@ -809,6 +814,7 @@ const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
   }
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
@@ -915,9 +921,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
@@ -8,7 +6,7 @@ function rand(min: number, max: number) {
 function generateSeries(n: number, base: number, volatility;
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
@@ -36,6 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const now = new Date(),
   const labels = Array.from({ length: 14 }, (_, i) => {;
@@ -62,6 +61,12 @@ return `${d.getMonth() + 1}/${d.getDate()}`;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+return `${d.getMonth() + 1}/${d.getDate()}`;
+  });
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const marketplace = [
     {
       key: 'jobs_24h'
@@ -167,8 +172,6 @@ return `${d.getMonth() + 1}/${d.getDate()}`;
     }
   ];
   const response: any = {
-<<<<<<< HEAD
-=======
     marketplace
     dao
     token
@@ -183,11 +186,12 @@ return `${d.getMonth() + 1}/${d.getDate()}`;
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (req.query.compare === 'quarter') {
     const factor = 0.8 + Math.random() * 0.4;
     response.compare = {
       prevQuarter: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         })),
       },
@@ -207,6 +211,8 @@ return `${d.getMonth() + 1}/${d.getDate()}`;
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 marketplace: marketplace.map(m => ({
           ...m,
           value: Math.round(m.value * factor),
@@ -223,8 +229,12 @@ marketplace: marketplace.map(m => ({
 
   res.status(200).json(response);
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
 <<<<<<< HEAD

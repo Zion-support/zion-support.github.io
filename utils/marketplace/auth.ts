@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest } from "next";
 type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {;
@@ -45,6 +46,11 @@ export function assertTalentOrClientForOffer(
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
 
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -56,26 +62,14 @@ export function assertTalentOrClientForOffer(
     u && u.role === 'talent' &&
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -108,7 +102,6 @@ export interface AuthContext {
   permissions: string[];
   sessionId?: string;
 }
-=======
   err && err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {
 
@@ -121,12 +114,12 @@ export interface AuthContext {
   return user;
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export function getUserFromRequest (req: any): User | null {
@@ -134,6 +127,12 @@ export function getUserFromRequest (req: any): User | null {
   const auth_header = req.headers.authorization;
   if () {) {
   $2
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
     return null;
   }
@@ -179,6 +178,7 @@ if ( {) {
   }
   return user;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -197,3 +197,13 @@ if ( {) {
   throw err;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  err.statusCode = 403;
+  throw err;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

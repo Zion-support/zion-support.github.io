@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -72,17 +73,20 @@ import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Revolutionary2026ServicesShowcase() {
 <<<<<<< HEAD
@@ -99,13 +103,16 @@ export default function Revolutionary2026ServicesShowcase() {
     3
   );  const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(0, 3);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const featuredAIServices = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         staggerChildren: 0.1
@@ -119,19 +126,26 @@ export default function Revolutionary2026ServicesShowcase() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 staggerChildren: 0.1,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -189,20 +203,22 @@ export default function Revolutionary2026ServicesShowcase() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 duration: 0.6,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
       {/* Enhanced Background Effects */}
-<<<<<<< HEAD
-  };
-
-=======
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30'></div>
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20'></div>
@@ -211,7 +227,7 @@ duration: 0.6,
       </div>
 
       <div className='max-w-7xl mx-auto relative z-10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -233,6 +249,7 @@ duration: 0.6,
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,6 +264,10 @@ duration: 0.6,
 className='text-center mb-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30 mb-6'>
             <Sparkles className='w-5 h-5 text-purple-400' />
@@ -336,6 +357,7 @@ className='text-center mb-20'
                 {metaverseDigitalRealityServices2026.length}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           className="text-center mb-20"
         >
@@ -375,13 +397,15 @@ className='text-center mb-20'
             <div className="text-center">
               <div className="text-gray-400 text-sm">Possibilities</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
               <div className='text-gray-400 text-sm'>Metaverse Services</div>
             </div>
             <div className='text-center'>
               <div className='text-3xl font-bold text-green-400'>∞</div>
               <div className='text-gray-400 text-sm'>Possibilities</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </motion.div>
@@ -497,6 +521,7 @@ initial='hidden'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 key={service.id}
                 variants={item_variants}
                 className='group relative'          viewport={{ once: true }}
@@ -527,6 +552,8 @@ initial='hidden'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           className='mb-20'
         >
           <div className='flex items-center space-x-3 mb-12'>
@@ -544,12 +571,17 @@ initial='hidden'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {featuredAIServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -563,6 +595,8 @@ initial='hidden'
                     ))}
                   </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -591,7 +625,7 @@ className='group relative'
 <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-blue-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -600,6 +634,7 @@ className='group relative'
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
@@ -632,6 +667,8 @@ className='group relative'
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </span>
                       <span className='text-gray-400 text-sm'>
                         ({service.reviews})
@@ -643,12 +680,13 @@ className='group relative'
                     className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium'
                   >
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-center mt-8'>
@@ -709,6 +747,8 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <div className='text-center mt-8'>
             <Link
@@ -720,8 +760,12 @@ className='group relative'
             </Link>
           </div>
         </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Quantum Space Tech Services Section */}
         <motion.div
           variants={containerVariants}
@@ -749,6 +793,7 @@ initial='hidden'
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {featuredQuantumServices.map((service, index) => (
               <motion.div
@@ -951,13 +996,16 @@ initial='hidden'
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredQuantumServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -965,6 +1013,8 @@ initial='hidden'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -973,21 +1023,16 @@ className='group relative'
                     <div className='text-3xl'>{service.icon}</div>
                     <div>
                       <h4 className='text-xl font-bold text-white'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         {service.name}
                       </h4>;
                       <p className='text - indigo - 300 text - sm'>;
                         {service.tagline}
-<<<<<<< HEAD
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
-                        <span className="text-gray-400 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-=======
                       </p>
                     </div>
                   </div>
@@ -1006,7 +1051,7 @@ className='group relative'
 <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-indigo-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -1015,6 +1060,7 @@ className='group relative'
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span className="text-2xl font-bold text-indigo-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
@@ -1045,6 +1091,8 @@ className='group relative'
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </span>
                       <span className='text-gray-400 text-sm'>
                         ({service.reviews})
@@ -1056,12 +1104,13 @@ className='group relative'
                     className='inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium'
                   >
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1073,10 +1122,16 @@ className='group relative'
 <div className='text-center mt-8'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+<div className='text-center mt-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Link
               href='/services?category=quantum-space'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Quantum Space Services{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1107,11 +1162,13 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <ArrowRight className='w-5 h-5 ml-2' />
             </Link>
           </div>
         </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Metaverse & Digital Reality Services Section */}
         <motion&& motion.div
           variants={containerVariants}
@@ -1135,6 +1192,7 @@ initial='hidden'
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                       </span>;
@@ -1227,6 +1285,8 @@ initial='hidden'
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           className='mb-20'
         >
           <div className='flex items-center space-x-3 mb-12'>
@@ -1244,11 +1304,12 @@ initial='hidden'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {featuredMetaverseServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1264,6 +1325,8 @@ initial='hidden'
                     ))}
                   </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group relative'
               >
                 <div className='absolute inset-0 bg-gradient-to-r from-pink-600/20 to-rose-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500'></div>
@@ -1292,7 +1355,7 @@ className='group relative'
 <div className='flex items-center justify-between mb-4'>
                     <div>
                       <span className='text-2xl font-bold text-pink-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.price}
                       </span>;
                       <span className='text - gray - 400'>{service.period}</span>;
@@ -1301,6 +1364,7 @@ className='group relative'
                       <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                       <span className='text - yellow - 400 text - sm'>;
                         {service.rating}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span className="text-2xl font-bold text-pink-400">{service.price}</span>
                       <span className="text-gray-400">{service.period}</span>
@@ -1331,6 +1395,8 @@ className='group relative'
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </span>
                       <span className='text-gray-400 text-sm'>
                         ({service.reviews})
@@ -1342,12 +1408,13 @@ className='group relative'
                     className='inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium'
                   >
                     Learn More <ArrowRight className='w-4 h-4 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1360,10 +1427,16 @@ className='group relative'
 <div className='text-center mt-8'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+<div className='text-center mt-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Link
               href='/services?category=metaverse'
               className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-semibold rounded-xl hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
               View All Metaverse Services{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1403,12 +1476,18 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <ArrowRight className='w-5 h-5 ml-2' />
             </Link>
           </div>
         </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Call to Action Section */}
         <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1416,6 +1495,7 @@ className='group relative'
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='text-center'
@@ -1427,12 +1507,18 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center'
         >
           <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               Ready to Experience the Future?
             </h3>
             <p className='text-gray-300 text-xl mb-8 max-w-3xl mx-auto'>
@@ -1444,6 +1530,7 @@ className='text-center'
               </span>{' '}
               to start your transformation.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
@@ -1487,6 +1574,8 @@ className='text-center'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -1512,13 +1601,18 @@ className='text-center'
                 </span>
                 <span className='text-purple-300'>🌐 ziontechgroup.com</span>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
           </div>
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1676,3 +1770,8 @@ className='text-center'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   ArrowRight,
@@ -345,13 +346,19 @@ const Revolutionary2027ServicesShowcase = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network  } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027ServicesShowcase = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -359,24 +366,32 @@ const Revolutionary2027ServicesShowcase = null;
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 staggerChildren: 0.1,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -405,6 +420,8 @@ staggerChildren: 0.1,
       <div className="max-w-7xl mx-auto relative z-10">;
         <motion&& motion.div
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.6,
 ease: 'easeOut' as const,
       },
@@ -421,17 +438,18 @@ ease: 'easeOut' as const,
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Section Header */}
         <motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
 className='text-center mb-20'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -659,6 +677,7 @@ initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          initial="hidden";
           whileInView="visible";
           viewport={{ once: true }}
@@ -745,6 +764,8 @@ initial='hidden'
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
         >
           {categories.map((category, index) => (
@@ -776,12 +797,13 @@ initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="group relative"
             >
@@ -1073,6 +1095,8 @@ initial='hidden'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group relative'
             >
               <div className='relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full transform transition-all duration-500 group-hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-purple-500/20'>
@@ -1100,30 +1124,17 @@ className='group relative'
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {/* Market Info */}
 <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-green-400'>
-<<<<<<< HEAD
-                      </span>                    </div>
-                  </div>
-                  {/* Price and CTA */}
-                  <div className='pt-4 flex items-center justify-between'>
-                    <div className='text-3xl font-bold text-white'>                  <div className="pt-4 border-t border-gray-700/50">
-                    <div className="flex justify-between items-center text-sm text-gray-400">
-                      <span>Market: {service.marketSize}</span>
-                    ))}
-                  </div>
-
-                  {/* Market Info */}
-                  <div className="pt-4 border-t border-gray-700/50">
-                    <div className="flex justify-between items-center text-sm text-gray-400">
-                      <span>Market: {service.marketSize}</span>
-                      <span className="text-green-400">↑ {service.growthRate}</span>
-=======
                         ↑ {service.growthRate}
                       </span>
                     </div>
@@ -1135,7 +1146,7 @@ className='group relative'
                       <span className='text-lg text-gray-400'>
                         {service.period}
                       </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </div>
                   </div>;
@@ -1159,6 +1170,7 @@ className='group relative'
                       </span>;
                     </div>;
                     <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
                       <span className="text-lg text-gray-400">{service.period}</span>
                     </div>
@@ -1198,6 +1210,8 @@ className='group relative'
                 </div>;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       href={`/services/${service.id}`}
                       className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25'
                     >
@@ -1210,7 +1224,7 @@ className='group relative'
 <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>
               </div>
             </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </motion.div>
 
@@ -1228,10 +1242,13 @@ className='group relative'
           viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1252,6 +1269,7 @@ className='text-center'
               </Link>
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           className="text-center"
@@ -1525,6 +1543,8 @@ export default Revolutionary2027ServicesShowcase;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl'
               >
                 <span>Call +1 302 464 0950</span>
@@ -1538,5 +1558,9 @@ export default Revolutionary2027ServicesShowcase;
 };
 
 export default Revolutionary2027ServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

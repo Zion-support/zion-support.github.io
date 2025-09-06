@@ -68,6 +68,7 @@ setupSignalHandlers() {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -86,6 +87,13 @@ setupSignalHandlers() {}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;`
+    console.log(message);
+    
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const logFile = path.join(this.logDir, 'build-monitor.log');
     fs.appendFileSync(logFile, message + '\n')};
   async runCommand(command, options = {}) {}
@@ -352,6 +360,7 @@ monitor.start().catch(error => {})
   process.exit(1)}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
@@ -365,3 +374,8 @@ monitor.start().catch(error => {})
 });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+});
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

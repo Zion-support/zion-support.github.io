@@ -37,6 +37,7 @@
         this.log(`Automation cycle "error"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.error('Fatal "error")
@@ -50,3 +51,8 @@
     console.error('Fatal "error")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    console.error('Fatal "error")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

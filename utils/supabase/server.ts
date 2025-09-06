@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https: //placeholder.supabase.co';
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
@@ -51,21 +52,21 @@ export function getServerSupabase() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { createClient } from '@supabase/supabase-js';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder && placeholder.supabase.co';
 const supabaseServiceKey = process && process.env.SUPABASE_SERVICE_ROLE_KEY || 'placeholder-key';
 
-=======
 // Supabase server utilities
 import { createClient } from '@supabase/supabase-js';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
@@ -80,6 +81,8 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.s
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { createClient } from '@supabase/supabase-js';
 =======
 }import { createClient } from '@supabase/supabase-js';
@@ -87,6 +90,7 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -105,15 +109,69 @@ const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key'
 export function getServerSupabase() {
   return createClient(supabaseUrl, supabaseKey);
 }
+=======
+
+import { createClient } from '@supabase/supabase-js';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL |'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |'placeholder-key';
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+export function getServerSupabase() {
+  // Mock implementation - replace with actual Supabase client
+  return {
+    from: (table: string) => ({
+      select: () => ({
+        eq: () => ({
+          data: [];
+          error: null
+        })
+      })
+    })
+  };
+}
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export function getClientSupabase() {
   return createClient(supabaseUrl, process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key');
 
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+import { create_client } from '@supabase / supabase - js';
+;
+const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabase_key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder - key';
+;
+export /**
+ * getServerSupabase - Function description
+ */
+function getServerSupabase() {
+  return create_client (supabase_url, supabase_key);
+}
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function getServerSupabase() {;
   return createClient(supabaseUrl, supabaseKey);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -137,3 +195,17 @@ export function getServerSupabase() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

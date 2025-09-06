@@ -247,6 +247,7 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
   files.push(...this.getAllFiles(fullPath")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
@@ -260,3 +261,8 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node;
 =======
 =======
@@ -30,6 +31,11 @@
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 =======
@@ -1771,6 +1777,7 @@ ursor/automate-test-improve-and-merge-code-8ee2
 #!/usr/bin/env node;
 origin/automation-improvements-final
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 <<<<<<< HEAD
@@ -1783,6 +1790,13 @@ origin/automation-improvements-final
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+#!/usr/bin/env node;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -1818,6 +1832,7 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 } catch (error) {this.log(`❌ Error running security scanner: ${error.message}`); process.exit(1)}}}
 // Run the security scanner;
 const scanner = new SecurityScanner();
+<<<<<<< HEAD
 <<<<<<< HEAD
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
@@ -2629,3 +2644,16 @@ scanner.run().catch(error = > {; process.exit(1)}));
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+module.exports = SecurityScanner;
+
+main
+
+
+scanner.run().catch(error = > {; process.exit(1)}));
+}),);
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

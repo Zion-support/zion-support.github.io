@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 =======
@@ -52,6 +53,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }    return res.status(200).json({ cid, provider })
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { execSync  } from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -91,7 +94,7 @@ return res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -212,8 +215,10 @@ function handler() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 }
-<<<<<<< HEAD
-=======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

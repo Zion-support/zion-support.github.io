@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -27,6 +28,9 @@ class ErrorBoundary extends React.Component {
 }
 
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 'use client';
@@ -50,6 +54,7 @@ import {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 'use client';
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
 <<<<<<< HEAD
@@ -65,10 +70,17 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Mail,
   Phone,
   MapPin,
@@ -76,6 +88,7 @@ import {
 <<<<<<< HEAD
 =======
   CheckCircle,
+<<<<<<< HEAD
 <<<<<<< HEAD
   AlertCircle,
   CheckCircle,
@@ -98,6 +111,8 @@ const ContactForm: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   AlertCircle,;
 } from 'lucide-react';
 
@@ -109,13 +124,18 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
 message: '',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
     'idle' | 'success' | 'error';
   >('idle');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -152,6 +172,8 @@ const ContactForm: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ...formData;
       [e && e.target.name]: e && e.target.value;
     })
@@ -168,6 +190,8 @@ const ContactForm: React.FC = () => {
         service: '',;
         message: '',;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -194,10 +218,11 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
 message: '',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
     } catch (error) {;
       setSubmitStatus('error');
+<<<<<<< HEAD
 <<<<<<< HEAD
     } finally {;
       setIsSubmitting(false);    }
@@ -217,9 +242,11 @@ message: '',
     } finally {
       setIsSubmitting(false)
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } finally {
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 =======
   }
@@ -272,6 +299,7 @@ message: '',
   const contact_info = [;
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Mail
       title: 'Email Us'
       content: 'contact@ziontechgroup.com'
@@ -284,6 +312,8 @@ message: '',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: Mail,
       title: 'Email Us',
       content: 'contact@ziontechgroup.com',
@@ -319,8 +349,12 @@ href: '#',
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
 className='text-center mb-16'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -334,6 +368,7 @@ className='text-center mb-16'
             goals.
           </p>
         </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -360,9 +395,11 @@ className='text-center mb-16'
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Contact Information */}
 
 <<<<<<< HEAD
@@ -378,6 +415,7 @@ className='text-center mb-16'
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -408,6 +446,8 @@ className='text-center mb-16'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='space-y-8'
           >
             <div>
@@ -428,6 +468,7 @@ className='space-y-8'
                   key={info.title}
                   href={info.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -435,10 +476,14 @@ className='space-y-8'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -467,6 +512,8 @@ className='space-y-8'
                     <h4 className="text-lg font-semibold text-white mb-1">{info.title}</h4>
                     <p className="text-gray-300 group-hover:text-blue-400 transition-colors duration-300">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
                 >
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
@@ -477,7 +524,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                       {info.title}
                     </h4>
                     <p className='text-gray-300 group-hover:text-blue-400 transition-colors duration-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {info.content}
                     </p>
                   </div>
@@ -520,6 +567,7 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'>;
               <h4 className='text-lg font-semibold text-white mb-3'>;
@@ -579,6 +627,8 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                 </li>
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-xl p-6'
             >
               <h4 className='text-lg font-semibold text-white mb-3'>
@@ -611,6 +661,7 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
             </motion.div>
           </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           {/* Contact Form */}
           <motion.div
@@ -622,6 +673,9 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Contact Form */}
           <motion&& motion.div
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -629,6 +683,7 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -651,11 +706,16 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
 className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             {submitStatus === 'success' ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -676,6 +736,8 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-
 =======
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center py-12'
               >
                 <CheckCircle className='w-20 h-20 text-green-400 mx-auto mb-6' />
@@ -689,13 +751,18 @@ className='text-center py-12'
                 <button
                   onClick={() => setSubmitStatus('idle')}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   Send Another Message
                 </button>
               </motion.div>
             ) : (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -723,8 +790,10 @@ className='text-center py-12'
                     />
               <form onSubmit={handleSubmit} className='space-y-6'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <form onSubmit={handleSubmit} className='space-y-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div>
                     <label
@@ -741,6 +810,7 @@ className='text-center py-12'
                       type='email'
                       id='email'
                       name='email'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -768,6 +838,8 @@ className='text-center py-12'
                   </div>;
                 </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       value={formData.email}
                       onChange={handleChange}
                       required
@@ -795,7 +867,7 @@ className='text-center py-12'
                       placeholder='Enter company name'                    />
                   </div>
                   <div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <label
                       htmlFor='phone'
                       className='block text-white font-medium mb-2'>;
@@ -808,6 +880,7 @@ className='text-center py-12'
                       value={formData && formData.phone}
                       onChange={handleChange}
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
+<<<<<<< HEAD
 <<<<<<< HEAD
                       placeholder="Enter phone number";
                     />;
@@ -836,6 +909,8 @@ className='text-center py-12'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   <label
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       placeholder='Enter phone number'
                     />
                   </div>
@@ -868,13 +943,14 @@ className='text-center py-12'
                 </div>
                 <div>
 <label
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     htmlFor='message'
                     className='block text-white font-medium mb-2'>;
                     Message *;
                   </label>;
                   <textarea
                     id='message'
+<<<<<<< HEAD
 <<<<<<< HEAD
                     name='message'                    value={formData && formData.message}
                     onChange={handleChange}
@@ -915,6 +991,8 @@ className='text-center py-12'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     name='message'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     value={formData.message}
@@ -931,8 +1009,12 @@ className='text-center py-12'
 =======
 className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
                     placeholder='Tell us about your project or inquiry...'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -944,8 +1026,6 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                   <motion&& motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-red-400/20 rounded-lg p-4'
                   >
                     <AlertCircle className='w-5 h-5' />
@@ -967,11 +1047,12 @@ type='submit'
 <Send className='w-5 h-5' />
                       <span>Send Message</span>
                     </>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
                 </button>;
               </form>;
             )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1103,6 +1184,8 @@ export default ContactForm;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           </motion.div>
         </div>
       </div>
@@ -1111,5 +1194,9 @@ export default ContactForm;
 };
 
 export default ContactForm;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

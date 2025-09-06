@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import Head from 'next/head';
@@ -45,6 +46,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
@@ -54,8 +57,12 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Check
   Star
   Zap
@@ -208,6 +215,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
 =======
 =======
@@ -236,6 +244,8 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import {
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,;
@@ -243,13 +253,18 @@ import {
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 export default function ComprehensivePricingPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -333,6 +348,8 @@ export default function ComprehensivePricingPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const allServices = [
     ...revolutionaryMicroSaasServices,
     ...enhancedMicroSaasServices,
@@ -383,13 +400,18 @@ filteredServices = filteredServices.filter(
         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return (
@@ -400,12 +422,18 @@ filteredServices = filteredServices.filter(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return (
           parseFloat(a.price.replace('$', '').replace(',', '')) -
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'category':
@@ -417,6 +445,7 @@ return (
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         return bRoi - aRoi;
+<<<<<<< HEAD
 <<<<<<< HEAD
       default:
         return a.name.localeCompare(b.name);    }      default: return a.name.localeCompare(b.name)
@@ -668,6 +697,8 @@ if ( {) {
       period: '/month'
       description: 'Ideal for growing businesses and teams'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 default:
         return a.name.localeCompare(b.name);
     }
@@ -702,7 +733,7 @@ website: 'https://ziontechgroup.com',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses and teams',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       features: [
 'Advanced service access',
         'Priority support',
@@ -721,25 +752,6 @@ website: 'https://ziontechgroup.com',
       period: '/month',
       description: 'For large organizations and enterprises',
       features: [
-<<<<<<< HEAD
-        'Full service access'
-        '24/7 dedicated support'
-        'All features'
-        'Custom development'
-        'Enterprise analytics'
-        'White-label options'
-        'SLA guarantees'
-      ]
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
-      ];
-      icon: <Crown className="w-6 h-6" />
-      color: 'from-yellow-500 to-orange-600'
-      popular: false
-    }
-=======
 'Full service access',
         '24/7 dedicated support',
         'All features',
@@ -756,13 +768,11 @@ website: 'https://ziontechgroup.com',
 
   // Market statistics
   const marketStats = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       metric: '$15.2B',
       label: 'Total Market Size',
       description: 'Combined market value of all services',
-<<<<<<< HEAD
-=======
 icon: <ChartBar className='w-6 h-6' />,
     },
     {
@@ -783,32 +793,26 @@ icon: <Shield className='w-6 h-6' />,
       description: 'Proven business value',
 icon: <TrendingUp className='w-6 h-6' />,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.1
-      }
-    },  };        staggerChildren: 0.1
-      }
-    }
-=======
 staggerChildren: 0.1,
       },
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         duration: 0.5,
       },
@@ -1015,6 +1019,8 @@ staggerChildren: 0.1,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 duration: 0.5,
       },
     },
@@ -1073,12 +1079,17 @@ duration: 0.5,
               </motion.h1>
               <motion.p
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Transparent pricing for all our revolutionary micro SaaS
@@ -1124,6 +1135,8 @@ duration: 0.5,
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
@@ -1131,8 +1144,12 @@ Transparent pricing for all our revolutionary micro SaaS
               {/* Market Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -1145,6 +1162,7 @@ Transparent pricing for all our revolutionary micro SaaS
                     <div className='text-gray-400 text-sm'>{stat.label}</div>
                     <div className='text-gray-500 text-xs'>
                       {stat.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     </div>                  </div>                  <div key={index} className="text-center">
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
@@ -1161,9 +1179,11 @@ Transparent pricing for all our revolutionary micro SaaS
                   </div>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 ))}
               </motion.div>
 
@@ -1185,6 +1205,7 @@ Transparent pricing for all our revolutionary micro SaaS
                 ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               {/* CTA Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
@@ -1216,9 +1237,11 @@ Transparent pricing for all our revolutionary micro SaaS
               >
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -1287,6 +1310,7 @@ variant="primary"
                 >
                   Browse All Services
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   <Search className="ml-2 w-5 h-5" />
@@ -1298,6 +1322,10 @@ variant="primary"
                   <Search className='ml-2 w-5 h-5' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  <Search className='ml-2 w-5 h-5' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </Button>
               </motion.div>
             </div>
@@ -1307,6 +1335,7 @@ variant="primary"
 
 =======
         {/* Contact Information Banner */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1350,6 +1379,8 @@ variant="primary"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
@@ -1374,12 +1405,17 @@ variant="primary"
             <motion.div
               className='text-center mb-16'
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1479,6 +1515,8 @@ variant="primary"
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
                   Flexible Pricing
@@ -1564,8 +1602,12 @@ variant={
                     </div>
                   </UltraFuturisticCard>
                 </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
 
         {/* Services Pricing Grid */}
@@ -1607,6 +1649,7 @@ variant={
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1672,6 +1715,8 @@ variant={
               <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>;
                 <div className='flex flex-wrap gap-4'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='mb-8'
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1680,7 +1725,7 @@ variant={
             >
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 <div className='flex flex-wrap gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e && e.target.value)}
@@ -1729,6 +1774,7 @@ variant={
                       type='text'
                       placeholder='Search services...'
                       value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <button
                       onClick={() => setViewMode('grid')}
@@ -1838,6 +1884,8 @@ variant={
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       onChange={e => setSearchQuery(e.target.value)}
                       className='pl-10 pr-4 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 w-64'
                     />
@@ -1871,8 +1919,12 @@ variant={
               initial='hidden'
               whileInView='visible'
               viewport={{ once: true }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1880,6 +1932,7 @@ variant={
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
+<<<<<<< HEAD
 <<<<<<< HEAD
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
@@ -1901,17 +1954,19 @@ variant={
 variant={(service.variant as any) || 'quantum-advanced'}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+variant={(service.variant as any) || 'quantum-advanced'}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
                     {viewMode === 'grid' ? (
                       // Grid View
-<<<<<<< HEAD
-=======
 <div className='text-center'>
                         <div className='text-4xl mb-4'>{service.icon}</div>
                         <h3 className='text-xl font-bold text-white mb-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           {service.name}
                         </h3>;
                         <p className='text - gray - 300 mb - 4 text - sm'>;
@@ -1943,6 +1998,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
                         </div>;
                             <div
                               key={idx}
+<<<<<<< HEAD
 <<<<<<< HEAD
                               className='flex items-center gap-2 text-sm'>;
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />;
@@ -2319,6 +2375,8 @@ variant={(service.variant as any) || 'quantum-advanced'}
                         </div>;
                       </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               className='flex items-center gap-2 text-sm'
                             >
                               <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
@@ -2446,11 +2504,12 @@ variant={(service.variant as any) || 'quantum-advanced'}
                           </div>
                         </div>
                       </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     )}
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2468,12 +2527,18 @@ variant={(service.variant as any) || 'quantum-advanced'}
 =======
                 className="text-center py-16"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </motion.div>
             {filteredServices.length === 0 && (
 <motion.div
                 className='text-center py-16'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -2492,6 +2557,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
                     setSelectedCategory('All');
                     setPriceRange('All');
                   }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                              <Button
@@ -2541,6 +2607,8 @@ variant={(service.variant as any) || 'quantum-advanced'}
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   Clear Filters
                 </Button>
@@ -2565,12 +2633,17 @@ variant={(service.variant as any) || 'quantum-advanced'}
             <motion.div
               className='max-w-4xl mx-auto'
               initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2602,6 +2675,8 @@ variant={(service.variant as any) || 'quantum-advanced'}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started?
               </h2>
@@ -2610,8 +2685,12 @@ variant={(service.variant as any) || 'quantum-advanced'}
                 implementation options.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <Button
                   variant='primary'
                   size='lg'
@@ -2628,6 +2707,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
                   onClick={() =>;
                     window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
                   }
+<<<<<<< HEAD
 <<<<<<< HEAD
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -2683,6 +2763,8 @@ variant={(service.variant as any) || 'quantum-advanced'}
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   Schedule Demo
                   <Calendar className='ml-2 w-5 h-5' />
@@ -2709,8 +2791,12 @@ variant={(service.variant as any) || 'quantum-advanced'}
                     {contactInfo.address}
                   </div>
                   <div className='text-gray-400 text-sm'>Visit our office</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
 
 <<<<<<< HEAD
@@ -2724,6 +2810,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -2933,3 +3020,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -94,6 +95,8 @@ const Homepage2038: React.FC = () => {
     .filter (string => s.popular);
     .slice (0, 3);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ArrowRight, Star;
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Cpu, Cloud, Lock, Users, Award;
@@ -119,11 +122,16 @@ const Homepage2038: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <Layout>
       {/* Main Content */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <main className='relative z-10'>const Homepage2038: React.FC = () => {
   // Get featured services from each category
@@ -191,6 +199,8 @@ const Homepage2038: React.FC = () => {
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <main className='relative z-10'>
         {/* Hero Section */}
         <section className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'>
@@ -204,8 +214,12 @@ const Homepage2038: React.FC = () => {
           </div>
 
           <div className='text-center max-w-5xl mx-auto relative z-10'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -233,6 +247,7 @@ className='space-y-8'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -250,6 +265,11 @@ className='space-y-8'
 className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                transition={{ duration: 0.6, delay: 0.2 }}
+className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2038</span>
@@ -303,6 +323,7 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
                     className='group px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 text-lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium backdrop-blur-sm"
@@ -352,6 +373,8 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -364,22 +387,29 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
                 <Link href='/services'>
                   <motion.button
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg backdrop-blur-sm'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     Explore Services
                   </motion.button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </Link>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -388,6 +418,7 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -412,6 +443,8 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
           <div className="max-w-7xl mx-auto relative z-10">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 transition={{ duration: 0.8, delay: 0.4 }}
 className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400'
               >
@@ -439,7 +472,7 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
 <section className='py-24 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
           <div className='max-w-7xl mx-auto relative z-10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -454,6 +487,7 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -476,6 +510,10 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
 className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
@@ -517,6 +555,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
               </motion.div>
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 whileHover={{ scale: 1.05 }}
               >
@@ -569,6 +608,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
                 <div className="text-gray-300 text-lg">Future Possibilities</div>
                 <div className="text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">Unlimited potential</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 whileHover={{ scale: 1.05 }}
               >
                 <div className='text-5xl font-bold text-green-400 mb-3 group-hover:text-green-300 transition-colors'>
@@ -580,7 +621,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
                 <div className='text-sm text-green-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
                   Unlimited potential
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             </motion.div>
           </div>
@@ -591,6 +632,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
 =======
         {/* Featured AI Services */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py-24 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -600,9 +642,11 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -616,6 +660,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -638,6 +683,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
 className='text-center mb-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -647,6 +696,7 @@ className='text-center mb-20'
                 our consciousness evolution and quantum AI platforms
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
 <<<<<<< HEAD
@@ -664,9 +714,11 @@ className='text-center mb-20'
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredAI.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -702,6 +754,7 @@ className='text-center mb-20'
                     service={service}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variant='consciousness'                  />                    variant="consciousness"
                     variant='consciousness'                  />
 
@@ -721,12 +774,17 @@ className='text-center mb-20'
 variant='consciousness'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+variant='consciousness'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   />
                 </motion.div>
 
               ))}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -736,13 +794,19 @@ variant='consciousness'
 =======
             <div className="text-center">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
               <Link href='/ai-services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   whileTap={{ scale: 0.95 }}
                 >
                   View All AI Services
@@ -1057,6 +1121,7 @@ variant='consciousness'
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-20'
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1069,6 +1134,10 @@ variant='consciousness'
 className='text-center mb-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent'>
                 Innovative Micro SAAS
@@ -1078,6 +1147,7 @@ className='text-center mb-20'
                 solutions designed for the future
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >
 <<<<<<< HEAD
@@ -1095,9 +1165,11 @@ className='text-center mb-20'
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredMicroSaas.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -1133,6 +1205,7 @@ className='text-center mb-20'
                     service={service}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variant='automation'                  />                    variant="automation"
                     variant='automation'                  />
 
@@ -1152,12 +1225,17 @@ className='text-center mb-20'
 variant='automation'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+variant='automation'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   />
                 </motion.div>
 
               ))}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1167,13 +1245,19 @@ variant='automation'
 =======
             <div className="text-center">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
               <Link href='/services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-emerald-400 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   whileTap={{ scale: 0.95 }}
                 >
                   Explore All Services
@@ -1285,6 +1369,7 @@ variant='automation'
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-20'
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1297,6 +1382,10 @@ variant='automation'
 className='text-center mb-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'>
                 Advanced IT Infrastructure
@@ -1306,6 +1395,7 @@ className='text-center mb-20'
                 AI-powered DevOps automation
               </p>
             </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
 <<<<<<< HEAD
@@ -1323,9 +1413,11 @@ className='text-center mb-20'
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {featuredIT.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -1361,6 +1453,7 @@ className='text-center mb-20'
                     service={service}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variant='quantum'                  />                    variant="quantum"
                     variant='quantum'                  />
 
@@ -1380,12 +1473,17 @@ className='text-center mb-20'
 variant='quantum'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+variant='quantum'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   />
                 </motion.div>
 
               ))}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1395,13 +1493,19 @@ variant='quantum'
 =======
             <div className="text-center">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
               <Link href='/it-services'>
                 <motion.button
                   className='px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                   whileHover={{ scale: 1.05 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   whileTap={{ scale: 0.95 }}
                 >
                   View All IT Services
@@ -1515,6 +1619,7 @@ variant='quantum'
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-20'
 
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -1586,6 +1691,11 @@ className='text-center mb-20'
             >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-20'
+            >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Why Choose Zion Tech Group?
               </h2>
@@ -1664,6 +1774,7 @@ className='text-center mb-20'
                   title: 'Proven Results'
                   description:
 <<<<<<< HEAD
+<<<<<<< HEAD
                     'Track record of delivering transformative solutions to leading organizations'
                   color: 'from-yellow-500 to-orange-500'
                 },              ].map((feature, index) => (                  icon: <Award className="w-12 h-12" />
@@ -1695,6 +1806,8 @@ className='text-center mb-20'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     'Track record of delivering transformative solutions to leading organizations',
                   color: 'from-yellow-500 to-orange-500',
                 },
@@ -1706,14 +1819,19 @@ className='text-center mb-20'
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
 className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   whileHover={{ scale: 1.05 }}
                 >
                   <div
                     className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     <div className='text-white'>{feature.icon}</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
@@ -1733,6 +1851,8 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
                   </p>                </motion.div>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                   <h3 className='text-xl font-bold text-white mb-4'>
                     {feature.title}
@@ -1740,7 +1860,7 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
                   <p className='text-gray-300 leading-relaxed'>
                     {feature.description}
                   </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1789,6 +1909,7 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py-24 px-4'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1807,9 +1928,11 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
         <section className="py-24 px-4">
           <div className="max-w-4xl mx-auto text-center">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
 <<<<<<< HEAD
@@ -1824,6 +1947,7 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1841,6 +1965,10 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
 className='space-y-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Ready to Shape the Future?
@@ -1864,6 +1992,7 @@ className='space-y-8'
                 </Link>
                 <Link href='/services'>
                   <motion.button
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                    whileHover={{ scale: 1.05 }}            >
 <<<<<<< HEAD
@@ -2096,6 +2225,8 @@ export default Homepage2038;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -2113,5 +2244,9 @@ export default Homepage2038;
 };
 
 export default Homepage2038;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

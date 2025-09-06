@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,12 +18,17 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
-=======
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
@@ -32,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             navToggle.classList.toggle('active')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         })
     }),
     
@@ -83,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -94,17 +101,26 @@ document.addEventListener('DOMContentLoaded', function() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
     if (searchResults) {
         const results = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
@@ -118,12 +134,17 @@ function performSearch(query) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         )
@@ -428,10 +449,15 @@ function performSearch(query) {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         if (results.length > 0) {
@@ -444,6 +470,8 @@ function performSearch(query) {;
             ).join('')
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }));
     // Initialize tooltips
     initializeTooltips();
@@ -470,18 +498,15 @@ function performSearch(query) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
             ).join('');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             searchResults.style.display = 'block'
-<<<<<<< HEAD
-=======
-=======
         if (results && results.length > 0) {
             searchResults && searchResults.innerHTML = results && results.map(result => 
                 `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
             ).join(''),
             searchResults && searchResults.style.display = 'block'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
         } else {
             searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults && searchResults.style.display = 'block'
@@ -491,15 +516,10 @@ function performSearch(query) {
 }
 // Counter animation
 function animateCounter(element) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     const timer = setInterval(() => {
 
         current += step
@@ -507,18 +527,13 @@ function animateCounter(element) {
             current = target
             clearInterval(timer)
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
         
         const suffix = element && element.textContent.replace(/\d/g, ''),
         element && element.textContent = Math && Math.floor(current) + suffix
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     const target = parseInt(element.textContent.replace(/\D/g, ''))
     const duration = 2000
     const step = target / (duration / 16)
@@ -532,15 +547,11 @@ function animateCounter(element) {
         
         const suffix = element.textContent.replace(/\d/g, '');
         element.textContent = Math.floor(current) + suffix
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }, 16)
 }
 // Tooltip initialization
 function initializeTooltips() {
-<<<<<<< HEAD
-
-
-=======
     const tooltipElements = document.querySelectorAll('[data-tooltip]');
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', function(e) {
@@ -558,17 +569,13 @@ function initializeTooltips() {
             if (this.tooltip) {
                 this.tooltip.remove();
                 this.tooltip = null
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }
         })
     })
 }
 // Modal initialization
 function initializeModals() {
-<<<<<<< HEAD
-
-
-=======
     const modalTriggers = document.querySelectorAll('[data-modal]');
     const modals = document.querySelectorAll('.modal');
     modalTriggers.forEach(trigger => {
@@ -579,20 +586,11 @@ function initializeModals() {
             if (modal) {
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }
         })
     })
     // Close modal on overlay click
-<<<<<<< HEAD
-
-
-            }
-        })
-        // Close modal on close button click
-
-
-=======
     modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
@@ -606,11 +604,12 @@ function initializeModals() {
             closeBtn.addEventListener('click', function() {
                 modal.classList.remove('active');
                 document.body.style.overflow = ''
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             })
         }
     })
     // Close modal on escape key
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -869,9 +868,10 @@ function initializeTooltips() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
-
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
 //Zion Tech Group Website JavaScript;
 });
 // Search function;
@@ -885,7 +885,7 @@ function perform_search() {
     // Check condition
 if ( {) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -955,6 +955,11 @@ if ( {) {
   $2
 }
                 this.tooltip.remove (),
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 this.tooltip = null;
 <<<<<<< HEAD
 
@@ -968,6 +973,7 @@ if ( {) {
         });
     });
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1063,6 +1069,8 @@ function initializeModals() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Modal initialization;
 /**
  * initialize_modals - Function description
@@ -1120,6 +1128,7 @@ if ( {) {
                     modal.class_list.remove ('active'),
                     document.body.style.overflow = '';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -1128,6 +1137,11 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }
             });
         }
@@ -1135,6 +1149,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     modal.classList.remove('active')
 
@@ -1151,14 +1166,20 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.classList.contains('active')) {
                     modal.classList.remove('active');
                     document.body.style.overflow = ''
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 }
             })
         }
@@ -1166,6 +1187,7 @@ if ( {) {
 }
 // Performance monitoring
 function logPerformance() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1184,45 +1206,65 @@ function logPerformance() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if ('performance' in window) {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if ({
         const perfData = performance.getEntriesByType('navigation')[0]);
         console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 }
 // Error tracking
 
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.error('JavaScript Error:', e.error)
 
-=======
     console.error('JavaScript Error:', e.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // Send to error tracking service
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // // // console.log('Event tracked:', eventName, eventData),
@@ -1234,12 +1276,15 @@ function trackEvent(eventName, eventData = {}) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     console.log('Event tracked:', eventName, eventData);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     // Implement your analytics tracking here
 }
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1253,6 +1298,12 @@ function trackEvent(eventName, eventData = {}) {
   lastScrollTop = scrollTop 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  entries.forEach (entry => {
+  if (entry.isIntersecting) {
+  lastScrollTop = scrollTop 
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
@@ -1260,7 +1311,10 @@ function trackEvent(eventName, eventData = {}) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   entries && entries.forEach (entry => {
   if (entry && entry.isIntersecting) {
@@ -1282,7 +1336,6 @@ function trackEvent(eventName, eventData = {}) {
 
 //Reset button after delay //Initialize tooltips initializeTooltips ();
 //Initialize modals initializeModals ()
-=======
 // Performance monitoring;
 /**
  * log_performance - Function description
@@ -1310,7 +1363,6 @@ function track_event() {
     console.log ('Event tracked:', event_name, event_data),
     // Implement your analytics tracking here;
 }
-=======
   entries.forEach (entry => {
   if (entry.isIntersecting) {
   
@@ -1320,7 +1372,7 @@ function track_event() {
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
 //Reset button after delay //Initialize tooltips initializeTooltips ();
 //Initialize modals initializeModals () 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.for_each (entry => {
@@ -1342,8 +1394,12 @@ if ( {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -1357,22 +1413,6 @@ if ( {) {
  */
 function if() {
   const results = [ {
-<<<<<<< HEAD
-
-  title: 'Quantum Computing Services', url: '/services/quantum-computing' 
-}].filter (item => item && item.title.toLowerCase () .includes (query) );
-
-}//Counter animation //Close modal on overlay click modals && modals.forEach (modal => {
-  modal && modal.addEventListener ('click', function (e) {
-  if (e && e.target === this) {
-  
-
-});
-//Close modal on escape key document && document.addEventListener ('keydown', function (e) {
-  if (e && e.key === 'Escape') {
-  modals && modals.forEach (modal => {
-  if (modal && modal.classList.contains ('active') ) {
-=======
   title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' 
 };
 {
@@ -1396,12 +1436,13 @@ function if() {
   if (e.key === 'Escape') {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   
 
 }) 
 }//Performance monitoring 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }//Error tracking window && window.addEventListener ('error', function (e) {
   console && console.error ('JavaScript Error:', e && e.error);
@@ -1417,12 +1458,19 @@ function if() {
 //Send to error tracking service 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}//Error tracking window.addEventListener ('error', function (e) {
+  console.error ('JavaScript Error:', e.error);
+//Send to error tracking service 
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
   
 }) {
   //Implement your analytics tracking here 
 }//Track page views trackEvent ('page view', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1436,22 +1484,27 @@ function if() {
 title: document.title 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  page: window.location.pathname;
+title: document.title 
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
 //Track button clicks document.addEventListener ('click', function (e) {
   if (e.target.matches ('.btn') ) {
   trackEvent ('button click', {
-<<<<<<< HEAD
-
-=======
   button text: e.target.textContent;
 button class: e.target.className;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Track button clicks
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   page: window && window.location.pathname;
 title: document && document.title 
@@ -1485,11 +1538,17 @@ document && document.addEventListener('click', function(e) {
             button_class: e && e.target.className,
             page: window && window.location.pathname
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         })
     }
 })
 // Log performance when page is fully loaded
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1503,6 +1562,9 @@ window.addEventListener('load', logPerformance),
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
 }
 {
@@ -1511,6 +1573,7 @@ window.addEventListener('load', logPerformance),
 {
   title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems';
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 ;
@@ -1552,6 +1615,8 @@ document.addEventListener('click', function(e) {;
 }),;
 // Log performance when page is fully loaded;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
   title: 'Quantum Computing Services', url: '/services / quantum - computing';
 }].filter (item => item.title.toLowerCase () .includes (query) );
@@ -1620,15 +1685,23 @@ window.addEventListener('load', logPerformance),;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 window.addEventListener ('load', log_performance),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 window.addEventListener('load', logPerformance),;
 =======
@@ -1651,3 +1724,10 @@ window.addEventListener('load', logPerformance),;
 window.addEventListener('load', logPerformance);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+window.addEventListener('load', logPerformance);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

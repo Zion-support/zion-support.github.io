@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -7,6 +8,8 @@
 {
   /* Robots Meta */
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -28,7 +31,7 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({
   title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -254,6 +257,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullImage = image.startsWith('http')
     ? image
 <<<<<<< HEAD
+<<<<<<< HEAD
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -390,6 +394,8 @@ const SEO: React.FC < SEOProps> = ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     : `https://ziontechgroup.com${image}`;
 
   return (
@@ -403,8 +409,12 @@ const SEO: React.FC < SEOProps> = ({
       />
       <meta name='author' content={author} />
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -759,6 +769,7 @@ const SEO: React.FC < SEOProps> = ({
           type='application/ld+json'
           dangerouslySetInnerHTML={{
 <<<<<<< HEAD
+<<<<<<< HEAD
             __html: JSON && JSON.stringify(structuredData),          }}
         />;
       )}
@@ -804,12 +815,19 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             __html: JSON.stringify(structuredData),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           }}
         />
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -818,6 +836,8 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 export default SEO;  )
 };
@@ -956,10 +976,16 @@ export default SEO;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
     </Head>
 );
 };
 
 export default SEO;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

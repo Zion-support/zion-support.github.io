@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require("child_process");
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require("child_process");
+const path = require("child_process");
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require("child_process");
 class AutoFixer {}
   constructor() {}
@@ -206,6 +214,7 @@ if (require.main === module) {}
       process.exit(1)})};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = AutoFixer;
@@ -219,3 +228,8 @@ module.exports = AutoFixer;
 module.exports = AutoFixer;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = AutoFixer;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

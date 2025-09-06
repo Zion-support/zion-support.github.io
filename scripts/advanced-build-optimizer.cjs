@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
 console.log('⚡ Starting Advanced Build Optimization...')
   log(message, type = 'info')
@@ -109,6 +117,7 @@ console.log('⚡ Starting Advanced Build Optimization...')
           resolve({ "size": 0, "message"})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     this.log(' Build Optimization "Summary")
@@ -122,3 +131,8 @@ console.log('⚡ Starting Advanced Build Optimization...')
     this.log(' Build Optimization "Summary")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    this.log(' Build Optimization "Summary")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

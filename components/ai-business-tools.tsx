@@ -5,6 +5,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -77,6 +78,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Brain;
   MessageSquare;
   Image;
@@ -84,8 +87,12 @@ import { Brain;
   FileText;
   BarChart3;
   Users;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Zap;
   ArrowRight;
   Star;
@@ -93,6 +100,7 @@ import { Brain;
   ExternalLink;
   TrendingUp;
   Shield;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Globe
@@ -104,6 +112,8 @@ import { Brain;
       bestFor: 'Content creators, developers, researchers'
     }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Globe
  } from 'lucide-react';
 export default function AIBusinessToolsPage() {
@@ -128,7 +138,7 @@ export default function AIBusinessToolsPage() {
       cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],
       bestFor: 'Content creators, developers, researchers',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Midjourney',
       description:
@@ -194,6 +204,7 @@ export default function AIBusinessToolsPage() {
       bestFor: 'Marketing teams, content creators, businesses',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -394,6 +405,8 @@ function AIBusinessToolsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Synthesia',
       description:
         'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
@@ -525,8 +538,12 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
       useCase:
         'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
       pros: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Data-driven insights',
         'Content optimization',
         'Competitor analysis',
@@ -534,6 +551,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
       ],
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses',
+<<<<<<< HEAD
 <<<<<<< HEAD
     },;
 <<<<<<< HEAD
@@ -546,6 +564,10 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    },
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
 
   const categories = [
@@ -563,6 +585,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
     selectedCategory === 'All'
       ? aiTools
 <<<<<<< HEAD
+<<<<<<< HEAD
       : aiTools.filter(tool => tool.category === selectedCategory);  const filteredTools = selectedCategory === 'All'
     ? aiTools
     : aiTools.filter(tool => tool.category === selectedCategory);
@@ -579,6 +602,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
         <title>AI Business Tools - Zion Tech Group</title>;
         <meta
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       : aiTools.filter(tool => tool.category === selectedCategory);
 
   return (
@@ -586,7 +611,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
       <Head>
         <title>AI Business Tools - Zion Tech Group</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services.'
         />;
@@ -606,6 +631,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                 variant='outline'
                 size='lg'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -614,6 +640,11 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                 style={{ animationDelay: '0.4s' }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
+                style={{ animationDelay: '0.4s' }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get AI Consultation
               </Button>
@@ -650,6 +681,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 =======
           {/* Stats */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 {aiTools.length}+
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -673,6 +705,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
             style={{ animationDelay: '0.6s' }}
@@ -700,11 +734,12 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                 130M+
               </div>
               <div className='text-gray-400 text-sm'>Total Users</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -724,14 +759,20 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
               <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -920,6 +961,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
                         size='sm'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className='group-hover:border-green-500 group-hover:text-green-400'
                       >
                         Visit Website
@@ -939,6 +981,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='group-hover:border-green-500 group-hover:text-green-400'
                       >
                         Visit Website
@@ -962,6 +1006,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -976,6 +1021,9 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* AI Benefits Section */}
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1047,6 +1095,7 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
               Why Choose AI Tools?
             </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.
@@ -1079,6 +1128,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
               <p className="text-gray-400">
                 AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               AI-powered tools are revolutionizing how businesses operate
               create content, and serve customers.
@@ -1121,12 +1172,13 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
               <p className='text-gray-400'>
                 AI-powered chatbots, personalization, and automation create
                 seamless, personalized experiences for your customers.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1145,6 +1197,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1315,6 +1369,8 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1349,5 +1405,9 @@ icon: <TrendingUp className='w-8 h-8 text-green-400' />,
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
@@ -21,6 +22,13 @@ export const JOB_POSTS: Job[] = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Job } from "@/types/jobs";
+export const JOB_POSTS: Job[] = [
+  {
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 ];
@@ -28,52 +36,61 @@ export const JOB_POSTS: Job[] = [
 updated at: "2024-05-05"
 }];
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-import { Job } from "@/types/jobs",
-export const JOB_POSTS: Job[] = [
-=======
-import { Job } from '@/types/jobs';
-=======
-import { Job } from "@/types/jobs",
-export const JOB_POSTS: Job[] = [
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [
+import { Job } from '@/types/jobs';
+import { Job } from "@/types/jobs",
+export const JOB_POSTS: Job[] = [
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: "job-1",
     client_id: "client-1",
     title: "React Developer Needed",
     description: "Seeking a React developer for a 3 month contract building dashboards.",
     category: "development",
-=======
     id: "job-1";
     client_id: "client-1";
     title: "React Developer Needed";
     description: "Seeking a React developer for a 3 month contract building dashboards.";
     category: "development";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     skills: ["React", "TypeScript"],
     budget: { min: 40, max: 50, currency: "USD" },
     deadline: "2024-07-01",
@@ -81,12 +98,6 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 id: 'job-2',
     client_id: 'client-2',
     title: 'Part-time DevOps Engineer',
@@ -104,8 +115,7 @@ status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05" 
 }];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     id: "job-2",
     client_id: "client-2",
     title: "Part-time DevOps Engineer",
@@ -118,6 +128,7 @@ updated at: "2024-05-05"
     created_at: "2024-05-05",
     updated_at: "2024-05-05"}
 ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { Job } from "@/types/jobs",;
 export const JOB_POSTS: Job[] = [;
@@ -153,6 +164,8 @@ export const JOB_POSTS: Job[] = [;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   {
 
@@ -215,6 +228,7 @@ created at: "2024 - 05 - 05";
 updated at: "2024 - 05 - 05";
 }];
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -226,3 +240,8 @@ updated at: "2024 - 05 - 05";
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

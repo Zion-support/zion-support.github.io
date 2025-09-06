@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React, { useCallback, useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -43,18 +44,25 @@ type Web3LoginModalProps = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import dynamic from 'next/dynamic';
 const isClient = typeof window !== 'undefined';
   }) => void;
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     if (!isOpen) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -68,17 +76,24 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setError(null);
 setLoading(false);
     }
   }, [isOpen]);
   const handleEvmConnect = useCallback(async () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     setError(null);
     setLoading(true);
     try {;
       const Web3ModalCtor = (await import('web3modal')).default;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -95,6 +110,8 @@ setLoading(false);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const WalletConnectProvider = (
         await import('@walletconnect/web3-provider')
       ).default;
@@ -111,8 +128,12 @@ rpc: { 1: 'https://cloudflare-eth.com' },
         },
       });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const provider = await web3Modal.connect();
       const ethers = await import('ethers');
       const web3Provider = new ethers.providers.Web3Provider(provider as any);
@@ -125,6 +146,7 @@ rpc: { 1: 'https://cloudflare-eth.com' },
       const origin = window.location.origin;
       const statement = 'Sign in to Zion with your wallet. No gas required.';
       const issuedAt = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -167,6 +189,8 @@ rpc: { 1: 'https://cloudflare-eth.com' },
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const siweMessage = `${address} wants you to sign in with your Ethereum account:\n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;
 
       const signature = await signer.signMessage(siweMessage);
@@ -188,8 +212,12 @@ body: JSON.stringify({
       setError(e?.message |'Wallet connection failed');
     } finally {
       setLoading(false);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }, [onClose, onLoggedIn]);
 
@@ -198,6 +226,7 @@ body: JSON.stringify({
     setLoading(true);
     try {;
       const provider = (window as any)?.solana;
+<<<<<<< HEAD
 <<<<<<< HEAD
         throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -255,6 +284,8 @@ body: JSON.stringify({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       if (!provider || !provider.isPhantom) {
 throw new Error('Phantom not found. Install the Phantom extension');
       }
@@ -287,12 +318,17 @@ body: JSON.stringify({
       setError(e?.message |'Phantom connection failed');
     } finally {
       setLoading(false);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -304,6 +340,8 @@ body: JSON.stringify({
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             Cancel;
           </button>;
@@ -311,8 +349,10 @@ body: JSON.stringify({
       </div>;
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/60'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='w-full max-w-md rounded-xl bg-white dark:bg-neutral-900 p-6 shadow-2xl'>
         <div className='mb-4'>
           <h2 className='text-lg font-semibold'>Connect your wallet</h2>
@@ -374,6 +414,7 @@ body: JSON.stringify({
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -395,6 +436,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
+<<<<<<< HEAD
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
@@ -404,8 +446,15 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   return <ModalInner {...props} />;
   return <ModalInner {...props} />
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

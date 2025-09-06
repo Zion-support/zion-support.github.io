@@ -40,6 +40,7 @@ console.log(' Starting master error fixing orchestrator...')
         execSync(`pm2 restart ${fixerName}`, { "stdio"`})
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(' Master error fixing orchestrator failed to "start")
@@ -53,3 +54,8 @@ console.log(' Starting master error fixing orchestrator...')
   console.error(' Master error fixing orchestrator failed to "start")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error(' Master error fixing orchestrator failed to "start")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

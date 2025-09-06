@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface FuturisticInnovation2028 {
 <<<<<<< HEAD
   id: string;
@@ -19,6 +20,14 @@ export interface FuturisticInnovation2028 {
 id: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface FuturisticInnovation2028 {
+
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   name: string;
   tagline: string;
   price: string;
@@ -30,6 +39,7 @@ id: string;
   contact_info: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     address: string;
@@ -47,6 +57,10 @@ id: string;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface FuturisticInnovation2028 {;
 =======
 export interface FuturisticInnovation2028 {  id: string;export interface FuturisticInnovation2028 {;
@@ -63,9 +77,13 @@ export interface FuturisticInnovation2028 {  id: string;export interface Futuris
   contactInfo: {;
     mobile: string,;
 <<<<<<< HEAD
+<<<<<<< HEAD
     email: string,;
 <<<<<<< HEAD
 =======
+=======
+    email: string,;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string;
   }
 }
@@ -75,14 +93,21 @@ export interface FuturisticInnovation2028 {  id: string;export interface Futuris
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     address: string;
   }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -96,8 +121,12 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
 =======
     email: string,;  }
@@ -130,6 +159,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
   },
 ];      mobile: "+1 302 464 0950";
 
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
@@ -137,8 +167,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
 ];
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 
     id: "2028-futuristic-innovation",
     name: "2028 Futuristic Innovation Platform",
@@ -156,16 +187,25 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
     category: "Futuristic Innovations 2028",
     realImplementation: true,
     contactInfo: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -178,6 +218,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [;
 }
 export const futuristic2028Services: FuturisticInnovation2028[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -202,6 +243,8 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -213,8 +256,12 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     tagline: "Futuristic innovations for 2028";
     price: "$399/month";
     description: "Futuristic innovation platform that showcases breakthrough technologies for 2028.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
 =======
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
@@ -224,6 +271,7 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
       "Futuristic innovations";
       "Breakthrough technologies";
       "Future capabilities";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Innovation platform";
       "Expert insights"
@@ -236,6 +284,8 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Innovation platform",
       "Expert insights"
     ],
@@ -245,13 +295,18 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 <<<<<<< HEAD
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -271,6 +326,8 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "2028-futuristic-innovation",
     name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028",
@@ -287,9 +344,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     category: "Futuristic Innovations 2028",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -306,10 +363,16 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ];      address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -323,3 +386,8 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

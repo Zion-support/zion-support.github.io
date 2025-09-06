@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function VendorProfilePage({ vendor }: Props) {
@@ -42,10 +43,12 @@ export default function VendorProfilePage({ vendor }: Props) {
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
@@ -54,6 +57,7 @@ type Props = any;
     setLoading(true);
     setMessage(null)
     try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       const res = await fetch ('/api / vendors / lead', {
@@ -98,6 +102,8 @@ type Props = any;
             {vendor.name}
             {vendor.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const res = await fetch('/api/vendors/lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -136,11 +142,12 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
           </div>
           <div className='text-sm text-gray-500'>
             {vendor.servicesOffered?.join(', ')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
       <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -199,11 +206,13 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
 
         </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-lg font-medium mb-2'>About</h2>
         <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
           {vendor.about || 'No description provided.'}
         </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       <div>
@@ -212,9 +221,6 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
 
       {vendor.packages && vendor.packages.length > 0 && (
         <div>
-<<<<<<< HEAD
-
-=======
 <h2 className='text-lg font-medium mb-2'>Packages</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {vendor.packages.map(p => (
@@ -254,7 +260,7 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
                 <div className='p-3'>
                   <div className='font-medium'>{sp.title}</div>
                   <div className='text-sm text-gray-500'>{sp.description}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
 
         </div>
@@ -401,6 +407,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
 <<<<<<< HEAD
+<<<<<<< HEAD
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
@@ -452,3 +459,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

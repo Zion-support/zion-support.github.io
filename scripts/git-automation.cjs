@@ -278,8 +278,11 @@ module.exports = GitAutomation;
 =======
 
 module.exports = GitAutomation;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
@@ -313,6 +316,7 @@ const path = require('path')
       "operation"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(" Git automation workflow "failed": ${error.message}")
@@ -326,3 +330,8 @@ const path = require('path')
       this.log(" Git automation workflow "failed": ${error.message}")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log(" Git automation workflow "failed": ${error.message}")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

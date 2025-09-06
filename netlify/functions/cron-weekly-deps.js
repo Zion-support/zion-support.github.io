@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,13 +10,15 @@
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 async function getLatest(pkg) {
 
     const resp = await fetch(
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+ursor/expand-services-advertise-and-build-project-4b36
     );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (!resp && resp.ok) return null;
@@ -60,7 +63,75 @@ exports && exports.handler = async function () {
         repo,
         path: 'data/reports/deps/weekly-dependencies && dependencies.json',
         content: JSON && JSON.stringify(report, null, 2),
+<<<<<<< HEAD
         message: 'chore(automation): weekly dependency insights',        token,
+=======
+        message: 'chore(automation): weekly dependency insights',
+ursor/expand-services-advertise-and-build-project-4b36
+const { upsert_file } = require ('./_lib / github');
+const fs = require ('fs');
+const path = require ('path');
+;
+async /**
+ * get_latest - Function description
+ */
+function get_latest() {
+  try {
+    const resp = await fetch (
+      `https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`);
+    // Check condition
+if (return null) {
+  $2
+}
+    const json = await resp.json ();
+    return json.version || null;
+  } catch (_) {
+    return null;
+  }
+exports.handler = async function () {
+  try {
+    const pkg_path = path.join (process.cwd (), 'package.json');
+    const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8'));
+    const deps = {
+      ...(pkg.dependencies || {}),
+      ...(pkg.dev_dependencies || {}),
+    }
+;
+    const entries = [];
+    for (const [name, current] of Object.entries (deps)) {
+      const latest = await get_latest (name);
+      // Check condition
+if (continue) {
+  $2
+}
+      entries.push ({
+        name,
+        current,
+        latest,
+        outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest,
+      });
+    }
+    const report = { updated_at: Date.now (), entries }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / reports / deps / weekly - dependencies.json',
+        content: JSON.stringify (report, null, 2),
+        message: 'chore (automation): weekly dependency insights',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+        token,
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       });
     }
     return {
@@ -82,7 +153,6 @@ if (return null, ) {
 }
     const json = await resp.json (),
     return json.version || null;
-=======
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -92,14 +162,11 @@ async function getLatest(pkg) {
     if (!resp.ok) return null;
     const json = await resp.json();
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (_) {
     return null;
   }
 }
-<<<<<<< HEAD
-
-=======
 exports.handler = async function() {
   try {
     const pkgPath = path.join(process.cwd(), 'package.json'),
@@ -116,13 +183,14 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER);
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 exports.handler = async function () {
   try {
@@ -191,3 +259,11 @@ const path = require ('path';
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+ursor/expand-services-advertise-and-build-project-4b36
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

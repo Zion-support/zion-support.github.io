@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -122,6 +123,8 @@ function ask() {
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';
           placeholder='Ask for help...';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState('');
@@ -144,7 +147,7 @@ export default function CoachWidget() {
         <input
           className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
           placeholder='Ask for help...'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           value={input}
           on_change={e => set_input (e.target.value)}
         />;
@@ -158,6 +161,7 @@ export default function CoachWidget() {
       {reply && (
         <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>)}
     </div>);
@@ -175,9 +179,15 @@ export default function CoachWidget() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
       )}
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

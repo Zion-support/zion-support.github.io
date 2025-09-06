@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -42,11 +43,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from "react",
 import fs from "fs";
 import path from "path";
 type Experiment = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -61,8 +64,11 @@ impact?: number
 }
 type Props = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   updatedAt: string | null;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <<<<<<< HEAD
   updated_at: string | null;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -197,6 +203,8 @@ export default function CurationPage(): any ({ updatedAt, items }: Props) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   updatedAt: string | null;
 items: Experiment[]
 };
@@ -214,7 +222,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -342,14 +350,17 @@ export default function CurationPage({ updatedAt, items }: Props) {
         {!items.length && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             Nothing to show yet.
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -395,6 +406,7 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
 <<<<<<< HEAD
             </div>;
             {(exp.hypothesis || exp.metric) && (
@@ -546,6 +558,8 @@ export async function getStaticProps() {;
     };
   }        items: []},
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         updatedAt: parsed.updatedAt || null,
 items: parsed.items || [],
       },
@@ -560,7 +574,7 @@ items: [],
       revalidate: 300,
     };
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       revalidate: 300}
 }
 }

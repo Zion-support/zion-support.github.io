@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -87,13 +88,19 @@ export default function NeoFuturisticFooter() {
 
 export default function NeoFuturisticFooter() {;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
 const contactInfo = null;
 export default function NeoFuturisticFooter() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
 =======
               Productized AI, IT and micro SaaS solutions with transparent;
@@ -125,6 +132,7 @@ export default function NeoFuturisticFooter() {
               </a>;
               <a
                 aria-label='LinkedIn'
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
         </div>
@@ -289,6 +297,8 @@ export default function NeoFuturisticFooter() {
 export default function NeoFuturisticFooter() {
   return (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 href='https://www.linkedin.com/company/zion-tech-group/'
                 className='text-slate-400 hover:text-white'
               >
@@ -316,5 +326,9 @@ export default function NeoFuturisticFooter() {
   );
 }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

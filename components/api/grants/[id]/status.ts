@@ -19,6 +19,7 @@ function grantPath(id: string) {
 =======
 function grantPath(id: string) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -36,6 +37,8 @@ function isAuthorized(req: NextApiRequest) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
@@ -54,8 +57,12 @@ function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |''
   const token = header.replace('Bearer ', '');
 return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
@@ -95,6 +102,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (req && req.method !== 'POST') {
@@ -149,6 +157,8 @@ const payload = req.body as StatusUpdatePayload;
   res.status(200).json({ record: existing });
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
@@ -173,5 +183,9 @@ const payload = req.body as StatusUpdatePayload;
   existing.updatedAt = new Date().toISOString();
   writeGrant(existing);
 res.status(200).json({ record: existing });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

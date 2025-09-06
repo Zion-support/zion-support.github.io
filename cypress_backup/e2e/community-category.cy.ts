@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -47,18 +48,17 @@ describe("community category listing",() => { it("displays posts in Getting Hire
 describe('community category listing',() => { it('displays posts in Getting Hired category',() => { cy.visit('/community/getting-hired'); cy.get('[data-testid="post-card"]') .its('length') .should('be.greaterThan',0)})}
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 });''
 
-=======
-
-
-=======
 
 
 
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -66,6 +66,14 @@ describe('community category listing',() => { it('displays posts in Getting Hire
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });''
 });''
 });''
@@ -176,6 +184,7 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 });''
 });''
 <<<<<<< HEAD
+<<<<<<< HEAD
 });''
 });''
 });''
@@ -216,6 +225,10 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 describe('community category listing', () => {
   it('displays posts in Getting Hired category', () => {
     cy.visit('/community/getting-hired');
@@ -224,7 +237,12 @@ describe('community category listing', () => {
       .should('be.greaterThan', 0);
   });
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

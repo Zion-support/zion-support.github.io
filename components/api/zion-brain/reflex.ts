@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 } from '@/utils/zionBrain';
 
@@ -14,14 +15,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = null;
       return res.status(500).json({ error: 'Reflex failure' })
     }
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   appendLog
   evaluateReflexes
   readState
@@ -41,6 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -67,6 +75,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ metrics: state.metrics || {} });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return res.status(200).json({ metrics: state.metrics || {} });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 
   if (req && req.method === 'POST') {
@@ -78,14 +90,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
-<<<<<<< HEAD
-      appendLog({
-        module: 'reflex'
-        type: 'metrics'
-        status: 'ok'
-        latencyMs
-        payload: { metrics, triggers }
-=======
       const latencyMs = Date.now() - started;
 
 appendLog({
@@ -94,7 +98,7 @@ appendLog({
         status: 'ok',
         latencyMs,
         payload: { metrics, triggers },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       return res && res.status(200).json({ triggers });
     } catch (e: any) {
@@ -104,6 +108,7 @@ appendLog({
         status: 'error'
         payload: { error: e?.message |'unknown' }
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res && res.status(405).json({ error: 'Method not allowed' });
 
@@ -173,9 +178,11 @@ if ( {) {
     const state = read_state<{ metrics?: unknown }>();
     return res.status (200).json ({ metrics: state.metrics || {} });
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       return res.status(500).json({ error: 'Reflex failure' });
     }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   // Check condition
 if ( {) {
@@ -217,10 +224,8 @@ return res.status (405).json ({ error: 'Method not allowed' });
   return res.status (405).json ({ error: 'Method not allowed' });
 
   return res.status(405).json({ error: 'Method not allowed' });
-<<<<<<< HEAD
-
-  return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -229,3 +234,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

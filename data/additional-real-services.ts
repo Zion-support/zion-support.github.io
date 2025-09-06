@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export interface AdditionalRealService {
@@ -14,6 +15,12 @@ export interface AdditionalRealService {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
 =======
 export interface AdditionalRealService {  id: string;
@@ -49,14 +56,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
     address: string;
   }
 ;
@@ -80,9 +89,14 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     real_implementation: true,
     contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -91,7 +105,10 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -100,6 +117,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
   contactInfo: {
     mobile: string, email: string,
     address: string
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -111,6 +129,12 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
 id: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+  id: string;
+id: string;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   name: string;
   tagline: string;
   price: string,
@@ -124,11 +148,19 @@ id: string;
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     address: string
 };
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    address: string;
+  };
+}
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     address: string;
   }
@@ -138,10 +170,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -150,6 +188,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 <<<<<<< HEAD
 ];      mobile: "+1 302 464 0950";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -158,6 +197,11 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 <<<<<<< HEAD
 
 =======
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "ai-automation-suite",
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -177,7 +221,12 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   },
   {
@@ -198,15 +247,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     realImplementation: true,
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       address: "364 E Main St STE 1008 Middletown DE 19709"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
     address: string
   }
 }
@@ -252,7 +302,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       email: "kleber@ziontechgroup.com";
 =======
 ];      mobile: "+1 302 464 0950";      email: "kleber@ziontechgroup.com";
@@ -262,6 +312,30 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
   }
 
 ];
+<<<<<<< HEAD
+=======
+
+;
+    id: "ai-automation-suite",
+    name: "AI Automation Suite",
+    tagline: "Intelligent automation for modern businesses",
+    price: "$79/month",
+    description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.",
+    features: [
+      "Workflow automation",
+      "AI decision making",
+      "Integration APIs",
+      "Custom workflows",
+      "Analytics dashboard"
+    ],
+    link: "/services/ai-automation-suite",
+    category: "AI & Automation",
+    realImplementation: true,
+    contactInfo: {
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   },
@@ -284,6 +358,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950",
 <<<<<<< HEAD
+<<<<<<< HEAD
       email: "kleber@ziontechgroup.com",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
@@ -293,6 +368,12 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      email: "kleber@ziontechgroup.com",
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
 =======
       email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -300,6 +381,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -311,3 +393,9 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

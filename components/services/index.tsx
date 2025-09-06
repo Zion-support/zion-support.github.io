@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
@@ -67,6 +70,8 @@ budgetRange: values.budgetRange;
 =======
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import React from 'react',
@@ -89,8 +94,12 @@ import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 
 const mapLocalToServiceItem = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -118,6 +127,7 @@ budgetRange: values.budgetRange;
 }service= {
   selected
 }onSubmit= {
+<<<<<<< HEAD
 <<<<<<< HEAD
   handleSubmit
 }/> </div>)
@@ -422,9 +432,15 @@ export default ServicesPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   handleSubmit 
 }/> </div>) 
 };
 export default ServicesPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -80,38 +80,17 @@ const EnhancedFooter = () => {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 const EnhancedFooter = () => {
-<<<<<<< HEAD
-  return (
-    <footer className='bg - gray - 900 text - white'>;
-      {/* Main Footer Content */}
-      <div className='container mx - auto px - 4 py - 16'>;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-          {/* Company Info */}
-  const currentYear = new Date().getFullYear(),
-
-          <div className='lg:col - span - 2'>;
-            <div className='flex items - center space - x-2 mb - 4'>;
-              <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
-                <span className='text - white font - bold text - xl'>Z</span>;
-              </div>;
-              <span className='text - xl font - bold'>Zion Tech Group</span>;
-            </div>;
-            <p className='text - gray - 300 mb - 6 max - w-md'>;
-              Leading technology solutions provider helping businesses transform;
-              their digital presence with cutting - edge AI, cloud architecture,
-              and innovative development services.            </p > const EnhancedFooter = () =>: any {
-  const current_year = new Date ().getFullYear (),
-=======
   const currentYear = new Date().getFullYear();
               their digital presence with cutting-edge AI, cloud architecture,
               and innovative development services.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <footer className="bg - gray-900 text-white">;
       {/* Main Footer Content */}
       <div className="container mx - auto px-4 py-16">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8">;
           {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -140,6 +119,8 @@ const EnhancedFooter = () => {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -189,8 +170,12 @@ const EnhancedFooter = () => {
                 </Link>
               </li>
             </ul>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
           {/* Company */}
           <div>
@@ -251,6 +236,7 @@ export default EnhancedFooter;
         </div>
       </div>
       {/* Bottom Footer */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:col-span-2">;
             <div className="flex items - center space-x-2 mb-4">;
@@ -371,8 +357,10 @@ export default EnhancedFooter;
 }
 export default EnhancedFooter;}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   )
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default EnhancedFooter;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

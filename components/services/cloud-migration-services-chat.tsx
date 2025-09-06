@@ -4,8 +4,8 @@
 
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -35,6 +35,8 @@ const CloudMigrationServicesChat: NextPage = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <main>;
         <h1>CloudMigrationServicesChat</h1>;
         <p>Service details coming soon...</p>;
@@ -50,11 +52,8 @@ export default CloudMigrationServicesChat;
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -93,6 +92,7 @@ const CloudMigrationServicesChat: NextPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
@@ -112,6 +112,11 @@ const CloudMigrationServicesChat: NextPage = () => {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -136,11 +141,15 @@ const CloudMigrationServicesChat: NextPage = () => {
 export default CloudMigrationServicesChat;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>
       <Head>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
@@ -188,6 +197,7 @@ export default CloudMigrationServicesChat;
 
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
         <title>CloudMigrationServicesChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -205,3 +215,9 @@ export default CloudMigrationServicesChat;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

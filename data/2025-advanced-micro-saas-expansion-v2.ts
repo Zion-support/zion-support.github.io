@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -26,6 +27,10 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const advancedMicroSaasExpansion2025V2 = [
 =======
 =======export const advancedMicroSaasExpansion2025V2 = [
@@ -263,19 +268,19 @@ export const advancedMicroSaasExpansion2025V2 = [
     category: 'AI & Data',
     pricing: '$299 / month',
       'Multi - format content generation',
-=======
 name: 'AI Content Factory Pro',
     description: 'Advanced AI-powered content creation and management platform',
     category: 'AI & Data',
     pricing: '$299/month',
     features: [
       'Multi-format content generation',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Brand voice customization',
       'Content calendar management',
       'Performance analytics',
     ],
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
     name: 'AI Content Marketing Automation',
@@ -493,6 +498,9 @@ name: 'AI Content Factory Pro',
       'Real-time monitoring',
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     name: 'AI Threat Detection',
     description: 'Advanced AI threat detection system',
     category: 'Cybersecurity',
@@ -500,9 +508,12 @@ name: 'AI Content Factory Pro',
     features: [;
       'Real - time monitoring',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     name: 'AI Content Marketing Automation',
     description: 'Intelligent content marketing workflow automation',
@@ -714,12 +725,17 @@ name: 'AI Content Factory Pro',
     pricing: '$549/month',
     features: [
       'Real-time monitoring',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Threat intelligence',
       'Automated response',
       'Incident management',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   },;
@@ -1091,11 +1107,12 @@ export const advancedMicroSaasExpansion2025V2 = [;
   },
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 ];      'Real - time monitoring_threat intelligence_automated response_incident management';
     ];
 
-=======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -1270,10 +1287,15 @@ export const advancedMicroSaasExpansion2025V2 = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 ];
 =======
@@ -1455,6 +1477,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
+<<<<<<< HEAD
   }
 ];
 <<<<<<< HEAD
@@ -1471,3 +1494,15 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

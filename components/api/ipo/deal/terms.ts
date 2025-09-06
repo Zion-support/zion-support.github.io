@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -17,12 +18,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
     target: '$10,000,000';
     valuationCap: '$80,000,000';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     discount: '20%'
@@ -34,6 +40,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     leadInvestor: 'TBD'});
 
   res && res.status(200).json(terms)
@@ -46,23 +56,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 leadInvestor: 'TBD'});
   res && res.status(200).json(terms)
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
     leadInvestor: 'TBD'});
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     leadInvestor: 'TBD'});
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { readJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 export default /**
@@ -95,6 +105,7 @@ function handler() {
   res.status (200).json (terms);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -108,46 +119,33 @@ function handler() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 }
 
 
 
+<<<<<<< HEAD
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+}
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
+}
+
+}
+
+
+
 <<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-
-  const terms = readJsonFile('deal/terms.json', {
-    round: 'Series A'
-    target: '$10,000,000'
-    valuationCap: '$80,000,000'
-    discount: '20%'
-    leadInvestor: 'TBD'
-  });
-  res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (!requireSuperadminApi(req, res)) return;
-  const terms = readJsonFile('deal/terms.json', {
-    round: 'Series A'
-    target: '$10,000,000';
-    valuationCap: '$80,000,000';
-    discount: '20%'
-    leadInvestor: 'TBD'});
-
-  res.status(200).json(terms)
-}
-}
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
-}
-
-
-
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -168,3 +166,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  const terms = null;
+  res.status(200).json(terms)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

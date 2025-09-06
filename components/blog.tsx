@@ -71,6 +71,7 @@ export default function BlogPage() {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     </UltraFuturisticBackground>;
     </UltraFuturisticBackground>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -153,3 +154,8 @@ function BlogPage() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </UltraFuturisticBackground>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

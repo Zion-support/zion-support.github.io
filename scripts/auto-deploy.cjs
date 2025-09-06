@@ -11,6 +11,7 @@ const { execSync } = require('child_process')
       'git commit -m ""feat": automated improvements and fixes"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         execSync(step, { "stdio"})
@@ -24,3 +25,8 @@ const { execSync } = require('child_process')
         execSync(step, { "stdio"})
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        execSync(step, { "stdio"})
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   console.log(' Starting Final Syntax Fixer...')
     const files = findCodeFiles('.;')
         const originalContent = fs.readFileSync(file, 'utf8')
@@ -33,6 +41,7 @@ const path = require('path')
           content = content.replace(templateLiteralSemicolon, '"$1$2")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.error(' Final syntax fixer "failed")
@@ -46,3 +55,8 @@ const path = require('path')
     console.error(' Final syntax fixer "failed")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    console.error(' Final syntax fixer "failed")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
 import {useState} from 'react';
@@ -67,6 +68,8 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const res = null;
       setStatus('')
     }
@@ -79,8 +82,12 @@ setStatus('Deployed successfully');
       setError(e.message);
       setStatus('');
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   return (
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
@@ -136,6 +143,7 @@ setStatus('Deployed successfully');
             CID: <code className='break-all'>{cid}</code>;
           </div>;
           {provider && <div>Provider: {provider}</div>}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
@@ -207,6 +215,8 @@ function handle_deploy() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='text-sm text-gray-600'>
             You can open via any IPFS gateway or offline node.
           </div>
@@ -215,5 +225,9 @@ function handle_deploy() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

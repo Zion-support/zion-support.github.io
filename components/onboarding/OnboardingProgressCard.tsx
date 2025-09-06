@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -34,11 +35,13 @@ import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
 export type OnboardingStep = {;
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 export type OnboardingStep = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   label: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +82,7 @@ export type OnboardingProgressCardProps = {;
 
 function computePercentage(steps: OnboardingStep[]): number {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
 <<<<<<< HEAD
@@ -110,9 +114,11 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   if (!steps || steps.length === 0) return 0;
 const completedCount = steps.filter(s => s.completed).length;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return Math.round((completedCount / steps.length) * 100);
 <<<<<<< HEAD
 export default function OnboardingProgressCard({
@@ -150,6 +156,7 @@ export default function OnboardingProgressCard({
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
+<<<<<<< HEAD
 <<<<<<< HEAD
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
@@ -446,8 +453,10 @@ function OnboardingProgressCard() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
@@ -471,6 +480,7 @@ function OnboardingProgressCard() {
       ) : null}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -478,9 +488,11 @@ function OnboardingProgressCard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <ul className='mt-4 space-y-2'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Checklist */}
 <ul className='mt-4 space-y-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
@@ -497,12 +509,8 @@ function OnboardingProgressCard() {
             </div>
             {!step.completed && step.ctaHref && step.ctaLabel ? (
               <Link href={step.ctaHref}>
-<<<<<<< HEAD
-                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-
-=======
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -526,21 +534,25 @@ function OnboardingProgressCard() {
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-5'>
           <Link href={firstIncomplete.ctaHref!}>
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {firstIncomplete.ctaLabel}
             </a>
           </Link>
         </div>
       ) : null}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -560,6 +572,9 @@ function OnboardingProgressCard() {
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

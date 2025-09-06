@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
   const apiKey = process.env.OPENAI_API_KEY;
@@ -44,9 +45,15 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   try {
       return {  try {
       return {
+<<<<<<< HEAD
     }
     const confidence =
       typeof parsed && parsed.confidence === 'number'
@@ -65,12 +72,37 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     return {
 <<<<<<< HEAD
   reasoning: string;
+=======
+
+        label: 'SUSPICIOUS',
+        reason: 'Unrecognized label from GPT',
+
+    return {
+
+      label,
+      reason: parsed && parsed.reason || 'No reason provided',
+      confidence,
+
+    } as GptClassification;
+  } catch {
+    return {
+
+// GPT-based fraud classification utilities
+export interface GptClassification {
+  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
+  confidence: number; // 0-100
+
+  reasoning: string;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5,
     }
   }export interface GptResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -84,10 +116,17 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
   }export interface GptResult {;
   label: string;
@@ -98,6 +137,15 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 }  label: string;
   confidence: number;
   reasoning: string
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+  label: string;
+  confidence: number;
+  reasoning: string
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -112,24 +160,18 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
 
 <<<<<<< HEAD
 }
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+}
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+}
 <<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-<<<<<<< HEAD
-}
-=======
-=======
-
-
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -144,3 +186,11 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

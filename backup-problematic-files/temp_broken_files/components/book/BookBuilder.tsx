@@ -1,25 +1,10 @@
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
-
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
-import { buildPrintableHtml } from '../../utils/export/buildHtml';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
-import { defaultChapters } from '../../utils/book/defaultOutline';
-const initialProject: BookProject = {
-  meta: {
-    title: 'Zion OS: Building the Civilization Protocol'
-    subtitle: 'AI. Talent. Trust.'
-    author: 'Founder Name'
-    isbn: ''
-    publisher: 'Zion Tech Solutions'}
-  chapters: defaultChapters
-=======
 import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
 import { buildPrintableHtml  } from '../../utils/export/buildHtml';
 import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
 const initialProject: BookProject;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
   visuals: {
     timelineImages: []
     daoVoteCharts: []
@@ -67,6 +52,7 @@ export default function BookBuilder() {
           {project.meta.isbn ? (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -74,12 +60,18 @@ export default function BookBuilder() {
 =======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='pt-4'>
               <img
                 alt='ISBN barcode'
                 className='h-16'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 src={`/api/barcode/isbn?code=${encodeURIComponent(project.meta.isbn)}`}
               />
             </div>
@@ -177,6 +169,7 @@ URL.revokeObjectURL(url);
           </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -184,6 +177,8 @@ URL.revokeObjectURL(url);
 =======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <select
             className='border rounded px-2 py-1 text-sm'
             value={pageSize}
@@ -191,8 +186,12 @@ URL.revokeObjectURL(url);
           >
             <option value='LETTER'>8.5x11 Letter</option>
             <option value='A4'>A4</option>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </select>
           <button
             className='btn btn-sm btn-primary'
@@ -203,6 +202,7 @@ URL.revokeObjectURL(url);
           </button>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -210,6 +210,8 @@ URL.revokeObjectURL(url);
 =======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <button
             className='btn btn-sm btn-secondary'
             onClick={handleExportEpub}
@@ -217,8 +219,12 @@ URL.revokeObjectURL(url);
           >
             <FileType className='w-4 h-4 mr-1' /> EPUB
           </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
       </div>
 
@@ -227,6 +233,7 @@ URL.revokeObjectURL(url);
           <h2 className='font-semibold flex items-center gap-2'>
             <BookOpen className='w-4 h-4' /> Cover & Branding
           </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -267,6 +274,8 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
             <label className='space-y-1'>
               <div className='text-xs uppercase opacity-60'>Title</div>
@@ -314,8 +323,12 @@ className=&quot;w-full border rounded px-3 py-2&quot;
               <input
                 className='w-full border rounded px-3 py-2'
                 placeholder='9781234567897'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 value={project.meta.isbn}
                 onChange={e =>
                   setProject({
@@ -328,6 +341,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -335,14 +349,20 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 =======
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='pt-2'>{coverPreview}</div>
         </div>
 
         <div className='space-y-4'>
           <h2 className='font-semibold flex items-center gap-2'>
             <Settings className='w-4 h-4' /> Visual Elements
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </h2>
           <div className='space-y-3'>
             <label className='block'>
@@ -378,6 +398,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                 }
               />
             </label>
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/temp_broken_files/components/book/BookBuilder.tsx
             <div className="grid grid-cols-3 gap-2">
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(0, 6).map((src, i) => (
@@ -388,6 +409,8 @@ className=&quot;w-full border rounded px-3 py-2&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               ))}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='grid grid-cols-3 gap-2'>
               {project.visuals.timelineImages
                 .concat(project.visuals.daoVoteCharts)
@@ -405,7 +428,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
                     />
                   </div>
                 ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
             </div>
           </div>
         </div>
@@ -415,6 +438,7 @@ className=&quot;w-full border rounded px-3 py-2&quot;
         <h2 className='font-semibold'>Chapters</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {project.chapters.map((ch, idx) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -440,6 +464,8 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div key={idx} className='border rounded-lg p-4 space-y-2'>
               <div className='font-medium'>{ch.title}</div>
               <textarea
@@ -450,8 +476,12 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                   chapters[idx] = { ...chapters[idx], content: e.target.value };
                   setProject({ ...project, chapters });
                 }}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               />
             </div>
           ))}
@@ -462,6 +492,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
         <h2 className='font-semibold'>Quote Callouts</h2>
         <div className='space-y-2'>
           {project.visuals.quoteCallouts.map((q, i) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -476,6 +507,12 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                 className='border rounded px-2 py-1'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            <div key={i} className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+              <input
+                className='border rounded px-2 py-1'
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 value={q.text}
                 onChange={e => {
                   const quoteCallouts = [...project.visuals.quoteCallouts];
@@ -489,6 +526,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                   });
                 }}
               />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -509,6 +547,8 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <input
                 className='border rounded px-2 py-1'
                 value={q.attribution ?? ''}
@@ -527,8 +567,12 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               />
               <div />
             </div>
@@ -536,6 +580,7 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -548,3 +593,8 @@ className=&quot;w-full min-h-[160px] border rounded p-2&quot;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533:components/book/BookBuilder.tsx
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

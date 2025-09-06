@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -89,6 +90,8 @@ interface Deployment {
             <div>;
               <p className='text-2xl font-bold'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Mock data - replace with actual API calls
 const mockDeployments: Deployment[] = [
   {
@@ -255,7 +258,7 @@ return (
             </div>
             <div>
               <p className='text-2xl font-bold'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {getStatusCount('deploying')}
               </p>;
               <p className='text-sm text-white/60'>Active</p>;
@@ -271,6 +274,7 @@ return (
             <div>;
               <p className='text-2xl font-bold'>;
                 {getStatusCount('completed')}
+<<<<<<< HEAD
 <<<<<<< HEAD
               </p>;
               <p className='text-sm text-white/60'>Live</p>;
@@ -296,6 +300,8 @@ return (
       </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
@@ -308,9 +314,14 @@ return (
         </h1>;
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
       </div>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
@@ -365,7 +376,6 @@ return (
             <div>
               <p className="text-2xl font-bold">{getStatusCount('failed')}</p>
               <p className="text-sm text-white/60">Failed</p>
-=======
               </p>
               <p className='text-sm text-white/60'>Live</p>
             </div>
@@ -379,13 +389,14 @@ return (
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
               <p className='text-sm text-white/60'>Failed</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </div>
       </div>
 <<<<<<< HEAD
       {/* Filter Tabs */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -397,10 +408,12 @@ return (
       <div className='flex flex-wrap gap-2'>
           { key: 'all', label: 'All Deployments', count: deployments.length }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex flex-wrap gap-2'>
         {[
           { key: 'all', label: 'All Deployments', count: deployments.length },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {
             key: 'pending'
             label: 'Pending'
@@ -658,6 +671,7 @@ export default function DeploymentsPage() {;
               filter === key;
                 ? 'bg-blue-600 text-white shadow-lg';
 <<<<<<< HEAD
+<<<<<<< HEAD
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
 =======
                 : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
@@ -665,6 +679,12 @@ export default function DeploymentsPage() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+                : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90'            }`}              filter === key ? 'bg-blue-600 text-white shadow-lg' : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white/90';
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }`}
           >;
             {label} ({count});
@@ -683,6 +703,7 @@ export default function DeploymentsPage() {;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
       {/* Deployments Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -779,21 +800,29 @@ export default function DeploymentsPage() {;
 <<<<<<< HEAD
                 </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
         ))}
       </div>
       {/* Deployments Grid */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
             {/* Status Header */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className="p-6 border-b border-white/10">;
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex items-center gap-3">;
@@ -811,9 +840,11 @@ export default function DeploymentsPage() {;
                       <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">;
                         {deployment && deployment.governanceType}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
 ;
 // Mock data - replace with actual API calls;
 const mock_deployments: Deployment[] = [;
@@ -1159,20 +1190,30 @@ const getVerticalIcon = (vertical: string) =>: any {
                       <span className="inline - flex items - center px - 2 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
                         {deployment.governance_type}
 
+<<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </span>;
                     </div>;
                   </div>;
                 </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
               {/* Progress Bar for Active Deployments */}
               {deployment && deployment.status === 'deploying' && (;
                 <div className='space-y-2'>;
                   <div className='flex justify-between text-sm text-white/70'>;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
                 </div>      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
@@ -1183,6 +1224,10 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </div>;
                 </div>;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <span>Deployment Progress</span>;
                     <span>{deployment && deployment.progress}%</span>;
                   </div>;
@@ -1200,10 +1245,8 @@ const getVerticalIcon = (vertical: string) =>: any {
               )}
             </div>
             {/* Deployment Details */}
-<<<<<<< HEAD
-=======
 <div className='p-6 space-y-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Domain & Location */}
               <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div className='flex items-center gap-2 text-white/70'>
@@ -1222,12 +1265,15 @@ const getVerticalIcon = (vertical: string) =>: any {
                         .filter(Boolean)
                         .join(', ')}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </span>                  </div>              {/* Domain & Location */}
 <<<<<<< HEAD
 <<<<<<< HEAD
                       style={{ width: `${deployment.progress}%` }}
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <div className="flex items-center gap-2">
                   {getStatusIcon(deployment.status)}
                   <span className={`text-sm font-medium ${getStatusColor(deployment.status)}`}>
@@ -1272,6 +1318,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                   <div className="w - full bg - white / 10 rounded - full h - 2">;
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
+<<<<<<< HEAD
                       style={{ width: `${deployment.progress}%` }}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1296,6 +1343,14 @@ const getVerticalIcon = (vertical: string) =>: any {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+                      style={{ width: `${deployment.progress}%` }}
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
@@ -1304,18 +1359,23 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span></span>
                     <span>{deployment.region} {deployment.country}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
                   </div>
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1333,12 +1393,17 @@ const getVerticalIcon = (vertical: string) =>: any {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+ursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='grid grid-cols-2 gap-4 text-sm'>;
 =======
                   </div>              <div className='grid grid-cols-2 gap-4 text-sm'>;
@@ -1374,11 +1439,14 @@ const getVerticalIcon = (vertical: string) =>: any {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Features */}
 <div className='space-y-2'>
                 <div className='text-sm font-medium text-white/80'>
@@ -1387,32 +1455,37 @@ const getVerticalIcon = (vertical: string) =>: any {
                 <div className='flex flex-wrap gap-2'>
                   {deployment.features.slice(0, 4).map(feature => (
                     <span
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       key={feature}
                       className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'
                     >
                       {feature.replace('_', ' ')}
                     </span>
                   ))}
-<<<<<<< HEAD
-=======
                   {deployment.features.length > 4 && (
                     <span className='inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70'>
                       +{deployment.features.length - 4} more
                     </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   )}
 <<<<<<< HEAD
-              {/* Timestamps */}
 <<<<<<< HEAD
 =======
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+              {/* Timestamps */}
                     ></div>
                   </div>
                 </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">;
         {filteredDeployments.map((deployment) => (;
           <div key={deployment.id} className="group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5">;
@@ -1458,9 +1531,44 @@ const getVerticalIcon = (vertical: string) =>: any {
                     ></div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               )}
             </div>;
             {/* Deployment Details */}
+<<<<<<< HEAD
+=======
+                    {deployment.domain ||
+                      deployment.subdomain ||
+                      'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+
+                  <div className='flex items-center gap-2 text-white/70'>
+                    <MapPin className='w-4 h-4' />
+                    <span>
+                      {[deployment.region, deployment.country]
+                        .filter(Boolean)
+                        .join(', ')}
+                    </span>                  </div>              {/* Domain & Location */}
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="flex items-center gap-2 text-white/70">
+                  <span>🌐</span>
+                  <span className="font-mono">
+                    {deployment.domain || deployment.subdomain || 'No domain set'}
+                  </span>
+                </div>
+                {(deployment.region || deployment.country) && (
+
+                  <div className="flex items-center gap-2 text-white/70">
+                    <span>📍</span>
+                    <span>{deployment.region} {deployment.country}</span>
+                  </div>
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -1475,6 +1583,12 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 )}
               </div>;
               {/* Features */}
@@ -1489,7 +1603,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   ))}
 
 
-=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               <div className="space-y-2">;
@@ -1507,9 +1620,14 @@ const getVerticalIcon = (vertical: string) =>: any {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   )}
                 </div>;
               </div>;
@@ -1555,6 +1673,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                 </div>;
               </div>;
 
+<<<<<<< HEAD
               {/* Timestamps */}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
               <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
@@ -1582,19 +1701,21 @@ const getVerticalIcon = (vertical: string) =>: any {
               {/* Timestamps */}
 <<<<<<< HEAD
 =======
+=======
+
+
+              {/* Timestamps */}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
-=======
-<<<<<<< HEAD
-              <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
-=======
 <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-3 h-3' />
                   <span>Created: {formatDate(deployment.createdAt)}</span>
                 </div>
                 {deployment.updatedAt !== deployment.createdAt && (
                   <div className='flex items-center gap-1'>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1610,20 +1731,30 @@ const getVerticalIcon = (vertical: string) =>: any {
                   <div className="flex items-center gap-1">
                     <span>🔄</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <RefreshCw className='w-3 h-3' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>
 <<<<<<< HEAD
 =======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
+                  </div>
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
               {/* Timestamps */}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
 =======
                   </div>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
@@ -1639,6 +1770,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </div>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 )}
@@ -1650,10 +1782,17 @@ const getVerticalIcon = (vertical: string) =>: any {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 )}
               </div>;
             </div>;
             {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="p-6 pt-0">;
               <div className="flex gap-2">;
@@ -1666,12 +1805,19 @@ const getVerticalIcon = (vertical: string) =>: any {
 ;
                 {deployment.status === 'deploying' && (;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
                 )}
                 {deployment && deployment.status === 'deploying' && (;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <>;
                     <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-orange-600 hover:bg-orange-700 text-white text-sm font-medium rounded-lg transition-colors duration-200">;
                       <Pause className="w-4 h-4" />;
@@ -1728,9 +1874,13 @@ const getVerticalIcon = (vertical: string) =>: any {
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         ))}
 
       </div>;
@@ -1751,17 +1901,17 @@ const getVerticalIcon = (vertical: string) =>: any {
           )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             <div className="p-6 pt-0">
               <div className="flex gap-2">
-=======
-<<<<<<< HEAD
-            <div className='p-6 pt-0'>
-=======
 <div className='p-6 pt-0'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div className='flex gap-2'>
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {deployment.status === 'pending' && (
 <<<<<<< HEAD
@@ -1987,6 +2137,10 @@ const getVerticalIcon = (vertical: string) =>: any {
               ? 'Start by creating your first Zion ecosystem deployment' ;
               : `No deployments with status "${filter}" found`;
 <<<<<<< HEAD
+=======
+
+                {deployment.status === 'pending' && (
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
             }
           </p>;
@@ -1995,6 +2149,10 @@ const getVerticalIcon = (vertical: string) =>: any {
               href="/admin/os-deploy"
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Rocket className="w-4 h-4" />;
               Deploy First Instance;
             </a>;
@@ -2153,11 +2311,9 @@ const getVerticalIcon = (vertical: string) =>: any {
 
   );
 }
-=======
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
             >
               <Rocket className="w-4 h-4" />
-=======
                   <button className='flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors duration-200'>
                     <Play className='w-4 h-4' />
                     Start Deployment
@@ -2215,34 +2371,29 @@ const getVerticalIcon = (vertical: string) =>: any {
               className='inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200'
             >
               <Rocket className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Deploy First Instance
             </a>
           )}
         </div>
-<<<<<<< HEAD
-      )}
-    </div>
-
-=======
         </div>;
       )}
     </div>;
 
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
-<<<<<<< HEAD
-    </div>))}
-    </div>);
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
       {filteredDeployments.length === 0 && (;
 =======
     </div>;  );
@@ -2275,12 +2426,11 @@ const getVerticalIcon = (vertical: string) =>: any {
       )}
 <<<<<<< HEAD
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>))}
     </div>);
@@ -2300,6 +2450,11 @@ const getVerticalIcon = (vertical: string) =>: any {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 </div>
 
       {/* Deployments Table */}
@@ -2347,5 +2502,9 @@ const getVerticalIcon = (vertical: string) =>: any {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

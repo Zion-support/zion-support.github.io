@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,6 +38,15 @@ import Seo from '../../components/seo/Seo';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import Link from 'next/link';
+import Seo from '../../components/seo/Seo';
+
+  return (
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -47,6 +57,7 @@ import Seo from '../../components/seo/Seo';
     </div>
   )
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +76,11 @@ const ProductManagementChat: NextPage = () => {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -80,9 +96,12 @@ const ProductManagementChat: NextPage = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default ProductManagementChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default ProductManagementChat;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
@@ -99,17 +118,25 @@ import Seo from '../../components / seo / Seo';
 ;
 export default ProductManagementChat;
 ;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+export default ProductManagementChat;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 export default ProductManagementChat;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default ProductManagementChat;
 =======
 export default ProductManagementChat;export default ProductManagementChat;
@@ -129,6 +156,7 @@ export default ProductManagementChat
 export default ProductManagementChat;
 export default ProductManagementChat;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -144,3 +172,10 @@ export default ProductManagementChat;
 const ProductManagementChat: NextPage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+const ProductManagementChat: NextPage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

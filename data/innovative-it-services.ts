@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -64,6 +65,23 @@ id: string;
     website: string;
   }
   {
+=======
+
+
+  {
+
+    id: 'edge - computing - platform',
+    name: 'Edge Computing Platform',
+    tagline: 'Distributed computing at the network edge',
+    price: '$299',
+    period: '/month',
+    description:;
+      'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.',
+    features: [;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Distributed edge nodes',
       'Real - time data processing',
       'Low - latency computing',
@@ -77,11 +95,14 @@ id: string;
     ],
     popular: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     icon: '🌐',
 <<<<<<< HEAD
 =======
-
 =======
+    icon: '🌐',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
     color: 'from - blue - 500 to - cyan - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
@@ -95,7 +116,12 @@ id: string;
     real_service: true,
     technology: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Edge Computing',
       'IoT',
       '5G',
@@ -107,9 +133,11 @@ id: string;
       'AWS',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
     integrations: [;
       'AWS IoT',
       'Azure IoT',
@@ -156,7 +184,6 @@ id: string;
   },
   {
 
-=======
     id: 'quantum - computing - as - a-service',
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
@@ -180,7 +207,6 @@ id: string;
     popular: true,
     icon: '⚛️',
 
-=======
     color: 'from - purple - 500 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
@@ -204,7 +230,6 @@ id: string;
       'AWS',
     ],
 
-=======
     integrations: [;
       'Jupyter Notebooks',
       'Python',
@@ -275,7 +300,6 @@ id: string;
     popular: true,
     icon: '🔗',
 
-=======
     color: 'from - green - 500 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
@@ -300,7 +324,6 @@ id: string;
       'AWS',
     ],
 
-=======
     integrations: [;
       'Ethereum',
       'Hyperledger',
@@ -397,7 +420,6 @@ id: string;
       'AWS',
     ],
 
-=======
     integrations: [;
       'GitHub',
       'GitLab',
@@ -446,7 +468,6 @@ id: string;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -468,7 +489,6 @@ id: string;
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
-=======
     website: string
   },
   realImplementation: boolean;
@@ -476,7 +496,7 @@ id: string;
   launchDate: string;
   customers: number;
   rating: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   reviews: number
 }
 export const innovativeITServices: InnovativeITService[] = [
@@ -501,6 +521,7 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -609,17 +630,23 @@ export const innovativeITServices: InnovativeITService[] = [;
   }
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface InnovativeITService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: true
 =======
     icon: '🌐',    realImplementation: true
@@ -829,6 +856,7 @@ export interface InnovativeITService {;
     }
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
     customers: 2500
@@ -837,14 +865,20 @@ export interface InnovativeITService {;
 <<<<<<< HEAD
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
     customers: 2500,
     rating: 4.7,
     reviews: 1250,
   },;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];      mobile: '+1 302 464 0950';
 =======
   }];      mobile: '+1 302 464 0950';
@@ -862,6 +896,7 @@ export interface InnovativeITService {;
     reviews: 1250
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -874,6 +909,11 @@ export interface InnovativeITService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+export interface InnovativeITService {;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string,;
 =======
   }
@@ -969,6 +1009,7 @@ export const innovativeITServices: InnovativeITService[] = [;
     customers: 2500;
     rating: 4.7,
     reviews: 1250;
+<<<<<<< HEAD
 
   }
 ;  }
@@ -983,6 +1024,15 @@ export const innovativeITServices: InnovativeITService[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1168,5 +1218,9 @@ export const innovativeITServices: InnovativeITService[] = [;
     reviews: 1250
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

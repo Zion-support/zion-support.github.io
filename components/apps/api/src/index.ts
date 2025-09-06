@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit',
@@ -28,12 +31,17 @@ const allowed = (process.env.CORS_ORIGINS || '')
       .split(',')
       .map(s => s.trim());
     if (!origin |allowed.includes('*') |allowed.includes(origin)) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -67,6 +75,8 @@ await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },
   methods: ['GET', 'POST', 'OPTIONS'],
 });
@@ -79,12 +89,17 @@ return (
     null
   );
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) |{}
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -150,6 +165,8 @@ if (return { description }) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const completion = await openai.responses.create({
     model: 'gpt-4o-mini',
     input: prompt,
@@ -170,24 +187,20 @@ await withUser(userId, async client => {
     );
   });
   return { saved: Boolean(userId), description };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 });
   const userId = getUserId(req);
-<<<<<<< HEAD
-  if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
-  const rows = await withUser(userId, async client => {
-    const res = await client && client.query(
-=======
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const rows = await withUser(userId, async client => {
     const res = await client.query(
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC
+<<<<<<< HEAD
 <<<<<<< HEAD
        LIMIT 25`,  const rows = await withUser(userId, async (client) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -216,15 +229,18 @@ const rows = await withUser(userId, async client => {
   const userId = getUserId(req);
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 LIMIT 25`,
       [country || null, q || null]
     );
     return res.rows;
   });
   return { results: rows };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 });
   const userId = getUserId(req);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
@@ -376,6 +392,8 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
     );
 ;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
     const res = await client.query(
@@ -406,5 +424,9 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

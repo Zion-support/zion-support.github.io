@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -7,11 +8,17 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 <<<<<<< HEAD
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
+<<<<<<< HEAD
 <<<<<<< HEAD
   {
 
@@ -27,21 +34,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
-  {
-
-        'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100',
-    },
-    images: [
-      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
-    ],
-    createdAt: '2024-02-15T10:45:00 && 00.000Z',
-    rating: 4 && 4.8,
-    reviewCount: 32,
 =======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
     id: 'ai - service - 2',
     title: 'Custom Machine Learning Model Development',
     description:;
@@ -136,12 +131,15 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   },
   {
 
-<<<<<<< HEAD
-=======
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -150,6 +148,7 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -347,6 +346,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [      'https://images && 
     rating: 4.8,
     review_count: 22,
     location: 'North America',
+=======
+
+
+    location: 'North America',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     availability: '4 - 6 Weeks',
     ai_score: 92,
   },
@@ -358,6 +362,40 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [      'https://images && 
   },
   {
 
+<<<<<<< HEAD
+=======
+    id: 'ai-model-1'
+    title: 'GPT-4 API Integration Package'
+    description:
+      'Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.'
+    category: 'AI Models & APIs'
+    price: 1999
+    currency: '$'
+    tags: ['GPT-4', 'API Integration', 'NLP']
+      name: 'AI Solutions Inc.'
+      id: 'ai-solutions'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+  {
+    id: 'ai-service-2'
+    title: 'Custom Machine Learning Model Development'
+    description:
+      'End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.'
+    category: 'Services'
+    price: 5999
+    currency: '$'
+    tags: ['Machine Learning', 'Custom Development', 'Data Science']
+    author: {
+      name: 'DataMinds'
+      id: 'dataminds'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500'
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ]
 <<<<<<< HEAD
     createdAt: '2024-01-15T15:30:00.000Z'
@@ -387,8 +425,118 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [      'https://images && 
     ]
     createdAt: '2024-02-25T12:15:00.000Z'
     rating: 4.8
+<<<<<<< HEAD
     reviewCount: 19
 =======
+=======
+    reviewCount: 36
+    featured: true
+    location: 'Global'
+    availability: 'Immediate'
+    aiScore: 94
+  }
+  {
+    id: 'ai-assistant-7'
+    title: 'Custom AI Assistant Development'
+    description:
+      'End-to-end solution for creating your own branded AI assistant tailored to your specific industry and business needs. Includes voice customization and knowledge base integration.'
+    category: 'Virtual Assistants'
+    price: 3499
+    currency: '$'
+    tags: ['Chatbot', 'Voice Assistant', 'Conversational AI']
+    author: {
+      name: 'AssistantCraft'
+      id: 'assistantcraft'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-03-12T13:10:00.000Z'
+    rating: 4.7
+    reviewCount: 29
+    location: 'Europe'
+    availability: '3-4 Weeks'
+    aiScore: 91
+  }
+  {
+    id: 'ai-speech-8'
+    title: 'Advanced Speech Recognition System'
+    description:
+      'High-accuracy speech recognition system with multi-language support, noise cancellation, and specialized terminology adaptation for various industries.'
+    category: 'Voice & Speech'
+    price: 1799
+    currency: '$'
+    tags: ['Speech Recognition', 'Voice Processing', 'Transcription']
+    author: {
+      name: 'VoiceIntelligence'
+      id: 'voiceintelligence'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1590742084231-a778c92b8842?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-01-05T10:20:00.000Z'
+    rating: 4.6
+    reviewCount: 41
+    location: 'Global'
+    availability: '1-2 Weeks'
+    aiScore: 89
+  }
+  {
+    id: 'ai-code-9'
+    title: 'AI Code Assistant & Generator Pro'
+    description:
+      'Powerful AI-powered code generation and optimization tool with support for 20+ programming languages, code review capabilities, and IDE plugins.'
+    category: 'Developer Tools'
+    price: 749
+    currency: '$'
+    tags: ['Code Generation', 'Developer Tools', 'Automation']
+    author: {
+      name: 'CodeGenius'
+      id: 'codegenius'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-02-20T09:45:00.000Z'
+    rating: 4.9
+    reviewCount: 89
+    featured: true
+    location: 'Global'
+    availability: 'Immediate'
+    aiScore: 97
+  }
+  {
+    id: 'ai-business-10'
+    title: 'Enterprise AI Transformation Package'
+    description:
+      'Comprehensive solution for businesses looking to integrate AI across operations. Includes AI readiness assessment, strategy development, implementation roadmap, and staff training.'
+    category: 'Business Solutions'
+    price: 15000
+    currency: '$'
+    tags: ['Enterprise', 'Digital Transformation', 'AI Strategy']
+    author: {
+      name: 'BusinessAI Consultants'
+      id: 'businessai'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&h=100'
+    }
+    images: [
+      'https://images.unsplash.com/photo-1664575602276-acd073f104c1?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2024-03-01T11:00:00.000Z'
+    rating: 4.8
+    reviewCount: 22
+    location: 'North America'
+    availability: '4-6 Weeks'
+    aiScore: 96
+  }
+  {
+
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+    ]
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     createdAt: '2023-12-15T09:45:00.000Z'
     rating: 4.9
     reviewCount: 18
@@ -396,6 +544,13 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [      'https://images && 
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
+<<<<<<< HEAD
+=======
+
+
+
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
     rating: 4.9,
@@ -404,6 +559,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [      'https://images && 
     location: 'North America',
     availability: '2-4 Weeks',;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -750,6 +909,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     id: "equipment-2", title: "Enterprise GPU Server Rack",
     description: "Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large-scale AI model training and deployment.", category: "Servers",
@@ -763,18 +923,19 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"], createdAt: "2023-12-15T09:45:00.000Z",
     rating: 4.9, reviewCount: 18,
     featured: true, location: "North America",
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     reviewCount: 18;
     featured: true;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     availability: "2-4 Weeks"
   }
-=======
     id: "ai-model-1";
     title: "GPT-4 API Integration Package";
     description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
@@ -786,11 +947,12 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       name: "AI Solutions Inc.";
       id: "ai-solutions";
       avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -801,6 +963,8 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -820,6 +984,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Edge computing'
     'High performance storage'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -835,6 +1000,14 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 'AI models',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+    'AI models',
+'AI models',
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     'GPT integration',
     'Machine learning',
     'Computer vision',
@@ -854,14 +1027,18 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'High performance storage',;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     'High performance storage',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -877,12 +1054,21 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+    'High performance storage',;
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface  ];
   // Convert strings to SearchSuggestion objects
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
 
+<<<<<<< HEAD
+=======
+    "AI models";
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "GPT integration";
     "Machine learning";
     "Computer vision";
@@ -902,13 +1088,21 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "High performance storage"
   ];
 
+<<<<<<< HEAD
     }))
 };  ];
+=======
+  
+
+
+  }));};  ];
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Convert strings to SearchSuggestion objects
   return suggestions && suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -920,6 +1114,10 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 =======
 
@@ -932,6 +1130,7 @@ export const generateFilterOptions = (): FilterOptions => {
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -942,6 +1141,10 @@ export const generateFilterOptions = (): FilterOptions => {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }));
 };
 
@@ -950,8 +1153,12 @@ export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
 const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ].sort();
   const locations = [
     ...new Set(
@@ -998,6 +1205,7 @@ availabilityOptions: availability && availability.map (item => ({
 
 }) );
 <<<<<<< HEAD
+<<<<<<< HEAD
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
@@ -1010,15 +1218,17 @@ export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 };
   }));};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1028,16 +1238,25 @@ export const MIN_PRICE = Math && Math.min(...MARKETPLACE_LISTINGS && MARKETPLACE
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+};
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -1051,16 +1270,26 @@ export const generateFilterOptions = (): FilterOptions => {
       MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
     ),
   ].sort();
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
@@ -1083,6 +1312,7 @@ export const generateFilterOptions = (): FilterOptions => {
       label: item,
       value: item
 <<<<<<< HEAD
+<<<<<<< HEAD
     })),
 =======
 <<<<<<< HEAD
@@ -1092,6 +1322,10 @@ export const generateFilterOptions = (): FilterOptions => {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -1402,12 +1636,14 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 <<<<<<< HEAD
 =======
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'equipment - 2',
     title: 'Enterprise GPU Server Rack',
     description:;
@@ -1533,6 +1769,7 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1540,18 +1777,17 @@ export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listi
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     })),
 
 
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
@@ -1571,3 +1807,11 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

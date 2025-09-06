@@ -7,6 +7,7 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = null;
   res.status(200).send(JSON.stringify(data, null, 2))
 }
@@ -51,6 +52,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import { readJsonFile } from '../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (!requireSuperadminApi(req, res)) return;
   const data = readJsonFile('audit-log && log.json', [] as unknown[]);
   res && res.setHeader('Content-Typeapplication/json');
@@ -58,11 +66,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
 }
 
+<<<<<<< HEAD
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Typeapplication/json');
   res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2))
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -73,6 +95,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { readJsonFile } from '../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../utils / api / auth';
@@ -100,6 +125,7 @@ function handler() {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 
@@ -108,6 +134,11 @@ function handler() {
 =======
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -125,6 +156,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -138,9 +170,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const data = readJsonFile('audit-log.json', [] as unknown[]);
   res.setHeader('Content-Type', 'application/json');
   res.setHeader('Content-Disposition', 'attachment; filename="audit-log.json"');
   res.status(200).send(JSON.stringify(data, null, 2));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,11 +57,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  if (req.method === 'POST') {
+    // In a real implementation, validate and insert review into Supabase
+  }
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method === 'GET') {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // In a real implementation, fetch reviews from Supabase by talent id/slug
 <<<<<<< HEAD
@@ -86,6 +98,8 @@ export default async function handler(
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const { slug } = req.query as { slug?: string };
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 });
   }
@@ -93,7 +107,7 @@ export default async function handler(
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
 return res.status(201).json({ ok: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {
     // In a real implementation, validate and insert review into Supabase
@@ -112,7 +126,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 ;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -157,6 +176,7 @@ return res;
   return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -170,6 +190,12 @@ return res;
 }
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+}
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method === 'GET') {
 
     // In a real implementation, fetch reviews from Supabase by talent id/slug;
@@ -197,9 +223,6 @@ return res;
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-<<<<<<< HEAD
-    .end('Method Not Allowed');    return res.status(201).json({ ok: true })
-  }
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
 
@@ -214,10 +237,8 @@ return res
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 
-    // In a real implementation, fetch reviews from Supabase by talent id/slug;
-    const { slug } = req.query as { slug?: string };
-    return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
+<<<<<<< HEAD
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
   if (req.method === 'POST') {
 
@@ -253,3 +274,8 @@ return res
     .end('Method Not Allowed');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+    .end('Method Not Allowed');
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

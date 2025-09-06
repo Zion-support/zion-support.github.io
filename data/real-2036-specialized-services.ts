@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -26,8 +27,10 @@ export type Real2036SpecializedService = {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type Real2036SpecializedService = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string,
   description: string;
@@ -42,6 +45,7 @@ export type Real2036SpecializedService = any;
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   features: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,11 +66,18 @@ export type Real2036SpecializedService = any;
   rating?: number;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  link: string;
+  launchDate?: string;
+  rating?: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       'Brain-inspired neural architecture',
@@ -979,6 +990,8 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     ]
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 technology?: string[];
 };
 
@@ -1442,12 +1455,13 @@ id: 'neuromorphic-computing-platform',
       'Customer experience',
     ],
     technology: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       'Space systems',
       'Safety protocols',
       'Training technology',
       'Customer management',
     ],
+<<<<<<< HEAD
 <<<<<<< HEAD
   },;
 ];    id: 'neuromorphic-computing-platform';
@@ -1479,6 +1493,12 @@ id: 'neuromorphic-computing-platform',
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: 'synthetic - biology - platform';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1486,23 +1506,39 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     category: 'Biotechnology',
     price: '$5, 999';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'AI - powered DNA design_biological system simulation_automated lab protocols_genetic circuit optimization_safety and compliance tools_real - time monitoring_custom organism design_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.8;
     marketSize: '$3 && 3.2B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Pharmaceutical companies, Biotech firms, Research institutions';
     competitiveAdvantage: 'AI integration, Automated protocols, Safety focus';
     integration: ['Lab automation systemsDNA synthesis platformsSequencing servicesCloud platforms'];
@@ -1526,25 +1562,41 @@ id: 'neuromorphic-computing-platform',
     id: 'quantum - internet - protocol - suite';
     name: 'Quantum Internet Protocol Suite';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     tagline: 'Next - generation internet protocols for quantum networks',
     description: 'Comprehensive suite of protocols and standards for building and operating quantum internet networks, enabling secure quantum communication worldwide.';
     category: 'Quantum Technology',
     price: '$2, 999';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'Quantum network protocols_interoperability standards_security frameworks_network management tools_performance optimization_compliance certification_custom protocol development_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.9;
     marketSize: '$2 && 2.1B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Internet service providers, Government agencies, Research institutions';
     competitiveAdvantage: 'Quantum protocols, Interoperability, Security focus';
     integration: ['Quantum networksInternet infrastructureSecurity systemsCloud platforms'];
@@ -1583,12 +1635,20 @@ id: 'neuromorphic-computing-platform',
       'Neural signal processing_real - time brain monitoring_custom interface design_safety and compliance_performance optimization_user training tools_custom applications_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.7;
     marketSize: '$2 && 2.8B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Healthcare providers, Research institutions, Accessibility companies';
     competitiveAdvantage: 'Direct neural interface, Real-time processing, Safety focus';
     integration: ['Medical devicesAccessibility toolsGaming platformsResearch systems'];
@@ -1614,23 +1674,39 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Professional metaverse creation and management platform'
     description: 'Comprehensive platform for designing, building, and managing immersive metaverse experiences with advanced 3D graphics, AI, and blockchain integration.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     category: 'Metaverse',
     price: '$1, 999';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       '3D world building toolsAI - powered NPCsBlockchain integration_multi - user environmentsVR / AR support_performance optimization_custom development_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.6;
     marketSize: '$8 && 8.9B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Gaming companies, Real estate firms, Educational institutions';
     competitiveAdvantage: '3D tools, AI integration, Blockchain support';
     integration: ['VR headsetsAR devicesBlockchain platforms3D engines'];
@@ -1654,25 +1730,41 @@ id: 'neuromorphic-computing-platform',
     id: 'autonomous - vehicle - ai - platform';
     name: 'Autonomous Vehicle AI Platform';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     tagline: 'Advanced AI for self - driving vehicles and transportation',
     description: 'Comprehensive AI platform for autonomous vehicles, providing perception, decision - making, and control systems for safe and efficient self - driving operations.';
     category: 'Autonomous Systems',
     price: '$3, 999';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'Computer vision systems_sensor fusion algorithms_path planning and navigation_safety and redundancy_real - time processing_performance optimization_custom vehicle integration_expert consultation';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.8;
     marketSize: '$12 && 12.4B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Automotive companies, Transportation firms, Logistics providers';
     competitiveAdvantage: 'Advanced AI, Safety focus, Real-time processing';
     integration: ['Vehicle systemsSensor arraysNavigation systemsCloud platforms'];
@@ -1698,23 +1790,39 @@ id: 'neuromorphic-computing-platform',
     tagline: 'AI - powered discovery of next - generation materials';
     description: 'Revolutionary platform that uses quantum computing and AI to discover and design new materials with extraordinary properties for various applications.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     category: 'Quantum Technology',
     price: '$4, 999';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'Quantum material simulationAI - powered discovery_property prediction_synthesis optimization_performance testing_custom material design_expert consultation_research collaboration';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.9;
     marketSize: '$1 && 1.6B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Materials companies, Research institutions, Manufacturing firms';
     competitiveAdvantage: 'Quantum simulation, AI discovery, Custom design';
     integration: ['Quantum computersAI platformsLab systemsResearch databases'];
@@ -1740,23 +1848,39 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Advanced climate prediction and analysis with AI'
     description: 'Comprehensive platform that uses artificial intelligence to model and predict climate patterns, enabling better understanding and response to climate change.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     category: 'Climate Technology',
     price: '$2, 499';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'AI climate models_real - time data analysis_predictive modeling_scenario simulation_data visualization_custom analysis_expert consultation_research collaboration';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.7;
     marketSize: '$3 && 3.8B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Government agencies, Research institutions, Environmental organizations';
     competitiveAdvantage: 'AI modeling, Real-time analysis, Predictive capabilities';
     integration: ['Climate sensorsSatellite dataWeather servicesResearch databases'];
@@ -1782,23 +1906,39 @@ id: 'neuromorphic-computing-platform',
     tagline: 'Quantum - enhanced neural networks for advanced AI';
     description: 'Revolutionary platform that combines quantum computing with neural networks to create more powerful and efficient artificial intelligence systems.';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     category: 'Quantum Technology',
     price: '$3, 499';
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     period: '/month';
     features: [;
       'Quantum neural networks_hybrid quantum - classical AIAdvanced optimization_performance benchmarking_custom model development_expert consultation_research collaboration_training and support';
     ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     rating: 4 && 4.8;
     marketSize: '$2 && 2.2B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'AI companies, Research institutions, Technology firms';
     competitiveAdvantage: 'Quantum enhancement, Advanced AI, Performance optimization';
     integration: ['Quantum computersAI frameworksCloud platformsResearch tools'];
@@ -1816,12 +1956,16 @@ id: 'neuromorphic-computing-platform',
     period: '/month';
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   technology?: string[]
 };
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
@@ -2011,12 +2155,18 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     rating: 4 && 4.6;
     marketSize: '$1 && 1.2B',
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies';
     competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management';
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }
@@ -2273,6 +2423,10 @@ export type Real2036SpecializedService = {;
 =======
 
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     price: '$6, 999';
     period: '/month';
     features: [;
@@ -2287,11 +2441,10 @@ export type Real2036SpecializedService = {;
     integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
     use_cases: ['Space tourism_training programs_safety management_customer experience'],
     technology: ['Space systems_safety protocols_training technology_customer management'];
-=======
 export type Real2036SpecializedService = {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 =======
 =======  marketSize?: string;
@@ -2303,7 +2456,14 @@ export type Real2036SpecializedService = {;
 ];
 ;
 
+<<<<<<< HEAD
 =======  id: string,;
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export type Real2036SpecializedService = {;
+
+  id: string,;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   name: string,;
   tagline: string,,
   description: string,;
@@ -2541,6 +2701,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
+<<<<<<< HEAD
   }
 ];
 ;
@@ -2818,3 +2979,15 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  },
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

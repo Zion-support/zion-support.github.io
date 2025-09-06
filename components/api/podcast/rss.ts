@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
 
@@ -33,6 +34,8 @@ function ensureStorage() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
@@ -43,8 +46,12 @@ const EPISODES_PATH = path.join(
   'episodes.json'
 );
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -57,6 +64,7 @@ function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
@@ -91,6 +99,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -98,8 +108,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
@@ -115,14 +129,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const items = episodes
     .filter(e => e.audio?.mp3Url)
-<<<<<<< HEAD
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
-=======
     .map(e => {
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       return `
     <item>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -147,22 +157,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 </rss>`;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
 return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -284,3 +302,8 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }</channel> </rss>`;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  items 
+}</channel> </rss>`;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,10 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       supabase
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -131,8 +134,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               (1000 * 60 * 60 * 24)
           0
         ) / filled.length
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
     const funnel = [
@@ -148,6 +155,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         { label: 'Hire', value: 2 }]})
@@ -192,12 +200,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 =======
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         { label: 'Hire', value: 2 }
       ]
     });
   }
         { label: 'Hire', value: 2 }]})
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }

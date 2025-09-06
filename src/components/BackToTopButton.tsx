@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react",
 
@@ -120,12 +121,17 @@ export function BackToTopButton() {;
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import React, { useEffect, useState } from 'react';
+import { ArrowUp } from 'lucide-react';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-export function BackToTopButton() {
+const BackToTopButton: React.FC = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const updateVisibility = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
@@ -134,30 +140,28 @@ export function BackToTopButton() {
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setVisible(window.scrollY > 400);
     };
+
     updateVisibility();
     window.addEventListener('scroll', updateVisibility);
     return () => window.removeEventListener('scroll', updateVisibility);
   }, []);
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const scrollToTop = () => {
-    const opts: ScrollToOptions = { top: 0, behavior: 'smooth' };
-    window.scrollTo(opts);
-    document.documentElement.scrollTo(opts);
-    document.body.scrollTo(opts);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-<<<<<<< HEAD
-  
+
   return (
     <button
       aria-label="Back to top"
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
+      className={`fixed bottom-6 right-6 z-50 rounded-full bg-blue-600 text-white p-3 shadow-lg transition-all duration-300 hover:bg-blue-700 hover:shadow-xl ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
 <<<<<<< HEAD
@@ -189,9 +193,10 @@ export function BackToTopButton() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     >
-      <ArrowUp className="h-4 w-4" />
+      <ArrowUp className="w-5 h-5" />
     </button>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -213,3 +218,8 @@ export function BackToTopButton() {
 }
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+
+export default BackToTopButton;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -5,6 +5,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function TechnologyInsightsPage() {
 
   const technologyTrends = [
@@ -198,6 +199,8 @@ export default function TechnologyInsightsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const technologyTrends = null;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
   ];
@@ -325,8 +328,12 @@ description:
                     >
                       Read More <span className='ml-1'>→</span>
                     </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                 ))}
               </div>
@@ -411,6 +418,7 @@ description:
                           key={focusIndex}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           className='text-sm text-white/60 flex items-center'
                         >
                           <span className='text-cyan-400 mr-2'>•</span>                          {focus}                {researchAreas.map((area, index) => (
@@ -436,6 +444,12 @@ description:
                           <span className='text-cyan-400 mr-2'>•</span>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          className='text-sm text-white/60 flex items-center'
+                        >
+                          <span className='text-cyan-400 mr-2'>•</span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {focus}
                         </li>;
                       ))}
@@ -496,6 +510,7 @@ description:
                     <Link
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
@@ -521,11 +536,13 @@ description:
 =======
                       Download PDF <span className="ml-1">→</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
                       Download PDF <span className='ml-1'>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </Link>
                       Download PDF <span className='ml-1'>→</span>                    </Link>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -592,6 +609,7 @@ description:
                     </p>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <ul className='space-y-2 text-white/70'>                      <li>• Advanced AI research and development</li>                  <div>
 
 =======
@@ -602,8 +620,10 @@ description:
                     <p className="text-white/80 mb-6">
                       Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <ul className='space-y-2 text-white/70'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
@@ -614,6 +634,7 @@ description:
                   </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     <div className="text-6xl mb-4">🧪</div>
 =======
@@ -622,14 +643,17 @@ description:
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                     <p className="text-white/60 text-sm">Innovation Lab</p>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
                     <div className='text-6xl mb-4'>🧪</div>
                     <p className='text-white/60 text-sm'>Innovation Lab</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -646,6 +670,8 @@ description:
                   href="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -659,7 +685,7 @@ description:
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-bold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200 transform hover:scale-105'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get in Touch
 <<<<<<< HEAD
@@ -685,6 +711,7 @@ description:
                 </Link>
                 <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                   href="/blog"
                   Read Our Blog;
                 </Link>;
@@ -706,6 +733,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   href='/blog'
                   className='px-8 py-3 bg-white/10 text-white font-bold rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-200'
                 >
@@ -719,5 +748,9 @@ description:
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

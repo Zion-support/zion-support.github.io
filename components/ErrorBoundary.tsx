@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
 
         </div>
@@ -187,11 +188,17 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 interface Props {;
@@ -203,6 +210,12 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;}
 =======
+=======
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
@@ -210,6 +223,7 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
@@ -307,23 +321,20 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 =======
+=======
+}
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-<<<<<<< HEAD
-    hasError: false,
-  };
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-=======
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
+origin/cursor/automate-test-fix-improve-and-merge-code-a7a7
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -360,10 +371,12 @@ export class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
@@ -442,25 +455,25 @@ class ErrorBoundary extends Component<Props, State> {
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
+<<<<<<< HEAD
       console.error('Production error:', error, errorInfo);    }
 =======
 
+=======
+      console.error('Production error:', error, errorInfo);
+
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error details:', error);
+      console.error('Error info:', errorInfo);
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-      // Fallback UI
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-=======
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error: ', error, errorInfo);
 
@@ -511,7 +524,7 @@ class ErrorBoundary extends Component<Props, State> {
                   </button>
                 </div>
               </div>
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
             </div>
             <h2 className="text-xl font-semibold text-gray-900 text-center mb-2">
               Something went wrong
@@ -602,8 +615,12 @@ export default class ErrorBoundary extends Component<Props, State> {
               >;
                 Refresh Page;
               </button>;
+<<<<<<< HEAD
               <button                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
 =======
+=======
+              <button
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -624,6 +641,11 @@ export default class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
+<<<<<<< HEAD
+=======
+              <button 
+                onClick={() => this.setState({ hasError: false })} 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -633,6 +655,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -640,6 +663,17 @@ export default class ErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}                </pre>
+=======
+
+              <details className="mt-6 text-left">
+                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
+                  {this.state.error.stack}
+
+                </pre>
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </details>
             )}
           </div>;
@@ -677,6 +711,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
+<<<<<<< HEAD
 =======
 
               <details className="mt-6 text-left">
@@ -691,6 +726,12 @@ export default class ErrorBoundary extends Component<Props, State> {
             )}
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+main
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
 <<<<<<< HEAD
         </div>
@@ -706,6 +747,7 @@ export default class ErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     return this.props.children;
   }
@@ -715,6 +757,10 @@ export default class ErrorBoundary extends Component<Props, State> {
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return this && this.props.children;
   }
 }
@@ -881,6 +927,7 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
@@ -894,10 +941,14 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return this.props.children;
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1098,3 +1149,10 @@ export default ErrorBoundary;
 =======
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

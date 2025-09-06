@@ -162,11 +162,8 @@ describe('AccessibilityEnhancer', () => {
     const element = screen.getByRole('button');
     expect(element).toHaveAttribute('tabindex', '-1');
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -184,6 +181,9 @@ describe('AccessibilityEnhancer', () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 =======
@@ -210,6 +210,7 @@ describe('AccessibilityEnhancer'
     fireEvent.keyDown(element, { "key";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -225,9 +226,18 @@ describe('AccessibilityEnhancer'
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
-});
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 });
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+});
+<<<<<<< HEAD
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

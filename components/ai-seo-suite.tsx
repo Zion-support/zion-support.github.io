@@ -9,6 +9,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {
@@ -248,6 +249,8 @@ export default function AISeosuitePage() {
   const features = [
     {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = null;
@@ -345,7 +348,7 @@ export default function AISeosuitePage() {
         'Custom dashboards',
       ],
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const pricingPlans = [
     {
@@ -354,6 +357,7 @@ export default function AISeosuitePage() {
       period: '/month'
       description: 'Perfect for small websites and blogs'
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -764,6 +768,8 @@ export default function AISeosuitePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     };
     {;
       category: 'On-Page SEO',;
@@ -811,6 +817,8 @@ export default function AISeosuitePage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 'Up to 5 websites',
         'Basic keyword research',
         'Monthly site audits',
@@ -1069,7 +1077,7 @@ description:
             analytics, and intelligent optimization
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
               href='#pricing'
               size='lg'
@@ -1081,6 +1089,7 @@ description:
               href='#demo'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button
               href="#pricing"
@@ -1104,6 +1113,8 @@ description:
             </p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white/20 hover:border-white/40 hover:bg-white/5'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -1162,12 +1173,13 @@ description:
                   <div
                     className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {feature.icon}
                   </div>;
                 </div>;
                 <h3 className='text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300'>;
                   {feature.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1231,6 +1243,12 @@ description:
                   {feature.description}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                </h3>
+                <p className='text-gray-400 leading-relaxed'>
+                  {feature.description}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1256,6 +1274,7 @@ description:
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* SEO Tools Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1296,6 +1315,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1309,8 +1330,12 @@ description:
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1324,6 +1349,7 @@ description:
                       {tool && tool.tools.map((toolName, toolIndex) => (;
                         <div
                           key={toolIndex}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className='flex items-center text-sm text-gray-300'>;
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools && seoTools.map((tool, index) => (;
@@ -1360,6 +1386,12 @@ description:
                           <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          className='flex items-center text-sm text-gray-300'
+                        >
+                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {toolName}
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1390,6 +1422,7 @@ description:
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Success Metrics Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1478,6 +1511,8 @@ description:
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1503,6 +1538,7 @@ description:
                 </h3>
                 <p className='text-gray-400 text-sm'>{metric.description}</p>
               </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             ))}
@@ -1514,11 +1550,15 @@ description:
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       {/* Use Cases Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1538,6 +1578,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -1551,8 +1593,12 @@ description:
 
 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'>;
@@ -1569,6 +1615,7 @@ description:
                       {useCase && useCase.benefits.map((benefit, benefitIndex) => (;
                         <div
                           key={benefitIndex}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           className='flex items-center text-sm text-gray-300'>;
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases && useCases.map((useCase, index) => (;
@@ -1608,6 +1655,12 @@ description:
                           <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          className='flex items-center text-sm text-gray-300'
+                        >
+                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {benefit}
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1641,6 +1694,7 @@ description:
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Pricing Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1940,6 +1994,8 @@ description:
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 <div className='text-center mb-8'>
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 <section
         id='pricing'
         className='py-24 bg-gray-900 relative overflow-hidden'
@@ -1968,7 +2024,7 @@ description:
                   </div>
                 )}
 <div className='text-center mb-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
                   </h3>;
@@ -2004,13 +2060,10 @@ description:
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
                       key={featureIndex}
-<<<<<<< HEAD
-
-=======
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {feature}
                     </li>;
                   ))}
@@ -2043,6 +2096,7 @@ description:
 =======
                 <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   href="/contact"
                   className={`w-full ${plan.buttonColor} text-white`}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -2051,13 +2105,15 @@ description:
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
                   size='lg'
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </Button>
               </Card>
             ))}
@@ -2082,6 +2138,7 @@ href='/contact'
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Integrations Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -2148,6 +2205,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
@@ -2175,8 +2234,12 @@ href='/contact'
                   {integration.description}
                 </p>
               </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -2243,6 +2306,7 @@ href='/contact'
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'>;
               <Play className='w-5 h-5 mr-2' />              Watch Demo            Ready to Dominate Search Rankings?;
           </h2>;
@@ -2255,6 +2319,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Button
               href="/contact"
               variant="secondary"
@@ -2297,6 +2363,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               <Play className='w-5 h-5 mr-2' />
@@ -2308,5 +2376,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

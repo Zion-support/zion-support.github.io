@@ -55,6 +55,7 @@ const os = require('os')
         '15min'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       const result = execSync('top -bn1 | grep "Cpu(s)"
@@ -68,3 +69,8 @@ const os = require('os')
       const result = execSync('top -bn1 | grep "Cpu(s)"
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

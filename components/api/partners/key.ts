@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
@@ -12,6 +13,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   authenticateRequest
   listApiKeys
   saveApiKeys;
@@ -42,17 +49,13 @@ export default async function handler(
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
-<<<<<<< HEAD
-  const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false;
-  // Create new key
-  const now = new Date().toISOString();
-  const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
-
-import type { NextApiRequest, NextApiResponse } from "next";
-=======
 const existing = keys.find(k => k.id === apiKey.id);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -105,22 +108,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const newKey = {
 =======
   }
-<<<<<<< HEAD
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-  const { apiKey } = auth;
-  const keys = await listApiKeys();
-  // Deactivate old key
-  const existing = keys.find((k) => k.id === apiKey.id);
-=======
   const auth = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
   const newKey = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     id: uuidv4(), partnerId: auth.partner.id,
@@ -230,6 +224,8 @@ if (existing.active = false) {
     id: uuidv4(),
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: uuidv4(),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     partnerId: auth.partner.id,
@@ -257,5 +253,9 @@ id: uuidv4(),
   return res.status(201).json({ apiKey: newKey.key });
   return res.status(201).json({ apiKey: newKey.key })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

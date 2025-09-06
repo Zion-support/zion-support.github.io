@@ -411,14 +411,10 @@ EOF
 # Display ecosystem status
 display_ecosystem_status() {
     banner "🧠 Enhanced Intelligent PM2 Ecosystem V2 Status"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    echo "====="
-=======
     echo "============================================================="
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
     echo "============================================================="
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     echo "============================================================="
@@ -430,6 +426,11 @@ display_ecosystem_status() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    echo "====="
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     echo
     
     # Show PM2 process list
@@ -541,14 +542,10 @@ run_comprehensive_health_check() {
 # Main execution
 main() {
     banner "🚀 Enhanced Intelligent PM2 Ecosystem V2 Startup"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    banner "="
-=======
     banner "=================================================="
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+
     banner "=================================================="
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     banner "=================================================="
@@ -560,6 +557,11 @@ main() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    banner "="
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     echo
     
     # System checks

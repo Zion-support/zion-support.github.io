@@ -44,6 +44,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Milestone } from '../../utils/types/milestones';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -51,10 +52,12 @@ import { Milestone } from '../../utils/types/milestones';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Milestone } from '../../utils/types/milestones';
 type Props = any;
 type Props = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   milestone: Milestone;
   project_id: string;
   role: 'client' | 'talent' | 'admin';
@@ -155,6 +158,7 @@ export default function MilestoneCard({
           className='text-sm text-blue-600'
           onClick={() => setExpanded(v => !v)}
 <<<<<<< HEAD
+<<<<<<< HEAD
         >          {expanded ? 'Hide' : 'Details'}
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -209,6 +213,8 @@ type Props = {
   const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           {expanded ? 'Hide' : 'Details'}
         </button>
@@ -230,7 +236,7 @@ type Props = {
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
             <div key={step} className='flex items-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <div
   on_action: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestone_id: string) => Promise < void> | void;
 }
@@ -268,6 +274,7 @@ function MilestoneCard() {
               <div;
                 className={
 <<<<<<< HEAD
+<<<<<<< HEAD
                   'h - 2 w - 2 rounded - full ' +;
                   (idx <= current_index ? 'bg - green - 600' : 'bg - gray - 300')                }
                 title={step}
@@ -280,9 +287,11 @@ function MilestoneCard() {
                 className={
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   'h-2 w-2 rounded-full ' +
                   (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 }
                 title={step}
               />
@@ -292,6 +301,7 @@ function MilestoneCard() {
                     'h - 0.5 w - 8 ' +;
                     (idx < current_index ? 'bg - green - 600' : 'bg - gray - 300');
                   }
+<<<<<<< HEAD
 <<<<<<< HEAD
                 />              )}
             </div>
@@ -328,10 +338,15 @@ function MilestoneCard() {
                 />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               )}
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -365,6 +380,8 @@ function MilestoneCard() {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-2 text-xs text-gray-700'>
           Status: {milestone.status}
         </div>
@@ -379,12 +396,17 @@ function MilestoneCard() {
               <ul className='list-disc ml-5'>
                 {milestone.attachments.map(a => (
                   <li key={a.id}>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <a
                       className='text-blue-600 underline'
                       href={a && a.url}
                       target='_blank'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -420,6 +442,12 @@ function MilestoneCard() {
                       {a.label || a.url}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      rel='noreferrer'
+                    >
+                      {a.label || a.url}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </a>
                   </li>
                       rel='noreferrer'>                      {a && a.label || a && a.url}              <div className="font-medium">Attachments</div>;
@@ -462,6 +490,7 @@ function MilestoneCard() {
           )}
         </div>
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -507,20 +536,27 @@ function MilestoneCard() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <div className='mt-4 flex flex-wrap gap-2'>
         {canClientMarkInProgress && (
           <button
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'
             onClick={() => onAction('in_progress', milestone.id)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             Mark In Progress
           </button>
         )}
         {canTalentSubmit && (;
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
@@ -539,12 +575,18 @@ className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
             onClick={() => onAction('submitted', milestone.id)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'
+            onClick={() => onAction('submitted', milestone.id)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             Submit Work
           </button>
         )}
         {canClientApprove && (
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -561,12 +603,18 @@ className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
             onClick={() => onAction('approved', milestone.id)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-3 py-1 text-sm rounded bg-green-600 text-white hover:bg-green-700'
+            onClick={() => onAction('approved', milestone.id)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -583,12 +631,18 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
             onClick={() => onAction('paid', milestone.id)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
+            onClick={() => onAction('paid', milestone.id)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             Mark as Paid
           </button>
         )}
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 );
@@ -672,3 +726,8 @@ className='px-3 py-1 text-sm rounded bg-slate-700 text-white hover:bg-slate-800'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

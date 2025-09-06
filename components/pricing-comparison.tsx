@@ -13,10 +13,6 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
 export default function PricingComparisonPage() {
-<<<<<<< HEAD
-
-  const serviceComparisons = [
-=======
 starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month',
@@ -78,7 +74,7 @@ pros: ['Affordable', 'Good for beginners', 'Basic features'],
       color: 'from-purple-500 to-indigo-600',
       icon: '🤖',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       service: 'Cloud Monitoring',
       zionPricing: {
@@ -105,6 +101,7 @@ pros: [
           rating: '4.5/5',
 pros: ['Good APM', 'User-based pricing', 'Reliable'],
           cons: [
+<<<<<<< HEAD
 <<<<<<< HEAD
             'Higher pricing',
             'Limited customization',
@@ -217,6 +214,8 @@ pros: ['Good APM', 'User-based pricing', 'Reliable'],
       color: 'text - yellow - 400';
     }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
             'Expensive for teams',
             'Limited server monitoring',
             'Complex setup',
@@ -295,7 +294,7 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
       color: 'from-blue-500 to-cyan-600',
       icon: '🚀',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   const marketInsights = [
     {
@@ -314,6 +313,7 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-purple-400',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       insight: 'Enterprise-grade reliability without enterprise pricing'
       icon: <Star className='w-6 h-6' />
@@ -381,6 +381,8 @@ icon: <DollarSign className='w-6 h-6' />,
           Competition;
         </title>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       insight: 'Enterprise-grade reliability without enterprise pricing',
       icon: <Star className='w-6 h-6' />,
       color: 'text-yellow-400',
@@ -407,7 +409,7 @@ icon: <DollarSign className='w-6 h-6' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
       <div className='min-h-screen bg-black'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
@@ -430,20 +432,16 @@ icon: <DollarSign className='w-6 h-6' />,
                 href='#comparison'
                 variant='primary'
                 size='lg'
-<<<<<<< HEAD
-                className='bg-indigo-600 hover:bg-indigo-700 text-white'>;
-                View Comparison;
-              </Button>;
-=======
                 className='bg-indigo-600 hover:bg-indigo-700 text-white'
               >
                 View Comparison
               </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
 href='/pricing'
                 variant='outline'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'>                href="#comparison";
                 variant="primary";
@@ -463,6 +461,8 @@ href='/pricing'
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
               >
                 View Our Pricing
@@ -490,7 +490,7 @@ href='/pricing'
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {insight.icon}
 <<<<<<< HEAD
 
@@ -528,6 +528,7 @@ href='/pricing'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Detailed Comparison */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         <section id="comparison" className="py-24 bg-gray-800">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -541,6 +542,8 @@ href='/pricing'
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See exactly how each service compares in features, pricing, and value.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -555,7 +558,7 @@ href='/pricing'
             {serviceComparisons.map((service, serviceIndex) => (
 <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <div
                     className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
                     {service && service.icon}
@@ -617,6 +620,7 @@ href='/pricing'
                     </span>;
                     <span>;
                       Enterprise:{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                       </span>;
                     </span>;
@@ -681,6 +685,8 @@ href='/pricing'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <span className='text-purple-400 font-semibold'>
                         {service.zionPricing.enterprise}
                       </span>
@@ -730,8 +736,12 @@ href='/pricing'
                           </div>
                           <div className='flex items-center justify-center mb-4'>
                             {[...Array(5)].map((_, i) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -741,6 +751,7 @@ href='/pricing'
                                 }`}
                               />;
                             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -758,6 +769,12 @@ href='/pricing'
                             </span>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<span className='text-sm text-gray-400 ml-2'>
+                              {competitor.rating}
+                            </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -773,6 +790,7 @@ href='/pricing'
                                 {competitor.pros.map((pro, proIndex) => (
                                   <li
                                     key={proIndex}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                     className='flex items-center'>;
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;
@@ -804,10 +822,12 @@ href='/pricing'
                                     <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                     className='flex items-center'
                                   >
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                     {pro}
                                   </li>;
                                 ))}
@@ -815,6 +835,7 @@ href='/pricing'
                               </ul>
                             </div>
                             <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -829,6 +850,8 @@ href='/pricing'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <p className='text-red-400 font-medium mb-1'>
                                 Cons:
                               </p>
@@ -839,7 +862,7 @@ href='/pricing'
                                     className='flex items-center'
                                   >
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                     {con}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                   </li>
@@ -877,6 +900,7 @@ href='/pricing'
                           </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -884,11 +908,13 @@ href='/pricing'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                             <p className="text-green-400 font-semibold text-sm">{competitor.savings}</p>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='text-center'>
                             <p className='text-green-400 font-semibold text-sm'>
                               {competitor.savings}
                             </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                           </div>
                         </div>
                       </Card>
@@ -930,6 +956,7 @@ href='/pricing'
 =======
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
           <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
             <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
@@ -942,6 +969,8 @@ href='/pricing'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
@@ -951,12 +980,17 @@ href='/pricing'
               choose Zion.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
                 href='/ai-content-generator'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >
                 Try AI Content Generator
@@ -967,16 +1001,23 @@ href='/pricing'
                 Try AI Content Generator;
               </Button>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try AI Content Generator
               </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
 href='/cloud-monitoring'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='bg-white text-indigo-600 hover:bg-gray-100'              >
                 Try Cloud Monitoring
@@ -987,16 +1028,23 @@ href='/cloud-monitoring'
                 Try Cloud Monitoring;
               </Button>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try Cloud Monitoring
               </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
 href='/devops-automation'
                 variant='secondary'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1055,6 +1103,8 @@ href='/devops-automation'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='bg-white text-indigo-600 hover:bg-gray-100'
               >
                 Try DevOps Automation
@@ -1066,5 +1116,9 @@ href='/devops-automation'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

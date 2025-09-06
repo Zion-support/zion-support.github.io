@@ -9,6 +9,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Rocket
@@ -173,12 +174,17 @@ import {
 import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
   Heart, ShieldCheck, Users, Briefcase, BookOpen;
   Target, Microscope, Cpu, Database, Cloud, Lock;
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
@@ -270,6 +276,8 @@ export default function UltraFuturisticFooter2034() {
 export default function UltraFuturisticFooter2034() {;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
  } from 'lucide-react';
 const contactInfo = null;
@@ -440,7 +448,7 @@ export default function UltraFuturisticFooter2034() {
   return (
 <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
 export default function UltraFuturisticFooter2034() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -449,6 +457,7 @@ export default function UltraFuturisticFooter2034() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
           <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
             {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='lg:col-span-1'>              <motion && motion.div      {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">;
@@ -474,8 +483,10 @@ export default function UltraFuturisticFooter2034() {
   return (
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='lg:col-span-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
 <<<<<<< HEAD
@@ -490,6 +501,7 @@ export default function UltraFuturisticFooter2034() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -512,6 +524,10 @@ export default function UltraFuturisticFooter2034() {
 className='space-y-6'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-6'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -535,6 +551,7 @@ className='space-y-6'
                   innovative tools for the future.
                 </p>
                 {/* Stats */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
 <<<<<<< HEAD
@@ -596,6 +613,8 @@ className='space-y-6'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <div className='grid grid-cols-2 gap-4'>
                   {stats.map((stat, index) => (
                     <motion.div
@@ -614,8 +633,12 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                     </motion.div>
                   ))}
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Contact Info */}
 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
@@ -640,6 +663,7 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
 <<<<<<< HEAD
@@ -683,8 +707,10 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <span className='text-sm'>{contactInfo.address}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </motion.div>
@@ -723,6 +749,7 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     <motion.div
                       key={category.title}
@@ -730,6 +757,8 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='space-y-8'
               >
                 <h3 className='text-xl font-bold text-white mb-6'>
@@ -739,12 +768,17 @@ className='space-y-8'
                   {serviceCategories.map((category, index) => (
                     <motion.div
                       key={category.title}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       className='space-y-4'
@@ -756,6 +790,10 @@ className='space-y-8'
 className='space-y-4'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-4'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -851,11 +889,8 @@ className='space-y-4'
 =======
 
             {/* Quick Links & Social */}
-<<<<<<< HEAD
-            <div className="lg:col-span-1">
-=======
 <div className='lg:col-span-1'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <motion.div
 
             <div className='lg:col-span-1'>              <motion.div
@@ -870,6 +905,7 @@ className='space-y-4'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -889,6 +925,10 @@ className='space-y-4'
 className='space-y-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 {/* Quick Links */}
                 <div>;
@@ -896,6 +936,7 @@ className='space-y-8'
                   <div className="space-y-2">;
                     {quickLinks && quickLinks.map((link) => (;
                       <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         key={link.name}
@@ -919,6 +960,8 @@ className='space-y-8'
                         <span className="text-sm">{link.name}</span>
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         key={link.name}
                         href={link.href}
                         className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
@@ -930,6 +973,7 @@ className='space-y-8'
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <span className='text-sm'>{link.name}</span>                      </Link>
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -948,6 +992,9 @@ className='space-y-8'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Company Links */}
                 <div>
 <h4 className='text-lg font-semibold text-white mb-4'>
@@ -963,6 +1010,7 @@ className='space-y-8'
                         <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -974,8 +1022,10 @@ className='space-y-8'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         <span className='text-sm'>{link.name}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </Link>
 
                     ))}
@@ -984,6 +1034,7 @@ className='space-y-8'
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Social Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1005,6 +1056,8 @@ className='space-y-8'
                         <social.icon className='w-5 h-5' />                      </Link>                      <Link
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <div>
 <h4 className='text-lg font-semibold text-white mb-4'>
                     Follow Us
@@ -1017,7 +1070,7 @@ className='space-y-8'
                         href={social.href}
                         target='_blank'
                         rel='noopener noreferrer'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
                       >
                         <social.icon className='w-5 h-5' />
@@ -1087,6 +1140,7 @@ className='space-y-8'
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1208,6 +1262,8 @@ className='space-y-8'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mt-16 pt-8 border-t border-white/10'
           >
             <h4 className='text-lg font-semibold text-white mb-6 text-center'>
@@ -1216,13 +1272,18 @@ className='mt-16 pt-8 border-t border-white/10'
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
               {certifications.map((cert, index) => (
                 <motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   key={cert}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1234,6 +1295,8 @@ className='mt-16 pt-8 border-t border-white/10'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
                 >
                   <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
@@ -1241,7 +1304,7 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                     {cert}
                   </span>
                 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           </motion.div>
@@ -1302,11 +1365,14 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                 <Link
                   href='/terms'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='hover:text-cyan-400 transition-colors'
                 >
                   Terms of Service
@@ -1326,13 +1392,18 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
 =======
                 <span className='text-sm'>Made with ❤️ for the future</span>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
           </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1375,3 +1446,8 @@ export default function UltraFuturisticFooter2034() {;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

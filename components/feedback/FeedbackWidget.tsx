@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -54,6 +55,10 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
 export type FeedbackWidgetProps = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+export type FeedbackWidgetProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -82,6 +87,7 @@ const effectiveResponseId = useMemo(
     [responseId];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
   const submit = async () => {;
     if (!rating) {;
@@ -156,6 +162,8 @@ const effectiveResponseId = useMemo(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   const submit = async () => {
     if (!rating) {
@@ -187,7 +195,7 @@ rating,
       setSubmitting(false);
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
@@ -209,6 +217,7 @@ rating,
             <button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               type='button'              onClick={() => setRating(rating === 'up' ? null : 'up')}      {submitted ? (
 
         <div className="text-sm text-emerald-700 dark:text-emerald-300">Thanks for your feedback!</div>
@@ -224,8 +233,10 @@ rating,
             <button
               type="button"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               type='button'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -461,6 +472,7 @@ if ( {) {
             <button
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -469,6 +481,10 @@ if ( {) {
 type='button'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+type='button'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -480,11 +496,14 @@ type='button'
           <textarea
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 placeholder='Optional feedback (what worked, what didn’t)'
             value={comment}
             onChange={e => setComment(e.target.value.slice(0, 2000))}
@@ -498,14 +517,19 @@ placeholder='Optional feedback (what worked, what didn’t)'
               disabled={submitting}
               className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
             >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
         </div>
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -526,6 +550,9 @@ placeholder='Optional feedback (what worked, what didn’t)'
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

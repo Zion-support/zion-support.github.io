@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Document, {
 
@@ -22,16 +23,19 @@ import Document, {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import Document, {
 } from 'next/document';
-<<<<<<< HEAD
-
-=======
 export default function Document() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <Html lang='en'>;
       <Head>;
@@ -54,6 +58,7 @@ export default function Document() {
           rel='stylesheet'
 =======
           rel='stylesheet'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
@@ -136,8 +141,10 @@ export default function Document() {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
       <body>
@@ -159,7 +166,11 @@ export default function Document() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

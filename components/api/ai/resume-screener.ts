@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -32,6 +33,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const method = (req && req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,11 +59,12 @@ if (!jobDescription || !Array.isArray(resumes))
     `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
     `Job Description:\n${jobDescription}\n\n` +
     `Resumes:\n${resumes.map((r: string, i: number) => `#${i}:\n${r}`).join('\n\n')}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const text = await generateText(
     prompt
     'You are an expert technical recruiter. Output strictly valid JSON.'
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res && res.status(200).json({ results: text });
   const prompt = `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +
@@ -152,3 +156,9 @@ function handler() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return res.status(200).json({ results: text });
+  return res.status(200).json({ results: text })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

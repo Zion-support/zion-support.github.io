@@ -698,6 +698,7 @@ if (require.main === module) {
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ESLintErrorCleaner
@@ -711,3 +712,8 @@ module.exports = ESLintErrorCleaner
 module.exports = ESLintErrorCleaner
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = ESLintErrorCleaner
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

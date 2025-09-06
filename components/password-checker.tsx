@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Button from '../components/ui/Button';
 
@@ -54,18 +55,21 @@ export default function PasswordCheckerPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 export default function PasswordCheckerPage() {;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function PasswordCheckerPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -101,6 +105,8 @@ export default function PasswordCheckerPage() {;
 
       analyzePassword(password);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [checks, setChecks] = useState({
     length: false;
     uppercase: false;
@@ -115,13 +121,11 @@ export default function PasswordCheckerPage() {;
   useEffect(() => {
     if (password) {
 analyzePassword(password);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     } else {
       resetAnalysis();
     }
   }, [password]);
-<<<<<<< HEAD
-=======
       length: pass.length >= 8,
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
@@ -130,7 +134,7 @@ symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
       noCommon: !isCommonPassword(pass),
       noSequential: !hasSequentialChars(pass),
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 <<<<<<< HEAD
 
@@ -163,6 +167,7 @@ symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
     if (score >= 90) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       setStrengthColor('text-green-400')
     } else if (score >= 50) {
@@ -180,6 +185,12 @@ setStrengthColor('text-green-400');
     } else if (score >= 70) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      setStrengthText('Very Strong');
+setStrengthColor('text-green-400');
+    } else if (score >= 70) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setStrengthText('Strong');
       setStrengthColor('text-green-400');
     } else if (score >= 50) {;
@@ -192,6 +203,7 @@ setStrengthColor('text-green-400');
       setStrengthText('Very Weak');
       setStrengthColor('text-red-400');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -209,6 +221,8 @@ setStrengthColor('text-green-400');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Generate suggestions
     generateSuggestions(newChecks, pass);
   };
@@ -261,13 +275,18 @@ if (!checks.length)
     setSuggestions(suggestions);
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const resetAnalysis = () => {
     setStrength(0);
     setStrengthText('');
     setStrengthColor('');
     setChecks({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -323,6 +342,8 @@ if (!checks.length)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       length: false,
       uppercase: false,
       lowercase: false,
@@ -361,13 +382,18 @@ const charset =
   };
 
   const getStrengthBarColor = () => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
 <<<<<<< HEAD
     if (strength >= 30) return 'bg-orange-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -400,6 +426,8 @@ const charset =
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return 'bg-red-400';
   };
 
@@ -410,8 +438,12 @@ return 'bg-red-400';
       <XCircle className='w-5 h-5 text-red-400' />
     );
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   return (
     <>
@@ -463,6 +495,7 @@ return 'bg-red-400';
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
 <<<<<<< HEAD
+<<<<<<< HEAD
             protect your accounts and data.          </p>      </Head>
     <>
       <Head>
@@ -476,13 +509,16 @@ return 'bg-red-400';
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             protect your accounts and data.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>
       </section>
       {/* Password Checker Tool */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -707,6 +743,8 @@ if (return 'bg - orange - 400') {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -752,12 +790,17 @@ if (return 'bg - orange - 400') {
                     </button>
                   </div>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Generate Password */}
                 <div>;
                   <Button
                     onClick={generateStrongPassword}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'>;
                     <RefreshCw className='w-5 h-5 mr-2' />                    Generate Strong Password                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold";
@@ -806,6 +849,8 @@ if (return 'bg - orange - 400') {
 =======
                 {/* Generated Password Display */}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-3 text-lg font-semibold'
                   >
                     <RefreshCw className='w-5 h-5 mr-2' />
@@ -830,7 +875,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                       </Button>
                     </div>
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {generatedPassword}
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
@@ -844,6 +889,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 )}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">
 
 =======
@@ -854,6 +900,11 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 <div className='text-sm text-gray-400'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+<div className='text-sm text-gray-400'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <p>• Real-time strength analysis</p>
                   <p>• Multiple security criteria</p>
                   <p>• Detailed feedback and suggestions</p>
@@ -863,6 +914,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
             </Card>
 =======
             {/* Strength Analysis */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -918,6 +970,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />
@@ -939,8 +993,12 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                     </div>
 <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
 
 =======
@@ -996,6 +1054,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
+<<<<<<< HEAD
 <<<<<<< HEAD
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
@@ -1154,11 +1213,16 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                           >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
                             {key === 'numbers' && 'Contains number'}
                             {key === 'symbols' && 'Contains special character'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1203,6 +1267,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                           </div>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             {key === 'noCommon' && 'Not a common password'}
 {key === 'noSequential' &&
                               'No sequential characters'}
@@ -1228,7 +1294,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                               {suggestion}
                             </span>
                           </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         ))}
                       </div>
                     </div>
@@ -1363,19 +1429,11 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Features */}
-<<<<<<< HEAD
-
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Advanced Password Security Features
-=======
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Comprehensive password analysis with real-time feedback and security recommendations.
@@ -1423,6 +1481,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
               </p>
             </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1438,6 +1497,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔒</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -1447,8 +1508,12 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 Your passwords are never stored or transmitted - analysis
                 happens locally in your browser.
               </p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </Card>
           </div>
         </div>
@@ -1460,10 +1525,13 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 =======
       {/* Security Tips */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -1497,17 +1565,24 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 </li>
                 <li className='flex items-start'>
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   Update passwords regularly
                 </li>
               </ul>
             </Card>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>❌</div>
@@ -1552,8 +1627,12 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 </li>
                 <li className='flex items-start'>
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   Avoid writing passwords down
                 </li>
               </ul>
@@ -1561,6 +1640,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1820,12 +1900,18 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1839,6 +1925,7 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
@@ -1880,6 +1967,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-indigo-600'
             >
               View Pricing
@@ -1890,5 +1979,9 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

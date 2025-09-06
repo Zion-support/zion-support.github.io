@@ -1,9 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,6 +36,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';  {
 =======
 import React from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,32 +45,34 @@ import React from 'react';
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import dynamic from 'next / dynamic';
 ;
 const NotificationCenter = dynamic (
   () => import ('../components / notifications / NotificationCenter'),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+
+
 import React from 'react';
 import dynamic from 'next/dynamic';
 const NotificationCenter = null;
 const NotificationCenter = dynamic(
   () => import('../components/notifications/NotificationCenter')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
     ssr: false
   }
 );
-<<<<<<< HEAD
-=======
 export default function NotificationsPage() {
   return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
   ssr: false})
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -76,6 +85,7 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -104,3 +114,8 @@ function NotificationsPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

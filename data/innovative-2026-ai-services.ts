@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
   rating: number;
@@ -444,6 +445,8 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { ServiceVariant } from '../types / service - variants';
 
@@ -451,8 +454,11 @@ export interface Innovative2026AIService {
 
   {
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -466,6 +472,7 @@ export interface Innovative2026AIService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -509,6 +516,13 @@ export interface Innovative2026AIService {
 
     reviews: 950
   }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  contactInfo: {
+
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
@@ -517,7 +531,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable insights with AI', price: '$299',
     period: '/month',
-=======
     mobile: string;
     email: string;
     address: string;
@@ -533,12 +546,13 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     tagline: 'Transform data into actionable insights with AI';
     price: '$299';
     period: '/month';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, predicts outcomes, and provides actionable recommendations in real-time.',
     features: [
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models';
       'Collaborative workspace for teamsMobile app for on-the-go insights'
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
     popular: true, icon: '🧠',
     color: 'from-blue-600 to-purple-700', textColor: 'text-blue-400',
@@ -884,11 +898,19 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 <<<<<<< HEAD
 ];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 =======
 ];import { ServiceVariant } from '../types/service-variants',;
@@ -1156,6 +1178,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 <<<<<<< HEAD
     reviews: 950;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 =======
     reviews: 950;  }
@@ -1180,6 +1203,15 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     popular: true;
     icon: '🧠';
     color: 'from-blue-600 to-purple-700';
@@ -1564,5 +1596,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     reviews: 950
   }
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

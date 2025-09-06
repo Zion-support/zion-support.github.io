@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       if (stored === 'talent' |stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
       if (stored === 'talent' || stored === 'client') {
@@ -37,6 +40,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { createContext, useContext, useEffect, useState } from 'react';
 type UserRole = any;
   setRole: (role: UserRole) => void;
@@ -52,8 +57,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
       if (stored === 'talent' || stored === 'client') {
 setRoleState(stored);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
     } catch {}
   }, []);
@@ -61,6 +70,7 @@ setRoleState(stored);
     setRoleState(r);
 try {
       window.localStorage.setItem('userRole', r);
+<<<<<<< HEAD
 <<<<<<< HEAD
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;    } catch {}
   }
@@ -184,6 +194,8 @@ return useContext(AuthContext);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
     } catch {}
   }
@@ -194,5 +206,9 @@ return useContext(AuthContext);
   );
 export function useAuth() {
   return useContext(AuthContext);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

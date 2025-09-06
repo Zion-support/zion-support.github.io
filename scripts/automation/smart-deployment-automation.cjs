@@ -78,6 +78,7 @@ class SmartDeploymentAutomation {}
         }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         
@@ -91,6 +92,11 @@ class SmartDeploymentAutomation {}
         
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -288,6 +294,7 @@ if ( {})
     automation.run().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SmartDeploymentAutomation;
@@ -301,3 +308,8 @@ module.exports = SmartDeploymentAutomation;
 module.exports = SmartDeploymentAutomation;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = SmartDeploymentAutomation;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

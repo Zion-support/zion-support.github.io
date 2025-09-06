@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -12,19 +13,12 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-console.log("Starting enhanced error detector...");
 
-async function detectAllErrors() {
-  const errors = {
-    typescript: [],
-    linting: [],
-    build: [],
-    dependencies: [],
-    syntax: [],
-    timestamp: new Date().toISOString()
-  };
 
+<<<<<<< HEAD
   try {
     // 1. Detect TypeScript errors
     console.log("Detecting TypeScript errors...");
@@ -302,6 +296,8 @@ module.exports = { detectAllErrors };
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -429,6 +425,7 @@ function checkSyntaxErrors(content")
         "type": "syntax"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(" Error detection "failed": ")
@@ -445,3 +442,9 @@ function checkSyntaxErrors(content")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error(" Error detection "failed": ")
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

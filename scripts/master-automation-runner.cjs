@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { execSync } = require('child_process')
 console.log(' Starting Master Automation Runner...')
     "name"
@@ -41,6 +49,7 @@ console.log(' Starting Master Automation Runner...')
     recommendations.push('"CRITICAL")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.log(' Master Automation "Summary")
@@ -54,3 +63,8 @@ console.log(' Starting Master Automation Runner...')
   console.log(' Master Automation "Summary")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.log(' Master Automation "Summary")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

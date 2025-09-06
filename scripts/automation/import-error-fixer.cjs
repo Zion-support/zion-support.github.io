@@ -21,6 +21,7 @@ const glob = require('glob')
         this.log(`Remaining "errors"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(`Error during import fixing "process"`)
@@ -34,3 +35,8 @@ const glob = require('glob')
       this.log(`Error during import fixing "process"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log(`Error during import fixing "process"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

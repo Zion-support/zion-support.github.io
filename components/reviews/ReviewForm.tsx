@@ -1,17 +1,24 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   categories?: {
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -63,12 +70,11 @@ type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
 
 const ReviewForm: React.FC<Props> = ({ initial }) => {;
-=======
 import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props> = ({ initial }) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
   const [anonymous, setAnonymous] = useState(false);
@@ -79,6 +85,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     wouldWorkWithAgain?: boolean;
   }
@@ -122,6 +129,8 @@ function handle_submit() {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const res = await fetch('/api/reviews/submit', {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -132,8 +141,12 @@ function handle_submit() {
 rating,
           text,
           anonymous,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           categories: {
             communication
             qualityOfWork
@@ -143,6 +156,7 @@ rating,
         })
       });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
       setMessage('Review submitted! Pending admin approval.');
 <<<<<<< HEAD
@@ -163,6 +177,10 @@ rating,
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+      setMessage('Review submitted! Pending admin approval.');
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const data = await res.json ();
       if (throw new Error (data.error || 'Failed to submit')) {
   $2
@@ -181,9 +199,17 @@ rating,
       <div>;
         <label className='block text - sm font - medium mb - 2'>Your Review</label>          categories: {
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   return (
 
+=======
+
+            communication;
+            qualityOfWork;
+            timeliness;
+            wouldWorkWithAgain}})});
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
   return (
@@ -203,6 +229,7 @@ rating,
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
             communication;
@@ -214,6 +241,9 @@ rating,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch (err: any) {
       setMessage(err.message);
     } finally {
@@ -228,12 +258,17 @@ rating,
       </div>
       <div>
 <label className='block text-sm font-medium mb-2'>Your Review</label>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <textarea
           className='w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500'
           rows={5}
           value={text}
+<<<<<<< HEAD
 <<<<<<< HEAD
           onChange={e => setText(e && e.target.value)}          required;
         />;
@@ -242,31 +277,47 @@ rating,
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           onChange={e => setText(e.target.value)}
           required
         />
       </div>
 
 <div className='flex items-center gap-3'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <input
           id='anonymous'
           type='checkbox'
           checked={anonymous}
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       set_submitting (false);
     }
   }
@@ -316,6 +367,7 @@ rating,
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Quality of Work</span>;
@@ -324,40 +376,50 @@ rating,
               on_change={v => setQualityOfWork (v)}
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}            />;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
           </div>;
           <span className='pill'>Optional</span>;
         </div>;
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
               onChange={e => setWouldWorkWithAgain(e && e.target.checked)}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className='enhanced - card'>;
           <div className='flex items - center justify - between mb - 2'>;
             <span className='text - sm'>Would Work With Again</span>;
             <input;
               type='checkbox';
               checked={wouldWorkWithAgain}
-<<<<<<< HEAD
-              on_change={e => setWouldWorkWithAgain (e.target.checked)}
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           </div>;
           <span className='pill'>Optional</span>        </div>;
       </div>;
+<<<<<<< HEAD
 
       </button>;
 <<<<<<< HEAD
@@ -377,10 +439,11 @@ export default ReviewForm;    </form>;
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <button
         type="submit"
         className="enhanced-button enhanced-button-primary"
-=======
               onChange={e => setWouldWorkWithAgain(e.target.checked)}
             />
           </div>
@@ -391,13 +454,12 @@ export default ReviewForm;    </form>;
       <button
 type='submit'
         className='enhanced-button enhanced-button-primary'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         disabled={submitting}
       >;
         {submitting ? 'Submitting...' : 'Submit Review'}
-<<<<<<< HEAD
-};
 
+<<<<<<< HEAD
 export default ReviewForm;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -419,6 +481,8 @@ export default ReviewForm;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </button>
 
 {message && <p className='text-sm'>{message}</p>}
@@ -427,5 +491,9 @@ export default ReviewForm;
 };
 
 export default ReviewForm;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -29,6 +29,7 @@ import { getBadgeLabels } from '../../utils/kyc';
 import { VerifiedBadge } from './VerifiedBadge';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
 
   const labels = getBadgeLabels(profile |undefined);
@@ -61,9 +62,15 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
   const labels = null;
   return <VerifiedBadge labels={labels} />
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

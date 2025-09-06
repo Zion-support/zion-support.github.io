@@ -81,6 +81,7 @@ const { execSync } = require("child_process")
   arrayOfFiles = await this.getAllFiles(fullPath")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const fullPath = path.join(dirPath, ")
@@ -94,3 +95,8 @@ const { execSync } = require("child_process")
   const fullPath = path.join(dirPath, ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  const fullPath = path.join(dirPath, ")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

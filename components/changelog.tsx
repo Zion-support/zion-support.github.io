@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     <main className='mx-auto max-w-4xl px-4 py-12'>
@@ -28,9 +29,11 @@ function ChangelogPage() {
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 type Props = any;
     return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
       {generatedAt && (
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
@@ -47,6 +50,7 @@ type Props = any;
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </pre>) : (
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text-gray-600">Generated: {generated_at}</p>)}
@@ -58,10 +62,12 @@ type Props = any;
       ) : (
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         </pre>
       ) : (
         <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           No changelog generated yet.
         </div>
       )}
@@ -129,6 +135,7 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   } catch {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
@@ -172,9 +179,11 @@ export async /**
  */
 function getStaticProps() {
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 
 export async function getStaticProps() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const file = path.join(process.cwd(), 'CHANGELOG.md');
     const content = fs.readFileSync(file, 'utf8');
@@ -183,17 +192,14 @@ export async function getStaticProps() {
       revalidate: 300,
     };
   } catch {
-<<<<<<< HEAD
-  }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-
-=======
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
   } catch {
@@ -206,3 +212,6 @@ export async function getStaticProps() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

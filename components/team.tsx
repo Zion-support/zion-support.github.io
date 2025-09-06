@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 const OrgChartPage = dynamic(() => import('../components/org/OrgChartPage'), { ssr: false }),
@@ -78,6 +79,8 @@ function TeamPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import dynamic from 'next/dynamic';
 const OrgChartPage = null;
@@ -86,5 +89,9 @@ export default function TeamPage() {
 export default function TeamPage() {
   return <OrgChartPage />;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

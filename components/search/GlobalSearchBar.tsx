@@ -2,12 +2,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -78,6 +81,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -86,6 +90,10 @@ import { useRouter } from 'next/router';
 
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function GlobalSearchBar() {
 
 export default function GlobalSearchBar() {;
@@ -101,11 +109,16 @@ export default function GlobalSearchBar() {;
       return;      return
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -367,11 +380,15 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     
     return this.props.children;
@@ -393,6 +410,7 @@ export default function GlobalSearchBar() {
       setSuggestions([]);
       return
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -402,6 +420,13 @@ import { useRouter } from 'next/router';
   const router = null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+import { useEffect, useMemo, useRef, useState  } from 'react';
+import { useRouter } from 'next/router';
+  const router = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 =======
       return;      return    }
@@ -419,15 +444,7 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
       } catch {}
     }
     const id = setTimeout(run, 150);
-<<<<<<< HEAD
-    return () => clearTimeout(id);  }, [query]);        const j = await r.json();
-        setSuggestions(j.suggestions |[]);
-        setOpen(true)
-      } catch {}
-    }
-    const id = setTimeout(run, 150);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     return () => clearTimeout(id);
   }, [query]);
   const onSubmit = (e?: React.FormEvent) => {
@@ -451,8 +468,6 @@ const Speech: any =
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
-<<<<<<< HEAD
-=======
       const transcript = e.results?.[0]?.[0]?.transcript || '';
 if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     };
@@ -468,11 +483,12 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
         aria-label='Search'
       />
       <div className='absolute inset-y-0 right-2 flex items-center gap-2'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <button
           type='button'
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
+<<<<<<< HEAD
 <<<<<<< HEAD
           aria-label='Voice search'
         >
@@ -523,6 +539,9 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
             {suggestions.map((s, i) => (
               <li key={i}>
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
                 <button
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -532,6 +551,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                     setOpen(false);
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -559,6 +579,14 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+                >
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
                 >;
                   {s}
@@ -568,6 +596,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
           </ul>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -587,11 +616,18 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -601,6 +637,9 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </button>
               </li>
             ))}
@@ -608,6 +647,7 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
         </div>
       )}
     </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -630,6 +670,12 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+  )
+}
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { use_router } from 'next / router';
 =======
                 >import { use_router } from 'next / router';
@@ -804,19 +850,22 @@ if (return) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
+ursor/fix-website-loading-errors-and-merge-6662
   );
 
 );  )
 }
   );
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -834,3 +883,10 @@ if (return) {
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

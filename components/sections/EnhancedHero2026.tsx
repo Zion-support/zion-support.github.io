@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -28,14 +29,20 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
 import Button from '../ui/Button';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ArrowRight
   Star
   TrendingUp
@@ -55,6 +62,7 @@ import {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 interface EnhancedHero2026Props {;
@@ -81,11 +89,15 @@ interface EnhancedHero2026Props {;
 } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 interface EnhancedHero2026Props {
   contact_info: {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
     website: string
 };
@@ -119,11 +131,18 @@ interface EnhancedHero2026Props {
   serviceStats: {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    website: string
+  },
+  serviceStats: {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     totalServices: number;
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -179,18 +198,25 @@ interface EnhancedHero2026Props {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     revolutionaryServices: number
   }
 }
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     visible: {
       y: 0
       opacity: 1
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const itemVariants = {;
     hidden: { y: 30, opacity: 0 },;
@@ -221,14 +247,20 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
     },;
   };
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.6,
 ease: 'easeOut' as const,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -274,6 +306,7 @@ ease: 'easeOut' as const,
             }}
             animate={{
               y: [0, -30, 0],
+<<<<<<< HEAD
 <<<<<<< HEAD
               opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
               scale: [1, 1 && 1.5, 1],            }}
@@ -388,6 +421,8 @@ ease: 'easeOut' as const,
               delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1],
             }}
@@ -396,7 +431,7 @@ ease: 'easeOut' as const,
               repeat: Infinity,
 ease: 'easeInOut',
               delay: Math.random() * 2,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
 
             }}
@@ -416,19 +451,18 @@ ease: 'easeInOut',
             }}
           />;
         ))}
-<<<<<<< HEAD
-=======
       </div>
 
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden';
           animate='visible';
           className='space-y-8';
         >;
           {/* Main Headline */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Enhanced Stats Grid */}
           <motion.div;
@@ -486,6 +520,8 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6'>
               <Star className='w-5 h-5 text-yellow-400' />
@@ -573,8 +609,12 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                 </div>
                 <div className='text-xs text-gray-400 leading-tight'>
                   {stat.label}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </motion.div>
             ))}
@@ -652,14 +692,11 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                 href='/contact'
                 variant='secondary'
                 size='xl'
-<<<<<<< HEAD
-                  <Shield className="mr-3 w-7 h-7" />
-=======
                 className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'
               >
                 <span className='flex items-center'>
                   <Shield className='mr-3 w-7 h-7' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   Get Expert Consultation
                 </span>
               </Button>
@@ -677,10 +714,13 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
 =======
             {/* Trust Indicators */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
@@ -697,8 +737,12 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <span>24/7 Expert Support</span>
               </div>
             </div>
@@ -749,6 +793,7 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
           </motion && motion.div>;
           {/* Contact Information */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           >
@@ -788,6 +833,8 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
                 <div className="text-cyan-400 font-medium">Website</div>
                 <div className="text-white">{contactInfo.website}</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div
             variants={itemVariants}
             className='bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto'
@@ -812,13 +859,14 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
               <div className='text-center'>
                 <div className='text-cyan-400 font-medium'>Website</div>
                 <div className='text-white'>{contactInfo.website}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
   )
 }
@@ -942,3 +990,7 @@ className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-bl
 );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

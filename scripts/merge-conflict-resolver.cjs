@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process")"console.log(" Merge Conflict Resolver")"console.log("=====")class MergeConflictResolver { constructor() { this.resolvedFiles = [] this.errors = [] } async resolveConflicts() { try { / Get list of files with conflicts" const conflictFiles = execSync("git diff --name-only --diff-filter=U", {" encoding: "utf8"" }).trim().split("\n").filter(f => f) console.log(`Found ${conflictFiles.length} files with conflicts`) for (const file of conflictFiles) { if (file) { await this.resolveFileConflicts(file) } }` console.log(`\n Resolved conflicts in ${this.resolvedFiles.length} files`)` console.log(` Errors in ${this.errors.length} files`) if (this.errors.length > 0) {"" console.log("\nErrors: ")` this.errors.forEach(error => console.log(` - ${error}`)) } } catch (error) {"" console.error("Error resolving conflicts: ", error.message) } } async resolveFileConflicts(filePath) { try {" const content = fs.readFileSync(filePath, "utf8") let resolvedContent = content" / Strategy: Keep our changes (HEAD) for most conflicts / Remove conflict markers and keep the HEAD version resolvedContent = resolvedContent.replace('"`'"`
@@ -72,6 +73,12 @@ console.log('🎉 Merge conflict resolver completed!');
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -150,6 +157,7 @@ console.log('=====')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -176,3 +184,15 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+
+
+
+
+
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

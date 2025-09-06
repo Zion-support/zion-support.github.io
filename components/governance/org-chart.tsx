@@ -16,6 +16,7 @@ const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), 
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import dynamic from 'next / dynamic';
@@ -67,4 +68,10 @@ export default function OrgChartGovernancePage() {;
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

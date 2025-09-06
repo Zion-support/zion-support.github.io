@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 
@@ -371,6 +372,8 @@ const contactInfo = {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
   Brain, Atom, Globe, Shield, Cpu, Database;
   Cloud, Smartphone, Palette, Search, MessageSquare;
@@ -379,8 +382,12 @@ import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
   Phone, Mail, MapPin, ExternalLink, Building
  } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const serviceCategories = [
   {
     title: '🚀 2028 Cutting-Edge Innovations'
@@ -388,6 +395,7 @@ const serviceCategories = [
     color: 'from-violet-600 to-purple-600'
     description: 'Beyond the future of technology'
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       { name: 'Quantum Consciousness Interface', href: '/quantum-consciousness-interface', description: 'Bridge quantum computing with consciousness', price: '$15,999/month' };
       { name: 'Autonomous AI Civilization', href: '/autonomous-ai-civilization-platform', description: 'Create AI civilizations', price: '$19,999/month' };
@@ -411,6 +419,8 @@ const companyLinks = [
     icon: Rocket
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-platform',
@@ -606,7 +616,7 @@ const companyLinks = [
     href: '/ultimate-2028-services-showcase',
     icon: Rocket,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: '⭐ Ultimate 2028'
     href: '/ultimate-2028-services-showcase'
@@ -624,6 +634,7 @@ const companyLinks = [
   { name: '💼 Careers', href: '/careers', icon: Users },
 { name: '📞 Contact', href: '/contact', icon: MessageCircle },
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 const _serviceCategories = [
@@ -724,6 +735,8 @@ const company_links = [;
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const technologyLinks = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
@@ -749,8 +762,12 @@ export default function UltraFuturisticNavigation2027() {
 =======
 { name: '🔄 Automation', href: '/automation', icon: Cpu },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function UltraFuturisticNavigation2027() {
 export default function UltraFuturisticNavigation2027() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -758,6 +775,7 @@ export default function UltraFuturisticNavigation2027() {;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     setIsClient(true);  }, []);    setIsClient(true)
@@ -768,10 +786,15 @@ export default function UltraFuturisticNavigation2027() {;
 setIsClient(true);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+setIsClient(true);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }, []);
   useEffect(() => {
     if (!isClient) return;
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       setIsScrolled(window.scrollY > 20);
@@ -1100,6 +1123,8 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/services?category=Enterprise%20IT',;
           description: 'Explore enterprise tools',;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsScrolled(window.scrollY > 20);
     };
 
@@ -1398,14 +1423,19 @@ website: 'https://ziontechgroup.com',
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />
       <div className='relative container mx-auto px-4'>
         <div className='flex items-center justify-between h-20'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Logo */}
           <Link
             href='/'
             className='flex items-center space-x-3 group relative z-10'>;
             <motion&& motion.div
               className='w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30'
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
     {
@@ -1654,6 +1684,8 @@ website: 'https://ziontechgroup.com',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               whileHover={{ rotate: 5, scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -1664,12 +1696,17 @@ website: 'https://ziontechgroup.com',
                 Zion Tech Group
               </div>
               <div className='text-xs text-gray-400 group-hover:text-cyan-300 transition-colors'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Revolutionary Technology Solutions
               </div>
             </div>
           </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Desktop Navigation */}
@@ -1743,6 +1780,8 @@ website: 'https://ziontechgroup.com',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Desktop Navigation */}
 <nav className='hidden xl:flex items-center space-x-1'>
             {navigation.map(item => (
@@ -1762,7 +1801,7 @@ website: 'https://ziontechgroup.com',
                   <span className='font-medium'>{item.name}</span>
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />
                 </motion.button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                 {/* Dropdown Menu */}
@@ -1772,6 +1811,7 @@ website: 'https://ziontechgroup.com',
                       initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
                       animate={{ opacity: 1, y: 0, scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1793,6 +1833,12 @@ website: 'https://ziontechgroup.com',
 className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -1868,6 +1914,7 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                                   {child.price}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                                 </div>
@@ -1919,9 +1966,11 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 </div>
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                               </div>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1989,12 +2038,8 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
           </nav>
 
           {/* Right Side */}
-<<<<<<< HEAD
-          <div className='flex items-center space-x-4'>
-
-=======
 <div className='flex items-center space-x-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
               <a
@@ -2044,6 +2089,7 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
             </div>
             {/* CTA Button */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -2078,6 +2124,8 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href='/contact'
@@ -2087,8 +2135,12 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                 <span>Get Started</span>
               </Link>
             </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -2098,24 +2150,8 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-<<<<<<< HEAD
-              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors"
-            >
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors';
-            >;
-              {isMenuOpen ? (;
-                <X className='w-6 h-6' />;
-              ) : (;
-                <Menu className='w-6 h-6' />;
-              )}            </button>              className="xl:hidden p-2 text-gray-300 hover:text-white transition-colors";
-            >;
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
               )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </button>
           </div>
         </div>
@@ -2146,6 +2182,7 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
             exit={{ opacity: 0, height: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.3 }}
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
 
@@ -2156,13 +2193,19 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             transition={{ duration: 0.3 }}
 className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
           >
             <div className='container mx-auto px-4 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {/* Services */}
                 <div>;
                   <h3 className="text-lg font-semibold text-white mb-4">Services</h3>;
@@ -2227,6 +2270,7 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                           <div className={`p - 2 rounded - lg bg - gradient - to - br ${item.color}`}>;
                             {item.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -2251,6 +2295,8 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </div>
                           <div>
                             <div className='font-medium text-white'>
@@ -2267,8 +2313,12 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                 </div>
                 {/* Quick Links & Contact */}
 <div className='space-y-6'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -2313,8 +2363,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                           className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition-all duration-200";
                         >;
                           {link.icon}
-<<<<<<< HEAD
-=======
                           <span className='text-white'>{link.name}</span>
                         </Link>
                       ))}
@@ -2325,7 +2373,7 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       Contact Info
                     </h3>
                     <div className='space-y-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
                         href={`tel:${contactInfo && contactInfo.mobile}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
@@ -2333,6 +2381,7 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                         <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
                       </a>;
                       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -2354,6 +2403,8 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                         <MapPin className="w-4 h-4 text-cyan-400" />
                         <span className="text-white text-sm">{contactInfo.address}</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={`mailto:${contactInfo.email}`}
                         className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'
                       >
@@ -2365,12 +2416,13 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                         <span className='text-white text-sm'>
                           {contactInfo.address}
                         </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2415,6 +2467,8 @@ export default UltraFuturisticNavigation2027;
   item.color;
 }shadow - lg`;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50'>
                 <Link
@@ -2437,7 +2491,7 @@ export default UltraFuturisticNavigation2027;
   `p-2 rounded-lg bg-gradient-to-br $ {
   item.color
 }shadow-lg`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }> {
   item.icon;
 }</div> </motion.button> {
@@ -2463,6 +2517,7 @@ export default UltraFuturisticNavigation2027;
 }`;
 }> {
 <<<<<<< HEAD
+<<<<<<< HEAD
   item.icon;
 }</div> <div> </div> </a> </div>) );
 }</div> </div>) );
@@ -2479,6 +2534,8 @@ export default UltraFuturisticNavigation2027;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   item.icon 
 }</div> <div> </div> </a> </div>) ) 
 }</div> </div>) ) 
@@ -2486,5 +2543,9 @@ export default UltraFuturisticNavigation2027;
 }</AnimatePresence> </header>) 
 };
 export default UltraFuturisticNavigation2027;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

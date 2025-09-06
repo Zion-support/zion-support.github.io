@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Head from 'next/head';
 export default function OffworldConsole() {;
@@ -55,6 +56,8 @@ export default function OffworldConsole() {;
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { useState  } from 'react';
 import Head from 'next/head';
     const res = null;
@@ -98,8 +101,12 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       body: JSON.stringify({ message: 'We build beyond platforms.' }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
         <input
           className='border p-2 w-full'
@@ -293,6 +300,7 @@ function broadcast() {
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -389,3 +397,7 @@ function broadcast() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

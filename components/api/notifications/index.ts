@@ -15,6 +15,7 @@ function getUserId(req: NextApiRequest): string {
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
   const cookie = req && req.headers.cookie || '';
@@ -67,6 +68,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       filter = 'all',
       countOnly,
       limit = '50',
@@ -108,8 +111,12 @@ const count = (data as any)?.length || 0; // when head:true, data is empty; Supa
 return res.status(200).json({ count: exactCount || 0 });
       }
       return res.status(200).json({ count });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
     // Build query based on filter
     let query = supabase
@@ -123,6 +130,7 @@ return res.status(200).json({ count: exactCount || 0 });
       query = query && query.eq('type', filter as NotificationType);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -134,17 +142,24 @@ return res.status(200).json({ count: exactCount || 0 });
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const { data, error } = await query.range(
       parseInt(offset, 10)
       parseInt(offset, 10) + parseInt(limit, 10) - 1
     );
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -166,6 +181,8 @@ return res.status(200).json({ count: exactCount || 0 });
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: 'seed-1',
           user_id: userId,
           type: 'onboarding',
@@ -201,7 +218,7 @@ id: 'seed-1',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
       return res.status(200).json({ notifications: fallback });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   };
@@ -216,6 +233,7 @@ return res.status(500).json({ error: 'Unexpected error' });
   }    return res.status(500).json({ error: 'Unexpected error' })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   };
 }
@@ -228,3 +246,6 @@ return res.status(500).json({ error: 'Unexpected error' });
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

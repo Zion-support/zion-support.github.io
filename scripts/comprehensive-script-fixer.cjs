@@ -42,6 +42,7 @@ const path = require('path')
       this.log(`⚠ ${this.errors.length} files had "errors"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       this.log(`� Script fixing "failed"`)
@@ -55,3 +56,8 @@ const path = require('path')
       this.log(`� Script fixing "failed"`)
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      this.log(`� Script fixing "failed"`)
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

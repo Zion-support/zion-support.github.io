@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
@@ -52,6 +53,9 @@ jest.mock('next/router', () => ({
 =======
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -156,10 +160,13 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   // Reset / clear mocks;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 
 interface SetupProps {
@@ -174,6 +181,7 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
@@ -210,6 +218,10 @@ global.window.scrollTo = jest.fn();
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { afterEach, vi } from 'vitest'
@@ -219,7 +231,12 @@ afterEach(() => {
   cleanup()
   vi.restoreAllMocks()
 })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -16,16 +16,15 @@ id: string;
   price: string,
   description: string;
   features: string[];
-<<<<<<< HEAD
-=======
   link: string
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
   title?: string;
   subtitle?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -82,6 +81,8 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function UltraFuturisticServiceShowcase2029({
   services,
@@ -91,8 +92,12 @@ export default function UltraFuturisticServiceShowcase2029({
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">;
@@ -100,6 +105,7 @@ export default function UltraFuturisticServiceShowcase2029({
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {title}
 <<<<<<< HEAD
@@ -128,6 +134,8 @@ export default function UltraFuturisticServiceShowcase2029({
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           transition={{ duration: 0.6 }}
 className='text-center mb-16'
         >
@@ -139,12 +147,17 @@ className='text-center mb-16'
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.slice(0, 6).map((service, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
@@ -157,6 +170,12 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
             >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20'
+            >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
                   <div className='w-3 h-3 bg-cyan-400 rounded-full animate-pulse' />
@@ -229,6 +248,7 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
               <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
                 {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -277,6 +297,8 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
             </motion && motion.div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </p>
               <div className='flex items-center justify-between mb-4'>
                 <span className='text-2xl font-bold text-cyan-400'>
@@ -296,7 +318,7 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
                 <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
               </Link>
             </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         <motion.div
 <<<<<<< HEAD
@@ -314,6 +336,7 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='text-center mt-12'
 
@@ -380,6 +403,8 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 className='text-center mt-12'
         >
           <Link
@@ -388,8 +413,12 @@ className='text-center mt-12'
           >
             View All Services
             <ArrowRight className='w-4 h-4 ml-2' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </Link>
         </motion.div>
       </div>
@@ -401,6 +430,7 @@ className='text-center mt-12'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               </p>;
@@ -453,5 +483,8 @@ className='text-center mt-12'
     </section>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

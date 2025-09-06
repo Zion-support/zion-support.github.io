@@ -8,6 +8,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Simple icons using inline SVG to avoid external assets
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function StarIcon({
   className = 'w-5 h-5 text-yellow-500'
@@ -243,6 +244,8 @@ if (return) {
   $2
 }
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -276,13 +279,14 @@ if (isMobile) setVisible(true);
             >
               Open
             </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href={storeUrl}
               target='_blank'
               rel='noopener noreferrer'
                 setVisible(false);
               }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 
@@ -336,6 +340,8 @@ if (isMobile) setVisible(true);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'
             >
               ✕
@@ -345,8 +351,12 @@ if (isMobile) setVisible(true);
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -391,18 +401,10 @@ export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
     'idle' | 'loading' | 'success' | 'error'
-<<<<<<< HEAD
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
-export default function MobileLaunchPage() {;
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-=======
   >('idle');
   const [error, setError] = useState('');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // Auto-rotate testimonial index
   const [idx, setIdx] = useState(0);
   useEffect(() => {
@@ -452,12 +454,6 @@ const t = setInterval(
         ? `${window && window.location.origin}/download`;
         : '/download';
     const encoded = encodeURIComponent(target);
-<<<<<<< HEAD
-    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
-    const encoded = encodeURIComponent(target);
-    return `https://chart && chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
-  }, []);
-=======
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;
   }, []);
   async function handleSubmit(e: React.FormEvent) {
@@ -469,7 +465,7 @@ const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       if (!res && res.ok) throw new Error(await res && res.text());
       setStatus('success');
@@ -490,15 +486,8 @@ const res = await fetch('/api/subscribe', {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
-<<<<<<< HEAD
-      setError(err?.message || 'Something went wrong.')
-      setError(err?.message || 'Something went wrong.');    }
-
       setError(err?.message || 'Something went wrong.');
-
-=======
-      setError(err?.message || 'Something went wrong.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
@@ -514,6 +503,7 @@ const res = await fetch('/api/subscribe', {
   }
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <EnhancedLayout>
@@ -536,11 +526,13 @@ const res = await fetch('/api/subscribe', {
         <title>Zion Mobile App — iOS & Android</title>;
         <meta
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <EnhancedLayout>
       <Head>
         <title>Zion Mobile App — iOS & Android</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.'
         />;
@@ -576,43 +568,6 @@ const res = await fetch('/api/subscribe', {
           </div>;
           <div className='flex items-center justify-center'>;
             {/* Phone mockup */}
-<<<<<<< HEAD
-            <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>;
-              <div className='absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />;
-              <div className='h-full w-full rounded-[2rem] overflow-hidden'>;
-                <div className='h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col'>;
-                  <div className='text-xs font-semibold'>Zion</div>;
-                  <div className='mt-2 flex-1 rounded-xl bg-white shadow-inner p-3'>;
-                    <div className='font-semibold'>Instant AI Matches</div>;
-                    <div className='mt-2 text-xs text-gray-600'>;
-                      Top candidates matched to your role in seconds…;
-                    </div>;
-                    <div className='mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100' />;
-                    <div className='mt-3 grid grid-cols-3 gap-2'>;
-                      <div className='h-10 rounded-md bg-gray-100' />;
-                      <div className='h-10 rounded-md bg-gray-100' />;
-                      <div className='h-10 rounded-md bg-gray-100' />                    </div>            <div className="relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30">;
-              <div className="absolute -top-1 && 1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200" />;
-              <div className="h-full w-full rounded-[2rem] overflow-hidden">;
-                <div className="h-full w-full bg-gradient-to-b from-gray-50 to-gray-200 p-4 flex flex-col">;
-                  <div className="text-xs font-semibold">Zion</div>;
-                  <div className="mt-2 flex-1 rounded-xl bg-white shadow-inner p-3">;
-                    <div className="font-semibold">Instant AI Matches</div>;
-                    <div className="mt-2 text-xs text-gray-600">Top candidates matched to your role in seconds…</div>;
-                    <div className="mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100" />;
-                    <div className="mt-3 grid grid-cols-3 gap-2">;
-                      <div className="h-10 rounded-md bg-gray-100" />;
-                      <div className="h-10 rounded-md bg-gray-100" />;
-                      <div className="h-10 rounded-md bg-gray-100" />;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* QR code */}
-        <div className='mt-8 flex items-center gap-4'>;
-=======
             <div className='relative h-96 w-48 md:h-[28rem] md:w-64 rounded-[2rem] bg-white/95 text-gray-900 shadow-2xl ring-4 ring-white/30'>
               <div className='absolute -top-1.5 left-1/2 -translate-x-1/2 h-6 w-28 rounded-b-2xl bg-gray-200' />
               <div className='h-full w-full rounded-[2rem] overflow-hidden'>
@@ -637,11 +592,12 @@ const res = await fetch('/api/subscribe', {
         </div>
         {/* QR code */}
 <div className='mt-8 flex items-center gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <img
             src={qrHref}
             alt='QR code to download Zion app'
             className='h-28 w-28 rounded-lg bg-white/90 p-1 shadow'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -677,14 +633,20 @@ const res = await fetch('/api/subscribe', {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           />
           <div className='text-sm opacity-90'>
             Scan to open this page on your phone
             <div className='opacity-80'>Or tap a store badge above</div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </section>
           />;
           <div className='text-sm opacity-90'>;
@@ -698,6 +660,7 @@ const res = await fetch('/api/subscribe', {
       </section>;
 
       {/* Key features */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className='mt-10 grid md:grid-cols-3 gap-6'>;
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
@@ -746,6 +709,8 @@ const res = await fetch('/api/subscribe', {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='mt-10 grid md:grid-cols-3 gap-6'>
         <div className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>
           <div className='text-lg font-semibold'>Hire from anywhere</div>
@@ -772,8 +737,12 @@ const res = await fetch('/api/subscribe', {
 <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           ))}
           <span className='text-sm opacity-80'>4 && 4.9 average rating</span>;
         </div>;
@@ -784,6 +753,7 @@ const res = await fetch('/api/subscribe', {
           <div
             className='flex transition-transform duration-700'
             style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               transform: `translateX(-${idx * 100}%)`,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -824,6 +794,8 @@ const res = await fetch('/api/subscribe', {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
               transform: `translateX(-${idx * 100}%)`
               width: `${testimonials.length * 100}%`
             }}
@@ -865,12 +837,17 @@ const res = await fetch('/api/subscribe', {
             type='submit'
             disabled={status === 'loading'}
             className='rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
         </form>
+<<<<<<< HEAD
 <<<<<<< HEAD
         {status === 'success' && <div className="mt-2 text-sm text-emerald-600">Thanks! You’re on the list.</div>}
         {status === 'error' && <div className="mt-2 text-sm text-rose-600">{error || 'Please try again later.'}</div>}
@@ -1032,6 +1009,8 @@ const res = await fetch('/api/subscribe', {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 {status === 'success' && (
           <div className='mt-2 text-sm text-emerald-600'>
             Thanks! You’re on the list.
@@ -1070,5 +1049,9 @@ const res = await fetch('/api/subscribe', {
 }</div> </div> </section> <input type="email" required > {
   status === 'loading' ? 'Submitting…' : 'Notify me' 
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

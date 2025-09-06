@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
@@ -22,6 +23,8 @@ export function earnTokens(;
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -128,8 +131,12 @@ export function redeemToCredits(
 export function getAllTransactions() {
   return tokenStore.getTransactions();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -138,14 +145,17 @@ export function getConfig() {
     totalSupply: 1000000
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TokenTransaction {;  id: string;
 =======
 <<<<<<< HEAD
 export interface TokenTransaction {;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   userId: string;
@@ -185,10 +195,34 @@ export interface TokenTransaction {
 
 }
 // Mock data storage - replace with actual database;
+<<<<<<< HEAD
 let transactions: TokenTransaction[] = [];    type: 'redeem',
     reason,
     timestamp: Date.now(),
   };
+=======
+let transactions: TokenTransaction[] = [];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: "issue",
+    reason,
+    timestamp: Date.now(),
+  };
+  
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   transactions.push(transaction);
   return transaction;
 <<<<<<< HEAD
@@ -203,6 +237,7 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -283,6 +318,8 @@ export function handleAction(userId: string, action: string, metadata?: Record<s
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -310,18 +347,20 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 ;
   transactions.push (transaction);
 
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     type: 'redeem',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     reason,
     timestamp: Date.now(),
   };
-<<<<<<< HEAD
-
-=======
   
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
@@ -333,11 +372,19 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
   transactions.push(transaction);
   return transaction;
+=======
+
+  transactions.push(transaction);
+ursor/fix-website-loading-errors-and-merge-6662
+  return transaction;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
     timestamp: Date.now()
 };
 // Token service utilities
@@ -472,6 +519,8 @@ export function set_config (
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -555,10 +604,13 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   }
   return [...tokenBalances];
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   transactions.push(transaction);
 =======
 =======  transactions.push(transaction);
@@ -568,18 +620,30 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
+<<<<<<< HEAD
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-}
-<<<<<<< HEAD
+=======
 
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -597,3 +661,11 @@ export function set_config (
   tokenStore.setConfig({ ...current, ...partial });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+}
+  const current = tokenStore.getConfig();
+  tokenStore.setConfig({ ...current, ...partial });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

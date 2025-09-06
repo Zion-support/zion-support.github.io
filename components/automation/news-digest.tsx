@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -62,10 +63,12 @@ export async function getServerSideProps() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     items = json.items || [];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import fs from 'fs';
 import path from 'path';
 type NewsItem = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
@@ -100,6 +103,7 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
 
@@ -130,4 +134,10 @@ function NewsDigestPage() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

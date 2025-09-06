@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,8 +25,13 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-      supabase
 =======
+import { createServerClient } from '../../../utils/supabase/server';
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      supabase
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -36,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
 supabase
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -113,6 +119,7 @@ topTags: Object && Object.entries(tagCounts)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -211,14 +218,20 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -230,10 +243,16 @@ function handler() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }import { createServerClient } from '../../../utils / supabase / server';
 =======
 }
 
+=======
+}
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { createServerClient } from '../../../utils / supabase / server';
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 ;
@@ -322,6 +341,7 @@ function handler() {
   }
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -342,3 +362,9 @@ function handler() {
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -2,6 +2,7 @@ import useSWR from 'swr';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function useCurrentUser() {
 =======
@@ -46,10 +47,14 @@ function useCurrentUser() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     user: data?.user || null,
     loading: !data && !error,
     error,
     mutate,
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
     loading: !data && !error;
@@ -96,3 +101,9 @@ export function useCurrentUser() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  };
+    mutate}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

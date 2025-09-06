@@ -33,9 +33,13 @@ import {Check, ExternalLink} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function BrowserAutomationCloudPage() {
   const features = [
@@ -46,7 +50,12 @@ export default function BrowserAutomationCloudPage() {
     'Webhook callbacks and REST API',;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 
@@ -118,11 +127,20 @@ export default function BrowserAutomationCloudPage() {
 <<<<<<< HEAD
 =======
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+<<<<<<< HEAD
               <ExternalLink className='w-4 h-4' /> Puppeteer;    </>);	return (
 =======
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
 
+=======
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
+              <ExternalLink className='w-4 h-4' /> Puppeteer;
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -192,7 +210,13 @@ function BrowserAutomationCloudPage() {
           </div>;
         </section>;
       </main>;
+<<<<<<< HEAD
 
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </>);	return (
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   <>;
@@ -225,9 +249,12 @@ function BrowserAutomationCloudPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
@@ -239,27 +266,9 @@ import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
-<<<<<<< HEAD
-
-export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
-
-  const features = [
-    'Parallel Playwright/Puppeteer execution'
-    'Queued jobs with retries and rate limits'
-    'Artifacts: HAR, traces, screenshots, videos'
-    'Rotating proxies and geo targeting'
-    'Webhook callbacks and REST API'
-=======
 	const features = null;
 	return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return (
     <>
@@ -321,12 +330,8 @@ export default function BrowserAutomationCloudPage() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
-  );	return (
-
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
 			<main id="main" className="container mx-auto px-4 py-24">
@@ -384,17 +389,23 @@ export default function BrowserAutomationCloudPage() {
   </>),
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+	),
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	),
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -424,3 +435,8 @@ export default function BrowserAutomationCloudPage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

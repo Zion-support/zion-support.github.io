@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -133,6 +134,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
   process.cwd()
@@ -149,7 +152,7 @@ if (!fs.existsSync(EPISODES_PATH))
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 const simplified = episodes.map(e => ({
     id: e.id,
@@ -159,6 +162,7 @@ const simplified = episodes.map(e => ({
     summary: e.bestQuote || '',
     audio: e.audio || {},
   }));
+<<<<<<< HEAD
 <<<<<<< HEAD
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
@@ -205,3 +209,9 @@ const simplified = episodes.map(e => ({
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  return res.status(200).json({ episodes: simplified });
+  return res.status(200).json({ episodes: simplified })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

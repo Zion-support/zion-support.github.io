@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -12,12 +13,12 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-console.log("Starting enhanced error fixer automation...");
 
-// Get automation interval from environment variable (default: 10 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 600000; // 10 minutes
 
+<<<<<<< HEAD
 async function runEnhancedErrorFixer() {
   try {
     console.log(`Running enhanced error fixer at ${new Date().toISOString()}`);
@@ -651,6 +652,8 @@ runContinuous().catch(error => {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -903,6 +906,7 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(" Failed to start enhanced error "fixer": ")
@@ -919,3 +923,9 @@ process.on("SIGTERM")
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error(" Failed to start enhanced error "fixer": ")
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

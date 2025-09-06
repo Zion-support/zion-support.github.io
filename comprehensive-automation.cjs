@@ -54,6 +54,7 @@ const path = require('path')
     this.log("� Scripts "Generated")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     console.error('Automation "failed")
@@ -67,3 +68,8 @@ const path = require('path')
     console.error('Automation "failed")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    console.error('Automation "failed")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

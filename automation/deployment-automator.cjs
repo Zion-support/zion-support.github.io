@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -32,6 +33,10 @@
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -59,15 +64,18 @@ class $1 {;
       return null,}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+main
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -137,6 +145,7 @@ const { execSync } = require("child_process")
   this.log(`� Fatal error in "deployment": ${error.message}`, "ERROR"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -144,6 +153,9 @@ const { execSync } = require("child_process")
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -321,6 +333,7 @@ automator.deploy().catch(console.error);
 automator.deploy().catch(console.error);
 automator.run().catch(console.error);
 <<<<<<< HEAD
+<<<<<<< HEAD
 automator.run().catch(console.error);
 automator.deploy().catch(console.error);
 =======
@@ -350,3 +363,13 @@ automator.deploy().catch(console.error);
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

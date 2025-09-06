@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
@@ -15,11 +16,17 @@ export default function UseTokensButton({
 export default function UseTokensButton({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+export default function UseTokensButton({
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   serviceId
   defaultType
 }: {
   serviceId?: string;
   defaultType?: RedemptionType;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }) {
@@ -42,6 +49,10 @@ serviceId
 }) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -86,6 +97,7 @@ serviceId
     </>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -120,3 +132,6 @@ serviceId
     </>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308

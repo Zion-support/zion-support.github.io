@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -29,10 +30,12 @@ type Props = {;
   room: Room | null;
   onLeave: () => void;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import type { Room } from 'livekit-client';
 type Props = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 <<<<<<< HEAD
 
@@ -46,6 +49,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -134,6 +138,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const enabled =
       await room.localParticipant.setMicrophoneEnabled(!micEnabled);
     setMicEnabled(enabled);
@@ -158,8 +164,12 @@ const enabled =
 
   return (
 <div className='flex items-center gap-3'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -186,6 +196,7 @@ const enabled =
         Leave
       </button>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 }
@@ -308,3 +319,7 @@ if (return) {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

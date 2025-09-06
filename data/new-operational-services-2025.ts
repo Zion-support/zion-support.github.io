@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface NewOperationalService2025 {
 export interface NewOperationalService2025 {;
 =======
@@ -12,9 +13,11 @@ export interface NewOperationalService2025 {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface NewOperationalService2025 {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -26,6 +29,7 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface NewOperationalService2025 {;
     address: string
@@ -55,14 +59,25 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -71,6 +86,7 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
   contactInfo: {
 export const newOperationalServices2025: NewOperationalService2025[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: "$119/month",
@@ -91,6 +107,8 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -102,12 +120,17 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     tagline: "AI-powered operations management";
     price: "$119/month";
     description: "Intelligent operations center that uses AI to optimize business processes and workflows.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
       "AI process optimization";
       "Real-time monitoring";
       "Predictive analytics";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Automated workflows";
       "Performance insights"
@@ -132,6 +155,8 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Automated workflows",
       "Performance insights"
     ],
@@ -141,12 +166,17 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +203,8 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "smart-operations-center",
     name: "Smart Operations Center",
     tagline: "AI-powered operations management",
@@ -189,9 +221,9 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
     category: "New Operational Services 2025",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -207,10 +239,15 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -228,3 +265,9 @@ export const newOperationalServices2025: NewOperationalService2025[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

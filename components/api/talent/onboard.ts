@@ -13,15 +13,16 @@ import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
-<<<<<<< HEAD
-
-=======
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string;
 async function summarizeAndTag(input: {fullName: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   professionalTitle: string;
   bio: string;
   projects?: string;
@@ -33,6 +34,7 @@ async function summarizeAndTag(input: {
   skills: string,
   tools?: string
 }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -50,11 +52,16 @@ async function summarizeAndTag(input: {
     return { summary, tags: basicTags.slice(0, 24) };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    return { summary, tags: basicTags.slice(0, 24) };
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -104,6 +111,8 @@ if (
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
@@ -122,13 +131,18 @@ if (
         Array.isArray(parsed.tags)
       ) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
     } catch (_) {
       // fall through to heuristic;
     }
   } catch (err) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // ignore and fallback;
@@ -140,16 +154,23 @@ if (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // ignore and fallback
   }
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -227,10 +248,17 @@ if ( {) {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   try {
     const id = randomUUID ();
     const {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -249,6 +277,12 @@ fullName,
       profilePicture,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+fullName,
+      professionalTitle,
+      profilePicture,
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       bio,
       projects,
       yearsOfExperience,
@@ -256,6 +290,7 @@ fullName,
       tools,
       availability,
       timezone,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -332,6 +367,8 @@ fullName,
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       hourlyRate,
       portfolioLinks,
       cvFile,
@@ -418,8 +455,12 @@ const aggregatePath = path.join(
       'data',
       'talent-submissions.json'
     );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -430,6 +471,7 @@ const aggregatePath = path.join(
   $2
 }
       try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -451,10 +493,16 @@ const aggregatePath = path.join(
 if (Array.isArray(content)) aggregate = content;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        const content = await fse.readJSON(aggregatePath);
+if (Array.isArray(content)) aggregate = content;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       } catch (_) {
         // ignore;
       }
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -504,6 +552,8 @@ if (Array.isArray(content)) aggregate = content;
   }
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
@@ -513,5 +563,9 @@ return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

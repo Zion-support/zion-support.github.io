@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -251,6 +252,8 @@ interface NavigationItem {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -268,18 +271,16 @@ interface NavigationItem {
   name: string;
   href: string;
   icon?: React.ReactNode;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   description?: string;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
-<<<<<<< HEAD
-  featured?: boolean
-}
-  featured?: boolean;
-  featured?: boolean;  featured?: boolean
-=======
 
 const contactInfo = null;
 const contactInfo = {
@@ -287,7 +288,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
   featured?: boolean;
 <<<<<<< HEAD
@@ -307,6 +308,7 @@ const navigationItems: NavigationItem[] = [
   {
     name: 'Pricing',
     href: '/pricing',
+<<<<<<< HEAD
 <<<<<<< HEAD
     icon: <DollarSign className="w-5 h-5" />,
     description: 'Plans and average market prices',
@@ -336,6 +338,8 @@ const navigation_items: NavigationItem[] = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         description: 'Compare market averages',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 icon: <DollarSign className='w-5 h-5' />,
     description: 'Plans and average market prices',
     children: [
@@ -364,11 +368,12 @@ icon: <DollarSign className='w-5 h-5' />,
         name: 'Services Advertising',
         href: '/services-advertising',
         description: 'Features, benefits and market pricing links',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       },
     ],
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     name: 'Resources',
     href: '/resources',
@@ -548,6 +553,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         name: 'AI Customer Success Platform',
         href: '/ai - customer - success - platform',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     name: 'Contact',
     href: '/contact',
     icon: <Phone className='w-5 h-5' />,
@@ -680,11 +687,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 {
         name: 'AI Customer Success Platform',
         href: '/ai-customer-success-platform',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         description: 'Predict and prevent churn with AI',
         featured: true,
       },
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
         name: 'AI Sales Intelligence',
         href: '/ai - sales - intelligence - platform',
@@ -1075,6 +1083,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     ]
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: 'AI Sales Intelligence'
         href: '/ai-sales-intelligence-platform'
         description: 'Supercharge sales with AI automation'
@@ -1427,7 +1437,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
       },
     ],
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
     name: 'Resources',
     href: '/resources',
@@ -1541,8 +1551,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         description: 'Technical documentation',
       },
       {
-<<<<<<< HEAD
-=======
         name: 'API Reference',
         href: '/api-documentation',
         description: 'API documentation',
@@ -1553,7 +1561,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
         description: 'Success stories',
       },
       { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {
         name: 'Support Center',
         href: '/support',
@@ -1568,8 +1576,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     ],
   },
 ];
-<<<<<<< HEAD
-=======
 
 const quickActions = [
   {
@@ -1616,13 +1622,14 @@ const quickActions = [
   },
 ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const UltraFuturisticNavigation2035: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -1645,6 +1652,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsScrolled(window.scrollY > 10);
     };
 
@@ -1656,12 +1665,17 @@ setIsScrolled(window.scrollY > 10);
   }
   const closeDropdowns = () => {
     setActiveDropdown(null);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
 
   const closeMobileMenu = () => {
     setIsOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
     closeDropdowns()
   };
@@ -1746,6 +1760,8 @@ setIsScrolled(window.scrollY > 10);
                         item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 closeDropdowns();
   };
 
@@ -1786,14 +1802,11 @@ closeDropdowns();
                   <button
                     onClick={() => toggleDropdown(item.name)}
                     className='flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {item.icon}
                     <span>{item.name}</span>
                     {item.badge && (
-<<<<<<< HEAD
-
-=======
 <span
                         className={`px-2 py-1 text-xs rounded-full ${
                           item.badge === 'New'
@@ -1819,7 +1832,7 @@ closeDropdowns();
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`}
                     />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </button>
 
                   {/* Dropdown Menu */}
@@ -1830,6 +1843,7 @@ closeDropdowns();
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
@@ -2007,6 +2021,8 @@ closeDropdowns();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
                         onMouseLeave={closeDropdowns}
                       >
@@ -2026,8 +2042,12 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                           </div>
                           <div className='space-y-2'>
                             {item.children?.map(child => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
@@ -2276,6 +2296,7 @@ child.featured
                                 }`}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 onClick={closeDropdowns}
                               >
 
@@ -2283,6 +2304,8 @@ child.featured
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 onClick={closeDropdowns}
                               >
 {child.featured && (
@@ -2299,8 +2322,12 @@ child.featured
                                 </div>
                                 <ArrowRight className='w-4 h-4 opacity-50' />
                               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             ))}
                           </div>
                         </div>
@@ -2327,6 +2354,7 @@ child.featured
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2340,6 +2368,11 @@ child.featured
                   <Link
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                {quickActions.map(action => (
+                  <Link
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -2409,6 +2442,7 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
               exit={{ opacity: 0, height: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}
 
                   {/* Mobile Navigation Items */}
@@ -2430,6 +2464,8 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
             >
@@ -2458,8 +2494,12 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
                               }`}
                             >
                               {item.badge}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </span>
                           )}
                         </div>
@@ -2499,6 +2539,7 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                       {/* Mobile Dropdown */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
                           <motion&& motion.div
@@ -2514,6 +2555,8 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -2524,12 +2567,17 @@ className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50
 className='ml-6 mt-2 space-y-2'
                           >
                             {item.children?.map(child => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
                                 className={`block p-3 rounded-lg transition-colors duration-200 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2555,6 +2603,8 @@ className='ml-6 mt-2 space-y-2'
                                   child.featured
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 child.featured
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 text-cyan-400'
@@ -2572,8 +2622,12 @@ child.featured
                                   <div className='text-sm opacity-75 mt-1'>
                                     {child.description}
                                   </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                 )}
 
 <<<<<<< HEAD
@@ -2605,6 +2659,7 @@ child.featured
                     </div>;
                   ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2630,13 +2685,19 @@ child.featured
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {/* Mobile Quick Actions */}
 <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3'>
                       {quickActions.map(action => (
                         <Link
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           key={action.name}
                           href={action.href}
                         <Link
@@ -2665,13 +2726,9 @@ child.featured
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   {/* Mobile Contact Info */}
-<<<<<<< HEAD
-                  <div className='pt-4 border-t border-gray-800/50'>;
-                    <div className='space-y-3 text-sm text-gray-400'>;
-=======
 <div className='pt-4 border-t border-gray-800/50'>
                     <div className='space-y-3 text-sm text-gray-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <a
 <<<<<<< HEAD
 
@@ -2680,36 +2737,6 @@ child.featured
                         <span>{contactInfo.mobile}</span>
                       </a>
                       <a
-<<<<<<< HEAD
-                        href={`mailto:${contactInfo && contactInfo.email}`}
-                        className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'>;
-                        <Mail className='w-4 h-4' />;
-                        <span>{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className='flex items-center gap-3 p-3 rounded-lg'>;
-                        <MapPin className='w-4 h-4' />;
-                        <span className='text-sm'>{contactInfo && contactInfo.address}</span>                      </div>                        <span>{contactInfo && contactInfo.mobile}</span>;
-                      </a>;
-                      <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200">;
-                        <Mail className="w-4 h-4" />;
-                        <span>{contactInfo && contactInfo.email}</span>;
-                      </a>;
-                      <div className="flex items-center gap-3 p-3 rounded-lg">;
-                        <MapPin className="w-4 h-4" />;
-                        <span className="text-sm">{contactInfo && contactInfo.address}</span>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          )}
-        </AnimatePresence>;
-      </div>;
-    </nav>;
-  );
-}
-=======
                         href={`mailto:${contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'
                       >
@@ -2733,7 +2760,7 @@ child.featured
 };
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }, []);
 <<<<<<< HEAD
 

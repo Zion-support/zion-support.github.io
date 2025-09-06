@@ -22,6 +22,7 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+<<<<<<< HEAD
     if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
       return false;
     }
@@ -42,6 +43,8 @@ conflictType = 'incoming';
       
       if (line.includes('=======')) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         conflictType = 'incoming';
         continue;
       }
@@ -166,6 +169,7 @@ function findConflictedFiles(dir) {
 >>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
 =======
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             conflictedFiles.push(fullPath);
@@ -250,3 +254,5 @@ try {
 }
 }
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

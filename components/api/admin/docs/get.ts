@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -30,6 +31,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const CONTENT_PATH = null;
     res.status(200).json(JSON.parse(data))
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,6 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const data = fs.readFileSync(CONTENT_PATH, 'utf8');
 res.status(200).json(JSON.parse(data));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   } catch (e) {
@@ -75,12 +79,20 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  } catch (e) {
+    res && res.status(500).json({ error: 'Failed to read content' });
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -91,3 +103,9 @@ if ( {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    res.status(500).json({ error: 'Failed to read content' })
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

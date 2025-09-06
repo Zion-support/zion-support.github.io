@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildIdentityProfile } from "@/utils/offworld/identity";
 =======
@@ -8,6 +9,9 @@ import { buildIdentityProfile } from "@/utils/offworld/identity";
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -46,6 +50,7 @@ function handler() {
   try {
     const { address } = req.query as { address?: string }
 <<<<<<< HEAD
+<<<<<<< HEAD
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
 =======
@@ -57,6 +62,11 @@ function handler() {
     return res.status(200).json(profile);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    const profile = await buildIdentityProfile(address);
+    return res.status(200).json(profile);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (e: any) {
     return res.status (500).json ({ error: e.message });
   }
@@ -75,9 +85,11 @@ function handler() {
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
   } catch (e: any) {
-<<<<<<< HEAD
-=======
     return res.status(500).json({ error: e.message });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

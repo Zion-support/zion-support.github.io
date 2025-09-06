@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -52,6 +53,8 @@ import {
 } from 'lucide-react';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -60,7 +63,7 @@ import { Brain, Shield, Code, CheckCircle, Zap;
   Lock, Eye, BarChart3, Globe, Award
  } from 'lucide-react';
 const AICodeReviewSecurityScanner = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Brain
   Shield
@@ -100,6 +103,7 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='relative overflow-hidden'>;
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />;
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>            <motion&& motion.div
@@ -124,6 +128,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <section className='relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20' />
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20'>
@@ -191,8 +197,12 @@ className='text-center'
         {/* Features Section */}
 <section className='py-20 bg-white/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -449,6 +459,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Pricing Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -475,10 +486,16 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 ho
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<section className='py-20'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -493,6 +510,12 @@ className='text-center mb-16'
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+            >
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Transparent Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -510,6 +533,7 @@ className='text-center mb-16'
                   description: "Perfect for small development teams and startups",
                   features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
                     "Up to 10 developers";
                     "Basic security scanning";
                     "GitHub/GitLab integration";
@@ -522,6 +546,8 @@ className='text-center mb-16'
                   popular: false
                 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     'Up to 10 developers',
                     'Basic security scanning',
                     'GitHub/GitLab integration',
@@ -531,7 +557,7 @@ className='text-center mb-16'
                   ],
                   popular: false,
                 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {
                   name: 'Professional',
                   price: '$799',
@@ -556,6 +582,7 @@ className='text-center mb-16'
                   description:
                     'For large organizations with complex security needs',
                   features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
                     'Unlimited developers'
                     'Enterprise security scanning'
@@ -643,6 +670,8 @@ className='text-center mb-16'
                     "API access";
                     "Custom integrations";
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     'Unlimited developers',
                     'Enterprise security scanning',
                     'On-premise deployment',
@@ -657,12 +686,13 @@ className='text-center mb-16'
                 },
               ].map((plan, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className={`relative bg-white/5 backdrop-blur-xl border rounded-2xl p-8 ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -689,9 +719,11 @@ className='text-center mb-16'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 plan.popular
                       ? 'border-purple-500 bg-gradient-to-br from-purple-500/10 to-blue-500/10'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       : 'border-white/10'
                     "SLA guarantees";
                   ],
@@ -717,16 +749,14 @@ plan.popular
                   }`}
                 >;
                   {plan.popular && (
-<<<<<<< HEAD
-                      <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-=======
 <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         Most Popular
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -740,6 +770,11 @@ plan.popular
                     <h3 className='text-2xl font-bold text-white mb-2'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='text-center mb-8'>
+                    <h3 className='text-2xl font-bold text-white mb-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {plan.name}
                     </h3>;
                     <div className='flex items - baseline justify - center mb - 4'>;
@@ -747,6 +782,7 @@ plan.popular
                         {plan.price}
                       <li
                         key={featureIndex}
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='flex items-center text-gray-300'>;
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                        {feature}
@@ -787,6 +823,12 @@ plan.popular
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                        className='flex items-center text-gray-300'
+                      >
+                        <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         {feature}
                       </li>
                     ))}
@@ -829,6 +871,7 @@ plan.popular
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-20 bg-white/5'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
@@ -876,13 +919,16 @@ plan.popular
   description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 bg-white/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center mb-16'
@@ -930,6 +976,8 @@ plan.popular
                   </motion && motion.div>;
                 ))}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -978,13 +1026,11 @@ className='flex items-start'
                         {benefit.title}
                       </h3>
                       <p className='text-gray-300'>{benefit.description}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
 <div className='space-y-8'>
                 {[
                   {
@@ -1022,7 +1068,7 @@ className='flex items-start'
                       </h3>
                       <p className='text-gray-300'>{benefit.description}</p>
                     </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </motion.div>
                 ))}
               </div>
@@ -1030,6 +1076,7 @@ className='flex items-start'
           </div>
         </section>
         {/* Use Cases Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
@@ -1064,13 +1111,16 @@ className='flex items-start'
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 className="text-center mb-16"
@@ -1332,6 +1382,8 @@ className="text-center mb-16"
             <div className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
               {[;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1345,11 +1397,12 @@ className='text-center mb-16'
             </motion.div>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 'Software Development Teams',
                 'DevOps & Security Teams',
                 'Financial Technology Companies',
                 'Healthcare Software Providers',
+<<<<<<< HEAD
 <<<<<<< HEAD
                 'E - commerce Platforms',
                 'Government Software Projects',
@@ -1397,6 +1450,8 @@ className='text-center mb-16'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 'E-commerce Platforms',
                 'Government Software Projects',
                 'Educational Institutions',
@@ -1433,12 +1488,17 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
 =======
 <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 </motion.div>
@@ -1516,6 +1576,8 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Secure Your Code?
@@ -1533,20 +1595,18 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                 >
                   Start Free Trial
                   <ArrowRight className='ml-2 w-5 h-5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                  className="px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300"
-=======
                   className='px-8 py-4 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Contact Sales
                 </motion.button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1555,12 +1615,18 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mt-8 text-gray-400'>
                 <p>
                   14-day free trial • No credit card required • Cancel anytime
                 </p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </motion.div>
           </div>
@@ -1570,6 +1636,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
         {/* Contact Information */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-16 bg-white/5'>;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-16 bg-white/5">;
@@ -1587,6 +1654,8 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                   </div>
                   <h4 className="text-white font-semibold mb-2">Contact Us</h4>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-16 bg-white/5'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <motion.div
@@ -1603,24 +1672,11 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                     <Users className='w-6 h-6' />
                   </div>
                   <h4 className='text-white font-semibold mb-2'>Contact Us</h4>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <p>Mobile: +1 302 464 0950</p>
                   <p>Email: kleber@ziontechgroup.com</p>
                 </div>
                 <div>
-<<<<<<< HEAD
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Globe className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-white font-semibold mb-2">Visit Our Website</h4>
-                  <p>https://ziontechgroup.com</p>
-                </div>
-                <div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    <Award className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-white font-semibold mb-2">Address</h4>
-=======
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-4'>
                     <Globe className='w-6 h-6' />
                   </div>
@@ -1634,7 +1690,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
                     <Award className='w-6 h-6' />
                   </div>
                   <h4 className='text-white font-semibold mb-2'>Address</h4>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <p>364 E Main St STE 1008</p>
                   <p>Middletown DE 19709</p>
                 </div>
@@ -1644,6 +1700,7 @@ className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl p-6 tex
         </section>
       </div>
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -1837,9 +1894,15 @@ export default AICodeReviewSecurityScanner
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default AICodeReviewSecurityScanner;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

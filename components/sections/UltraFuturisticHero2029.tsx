@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -195,6 +196,8 @@ export default function UltraFuturisticHero2029() {;
     { number: '99 && 99.9%', label: 'Success Rate', icon: Star },;
     { number: '24/7', label: 'AI Operations', icon: Zap },;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom, Rocket, Target, Shield, Cpu, Globe, Sparkles  } from 'lucide-react';
@@ -238,7 +241,7 @@ export default function UltraFuturisticHero2029() {
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
     { number: '99.9%', label: 'Success Rate', icon: Star },
 { number: '24/7', label: 'AI Operations', icon: Zap },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
@@ -253,6 +256,7 @@ export default function UltraFuturisticHero2029() {
               animate={{
               }}
               style={{
+<<<<<<< HEAD
 <<<<<<< HEAD
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'
@@ -354,9 +358,11 @@ export default function UltraFuturisticHero2029() {
                 repeat: Infinity,
                 ease: "linear"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 left: Math.random() * 100 + '%',
                 top: Math.random() * 100 + '%',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               }}
             />
           ))}
@@ -376,6 +382,7 @@ export default function UltraFuturisticHero2029() {
               backgroundSize: '50px 50px'
             }}
           />
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -529,6 +536,8 @@ export default function UltraFuturisticHero2029() {
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>        {/* Main Heading */}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         </div>
         {/* Gradient Orbs */}
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse' />
@@ -536,7 +545,7 @@ export default function UltraFuturisticHero2029() {
       </div>
       {/* Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Heading */}
 
 <<<<<<< HEAD
@@ -547,6 +556,7 @@ export default function UltraFuturisticHero2029() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='mb-8'
 
@@ -561,6 +571,11 @@ className='mb-8'
         >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mb-8'
+        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               2029
@@ -742,6 +757,7 @@ className='mb-8'
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
 
@@ -784,6 +800,11 @@ className='mb-8'
 className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          transition={{ duration: 0.8, delay: 0.2 }}
+className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <Link
             href='/services'
@@ -813,12 +834,17 @@ className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
           transition={{ duration: 0.8, delay: 0.4 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           {features.map((feature, index) => (
 
@@ -832,6 +858,7 @@ className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
 
@@ -853,12 +880,17 @@ className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-16'
 className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/50'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <div
                 className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform`}
               >
                 <feature.icon className='w-6 h-6 text-white' />
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -875,6 +907,11 @@ className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gr
                 {feature.text}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              <p className='text-xs text-gray-300 group-hover:text-white transition-colors text-center leading-tight'>
+                {feature.text}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </p>
             </motion.div>
           ))}
@@ -893,6 +930,7 @@ className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gr
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -914,6 +952,11 @@ className='group p-4 rounded-xl bg-gray-800/30 backdrop-blur-sm border border-gr
 className='grid grid-cols-2 md:grid-cols-4 gap-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          transition={{ duration: 0.8, delay: 0.6 }}
+className='grid grid-cols-2 md:grid-cols-4 gap-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -944,6 +987,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8'
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='text-center group'
@@ -978,6 +1022,10 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8'
 className='text-center group'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center group'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <div className='w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform'>
                 <stat.icon className='w-8 h-8 text-cyan-400' />
@@ -985,6 +1033,7 @@ className='text-center group'
               <div className='text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {stat.number}
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -999,8 +1048,10 @@ className='text-center group'
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>                {stat.label}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='text-sm text-gray-400 group-hover:text-gray-300 transition-colors'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {stat.label}
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1022,6 +1073,7 @@ className='text-center group'
         <motion&& motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           transition={{ duration: 1, delay: 1.2 }}
@@ -1057,15 +1109,23 @@ className='text-center group'
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          transition={{ duration: 1, delay: 1.2 }}
+className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           >
@@ -1079,8 +1139,12 @@ className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />
           </motion.div>
         </motion.div>
@@ -1141,6 +1205,7 @@ className='w-1 h-3 bg-cyan-400 rounded-full mt-2'
         animate={{ rotate: 360 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
 
@@ -1182,11 +1247,17 @@ transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
         className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        className='absolute top-20 right-20 w-32 h-32 border border-cyan-500/20 rounded-full'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
         className='absolute bottom-20 left-20 w-24 h-24 border border-purple-500/20 rounded-full'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       />
@@ -1230,8 +1301,10 @@ transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
 
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       />
     </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

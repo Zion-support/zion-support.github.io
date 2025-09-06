@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -13,10 +14,23 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+
+
+import { IntegrationProviderMeta } from "./types";
+export const PROVIDERS: IntegrationProviderMeta[] = [
+import { IntegrationProviderMeta  } from './types';
+;
+export const PROVIDERS: IntegrationProviderMeta[] = [;
+import { IntegrationProviderMeta } from "./types";
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -39,6 +53,10 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: "salesforce"
     name: "Salesforce"
@@ -52,6 +70,18 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Marketing & Sales CRM"
   }
   {
+<<<<<<< HEAD
+=======
+
+    id: "zoho",
+    name: "Zoho CRM",
+    category: "crm",
+    description: "All - in - one CRM",
+  },
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -74,6 +104,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ];
 export function getProviderById(
   id: string
@@ -92,12 +123,15 @@ export function getProviderById(
   }
 ];
 export function getProviderById(
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 }
 import { IntegrationProviderMeta } from './types';
-=======
 import { IntegrationProviderMeta  } from './types';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -106,6 +140,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
@@ -128,9 +163,42 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+;
+export function getProviderById (
+  id: string,
+): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find ((p) => p.id === id);
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    id: "bamboohr",
+    name: "BambooHR",
+    category: "ats",
+    description: "HRIS & ATS",
+  },;
+
+];
+export function getProviderById(
+
+  id: string,
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }];
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

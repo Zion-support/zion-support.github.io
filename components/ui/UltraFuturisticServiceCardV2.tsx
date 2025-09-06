@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ArrowRight,
   Star,
@@ -15,13 +16,19 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ArrowRight
   Star
   Users
@@ -80,6 +87,7 @@ interface ServiceCardProps {
   description: string;
     category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     price: {;
@@ -106,6 +114,8 @@ interface ServiceCardProps {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     price: {
       monthly: number;
       yearly: number;
@@ -124,8 +134,12 @@ interface ServiceCardProps {
     implementationDetails: string;
     roi: string;
     useCases: string[];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: string[];
     support: string;
     compliance: string[];
@@ -133,6 +147,7 @@ interface ServiceCardProps {
     icon: string;
     color: string;
     popular: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -194,13 +209,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
         return <Zap className='w-5 h-5' />;    }
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     launchDate: string;
     customers: number;
     rating: number;
     reviews: number;
     marketSize?: string;
         return <Zap className='w-5 h-5' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
 <<<<<<< HEAD
@@ -214,6 +231,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
 
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       return color;
@@ -230,18 +248,21 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
   };
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return color;
     }
     return 'from-cyan-500 to-blue-500';
   }
     >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>
         {/* Background pattern */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className='absolute inset-0 opacity-5'>
@@ -339,6 +360,8 @@ return color;
 =======
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className='absolute inset-0 opacity-5'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>
@@ -352,8 +375,12 @@ return color;
                 <div className='flex items-center space-x-2'>
                   {getCategoryIcon(service.category)}
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {service.category}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                   </span>
@@ -361,11 +388,7 @@ return color;
               </div>
             </div>
 
-<<<<<<< HEAD
-            
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {service.popular && (
               <motion.div
         <div className="absolute inset-0 opacity-5">;
@@ -388,6 +411,7 @@ return color;
             </div>;
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
             {service.name}
           </h3>
@@ -417,6 +441,8 @@ return color;
         </div>
         {/* Stats */}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full'
               >
@@ -439,7 +465,7 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
           <div className='grid grid-cols-3 gap-4'>
             <div className='text-center'>
               <div className='text-2xl font-bold text-cyan-400'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {service.rating}
 
 <<<<<<< HEAD
@@ -473,6 +499,7 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
               <div className='text - 2xl font - bold text - pink - 400'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {service.reviews}
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="text-center">
               <div className="text-2xl font-bold text-purple-400">{service.customers.toLocaleString()}</div>
@@ -566,6 +593,8 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
               <div className='text-xs text-gray-400'>Reviews</div>
             </div>
@@ -601,13 +630,18 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             )}
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Features preview */}
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -635,11 +669,16 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
           <div className='space-y-2'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          <div className='space-y-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 transition={{ delay: 0.6 + idx * 0.1 }}
@@ -658,6 +697,11 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
 className='flex items-center space-x-2 text-sm'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                transition={{ delay: 0.6 + idx * 0.1 }}
+className='flex items-center space-x-2 text-sm'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
@@ -758,6 +802,7 @@ className='flex items-center space-x-2 text-sm'
 =======
         {/* Benefits */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
           <div className="space-y-2">
@@ -818,13 +863,19 @@ className='flex items-center space-x-2 text-sm'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
           <div className='space-y-2'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -833,11 +884,9 @@ className='flex items-center space-x-2 text-sm'
                 transition={{ delay: 0.8 + idx * 0.1 }}
 className='flex items-center space-x-2 text-sm'
               >
-<<<<<<< HEAD
-=======
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
                 <span className='text-gray-300'>{benefit}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
             ))}
 
@@ -859,6 +908,7 @@ className='flex items-center space-x-2 text-sm'
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className='relative z-10 mb-6'>
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>
@@ -888,6 +938,8 @@ className='flex items-center space-x-2 text-sm'
                 <span className="text-green-400 font-medium">{service.growthRate}</span>
               </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='relative z-10 mb-6'>
             <div className='bg-gray-800/30 rounded-lg p-3 border border-gray-600/20'>
               <div className='flex items-center justify-between text-xs'>
@@ -902,7 +954,7 @@ className='flex items-center space-x-2 text-sm'
                   {service.growthRate}
                 </span>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
             ))}
@@ -933,6 +985,7 @@ className='flex items-center space-x-2 text-sm'
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -977,10 +1030,16 @@ className='flex items-center space-x-2 text-sm'
 <div className='relative z-10'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        {/* CTA Button */}
+<div className='relative z-10'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -998,6 +1057,8 @@ className='flex items-center space-x-2 text-sm'
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
           >
             <span className='relative z-10 flex items-center space-x-2'>
@@ -1006,7 +1067,7 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
             </span>
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </motion.a>
         </div>
 <<<<<<< HEAD
@@ -1067,6 +1128,7 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
         <motion&& motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
@@ -1169,12 +1231,15 @@ export default UltraFuturisticServiceCardV2;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         />
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -1216,3 +1281,9 @@ export default UltraFuturisticServiceCardV2
 export default UltraFuturisticServiceCardV2;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+};
+
+export default UltraFuturisticServiceCardV2;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

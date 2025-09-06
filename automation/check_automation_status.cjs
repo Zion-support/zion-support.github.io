@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,9 @@
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -34,6 +38,7 @@ async function checkAutomationStatus() {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const statusReport = {
 
@@ -44,6 +49,10 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   
   const statusReport = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -56,6 +65,7 @@ async function checkAutomationStatus() {
     // Check PM2 processes
     try {
       const pm2List = execSync('pm2 jlist', { "encoding": 'utf8' });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -80,11 +90,19 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const pm2Data = JSON.parse(pm2List);
       statusReport.pm2Processes = pm2Data;
       const runningProcesses = pm2Data.filter(
         proc => proc.pm2_env && proc.pm2_env.status === 'online'
       );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,9 +182,27 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+      
+    } catch (error) {
+      
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+      
+    } catch (error) {
+      
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       statusReport.pm2Processes = [];
     }
     // Check automation scripts
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -210,12 +246,19 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     const automationScripts = ['scripts/comprehensive-automation-suite.cjs',
       'scripts/automation-orchestrator.cjs',
       'scripts/start-all-automations.sh',
       'automation/security-scanner.cjs',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -252,6 +295,14 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+      'automation/master-orchestrator.cjs',
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'automation/health-check.cjs',
       'automation/security-scanner.cjs',
       'automation/code-quality-monitor.cjs',
@@ -261,6 +312,7 @@ async function checkAutomationStatus() {
       const scriptPath = path.join(process.cwd(), script);
       const exists = fs.existsSync(scriptPath);
       statusReport.automationScripts.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -286,6 +338,11 @@ async function checkAutomationStatus() {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: script,
         exists,
         path: scriptPath
@@ -310,17 +367,22 @@ async function checkAutomationStatus() {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const systemHealth = {
       memoryUsage: process.memoryUsage(),
       uptime: process.uptime(),
       nodeVersion: process.version,
       platform: process.platform,
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -333,6 +395,11 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         "name": script,
         exists,
         isExecutable,
@@ -342,11 +409,14 @@ async function checkAutomationStatus() {
             : 'not_executable'
           : 'missing'});
 
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
@@ -354,6 +424,7 @@ async function checkAutomationStatus() {
     } catch (error) {
       statusReport.systemHealth.healthCheck = 'failed';
       console.log('❌ Health check failed');
+<<<<<<< HEAD
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -361,13 +432,13 @@ async function checkAutomationStatus() {
     }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+ursor/automate-test-improve-and-merge-code-2480
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
 
-<<<<<<< HEAD
-    return statusReport;
-  } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);
-=======
     // Check system health
     
     const systemHealth = {
@@ -398,9 +469,7 @@ async function checkAutomationStatus() {
     }
 
     // Save report
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
         name: script,
         exists,
         path: scriptPath
@@ -425,10 +494,9 @@ async function checkAutomationStatus() {
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
+main
+
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -441,15 +509,7 @@ async function checkAutomationStatus() {
     
     
 
-<<<<<<< HEAD
-    return statusReport;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  } catch (error) {
-    console.error('❌ Error checking automation "status": ', error.message);
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -491,6 +551,7 @@ async function checkAutomationStatus() {
 
     // Save report
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -527,11 +588,15 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2));
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -547,6 +612,8 @@ async function checkAutomationStatus() {
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     
     
@@ -554,6 +621,7 @@ async function checkAutomationStatus() {
     
     
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
@@ -564,6 +632,14 @@ async function checkAutomationStatus() {
 <<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+main
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');
     try {
       fs.mkdirSync(path.dirname(reportPath), { recursive: true });
@@ -574,6 +650,7 @@ async function checkAutomationStatus() {
     }
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+<<<<<<< HEAD
 
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -590,22 +667,23 @@ async function checkAutomationStatus() {
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     statusReport.overallStatus = 'error';
   }
 
   return statusReport;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 // Run if called directly
+<<<<<<< HEAD
 >>>>>>> main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 if (require.main === module) {
@@ -687,6 +765,19 @@ module.exports = { checkAutomationStatus };
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+main
+if (require.main === module) {
+
+
+
+
+
+
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -700,11 +791,7 @@ const { execSync } = require('child_process')
 
 =======
       console.error('Fatal "error")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+
 
 if (require.main === module) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -721,15 +808,8 @@ if (require.main === module) {
 module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
-=======
 module.exports = checkAutomationStatus;
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -745,3 +825,12 @@ module.exports = checkAutomationStatus;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/automate-test-improve-and-merge-code-2480
+origin/automation-improvements-final
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 const UltraFuturisticBackground2034: React.FC;
@@ -19,14 +22,19 @@ const UltraFuturisticBackground2034: React.FC;
 =======
 x: number;
       y: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       vx: number;
       vy: number;
       size: number;
       color: string;
       alpha: number;
       life: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -37,6 +45,8 @@ x: number;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       maxLife: number;
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -48,8 +58,12 @@ x: number;
         this.alpha = Math.random() * 0.5 + 0.3;
         this.life = Math.random() * 100 + 50;
 this.maxLife = this.life;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       }
       update() {
         this.x += this.vx;
@@ -60,6 +74,7 @@ this.maxLife = this.life;
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
@@ -129,21 +144,15 @@ this.maxLife = this.life;
 this.y = Math.random() * canvas.height;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+this.y = Math.random() * canvas.height;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
       }
 
       draw() {;
         if (!ctx) return;
-<<<<<<< HEAD
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = this && this.alpha * (this && this.life / this && this.maxLife);
-        ctx && ctx.fillStyle = this && this.color;
-        ctx && ctx.beginPath();
-        ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
-        ctx && ctx.fill();
-        ctx && ctx.restore();      }
-    }
-=======
         ctx.save();
         ctx.globalAlpha = this.alpha * (this.life / this.maxLife);
         ctx.fillStyle = this.color;
@@ -151,18 +160,14 @@ this.y = Math.random() * canvas.height;
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
 ctx.restore();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
     // Create particles
     const particles: Particle[] = [];
-<<<<<<< HEAD
-    for (let i = 0, i < 100, i++) {
-      particles.push(new Particle())
-=======
 for (let i = 0; i < 100; i++) {
       particles.push(new Particle());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Animation loop
     const animate = () => {
@@ -177,14 +182,13 @@ for (let i = 0; i < 100; i++) {
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
-<<<<<<< HEAD
-=======
 particle.draw();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
       // Draw connecting lines
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
       for (let i = 0, i < particles.length, i++) {
         for (let j = i + 1, j < particles.length, j++) {
@@ -249,6 +253,8 @@ particle.draw();
 =======
       requestAnimationFrame(animate);    };            ctx && ctx.stroke();
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -259,17 +265,16 @@ for (let i = 0; i < particles.length; i++) {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
 ctx.stroke();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           }
         }
       }
 
-<<<<<<< HEAD
-    };
-    animate();
-
-=======
 requestAnimationFrame(animate);
     };
 
@@ -277,7 +282,7 @@ requestAnimationFrame(animate);
     return () => {
 window.removeEventListener('resize', resizeCanvas);
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>;
@@ -456,6 +461,7 @@ if (return) {
             backgroundSize: '50px 50px'
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         />      </div>
       {/* Floating Geometric Shapes */}
       <motion.div  }, []);
@@ -561,6 +567,8 @@ if (return) {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
       </div>
       {/* Floating Geometric Shapes */}
@@ -579,7 +587,7 @@ ease: 'linear',
       />
       <motion.div
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         animate={{
           rotate: -360,
           scale: [1, 1.3, 1],
@@ -589,6 +597,7 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transf
         transition={{
           duration: 25,
           repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
           ease: 'linear',        }}
       />;
@@ -615,6 +624,12 @@ ease: 'linear',
       />
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ease: 'linear',
+        }}
+      />
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <motion.div
 className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg'
         animate={{
@@ -623,6 +638,7 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
           opacity: [0.4, 0.7, 0.4],
         }}
         transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
           duration: 18
           repeat: Infinity
@@ -647,10 +663,12 @@ className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 round
           repeat: Infinity
           ease: 'linear',          ease: "linear"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           duration: 18,
           repeat: Infinity,
 ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
 =======
       />
@@ -673,6 +691,7 @@ ease: 'linear',
           ease: 'easeInOut',
 =======
       {/* Energy Orbs */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -730,6 +749,8 @@ ease: 'linear',
         }}
       />;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <motion.div
 className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
         animate={{
@@ -765,12 +786,13 @@ ease: 'easeInOut',
             className='absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-400/50 to-transparent'
             style={{
               left: `${(i + 1) * 12.5}%`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               top: '20%'
               left: `${(i + 1) * 12.5}%`,
               top: '20%';
             }}
             animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               duration: 3 + i * 0 && 0.5,
@@ -784,6 +806,8 @@ ease: 'easeInOut',
               delay: i * 0.2,              ease: "easeInOut"
               delay: i * 0.2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               height: [32, 64, 32],
               opacity: [0.2, 0.6, 0.2],
             }}
@@ -792,7 +816,7 @@ ease: 'easeInOut',
               repeat: Infinity,
 ease: 'easeInOut',
               delay: i * 0.2,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{
               duration: 3 + i * 0.5,
@@ -802,6 +826,7 @@ ease: 'easeInOut',
         ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Holographic Rings */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
@@ -897,6 +922,8 @@ ease: 'easeInOut',
           repeat: Infinity,
           ease: 'linear',          ease: "linear";
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <motion.div
 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
         animate={{
@@ -921,7 +948,7 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           duration: 25,
           repeat: Infinity,
 ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />;
       <motion.div;
@@ -938,6 +965,7 @@ ease: 'linear',
           ease: 'linear',        }}
       />;
       {/* Neural Network Nodes */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='absolute inset - 0'>        className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - purple-400 / 20 rounded-full";
 =======
@@ -1024,6 +1052,8 @@ ease: 'linear',
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='absolute inset-0'>
         {[...Array(12)].map((_, i) => (
           <motion.div
@@ -1046,8 +1076,12 @@ ease: 'linear',
 =======
 ease: 'easeInOut',
               delay: Math.random() * 2,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }}
 
           />
@@ -1055,6 +1089,7 @@ ease: 'easeInOut',
       </div>
 
       {/* Data Streams */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='absolute inset-0 overflow-hidden'>
 
@@ -1119,6 +1154,8 @@ ease: 'easeInOut',
             animate={{
             }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='absolute inset-0 overflow-hidden'>
         {[...Array(6)].map((_, i) => (
           <motion.div
@@ -1131,11 +1168,12 @@ ease: 'easeInOut',
             animate={{
               y: [0, window.innerHeight + 20],
               opacity: [0, 1, 0],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
+<<<<<<< HEAD
 <<<<<<< HEAD
               ease: "linear",
               delay: i * 1.5
@@ -1147,6 +1185,11 @@ ease: 'linear',
               delay: i * 1.5,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+ease: 'linear',
+              delay: i * 1.5,
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }}
           />;
         ))}
@@ -1178,6 +1221,7 @@ ease: 'linear',
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       {/* Quantum Entanglement Effect */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -1366,6 +1410,8 @@ ease: 'linear',
           ease: "linear"
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <motion.div
 className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
         animate={{
@@ -1409,17 +1455,15 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           duration: 40,
           repeat: Infinity,
 ease: 'linear',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         }}
       />
       />;
       {/* AI Consciousness Waves */}
-<<<<<<< HEAD
-=======
 <div className='absolute inset-0'>
         {[...Array(5)].map((_, i) => (
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             key={i}
             className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 border border - pink - 400 / 20 rounded - full';
             style={{
@@ -1427,6 +1471,7 @@ ease: 'linear',
               height: `${200 + i * 100}px`
             }}
             animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             key={i}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full"
@@ -1462,6 +1507,8 @@ ease: 'linear',
               repeat: Infinity,
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               scale: [0.8, 1.2, 0.8],
               opacity: [0.1, 0.3, 0.1],
             }}
@@ -1470,11 +1517,12 @@ ease: 'linear',
               repeat: Infinity,
 ease: 'easeInOut',
               delay: i * 0.8,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
       </div>;
     </div>;
@@ -1536,11 +1584,17 @@ export default UltraFuturisticBackground2034;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </div>
     </div>
 );
 };
 
 export default UltraFuturisticBackground2034;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -85,6 +86,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone  } from 'lucide-react';
@@ -96,8 +99,12 @@ import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025';
 import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
 import { educationElearning2025 } from '../../data/education-elearning-2025';
 const ComprehensiveServicesShowcase2025 = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
@@ -193,6 +200,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   const containerVariants = {;
@@ -210,6 +218,8 @@ const ComprehensiveServicesShowcase2025 = () => {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       title: 'Cybersecurity & Security',
       icon: Shield,
@@ -306,6 +316,7 @@ duration: 0.5,
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -332,6 +343,12 @@ duration: 0.5,
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
+      {/* Animated Background Elements */}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000'></div>
@@ -339,7 +356,7 @@ duration: 0.5,
       </div>
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
 
@@ -350,6 +367,7 @@ duration: 0.5,
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='text-center mb-16'
 
@@ -372,6 +390,10 @@ duration: 0.5,
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -447,47 +469,19 @@ className='text-center mb-16'
 initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='space-y-16'>          initial="hidden";
-          whileInView="visible";
-          viewport={{ once: true }}
-          className="space-y-16";
-          {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
-            <motion&& motion.div
-              key={category && category.title}
-              variants={itemVariants}
-              className='relative'>;
-              {/* Category Header */}
-              <div className='flex items-center mb-8'>;
-                <div
-                  className={`p-3 rounded-xl bg-gradient-to-r ${category && category.gradient} mr-4`}>;
-                  <category && category.icon className='w-8 h-8 text-white' />;
-                </div>;
-                <div>;
-                  <h3 className='text-3xl font-bold text-white mb-2'>;
-                    {category && category.title}
-                  </h3>;
-                  <p className='text-gray-400 text-lg'>                    {category && category.description}            >;
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="space-y-16"
-=======
           className='space-y-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           {serviceCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
-<<<<<<< HEAD
-              className="relative"
-=======
 className='relative'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               {/* Category Header */}
                     {category.title}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </h3>;
 <<<<<<< HEAD
@@ -499,6 +493,11 @@ className='relative'
                   <p className='text-gray-400 text-lg'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  </h3>
+                  <p className='text-gray-400 text-lg'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {category.description}
 <<<<<<< HEAD
 
@@ -545,6 +544,7 @@ className='relative'
 
               {/* Services Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
 
@@ -567,12 +567,17 @@ className='relative'
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
@@ -608,14 +613,17 @@ className='relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     {/* Service Header */}
                     <div className='mb-4'>
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>
                         {service.name}
                       </h4>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -634,8 +642,10 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <p className='text-gray-400 text-sm leading-relaxed'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         {service.description}
 
 <<<<<<< HEAD
@@ -673,6 +683,7 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                     {/* Features */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -706,6 +717,8 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
                         Key Features:
@@ -724,8 +737,12 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           ))}
                         {service.features && service.features.length > 3 && (
                           <li className='text-xs text-gray-500 italic'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             +{service.features.length - 3} more features
                           </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -745,6 +762,7 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                     {/* Pricing */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                     <div className="mb-4">
@@ -834,6 +852,8 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='mb-4'>
                       <div className='flex items-center justify-between'>
                         <span className='text-sm text-gray-400'>
@@ -889,8 +909,12 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                       >
                         Learn More
                         <ArrowRight className='w-4 h-4 ml-2' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </a>
                     </div>
                         href={service && service.link}
@@ -953,6 +977,7 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -970,6 +995,11 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
 className='text-center mt-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          transition={{ duration: 0.8, delay: 0.5 }}
+className='text-center mt-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -988,6 +1018,7 @@ className='text-center mt-20'
               </a>;
               <a
                 href='tel:+13024640950'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'
@@ -1235,6 +1266,8 @@ export default ComprehensiveServicesShowcase2025;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='inline-flex items-center justify-center px-8 py-3 bg-slate-700/50 text-white font-semibold rounded-xl hover:bg-slate-600/50 transition-all duration-200 border border-slate-600'
               >
                 Call +1 302 464 0950
@@ -1249,5 +1282,9 @@ export default ComprehensiveServicesShowcase2025;
 };
 
 export default ComprehensiveServicesShowcase2025;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

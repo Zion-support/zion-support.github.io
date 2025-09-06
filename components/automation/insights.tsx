@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
@@ -47,6 +48,11 @@ import { useEffect, useState  } from 'react';
 import Head from 'next/head',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { useEffect, useState  } from 'react';
+import Head from 'next/head',
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function AutomationInsightsPage() {
 
 =======
@@ -117,6 +123,7 @@ function AutomationInsightsPage() {
         <h2 className="font-medium">Market Intelligence</h2>;
         {!intel ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text - sm text-gray-500">Loading…</div>) : (
           <div className="mt-3 text-sm">;
             <div className="text - xs text-gray-500">Generated at {intel.generated_at}</div>;
@@ -156,6 +163,8 @@ function AutomationInsightsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className="text-sm text-gray-500">Loading…</div>
         ) : (
           <div className="mt-3 text-sm">
@@ -190,5 +199,9 @@ function AutomationInsightsPage() {
     </div>
 );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "vulnerabilities": [],
   "recommendations": [
     "Use HTTPS for all external requests",
@@ -283,54 +284,12 @@
   ],
   "recommendations": [
     {
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
-      "priority": "high",
-      "category": "dependencies",
-      "message": "Update dependencies with known vulnerabilities",
-      "action": "Run npm audit fix to automatically fix vulnerabilities"
-    },
-    {
-      "priority": "high",
-      "category": "code_security",
-      "message": "Address code security issues",
-      "action": "Review and fix dangerous code patterns identified in the audit"
-    },
-    {
-      "priority": "medium",
-      "category": "environment",
-      "message": "Secure environment variables",
-      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
-    },
-    {
-      "priority": "low",
-      "category": "permissions",
-      "message": "Review file permissions",
-      "action": "Consider restricting file permissions for sensitive files"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  "summary": {
-    "totalVulnerabilities": 0,
-    "totalSecurityIssues": 17,
-    "criticalIssues": 0,
-    "warnings": 13,
-    "info": 4,
-    "totalRecommendations": 4
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -353,6 +312,10 @@
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   "auditReportVersion": 2,
   "vulnerabilities": {},
   "metadata": {
@@ -374,7 +337,12 @@
     }
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

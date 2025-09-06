@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Project } from "@/types/projects";
 export const PROJECTS: Project[] = [
   {
@@ -19,6 +20,13 @@ export const PROJECTS: Project[] = [
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+import { Project } from "@/types/projects";
+export const PROJECTS: Project[] = [
+  {
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
     job: {
@@ -31,7 +39,6 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
-=======
     id: "project-1";
     client_id: "client-1";
     talent_id: "t-001";
@@ -46,28 +53,49 @@ export const PROJECTS: Project[] = [
       title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     talent_profile: {
       full_name: "Alexandra Chen";
+<<<<<<< HEAD
       professional_title: "Senior AI Engineer";
+=======
+
+import { Project } from "@/types/projects",
+export const PROJECTS: Project[] = [
+import { Project } from '@/types/projects';
+import { Project } from "@/types/projects",
+export const PROJECTS: Project[] = [
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       professional_title: "Senior AI Engineer"
     }
   }
 <<<<<<< HEAD
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
     id: "project-1",
     client_id: "client-1",
@@ -85,6 +113,7 @@ export const PROJECTS: Project[] = [
     },
     talent_profile: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +122,8 @@ export const PROJECTS: Project[] = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       full_name: 'Alexandra Chen',
       professional_title: 'Senior AI Engineer',
     },
@@ -104,8 +135,7 @@ export const PROJECTS: Project[] = [
     talent_profile: {
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
 import { Project } from "@/types/projects",;
@@ -129,6 +159,7 @@ export const PROJECTS: Project[] = [;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
@@ -142,14 +173,22 @@ export const PROJECTS: Project[] = [;
   }
 ];
 
+=======
+;
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
 ];
@@ -159,9 +198,15 @@ export const PROJECTS: Project[] = [;
 ];
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

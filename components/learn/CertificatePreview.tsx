@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 
 import React from "react";
@@ -27,20 +28,24 @@ export default function CertificatePreview({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 export default function CertificatePreview({
   courseId
   userId = "demo-user"
 }: {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   courseId: string;
   userId?: string;
 }) {;
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-<<<<<<< HEAD
-=======
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -52,13 +57,14 @@ export default function CertificatePreview({
       </div>
       <a
         href={url}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF
       </a>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
@@ -148,3 +154,6 @@ function CertificatePreview() {
     </div>);
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

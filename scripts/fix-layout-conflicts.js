@@ -89,6 +89,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   let fixedContent = content;
   let changes = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Check if both Layout component and Layout icon are imported
   const hasLayoutComponent =
 <<<<<<< HEAD
@@ -127,6 +128,8 @@ function fixLayoutConflicts(content, filePath) {;    fixedContent.includes("impo
   const hasLayoutIcon =
     fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   // Check if both Layout component and Layout icon are imported
   const hasLayoutComponent =
@@ -136,29 +139,26 @@ function fixLayoutConflicts(content, filePath) {;    fixedContent.includes("impo
   const hasLayoutIcon =
     fixedContent.includes('Layout,') || fixedContent.includes('Layout }');
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   if (hasLayoutComponent && hasLayoutIcon) {
     // Remove Layout from lucide-react import
     fixedContent = fixedContent.replace(/Layout,\s*/g, '');
     fixedContent = fixedContent.replace(/,\s*Layout/g, '');
     fixedContent = fixedContent.replace(/{\s*Layout\s*}/g, '{}');
     changes++;
-<<<<<<< HEAD
-    console.log(`✅ Fixed Layout conflict in ${filePath}`)}
-  return { "content": fixedContent, changes }}
-=======
     console.log(`✅ Fixed Layout conflict in ${filePath}`);
   }
 
   return { content: fixedContent, changes };
 }
 
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 // Process individual file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const result = fixLayoutConflicts(content, filePath);
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
@@ -187,6 +187,8 @@ function processFile(filePath) {
     console && console.error(`❌ Error processing ${filePath}:`, error && error.message)}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
@@ -197,7 +199,7 @@ function processFile(filePath) {
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 }
 
 
@@ -213,13 +215,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Main function
 async function main() {
   console.log('🔧 Starting Layout conflicts fix...\n');
-<<<<<<< HEAD
-  const patterns = ['pages/**/*.{tsx,jsx}',
-    'src/**/*.{tsx,jsx}',
-    'components/**/*.{tsx,jsx}',
-  ];
-  const excludeDirs = ['node_modules',
-=======
 
   const patterns = [
     'pages/**/*.{tsx,jsx}',
@@ -229,7 +224,7 @@ async function main() {
 
   const excludeDirs = [
     'node_modules',
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     '.next',
       'build'
     'dist',
@@ -244,6 +239,7 @@ async function main() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -252,11 +248,14 @@ async function main() {
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   for (const pattern of patterns) {
     const files = await glob(pattern, {
       "ignore": excludeDirs.map(dir => `**/${dir}/**`)});
     for (const file of files) {
       processFile(file)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -266,6 +265,9 @@ async function main() {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -282,10 +284,15 @@ async function main() {
   console.log(`   Total fixes: ${totalFixes}`);
   console.log(`\n✨ Layout conflicts fix completed!`);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
   /**`)});
@@ -312,11 +319,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   console.log(`   Total "fixes": ${totalFixes}`);
   console.log("\n✨ Layout conflicts fix completed!")}
 // Run the script
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+
 main().catch(console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,6 +369,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -386,3 +390,10 @@ main().catch(console.error);
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+main().catch(console.error);
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

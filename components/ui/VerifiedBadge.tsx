@@ -4,6 +4,7 @@ import React from 'react';
 
 export function VerifiedBadge({ labels }: { labels: string[] }) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function VerifiedBadge(): any ({ labels }: { labels: string[] }) {;
@@ -20,6 +21,10 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
   if (!labels || labels.length;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  if (!labels || labels.length;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className='flex gap-2 items-center'>
       {labels.map(label => (
@@ -37,6 +42,7 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
               fillRule='evenodd'
               d='M2.25 12c0-5.385 4.365-9.75 9.75-9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36-1.28a.75.75 0 0 0-1.06-1.06L11 13.17l-1.47-1.47a.75.75 0 0 0-1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08-4.08Z'
               clipRule='evenodd'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             />          </svg>    <div className="flex gap-2 items-center">
@@ -65,11 +71,17 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
           </svg>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            />
+          </svg>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {label}
         </span>;
       ))}
     </div>;
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -138,3 +150,7 @@ if (return null) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

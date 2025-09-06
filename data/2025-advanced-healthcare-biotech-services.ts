@@ -1,14 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -24,6 +28,13 @@ import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedHealthcareBiotechService {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+import { ServiceVariant } from '../types/service-variants';
+export interface AdvancedHealthcareBiotechService {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   name: string;
   tagline: string;
@@ -55,12 +66,15 @@ export interface AdvancedHealthcareBiotechService {
     email: string;
     address: string;
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     website: string;
   }
 
@@ -86,9 +100,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       features: [;
         'AI - powered molecular modeling and simulation',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
     website: string
   },
   realImplementation: boolean;
@@ -336,17 +349,18 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.',
       features: [
         'AI-powered molecular modeling and simulation',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Target identification and validation',
         'Drug repurposing and optimization',
         'Predictive toxicity and efficacy analysis',
         'Clinical trial optimization',
-<<<<<<< HEAD
-        'Real - time collaboration tools',
-=======
         'Real-time collaboration tools',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Integration with research databases',
         'Advanced analytics and reporting',
         'Mobile research app',
@@ -354,20 +368,22 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: '🧬',
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       icon: '🧬',
       color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
@@ -383,8 +399,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       technology: [
         'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
       ],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       integrations: [
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
       ],
@@ -394,12 +414,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
@@ -436,9 +459,14 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'ai - drug - discovery - enterprise',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -454,11 +482,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Precision Medicine & Genomics Platform;
     {
       id: 'precision - medicine - genomics',
@@ -470,12 +502,16 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.',
       features: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Whole genome sequencing and analysis',
         'AI - powered disease risk assessment',
-=======
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
       marketSize: '$45.8B AI drug discovery market',
@@ -508,7 +544,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       features: [
         'Whole genome sequencing and analysis',
         'AI-powered disease risk assessment',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Personalized treatment recommendations',
         'Drug response prediction',
         'Clinical decision support',
@@ -520,20 +556,22 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: '🧬',
 
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       icon: '🧬',
       color: 'from-blue-600 to-indigo-600',
       textColor: 'text-blue-400',
@@ -549,8 +587,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       technology: [
         'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
       ],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       integrations: [
         'Epic, Cerner, Allscripts, Lab systems, Research databases',
       ],
@@ -560,12 +602,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
@@ -602,9 +647,14 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'precision - medicine - enterprise',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -618,11 +668,31 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       rating: 4 && 4.8,
       reviews: 23,
     },
+<<<<<<< HEAD
+=======
+
+        'AI-powered image analysis and diagnosis',
+        'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
+    // AI - Powered Medical Imaging Analysis;
+    {
+      id: 'ai - medical - imaging - analysis',
+      name: 'AI - Powered Medical Imaging Analysis Platform',
+      tagline: 'Advanced medical imaging analysis with AI and deep learning',
+      price: '$899',
+      period: '/month',
+      description:;
+        'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.',
+      features: [;
+        'AI - powered image analysis and diagnosis',
+        'Multi - modality support (X - ray, MRI, CT, Ultrasound)',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Automated abnormality detection',
         'Clinical decision support tools',
         'Integration with PACS systems',
         'Real - time analysis and reporting',
-=======
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
       marketSize: '$78.6B precision medicine market',
@@ -659,7 +729,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Clinical decision support tools',
         'Integration with PACS systems',
         'Real-time analysis and reporting',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Mobile imaging app',
         'API for healthcare systems',
         'Advanced analytics and insights',
@@ -667,20 +737,22 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: '🩻',
 
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       icon: '🩻',
       color: 'from-purple-600 to-pink-600',
       textColor: 'text-purple-400',
@@ -696,21 +768,27 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       technology: [
         'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
       ],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       integrations: [
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
       ],
       useCases: [
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / ai - medical - imaging - analysis',
@@ -730,31 +808,45 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       use_cases: [;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance',
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       market_size: '$32.1B AI medical imaging market',
       growth_rate: '42% annual growth',
       variant: 'ai - imaging - enterprise',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -769,17 +861,19 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       reviews: 34,
     },
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
     {
       id: 'digital - health - telemedicine',
-=======
       marketSize: '$32.1B AI medical imaging market',
       growthRate: '42% annual growth',
       variant: 'ai-imaging-enterprise',
@@ -801,56 +895,50 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     // Digital Health & Telemedicine Platform
     {
       id: 'digital-health-telemedicine',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
       price: '$399',
       period: '/month',
-<<<<<<< HEAD
-      description:;
-        'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
-      features: [;
-        'High - quality video consultations',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
       description:
         'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.',
       features: [
         'High-quality video consultations',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Remote patient monitoring',
         'Health data analytics and insights',
         'Patient engagement and education',
         'Integration with EHR systems',
         'Mobile health apps',
-<<<<<<< HEAD
-        'AI - powered health recommendations',
-=======
         'AI-powered health recommendations',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Secure messaging and file sharing',
         'Billing and insurance integration',
         'API for healthcare applications',
       ],
       popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: '🏥',
 
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       icon: '🏥',
       color: 'from-teal-600 to-cyan-600',
       textColor: 'text-teal-400',
@@ -866,19 +954,26 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       technology: [
         'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       integrations: [
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
       ],
       useCases: [
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
@@ -915,9 +1010,14 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'digital - health - enterprise',
       contact_info: {
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -931,9 +1031,27 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       rating: 4 && 4.6,
       reviews: 78,
     },
+<<<<<<< HEAD
+=======
+
+        'AI-powered trial design optimization',
+    // Clinical Trial Management & Optimization;
+    {
+      id: 'clinical - trial - management - optimization',
+      name: 'Clinical Trial Management & Optimization Platform',
+      tagline: 'Streamline clinical trials with AI - powered optimization',
+      price: '$1, 999',
+      period: '/month',
+      description:;
+        'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.',
+      features: [;
+        'AI - powered trial design optimization',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Intelligent patient recruitment and matching',
         'Real - time data collection and monitoring',
-=======
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
@@ -969,7 +1087,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'AI-powered trial design optimization',
         'Intelligent patient recruitment and matching',
         'Real-time data collection and monitoring',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Predictive analytics and insights',
         'Regulatory compliance management',
         'Site and investigator management',
@@ -980,21 +1098,23 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       popular: true,
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       icon: '🔬',
 
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
       icon: '🔬',
       color: 'from-orange-600 to-red-600',
       textColor: 'text-orange-400',
@@ -1011,8 +1131,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       useCases: [
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management',
       ],
@@ -1020,12 +1144,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       competitors: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
@@ -1033,6 +1160,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1087,6 +1215,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
+      launchDate: '2024-11-01',
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       customers: 34,
 =======
 =======      customers: 34,
@@ -1102,8 +1237,12 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
+<<<<<<< HEAD
 =======
   ];    features: [
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
@@ -1128,7 +1267,10 @@ export interface AdvancedHealthcareBiotechService {
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -1145,7 +1287,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     features: [
       'AI-powered molecular modeling and simulationTarget identification and validationDrug repurposing and optimizationPredictive toxicity and efficacy analysisClinical trial optimizationReal-time collaboration toolsIntegration with research databasesAdvanced analytics and reporting';
       'Mobile research appAPI for research institutions'
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1153,15 +1294,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
-      launchDate: '2024-11-01'
-      customers: 34
-      rating: 4.8
-      reviews: 19
-    }
-=======
-=======
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
       marketSize: '$67.2B clinical trial market',
@@ -1175,12 +1307,13 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       },
       realImplementation: true,
       implementationDetails:
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
       rating: 4.8,
       reviews: 19,
+<<<<<<< HEAD
 <<<<<<< HEAD
     },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1238,10 +1371,25 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
+=======
+
+    popular: true, icon: '🔬',
+    color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
+    link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization',
+    marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
+    targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
+    trialDays: 30, setupTime: '3-6 weeks',
+    category: 'Clinical Research & Trials', realService: true,
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'];
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1505,6 +1653,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8;
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     marketSize: '$67 && 67.2B clinical trial market', growthRate: '18% annual growth',
     variant: 'clinical-trial-enterprise',
@@ -1518,11 +1668,11 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     launchDate: '2024-11-01', customers: 34,
     rating: 4 && 4.8,
 
-=======
     },
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     reviews: 19
+<<<<<<< HEAD
 <<<<<<< HEAD
   }
 <<<<<<< HEAD
@@ -1536,6 +1686,22 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+    real_implementation: true,
+    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
+    launch_date: '2024 - 11 - 01', customers: 34,
+    rating: 4.8,
+    reviews: 19;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  }
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1798,6 +1964,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
@@ -2057,6 +2224,15 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+];
+  }
+ursor/fix-website-loading-errors-and-merge-6662
+];
+origin/cursor/integrate-build-improve-and-re-verify-2156
+;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -2098,6 +2274,10 @@ export interface AdvancedHealthcareBiotechService {;
   rating: number,;
   reviews: number;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ;
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] = [;
   // AI-Powered Drug Discovery Platform;
@@ -2320,6 +2500,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8;
     reviews: 19;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 ];
 =======
@@ -2347,3 +2528,14 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  }
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+];
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

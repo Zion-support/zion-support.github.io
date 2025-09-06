@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
 
@@ -34,6 +35,22 @@ import ErrorBoundary from './src/components/ErrorBoundary';
 
 <<<<<<< HEAD
 export default function App(): JSX.Element {
+=======
+import React from 'react';
+import Header from './src/components/Header';
+import Footer from './src/components/Footer';
+import ServiceCard from './src/components/ServiceCard';
+import TestimonialCarousel from './src/components/TestimonialCarousel';
+import ContactSection from './src/components/ContactSection';
+import BenefitsSection from './src/components/BenefitsSection';
+import HowItWorksSection from './src/components/HowItWorksSection';
+import FaqSection from './src/components/FaqSection';
+import ChatAssistant from './src/components/ChatAssistant';
+import ScrollToTop from './src/components/ScrollToTop';
+import ParticleBackground from './src/components/ParticleBackground';
+
+export default function App() {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const services = [
     {
       title: 'AI Solutions',
@@ -387,6 +404,7 @@ function App() {
     </div>
   );
 }
+<<<<<<< HEAD
 
 export default App;
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -413,3 +431,5 @@ export default App;
   );
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

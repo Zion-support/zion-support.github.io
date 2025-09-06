@@ -72,6 +72,7 @@ await this.log(" ESLint configuration fixed")
 });")}")} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   await this.log(")
@@ -85,3 +86,8 @@ await this.log(" ESLint configuration fixed")
   await this.log(")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  await this.log(")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

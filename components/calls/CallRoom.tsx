@@ -1,19 +1,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets  } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = any;
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Room
   RoomEvent
   RemoteParticipant
@@ -101,6 +108,7 @@ export default function CallRoom(): any ({;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   const [room, setRoom] = useState<Room | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
@@ -139,10 +147,12 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [participants, setParticipants] = useState<
     Array<RemoteParticipant | LocalParticipant>
   >([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
   const connect = useCallback(async () => {
     const r = new Room();
@@ -154,6 +164,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -195,14 +206,17 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
         video: VideoPresets && VideoPresets.h720,;
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 localTracks = await createLocalTracks({
         audio: true,
         video: VideoPresets.h720,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     setConnectedAt(Date && Date.now());
     rebuild(r);
@@ -235,6 +249,8 @@ localTracks = await createLocalTracks({
   const handleLeave = () => {
     if (room) {
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     await r.connect(serverUrl, token, {
       autoSubscribe: true
     });
@@ -266,7 +282,7 @@ room.disconnect();
   const handleLeave = () => {
     if (room) {
 room.disconnect();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }, [connect]);
 
@@ -283,6 +299,7 @@ room.disconnect();
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
     onLeave?.(durationSec)
 };      room && room.disconnect();
     }
@@ -298,6 +315,11 @@ room.disconnect();
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    onLeave?.(durationSec);
+  };
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
@@ -309,6 +331,7 @@ room.disconnect();
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
     if (count === 2) return 'grid-cols-2';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   Room,
@@ -691,6 +714,8 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
             key={String ((p as any).sid || (p as any).identity) + idx}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
@@ -708,28 +733,24 @@ if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
         {participants.map((p, idx) => (
 <ParticipantTile
             key={String((p as any).sid || (p as any).identity) + idx}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             participant={p}
             is_local={p instanceof LocalParticipant}
             display_name={
               (p as any).name ||;
               (p instanceof LocalParticipant ? 'You' : undefined);
             }
-<<<<<<< HEAD
-          />        ))}
-      </div>;
-    </div>);
-}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
-      </div>;
-    </div>);
-=======
           />
         ))}
       </div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
 

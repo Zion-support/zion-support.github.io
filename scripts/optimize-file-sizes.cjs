@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -18,6 +19,13 @@ const path = require('path')
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('� Starting File Size Optimization...')
 const largeFiles = ['pages/ai-services.tsx']
   'pages/it-services.tsx'
@@ -28,6 +36,7 @@ const largeFiles = ['pages/ai-services.tsx']
     const backupPath = filePath + '.backup;'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 console.log(' File size optimization completed')
@@ -41,3 +50,8 @@ console.log(' File size optimization completed')
 console.log(' File size optimization completed')
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+console.log(' File size optimization completed')
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

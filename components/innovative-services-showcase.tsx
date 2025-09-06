@@ -5,6 +5,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -115,6 +116,10 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -122,6 +127,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function InnovativeServicesShowcase() {
 <<<<<<< HEAD
@@ -141,6 +147,9 @@ export default function InnovativeServicesShowcase() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
   }
+=======
+  const contactInfo = null;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -193,14 +202,19 @@ delayChildren: 0.2,
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         duration: 0.6,
 
@@ -209,14 +223,20 @@ delayChildren: 0.2,
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.6,
 ease: 'easeOut',
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform',
@@ -227,6 +247,7 @@ description:
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         'Quantum key distribution (QKD)'
         'Post-quantum cryptography'
@@ -499,6 +520,8 @@ export default function InnovativeServicesShowcase() {;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Quantum key distribution (QKD)',
         'Post-quantum cryptography',
         'Quantum-resistant VPN tunnels',
@@ -568,8 +591,12 @@ export default function InnovativeServicesShowcase() {;
     <UltraAdvancedFuturisticBackground>
 <div className='min-h-screen'>
         <Head>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
@@ -649,6 +676,7 @@ export default function InnovativeServicesShowcase() {;
           <div className='max-w-7xl mx-auto'>
             <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -697,6 +725,8 @@ export default function InnovativeServicesShowcase() {;
               </p>;
             </motion && motion.div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='text-center mb-16'
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -718,7 +748,7 @@ export default function InnovativeServicesShowcase() {;
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {featuredServices.map((service, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={index}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -853,12 +883,17 @@ export default function InnovativeServicesShowcase() {;
                   viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -879,6 +914,7 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                       </div>;
                       <div className='text - sm text - green - 400 mt - 1'>;
                         {service.savings}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
@@ -958,6 +994,8 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </div>
                     </div>
                     <div className='mb-6'>
@@ -978,8 +1016,12 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                     </div>
 
 <div className='flex flex-col sm:flex-row gap-3'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <a
                         href={service && service.link}
                         className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2'>;
@@ -992,22 +1034,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                       <a
                         href='/contact'
-<<<<<<< HEAD
-                        className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                      <a
-                        href={service && service.link}
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2">;
-                        <span>Learn More</span>;
-                        <ExternalLink className="w-5 h-5" />;
-                      </a>;
-                      <a
-                        href="/contact"
-                        className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">;
-                        Get Started;
-                      </a>;
-                    </div>;
-                  </div>;
-                </motion && motion.div>;
-=======
                         className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
                       >
                         Get Started
@@ -1015,7 +1041,7 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                     </div>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
 =======
 
@@ -1029,6 +1055,7 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Emerging Tech Services */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>;
@@ -1233,8 +1260,10 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
         {/* ArrowRight-Gen AI Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='max-w-7xl mx-auto'>
             <motion.div
 <<<<<<< HEAD
@@ -1257,6 +1286,7 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
@@ -1406,6 +1436,8 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
             <motion.div
               className="text-center mt-16"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
                   Emerging
@@ -1461,7 +1493,7 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
             </div>
             <motion.div
               className='text-center mt-16'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1480,18 +1512,17 @@ href='/services'
           </div>
         </section>
         {/* ArrowRight-Gen AI Services */}
-<<<<<<< HEAD
-=======
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
               initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </span>{' '}
                 Tech Services;
@@ -1554,6 +1585,8 @@ href='/services'
                               {emergingTechServicesEnhanced2025.slice (0, 6).map ((service, index) => (
                 <motion.div;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>
                   ArrowRight-Generation
@@ -1569,12 +1602,13 @@ href='/services'
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 50 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 >;
 <<<<<<< HEAD
@@ -1590,6 +1624,8 @@ href='/services'
                     <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
                     <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 >
 <UltraFuturisticCard
                     variant='quantum-holographic'
@@ -1603,18 +1639,18 @@ href='/services'
                       {service.description}
                     </p>
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {service.price}
                       <span className="text - sm text-gray-400">{service.period}</span>;
                     </div>;
                     <div className="text - sm text - gray-400 mb-4">{service.market_size} • {service.growth_rate}</div>;
                     <a;
                       href={service.link}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
                       className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2'
                     >
                       <span>Learn More</span>
@@ -1639,7 +1675,7 @@ href='/services'
               >
                 <span>Discover All AI Services</span>
 <ArrowRight className='w-6 h-6' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.a>
             </motion.div>
           </div>
@@ -1674,6 +1710,7 @@ href='/services'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <a
                   href='/contact'
@@ -1711,6 +1748,8 @@ href='/services'
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -1728,7 +1767,7 @@ href='/services'
                 >
                   Get Started Today
                 </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
 href='/services'
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'
@@ -1737,6 +1776,7 @@ href='/services'
                   Explore All Services
                 </a>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1752,6 +1792,8 @@ href='/services'
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <div className='mt-12 text-center'>
                 <p className='text-gray-400 mb-4'>Contact us directly:</p>
@@ -1767,7 +1809,7 @@ href='/services'
                   <div className='flex items-center space-x-2'>
                     <MapPin className='w-5 h-5 text-pink-400' />
                     <span className='text-white'>{contactInfo.address}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </div>
@@ -1783,6 +1825,7 @@ href='/services'
 =======
   );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   );
@@ -1994,3 +2037,6 @@ href='/services'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

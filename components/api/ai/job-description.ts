@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -111,6 +112,8 @@ function handler() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -142,5 +145,9 @@ const prompt =
   return res.status(200).json({ jobDescription: text });
   return res.status(200).json({ jobDescription: text })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

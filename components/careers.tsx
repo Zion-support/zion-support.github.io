@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
@@ -38,6 +39,8 @@ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.fi
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 };export default CareersPage;import React, { useState } from 'react';
 
@@ -619,6 +622,8 @@ export default CareersPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout';
@@ -630,5 +635,9 @@ export default function Careers() {
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = null;
 export default CareersPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

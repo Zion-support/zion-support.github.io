@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function AgencyDashboardPage({ vendor }: Props) {
@@ -32,12 +33,19 @@ import type { Vendor } from '../utils/vendor-types';
 type Props = any;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { FormEvent, useEffect, useState } from 'react';
+import type { Vendor } from '../utils/vendor-types';
+type Props = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function AgencyDashboardPage({ vendor }: Props) {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -84,6 +92,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     const packages = [
       ...(activeVendor.packages |[])
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 if (!activeVendor)
     return (
@@ -113,7 +123,7 @@ if (!activeVendor)
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 const packages = [
       ...(activeVendor.packages || []),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {
         id: `pkg_${Date.now()}`
         title: pkgTitle
@@ -239,6 +249,7 @@ const packages = [
               name='servicesOffered'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               defaultValue={activeVendor && activeVendor.servicesOffered?.join(', ') || ''}
               className='w-full border rounded px-3 py-2 bg-transparent'
@@ -323,6 +334,8 @@ const packages = [
     setPkgDesc('');
       <section className='space-y-3'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               defaultValue={activeVendor.servicesOffered?.join(', ') |''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
@@ -336,7 +349,7 @@ const packages = [
       </section>
 
 <section className='space-y-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
 
@@ -402,6 +415,7 @@ const packages = [
               type='number'
               value={pkgPrice}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -425,6 +439,8 @@ const packages = [
       </section>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               onChange={e => setPkgPrice(Number(e.target.value))}
               className='border rounded px-3 py-2 bg-transparent w-full'
             />
@@ -445,7 +461,7 @@ const packages = [
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -464,6 +480,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 <<<<<<< HEAD
@@ -473,16 +490,19 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     setItems(data.items || [])
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
     const data = await res.json();
     setItems(data.items || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   useEffect(() => {
@@ -546,10 +566,12 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ itemId, status }),;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ itemId, status }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     fetchItems();
 <<<<<<< HEAD
@@ -659,6 +681,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
         </div>
       ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
@@ -694,6 +717,8 @@ export const getServerSideProps: GetServerSideProps < Props> = async () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
 );
 
@@ -702,5 +727,9 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const vendor = listVendors()[0] || null; // tie to auth later
   return { props: { vendor } };
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

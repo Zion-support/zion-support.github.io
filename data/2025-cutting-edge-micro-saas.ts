@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -426,9 +427,11 @@ export const cuttingEdgeMicroSaasServices2025 = [
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 id: 'customer-success-ai-pro',
     name: 'Customer Success AI Pro',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.'
       'AI-powered churn prediction with 92% accuracy'
@@ -851,6 +854,7 @@ id: 'customer-success-ai-pro',
     ]
     compliance: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -858,6 +862,11 @@ id: 'customer-success-ai-pro',
       'Risk Management Standards'
     ]
   }export const cuttingEdgeMicroSaasServices2025 = [
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+export const cuttingEdgeMicroSaasServices2025 = [
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   {
 
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
@@ -916,6 +925,7 @@ id: 'customer-success-ai-pro',
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -924,6 +934,11 @@ id: 'customer-success-ai-pro',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -1129,6 +1144,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
+<<<<<<< HEAD
   }
 ];
   },
@@ -1158,6 +1174,17 @@ export const cuttingEdgeMicroSaasServices2025 = [;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+  }
+];
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Basel III',
       'Solvency II',
       'Dodd-Frank',
@@ -1166,5 +1193,9 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],
   },
 ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

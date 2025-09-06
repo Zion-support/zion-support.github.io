@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Innovative2026AiServiceV3 {
 export interface Innovative2026AiServiceV3 {;
 =======
@@ -12,9 +13,11 @@ export interface Innovative2026AiServiceV3 {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface Innovative2026AiServiceV3 {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -26,6 +29,7 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface Innovative2026AiServiceV3 {;
     address: string
@@ -55,14 +59,25 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -71,6 +86,7 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   contactInfo: {
 export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "2026-innovative-ai-v3", name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI", price: "$349/month",
@@ -91,6 +107,8 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -102,12 +120,17 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     tagline: "Third generation innovative AI";
     price: "$349/month";
     description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
       "Third generation AI";
       "Enhanced capabilities";
       "Advanced features";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Improved performance";
       "Better integration"
@@ -132,6 +155,8 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Improved performance",
       "Better integration"
     ],
@@ -141,12 +166,17 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +203,8 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "2026-innovative-ai-v3",
     name: "2026 Innovative AI Platform V3",
     tagline: "Third generation innovative AI",
@@ -189,9 +221,9 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
     category: "Innovative 2026 AI V3",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -207,10 +239,15 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -228,3 +265,9 @@ export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

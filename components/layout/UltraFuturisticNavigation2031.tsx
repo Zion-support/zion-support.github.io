@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Menu
@@ -218,6 +219,12 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -227,19 +234,26 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Network, Server, HardDrive, Monitor;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon
  } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const serviceCategories = [
   {
     title: '🚀 2031 Revolutionary AI Services'
@@ -247,6 +261,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and creativity'
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -704,6 +719,8 @@ export default function UltraFuturisticNavigation2031() {;
     ];
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
         name: 'AI Consciousness Evolution Platform',
         href: '/ai-consciousness-evolution-platform',
@@ -908,7 +925,7 @@ const mainNavigation = [
   { name: 'About', href: '/about', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle },
 { name: 'Resources', href: '/resources', icon: BookOpen },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 export default function UltraFuturisticNavigation2031() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -917,6 +934,7 @@ export default function UltraFuturisticNavigation2031() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 const mainNavigation = [;
   { name: 'Home', href: '/', icon: Home },;
@@ -961,6 +979,8 @@ export default function UltraFuturisticNavigation2031() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
@@ -971,7 +991,7 @@ setScrolled(window.scrollY > 50);
     <>
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       {/* Top Contact Bar */}
@@ -981,6 +1001,7 @@ setScrolled(window.scrollY > 50);
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               <span>{contactInfo.mobile}</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className='flex items-center space-x-2'>
               <Mail className='w-4 h-4 text-purple-400' />
@@ -1008,6 +1029,8 @@ setScrolled(window.scrollY > 50);
             <MapPin className="w-4 h-4 text-pink-400" />
             <span className="text-xs">{contactInfo.address}</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <div className='flex items-center space-x-2'>
               <Mail className='w-4 h-4 text-purple-400' />
               <span>{contactInfo.email}</span>
@@ -1016,7 +1039,7 @@ setScrolled(window.scrollY > 50);
           <div className='flex items-center space-x-2'>
             <MapPin className='w-4 h-4 text-pink-400' />
             <span className='text-xs'>{contactInfo.address}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
@@ -1080,6 +1103,7 @@ setScrolled(window.scrollY > 50);
 =======
       {/* Main Navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         scrolled 
           ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
@@ -1087,6 +1111,8 @@ setScrolled(window.scrollY > 50);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
@@ -1102,8 +1128,12 @@ setScrolled(window.scrollY > 50);
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
 className='flex items-center space-x-3'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -1112,6 +1142,7 @@ className='flex items-center space-x-3'
                 <h1 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Zion Tech Group
                 </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>              </div>
             </motion.div>
@@ -1160,6 +1191,8 @@ className='flex items-center space-x-3'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>
               </div>
             </motion.div>
@@ -1173,8 +1206,12 @@ className='flex items-center space-x-3'
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='relative group'
                 >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <Link
               ))}
             </div>
@@ -1261,6 +1298,7 @@ className="relative group"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
             {/* CTA Buttons */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -1291,10 +1329,15 @@ className="relative group"
 <div className='hidden lg:flex items-center space-x-4'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='hidden lg:flex items-center space-x-4'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1305,6 +1348,10 @@ className="relative group"
 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 Get Started
               </motion.button>
@@ -1521,6 +1568,7 @@ function UltraFuturisticNavigation2031() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 animate={{ opacity: 1, scale: 1 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 animate={{ opacity: 1, scale: 1 }}
@@ -1566,6 +1614,8 @@ function UltraFuturisticNavigation2031() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 transition={{ duration: 0.5, delay: 0.9 }}
 className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'
               >
@@ -1586,7 +1636,7 @@ className='text-gray-300 hover:text-white transition-colors duration-200'
                 ) : (
                   <Menu className='w-6 h-6' />
                 )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.button>
             </div>
           </div>
@@ -1606,6 +1656,7 @@ className='text-gray-300 hover:text-white transition-colors duration-200'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
         {/* Service Categories Bar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1765,6 +1816,8 @@ className='text-gray-300 hover:text-white transition-colors duration-200'
                             <h3 className='text - lg font - semibold text - white mb - 1'>;
                   className='relative group'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='flex items-center justify-center space-x-8 py-3'>
@@ -1775,7 +1828,7 @@ className='text-gray-300 hover:text-white transition-colors duration-200'
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
 className='relative group'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
                 >
@@ -1826,6 +1879,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl borde
                               {category.description}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1835,6 +1889,8 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl borde
                                   duration: 0.2,
                                   delay: service_index * 0.05,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </p>
                           </div>
                           <div className='space-y-3'>
@@ -1846,7 +1902,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl borde
 transition={{
                                   duration: 0.2,
                                   delay: serviceIndex * 0.05,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                                 }}
 <<<<<<< HEAD
 
@@ -1872,6 +1928,7 @@ transition={{
                                     <div className='text - right'>;
                                       <span className='text - sm font - semibold text - cyan - 400'>;
                                         {service.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
                                       </span>                                    </div>                              >;
                                 <Link;
@@ -1920,6 +1977,8 @@ transition={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                                       </span>
                                     </div>
                                   </div>
@@ -1937,8 +1996,12 @@ transition={{
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1946,6 +2009,7 @@ transition={{
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1961,12 +2025,18 @@ transition={{
 className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            transition={{ duration: 0.3 }}
+className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
                 <h2 className='text-xl font-bold text-white'>Menu</h2>
                 <button
                   onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                   className='text-gray-400 hover:text-white transition-colors duration-200';
@@ -2005,6 +2075,8 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='text-gray-400 hover:text-white transition-colors duration-200'
                 >
                   <X className='w-6 h-6' />
@@ -2012,12 +2084,17 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
               </div>
               <div className='space-y-6'>
                 {mainNavigation.map(item => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <Link
                     key={item && item.name}
                     href={item && item.href}
                     onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400';
                   >;
@@ -2037,6 +2114,8 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                     </button>
                     <button className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 hover:text-cyan-400'
                   >
                     <item.icon className='w-5 h-5' />
@@ -2049,7 +2128,7 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                       Get Started
                     </button>
                     <button className='w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-200'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       Contact Us
                     </button>
                   </div>
@@ -2064,6 +2143,7 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Spacer for fixed navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className='h-32 lg:h-40'></div>
@@ -2204,3 +2284,9 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='h-32 lg:h-40'></div>
+    </>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

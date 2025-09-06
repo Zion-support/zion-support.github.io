@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Menu
@@ -224,6 +225,12 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -233,11 +240,14 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Network, Server, HardDrive, Monitor;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Laptop, Watch, Headphones, Speaker, Mic;
   Keyboard, Mouse, CpuIcon, DatabaseIcon;
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
@@ -245,8 +255,12 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   MenuIcon, CloseIcon, ChevronRightIcon
  } from 'lucide-react';
 const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const serviceCategories = [
   {
     title: '🧠 AI & Consciousness 2030'
@@ -254,6 +268,7 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600'
     description: 'Next-generation AI consciousness and emotional intelligence'
     services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -531,6 +546,8 @@ const mainNavigation = [
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
         name: 'AI Consciousness Evolution Platform',
         href: '/ai-consciousness-evolution-platform',
@@ -737,13 +754,18 @@ const mainNavigation = [
 { name: 'Contact', href: '/contact', icon: MessageCircle },
 ];
 const companyLinks = [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
   { name: 'News', href: '/news' },
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -754,11 +776,18 @@ const companyLinks = [
 export default function UltraFuturisticNavigation2032() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+{ name: 'Status', href: '/status' },
+];
+export default function UltraFuturisticNavigation2032() {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -806,6 +835,8 @@ const companyLinks = [;
   const closeMenu = () => setIsOpen(false);
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -814,10 +845,11 @@ setIsScrolled(window.scrollY > 20);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <>;
       {/* Top Contact Bar */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -865,6 +897,8 @@ setIsScrolled(window.scrollY > 20);
                 <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Zion Tech Group
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 backdrop-blur-sm border-b border-cyan-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between py-2 text-sm'>
@@ -942,10 +976,11 @@ setIsScrolled(window.scrollY > 20);
                 </div>
                 <div className='text-xs text-gray-400'>
                   2030 Future Technology
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               </div>
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1011,10 +1046,12 @@ setIsScrolled(window.scrollY > 20);
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map(item => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <Link
                   key={item.name}
                   href={item.href}
@@ -1050,6 +1087,7 @@ setIsScrolled(window.scrollY > 20);
                               </p>
                             </div>
                           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                           <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (
                               <Link
@@ -1105,15 +1143,22 @@ setIsScrolled(window.scrollY > 20);
                           <div className='space-y-2'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                          <div className='space-y-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -1128,13 +1173,18 @@ className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                                     {service.price}
                                   </div>
                                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               </Link>
                             ))}
                           </div>;
                         </div>;
                       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1146,6 +1196,8 @@ className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </div>
                 </div>
@@ -1177,8 +1229,12 @@ className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
 <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   Get Started
                 </button>
               </Link>
@@ -1442,23 +1498,8 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
                 <X className='w-6 h-6' />
               ) : (
                 <Menu className='w-6 h-6' />
-<<<<<<< HEAD
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors"
-            >
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors'>;
-              {isOpen ? (;
-                <X className='w-6 h-6' />;
-              ) : (;
-                <Menu className='w-6 h-6' />;
-              )}            </button>              className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
               )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </button>
           </div>
         </div>
@@ -1488,6 +1529,7 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1503,10 +1545,16 @@ className='lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-g
 className='fixed inset-0 z-50 lg:hidden'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            transition={{ duration: 0.3 }}
+className='fixed inset-0 z-50 lg:hidden'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
               onClick={closeMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
             />;
             <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 overflow-y-auto'>;
@@ -1575,6 +1623,8 @@ className='fixed inset-0 z-50 lg:hidden'
                   {mainNavigation && mainNavigation.map(item => (                <div className="space-y-6">;
                   {mainNavigation && mainNavigation.map((item) => (;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             />
             <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 overflow-y-auto'>
               <div className='p-6'>
@@ -1599,11 +1649,12 @@ className='fixed inset-0 z-50 lg:hidden'
                 {/* Mobile Navigation */}
 <div className='space-y-6'>
                   {mainNavigation.map(item => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <Link
                       key={item && item.name}
                       href={item && item.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
@@ -1613,6 +1664,8 @@ className='fixed inset-0 z-50 lg:hidden'
                       <item.icon className="w-5 h-5" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors p-3 rounded-lg hover:bg-gray-800/50'
                     >
                       <item.icon className='w-5 h-5' />
@@ -1636,8 +1689,12 @@ className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <div className='space-y-2'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <button
                       onClick={() =>;
                         setActiveCategory(activeCategory === 0 ? null : 0);
@@ -1650,33 +1707,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
                       </span>;
                       <ChevronRightIcon
                         className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`}
-<<<<<<< HEAD
-                      />;
-                    </button>;
-
-                    {activeCategory === 0 && (;
-                      <div className='pl-8 space-y-2'>;
-                        {serviceCategories && serviceCategories.map((category, index) => (;
-                          <div key={index} className='space-y-2'>;
-                            <div className='text-sm font-medium text-cyan-400 py-2'>;
-                              {category && category.title}
-                            </div>                            {category && category.services.map((service, serviceIndex) => (                    <button
-                      onClick={() => setActiveCategory(activeCategory === 0 ? null : 0)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors";
-                    >;
-                      <span className="flex items-center space-x-3">;
-                        <Briefcase className="w-5 h-5" />;
-                        <span>Services</span>;
-                      </span>;
-                      <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />;
-                    </button>;
-                    {activeCategory === 0 && (;
-                      <div className="pl-8 space-y-2">;
-                        {serviceCategories && serviceCategories.map((category, index) => (;
-                          <div key={index} className="space-y-2">;
-                            <div className="text-sm font-medium text-cyan-400 py-2">{category && category.title}</div>;
-                            {category && category.services.map((service, serviceIndex) => (;
-=======
                       />
                     </button>
                     {activeCategory === 0 && (
@@ -1687,11 +1717,12 @@ className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
                               {category.title}
                             </div>
                             {category.services.map((service, serviceIndex) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                               <Link
                                 key={serviceIndex}
                                 href={service && service.href}
                                 onClick={closeMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1702,12 +1733,18 @@ className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transit
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1'
                               >
                                 {service.name}
                               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             ))}
                           </div>;
                         ))}
@@ -1717,6 +1754,7 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                   </div>
 
                   {/* Company Links */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -1744,6 +1782,8 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
                       Company
@@ -1758,8 +1798,12 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                         >
                           {link.name}
                         </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       ))}
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1813,6 +1857,7 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -1827,12 +1872,15 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
                         <MapPin className="w-4 h-4 text-pink-400" />
                         <span className="text-xs">{contactInfo.address}</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         <span className='text-xs'>{contactInfo.address}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
                   {/* CTA Button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <div className='pt-4'>;
                     <Link href='/contact' onClick={closeMenu}>;
@@ -2039,6 +2087,8 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='pt-4'>
                     <Link href='/contact' onClick={closeMenu}>
                       <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'>
@@ -2056,5 +2106,9 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-
 <div className='h-20' />
     </>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

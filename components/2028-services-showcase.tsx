@@ -11,6 +11,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -225,6 +226,10 @@ export default function ServicesShowcase2028() {;
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -233,6 +238,7 @@ import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticN
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -438,6 +444,8 @@ export default function ServicesShowcase2028() {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const contactInfo = null;
       .filter(
         s =>
@@ -615,13 +623,18 @@ className='space-y-8'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                 <div className='text-cyan-300'>Support Available</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </div>
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -675,6 +688,8 @@ className='space-y-8'
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -693,7 +708,7 @@ className='space-y-8'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
@@ -721,8 +736,6 @@ className='space-y-8'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='group relative'
               >
                 <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
@@ -750,7 +763,7 @@ className='group relative'
                             {service.name}
                           </span>
                         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       ))}
                     </div>
 
@@ -833,8 +846,6 @@ className='group relative'
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                     <Link
-<<<<<<< HEAD
-=======
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
 className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
                     >
@@ -844,21 +855,10 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
                   </div>
                 </div>
               </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Featured Services */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Featured{' '}
-            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-              Our most innovative and in-demand services that are revolutionizing industries worldwide.
-            </p>
-          </div>
-=======
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
@@ -915,12 +915,13 @@ className='group relative'
                         </span>
                       </div>
                       <div className='text-sm text-purple-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className='font-medium'>Market Size:</span>{' '}
                         {service && service.marketSize}
                       </div>;
                       <div className='text-sm text-purple-300'>;
                         <span className='font-medium'>Growth Rate:</span>{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -965,6 +966,8 @@ className='group relative'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         {service.growthRate}
                       </div>
                     </div>
@@ -987,8 +990,12 @@ className='group relative'
                   </div>
                 </div>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </div>
@@ -1124,13 +1131,6 @@ className='group relative'
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
-              <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential
-
-=======
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
             >
               <TrendingUp className='w-16 h-16 text-green-400 mx-auto mb-6' />
@@ -1143,7 +1143,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -1213,8 +1213,6 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
             >
               <DollarSign className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -1229,14 +1227,11 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               <div className='text-blue-300'>Total Addressable Market</div>
             </motion.div>
             <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
             >
               <Shield className='w-16 h-16 text-pink-400 mx-auto mb-6' />
@@ -1253,7 +1248,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -1269,6 +1264,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1287,6 +1283,10 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 className='space-y-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             className='space-y-8'>;
@@ -1319,11 +1319,14 @@ className='space-y-8'
               <Link
                 href='/case-studies'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'
               >
                 <span>View Case Studies</span>
@@ -1348,8 +1351,12 @@ className='space-y-8'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
                 <CheckCircle className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <span>Money-Back Guarantee</span>
               </div>
             </div>
@@ -1360,6 +1367,7 @@ className='space-y-8'
 =======
       <UltraFuturisticFooter2028 />
     </>
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
   );
@@ -1565,3 +1573,8 @@ className='space-y-8'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

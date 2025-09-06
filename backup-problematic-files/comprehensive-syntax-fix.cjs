@@ -668,9 +668,6 @@ fixer.run().catch(console.error);
   async fixMergeConflicts() {
     this.log('🔧 Fixing merge conflicts...');
     // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
     // Fix common syntax errors
     content = content.replace(/;\s*;/g, ';');

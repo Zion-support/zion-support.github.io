@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }</ul> </Card> <Card className="p-6 bg-black/40 border border-gray-700/50" > <div className="text-sm text-gray-400 mb-1" >Pricing</div> <div className="text-3xl font-bold text-white" >$89<span className="text-base text-gray-400" >/month</span></div> <div className="text-sm text-gray-400 mt-2" >Trial: 14 days • Setup: 30 minutes</div> <div className="mt-6 flex gap-3" > <Link href="/contact" className="flex-1 bg-gradient-to-r from-purple-600 to-indigo-600 text-white" >Contact Sales</Button> <Link href="https://ziontechgroup.com/audit-log-vault" variant="outline" className="flex-1 border border-gray-600 text-gray-200" ><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button> </div> </div> </Card> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
@@ -209,6 +210,8 @@ export default function AuditLogVaultPage() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground>
@@ -256,5 +259,9 @@ export default function AuditLogVaultPage() {
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

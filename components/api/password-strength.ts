@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -152,6 +153,10 @@ if ( {) {
 password.toLowerCase () .includes (pattern) );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+password.toLowerCase () .includes (pattern) );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -166,6 +171,7 @@ if (!hasNumbers) feedback.push ('Add numbers');
 if (!hasSymbols) feedback.push ('Add special characters');
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
 if (entropy < 30) feedback.push ('Password is too predictable');
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -191,11 +197,16 @@ interface PasswordStrengthResult {
     hasCommonPatterns: boolean;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    hasCommonPatterns: boolean;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     entropy: number
   }
   suggestions: string[]
 }
 export default async function handler(
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -225,6 +236,8 @@ export default async function handler(
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   req: NextApiRequest;
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
@@ -239,8 +252,12 @@ return res.status(405).json({ error: 'Method not allowed' });
     // Password analysis
 const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Check for common patterns
     const commonPatterns = [
       '123'
@@ -377,6 +394,7 @@ suggestions.push(
     res.status(500).json({ error: 'Internal server error' });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }      suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
@@ -428,9 +446,15 @@ suggestions.push(
 }
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

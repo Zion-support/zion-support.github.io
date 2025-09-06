@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 =======
 
@@ -189,6 +190,8 @@ function on_submit() {
       setMessage('Application submitted. Await approval.');
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { FormEvent, useState } from 'react';
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
@@ -221,7 +224,7 @@ export default function VendorRegisterPage() {
       setMessage(err.message);
     } finally {
       setLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       form.reset()
     } catch (err: any) {
       setMessage(err.message)
@@ -297,6 +300,7 @@ export default function VendorRegisterPage() {
       {message && <div className='text-sm'>{message}</div>}
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 );
 }
@@ -563,3 +567,7 @@ export default function VendorRegisterPage() {
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

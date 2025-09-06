@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { TokenConfig, TokenTransaction, Wallet } from "./types";
@@ -11,6 +12,8 @@ export interface TokenStoreData {;
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class TokenStore {
   private config: any = {};
 
@@ -25,12 +28,17 @@ class TokenStore {
 
 export const tokenStore = new TokenStore();
 export interface TokenConfig {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   tokenName: string;
   tokenSymbol: string;
 
 export interface TokenConfig {
+<<<<<<< HEAD
 export interface TokenConfig {
 export interface TokenConfig {;
   tokenName: string;
@@ -38,6 +46,28 @@ export interface TokenConfig {;
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
+=======
+
+export interface TokenConfig {
+
+  decimals: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
+
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -50,6 +80,10 @@ class TokenStore {
     maxIssueAmount: 10000;
   }
 ;
+<<<<<<< HEAD
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface TokenStoreData {
   wallets: Record < string, Wallet>;
   transactions: TokenTransaction[];
@@ -65,25 +99,26 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+<<<<<<< HEAD
+=======
+  }
+export interface TokenStoreData {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
+origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 <<<<<<< HEAD
 export interface TokenStoreData {
-=======
-  }
-export interface TokenStoreData {
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  }
-export interface TokenStoreData {
-=======
   };
 
 export interface TokenStoreData {;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
 }
 export const tokenStore = new TokenStore();
@@ -107,10 +142,9 @@ export class TokenStorageManager {
 
   }
 export interface TokenStoreData {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
   wallets: Record<string, Wallet>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   transactions: TokenTransaction[];
@@ -126,16 +160,15 @@ function ensureDataDir(): void {;
 function readFromDisk(): TokenStoreData | null {;
   try {;
     ensureDataDir();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 =======
@@ -173,11 +206,19 @@ export interface TokenStoreData {}
 
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  set_config (new_config: Partial < TokenConfig>): void {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -190,6 +231,12 @@ export const token_store = new TokenStore ();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -249,6 +296,7 @@ class InMemoryTokenStore {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 ;
 const store = new InMemoryTokenStore();
@@ -290,15 +338,15 @@ export const tokenStore = new TokenStore();
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -309,6 +357,13 @@ export const tokenStore = new TokenStore();
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   getData(): TokenStoreData {
     return this.data;
@@ -352,5 +407,9 @@ export const tokenStore = {
     return txs.filter(t => t.userId === userId);
   },
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

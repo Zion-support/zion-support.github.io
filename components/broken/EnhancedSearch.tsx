@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
@@ -24,6 +25,8 @@ setShowResults (true);
 setIsSearching (false);
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -64,12 +67,13 @@ setResults (sortedResults);
 setShowResults (true);
 setIsSearching (false) 
 }, 300) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }, 300);
 }, 300);
 [selected_filters]);
 [selected_filters]);
 //Close search on outside click useEffect ( () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -147,6 +151,8 @@ setIsSearching (false) ;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
@@ -173,8 +179,12 @@ setIsSearching (false) ;
   {
   opacity: 0, y: -10, scale: 0.95 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }animate= {
   {
   opacity: 1, y: 0, scale: 1 
@@ -183,9 +193,12 @@ setIsSearching (false) ;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto" > {
   /* Filters */
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }{
   showFilters && (<div className="p-4 border-b border-gray-700"> <div className="flex items-center gap-2 mb-3"> <Filter className="w-4 h-4 text-gray-400" /> <span className="text-sm font-medium text-gray-300">Filter by Category</span> </div> <div className="flex flex-wrap gap-2"> {
   categories.map ( (category) => (<button key= {
@@ -259,6 +272,8 @@ setIsSearching (false) ;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10, scale: 0.95 
 
 }transition= {
@@ -293,7 +308,7 @@ setIsSearching (false) ;
   /* Search Suggestions */ 
 }<AnimatePresence> {
   showSuggestions && suggestions.length > 0 && (<motion.div initial= {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   {
   opacity: 0, y: -10 
 
@@ -305,11 +320,14 @@ setIsSearching (false) ;
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
   func: T
@@ -558,6 +576,8 @@ function debounce < T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   opacity: 0, y: -10 
 
 }className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10" > {
@@ -644,5 +664,9 @@ function debounce < T extends (...args: any[]) => any>(
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

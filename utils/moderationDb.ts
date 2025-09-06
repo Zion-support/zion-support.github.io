@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -29,6 +30,12 @@ export interface ModerationFlag {
 export interface ModerationFlag {;
 
 export interface ModerationFlag {
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -38,6 +45,7 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
 export interface ModerationFlag {
   id: string;
   content_id: string;
@@ -54,6 +62,11 @@ let flags: ModerationFlag[] = [];
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+=======
+}
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -70,11 +83,15 @@ export async function getFlagById (id: string): Promise < ModerationFlag | null>
 <<<<<<< HEAD
   return flags.find (flag => flag.id === id) || null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 <<<<<<< HEAD
 ;
@@ -102,6 +119,7 @@ export async function readAllFlags (): Promise < ModerationFlag[]> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
@@ -114,10 +132,16 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 export async function readAllFlags (): Promise < ModerationFlag[]> {
   return [...flags];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find((flag) => flag.id === id) || null;
@@ -125,6 +149,8 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   flag && flag.status = status;
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
@@ -136,7 +162,6 @@ export async function getFlagById(id: string): Promise<ModerationFlag | null> {
 =======
 }
 
-=======
 // Moderation database utilities
 export interface ModerationFlag {
   id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
@@ -146,10 +171,9 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 
 
@@ -158,12 +182,17 @@ let flags: ModerationFlag[] = [];
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {;
   return flags.find(flag => flag.id === id) || null;
+<<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   // Mock implementation - replace with actual database logic
@@ -203,8 +232,12 @@ export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt' |
 let flags: ModerationFlag[] = [];
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   return flags.find(flag => flag.id === id) |null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
 =======
@@ -217,6 +250,7 @@ export interface ModerationFlag {
   updatedAt: Date, moderatorId?: string,
   notes?: string;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -343,6 +377,10 @@ export async function updateFlagStatus(
 <<<<<<< HEAD
 =======
 =======
+=======
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   status: ModerationFlag['status'],
   admin_notes?: string): Promise < FlaggedContent | undefined> {
   const flag = await getFlagById (id);
@@ -350,7 +388,6 @@ export async function updateFlagStatus(
 if (return undefined) {
   $2
 }
-=======
     reason: data.reason || '',
     userEmail: data.userEmail || '',
     status: 'pending',
@@ -369,8 +406,8 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -378,6 +415,12 @@ export async function updateFlagStatus(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();
@@ -385,6 +428,7 @@ export async function updateFlagStatus(
   return flag;
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 <<<<<<< HEAD
@@ -402,3 +446,10 @@ export async function updateFlagStatus(
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

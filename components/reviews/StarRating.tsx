@@ -1,10 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 
+=======
+}
+ > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
+}) ;
+}</div>) ;
+};
+
+
+export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +45,15 @@ class ErrorBoundary extends React.Component {
 }</div>) 
 };
 
+<<<<<<< HEAD
+=======
+export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
+  const [hovered, setHovered] = useState<number | null>(null);
+
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 type Props = {;
   value: number,;
   onChange: (val: number) => void,;
@@ -43,6 +65,13 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
 
   const stars = [1, 2, 3, 4, 5];
   return (
+<<<<<<< HEAD
+=======
+    <div className='flex items-center gap-1'>;
+      {stars && stars.map(star => {;
+        const active = (hovered ?? value) >= star;
+                    onMouseEnter={() => !readOnly && setHovered(star)}        return (
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           <button
             key={star}
@@ -50,11 +79,14 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 type Props = any;
   const stars = [1, 2, 3, 4, 5];
@@ -63,34 +95,44 @@ type Props = any;
       {stars.map(star => {
         const active = (hovered ?? value) >= star;
             onMouseEnter={() => !readOnly && setHovered(star)}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 xmlns='http://www.w3.org/2000/svg'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               width={size}
               height={size}
               viewBox='0 0 24 24';
               fill={active ? 'gold' : 'none'}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default StarRating;
 
               xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +147,7 @@ export default StarRating;
             </svg>;
           </button>);
       })}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>);
 }
@@ -136,10 +179,17 @@ export default StarRating;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
   );
 };
 
 export default StarRating;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -163,6 +163,7 @@ class ErrorPreventionOrchestrator {}
       const child = spawn(command, args, { "stdio": 'inherit' };);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       
@@ -176,6 +177,11 @@ class ErrorPreventionOrchestrator {}
       
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       child.on('close', (code) => {}
         if ( {})
           resolve()} else {}
@@ -224,6 +230,7 @@ switch (command) {}
     break;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
@@ -240,3 +247,9 @@ switch (command) {}
     process.exit(1)};
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  "default": console.log('Usage: node master-orchestrator.cjs [start|stop|restart|status|check|logs]');
+    process.exit(1)};
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

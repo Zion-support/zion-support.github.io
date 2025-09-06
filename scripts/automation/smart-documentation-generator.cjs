@@ -289,6 +289,7 @@ process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   console.error(" Failed to start smart documentation "generator")
@@ -302,3 +303,8 @@ process.on("SIGTERM")
   console.error(" Failed to start smart documentation "generator")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  console.error(" Failed to start smart documentation "generator")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

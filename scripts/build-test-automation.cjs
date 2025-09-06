@@ -31,6 +31,7 @@ class BuildTestAutomation {}
     const timestamp = new Date().toISOString(;);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -49,6 +50,13 @@ class BuildTestAutomation {}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
+    console.log(logMessage);
+    
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     this.report.steps.push({})
       timestamp,
       type,
@@ -199,6 +207,7 @@ if ( {})
   automation.run().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = BuildTestAutomation;
@@ -212,3 +221,8 @@ module.exports = BuildTestAutomation;
 module.exports = BuildTestAutomation;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = BuildTestAutomation;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

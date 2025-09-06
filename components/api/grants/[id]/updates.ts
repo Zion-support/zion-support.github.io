@@ -6,6 +6,7 @@ const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
 
 function grantPath(id: string) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
@@ -26,20 +27,27 @@ function readGrant(id: string): GrantApplication | null {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
 return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
     'utf8'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
@@ -59,6 +67,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -76,6 +88,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method === 'GET') {
     return res.status(200).json({ updates: existing.updates |[] });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
     const update = {
 <<<<<<< HEAD
@@ -181,10 +194,12 @@ if ( {) {
     const { content } = req.body as { content?: string }
     if (!content |!content.trim())
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method === 'POST') {
     const { content } = req.body as { content?: string };
 if (!content || !content.trim())
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: 'Missing content' });
     const update = {
       id: uuidv4()
@@ -196,6 +211,7 @@ if (!content || !content.trim())
     write_grant (existing);
     return res.status (201).json ({ update });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    existing.updates = [...(existing.updates || []), update];
@@ -215,9 +231,15 @@ if (!content || !content.trim())
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

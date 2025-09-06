@@ -1,10 +1,13 @@
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 async function fetchHtml(url) {
@@ -13,9 +16,14 @@ async function fetchHtml(url) {
   return resp && resp.text();
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return resp.text();
 function extractLinks(html, base) {
   const aTags = [...html && html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
@@ -26,6 +34,37 @@ function extractLinks(html, base) {
     .map(h =>
       h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`
     );
+<<<<<<< HEAD
+=======
+
+const { upsert_file } = require ('./_lib / github');
+;
+async /**
+ * fetch_html - Function description
+ */
+function fetch_html() {
+  const resp = await fetch (url);
+  if (throw new Error (`HTTP ${resp.status}`)) {
+  $2
+}
+  return resp.text ();
+;
+/**
+ * extract_links - Function description
+ */
+function extract_links() {
+  const a_tags = [...html.match_all (/<a[^>]+href=["']([^"']+)["']/gi)].map (
+    m => m[1]);
+  const links = a_tags;
+    .filter (h => h && !h.starts_with ('mailto:') && !h.starts_with ('tel:'));
+    .map (h =>;
+      h.starts_with ('http') ? h : `${base}${h.starts_with ('/') ? h : `/${h}`}`);
+  return Array.from (new Set (links));
+;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
@@ -36,6 +75,35 @@ exports && exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const checked = [];
     const broken = [];
+<<<<<<< HEAD
+=======
+
+            broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) });
+          }
+        }
+      } catch (e) {
+        broken && broken.push({
+          url: `${base}${p}`,
+          status: 0,
+          error: String(e && e.message || e),
+        });
+      }
+    }
+    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken };
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+    if (owner && repo && token) {
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/links/weekly-links && links.json',
+        content: JSON && JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly link check',
+;
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     ${p}`);
         const links = extract_links (html, base);
         for (const l of links.slice (0, 50)) {
@@ -63,13 +131,33 @@ exports && exports.handler = async function () {
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
+<<<<<<< HEAD
+=======
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      await upsert_file ({
+        owner,
+        repo,
+        path: 'data / reports / links / weekly - links.json',
+        content: JSON.stringify (report, null, 2),
+        message: 'chore (automation): weekly link check',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         token,
       });
     }
     return {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
@@ -104,6 +192,7 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
@@ -121,13 +210,15 @@ if ( {) {
   return resp && resp.text()
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
 };
   return resp.text()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 function extractLinks(html, base) {
 
@@ -140,21 +231,29 @@ function extractLinks(html, base) {
 exports && exports.handler = async function() {
   try {
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications'],
     const checked = [],
     const broken = [],
 
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const base = process.env.URL |process.env.DEPLOY_URL |''
     const pages = ['//learn/dao/certifications']
     const checked = []
@@ -163,7 +262,10 @@ exports && exports.handler = async function() {
       try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
         const html = await fetchHtml(`${base}${p}`),
         const links = extractLinks(html, base),
@@ -174,7 +276,6 @@ exports && exports.handler = async function() {
             if (resp && resp.status >= 400) broken && broken.push({ url: l, status: resp && resp.status })
           } catch (e) {
             broken && broken.push({ url: l, status: 0, error: String(e && e.message || e) })
-=======
     const base = process.env.URL || process.env.DEPLOY_URL || '',
     const pages = ['//learn/dao/certifications'];
     const checked = [];
@@ -189,19 +290,15 @@ exports && exports.handler = async function() {
             checked.push({ url: l, status: resp.status });
             if (} catch (e) {
             broken.push({ url: l, status: 0, error: String(e.message || e) })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       } catch (e) {
         broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
       }
     }
-<<<<<<< HEAD
-    const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
-    const owner = process && process.env.GITHUB_OWNER,
-    const repo = process && process.env.GITHUB_REPO,
-    const token = process && process.env.GITHUB_TOKEN,
 
+<<<<<<< HEAD
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links && links.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
@@ -285,6 +382,8 @@ exports.handler = async function() {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };async function fetchHtml(url) {
@@ -332,14 +431,13 @@ exports.handler = async function() {
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
 
-=======
 
     const report = { updatedAt: Date.now(), checked: checked.length, broken },
 
     const owner = process.env.GITHUB_OWNER);
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token })
     }
@@ -348,8 +446,9 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -359,6 +458,10 @@ exports.handler = async function() {
 =======
 },},
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
@@ -416,6 +519,7 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -432,3 +536,11 @@ exports.handler = async function() {
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+};
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

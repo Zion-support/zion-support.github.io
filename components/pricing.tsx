@@ -6,6 +6,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -91,18 +92,21 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Check, Star, Users, TrendingUp, DollarSign, Clock;
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
   Check, Star, Users, TrendingUp, DollarSign, Clock
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Import all service data
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
@@ -211,6 +215,8 @@ export default function PricingPage() {;
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -335,7 +341,7 @@ answer:
         );
 
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 <<<<<<< HEAD
@@ -359,6 +365,7 @@ answer:
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
@@ -384,6 +391,8 @@ answer:
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>
@@ -426,8 +435,12 @@ className='max-w-4xl mx-auto'
               Transparent pricing for our cutting-edge technology services that
               are already operational and delivering transformative results
             </p>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Filter Controls */}
             <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>
               <select
@@ -448,6 +461,7 @@ className='max-w-4xl mx-auto'
                 {priceRanges.map(range => (
                   <option key={range.id} value={range.id}>
                     {range.name}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </option>                ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -548,6 +562,8 @@ className='max-w-4xl mx-auto'
 =======
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                   </option>
                 ))}
               </select>
@@ -592,8 +608,12 @@ className='max-w-4xl mx-auto'
                         transition={{
                           duration: 0.6
                           delay: serviceIndex * 0.1
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         }}
                         viewport={{ once: true }}
                         className='group cursor-pointer'>;
@@ -714,10 +734,14 @@ className='max-w-4xl mx-auto'
                           <div className='flex items-center justify-between'>;
                             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
                         {/* Market Position */}
@@ -810,6 +834,8 @@ className='max-w-4xl mx-auto'
 
           <div className="max-w-4xl mx-auto text-center">
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                               href={service.link |`/services/${service.id}`}
                             >
                               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
@@ -833,7 +859,7 @@ className='max-w-4xl mx-auto'
         {/* Contact CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
 =======
@@ -845,29 +871,17 @@ className='max-w-4xl mx-auto'
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Get Started with
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
-=======
 <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started with
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   {' '}
                   Revolutionary Technology?
                 </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Link href="/contact">
-                  <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-                    <Phone className="inline-block w-5 h-5 mr-2" />
-                    <Mail className="inline-block w-5 h-5 mr-2" />
-=======
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Link href='/contact'>
                   <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
@@ -878,11 +892,12 @@ className='max-w-4xl mx-auto'
                 <a href={`mailto:${contactInfo.email}`}>
 <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105'>
                     <Mail className='inline-block w-5 h-5 mr-2' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     Get Quote
                   </button>
                 </a>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -902,6 +917,8 @@ className='max-w-4xl mx-auto'
               </div>
               {/* Additional Info */}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Contact Information */}
 <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
                 <div className='flex items-center justify-center space-x-2'>
@@ -946,7 +963,7 @@ className='max-w-4xl mx-auto'
                   </div>
                   <div className='flex items-center space-x-2'>
                     <Check className='w-4 h-4 text-green-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>Cutting-edge 2029 technology</span>
                   </div>
                 </div>
@@ -955,6 +972,7 @@ className='max-w-4xl mx-auto'
           </div>
         </section>
       </main>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -968,10 +986,12 @@ className='max-w-4xl mx-auto'
   );
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -980,6 +1000,7 @@ className='max-w-4xl mx-auto'
   duration: 0.8
 }viewport= {
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1012,6 +1033,8 @@ className='max-w-4xl mx-auto'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </p>;
                           {/* Key Features */}
                           <div className='mb - 6'>;
@@ -1373,8 +1396,14 @@ className='max-w-4xl mx-auto'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   once: true 
 
 }> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

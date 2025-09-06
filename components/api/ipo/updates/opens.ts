@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -20,12 +21,16 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const id = String(req.query.id |"");
   const updates = readJsonFile("updates.json", [] as any[]);
@@ -85,6 +90,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 }
+=======
+  const id = String(req && req.query.id || "");
+
+  if (!u) return res.status(404).json({ error: 'Not found' });
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
   if (!u) return res.status(404).json({ error: 'Not found' });
@@ -97,9 +110,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ opens: u.opens || 0 })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -120,6 +138,7 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!u) return res.status(404).json({ error: 'Not found' });import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -132,6 +151,12 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -187,6 +212,7 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 <<<<<<< HEAD
@@ -210,3 +236,11 @@ function handler() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+  const id = null;
+  res.status(200).json({ opens: u.opens || 0 })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

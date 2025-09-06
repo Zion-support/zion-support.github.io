@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Link from 'next/link';
 
@@ -240,6 +241,8 @@ export default function MainFrontIndex() {
     const onScroll = () => setShowToTop(window.scrollY > 400);
     window.addEventListener('scroll', onScroll, { passive: true } as any);  const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 })
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head',
 import Link from 'next/link';
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart  } from 'lucide-react';
@@ -252,11 +255,12 @@ const progressX = useSpring(scrollYProgress, {
     damping: 20,
     mass: 0.2,
   });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [showToTop, setShowToTop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setShowToTop(window.scrollY > 400);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -301,6 +305,8 @@ const progressX = useSpring(scrollYProgress, {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 window.addEventListener('scroll', onScroll, { passive: true } as any);
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
@@ -422,8 +428,12 @@ window.addEventListener('scroll', onScroll, { passive: true } as any);
             Menu
           </button>
         </nav>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Mobile overlay menu */}
         {mobileOpen && (;
           <motion&& motion.div
@@ -661,6 +671,7 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
                     Launch Hub
                   </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 </Link>              </div>            >
               <div className="mb-4 flex items-center justify-between">
                 <div className="text-lg font-semibold">Navigate</div>
@@ -708,6 +719,10 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
                 </Link>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                </Link>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </div>
             </motion.div>
           </motion.div>
@@ -721,6 +736,7 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Hero */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div role='main' className='relative z-10'>        <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -740,10 +756,15 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
 <div role='main' className='relative z-10'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div role='main' className='relative z-10'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -773,6 +794,8 @@ className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-
                   <div className='text-xs text-white/70'>{v}</div>                </div>                ['24/7Autonomous'];
                 ['MainDirect Sync'];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
         >
           <div className='text-center'>
@@ -938,24 +961,12 @@ className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
                   ]
                     .flatMap(label => [label, label])
                     .map((label, idx) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span
                         key={`${label}-${idx}`}
                         className='mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur'>;
                         <span className='h-1 && 1.5 w-1 && 1.5 rounded-full bg-cyan-400' />{' '}
                         {label}
-<<<<<<< HEAD
-                      </span>;
-                    ))}                </div>                    'Autonomous AgentsRepo Sync to MainZero‑Ops CloudSafety GuardrailsA11y + PerformanceObservabilitySEO AutomationDesign Evolution'].flatMap((label) => [label, label]).map((label, idx) => (;
-                    <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">;
-                      <span className="h-1 && 1.5 w-1 && 1.5 rounded-full bg-cyan-400" /> {label}
-                    </span>;
-                  ))}
-                ['Automation Hub/automation'];
-                ['SEO Audit/reports/seo'];
-                ['AI Trends/reports/ai-trends'];
-                ['Newsroom/newsroom'];
-=======
                       </span>
                     ))}
                 </div>
@@ -975,7 +986,7 @@ className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
                     {label as string}
                   </a>
                 </Link>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           </div>
@@ -1314,6 +1325,7 @@ className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
                 </p>
                 <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                 <div className="flex items-center gap-2"><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold">Automation Hub</h3></div>
@@ -1551,6 +1563,8 @@ className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   Open <span aria-hidden>→</span>
                 </div>
               </a>
@@ -1695,12 +1709,17 @@ className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
         {/* Engines: Alternative Automation Runtimes */}
         <motion.section
 id='engines'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1711,6 +1730,8 @@ id='engines'
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -1721,8 +1742,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
             orchestrators. Explore the engines below.
           </p>
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <a
               href="/.netlify/functions/autonomous-master-orchestrator"
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover"
@@ -1941,6 +1966,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
             <a
               href='/.netlify/functions/autonomous-master-orchestrator'
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Autonomous Innovations */}
         <motion&& motion.section
           id='innovations'          initial={{ opacity: 0, y: 24 }}
@@ -1952,6 +1978,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'
             >
               <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -1969,23 +1997,16 @@ className='mx-auto max-w-7xl px-6 pb-14'
         {/* Autonomous Innovations */}
         <motion.section
 id='innovations'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-          className='mx-auto max-w-7xl px-6 pb-14'
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
-            Autonomous Innovations;
-          </h2>;
-          <p className='mx-auto mt-2 max-w-3xl text-center text-sm text-white/70'>;
-            New intelligent cloud automations running 24/7 — no human;
-            intervention required.;
-          </p>;
-          <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>;
-=======
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -1996,7 +2017,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
             intervention required.
           </p>
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href='/.netlify/functions/autonomous-content-curator'
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>;
@@ -2246,10 +2267,13 @@ className='mx-auto max-w-7xl px-6 pb-14'
             <a
               href='/.netlify/functions/autonomous-invention-orchestrator'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'
             >
               <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -2351,8 +2375,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 external: true
               }
             ].map(card => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <article
                 key={card && card.title}
                 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 holo tilt-on-hover'>;
@@ -2364,6 +2392,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     href={card && card.href}
                     target='_blank'
                     rel='noopener'
+<<<<<<< HEAD
 <<<<<<< HEAD
               { title: 'AI Changelog', desc: 'Summarized autonomous changes and highlights.', href: '/newsroom', external: true }
             ].map((card) => (;
@@ -2381,6 +2410,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline'
                   >
                     Open
@@ -2493,8 +2524,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
         {/* Netlify Automations */}
         <motion.section
 id='netlify-automations'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -2584,43 +2619,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href={f && f.href}
                 target='_blank'
                 rel='noopener'
-<<<<<<< HEAD
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { label: 'Autonomous Cloud Brain (1m)', desc: 'Selectively triggers and syncs key pipelines every minute.', href: '/.netlify/functions/autonomous-cloud-brain' }
-              { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' }
-              { label: 'Autonomous Meta Orchestrator', desc: 'Intelligently triggers cloud functions and syncs to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' }
-              { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' }
-              { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' }
-              { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' }
-              { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' }
-              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals, writes public report.', href: '/.netlify/functions/seo-audit-runner' }
-              { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' }
-              { label: 'Dependency Auto‑Upgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' }
-              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' }
-                className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'>;
-                <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
-                <div className='text-lg font-semibold'>{f && f.label}</div>;
-                <div className='mt-1 text-sm text-white/75'>{f && f.desc}</div>;
-                <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>;
-                  Trigger <span aria-hidden>↗</span>;
-                </div>              </a>          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Netlify Automations</h2>;
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Zero‑ops scheduled functions power background tasks that improve the site and ship small, safe diffs to main.</p>;
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
-            {[ ;
-              { label: 'Autonomous Cloud Brain (1m)', desc: 'Selectively triggers and syncs key pipelines every minute.', href: '/.netlify/functions/autonomous-cloud-brain' },;
-              { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },;
-              { label: 'Autonomous Meta Orchestrator', desc: 'Intelligently triggers cloud functions and syncs to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' },;
-              { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },;
-              { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' },;
-              { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' },;
-              { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },;
-              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals, writes public report.', href: '/.netlify/functions/seo-audit-runner' },;
-              { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' },;
-              { label: 'Dependency Auto‑Upgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' },;
-              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' },;
-              { label: 'Trigger All & Commit', desc: 'Invokes all functions and triggers a build or commit.', href: '/.netlify/functions/trigger-all-and-commit' }
-=======
                 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'
               >
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -2630,9 +2628,10 @@ className='mx-auto max-w-7xl px-6 pb-14'
                   Trigger <span aria-hidden>↗</span>
                 </div>
               </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
         {/* New Cloud Automations */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2641,6 +2640,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
         <motion&& motion.section
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='mx-auto max-w-7xl px-6 pb-14'>
           <h3 className='text-center text-xl font-bold tracking-wide text-white/90'>
             New Cloud Automations
@@ -2782,8 +2783,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
 =======
                   </div>
                 </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Link>
             ))}
           </div>
@@ -2892,6 +2897,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className='mx-auto max-w-7xl px-6 pb-16'>;
           <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl'>;
             <div
@@ -2936,6 +2942,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
               <a href="https://github.com/Zion-Holdings/zion.app/actions" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /><h3 className="text-base font-semibold">Live Workflows</h3><p className="mt-1 text-sm text-white/75">Observe pipelines running 24/7</p><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a>
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='mx-auto max-w-7xl px-6 pb-16'>
           <div className='relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/10 via-violet-600/10 to-cyan-600/10 p-6 backdrop-blur-xl'>
             <div
@@ -3052,8 +3060,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 className='mx-auto max-w-7xl px-6 pb-14'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -3247,21 +3259,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/automation'
               }
               {
-<<<<<<< HEAD
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { label: 'Grow organic traffic', desc: 'On‑site SEO improvements, better metadata, richer links', href: '/reports/seo' }
-              { label: 'Improve UX quality', desc: 'A11y fixes, performance gains, resilient links', href: '/site-health' }
-              { label: 'Reduce engineering toil', desc: 'Automated upgrades, refactors, and maintenance', href: '/automation' }
-              { label: 'Ship faster with confidence', desc: 'Small safe diffs synced to main', href: '/automation' }
-              { label: 'Stay compliant & accessible', desc: 'Policy guardrails and WCAG checks', href: '/site-health' }
-              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' }].map((b) => (
-              <Link key={b.label} href={b.href}>
-                <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
-                  <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
-                  <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
-=======
                 label: 'Stay compliant & accessible'
                 desc: 'Policy guardrails and WCAG checks'
                 href: '/site-health'
@@ -3279,7 +3276,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     <span className='font-semibold text-white'>{b.label}</span>{' '}
                     — {b.desc} <span className='ml-1 text-cyan-300/90'>→</span>
                   </span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
 <<<<<<< HEAD
 
@@ -3378,6 +3375,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Suites */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -3446,6 +3444,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.section
 id='suites'
           initial={{ opacity: 0, y: 24 }}
@@ -3464,8 +3464,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 desc: 'Build rescue, sitemap/robots, security remediation'
                 href: '/automation'
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 title: 'Deep Maintenance'
                 desc: 'Orchestrated smoke tests and link checks'
@@ -3494,6 +3498,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                       href={suite && suite.href}
                       target='_blank'
                       rel='noopener'
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -3577,6 +3582,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       className='mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline'
                     >
                       Open
@@ -3588,7 +3595,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                       </a>
                     </Link>
                   ))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </article>
 
             ))}
@@ -3601,16 +3608,23 @@ className='mx-auto max-w-7xl px-6 pb-14'
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 className='mx-auto max-w-7xl px-6 pb-14'
         >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Superpowers
           </h2>
@@ -3717,6 +3731,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
               }
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
               { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -3735,6 +3750,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Icon: GitBranch
                 title: 'Main Sync'
                 desc: 'Small, reviewable edits committed and pushed continuously.'
@@ -3749,8 +3766,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 <h3 className='mt-3 text-lg font-semibold'>{title}</h3>
                 <p className='mt-1 text-sm text-white/75'>{desc}</p>
               </article>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
           </div>
         </motion.section>
@@ -3761,6 +3782,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
 
@@ -3824,6 +3846,11 @@ className='mx-auto max-w-7xl px-6 pb-14'
         >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mx-auto max-w-7xl px-6 pb-14'
+        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Get Started in Minutes
           </h2>
@@ -3860,6 +3887,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 <p className="mt-1 text-xs text-white/75">A11y, performance, and link health dashboards.</p>
               </a>
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link href="/reports/ai-trends">
               <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
@@ -4017,6 +4045,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Link href='/reports/ai-trends'>
               <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'>
                 <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -4047,8 +4077,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 Icon: Zap
                 title: 'Self‑Improving'
@@ -4137,6 +4171,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/newsroom'
               }
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -4429,6 +4464,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Icon: Gauge
                 title: 'Image Pipeline'
                 desc: 'Optimize and transform media assets automatically.'
@@ -4447,8 +4484,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     Learn more <Link2 className='h-3.5 w-3.5' />
                   </div>
                 </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Link>
             ))}
           </div>
@@ -4474,6 +4515,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
@@ -4486,12 +4528,18 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 className='mx-auto max-w-7xl px-6 pb-14'
         >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcomes
           </h2>
@@ -4502,6 +4550,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
             <div className='pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-950/90 to-transparent' />
             <div className='pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-950/90 to-transparent' />
             <div className='marquee'>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='marquee__track'>                {[          <div className="relative mx-auto mt-6 max-w-6xl overflow-hidden">
 <<<<<<< HEAD
@@ -4533,6 +4582,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='marquee__track'>
                 {[
                   { label: 'Accessibility fixes', href: '/site-health' },
@@ -4551,8 +4602,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                         <span className='h-1.5 w-1.5 rounded-full bg-cyan-400' />{' '}
                         {item.label}
                       </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </Link>
                   ))}
               </div>
@@ -4585,11 +4640,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Feature Map */}
         <motion.section
-<<<<<<< HEAD
-          id="feature-map"
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-=======
 id='feature-map'
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -4606,7 +4656,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </p>
           <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
             {[
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {
                 label: 'Automation Hub'
                 desc: 'Live agents & workflows'
@@ -4642,9 +4692,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                   rel='noopener'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'
                 >
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -4822,6 +4875,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
         <motion.section
           id='modules'          id="feature-map"
 <<<<<<< HEAD
+<<<<<<< HEAD
           id='modules'
 
           initial={{ opacity: 0, y: 24 }}
@@ -4830,6 +4884,9 @@ className='mx-auto max-w-7xl px-6 pb-14'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -4893,6 +4950,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/automation'
               }
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Icon: BarChart3
                 title: 'Impact Analytics'
@@ -5592,13 +5650,15 @@ className='mx-auto max-w-7xl px-6 pb-14'
               { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' }
               { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 Icon: BarChart3,
                 title: 'Impact Analytics',
                 desc: 'Track outcomes and ROI from automations.',
                 href: '/site-health',
               },
             ].map(({ Icon, title, desc, href }) => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Link key={title} href={href}>
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -5864,6 +5924,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                   rel='noopener'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'
@@ -5964,6 +6025,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'
                 >
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -5988,8 +6051,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 </Link>
               )
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </motion.section>
 
@@ -6011,6 +6078,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6026,6 +6094,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
 className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+className='mx-auto max-w-7xl px-6 pb-14'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -6242,6 +6316,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                   rel='noopener'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'
@@ -6326,6 +6401,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover neon-ring'
                 >
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -6354,8 +6431,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 </Link>
               )
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </motion.section>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
@@ -6429,6 +6510,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -6438,6 +6520,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+className='mx-auto max-w-7xl px-6 pb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -6641,6 +6729,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
                       {desc as string}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capability Deep Links</h2>
@@ -6687,6 +6776,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
           transition={{ duration: 0.5 }}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                     <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                       Open <span aria-hidden>→</span>
@@ -6700,11 +6791,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
         {/* Use Cases */}
         <motion.section
 id='use-cases'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='mx - auto max - w-7xl px - 6 pb - 16';
@@ -6843,6 +6935,8 @@ id='use-cases'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -6850,8 +6944,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 title: 'AI SEO Auditor'
                 desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.'
@@ -6958,18 +7056,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
               },;
             ].map(u => (;
               <article
-<<<<<<< HEAD
-                key={u && u.title}
-                className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30'>;
-                <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
-                <h3 className='text-lg font-semibold'>{u && u.title}</h3>;
-                <p className='mt-1 text-sm text-white/75'>{u && u.desc}</p>              </article>              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },;
-              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' };
-              <article key={u && u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">;
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
-                <h3 className="text-lg font-semibold">{u && u.title}</h3>;
-                <p className="mt-1 text-sm text-white/75">{u && u.desc}</p>;
-=======
                 key={u.title}
                 className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30'
               >
@@ -6977,7 +7063,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 <h3 className='text-lg font-semibold'>{u.title}</h3>
                 <p className='mt-1 text-sm text-white/75'>{u.desc}</p>
               </article>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </div>;
         </motion && motion.section>;
@@ -6985,8 +7071,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 className='mx-auto max-w-7xl px-6 pb-14'
@@ -7014,7 +7098,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
               { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' }
             ].map(item =>
               item.external ? (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <a
                   key={item && item.label}
                   href={item && item.href as string}
@@ -7031,6 +7115,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     </div>;
                     <div className='mt - 1 text - xs text - white / 70'>;
                       {item.label}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="neon-divider mx-auto mb-8 h-px w-full max-w-5xl" />
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>
@@ -7066,13 +7151,19 @@ className='mx-auto max-w-7xl px-6 pb-14'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </div>
                   </a>
                 </Link>
               )
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </motion.section>
 
@@ -7136,6 +7227,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Capabilities */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -7157,10 +7249,16 @@ className='mx-auto max-w-7xl px-6 pb-14'
 id='capabilities'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <motion.section
+id='capabilities'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -7212,6 +7310,8 @@ id='capabilities'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -7219,8 +7319,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 Icon: Palette
                 title: 'Design Evolution'
@@ -7256,33 +7360,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/newsroom'
               }
               {
-<<<<<<< HEAD
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {[
-              { Icon: Palette, title: 'Design Evolution', desc: 'Autonomously beautifies UI with consistent, futuristic patterns.', href: '/newsroom' }
-              { Icon: BarChart3, title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.', href: '/site-health' }
-              { Icon: LineChart, title: 'Content & SEO', desc: 'Curates content, updates promos, and tunes metadata for reach.', href: '/reports/seo' }
-              { Icon: Layers, title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.', href: '/automation' }
-              { Icon: Gauge, title: 'Observability & Reports', desc: 'Artifacts, dashboards, and live logs for every automation.', href: '/site-health' }
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking to spark new factory ideas.', href: '/reports/ai-trends' }
-              { Icon: GitBranch, title: 'Repo Sync to Main', desc: 'Small, safe diffs merged continuously for momentum.', href: '/automation' }
-              { Icon: ShieldCheck, title: 'Guardrails & Policy', desc: 'Organization‑wide safety rules enforced automatically.', href: '/site-health' }
-              { Icon: Cpu, title: 'Zero‑Ops Cloud', desc: 'Fully managed cloud execution with no servers to babysit.', href: '/automation' }
-              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' }
-              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' }
-              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' }
-              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' }
-              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (
-              <Link key={title} href={href}>
-                <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-                  <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
-                  <div className="flex items-center gap-2">
-                    <Icon className="h-5 w-5 text-cyan-300" />
-                    <h3 className="text-lg font-semibold">{title}</h3>
-                  </div>
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>
-=======
                 Icon: Gauge
                 title: 'Image Pipeline'
                 desc: 'Optimize and transform media assets automatically.'
@@ -7297,7 +7374,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     <h3 className='text-lg font-semibold'>{title}</h3>
                   </div>
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
 <<<<<<< HEAD
 
@@ -7464,6 +7541,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
 
 <<<<<<< HEAD
@@ -7521,6 +7599,11 @@ className='mx-auto max-w-7xl px-6 pb-14'
         >
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mx-auto max-w-7xl px-6 pb-14'
+        >
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -7583,6 +7666,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
             ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Value Pillars */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.section
           id='pillars'          initial={{ opacity: 0, y: 24 }}
@@ -7661,6 +7745,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.section
 id='pillars'
           initial={{ opacity: 0, y: 24 }}
@@ -7684,8 +7770,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 desc: 'Guardrails, policy, and quality gates.'
                 href: '/site-health'
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 Icon: Rocket
                 title: 'Speed & Momentum'
@@ -7693,24 +7783,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/automation'
               }
               {
-<<<<<<< HEAD
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Value Pillars</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { Icon: ShieldCheck, title: 'Security & Safety', desc: 'Guardrails, policy, and quality gates.', href: '/site-health' }
-              { Icon: Rocket, title: 'Speed & Momentum', desc: 'Small diffs shipped continuously.', href: '/automation' }
-              { Icon: Gauge, title: 'Quality & Reliability', desc: 'A11y, performance, and link integrity.', href: '/site-health' }
-              { Icon: Layers, title: 'Scale & Composability', desc: 'Factories chained into higher‑order workflows.', href: '/automation' }].map(({ Icon, title, desc, href }) => (
-              <Link key={title} href={href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="flex items-center gap-3">
-                    <Icon className="h-5 w-5 text-cyan-300" />
-                    <h3 className="text-lg font-semibold">{title}</h3>
-                  </div>
-                  <p className="mt-1 text-sm text-white/75">{desc}</p>
-=======
                 Icon: Gauge
                 title: 'Quality & Reliability'
                 desc: 'A11y, performance, and link integrity.'
@@ -7731,7 +7803,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                     <h3 className='text-lg font-semibold'>{title}</h3>
                   </div>
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </a>
 <<<<<<< HEAD
 
@@ -7837,6 +7909,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Benefits */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -7861,10 +7934,16 @@ className='mx-auto max-w-7xl px-6 pb-14'
 id='benefits'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <motion.section
+id='benefits'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -7901,6 +7980,8 @@ id='benefits'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-20'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -7963,7 +8044,7 @@ className='mx-auto max-w-7xl px-6 pb-20'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
                 <span className='text-sm text-white/80'>{b}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
             ))}
@@ -7985,6 +8066,7 @@ className='mx-auto max-w-7xl px-6 pb-20'
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-16'
 
 <<<<<<< HEAD
@@ -8001,6 +8083,10 @@ className='mx-auto max-w-7xl px-6 pb-20'
 className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mx-auto max-w-7xl px-6 pb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -8193,6 +8279,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
                         {b.label}
                       </span>{' '}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits in Practice</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">See where each benefit shows up in the product.</p>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -8228,6 +8315,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       — {b.desc}{' '}
                       <span className='ml-1 text-cyan-300/90'>→</span>
                     </span>
@@ -8244,8 +8333,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 title: 'Developers'
                 desc: 'Code quality, refactors, upgrades, reliability'
@@ -8257,12 +8350,6 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 href: '/newsroom'
               }
               {
-<<<<<<< HEAD
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <h3 className="text-lg font-semibold">{card.title}</h3>
-                  <p className="mt-1 text-sm text-white/75">{card.desc}</p>
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <Link2 className="h-3.5 w-3.5" /></div>
-=======
                 title: 'Marketing'
                 desc: 'SEO automation, content curation, reach'
                 href: '/reports/seo'
@@ -8282,12 +8369,13 @@ className='mx-auto max-w-7xl px-6 pb-16'
                     Open <Link2 className='h-3.5 w-3.5' />
                   </div>
                 </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             ))}
           </div>
         </section>
         {/* Ecosystem & Integrations */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.section
           id='reports'          initial={{ opacity: 0, y: 24 }}
@@ -8308,6 +8396,11 @@ className='mx-auto max-w-7xl px-6 pb-16'
 id='reports'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <motion.section
+id='reports'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -8377,6 +8470,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
               target='_blank'
               rel='noopener'
 <<<<<<< HEAD
+<<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Ecosystem & Integrations</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <a href="/site-health" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
@@ -8429,6 +8523,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'
             >
               <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -8440,13 +8536,18 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 Futuristic micro‑interactions and motion design system.
               </p>
               <div className='mt-3 text-xs text-cyan-300/90'>Docs →</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </a>
           </div>
         </motion.section>
         {/* Quality Gates & Guardrails */}
         <motion.section
+<<<<<<< HEAD
 <<<<<<< HEAD
           id='guardrails'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -8468,10 +8569,15 @@ className='mx-auto max-w-7xl px-6 pb-14'
 id='guardrails'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+id='guardrails'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -8564,6 +8670,8 @@ id='guardrails'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-16'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -8598,8 +8706,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
                   <h3 className='text-lg font-semibold'>{g.title}</h3>
                   <p className='mt-1 text-sm text-white/75'>{g.desc}</p>
                 </a>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Link>
             ))}
           </div>
@@ -8749,6 +8861,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 <span
                   key={t}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className='rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0 && 0.06)] glow-pulse'>                  {t}          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">;
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>;
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">;
@@ -8783,6 +8896,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)] glow-pulse'
                 >
                   {t}
@@ -8806,12 +8921,17 @@ className='mx-auto max-w-7xl px-6 pb-16'
               <Link key={title as string} href={href as string}>
                 <a className='rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30'>
                   <div className='text-sm font-semibold text-white'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     {title as string}
                   </div>;
                   <div className='mt-1 text-xs text-white/70'>;
                     {desc as string}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   </div>                </a>            {[;
               ['ExploreBrowse live automations/automation'];
@@ -8858,6 +8978,11 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 </a>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                  </div>
+                </a>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Link>
             ))}
 
@@ -8874,23 +8999,6 @@ className='mx-auto max-w-7xl px-6 pb-16'
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                  </span>;
-                </li>;
-              </ul>;
-            </div>;
-                    Observability and analytics;
-                  </span>;
-                </li>;
-              </ul>;
-            </div>;
-                    Links to hubs, reports, and docs;
-                  </span>;
-                </li>;
-              </ul>;
-            </div>;
-          </div>;
-=======
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
 className='mx-auto max-w-7xl px-6 pb-24'
@@ -9093,7 +9201,7 @@ className='mx-auto max-w-7xl px-6 pb-24'
                 Open <span aria-hidden>↗</span>
               </div>
             </a>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               key='AI Changelog'
               href='/newsroom'
@@ -9240,8 +9348,6 @@ className='mx-auto max-w-7xl px-6 pb-24'
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
               </div>
-<<<<<<< HEAD
-=======
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                 Open <span aria-hidden>↗</span>
               </div>
@@ -9272,11 +9378,12 @@ className='mx-auto max-w-7xl px-6 pb-24'
                   GitHub
                 </a>
               </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
         </footer>
         <motion.section
+<<<<<<< HEAD
 <<<<<<< HEAD
           id="agents"
 <<<<<<< HEAD
@@ -9286,6 +9393,10 @@ className='mx-auto max-w-7xl px-6 pb-24'
 id='agents'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+id='agents'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -9295,6 +9406,7 @@ id='agents'
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -9321,6 +9433,8 @@ id='agents'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -9332,8 +9446,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </p>
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 Icon: Search,
                 title: 'AI SEO Auditor',
@@ -9355,24 +9473,6 @@ className='mx-auto max-w-7xl px-6 pb-14'
                 href: '/automation'
               }
               {
-<<<<<<< HEAD
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">AI Agents Gallery</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>
-          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuously improves on‑site SEO with safe diffs.', href: '/reports/seo' }
-              { Icon: Link2, title: 'Link Healer', desc: 'Finds and fixes broken links with dashboards.', href: '/site-health' }
-              { Icon: Palette, title: 'Design Beautifier', desc: 'Evolves UI with cohesive, futuristic patterns.', href: '/newsroom' }
-              { Icon: Gauge, title: 'Performance Tuner', desc: 'Optimizes bundles and runtime for speed.', href: '/site-health' }
-              { Icon: Layers, title: 'Factory Composer', desc: 'Chains automations into higher‑order workflows.', href: '/automation' }
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' }].map(({ Icon, title, desc, href }) => (
-              <Link key={title} href={href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="flex items-center gap-2">
-                    <Icon className="h-5 w-5 text-cyan-300" />
-                    <h3 className="text-lg font-semibold">{title}</h3>
-=======
                 Icon: GitBranch
                 title: 'Main Sync'
                 desc: 'Ships small, safe diffs to main continuously.'
@@ -9389,7 +9489,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
                   <p className='mt-1 text-sm text-white/75'>{desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Open <span aria-hidden>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </a>
 <<<<<<< HEAD
@@ -9510,6 +9610,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Capabilities Matrix */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -9595,6 +9696,8 @@ className='mx-auto max-w-7xl px-6 pb-14'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.section
 id='capability-matrix'
           initial={{ opacity: 0, y: 24 }}
@@ -9612,8 +9715,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
           </p>
           <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
             {[
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 title: 'Autonomous Agents'
                 desc: 'Self‑improving cloud workers'
@@ -9642,6 +9749,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
                   href={item && item.href as string}
                   target='_blank'
                   rel='noopener'
+<<<<<<< HEAD
 <<<<<<< HEAD
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities Matrix</h2>
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hub, report, or workflow.</p>
@@ -9692,6 +9800,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'
                 >
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -9716,8 +9826,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 </Link>
               )
             )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </motion.section>
 
@@ -9820,6 +9934,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
         {/* Benefits Directory */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -9919,6 +10034,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.section
 id='benefits-directory'
           initial={{ opacity: 0, y: 24 }}
@@ -9941,8 +10058,12 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 desc: 'Always‑on autonomous delivery'
                 href: '/automation'
               }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {
                 label: 'Safe Incremental Diffs'
                 desc: 'Small, reviewable changes'
@@ -9960,24 +10081,6 @@ className='mx-auto max-w-7xl px-6 pb-16'
                 href: '/newsroom'
               }
               {
-<<<<<<< HEAD
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Benefits Directory</h2>
-          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>
-          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { label: '24/7 Progress', desc: 'Always‑on autonomous delivery', href: '/automation' }
-              { label: 'Safe Incremental Diffs', desc: 'Small, reviewable changes', href: '/automation' }
-              { label: 'Zero‑Ops Cloud‑Native', desc: 'No servers to babysit', href: '/automation' }
-              { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' }
-              { label: 'Faster Iteration Loops', desc: 'Shorten idea‑to‑impact', href: '/newsroom' }
-              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' }].map((b) => (
-              <Link key={b.label} href={b.href}>
-                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
-                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                  <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 glow-pulse" />
-                    <h3 className="text-base font-semibold">{b.label}</h3>
-=======
                 label: 'SEO Visibility Gains'
                 desc: 'Continuous improvements'
                 href: '/reports/seo'
@@ -9993,7 +10096,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
                   <p className='mt-1 text-sm text-white/75'>{b.desc}</p>
                   <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>
                     Explore <span aria-hidden>→</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </a>
 <<<<<<< HEAD
@@ -10023,14 +10126,17 @@ className='mx-auto max-w-7xl px-6 pb-16'
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
           </h2>
           <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
@@ -10136,6 +10242,7 @@ className='mx-auto max-w-7xl px-6 pb-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Feature Highlights (new) */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <motion&& motion.section
           id='feature-highlights'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -10168,10 +10275,16 @@ className='mx-auto max-w-7xl px-6 pb-16'
           id='feature-highlights'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <motion.section
+          id='feature-highlights'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='mx-auto max-w-7xl px-6 pb-14'
@@ -10301,6 +10414,8 @@ className='mx-auto max-w-7xl px-6 pb-16'
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mx-auto max-w-7xl px-6 pb-14'
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -10400,8 +10515,12 @@ className='mx-auto max-w-7xl px-6 pb-14'
           </div>
         </section>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' }].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover:border-cyan-400/30 hover:text-white transition-colors">
                 <div className="text-base font-semibold text-white">{tool.title}</div>
@@ -10535,18 +10654,15 @@ className='mx-auto max-w-7xl px-6 pb-14'
   </div>;
 </section>;
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-<<<<<<< HEAD
-          className="fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]"
-          aria-label="Scroll to top"
-=======
           className='fixed bottom-24 right-4 z-40 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-3 py-2 text-xs font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)]'
           aria-label='Scroll to top'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         >
           ↑ Top
         </button>
       )}
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
@@ -11103,6 +11219,11 @@ className='mx-auto max-w-7xl px-6 pb-14'
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+);
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className='mx-auto max-w-7xl px-6 pb-14'>
   <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -11423,6 +11544,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
   /* AUTO-GENERATED: FRONT ADS END */
 }{
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
 =======
@@ -11567,11 +11689,15 @@ className='mx-auto max-w-7xl px-6 pb-14'
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   /* Feature Highlights (new) */ 
 }<motion.section </a>) ) 
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
@@ -11585,3 +11711,7 @@ className='mx-auto max-w-7xl px-6 pb-14'
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -9,6 +9,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -73,13 +74,15 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
  } from 'lucide-react';
 const contactInfo = null;
                 and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 {
   name: 'AI Predictive Enterprise Analytics', href: '/ai-predictive-enterprise-analytics'
 }
@@ -241,6 +244,7 @@ const contactInfo = null;
       }
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
       {
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -493,6 +497,8 @@ const service_categories = [;
     ];
   }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         name: 'AI Autonomous Clinical Trials',
         href: '/ai-autonomous-clinical-trials',
       },
@@ -500,7 +506,7 @@ const service_categories = [;
   },
 ];
 const companyLinks = [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   { name: 'About Us', href: '/about' },
   { name: 'Leadership Team', href: '/leadership' },
   { name: 'Careers', href: '/careers' },
@@ -508,6 +514,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 const resourceLinks = [
   { name: 'Locations', href: '/locations' }, ];  { name: 'Locations', href: '/locations' }
@@ -551,6 +558,8 @@ const socialLinks = [
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0 && 0.05),transparent_50%)]"></div>;
       </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 { name: 'Locations', href: '/locations' },
 ];
 const resourceLinks = [
@@ -581,10 +590,11 @@ export default function UltraFuturisticFooter2026() {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]'></div>
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -600,6 +610,8 @@ export default function UltraFuturisticFooter2026() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='lg:col-span-2'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -620,6 +632,7 @@ export default function UltraFuturisticFooter2026() {
                 cybersecurity, fintech blockchain, and healthcare biotech
                 solutions. Transforming businesses with cutting-edge technology.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
@@ -629,6 +642,9 @@ export default function UltraFuturisticFooter2026() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </p>
               {/* Contact Info */}
               <div className='space-y-3'>
@@ -696,6 +712,7 @@ export default function UltraFuturisticFooter2026() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                       href={service.href}
                       className="text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text-sm flex items-center group";
                     >;
@@ -704,6 +721,8 @@ export default function UltraFuturisticFooter2026() {
 =======
                       <ArrowRight className="w - 3 h - 3 mr - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -729,8 +748,12 @@ export default function UltraFuturisticFooter2026() {
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {service.name}
 <<<<<<< HEAD
 
@@ -760,6 +783,7 @@ export default function UltraFuturisticFooter2026() {
 <<<<<<< HEAD
 =======
         {/* Additional Links */}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 <<<<<<< HEAD
 
@@ -770,8 +794,10 @@ export default function UltraFuturisticFooter2026() {
         {/* Additional Links */}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           {/* Company Links */}
           <motion&& motion.div
 <<<<<<< HEAD
@@ -803,6 +829,7 @@ export default function UltraFuturisticFooter2026() {
                 <li key={index}>
                   <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
             </h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
@@ -819,10 +846,12 @@ export default function UltraFuturisticFooter2026() {
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
                   >;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
 <<<<<<< HEAD
 
@@ -838,10 +867,13 @@ export default function UltraFuturisticFooter2026() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     href={link.href}
                     className="text - gray - 400 hover:text - cyan - 400 transition - colors duration-300 text-sm";
                   >;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             transition={{ duration: 0.6, delay: 0.3 }}
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -855,7 +887,7 @@ export default function UltraFuturisticFooter2026() {
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'
                   >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {link.name}
 <<<<<<< HEAD
 
@@ -872,6 +904,7 @@ export default function UltraFuturisticFooter2026() {
             whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -881,6 +914,8 @@ export default function UltraFuturisticFooter2026() {
             <div className="grid grid-cols-3 gap-4">
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             transition={{ duration: 0.6, delay: 0.4 }}
           >
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -900,8 +935,12 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />
                 </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               ))}
             </div>
           </motion.div>
@@ -912,6 +951,7 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                   </Link>;
                 </li>))}
             </ul>;
@@ -953,6 +993,8 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           transition={{ duration: 0.6, delay: 0.5 }}
 
         >
@@ -966,6 +1008,7 @@ className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center 
               breakthrough solutions and industry trends.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1031,10 +1074,14 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <input
                 type='email'
                 placeholder='Enter your email'
                 className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               />
@@ -1074,9 +1121,11 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Subscribe
               </button>
             </div>
@@ -1123,6 +1172,7 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -1154,6 +1204,8 @@ className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border bor
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           transition={{ duration: 0.6, delay: 0.6 }}
 className='border-t border-gray-800 pt-8'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -1162,12 +1214,16 @@ className='border-t border-gray-800 pt-8'
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
               © 2026 Zion Tech Group. All rights reserved.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Link
                 href='/privacy'
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'>;
@@ -1176,6 +1232,7 @@ className='border-t border-gray-800 pt-8'
               <span className='mx-2'>|</span>;
               <Link
                 href='/terms'
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
@@ -1204,6 +1261,8 @@ className='border-t border-gray-800 pt-8'
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='hover:text-cyan-400 transition-colors duration-300'
               >
                 Terms of Service
@@ -1216,8 +1275,12 @@ className='border-t border-gray-800 pt-8'
               </div>
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>
               <div className='text-cyan-400 text-sm font-semibold'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 99.9% Uptime
               </div>
             </div>
@@ -1307,6 +1370,7 @@ className='border-t border-gray-800 pt-8'
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1321,3 +1385,6 @@ className='border-t border-gray-800 pt-8'
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

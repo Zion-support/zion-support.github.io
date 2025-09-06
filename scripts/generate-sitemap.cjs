@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -7,6 +8,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -19,115 +22,7 @@ fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully');
 =======
 module.exports = {};
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-#!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
 
-/**
- * Generate sitemap.xml for better SEO;
- */
-
-const BASE_URL = '"https": //ziontechgroup.com';
-const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
-
-// Static pages that should be included in sitemap;
-const STATIC_PAGES = ['',]
-  '/about',
-  '/services',
-  '/solutions',
-  '/products',
-  '/pricing',
-  '/contact',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/careers',
-  '/blog',
-  '/case-studies',
-  '/whitepapers',
-  '/webinars',
-  '/events',
-  '/news',
-  '/support',
-  '/docs',
-  '/api',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/cybersecurity',
-  '/cloud-services',
-  '/digital-transformation'
-];
-
-// Dynamic pages patterns;
-const DYNAMIC_PATTERNS = ['pages/services/*.tsx',]
-  'pages/solutions/*.tsx',
-  'pages/products/*.tsx'
-];
-
-function generateSitemap() {}
-  const urls = [];
-  const currentDate = new Date().toISOString();
-
-  // Add static pages;
-  STATIC_PAGES.forEach(page => {})
-    urls.push({})
-      "loc": `${BASE_URL}${page}`,`
-      "lastmod": currentDate,
-      "changefreq": page === '' ? 'daily' : 'weekly',
-      "priority": page === '' ? '1.0' : '0.8'
-    })}
-});
-
-  // Add dynamic pages;
-  DYNAMIC_PATTERNS.forEach(pattern => {})
-    const files = glob.sync(pattern);
-    
-    files.forEach(file => {})
-      // Skip index files and special pages;
-      if (file.includes('index.') || file.includes('_app.') || file.includes('_document.')) {}
-        return};
-      // Convert file path to URL;
-      const relativePath = file.replace('pages/', '').replace('.tsx', '').replace('.js', '');
-      const url = `${BASE_URL}/${relativePath}`;`
-      
-      urls.push({})
-        "loc": url,
-        "lastmod": currentDate,
-        "changefreq": 'monthly',
-        "priority": '0.6'
-      })})}
-});
-
-  // Generate XML;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map(url => `  <url>`})
-    <loc>${url.loc}</loc>
-    <lastmod>${url.lastmod}</lastmod>
-    <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
-  </url>").join('\n')};
-</urlset>";
-
-  // Write sitemap;
-  fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
-  
-  console.log(`✓ Sitemap generated with ${urls.length} URLs`);
-  console.log(`  "Location": ${SITEMAP_PATH}`)};
-if (require.main === module) {}
-  generateSitemap()};
-module.exports = { generateSitemap };
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -219,10 +114,8 @@ if (require.main === module) {
 }
 
 module.exports = SitemapGenerator;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
+ursor/automate-test-improve-and-merge-code-59d5
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -231,6 +124,7 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -239,3 +133,8 @@ module.exports = {};
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

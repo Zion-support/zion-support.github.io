@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -12,6 +13,8 @@ setIsMobile (isMobileDevice);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -39,8 +42,12 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children;
   showDebugInfo;
 setIsMobile (isMobileDevice);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 setIsTablet (isTabletDevice);
 
 //Apply mobile - specific optimizations // Check condition
@@ -90,8 +97,6 @@ if ( {) {
   const updateBatteryLevel = () =>: any {
   setPerformanceMetrics (prev => ({
   updateBatteryLevel ();
-<<<<<<< HEAD
-=======
 battery.addEventListener ('levelchange', updateBatteryLevel);
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
@@ -145,7 +150,7 @@ document.head.appendChild (style)
 }
 const applyPortraitOptimizations = () => {
   //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -164,6 +169,7 @@ if (return) {
   /* Global Mobile Styles */
 }<style jsx global> {
   `.mobile-optimized * {
+<<<<<<< HEAD
 <<<<<<< HEAD
 }`
 }</style> </>)
@@ -905,10 +911,16 @@ export default MobileOptimizer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   
 }` 
 }</style> </>) 
 };
 export default MobileOptimizer;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

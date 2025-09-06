@@ -123,6 +123,7 @@ const { execSync } = require("child_process")
   process.on("SIGINT")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   process.on("SIGTERM")
@@ -136,3 +137,8 @@ const { execSync } = require("child_process")
   process.on("SIGTERM")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+  process.on("SIGTERM")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

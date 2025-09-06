@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface InnovativeMicroSaasV3 {
 export interface InnovativeMicroSaasV3 {;
 =======
@@ -12,9 +13,11 @@ export interface InnovativeMicroSaasV3 {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   id: string;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface InnovativeMicroSaasV3 {
 id: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline: string;
   price: string,
@@ -26,6 +29,7 @@ id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export interface InnovativeMicroSaasV3 {;
     address: string
@@ -55,14 +59,25 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -71,6 +86,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   contactInfo: {
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "ai-customer-support", name: "AI Customer Support Platform",
     tagline: "24/7 intelligent customer support automation", price: "$59/month",
@@ -91,6 +107,8 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     address: string
   }
 }
@@ -102,12 +120,17 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     tagline: "24/7 intelligent customer support automation";
     price: "$59/month";
     description: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     features: [
       "AI chatbot integration";
       "Multi-language support";
       "Ticket management";
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Analytics dashboard";
       "CRM integration"
@@ -132,6 +155,8 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       "Analytics dashboard",
       "CRM integration"
     ],
@@ -141,12 +166,17 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +203,8 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 ;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: "ai-customer-support",
     name: "AI Customer Support Platform",
     tagline: "24/7 intelligent customer support automation",
@@ -189,9 +221,9 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     category: "Customer Support",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
       mobile: '+1 302 464 0950',
@@ -207,10 +239,15 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -228,3 +265,9 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

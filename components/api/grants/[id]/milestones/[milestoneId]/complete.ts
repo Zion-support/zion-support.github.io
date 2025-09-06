@@ -11,20 +11,6 @@ function grantPath(id: string) {
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
-<<<<<<< HEAD
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
-function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);
-}
-function readGrant(id: string): GrantApplication | null {
-}
-function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
-}
-function isAuthorized(req: NextApiRequest) {
-  return (
-=======
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
@@ -43,7 +29,7 @@ function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |''
   const token = header.replace('Bearer ', '');
 return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
@@ -100,12 +86,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 
-<<<<<<< HEAD
-  if (!existing) return res && res.status(404).json({ error: 'Not found' });
-  const ms = existing && existing.milestones || [];
-  const idx = ms && ms.findIndex(m => m && m.id === milestoneId);  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });  const idx = ms && ms.findIndex((m) => m && m.id === milestoneId);
-  if (idx === -1) return res && res.status(404).json({ error: 'Milestone not found' });
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
@@ -127,7 +107,7 @@ return;
   const ms = existing.milestones || [];
 const idx = ms.findIndex(m => m.id === milestoneId);
   if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ms[idx].completed = true;
   ms[idx].completedAt = new Date().toISOString();
   const tranche = ms[idx].trancheAmount || 0;
@@ -220,6 +200,7 @@ if ( {) {
   existing.funds_released = (existing.funds_released || 0) + tranche;
   existing.milestones = ms;
 <<<<<<< HEAD
+<<<<<<< HEAD
   existing.updated_at = new Date ().toISOString ();
 ;
 write_grant (existing);
@@ -247,9 +228,15 @@ writeGrant(existing);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   existing.updatedAt = new Date().toISOString();
 
   writeGrant(existing);
 res.status(200).json({ record: existing });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

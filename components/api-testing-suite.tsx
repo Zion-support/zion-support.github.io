@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
   const testTypes = [
@@ -35,13 +36,19 @@ import React, { useState } from 'react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Code,
   Zap,
   Shield,
@@ -50,6 +57,7 @@ import {
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Clock,;
@@ -79,16 +87,19 @@ import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTrian
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Clock,
   Database,;
 } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function APITestingSuitePage() {
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -99,6 +110,8 @@ export default function APITestingSuitePage() {
       icon: <Code className='w-8 h-8 text-white' />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 icon: <Code className='w-8 h-8 text-white' />,
       title: 'Comprehensive API Testing',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -179,8 +192,12 @@ icon: <Code className='w-8 h-8 text-white' />,
         'Error propagation',
       ],
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const testTypes = [
     {
@@ -254,6 +271,7 @@ icon: <Code className='w-8 h-8 text-white' />,
       period: '/month'
       description: 'Perfect for developers and small teams'
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
   const features = [;
     {;
@@ -394,8 +412,10 @@ function APITestingSuitePage() {
       features: [;
         '100 API tests / month',
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 '100 API tests/month',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         'Basic test scenarios',
         'Email notifications',
         'Basic reporting',
@@ -403,21 +423,13 @@ function APITestingSuitePage() {
         'Community support',
       ],
       popular: false,
-<<<<<<< HEAD
-    },    {        '100 API tests / month_basic test scenarios_email notifications_basic reporting5 API endpoints_community support';
-      ];
-      popular: false;
-    }
-=======
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Professional',
       price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses and development teams',
-<<<<<<< HEAD
-=======
       features: [
 '500 API tests/month',
         'Advanced test scenarios',
@@ -431,20 +443,11 @@ function APITestingSuitePage() {
       popular: true,
     },
     {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       name: 'Enterprise',
       price: '$299',
       period: '/month',
       description: 'For large organizations with complex API requirements',
-<<<<<<< HEAD
-    },  ];
-
-  const handleTestAPI = async () => {;
-    if (!apiEndpoint && apiEndpoint.trim()) return;        'Unlimited API testsCustom test scenariosCustom alerting rules24/7 dedicated supportUnlimited endpointsAdvanced security testingWhite-label optionsCustom integrations';
-      ];
-      popular: false;
-    }
-=======
       features: [
 'Unlimited API tests',
         'Custom test scenarios',
@@ -462,7 +465,7 @@ function APITestingSuitePage() {
   const handleTestAPI = async () => {
     if (!apiEndpoint.trim()) return;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     setIsTesting(true);
     // Simulate API testing
     setTimeout(() => {
@@ -472,6 +475,7 @@ function APITestingSuitePage() {
         responseTime: '245ms'
         statusCode: 200
         tests: [
+<<<<<<< HEAD
 <<<<<<< HEAD
           {
             name: 'Response Time'
@@ -499,11 +503,13 @@ function APITestingSuitePage() {
             status: 'pass',;
             value: '245ms',;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {
             name: 'Response Time',
             status: 'pass',
             value: '245ms',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             threshold: '<500ms',
           },
           {
@@ -706,6 +712,7 @@ function APITestingSuitePage() {
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -724,6 +731,9 @@ function APITestingSuitePage() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -738,6 +748,7 @@ function APITestingSuitePage() {
                 type='text'
                 placeholder='API Key (optional)'
                 value={apiKey}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={e => setApiKey(e && e.target.value)}
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'              />;
@@ -796,6 +807,8 @@ function APITestingSuitePage() {
                 className="px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 onChange={e => setApiKey(e.target.value)}
                 className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -839,26 +852,26 @@ size='lg'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <Button
               href='#pricing'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
-              className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl'>;
-              View Pricing;
-            </Button>;
-=======
               className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white shadow-2xl'
             >
               View Pricing
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'>              href="#pricing";
               variant="outline";
@@ -946,6 +959,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl'
             >
               Schedule Demo
@@ -989,8 +1004,12 @@ href='/contact'
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </p>
                   </div>
                 </div>
@@ -1035,6 +1054,7 @@ href='/contact'
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {testTypes.map((type, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1132,6 +1152,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='card-hover border-gradient-indigo'
@@ -1148,8 +1170,12 @@ href='/contact'
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-4 h-4 text-indigo-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {test}
                     </li>
                   ))}
@@ -1202,6 +1228,7 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Demo Test Results */}
       {testResults && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         <section className="section-padding bg-gradient-cursor-accent">
@@ -1320,6 +1347,8 @@ href='/contact'
                         }`}>
                           {test.status}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -1380,7 +1409,7 @@ href='/contact'
                         </span>
                         <span className='text-xs text-gray-400'>
                           {test.value}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         </span>
 <<<<<<< HEAD
 =======
@@ -1465,6 +1494,7 @@ href='/contact'
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Uptime</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <span className='text-green-400 font-bold'>24/7</span>                  </div>                  </div>
 <<<<<<< HEAD
 
@@ -1483,12 +1513,15 @@ href='/contact'
                     <span className="text-gray-400">Uptime</span>
                     <span className="text-green-400 font-bold">24/7</span>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     <span className='text-green-400 font-bold'>24/7</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 </div>
               </Card>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1507,9 +1540,11 @@ href='/contact'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             <Card className='border-gradient-indigo'>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             {/* Recommendations */}
 <Card className='border-gradient-indigo'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <h3 className='text-2xl font-bold mb-6 text-white'>
                 Optimization Recommendations
               </h3>
@@ -1517,6 +1552,7 @@ href='/contact'
                 {testResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
@@ -1545,12 +1581,18 @@ href='/contact'
                   </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    <span className='text-gray-300'>{rec}</span>
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ))}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1577,6 +1619,8 @@ href='/contact'
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1591,7 +1635,7 @@ href='/contact'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {pricing.map((plan, index) => (
 <<<<<<< HEAD
 =======
@@ -1610,6 +1654,7 @@ href='/contact'
             {test_types.map ((type, index) => (
               <Card;
                 key={index}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='card - hover border - gradient - indigo';
                 style={{ animation_delay: `${index * 0.1}s` }}
@@ -1818,6 +1863,8 @@ href='/contact'
             </p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className={`card-hover border-gradient-indigo ${plan.popular ? 'ring-2 ring-indigo-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1830,12 +1877,13 @@ href='/contact'
                 )}
 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1866,6 +1914,8 @@ href='/contact'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
@@ -1902,8 +1952,12 @@ href='/contact'
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-indigo-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {feature}
                     </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1911,6 +1965,7 @@ href='/contact'
                 <Button
 href='/contact'
                   size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1941,13 +1996,19 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Card>
             ))}
           </div>
@@ -2033,6 +2094,7 @@ href='/contact'
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/contact"
@@ -2085,21 +2147,21 @@ href='/contact'
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
             >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               Schedule Demo
             </Button>
           </div>
         </div>
       </section>
     </>
-<<<<<<< HEAD
-}
-
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -2115,3 +2177,6 @@ href='/contact'
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

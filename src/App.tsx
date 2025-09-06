@@ -82,9 +82,16 @@ import React, { Suspense, lazy } from 'react';
 import React from 'react';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import ErrorBoundary from './components/ErrorBoundary';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
 import ScrollToTop from './components/ScrollToTop';
+<<<<<<< HEAD
 import { BackToTopButton } from './components/BackToTopButton';
 
 // Simple Home component
@@ -111,10 +118,19 @@ const Home = () => (
     </div>
   </div>
 );
+=======
+import BackToTop from './components/BackToTopButton';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 function App() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -143,6 +159,8 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
                 <Route path="/pricing" element={<Pricing />} />
               </Routes>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     <ThemeProvider>
       <ErrorBoundary>
         <Router>
@@ -150,6 +168,7 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">
+<<<<<<< HEAD
               <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                   <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -167,10 +186,25 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
             </main>
             <Footer />
             <BackToTopButton />
+=======
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="*" element={<Home />} />
+              </Routes>
+            </main>
+            <Footer />
+            <BackToTop />
+            <ToastContainer />
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
         </Router>
       </ErrorBoundary>
     </ThemeProvider>
+<<<<<<< HEAD
 =======
     <Router>
       <div className="min-h-screen flex flex-col">
@@ -183,6 +217,8 @@ const SolutionsPage = lazy(() => import('./pages/Solutions').then(module => ({ d
       </div>
     </Router>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   );
 }
 <<<<<<< HEAD

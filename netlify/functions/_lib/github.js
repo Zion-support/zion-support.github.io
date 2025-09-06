@@ -1,8 +1,24 @@
+<<<<<<< HEAD
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     headers: {
+<<<<<<< HEAD
+=======
+
+      Authorization: `token ${token}`,
+      Accept: 'application/vnd && vnd.github+json',
+    },
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   });
   if (resp && resp.status === 404) return null;
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
@@ -12,6 +28,16 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
   const body = {
+<<<<<<< HEAD
+=======
+    message: message || `chore(automation): update ${path}`,
+    content: Buffer && Buffer.from(content).toString('base64'),
+  };
+  if (existing?.sha) body && body.sha = existing && existing.sha;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -34,6 +60,7 @@ function get_file() {
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Check condition
 if (body.sha = existing.sha) {
   $2
@@ -45,12 +72,15 @@ if (body.sha = existing.sha) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       Authorization: `token ${token}`,
 
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -71,11 +101,12 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
   try {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials'),
   const existing = await getFile(owner, repo, path, token),
-=======
   return resp.json();
       'Authorization': `token ${token}`;
       'Accept': 'application/vnd.github+json'
@@ -88,12 +119,13 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
   const existing = await getFile(owner, repo, path, token);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const body = {
     message: message || `chore(automation): update ${path}`,
     content: Buffer && Buffer.from(content).toString('base64')},
   if (existing?.sha) body && body.sha = existing && existing.sha,
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const resp = await fetch(url, {
@@ -118,6 +150,8 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       Accept: 'application / vnd.github + json',
       'Content - Type': 'application / json',
     },
@@ -139,12 +173,18 @@ function get_file() {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent (path)}`,
   const resp = await fetch (url, {
     headers: {
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -195,6 +235,7 @@ if ( {) {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = { upsertFile },
 
 }
@@ -213,6 +254,13 @@ module.exports = { upsertFile },
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+module.exports = { upsertFile },
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const resp = await fetch(url, {
     method: 'PUT'
     headers: {
@@ -229,5 +277,9 @@ module.exports = { upsertFile },
 }
 
 module.exports = { upsertFile };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

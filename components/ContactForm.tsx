@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
       });
@@ -113,17 +114,16 @@ import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 interface FormData {
   name: string;
   email: string;
   company: string;
-<<<<<<< HEAD
-  phone: string;
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   service: string;
   message: string;
 }
@@ -135,6 +135,7 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     message: ''
   });
@@ -170,6 +171,8 @@ const ContactForm: React.FC = () => {
     } catch {
       setSubmitStatus('error');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -194,13 +197,13 @@ const ContactForm: React.FC = () => {
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error submitting form: ', error);
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     } finally {
       setIsSubmitting(false);
     }
   };
-<<<<<<< HEAD
 
+<<<<<<< HEAD
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-lgshadow-lgp-8">
       <h2 className="text-3xl font-bold text-gray-900mb-6text-center">Get In Touch</h2>
@@ -342,6 +345,8 @@ export default ContactForm;
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       setSubmitStatus('success');
     } catch {;
       setSubmitStatus('error');
@@ -374,6 +379,7 @@ export default ContactForm;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default ContactForm;
 export default ContactForm;
@@ -393,6 +399,10 @@ export default ContactForm;
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (isSubmitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
@@ -571,5 +581,9 @@ export default ContactForm;
   );
 };
 export default ContactForm;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

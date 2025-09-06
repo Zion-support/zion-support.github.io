@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -26,6 +27,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
@@ -43,14 +46,19 @@ staggerChildren: 0.1,
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -75,10 +83,12 @@ staggerChildren: 0.1,
 =======
     setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length));
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 duration: 0.5,
       },
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 
@@ -92,6 +102,7 @@ duration: 0.5,
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -142,11 +153,17 @@ duration: 0.5,
           className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+        <motion.div
+          className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -212,6 +229,8 @@ duration: 0.5,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               Revolutionary 2025
@@ -228,13 +247,18 @@ duration: 0.5,
         {/* Category Filter */}
 <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -244,10 +268,15 @@ duration: 0.5,
 {categories.map(category => (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+{categories.map(category => (
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <button
               key={category.id}
               onClick={() => {
                 setActiveCategory(category.id);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -261,12 +290,17 @@ duration: 0.5,
 setVisibleServices(12);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+setVisibleServices(12);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               }}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
                 activeCategory === category && category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             >
@@ -288,12 +322,18 @@ setVisibleServices(12);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               {category.name}
 <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>
                 {category.count}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </span>
             </button>
           ))}
@@ -308,6 +348,7 @@ setVisibleServices(12);
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Services Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -336,6 +377,8 @@ setVisibleServices(12);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.div
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
           variants={containerVariants}
@@ -348,8 +391,12 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
               key={service.id}
               variants={itemVariants}
 className='group relative cursor-pointer'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
@@ -363,6 +410,7 @@ className='group relative cursor-pointer'
               <div className='relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full'>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                 {/* Background Effects */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {/* Popular Badge */}
                 {service && service.popular && (;
@@ -480,6 +528,8 @@ className='group relative cursor-pointer'
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
                     <Star className="w-3 h-3 inline mr-1" />
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <div className='absolute inset-0 rounded-2xl overflow-hidden'>
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
@@ -488,7 +538,7 @@ className='group relative cursor-pointer'
                 {service.popular && (
 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
                     <Star className='w-3 h-3 inline mr-1' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     POPULAR
                   </div>
                 )}
@@ -600,17 +650,12 @@ className='group relative cursor-pointer'
                       </div>;
                       <div className='text - gray - 400 text - sm'>;
                         {service.period}
-<<<<<<< HEAD
-                        <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                          {service.name}
-                        </h3>
-                        <p className="text-gray-400 text-sm">{service.tagline}</p>
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
                   {/* Description */}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>;
@@ -754,6 +799,8 @@ className='group relative cursor-pointer'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
@@ -831,14 +878,19 @@ className='group relative cursor-pointer'
         {visibleServices < filteredServices.length && (
 <motion.div
             className='text-center'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
@@ -854,11 +906,16 @@ className='group relative cursor-pointer'
 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -891,6 +948,8 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
           </p>;
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Call to Action */}
 <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'
@@ -908,7 +967,7 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
             competition.
           </p>
           <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <a
               href='/contact'
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>;
@@ -916,6 +975,7 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
             </a>;
             <a
               href='/pricing'
+<<<<<<< HEAD
 <<<<<<< HEAD
           </h3>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -952,6 +1012,10 @@ export default RevolutionaryServicesShowcase;
               className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+              className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               View Pricing
             </a>
@@ -959,6 +1023,7 @@ export default RevolutionaryServicesShowcase;
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 export default RevolutionaryServicesShowcase;  );
@@ -1083,9 +1148,15 @@ export default RevolutionaryServicesShowcase
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default RevolutionaryServicesShowcase;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

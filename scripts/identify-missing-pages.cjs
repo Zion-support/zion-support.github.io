@@ -37,6 +37,7 @@ const fs = require("fs").promises;const path = require("path")"
           .replace(/\s+/g, ")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
@@ -53,3 +54,9 @@ const fs = require("fs").promises;const path = require("path")"
     console.error("Error identifying missing "pages")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

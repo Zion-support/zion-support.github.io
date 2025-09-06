@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
@@ -65,6 +66,8 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
     );
@@ -73,6 +76,7 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   return events;export function resetState(): void {
   state = { ...defaultState }
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -215,6 +219,15 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export interface SyncMapping {
   id: string;
   name: string;
@@ -242,6 +255,7 @@ export interface SyncLog {
   timestamp: string;
 }
 
+<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -442,6 +456,11 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -451,9 +470,25 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
+<<<<<<< HEAD
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
+=======
+}
+
+}
+}
+}
+  const entity_id = getEntityId (event);
+  const current_version = state.latestVersionByEntityId[entity_id] || 0;
+  const is_newer = event.version > current_version;
+;
+  // Check condition
+if ( {) {
+  $2
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -489,6 +524,7 @@ export function getEntityId (event: SyncEvent): string {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;
 export function filterEventsByScope(;
   events: SyncEvent[];
@@ -500,6 +536,8 @@ export function filterEventsByScope(;
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Check condition
 if ( {) {
   $2
@@ -518,6 +556,7 @@ if ( {) {
   return events;export function reset_state (): void {
   state = { ...default_state }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -531,3 +570,11 @@ if ( {) {
   return events;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  return events;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

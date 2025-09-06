@@ -5,6 +5,7 @@
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 <<<<<<< HEAD
@@ -69,18 +70,21 @@ import {
   Shield,
   Zap,
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { Code;
   GitBranch;
   Database;
   Cloud;
   Shield;
   Zap;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Cpu;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -185,6 +189,8 @@ export default function DeveloperToolsPage() {_const _developerTools = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Globe
  } from 'lucide-react';
 export default function DeveloperToolsPage() {
@@ -312,6 +318,7 @@ category: 'Security',
       popular: false,
 category: 'API Development',
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   ];
@@ -322,12 +329,17 @@ category: 'API Development',
   description: 'Global developer tools market size'
     }
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  ];
+    {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       title: 'Dev Tools Market',
       value: '$8.2B',
       growth: '+24% YoY',
 description: 'Global developer tools market size',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'AI Code Tools',
       value: '$2.1B',
@@ -348,6 +360,7 @@ description: 'Average productivity improvement',
     },
   ];
   const devCategories = [
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'AI - powered development tools market',
     },    {
@@ -549,6 +562,8 @@ export default function DeveloperToolsPage() {;
             Curated developer tools and services that professionals use daily. Each tool has been tested and verified
             to provide real value for developers and development teams.
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       name: 'Code Generation',
       description: 'AI-powered coding assistants and code completion tools',
@@ -646,7 +661,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
             Curated developer tools and services that professionals use daily.
             Each tool has been tested and verified to provide real value for
             developers and development teams.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           </p>
         </div>
       </section>
@@ -654,6 +669,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
 <<<<<<< HEAD
 =======
       {/* Developer Market Statistics */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               Understanding the developer tools landscape helps you make;
               informed decisions about your development stack.;
@@ -669,6 +685,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                   <p className="text-sm text-gray-400">{stat.description}</p>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
@@ -703,7 +721,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -740,6 +758,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
               Curated Developer Tools & Services
             </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
@@ -761,6 +780,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
@@ -768,7 +789,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {developerTools.map((tool, index) => (
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
@@ -793,6 +814,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='flex items-start space-x-6'>;
@@ -890,6 +912,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                       <Star className="w-3 h-3 mr-1" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tool.popular && (
@@ -992,12 +1016,17 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
 =======
 =======
 <div className='flex items-center justify-between'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       <Button
                         href={tool && tool.website}
                         variant='primary'
                         size='sm'
+<<<<<<< HEAD
 <<<<<<< HEAD
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
                         Try Tool;
@@ -1027,6 +1056,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         className='bg-cursor-blue hover:bg-cursor-blue-dark'
                       >
                         Try Tool
@@ -1046,8 +1077,12 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Developer Workflow */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -1073,6 +1108,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1137,6 +1173,8 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
@@ -1156,8 +1194,12 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                         key={toolIndex}
                         className='text-sm text-cursor-blue font-medium'
                       >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         {tool}
                       </div>
                     ))}
@@ -1265,6 +1307,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                     <span className='text-cursor-blue font-semibold'>
                       {category.avgPrice}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </span>                  </div>                <div className="p-6">
 <<<<<<< HEAD
 
@@ -1309,6 +1352,10 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                     </span>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                 </div>
               </Card>
@@ -1357,20 +1404,16 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
               href='/ai-tools'
               variant='primary'
               size='lg'
-<<<<<<< HEAD
-              className='bg-cursor-blue hover:bg-cursor-blue-dark'>;
-              Explore AI Tools;
-            </Button>;
-=======
               className='bg-cursor-blue hover:bg-cursor-blue-dark'
             >
               Explore AI Tools
             </Button>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
 href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1420,6 +1463,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'
             >
               Get Dev Consultation
@@ -1430,5 +1475,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

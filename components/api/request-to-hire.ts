@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -72,6 +73,8 @@ export default async function handler(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -89,13 +92,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Internal error' })
   }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     });
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     const payload = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       timestamp
@@ -164,6 +172,8 @@ console.error ('Request - to - hire failed', err);
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       timestamp
       talentSlug
       requesterName
@@ -180,6 +190,6 @@ console.error ('Request - to - hire failed', err);
   } catch (err) {
     console.error('Request-to-hire failed', err);
 return res.status(500).json({ error: 'Internal error' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

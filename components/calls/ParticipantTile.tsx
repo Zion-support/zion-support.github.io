@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,12 +9,18 @@
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useEffect, useRef } from 'react';
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 type Props = any;
 import type {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   RemoteParticipant
   LocalParticipant
   TrackPublication
@@ -42,6 +49,7 @@ type Props = {;
   displayName?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 export default function ParticipantTile({
@@ -65,18 +73,21 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 };
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 export default function ParticipantTile({
   participant,
   isLocal,
   displayName,
 }: Props) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         track.attach(videoRef.current);
 <<<<<<< HEAD
@@ -157,6 +168,8 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 track.attach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
@@ -175,13 +188,18 @@ track.detach(videoRef.current);
     participant.tracks.forEach(pub => {
       const track = pub.track;
 if (track) handleTrackSubscribed(pub, track);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     });
     participant.on('trackSubscribed', handleTrackSubscribed);
     participant.on('trackUnsubscribed', handleTrackUnsubscribed);
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -208,19 +226,26 @@ if (track) handleTrackSubscribed(pub, track);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
   }, [participant]);
   return (
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <video
         ref={videoRef}
         autoPlay
         playsInline
         muted={Boolean(isLocal)}
         className='w-full h-48 object-cover bg-black'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -240,6 +265,8 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed);
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       />
       <audio ref={audioRef} autoPlay className='hidden' />
       <div className='absolute bottom-2 left-2 text-xs px-2 py-1 rounded bg-black/60 text-white'>
@@ -249,8 +276,12 @@ participant.off('trackUnsubscribed', handleTrackUnsubscribed);
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
   RemoteParticipant,
   LocalParticipant,
@@ -383,6 +414,7 @@ if ( {) {
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -398,3 +430,6 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

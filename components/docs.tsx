@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -96,6 +97,8 @@ export default function DocsPage() {
       color: 'text-green-400'
     }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -159,7 +162,7 @@ icon: <CheckCircle className='w-6 h-6' />,
       href: '/status',
       color: 'text-green-400',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       title: 'SDK Downloads',
       description: 'Get the latest SDKs and client libraries',
@@ -175,15 +178,13 @@ icon: <CheckCircle className='w-6 h-6' />,
       color: 'text-purple-400',
     },
     {
-<<<<<<< HEAD
-=======
       title: 'Community Forum',
       description: 'Connect with other developers and users',
       icon: <ExternalLink className='w-6 h-6' />,
       href: '/community',
       color: 'text-yellow-400',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ];
 
   const filteredDocs = documentationItems.filter(doc => {
@@ -191,6 +192,7 @@ icon: <CheckCircle className='w-6 h-6' />,
       doc.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory =
+<<<<<<< HEAD
 <<<<<<< HEAD
       selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory;  });
@@ -291,6 +293,8 @@ export default function DocsPage() {;
     const matchesCategory = selectedCategory === 'all' || doc && doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       selectedCategory === 'all' || doc.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -298,12 +302,13 @@ export default function DocsPage() {;
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
 case 'Beginner':
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':;
         return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced':;
         return 'bg-red-500/20 text-red-400';
+<<<<<<< HEAD
 <<<<<<< HEAD
       default:;
         return 'bg-gray-500/20 text-gray-400';    }      case 'Beginner': return 'bg-green-500/20 text-green-400';
@@ -334,6 +339,8 @@ case 'Beginner':
 <<<<<<< HEAD
     });  };      day: 'numeric';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       default:
         return 'bg-gray-500/20 text-gray-400';
     }
@@ -344,7 +351,7 @@ case 'Beginner':
       year: 'numeric',
       month: 'short',
 day: 'numeric',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -357,8 +364,6 @@ day: 'numeric',
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
   return (
-<<<<<<< HEAD
-=======
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Documentation | Zion Tech Group</title>
@@ -380,7 +385,7 @@ day: 'numeric',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {sections.map(s => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Card
                 key={s && s.title}
                 className='p-6 bg-black/40 border border-gray-700/50'>;
@@ -391,6 +396,7 @@ day: 'numeric',
                   {s && s.links.map(l => (;
                     <li key={l && l.name}>;
                       <a
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -561,24 +567,33 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         href={l.href}
                         className='text-cyan-400 hover:underline'
                       >
                         {l.name}
                       </a>
                     </li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   ))}
                 </ul>
               </Card>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
           </div>
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           </div>
 
 <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -589,6 +604,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300'>
               {external.map(e => (
                 <li key={e.name}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -617,10 +633,14 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <a
                     href={e && e.url}
                     target='_blank'
                     rel='noopener noreferrer'
+<<<<<<< HEAD
 <<<<<<< HEAD
                     className='text-cyan-400 hover:underline'>;
                     {e && e.name}
@@ -655,6 +675,8 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     className='text-cyan-400 hover:underline'
                   >
                     {e.name}
@@ -669,8 +691,12 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               Need help?
             </h2>
             <div className='flex flex-col sm:flex-row gap-3'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Button
                 href='/contact'
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'>;
@@ -798,6 +824,7 @@ icon: <ExternalLink className='w - 6 h - 6' />,
               <a className='text - purple - 400' href={`mailto:${contact.email}`}>;
                 {contact.email}
 <<<<<<< HEAD
+<<<<<<< HEAD
               </a>            </div>          <Card className="p - 6 bg - black / 40 border border-gray-700 / 50">;
             <h2 className="text - xl font - semibold mb-4 text-white">Need help?</h2>;
             <div className="flex flex - col sm:flex-row gap-3">;
@@ -841,6 +868,8 @@ icon: <ExternalLink className='w - 6 h - 6' />,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </a>
             </div>
           </Card>
@@ -849,5 +878,9 @@ icon: <ExternalLink className='w - 6 h - 6' />,
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

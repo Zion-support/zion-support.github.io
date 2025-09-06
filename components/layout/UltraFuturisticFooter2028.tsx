@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -73,6 +74,8 @@ import {;
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Phone
   Mail
   MapPin
@@ -542,6 +545,8 @@ const socialLinks = [;
 
 export default function UltraFuturisticFooter2028() {;
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
@@ -642,13 +647,14 @@ export default function UltraFuturisticFooter2028() {
   return (
 <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
 export default function UltraFuturisticFooter2028() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>;
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>;
           {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -710,6 +716,8 @@ export default function UltraFuturisticFooter2028() {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <div className='lg:col-span-1'>
             <div className='flex items-center space-x-3 mb-6'>
               <div className='relative'>
@@ -752,8 +760,12 @@ export default function UltraFuturisticFooter2028() {
                   href={contactInfo.website}
                   className='text-sm hover:text-white transition-colors'
                 >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   {contactInfo.website}
 
                   {contactInfo.website}
@@ -811,12 +823,15 @@ export default function UltraFuturisticFooter2028() {
 =======
                 <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                   {contactInfo.website}
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   key={social.name}
                   href={social.href}
                   target='_blank'
@@ -824,8 +839,12 @@ export default function UltraFuturisticFooter2028() {
                   className='w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
                 >
                   <social.icon className='w-5 h-5' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </a>
               </div>
             </div>
@@ -888,6 +907,7 @@ export default function UltraFuturisticFooter2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
                         <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
                           href={service && service.href}
                           className='text-sm text-purple-200 hover:text-white transition-colors hover:underline'>              🚀 Our Services;
             </h3>;
@@ -916,6 +936,8 @@ export default function UltraFuturisticFooter2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
                           href={service.href}
                           className='text-sm text-purple-200 hover:text-white transition-colors hover:underline'
                         >
@@ -931,8 +953,12 @@ export default function UltraFuturisticFooter2028() {
           {/* Quick Links */}
 <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               Quick Links
             </h3>
             </div>;
@@ -1031,16 +1057,8 @@ export default function UltraFuturisticFooter2028() {
                       href={link.href}
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
                     >
-<<<<<<< HEAD
-                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
-                    >
-                      <link.icon className="w-4 h-4" />
-=======
                       <link.icon className='w-4 h-4' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{link.name}</span>
                     </Link>
                   </li>
@@ -1145,6 +1163,7 @@ export default function UltraFuturisticFooter2028() {
                   className='flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 />
                 <button className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe                Get the latest insights on future technology and AI innovations.
               </p>
@@ -1187,6 +1206,8 @@ export default function UltraFuturisticFooter2028() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 />
                 <button className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   Subscribe
@@ -1207,8 +1228,12 @@ export default function UltraFuturisticFooter2028() {
             </div>
             {/* Legal Links */}
             <div className='flex items-center space-x-6 text-sm'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Link
                 href='/privacy'
                 className='text-purple-300 hover:text-white transition-colors'>;
@@ -1226,32 +1251,16 @@ export default function UltraFuturisticFooter2028() {
               </Link>;
               <Link
                 href='/security'
-<<<<<<< HEAD
-            <div className="text-sm text-purple-300">
-              © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
-            </div>
-            {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm">
-              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors">
-                Cookie Policy
-              </Link>
-              <Link href="/security" className="text-purple-300 hover:text-white transition-colors">
-=======
                 className='text-purple-300 hover:text-white transition-colors'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Security
               </Link>
             </div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1390,6 +1399,8 @@ className='text-purple-300 hover:text-white transition-colors'>                S
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Floating Action Button */}
 <div className='fixed bottom-6 right-6 z-50'>
         <Link
@@ -1407,5 +1418,9 @@ className='text-purple-300 hover:text-white transition-colors'>                S
       </div>
     </footer>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

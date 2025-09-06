@@ -155,6 +155,7 @@ describe('App', () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 =======
@@ -175,10 +176,13 @@ describe('App', () => {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 =======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
 
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -204,21 +208,25 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+});
+
+
+
 });
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
-=======
-});
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -227,8 +235,8 @@ describe('App', () => {
     // Simple test that just checks if the component can be imported
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
 });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -258,3 +266,13 @@ describe('App', () => {
 });
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+main
+
+main
+
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+});
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

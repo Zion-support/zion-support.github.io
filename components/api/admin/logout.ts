@@ -21,6 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -35,22 +36,35 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
   res && res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+  res.status(200).json({ ok: true })
+}
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   res.status(200).json({ ok: true })
 }  res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 =======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { clearSessionCookie } from '../../../utils / admin_auth';
 export default /**
  * handler - Function description
@@ -68,13 +82,15 @@ function handler() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 import { clearSessionCookie } from '../../../utils/adminAuth';
@@ -87,6 +103,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -104,3 +121,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(200).json({ ok: true });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+
+
+  res.status(200).json({ ok: true });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

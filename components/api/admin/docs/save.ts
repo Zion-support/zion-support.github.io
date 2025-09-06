@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  const ts = new Date () .toISOString () 
 const ts = new Date () .toISOString () 
  const ts = new Date () .toISOString () 
@@ -69,13 +70,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const DOCS_DIR = null;
     res.status(200).json({ ok: true, version: ts })
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
@@ -91,12 +98,15 @@ const DOCS_DIR = null;
     ensureDir(VERSIONS_DIR);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     res.status(200).json({ ok: true, version: ts })
 =======
     res.status(200).json({ ok: true, version: ts })
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const body = req.body;
 
 const jsonString =
@@ -110,8 +120,12 @@ const jsonString =
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
 
 res.status(200).json({ ok: true, version: ts });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ();
@@ -153,9 +167,6 @@ function ensure_dir() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   }
-<<<<<<< HEAD
-  }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f

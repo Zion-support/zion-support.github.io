@@ -65,6 +65,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
@@ -959,6 +960,8 @@ module.exports = {;
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   root: true,
   env: {
     browser: true,
@@ -992,5 +995,9 @@ module.exports = {;
     },
   },
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

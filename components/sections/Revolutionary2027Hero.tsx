@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -69,13 +70,19 @@ const Revolutionary2027Hero = () => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027Hero = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -84,24 +91,32 @@ const Revolutionary2027Hero = null;
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 staggerChildren: 0.1,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1
       y: 0
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         duration: 0.8
@@ -168,14 +183,20 @@ const Revolutionary2027Hero = () => {;
     },;
   };
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.8,
 ease: 'easeOut' as const,
       },
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>
       {/* Enhanced Background Effects */}
@@ -244,6 +265,7 @@ ease: 'easeOut' as const,
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]"></div>;
       {/* Animated Grid Pattern */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="absolute inset-0 opacity-20">;
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>;
       </div>;
@@ -268,9 +290,11 @@ ease: 'easeOut' as const,
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <div className='absolute inset-0 opacity-20'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
 
@@ -288,6 +312,7 @@ ease: 'easeOut' as const,
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             y: [0, -20, 0]
@@ -340,6 +365,8 @@ ease: 'easeOut' as const,
           <item.icon className="w-8 h-8" />
         </motion.div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 y: [0, -20, 0],
             rotate: [0, 5, -5, 0],
           }}
@@ -356,12 +383,13 @@ ease: 'easeInOut',
       {/* Main Content */}
 <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
         <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           variants={containerVariants}
           initial='hidden'
           animate='visible'
           className='space-y-8'>;
           {/* Main Heading */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <motion && motion.div variants={itemVariants} className='space-y-6'>;
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>;
@@ -548,6 +576,8 @@ ease: 'easeInOut',
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-400 text-sm">Uptime Guarantee</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <motion.div variants={itemVariants} className='space-y-6'>
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -658,11 +688,12 @@ ease: 'easeInOut',
                 99.9%
               </div>
               <div className='text-gray-400 text-sm'>Uptime Guarantee</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -873,6 +904,8 @@ ease: 'easeInOut',
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>;
           <motion&& motion.div
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Scroll Indicator */}
       <motion.div
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
@@ -887,7 +920,7 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
       >
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>
           <motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             className='w-1 h-3 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-full mt-2'
       >;
         <div className='w - 6 h - 10 border - 2 border - purple - 400 / 50 rounded - full flex justify - center'>;
@@ -895,18 +928,13 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
             animate={{
-<<<<<<< HEAD
-            animate={{
-              coordinate_y: [0, 12, 0]}}
-            transition={{
-=======
               y: [0, 12, 0],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
               ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
             transition={{
               duration: 2
@@ -934,6 +962,7 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 
       {/* Particle Effects */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='absolute inset-0 pointer-events-none'>
 
 <<<<<<< HEAD
@@ -944,6 +973,10 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 <div className='absolute inset-0 pointer-events-none'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='absolute inset-0 pointer-events-none'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -968,6 +1001,7 @@ className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
               opacity: [0, 1, 0]
             }}
             transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
         ))}
       </div>;
@@ -1027,6 +1061,8 @@ export default Revolutionary2027Hero;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
@@ -1039,5 +1075,9 @@ export default Revolutionary2027Hero;
 };
 
 export default Revolutionary2027Hero;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

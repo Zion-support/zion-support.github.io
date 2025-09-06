@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 }},
@@ -102,6 +103,8 @@ files.forEach((file) => {
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -203,10 +206,15 @@ function fixSyntaxErrors(filePath) {
         if (items.length > 1) {
           modified = true;
           return `[${items.join(', ')}]`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         }
         return match;
       },
@@ -349,6 +357,7 @@ console.log(`\nTotal files fixed: ${totalFixed}`);
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -494,6 +503,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 export { fixSyntaxErrors, findFiles };
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -559,6 +570,7 @@ const main = () => {
 };
 
 main();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -570,3 +582,7 @@ main();
 =======
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-646c
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

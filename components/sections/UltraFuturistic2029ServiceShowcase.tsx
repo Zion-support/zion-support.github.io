@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 class ErrorBoundary extends React.Component {
@@ -28,6 +29,8 @@ import {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles  } from 'lucide-react';
@@ -36,8 +39,12 @@ import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovati
 type Service = any;
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ChevronDown
   Star
   TrendingUp
@@ -166,6 +173,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
     ...Array && Array.from(new Set(services && services.map(service => service && service.category))),;
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Filter and sort services;
   const filteredServices = services;
@@ -220,14 +228,20 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Filter and sort services
   const filteredServices = services
     .filter(
       service =>
         selectedCategory === 'all' || service.category === selectedCategory
     )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
@@ -242,6 +256,7 @@ const innovationOrder = {
           };
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -259,6 +274,8 @@ const innovationOrder = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           );
         case 'price':
           return (
@@ -282,8 +299,12 @@ staggerChildren: 0.1,
     },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -292,18 +313,22 @@ staggerChildren: 0.1,
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         duration: 0.6,
 ease: 'easeOut' as const,
       },
     },
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Header */}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -321,6 +346,8 @@ ease: 'easeOut' as const,
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
         <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -328,8 +355,12 @@ ease: 'easeOut' as const,
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Header */}
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -373,6 +404,7 @@ ease: 'easeOut' as const,
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -397,11 +429,16 @@ ease: 'easeOut' as const,
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -432,6 +469,8 @@ className='text-center mb-16'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'
           >
             {title}
@@ -442,7 +481,7 @@ className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-p
             transition={{ duration: 0.8, delay: 0.2 }}
 className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {subtitle}
           </motion.p>
         </motion.div>
@@ -469,10 +508,13 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
           whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.3 }}
           className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           transition={{ duration: 0.6, delay: 0.3 }}
 className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -499,8 +541,12 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
 =======
               {categories.map(category => (
                 <button
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
@@ -510,6 +556,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
                   }`}
                 >;
                   {category === 'all' ? 'All Categories' : category}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -542,6 +589,8 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </button>
               ))}
             </div>
@@ -549,8 +598,12 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
           {/* Sort Options */}
 <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -558,6 +611,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -572,8 +626,10 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
               <option value='rating'>Rating</option>            </select>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <option value='rating'>Rating</option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </select>
 
           </div>
@@ -586,6 +642,7 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
 initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
@@ -647,6 +704,8 @@ initial='hidden'
                 className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
             </motion && motion.div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
         >
           {filteredServices.map((service, index) => (
@@ -660,13 +719,14 @@ className='group'
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'
               />
             </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -685,6 +745,11 @@ className='group'
 className='text-center mt-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+          transition={{ duration: 0.8, delay: 0.4 }}
+className='text-center mt-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -697,6 +762,7 @@ className='text-center mt-16'
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='/contact'
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
                 Get Started Today
@@ -836,6 +902,8 @@ className='text-center mt-16'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'
               >
                 Get Started Today
@@ -849,8 +917,12 @@ href='/pricing'
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -895,6 +967,7 @@ className='mt-20'
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -909,13 +982,19 @@ className='mt-20'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ).toFixed(1),
                 icon: TrendingUp,
                 color: 'from-green-500 to-teal-500',
               },
             ].map((stat, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <motion.div
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -957,6 +1036,7 @@ className='mt-20'
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -981,6 +1061,11 @@ export default UltraFuturistic2029ServiceShowcase;  )
 className='text-center'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+className='text-center'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -1018,6 +1103,7 @@ className='text-center'
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -1094,9 +1180,15 @@ export default UltraFuturistic2029ServiceShowcase;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 );
 };
 
 export default UltraFuturistic2029ServiceShowcase;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

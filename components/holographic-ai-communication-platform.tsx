@@ -36,6 +36,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
@@ -140,13 +141,15 @@ export default function HolographicAICommunicationPage() {;
         <title>Holographic AI Communication Platform - Zion Tech Group</title>;
         <meta
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Holographic AI Communication Platform - Zion Tech Group</title>
 <meta
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
         />;
@@ -193,6 +196,7 @@ export default function HolographicAICommunicationPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className='w-full mt-4'
@@ -285,6 +289,8 @@ export default function HolographicAICommunicationPage() {;
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='w-full mt-4'
               >
                 Start Free Trial
@@ -303,7 +309,7 @@ export default function HolographicAICommunicationPage() {;
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{contactInfo.address}</span>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
             </div>
@@ -311,6 +317,7 @@ export default function HolographicAICommunicationPage() {;
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -352,3 +359,9 @@ function HolographicAICommunicationPage() {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  );
+}
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -19,6 +19,7 @@ function grantPath(id: string) {
 =======
 function grantPath(id: string) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -36,6 +37,8 @@ function isAuthorized(req: NextApiRequest) {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return path.join(GRANTS_DIR, `${id}.json`);
 
 function readGrant(id: string): GrantApplication | null {
@@ -54,8 +57,12 @@ function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization |''
   const token = header.replace('Bearer ', '');
 return (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     token &&
     process && process.env.ZION_ADMIN_TOKEN &&
     token === process && process.env.ZION_ADMIN_TOKEN
@@ -150,8 +157,6 @@ function write_grant() {
 =======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' });
 return;
@@ -165,8 +170,12 @@ return;
     const existing = readGrant(id);
     if (!existing) return res.status(404).json({ error: 'Not found' });
 return res.status(200).json({ milestones: existing.milestones || [] });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   if (req.method === 'POST') {
     const existing = readGrant(id);
@@ -174,6 +183,7 @@ return res.status(200).json({ milestones: existing.milestones || [] });
     const payload = req.body as MilestonesUpdatePayload;
     existing.milestones = payload.milestones |[];
     existing.updatedAt = new Date().toISOString();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -237,6 +247,11 @@ function handler() {
 return res.status(200).json({ record: existing });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    writeGrant(existing);
+return res.status(200).json({ record: existing });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }
   const { id } = req.query as { id: string }
   // Check condition
@@ -296,12 +311,12 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
   res.setHeader('Allow', 'GET, POST');
-<<<<<<< HEAD
-  }
-
-=======
   res.status(405).end('Method Not Allowed');
   res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

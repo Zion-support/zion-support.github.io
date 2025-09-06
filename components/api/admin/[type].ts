@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -20,6 +21,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
@@ -58,12 +61,17 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     format: (format as any) || undefined,
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -111,6 +119,8 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     filters;
     format: (format as any) || undefined}
 }
@@ -120,7 +130,7 @@ return '"' + s.replace(/"/g, '""') + '"';
   };
   const lines = [headers.join(',')].concat(
     rows.map(r => headers.map(h => escape(r[h])).join(','))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   );
   return lines.join('\n');
 
@@ -136,6 +146,7 @@ export default async function handler(
     return res.status(400).json({ error: 'Invalid type' });  }
 =======
   if (!ADMIN_TYPES.includes(type))
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(400).json({ error: 'Invalid type' });  }
     return '"' + s.replace(/"/g, '""') + '"'
@@ -160,8 +171,10 @@ export default async function handler(
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return res.status(400).json({ error: 'Invalid type' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const useSupabase = isSupabaseConfigured();
@@ -174,6 +187,7 @@ export default async function handler(
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
         // heuristic: search name/title/email
+<<<<<<< HEAD
 <<<<<<< HEAD
         }
       }
@@ -229,6 +243,8 @@ export default async function handler(
         query = query.or(
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 query = query.or(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           'name.ilike.%' +
@@ -284,12 +300,17 @@ res.setHeader('Content-Type', 'text/csv');
         return res.status(200).send(toCsv(data || []));
       }
       return res.status(200).json({ items: data |[], total: count |0 });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       if (params.search) {
@@ -312,6 +333,8 @@ res.setHeader('Content-Type', 'text/csv');
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       if (params.search) {
         const s = params.search.toLowerCase();
 filtered = filtered.filter(r =>
@@ -325,8 +348,12 @@ filtered = filtered.filter(r =>
           );
         }
       }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
       }
@@ -338,6 +365,7 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
+<<<<<<< HEAD
 <<<<<<< HEAD
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
@@ -370,6 +398,8 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
           );
@@ -386,8 +416,12 @@ res.setHeader('Content-Type', 'text/csv');
           `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -437,6 +471,7 @@ res.setHeader('Content-Type', 'text/csv');
       list[idx] = updated as any;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
@@ -446,6 +481,10 @@ res.setHeader('Content-Type', 'text/csv');
       return res.status(200).json({ item: updated });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      return res.status(200).json({ item: updated });
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
       return res.status(200).json({ item: updated });    }
@@ -469,6 +508,7 @@ res.setHeader('Content-Type', 'text/csv');
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -599,6 +639,8 @@ return res.status (405).json ({ error: 'Method not allowed' });
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 return res.status(200).json({ ok: true });
     } else {
       const list = MOCK_DATA[type] || [];
@@ -618,5 +660,9 @@ return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -28,6 +28,7 @@ import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
@@ -56,8 +57,10 @@ export default function TrustPage() {;
     const u = params.get('user');
     if (u) setUserId(u);    if (u) setUserId(u)
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const params = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   useEffect(() => {
     async function load() {
@@ -78,11 +81,9 @@ export default function TrustPage() {;
   useEffect(() => {;
     async function load() {;
       setLoading(true);
-<<<<<<< HEAD
-=======
 const res = await fetch(
         `/api/trust/${encodeURIComponent(userId)}?analyze=true`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       );
       const json = await res && res.json();
       setData(json);
@@ -95,6 +96,7 @@ const res = await fetch(
     }
     load();
   }, [userId]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -125,6 +127,8 @@ const res = await fetch(
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   async function submitPeer(type: 'endorse' | 'flag') {
     await fetch('/api/trust/peer', {
       method: 'POST'
@@ -147,7 +151,7 @@ await fetch('/api/trust/appeal', {
     alert('Appeal submitted');
     form.reset();
     form.reset()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   return (
     <EnhancedLayout>
@@ -168,6 +172,7 @@ await fetch('/api/trust/appeal', {
                 checked={showLogic}
                 onChange={() => setShowLogic(!showLogic)}
               />{' '}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -206,6 +211,8 @@ await fetch('/api/trust/appeal', {
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               Transparent logic
             </label>
           </div>
@@ -242,8 +249,12 @@ await fetch('/api/trust/appeal', {
                           {Math.round(c.raw * 100)} / weighted{' '}
                           {c.weighted.toFixed(3)}
                         </span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       </li>
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -297,6 +308,7 @@ await fetch('/api/trust/appeal', {
               )}
               {data.reasonSummary && (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
@@ -309,6 +321,10 @@ await fetch('/api/trust/appeal', {
 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
@@ -330,6 +346,7 @@ await fetch('/api/trust/appeal', {
                       className='w-full border rounded px-2 py-1 text-sm'
                       rows={4}
                       required
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     />
@@ -377,6 +394,8 @@ await fetch('/api/trust/appeal', {
 }
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     />
                     <button
                       className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
@@ -386,11 +405,12 @@ await fetch('/api/trust/appeal', {
                     </button>
                   </form>
                 </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </div>;
           </div>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -605,9 +625,15 @@ function submit_appeal() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       </div>
     </EnhancedLayout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

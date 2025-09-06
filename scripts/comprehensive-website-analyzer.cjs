@@ -78,6 +78,7 @@ const path = require("path")
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
       return { "success": false, "error"}
@@ -91,3 +92,8 @@ const path = require("path")
       return { "success": false, "error"}
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+      return { "success": false, "error"}
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

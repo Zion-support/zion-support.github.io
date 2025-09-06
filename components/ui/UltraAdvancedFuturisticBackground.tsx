@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -72,6 +73,8 @@ const UltraAdvancedFuturisticBackground: React.FC<;
     let animationFrameId: number;
     let particles: Array<{;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 let animationFrameId: number;
 let particles: Array< {
   resizeCanvas ();
@@ -106,7 +109,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 
 let animationFrameId: number;
     let particles: Array<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       x: number;
       y: number;
   children;
@@ -133,16 +136,6 @@ if (return) {
       size: number;
       opacity: number;
       color: string;
-<<<<<<< HEAD
-      vx: number,
-      vy: number,
-      size: number,
-      opacity: number,
-      color: string,
-      }
-    }
-    resizeCanvas();
-=======
       type: 'quantum' | 'holographic' | 'neon' | 'fusion';
     }> = [];
 
@@ -159,44 +152,36 @@ canvas.height = rect.height;
     // Color schemes
     const colorSchemes = {
       'quantum-fusion': {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         primary: '#00ffff',
         secondary: '#ff00ff',
         accent: '#ffff00',
         quantum: '#00ff88',
-<<<<<<< HEAD
-=======
 holographic: '#ff0088',
       },
       'neon-cyber': {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         primary: '#00ff41',
         secondary: '#ff0080',
         accent: '#00d4ff',
         quantum: '#ff6b35',
-<<<<<<< HEAD
-        holographic: '#9d4edd'
-      },
-      'holographic': {
-=======
 holographic: '#9d4edd',
       },
       holographic: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         primary: '#ff00ff',
         secondary: '#00ffff',
         accent: '#ffff00',
         quantum: '#00ff88',
-<<<<<<< HEAD
-=======
 holographic: '#ff0088',
       },
       'quantum-ai': {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         primary: '#00d4ff',
         secondary: '#ff6b35',
         accent: '#9d4edd',
         quantum: '#00ff88',
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Color schemes;
     const colorSchemes = {;
@@ -238,6 +223,8 @@ holographic: '#ff0088',
         holographic: '#ff0088',;
       },    };        holographic: '#ff0088';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 holographic: '#ff0088',
       },
     };
@@ -272,36 +259,31 @@ color:
                   : colors.secondary,
           type,
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     };
 
     // Quantum entanglement effect
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return;
-<<<<<<< HEAD
-      
-      for (let i = 0; i < particles.length; i++) {
-=======
 for (let i = 0; i < particles.length; i++) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-<<<<<<< HEAD
-=======
           if (
             distance < 100 &&
             particles[i].type === 'quantum' &&
             particles[j].type === 'quantum'
           ) {
             ctx.beginPath();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.strokeStyle = `rgba(0, 255, 136, ${0.3 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
@@ -386,8 +368,10 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.stroke();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }
         }
       }
@@ -539,14 +523,11 @@ ctx.stroke();
     // Holographic grid effect;
     const createHolographicGrid = () => {;
       if (!enableHolographic) return;
-<<<<<<< HEAD
-      const gridSize = 50;
-=======
 const gridSize = 50;
       const offset = (Date.now() * 0.001) % gridSize;
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
@@ -557,6 +538,7 @@ const gridSize = 50;
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
+<<<<<<< HEAD
 <<<<<<< HEAD
           const dy = nodes[i].y - nodes[j].y;
           }
@@ -576,6 +558,8 @@ const gridSize = 50;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         ctx.stroke();
       }
     };
@@ -599,8 +583,12 @@ const nodes = particles.filter(
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
 ctx.stroke();
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           }
         }
       }
@@ -610,6 +598,7 @@ ctx.stroke();
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       
@@ -628,6 +617,8 @@ ctx.stroke();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Create background gradient
       const gradient = ctx.createRadialGradient(
         canvas.width / 2,
@@ -637,8 +628,12 @@ ctx.stroke();
         canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2
       );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
@@ -657,6 +652,7 @@ ctx.stroke();
         particle.y += particle.vy;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Bounce off edges
         if (particle.x < 0 |particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 |particle.y > canvas.height) particle.vy *= -1;
@@ -667,16 +663,23 @@ ctx.stroke();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Bounce off edges
         if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
         // Wrap around edges
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // Draw particle
@@ -689,11 +692,16 @@ ctx.stroke();
 // Draw particle
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+// Draw particle
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
 
         // Create glow effect
         const glowGradient = ctx.createRadialGradient(
+<<<<<<< HEAD
 <<<<<<< HEAD
           particle.x, particle.y, 0;
 =======
@@ -706,6 +714,8 @@ ctx.stroke();
         glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`);
         glowGradient.addColorStop(1, 'transparent');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           particle.x,
           particle.y,
           0,
@@ -727,7 +737,7 @@ ctx.stroke();
         );
         glowGradient.addColorStop(1, 'transparent');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.fillStyle = glowGradient;
         ctx.fill();
 <<<<<<< HEAD
@@ -763,6 +773,7 @@ ctx.stroke();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           ctx.strokeStyle = `${particle.color}${Math.floor(
             particle.opacity * 255
           )
@@ -776,12 +787,18 @@ ctx.stroke();
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.strokeStyle = `${particle.color}${Math.floor(
             particle.opacity * 255
           )
             .toString(16)
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             .padStart(2, '0')}`;
         );
         glowGradient && glowGradient.addColorStop(;
@@ -808,23 +825,30 @@ ctx.strokeStyle = `${particle.color}${Math.floor(
           ctx && ctx.stroke();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       });          ctx && ctx.lineWidth = 2;
           ctx && ctx.stroke();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         }
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       });
       // Add intensity-based effects
       if (intensity === 'high') {
         // Add energy waves
         const time = Date.now() * 0.001;
 <<<<<<< HEAD
+<<<<<<< HEAD
         for (let i = 0; i < 3; i++) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 for (let i = 0; i < 3; i++) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           const waveRadius =
@@ -837,17 +861,22 @@ for (let i = 0; i < 3; i++) {
             0
             Math.PI * 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           );
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
           ctx.lineWidth = 2;
           ctx.stroke();
         }
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       animationFrameId = requestAnimationFrame(animate);    };          ctx.beginPath();
@@ -872,13 +901,16 @@ for (let i = 0; i < 3; i++) {
       animationFrameId = requestAnimationFrame(animate);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+      animationFrameId = requestAnimationFrame(animate);
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     };
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     initParticles();
     animate();
-<<<<<<< HEAD
-=======
     return () => {
       window.removeEventListener('resize', resizeCanvas);
 cancelAnimationFrame(animationFrameId);
@@ -890,7 +922,7 @@ cancelAnimationFrame(animationFrameId);
     animationSpeed
     enableHolographic
     enableQuantumEffects
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   ]);
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
@@ -994,6 +1026,7 @@ export default UltraAdvancedFuturisticBackground;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 export default UltraAdvancedFuturisticBackground;
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">;
       <canvas
@@ -1076,3 +1109,6 @@ export default UltraAdvancedFuturisticBackground;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

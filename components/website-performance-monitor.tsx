@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react',
@@ -32,6 +33,8 @@ export default function WebsitePerformanceMonitorPage() {;
 } from 'lucide-react';
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -42,7 +45,7 @@ export default function WebsitePerformanceMonitorPage() {
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = null;
             and AI-powered optimization recommendations. Never let performance issues impact your users again.
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Activity
   Zap
@@ -148,17 +151,24 @@ icon: <Monitor className='w-8 h-8 text-white' />,
       description:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
       color: 'text-pink-400',
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   ];
   const pricing = [
     {
@@ -182,6 +192,7 @@ icon: <Monitor className='w-8 h-8 text-white' />,
       period: '/month',
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         '25 websites monitored'
         'Advanced performance metrics'
@@ -312,6 +323,8 @@ export default function WebsitePerformanceMonitorPage() {;
       popular: false,;
     },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 '25 websites monitored',
         'Advanced performance metrics',
         'Real-time monitoring',
@@ -323,11 +336,12 @@ export default function WebsitePerformanceMonitorPage() {;
       ],
       popular: true,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description:
         'For large organizations with critical performance requirements'
@@ -361,6 +375,8 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 description:
         'For large organizations with critical performance requirements',
       features: [
@@ -377,8 +393,12 @@ description:
     },
   ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
@@ -391,6 +411,7 @@ description:
         cls: '0.08'
         loadTime: '1.8s'
         recommendations: [
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleAnalyzeWebsite = async () => {;
     setIsAnalyzing(true);
@@ -507,6 +528,8 @@ description:
           </p>;
           <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 'Optimize images and implement lazy loading',
           'Minimize render-blocking resources',
           'Enable compression and caching',
@@ -564,16 +587,19 @@ description:
               className='bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <Button
               onClick={handleAnalyzeWebsite}
               size="lg"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               disabled={isAnalyzing}
             >
               {isAnalyzing ? (
@@ -745,8 +771,12 @@ href='#pricing'
                     </h3>
                     <p className='text-gray-400 leading-relaxed'>
                       {feature.description}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </p>
                   </div>
                 </div>
@@ -801,6 +831,7 @@ href='#pricing'
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
                   {metric.description}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -863,8 +894,10 @@ href='#pricing'
                 </p>              </Card>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </Card>
 
             ))}
@@ -881,28 +914,6 @@ href='#pricing'
 
       {/* Demo Analysis Section */}
       {analysisResults && (
-<<<<<<< HEAD
-
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Demo Analysis Section */}
-      {analysisResults && (;
-        <section className='section-padding bg-gradient-cursor-accent'>;
-          <div className='container-cursor'>;
-            <div className='text-center mb-12'>;
-              <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-                Performance Analysis Results;
-              </h2>;
-              <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-                Here's a sample analysis of a website. Get real-time insights;
-                for your own website.;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-
-=======
 <section className='section-padding bg-gradient-cursor-accent'>
           <div className='container-cursor'>
             <div className='text-center mb-12'>
@@ -915,7 +926,7 @@ href='#pricing'
               </p>
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               {/* Score Card */}
 <<<<<<< HEAD
               <Card className='border-gradient-blue text-center'>;
@@ -1000,6 +1011,7 @@ href='#pricing'
                     <span className='text-gray-400'>Page Load Time</span>;
                     <span
 <<<<<<< HEAD
+<<<<<<< HEAD
               </h2>
               <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
                 Here's a sample analysis of a website. Get real-time insights for your own website.
@@ -1044,6 +1056,8 @@ href='#pricing'
 =======
                   </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}
                     >
                       {analysisResults.loadTime}
@@ -1052,7 +1066,7 @@ href='#pricing'
                 </div>
               </Card>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {/* Recommendations */}
 <Card className='border-gradient-blue mt-8'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1062,6 +1076,7 @@ href='#pricing'
                 {analysisResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
@@ -1090,12 +1105,18 @@ href='#pricing'
                   </div>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+                    <span className='text-gray-300'>{rec}</span>
+                  </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 ))}
               </div>;
             </Card>;
           </div>;
         </section>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1122,6 +1143,8 @@ href='#pricing'
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1136,7 +1159,7 @@ href='#pricing'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {pricing.map((plan, index) => (
 <<<<<<< HEAD
 =======
@@ -1161,6 +1184,7 @@ href='#pricing'
             {metrics.map ((metric, index) => (
               <Card;
                 key={index}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className="card - hover border - gradient-blue text-center";
 =======
@@ -1346,6 +1370,8 @@ href='#pricing'
             </p>;
           </div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className={`card-hover border-gradient-blue ${plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1358,12 +1384,13 @@ href='#pricing'
                 )}
 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     {plan.name}
                   </h3>;
                   <div className='mb - 6'>;
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1394,6 +1421,8 @@ href='#pricing'
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
@@ -1430,8 +1459,12 @@ href='#pricing'
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       {feature}
                     </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1439,6 +1472,7 @@ href='#pricing'
                 <Button
 href='/contact'
                   size='lg'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1469,13 +1503,19 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </Card>
             ))}
           </div>
@@ -1561,6 +1601,7 @@ href='/contact'
               size='lg'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/contact"
@@ -1599,6 +1640,8 @@ href='/contact'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'
             >
               Schedule Demo
@@ -1609,5 +1652,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

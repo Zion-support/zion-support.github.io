@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React, { useEffect, useRef } from 'react';
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -10,11 +7,12 @@ if (particle.x > canvas.width) particle.x = 0;
 if (particle.y < 0) particle.y = canvas.height;
 if (particle.y > canvas.height) particle.y = 0;
 // Draw particle requestAnimationFrame (animate)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 animate ();
 // Handle resize window.addEventListener ('resize', handleResize);
 /> {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   /* Floating Circles */
@@ -59,19 +57,22 @@ import React, { useEffect, useRef } from 'react';
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   /* Floating Circles */
 }<motion.div
 export default function UltraFuturisticBackground2028({
   children,
 }: UltraFuturisticBackground2028Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
   children: React.ReactNode
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -105,12 +106,14 @@ interface UltraFuturisticBackground2028Props {;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
   const canvasRef = null;
               ease: "easeInOut"
   useEffect(() => {
     const canvas = canvasRef.current;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (!canvas) return;
   /* Floating Circles */;
 }<motion.div;
@@ -143,6 +146,7 @@ if (return) {
     // Particle system;
     const particles: Array<{
 <<<<<<< HEAD
+<<<<<<< HEAD
       coordinate_x: number;
       coordinate_y: number;
 <<<<<<< HEAD
@@ -156,12 +160,18 @@ x: number;
       y: number;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+x: number;
+      y: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       vx: number;
       vy: number;
       size: number;
       color: string;
       opacity: number;
     }> = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -175,6 +185,8 @@ x: number;
         opacity: Math.random() * 0.5 + 0.3
       })
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({
@@ -188,12 +200,13 @@ color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][
         ],
         opacity: Math.random() * 0.5 + 0.3,
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -202,6 +215,10 @@ color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][
 particles.forEach(particle => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+particles.forEach(particle => {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -218,6 +235,7 @@ particles.forEach(particle => {
         // Draw connections
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -226,6 +244,10 @@ particles.forEach(particle => {
 particles.forEach(otherParticle => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+particles.forEach(otherParticle => {
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -236,8 +258,11 @@ particles.forEach(otherParticle => {
             ctx.strokeStyle = particle.color;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
             ctx.lineWidth = 1;
             ctx.stroke();
@@ -266,14 +291,19 @@ canvas.height = window.innerHeight;
     return () => {
 window.removeEventListener('resize', handleResize);
     };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
       {/* Animated Background Canvas */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
 <<<<<<< HEAD
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -298,8 +328,10 @@ window.removeEventListener('resize', handleResize);
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         className='absolute inset-0 w-full h-full pointer-events-none'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         style={{ zIndex: 0 }}
 <<<<<<< HEAD
 
@@ -342,6 +374,7 @@ window.removeEventListener('resize', handleResize);
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1 }} />
       {/* Floating Geometric Shapes */}
           animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
           }}
@@ -394,6 +427,8 @@ window.removeEventListener('resize', handleResize);
             opacity: [0.2, 0.5, 0.2],            rotate: [45, -315];
             scale: [1, 1.2, 1];
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             rotate: [45, 405],
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -407,13 +442,14 @@ ease: 'easeInOut',
 
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
             rotate: [45, -315],
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
+<<<<<<< HEAD
 <<<<<<< HEAD
             duration: 10
             repeat: Infinity
@@ -436,6 +472,8 @@ ease: 'easeInOut',
           transition={{
             ease: 'easeInOut',            ease: "easeInOut"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             duration: 10,
             repeat: Infinity,
 ease: 'easeInOut',
@@ -452,7 +490,7 @@ className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotat
             duration: 12,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
             duration: 12,
@@ -467,6 +505,7 @@ ease: 'easeInOut',
           transition={{
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
         {/* Floating Circles */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -515,6 +554,8 @@ ease: 'easeInOut',
             y: [0, 25, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <motion.div
 className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
           animate={{
@@ -533,12 +574,13 @@ className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounde
             y: [0, 25, 0],
             opacity: [0.2, 0.5, 0.2],
           }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           transition={{
             duration: 7,
             repeat: Infinity,
 ease: 'easeInOut',
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           animate={{
             y: [0, -15, 0]
@@ -566,6 +608,8 @@ ease: 'easeInOut',
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         />
         <motion.div
 className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
@@ -577,7 +621,7 @@ className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rou
             duration: 5,
             repeat: Infinity,
 ease: 'easeInOut',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 
           }}
@@ -589,6 +633,7 @@ ease: 'easeInOut',
       </div>;
 
       {/* Energy Waves */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <div
@@ -700,6 +745,8 @@ ease: 'easeInOut',
 
             delay: 4
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 3 }}
@@ -741,7 +788,7 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
             repeat: Infinity,
 ease: 'linear',
             delay: 4,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
             duration: 8,
             repeat: Infinity,
@@ -797,6 +844,7 @@ ease: 'linear',
               top: `${Math.random() * 100}%`
             }}
             animate={{
+<<<<<<< HEAD
 <<<<<<< HEAD
               scale: [0, 1, 0]
               opacity: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
@@ -901,6 +949,8 @@ ease: 'linear',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               scale: [0, 1, 0],
               opacity: [0, 1, 0],
             }}
@@ -909,8 +959,12 @@ ease: 'linear',
               repeat: Infinity,
               delay: Math.random() * 3,
 ease: 'easeInOut',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             }}
           />
         ))}
@@ -939,6 +993,7 @@ ease: 'easeInOut',
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* Content */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
@@ -985,11 +1040,14 @@ ease: 'easeInOut',
       </div>;
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='relative' style={{ zIndex: 10 }}>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>;
       {/* Bottom Glow */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1020,11 +1078,17 @@ ease: 'easeInOut',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div
         className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
         style={{ zIndex: 5 }}
       />
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

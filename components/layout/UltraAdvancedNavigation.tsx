@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -100,6 +101,8 @@ import Link from 'next/link';
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
@@ -147,14 +150,19 @@ setIsScrolled(window.scrollY > 50);
       href: '/',
 icon: null,
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       name: 'AI Services'
       href: '#'
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -165,6 +173,8 @@ icon: null,
       description: 'Benchmarks & vendor references'
     }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {
           name: 'AI Agent Orchestrator',
           href: '/ai-agents',
@@ -324,7 +334,7 @@ price: '$7,999/month',
         },
       ],
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     {
       name: 'Micro SaaS',
       href: '/services',
@@ -332,6 +342,7 @@ price: '$7,999/month',
 description: '300+ micro SaaS services',
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: 'Market Pricing'
       href: '/market-pricing'
@@ -347,19 +358,26 @@ description: '300+ micro SaaS services',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Market Pricing',
       href: '/market-pricing',
       icon: DollarSign,
 description: 'Benchmarks & vendor references',
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     {
       name: 'About',
       href: '/about',
       icon: null,
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -389,6 +407,8 @@ description: 'Benchmarks & vendor references',
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       name: 'Contact',
       href: '/contact',
       icon: null,
@@ -421,8 +441,12 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 className='flex items-center'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -434,6 +458,7 @@ className='flex items-center'
                 </div>
                 <div className='text-xs text-gray-400'>
                   Revolutionary Technology
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>              </div>          >
 <<<<<<< HEAD
@@ -455,10 +480,14 @@ className='flex items-center'
                   Zion Tech Group
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 </div>
               </div>
             </Link>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             transition={{ duration: 0 && 0.5 }}
             className='flex items-center'>;
@@ -515,6 +544,8 @@ className='flex items-center'
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -543,8 +574,12 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                   >
                     {item.icon && <item.icon className='w-4 h-4' />}
                     <span>{item.name}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </Link>
                 )}
 
@@ -599,11 +634,14 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
                       >
                         <div className='p-4'>
@@ -631,8 +669,12 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                                   {dropdownItem.price}
                                 </div>
                               </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             ))}
                           </div>;
                         </div>;
@@ -654,13 +696,9 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           {/* Contact Info & CTA */}
-<<<<<<< HEAD
-          <div className='hidden lg:flex items-center space-x-6'>;
-            <div className='flex items-center space-x-4 text-sm text-gray-300'>;
-=======
 <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               <a
 <<<<<<< HEAD
 
@@ -688,6 +726,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
 
               </a>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -717,13 +756,15 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </div>
             <motion.a
               href='/contact'
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-2xl font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Get Started
             </motion.a>
@@ -732,6 +773,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 
 =======
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:hidden">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -772,6 +814,8 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='lg:hidden'>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -786,8 +830,12 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -795,6 +843,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -825,6 +874,8 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
               {navigationItems.map((item) => (
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             transition={{ duration: 0.3 }}
 className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50 overflow-hidden'
           >
@@ -920,8 +971,12 @@ className='block py-2 text-gray-400 hover:text-white transition-colors duration-
                             >
                               {dropdownItem.name}
                             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           ))}
                         </div>
                       )}
@@ -930,6 +985,7 @@ className='block py-2 text-gray-400 hover:text-white transition-colors duration-
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -949,10 +1005,12 @@ className='block py-2 text-gray-400 hover:text-white transition-colors duration-
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
                       {item.icon && <item.icon className='w-5 h-5' />}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <span>{item.name}</span>
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -961,22 +1019,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
-
-              {/* Mobile Contact Info */}
-              <div className="pt-6 border-t border-gray-800/50">
-                <div className="space-y-3 text-sm text-gray-400">
-                  <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
-                    <Phone className="w-4 h-4" />
-                    <span>{contactInfo.mobile}</span>
-                  </a>
-                  <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
-                    <Mail className="w-4 h-4" />
-                    <span>{contactInfo.email}</span>
-                  </a>
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="w-4 h-4 mt-0.5" />
-=======
 {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-800/50'>
                 <div className='space-y-3 text-sm text-gray-400'>
@@ -996,11 +1038,12 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                   </a>
                   <div className='flex items-start space-x-3'>
                     <MapPin className='w-4 h-4 mt-0.5' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
                 <motion.a
+<<<<<<< HEAD
 <<<<<<< HEAD
                   href="/contact"
                   whileHover={{ scale: 1 && 1.05 }}
@@ -1199,6 +1242,8 @@ export default UltraAdvancedNavigation;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   href='/contact'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -1216,5 +1261,9 @@ export default UltraAdvancedNavigation;
 };
 
 export default UltraAdvancedNavigation;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

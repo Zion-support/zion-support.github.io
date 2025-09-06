@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "type": "module",
 <<<<<<< HEAD
   "scripts": {
@@ -25,10 +26,36 @@
     "build": "next build",
     "build:netlify": "node scripts/build-with-error-handling.js",
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+<<<<<<< HEAD
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "14.2.32",
+    "typescript": "^5.0.0"
+  }
+=======
+    "build:netlify": "node scripts/build-with-error-handling.js",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "export": "next build",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
+<<<<<<< HEAD
     "lint": "eslint .",
 =======
     "dev": "next dev",
@@ -55,6 +82,9 @@
 =======
     "lint": "eslint .",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    "lint": "next lint",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
@@ -66,6 +96,7 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "prepare": "echo 'Husky prepare script disabled'",
 <<<<<<< HEAD
@@ -341,6 +372,12 @@
   },
   "dependencies": {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    "prepare": "echo 'Husky prepare script disabled'",
+    "seo:generate": "node scripts/generate-dynamic-sitemap.js"
+  },
+  "dependencies": {
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
@@ -412,11 +449,11 @@
     "@sendgrid/mail": "^8.1.5",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.57.0",
+    "@supabase/supabase-js": "^2.57.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/postcss": "^4.1.12",
     "@tailwindcss/typography": "^0.5.16",
+<<<<<<< HEAD
     "@tanstack/react-query": "^5.85.5",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -546,7 +583,11 @@
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^15.5.2",
 =======
+=======
+    "framer-motion": "^12.23.12",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "lucide-react": "^0.536.0",
+    "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.8.2"
@@ -560,6 +601,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@types/jest": "^29.5.8",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
@@ -571,6 +613,16 @@
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.21",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "autoprefixer": "^10.4.21",
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     "axe-core": "^4.10.3",
     "eslint": "^9.17.0",
     "eslint-config-next": "^14.2.32",
@@ -668,6 +720,7 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
@@ -701,3 +754,7 @@
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

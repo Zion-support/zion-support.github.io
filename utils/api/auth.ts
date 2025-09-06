@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 export type CurrentUser = {;
   userId: string;
@@ -74,10 +75,32 @@ export function validateUser(userId: string, role: string): User | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+
+
+import { NextApiRequest, NextApiResponse } from 'next';
+
+main
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+
+    return null;
+  }
+  return user;
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
 
 
 export function getUserFromRequest (req: any): User | null {
@@ -90,6 +113,7 @@ export function getUserFromRequest (req: any): User | null {
   }
   return user;
 }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -136,3 +160,11 @@ export function getUserFromRequest (req: any): User | null {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

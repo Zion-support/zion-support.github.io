@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,12 +60,14 @@ import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Award, value: '50+', label: 'Awards Won' },
     { icon: Star, value: '99%', label: 'Client Satisfaction' },
 { icon: Zap, value: '24/7', label: 'Support Available' },
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>;
       {/* Animated Background Elements */}
@@ -139,6 +142,7 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
 =======
         {/* Grid Pattern */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
@@ -199,12 +203,18 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
 
       <div className='relative container mx-auto px-4 text-center z-10'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Main Content */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -260,6 +270,7 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
+<<<<<<< HEAD
 <<<<<<< HEAD
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
@@ -411,6 +422,12 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+            </span>
+          </motion.div>
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Main Heading */}
           <motion.h1;
             initial={{ opacity: 0, coordinate_y: 30 }}
@@ -501,9 +518,12 @@ className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm borde
             transition={{ duration: 0.8, delay: 0.3 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
           >
             Transform Your Business with
@@ -511,8 +531,12 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
               Cutting-Edge Technology
             </span>
           </motion.h1>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* Subtitle */}
 
 =======
@@ -524,9 +548,12 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
             transition={{ duration: 0.8, delay: 0.4 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'
           >
             From AI development to cloud architecture, we help companies
@@ -534,8 +561,12 @@ className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-rel
             in the modern technology landscape.
           </motion.p>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           {/* CTA Buttons */}
 
 =======
@@ -545,6 +576,7 @@ className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-rel
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -559,6 +591,10 @@ className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-rel
 className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <Link
               href='/contact'
@@ -587,12 +623,17 @@ className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
             transition={{ duration: 0.8, delay: 0.6 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
 className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             {stats.map((stat, index) => (
 
@@ -606,6 +647,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                 className='text-center group'
 
@@ -626,6 +668,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center group'
               >
                 <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
@@ -635,7 +679,7 @@ className='text-center group'
                   {stat.value}
                 </div>
                 <div className='text-gray-400 font-medium'>{stat.label}</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               </motion.div>
 
             ))}
@@ -675,6 +719,7 @@ className='text-center group'
         transition={{ duration: 1, delay: 1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'      >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -696,8 +741,10 @@ export default HeroSection;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -712,6 +759,7 @@ export default HeroSection;        className="absolute bottom - 8 left-1/2 trans
           animate={{ coordinate_y: [0, 10, 0] }}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
           transition={{ duration: 2, repeat: Infinity }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -756,6 +804,8 @@ export default HeroSection;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='w-6 h-10 border-2 border-white/30 rounded-full flex justify-center'
         >
           <motion.div
@@ -770,5 +820,9 @@ className='w-1 h-3 bg-white/60 rounded-full mt-2'
 };
 
 export default HeroSection;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

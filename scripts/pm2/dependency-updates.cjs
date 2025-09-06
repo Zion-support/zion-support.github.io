@@ -182,6 +182,7 @@ main().catch(error => {})
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 });
@@ -195,3 +196,8 @@ main().catch(error => {})
 });
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+});
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

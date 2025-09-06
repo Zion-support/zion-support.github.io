@@ -103,6 +103,7 @@ const path = require("path")
       "totalEnhancements"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
     const reportPath = path.join(this.projectRoot, ")
@@ -116,3 +117,8 @@ const path = require("path")
     const reportPath = path.join(this.projectRoot, ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+    const reportPath = path.join(this.projectRoot, ")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

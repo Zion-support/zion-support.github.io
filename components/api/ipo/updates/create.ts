@@ -6,6 +6,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
   if (!title) return res && res.status(400).json({ error: 'Missing title' });
@@ -69,3 +70,9 @@ function handler() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+  res.status(200).json(update);
+  res.status(200).json(update)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

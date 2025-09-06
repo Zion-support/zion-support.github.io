@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -6,6 +7,8 @@
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return (    <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -187,7 +190,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     </footer>
   )
 }
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 

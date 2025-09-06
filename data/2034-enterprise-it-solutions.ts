@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 export type EnterpriseITSolution = {
@@ -26,15 +27,21 @@ export type EnterpriseITSolution = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-  id: string;
 =======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+  id: string;
 export type EnterpriseITSolution = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   name: string;
   tagline?: string;
   description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   category:
     | 'Enterprise Security'
     | 'DevOps & Automation'
@@ -47,21 +54,31 @@ export type EnterpriseITSolution = any;
     professional?: string;
     enterprise?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
   };
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
   };
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   category:;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   features: string[];
   integrations?: string[];
   use_cases?: string[];
@@ -69,17 +86,20 @@ export type EnterpriseITSolution = any;
   real_service?: boolean;
   rating?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
       'Policy-based access',
       'Micro-segmentation',
   launch_date?: string;
-=======
   launchDate?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -231,10 +251,16 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 =======
 <<<<<<< HEAD
 =======
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
   launchDate?: string;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
@@ -301,10 +327,16 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
       'Policy-based access',
       'Micro-segmentation',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Device posture checks',
       'SSO & MFA integration',
     ],
@@ -330,10 +362,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [;
       'Self - service templates',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Secure remote work', 'Lateral movement prevention'],
     link: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
     realService: true,
@@ -348,12 +377,18 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$3,499/mo' },
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Self-service templates',
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Golden pipelines',
 =======
       'Micro - segmentation',      'Golden pipelines',
@@ -373,6 +408,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -380,6 +416,10 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'enterprise - data - mesh',
     name: 'Enterprise Data Mesh',
     description:;
@@ -390,9 +430,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     useCases: ['Developer productivity', 'Standardized delivery'],
     link: 'https://ziontechgroup.com/services/platform-engineering-foundation',
     realService: true,
@@ -407,10 +451,16 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$5,999/mo' },
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Domain data products',
 =======
 =======      'Domain data products',
@@ -428,6 +478,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
   },
   {
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'cloud - migration - accelerator',
     name: 'Cloud Migration Accelerator',
     description:;
@@ -436,7 +491,27 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$2, 999 / mo' },
     features: [;
 
+<<<<<<< HEAD
 =======      'Landing zones',
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    useCases: ['Faster analytics', 'Federated governance'],
+    link: 'https://ziontechgroup.com/services/enterprise-data-mesh',
+    realService: true,
+  },
+  {
+    id: 'cloud-migration-accelerator',
+    name: 'Cloud Migration Accelerator',
+    description:
+      'Blueprints, landing zones, and automated cutovers to move workloads quickly and safely to the cloud.',
+    category: 'Cloud Services',
+    pricing: { starter: '$2,999/mo' },
+    features: [
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'Landing zones',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Infra as Code',
       'Automated cutovers',
       'FinOps baselines',
@@ -460,7 +535,28 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     features: [;
       'Detections - as - code',
 
+<<<<<<< HEAD
 =======      'SOAR playbooks',
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    useCases: ['Datacenter exit', 'Hybrid cloud enablement'],
+    link: 'https://ziontechgroup.com/services/cloud-landing-zone',
+    realService: true,
+  },
+  {
+    id: 'threat-detection-response',
+    name: 'Threat Detection & Response',
+    description:
+      'Modern SOC capabilities with detections-as-code, attack surface reduction, and automated response.',
+    category: 'Cybersecurity',
+    pricing: { starter: '$3,999/mo' },
+    features: [
+      'Detections-as-code',
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'SOAR playbooks',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Attack surface monitoring',
       'Threat intel',
     ],
@@ -473,6 +569,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
   },
   {
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'observability - platform - starter',
     name: 'Observability Platform Starter',
     description:;
@@ -481,7 +582,27 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$1, 999 / mo' },
     features: [;
 
+<<<<<<< HEAD
 =======      'OpenTelemetry ingest',
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    useCases: ['Compliance readiness', 'Breaches prevention'],
+    link: 'https://ziontechgroup.com/services/quantum-cybersecurity-services',
+    realService: true,
+  },
+  {
+    id: 'observability-platform-starter',
+    name: 'Observability Platform Starter',
+    description:
+      'Unified logs, metrics, traces with SLO governance and incident workflows.',
+    category: 'DevOps & Automation',
+    pricing: { starter: '$1,999/mo' },
+    features: [
+ursor/fix-website-loading-errors-and-merge-6662
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+      'OpenTelemetry ingest',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'SLO dashboards',
       'Burn rate alerts',
       'Incident workflows',
@@ -495,6 +616,11 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
   },
   {
 
+<<<<<<< HEAD
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     id: 'cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     description:;
@@ -518,6 +644,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
   {
 
     id: 'identity - governance - administration',
+<<<<<<< HEAD
 =======    category: 'Enterprise Security',
     pricing: { starter: '$3, 499 / mo' },
     features: [;
@@ -536,6 +663,40 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     description:
       'Implement a Zero Trust security model with policy-based access, continuous verification, and micro-segmentation across users, devices, and workloads.',
 =======    category: 'Enterprise Security',
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    useCases: ['MTTR reduction', 'Reliability governance'],
+    link: 'https://ziontechgroup.com/services/api-observability-starter',
+    realService: true,
+  },
+  {
+    id: 'cost-governance-suite',
+    name: 'Cloud Cost Governance Suite',
+    description:
+      'FinOps guardrails, forecasting, and anomaly detection to keep cloud spending predictable.',
+    category: 'Cloud Services',
+    pricing: { starter: '$2,499/mo' },
+    features: [
+      'Budget guardrails',
+      'Anomaly alerts',
+      'Forecasting',
+      'Showback/chargeback',
+    ],
+    integrations: ['AWS CUR', 'Azure Cost', 'GCP Billing'],
+    useCases: ['Cost optimization', 'Budget adherence'],
+    link: 'https://ziontechgroup.com/cloud-cost-optimizer',
+    realService: true,
+  },
+  {
+    id: 'identity-governance-administration',
+
+    name: 'Identity Governance & Administration',
+    description:;
+      'Automate joiner / mover / leaver flows, access reviews, and least - privilege enforcement across SaaS and cloud.',
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    category: 'Enterprise Security',
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     pricing: { starter: '$4,999/mo', enterprise: 'Custom' },
     features: [
       'Policy-based access',
@@ -622,6 +783,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
     pricing: { starter: '$3,499/mo' },
     features: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 <<<<<<< HEAD
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -630,12 +792,17 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Lifecycle automation',
       'Access reviews',
       'RBAC & SoD',
       'Provisioning workflows',
     ],
     integrations: ['Okta', 'Azure AD', 'Google Workspace'],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -655,12 +822,21 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
   description: string;
 
 <<<<<<< HEAD
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }];	id: string;
 	name: string;
 
+<<<<<<< HEAD
+=======
+	id: string, name: string,
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	tagline?: string;
 	description: string;
 
@@ -673,16 +849,22 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 =======
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export type EnterpriseITSolution = {
 	id: string,
 	name: string,
 	tagline?: string,
 	description: string,
+<<<<<<< HEAD
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -700,36 +882,67 @@ export type EnterpriseITSolution = {
 	pricing: {
 		starter: string, // e && e.g. "$2,999/mo"
 		professional?: string;		enterprise?: string
+=======
+
+	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity',
+
+ursor/fix-website-loading-errors-and-merge-6662
+	pricing: {
+		starter: string, // e.g. "$2,999/mo"
+		professional?: string,
+
+		enterprise?: string
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	},
 	features: string[],
 	integrations?: string[],
 	useCases?: string[],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	link: string, // canonical internal link under /services/*
 	realService?: boolean;
 	rating?: number;
 	launchDate?: string
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/zero-trust-network-architecture';
 		realService: true,
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		launchDate: '2025-11-01'
 	}
 	{
@@ -742,6 +955,7 @@ export type EnterpriseITSolution = {
 		integrations: ['GitHubArgoCDBackstage'];
 		useCases: ['Developer productivityStandardized delivery'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
@@ -750,6 +964,16 @@ export type EnterpriseITSolution = {
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/platform-engineering-foundation';
+		realService: true,
+		rating: 4 && 4.8
+	};
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 	{
 		id: 'enterprise-data-mesh';
 		name: 'Enterprise Data Mesh'
@@ -760,11 +984,19 @@ export type EnterpriseITSolution = {
 		integrations: ['SnowflakeDatabricksBigQuery'];
 		useCases: ['Faster analyticsFederated governance'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-mesh',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -777,11 +1009,19 @@ export type EnterpriseITSolution = {
 		integrations: ['AWSAzureGCP'];
 		useCases: ['Datacenter exitHybrid cloud enablement'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-landing-zone',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-landing-zone',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -794,11 +1034,19 @@ export type EnterpriseITSolution = {
 		integrations: ['CrowdStrikeWizSnykCloudflare'];
 		useCases: ['Compliance readinessBreaches prevention'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-cybersecurity-services',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -811,11 +1059,19 @@ export type EnterpriseITSolution = {
 		integrations: ['GrafanaDatadogPagerDuty'];
 		useCases: ['MTTR reductionReliability governance'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-observability-starter',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-observability-starter',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -828,11 +1084,19 @@ export type EnterpriseITSolution = {
 		integrations: ['AWS CURAzure CostGCP Billing'];
 		useCases: ['Cost optimizationBudget adherence'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+		link: 'https://ziontechgroup && ziontechgroup.com/cloud-cost-optimizer',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		realService: true
 	}
 	{
@@ -844,8 +1108,6 @@ export type EnterpriseITSolution = {
 		features: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows'];
 		integrations: ['OktaAzure ADGoogle Workspace'];
 		useCases: ['Audit readinessInsider risk reduction'];
-<<<<<<< HEAD
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 
@@ -854,7 +1116,11 @@ export type EnterpriseITSolution = {
 ];
 
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     use_cases: ['Audit readiness', 'Insider risk reduction'],
     link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
     real_service: true,
@@ -988,8 +1254,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
   link: 'https://ziontechgroup.com / services / sso - and - user - lifecycle - hub',
   real_service: true;
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -999,15 +1264,18 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 	}
+<<<<<<< HEAD
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 ];
 <<<<<<< HEAD
 ;
-=======
 
-=======
 },
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [
+<<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
 <<<<<<< HEAD
 ];
@@ -1023,6 +1291,13 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+	{
+		id: 'zero-trust-network-architecture',
+		name: 'Zero Trust Network Architecture',
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 		tagline: 'Identity-first perimeterless security for modern enterprises',
 =======
 ;		tagline: 'Identity-first perimeterless security for modern enterprises',
@@ -1122,6 +1397,9 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',
 		realService: true
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export type EnterpriseITSolution = {;
 	id: string,;
@@ -1242,6 +1520,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub',;
 		realService: true;
 
+<<<<<<< HEAD
 	}
 ];
 <<<<<<< HEAD
@@ -1396,6 +1675,14 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+
+	}
+];
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       'Lifecycle automation'
       'Access reviews'
       'RBAC & SoD'
@@ -1417,5 +1704,9 @@ rating: 4.8
 link: 'https://ziontechgroup.com/services/sso-and-user-lifecycle-hub';
 realService: true 
 }];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

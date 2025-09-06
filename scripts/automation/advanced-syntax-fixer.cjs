@@ -50,6 +50,7 @@ const logsDir = path.join(process.cwd(), "logs"
   path.join(logsDir, "advanced-syntax-fixes.json")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
@@ -63,3 +64,8 @@ console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

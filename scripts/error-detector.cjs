@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 #!/usr/bin/env node;
@@ -16,6 +17,12 @@ const fs = require("child_process");
 const fs = require("child_process");
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+#!/usr/bin/env node;
+const fs = require("child_process");
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const path = require("path");
 class ErrorDetector {}
   constructor() {}
@@ -36,6 +43,7 @@ if (require.main === module) {}
   detector.detect().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = ErrorDetector;
@@ -49,3 +57,8 @@ module.exports = ErrorDetector;
 module.exports = ErrorDetector;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = ErrorDetector;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

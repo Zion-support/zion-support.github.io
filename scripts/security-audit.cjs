@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 =======
 <<<<<<< HEAD
@@ -11,27 +7,7 @@ const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-#!/usr/bin/env node;
-const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-function log(msg, level = "INFO")
-    execSync(cmd, { "stdio": "inherit"})
-    return { "ok"}
-    return { "ok": false, "error"}
-  log("� Starting security audit...")
-  log("Running npm audit (moderate)..."
-  const audit = tryExec("npm audit --audit-level=moderate")
-    log("Vulnerabilities found, attempting npm audit fix", "WARN")
-    tryExec("npm audit fix")
-  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
-    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
-    log("No sensitive files found in repo root")
-  log(" Security audit completed")
-=======
+
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -191,7 +167,6 @@ class SecurityAuditor {
     } catch (error) {
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -506,11 +481,12 @@ class SecurityAuditor {
     } catch (error) {
       this.log(`❌ Security audit failed: ${error.message}`, 'error');
       throw error;
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Run the security auditor
 const auditor = new SecurityAuditor();
@@ -526,12 +502,15 @@ auditor.run().catch(console.error);
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 >>>>>>> main
@@ -543,6 +522,11 @@ console.log('✅ Security audit completed');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+=======
+
+main
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 // Run the auditor
 if (require.main === module) {
   const auditor = new SecurityAuditor();
@@ -550,5 +534,9 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -16,6 +17,8 @@ import {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import type { NextApiRequest, NextApiResponse } from "next",
 import fs from "fs-extra";
 import path from "path";
@@ -24,7 +27,7 @@ import { v4 as uuidv4 } from "uuid";
 const REDEMPTIONS_FILE = null;
   return res.status(201).json({ id: record.id, redeemedAt: now })
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
@@ -89,6 +92,7 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     return res.status(405).json({ error: 'Method Not Allowed' });  }
@@ -171,8 +175,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return res.status(405).json({ error: 'Method Not Allowed' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   const { studentEmail, grantCode, courseId } = req.body |{}
@@ -211,6 +217,7 @@ return res.status(400).json({ error: 'Missing required fields' });
   const record = {
     id: uuidv4(),
 <<<<<<< HEAD
+<<<<<<< HEAD
     partnerId: auth && auth.partner.id,
 =======
 <<<<<<< HEAD
@@ -219,11 +226,16 @@ return res.status(400).json({ error: 'Missing required fields' });
     partnerId: auth.partner.id,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    partnerId: auth.partner.id,
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     studentEmail,
     grantCode,
     courseId,
     redeemedAt: now,
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -365,9 +377,15 @@ redeemed_at: now,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   records.push(record);
   await fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

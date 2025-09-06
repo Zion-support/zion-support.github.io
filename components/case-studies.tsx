@@ -69,6 +69,7 @@ export default function CaseStudiesPage() {;
         title='Case Studies | Zion Tech Group'
         description='Proven outcomes across AI, cloud, and automation projects.'
 <<<<<<< HEAD
+<<<<<<< HEAD
         canonical='https://ziontechgroup && ziontechgroup.com/case-studies/'
       />;
       <div className='container mx-auto px-4 py-16 text-white'>;
@@ -161,6 +162,8 @@ function CaseStudiesPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
         canonical='https://ziontechgroup.com/case-studies/'
       />
       <div className='container mx-auto px-4 py-16 text-white'>
@@ -175,5 +178,9 @@ function CaseStudiesPage() {
       </div>
     </UltraFuturisticBackground>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

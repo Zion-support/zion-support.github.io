@@ -4,6 +4,7 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
 =======
@@ -92,10 +93,15 @@ import {
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,14 +109,20 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
  } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
 import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const pricingTiers = [
   {
     name: 'Starter'
@@ -118,6 +130,7 @@ const pricingTiers = [
     period: '/month'
     description: 'Perfect for small businesses and startups'
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   CheckCircle,
@@ -182,6 +195,8 @@ const pricingTiers = [
     period: '/month'
     description: 'Ideal for growing businesses and enterprises'
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 'Basic AI integration',
       'Standard support',
       'Core features access',
@@ -199,7 +214,7 @@ const pricingTiers = [
     price: '$999',
     period: '/month',
     description: 'Ideal for growing businesses and enterprises',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     features: [
 'Advanced AI capabilities',
       'Priority support',
@@ -221,6 +236,7 @@ const pricingTiers = [
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
+<<<<<<< HEAD
 <<<<<<< HEAD
       'Custom AI development'
       'Dedicated support team'
@@ -359,6 +375,8 @@ const service_pricing = [;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 'Custom AI development',
       'Dedicated support team',
       'White-label solutions',
@@ -525,7 +543,7 @@ className='space-y-8'
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
@@ -552,6 +570,7 @@ className='space-y-8'
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -814,6 +833,8 @@ function Revolutionary2028Pricing() {
                       <Crown className="w-4 h-4" />
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
               >
                 {tier.popular && (
@@ -876,8 +897,12 @@ function Revolutionary2028Pricing() {
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>
                         </li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       ))}
                     </ul>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1101,6 +1126,7 @@ function Revolutionary2028Pricing() {
                         <p className='text - purple - 300 mb - 4 text - sm'>;
                           {service.description}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
@@ -1164,6 +1190,8 @@ function Revolutionary2028Pricing() {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                         </p>
                         <div className='mb-4'>
                           <div className='flex items-center space-x-2 mb-2'>
@@ -1192,8 +1220,12 @@ function Revolutionary2028Pricing() {
                             <div className='text-white font-medium'>
                               {service.trialDays} days
                             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           </div>
                         </div>
                       </div>
@@ -1251,6 +1283,7 @@ function Revolutionary2028Pricing() {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
 <<<<<<< HEAD
 
@@ -1268,9 +1301,11 @@ function Revolutionary2028Pricing() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 <<<<<<< HEAD
 
@@ -1394,6 +1429,7 @@ function Revolutionary2028Pricing() {
               viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 =======
 
@@ -1410,6 +1446,10 @@ function Revolutionary2028Pricing() {
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1420,6 +1460,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
                 superior technology and features.
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
 <<<<<<< HEAD
@@ -1437,8 +1478,10 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               <div className="text-3xl font-bold text-green-400">30%</div>
               <div className="text-purple-300">Lower than Market</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='text-purple-300'>Lower than Market</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
             <motion.div
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
@@ -1466,6 +1509,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1487,6 +1531,10 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1497,6 +1545,7 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
                 you pay, with clear value for every dollar.
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
 <<<<<<< HEAD
@@ -1510,8 +1559,10 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               <p className="text-blue-300 mb-6">
                 Transparent pricing with no surprise fees. What you see is what you pay
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='text-blue-300'>Transparent Pricing</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 with clear value for every dollar.
               </p>
               <div className="text-3xl font-bold text-blue-400">100%</div>
@@ -1554,6 +1605,7 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -1562,6 +1614,10 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1572,6 +1628,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
                 that justify every penny of investment.
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
 <<<<<<< HEAD
@@ -1589,8 +1646,10 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
               <div className="text-3xl font-bold text-pink-400">5x</div>
               <div className="text-pink-300">ROI Guarantee</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <div className='text-pink-300'>ROI Guarantee</div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             </motion.div>
           </div>
         </div>
@@ -1631,13 +1690,9 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.div
 <<<<<<< HEAD
 
@@ -1653,6 +1708,7 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1666,6 +1722,10 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
 className='space-y-8'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='space-y-8'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -1726,6 +1786,7 @@ className='space-y-8'
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
@@ -1875,12 +1936,10 @@ className='space-y-8'
 
   );
 
-    </>
-  );
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

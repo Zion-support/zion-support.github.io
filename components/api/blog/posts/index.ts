@@ -22,6 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { status, topic, tag, author, limit, offset } = req && req.query;
     let posts = readPosts();
 <<<<<<< HEAD
+<<<<<<< HEAD
 return res.status (405).end ();
 }
 import { v4 as uuidv4  } from 'uuid';
@@ -38,6 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       posts = posts.filter(p => p.status === status);
     if (topic && typeof topic === 'string')
       posts = posts.filter(p => (p.topics |[]).includes(topic));
+=======
+origin/cursor/integrate-build-improve-and-re-verify-2156
+      posts = posts && posts.filter(p => (p && p.topics || []).includes(topic));
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     if (tag && typeof tag === 'string')
       posts = posts.filter(p => (p.tags |[]).includes(tag));
     if (author && typeof author === 'string')
@@ -109,6 +114,7 @@ return res.status(405).end();
 return res.status(405).end();
 }
 
+<<<<<<< HEAD
 }
 }
   return res.status(405).end();
@@ -125,6 +131,9 @@ return res.status(405).end();
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 import { v4 as uuidv4 } from 'uuid';
 import { BlogPost } from '@/utils / types / blog';
@@ -231,6 +240,7 @@ return res.status(405).end();
 return res.status (405).end ();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 =======
@@ -278,9 +288,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!body.title |!body.slug |!body.author |!body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' });
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method;
     return res.status(201).json(post)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     const posts = readPosts();
     if (posts.some(p => p.slug === body.slug)) {
       return res.status(409).json({ error: 'Slug already exists' });
@@ -306,25 +318,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     posts.unshift(post);
     writePosts(posts);
     return res.status(201).json(post);
-<<<<<<< HEAD
 
-  }
-return res.status(405).end();
-}
-        metaTitle: body.seo?.metaTitle || body.title!,
-        metaDescription: body.seo?.metaDescription || '',
-        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
-      },
-      body: body.body || '',
-      status: body.status || 'draft',
-      metrics: { views: 0, likes: 0, shares: 0 },
-    };
-    posts.unshift(post);
-    writePosts(posts);
-    return res.status(201).json(post);
+
   }
 
   return res.status(405).end();
+<<<<<<< HEAD
 return res.status(405).end();
 }
 
@@ -341,3 +340,6 @@ return res.status(405).end();
   return res.status(405).end();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
@@ -49,32 +50,19 @@ export default function PartnerDashboard() {
     const saved = localStorage.getItem('zion_partner_token');
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');
   const [token, setToken] = useState<string | null>(null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-    const saved = localStorage.getItem("zion_partner_token");
-    if (saved) setToken(saved)
-  }, []);
-
-  async function getToken() {
-    const res = await fetch("/api/partners/token", {
-      method: "POST"
-      headers: { "Content-Type": "application/json" }
-      body: JSON.stringify({ apiKey })})
-    const data = await res.json();
-    if (data.token) {
-      localStorage.setItem("zion_partner_token", data.token);
-      setToken(data.token)
-=======
     const saved = null;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
     if (saved) setToken(saved);
@@ -125,13 +113,18 @@ export default function PartnerDashboard() {
 =======
 =======
       setToken(data.token);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     }
   }
 
   async function fetchUsage() {;
     setLoading(true);
+<<<<<<< HEAD
 <<<<<<< HEAD
     });
     const data = await res && res.json();
@@ -154,6 +147,8 @@ export default function PartnerDashboard() {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const res = await fetch('/api/partners/usage', {
       headers: token ? { Authorization: `Bearer ${token}` } : {},
     });
@@ -187,8 +182,12 @@ const res = await fetch('/api/partners/usage', {
           <div className='bg-white p-6 rounded-lg shadow mb-8'>
             <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
             <div className='flex gap-2'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -197,6 +196,7 @@ const res = await fetch('/api/partners/usage', {
               />;
               <button
                 onClick={getToken}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -216,6 +216,8 @@ const res = await fetch('/api/partners/usage', {
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='bg-black text-white px-4 py-2 rounded'
               >
                 Get JWT
@@ -239,12 +241,17 @@ const res = await fetch('/api/partners/usage', {
           </div>
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
             <h3 className='font-medium mb-2'>Usage</h3>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -318,6 +325,8 @@ const res = await fetch('/api/partners/usage', {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             </button>
             {usage ? (
               <div className='text-sm'>
@@ -331,8 +340,12 @@ const res = await fetch('/api/partners/usage', {
                       <li key={k}>
                         {k}: {v as any}
                       </li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                     ))}
                   </ul>;
                 </div>;
@@ -363,6 +376,7 @@ const res = await fetch('/api/partners/usage', {
             ) : (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -371,6 +385,8 @@ const res = await fetch('/api/partners/usage', {
 =======
             )}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <p className='text-gray-500 text-sm'>No usage yet.</p>
             )}
           </div>
@@ -378,8 +394,12 @@ const res = await fetch('/api/partners/usage', {
 
 <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           <a
             className='text-blue-600 underline mr-4'
             href='/api/partners/sdk?type=rest'>;
@@ -387,6 +407,7 @@ const res = await fetch('/api/partners/usage', {
           </a>;
           <a
             className='text-blue-600 underline'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -433,6 +454,8 @@ const res = await fetch('/api/partners/usage', {
 
         </div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             href='/api/partners/sdk?type=graphql'
           >
             GraphQL SDK
@@ -442,5 +465,9 @@ const res = await fetch('/api/partners/usage', {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

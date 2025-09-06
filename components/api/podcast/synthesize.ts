@@ -4,6 +4,7 @@ import path from 'path';
 import axios from 'axios';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
@@ -27,6 +28,8 @@ function ensureStorage() {
 =======
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
 };
@@ -44,12 +47,17 @@ function ensureStorage() {
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -85,6 +93,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
@@ -92,8 +102,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 const idx = episodes.findIndex(e => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const episode = episodes[idx];
   const text = episode && episode.transcript as string;
 
@@ -109,6 +123,7 @@ const idx = episodes.findIndex(e => e.id === episodeId);
   try {
     if (elevenKey) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -117,6 +132,12 @@ const idx = episodes.findIndex(e => e.id === episodeId);
 `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
+      const resp = await axios.post(
+`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {
           text,
           model_id: process && process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
@@ -140,6 +161,7 @@ const idx = episodes.findIndex(e => e.id === episodeId);
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
 <<<<<<< HEAD
+<<<<<<< HEAD
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
@@ -153,16 +175,14 @@ const idx = episodes.findIndex(e => e.id === episodeId);
     const publicBase = '/podcast/' + baseFilename;
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
     const publicBase = '/podcast/' + baseFilename;
-<<<<<<< HEAD
-    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-    return res.status(200).json({ episode });
-=======
     episode.audio = {
 mp3Url: publicBase + '.mp3',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
@@ -179,12 +199,17 @@ mp3Url: publicBase + '.mp3',
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
 return res.status(200).json({ episode });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   } catch (error: any) {
     console.error(error);
     return res
       .status(500)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -316,9 +341,15 @@ if ( {) {
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       .json({ error: error?.message || 'Synthesis failed' });
   }
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

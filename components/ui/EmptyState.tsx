@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import Link from "next/link";
@@ -7,14 +8,20 @@ import Link from "next/link";
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react',
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
 export type EmptyStateProps = any;
 import React from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {
   title: string;
@@ -85,6 +92,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 import Link from 'next/link';
@@ -127,6 +135,8 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
 =======
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
       {(primaryAction |secondaryAction) && (
         <div className='flex gap-2 mt-2'>
           {primaryAction && (
@@ -134,8 +144,12 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
               <a>
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
 export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
@@ -148,6 +162,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
               <a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -158,6 +173,12 @@ export default function EmptyState({ title, description, icon, primaryAction, se
                 </EnhancedButton>
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+<EnhancedButton variant='secondary' size='md'>
+                  {secondaryAction.label}
+                </EnhancedButton>
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               </a>
             </Link>
           )}
@@ -172,6 +193,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
           )}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -194,8 +216,10 @@ export default EmptyState;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     </div>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc

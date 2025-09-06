@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 </div> </div>) )
@@ -22,6 +23,8 @@ export async function getServerSideProps() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -94,10 +97,12 @@ export async function getServerSideProps() {;
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import fs from 'fs';
 import path from 'path';
 export type Trend = any;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { items } }
 }
 
@@ -105,6 +110,7 @@ export type Trend = any;
 
 );
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
   );
 }
@@ -142,4 +148,10 @@ function AiTrendsPage() {
 =======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

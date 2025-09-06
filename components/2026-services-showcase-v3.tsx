@@ -31,11 +31,14 @@ import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026S
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ServicesShowcase2026V3() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 export default function ServicesShowcase2026V3() {;
   const contactInfo = {;
@@ -48,9 +51,15 @@ export default function ServicesShowcase2026V3() {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   const contactInfo = null;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme" 
@@ -96,13 +105,9 @@ export default function ServicesShowcase2026V3() {;
         <UltraAdvancedNavigation2026 />
 
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto text-center">
-=======
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto text-center'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             <motion.div
 
 <<<<<<< HEAD
@@ -119,11 +124,8 @@ export default function ServicesShowcase2026V3() {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-=======
 <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 Revolutionary 2026 Services
         <UltraAdvancedNavigation2026 />;
 
@@ -146,23 +148,10 @@ export default function ServicesShowcase2026V3() {;
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
                 <motion&& motion.a
                   href='#services'
-<<<<<<< HEAD
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions.
-                Transform your business with services designed for tomorrow's challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <motion.a
-                  href="#services"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
-=======
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Explore Services
                 </motion.a>
@@ -170,10 +159,8 @@ export default function ServicesShowcase2026V3() {;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-=======
 className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 >
                   Get Started
                 </motion.a>
@@ -182,6 +169,7 @@ className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold
           </div>
         </section>
         {/* Services Showcase */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -245,6 +233,8 @@ className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div id='services'>
           <Enhanced2026ServicesShowcaseV3 />
         </div>
@@ -269,12 +259,17 @@ className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold
               </p>
 
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 <motion.a
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
@@ -514,6 +509,8 @@ function ServicesShowcase2026V3() {
       </div>;
     </UltraQuantumHolographicBackground>);
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'
                 >
                   <span>Call {contactInfo.mobile}</span>
@@ -556,7 +553,7 @@ className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 t
       </div>
     </UltraQuantumHolographicBackground>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 <<<<<<< HEAD
   );

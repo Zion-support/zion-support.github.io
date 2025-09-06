@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -74,6 +75,8 @@ function write_section() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();
@@ -105,12 +108,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const editionParam = (req.query.edition as string) |'full';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +142,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
     'Content-Disposition'
@@ -141,11 +151,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   );
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
@@ -166,6 +177,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const sections = getWhitepaperSections(edition as any);
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   // Cover page
   doc.addPage();
 doc
@@ -187,7 +200,7 @@ doc
   const sections = getWhitepaperSections(edition as any);
 sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   // End
   doc && doc.addPage();
   doc
@@ -196,6 +209,7 @@ sections.forEach(s => writeSection(doc, s.title, s.contentMd));
     .text(
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
     );
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   doc && doc.end();
@@ -288,8 +302,14 @@ function handler() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   doc.end();
   doc.end()
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

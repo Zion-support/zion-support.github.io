@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   MessageSquare
   Image
@@ -51,6 +52,8 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
@@ -62,12 +65,17 @@ import { Brain;
   Code;
   FileText;
   Zap;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Shield
@@ -91,6 +99,8 @@ import { Brain;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Shield
  } from 'lucide-react';
 export default function AiToolsPage() {
@@ -98,13 +108,18 @@ export default function AiToolsPage() {
       description:
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
+<<<<<<< HEAD
 <<<<<<< HEAD
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
 <<<<<<< HEAD
@@ -362,6 +377,8 @@ export default function AiToolsPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -441,13 +458,18 @@ category: 'Video Generation',
       description:
         'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.'
       features: [
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         'Advanced reasoning abilities',
         'Document analysis',
         'Code generation',
         'Creative writing',
         'Research assistance',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -785,6 +807,8 @@ category: 'Video Generation',
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       ],
       pricing: '$20/month',
       marketPrice: '$20/month',
@@ -950,8 +974,12 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* AI Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -962,6 +990,7 @@ avgPrice: '$82/month',
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Curated AI Tools & Services
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
@@ -984,6 +1013,8 @@ avgPrice: '$82/month',
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Each tool has been carefully selected based on performance
               reliability, and real-world value.
@@ -991,7 +1022,7 @@ avgPrice: '$82/month',
           </div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             {aiTools.map((tool, index) => (
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>;
@@ -1016,6 +1047,7 @@ avgPrice: '$82/month',
                 className={`card-hover group border-gradient-blue relative ${
                   tool && tool.popular ? 'ring-2 ring-cursor-blue ring-opacity-50' : ''
                 }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div className='flex items-start space-x-6'>;
@@ -1161,6 +1193,8 @@ avgPrice: '$82/month',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {tool.popular && (
@@ -1220,12 +1254,17 @@ avgPrice: '$82/month',
                           className='flex items-center text-gray-300'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400 mr-3 flex-shrink-0' />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                           {feature}
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1245,6 +1284,8 @@ avgPrice: '$82/month',
                         <div className="text-xs text-gray-500">Direct Link</div>
                         <div className="text-xs text-cursor-blue font-mono">{tool.website}</div>
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <div className='flex items-center justify-between'>
                       <Button
@@ -1261,7 +1302,7 @@ avgPrice: '$82/month',
                         <div className='text-xs text-cursor-blue font-mono'>
                           {tool.website}
                         </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       </div>
                     </div>
                   </div>
@@ -1301,6 +1342,7 @@ avgPrice: '$82/month',
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1433,6 +1475,8 @@ avgPrice: '$82/month',
             </h2>;
             <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               <Card
                 key={index}
                 className='card-hover border-gradient-blue'
@@ -1454,7 +1498,7 @@ avgPrice: '$82/month',
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
               Understanding the different types of AI tools helps you build a;
               comprehensive toolkit for your needs.;
@@ -1477,6 +1521,7 @@ avgPrice: '$82/month',
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
               Getting Started with AI Tools
             </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Practical advice for implementing AI tools in your workflow and
@@ -1522,6 +1567,8 @@ avgPrice: '$82/month',
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Practical advice for implementing AI tools in your workflow and
               maximizing their value.
@@ -1541,13 +1588,14 @@ avgPrice: '$82/month',
                   need. Master it before adding more.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <li>• Choose based on your primary use case</li>
                   <li>• Start with free tiers when available</li>
                   <li>• Focus on one tool at a time</li>
                 </ul>
               </div>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1561,6 +1609,8 @@ avgPrice: '$82/month',
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
 <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
@@ -1575,7 +1625,7 @@ avgPrice: '$82/month',
                   and ensure quality output.
                 </p>
                 <ul className='space-y-2 text-sm text-gray-300'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <li>• Always review and edit AI-generated content</li>
                   <li>• Use specific, detailed prompts</li>
                   <li>• Maintain human oversight and creativity</li>
@@ -1585,6 +1635,7 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               Get AI Consultation
@@ -1614,6 +1665,8 @@ avgPrice: '$82/month',
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
@@ -1647,5 +1700,9 @@ href='/contact'
     </>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

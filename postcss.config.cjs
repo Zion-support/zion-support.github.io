@@ -6,6 +6,32 @@ module.exports = {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   plugins: {
+<<<<<<< HEAD
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+};
+=======
+<<<<<<< HEAD
+}
+=======
+};
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+=======
+};
+>>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
+=======
+>:postcss.config.js
+    autoprefixer: {},
+  },
+}
     tailwindcss: {},
     autoprefixer: {},
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
@@ -18,6 +44,7 @@ module.exports = {
 }
 =======
 };
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
@@ -48,3 +75,11 @@ module.exports = {
 =======
 };
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+main
+
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

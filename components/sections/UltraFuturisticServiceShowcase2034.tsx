@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -28,12 +29,18 @@ import {
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
 import {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Star
   CheckCircle
   ArrowRight
@@ -61,40 +68,6 @@ import {
   Phone;
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
-<<<<<<< HEAD
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users
-
-  Star,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Zap,
-  Shield,
-  Brain,
-  Atom,
-  Rocket,
-  ShoppingCart,
-  Cpu,
-  Globe,
-  Lock,
-  Video,
-  Palette,
-  BarChart,
-  UserCheck,
-  FileText,
-  Heart,
-  Eye,
-  Search,;
-  Phone,;
-} from 'lucide-react';
-import { realMarketServices } from '../../data/2024-real-market-services';
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
-  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
-=======
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -102,22 +75,15 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 website: 'https://ziontechgroup.com',
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
  } from 'lucide-react';
 import { realMarketServices  } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-=======
 const contactInfo = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
@@ -236,6 +202,7 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import {;
@@ -390,10 +357,13 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },;
   };
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     hidden: { opacity: 0, y: 20 },
 visible: { opacity: 1, y: 0 },
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return (
@@ -427,6 +397,12 @@ visible: { opacity: 1, y: 0 },
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
 =======
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
+      {/* Animated Background */}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
@@ -434,7 +410,7 @@ visible: { opacity: 1, y: 0 },
       </div>
 
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
 
     hidden: { opacity: 0, y: 20 },
@@ -540,6 +516,7 @@ visible: { opacity: 1, y: 0 },
           viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           className='text-center mb-16'
 
 =======
@@ -549,6 +526,10 @@ visible: { opacity: 1, y: 0 },
 className='text-center mb-16'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mb-16'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -566,6 +547,7 @@ className='text-center mb-16'
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
               {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -617,6 +599,8 @@ className='text-center mb-16'
               { label: 'Happy Customers', value: '50K+', icon: Users },;
               { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 label: 'Total Services',
                 value: allServices.length.toString(),
                 icon: Rocket,
@@ -624,7 +608,7 @@ className='text-center mb-16'
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
 <<<<<<< HEAD
             ].map((stat, index) => (;
@@ -694,10 +678,13 @@ className='text-center mb-16'
                 viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
               >
@@ -724,8 +711,12 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
 =======
                 <div className='text-sm text-gray-400'>{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
             ))}
 
 =======
@@ -756,6 +747,7 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           viewport={{ once: true }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -772,6 +764,10 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
 className='mb-12'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='mb-12'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             {/* Search */}
@@ -780,6 +776,7 @@ className='mb-12'
                 type='text'
                 placeholder='Search services...'
                 value={searchTerm}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 onChange={e => setSearchTerm(e.target.value)}
@@ -834,6 +831,8 @@ className='mb-12'
                   {category && category.title.split(' ')[0]}
                 </option>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 onChange={e => setSearchTerm(e.target.value)}
                 className='w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
@@ -850,7 +849,7 @@ onChange={e => setSelectedCategory(e.target.value)}
                 <option key={category.id} value={category.id}>
                   {category.title.split(' ')[0]}
                 </option>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
 <<<<<<< HEAD
             </select>
@@ -876,6 +875,7 @@ onChange={e => setSelectedCategory(e.target.value)}
           viewport={{ once: true }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -886,19 +886,26 @@ onChange={e => setSelectedCategory(e.target.value)}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='mb-16'
         >
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.id}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   selectedCategory === category.id
@@ -919,6 +926,8 @@ className='mb-16'
                 <div className="text-sm text-gray-300">
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 selectedCategory === category.id
                     ? 'border-cyan-500 bg-cyan-500/10'
                     : 'border-white/20 bg-white/5 hover:border-cyan-500/50 hover:bg-cyan-500/5'
@@ -953,6 +962,7 @@ selectedCategory === category.id
           </div>
         </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -965,6 +975,9 @@ selectedCategory === category.id
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -992,6 +1005,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                 </div>
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
                 </div>
@@ -1014,13 +1028,15 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
               )}
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Service Icon */}
 <div className='flex items-center justify-between mb-4'>
                 <div
                   className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}
                 >
                   {service.icon}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
               )}
 
@@ -1109,6 +1125,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   <div className='text - 2xl font - bold text - white'>;
                     {service.price}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-2xl`}>
                   {service.icon}
                 </div>
@@ -1175,6 +1192,8 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   </div>
                   <div className='text-sm text-gray-400'>{service.period}</div>
                 </div>
@@ -1195,7 +1214,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   >
                     <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
                     <span>{feature}</span>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                 ))}
                 {service.features.length > 3 && (
@@ -1265,9 +1284,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   <Star className="w-4 h-4 text-yellow-400" />
                   <span>{service.rating}/5</span>
                 </div>
-<<<<<<< HEAD
-                  <TrendingUp className="w-4 h-4 text-green-400" />
-=======
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Users className='w-4 h-4' />
                   <span>{service.customers.toLocaleString()}</span>
@@ -1278,35 +1294,27 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                 </div>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <TrendingUp className='w-4 h-4 text-green-400' />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   <span>{service.growthRate}</span>
                 </div>
               </div>
               {/* Market Position */}
-<<<<<<< HEAD
-                <div className="text-xs text-gray-400 mb-1">Market Position</div>
-                <div className="text-sm text-gray-300 leading-relaxed">
-=======
 <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>
                 <div className='text-xs text-gray-400 mb-1'>
                   Market Position
                 </div>
                 <div className='text-sm text-gray-300 leading-relaxed'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.marketPosition}
                 </div>
               </div>
               {/* ROI */}
-<<<<<<< HEAD
-                <div className="text-xs text-green-400 mb-1 font-semibold">Expected ROI</div>
-                <div className="text-sm text-green-300 font-medium">
-=======
 <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>
                 <div className='text-xs text-green-400 mb-1 font-semibold'>
                   Expected ROI
                 </div>
                 <div className='text-sm text-green-300 font-medium'>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.roi}
                 </div>
               </div>
@@ -1363,6 +1371,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
               </div>;
 
               {/* Action Buttons */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1430,6 +1439,8 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
               </div>;
             </motion && motion.div>;
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='flex space-x-3'>
                 <a
                   href={service.link}
@@ -1452,7 +1463,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                 </div>
               </div>
             </motion.div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
 
         </motion && motion.div>;
@@ -1469,6 +1480,7 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1488,6 +1500,10 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
 className='text-center mt-20'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='text-center mt-20'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1507,6 +1523,7 @@ className='text-center mt-20'
               </a>
               <a
                 href='/pricing-2034'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
@@ -1747,6 +1764,8 @@ className='text-center mt-20'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                 className='px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 text-lg'
               >
                 View Pricing
@@ -1762,5 +1781,9 @@ className='text-center mt-20'
     </section>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

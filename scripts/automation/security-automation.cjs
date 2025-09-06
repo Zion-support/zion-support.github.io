@@ -450,6 +450,7 @@ security.run().catch(error => {})
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SecurityAutomation;
@@ -463,3 +464,8 @@ module.exports = SecurityAutomation;
 module.exports = SecurityAutomation;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+module.exports = SecurityAutomation;
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

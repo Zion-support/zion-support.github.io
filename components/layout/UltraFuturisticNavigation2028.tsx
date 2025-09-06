@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Menu
@@ -174,11 +175,18 @@ import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Microscope, DollarSign, Home, Users, Briefcase;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
   Palette, Camera, Video, Music, Gamepad2, Heart;
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   Code, Wrench, Smartphone, BarChart3
@@ -237,6 +245,8 @@ const companyLinks = [
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   Code, Wrench, Smartphone, BarChart3
  } from 'lucide-react';
 const contactInfo = null;
@@ -564,7 +574,7 @@ const serviceCategories = [
   },
 ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },
@@ -574,6 +584,7 @@ const companyLinks = [
     icon: Star,
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     name: '⭐ Ultimate 2028'
     href: '/ultimate-2028-services-showcase'
@@ -652,6 +663,8 @@ export default function UltraFuturisticNavigation2028() {
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     name: '💰 2028 Pricing',
     href: '/revolutionary-2028-pricing',
     icon: DollarSign,
@@ -671,7 +684,7 @@ const resourceLinks = [
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
   { name: '🔐 Security Center', href: '/security', icon: Shield },
 { name: '📊 Analytics', href: '/analytics', icon: BarChart3 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 export default function UltraFuturisticNavigation2028() {
@@ -704,6 +717,7 @@ const companyLinks = [;
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -786,6 +800,8 @@ const companyLinks = [;
             <div className="flex items-center space-x-4">
               <a href={contactInfo.website} className="text-purple-300 hover:text-white transition-colors">
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const handleCategoryHover = (categoryTitle: string) => {
 setActiveCategory(categoryTitle);
   };
@@ -825,7 +841,7 @@ setActiveCategory(categoryTitle);
                 href={contactInfo.website}
                 className='text-purple-300 hover:text-white transition-colors'
               >
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {contactInfo.website}
               </a>
             </div>
@@ -860,6 +876,7 @@ setActiveCategory(categoryTitle);
       </div>;
 
       {/* Main Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -916,6 +933,8 @@ setActiveCategory(categoryTitle);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
@@ -946,8 +965,12 @@ setActiveCategory(categoryTitle);
                 <span>Services</span>
                 <ChevronDown className='w-4 h-4' />
               </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
               {/* Mega Menu */}
               <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>;
                 <div className='p-6'>;
@@ -968,6 +991,7 @@ setActiveCategory(categoryTitle);
                         <div className='space-y-2'>;
                           {category && category.services.slice(0, 2).map(service => (;
                             <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1112,6 +1136,8 @@ setActiveCategory(categoryTitle);
 =======
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                               key={service.name}
                               href={service.href}
                               className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors group'
@@ -1129,28 +1155,24 @@ setActiveCategory(categoryTitle);
                                   {service.price}
                                 </span>
                               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                             </Link>
                           ))}
                         </div>;
                       </div>;
                     ))}
-<<<<<<< HEAD
-                  </div>;
-                  <div className='mt-6 pt-6 border-t border-purple-500/20'>;
-                    <div className='flex items-center justify-between'>;
-                      <p className='text-purple-300'>;
-                        Explore all our cutting-edge services;
-                      </p>;
-=======
                   </div>
 <div className='mt-6 pt-6 border-t border-purple-500/20'>
                     <div className='flex items-center justify-between'>
                       <p className='text-purple-300'>
                         Explore all our cutting-edge services
                       </p>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                       <Link
                         href='/services'
 <<<<<<< HEAD
@@ -1234,6 +1256,7 @@ setActiveCategory(categoryTitle);
 =======
             {/* Company Links */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             {companyLinks.slice(1, 5).map((link) => (
               <Link
                 key={link.name}
@@ -1293,6 +1316,8 @@ setActiveCategory(categoryTitle);
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 {companyLinks.slice(1, 5).map(link => (
               <Link
                 key={link.name}
@@ -1342,8 +1367,12 @@ href='/contact'
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1351,6 +1380,7 @@ href='/contact'
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1365,6 +1395,10 @@ href='/contact'
 className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -1374,6 +1408,7 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
                   type='text'
                   placeholder='Search services...'
                   value={searchQuery}
+<<<<<<< HEAD
 <<<<<<< HEAD
               {/* Mobile Service Categories */}
               <div className='space-y-4'>;
@@ -1397,6 +1432,8 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
                   placeholder="Search services..."
                   value={searchQuery}
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                   onChange={e => setSearchQuery(e.target.value)}
                   className='w-full pl-10 pr-4 py-3 bg-purple-900/30 border border-purple-500/30 rounded-lg text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                 />
@@ -1414,11 +1451,12 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
                     </div>
                     <div className='ml-8 space-y-2'>
                       {category.services.map(service => (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
                         <Link
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                         >
@@ -1439,6 +1477,8 @@ className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                         >
                           <h4 className='text-sm font-medium text-white'>
@@ -1451,8 +1491,12 @@ className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transiti
                             {service.price}
                           </span>
                         </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
                       ))}
                     </div>;
                   </div>;
@@ -1511,6 +1555,7 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
                 </div>
               </div>
               {/* Mobile CTA */}
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className='pt-4 border-t border-purple-500/30'>
 
@@ -1575,6 +1620,8 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 <div className='pt-4 border-t border-purple-500/30'>
                 <Link
                   href='/contact'
@@ -1588,8 +1635,12 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
 <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -1669,6 +1720,7 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
         </div>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
   );
 }
@@ -1736,3 +1788,9 @@ className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+    </nav>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

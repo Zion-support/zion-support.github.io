@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -34,6 +35,8 @@ return res.status(405).end();
   export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   if (typeof id !== 'string')
     return res.status(400).json({ error: 'Invalid id' });
 
@@ -49,8 +52,12 @@ return res.status(200).json(updated);
   }
   return res.status(405).end();
   export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     const { id } = req.query;
     if (typeof id !== "string")
 
@@ -111,6 +118,7 @@ function handler() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
   return res.status(405).end();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method === 'PUT') {
     if (!requireAdmin(req, res)) return;
@@ -132,3 +140,6 @@ function handler() {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

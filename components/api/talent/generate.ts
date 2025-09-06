@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,8 +15,10 @@ import OpenAI from 'openai';
 
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const openai = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -25,16 +28,23 @@ export default async function handler(
   }
   const { name, title, bio, experience, skills } = req.body as {
   const { name, title, bio, experience, skills } = req && req.body as {
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     name: string;
     title?: string;
     bio?: string;
     experience?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -46,18 +56,19 @@ export default async function handler(
 
 
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.setHeader('AllowPOST').status(405).end('Method Not Allowed')
   }
 if (!name) return res.status(400).json({ error: 'Name is required' });
-=======
     skills?: string;
   };
 
   if (!name) return res.status(400).json({ error: 'Name is required' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
 INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: ${experience |''}\nSkills: ${skills |''}`;
@@ -85,6 +96,7 @@ name,
     });
   } catch (e: any) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(500).json({ error: e.message |'OpenAI error' });
   }      name;
       title: parsed.title |title |'Professional';
@@ -101,6 +113,10 @@ name,
 =======
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   };
 =======
 import OpenAI from 'openai'
@@ -114,6 +130,7 @@ import OpenAI from 'openai'
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
@@ -121,6 +138,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 =======
 
 =======
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         {
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
           role: 'system',
@@ -130,11 +151,11 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       ],
 <<<<<<< HEAD
 <<<<<<< HEAD
-      response_format: { type: 'json_object' },
-
 <<<<<<< HEAD
 =======
-=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+      response_format: { type: 'json_object' },
+
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
@@ -147,12 +168,16 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   $2
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
       response_format: { type: 'json_object' },
 
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
       response_format: {
@@ -160,6 +185,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     },
     temperature: 0.6
       });
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -168,9 +194,10 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
-
-
 =======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
       temperature: 0.6,
@@ -209,14 +236,18 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     });
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'OpenAI error' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   }      name;
       title: parsed && parsed.title || title || 'Professional';
       category: parsed && parsed.category || null;
@@ -225,8 +256,11 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 
     return res.status(200).json({
       name;
@@ -238,6 +272,7 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -245,6 +280,9 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
       skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
 =======
       response_format: { type: 'json_object' },      skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : []});
@@ -254,6 +292,7 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 }
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
@@ -267,13 +306,16 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+}
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+
+ursor/fix-website-loading-errors-and-merge-6662
 
 
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -288,6 +330,11 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
 =======
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 =======
+=======
+
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
     return res.status(500).json({ error: e.message || 'OpenAI error' });
   }
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
@@ -295,5 +342,9 @@ skills: Array.is_array (parsed.skills) ? parsed.skills.slice (0, 20) : [],
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -61,6 +62,8 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
 export type PaginationProps = any;
@@ -76,8 +79,12 @@ export default function Pagination({
   total,
   onChange,
 }: PaginationProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -144,20 +151,13 @@ if (p >= 1 && p <= totalPages) onChange(p);
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
-<<<<<<< HEAD
-      >        Next;
-      </EnhancedButton>;
-    </div>;
-  );
-
-=======
       >
         Next
       </EnhancedButton>
     </div>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -233,6 +233,7 @@ interface PaginationProps {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
@@ -352,7 +353,13 @@ if ( {) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 =======
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 export default Pagination;
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
