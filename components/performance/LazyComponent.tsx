@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {
@@ -21,3 +22,7 @@ export const LazyComponent: React.FC<LazyComponentProps> = ({
 };
 
 export default LazyComponent;
+=======
+import React from 'react',
+},
+>>>>>>> pr-11992
