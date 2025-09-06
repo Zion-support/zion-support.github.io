@@ -103,7 +103,6 @@ export default function ServicesPage() {
   const getPopularServices = () => {
     return enhancedRealMicroSaasServices.filter(service => service.popular).slice(0, 6);
   };
-=======
 import { motion } from 'framer-motion';
 import { 
   Star, 
@@ -360,7 +359,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </EnhancedFuturisticBackground>
-=======
       <div className="relative min-h-screen">
         {/* Hero Section */}
         <section className="relative py-32 overflow-hidden">

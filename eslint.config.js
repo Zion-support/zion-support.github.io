@@ -8,14 +8,22 @@ import next from '@next/eslint-plugin-next';
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+    files: ["**/*.{js,jsx,ts,tsx}"],
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
     ignores: [
       '.next/**',
       'out/**',
       'dist/**',
       'build/**',
       'node_modules/**',
+<<<<<<< HEAD
       '.eslintrc.js',
+=======
+      'coverage/**',
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -30,6 +38,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+<<<<<<< HEAD
       '**/test-utils.*',
       '**/jest.setup.*',
       '**/jest.config.*',
@@ -163,8 +172,23 @@ export default [
       '**/performance-*.sh',
       '**/performance-*.html',
       '**/performance-*.md',
+<<<<<<< HEAD
       '**/performance-*.txt',
       'backup-problematic-files/**'
+=======
+      '**/performance-*.txt'
+=======
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     ],
     languageOptions: {
       parser: typescriptParser,
@@ -172,11 +196,12 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         // Browser globals
+<<<<<<< HEAD
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -205,6 +230,52 @@ export default [
         performance: 'readonly',
         IntersectionObserver: 'readonly',
         IntersectionObserverEntry: 'readonly',
+=======
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
+        navigator: "readonly",
+        performance: "readonly",
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
+        requestAnimationFrame: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        self: "readonly",
+        // Node.js globals
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly",
+        global: "readonly",
+        // DOM types
+        Element: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        HTMLDivElement: "readonly",
+        MouseEvent: "readonly",
+        KeyboardEvent: "readonly",
+        Node: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
+        LayoutShift: "readonly",
+        IntersectionObserver: "readonly",
+        IntersectionObserverEntry: "readonly",
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
         // React
         React: 'readonly',
         // Jest/Testing globals
@@ -231,7 +302,7 @@ export default [
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next
+      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -245,13 +316,13 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn'
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.cjs'],
@@ -273,17 +344,19 @@ export default [
         setInterval: 'readonly',
         clearInterval: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly'
-      }
-    }
+        clearImmediate: 'readonly',
+      },
+    },
   },
+<<<<<<< HEAD
   {
     ignores: [
       // Node/build outputs
+      'node_modules/**',
       '.next/**',
-      'out/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
       'node_modules/**',
       // Public assets/scripts
       'public/**',
@@ -300,4 +373,34 @@ export default [
       'backup-problematic-files/**'
     ]
   }
+=======
+      'out/**',
+      'coverage/**',
+      '*.log',
+      '*.tsbuildinfo',
+      // Generated files
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/static/**',
+      '**/public/**',
+      '**/backup*/**',
+      '**/backups/**',
+      '**/cache/**',
+      '**/temp/**',
+      '**/tmp/**',
+      // Build artifacts
+      '**/ecosystem*.cjs',
+      '**/comprehensive-*.cjs',
+      '**/advanced-*.cjs',
+      '**/enhanced-*.cjs',
+      '**/automation/**',
+      '**/scripts/**',
+      '**/tools/**',
+      '**/zion-os/**',
+      '**/zion-website/**',
+    ],
+  },
+=======
+>>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
 ];

@@ -1,0 +1,17 @@
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['';,;
+"export": type AddedService = { id: string: title: string: description: string: category,:
+  "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['';,;
+
+"export": type AddedService = { id: string: title: string: description: string: category,:
+  "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
+
+export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
+

@@ -2,7 +2,6 @@
     </div>
   );
 }
-=======
 export default function ContactPage() {
   return (
     <div className="py-8">
@@ -11,7 +10,6 @@ export default function ContactPage() {
     </div>
   );
 }
-=======
 export default function Contact() {
   return (
     <div className="py-10">

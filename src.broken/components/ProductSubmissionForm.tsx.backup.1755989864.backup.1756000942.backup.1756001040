@@ -27,7 +27,6 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 
-
 // Define the form schema with zod
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
@@ -210,7 +209,6 @@ export function ProductSubmissionForm() {
         }
       }
 
-<<<<<<< HEAD
       // Upload model if provided
       if (values.model) {
         const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -235,26 +233,6 @@ export function ProductSubmissionForm() {
           throw new Error(updateError.message);
         }
       }
-
-=======
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
-      // Send listing to moderation service
-      try {
-        await supabase.functions.invoke('moderate-listing', {
-          body: {
-            listingId: productRecord.id,
-            listingType: 'product',
-            description: values.description,
-            images: imagePublicUrl ? [imagePublicUrl] : [],
-            sellerId: user.id,
-          }
-        });
-      } catch (err) {
-<<<<<<< HEAD
-        logErrorToProduction('Error invoking moderation:', { data: err });
-=======
-        console.error('Error invoking moderation:', err);
->>>>>>> origin/5lqy80-codex/fix-npm-ci-errors-and-missing-dependencies
       }
       
       // Show success message

@@ -18,8 +18,6 @@ const CloudComputingStrategies: NextPage = () => {
 };
 
 export default CloudComputingStrategies;
-=======
   return <div className="max-w-3xl mx-auto p-6">Cloud Computing Strategies</div>;
 }
-=======
 export default function Page() { return null }

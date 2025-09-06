@@ -1,0 +1,203 @@
+{
+  "timestamp": "2025-09-05T21:58:58.593Z",
+  "vulnerabilities": [],
+  "securityIssues": [
+    {
+      "file": "/workspace/backup-merge-conflicts/build-optimizer.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/docs-generator.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/health-monitor.js",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/security-scanner.js",
+      "type": "evalUsage",
+      "matches": 1,
+      "description": "Potential evalUsage found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/security-scanner.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/seo-accessibility.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/backup-merge-conflicts/test-automation.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/AccessibilityEnhancer.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/Analytics.tsx",
+      "type": "innerHTML",
+      "matches": 1,
+      "description": "Potential innerHTML found"
+    },
+    {
+      "file": "/workspace/components/Analytics.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/ContactForm.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/components/SEOHead.tsx",
+      "type": "innerHTML",
+      "matches": 1,
+      "description": "Potential innerHTML found"
+    },
+    {
+      "file": "/workspace/components/SearchBar.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/coverage/lcov-report/prettify.js",
+      "type": "innerHTML",
+      "matches": 1,
+      "description": "Potential innerHTML found"
+    },
+    {
+      "file": "/workspace/coverage/lcov-report/prettify.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/coverage/lcov-report/sorter.js",
+      "type": "innerHTML",
+      "matches": 1,
+      "description": "Potential innerHTML found"
+    },
+    {
+      "file": "/workspace/deployment/next.config.js",
+      "type": "hardcodedSecrets",
+      "matches": 21,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/deployments/deployment-20250903-181759/production/next.config.js",
+      "type": "hardcodedSecrets",
+      "matches": 17,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/deployments/deployment-20250903-181759/staging/next.config.js",
+      "type": "hardcodedSecrets",
+      "matches": 17,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/hooks/useDebounce.ts",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/hooks/useLocalStorage.ts",
+      "type": "hardcodedSecrets",
+      "matches": 1,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/next.config.minimal.js",
+      "type": "hardcodedSecrets",
+      "matches": 3,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/next.config.original.js",
+      "type": "hardcodedSecrets",
+      "matches": 5,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/next.config.simple.js",
+      "type": "hardcodedSecrets",
+      "matches": 3,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/public/sw-enhanced.js",
+      "type": "hardcodedSecrets",
+      "matches": 2,
+      "description": "Potential hardcodedSecrets found"
+    },
+    {
+      "file": "/workspace/public/sw.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/scripts/pm2/security-scanner.js",
+      "type": "evalUsage",
+      "matches": 2,
+      "description": "Potential evalUsage found"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceMonitor.tsx",
+      "type": "dangerousFunctions",
+      "matches": 2,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/src/components/PerformanceOptimized.tsx",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/utils/accessibility-utils.js",
+      "type": "dangerousFunctions",
+      "matches": 1,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/utils/api.ts",
+      "type": "dangerousFunctions",
+      "matches": 4,
+      "description": "Potential dangerousFunctions found"
+    },
+    {
+      "file": "/workspace/utils/security-headers.js",
+      "type": "hardcodedSecrets",
+      "matches": 8,
+      "description": "Potential hardcodedSecrets found"
+    }
+  ],
+  "summary": {
+    "totalVulnerabilities": 0,
+    "totalSecurityIssues": 32,
+    "criticalIssues": 0
+  }
+}

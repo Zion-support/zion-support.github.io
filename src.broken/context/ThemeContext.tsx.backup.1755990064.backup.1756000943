@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src_backup/context/ThemeContext.tsx
+:src_backup/context/ThemeContext.tsx
 import React from 'react';
 export function ThemeContext() {
   return (
@@ -8,7 +8,6 @@ export function ThemeContext() {
     </div>
   );
 }
-=======
 import React, {
   createContext,
   useContext,
@@ -72,4 +71,3 @@ export const useTheme = (): ThemeContextState => {
   }
   return context;
 };
->>>>>>> origin/by9dba-codex/implement-light/dark-theme-with-persistence:src/context/ThemeContext.tsx

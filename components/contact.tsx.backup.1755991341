@@ -1,7 +1,6 @@
 export default function Contact() {
   return <div>Contact</div>;
 }
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -22,7 +21,6 @@ export default function Contact() {
         </div>
       </main>
     </div>
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 

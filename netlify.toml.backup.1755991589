@@ -11,7 +11,6 @@
 
 [[plugins]]
   package = "netlify-plugin-cloudinary"
-<<<<<<< HEAD
 
 [[plugins]]
   package = "./netlify/plugins/run-functions-and-rerun"
@@ -320,5 +319,3 @@ name = "duplicate-media-finder-runner"
 [[scheduled.functions]]
 name = "autonomous-cloud-trigger"
   schedule = "*/2 * * * *"
-=======
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

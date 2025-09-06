@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -10,10 +9,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { useTranslation } from "react-i18next";
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react';
-
-
-
-
 
 import { useIsMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/context/LanguageContext";
@@ -236,12 +231,7 @@ export default function TranslationManager() {
         return !(typeof langTranslations === 'object' && langTranslations !== null && langTranslations[key]);
       });
   };
-  
-=======
-import React from 'react';
-export function TranslationManager() {
->>>>>>> origin/automation-error-fixes
-  return (
+    return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>

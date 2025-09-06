@@ -1,17 +1,5 @@
-<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 import api from '@/lib/api';
-=======
-<<<<<<< HEAD
-// Re-export from the SSR client to maintain backward compatibility
-export { supabase, createClient } from '@/utils/supabase/client';
-import { logWarn, logDebug } from '@/utils/productionLogger';
-=======
-import { createClient } from '@supabase/supabase-js';
-import api from '@/lib/api';
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-
 // Get actual environment variables
 const envSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const envSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -60,9 +48,6 @@ async function checkOnline(): Promise<boolean> {
 
 // Optimized safeFetch for development mode with better error handling
 export async function safeFetch(url: string, options: RequestInit = {}) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   try {
     // In development, provide faster mock responses
     if (process.env.NODE_ENV === 'development' && url.includes('/favorites')) {
@@ -71,48 +56,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
         status: 200,
         json: async () => ([]),
         text: async () => '[]',
-      } as Response;
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  if (!(await checkOnline())) {
-    throw new Error('Failed to connect to Supabase');
-  }
-
-  const headers =
-    options.headers instanceof Headers
-      ? options.headers
-      : new Headers(options.headers);
-
-  if (!headers.has('apikey')) {
-    headers.set('apikey', supabaseAnonKey);
-  }
-
-  const maxRetries = 3;
-  let lastError: any;
-
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      const response = await api({
-        url,
-        method: options.method as any,
-        data: (options as any).body,
-        headers: Object.fromEntries(headers.entries()),
-      });
-
-      if (response.status < 200 || response.status >= 300) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      return response;
-    } catch (error) {
-      lastError = error;
-      // Wait before retrying (exponential backoff)
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
-<<<<<<< HEAD
-=======
->>>>>>> origin/4b9zsu-codex/surface-api-errors-across-the-app
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-    }
+      } as Response;    }
     
     // Use real fetch for other cases
     return fetch(url, options);

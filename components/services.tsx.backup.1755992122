@@ -42,7 +42,6 @@ import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-servi
 import { emergingTech2026Innovations } from '../data/emerging-tech-2026-innovations';
 import { enterpriseIT2026Comprehensive } from '../data/enterprise-it-2026-comprehensive';
 import { comprehensiveMicroSaas2026 } from '../data/comprehensive-micro-saas-2026';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -72,7 +71,6 @@ export default function ServicesPage() {
   const allServices = [
     ...enhancedRealMicroSaasServices,
     </UltraAdvancedQuantumBackground>
-=======
     ...innovativeAIServices2029,
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export interface TalentProfile {
   id: string;
@@ -62,9 +61,3 @@ export interface HireRequest {
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
 }
-=======
-// Type definitions for talent;
-interface talent {;
-  // TODO: Add proper type definitions;
-};
->>>>>>> origin/automation-error-fixes

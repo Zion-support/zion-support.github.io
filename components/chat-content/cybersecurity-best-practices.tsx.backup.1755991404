@@ -6,7 +6,6 @@ export default function CybersecurityBestPractices() {
     </div>
   );
 }
-=======
 export default function CybersecurityBestPracticesPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -15,5 +14,4 @@ export default function CybersecurityBestPracticesPage() {
     </div>
   );
 }
-=======
 export default function ChatContent3() { return <div className="py-10 text-white">Content coming soon.</div>; }

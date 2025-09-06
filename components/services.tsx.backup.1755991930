@@ -260,7 +260,6 @@ export default function ServicesPage() {
       link: 'https://monitor.zion.app',
       category: 'Analytics & Monitoring',
       marketSize: '$2.4B'
-=======
     {
       metric: 'Average Growth Rate',
       value: '22.1%',
@@ -693,7 +692,6 @@ export default function ServicesPage() {
         </section>
       </div>
     </AdvancedFuturisticBackground>
-=======
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />

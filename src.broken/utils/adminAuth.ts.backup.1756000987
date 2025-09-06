@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.broken/utils/adminAuth.ts
+:src.broken/utils/adminAuth.ts
 // Stub admin auth utility - placeholder for missing functionality
 export const requireAdminAuth = () => {
   // Placeholder implementation
@@ -9,7 +9,6 @@ export const isAdmin = () => {
   // Placeholder implementation
   return false;
 };
-=======
 export type AdminSession = {
   username: string;
   issuedAt: number;
@@ -79,4 +78,3 @@ export function isInternalAgentRequest(req: NextApiRequest): boolean {
   if (!key || Array.isArray(key)) return false;
   return crypto.timingSafeEqual(Buffer.from(key), Buffer.from(expected));
 }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6:src/utils/adminAuth.ts

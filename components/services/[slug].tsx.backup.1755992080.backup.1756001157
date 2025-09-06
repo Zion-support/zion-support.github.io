@@ -73,7 +73,6 @@ function getPriceValue(price: Service['price']): string {
 function getAllServices(): Service[] {
 		.concat(real2032ServiceExpansions as unknown as Service[])
 		.concat(real2025Q4FreshAdditions as unknown as Service[]);
-=======
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
@@ -199,12 +198,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
-<<<<<<< HEAD
-		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
-=======
-		<Layout>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
-			<Head>
+		<UltraFuturisticBackground variant="quantum" intensity={1.5}>			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={service.link} />
@@ -294,14 +288,8 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							<div className="text-3xl font-bold text-white">${getPriceValue(service.price)}<span className="text-base font-medium text-gray-400">{service.period || '/month'}</span></div>
 							<div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
 							<div className="mt-6 flex gap-3">
-<<<<<<< HEAD
 								<Link href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
-								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
-=======
-								<a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">Contact Sales</a>
-								<a href={service.link} className="flex-1 border border-gray-600 text-gray-200 px-4 py-2 rounded-lg text-center hover:bg-gray-600 transition-all duration-300"><ExternalLink className="w-4 h-4 mr-2 inline" /> Learn More</a>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-196b
-							</div>
+								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>							</div>
 						</div>
 
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
@@ -331,7 +319,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</Layout>
 	);
 }
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';

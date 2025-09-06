@@ -1,5 +1,4 @@
 export default function Contact() { return <div className="p-8">Contact</div>; }
-=======
 import React from 'react';
 
 const Component = () => {
@@ -12,7 +11,6 @@ const Component = () => {
 };
 
 export default Component;
-=======
 export default function Contact() {
   return <div>Contact</div>;
 }

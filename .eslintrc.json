@@ -1,25 +1,30 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off"
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
   },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
     "out/",
     "dist/",
-    "build/",
-    "coverage/",
     "*.config.js",
+<<<<<<< HEAD
     "*.config.cjs",
     "*.config.mjs",
     "fix-critical-files.js",
@@ -176,3 +181,10 @@
     "backup-problematic-files/**"
   ]
 }
+=======
+    "*.config.ts",
+    "advanced-*.js",
+    "aggressive-fix.js"
+  ]
+}
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358

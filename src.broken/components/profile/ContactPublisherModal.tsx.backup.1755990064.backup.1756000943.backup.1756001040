@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import FocusLock from 'react-focus-lock';
 import { SendIcon, Mail } from 'lucide-react';
 import {
@@ -98,10 +97,6 @@ export function ContactPublisherModal({
       onClose();
     }
   };
-
-=======
-export function ContactPublisherModal() {
->>>>>>> origin/automation-error-fixes
   return (
     <div>
       <h1>Component</h1>

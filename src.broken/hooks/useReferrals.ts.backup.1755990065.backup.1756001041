@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
@@ -251,14 +248,3 @@ export function useReferrals() {
     fetchRewards,   // Added this method for refreshing rewards
   };
 }
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-// Hook for useReferrals;
-export const useUseReferrals: unknown = () => {
-  // TODO: Implement hook logic;
-  return {};
-};
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-error-fixes
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

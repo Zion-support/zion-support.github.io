@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
@@ -19,13 +18,3 @@ const BlockchainSolutions: NextPage = () => {
 };
 
 export default BlockchainSolutions;
-=======
-export default function BlockchainSolutionsPage() {
-  return (
-    <div className="py-8">
-      <h1 className="text-xl font-semibold mb-2">Blockchain Solutions</h1>
-      <p className="text-gray-600 dark:text-gray-300">Content coming soon.</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/create-zion-ai-dashboard-interfaces-6fb9

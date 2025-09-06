@@ -30,7 +30,6 @@ const _document: NextPage = () => {
 };
 
 export default _document;
-=======
     );
   }
 }

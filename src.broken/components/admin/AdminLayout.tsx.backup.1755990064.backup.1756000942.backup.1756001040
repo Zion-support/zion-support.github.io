@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 
 interface AdminLayoutProps {
@@ -14,11 +13,7 @@ const navItems = [
   { title: 'Moderation', href: '/admin/moderation' },
 ];
 
-export function AdminLayout({ children }: AdminLayoutProps) {
-=======
-export function AdminLayout() {
->>>>>>> origin/automation-error-fixes
-  return (
+export function AdminLayout({ children }: AdminLayoutProps) {  return (
     <div>
       <h1>Component</h1>
       <p>Component placeholder</p>

@@ -94,12 +94,7 @@ const AnimatedBackground: React.FC = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
              // Update and draw orbs
-<<<<<<< HEAD
-       orbsRef.current?.forEach((orb) => {
-=======
-       orbsRef.current.forEach((orb) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-        orb.pulse += 0.02;
+       orbsRef.current?.forEach((orb) => {        orb.pulse += 0.02;
         const pulseOpacity = orb.opacity + Math.sin(orb.pulse) * 0.02;
         
         ctx.beginPath();
@@ -115,12 +110,7 @@ const AnimatedBackground: React.FC = () => {
       });
 
       // Update and draw particles
-<<<<<<< HEAD
-      particlesRef.current?.forEach((particle) => {
-=======
-      particlesRef.current.forEach((particle) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-        particle.x += particle.vx;
+      particlesRef.current?.forEach((particle) => {        particle.x += particle.vx;
         particle.y += particle.vy;
 
         // Wrap around edges
@@ -136,12 +126,7 @@ const AnimatedBackground: React.FC = () => {
         ctx.fill();
 
         // Draw connections between nearby particles
-<<<<<<< HEAD
-        particlesRef.current?.forEach((otherParticle) => {
-=======
-        particlesRef.current.forEach((otherParticle) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
-          const dx = particle.x - otherParticle.x;
+        particlesRef.current?.forEach((otherParticle) => {          const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
