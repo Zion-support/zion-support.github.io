@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { createClient, SupabaseClient } from '@supabase/supabase-js',;
 export type ZionSupabase = SupabaseClient | undefined,;
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '',;
@@ -12,19 +8,10 @@ export function getSupabaseClient(): ZionSupabase {try {;
     if (typeof window !== 'undefined') {;
       if (!browserClient) {;
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       return browser_client;
     }
 
-=======
-=======
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 export type ZionSupabase = SupabaseClient | undefined;
 
@@ -48,14 +35,8 @@ export function getSupabaseClient(): ZionSupabase {;
 }
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
@@ -66,25 +47,15 @@ export function getSupabaseClient(): ZionSupabase {;
 
 }
 
-=======
     // Server - side: create a new client per call to avoid cross - request state;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {
     return undefined;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   }
 }
 
@@ -96,11 +67,3 @@ export function getSupabaseClient(): ZionSupabase {;
     return undefined;
   }
 }
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

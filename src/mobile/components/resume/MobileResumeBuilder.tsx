@@ -132,7 +132,6 @@ function BasicsStep() {
           Skills;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
       {renderStepContent()}
 
@@ -140,37 +139,20 @@ function BasicsStep() {
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
 
-=======
-      {renderStepContent()}
-;
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 function BasicsStep() {;
   return (
-=======
-;
-function BasicsStep() {;
-  return (;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
-<<<<<<< HEAD
           <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;
-=======
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
@@ -178,11 +160,7 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
-<<<<<<< HEAD
           <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;
-=======
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;

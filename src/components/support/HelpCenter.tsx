@@ -121,7 +121,6 @@ import { HelpArticleList } from "./HelpArticleList",;
 import { HelpArticleView } from "./HelpArticleView",;
 import { HELP_CATEGORIES } from "./help-content",;
 import { Search } from 'lucide-react';
-<<<<<<< HEAD
 
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -136,13 +135,10 @@ export default function HelpCenter() {;
   const handleArticleSelect = (articleId: string) => {;
     setSelectedArticle(articleId);
   };
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function HelpCenter() {;
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null),;
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null),;
   const [searchQuery, setSearchQuery] = useState(""),;
-<<<<<<< HEAD
 
   const handleCategorySelect = (categoryId: string,) => {;
     setSelectedCategory(categoryId),;
@@ -172,31 +168,6 @@ export default function HelpCenter() {;
           <p className='text-zion-slate-light mb-6'>;
             Find answers to common questions or get in touch with our support;
             team.;
-=======
-  const handleCategorySelect = (categoryId: string) => {;
-    setSelectedCategory(categoryId),;
-    setSelectedArticle(null);
-  },;
-  const handleArticleSelect = (articleId: string) => {;
-    setSelectedArticle(articleId);
-  },;
-  const handleBackToCategories = () => {;
-    setSelectedCategory(null),;
-    setSelectedArticle(null);
-  };
-  const handleBackToArticles = () => {;
-    setSelectedArticle(null);
-  };
-  return (;
-    <>;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="max-w-4xl mx-auto">;
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
-            Help Center;
-          </h1>;
-          <p className="text-zion-slate-light mb-6">;
-            Find answers to common questions or get in touch with our support team.;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>;
 
           <div className='relative mb-8'>;
@@ -325,7 +296,6 @@ export default function HelpCenter() {;
                 
                 <div className="space-y-6">
                   <div>
-<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       How do I hire someone on Zion?
                     </h3>
@@ -334,11 +304,6 @@ export default function HelpCenter() {;
                       matches or applications, interview candidates through our
                       platform, and extend an offer. Our secure payment system
                       protects both parties throughout the engagement.
-=======
-                    <h3 className="font-medium text-zion-cyan mb-2">How does the AI matching work?</h3>
-                    <p className="text-zion-slate-light">
-                      Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </p>
                   </div>
 
@@ -347,7 +312,6 @@ export default function HelpCenter() {;
 
 
                   <div>
-<<<<<<< HEAD
                     <h3 className='font-medium text-zion-cyan mb-2'>
                       What are the payment terms?
                     </h3>
@@ -356,11 +320,6 @@ export default function HelpCenter() {;
                       milestone-based payments, hourly rates, or fixed project
                       fees. Funds are held in escrow until deliverables are
                       approved, ensuring security for both clients and talent.
-=======
-                    <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
-                    <p className="text-zion-slate-light">
-                      To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </p>
                   </div>
 
@@ -519,11 +478,7 @@ export default function HelpCenter() {;
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                         support@ziontechgroup.com
-<<<<<<< HEAD
                       </a>
-=======
-                      </Link>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
 
                         href='mailto:support@ziontechgroup && ziontechgroup.com'

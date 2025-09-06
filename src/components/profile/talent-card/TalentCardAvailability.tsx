@@ -78,11 +78,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
-<<<<<<< HEAD
         return 'bg-yellow-500/20 text-yellow-400';
-=======
-        return 'bg-yellow-500/20 text-yellow-400',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;
@@ -104,12 +100,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project';
       default:;
         return status;
-<<<<<<< HEAD
   };
-=======
-    }
-  },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 

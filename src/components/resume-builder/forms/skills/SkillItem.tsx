@@ -23,18 +23,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {;
     <Badge
       key = {skill && skill.id,}
       variant="secondary"
-<<<<<<< HEAD
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
       {skill && skill.proficiency && (;
         <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
-=======
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
-      {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
       <Button
         variant="ghost"
@@ -97,7 +89,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
       >
         <Trash2 className="h-3 w-3" />
       </Button>
-<<<<<<< HEAD
     </Badge>
   )
 
@@ -164,5 +155,3 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
     </Badge>);
 } },
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

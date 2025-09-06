@@ -1,57 +1,9 @@
-<<<<<<< HEAD
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-=======
-<<<<<<< HEAD
-=======
-
-
-"use client",;
-import { useState, useEffect, useRef } from "react",;
-import Link from "next/link",;
-export function Navigation() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
-  const [isSearchOpen, setIsSearchOpen] = useState(false),;
-
-
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
-=======
-"use client",
-import { useState, useEffect, useRef  } from './react';,
-import Link from './next / link';,
-export /**
- * Navigation - Function description
- */
-function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
-  const [isSearchOpen, setIsSearchOpen] = useState (false),
-  const [isServicesOpen, setIsServicesOpen] = useState (false);
-  const [is_scrolled, setIsScrolled] = useState (false);
-  return (
-=======
-<<<<<<< HEAD
-"use client";
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-=======
-"use client",;
-import { useState, useEffect, useRef } from "react",;
-import Link from "next/link",;
-export function Navigation() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
-  const [isSearchOpen, setIsSearchOpen] = useState(false),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -227,20 +179,6 @@ export function Navigation() {;
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-          </div>)}
-
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -317,16 +255,3 @@ export function Navigation() {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    </nav>;
-  );
-
-
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

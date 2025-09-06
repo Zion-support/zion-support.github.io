@@ -204,11 +204,7 @@ function EducationFormFields() {
 
 
             )}
-<<<<<<< HEAD
           />;
-=======
-          />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
           <div className='space-y-4'>;
             <FormField
@@ -218,7 +214,6 @@ function EducationFormFields() {
 
 
                     <Checkbox
-<<<<<<< HEAD
                       checked = {field && field.value,}
                       onCheckedChange = {field && field.onChange,}
                     />;
@@ -227,16 +222,6 @@ function EducationFormFields() {
                     <FormLabel>I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>;
-=======
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                    />
-                  </FormControl>
-                  <div className="space-y-1 leading-none">
-                    <FormLabel>I am currently studying here</FormLabel>
-                  </div>
-                </FormItem>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
 
             />;
@@ -346,11 +331,7 @@ function EducationFormFields() {
 
 
         <FormField
-<<<<<<< HEAD
           control={form && form.control}
-=======
-          control={form.control}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>

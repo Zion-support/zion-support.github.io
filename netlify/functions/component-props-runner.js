@@ -1,80 +1,23 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const abs = path && path.resolve(__dirname, '..', '..', relPath);
-=======
-
-
-function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     status: res && res.status || 0,
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
-=======
-
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return status;
   }
   logStep('components:generate-docs', () =>
     runNode('automation/component-props-docs && docs.cjs')
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 const path = require ('path');
@@ -123,15 +66,8 @@ function log_step() {
 function run_node() {
   const abs = path.resolve (__dirname, '....', rel_path),
   const res = spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-<<<<<<< HEAD
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-=======
-
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
-}
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
@@ -153,13 +89,6 @@ exports && exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 exports.handler = async () => {
   const logs = [],
   /**

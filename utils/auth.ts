@@ -3,54 +3,16 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 // Authentication utilities
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 ;
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-;
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface User {
   id: string;
   email: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   role: "admin" | "user" | "guest";
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
-<<<<<<< HEAD
-=======
-=======
-  role: string;
-  isAdmin: boolean;
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface User {;
   id: string;
   email: string;
@@ -58,23 +20,6 @@ export interface User {;
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
-<<<<<<< HEAD
-=======
-  // Mock implementation - replace with actual auth logic;
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return { id: 'guest', email: 'guest@example.com', role: 'guest' };
-  }
-  
-  // Simple mock for admin users
-  if (authHeader.includes('admin')) {
-    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' };
-  }
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
   try {;
@@ -83,13 +28,6 @@ export function parseUserFromRequest(req: NextApiRequest): User {
 
     ensureAdmin(user);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function parseUserFromRequest (req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic;
   const auth_header = req.headers.authorization;
@@ -117,7 +55,6 @@ if ( {) {
     throw error;
   }
 }
-<<<<<<< HEAD
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
@@ -159,32 +96,15 @@ export function ensureAdmin(user: User): void {
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
     ensureAdmin(user);
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowed: boolean }> {
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
-<<<<<<< HEAD
 }
-=======
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export interface User {;
-  id: string;
-  email: string;
-  role: 'admin' | 'user' | 'guest';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   // Mock implementation - replace with actual auth logic
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return { id: "guest", email: "guest@example.com", role: "guest" };
@@ -194,19 +114,8 @@ export function parseUserFromRequest(req: NextApiRequest): User {
   if (authHeader.includes("admin")) {
     return { id: "admin-1", email: "admin@zion.os", role: "admin" };
   }
-<<<<<<< HEAD
 
   return { id: "user-1", email: "user@zion.os", role: "user" };
-=======
-<<<<<<< HEAD
-
-  return { id: "user-1", email: "user@zion.os", role: "user" };
-=======
-  
-  return { id: 'user-1', email: 'user@zion.os', role: 'user' };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 }
 
 export function ensureAdmin(user: User): void {
@@ -216,15 +125,6 @@ export function ensureAdmin(user: User): void {
     throw error;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
-<<<<<<< HEAD
-    ensureAdmin(user);
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 
 export async function ensureAdminFromApi(
   req: NextApiRequest,
@@ -233,38 +133,15 @@ export async function ensureAdminFromApi(
     const user = parseUserFromRequest (req);
     ensure_admin (user);
 }
-=======
-<<<<<<< HEAD
 
   try {
-=======
-  try {;
-    const user = parseUserFromRequest(req);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ensureAdmin(user);
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return { allowed: true }
   } catch {
     return { allowed: false }
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-// Additional auth utilities for login;
-
-export interface DemoUser {
-=======
-// Additional auth utilities for login
-export interface DemoUser {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   role: "admin" | "user" | "guest";
@@ -320,19 +197,6 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   const cookieHeader = req.headers.cookie || "";
   const match = cookieHeader.match(/user=([^;]+)/);
   if (!match) return null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const demo_users: DemoUser[] = [];
 ;
 export function ensureDemoUsers (): void {
@@ -375,39 +239,11 @@ export function getUserFromRequest (req: NextApiRequest): DemoUser | null {
 if (return null) {
   $2
 }
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   try {
     return JSON.parse (decodeURIComponent (match[1]));
   } catch {
     return null;
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
-
-
-    user,
-    token,
-    expiresAt: Date && Date.now() + 24 * 60 * 60 * 1000, // 24 hours
-  };
-}
-=======
-
-  }
-}
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {
@@ -417,16 +253,6 @@ export function isAuthenticated(session: AuthSession | null): boolean {
 
   }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export function hasRole(session: AuthSession | null, role: string): boolean {
-    if (!session || !isAuthenticated(session)) return false;
-
-
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function isModerator(session: AuthSession | null): boolean {
@@ -434,11 +260,4 @@ export function isModerator(session: AuthSession | null): boolean {
 
 }
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

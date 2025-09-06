@@ -1,32 +1,10 @@
-<<<<<<< HEAD
 export interface InnovativeNewService2025 {
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface InnovativeNewService2025 {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface InnovativeNewService2025 {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-<<<<<<< HEAD
 export interface InnovativeNewService2025 {
 
-=======
-<<<<<<< HEAD
-export interface InnovativeNewService2025 {
-
-=======
-=======
-export interface InnovativeNewService2025 {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -57,33 +35,10 @@ export interface InnovativeNewService2025 {;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-  {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Algorithmic trading, Risk management, Portfolio optimization, Market analysis, Compliance monitoring',
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    market_size: '$32.1B financial technology market',
-    growth_rate: '22% annual growth',
-    variant: 'quantum - financial - enterprise',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -100,31 +55,11 @@ export interface InnovativeNewService2025 {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
     implementation_details: 'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.';
     launch_date: '2025 - 01 - 08';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    customers: 12;
-
-    rating: 4 && 4.9,
-
-    reviews: 6
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
@@ -265,24 +200,10 @@ export interface InnovativeNewService {
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08', customers: 12,
     rating: 4.9,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -295,16 +216,6 @@ export interface InnovativeNewService {
     launchDate: '2025-01-08';
     customers: 12;
 
-<<<<<<< HEAD
-=======
-=======
-    reviews: 6;
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeNewService {;
   id: string,;
@@ -567,22 +478,10 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
     customers: 12,;
     rating: 4.9;
     reviews: 6;
-<<<<<<< HEAD
   }
 ];
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -67,8 +66,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type: selectedResume.type
         } : null
       let full_message = message;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -82,7 +79,6 @@ import { ResumeTab } from './ResumeTab';
 import { Job } from './types';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-<<<<<<< HEAD
       let fullMessage = message;
 
 import React, { useState } from 'react';
@@ -100,11 +96,6 @@ interface ApplyFormProps {;
   job: Job,;
   onClose: () => void,;
   onApplySuccess?: (jobId: string,) => Promise<void>;
-=======
-interface ApplyFormProps {
-  job: Job;
-  onClose: () => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
@@ -126,7 +117,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
       return;
     }
 
-<<<<<<< HEAD
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -180,57 +170,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
 
 
           <MessageTab;
-=======
-    setIsSubmitting(true);
-    try {
-      await applyToJob(job.id, {
-        resumeId: selectedResume.id,
-        message,
-      });
-
-      // Send a message to the job poster
-      await sendMessage({
-        content: `I'm interested in the ${job.title} position. ${message}`,
-        recipientId: job.posterId,
-        jobId: job.id,
-      });
-
-      toast({
-        title: 'Application submitted',
-        description: 'Your application has been sent successfully.',
-      });
-      
-      onClose();
-    } catch (error) {
-      logErrorToProduction('Job application failed', error);
-      toast({
-        title: 'Application failed',
-        description: 'There was an error submitting your application.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">Apply to {job.title}</h2>
-        <Button variant="outline" onClick={onClose}>
-          Close
-        </Button>
-      </div>
-
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="message">Message</TabsTrigger>
-          <TabsTrigger value="resume">Resume</TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="message" className="space-y-4">
-          <MessageTab
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             message={message}
             onMessageChange={setMessage}
             job={job}
@@ -244,7 +183,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
         <Button
           type="button"
@@ -256,16 +194,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
         </Button>
         <Button
           className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-=======
-
-      <div className="flex justify-end space-x-2">
-        <Button variant="outline" onClick={onClose}>
-          Cancel
-        </Button>
-        <Button
-          onClick={handleSubmit}
-          disabled={isSubmitting || !selectedResume}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         >
           {isSubmitting ? (
             <>
@@ -275,7 +203,6 @@ export const ApplyForm: React.FC<ApplyFormProps> = ({ job, onClose }) => {
           ) : (
             'Submit Application'
           )}
-<<<<<<< HEAD
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'
@@ -334,10 +261,3 @@ return (<> <Tabs value= {
   );
 }
 ;
-=======
-        </Button>
-      </div>
-    </div>
-  );
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

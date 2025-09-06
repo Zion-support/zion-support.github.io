@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-return (
-      <Link href="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
-      </Link>);
-  }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   if (logoToUse) {
@@ -98,8 +90,3 @@ if ( {) {
       />;
     </Link>);
 }
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

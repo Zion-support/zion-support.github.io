@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -6,24 +5,6 @@ import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChar
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
-import * as React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import {
-  BookOpen,
-  Brain,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  GraduationCap,
-  BarChart3,
-  FileText,
-  Video,
-  Globe,
-  Database;
-} from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -34,7 +15,6 @@ const services = [
       'Course management,',
       'Student tracking',',
       'Assessment tools',',
-<<<<<<< HEAD
     title: 'Learning Management Systems,',;
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',;
 import Layout from '../../components/Layout';
@@ -47,94 +27,32 @@ const services = [;
       'Course management,',;
       'Student tracking',',;
       'Assessment tools',',;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Progress analytics'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Virtual Classrooms,',
-    description: 'Advanced virtual learning environments with interactive features.,',
-    icon: Video,
-    features: [;
-      'Live video streaming,',
-      'Interactive whiteboards',',
-      'Breakout rooms',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Recording capabilities'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Educational AI Tutors,',
-    description: 'AI-powered tutoring systems for personalized learning experiences.,',
-    icon: Brain,
-    features: [;
-      'Adaptive learning paths,',
-      'Intelligent tutoring',',
-      'Progress monitoring',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Personalized feedback'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Student Analytics,',
-    description: 'Data-driven insights into student performance and engagement.,',
-    icon: BarChart3,
-    features: [;
-      'Performance tracking,',
-      'Engagement metrics',',
-      'Predictive analytics',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intervention recommendations'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Online Assessment Tools,',
-    description: 'Secure and comprehensive online testing and evaluation systems.,',
-    icon: FileText,
-    features: [;
-      'Automated grading,',
-      'Plagiarism detection',',
-      'Secure testing',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Performance reports'';
     ];
   },
   {}
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Improved Learning Outcomes,',;
     description: 'Personalized learning experiences lead to better student performance.,',;
     icon: GraduationCap;
-=======
-    title: 'Content Management Systems,',
-    description: 'Digital content creation and management platforms for educators.,',
-    icon: Database,
-    features: [;
-      'Content creation tools,',
-      'Resource libraries',',
-      'Version control',',
-      'Collaboration features'';
-    ];
-  }
-];
-const benefits = [
-  {
-    title: 'Improved Learning Outcomes',
-    description: 'Personalized learning experiences lead to better student performance.',
-    icon: GraduationCap
-  },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {}
     title: 'Enhanced Engagement,',
     description: 'Interactive tools and gamification increase student participation.,',
@@ -150,7 +68,6 @@ const benefits = [
     description: 'Analytics help educators make informed decisions about teaching methods.,',
     icon: BarChart3;
   }
-<<<<<<< HEAD
 ;];
 export default function EducationPage() {;
   return (
@@ -188,8 +105,6 @@ export default function EducationPage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 export default function EducationPage() {
   return (
@@ -210,48 +125,11 @@ export default function EducationPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive edtech solutions designed for schools, universities, ;
                 and corporate training programs.;
               </p>;
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Education
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                    Technology Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionize education with cutting-edge learning management systems, virtual classrooms,
-                AI tutors, and student analytics that enhance learning outcomes.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Education Consultation
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">
-                  View Education Case Studies
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -269,7 +147,6 @@ export default function EducationPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
@@ -307,8 +184,6 @@ export default function EducationPage() {
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">
@@ -320,7 +195,6 @@ export default function EducationPage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">;
@@ -332,8 +206,6 @@ export default function EducationPage() {
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         {feature}
                       </li>,
                     ))}
@@ -343,7 +215,6 @@ export default function EducationPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -356,23 +227,17 @@ export default function EducationPage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our education technology solutions deliver measurable improvements in learning outcomes, ;
                 student engagement, and educational efficiency.,;
               </p>;
-=======
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -387,7 +252,6 @@ export default function EducationPage() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {benefits && benefits.map((benefit, index) => (,;
@@ -405,8 +269,6 @@ export default function EducationPage() {
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -422,7 +284,6 @@ export default function EducationPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -435,15 +296,12 @@ export default function EducationPage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
@@ -456,9 +314,6 @@ export default function EducationPage() {
         </section>;
       </div>;
     </Layout>;
-=======
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Education?
@@ -481,7 +336,6 @@ export default function EducationPage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Education?;
@@ -505,6 +359,3 @@ export default function EducationPage() {
     </Layout>;
   ),;
 }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

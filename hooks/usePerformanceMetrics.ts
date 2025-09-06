@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-import { PerformanceMetrics } from '../types';
-export function usePerformanceMetrics() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isSupported, setIsSupported] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const paintEntries = window && window.performance.getEntriesByType("paint");
-=======
-
-      const paintEntries = window && window.performance.getEntriesByType("paint");
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const fcp = paintEntries && paintEntries.find(
         (entry) => entry && entry.name === "first-contentful-paint",
       );
@@ -31,28 +10,14 @@ const paintEntries = window && window.performance.getEntriesByType("paint");
         return acc + (entry as PerformanceEntry & { value: number }).value;
       }, 0);
       const fidEntries = window && window.performance.getEntriesByType("first-input");
-<<<<<<< HEAD
       const fid = fidEntries[0] as PerformanceEventTiming;
       setMetrics({
-=======
-
-      const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: cls,
         firstInputDelay: fid ? fid && fid.processingStart - fid && fid.startTime : 0,
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     }
     setIsSupported(true);
     const measurePerformance = () => {

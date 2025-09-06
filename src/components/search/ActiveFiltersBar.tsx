@@ -433,7 +433,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
-<<<<<<< HEAD
       </button>
     </div>
   )}
@@ -448,5 +447,3 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
       </button>;
     </div>)}
 '";
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

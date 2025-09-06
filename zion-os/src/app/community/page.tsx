@@ -1,32 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-import Link from './next / link';
-export default /**
- * CommunityPage - Function description
- */
-function CommunityPage() {
-  return (
-    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
-      <div className="max - w-7xl mx - auto">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import Link from "next/link";
-export default function CommunityPage() {return (;
-export default function CommunityPage() {;
-  return (;
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Header */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 5xl font - bold mb - 6">;

@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-import React from "react",
-import { AdminHeader } from "./AdminHeader",
-import { TeamManagement } from "./TeamManagement",
-import { UsageStats } from "./UsageStats",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import { AdminHeader } from "./AdminHeader";
 import { TeamManagement } from "./TeamManagement";
 import { UsageStats } from "./UsageStats";
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { RoleManagement } from "./RoleManagement";
 import { TeamActivity } from "./TeamActivity";
 
@@ -26,13 +11,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
 
-<<<<<<< HEAD
-=======
-export function AdminDashboard() {
-  return (
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">
-      <AdminHeader />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",
 import { AdminHeader } from "./AdminHeader",
 import { TeamManagement } from "./TeamManagement",
@@ -45,15 +23,8 @@ import {
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
 
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Tabs defaultValue="team" className="mt-8">
         <TabsList className="grid w-full grid-cols-4 mb-8">
           <TabsTrigger value="team">Team Management</TabsTrigger>
@@ -61,16 +32,6 @@ import {
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>
           <TabsTrigger value="activity">Team Activity</TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
         </TabsContent>
@@ -80,10 +41,6 @@ import {
         <TabsContent value="usage" className="space-y-8">
           <UsageStats />
         </TabsContent>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         
         <TabsContent value="team" className="space-y-8">
           <TeamManagement />
@@ -97,55 +54,12 @@ import {
           <UsageStats />
         </TabsContent>
         
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TabsContent value="activity" className="space-y-8">
           <TeamActivity />
         </TabsContent>
       </Tabs>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
-      <AdminHeader />;
-
-      <Tabs defaultValue="team" className="mt-8">;
-        <TabsList className="grid w-full grid-cols-4 mb-8">;
-=======
-import React from './react';
-import { AdminHeader  } from './AdminHeader';
-import { TeamManagement  } from './TeamManagement';
-import { UsageStats  } from './UsageStats';
-import { RoleManagement  } from './RoleManagement';
-import { TeamActivity  } from './TeamActivity';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-;
-export /**
- * AdminDashboard - Function description
- */
-function AdminDashboard() {
-  return (
-    <div className="container mx - auto max - w-7xl py - 8 px - 4 md: px - 6">;
-      <AdminHeader />;
-      <Tabs default_value="team" className="mt - 8">;
-        <TabsList className="grid w - full grid - cols - 4 mb - 8">;
-
-=======
-    </div>
-  );
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -166,49 +80,12 @@ export function AdminDashboard() {;
   return (;
 
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <AdminHeader />;
-      <Tabs defaultValue="team" className="mt-8">;
-        <TabsList className="grid w-full grid-cols-4 mb-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsTrigger value="team">Team Management</TabsTrigger>;
           <TabsTrigger value="roles">Role Assignment</TabsTrigger>;
           <TabsTrigger value="usage">Usage Limits</TabsTrigger>;
           <TabsTrigger value="activity">Team Activity</TabsTrigger>;
         </TabsList>;
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <TabsContent value="team" className="space - y-8">;
-          <TeamManagement />;
-        </TabsContent>;
-        <TabsContent value="roles" className="space - y-8">;
-          <RoleManagement />;
-        </TabsContent>;
-        <TabsContent value="usage" className="space - y-8">;
-          <UsageStats />;
-        </TabsContent>;
-        <TabsContent value="activity" className="space - y-8">;
-          <TeamActivity />;
-        </TabsContent>;
-      </Tabs>;
-    </div>);
-
-}
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 }
         ;
@@ -241,8 +118,4 @@ export function AdminDashboard() {;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

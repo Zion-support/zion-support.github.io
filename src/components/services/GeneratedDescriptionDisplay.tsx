@@ -157,11 +157,7 @@ export function GeneratedDescriptionDisplay({;
       </CardContent>;
       {isEditing && (;
         <CardFooter>;
-<<<<<<< HEAD
           <Button
-=======
-          <Button;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={handleSave}
 
             className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"

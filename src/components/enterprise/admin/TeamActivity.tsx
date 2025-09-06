@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
 
   Table
@@ -88,9 +87,6 @@ export function TeamActivity() {
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<string { variant: "default" | "outline" | "secondary" | "destructive" }> = {
       jobs: { variant: "default" },
-=======
-jobs: { variant: "default" },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
@@ -410,7 +406,3 @@ const getCategoryBadge = (category: string) =>: any {
         <Button variant="outline" size="sm">
           Next
         </Button>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

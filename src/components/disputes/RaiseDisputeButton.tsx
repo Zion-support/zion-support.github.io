@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -43,11 +42,6 @@ import { useRouter } from 'next/router',
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
-=======
-return (
-    <>;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId: string,
   milestoneId?: string,
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
@@ -56,12 +50,6 @@ return (
 }
 
 export function RaiseDisputeButton({ 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId,
   milestoneId, 
   variant = "outline", 
@@ -70,7 +58,6 @@ export function RaiseDisputeButton({
 }: RaiseDisputeButtonProps) {
 
 
-<<<<<<< HEAD
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -91,8 +78,6 @@ export function RaiseDisputeButton({
         Raise Dispute
       </Button>
       
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
           <DialogHeader>
@@ -142,22 +127,12 @@ export function RaiseDisputeButton({
             project_id={project_id}
             milestone_id={milestone_id}
             onDisputeCreated={handleDisputeCreated}
-<<<<<<< HEAD
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
     </>
   )
 }
-=======
-            on_cancel={() => setIsDialogOpen (false)}          />;
-        </DialogContent>;
-      </Dialog>;
-    </>);
-}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           
           <DisputeForm 
 import React, { useState } from "react",;
@@ -220,9 +195,3 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-<<<<<<< HEAD
-=======
-
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

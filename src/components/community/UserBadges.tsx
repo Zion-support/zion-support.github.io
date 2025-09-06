@@ -1,32 +1,8 @@
-<<<<<<< HEAD
 
 
 interface UserBadgesProps {
   badges: Badge[]
 }
-=======
-;
-
-interface UserBadgesProps {
-  badges: Badge[];
-}
-
-const icon_map = {
-  Trophy;
-  Award;
-  BadgeCheck;
-  Star;
-  MessageSquare;
-}
-export const UserBadges = ({ badges }: UserBadgesProps) =>: any {
-  // Check condition
-if (return null) {
-  $2
-
-}
-const iconMap = {
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Trophy,
   Award,
   BadgeCheck,
@@ -37,13 +13,10 @@ const iconMap = {
 export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
-<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
@@ -54,13 +27,10 @@ export default UserBadges;
 }
 }
 
-<<<<<<< HEAD
   return (
     <div className="flex flex-wrap gap-2">
       {badges.map((badge) => {
         // Get the correct icon component based on the badge's icon name
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
         return (
@@ -100,7 +70,6 @@ const iconMap = {;
   BadgeCheck;
   Star;
   MessageSquare;
-<<<<<<< HEAD
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
@@ -136,20 +105,3 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
   );
 };
 export default UserBadges;
-=======
-};
-
-export const UserBadges = ({ badges }: UserBadgesProps) => {;
-  if (!badges?.length) return null;
-  return (
-    <div className="flex flex-wrap gap-2">;
-      {badges && badges.map((badge,) => {;
-        // Get the correct icon component based on the badge's icon name;
-        const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
-
-    <div className="flex flex - wrap gap - 2">;
-      {badges.map ((badge, ) => {
-        // Get the correct icon component based on the badge's icon name;
-        const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
-export default UserBadges;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

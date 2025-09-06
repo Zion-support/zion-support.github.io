@@ -122,7 +122,6 @@ function TalentProfile() {
   const { is_authenticated } = use_auth ();
   // Create proper availability object from talent profile;
   const availability: Availability = {
-<<<<<<< HEAD
     status:;
       profile.availability_type === 'full_time';
         ? 'available';
@@ -147,91 +146,14 @@ function TalentProfile() {
     })) || [];
   return (
     <div className='container mx - auto px - 4 py - 8'>;
-=======
-    status: profile.availability_type === 'full_time' ? 'available' : 
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
-    message: `${profile.professional_title} with ${profile.years_experience} years of experience`
-  },
-  
-  // Create proper skills array for ProfileSkills component
-  const skillsArray = profile.skills?.map(skill => ({
-    name: skill,
-    level: 3 // Default level since we don't have this data
-  })) || [],
-  
-  // Create proper projects array for ProfileProjects component
-  const projectsArray = profile.key_projects?.map((proj, i) => ({
-    id: `project-${i}`,
-    title: proj.title,
-    description: proj.description,
-    date: new Date().toISOString() // Default date since we don't have this data
-  })) || [],
-  
-  return (
-    <div className="container mx-auto px-4 py-8">
-import React from "react",;
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { HireNowCTA } from "./HireNowCTA",;
-import { ProfileHero } from "./ProfileHero",;
-import { ProfileSkills } from "./ProfileSkills",;
-import { ProfileExperience } from "./ProfileExperience",;
-import { ProfileProjects } from "./ProfileProjects",;
-import { ProfileAvailability } from "./ProfileAvailability",;
-import { ProfileContact } from "./ProfileContact",;
-import { ProfileRatings } from "./ProfileRatings",;
-import { TalentProfile as TalentProfileType } from "@/types/talent",;
-import { useAuth } from "@/hooks/useAuth",;
-import { Availability } from "@/types/profile",;
-interface TalentProfileProps {;
-  profile: TalentProfileType,;
-  onRequestHire: () => void,;
-  onMessageTalent?: () => void;
-}
-;
-export function TalentProfile({;
-  profile,;
-  onRequestHire,;
-  onMessageTalent;
-}: TalentProfileProps) {;
-  const { isAuthenticated } = useAuth(),;
-  // Create proper availability object from talent profile;
-  const availability: Availability = {;
-    status: profile.availability_type === 'full_time' ? 'available' :;
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',;
-    message: `${profile.professional_title} with ${profile.years_experience} years of experience`;
-  },;
-  // Create proper skills array for ProfileSkills component;
-  const skillsArray = profile.skills?.map(skill => ({;
-    name: skill,;
-    level: 3 // Default level since we don't have this data;
-  })) || [],;
-  // Create proper projects array for ProfileProjects component;
-  const projectsArray = profile.key_projects?.map((proj, i) => ({;
-    id: `project-${i}`,;
-    title: proj.title,;
-    description: proj.description;
-    date: new Date().toISOString() // Default date since we don't have this data;
-  })) || [];
-  return (;
-    <div className="container mx-auto px-4 py-8">;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
         title={profile.professional_title}
-<<<<<<< HEAD
         avatar_url={profile.profile_picture_url}
         profile_type='talent';
         rating={profile.average_rating}
         review_count={profile.rating_count}      />;
-=======
-        avatarUrl={profile.profile_picture_url}
-        profileType="talent"
-        rating={profile.average_rating}
-        reviewCount={profile.rating_count}
-      />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Main content area */}
       <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mt - 8'>;
         {/* Left Column - Skills & Info */}

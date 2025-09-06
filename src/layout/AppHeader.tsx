@@ -1215,19 +1215,11 @@ import React from 'react';
               </div>;
 
               {/* Mobile Services */}
-<<<<<<< HEAD
               <div className="space-y-2">;
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">;
                   Services;
                 </div>;
                 {services && services.map((service) => (;
-=======
-              <div className="space-y-2">
-                <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  Services
-                </div>
-                {services.map((service) => (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Link
                     key={service.name}
                     to={service.href}

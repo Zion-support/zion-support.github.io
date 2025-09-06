@@ -1,22 +1,4 @@
 interface JobMatchCardProps {
-<<<<<<< HEAD
-=======
-import { useState } from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-  CardFooter,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
-import { format } from 'date-fns';
-import { JobMatch } from '@/types/jobs';
-interface JobMatchCardProps {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
@@ -30,20 +12,6 @@ export function JobMatchesCard(): any ({;
 }: JobMatchCardProps) {;
   const job = match && match.job;
 
-<<<<<<< HEAD
-=======
-
-  return (
-    <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
-      <CardHeader className='p-4 pb-2'>;
-        <div className='flex justify-between items-start'>;
-
-
-
-}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
@@ -165,10 +133,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             ${job.budget.min} - ${job.budget.max}
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -368,7 +332,3 @@ if (return null) {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

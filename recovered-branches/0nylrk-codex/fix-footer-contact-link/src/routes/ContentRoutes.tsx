@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Fragment } from "react",
 import { Route, Routes, Navigate } from "react-router-dom",
 import Home from "@/pages/Home",
@@ -49,25 +48,6 @@ import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
 const ContentRoutes = () => {;
   return (;
-=======
-import { Fragment } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
-import Careers from "@/pages/Careers";
-import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-const ContentRoutes = () => {
-=======
-const ContentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Content Routes */}
@@ -106,17 +86,10 @@ const ContentRoutes = () => {;
     </Routes>
   );
 };
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ContentRoutes;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from './react';
 import { Route, Routes, Navigate } from './react-router-dom';
 import Home from "@/pages / Home";
@@ -166,13 +139,6 @@ const ContentRoutes = () =>: any {
 
 
 export default ContentRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       ;
       {/* Help Center Routes */}
       <Route path="/help" element={<HelpCenterPage />} />;
@@ -260,7 +226,3 @@ export default ContentRoutes,; const ContentRoutes = () => {
 export default ContentRoutes;
 export default ContentRoutes;
 export default ContentRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

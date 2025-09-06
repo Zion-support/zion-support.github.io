@@ -147,7 +147,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Chatbot?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create an intelligent chatbot that enhances customer experience and reduces support workload.
+          Let&apos;s create an intelligent chatbot that enhances customer experience and reduces support workload.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

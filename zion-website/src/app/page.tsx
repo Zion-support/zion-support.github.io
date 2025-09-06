@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   LightBulbIcon
   CpuChipIcon
@@ -7,8 +6,6 @@ import {
   ChartBarIcon
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import { 
   LightBulbIcon,
@@ -18,7 +15,6 @@ import {
   ChartBarIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-<<<<<<< HEAD
 import React from 'react';
 
 
@@ -85,54 +81,6 @@ const solutions = [
 ];
 export default function HomePage() {
               Join the revolution that's reshaping industries worldwide.
-=======
-
-const features = [
-  {
-    name: 'AI-Powered Research',
-    description: 'Cutting-edge artificial intelligence that accelerates research and discovery across all domains.',
-    icon: LightBulbIcon,
-  },
-  {
-    name: 'Quantum Computing',
-    description: 'Next-generation quantum neural networks for solving complex computational problems.',
-    icon: CpuChipIcon,
-  },
-  {
-    name: 'Global Solutions',
-    description: 'Worldwide deployment of autonomous business operations and digital transformation.',
-    icon: GlobeAltIcon,
-  },
-  {
-    name: 'Security First',
-    description: 'Advanced cybersecurity and data protection for enterprise-grade applications.',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Analytics & Insights',
-    description: 'Real-time data analysis and predictive modeling for informed decision making.',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Team Collaboration',
-    description: 'Seamless integration tools for distributed teams and remote work environments.',
-    icon: UserGroupIcon,
-  },
-];
-
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-blue-600 to-purple-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Leading the future of AI, quantum computing, and autonomous business solutions
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
@@ -172,7 +120,6 @@ export default function HomePage() {
         </div>
       </div>
 
-<<<<<<< HEAD
               <span className="bg - gradient - to - r from - blue - 400 to - purple - 600 bg - clip - text text - transparent">;
                 AI & Technology;
               </span>;
@@ -288,18 +235,10 @@ export default function HomePage() {
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to transform your business?
-=======
-      {/* CTA Section */}
-      <div className="bg-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join thousands of companies already using our AI-powered solutions to drive innovation and growth.
           </p>
-<<<<<<< HEAD
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/contact"
@@ -383,20 +322,11 @@ export default function HomePage() {
             >
               Get Started
           </div>
-=======
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-            Contact Us Today
-          </button>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
   )
 }
 ;
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

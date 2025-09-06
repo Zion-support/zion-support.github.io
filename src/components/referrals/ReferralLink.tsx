@@ -166,7 +166,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               className="font-mono text-sm"
 
 
-<<<<<<< HEAD
           )}
         </div>;
       </CardContent>;
@@ -312,8 +311,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardFooter>
     </Card>
   )
-=======
-          )}
-        </div>
-      </CardContent>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -66,17 +66,10 @@ if (isLoading) {
 
 
   return (
-<<<<<<< HEAD
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
         <h1 className="text-2xl font-bold">Resume Builder</h1>;
         <div className="flex gap-4 flex-wrap items-center">;
-=======
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h1 className="text-2xl font-bold">Resume Builder</h1>
-        <div className="flex gap-4 flex-wrap items-center">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
 
 

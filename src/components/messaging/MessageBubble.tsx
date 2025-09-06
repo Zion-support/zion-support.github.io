@@ -1,19 +1,5 @@
-<<<<<<< HEAD
   message: Message
   isUserMessage: boolean
-=======
-import React from 'react';
-import { format } from 'date-fns';
-import { PaperclipIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
-
-interface MessageBubbleProps {
-  message: Message;
-  isUserMessage: boolean;
-}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
     <div
@@ -46,7 +32,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
-<<<<<<< HEAD
         </div>;
       </div>;
     </div>;
@@ -156,10 +141,3 @@ function MessageBubble() {
       </div>;
     </div>));
 }
-=======
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

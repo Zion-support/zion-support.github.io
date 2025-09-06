@@ -344,7 +344,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             </Tooltip>;
           </TooltipProvider>;
         </div>;
-<<<<<<< HEAD
 
         <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
         </p>;
@@ -353,8 +352,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   );
 };
 "        ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;

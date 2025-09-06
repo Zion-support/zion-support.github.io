@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -18,11 +17,3 @@ export * from './createOnboardingNotification',;
 export * from './createSystemNotification',;
 export * from './createTestNotification',;
 export * from './types';
-=======
-export * from "./createNotification";
-export * from "./createHireRequestNotifications";
-export * from "./createOnboardingNotification";
-export * from "./createSystemNotification";
-export * from "./createTestNotification";
-export * from "./types";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

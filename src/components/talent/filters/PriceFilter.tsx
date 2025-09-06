@@ -79,31 +79,18 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
-<<<<<<< HEAD
 import { Slider } from "@/components/ui/slider";
 import { PriceFilterProps } from "@/types/filters";
 export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
-=======
-import { Slider } from "@/components/ui/slider",;
-import { PriceFilterProps } from "@/types/filters",;
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0] || 0, values[1] || 500]);
   };
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-<<<<<<< HEAD
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
-=======
-      <button;
-        onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
-      >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <span>Hourly Rate</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
@@ -124,9 +111,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 
     </div>;
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 }
 
             className="mt-6"
@@ -157,7 +142,3 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 }
 
 ;
-=======
-};
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Index utility
 export const Index = () => {
   // Implementation here
@@ -23,13 +22,3 @@ export * from './useDeleteMilestone',;
 export * from './useUploadDeliverable',;
 export * from './useRecordActivity',;
 export * from './useMilestones';
-=======
-export * from "./types";
-export * from "./useLoadMilestones";
-export * from "./useCreateMilestone";
-export * from "./useUpdateMilestone";
-export * from "./useDeleteMilestone";
-export * from "./useUploadDeliverable";
-export * from "./useRecordActivity";
-export * from "./useMilestones";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-=======
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const mainNavLinks = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
@@ -24,13 +13,6 @@ const EnhancedNavigation: React.FC = () => {
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, ChevronDown } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const mainNavLinks = [{ "href": '/', "label": 'Home' },
   { "href": '/services', "label": 'Services' },
   { "href": '/products', "label": 'Products' },
@@ -64,26 +46,11 @@ const "EnhancedNavigation": React.FC = () => {
             </div>{' '}
           </Link>{' '}
           {}{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="hidden lg:flex items-center space-x-8">
             {' '}
             <Link
               href="/"
               className="text-gray-600 hover:text-blue-600 transition-colors"
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="hidden "lg": flex items-center space-x-8">
             {' '}
             <Link
@@ -96,11 +63,6 @@ const "EnhancedNavigation": React.FC = () => {
             <div className="relative group">
               {' '}
               <button
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="flex items-center text-gray-600 "hover": text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -116,77 +78,42 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/services/ai-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   AI Development
                 </Link>{' '}
                 <Link
                   href="/services/cloud-services"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Cloud Services
                 </Link>{' '}
                 <Link
                   href="/services/web-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Web Development
                 </Link>{' '}
                 <Link
                   href="/services/mobile-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Mobile Development
                 </Link>{' '}
                 <Link
                   href="/services/blockchain-solutions"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Blockchain Solutions
                 </Link>{' '}
                 <Link
                   href="/services/iot-platforms"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   IoT Platforms
                 </Link>{' '}
                 <Link
                   href="/services/cybersecurity"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Cybersecurity
@@ -197,11 +124,6 @@ const "EnhancedNavigation": React.FC = () => {
             <div className="relative group">
               {' '}
               <button
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="flex items-center text-gray-600 "hover": text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
@@ -217,55 +139,30 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/solutions/enterprise"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Enterprise Solutions
                 </Link>{' '}
                 <Link
                   href="/solutions/small-business"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Small Business
                 </Link>{' '}
                 <Link
                   href="/solutions/startups"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Startups
                 </Link>{' '}
                 <Link
                   href="/solutions/healthcare"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Healthcare
                 </Link>{' '}
                 <Link
                   href="/solutions/finance"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
                 >
                   Finance
@@ -274,92 +171,47 @@ const "EnhancedNavigation": React.FC = () => {
             </div>{' '}
             <Link
               href="/products"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Products
             </Link>{' '}
             <Link
               href="/solutions"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Solutions
             </Link>{' '}
             <Link
               href="/about"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               About
             </Link>{' '}
             <Link
               href="/blog"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Blog
             </Link>{' '}
             <Link
               href="/careers"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Careers
             </Link>{' '}
             <Link
               href="/contact"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               className="text-gray-600 "hover": text-blue-600 transition-colors"
             >
               Contact
             </Link>{' '}
           </div>{' '}
           {}{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="hidden lg:block">
             {' '}
             <Link
               href="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block"
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
           <div className="hidden "lg": block">
             {' '}
             <Link
@@ -371,11 +223,6 @@ const "EnhancedNavigation": React.FC = () => {
           </div>{' '}
           {}{' '}
           <button
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
             className=""lg": hidden text-gray-600 hover:text-gray-900"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -389,22 +236,12 @@ const "EnhancedNavigation": React.FC = () => {
         </div>{' '}
         {}{' '}
         {isOpen && (
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
           <div className=""lg": hidden border-t border-gray-200 py-4">
             {' '}
             <div className="space-y-2">
               {' '}
               <Link
                 href="/"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Home
@@ -418,77 +255,42 @@ const "EnhancedNavigation": React.FC = () => {
                   {' '}
                   <Link
                     href="/services/ai-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     AI Development
                   </Link>{' '}
                   <Link
                     href="/services/cloud-services"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Cloud Services
                   </Link>{' '}
                   <Link
                     href="/services/web-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Web Development
                   </Link>{' '}
                   <Link
                     href="/services/mobile-development"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Mobile Development
                   </Link>{' '}
                   <Link
                     href="/services/blockchain-solutions"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Blockchain Solutions
                   </Link>{' '}
                   <Link
                     href="/services/iot-platforms"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     IoT Platforms
                   </Link>{' '}
                   <Link
                     href="/services/cybersecurity"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Cybersecurity
@@ -504,55 +306,30 @@ const "EnhancedNavigation": React.FC = () => {
                   {' '}
                   <Link
                     href="/solutions/enterprise"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Enterprise Solutions
                   </Link>{' '}
                   <Link
                     href="/solutions/small-business"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Small Business
                   </Link>{' '}
                   <Link
                     href="/solutions/startups"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Startups
                   </Link>{' '}
                   <Link
                     href="/solutions/healthcare"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Healthcare
                   </Link>{' '}
                   <Link
                     href="/solutions/finance"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                     className="block py-1 text-gray-500 "hover": text-blue-600"
                   >
                     Finance
@@ -561,55 +338,30 @@ const "EnhancedNavigation": React.FC = () => {
               </div>{' '}
               <Link
                 href="/products"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Products
               </Link>{' '}
               <Link
                 href="/about"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 About
               </Link>{' '}
               <Link
                 href="/blog"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Blog
               </Link>{' '}
               <Link
                 href="/careers"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Careers
               </Link>{' '}
               <Link
                 href="/contact"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                 className="block py-2 text-gray-600 "hover": text-blue-600"
               >
                 Contact
@@ -618,11 +370,6 @@ const "EnhancedNavigation": React.FC = () => {
                 {' '}
                 <Link
                   href="/contact"
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
                   className="bg-blue-600 "hover": bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center"
                 >
                   Get Started
@@ -636,17 +383,5 @@ const "EnhancedNavigation": React.FC = () => {
   );
 };
 export default EnhancedNavigation;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import React,{ useState } from 'react'; import Link from 'next/link'; import { Menu,X,ChevronDown } from 'lucide-react'; const mainNavLinks = [ { href: '/',label: 'Home' },{ href: '/services',label: 'Services' },{ href: '/products',label: 'Products' },{ href: '/blog',label: 'Blog' },{ href: '/about',label: 'About' },{ href: '/contact',label: 'Contact' },]; const EnhancedNavigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [servicesOpen,setServicesOpen] = useState(false); const [solutionsOpen,setSolutionsOpen] = useState(false); return ( <nav className="bg-white shadow-lg sticky top-0 z-50"> {' '} <div className="container mx-auto px-4"> {' '} <div className="flex justify-between items-center py-4"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="flex items-center space-x-2"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"> {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="text-xl font-bold text-gray-800"> {' '} Zion Tech Group{' '} </div>{' '} </div>{' '} </Link>{' '} {}{' '} <div className="hidden lg:flex items-center space-x-8"> {' '} <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Home{' '} </Link>{' '} {}{' '} <div className="relative group"> {' '} <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} > {' '} Services <ChevronDown className="ml-1 w-4 h-4" />{' '} </button>{' '} <div className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`} onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} > {' '} <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} AI Development{' '} </Link>{' '} <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Cloud Services{' '} </Link>{' '} <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Web Development{' '} </Link>{' '} <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Mobile Development{' '} </Link>{' '} <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Blockchain Solutions{' '} </Link>{' '} <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} IoT Platforms{' '} </Link>{' '} <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Cybersecurity{' '} </Link>{' '} </div>{' '} </div>{' '} {}{' '} <div className="relative group"> {' '} <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)} > {' '} Solutions <ChevronDown className="ml-1 w-4 h-4" />{' '} </button>{' '} <div className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`} onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)} > {' '} <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Enterprise Solutions{' '} </Link>{' '} <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Small Business{' '} </Link>{' '} <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Startups{' '} </Link>{' '} <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Healthcare{' '} </Link>{' '} <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Finance{' '} </Link>{' '} </div>{' '} </div>{' '} <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Products{' '} </Link>{' '} <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Solutions{' '} </Link>{' '} <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} About{' '} </Link>{' '} <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Blog{' '} </Link>{' '} <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Careers{' '} </Link>{' '} <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Contact{' '} </Link>{' '} </div>{' '} {}{' '} <div className="hidden lg:block"> {' '} <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button className="lg:hidden text-gray-600 hover:text-gray-900" onClick={() => setIsOpen(!isOpen)} > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="lg:hidden border-t border-gray-200 py-4"> {' '} <div className="space-y-2"> {' '} <Link href="/" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Home{' '} </Link>{' '} <div className="py-2"> {' '} <div className="text-gray-600 font-semibold mb-2"> {' '} Services{' '} </div>{' '} <div className="pl-4 space-y-2"> {' '} <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} AI Development{' '} </Link>{' '} <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Cloud Services{' '} </Link>{' '} <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Web Development{' '} </Link>{' '} <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Mobile Development{' '} </Link>{' '} <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Blockchain Solutions{' '} </Link>{' '} <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} IoT Platforms{' '} </Link>{' '} <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Cybersecurity{' '} </Link>{' '} </div>{' '} </div>{' '} <div className="py-2"> {' '} <div className="text-gray-600 font-semibold mb-2"> {' '} Solutions{' '} </div>{' '} <div className="pl-4 space-y-2"> {' '} <Link href="/solutions/enterprise" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Enterprise Solutions{' '} </Link>{' '} <Link href="/solutions/small-business" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Small Business{' '} </Link>{' '} <Link href="/solutions/startups" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Startups{' '} </Link>{' '} <Link href="/solutions/healthcare" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Healthcare{' '} </Link>{' '} <Link href="/solutions/finance" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Finance{' '} </Link>{' '} </div>{' '} </div>{' '} <Link href="/products" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Products{' '} </Link>{' '} <Link href="/about" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} About{' '} </Link>{' '} <Link href="/blog" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Blog{' '} </Link>{' '} <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Careers{' '} </Link>{' '} <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Contact{' '} </Link>{' '} <div className="pt-4"> {' '} <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center" > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default EnhancedNavigation;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import React,{ useState } from 'react'; import Link from 'next/link'; import { Menu,X,ChevronDown } from 'lucide-react'; const mainNavLinks = [ { href: '/',label: 'Home' },{ href: '/services',label: 'Services' },{ href: '/products',label: 'Products' },{ href: '/blog',label: 'Blog' },{ href: '/about',label: 'About' },{ href: '/contact',label: 'Contact' },]; const EnhancedNavigation: React.FC = () => { const [isOpen,setIsOpen] = useState(false); const [servicesOpen,setServicesOpen] = useState(false); const [solutionsOpen,setSolutionsOpen] = useState(false); return ( <nav className="bg-white shadow-lg sticky top-0 z-50"> {' '} <div className="container mx-auto px-4"> {' '} <div className="flex justify-between items-center py-4"> {' '} {}{' '} <Link href="/" className="flex items-center space-x-2"> {' '} <div className="flex items-center space-x-2"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center"> {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="text-xl font-bold text-gray-800"> {' '} Zion Tech Group{' '} </div>{' '} </div>{' '} </Link>{' '} {}{' '} <div className="hidden lg:flex items-center space-x-8"> {' '} <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Home{' '} </Link>{' '} {}{' '} <div className="relative group"> {' '} <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} > {' '} Services <ChevronDown className="ml-1 w-4 h-4" />{' '} </button>{' '} <div className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`} onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} > {' '} <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} AI Development{' '} </Link>{' '} <Link href="/services/cloud-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Cloud Services{' '} </Link>{' '} <Link href="/services/web-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Web Development{' '} </Link>{' '} <Link href="/services/mobile-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Mobile Development{' '} </Link>{' '} <Link href="/services/blockchain-solutions" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Blockchain Solutions{' '} </Link>{' '} <Link href="/services/iot-platforms" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} IoT Platforms{' '} </Link>{' '} <Link href="/services/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Cybersecurity{' '} </Link>{' '} </div>{' '} </div>{' '} {}{' '} <div className="relative group"> {' '} <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors" onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)} > {' '} Solutions <ChevronDown className="ml-1 w-4 h-4" />{' '} </button>{' '} <div className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`} onMouseEnter={() => setSolutionsOpen(true)} onMouseLeave={() => setSolutionsOpen(false)} > {' '} <Link href="/solutions/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Enterprise Solutions{' '} </Link>{' '} <Link href="/solutions/small-business" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Small Business{' '} </Link>{' '} <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Startups{' '} </Link>{' '} <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Healthcare{' '} </Link>{' '} <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600" > {' '} Finance{' '} </Link>{' '} </div>{' '} </div>{' '} <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Products{' '} </Link>{' '} <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Solutions{' '} </Link>{' '} <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} About{' '} </Link>{' '} <Link href="/blog" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Blog{' '} </Link>{' '} <Link href="/careers" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Careers{' '} </Link>{' '} <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors" > {' '} Contact{' '} </Link>{' '} </div>{' '} {}{' '} <div className="hidden lg:block"> {' '} <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block" > {' '} Get Started{' '} </Link>{' '} </div>{' '} {}{' '} <button className="lg:hidden text-gray-600 hover:text-gray-900" onClick={() => setIsOpen(!isOpen)} > {' '} {isOpen ? ( <X className="w-6 h-6" /> ) : ( <Menu className="w-6 h-6" /> )}{' '} </button>{' '} </div>{' '} {}{' '} {isOpen && ( <div className="lg:hidden border-t border-gray-200 py-4"> {' '} <div className="space-y-2"> {' '} <Link href="/" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Home{' '} </Link>{' '} <div className="py-2"> {' '} <div className="text-gray-600 font-semibold mb-2"> {' '} Services{' '} </div>{' '} <div className="pl-4 space-y-2"> {' '} <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} AI Development{' '} </Link>{' '} <Link href="/services/cloud-services" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Cloud Services{' '} </Link>{' '} <Link href="/services/web-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Web Development{' '} </Link>{' '} <Link href="/services/mobile-development" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Mobile Development{' '} </Link>{' '} <Link href="/services/blockchain-solutions" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Blockchain Solutions{' '} </Link>{' '} <Link href="/services/iot-platforms" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} IoT Platforms{' '} </Link>{' '} <Link href="/services/cybersecurity" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Cybersecurity{' '} </Link>{' '} </div>{' '} </div>{' '} <div className="py-2"> {' '} <div className="text-gray-600 font-semibold mb-2"> {' '} Solutions{' '} </div>{' '} <div className="pl-4 space-y-2"> {' '} <Link href="/solutions/enterprise" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Enterprise Solutions{' '} </Link>{' '} <Link href="/solutions/small-business" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Small Business{' '} </Link>{' '} <Link href="/solutions/startups" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Startups{' '} </Link>{' '} <Link href="/solutions/healthcare" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Healthcare{' '} </Link>{' '} <Link href="/solutions/finance" className="block py-1 text-gray-500 hover:text-blue-600" > {' '} Finance{' '} </Link>{' '} </div>{' '} </div>{' '} <Link href="/products" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Products{' '} </Link>{' '} <Link href="/about" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} About{' '} </Link>{' '} <Link href="/blog" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Blog{' '} </Link>{' '} <Link href="/careers" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Careers{' '} </Link>{' '} <Link href="/contact" className="block py-2 text-gray-600 hover:text-blue-600" > {' '} Contact{' '} </Link>{' '} <div className="pt-4"> {' '} <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors cursor-pointer inline-block w-full text-center" > {' '} Get Started{' '} </Link>{' '} </div>{' '} </div>{' '} </div> )}{' '} </div>{' '} </nav> )}; export default EnhancedNavigation;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

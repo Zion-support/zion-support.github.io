@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 };
 };
   return (;
@@ -20,9 +19,6 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 };
 };
-=======
-import React from "react";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 class ErrorBoundary extends React.Component {
@@ -58,13 +54,7 @@ interface HTMLElement {;
   textContent: string | null;
   style: { [key: string]: string }
 }
-<<<<<<< HEAD
   tagName: 'A';
-=======
-
-interface HTMLAnchorElement extends HTMLElement {
-  tagName: "A";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   href: string;
   target: string;
 }
@@ -84,7 +74,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 };
 }
-<<<<<<< HEAD
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
 };
@@ -132,20 +121,6 @@ function resolveHref("href": Href): string {
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
 
-=======
-function resolveHref(href: Href): string {
-  if (typeof href === "string") return href;
-  return href?.pathname || (href as { href?: string })?.href || "#";
-}
-
-export default function Link({
-  href,
-  children,
-  className,
-  ...rest
-}: LinkProps) {
-  const resolved = resolveHref(href);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
@@ -159,7 +134,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       .filter(Boolean)
       .join(" ");
 
-<<<<<<< HEAD
 export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
   const resolved = resolveHref(href);
 
@@ -247,16 +221,6 @@ function Link() {
       class_name: mergedClassName,
       ...rest,
     });
-=======
-    return React.cloneElement(
-      children as React.ReactElement<{ href?: string; className?: string }>,
-      {
-        href: resolved,
-        className: mergedClassName,
-        ...rest,
-      },
-    );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return (
     <a href={resolved} className={class_name} {...rest}>;

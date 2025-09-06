@@ -117,7 +117,6 @@ if ( {) {
           })) }
   }
 export function PrimaryNav() {;
-<<<<<<< HEAD
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const { user } = useAuth();
@@ -149,36 +148,6 @@ export function PrimaryNav() {;
           });
         );    }
   };
-=======
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
-  const [loginOpen, setLoginOpen] = useState(false),;
-  const { user } = useAuth(),;
-  const isLoggedIn = !!user,;
-  const isMobile = useIsMobile(),;
-  const { t } = useTranslation(),;
-  const router = useRouter(),;
-  const [query, setQuery] = useState(''),;
-  const suggestions = generateSearchSuggestions(),;
-  let unreadCount = 0,;
-  try {;
-    const messaging = useMessaging(),;
-    unreadCount = messaging.unreadCount;
-  } catch {;
-    // context not available;
-  }
-;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    const trimmed = query.trim(),;
-    if (trimmed) {;
-      logDebug('PrimaryNav search submit:', { query: trimmed }),;
-      router;
-        .push(`/search?q=${encodeURIComponent(trimmed)}`);
-        .then(() => setQuery(''));
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }));
-    }
-  },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
         data-testid='header'>;
@@ -215,18 +184,12 @@ export function PrimaryNav() {;
           
 
           {/* Actions container with responsive layout */}
-<<<<<<< HEAD
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
             {/* Search form with clamped width */}
             <form
               onSubmit={handleSubmit}
               className='flex-shrink-0'
               style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>;
-=======
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -296,7 +259,6 @@ if ( {) {
                   if (sugg.id) {;
 
                     // Product listings with IDs go to product detail page;
-<<<<<<< HEAD
                     router && router.push(`/marketplace/listing/${sugg && sugg.id}`);
                   } else if (;
                     sugg && sugg.type === 'doc' &&;
@@ -314,20 +276,6 @@ if ( {) {
                   }
                   setQuery('');
 
-=======
-                    router.push(`/marketplace/listing/${sugg.id}`);
-                  } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
-                    // Documentation suggestions navigate directly to their path;
-                    router.push(sugg.slug);
-                  } else if (sugg.type === 'blog' && sugg.slug) {;
-                    // Blog posts navigate to blog detail page;
-                    router.push(`/blog/${sugg.slug}`);
-                  } else {;
-                    // Default: search results page with query parameter;
-                    router.push(`/search?q=${encodeURIComponent(sugg.text)}`);
-                  }
-                  setQuery(''),;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {;
                     window && window.gtag('event', 'search_suggestion_click', {;
@@ -485,20 +433,11 @@ if ( {) {
                     {t('auth && auth.login')}
                   </Link>;
                   <Link
-<<<<<<< HEAD
                     href='/signup'
                     className='text-sm hover:text-primary whitespace-nowrap'>;
                     {t('auth && auth.signup')}
                   </Link>;
                 </>;
-=======
-                    href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
-                  >
-                    {t('auth.signup')}
-                  </Link>
-                </>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
               {isLoggedIn && <UserMenu />}
 
@@ -614,19 +553,11 @@ if ( {) {
             ) : (
               <Menu className="h-6 w-6" />
             )}
-<<<<<<< HEAD
           </button>;
         </div>;
       </header>;
       {mobileMenuOpen && (;
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
-=======
-          </button>
-        </div>
-      </header>
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -786,7 +717,6 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-<<<<<<< HEAD
   unreadCount
 
   unreadCount 
@@ -953,5 +883,3 @@ setLoginOpen (true);
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

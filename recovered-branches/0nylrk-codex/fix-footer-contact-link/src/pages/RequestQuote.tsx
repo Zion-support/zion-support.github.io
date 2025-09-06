@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { Footer } from "@/components/Footer",
 import { QuoteRequestForm } from "@/components/QuoteRequestForm",
-=======
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function RequestQuote() {
   return (
     <>
@@ -18,7 +12,6 @@ export default function RequestQuote() {
       </div>
       <Footer />
     </>
-<<<<<<< HEAD
   )
 
 import {Header} from "@/components/Header";
@@ -39,14 +32,8 @@ export default function RequestQuote() {;
       </div>;
       <Footer />;
     </>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -64,17 +51,6 @@ function RequestQuote() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 
@@ -84,7 +60,3 @@ function RequestQuote() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

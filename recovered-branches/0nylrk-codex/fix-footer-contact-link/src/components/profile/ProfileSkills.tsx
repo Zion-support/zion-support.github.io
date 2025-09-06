@@ -1,17 +1,9 @@
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
-=======
-import { Badge } from "@/components/ui/badge";
-import { ProfileSkill } from "@/types/profile";
-interface ProfileSkillsProps {
-  skills: ProfileSkill[];
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface ProfileSkillsProps {
   skills: ProfileSkill[];
@@ -32,13 +24,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
                 </span>
               )}
             </div>
-<<<<<<< HEAD
-=======
-
-            <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
-              <div
-                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
             </div>
@@ -46,7 +31,6 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
   )
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";
@@ -84,8 +68,6 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 export /**
@@ -115,12 +97,6 @@ function ProfileSkills() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile",;
@@ -178,7 +154,3 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {;
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

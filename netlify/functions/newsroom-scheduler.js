@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 function runNode(relPath, args = []) {
@@ -49,9 +41,6 @@ exports && exports.handler = async () => {
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -74,18 +63,8 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -156,15 +135,6 @@ exports.handler = async () => {
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';
@@ -204,13 +174,3 @@ exports.config = { schedule: '0 * * * *';
   step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs';
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

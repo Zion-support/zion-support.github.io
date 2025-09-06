@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
-=======
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { GradientHeading } from "@/components/GradientHeading";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function Featured() {
   return (
     <>
@@ -30,7 +23,6 @@ export default function Featured() {
               Marketplace has to offer.
             </p>
           </div>
-<<<<<<< HEAD
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { FeaturedListingsSection } from '@/components / FeaturedListingsSection';
@@ -55,9 +47,6 @@ function Featured() {
           </div>;
 
 
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
@@ -69,11 +58,6 @@ function Featured() {
 }
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
   ),;}
  export default function Featured () {
@@ -86,9 +70,6 @@ function Featured() {
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection show_title={false} />;
         </div>;
@@ -96,7 +77,3 @@ function Featured() {
       <Footer />;
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

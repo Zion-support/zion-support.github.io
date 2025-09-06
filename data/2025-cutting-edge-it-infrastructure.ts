@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -36,154 +28,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    website: string;
-  }
-
-        'Quantum-resistant encryption algorithms',
-        'Zero-trust security architecture',
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-;
-export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =;
-  [;
-    // Quantum - Secure Cloud Infrastructure;
-    {
-      id: 'quantum - secure - cloud - infrastructure',
-      name: 'Quantum - Secure Cloud Infrastructure Platform',
-      tagline:;
-        'Next - generation cloud infrastructure with quantum encryption and zero - trust security',
-      price: '$4, 999',
-      period: '/month',
-      description:;
-        'Revolutionary cloud infrastructure platform featuring quantum - resistant encryption, zero - trust architecture, and autonomous security management for enterprise - grade applications.',
-      features: [;
-        'Quantum - resistant encryption algorithms',
-        'Zero - trust security architecture',
-
-        'Autonomous security management',
-        'Multi - cloud orchestration',
-        'Real - time threat detection',
-        'Compliance automation (SOC2, ISO27001)',
-        'AI - powered resource optimization',
-        'Global edge computing network',
-
-=======
-        '99.999% uptime guarantee',
-        '24 / 7 security monitoring',
-      ],
-      popular: true,
-      icon: '☁️',
-      color: 'from - blue - 600 to - indigo - 600',
-      text_color: 'text - blue - 400',
-      link: 'https://ziontechgroup.com / quantum - secure - cloud',
-      market_position:;
-        'Competes with AWS Enterprise ($50, 000+/month), Azure Enterprise ($40, 000+/month). Our advantage: Quantum security with 60% lower costs and autonomous management.',
-      target_audience:;
-        'Fortune 500 companies, Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
-      trial_days: 60,
-      setup_time: '4 - 8 weeks',
-      category: 'Cloud Infrastructure & Security',
-      real_service: true,
-      technology: [;
-        'Kubernetes, Docker, Terraform, Ansible, Python, Go, Rust, Quantum APIs',
-      ],
-      integrations: ['AWS, Azure, GCP, VMware, OpenStack, Kubernetes, Docker'],
-      use_cases: [;
-
-        'Enterprise applications, Government systems, Financial platforms, Healthcare systems, Defense applications',
-      ],
-      roi: 'Enterprises report 800% ROI through reduced security incidents and operational costs.',
-      competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],
-
-      market_size: '$397.4B cloud computing market',
-      growth_rate: '23% annual growth',
-      variant: 'quantum - cloud - enterprise',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Enterprise - grade cloud platform with quantum - resistant encryption, zero - trust architecture, and autonomous security management.',
-      launch_date: '2025 - 01 - 10',
-      customers: 8,
-      rating: 4 && 4.9,
-      reviews: 5,
-    },
-
-=======
-    // Edge Computing Orchestration Platform;
-    {
-      id: 'edge - computing - orchestration - platform',
-      name: 'Edge Computing Orchestration Platform',
-      tagline:;
-        'Intelligent edge computing management with AI - powered optimization and global distribution',
-      price: '$2, 999',
-      period: '/month',
-      description:;
-        'Advanced edge computing platform that orchestrates distributed computing resources across global edge locations with AI - powered optimization and real - time performance monitoring.',
-      features: [;
-
-        'Global edge computing network',
-        'AI - powered resource optimization',
-        'Real - time performance monitoring',
-        'Automatic load balancing',
-        'Edge - to - cloud synchronization',
-        'Latency optimization algorithms',
-        'Multi - region deployment',
-        'Edge security management',
-        'Cost optimization analytics',
-        'API for edge application development',
-      ],
-      popular: true,
-      icon: '🌐',
-
-        'Content delivery, IoT applications, Gaming platforms, Video streaming, E-commerce optimization',
-      ],
-      roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
-      competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
-      marketSize: '$67 && 67.8B edge computing market',
-      growthRate: '37% annual growth',
-      variant: 'edge-computing-enterprise',
-      contactInfo: {
-      color: 'from - green - 600 to - teal - 600',
-      text_color: 'text - green - 400',
-      link: 'https://ziontechgroup.com / edge - computing - orchestration',
-      market_position:;
-        'Competes with AWS CloudFront ($0.085 / GB), Cloudflare ($20 / month). Our advantage: AI optimization with 40% better performance and global edge distribution.',
-      target_audience:;
-        'Content delivery networks, IoT platforms, Gaming companies, Video streaming services, E - commerce platforms',
-      trial_days: 30,
-      setup_time: '2 - 4 weeks',
-      category: 'Edge Computing & CDN',
-      real_service: true,
-      technology: ['Kubernetes, Docker, Python, Go, Rust, AI / ML, Edge APIs'],
-      integrations: [;
-        'AWS, Azure, GCP, Cloudflare, Fastly, Akamai, CDN providers',
-      ],
-      use_cases: [;
-        'Content delivery, IoT applications, Gaming platforms, Video streaming, E - commerce optimization',
-      ],
-      roi: 'Companies report 500% ROI through improved performance and reduced bandwidth costs.',
-      competitors: ['AWS CloudFront, Cloudflare, Fastly, Akamai'],
-      market_size: '$67.8B edge computing market',
-      growth_rate: '37% annual growth',
-      variant: 'edge - computing - enterprise',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -197,75 +41,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.8,
       reviews: 18,
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-        'AI-powered code review and testing',
-    // Autonomous DevOps Platform;
-    {
-      id: 'autonomous - devops - platform',
-      name: 'Autonomous DevOps Platform',
-      tagline:;
-        'Self - managing DevOps with AI - powered automation and intelligent deployment optimization',
-      price: '$1, 999',
-      period: '/month',
-      description:;
-        'Revolutionary DevOps platform that autonomously manages software development, testing, deployment, and operations using advanced AI and machine learning algorithms.',
-      features: [;
-        'AI - powered code review and testing',
-
-        'Autonomous deployment optimization',
-        'Intelligent monitoring and alerting',
-        'Automated incident response',
-        'Performance optimization algorithms',
-        'Security vulnerability scanning',
-        'Cost optimization analytics',
-        'Multi - environment management',
-        'GitOps workflow automation',
-        'Real - time collaboration tools',
-      ],
-      popular: true,
-      icon: '⚡',
-
-        'Software development, CI/CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
-      ],
-      roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
-      competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-      marketSize: '$8 && 8.2B DevOps market',
-      growthRate: '24% annual growth',
-      variant: 'autonomous-devops-enterprise',
-      contactInfo: {
-      color: 'from - purple - 600 to - pink - 600',
-      text_color: 'text - purple - 400',
-      link: 'https://ziontechgroup.com / autonomous - devops',
-      market_position:;
-        'Competes with GitLab ($99 / user / month), GitHub Enterprise ($21 / user / month). Our advantage: AI automation reduces manual DevOps work by 80% and improves deployment success rates.',
-      target_audience:;
-        'Software development teams, DevOps engineers, IT operations teams, Startups, Enterprise development teams',
-      trial_days: 30,
-      setup_time: '1 - 2 weeks',
-      category: 'DevOps & Automation',
-      real_service: true,
-      technology: [;
-        'Kubernetes, Docker, Jenkins, GitLab CI, Python, Go, AI / ML, Terraform',
-      ],
-      integrations: [;
-        'GitHub, GitLab, Bitbucket, AWS, Azure, GCP, Kubernetes, Docker',
-      ],
-      use_cases: [;
-        'Software development, CI / CD pipelines, Infrastructure automation, Monitoring and alerting, Security automation',
-      ],
-      roi: 'Development teams report 600% ROI through faster deployments and reduced operational overhead.',
-      competitors: ['GitLab, GitHub Enterprise, Azure DevOps, Jenkins'],
-      market_size: '$8.2B DevOps market',
-      growth_rate: '24% annual growth',
-      variant: 'autonomous - devops - enterprise',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -279,75 +54,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.7,
       reviews: 25,
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    // Blockchain Infrastructure Platform;
-    {
-      id: 'blockchain - infrastructure - platform',
-      name: 'Enterprise Blockchain Infrastructure Platform',
-      tagline:;
-        'Scalable blockchain infrastructure with AI - powered consensus and smart contract automation',
-      price: '$3, 499',
-      period: '/month',
-      description:;
-        'Enterprise - grade blockchain platform featuring scalable infrastructure, AI - powered consensus mechanisms, and automated smart contract management for business applications.',
-      features: [;
-
-        'Scalable blockchain infrastructure',
-        'AI - powered consensus algorithms',
-        'Smart contract automation',
-        'Enterprise - grade security',
-        'Multi - chain interoperability',
-        'Real - time transaction monitoring',
-        'Compliance and audit tools',
-        'API for business integration',
-        'Performance analytics dashboard',
-        '24 / 7 blockchain monitoring',
-      ],
-      popular: true,
-      icon: '🔗',
-
-        'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
-      ],
-      marketSize: '$19 && 19.9B blockchain market',
-      growthRate: '87% annual growth',
-      variant: 'blockchain-enterprise',
-      contactInfo: {
-      color: 'from - orange - 600 to - red - 600',
-      text_color: 'text - orange - 400',
-      link: 'https://ziontechgroup.com / blockchain - infrastructure',
-      market_position:;
-        'Competes with IBM Blockchain Platform ($10, 000 / month), AWS Managed Blockchain ($0.30 / hour). Our advantage: AI - powered consensus with 50% better performance and lower costs.',
-      target_audience:;
-        'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Real estate companies',
-      trial_days: 45,
-      setup_time: '3 - 6 weeks',
-      category: 'Blockchain & Distributed Systems',
-      real_service: true,
-      technology: [;
-        'Hyperledger Fabric, Ethereum, Solidity, Python, Go, AI / ML, Kubernetes',
-      ],
-      integrations: [;
-        'AWS, Azure, GCP, IBM Cloud, Oracle Cloud, SAP, Salesforce',
-      ],
-      use_cases: [;
-        'Supply chain tracking, Financial transactions, Digital identity, Asset tokenization, Smart contracts',
-      ],
-      roi: 'Organizations report 700% ROI through improved transparency and reduced transaction costs.',
-      competitors: [;
-        'IBM Blockchain Platform, AWS Managed Blockchain, Azure Blockchain Service',
-      ],
-      market_size: '$19.9B blockchain market',
-      growth_rate: '87% annual growth',
-      variant: 'blockchain - enterprise',
-      contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -361,17 +67,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       rating: 4 && 4.8,
       reviews: 12,
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    // Quantum Networking Platform;
-    {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: 'quantum - networking - platform',
       name: 'Quantum Networking Platform',
       tagline:;
@@ -394,56 +89,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
         '24 / 7 network monitoring',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      icon: '🌌',
-
-=======
-      color: 'from - indigo - 600 to - purple - 600',
-      text_color: 'text - indigo - 400',
-      link: 'https://ziontechgroup.com / quantum - networking',
-      market_position:;
-        'Competes with Cisco ($100, 000+/year), Juniper ($80, 000+/year). Our advantage: Quantum security with 70% better performance and autonomous management.',
-      target_audience:;
-        'Government agencies, Defense contractors, Financial institutions, Healthcare organizations, Research institutions',
-      trial_days: 90,
-      setup_time: '6 - 12 weeks',
-      category: 'Quantum Networking & Security',
-      real_service: true,
-      technology: [;
-        'Quantum APIs, Python, Go, Rust, AI / ML, Network protocols, Quantum hardware',
-      ],
-      integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'],
-      use_cases: [;
-
-        'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks',
-      ],
-      roi: 'Organizations report 1000% ROI through improved security and network performance.',
-      competitors: ['Cisco, Juniper, Arista, Huawei'],
-
-      market_size: '$25.3B quantum computing market',
-      growth_rate: '32% annual growth',
-      variant: 'quantum - networking - enterprise',
-      contact_info: {
-
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup && ziontechgroup.com',
-      },
-      real_implementation: true,
-      implementation_details:;
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
-      launch_date: '2025 - 02 - 01',
-=======
-
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
-      launchDate: '2025-02-01',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
@@ -451,13 +96,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     },;
   ];    features: [
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -493,10 +131,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     features: [
       'Quantum-resistant encryption algorithmsZero-trust security architectureAutonomous security managementMulti-cloud orchestrationReal-time threat detectionCompliance automation (SOC2, ISO27001)AI-powered resource optimizationGlobal edge computing network';
       '99.999% uptime guarantee24/7 security monitoring'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: 'quantum-networking-platform'
       name: 'Quantum Networking Platform'
       tagline:
@@ -535,44 +169,9 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       ]
       integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes']
       useCases: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-        'Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'
-      ]
-      roi: 'Organizations report 1000% ROI through improved security and network performance.'
-      competitors: ['Cisco, Juniper, Arista, Huawei']
-      marketSize: '$25.3B quantum computing market'
-      growthRate: '32% annual growth'
-      variant: 'quantum-networking-enterprise'
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-        website: 'https://ziontechgroup.com'
-      }
-      realImplementation: true
-      implementationDetails:
-<<<<<<< HEAD
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.'
-      launchDate: '2025-02-01'
-      customers: 6
-      rating: 4.9
-      reviews: 4
-    }
-=======
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
-      launchDate: '2025-02-01',
-      customers: 6,
-      rating: 4.9,
-      reviews: 4,
-    },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration';
       'Performance analytics24/7 network monitoring'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '☁️',
     color: 'from-blue-600 to-indigo-600', textColor: 'text-blue-400',
@@ -609,36 +208,15 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     variant: 'quantum - networking - enterprise',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    popular: true, icon: '🌌',
-    color: 'from-indigo-600 to-purple-600', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-networking',
-    marketPosition: 'Competes with Cisco ($100,000+/year), Juniper ($80,000+/year). Our advantage: Quantum security with 70% better performance and autonomous management.',
-    targetAudience: 'Government agencies, Defense contractors, Financial institutions, Healthcare organizations, Research institutions',
-    trialDays: 90, setupTime: '6-12 weeks',
-    category: 'Quantum Networking & Security', realService: true,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     technology: ['Quantum APIs, Python, Go, Rust, AI/ML, Network protocols, Quantum hardware'];
     integrations: ['Cisco, Juniper, Arista, VMware, OpenStack, Kubernetes'];
     useCases: ['Government communications, Defense networks, Financial trading, Healthcare systems, Research networks'];
     roi: 'Organizations report 1000% ROI through improved security and network performance.'
     competitors: ['Cisco, Juniper, Arista, Huawei'];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -900,47 +478,18 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     launchDate: '2025-02-01',;
     customers: 6,;
     rating: 4.9;
-<<<<<<< HEAD
-=======
-=======
-
-    marketSize: '$25 && 25.3B quantum computing market', growthRate: '32% annual growth',
-    variant: 'quantum-networking-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.',
-    launchDate: '2025-02-01', customers: 6,
-    rating: 4 && 4.9,
-
-    reviews: 4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     real_implementation: true,
     implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
     launch_date: '2025 - 02 - 01', customers: 6,
     rating: 4.9,
     reviews: 4;
-<<<<<<< HEAD
 ];
-=======
-<<<<<<< HEAD
-];
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -1204,26 +753,13 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.9;
     reviews: 4;
 ];
-<<<<<<< HEAD
   }
 ];
-=======
-  }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -1265,7 +801,6 @@ export interface CuttingEdgeITInfrastructureService {;
   rating: number,;
   reviews: number;
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
   // Quantum-Secure Cloud Infrastructure;
@@ -1487,12 +1022,5 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     customers: 6,;
     rating: 4.9;
     reviews: 4;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

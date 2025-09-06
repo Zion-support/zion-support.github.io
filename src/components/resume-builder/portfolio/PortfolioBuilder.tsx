@@ -163,34 +163,20 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-<<<<<<< HEAD
             </h2>
             
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
-=======
-            </h2>;
-            <ProjectForm;
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-<<<<<<< HEAD
             />
           </CardContent>
         </Card>
-=======
-            />;
-          </CardContent>;
-        </Card>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       )}
 
       

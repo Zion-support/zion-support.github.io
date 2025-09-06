@@ -303,17 +303,10 @@ interface BrowseFiltersProps {
 
 
                   <Label>Salary Range</Label>
-<<<<<<< HEAD
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
                     <span>to</span>
                     <Input placeholder='Max' type='number' className='w-full' />
-=======
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   </div>
                 </div>
 

@@ -112,15 +112,9 @@ function MobileConversationList() {
               activeConversation === conversation && conversation.id && 'bg-primary/5'
 
             )}
-<<<<<<< HEAD
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
-=======
-            onClick={() => onSelectConversation(conversation.id)}          >
-            <div className='flex items-center gap-3 py-3 cursor-pointer'>
-              <Avatar>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <AvatarImage
 
 

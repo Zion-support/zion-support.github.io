@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -23,30 +22,13 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
-=======
-import React from "react";
-import { SEO } from "@/components/SEO";
-import { AppLayout } from "@/layout/AppLayout";
-import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero";
-import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase";
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";
-import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture";
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
-import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";
-import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const MobileLaunchPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
-    <AppLayout>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title="Get the Zion App - AI Marketplace in Your Pocket"
         description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go."
         keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app"
         canonical="/mobile-launch"
-<<<<<<< HEAD
 export default MobileLaunchPage;
 
 export default MobileLaunchPage,
@@ -62,36 +44,8 @@ import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 const MobileLaunchPage: React.FC = () => {;
   return (;
-=======
-      />
-
-      <MobileLaunchHero />
-
-      <MobileFeatureShowcase />
-
-      <QrCodeDownload />
-
-      <CommunityTrust />
-
-      <AppTestimonials />
-
-      <MobileEmailCapture />
-
-      <AppStoreBanner />
-    </AppLayout>
-  );
-};
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default MobileLaunchPage;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { SEO } from '@/components / SEO';
 import { AppLayout } from '@/layout / AppLayout';
@@ -122,13 +76,6 @@ const MobileLaunchPage: React.FC = () => {
 
 
 export default MobileLaunchPage;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from "react",;
 import { SEO } from "@/components/SEO",;
@@ -174,7 +121,3 @@ export default MobileLaunchPage,; const MobileLaunchPage: React.FC = () => {
   );
 },;
 export default MobileLaunchPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

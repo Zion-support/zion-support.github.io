@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {;
   status: ApplicationStatus;
 }
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 export function StatusBadge(): any ({ status }: StatusBadgeProps) {;
   switch (status) {;
-=======
-import { ApplicationStatus  } from '@/types / jobs';
-import { Badge  } from '@/components / ui / badge';
-=======
-
-import { ApplicationStatus } from "@/types/jobs";
-import { Badge } from "@/components/ui/badge";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface StatusBadgeProps {
   status: ApplicationStatus;
 }
@@ -35,7 +15,6 @@ export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
     case "new": return <Badge variant;
     default:
-=======
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":;
@@ -49,10 +28,6 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "rejected":;
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return <Badge variant="outline">{status}</Badge>;
   }
 }
@@ -101,27 +76,12 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
   }
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export /**
- * StatusBadge - Function description
- */
-function StatusBadge() {
-  switch (status) {
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
     case "viewed":;
       return <Badge variant="outline">Viewed</Badge>;
     case "shortlisted":;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
     case "interview":;
       return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
@@ -130,15 +90,10 @@ function StatusBadge() {
     case "rejected":;
       return <Badge className="bg - red - 100 text - red - 800">Not Selected</Badge>;
     default:;
-<<<<<<< HEAD
 
       return <Badge variant="outline">{status}</Badge>;
   }
 }
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
@@ -149,7 +104,6 @@ interface StatusBadgeProps {
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
 
-=======
 
 
 import { ApplicationStatus } from "@/types/jobs",
@@ -202,7 +156,3 @@ default: return <Badge variant="outline"> {
 }</Badge> 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

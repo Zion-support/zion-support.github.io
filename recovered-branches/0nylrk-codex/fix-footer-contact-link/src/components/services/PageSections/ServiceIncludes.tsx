@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Check } from "lucide-react",
 
@@ -7,18 +6,6 @@ export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
       <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>
-=======
-import { Check } from "lucide-react";
-export function ServiceIncludes() {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <h2 className="text-2xl font-bold text-white text-center mb-8">
-        What's Included in Every Service
-      </h2>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
         <div className="space-y-4">
           <div className="flex items-start">
@@ -100,7 +87,6 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 export function ServiceIncludes() {;
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">;
@@ -166,41 +152,21 @@ export function ServiceIncludes() {;
           </div>;
         </div>;
       </div>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 
-=======
 
   )
-=======
   )
 
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>);
 }
     </div>;
@@ -214,10 +180,3 @@ export function ServiceIncludes() {;
 
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

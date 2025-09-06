@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
-<<<<<<< HEAD
 
 const POPULAR_SKILLS = [
 
@@ -189,7 +188,6 @@ const POPULAR_SKILLS = [;
     </div>;
   );
 }
-<<<<<<< HEAD
 }
 }
 
@@ -250,5 +248,3 @@ function SkillsFilter() {
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

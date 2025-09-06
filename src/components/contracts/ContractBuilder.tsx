@@ -12,33 +12,10 @@ isOpen;
   );
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
-<<<<<<< HEAD
-=======
-
-  const handleLoadTemplate = (templateData: ContractFormValues,) => {;
-    setFormValues(templateData);
-  };
-
-  const handleContractGenerated = (contract: string) => {;
-    setGeneratedContract(contract);
-    setActiveTab("preview");    if (onContractGenerated) {;
-      onContractGenerated(contract);
-    }
-  };
-
-  if (showSmartContractBuilder) {;
-    return (
-      <SmartContractBuilder
-        isOpen={isOpen}
-        onClose={() => {;
-          setShowSmartContractBuilder(false);          onClose();
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
-<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -61,19 +38,6 @@ import { ContractPreview } from "./components/ContractPreview",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-=======
-      />;
-    );
-  }
-
-
-  }
-
-  return (
-
-
-            
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
             <div className="flex gap-2">
@@ -86,24 +50,6 @@ import { ContractPreview } from "./components/ContractPreview",
                 <Save className="h-4 w-4" />
                 Templates
               </Button>
-<<<<<<< HEAD
-=======
-
-    <Dialog open={isOpen} onOpenChange={onClose}>;
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
-        <DialogHeader>;
-          <DialogTitle>Contract Builder</DialogTitle>;
-        </DialogHeader>;
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">;
-          <div className="flex justify-between items-center">;
-            <TabsList className="grid grid-cols-2">;
-              <TabsTrigger value="form">Contract Details</TabsTrigger>;
-              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>;
-            </TabsList>;
-
-            <div className="flex gap-2">;
-              <Button
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 variant="outline" 
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
@@ -120,7 +66,6 @@ import { ContractPreview } from "./components/ContractPreview",
               <Button
                 variant="secondary"
                 size="sm"
-<<<<<<< HEAD
               <Button
                 variant="secondary"
                 size="sm"
@@ -133,28 +78,11 @@ import { ContractPreview } from "./components/ContractPreview",
             <ContractForm
 
             <ContractForm 
-=======
-                onClick = {() => setShowSmartContractBuilder(true),}
-
-              >;
-                Smart Contract Builder;
-              </Button>;
-            </div>;
-          </div>;
-
-          <TabsContent value="form" className="pt-4">;
-
-            <ContractForm
-
-            <ContractForm 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
-<<<<<<< HEAD
             />
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
@@ -162,43 +90,19 @@ import { ContractPreview } from "./components/ContractPreview",
               <ContractPreview
 
               <ContractPreview 
-=======
-
-            />;
-          </TabsContent>;
-
-          <TabsContent value="preview" className="pt-4">;
-            {generatedContract && (;
-
-              <ContractPreview
-
-              <ContractPreview 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-<<<<<<< HEAD
               />
             )}
           </TabsContent>
         </Tabs>
-=======
-              />;
-            )}
-
-          </TabsContent>;
-        </Tabs>;
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <TemplateManager
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
           currentValues = {formValues,}
-<<<<<<< HEAD
         />
       </DialogContent>
     </Dialog>
@@ -253,30 +157,9 @@ import { ContractPreview } from "./components/ContractPreview",
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         />;
       </DialogContent>;
     </Dialog>;
   );
-<<<<<<< HEAD
 }
 ;
-=======
-
-  handleContractGenerated;
-}/> </TabsContent> />);
-}</TabsContent> </Tabs> <TemplateManager is_open= {
-  templateManagerOpen;
-}on_close= {
-  () => setTemplateManagerOpen (false);
-}onSelectTemplate= {
-  handleLoadTemplate;
-}current_values= {
-  form_values;
-}/> </DialogContent> </Dialog>);
-}"}
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

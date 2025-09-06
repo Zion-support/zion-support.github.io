@@ -8,7 +8,6 @@ const ScrollToTop: React.FC = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-<<<<<<< HEAD
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -33,9 +32,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
-=======
-  return null;
->>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
 };
 
 export default ScrollToTop;

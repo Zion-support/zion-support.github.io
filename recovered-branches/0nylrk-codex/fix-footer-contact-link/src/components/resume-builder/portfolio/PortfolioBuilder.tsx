@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -8,17 +7,6 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
-=======
-import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FilePlus, Loader2 } from "lucide-react";
-import { ProjectCard } from "./ProjectCard";
-import { ProjectForm } from "./ProjectForm";
-import { PortfolioProject } from "@/types/resume";
-import { usePortfolio } from "@/hooks/usePortfolio";
-export function PortfolioBuilder() {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(
@@ -45,7 +33,6 @@ export function PortfolioBuilder() {
       fetchProjects();
     }
 
-<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -76,13 +63,6 @@ export function PortfolioBuilder() {;
     }
   },
   
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  };
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -115,11 +95,6 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-<<<<<<< HEAD
-=======
-              {editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             <ProjectForm
               project={editingProject || undefined}
@@ -133,9 +108,7 @@ export function PortfolioBuilder() {;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
@@ -145,8 +118,6 @@ export function PortfolioBuilder() {;
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
-<<<<<<< HEAD
-<<<<<<< HEAD
               onDelete={handleDeleteProject}
             />;
           ))}
@@ -257,47 +228,8 @@ if ( {) {
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Add Your First Project;
                 </Button>;
               </div>;
             </CardContent>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          </Card>))}
-    </div>);
-}
-
-=======
-          </Card>;
-        );
-      )}
-    </div>;
-  ),;}
- <div> <h1 className="text-2xl font-bold" >Portfolio Projects</h1> <p className="text-muted-foreground" >Showcase your best work and projects</p> </div> <Button > <FilePlus className="h-4 w-4" /> Add Project </Button> </div> {
-  editingProject ? 'Edit Project' : 'Add New Project' 
-}</h2> <ProjectForm /> </CardContent> </Card>) 
-}key= {
-  project.id 
-}project= {
-  project 
-}onEdit= {
-  () => setEditingProject (project) 
-}onDelete= {
-  handleDeleteProject 
-}/>) ) 
-}</div> <CardContent> <div className="flex flex-col items-center gap-4" > <div className="bg-muted/50 p-6 rounded-full" > <FilePlus className="h-12 w-12 text-muted-foreground" /> </div> <h3 className="text-xl font-medium" >No portfolio projects yet</h3> <p className="text-muted-foreground max-w-md mx-auto" > Add your best work to showcase your skills and experience to potential employers. </p> <Button > Add Your First Project </Button> </div> </CardContent> </Card>) ) 
-}</div>) 
-}
-{editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

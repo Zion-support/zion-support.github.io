@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-=======
-unreadCount, ;
-    markAsRead, ;
-
-  const handleFilterChange = (newFilter: FilterType,) => {;
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -42,7 +33,6 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
-<<<<<<< HEAD
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
@@ -122,19 +112,11 @@ export const NotificationCenter: React.FC = () => {;
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }, [open, loadedOnce, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -146,11 +128,6 @@ export const NotificationCenter: React.FC = () => {;
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
-<<<<<<< HEAD
-=======
-    setFilter(newFilter as any);
-  };
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
@@ -169,24 +146,16 @@ export const NotificationCenter: React.FC = () => {;
         <NotificationFilter
           filter = {filter as FilterType,}
           onFilterChange = {handleFilterChange,}
-<<<<<<< HEAD
           )}
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-=======
-        />;
-
-
-        <NotificationList
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-<<<<<<< HEAD
         />
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
@@ -209,11 +178,6 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
         />;
-=======
-
-        />;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
@@ -253,7 +217,3 @@ export const NotificationCenter: React.FC = () => {;
 },
 ;
 
-<<<<<<< HEAD
-=======
-        <NotificationHeader
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

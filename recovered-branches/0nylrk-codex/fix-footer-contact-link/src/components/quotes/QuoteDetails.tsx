@@ -12,7 +12,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
 import React from "react",
 import { 
   Dialog,
@@ -28,9 +27,6 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-=======
-import { format } from "date-fns";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
@@ -217,7 +213,6 @@ if (return "Not specified") {
   );
 };
 
-=======
       return date_string;
     }
   }

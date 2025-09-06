@@ -26,10 +26,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       if (!user) return,
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       try {
         let query = supabase
           .from("jobs")
@@ -451,7 +447,3 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD
-=======
-          </CardFooter>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

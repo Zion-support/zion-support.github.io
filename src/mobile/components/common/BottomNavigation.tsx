@@ -31,8 +31,6 @@ export function BottomNavigation() {;
             <span className="text-xs mt-1">{item.label}</span>
           </Link>
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
       })}
     </div>
   )
@@ -61,5 +59,3 @@ export function BottomNavigation() {;
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -6,25 +5,6 @@ import { DollarSign, Brain, Shield, BarChart3, CheckCircle, ArrowRight, Trending
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
-import * as React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import {
-  DollarSign,
-  Brain,
-  Shield,
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Lock,
-  CreditCard,
-  Database,
-  FileText,
-  Users;
-} from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -35,7 +15,6 @@ const services = [
       'Smart contract development,',
       'Cryptocurrency integration',',
       'Decentralized finance (DeFi)',',
-<<<<<<< HEAD
     title: 'Blockchain Solutions,',;
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
 import Layout from '../../components/Layout';
@@ -48,94 +27,32 @@ const services = [;
       'Smart contract development,',;
       'Cryptocurrency integration',',;
       'Decentralized finance (DeFi)',',;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Digital identity management'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'AI Trading Algorithms,',
-    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
-    icon: Brain,
-    features: [;
-      'Algorithmic trading systems,',
-      'Risk management AI',',
-      'Market prediction models',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Portfolio optimization'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Digital Payment Systems,',
-    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
-    icon: CreditCard,
-    features: [;
-      'Payment gateway integration,',
-      'Mobile payment solutions',',
-      'Cross-border payments',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Fraud detection systems'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Risk Management AI,',
-    description: 'AI-powered risk assessment and management tools for financial institutions.,',
-    icon: TrendingUp,
-    features: [;
-      'Credit risk analysis,',
-      'Market risk modeling',',
-      'Operational risk assessment',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Regulatory compliance monitoring'';
     ];
   },
   {}
-<<<<<<< HEAD
-=======
-    title: 'Fraud Detection Systems,',
-    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
-    icon: Lock,
-    features: [;
-      'Real-time transaction monitoring,',
-      'Behavioral analysis',',
-      'Pattern recognition',',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated alert systems'';
     ];
   },
   {}
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',;
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
-=======
-    title: 'Regulatory Compliance Tools,',
-    description: 'Automated compliance monitoring and reporting for financial regulations.,',
-    icon: FileText,
-    features: [;
-      'KYC/AML automation,',
-      'Regulatory reporting',',
-      'Audit trail management',',
-      'Compliance dashboards'';
-    ];
-  }
-];
-const benefits = [
-  {
-    title: 'Enhanced Security',
-    description: 'Bank-grade security measures protect sensitive financial data and transactions.',
-    icon: Shield
-  },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {}
     title: 'Improved Efficiency,',
     description: 'Automated processes reduce manual work and increase operational efficiency.,',
@@ -151,7 +68,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText;
   }
-<<<<<<< HEAD
 ;];
 export default function FinancePage() {;
   return (
@@ -189,8 +105,6 @@ export default function FinancePage() {;
             </motion && motion.div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 export default function FinancePage() {
   return (
@@ -211,48 +125,11 @@ export default function FinancePage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive fintech solutions designed for banks, financial institutions, ;
                 and fintech startups.;
               </p>;
-=======
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <div className="flex items-center justify-center mb-6">
-                <DollarSign className="w-12 h-12 text-green-400 mr-4" />
-                <h1 className="text-5xl md:text-6xl font-bold">
-                  Financial
-                  <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                    Technology Solutions
-                  </span>
-                </h1>
-              </div>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Revolutionizing financial services with cutting-edge blockchain, AI, and digital payment solutions.
-                Enhance security, efficiency, and compliance in your financial operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Get Fintech Consultation
-                </Link>
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
-                  View Finance Case Studies
-                </Link>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -270,7 +147,6 @@ export default function FinancePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -308,8 +184,6 @@ export default function FinancePage() {
                     {service && service.features.map((feature, featureIndex) => (,;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -321,7 +195,6 @@ export default function FinancePage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100";
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">;
@@ -333,8 +206,6 @@ export default function FinancePage() {
                     {service && service.features.map((feature, featureIndex) => (;
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">;
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         {feature}
                       </li>,
                     ))}
@@ -344,7 +215,6 @@ export default function FinancePage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -357,23 +227,17 @@ export default function FinancePage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our financial technology solutions deliver enhanced security, improved efficiency, ;
                 and regulatory compliance for financial institutions.;
               </p>;
-=======
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -388,7 +252,6 @@ export default function FinancePage() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-<<<<<<< HEAD
             </motion && motion.div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
               {benefits && benefits.map((benefit, index) => (,;
@@ -406,8 +269,6 @@ export default function FinancePage() {
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -423,7 +284,6 @@ export default function FinancePage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
             </div>,;
           </div>;
         </section>;
@@ -436,15 +296,12 @@ export default function FinancePage() {
             </div>;
           </div>;
         </section>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let our fintech experts help you implement cutting-edge financial technology;
@@ -457,9 +314,6 @@ export default function FinancePage() {
         </section>;
       </div>;
     </Layout>;
-=======
-              transition={{ duration: 0.8 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?
@@ -482,7 +336,6 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
             >;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">;
                 Ready to Transform Financial Services?;
@@ -506,6 +359,3 @@ export default function FinancePage() {
     </Layout>;
   ),;
 }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -43,12 +43,8 @@ export function TalentCardHeader(): any ({;
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
-<<<<<<< HEAD
 
         <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;
-=======
-        <p className="text-zion-cyan text-sm">{professionalTitle}</p>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </div>;
   );

@@ -1,19 +1,12 @@
-<<<<<<< HEAD
   memory: {
     used: number
     total: number
     limit: number
   } | null;
 }
-=======
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface PerformanceMonitorProps {
   onPerformanceData?: (data: any) => void;
 }
-<<<<<<< HEAD
 interface Performance {
   getEntriesByType (type: string): PerformanceEntry[];
   now (): number;
@@ -227,49 +220,6 @@ interface PerformanceMetrics {fcp?: number;
         )}
           </div>;
         )}
-=======
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') {
-      return;
-    }
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-        
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (performance as any).memory ? {
-          used: (performance as any).memory.usedJSHeapSize,
-          total: (performance as any).memory.totalJSHeapSize,
-          limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
-=======
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
@@ -287,11 +237,9 @@ const PerformanceMonitor: React.FC = () => {
           });
         }
       });
->>>>>>> main
 
       observer.observe({ entryTypes: ['navigation'] });
 
-<<<<<<< HEAD
       // Log performance data in development
       if (process.env.NODE_ENV === 'development') {
         console.log('Performance Metrics:', performanceData);
@@ -306,7 +254,6 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     return () => {
-<<<<<<< HEAD
       observer.disconnect ();
       clear_timeout (timer);
 }
@@ -356,15 +303,6 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
-=======
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, [onPerformanceData]);
-=======
-      return () => observer.disconnect();
-    }
-  }, []);
->>>>>>> main
 
   if (!metrics) return null;
 
@@ -378,4 +316,3 @@ if (return 'Needs Improvement) {
 };
 
 export default PerformanceMonitor;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

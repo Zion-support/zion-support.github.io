@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   Card,
   CardContent,
@@ -48,7 +45,6 @@ function ReferralLeaderboard() {
           {leaderboardData.map((entry) => (
             <div
               key={entry.rank}
-<<<<<<< HEAD
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
@@ -62,16 +58,6 @@ export function ReferralLeaderboard() {;
     { rank: 1, name: "Alex Johnson", referrals: 24 },;
     { rank: 2, name: "Jamie Smith", referrals: 18 },;
     { rank: 3, name: "Taylor Wong", referrals: 15 },;
-=======
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                      : entry.rank === 2
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         ? "bg-slate-200 text-slate-800"
                         : entry.rank === 3
                           ? "bg-amber-200 text-amber-800"
@@ -85,11 +71,6 @@ export function ReferralLeaderboard() {;
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
 ;
@@ -127,23 +108,6 @@ export function ReferralLeaderboard() {;
               key={entry && entry.rank}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry && entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                  }`}
-                >;
-                  {entry.rank}
-                </div>;
-                <span className="font - medium">{entry.name}</span>;
-              </div>;
-              <span className="text - sm">;
-                {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       : entry && entry.rank === 2
                       ? "bg-slate-200 text-slate-800"
                       : entry && entry.rank === 3
@@ -156,10 +120,6 @@ export function ReferralLeaderboard() {;
               </div>;
               <span className="text-sm">;
                 {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </span>;
             </div>;
           ))}
@@ -170,11 +130,6 @@ export function ReferralLeaderboard() {;
 }
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 <span className="font-medium">{entry.name}</span>;
               </div>;
               <span className="text-sm">;
@@ -213,7 +168,3 @@ referrals: number
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

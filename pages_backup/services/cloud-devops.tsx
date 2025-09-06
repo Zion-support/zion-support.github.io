@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import * as React from 'react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
 import React from 'react';
@@ -21,13 +16,10 @@ const features = [;
     description: 'Seamlessly migrate your infrastructure to AWS, Azure, or Google Cloud with zero downtime.',;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
-<<<<<<< HEAD
   }
 ;];
 const services = [;
@@ -117,11 +109,6 @@ export default function CloudDevOpsPage() {;
         </section>;
       </div>;
     </Layout>;
-=======
-    description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
-    benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
-  },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     icon: Server,
     title: 'Infrastructure as Code',
@@ -153,36 +140,12 @@ export default function CloudDevOpsPage() {;
     benefits: ['Real-time monitoring', 'Custom dashboards', 'Automated alerts', 'Performance metrics']
   }
 ];
-<<<<<<< HEAD
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
       description="Comprehensive cloud migration and DevOps services. Transform your infrastructure with modern cloud technologies and automated processes."
     >
       <div className="min-h-screen bg-white">
-=======
-
-const tools = [
-  { name: 'AWS', description: 'Amazon Web Services cloud platform' },
-  { name: 'Azure', description: 'Microsoft Azure cloud services' },
-  { name: 'Google Cloud', description: 'Google Cloud Platform solutions' },
-  { name: 'Docker', description: 'Containerization platform' },
-  { name: 'Kubernetes', description: 'Container orchestration' },
-  { name: 'Terraform', description: 'Infrastructure as code' },
-  { name: 'Jenkins', description: 'CI/CD automation' },
-  { name: 'Prometheus', description: 'Monitoring and alerting' }
-];
-
-export default function CloudDevOpsPage() {
-  return (
-    <>
-      <Head>
-        <title>Cloud & DevOps Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud and DevOps services including migration, infrastructure as code, CI/CD pipelines, and monitoring solutions." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -202,7 +165,6 @@ export default function CloudDevOpsPage() {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -227,11 +189,6 @@ export default function CloudDevOpsPage() {
         <section className="py-16 bg-white">;
           <div className="max-w-7xl mx-auto px-4">;
             <motion&& motion.div
-=======
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -266,7 +223,6 @@ export default function CloudDevOpsPage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
@@ -323,8 +279,6 @@ export default function CloudDevOpsPage() {
                       <span className="text-gray-700">{benefit}</span>;
                     </li>;
                   ))}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>
           </div>
         </section>
@@ -432,7 +386,6 @@ export default function CloudDevOpsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
   );
                 </ul>;
               </div>;
@@ -481,8 +434,3 @@ export default function CloudDevOpsPage() {
     </>;
   ),;
 }
-=======
-    </>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

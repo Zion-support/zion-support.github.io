@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -17,7 +12,6 @@ const CybersecurityChat: NextPage = () => {
   return (
     <div>
       <Head>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -28,29 +22,10 @@ const CybersecurityChat: NextPage = () => {;
       <Head>;
         <title>CybersecurityChat - Zion Tech Solutions</title>;
         <meta name="description" content="CybersecurityChat blog post" />{" "}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-const CybersecurityChat: NextPage = () => {
-  return (
-    <div>
-      <Head>
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       </Head>;
 
 
-<<<<<<< HEAD
-=======
-        <meta name="description" content="CybersecurityChat blog post" />
-      </Head>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <main>
         <h1>CybersecurityChat</h1>
         <p>Blog content coming soon...</p>
@@ -58,14 +33,6 @@ const CybersecurityChat: NextPage = () => {
       </main>
     </div>
       </Head>;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <main>;
         <h1>CybersecurityChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -75,26 +42,9 @@ const CybersecurityChat: NextPage = () => {
   );
 }
 export default CybersecurityChat;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
-        <title>CybersecurityChat - Zion Tech Solutions</title>
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -115,12 +65,6 @@ const CybersecurityChat: NextPage = () => {
 ;
 export default CybersecurityChat;
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div>
       <Head>
         <title>CybersecurityChat - Zion Tech Solutions</title>
@@ -165,7 +109,3 @@ export default CybersecurityChat;
 
         <title>CybersecurityChat - Zion Tech Solutions</title>
         <title>CybersecurityChat - Zion Tech Solutions</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

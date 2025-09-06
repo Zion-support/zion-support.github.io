@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -12,40 +11,10 @@ export const AppScreenshots: React.FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-=======
-if (scrollContainerRef.current) {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
         behavior: "smooth"})
-<<<<<<< HEAD
-=======
-
-
-};
-import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React, { useRef } from "react";
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-// These would be replaced with actual screenshots;
-const mockScreenshots = [;
-  { id: 1, alt: "Dashboard screen", src: "/placeholder && placeholder.svg" },;
-  { id: 2, alt: "Talent matching screen", src: "/placeholder && placeholder.svg" },;
-  { id: 3, alt: "Resume builder screen", src: "/placeholder && placeholder.svg" },;
-  { id: 4, alt: "Messaging screen", src: "/placeholder && placeholder.svg" },;
-  { id: 5, alt: "Profile screen", src: "/placeholder && placeholder.svg" }],;
-export const AppScreenshots: React.FC = () => {;
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (direction: "left" | "right",) => {;
-    if (scrollContainerRef && scrollContainerRef.current) {;
-      const scrollAmount = 300,;
-      scrollContainerRef && scrollContainerRef.current.scrollBy({;
-        left: direction === "left" ? -scrollAmount : scrollAmount,;
-        behavior: "smooth"});
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
     }
@@ -69,7 +38,6 @@ export const AppScreenshots: React.FC = () => {;
 
         
 
-<<<<<<< HEAD
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -79,32 +47,15 @@ export const AppScreenshots: React.FC = () => {;
             Take a visual tour through the Zion app's intuitive interface.
           </p>
         </div>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="relative">
           <Button
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-<<<<<<< HEAD
-=======
-
-            onClick={() => scroll("left")}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
-<<<<<<< HEAD
-=======
-
-            aria-label="Scroll left";
-          >;
-            <ChevronLeft className="h-6 w-6" />;
-          </Button>;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -122,15 +73,6 @@ export const AppScreenshots: React.FC = () => {;
                 />
               </div>
             ))}
-<<<<<<< HEAD
-=======
-
-          </div>;
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           
           <div 
             ref={scrollContainerRef}
@@ -152,21 +94,10 @@ export const AppScreenshots: React.FC = () => {;
             ))}
           </div>
 
-<<<<<<< HEAD
-=======
-          
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
-<<<<<<< HEAD
-=======
-
-            onClick={() => scroll("right")}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
@@ -174,7 +105,6 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -213,9 +143,6 @@ export const AppScreenshots: React.FC = () => {;
           <Button;
             variant="ghost";
             size="icon";
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -307,8 +234,4 @@ if ( {) {
 '"},
 }
 
-<<<<<<< HEAD
   )
-=======
-  )
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

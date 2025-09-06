@@ -1,27 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export interface Job {;
-
-
-<<<<<<< HEAD
-export interface Job {
-=======
-=======
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Job {;
 
 
 export interface Job {
-<<<<<<< HEAD
 export interface Job {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
+export interface Job {
+export interface Job {;
   id: string;
   title: string;
   description: string;
@@ -29,39 +16,17 @@ export interface Job {;
   budget?: string;
   client_id: string
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ApplyToJobModalProps {;
   job: Job;
   isOpen: boolean;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface Job {;
   id: string,;
@@ -75,47 +40,16 @@ export interface Job {;
 export interface ApplyToJobModalProps {;
   job: Job,;
   isOpen: boolean,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   onClose: () => void;
 
   onApplySuccess?: (jobId: string) => Promise<void>;
 }
 
-<<<<<<< HEAD
 export interface ApplyToJobModalProps {
   job: Job;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  is_open: boolean;
-  on_close: () => void;
-  onApplySuccess?: (job_id: string) => Promise < void>;
-}
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export interface ApplyToJobModalProps {
   job: Job;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -11,23 +11,14 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 
         }
-<<<<<<< HEAD
         .no - print {
-=======
-        .no-print {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           display: none !important }
       }
 
 
         }
-<<<<<<< HEAD
         .print - section, .print - section * {
           visibility: visible;
-=======
-        .print-section, .print-section * {
-          visibility: visible
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
 
         .print-section {;

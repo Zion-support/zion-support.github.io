@@ -1,73 +1,27 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {
 
-<<<<<<< HEAD
-=======
-
-import React from "react";
-import {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
-=======
 } from "@/components/ui/card";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
 
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -90,13 +44,6 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: false
     }
   ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -105,35 +52,12 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       expYear: 2025,
       isDefault: true,
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "pm-2",
       type: "credit_card",
@@ -141,26 +65,12 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-      isDefault: false}
-  ],
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       isDefault: false,
     },;
   ];
       isDefault: false}
   ],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card>
       <CardHeader>
@@ -211,38 +121,12 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
-  )
-
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PaymentMethods() {;
   // Mock payment methods;
   const paymentMethods = [;
@@ -253,27 +137,16 @@ export function PaymentMethods() {;
       last4: "4242",;
       expMonth: 12,;
       expYear: 2025,;
-<<<<<<< HEAD
-<<<<<<< HEAD
       isDefault: true,;
     },;
-=======
-      isDefault: true},;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       isDefault: true,;
     },;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "pm-2",;
       type: "credit_card",;
       brand: "Mastercard",;
       last4: "8888",;
       expMonth: 4,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       expYear: 2026,;
       isDefault: false,;
     },;
@@ -317,36 +190,19 @@ function PaymentMethods() {
   return (
     <Card>;
       <CardHeader>;
-<<<<<<< HEAD
 
         <CardTitle > Payment Methods</CardTitle>;
 
-=======
-        <CardTitle > Payment Methods</CardTitle>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardContent className="space - y-4">;
         {payment_methods.map ((method) => (
           <div;
@@ -389,16 +245,9 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
-<<<<<<< HEAD
 }
 }
-=======
-<<<<<<< HEAD
-    </Card>);
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 }
       id:"pm-1",;
       type:"credit_card",;
@@ -478,9 +327,5 @@ function PaymentMethods() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

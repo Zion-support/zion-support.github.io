@@ -5,25 +5,11 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light';
 
     ? {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return theme === 'light' 
     ? { ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
@@ -31,18 +17,10 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
         subheading: '#444444',
         accent: '#9b87f5';
 
-<<<<<<< HEAD
-=======
-/**
- * Theme configuration for PDF export */
-export interface PdfThemeColors {;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**;
 * Theme configuration for PDF export;
 */;
 export interface PdfThemeColors {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   background: string;
   text: string;
   heading: string;
@@ -50,30 +28,11 @@ export interface PdfThemeColors {
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        subheading: '#444444'
-        accent: '#9b87f5'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     : {
         background: '#1A1F2C';
         text: '#ffffff';
         heading: '#ffffff';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        subheading: '#cccccc',
-        accent: '#9b87f5';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         subheading: '#cccccc'
 
         accent: '#9b87f5'
@@ -105,9 +64,5 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
         subheading: '#cccccc',
         accent: '#9b87f5';
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
 }

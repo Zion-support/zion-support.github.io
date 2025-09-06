@@ -38,11 +38,7 @@ export function FilterSidebar(): any ({;
   clearFilters,;
   isMobileFilterOpen,}: FilterSidebarProps) {;
   return (
-<<<<<<< HEAD
     <>;
-=======
-    <>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Filter header */}
 
       <div className='flex items-center justify-between mb-6'>;
@@ -493,7 +489,6 @@ function FilterSidebar() {
       )}
     </>;
   );
-<<<<<<< HEAD
 }
 
   );
@@ -513,5 +508,3 @@ function FilterSidebar() {
 
 }
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

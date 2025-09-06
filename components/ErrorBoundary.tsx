@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-<<<<<<< HEAD
 
 interface Props {;
   children: ReactNode;
@@ -24,18 +12,12 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-=======
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -120,25 +102,6 @@ origin/automation-improvements-final
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
       error
-=======
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-      error,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       errorInfo
     });
 
@@ -146,7 +109,6 @@ class ErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
@@ -247,19 +209,11 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
       console.error('Production error:', error, errorInfo);
-=======
-
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error details:', error);
-      console.error('Error info:', errorInfo);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -361,8 +315,6 @@ export default class ErrorBoundary extends Component<Props, State> {
                 Refresh Page;
               </button>;
               <button
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return this.props.fallback || (
         <div className="min-h-screen bg-slate-950 flex items-center justify-center">
           <div className="text-center text-white max-w-md mx-auto p-6">
@@ -382,7 +334,6 @@ export default class ErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
-<<<<<<< HEAD
                 onClick={() => this.setState({ hasError: false })  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -396,17 +347,12 @@ export default class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-              <button 
-                onClick={() => this.setState({ hasError: false })} 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
@@ -414,15 +360,12 @@ export default class ErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
                   {this.state.error.stack}
-<<<<<<< HEAD
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
                   Error Details (Development)
@@ -441,74 +384,14 @@ export default class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 </pre>
               </details>
             )}
-<<<<<<< HEAD
-=======
-          </div>;
-    // Log the error to an error reporting service;
-    console && console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this && this.setState({ error, errorInfo });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-            <button
-              onClick={() => window.location.reload()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
-            >
-              Reload Page
-            </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return this.props.children;
-  }
-}
-
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     return this && this.props.children;
   }
@@ -673,21 +556,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

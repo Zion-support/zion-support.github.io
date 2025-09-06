@@ -46,7 +46,6 @@ if ( {) {
         if (set_error (e?.message || 'Translation failed')) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         if (set_loading (false)) {
   $2

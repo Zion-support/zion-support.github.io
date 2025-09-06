@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-const CommunityRoutes = () => {
-=======
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
@@ -34,12 +9,8 @@ import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 const CommunityRoutes = () => {
-<<<<<<< HEAD
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {;
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Routes>
       {/* Public routes */}
@@ -48,22 +19,13 @@ const CommunityRoutes = () => {;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
       <Route path="/community/post/:postId" element={<ForumPostPage />} />
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 
 const CommunityRoutes = () => {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 const CommunityRoutes = () => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const CommunityRoutes = () => {;
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Routes>;
       {/* Public routes */}
       <Route path="/community" element={<CommunityPage />} />
@@ -99,27 +61,10 @@ const CommunityRoutes = () => {;
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
-=======
-        }
-      />
-    </Routes>
-  )
-}
-export default CommunityRoutes;
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "../components/ProtectedRoute",;
@@ -134,31 +79,15 @@ const CommunityRoutes = () => {;
   return (;
     <Routes>;
       {/* Public routes */}
-<<<<<<< HEAD
   return (
     <Routes>;
       {/* Public routes */}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Route path="/community" element={<CommunityPage />} />;
       <Route path="/forum" element={<CommunityPage />} />;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
       <Route path="/community/post/:postId" element={<ForumPostPage />} />;
       <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
-  return (
-    <Routes>;
-      {/* Public routes */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
@@ -181,55 +110,20 @@ const CommunityRoutes = () =>: any {
       <Route;
         path="/community / create";
         element={
-<<<<<<< HEAD
-=======
-      ;
-      {/* Protected routes */}
-      <Route;
-        path="/community/create";
-        element={;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProtectedRoute>;
             <CreatePostPage />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
-      />;
-<<<<<<< HEAD
-
-      <Route;
-        path="/community / edit/:post_id";
-
-        element={
-=======
-      <Route;
-        element={
-        path="/community/edit/:postId";
-        element={;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <ProtectedRoute>;
             <EditPostPage />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
 
       />;
     </Routes>;
   );
 
-=======
-},;
-export default CommunityRoutes;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       />;
     </Routes>;
 },;
@@ -286,8 +180,4 @@ export default CommunityRoutes;
   );
 },;
 export default CommunityRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Shield, Zap, Users, Clock, Award } from 'lucide-react';
 
@@ -34,51 +33,11 @@ const BenefitsSection: React.FC = () => {
       title: "Industry Recognition",
       description: "Award-winning solutions recognized by leading technology organizations."
     }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-
-const BenefitsSection = () => {
-  const benefits = [
-    {
-      icon: '🚀',
-      title: 'Faster Implementation',
-      description: 'Get your solutions up and running quickly with our streamlined processes.',
-    },
-    {
-      icon: '💰',
-      title: 'Cost Effective',
-      description: 'Reduce operational costs while improving efficiency and productivity.',
-    },
-    {
-      icon: '🔒',
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime guarantee for all services.',
-    },
-    {
-      icon: '📈',
-      title: 'Scalable Solutions',
-      description: 'Grow your business with solutions that scale with your needs.',
-    },
-    {
-      icon: '🎯',
-      title: 'Expert Support',
-      description: '24/7 support from our team of certified professionals.',
-    },
-    {
-      icon: '⚡',
-      title: 'Latest Technology',
-      description: 'Stay ahead with cutting-edge AI and IT solutions.',
-    },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ];
 
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="container mx-auto max-w-6xl">
-<<<<<<< HEAD
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Why Choose Zion Tech?</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -86,30 +45,6 @@ const BenefitsSection = () => {
             solutions that drive real business value.
           </p>
         </div>
-=======
-        <h2 className="text-4xl font-bold text-center mb-4">Why Choose Zion Tech?</h2>
-        <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-          We deliver exceptional value through innovative solutions, expert support, and proven results.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="text-center p-6">
-              <div className="text-4xl mb-4">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default BenefitsSection;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main
 const getBenefits = (t: any) => [
 
 
@@ -266,10 +201,8 @@ function BenefitsSection() {
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               key={index}
-<<<<<<< HEAD
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
@@ -307,79 +240,3 @@ function BenefitsSection() {
 };
 
 export default BenefitsSection;
-=======
-
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-
-          ))}
-
-              className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
-            />))}
-        </div>;
-      </div>;
-    </section>);
-}
-import React, { useState } from 'react';
-export /**;
-
-export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading } from './ui / GradientHeading';
-export default /**
- * Page - Function description
- */
-function Page() {
-  {
-
-
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
-
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
-  );
-}
-";
-    title: "24 / 7 Support", ";
-    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.", ";
-    icon: <Clock className="w - 8 h - 8"  />, ";
-    color: "from - zion - blue to - zion - blue - dark", ";
-    bg_color: "from - zion - blue / 20 to - zion - blue - dark / 20", "    stats: "99.9% Uptime",
-    features: [";
-      "Round - the - clock assistance", ";
-      "Expert technical support", ";
-      "Rapid response times", ";
-      "Proactive monitoring" ];
-},
-  {
-";
-    title: "Cost Reduction", ";
-    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.", ";
-    icon: <TrendingDown className="w - 8 h - 8"  />, ";
-    color: "from - zion - green to - zion - green - dark", ";
-    bg_color: "from - zion - green / 20 to - zion - green - dark / 20", "    stats: "40% Cost Savings",
-    features: [";
-      "Direct provider connections", ";
-      "Competitive pricing", ";
-      "Bulk discount options", ";
-      "Transparent cost structure" ];
-}
-;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

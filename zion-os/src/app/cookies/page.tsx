@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-=======
-
-export default function CookiesPage() {;
-  return (;
-
-    <div className="min-h-screen py-20">;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * CookiesPage - Function description
  */
 function CookiesPage() {
   return (
     <div className="min - h-screen py - 20">;
-=======
-<<<<<<< HEAD
 export default function CookiesPage() {return (;
-=======
-export default function CookiesPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="relative mb - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;

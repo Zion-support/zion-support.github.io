@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
-<<<<<<< HEAD
   description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
-=======
-  description:
-    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 };
 
 export default function AIMeetingAssistantPage() {
@@ -43,7 +35,6 @@ export default function AIMeetingAssistantPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
@@ -51,56 +42,6 @@ export default function AIMeetingAssistantPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI assistant handles every aspect of your meetings, from real-time transcription to intelligent follow-ups.
           </p>
-=======
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing</h2>
-          <div className="space-y-6">
-            <PricingCard
-              title="Basic"
-              price="$19"
-              period="per month"
-              description="Perfect for individuals and small teams"
-              features={[
-                'Up to 10 hours/month',
-                'Basic transcription',
-                'Action item extraction',
-                'Meeting summaries',
-                'Email support',
-              ]}
-              popular={false}
-            />
-            <PricingCard
-              title="Professional"
-              price="$49"
-              period="per month"
-              description="Ideal for growing teams and departments"
-              features={[
-                'Up to 50 hours/month',
-                'Advanced AI features',
-                'Meeting analytics',
-                'Custom integrations',
-                'Priority support',
-                'Team collaboration',
-              ]}
-              popular={true}
-            />
-            <PricingCard
-              title="Enterprise"
-              price="$149"
-              period="per month"
-              description="For large organizations with advanced needs"
-              features={[
-                'Unlimited hours',
-                'Custom AI models',
-                'Advanced analytics',
-                '24/7 support',
-                'Custom integrations',
-                'Compliance features',
-              ]}
-              popular={false}
-            />
-          </div>
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
@@ -435,13 +376,7 @@ function PricingCard({ name, price, period, description, features, cta, popular 
   popular: boolean;
 }) {
   return (
-<<<<<<< HEAD
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-purple-500 bg-purple-50' : 'border-gray-200 bg-white'} shadow-lg`}>
-=======
-    <div
-      className={`border rounded-xl p-6 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'}`}
-    >
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -471,13 +406,8 @@ function PricingCard({ name, price, period, description, features, cta, popular 
         href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-<<<<<<< HEAD
             ? 'bg-purple-600 text-white hover:bg-purple-700'
             : 'bg-gray-900 text-white hover:bg-gray-800'
-=======
-            ? 'bg-green-600 text-white hover:bg-green-700'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         }`}
       >
         {cta}

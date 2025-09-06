@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -38,10 +37,6 @@
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
-=======
-import React from 'react';
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -76,7 +71,6 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
       {/* Contact methods */}
@@ -116,12 +110,6 @@ export default function ContactPage() {
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-=======
-          
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-            <form className="space-y-6">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name
@@ -150,7 +138,6 @@ export default function ContactPage() {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
-<<<<<<< HEAD
                 <div className="mt-2.5">
                   <textarea
                     name="message"
@@ -262,32 +249,11 @@ export default function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
             </Link>
-=======
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default Page;
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

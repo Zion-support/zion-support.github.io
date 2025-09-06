@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -18,34 +17,6 @@ import Layout from '../../components/Layout';';
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';
-=======
-import * as React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Heart,
-  DollarSign,
-  Settings,
-  ShoppingCart,
-  ArrowRight,
-  Building,
-  Users,
-  CheckCircle,
-  Globe,
-  Database,
-  Shield,
-  Cloud,
-  Brain;
-} from 'lucide-react';
-    href: '/industries/healthcare,',
-    features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
-    color: 'from-red-500 to-pink-500'';
-  },
-  {
-    name: 'Finance',
-    description: 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',
-    icon: DollarSign,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
     color: 'from-green-500 to-emerald-500'';
@@ -78,7 +49,6 @@ import {
     name: 'Government',
     description: 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',
     icon: Building,
-<<<<<<< HEAD
     href: '/industries/government',
     features: ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],
     color: 'from-gray-500 to-slate-500'
@@ -183,8 +153,6 @@ const stats = [;
   { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
   { number: '24/7', label: 'Industry Support' }
 ];
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
     color: 'from-gray-500 to-slate-500'';
@@ -202,13 +170,10 @@ export default function IndustriesPage() {
   return (;
     <Layout);
       title="Industry Solutions - Zion Tech Group"";
-<<<<<<< HEAD
 export default function IndustriesPage() {;
   return (
     <Layout)
       title="Industry Solutions - Zion Tech Group""
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >;
@@ -258,7 +223,6 @@ const industries = [
     href: '/industries/government',
     features: ['Citizen Services', 'Data Security', 'Digital Transformation']
   }
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -266,20 +230,6 @@ const industries = [
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-=======
-]
-
-export default function Industries() {
-  return (
-    <Layout
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
@@ -294,7 +244,6 @@ export default function Industries() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -409,16 +358,6 @@ export default function Industries() {
             </motion && motion.div>;
           </div>;
         </section>;
-=======
-                Industry Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Specialized technology solutions tailored to meet the unique challenges and opportunities across different industries.
-              </p>
-            </motion.div>
-          </div>
-        </section>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         {/* Industries Grid */}
         <section className="py-20">
@@ -427,7 +366,6 @@ export default function Industries() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 return (
                   <motion&& motion.div
                     key={index}
@@ -461,10 +399,6 @@ export default function Industries() {
                 and drive measurable business outcomes.;
               </p>;
             </motion.div>;
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industries We Serve
@@ -485,10 +419,6 @@ export default function Industries() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-                    whileHover={{ y: -5 }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <p className="text-gray-600 mb-6 leading-relaxed">";
                   >
                     <div className="text-blue-400 mb-6 group-hover:text-blue-300 transition-colors">
@@ -502,59 +432,17 @@ export default function Industries() {
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {industry.description}
                     </p>
-<<<<<<< HEAD
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-=======
-                    
-                      </div>,
-                    </div>;
-                    
-                    <Link
-                      href={industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
-                    >;
-                      <span>Learn More</span>;
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
-                    </Link>;
-                  </motion.div>;
-                    <div className="space-y-2 mb-6">
-                      {industry.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <Link href={industry.href}>
-                      <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </a>
-                    </Link>
-                  </motion.div>
-                );
-              })}
-            </div>,
-          </div>;
-        </section>;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
             <motion.div;
               className="text-center mb-16"";
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             >,
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
                 Why Choose Our Industry Solutions?;
@@ -571,7 +459,6 @@ export default function Industries() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
@@ -608,9 +495,6 @@ export default function Industries() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Industry Expertise</h3>;
                 <p className="text-gray-600">;
               >,;
-=======
-              >,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Users className="w-8 h-8 text-blue-600" />";
                 </div>;
@@ -625,7 +509,6 @@ export default function Industries() {
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               >,
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}>;
@@ -639,11 +522,6 @@ export default function Industries() {
                 </p>;
               </motion && motion.div>;
               >,;
-=======
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Shield className="w-8 h-8 text-green-600" />";
                 </div>;
@@ -652,18 +530,12 @@ export default function Industries() {
                   We ensure all solutions meet industry-specific regulatory requirements and;
                   maintain the highest security standards.;
                 </p>;
-<<<<<<< HEAD
-=======
-              </motion.div>;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <motion.div
                 className="text-center p-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Cloud className="w-8 h-8 text-purple-600" />
@@ -685,9 +557,6 @@ export default function Industries() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>;
                 <p className="text-gray-600">;
               >,;
-=======
-              >,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">";
                   <Cloud className="w-8 h-8 text-purple-600" />";
                 </div>;
@@ -702,7 +571,6 @@ export default function Industries() {
         </section>
 
         {/* Stats Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -710,14 +578,11 @@ export default function Industries() {
                 <motion.div
                   key={index}
                   className="text-center"
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
               {stats.map((stat, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
@@ -730,17 +595,10 @@ export default function Industries() {
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
               {stats && stats.map((stat, index) => (,;
                 <motion&& motion.div}),
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   key={index}
                   className="text-center""
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 >,
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
                     {stat.number}
@@ -749,7 +607,6 @@ export default function Industries() {
                 </motion.div>;
               ))}
             </div>,
-<<<<<<< HEAD
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">;
@@ -759,8 +616,6 @@ export default function Industries() {
                 </motion && motion.div>;
               ))}
             </div>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </section>;
 
@@ -774,7 +629,6 @@ export default function Industries() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-6">";
                 Ready to Transform Your Industry?;
               </h2>;
@@ -794,27 +648,3 @@ export default function Industries() {
         </section>;
       </div>;
     </Layout>;
-=======
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Don't See Your Industry?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                We work with organizations across all sectors. Contact us to discuss your specific industry needs.
-              </p>
-              <Link href="/contact">
-                <a className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
-                  Contact Us
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Link>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

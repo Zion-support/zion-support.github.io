@@ -5,7 +5,6 @@ interface TalentCardAvatarProps {;
 
   profilePicture?: string;
   fullName: string;
-<<<<<<< HEAD
 
 
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
@@ -18,8 +17,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 interface TalentCardAvatarProps {
   profilePicture?: string,
   fullName: string
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function TalentCardAvatar({
@@ -33,8 +30,6 @@ export function TalentCardAvatar({
       .map((part) => part[0])
       .join("")
       .toUpperCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
 
   return (
@@ -44,7 +39,6 @@ export function TalentCardAvatar({
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
-<<<<<<< HEAD
   )
 }
 import React from "react",;
@@ -62,20 +56,9 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .map(part => part[0]);
       .join('');
       .toUpperCase();
-=======
-  );
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
-<<<<<<< HEAD
-=======
-=======
-  );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
 interface TalentCardAvatarProps {
@@ -95,15 +78,6 @@ function TalentCardAvatar() {
       .toUpperCase ();
   }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return (
     <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
       <AvatarImage src={profile_picture || undefined} alt={full_name} />;
@@ -133,7 +107,3 @@ fullName: string
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

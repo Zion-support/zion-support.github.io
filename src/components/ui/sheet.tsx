@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-import * as SheetPrimitive from "@radix-ui/react-dialog"
-import { cva, type VariantProps } from "class-variance-authority"
-import { X } from 'lucide-react'
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 const Sheet = SheetPrimitive.Root
@@ -18,12 +12,6 @@ const SheetOverlay = React.forwardRef<
     className={cn(
 
 
-<<<<<<< HEAD
-=======
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
@@ -41,12 +29,6 @@ const sheetVariants = cva(
       side: {
         top: "inset-x-0 top-0 border-b data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
         bottom:
-<<<<<<< HEAD
-=======
-          "inset-x-0 bottom-0 border-t data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom",
-        left: "inset-y-0 left-0 h-full w-3/4 border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left sm:max-w-sm",
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
     defaultVariants: {
@@ -58,14 +40,6 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>
   SheetContentProps
-<<<<<<< HEAD
-=======
-
-
->(({ side = "right", className, children, ...props }, ref) => (
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <SheetPortal>
     <SheetOverlay />
     <SheetPrimitive.Content
@@ -123,14 +97,6 @@ const SheetContent = React.forward_ref<;
       {children}
 
 
-<<<<<<< HEAD
-=======
-      <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
-        <span className="sr-only">Close</span>
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
   </SheetPortal>
@@ -144,26 +110,11 @@ const SheetHeader = ({
     className={cn(
 
 
-<<<<<<< HEAD
-=======
-      "flex flex-col space-y-2 text-center sm:text-left",
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
 )
-<<<<<<< HEAD
-=======
-
-
-SheetHeader.displayName = "SheetHeader"
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const SheetFooter = ({
   className
   ...props
@@ -172,33 +123,17 @@ const SheetFooter = ({
     className={cn(
 
 
-<<<<<<< HEAD
-=======
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className
     )}
     {...props}
   />
 )
-<<<<<<< HEAD
-=======
-
-
-SheetFooter.displayName = "SheetFooter"
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
 
-<<<<<<< HEAD
 
     {...props}
   />;
@@ -213,82 +148,3 @@ const SheetDescription = React.forwardRef<;
   />;
 ));
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
-=======
-<SheetPrimitive.Close className=&quot;absolute right - 4 top - 4 rounded - sm opacity - 70 ring - offset - background transition - opacity hover:opacity - 100 focus:outline - none focus:ring - 2 focus:ring - ring focus:ring - offset - 2 disabled:pointer - events - none data-[state = open]:bg - secondary & quot;>;
-        <X className=&quot;h - 4 w - 4&quot; />;
-        <span className=&quot;sr - only & quot;>Close</span>;
-      </SheetPrimitive.Close>;
-    </SheetPrimitive.Content>;
-  </SheetPortal>));
-SheetContent.display_name = SheetPrimitive.Content.display_name;
-const SheetHeader = ({
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLDivElement>) =>: any (
-  <div;
-    className={cn (
-      &quot;flex flex - col space - y-2 text - center sm:text - left & quot;,
-      class_name)}
-    ref={ref}
-
-    className={cn("text-lg font-semibold text-foreground", className)}
-
-
-    {...props}
-  />);
-SheetHeader.display_name = &quot;SheetHeader & quot;
-;
-const SheetFooter = ({
-  class_name,
-  ...props;
-}: React.HTMLAttributes < HTMLDivElement>) =>: any (
-  <div;
-    className={cn (
-      &quot;flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2 & quot;,
-      class_name)}
-    {...props}
-  />);
-SheetFooter.display_name = &quot;SheetFooter & quot;
-;
-const SheetTitle = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Title>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Title>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Title;
-    ref={ref}
-    className={cn (&quot;text - lg font - semibold text - foreground & quot;, class_name)}
-    {...props}
-
-
-  React.ElementRef<typeof SheetPrimitive.Description>,;
-
-
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-  />));
-SheetTitle.display_name = SheetPrimitive.Title.display_name;
-const SheetDescription = React.forward_ref<;
-  React.ElementRef < typeof SheetPrimitive.Description>,
-  React.ComponentPropsWithoutRef < typeof SheetPrimitive.Description>;
->(({ class_name, ...props }, ref) => (
-  <SheetPrimitive.Description;
-    ref={ref}
-
-
-    className={cn("text-sm text-muted-foreground", className)}
-
-
-    {...props}
-
-  />));
-SheetDescription.display_name = SheetPrimitive.Description.display_name;
-export {
-
-export {;
-
-  Sheet, SheetClose;
-  SheetContent, SheetDescription, SheetFooter, SheetHeader, SheetOverlay, SheetPortal, SheetTitle, SheetTrigger;
-
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

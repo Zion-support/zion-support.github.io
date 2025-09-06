@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-=======
-import { Route, Routes } from "react-router-dom";
-import MobileAppPage from "../pages/MobileAppPage";
-import MobileLaunchPage from "../pages/MobileLaunchPage";
-import OpenAppRedirect from "../pages/OpenAppRedirect";
-const MobileAppRoutes = () => {
-=======
-const MobileAppRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {Route, Routes} from "react-router-dom";
 import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Route, Routes } from "react-router-dom",
 import MobileAppPage from "../pages/MobileAppPage",
 import MobileLaunchPage from "../pages/MobileLaunchPage";
@@ -49,31 +35,12 @@ import OpenAppRedirect from "../pages/OpenAppRedirect",;
 
 const MobileAppRoutes = () => {
 const MobileAppRoutes = () => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Routes>;
       {/* Mobile App Routes */}
-<<<<<<< HEAD
-=======
-      <Route path="/download" element={<MobileAppPage />} />
-      <Route path="/mobile-app" element={<MobileAppPage />} />
-      <Route path="/mobile-launch" element={<MobileLaunchPage />} />
-      <Route path="/open-app" element={<OpenAppRedirect />} />
-    </Routes>
-  );
-};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
-=======
-=======
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Route, Routes } from './react-router-dom';
 import MobileAppPage from "../pages / MobileAppPage";
 import MobileLaunchPage from "../pages / MobileLaunchPage";
@@ -90,13 +57,6 @@ const MobileAppRoutes = () =>: any {
 }
 ;
 export default MobileAppRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 },;
 ;export default MobileAppRoutes,
@@ -117,7 +77,3 @@ export default MobileAppRoutes;
   );
 },;
 export default MobileAppRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

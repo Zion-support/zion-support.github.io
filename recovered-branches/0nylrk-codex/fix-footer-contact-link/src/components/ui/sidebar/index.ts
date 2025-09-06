@@ -1,16 +1,6 @@
 // Export components from their respective files
 export * from "./Sidebar.tsx";
 
-<<<<<<< HEAD
-=======
-// Export components from their respective files;
-export * from "./Sidebar.tsx";
-
-// Export components from their respective files
-export * from "./Sidebar.tsx";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export * from "./SidebarItem";
 export * from "./SidebarSection";
 export * from "./SidebarContent";
@@ -23,18 +13,6 @@ export * from "./SidebarMenuButton";
 export * from "./SidebarProvider";
 export * from "./SidebarTrigger";
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export * from "./SidebarTrigger";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Export components from their respective files
 export * from "./Sidebar.tsx",
 export * from "./SidebarItem",
@@ -66,11 +44,3 @@ export * from "./SidebarTrigger";
 
 export * from "./SidebarTrigger";
 export * from "./SidebarTrigger";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export * from "./SidebarTrigger";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

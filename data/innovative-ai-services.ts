@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InnovativeAIService {
   id: string;
   name: string;
@@ -33,12 +29,6 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -80,55 +70,6 @@ export interface InnovativeAIService {
     ],
     popular: true,
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-    color: 'from - blue - 600 to - cyan - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-    market_position:;
-      'Competitive with Waymo and Cruise but more affordable and accessible for commercial use',
-    target_audience:;
-      'Logistics companies, Ride - sharing services, Delivery companies, Transportation fleets',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Autonomous Transportation',
-    real_service: true,
-    technology: [;
-      'Computer Vision',
-      'Deep Learning',
-      'LIDAR',
-      'Radar',
-      'GPS',
-      'Edge Computing',
-    ],
-    integrations: [;
-      'Fleet management systems',
-      'GPS tracking',
-      'Maintenance software',
-      'Insurance platforms',
-    ],
-    use_cases: [;
-      'Commercial delivery',
-      'Passenger transport',
-      'Logistics operations',
-      'Emergency services',
-    ],
-    roi: '300% ROI within 12 months through reduced labor costs and increased efficiency',
-    competitors: [;
-      'Waymo ($50, 000+/month)',
-      'Cruise ($100, 000+/month)',
-      'Tesla FSD',
-    ],
-    market_size: '$556B autonomous vehicle market',
-    growth_rate: '250% annual growth',
-    variant: 'ai - futuristic',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -143,23 +84,6 @@ export interface InnovativeAIService {
     reviews: 12,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'biotech - ai - platform',
-    name: 'Biotech AI Platform',
-    tagline: 'AI - powered drug discovery and genetic engineering',
-    price: '$3, 999',
-    period: '/month',
-    description:;
-      'AI - powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -172,56 +96,6 @@ export interface InnovativeAIService {
       'Multi - omics data analysis',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🧬',
-
-=======
-    color: 'from - emerald - 600 to - teal - 700',
-    text_color: 'text - emerald - 400',
-    link: 'https://ziontechgroup.com / biotech - ai',
-    market_position:;
-      'Accessible alternative to Insitro and Recursion with comprehensive research tools',
-    target_audience:;
-      'Pharmaceutical companies, Research institutions, Biotech startups, Medical researchers',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Biotechnology & AI',
-    real_service: true,
-    technology: [;
-      'Machine Learning',
-      'Bioinformatics',
-      'Computational Biology',
-      'AI / ML',
-      'Cloud Computing',
-    ],
-    integrations: [;
-      'Research databases',
-      'Lab equipment',
-      'Clinical trial systems',
-      'Regulatory platforms',
-    ],
-    use_cases: [;
-      'Drug discovery',
-      'Genetic research',
-      'Clinical trials',
-      'Personalized medicine',
-    ],
-    roi: '500% ROI within 18 months through accelerated drug development and cost savings',
-    competitors: [;
-      'Insitro ($100M+ funding)',
-      'Recursion ($2B+ funding)',
-      'Atomwise',
-    ],
-    market_size: '$150B AI in healthcare',
-    growth_rate: '250% annual growth',
-    variant: 'holographic - matrix',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -236,23 +110,6 @@ export interface InnovativeAIService {
     reviews: 23,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'quantum - financial - trading - platform',
-    name: 'Quantum Financial Trading Platform',
-    tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',
-    price: '$7, 999',
-    period: '/month',
-    description:;
-      'Quantum AI - powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real - time market analysis',
@@ -265,56 +122,6 @@ export interface InnovativeAIService {
       'API for integration',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '💰',
-
-=======
-    color: 'from - yellow - 600 to - orange - 700',
-    text_color: 'text - yellow - 400',
-    link: 'https://ziontechgroup.com / quantum - financial - trading',
-    market_position:;
-      'Accessible quantum AI technology for smaller firms, competing with Renaissance Technologies',
-    target_audience:;
-      'Hedge funds, Investment firms, Trading companies, Financial institutions',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Quantum Finance',
-    real_service: true,
-    technology: [;
-      'Quantum Computing',
-      'AI / ML',
-      'High - Frequency Trading',
-      'Blockchain',
-      'Cloud Computing',
-    ],
-    integrations: [;
-      'Trading platforms',
-      'Market data feeds',
-      'Risk management systems',
-      'Compliance tools',
-    ],
-    use_cases: [;
-      'Algorithmic trading',
-      'Portfolio management',
-      'Risk assessment',
-      'Market analysis',
-    ],
-    roi: '800% ROI within 6 months through superior trading performance and reduced risk',
-    competitors: [;
-      'Renaissance Technologies ($100B+ AUM)',
-      'Two Sigma ($60B+ AUM)',
-      'Citadel',
-    ],
-    market_size: '$15T algorithmic trading',
-    growth_rate: '150% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -329,23 +136,6 @@ export interface InnovativeAIService {
     reviews: 9,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'space - technology - platform',
-    name: 'Space Technology Platform',
-    tagline: 'Complete space mission management and satellite operations',
-    price: '$5, 999',
-    period: '/month',
-    description:;
-      'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real - time satellite tracking',
@@ -358,56 +148,6 @@ export interface InnovativeAIService {
       'Multi - satellite operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🚀',
-
-=======
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 400',
-    link: 'https://ziontechgroup.com / space - technology',
-    market_position:;
-      'Complete mission management platform, more comprehensive than SpaceX Starlink',
-    target_audience:;
-      'Satellite companies, Space startups, Aerospace companies, Research institutions',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Space Technology',
-    real_service: true,
-    technology: [;
-      'Orbital Mechanics',
-      'Satellite Technology',
-      'AI / ML',
-      'IoT',
-      'Cloud Computing',
-    ],
-    integrations: [;
-      'Satellite systems',
-      'Ground stations',
-      'Launch providers',
-      'Regulatory platforms',
-    ],
-    use_cases: [;
-      'Satellite operations',
-      'Mission planning',
-      'Space research',
-      'Commercial space',
-    ],
-    roi: '400% ROI within 12 months through operational efficiency and mission success',
-    competitors: [;
-      'SpaceX Starlink ($99 / month)',
-      'OneWeb ($50 / month)',
-      'Planet Labs',
-    ],
-    market_size: '$469B space economy',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - space',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -422,24 +162,6 @@ export interface InnovativeAIService {
     reviews: 16,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-      'AI-powered world generation',
-    id: 'metaverse - ai - development - platform',
-    name: 'Metaverse AI Development Platform',
-    tagline: 'AI - powered metaverse creation and management',
-    price: '$2, 499',
-    period: '/month',
-    description:;
-      'Complete AI - powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.',
-    features: [;
-      'AI - powered world generation',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Intelligent NPCs and avatars',
       '3D environment creation',
       'Virtual economy systems',
@@ -451,56 +173,6 @@ export interface InnovativeAIService {
       'Cross - platform support',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🌐',
-
-=======
-    color: 'from - pink - 600 to - purple - 700',
-    text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / metaverse - ai - development - platform',
-    market_position:;
-      'Comprehensive metaverse platform competing with Meta and Roblox',
-    target_audience:;
-      'Gaming companies, Virtual reality startups, Educational institutions, Entertainment companies',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Metaverse & Virtual Reality',
-    real_service: true,
-    technology: [;
-      'AI / ML',
-      '3D Graphics',
-      'Virtual Reality',
-      'Blockchain',
-      'Cloud Computing',
-    ],
-    integrations: [;
-      'VR headsets',
-      'Gaming platforms',
-      'Payment systems',
-      'Social media',
-    ],
-    use_cases: [;
-      'Virtual worlds',
-      'Gaming environments',
-      'Educational spaces',
-      'Social platforms',
-    ],
-    roi: '600% ROI within 12 months through virtual asset sales and user engagement',
-    competitors: [;
-      'Meta ($1000+/month)',
-      'Roblox ($500+/month)',
-      'Decentraland',
-    ],
-    market_size: '$800B metaverse market',
-    growth_rate: '300% annual growth',
-    variant: 'holographic - neural',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -515,23 +187,6 @@ export interface InnovativeAIService {
     reviews: 42,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'quantum - robotics - platform',
-    name: 'Quantum Robotics Platform',
-    tagline: 'Quantum AI - powered robotics and automation',
-    price: '$3, 999',
-    period: '/month',
-    description:;
-      'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum - enhanced robotics.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI decision making',
       'Precision robotics control',
       'Industrial automation',
@@ -544,52 +199,6 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🤖',
-
-=======
-    color: 'from - indigo - 600 to - purple - 700',
-    text_color: 'text - indigo - 400',
-    link: 'https://ziontechgroup.com / quantum - robotics',
-    market_position:;
-      'Quantum - enhanced robotics platform competing with ABB and KUKA',
-    target_audience:;
-      'Manufacturing companies, Industrial automation, Research institutions, Robotics startups',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Quantum Robotics',
-    real_service: true,
-    technology: [;
-      'Quantum Computing',
-      'AI / ML',
-      'Robotics',
-      'IoT',
-      'Industrial Automation',
-    ],
-    integrations: [;
-      'Manufacturing systems',
-      'Quality control',
-      'Maintenance software',
-      'Safety systems',
-    ],
-    use_cases: [;
-      'Industrial automation',
-      'Precision manufacturing',
-      'Quality control',
-      'Research robotics',
-    ],
-    roi: '400% ROI within 18 months through increased efficiency and reduced errors',
-    competitors: ['ABB ($50, 000+/month)', 'KUKA ($100, 000+/month)', 'FANUC'],
-    market_size: '$200B industrial robotics',
-    growth_rate: '200% annual growth',
-    variant: 'quantum - robotics',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -604,24 +213,6 @@ export interface InnovativeAIService {
     reviews: 15,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-      'Quantum-resistant encryption',
-    id: 'quantum - cybersecurity - platform',
-    name: 'Quantum Cybersecurity Platform',
-    tagline: 'Quantum - resistant security with AI threat detection',
-    price: '$2, 999',
-    period: '/month',
-    description:;
-      'Next - generation quantum - resistant cybersecurity platform with AI - powered threat detection, quantum encryption, and advanced security analytics.',
-    features: [;
-      'Quantum - resistant encryption',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'AI threat detection',
       'Real - time monitoring',
       'Incident response',
@@ -633,56 +224,6 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🔒',
-
-=======
-    color: 'from - red - 600 to - orange - 700',
-    text_color: 'text - red - 400',
-    link: 'https://ziontechgroup.com / quantum - cybersecurity',
-    market_position:;
-      'Quantum - resistant security platform competing with CrowdStrike and Palo Alto Networks',
-    target_audience:;
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trial_days: 30,
-    setup_time: '2 weeks',
-    category: 'Quantum Cybersecurity',
-    real_service: true,
-    technology: [;
-      'Quantum Computing',
-      'AI / ML',
-      'Cybersecurity',
-      'Encryption',
-      'Threat Intelligence',
-    ],
-    integrations: [;
-      'SIEM systems',
-      'Firewalls',
-      'Endpoint protection',
-      'Compliance platforms',
-    ],
-    use_cases: [;
-      'Threat detection',
-      'Incident response',
-      'Compliance',
-      'Security monitoring',
-    ],
-    roi: '500% ROI within 12 months through threat prevention and compliance savings',
-    competitors: [;
-      'CrowdStrike ($5000+/month)',
-      'Palo Alto Networks ($10000+/month)',
-      'SentinelOne',
-    ],
-    market_size: '$200B cybersecurity market',
-    growth_rate: '180% annual growth',
-    variant: 'quantum - cyberpunk',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -697,23 +238,6 @@ export interface InnovativeAIService {
     reviews: 48,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
-    id: 'quantum - internet - security',
-    name: 'Quantum Internet Security Platform',
-    tagline: 'Quantum - secured internet infrastructure',
-    price: '$4, 999',
-    period: '/month',
-    description:;
-      'Revolutionary quantum - secured internet infrastructure with quantum key distribution, quantum networks, and ultra - secure communications.',
-    features: [;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum key distribution',
       'Quantum networks',
       'Ultra - secure communications',
@@ -726,56 +250,6 @@ export interface InnovativeAIService {
       '24 / 7 support',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-    icon: '🌍',
-
-=======
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / quantum - internet - security - platform',
-    market_position:;
-      'First quantum internet security platform, competing with traditional internet security providers',
-    target_audience:;
-      'Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Quantum Internet',
-    real_service: true,
-    technology: [;
-      'Quantum Computing',
-      'Quantum Networks',
-      'Quantum Key Distribution',
-      'AI / ML',
-      'Network Security',
-    ],
-    integrations: [;
-      'Network infrastructure',
-      'Security systems',
-      'Compliance platforms',
-      'Monitoring tools',
-    ],
-    use_cases: [;
-      'Secure communications',
-      'Government networks',
-      'Financial transactions',
-      'Healthcare data',
-    ],
-    roi: '600% ROI within 18 months through security improvements and compliance benefits',
-    competitors: [;
-      'Traditional ISPs',
-      'Security providers',
-      'Network equipment vendors',
-    ],
-    market_size: '$100B quantum internet market',
-    growth_rate: '400% annual growth',
-    variant: 'quantum - entanglement',
-    contact_info: {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -790,10 +264,6 @@ export interface InnovativeAIService {
     reviews: 6,
   },
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
@@ -807,13 +277,6 @@ export interface InnovativeAIService {
     reviews: 34,
   },;
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -837,13 +300,6 @@ export interface InnovativeAIService {
     popular: true,
     icon: '📦',
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -901,13 +357,6 @@ export interface InnovativeAIService {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -995,7 +444,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     tagline: 'Revolutionary quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     features: [
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
@@ -1197,28 +645,10 @@ export const innovativeAIServices: InnovativeAIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
   }
 ];
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-    },
-    realImplementation: true, implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
-    launchDate: '2024-08-01', customers: 67,
-    rating: 4.7,
-    reviews: 34;
-
-=======
-
-export interface InnovativeAIService {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -59,85 +58,6 @@
         </div>
           {quickLinks.map((link, index) => (
             <Link
-=======
-{quickLinks.map((link, index) => (
-            <Link
-import React from 'react';
-import Link from 'next / link';
-import { use_translation } from 'react - i18next';
-import { cn } from '@/lib / utils';
-import {
-  ArrowRight,
-  Search,
-  Users,
-  Briefcase,
-  Settings,
-  MessageSquare,
-  Smartphone,
-} from 'lucide-react';
-interface QuickAccessProps {
-  class_name?: string;
-  style?: React.CSSProperties;
-export /**
- * QuickAccess - Function description
- */
-function QuickAccess() {
-  const { t } = use_translation ();
-  const quick_links = [;
-    {
-      title: t ('home.tool_ai_matcher'),
-      description: t ('home.tool_ai_matcher_desc'),
-      icon: <Search className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/marketplace',
-    },
-    {
-      title: t ('home.tool_talent'),
-      description: t ('home.tool_talent_desc'),
-      icon: <Users className='h - 6 w - 6 text - zion - purple' />,
-      link: '/talent',
-    },
-    {
-      title: t ('home.tool_services'),
-      description: t ('home.tool_services_desc'),
-      icon: <Briefcase className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/services',
-    },
-    {
-      title: t ('home.tool_equipment'),
-      description: t ('home.tool_equipment_desc'),
-      icon: <Settings className='h - 6 w - 6 text - zion - purple' />,
-      link: '/equipment',
-    },
-    {
-      title: t ('nav.community'),
-      description: t ('home.tool_chat_desc'),
-      icon: <MessageSquare className='h - 6 w - 6 text - zion - cyan' />,
-      link: '/community',
-    },
-    {
-      title: t ('home.tool_mobile_app', 'Mobile App'),
-      description: t ('home.tool_mobile_app_desc', 'Zion on the go'),
-      icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
-      link: '/mobile - launch',
-    },
-  ];
-  return (
-    <section className={cn ('py - 12 bg - zion - blue - dark', class_name)} style={style}>;
-      <div className='container mx - auto px - 4'>;
-        <div className='text - center mb - 8'>;
-          <h2 className='text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 2'>;
-            {t ('home.quick_access_title', 'Quick Access')}
-          </h2>;
-          <p className='text - zion - slate - light text - lg'>;
-            {t (
-              'home.quick_access_subtitle',
-              'Jump directly to our most popular features')}
-          </p>;
-        </div>;
-        <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
-          {quick_links.map ((link, index) => (
-            <Link;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               key={index}
               href={link.link}
 
@@ -568,10 +488,6 @@ export default function Page() {;";
 
 export default QuickAccess;
 ;
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -632,7 +548,3 @@ export default QuickAccess;
       </div>;
     </section>);
 export default QuickAccess }
-<<<<<<< HEAD
-=======
-export default QuickAccess;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

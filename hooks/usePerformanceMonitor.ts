@@ -1,20 +1,9 @@
 import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-=======
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-}
-
-export function usePerformanceMonitor(): PerformanceMetrics | null {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
-<<<<<<< HEAD
     if (typeof window === 'undefined') return;
     // Check if Performance Observer is supported
     if (!('PerformanceObserver' in window)) {
@@ -23,17 +12,11 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
-=======
-    if (typeof window === 'undefined' || !('performance' in window)) {
-      return;
-    }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     const updateMetrics = () => {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (window.performance as any).memory;
       
-<<<<<<< HEAD
       entries && entries.forEach((entry) => {
         if (entry && entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
@@ -134,23 +117,6 @@ if ( {) {
   }, []);
   return { metrics, isSupported }
 }
-=======
-      if (navigation) {
-        setMetrics({
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          renderTime: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          memoryUsage: memory?.usedJSHeapSize || 0,
-          fps: 60,
-        });
-      }
-    };
-
-    if (document.readyState === 'complete') {
-      updateMetrics();
-    } else {
-      window.addEventListener('load', updateMetrics);
-    }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     return () => {
       window.removeEventListener('load', updateMetrics);

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
-
-import React from "react";
-import { Quote } from "lucide-react";
-
-<<<<<<< HEAD
-=======
-
-import React from "react",;
-import { Quote } from "lucide-react",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {;
   Carousel,;
   CarouselContent,;
   CarouselItem,;
   CarouselNext,;
-<<<<<<< HEAD
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
@@ -50,20 +33,6 @@ const testimonials = [;
   },;
 
 ];
-=======
-
-=======
-
-import React from "react";
-import { Quote } from "lucide-react";
-import {
-import React from "react";
-import { Quote } from "lucide-react";
-import {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -71,18 +40,8 @@ import {
   CarouselPrevious,;
 } from "@/components/ui/carousel";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   Carousel
   CarouselContent
   CarouselItem
@@ -115,13 +74,6 @@ const testimonials = [
     image: "/placeholder.svg"
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Quote } from "lucide-react",
 import {
@@ -151,17 +103,10 @@ const testimonials = [
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export function EnterpriseTestimonials() {;
   return (
 
-=======
-=======
 export function EnterpriseTestimonials() {
   return (
     <section className="py-20 px-4 md:px-6">
@@ -185,55 +130,14 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className="flex items-center gap-4">
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 
 export function EnterpriseTestimonials() {;
   return (
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <img
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                      />
-                    </div>
-                    <div>
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-
-<<<<<<< HEAD
-
-=======
-=======
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </div>
-    </section>;
-  );
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -263,43 +167,6 @@ const testimonials = [;
     image: "/placeholder.svg"}];
 export function EnterpriseTestimonials() {;
   return (;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-];
-export function EnterpriseTestimonials() {;
-  return (
-  CarouselPrevious} from "@/components/ui/carousel",;
-;
-const testimonials = [;
-  {;
-    quote:"Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;
-    author:"Sarah Johnson",;
-    title:"VP of Talent Acquisition",;
-    company:"TechGlobal Inc.",;
-    image:"/placeholder.svg"},;
-  {;
-    quote:"The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;
-    author:"Michael Chen",;
-    title:"Director of HR",;
-    company:"InnovateCorp",;
-    image:"/placeholder.svg"},;
-  {;
-    quote:"The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
-    author:"Elena Rodriguez",;
-    title:"CTO",;
-    company:"FutureTech Systems",;
-    image:"/placeholder.svg"}],;
-;
-export function EnterpriseTestimonials() {;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-20 px-4 md:px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="text-center mb-12">;
@@ -310,52 +177,10 @@ export function EnterpriseTestimonials() {;
             See how enterprise teams are transforming their hiring process;
           </p>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <Carousel className="w-full">;
-          <CarouselContent>;
-            {testimonials && testimonials.map((testimonial, index) => (;
-=======
-;
-        <Carousel className="w-full">;
-          <CarouselContent>;
-            {testimonials.map((testimonial, index) => (;
-        <Carousel className="w-full">;
-          <CarouselContent>;
-            {testimonials.map((testimonial, index) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    "{testimonial && testimonial.quote}";
-                  </blockquote>;
-                  <div className="flex items-center gap-4">;
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
-
-=======
-
-                      <img
-                        src={testimonial && testimonial.image}
-                        alt={testimonial && testimonial.author}
-                        className="h-full w-full object-cover"
-                      />;
-                    </div>;
-                    <div>;
-                      <p className="font-bold">{testimonial && testimonial.author}</p>;
-                      <p className="text-sm text-muted-foreground">;
-                        {testimonial && testimonial.title}, {testimonial && testimonial.company}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Quote  } from './lucide-react';
 import {
@@ -366,15 +191,11 @@ import {
   CarouselPrevious,
 } from '@/components / ui / carousel';
                       <img;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 }
 ;
-<<<<<<< HEAD
 const testimonials = [;
   {
     quote:;
@@ -437,79 +258,18 @@ function EnterpriseTestimonials() {
                     <div>;
                       <p className="font - bold">{testimonial.author}</p>;
                       <p className="text - sm text - muted - foreground">;
-<<<<<<< HEAD
                         {testimonial.title}, {testimonial.company}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </p>;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
               </CarouselItem>))}
           </CarouselContent>;
           <div className="flex justify - center gap - 2 mt - 8">;
 
-=======
-                    "{testimonial.quote}";
-                  </blockquote>;
-                  <div className="flex items-center gap-4">;
-                    <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
-                      <img;
-              </CarouselItem>;
-            ))}
-          </CarouselContent>;
-          <div className="flex justify-center gap-2 mt-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
         </Carousel>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    </section>);
-
-}
-=======
-    </section>;
-  ),;}
- import {
-  Carousel;
-CarouselContent;
-CarouselItem;
-CarouselNext;
-const testimonials = [ {
-  quote: "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.";
-author: "Sarah Johnson";
-title: "VP of Talent Acquisition";
-company: "TechGlobal Inc.";
-image: "/placeholder.svg" 
-};
-{
-  quote: "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.";
-author: "Michael Chen";
-title: "Director of HR";
-company: "InnovateCorp";
-image: "/placeholder.svg" 
-};
-{
-  export function EnterpriseTestimonials () {
-  return (<section className="py-20 px-4 md:px-6" > <div className="container mx-auto max-w-6xl" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" > text-xl text-muted-foreground max-w-2xl mx-auto"> See how enterprise teams are transforming their hiring process </p> </div> <Carousel className=" w-full"> <CarouselContent> </blockquote> <div className=" flex items-center gap-4"> <div className=" h-12 w-12 rounded-full overflow-hidden bg-muted"> <img </p> </div> </div> </div> </CarouselItem>) ) 
-}</CarouselContent> <div className=" flex justify-center gap-2 mt-8" > <CarouselPrevious /> <CarouselNext /> </div> </Carousel> </div> </section>) 
-}
-}
-;
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

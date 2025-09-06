@@ -5,7 +5,6 @@ import { ThumbsUp, ThumbsDown } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
-<<<<<<< HEAD
   articleId: string
 }
 
@@ -25,8 +24,6 @@ import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
 
 
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   articleId: string;
 }
 
@@ -36,7 +33,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   >(null);
 
   // Find the article in all categories
-<<<<<<< HEAD
   let article,
   for (const category of HELP_CATEGORIES) {
 export /**
@@ -48,8 +44,6 @@ function HelpArticleView() {
   >(null);
 ;
   // Find the article in all categories;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   let article;
   for (const category of HELP_CATEGORIES) {
     const found = category.articles.find((a) => a.id === articleId);
@@ -64,7 +58,6 @@ function HelpArticleView() {
   }
 
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-<<<<<<< HEAD
     setFeedbackGiven(type),
     
     // In a real implementation, this would send feedback to the server
@@ -75,31 +68,10 @@ function HelpArticleView() {
         : "We'll work on improving this article."})
   },
   
-=======
-    (setFeedbackGiven(type),
-      // In a real implementation, this would send feedback to the server
-      toast({
-        title: "Thank you for your feedback!",
-        description:
-          type === "helpful"
-            ? "We're glad this article was helpful."
-            : "We'll work on improving this article.",
-      }));
-  };
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div>
       <Card className="p-6">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
-<<<<<<< HEAD
-=======
-
-        <div className="flex items-center text-sm text-zion-slate-light mb-6">
-          <span>Last updated: {formatDate(article.lastUpdated)}</span>
-        </div>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div className="prose dark:prose-invert max-w-none mb-8">
           {article.content.split("\n").map((paragraph, idx) => (
             <p key={idx}>{paragraph}</p>
@@ -113,7 +85,6 @@ function HelpArticleView() {
             </div>
 
             <div className="flex items-center space-x-3">
-=======
 
   if (!article) {;
     return <div>Article not found</div>;
@@ -152,7 +123,6 @@ function HelpArticleView() {
             </div>;
 
             <div className="flex items-center space-x-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="outline"
                 size="sm"
@@ -239,7 +209,6 @@ function format_date (date: string): string {
   });
 }
 
-<<<<<<< HEAD
 ;
 function formatDate(date:string):string {;
   return new Date(date).toLocaleDateString("en-US", {;
@@ -266,10 +235,6 @@ function formatDate(date:string):string {;
     </div>
   );
 }
-=======
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
@@ -278,8 +243,4 @@ function formatDate(date: string): string {
     day: "numeric",
   });
 }
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
 };
 
-=======
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {MessageSquare, ArchiveIcon} from "lucide-react";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type EmptyStateCardProps = {
   type: "active" | "archived";
 };
@@ -15,28 +9,13 @@ type EmptyStateCardProps = {
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === "active";
 
-=======
-=======
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from "lucide-react";
 type EmptyStateCardProps = {
-<<<<<<< HEAD
   type: 'active' | 'archived'
 },
 
-=======
-  type: "active" | "archived";
-};
-
-export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
-  const isActive = type === "active";
-
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -46,22 +25,11 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           ) : (
             <ArchiveIcon className="h-8 w-8 text-white" />
           )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
         <h3 className="text-xl font-medium text-white mb-2">
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
-<<<<<<< HEAD
           }
         </p>
       </CardContent>
@@ -95,35 +63,16 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
         </p>;
       </CardContent>;
     </Card>;
-=======
-          {isActive
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
-=======
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
         </p>
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 import React from './react';
 import { Card, CardContent  } from '@/components / ui / card';
@@ -155,15 +104,6 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
     </Card>);
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ),;
 },; type EmptyStateCardProps = {
   type: 'active' | 'archived' 
@@ -181,10 +121,3 @@ bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent
 };
 
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

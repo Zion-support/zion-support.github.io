@@ -2,9 +2,6 @@ import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
   availability: Availability
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -364,5 +361,3 @@ export function ProfileAvailability(): any ({;
 }
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/creator/CreatorSidebar";
 import {Header} from "@/components/Header";
@@ -9,12 +8,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-=======
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/creator/CreatorSidebar";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function CreatorDashboard() {
   return (
     <SidebarProvider>
@@ -73,7 +66,6 @@ export default function CreatorDashboard() {
                 Create new content, monitor your analytics, or manage your
                 account using the sidebar menu.
               </p>
-<<<<<<< HEAD
 }
 
 
@@ -145,23 +137,8 @@ function CreatorDashboard() {
         </div>;
       </div>;
       <SidebarTrigger />;
-=======
-              {/* Placeholder for more creator-specific content */}
-            </div>
-          </main>
-          <Footer />
-        </div>
-      </div>
-      <SidebarTrigger />
-    </SidebarProvider>
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </SidebarProvider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </SidebarProvider>);
 }
     </SidebarProvider>;
@@ -177,7 +154,3 @@ function CreatorDashboard() {
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

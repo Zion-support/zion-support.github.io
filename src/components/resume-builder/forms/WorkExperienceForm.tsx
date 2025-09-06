@@ -302,13 +302,8 @@ export function WorkExperienceForm(): any ({;
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-<<<<<<< HEAD
                   </div>;
                   <div className='flex gap-2'>;
-=======
-                  </div>
-                  <div className="flex gap-2">
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                     setEditingId(null),
                     setEditingId(null),

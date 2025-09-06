@@ -1,52 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-<<<<<<< HEAD
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}'
-=======
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-=======
-<<<<<<< HEAD
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
   ],
   theme: {
     extend: {
       colors: {
         primary: {
           50: '#eff6ff',
-<<<<<<< HEAD
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
-=======
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
-          950: '#172554',
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         },
         gray: {
           50: '#f9fafb',
@@ -69,21 +35,6 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      },
-    },
-  },
-  plugins: [],
-};
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
         'slide-right': 'slideRight 0.5s ease-out',
@@ -94,14 +45,6 @@ module.exports = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
       },
       keyframes: {
         fadeIn: {
@@ -110,10 +53,6 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         slideDown: {
@@ -190,24 +129,9 @@ module.exports = {
         '4xl': '2rem',
         '5xl': '2.5rem'
       },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)'
-      }
-    }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
     },
   },
   plugins: [
@@ -215,14 +139,4 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
 };
-=======
-};
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-191f
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

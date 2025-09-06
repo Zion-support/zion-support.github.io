@@ -1,64 +1,4 @@
-<<<<<<< HEAD
   contactInfo: {
-=======
-<<<<<<< HEAD
-  contactInfo: {
-=======
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface EmergingTech2026ServiceV4 {
-
-  {
-
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.',
-    launch_date: '2026 - 05 - 15',
-    customers: 30,
-    rating: 4 && 4.8,
-    reviews: 25,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'Comprehensive digital twin platform for smart cities with real - time modeling and predictive analytics.';
-    launch_date: '2026 - 05 - 15';
-
-    customers: 30;
-
-    rating: 4 && 4.8,
-
-    reviews: 25
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string,
-    website: string
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -265,43 +205,19 @@ export interface EmergingTech2026ServiceV4 {
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     reviews: 25;
-=======
     reviews: 25;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;
@@ -696,20 +612,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
     customers: 30,;
     rating: 4.8;
     reviews: 25;
-<<<<<<< HEAD
   }
 ];
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

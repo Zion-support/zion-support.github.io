@@ -103,17 +103,10 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     </div>;
 
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-=======
-import React, { useState } from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -183,21 +176,12 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
                 <button
                   className="h-8 w-8 flex items-center justify-center"
-<<<<<<< HEAD
                   onClick={() => toggleSaved(item && item.id)}
                 >;
                   {savedItems && savedItems.includes(item && item.id) ? (;
                     <BookmarkCheck className="h-5 w-5 text-primary" />;
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
-=======
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
 
                 </button>;

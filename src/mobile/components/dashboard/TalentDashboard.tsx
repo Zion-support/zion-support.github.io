@@ -333,18 +333,10 @@ function TalentDashboard() {
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
-<<<<<<< HEAD
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="View Portfolio">;
-=======
-          <Button;
-            variant="outline";
-            className="h-auto py-4 flex flex-col gap-1";
-            aria-label="View Portfolio";
-          >;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;

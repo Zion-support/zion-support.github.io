@@ -676,7 +676,6 @@ if ( {) {
                 location: values.location
   },;
   // Handle form submission;
-<<<<<<< HEAD
   const onSubmit = async (values: TalentFormValues,) => {;
     if (skillTags && skillTags.length === 0) {;
       toast({;
@@ -700,28 +699,6 @@ if ( {) {
       let finalSkills = skillTags;
 
       if (values && values.enhancedProfile && !generatedContent) {;
-=======
-  const onSubmit = async (values: TalentFormValues) => {;
-    if (skillTags.length === 0) {;
-      toast({;
-        title: "Skills required",;
-        description: "Please add at least one skill to your profile.",;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsSubmitting(true),;
-    try {;
-      // For actual implementation with Supabase;
-      if (!user?.id) {;
-        throw new Error("User not authenticated");
-      }
-;
-      // Enhance profile if not already done;
-      let finalSummary = "",;
-      let finalSkills = skillTags,;
-      if (values.enhancedProfile && !generatedContent) {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         try {;
           const { data: aiData } = await supabase && supabase.functions.invoke(;
             'talent-profile-enhancer',;
@@ -1642,7 +1619,6 @@ if (throw error) {
                   </div>
                 )}
                 {/* Generated Content Display */}
-<<<<<<< HEAD
                 {generatedContent && (;
                   <div className='bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4'>;
                     <div className='flex items-center justify-between mb-3'>;
@@ -1650,15 +1626,6 @@ if (throw error) {
                         <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />;
                         AI-Generated Content;
                       </h4>;
-=======
-                {generatedContent && (
-                  <div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h4 className="text-white font-medium flex items-center">
-                        <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
-                        AI-Generated Content
-                      </h4>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <Button
 
                         onClick={applyGeneratedContent}>;
@@ -1726,19 +1693,12 @@ if (throw error) {
               <Separator className='bg-zion-blue-light/50' />;
 
               {/* Skills and Availability */}
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Skills Section */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-medium text-white'>;
                     Skills & Expertise;
                   </h3>;
-=======
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {/* Skills Section */}
-                <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-white">Skills & Expertise</h3>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <FormField
 
                     control={form.control}
@@ -1754,15 +1714,9 @@ if (throw error) {
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a skill...'
                               {...field}
-<<<<<<< HEAD
                               onKeyDown = {handleSkillKeyPress,}
                             />;
                           </FormControl>;
-=======
-                              onKeyDown={handleSkillKeyPress}
-                            />
-                          </FormControl>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Button
 
                   />;
@@ -2203,25 +2157,12 @@ toast ({
 }finally {
   setIsGenerating (false);
 
-<<<<<<< HEAD
 }
 //Apply generated content to form const applyGeneratedContent = () =>: any {
   // Check condition
 if ( {) {
   $2
 }
-=======
-}
-//Apply generated content to form const applyGeneratedContent = () => {
-  if (generatedContent) {
-  //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generatedContent.categorizedSkills
-const newSkills: string[] = []
-if (Array.isArray (categorySkills) ) {
-  categorySkills.forEach (skill => {'
-  if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {
-})
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   new Date () .getFullYear () 
@@ -2256,11 +2197,7 @@ if ( {) {
   if (skillTags.length === 0) {
   toast ({
   return;
-<<<<<<< HEAD
 }setIsSubmitting (true);
-=======
-}setIsSubmitting (true)
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
   //For actual implementation with Supabase if (!user?.id) {
   try {
