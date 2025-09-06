@@ -9,9 +9,6 @@ interface LayoutProps {
 
 export default function Layout({
   children,
-  title = "Zion Tech Group",
-  description = "Leading technology solutions provider",
-  keywords = "technology, AI, cloud, micro SaaS",
 }: LayoutProps) {
   return (
     <div className="min-h-screen bg-gray-50">

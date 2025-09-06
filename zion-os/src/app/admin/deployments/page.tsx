@@ -41,7 +41,7 @@ export default function DeploymentsPage() {
     }
   };
 
-  const getVerticalIcon = (vertical: string) => {
+  const getVerticalIcon = (_vertical: string) => {
     // Return appropriate icon based on vertical
     return <div className="w-6 h-6 bg-blue-500 rounded" />;
   };
@@ -50,7 +50,7 @@ export default function DeploymentsPage() {
     return new Date(date).toLocaleDateString();
   };
 
-  const setFilter = (newFilter: string) => {
+  const setFilter = (_newFilter: string) => {
     // This should be managed with state
   };
 

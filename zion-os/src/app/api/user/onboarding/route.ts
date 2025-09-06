@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
         onboardingCompleted: updatedUser.onboardingCompleted
       }
     });
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
       { error: 'Failed to complete onboarding' },
       { status: 500 }

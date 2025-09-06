@@ -21,11 +21,13 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     // Only log to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      // eslint-disable-next-line no-console
       console.error('Error details:', error);
+      // eslint-disable-next-line no-console
       console.error('Error info:', errorInfo);
     }
   }

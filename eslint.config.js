@@ -48,6 +48,7 @@ export default [
         React: 'readonly',
         require: 'readonly',
         module: 'readonly',
+        HTMLElement: 'readonly',
         HTMLDivElement: 'readonly',
         HTMLParagraphElement: 'readonly',
         HTMLHeadingElement: 'readonly',
@@ -70,6 +71,11 @@ export default [
     plugins: {
       react,
       'react-hooks': reactHooks
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -122,7 +128,17 @@ export default [
         expect: 'readonly',
         vi: 'readonly',
         Deno: 'readonly',
-        React: 'readonly'
+        React: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        HTMLParagraphElement: 'readonly',
+        HTMLHeadingElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        MessageEvent: 'readonly',
+        RequestInit: 'readonly',
+        AbortController: 'readonly',
+        Performance: 'readonly',
+        PerformanceNavigationTiming: 'readonly'
       }
     },
     plugins: {
