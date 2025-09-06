@@ -1,7 +1,27 @@
 "use client";
+
+import { Rocket, CheckCircle, Clock, AlertCircle, XCircle } from 'lucide-react';
+
 const getStatusColor = (status: string) => {
   switch (status) {
-  const filteredDeployments = deployments.filter (deployment => filter === 'all' || deployment.status === filter);
+    case 'active':
+      return 'text-green-400';
+    case 'pending':
+      return 'text-yellow-400';
+    case 'failed':
+      return 'text-red-400';
+    case 'stopped':
+      return 'text-gray-400';
+    default:
+      return 'text-gray-400';
+  }
+};
+
+export default function DeploymentsPage() {
+  const deployments = []; // This should be populated from your data source
+  const filter = 'all'; // This should be managed with state
+  
+  const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
 return (<div className="space-y-8"> {
   /* Header Section */ 
 }<div className="border-b border-white/10 pb-6"> <h1 className="text-3xl font-bold bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent"> Deployment Management </h1> <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p> </div> {
