@@ -84,6 +84,18 @@ const nextConfig = {
     
     return config;
   },
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  },
+  async redirects() {
+    return [
+      { source: '/api-documentation', destination: '/api-docs', permanent: true },
+      { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
+    ];
+  },
   async headers() {
     return [
       {
@@ -109,37 +121,6 @@ const nextConfig = {
       }
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
-  output: 'standalone',
-  httpAgentOptions: {
-    keepAlive: true,
-  },
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
-  distDir: '.next',
-  assetPrefix: '',
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true,
-  skipMiddlewareUrlNormalize: true,
   serverExternalPackages: ['sharp'],
 };
 

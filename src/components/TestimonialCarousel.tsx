@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
@@ -86,6 +88,7 @@ const TestimonialCarousel: React.FC = () => {
         </div>
 =======
 <<<<<<< HEAD
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -143,7 +146,11 @@ export default TestimonialCarousel;
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -495,5 +502,9 @@ export default TestimonialCarousel;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+=======
 >>>>>>> main
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1

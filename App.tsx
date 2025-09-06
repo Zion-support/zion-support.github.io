@@ -1,34 +1,14 @@
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React, { JSX } from 'react';
 =======
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
 import React from 'react';
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
 import Header from './src/components/Header';
 import Footer from './src/components/Footer';
-<<<<<<< HEAD
-import LandingPage from './src/pages/LandingPage';
-import AboutPage from './src/pages/About';
-import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/ServicesPage';
-import PricingPage from './src/pages/PricingPage';
-
-export default function App() {
-=======
 import ServiceCard from './src/components/ServiceCard';
 import TestimonialCarousel from './src/components/TestimonialCarousel';
 import ContactSection from './src/components/ContactSection';
@@ -78,43 +58,8 @@ export default function App() {
       features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
     },
   ];
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
-<<<<<<< HEAD
-export default function App(): JSX.Element {
-=======
-<<<<<<< HEAD
-export default function App(): React.JSX.Element {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-export default function App(): React.JSX.Element {
-=======
-export default function App(): JSX.Element {
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
->>>>>>> 114abeb283f270aa60bfbe93d6f31e5f8341ce65
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-  return (
-<<<<<<< HEAD
-    <main>
-
-    </main>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
       <Header />
@@ -184,10 +129,33 @@ export default function App(): JSX.Element {
       <ChatAssistant />
       <ScrollToTop />
     </div>
-<<<<<<< HEAD
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> main
   );
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+export default function App() {
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+<<<<<<< HEAD
+export default function App(): React.JSX.Element {
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
+
+export default function App(): React.JSX.Element {
+  return (
+    <main>
+      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>
+  );
+}
+=======
+>>>>>>> main
+=======
+>>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56

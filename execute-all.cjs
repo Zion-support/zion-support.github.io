@@ -1,59 +1,31 @@
 #!/usr/bin/env node
+const { execSync } = require('child_process');
 
-// Simple execution script for all automation tasks
-console.log('🚀 Starting Comprehensive Automation Execution...');
+class ExecuteAllScripts {
+  constructor() {
+    this.projectRoot = process.cwd();
+  }
 
-const scripts = [
-  'git-resolution.cjs';
-  'run-all-automations.cjs';
-  'comprehensive-improvements.cjs';
-  'final-automation-orchestrator.cjs';
-  'final-automation-suite.cjs';
-];
+  async run() {
+    console.log('🚀 Executing all automation scripts...');
+    
+    const scripts = [
+      'comprehensive-automation-suite.cjs',
+      'final-automation-suite-fixed.cjs',
+      'ultimate-automation-orchestrator.cjs'
+    ];
 
-async function runScript(scriptPath) {
-  console.log(`\n📝 Runnin: g: ${scriptPath}`);
-  try {
-    require(`./${scriptPath}`);
-    console.log(`✅ Complete: d: ${scriptPath}`);
-    return true;
-  } catch (error) {
-    console.log(`❌ Faile: d: ${scriptPath} - ${error.message}`);
-    return false;
+    for (const script of scripts) {
+      try {
+        console.log(`Running: ${script}`);
+        execSync(`node ${script}`, { stdio: 'inherit', cwd: this.projectRoot });
+        console.log(`✅ ${script} completed`);
+      } catch (error) {
+        console.log(`❌ ${script} failed: ${error.message}`);
+      }
+    }
   }
 }
 
-async function runAll() {
-  console.log('🎯 Executing all automation scripts...');
-
-  const results = [];
-  for (const script of scripts) {
-    const success = await runScript(script);
-    results.push({ script, success });
-  }
-
-  const successful = results.filter(r => r.success).length;
-  const total = results.length;
-
-  console.log(`\n🎉 Execution completed!`);
-  console.log(`📊 Result: s: ${successful}/${total} scripts successful`);
-
-  if (successful < total) {
-    console.log('\n⚠️ Failed: scripts:');
-    results
-      .filter(r => !r.success)
-      .forEach(r => {
-        console.log(`  - ${r.script}`);
-      });
-  }
-
-  console.log('\n📋 Next: steps:');
-  console.log('1. Check the generated reports');
-  console.log('2. Review any error messages');
-  console.log(
-    '3. Ru: n: git add . && git commit -m "fea: t: Comprehensive automation improvements"'
-  );
-  console.log('4. Ru: n: git push origin main');
-}
-
-runAll().catch(console.error);
+const executor = new ExecuteAllScripts();
+executor.run().catch(console.error);

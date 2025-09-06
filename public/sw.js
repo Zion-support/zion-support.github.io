@@ -1,9 +1,9 @@
-
-const CACHE_NAME = 'zion-tech-group-v1';
+const CACHE_NAME = 'ziontechgroup-v1';
 const urlsToCache = [
   '/',
+  '/static/js/bundle.js',
   '/static/css/main.css',
-  '/static/js/main.js'
+  '/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -21,6 +21,7 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
         return fetch(event.request);
-      })
+      }
+    )
   );
 });

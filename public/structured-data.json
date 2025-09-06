@@ -2,26 +2,20 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",
-  "description": "Leading technology solutions provider specializing in AI services, IT solutions, and micro SaaS development.",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-302-464-0950",
-    "contactType": "customer service",
-    "email": "kleber@ziontechgroup.com"
-  },
+  "description": "Leading provider of AI, blockchain, and IT services",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "364 E Main St STE 1008",
-    "addressLocality": "Middletown",
-    "addressRegion": "DE",
-    "postalCode": "19709",
     "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "customer service"
   },
   "sameAs": [
     "https://twitter.com/ziontechgroup",
-    "https://linkedin.com/company/ziontechgroup",
-    "https://facebook.com/ziontechgroup"
+    "https://linkedin.com/company/ziontechgroup"
   ]
 }

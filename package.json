@@ -8,10 +8,9 @@
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
-    "export": "vite build",
-    "start": "vite preview --port 4173",
+    "start": "next start",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit",
@@ -19,6 +18,7 @@
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
     "test:watch": "jest --watch --config jest.config.ts",
     "test:coverage": "jest --coverage --config jest.config.ts",
+    "test:unit": "jest -c jest.config.ts --runInBand",
     "verify": "npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
@@ -159,9 +159,6 @@
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@next/swc-linux-x64-gnu": "^15.5.2",
     "@radix-ui/react-accordion": "^1.1.2",
-    "@radix-ui/react-alert-dialog": "^1.0.5",
-    "@radix-ui/react-avatar": "^1.0.4",
-    "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-hover-card": "^1.0.7",
@@ -293,27 +290,8 @@
   },
   "engines": {
     "node": ">=18.0.0",
-    "npm": ">=10.0.0"
+    "npm": ">=8.0.0"
   },
-  "postcss": {
-    "plugins": {
-      "tailwindcss": {},
-      "autoprefixer": {}
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
-  },
-  "keywords": [
-    "nextjs",
-    "react",
-    "typescript",
-    "tailwindcss",
-    "ai",
-    "automation",
-    "zion-tech-group"
-  ],
   "author": "Zion Tech Group",
   "license": "MIT"
 }
