@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-05T22:09:22.350Z",
   "bundleAnalysis": {
     "success": true,
@@ -25,3 +26,20 @@
     "score": 100
   }
 }
+=======
+  "timestamp": "2025-09-06T01:33:00.506Z",
+  "totalDuration": 35167,
+  "optimizations": [
+    "Image optimization tools installed",
+    "Bundle analysis completed",
+    "Previous builds cleaned",
+    "Optimized production build created"
+  ],
+  "errors": [],
+  "recommendations": [
+    "Set up continuous performance monitoring",
+    "Implement lazy loading for better initial load times",
+    "Consider using a CDN for static assets"
+  ]
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-7fb7

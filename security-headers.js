@@ -1,5 +1,5 @@
 // Security headers configuration
-export const securityHeaders = [
+const securityHeaders = [
   {
     key: 'X-DNS-Prefetch-Control',
     value: 'on'
@@ -25,3 +25,14 @@ export const securityHeaders = [
     value: 'origin-when-cross-origin'
   }
 ];
+
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: securityHeaders,
+      },
+    ];
+  },
+};

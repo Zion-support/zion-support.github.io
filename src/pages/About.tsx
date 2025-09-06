@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ContactSection } from '@/components/ContactSection';
@@ -286,3 +287,23 @@ export default function About() {
       </main>
     </>
   );
+=======
+import React from 'react';
+
+const About = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          About
+        </h1>
+        <p className="text-gray-600">
+          This is a placeholder about page.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default About;
+>>>>>>> cursor/automate-test-improve-and-merge-code-7fb7

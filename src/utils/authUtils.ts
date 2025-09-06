@@ -1,4 +1,15 @@
-export const cleanupAuthState = () => {;
-  // Basic cleanup function;
-  console.log('Cleaning up auth state');
-};'
+export const isAuthenticated = () => {
+  return localStorage.getItem('token') !== null;
+};
+
+export const getToken = () => {
+  return localStorage.getItem('token');
+};
+
+export const setToken = (token: string) => {
+  localStorage.setItem('token', token);
+};
+
+export const removeToken = () => {
+  localStorage.removeItem('token');
+};
