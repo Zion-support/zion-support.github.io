@@ -1,212 +1,78 @@
-<<<<<<< HEAD
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components/ui/ badge';
-import { Button } from '@/components/ui/ button';
-import { StarIcon } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { StarIcon } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-import { Star } from 'lucide-react'
-=======
+
+import { cn  } from '@/lib / utils';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { StarIcon  } from 'lucide-react';
+import { cn  } from '@/lib/utils';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import Image from 'next/image'; // Import next/image;
+import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image;
+import React, { useState } from 'react'; // Import useState;
+import { Star  } from 'lucide-react';
 import Image from 'next / image'; // Import next / image;
 import React, { useState } from 'react'; // Import useStateimport Image from 'next / image'; // Import next / image;
-import React, { useState } from 'react'; // Import useState;
-import { Star } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-interface ListingScoreCardProps {
-  title: string;
+interface ListingScoreCardProps  {title: string;
   description: string;
   image?: string;
   category: string;
   tags?: string[];
-  author?: string;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-interface ListingScoreCardProps {
-  title: string,
-  description: string,
-  image?: string,
-  category: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-=======
-  authorImage?: string;
+  author?: string;interface ListingScoreCardProps  {title: string,description: string,image?: string,category: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,authorImage?: string;
   aiScore?: number;
   rating?: number;
-  reviewCount?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-  className?: string
-}
-
-export function ListingScoreCard({ 
-<<<<<<< HEAD
-  title, 
-  description, 
-  image, 
-  category, 
-=======
-export function ListingScoreCard(): any ({;
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
-  className
-}: ListingScoreCardProps) {
-<<<<<<< HEAD
-  const [mainImageError, setMainImageError] = useState(false),
-  const [authorImageError, setAuthorImageError] = useState(false),
-
-  return (
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
-      className
-    )}>
-      {image && !mainImageError && (
-        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
-          <Image
-=======
-
-
-      {image && !mainImageError && (
-        <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
-          <Image
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            src={image} 
-            alt={title} 
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+  reviewCount?: number;className?: string;
+}export function ListingScoreCard({title,description,image,category,export function ListingScoreCard(): any ({tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className;
+}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false),const [authorImageError, setAuthorImageError] = useState(false),return (<div className={cn("flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",className;
+    )}>;
+      {image && !mainImageError && (<div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
+          <Image;
+      {image && !mainImageError && (<div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
+          <Image;
+            src={image}alt={title}className="object-cover transition-transform duration-300 group-hover:scale-105";
             onError={() => setMainImageError(true)}
             priority={false}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
-          />
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        </div>
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes;
+          />;
+        </div>;
       )}
-      {(!image || mainImageError) && ( // Fallback if no image or error
-        <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center">
-          <span className="text-zion-slate-light text-sm">No Image</span>
-        </div>
-      )}
-
-      <div className="flex flex-col p-4 flex-grow">
-        <div className="mb-2 flex items-center justify-between">
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+      {(!image || mainImageError) && ( // Fallback if no image or error;
+        <div className="h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center">;
+          <span className="text-zion-slate-light text-sm">No Image</span>;
+        </div>;
+      )}<div className="flex flex-col p-4 flex-grow">;
+        <div className="mb-2 flex items-center justify-between">;
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">;
             {category}
-          </Badge>
-          {aiScore === undefined || aiScore === null ? (
-            <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
-          ) : (
-            aiScore > 0 && (
-              <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
-                <span className="font-medium mr-1">AI Match:</span>
-                <span>{aiScore}%</span>
-              </div>
-            )
-          )}
-        </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
-        
-        {rating > 0 && (
-          <div className="flex items-center gap-1 mb-4">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <StarIcon 
+          </Badge>;
+          {aiScore === undefined || aiScore === null ? (<div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>;
+          ) : (aiScore > 0 && (<div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">;
+                <span className="font-medium mr-1">AI Match:</span>;
+                <span>{aiScore}%</span>;
+              </div>;
+            ))}
+        </div>;
+        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>;
+        <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>;
+        {rating > 0 && (<div className="flex items-center gap-1 mb-4">;
+            <div className="flex">;
+              {[1, 2, 3, 4, 5].map((star) => (<StarIcon;
                   key={star}
-                  className={cn(
-                    "h-4 w-4", 
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-import { cn } from "@/lib/utils",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { StarIcon } from 'lucide-react';
-import Image from 'next/image', // Import next/image;
+                  className={cn("h-4 w-4",star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
+                      : "text-zion-slate-light";
+import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import Image from 'next/image', // Import next/image;
 import React, { useState } from 'react', // Import useState;
-interface ListingScoreCardProps {;
-  title: string,;
-  description: string,;
-  image?: string,;
-  category: string,;
-  tags?: string[],;
-  author?: string,;
-  authorImage?: string,;
-  aiScore?: number,;
-  rating?: number,;
-  reviewCount?: number,;
-  className?: string;
-}
-;
-export function ListingScoreCard({;
-<<<<<<< HEAD
-export function ListingScoreCard(): any ({;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  title,;
-  description,;
-  image,;
-  category,;
-  tags,;
-  author,;
-  authorImage,;
-  aiScore,;
-  rating = 0,;
-  reviewCount = 0,;
-<<<<<<< HEAD
-=======
-  className,;
-}: ListingScoreCardProps) {;
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
-
-
-    >;
-      {image && !mainImageError && (;
-        <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  author_image?: string;
+interface ListingScoreCardProps  {title: string,description: string,image?: string,category: string,tags?: string[],author?: string,authorImage?: string,aiScore?: number,rating?: number,reviewCount?: number,className?: string;
+}export function ListingScoreCard({export function ListingScoreCard(): any ({title,description,image,category,tags,author,authorImage,aiScore,rating = 0,reviewCount = 0,className}: ListingScoreCardProps) {const [mainImageError, setMainImageError] = useState(false)const [authorImageError, setAuthorImageError]  = useState(false)>;
+      {image && !mainImageError && (<div className='h-48 w-full overflow-hidden relative'>;author_image?: string;
   ai_score?: number;
   rating?: number;
   review_count?: number;
   class_name?: string;
-export /**
- * ListingScoreCard - Function description
- */
-function ListingScoreCard() {
-  const [mainImageError, setMainImageError] = useState (false);
-  const [authorImageError, setAuthorImageError] = useState (false);
-    >;
-      {image && !mainImageError && (
-        <div className='h - 48 w - full overflow - hidden relative'>;
+export /**;
+ * ListingScoreCard - Function description;
+ */;
+function ListingScoreCard() {const [mainImageError, setMainImageError] = useState (false)const [authorImageError, setAuthorImageError] = useState (false)>;
+      {image && !mainImageError && (<div className='h - 48 w - full overflow - hidden relative'>;
           {' '}
           {/* Added relative for Image layout fill */}
           <Image;
@@ -214,44 +80,29 @@ function ListingScoreCard() {
             alt={title}
             className='object - cover transition - transform duration - 300 group - hover:scale - 105';
             on_error={() => setMainImageError (true)}
-            priority={false}
-
-      {(!image || mainImageError) && ( // Fallback if no image or error;
+            priority={false}{(!image || mainImageError) && ( // Fallback if no image or error;
         <div className='h-48 w-full overflow-hidden bg-zion-blue-light/10 flex items-center justify-center'>;
           <span className='text-zion-slate-light text-sm'>No Image</span>;
         </div>;
-      )}
-
-      <div className='flex flex-col p-4 flex-grow'>;
-        <div className='mb-2 flex items-center justify-between'>;
-
-          <Badge
-            variant='secondary'
+      )}<div className='flex flex-col p-4 flex-grow'>;
+        <div className='mb-2 flex items-center justify-between'>;<Badge;
+            variant='secondary';
             className='bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30'>;
-            {category}
-
-          </Badge>;
-          {aiScore === undefined || aiScore === null ? (;
-            <div className='text-xs italic text-zion-slate-light'>;
+            {category}</Badge>;
+          {aiScore === undefined || aiScore === null ? (<div className='text-xs italic text-zion-slate-light'>;
               Beta – simulated results;
             </div>;
-          ) : (;
-            aiScore > 0 && (;
-              <div className='flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs'>;
+          ) : (aiScore > 0 && (<div className='flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs'>;
                 <span className='font-medium mr-1'>AI Match:</span>;
                 <span>{aiScore}%</span>;
               </div>;
-            );
-
-          )}
+            ))}
         </div>;
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>;
           {title}
         </h3>;
         <p className='text-zion-slate mb-4 flex-grow line-clamp-2'>;
-          {description}
-
-            sizes='(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw' // General sizes          />;
+          {description}sizes='(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw' // General sizes          />;
         </div>)}
       {(!image || mainImageError) && ( // Fallback if no image or error;
         <div className='h - 48 w - full overflow - hidden bg - zion - blue - light / 10 flex items - center justify - center'>;
@@ -265,12 +116,9 @@ function ListingScoreCard() {
           >;
             {category}
           </Badge>;
-          {ai_score === undefined || ai_score === null ? (
-            <div className='text - xs italic text - zion - slate - light'>;
+          {ai_score === undefined || ai_score === null ? (<div className='text - xs italic text - zion - slate - light'>;
               Beta – simulated results;
-            </div>) : (
-            ai_score > 0 && (
-              <div className='flex items - center px - 2 py - 1 bg - zion - cyan / 10 rounded text - zion - cyan text - xs'>;
+            </div>) : (ai_score > 0 && (<div className='flex items - center px - 2 py - 1 bg - zion - cyan / 10 rounded text - zion - cyan text - xs'>;
                 <span className='font - medium mr - 1'>AI Match:</span>;
                 <span>{ai_score}%</span>;
               </div>))}
@@ -280,20 +128,10 @@ function ListingScoreCard() {
         </h3>;
         <p className='text - zion - slate mb - 4 flex - grow line - clamp - 2'>;
           {description}
-        </p>;
-
-        {rating > 0 && (
-          <div className='flex items - center gap - 1 mb - 4'>;
+        </p>;{rating > 0 && (<div className='flex items - center gap - 1 mb - 4'>;
             <div className='flex'>;
-              {[1, 2, 3, 4, 5].map (star => (
-                <StarIcon;
-                  key={star}
-
-        </p>;
-
-<<<<<<< HEAD
-=======
-  title;
+              {[1, 2, 3, 4, 5].map (star => (<StarIcon;
+                  key={star}</p>;title;
   description;
   image;
   category;
@@ -302,121 +140,70 @@ function ListingScoreCard() {
   authorImage;
   aiScore;
   rating;
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-                      : "text-zion-slate-light"
-                  )}
-                />
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-              ))}
-            </div>
-            <span className="text-sm text-zion-slate-light ml-1">
-              ({reviewCount})
-            </span>
-          </div>
-        )}
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}
-              </Badge>
-            ))}
-          </div>
-        )}
-        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
-          Request Quote
-        </Button>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {tags.map((tag, i) => (
-              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
-                {tag}
-=======
-        {rating > 0 && (;
-          <div className='flex items-center gap-1 mb-4'>;
-            <div className='flex'>;
-              {[1, 2, 3, 4, 5].map(star => (;
-                <StarIcon
-                  key={star}
-                  className={cn(
-                    'h-4 w-4',
-                    star <= Math && Math.round(rating)
-                      ? 'text-zion-cyan fill-zion-cyan'
-                      : 'text-zion-slate-light'
-                  )}                />;
-
-                  className={cn(;
-                    "h-4 w-4";
-                    star <= Math.round(rating);
-                      ? "text-zion-cyan fill-zion-cyan";
+                    star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
                   )}
                 />;
-
-
               ))}
             </div>;
-            <span className='text-sm text-zion-slate-light ml-1'>;
-              ({reviewCount});
-            </span>;
+            <span className="text-sm text-zion-slate-light ml-1">;
+              ({reviewCount})</span>;
           </div>;
         )}
-
-
-        {tags && tags.length > 0 && (;
           <div className='flex flex-wrap gap-2 mb-4'>;
-            {tags && tags.map((tag, i) => (;
-
-              <Badge
+            {tags.map((tag, i) => (<Badge;
                 key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+                variant='outline';
+                className='border-zion-slate-dark text-zion-slate-light';
+              >                {tag}
               </Badge>;
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-        
-        <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-          Request Quote
-        </Button>
-        
-=======
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        {author && (
-          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
-            {authorImage && !authorImageError ? (
-              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
-
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
           Request Quote;
         </Button>;
-
-        {author && (;
-          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
-            {authorImage && !authorImageError ? (;
-              <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
-                  className={cn (
-                    'h - 4 w - 4',
-                    star <= Math.round (rating);
-                      ? 'text - zion - cyan fill - zion - cyan';
+          <div className="flex flex-wrap gap-2 mb-4">;
+            {tags.map((tag, i) => (<Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
+                {tag}{rating > 0 && (<div className='flex items-center gap-1 mb-4'>;
+            <div className='flex'>;
+              {[1, 2, 3, 4, 5].map(star => (<StarIcon;
+                  key={star}
+                  className={cn('h-4 w-4',star <= Math && Math.round(rating)? 'text-zion-cyan fill-zion-cyan';
+                      : 'text-zion-slate-light';
+                  )}                />;className={cn("h-4 w-4";
+                    star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
+                      : "text-zion-slate-light";
+                  )}
+                />;))}
+            </div>;
+            <span className='text-sm text-zion-slate-light ml-1'>;
+              ({reviewCount})</span>;
+          </div>;
+        )}{tags && tags.length > 0 && (<div className='flex flex-wrap gap-2 mb-4'>;
+            {tags && tags.map((tag, i) => (<Badge;
+                key={i}
+                variant='outline';
+                className='border-zion-slate-dark text-zion-slate-light'>                {tag}</Badge>;
+            ))}
+          </div>;
+        )}<Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+          Request Quote;
+        </Button>;
+        {author && (<div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
+            {authorImage && !authorImageError ? (<div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
+        <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
+          Request Quote;
+        </Button>;{author && (<div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>;
+            {authorImage && !authorImageError ? (<div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>;
+                  className={cn ('h - 4 w - 4',star <= Math.round (rating)? 'text - zion - cyan fill - zion - cyan';
                       : 'text - zion - slate - light')}                />))}
             </div>;
             <span className='text - sm text - zion - slate - light ml - 1'>;
-              ({review_count});
-            </span>;
+              ({review_count})</span>;
           </div>)}
-        {tags && tags.length > 0 && (
-          <div className='flex flex - wrap gap - 2 mb - 4'>;
-            {tags.map ((tag, i) => (
-              <Badge;
+        {tags && tags.length > 0 && (<div className='flex flex - wrap gap - 2 mb - 4'>;
+            {tags.map ((tag, i) => (<Badge;
                 key={i}
                 variant='outline';
                 className='border - zion - slate - dark text - zion - slate - light';
@@ -426,69 +213,36 @@ function ListingScoreCard() {
         <Button className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white'>;
           Request Quote;
         </Button>;
-        {author && (
-          <div className='flex items - center mt - 4 pt - 4 border - t border - zion - blue - light'>;
-            {author_image && !authorImageError ? (
-              <div className='relative h - 8 w - 8 rounded - full mr - 2 overflow - hidden'>;
+        {author && (<div className='flex items - center mt - 4 pt - 4 border - t border - zion - blue - light'>;
+            {author_image && !authorImageError ? (<div className='relative h - 8 w - 8 rounded - full mr - 2 overflow - hidden'>;
                 {' '}
                 {/* Added relative and overflow - hidden */}
                 <Image;
                   src={author_image}
-                  alt={author}
-
-      </div>;
+                  alt={author}</div>;
     </div>;
-  );
-}
-
-                  className='object - cover rounded - full';
+  )}className='object - cover rounded - full';
                   on_error={() => setAuthorImageError (true)}
                   priority={false}                />;
-              </div>) : (
-              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2 flex items - center justify - center text - zion - purple'>;
+              </div>) : (<div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2 flex items - center justify - center text - zion - purple'>;
                 {author.char_at (0)}
               </div>)}
             <span className='text - sm text - zion - slate - light'>{author}</span>;
           </div>)}
       </div>;
-    </div>);
-}
-
-                  className="object-cover rounded-full"
+    </div>)}className="object-cover rounded-full";
                   onError={() => setAuthorImageError(true)}
                   priority={false}
-                />
-              </div>
-            ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
-
+                />;
+              </div>;
+            ) : (<div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
                 {author.charAt(0)}
-              </div>
-            )}
-
-
-<<<<<<< HEAD
-                {author.charAt(0)}
-              </div>
-            )}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <span className="text-sm text-zion-slate-light">{author}</span>
-          </div>
-        )}
-<<<<<<< HEAD
-      </div>;
+              </div>;
+            )}{author.charAt(0)}
+              </div>;
+            )}<span className="text-sm text-zion-slate-light">{author}</span>;
+          </div>;
+        )}</div>;
+    </div>;;)}</div>;
     </div>;
-<<<<<<< HEAD
-;
-=======
-  );
-
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-      </div>
-    </div>
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  )

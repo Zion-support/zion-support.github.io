@@ -1,8 +1,17 @@
-export interface BlogAuthor {
-  name: string;
+export interface BlogAuthor  {name: string;
   title: string;
   avatarUrl: string;
+}title: string,avatar_url: string;export interface BlogPost  {export interface BlogAuthor  {name: string;
 }
+  id: string;
+export interface BlogAuthor  {name: string;
+}export interface BlogAuthor  {name: string;
+}
+export interface BlogPost  {export interface BlogPost  {title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: BlogAuthor;published_date: string;
 
   title: string,
   avatar_url: string;
@@ -30,6 +39,12 @@ export interface BlogPost {;
   isPublished?: boolean;
   createdBy?: string;
   updatedAt?: string;
+}featured_image: string;
+  is_featured?: boolean;
+  is_published?: boolean;
+  created_by?: string,updated_at?: string;
+}
+// Type for generated blog content;export interface GeneratedBlogContent  {title: string;
 }
 
   featured_image: string;
@@ -47,6 +62,7 @@ export interface GeneratedBlogContent {
   tags: string[];
   tweetSummary?: string;
   imagePrompt?: string;
+}tweet_summary?: string,image_prompt?: string;
 }
 
   tweet_summary?: string,
@@ -58,6 +74,7 @@ export interface GeneratedBlogContent {
   tags: string[];
   featuredImage: string;
   isFeatured?: boolean;
+  isPublished?: boolean;createdBy?: string;
   isPublished?: boolean;
 
   createdBy?: string
@@ -107,14 +124,11 @@ export interface BlogPost {;
   createdBy?: string,;
   updatedAt?: string;
 }
-;
 // Type for generated blog content;
-export interface GeneratedBlogContent {;
-  title: string,;
-  metaDescription: string,;
-  body: string,;
-  tags: string[],;
-  tweetSummary?: string,;
+export interface GeneratedBlogContent  {title: string;
+  metaDescription: string;
+  body: string;
+  tags: string[];tweetSummary?: string;
   imagePrompt?: string;
 }
 ;
@@ -129,10 +143,21 @@ export interface GeneratedNewsletterContent {
 export interface BlogAuthor {;
 
 // Type for generated newsletter content;
-export interface GeneratedNewsletterContent {;
-  subject: string,;
-  previewText: string,;
-  body: string;
+export interface GeneratedNewsletterContent  {subject: string;
+  previewText: string;body: string;
   cta: string;
 }
-;
+export interface BlogAuthor  {name: string,tweet_summary?: string,image_prompt?: string;
+}  name: string,title: string,avatarUrl: string;
+}export interface BlogPost  {id: string,title: string,slug: string,excerpt: string,content: string,author: BlogAuthor,publishedDate: string,readTime: string,category: string,tags: string[],featuredImage: string,isFeatured?: boolean,isPublished?: boolean,createdBy?: string,updatedAt?: string;
+}// Type for generated blog content;
+export interface GeneratedBlogContent  {title: string,metaDescription: string,body: string,tags: string[],tweetSummary?: string,imagePrompt?: string;
+}// Type for generated newsletter content;
+export interface GeneratedNewsletterContent  {subject: string;
+  previewText: string;
+  body: string;
+  cta: string;
+}export interface BlogAuthor  {// Type for generated newsletter content;
+export interface GeneratedNewsletterContent  {subject: string,previewText: string,body: string;
+  cta: string;
+}
