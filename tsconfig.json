@@ -9,14 +9,9 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
-<<<<<<< HEAD
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-=======
-    "esModuleInterop": true,
-    "module": "ESNext",
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -25,20 +20,6 @@
       {
         "name": "next"
       }
-<<<<<<< HEAD
-    ]
-  },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-}
-=======
     ],
     "baseUrl": ".",
     "paths": {
@@ -56,4 +37,3 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
->>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
