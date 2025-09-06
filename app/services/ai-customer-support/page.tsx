@@ -192,37 +192,37 @@ export default function AICustomerSupportPage() {
             icon="🏦"
             title="Financial Services"
             description="Bank-grade security with compliance features for financial institutions."
-            features={["PCI DSS compliance", "Fraud detection", "Account verification", "Regulatory reporting"]
+            features={["PCI DSS compliance", "Fraud detection", "Account verification", "Regulatory reporting"]}
           />
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="Optimized for online retail with order tracking and product recommendations."
-            features={["Order management", "Product recommendations", "Return processing", "Inventory queries"]
+            features={["Order management", "Product recommendations", "Return processing", "Inventory queries"]}
           />
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="HIPAA-compliant support for healthcare providers and patients."
-            features={["HIPAA compliance", "Appointment scheduling", "Medical queries", "Insurance support"]
+            features={["HIPAA compliance", "Appointment scheduling", "Medical queries", "Insurance support"]}
           />
           <IndustryCard
             icon="🎓"
             title="Education"
             description="Student and parent support for educational institutions."
-            features={["Student queries", "Parent communication", "Enrollment support", "Academic guidance"]
+            features={["Student queries", "Parent communication", "Enrollment support", "Academic guidance"]}
           />
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="Property inquiries and client support for real estate professionals."
-            features={["Property searches", "Client matching", "Document support", "Market information"]
+            features={["Property searches", "Client matching", "Document support", "Market information"]}
           />
           <IndustryCard
             icon="🚗"
             title="Automotive"
             description="Vehicle support and service scheduling for automotive businesses."
-            features={["Service scheduling", "Warranty support", "Parts ordering", "Technical assistance"]
+            features={["Service scheduling", "Warranty support", "Parts ordering", "Technical assistance"]}
           />
         </div>
       </section>
@@ -390,7 +390,7 @@ function TestimonialCard({ name, role, company, content, avatar }: {
           <p className="text-sm text-gray-600">{role} at {company}</p>
         </div>
       </div>
-      <p className="text-gray-600 italic">"{content}"</p>
+      <p className="text-gray-600 italic">&ldquo;{content}&rdquo;</p>
     </div>
   );
 }

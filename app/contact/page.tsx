@@ -13,7 +13,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Ready to transform your business with cutting-edge technology? 
-            Let's discuss how we can help you achieve your goals.
+            Let&apos;s discuss how we can help you achieve your goals.
           </p>
         </div>
 

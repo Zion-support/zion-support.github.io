@@ -1,15 +1,28 @@
+import { Metadata } from 'next';
+import React from 'react';
+
+export const metadata: Metadata = {
+  title: 'Cybersecurity Suite | Zion Tech Group',
+  description: 'Comprehensive cybersecurity solutions including security assessments, penetration testing, compliance audits, and managed security services.',
+  keywords: 'cybersecurity, security assessment, penetration testing, compliance, managed security, incident response'
 };
 
 export default function CybersecuritySuitePage() {
   return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Cybersecurity Suite</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Protect your business with our comprehensive cybersecurity solutions. 
+            From security assessments to managed security services, we've got you covered.
+          </p>
+        </div>
+        
+        <SecurityServicesSection />
+        <PricingSection />
+        <ContactSection />
       </div>
-    </div>
-  );
-}
-
-          </li>
-        ))}
-      </ul>
     </div>
   );
 }

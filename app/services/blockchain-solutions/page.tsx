@@ -307,6 +307,12 @@ function BlockchainServiceCard({ title, description, features, price, icon }: {
     <div className="border border-gray-200 rounded-xl p-6 hover:border-orange-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2 mb-4">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
+            {feature}
           </li>
         ))}
       </ul>

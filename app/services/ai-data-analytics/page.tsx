@@ -192,37 +192,37 @@ export default function AIDataAnalyticsPage() {
             icon="🏦"
             title="Financial Services"
             description="Risk assessment, fraud detection, and regulatory compliance analytics."
-            features={["Fraud detection", "Risk modeling", "Compliance reporting", "Market analysis"]
+            features={["Fraud detection", "Risk modeling", "Compliance reporting", "Market analysis"]}
           />
           <IndustryCard
             icon="🛒"
             title="E-commerce"
             description="Customer behavior analysis, inventory optimization, and sales forecasting."
-            features={["Customer segmentation", "Inventory optimization", "Sales forecasting", "Conversion analysis"]
+            features={["Customer segmentation", "Inventory optimization", "Sales forecasting", "Conversion analysis"]}
           />
           <IndustryCard
             icon="🏥"
             title="Healthcare"
             description="Patient outcomes analysis, resource optimization, and clinical research insights."
-            features={["Patient analytics", "Resource optimization", "Clinical insights", "Outcome prediction"]
+            features={["Patient analytics", "Resource optimization", "Clinical insights", "Outcome prediction"]}
           />
           <IndustryCard
             icon="🏭"
             title="Manufacturing"
             description="Quality control, predictive maintenance, and supply chain optimization."
-            features={["Quality analytics", "Predictive maintenance", "Supply chain optimization", "Production insights"]
+            features={["Quality analytics", "Predictive maintenance", "Supply chain optimization", "Production insights"]}
           />
           <IndustryCard
             icon="🎓"
             title="Education"
             description="Student performance analysis, learning outcomes, and institutional effectiveness."
-            features={["Student analytics", "Learning outcomes", "Performance tracking", "Resource optimization"]
+            features={["Student analytics", "Learning outcomes", "Performance tracking", "Resource optimization"]}
           />
           <IndustryCard
             icon="🏠"
             title="Real Estate"
             description="Market analysis, property valuation, and investment opportunity identification."
-            features={["Market analysis", "Property valuation", "Investment insights", "Trend forecasting"]
+            features={["Market analysis", "Property valuation", "Investment insights", "Trend forecasting"]}
           />
         </div>
       </section>
@@ -270,7 +270,7 @@ export default function AIDataAnalyticsPage() {
 
       {/* CTA Section */}
       <section className="py-16 bg-indigo-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Unlock Your Data's Potential?</h2>
+        <h2 className="text-3xl font-bold mb-4">Ready to Unlock Your Data&apos;s Potential?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Join 1,500+ organizations that have transformed their decision-making with our AI analytics platform.
         </p>
@@ -412,7 +412,7 @@ function TestimonialCard({ name, role, company, content, avatar }: {
           <p className="text-sm text-gray-600">{role} at {company}</p>
         </div>
       </div>
-      <p className="text-gray-600 italic">"{content}"</p>
+      <p className="text-gray-600 italic">&ldquo;{content}&rdquo;</p>
     </div>
   );
 }

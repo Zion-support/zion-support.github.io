@@ -1,8 +1,8 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 
-export const metadata = { 
-  title: 'Advanced Data Analytics & BI | Zion Tech Group',
-  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
+export const metadata: Metadata = { 
   title: 'Data Analytics Solutions | Zion Tech Group',
   description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
 };

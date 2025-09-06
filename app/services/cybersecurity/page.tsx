@@ -1,6 +1,8 @@
-export const metadata = { 
+import { Metadata } from 'next';
+import React from 'react';
+
+export const metadata: Metadata = { 
   title: 'Cybersecurity Services | Zion Tech Group',
-  description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
   description: 'Comprehensive cybersecurity solutions including threat detection, compliance management, security audits, and incident response. Protect your business from cyber threats.'
 };
 

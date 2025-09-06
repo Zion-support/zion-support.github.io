@@ -151,6 +151,12 @@ export default function BusinessAutomationPage() {
             ? 'bg-green-600 text-white hover:bg-green-700' 
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
 function AutomationServiceCard({ title, description, features, pricing, icon }: { 
   title: string; 
   description: string; 
