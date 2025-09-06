@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-06T21:20:22.203Z",
+  "timestamp": "2025-09-06T21:21:24.352Z",
   "summary": {
     "totalScripts": 8,
     "successful": 4,
@@ -52,7 +52,7 @@
   "errors": [
     {
       "action": "Fixing linting issues",
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3283) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA config object is using the \"extends\" key, which is not supported in flat config system.\n\nInstead of \"extends\", you can include config objects that you'd like to extend from directly in the flat config array.\n\nIf you're using \"extends\" in your config file, please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#predefined-and-shareable-configs\n\nIf you're not using \"extends\" directly (it may be coming from a plugin), please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#using-eslintrc-configs-in-flat-config\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3825) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA config object is using the \"extends\" key, which is not supported in flat config system.\n\nInstead of \"extends\", you can include config objects that you'd like to extend from directly in the flat config array.\n\nIf you're using \"extends\" in your config file, please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#predefined-and-shareable-configs\n\nIf you're not using \"extends\" directly (it may be coming from a plugin), please see the following:\nhttps://eslint.org/docs/latest/use/configure/migration-guide#using-eslintrc-configs-in-flat-config\n"
     },
     {
       "action": "Type checking",

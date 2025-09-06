@@ -15,7 +15,7 @@ import {
   Lock,
   Cloud,
   Smartphone,
-  Building,
+  Building;
   Phone;
   Mail;
   MapPin} from "lucide-react";
