@@ -1,18 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es5",
+<<<<<<< HEAD
+    "target": "ES2020",
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020",
+      "es2021",
+      "es2022"
     ],
+=======
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -22,18 +33,17 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/app/*": ["./app/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"]
+    }
   },
+<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -41,16 +51,10 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    "node_modules"
   ]
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+>>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 }
