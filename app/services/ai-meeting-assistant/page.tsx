@@ -7,6 +7,23 @@ export const metadata = {
   keywords: 'AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meetings'
 };
 
+function TestimonialCard({ quote, author, role, company }: {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}) {
+  return (
+    <div className="bg-white p-6 rounded-lg shadow-lg">
+      <p className="text-gray-600 mb-4 italic">"{quote}"</p>
+      <div>
+        <p className="font-semibold text-gray-900">{author}</p>
+        <p className="text-sm text-gray-500">{role}, {company}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function AIMeetingAssistantPage() {
   return (
     <div className="space-y-16">
