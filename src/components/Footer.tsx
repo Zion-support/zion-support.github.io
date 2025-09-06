@@ -1,19 +1,20 @@
-import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { FooterNewsletter } from './FooterNewsletter';
 import {  Twitter,
   Linkedin,
   Facebook,
   Instagram,
   Github,
-  ChevronUp,;
+  ChevronUp,
 } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
-import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
+import FeedbackWidget from './feedback/FeedbackWidget';
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === '' || envVar === '#' || envVar === '/') {
     return fallback;
   }
   return envVar;
+}
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
@@ -295,5 +296,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
 }
