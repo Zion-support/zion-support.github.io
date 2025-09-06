@@ -25,9 +25,9 @@ interface ProjectViewProps {
     client: {
       name: string,
       avatar?: string
-    },
+    };
     startDate: string,
-    endDate?: string,
+    endDate?: string;
     status: string,
     totalAmount: string,
     progress: number,
@@ -37,24 +37,20 @@ interface ProjectViewProps {
 }
 
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-  const router = useRouter(),
-  
+  const router = useRouter();
   const startProjectCall = () => {
-    const roomId = `project-${project.id}`,
+    const roomId = `project-${project.id}`;
     toast.success("Starting project call", {
       description: "Initializing video connection..."
     }),
-    
     router.push(`/call/${roomId}`)
-  },
-  
+  };
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
     }),
     // Navigate to messaging with this client
-  },
-  
+  };
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>

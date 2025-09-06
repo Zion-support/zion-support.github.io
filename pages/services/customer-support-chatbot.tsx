@@ -19,5 +19,4 @@ const CustomerSupportChatbot: NextPage = () => {
     </div>
   )
 },
-
-export default CustomerSupportChatbot,
+export default CustomerSupportChatbot;

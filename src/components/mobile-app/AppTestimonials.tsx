@@ -2,7 +2,6 @@
 import React from "react";
 import { Star } from 'lucide-react'
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
 const testimonials = [
   {
     name: "Alex Johnson",
@@ -14,7 +13,7 @@ const testimonials = [
   {
     name: "Sarah Williams",
     role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
+    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
     rating: 5,
     avatar: "/placeholder.svg"
   },
@@ -26,7 +25,6 @@ const testimonials = [
     avatar: "/placeholder.svg"
   }
 ],
-
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -69,4 +67,4 @@ export const AppTestimonials: React.FC = () => {
       </div>
     </section>
   )
-},
+};

@@ -2,30 +2,30 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-
+  },
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // eslint-disable-next-line no-console
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined }),
   };
 
   public render() {
@@ -48,7 +48,7 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             <button
               onClick={this.handleRetry}
-              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
               Try Again
@@ -65,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

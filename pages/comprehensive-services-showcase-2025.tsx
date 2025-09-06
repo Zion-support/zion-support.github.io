@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react',
-
 import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -15,90 +9,79 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const categories = [
-  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence',
+  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence';
   'Content MarketingCRM & Customer IntelligenceBusiness Intelligence'
-],
-
+];
 const pricingRanges = [
   'All PricesUnder $300$300 - $500$500 - $800$800+'
-],
-
+];
 export default function ComprehensiveServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
-
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections
   const filteredServices = comprehensiveRealServices2025.filter(service => {
-    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory),
-    
-    let priceMatch = true,
+    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
+    let priceMatch = true;
     if (selectedPriceRange !== 'All Prices') {
-      const price = parseInt(service.price.replace('$', '')),
+      const price = parseInt(service.price.replace('$', ''));
       switch (selectedPriceRange) {
         case 'Under $300':
-          priceMatch = price < 300,
-          break,
+          priceMatch = price < 300;
+          break;
         case '$300 - $500':
-          priceMatch = price >= 300 && price <= 500,
-          break,
+          priceMatch = price >= 300 && price <= 500;
+          break;
         case '$500 - $800':
-          priceMatch = price > 500 && price <= 800,
-          break,
+          priceMatch = price > 500 && price <= 800;
+          break;
         case '$800+':
-          priceMatch = price > 800,
+          priceMatch = price > 800;
           break
       }
     }
     
     const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       service.category.toLowerCase().includes(searchQuery.toLowerCase()),
-    
+                       service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && priceMatch && searchMatch
-  }),
-
+  });
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       case 'price':
-        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', ''));
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       default: return 0
     }
   }),
-
   const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', '')),
-    if (numPrice < 300) return 'Under $300',
-    if (numPrice <= 500) return '$300 - $500',
-    if (numPrice <= 800) return '$500 - $800',
+    const numPrice = parseInt(price.replace('$', ''));
+    if (numPrice < 300) return 'Under $300';
+    if (numPrice <= 500) return '$300 - $500';
+    if (numPrice <= 800) return '$500 - $800';
     return '$800+'
-  },
-
+  };
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe
-  },
-
+  };
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
-  },
-
+  };
   return (
     <>
       <Head>
@@ -137,7 +120,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <span className="text-white">Showcase 2025</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>, 
+                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>;
                 cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
                 <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
               </p>
@@ -443,7 +426,7 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
 
                       {/* CTA and Additional Info */}
-                      <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
+                      <div className="mt-6 flex flex-col lg: flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-4 text-sm text-gray-400">
                           <span>Market: {service.marketSize}</span>
                           <span>Growth: {service.growthRate}</span>
@@ -474,7 +457,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <button
                   onClick={() => {
                     setSelectedCategory('All Services'),
-                    setSelectedPriceRange('All Prices'),
+                    setSelectedPriceRange('All Prices');
                     setSearchQuery('')
                   }}
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
@@ -535,5 +518,4 @@ export default function ComprehensiveServicesShowcase2025() {
     </>
   )
 },
-
-export default ComprehensiveServicesShowcase2025,
+export default ComprehensiveServicesShowcase2025;

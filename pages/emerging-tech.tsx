@@ -2,17 +2,14 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
-
 export default function EmergingTechPage() {
   const features = [
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
-
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'];
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
-
   return (
     <Layout>
       <Head>

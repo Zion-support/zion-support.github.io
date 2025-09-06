@@ -25,7 +25,7 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"},
     {
       title: "Sample Code",
-      description: "Examples in JavaScript, Python, and Node.js",
+      description: "Examples in JavaScript, Python, and Node.js";
       icon: Zap,
       path: "/docs/sample-code",
       color: "from-yellow-500 to-orange-500"},
@@ -35,7 +35,6 @@ export function ApiDocsHub() {
       icon: AlertCircle,
       path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
-
   return (
     <ApiDocsLayout>
       <div className="max-w-4xl">

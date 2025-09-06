@@ -4,9 +4,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, RefreshCcw, Star } from 'lucide
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function WebhookRelayReplayPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/webhook-relay-replay')),
-  if (!service) return null,
-
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/webhook-relay-replay'));
+  if (!service) return null;
   return (
     <Layout>
       <Head>

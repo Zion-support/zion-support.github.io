@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Atom, Shield, Building, Globe,
-  Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react',
-
 // Import our new service data
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data/2025-innovative-micro-saas-expansion';
@@ -17,13 +11,11 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const allServices = [
   ...advancedEnterpriseServices2025,
       ...innovativeMicroSaasExpansion2025,
   ...cuttingEdgeITInfrastructureServices
 ],
-
 const categories = [
   {
     id: 'all',
@@ -67,46 +59,39 @@ const categories = [
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
-],
+];
 
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category,
-  return 'Other'
-},
-
+  if (service.category) return service.category;
+  return 'Other';
+};
 const getServicePricing = (service: any) => {
-  if (service.price) return `${service.price}${service.period}`,
-  if (service.pricing?.starter) return service.pricing.starter,
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
-  return 'Contact for pricing'
-},
-
+  if (service.price) return `${service.price}${service.period}`;
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  return 'Contact for pricing';
+};
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features,
-  if (service.keyFeatures) return service.keyFeatures,
-  return []
-},
-
-
-
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
+  return [];
+};
 export default function AdvancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [filteredServices, setFilteredServices] = useState(allServices),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filteredServices, setFilteredServices] = useState(allServices);
   useEffect(() => {
-    let filtered = allServices,
-
+    let filtered = allServices;
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
-        const category = getServiceCategory(service).toLowerCase(),
-        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial'),
-        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project'),
-        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge'),
-        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml'),
-        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant'),
+        const category = getServiceCategory(service).toLowerCase();
+        if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial');
+        if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project');
+        if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge');
+        if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml');
+        if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant');
         return false
       })
     }
@@ -122,8 +107,7 @@ export default function AdvancedServicesShowcase() {
     }
 
     setFilteredServices(filtered)
-  }, [selectedCategory, searchTerm]),
-
+  }, [selectedCategory, searchTerm]);
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -235,7 +219,6 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   ),
-
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -345,7 +328,6 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   ),
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <SEO 

@@ -4,16 +4,15 @@ import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
-
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {
-    const [k, v] = part.trim().split('='),
-    if (k) acc[k] = decodeURIComponent(v || ''),
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
     return acc
-  }, {} as Record<string, string>),
-  let role = 'guest',
+  }, {} as Record<string, string>);
+  let role = 'guest';
   try {
-    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null,
+    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest'
   } catch {}
   if (role !== 'admin') {
@@ -21,17 +20,14 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   }
   return { props: {} }
 },
-
 export default function AdminDisputesDashboard() {
-  const { data } = useSWR('/api/disputes', fetcher),
-  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
-
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open');
   const disputes = useMemo(() => {
-    const list = data?.disputes || [],
-    if (statusFilter === 'All') return list,
+    const list = data?.disputes || [];
+    if (statusFilter === 'All') return list;
     return list.filter((d: any) => d.status === statusFilter)
-  }, [data, statusFilter]),
-
+  }, [data, statusFilter]);
   return (
     <EnhancedLayout>
       <div className="max-w-6xl mx-auto">

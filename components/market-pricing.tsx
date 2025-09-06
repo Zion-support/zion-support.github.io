@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  TrendingUp, TrendingDown, DollarSign, Target, 
-  ArrowRight, Check, Star, BarChart3, 
-  Globe, Zap, Shield, Crown, Brain, Atom
-} from 'lucide-react',
 import Link from 'next/link';
 export default function MarketPricing() {
-  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness'),
-
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
   const markets = [
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
   ],
-
   const marketData = {
     'ai-consciousness': {
       marketSize: '$45.2B',
@@ -102,7 +95,7 @@ export default function MarketPricing() {
         {
           name: 'UiPath',
           marketShare: '25%',
-          pricing: '$420-$1,200 per user/month',
+          pricing: '$420-$1,200 per user/month';
           strengths: ['Market leaderComprehensive platformStrong partnerships'],
           weaknesses: ['High costsComplex implementationLimited AI features'],
           rating: 4.0
@@ -110,7 +103,7 @@ export default function MarketPricing() {
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
-          pricing: '$750-$1,500 per user/month',
+          pricing: '$750-$1,500 per user/month';
           strengths: ['Enterprise focusCloud-nativeSecurity features'],
           weaknesses: ['ExpensiveSteep learning curveLimited customization'],
           rating: 3.8
@@ -127,7 +120,7 @@ export default function MarketPricing() {
       pricingAnalysis: {
         lowEnd: '$300 per user/month',
         midRange: '$750 per user/month',
-        highEnd: '$1,200 per user/month',
+        highEnd: '$1,200 per user/month';
         ourPosition: 'Competitive pricing with AI advantages'
       }
     },
@@ -170,15 +163,12 @@ export default function MarketPricing() {
       }
     }
   },
-
-  const currentMarket = marketData[selectedMarket as keyof typeof marketData],
-
+  const currentMarket = marketData[selectedMarket as keyof typeof marketData];
   const getGrowthIcon = (trend: string) => {
     return trend === 'up' ? 
       <TrendingUp className="w-5 h-5 text-green-400" /> : 
       <TrendingDown className="w-5 h-5 text-red-400" />
   },
-
   const getRatingStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star 
@@ -186,8 +176,7 @@ export default function MarketPricing() {
         className={`w-4 h-4 ${i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
       />
     ))
-  },
-
+  };
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -866,5 +855,4 @@ export default function MarketPricing() {
     </div>
   )
 },
-
-export default MarketPricing,
+export default MarketPricing;

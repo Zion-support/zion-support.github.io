@@ -5,7 +5,7 @@ import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 const features = [
   {
     title: "Private Hiring Portal",
-    description: "Create a secure, private hiring portal accessible only to your team members.",
+    description: "Create a secure, private hiring portal accessible only to your team members.";
     icon: Shield},
   {
     title: "Dedicated Talent Pool",
@@ -27,7 +27,6 @@ const features = [
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
     icon: Globe}],
-
 export function EnterpriseFeatures() {
   return (
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">

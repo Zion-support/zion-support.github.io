@@ -4,21 +4,18 @@ import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   },
-
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -28,7 +25,6 @@ export default function AIServices() {
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
   ],
-
   const services = [
     {
       id: 1,
@@ -43,7 +39,7 @@ export default function AIServices() {
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
-      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.';
       category: 'predictive',
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
@@ -63,7 +59,7 @@ export default function AIServices() {
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
-      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.';
       category: 'nlp',
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
@@ -83,7 +79,7 @@ export default function AIServices() {
     {
       id: 6,
       name: 'Computer Vision Solutions',
-      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+      description: 'Advanced image and video analysis for object detection, recognition, and processing.';
       category: 'computer-vision',
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
@@ -103,7 +99,7 @@ export default function AIServices() {
     {
       id: 8,
       name: 'Natural Language Processing',
-      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.';
       category: 'nlp',
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
@@ -123,7 +119,7 @@ export default function AIServices() {
     {
       id: 10,
       name: 'Predictive Analytics Engine',
-      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.';
       category: 'predictive',
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
@@ -133,7 +129,7 @@ export default function AIServices() {
     {
       id: 11,
       name: 'AI Content Generation',
-      description: 'Intelligent content creation for marketing, documentation, and communication.',
+      description: 'Intelligent content creation for marketing, documentation, and communication.';
       category: 'specialized',
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
@@ -151,10 +147,9 @@ export default function AIServices() {
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
   ],
-
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
   return (
     <>
       <Head>
@@ -336,7 +331,7 @@ export default function AIServices() {
                 </Link>
                 <a 
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+                  className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors"
                 >
                   Call {contact.phone}
                 </a>
@@ -354,7 +349,6 @@ export default function AIServices() {
     </>
   )
 }
-import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Link from 'next/link';
 export default function AIServicesPage() {

@@ -1,12 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  ArrowRight, Star, TrendingUp, Users, Award, Play,
-  CheckCircle, DollarSign, Clock, Target, Crown
-} from 'lucide-react',
-
 export default function UltraFuturisticHero2028() {
   const features = [
     { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },
@@ -14,14 +8,12 @@ export default function UltraFuturisticHero2028() {
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
   ],
-
   const stats = [
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket },
     { value: '25+', label: 'AI Solutions', icon: Brain },
     { value: '15+', label: 'Quantum Technologies', icon: Atom },
     { value: '1000+', label: 'Happy Clients', icon: Users }
   ],
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20">
       {/* Animated Background */}
@@ -92,7 +84,7 @@ export default function UltraFuturisticHero2028() {
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
-            Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, 
+            Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation;
             and Autonomous AI Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>

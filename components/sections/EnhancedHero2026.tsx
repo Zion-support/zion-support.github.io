@@ -29,7 +29,6 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -41,7 +40,6 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       }
     }
   },
-
   const statsVariants = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: {
@@ -53,7 +51,6 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       }
     }
   },
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -71,8 +68,8 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
+              y: [0, -30, 0];
+              opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
             }}
             transition={{

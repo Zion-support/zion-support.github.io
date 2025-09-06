@@ -13,14 +13,13 @@ interface MobileBottomNavProps {
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
+  const router = useRouter();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
   const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length,
-
+  const favoritesCount = wishlistItems.length;
   const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0,
+  let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
@@ -77,14 +76,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       authRequired: true
     }
   ],
-
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
-
+  );
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
+    <nav className="md: hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
         {visibleItems.map(item => (
           <Link

@@ -15,5 +15,4 @@ const EnhancedHome: NextPage = () => {
     </div>
   )
 },
-
-export default EnhancedHome,
+export default EnhancedHome;

@@ -1,12 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Target, Cpu, Database, Cloud, Lock, ArrowRight, 
-  Star, TrendingUp, Users, CheckCircle
-} from 'lucide-react',
-
 export default function UltraFuturisticHero2027() {
   const features = [
     { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-purple-400 to-pink-400' },
@@ -14,14 +8,12 @@ export default function UltraFuturisticHero2027() {
     { icon: Globe, text: 'Digital Reality', color: 'from-green-400 to-emerald-400' },
     { icon: Shield, text: 'Enterprise Security', color: 'from-red-400 to-orange-400' }
   ],
-
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' },
     { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' },
     { number: '99.9%', label: 'Uptime SLA', icon: CheckCircle, color: 'text-green-400' },
     { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
   ],
-
   return (
     <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Elements */}
@@ -30,8 +22,8 @@ export default function UltraFuturisticHero2027() {
         <motion.div
           className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl"
           animate={{
-            y: [0, -20, 0],
-            scale: [1, 1.2, 1],
+            y: [0, -20, 0];
+            scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
@@ -44,8 +36,8 @@ export default function UltraFuturisticHero2027() {
         <motion.div
           className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"
           animate={{
-            y: [0, 20, 0],
-            scale: [1, 1.3, 1],
+            y: [0, 20, 0];
+            scale: [1, 1.3, 1];
             opacity: [0.2, 0.5, 0.2]
           }}
           transition={{
@@ -58,8 +50,8 @@ export default function UltraFuturisticHero2027() {
         <motion.div
           className="absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
-            y: [0, -30, 0],
-            scale: [1, 1.1, 1],
+            y: [0, -30, 0];
+            scale: [1, 1.1, 1];
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{

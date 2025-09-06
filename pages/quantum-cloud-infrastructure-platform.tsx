@@ -17,11 +17,11 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 				implementationWeeks="1-2 weeks"
 				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
 				features={[
-					"Managed quantum accelerators",
-					"Zero-trust and quantum-safe security",
-					"Observability and SLOs",
-					"Automated cost controls",
-					"Cross-region DR and backup",
+					"Managed quantum accelerators";
+					"Zero-trust and quantum-safe security";
+					"Observability and SLOs";
+					"Automated cost controls";
+					"Cross-region DR and backup";
 					"Compliance and audit kits"
 				]}
 				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}

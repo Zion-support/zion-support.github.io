@@ -1,6 +1,5 @@
 import React from 'react';
 import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
-
 interface Testimonial {
   id: string,
   name: string,
@@ -69,20 +68,18 @@ const EnhancedTestimonialsSection: React.FC = () => {
       name: 'Robert Kim',
       title: 'Head of Digital Transformation',
       company: 'Global Innovations Corp',
-      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.',
+      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departments, leading to 35% faster market response and 28% cost optimization.';
       rating: 5,
       avatar: 'RK',
       category: 'AI & Analytics'
     }
   ],
-
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Client Satisfaction', icon: Award },
     { number: '4.9/5', label: 'Average Rating', icon: Star }
   ],
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -92,8 +89,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         }`}
       />
     ))
-  },
-
+  };
   return (
     <section className="py-24 px-6 relative overflow-hidden">
       {/* Background */}
@@ -119,7 +115,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">
                 <stat.icon className="w-10 h-10 text-blue-400" />
               </div>
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -129,7 +125,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
@@ -226,5 +222,4 @@ const EnhancedTestimonialsSection: React.FC = () => {
     </section>
   )
 },
-
-export default EnhancedTestimonialsSection,
+export default EnhancedTestimonialsSection;

@@ -18,11 +18,10 @@ interface PostCardProps {
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', { data: post ? post.id : 'NO POST' }),
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-
   return (
     <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md",
-      post.isPinned && "border-zion-purple/50",
+      "transition-shadow hover: shadow-md",
+      post.isPinned && "border-zion-purple/50";
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <p>DEBUG: PostCard ID: {post?.id}</p>
@@ -93,8 +92,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     </Card>
   )
 },
-
-export const PostCard = React.memo(PostCardComponent),
-PostCard.displayName = 'PostCard',
-
-export default PostCard,
+export const PostCard = React.memo(PostCardComponent);
+PostCard.displayName = 'PostCard';
+export default PostCard;

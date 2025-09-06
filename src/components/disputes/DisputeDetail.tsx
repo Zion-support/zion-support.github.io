@@ -2,11 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 import { useDisputes } from "@/hooks/useDisputes";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
- Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType
-} from "@/types/disputes",
-
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -20,41 +15,35 @@ import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
 export function DisputeDetail() {
-  const router = useRouter(),
-  const { disputeId } = router.query as { disputeId?: string },
-  const { user } = useAuth(),
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
-
-  const [dispute, setDispute] = useState<Dispute | null>(null),
-  const [messages, setMessages] = useState<DisputeMessage[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [message, setMessage] = useState(""),
-  const [adminNote, setAdminNote] = useState(""),
-  const [isSending, setIsSending] = useState(false),
+  const router = useRouter();
+  const { disputeId } = router.query as { disputeId?: string };
+  const { user } = useAuth();
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+  const [dispute, setDispute] = useState<Dispute | null>(null);
+  const [messages, setMessages] = useState<DisputeMessage[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [message, setMessage] = useState("");
+  const [adminNote, setAdminNote] = useState("");
+  const [isSending, setIsSending] = useState(false);
   const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({
   summary: "",
   resolution_type: "compromise"}),
-   
-  const [activeTab, setActiveTab] = useState("overview"),
-
+  const [activeTab, setActiveTab] = useState("overview");
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin",
-  
+  const isAdmin = user?.userType === "admin";
   useEffect(() => {
-    if (!disputeId) return,
-
+    if (!disputeId) return;
     const loadDisputeData = async () => {
-      setIsLoading(true),
+      setIsLoading(true);
       try {
-        const disputeData = await getDisputeById(disputeId),
+        const disputeData = await getDisputeById(disputeId);
         if (!disputeData) {
-          toast.error("Dispute not found"),
-          router.push("/dashboard/disputes"),
+          toast.error("Dispute not found");
+          router.push("/dashboard/disputes");
           return
         }
-        setDispute(disputeData),
-        
-        const messagesData = await getDisputeMessages(disputeId),
+        setDispute(disputeData);
+        const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData)
       } catch (error) {
         logErrorToProduction('Error loading dispute data:', { data: error }),
@@ -62,15 +51,12 @@ export function DisputeDetail() {
       } finally {
         setIsLoading(false)
       }
-    },
-    
+    };
     loadDisputeData()
-  }, [disputeId, getDisputeById, getDisputeMessages, router]),
-
+  }, [disputeId, getDisputeById, getDisputeMessages, router]);
   const handleStatusChange = async (status: DisputeStatus) => {
     if (!disputeId) return,
-
-    const success = await updateDisputeStatus(disputeId, status),
+    const success = await updateDisputeStatus(disputeId, status);
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })
@@ -78,12 +64,10 @@ export function DisputeDetail() {
       toast.error("Failed to update dispute status")
     }
   },
-
   const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
+    if (!disputeId) return;
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
+      toast.error("Please provide a resolution summary");
       return
     }
     
@@ -100,17 +84,15 @@ export function DisputeDetail() {
       toast.error("Failed to resolve dispute")
     }
   },
-
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return,
-    
-    setIsSending(true),
+    if (!disputeId || !message.trim()) return;
+    setIsSending(true);
     try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin),
+      const success = await addDisputeMessage(disputeId, message, isAdmin);
       if (success) {
         // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId),
-        setMessages(updatedMessages),
+        const updatedMessages = await getDisputeMessages(disputeId);
+        setMessages(updatedMessages);
         setMessage("")
       }
     } catch (error) {
@@ -119,7 +101,6 @@ export function DisputeDetail() {
       setIsSending(false)
     }
   },
-
   if (isLoading) {
     return (
       <div className="p-8 text-center">
@@ -143,13 +124,12 @@ export function DisputeDetail() {
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default",
-      case "under_review": return "secondary",
+      case "under_review": return "secondary";
       case "resolved": return "outline", // Changed from "success" to "outline"
-      case "closed": return "outline",
+      case "closed": return "outline";
       default: return "default"
     }
   },
-
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -251,7 +231,7 @@ export function DisputeDetail() {
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
                             {dispute.status !== "open" ? "3" : "2"}
                           </Badge>
-                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h: mm a")}</span>
                         </li>
                       )}
                     </ul>
@@ -477,7 +457,7 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (adminNote.trim()) {
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
-                                getDisputeMessages(disputeId!).then(setMessages),
+                                getDisputeMessages(disputeId!).then(setMessages);
                                 setAdminNote("")
                               })
                             }

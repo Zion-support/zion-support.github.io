@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-
 interface QuantumHolographicCardProps {
   service: {
     id: string,
@@ -50,8 +49,8 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
-      opacity: 1, 
-      y: 0, 
+      opacity: 1,
+      y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
@@ -67,12 +66,11 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       }
     }
   },
-
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.05, 1],
+      opacity: [0.5, 1, 0.5];
+      scale: [1, 1.05, 1];
       transition: {
         duration: 3,
         repeat: Infinity,
@@ -80,7 +78,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       }
     }
   },
-
   const featureVariants = {
     hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
@@ -93,7 +90,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       }
     })
   },
-
   return (
     <motion.div
       className={`relative group cursor-pointer ${className}`}
@@ -255,7 +251,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
           {/* CTA Button */}
           <motion.a
             href={service.link}
-            className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
+            className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -281,5 +277,4 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
     </motion.div>
   )
 },
-
-export default QuantumHolographicCard,
+export default QuantumHolographicCard;

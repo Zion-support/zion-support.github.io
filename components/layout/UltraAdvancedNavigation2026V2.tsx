@@ -2,20 +2,17 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
-
 export default function UltraAdvancedNavigation2026V2() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    },
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   const navigationItems = [
     {
       name: 'Home',
@@ -66,13 +63,11 @@ export default function UltraAdvancedNavigation2026V2() {
       icon: <Mail className="w-4 h-4" />
     }
   ],
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-
   return (
     <>
       {/* Top Contact Bar */}

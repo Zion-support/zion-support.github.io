@@ -5,27 +5,26 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
   title: string,
-  showBack?: boolean,
-  showNotifications?: boolean,
-  showSettings?: boolean,
-  className?: string,
-  onNotificationsClick?: () => void,
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
   onSettingsClick?: () => void
 }
 
 export function MobileHeader({
-  title,
-  showBack = false,
-  showNotifications = false,
-  showSettings = false,
-  className,
-  onNotificationsClick,
+  title;
+  showBack = false;
+  showNotifications = false;
+  showSettings = false;
+  className;
+  onNotificationsClick;
   onSettingsClick}: MobileHeaderProps) {
-  const router = useRouter(),
-
+  const router = useRouter();
   return (
     <header className={cn(
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">

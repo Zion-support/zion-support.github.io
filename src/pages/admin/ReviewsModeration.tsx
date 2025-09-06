@@ -9,17 +9,16 @@ import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [reviews, setReviews] = useState([]),
-  const [isLoading, setIsLoading] = useState(true),
-  
+  const [activeTab, setActiveTab] = useState("pending");
+  const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const fetchReviews = async () => {
-    setIsLoading(true),
+    setIsLoading(true);
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      setReviews([]),
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setReviews([]);
       setIsLoading(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching reviews' }),
@@ -29,16 +28,13 @@ function ReviewsModerationContent() {
         variant: "destructive"}),
       setIsLoading(false)
     }
-  },
-
+  };
   useEffect(() => {
     fetchReviews()
-  }, [activeTab]),
-
+  }, [activeTab]);
   const handleRefresh = () => {
     fetchReviews()
-  },
-  
+  };
   return (
     <>
       <SEO

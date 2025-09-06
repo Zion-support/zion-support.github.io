@@ -35,7 +35,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: User
     }
   ],
-
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -48,8 +47,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon,
-          const isSelected = selectedType === type.id,
-          
+          const isSelected = selectedType === type.id;
           return (
             <Button
               key={type.id}

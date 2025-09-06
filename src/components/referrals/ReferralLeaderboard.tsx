@@ -17,7 +17,6 @@ export function ReferralLeaderboard() {
     { rank: 3, name: "Taylor Wong", referrals: 15 },
     { rank: 4, name: "Casey Brown", referrals: 12 },
     { rank: 5, name: "Jordan Lee", referrals: 10 }],
-
   return (
     <Card>
       <CardHeader>

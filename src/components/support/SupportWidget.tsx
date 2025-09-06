@@ -7,10 +7,9 @@ import { MessageSquare, Info, X } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTheme } from "@/hooks/useTheme";
 export function SupportWidget() {
-  const [isOpen, setIsOpen] = useState(false),
-  const { theme } = useTheme(),
-  const router = useRouter(),
-  
+  const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useTheme();
+  const router = useRouter();
   return (
     <>
       {/* Fixed button in the bottom right */}
@@ -18,7 +17,7 @@ export function SupportWidget() {
         <Button
           onClick={() => setIsOpen(true)}
           size="icon"
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover: bg-zion-purple-light text-white z-50"
           aria-label="Open support"
         >
           <MessageSquare className="h-6 w-6" />

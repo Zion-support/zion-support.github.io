@@ -5,13 +5,11 @@ import { Web3Login } from "./Web3Login";
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {
-  const [isLoading, setIsLoading] = useState(false),
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleGoogle = () => {
-    setIsLoading(true),
+    setIsLoading(true);
     window.location.href = '/auth/google'
-  },
-
+  };
   return (
     <div className="mt-6">
       <div className="relative">

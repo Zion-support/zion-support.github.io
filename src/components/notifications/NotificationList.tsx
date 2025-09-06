@@ -19,10 +19,10 @@ interface NotificationListProps {
 
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
-  error,
-  notifications,
-  onMarkAsRead,
-  onDismiss,
+  error;
+  notifications;
+  onMarkAsRead;
+  onDismiss;
   onRetry
 }) => {
   return (

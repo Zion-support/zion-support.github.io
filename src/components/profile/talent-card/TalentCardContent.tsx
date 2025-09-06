@@ -10,8 +10,7 @@ interface TalentCardContentProps {
 }
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {
-  const [isHovering, setIsHovering] = useState(false),
-
+  const [isHovering, setIsHovering] = useState(false);
   return (
     <div>
       {/* Location */}

@@ -3,19 +3,18 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-
 export default function DevOpsAutomationPage() {
   const features = [
     {
       icon: <GitBranch className="w-6 h-6" />,
       title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
+      description: 'Automated build, test, and deployment workflows';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
+      description: 'Terraform, CloudFormation, and Kubernetes automation';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600'
     },
     {
@@ -31,7 +30,6 @@ export default function DevOpsAutomationPage() {
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
   ],
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -70,7 +68,6 @@ export default function DevOpsAutomationPage() {
       color: 'border-gray-600 hover:border-blue-500'
     }
   ],
-
   const marketComparison = [
     {
       competitor: 'GitHub Actions',
@@ -97,7 +94,6 @@ export default function DevOpsAutomationPage() {
       cons: ['Requires maintenanceNo managed service']
     }
   ],
-
   const testimonials = [
     {
       name: 'Michael Chen',
@@ -121,7 +117,6 @@ export default function DevOpsAutomationPage() {
       rating: 5
     }
   ],
-
   const automationExamples = [
     {
       title: 'Automated Testing',
@@ -148,7 +143,6 @@ export default function DevOpsAutomationPage() {
       color: 'from-purple-500 to-indigo-600'
     }
   ],
-
   return (
     <>
       <Head>
@@ -173,7 +167,7 @@ export default function DevOpsAutomationPage() {
               DevOps Automation
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
-              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code, 
+              Streamline your development workflow with automated CI/CD pipelines, infrastructure as code;
               and intelligent security automation. Deploy faster, safer, and more reliably.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

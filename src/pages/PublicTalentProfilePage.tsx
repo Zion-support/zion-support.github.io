@@ -14,23 +14,21 @@ import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, Check
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [isError, setIsError] = useState(false),
-
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true),
-      setIsError(false),
+      setIsLoading(true);
+      setIsError(false);
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single(),
-
+          .single();
         if (error) {
           throw error
         }
@@ -38,7 +36,7 @@ export default function ProfilePage() {
         setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
+        setIsError(true);
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
@@ -47,12 +45,10 @@ export default function ProfilePage() {
         setIsLoading(false)
       }
     },
-
     if (profileId) {
       fetchProfile()
     }
-  }, [profileId]),
-
+  }, [profileId]);
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">

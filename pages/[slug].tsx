@@ -34,48 +34,45 @@ import { real2027Q1Additions } from '../data/real-2027-q1-additions';
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
-type Service = typeof enhancedRealMicroSaasServices[number],
-
   const service = useMemo(() => {
-    if (!slug) return undefined,
+    if (!slug) return undefined;
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any,
-        extraServices as any,
-        additionalEnhancedServices as any,
-        innovativeAIServices as any,
-        quantumSpaceServices as any,
-        enterpriseITServices as any,
-        newRealServices as any,
-        marketReadyServices as any,
-        realMarketServices as any,
-        new2025Services as any,
-        newRealInnovations as any,
-        emergingTechnologyServices as any,
-        comprehensiveITSolutions as any,
-        marketValidatedServices as any,
-        curatedMarketServices as any,
-        cuttingEdgeITServices as any,
-        nextGenerationAIServices as any,
-        nextGenAIServices as any,
-        industryRealServices as any,
-        professionalServices as any,
-        realEnterpriseServices2025 as any,
-        augmentedServicesBatch3 as any,
-        real2025Q3Additions as any,
-        realQ4Services2025 as any,
+        extraServices as any;
+        additionalEnhancedServices as any;
+        innovativeAIServices as any;
+        quantumSpaceServices as any;
+        enterpriseITServices as any;
+        newRealServices as any;
+        marketReadyServices as any;
+        realMarketServices as any;
+        new2025Services as any;
+        newRealInnovations as any;
+        emergingTechnologyServices as any;
+        comprehensiveITSolutions as any;
+        marketValidatedServices as any;
+        curatedMarketServices as any;
+        cuttingEdgeITServices as any;
+        nextGenerationAIServices as any;
+        nextGenAIServices as any;
+        industryRealServices as any;
+        professionalServices as any;
+        realEnterpriseServices2025 as any;
+        augmentedServicesBatch3 as any;
+        real2025Q3Additions as any;
+        realQ4Services2025 as any;
         require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
-      ),
+      );
     const byLink = all.find(s => {
       try {
-        const url = new URL(s.link),
+        const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
         return false
       }
-    }),
-    if (byLink) return byLink,
-
+    });
+    if (byLink) return byLink;
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -112,18 +109,18 @@ function toSlug(value: string): string {
 }
 
 function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages'),
+	const pagesDir = path.join(process.cwd(), 'pages');
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-	const reserved = new Set<string>(['apireportsservices']),
-	const slugs = new Set<string>(),
+	const reserved = new Set<string>(['apireportsservices']);
+	const slugs = new Set<string>();
 	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue,
-		if (reserved.has(entry.name)) continue,
+		if (entry.name.startsWith('_')) continue;
+		if (reserved.has(entry.name)) continue;
 		// Files at root
 		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
+			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
 			if (m) {
-				const base = m[1],
+				const base = m[1];
 				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
 					slugs.add(base)
 				}
@@ -138,14 +135,14 @@ function getExistingRootPageSlugs(): Set<string> {
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
+	const services = getAllServices();
+	const slugs = new Set<string>();
 	for (const s of services) {
-		if (s.id) slugs.add(toSlug(s.id)),
+		if (s.id) slugs.add(toSlug(s.id));
 		else if (s.name) slugs.add(toSlug(s.name))
 	}
-	const existing = getExistingRootPageSlugs(),
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
+	const existing = getExistingRootPageSlugs();
+	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
 	return {
 		paths: filtered.map((slug) => ({ params: { slug } })),
 		fallback: false
@@ -154,7 +151,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices(),
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
 	if (!service) {
 		return { notFound: true }
@@ -178,7 +175,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org",
-								"@type": "Service",
+								"@type": "Service";
 								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,
@@ -189,12 +186,12 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 								},
 								offers: {
 									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									price: (service.price || '').replace(/[^0-9.]/g, '');
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
 							},
-							null,
+							null;
 							2
 							)
 						}}

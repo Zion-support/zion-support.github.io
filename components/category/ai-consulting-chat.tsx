@@ -17,5 +17,4 @@ const AiConsultingChat: NextPage = () => {
     </div>
   )
 },
-
-export default AiConsultingChat,
+export default AiConsultingChat;

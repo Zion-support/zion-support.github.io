@@ -14,9 +14,9 @@ interface SelectResumeSectionProps {
 
 export function SelectResumeSection({
   resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
   isLoading
 }: SelectResumeSectionProps) {
   return (

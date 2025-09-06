@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
-
 type Props = {
   value: number,
   onChange: (val: number) => void,
-  size?: number,
+  size?: number;
   readOnly?: boolean
-},
-
+};
 export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOnly }) => {
-  const [hovered, setHovered] = useState<number | null>(null),
-
-  const stars = [1, 2, 3, 4, 5],
-
+  const [hovered, setHovered] = useState<number | null>(null);
+  const stars = [1, 2, 3, 4, 5];
   return (
     <div className="flex items-center gap-1">
       {stars.map((star) => {
-        const active = (hovered ?? value) >= star,
+        const active = (hovered ?? value) >= star;
         return (
           <button
             key={star}
             type="button"
-            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
             onMouseEnter={() => !readOnly && setHovered(star)}
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
@@ -46,5 +42,4 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
     </div>
   )
 },
-
-export default StarRating,
+export default StarRating;

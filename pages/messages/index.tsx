@@ -20,5 +20,4 @@ const Messages: NextPage = () => {
     </div>
   )
 },
-
-export default Messages,
+export default Messages;

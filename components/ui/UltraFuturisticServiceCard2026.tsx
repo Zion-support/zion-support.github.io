@@ -1,30 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
-
 interface Service {
   id: string,
   name: string,
   tagline: string,
   description: string,
   price?: string | {
-    monthly?: number,
-    yearly?: number,
-    currency?: string,
-    trialDays?: number,
+    monthly?: number;
+    yearly?: number;
+    currency?: string;
+    trialDays?: number;
     setupTime?: string
-  },
-  period?: string,
-  pricing?: any,
+  };
+  period?: string;
+  pricing?: any;
   features: string[],
-  popular?: boolean,
+  popular?: boolean;
   category: string,
   icon: string,
-  marketPrice?: string,
-  competitors?: string[],
-  targetMarket?: string,
-  useCases?: string[],
-  integration?: string[],
+  marketPrice?: string;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
+  integration?: string[];
   benefits?: string[]
 }
 
@@ -108,8 +107,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
           iconBg: 'bg-amber-500/20',
           iconBorder: 'border-amber-400/30'
         },
-      default:
-        return {
+      default: return {
           gradient: 'from-gray-600 via-gray-700 to-gray-800',
           borderColor: 'border-gray-400/30',
           textColor: 'text-gray-400',
@@ -118,19 +116,15 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         }
     }
   },
-
-  const styles = getVariantStyles(),
-
+  const styles = getVariantStyles();
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Brain,
-    if (category.includes('Quantum')) return Atom,
-    if (category.includes('Space')) return Rocket,
-    if (category.includes('Cybersecurity')) return Shield,
+    if (category.includes('Quantum')) return Atom;
+    if (category.includes('Space')) return Rocket;
+    if (category.includes('Cybersecurity')) return Shield;
     return TrendingUp
-  },
-
-  const CategoryIcon = getCategoryIcon(service.category),
-
+  };
+  const CategoryIcon = getCategoryIcon(service.category);
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -270,7 +264,5 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
     </motion.div>
   )
 }),
-
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',
-
-export default UltraFuturisticServiceCard2026,
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+export default UltraFuturisticServiceCard2026;

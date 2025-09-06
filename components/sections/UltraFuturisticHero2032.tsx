@@ -1,31 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, Star, ArrowRight, Play, CheckCircle,
-  Phone, Mail, MapPin
-} from 'lucide-react',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const heroStats = [
   { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' },
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 ],
-
 const featuredServices = [
   {
     name: 'AI Consciousness Evolution',
     description: 'Develop genuine AI consciousness',
-    price: '$19,999/month',
+    price: '$19,999/month';
     icon: Brain,
     color: 'from-violet-600 to-purple-600',
     href: '/ai-consciousness-evolution-platform'
@@ -33,7 +25,7 @@ const featuredServices = [
   {
     name: 'Space Mining Automation',
     description: 'Automated asteroid mining',
-    price: '$45,999/month',
+    price: '$45,999/month';
     icon: Rocket,
     color: 'from-teal-600 to-emerald-600',
     href: '/space-mining-automation-platform'
@@ -41,13 +33,12 @@ const featuredServices = [
   {
     name: 'Quantum Internet Security',
     description: 'Unbreakable encryption',
-    price: '$15,999/month',
+    price: '$15,999/month';
     icon: Shield,
     color: 'from-indigo-600 to-blue-600',
     href: '/quantum-internet-security-gateway'
   }
 ],
-
 export default function UltraFuturisticHero2032() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black">
@@ -63,7 +54,7 @@ export default function UltraFuturisticHero2032() {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`}}
               animate={{
-                y: [0, -20, 0],
+                y: [0, -20, 0];
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
                 duration: 3 + Math.random() * 2,
@@ -114,7 +105,7 @@ export default function UltraFuturisticHero2032() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
         >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, 
+          Experience the revolution with our cutting-edge AI consciousness, quantum computing;
           space technology, and emerging tech solutions. Transform your business with 
           technologies that were once science fiction.
         </motion.p>

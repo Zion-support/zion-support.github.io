@@ -12,8 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req.method === 'POST') {
-    const { name, slug, logoUrl, brandColor, plan } = req.body || {},
-    const created = store.createCompany({ name, slug, logoUrl, brandColor, plan }),
+    const { name, slug, logoUrl, brandColor, plan } = req.body || {};
+    const created = store.createCompany({ name, slug, logoUrl, brandColor, plan });
     return res.status(201).json(created)
   }
 

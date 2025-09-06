@@ -1,26 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  innovative2035MicroSaasServices 
-} from '../data/innovative-2035-micro-saas-services',
-import { 
-  innovative2035AIServices 
-} from '../data/innovative-2035-ai-services',
-import { 
-  innovative2035ITServices 
-} from '../data/innovative-2035-it-services',
-import { 
-  innovativeRealMicroSaasServices2025 
-} from '../data/2025-innovative-real-micro-saas-services',
-import { 
-  innovativeAIServicesEnhanced2025 
-} from '../data/2025-innovative-ai-services-enhanced',
-import { 
-  innovativeITServicesEnhanced2025 
-} from '../data/2025-innovative-it-services-enhanced',
-import { 
-  emergingTechServicesEnhanced2025 
-} from '../data/2025-emerging-tech-services-enhanced',
 import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';
 import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2035 from './backgrounds/UltraFuturisticBackground2035';
@@ -32,34 +11,30 @@ import { real2036AIServices } from '../data/real-2036-ai-services';
 interface Homepage2025Props { showInternalNav?: boolean }
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
-  const [activeSection, setActiveSection] = useState('hero'),
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
-
+  const [activeSection, setActiveSection] = useState('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length)
-    }, 5000),
+    }, 5000);
     return () => clearInterval(interval)
-  }, []),
-
+  }, []);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId),
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' }),
-      setActiveSection(sectionId),
+      setActiveSection(sectionId);
       setIsMobileMenuOpen(false)
     }
-  },
-
+  };
   const allServices = [
     // New 2035 services (featured first)
     ...innovative2035MicroSaasServices,
     ...innovative2035AIServices,
     ...innovative2035ITServices,
-    
     // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
@@ -68,9 +43,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     ...advancedAIAutomationServices,
     ...quantumCybersecurityServices
   ],
-
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
-
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
   const navigationSections = [
     { id: 'hero', label: 'Home', icon: '🏠' },
     { id: 'services', label: 'Micro SAAS', icon: '🚀' },
@@ -81,7 +54,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
     { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
   ],
-
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
       {showInternalNav && (
@@ -702,17 +674,17 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 },
                 {
                   title: 'Proven Results',
-                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',
+                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.';
                   icon: '📈'
                 },
                 {
                   title: 'Future-Proof Technology',
-                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',
+                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.';
                   icon: '🔮'
                 },
                 {
                   title: 'Expert Team',
-                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',
+                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.';
                   icon: '👥'
                 },
                 {
@@ -722,7 +694,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 },
                 {
                   title: 'Scalable Solutions',
-                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
+                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.';
                   icon: '📊'
                 }
               ].map((feature, index) => (

@@ -11,7 +11,6 @@ export default function ServicesShowcase2026V3() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   return (
     <UltraQuantumHolographicBackground 
       intensity="extreme" 

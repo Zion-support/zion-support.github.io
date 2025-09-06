@@ -5,5 +5,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
       destination: '/media/kit',
       permanent: false}}
 },
-
 export default function LaunchRedirect() { return null }

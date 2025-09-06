@@ -12,18 +12,16 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
-      case "new": return 20,
-      case "viewed": return 40,
-      case "shortlisted": return 60,
-      case "interview": return 80,
-      case "hired": return 100,
-      case "rejected": return 100,
+      case "new": return 20;
+      case "viewed": return 40;
+      case "shortlisted": return 60;
+      case "interview": return 80;
+      case "hired": return 100;
+      case "rejected": return 100;
       default: return 0
     }
   },
-
-  const progressValue = getProgressValue(),
-  
+  const progressValue = getProgressValue();
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
@@ -63,10 +61,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     interview: 4,
     hired: 5,
     rejected: 5},
-
-  const currentRank = statusRank[current],
-  const statusRank_ = statusRank[status],
-
+  const currentRank = statusRank[current];
+  const statusRank_ = statusRank[status];
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />

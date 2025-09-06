@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-
 export default function AISeosuitePage() {
   const features = [
     {
@@ -42,7 +41,6 @@ export default function AISeosuitePage() {
       description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500'}],
-
   const seoTools = [
     {
       category: 'Keyword Research',
@@ -65,7 +63,6 @@ export default function AISeosuitePage() {
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
   ],
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -104,7 +101,6 @@ export default function AISeosuitePage() {
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
   ],
-
   const integrations = [
     { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
     { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
@@ -115,17 +111,16 @@ export default function AISeosuitePage() {
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
     { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
   ],
-
   const useCases = [
     {
       title: 'E-commerce Websites',
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
+      description: 'Optimize product pages, category pages, and search functionality for better conversions.';
       icon: '🛍️',
       benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
     },
     {
       title: 'Content Marketing',
-      description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
+      description: 'Optimize blog posts, articles, and content for search engines and user engagement.';
       icon: '📝',
       benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
     },
@@ -137,19 +132,17 @@ export default function AISeosuitePage() {
     },
     {
       title: 'SaaS Companies',
-      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
+      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.';
       icon: '💻',
       benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
     }
   ],
-
   const successMetrics = [
     { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
   ],
-
   return (
     <>
       <Head>

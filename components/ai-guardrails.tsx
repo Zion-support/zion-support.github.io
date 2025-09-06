@@ -11,11 +11,9 @@ export default function AIGuardrailsPage() {
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
 	},
-
 	const features = [
 		'Prompt/output policy engine with allow/deny listsJailbreak and prompt injection detectionPII/PHI detection and redactionToxicity, bias and safety classifiersHuman handoff flows and escalation policiesAudit logs, alerting and exportable evidence'
-	],
-
+	];
 	return (
 		<UltraAdvancedFuturisticBackground>
 			<Head>

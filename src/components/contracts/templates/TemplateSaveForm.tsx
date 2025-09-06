@@ -12,40 +12,35 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 const formSchema = z.object({
-  title: z.string().min(1, "Title is required"),
+  title: z.string().min(1, "Title is required");
   isDefault: z.boolean()}),
-
-type FormValues = z.infer<typeof formSchema>,
-
+type FormValues = z.infer<typeof formSchema>;
 interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
-  editTemplate?: ContractTemplate | null,
+  editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues
 }
 
 export function TemplateSaveForm({
-  onCancel,
-  onComplete,
-  editTemplate,
+  onCancel;
+  onComplete;
+  editTemplate;
   currentValues
 }: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false),
-  const { createTemplate, updateTemplate } = useContractTemplates(),
-  
+  const [saving, setSaving] = useState(false);
+  const { createTemplate, updateTemplate } = useContractTemplates();
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       title: editTemplate?.title || "",
       isDefault: editTemplate?.is_default || false}}),
-  
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
     }
     
     setSaving(true),
-    
     try {
       if (editTemplate) {
         await updateTemplate.mutateAsync({
@@ -65,7 +60,6 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   },
-  
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

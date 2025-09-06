@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 interface SkeletonProps {
-  className?: string,
-  height?: string,
-  width?: string,
+  className?: string;
+  height?: string;
+  width?: string;
   rounded?: string
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '',
-  height = 'h-4', 
-  width = 'w-full', 
+  height = 'h-4';
+  width = 'w-full';
   rounded = 'rounded' 
 }) => {
   return (
@@ -25,7 +25,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
     />
   )
 },
-
 interface ServiceCardSkeletonProps {
   className?: string
 }
@@ -46,7 +45,6 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
     </div>
   )
 },
-
 interface HeroSkeletonProps {
   className?: string
 }
@@ -66,7 +64,6 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
     </div>
   )
 },
-
 interface StatsSkeletonProps {
   className?: string
 }
@@ -87,6 +84,5 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       </div>
     </div>
   )
-},
-
-export default Skeleton,
+};
+export default Skeleton;

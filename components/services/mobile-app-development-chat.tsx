@@ -17,5 +17,4 @@ const MobileAppDevelopmentChat: NextPage = () => {
     </div>
   )
 },
-
-export default MobileAppDevelopmentChat,
+export default MobileAppDevelopmentChat;

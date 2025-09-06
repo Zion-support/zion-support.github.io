@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { useMemo, useState } from 'react';
 import Pagination from '../../components/ui/Pagination';
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
-
 interface Talent {
   id: string,
   name: string,
@@ -18,17 +17,14 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   title: 'Full-Stack Developer',
   badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
   testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
-
 const TalentDirectory: NextPage = () => {
-  const [page, setPage] = useState(1),
-  const pageSize = 10,
-  const total = mockTalent.length,
-
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+  const total = mockTalent.length;
   const pageItems = useMemo(() => {
-    const start = (page - 1) * pageSize,
+    const start = (page - 1) * pageSize;
     return mockTalent.slice(start, start + pageSize)
-  }, [page]),
-
+  }, [page]);
   return (
     <div className="space-y-6 pb-16">
       <Head>
@@ -37,7 +33,7 @@ const TalentDirectory: NextPage = () => {
 
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
         {pageItems.map((t) => (
           <article key={t.id} className="border rounded-md p-4 space-y-2">
             <div className="flex items-center justify-between">
@@ -60,5 +56,4 @@ const TalentDirectory: NextPage = () => {
     </div>
   )
 },
-
-export default TalentDirectory,
+export default TalentDirectory;

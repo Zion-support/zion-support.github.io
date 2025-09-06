@@ -7,16 +7,16 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
-  disputeId?: string,
+  disputeId?: string;
   isTalent: boolean,
   onAddMilestone: () => void
 }
 
 export function ProjectActions({
   projectId,
-  isUnderDispute,
-  disputeId,
-  isTalent,
+  isUnderDispute;
+  disputeId;
+  isTalent;
   onAddMilestone
 }: ProjectActionsProps) {
   return (

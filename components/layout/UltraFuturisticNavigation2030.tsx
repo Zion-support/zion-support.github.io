@@ -1,26 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-  BookOpen, MessageCircle, Star, TrendingUp, Target,
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
-  Earth, Factory, Car, Building, GraduationCap, Scale,
-  Palette, Camera, Video, Music, Gamepad2, Heart,
-  Leaf, Sun, Moon, Wind, Droplets, Mountain,
-  Code, Wrench, Smartphone, BarChart3, Eye,
-  Infinity, Hexagon, Network
-} from 'lucide-react',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: '🚀 2030 Ultra-Futuristic AI Services',
@@ -28,57 +14,57 @@ const serviceCategories = [
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     description: 'Next-generation AI consciousness and creativity',
     services: [
-      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotion-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$1,299/month' },
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$1,799/month' },
+      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotion-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$1,299/month' };
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$1,799/month' };
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$3,999/month' }
     ]
-  },
+  };
   {
     title: '⚛️ 2030 Quantum & Emerging Tech',
     icon: Atom,
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     description: 'Quantum computing and beyond',
     services: [
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$3,999/month' },
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$3,999/month' };
       { name: 'Quantum Learning Accelerator', href: '/quantum-learning-accelerator', description: 'Quantum-enhanced learning paths', price: '$899/month' },
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$4,999/month' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$4,999/month' };
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud performance', price: '$4,999/month' }
     ]
-  },
+  };
   {
     title: '🧬 2030 Biotech & DNA Computing',
     icon: Microscope,
     color: 'from-green-600 via-emerald-600 to-teal-600',
     description: 'Biological computing and genetic engineering',
     services: [
-      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$5,999/month' },
+      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$5,999/month' };
       { name: 'Biotech Personalized Nutrition', href: '/biotech-personalized-nutrition', description: 'DNA-based nutrition plans', price: '$599/month' },
-      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$1,599/month' },
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$1,599/month' };
       { name: 'Advanced Research Automation', href: '/advanced-research-automation', description: 'Automated research workflows', price: '$1,999/month' }
     ]
-  },
+  };
   {
     title: '🏙️ 2030 Enterprise IT Solutions',
     icon: Cpu,
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     description: 'Autonomous enterprise infrastructure',
     services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$2,999/month' },
-      { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure', price: '$6,999/month' },
-      { name: 'AI-Powered Enterprise Security', href: '/ai-powered-enterprise-security', description: 'AI-driven threat detection', price: '$2,999/month' },
+      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$2,999/month' };
+      { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center', description: 'Self-managing IT infrastructure', price: '$6,999/month' };
+      { name: 'AI-Powered Enterprise Security', href: '/ai-powered-enterprise-security', description: 'AI-driven threat detection', price: '$2,999/month' };
       { name: 'Intelligent Data Governance', href: '/intelligent-data-governance', description: 'AI-powered data management', price: '$7,999/month' }
     ]
-  },
+  };
   {
     title: '🌌 2030 Space & Metaverse Tech',
     icon: Rocket,
     color: 'from-teal-600 via-emerald-600 to-green-600',
     description: 'Space exploration and digital reality',
     services: [
-      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$8,999/month' },
-      { name: 'Metaverse Digital Reality Platform', href: '/metaverse-digital-reality-platform', description: 'Immersive virtual worlds', price: '$2,499/month' },
-      { name: 'Quantum Research Platform', href: '/quantum-research-platform', description: 'Quantum computing research', price: '$3,999/month' },
+      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$8,999/month' };
+      { name: 'Metaverse Digital Reality Platform', href: '/metaverse-digital-reality-platform', description: 'Immersive virtual worlds', price: '$2,499/month' };
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform', description: 'Quantum computing research', price: '$3,999/month' };
       { name: 'AI Research Assistant', href: '/ai-research-assistant', description: 'Intelligent research support', price: '$899/month' }
     ]
   },
@@ -95,7 +81,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -106,7 +91,6 @@ const mainNavigation = [
   { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
-
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
   { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
@@ -115,23 +99,19 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
 ],
-
 export default function UltraFuturisticNavigation2030() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [activeCategory, setActiveCategory] = useState<number | null>(null),
-  const [isScrolled, setIsScrolled] = useState(false),
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<number | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    },
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-  const toggleMenu = () => setIsOpen(!isOpen),
-  const closeMenu = () => setIsOpen(false),
-
+  }, []);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
   return (
     <>
       {/* Top Contact Bar */}

@@ -18,34 +18,28 @@ export interface TalentCardProps {
 
 const TalentCardComponent = ({
   talent,
-  onViewProfile,
-  onRequestHire,
+  onViewProfile;
+  onRequestHire;
   isAuthenticated
 }: TalentCardProps) => {
-  const router = useRouter(),
-  
+  const router = useRouter();
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`),
-    
+    router.push(`/talent/${talent.id}`);
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  },
-
+  };
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault(),
-    e.stopPropagation(),
+    e.stopPropagation();
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  },
-
-
+  };
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
-
+  const skills = talent.skills?.slice(0, 5) || [];
   return (
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
@@ -143,7 +137,7 @@ const TalentCardComponent = ({
                 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
                 Hire
               </Button>
@@ -165,6 +159,5 @@ const TalentCardComponent = ({
     </Card>
   )
 },
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';

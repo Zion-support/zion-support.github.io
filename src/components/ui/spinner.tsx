@@ -15,6 +15,6 @@ const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
       height={size}
     />
   )
-),
-Spinner.displayName = 'Spinner',
-export default Spinner,
+);
+Spinner.displayName = 'Spinner';
+export default Spinner;

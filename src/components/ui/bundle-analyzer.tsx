@@ -5,7 +5,6 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertTriangle, Package, Zap } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
   totalSize: number,
   gzippedSize: number,
@@ -23,77 +22,62 @@ interface ChunkInfo {
 
 export function BundleAnalyzer() {
   const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
-
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
   if (!isAllowed) {
     return null
   }
 
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null),
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]),
-  const [isVisible, setIsVisible] = useState(false),
-  const [isCollecting, setIsCollecting] = useState(false),
-  const [shouldShow, setShouldShow] = useState(false),
-
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
+  const [chunks, setChunks] = useState<ChunkInfo[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isCollecting, setIsCollecting] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
   useEffect(() => {
     // Only show in development or when explicitly enabled
     const show =
       process.env.NODE_ENV === 'development' ||
-      localStorage.getItem('bundle-analyzer') === 'true',
-
-    setShouldShow(show),
-
-    if (!show) return,
-
-    setIsVisible(true),
+      localStorage.getItem('bundle-analyzer') === 'true';
+    setShouldShow(show);
+    if (!show) return;
+    setIsVisible(true);
     collectBundleInfo()
-  }, []),
-
+  }, []);
   const collectBundleInfo = async () => {
-    if (typeof window === 'undefined') return,
-
-    setIsCollecting(true),
-
+    if (typeof window === 'undefined') return;
+    setIsCollecting(true);
     try {
       // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[],
+      const resourceEntries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
       const scriptEntries = resourceEntries.filter(entry => 
         entry.name.includes('/_next/static/') && 
         (entry.name.endsWith('.js') || entry.name.endsWith('.css'))
-      ),
-
+      );
       // Calculate bundle information
-      let totalSize = 0,
-      let totalLoadTime = 0,
+      let totalSize = 0;
+      let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [],
-
       scriptEntries.forEach(entry => {
-        const size = entry.transferSize || entry.encodedBodySize || 0,
-        const loadTime = entry.responseEnd - entry.requestStart,
-        const cached = entry.transferSize === 0,
-        
-        totalSize += size,
-        totalLoadTime += loadTime,
-
+        const size = entry.transferSize || entry.encodedBodySize || 0;
+        const loadTime = entry.responseEnd - entry.requestStart;
+        const cached = entry.transferSize === 0;
+        totalSize += size;
+        totalLoadTime += loadTime;
         chunkData.push({
           name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-          size,
-          loadTime,
+          size;
+          loadTime;
           cached})
-      }),
-
+      });
       // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7,
-      const cacheHitRate = chunkData.filter(chunk => chunk.cached).length / chunkData.length,
-
+      const gzippedSize = totalSize * 0.7;
+      const cacheHitRate = chunkData.filter(chunk => chunk.cached).length / chunkData.length;
       setBundleInfo({
-        totalSize,
-        gzippedSize,
+        totalSize;
+        gzippedSize;
         chunkCount: chunkData.length,
         loadTime: totalLoadTime / chunkData.length,
         cacheHitRate: cacheHitRate * 100}),
-
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)), // Top 5 largest chunks
     } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
@@ -101,30 +85,26 @@ export function BundleAnalyzer() {
       setIsCollecting(false)
     }
   },
-
   const formatSize = (bytes: number): string => {
     if (bytes === 0) return '0 B',
-    const k = 1024,
-    const sizes = ['BKBMBGB'],
-    const i = Math.floor(Math.log(bytes) / Math.log(k)),
+    const k = 1024;
+    const sizes = ['BKBMBGB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
-  },
-
+  };
   const getSizeColor = (size: number) => {
     if (size < 100000) return 'bg-green-500', // < 100KB
     if (size < 500000) return 'bg-yellow-500', // < 500KB
     return 'bg-red-500', // > 500KB
-  },
-
+  };
   const toggleAnalyzer = () => {
-    const current = localStorage.getItem('bundle-analyzer') === 'true',
-    localStorage.setItem('bundle-analyzer', (!current).toString()),
-    setIsVisible(!current),
+    const current = localStorage.getItem('bundle-analyzer') === 'true';
+    localStorage.setItem('bundle-analyzer', (!current).toString());
+    setIsVisible(!current);
     if (!current) {
       collectBundleInfo()
     }
-  },
-
+  };
   if (!shouldShow) {
     return null
   }

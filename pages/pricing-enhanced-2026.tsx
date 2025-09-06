@@ -17,18 +17,15 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
-  const popularServices = getPopularServices(),
-  
+  const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -42,14 +39,13 @@ export default function PricingEnhanced2026Page() {
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
   ],
-
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
     {
       name: 'ArrowRight-Generation AI 2026',
       description: 'Revolutionary AI platforms with quantum integration',
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
-      avgPrice: '$2,499/month',
+      avgPrice: '$2,499/month';
       savings: 'Save 60-80% vs. competitors',
       icon: Brain,
       color: 'from-purple-500 to-indigo-600'
@@ -58,7 +54,7 @@ export default function PricingEnhanced2026Page() {
       name: 'Quantum & Emerging Tech 2026',
       description: 'Cutting-edge quantum and emerging technologies',
       services: ['Quantum Internet SecurityNeuromorphic ComputingDNA ComputingPhotonic ComputingHolographic Display'],
-      avgPrice: '$4,199/month',
+      avgPrice: '$4,199/month';
       savings: 'Save 70-85% vs. competitors',
       icon: Atom,
       color: 'from-blue-500 to-cyan-600'
@@ -67,7 +63,7 @@ export default function PricingEnhanced2026Page() {
       name: 'Enterprise IT Solutions 2026',
       description: 'Advanced enterprise infrastructure and security',
       services: ['Zero Trust Network ArchitectureEdge Computing Orchestration5G Private NetworksBlockchain InfrastructureAI DevOps Automation'],
-      avgPrice: '$5,199/month',
+      avgPrice: '$5,199/month';
       savings: 'Save 50-75% vs. competitors',
       icon: Shield,
       color: 'from-red-500 to-pink-600'
@@ -85,7 +81,7 @@ export default function PricingEnhanced2026Page() {
       name: 'Healthcare & Biotech 2026',
       description: 'AI-powered healthcare and biotechnology solutions',
       services: ['AI Healthcare DiagnosticsDNA Computing PlatformNeuromorphic Healthcare AIQuantum Medical Imaging'],
-      avgPrice: '$3,999/month',
+      avgPrice: '$3,999/month';
       savings: 'Save 65-80% vs. competitors',
       icon: FlaskConical,
       color: 'from-blue-500 to-teal-600'
@@ -94,13 +90,12 @@ export default function PricingEnhanced2026Page() {
       name: 'Financial Technology 2026',
       description: 'Advanced financial and trading solutions',
       services: ['AI Quantum Financial TradingBlockchain InfrastructureQuantum Internet SecurityPhotonic Computing'],
-      avgPrice: '$4,499/month',
+      avgPrice: '$4,499/month';
       savings: 'Save 55-75% vs. competitors',
       icon: DollarSign,
       color: 'from-green-500 to-emerald-600'
     }
   ],
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -112,7 +107,7 @@ export default function PricingEnhanced2026Page() {
       features: [
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
         'Mobile App AccessAPI Access (1000 calls/month)'
-      ],
+      ];
       icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum' as const,
       popular: false,
@@ -128,7 +123,7 @@ export default function PricingEnhanced2026Page() {
       features: [
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
-      ],
+      ];
       icon: <Star className="w-8 h-8" />,
       variant: 'holographic' as const,
       popular: true,
@@ -144,7 +139,7 @@ export default function PricingEnhanced2026Page() {
       features: [
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
-      ],
+      ];
       icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-advanced' as const,
       popular: false,
@@ -152,12 +147,11 @@ export default function PricingEnhanced2026Page() {
       color: 'from-yellow-500 to-orange-600'
     }
   ],
-
   // Featured services showcase
   const featuredServices = [
     {
       name: 'AI Quantum Financial Trading',
-      price: '$2,999/month',
+      price: '$2,999/month';
       description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
       features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
@@ -166,7 +160,7 @@ export default function PricingEnhanced2026Page() {
     },
     {
       name: 'Zero Trust Network Architecture 2026',
-      price: '$6,999/month',
+      price: '$6,999/month';
       description: 'ArrowRight-generation network security with continuous verification',
       features: ['Continuous verificationMicro-segmentationReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/zero-trust-network-architecture-2026',
@@ -175,7 +169,7 @@ export default function PricingEnhanced2026Page() {
     },
     {
       name: 'AI Healthcare Diagnostics Platform',
-      price: '$1,499/month',
+      price: '$1,499/month';
       description: 'AI-powered medical diagnostics with 95% accuracy rate',
       features: ['Medical image analysisDiagnosis predictionTreatment recommendations'],
       link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics',
@@ -184,7 +178,7 @@ export default function PricingEnhanced2026Page() {
     },
     {
       name: 'Quantum Internet Security Platform',
-      price: '$4,999/month',
+      price: '$4,999/month';
       description: 'Unbreakable quantum encryption for the future internet',
       features: ['Quantum key distributionPost-quantum cryptographyReal-time threat detection'],
       link: 'https://ziontechgroup.com/services/quantum-internet-security-platform',
@@ -192,7 +186,6 @@ export default function PricingEnhanced2026Page() {
       color: 'from-blue-500 to-cyan-600'
     }
   ],
-
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">

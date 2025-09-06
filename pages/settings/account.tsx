@@ -2,49 +2,46 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
-  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false),
-  const [ens, setEns] = useState(''),
-  const [lens, setLens] = useState(''),
-  const [ceramic, setCeramic] = useState(''),
-  const [farcaster, setFarcaster] = useState(''),
-  const [linking, setLinking] = useState(false),
-  const [backupCid, setBackupCid] = useState(''),
-  const [restoreCid, setRestoreCid] = useState(''),
-  const [status, setStatus] = useState<string | null>(null),
-
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+  const [ens, setEns] = useState('');
+  const [lens, setLens] = useState('');
+  const [ceramic, setCeramic] = useState('');
+  const [farcaster, setFarcaster] = useState('');
+  const [linking, setLinking] = useState(false);
+  const [backupCid, setBackupCid] = useState('');
+  const [restoreCid, setRestoreCid] = useState('');
+  const [status, setStatus] = useState<string | null>(null);
   useEffect(() => {
-    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null,
-    if (saved) setUser(JSON.parse(saved)),
-    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null,
+    const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
+    if (saved) setUser(JSON.parse(saved));
+    const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
     setDisplayWeb3(pref === 'true')
-  }, []),
-
+  }, []);
   const saveDisplayPref = (val: boolean) => {
     setDisplayWeb3(val),
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val))
-  },
-
+  };
   const linkDID = async () => {
-    if (!user) return,
-    setLinking(true),
-    setStatus(null),
+    if (!user) return;
+    setLinking(true);
+    setStatus(null);
     try {
-      const nonceRes = await fetch('/api/auth/nonce'),
-      const { nonce } = await nonceRes.json(),
+      const nonceRes = await fetch('/api/auth/nonce');
+      const { nonce } = await nonceRes.json();
       const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },
-      const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`,
+      const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort)
       let signature: string | null = null,
       try {
         if (user.chain === 'evm' && (window as any).ethereum) {
-          const ethers = await import('ethers'),
-          const provider = new ethers.providers.Web3Provider((window as any).ethereum),
-          const signer = provider.getSigner(),
+          const ethers = await import('ethers');
+          const provider = new ethers.providers.Web3Provider((window as any).ethereum);
+          const signer = provider.getSigner();
           signature = await signer.signMessage(msg)
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
-          const enc = new TextEncoder().encode(msg),
-          const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8'),
-          const bs58 = (await import('bs58')).default,
+          const enc = new TextEncoder().encode(msg);
+          const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
+          const bs58 = (await import('bs58')).default;
           signature = bs58.encode(sig)
         }
       } catch {}
@@ -52,8 +49,8 @@ export default function AccountSettingsPage() {
       const res = await fetch('/api/did/link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ payload, message: msg, signature })}),
-      if (!res.ok) throw new Error('Failed to link DIDs'),
+        body: JSON.stringify({ payload, message: msg, signature })});
+      if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully')
     } catch (e: any) {
       setStatus(e?.message || 'Linking failed')
@@ -61,14 +58,13 @@ export default function AccountSettingsPage() {
       setLinking(false)
     }
   },
-
   const doBackup = async () => {
-    setStatus(null),
+    setStatus(null);
     try {
       const profile = {
-        user,
+        user;
         preferences: { displayWeb3 },
-        did: { ens, lens, ceramic, farcaster },
+        did: { ens, lens, ceramic, farcaster };
         resume: {},
         projects: [],
         reviews: []},
@@ -76,28 +72,27 @@ export default function AccountSettingsPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(profile)}),
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data?.error || 'Backup failed'),
-      setBackupCid(data.cid),
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Backup failed');
+      setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage')
     } catch (e: any) {
       setStatus(e?.message || 'Backup failed')
     }
   },
-
   const doRestore = async () => {
-    setStatus(null),
+    setStatus(null);
     try {
-      const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`),
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data?.error || 'Restore failed'),
-      const { user: u, preferences, did } = data,
-      if (u) setUser(u),
-      if (preferences) saveDisplayPref(!!preferences.displayWeb3),
+      const res = await fetch(`/api/backup/restore?cid=${encodeURIComponent(restoreCid || backupCid)}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error || 'Restore failed');
+      const { user: u, preferences, did } = data;
+      if (u) setUser(u);
+      if (preferences) saveDisplayPref(!!preferences.displayWeb3);
       if (did) {
-        setEns(did.ens || ''),
-        setLens(did.lens || ''),
-        setCeramic(did.ceramic || ''),
+        setEns(did.ens || '');
+        setLens(did.lens || '');
+        setCeramic(did.ceramic || '');
         setFarcaster(did.farcaster || '')
       }
       setStatus('Profile restored from backup')
@@ -105,7 +100,6 @@ export default function AccountSettingsPage() {
       setStatus(e?.message || 'Restore failed')
     }
   },
-
   return (
     <>
       <Head>

@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
-
-
 export default function AutomationPage() {
   const features = [
     {
@@ -26,11 +24,9 @@ export default function AutomationPage() {
       description: 'Automated responses based on events and conditions'
     }
   ],
-
   const benefits = [
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
-  ],
-
+  ];
   return (
     <>
       <Head>

@@ -15,5 +15,4 @@ const InnovationInEnterpriseTechnology: NextPage = () => {
     </div>
   )
 },
-
-export default InnovationInEnterpriseTechnology,
+export default InnovationInEnterpriseTechnology;

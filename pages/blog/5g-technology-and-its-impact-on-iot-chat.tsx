@@ -17,5 +17,4 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
     </div>
   )
 },
-
-export default Chat5gTechnologyAndItsImpactOnIotChat,
+export default Chat5gTechnologyAndItsImpactOnIotChat;

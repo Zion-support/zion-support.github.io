@@ -15,5 +15,4 @@ const DigitalTransformationInsights: NextPage = () => {
     </div>
   )
 },
-
-export default DigitalTransformationInsights,
+export default DigitalTransformationInsights;

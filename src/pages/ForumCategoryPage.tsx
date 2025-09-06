@@ -23,7 +23,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,
     icon: "Briefcase"
   },
@@ -37,7 +37,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
+    description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false,
     icon: "Code"
   },
@@ -56,28 +56,25 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     icon: "Megaphone"
   }
 },
-
 const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
   "Megaphone": Megaphone
-},
-
+};
 function CategoryContent({
-  categoryId,
-  category,
-  IconComponent,
+  categoryId;
+  category;
+  IconComponent;
   user}: {
   categoryId: string,
   category: ForumCategoryInfo,
   IconComponent: React.ComponentType<any>,
   user: any
 }) {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const { featuredPosts, recentPosts } = useCommunity(),
-
+  const [searchQuery, setSearchQuery] = useState("");
+  const { featuredPosts, recentPosts } = useCommunity();
   // Filter posts by category from context data
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
@@ -85,8 +82,7 @@ function CategoryContent({
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
-  ),
-
+  );
   // Apply search filter
   const filteredPosts = searchQuery 
     ? categoryPosts.filter(post => 
@@ -94,12 +90,10 @@ function CategoryContent({
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : categoryPosts,
-
-  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin'),
-  const { isFollowed, follow, unfollow } = useFollowedCategories(),
-  const { toast } = useToast(),
-
+    : categoryPosts;
+  const canCreatePost = user && (!category.adminOnly || user.userType === 'admin' || user.role === 'admin');
+  const { isFollowed, follow, unfollow } = useFollowedCategories();
+  const { toast } = useToast();
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -110,16 +104,14 @@ function CategoryContent({
     } else {
       follow(categoryId)
     }
-  },
-
+  };
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
-
   return (
     <div className="container py-8">
       <div className="flex items-center gap-3 mb-6">
-        <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
+        <Link href="/community" className="text-sm text-muted-foreground hover: text-foreground">
           Forum
         </Link>
         <span className="text-muted-foreground">/</span>
@@ -198,25 +190,21 @@ function CategoryContent({
 export default function ForumCategoryPage() {
   const router = useRouter(),
   const { categoryId } = router.query as { categoryId: string },
-  const { user } = useAuth(),
-
+  const { user } = useAuth();
   // Check if the category exists and user has access
-  const category = categoryId ? categoriesInfo[categoryId] : null,
-  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null,
-
+  const category = categoryId ? categoriesInfo[categoryId] : null;
+  const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
   // Check access for admin-only categories
   const hasAccess = category && (
     !category.adminOnly || 
     (user && (user.userType === 'admin' || user.role === 'admin'))
-  ),
-
+  );
   useEffect(() => {
     // Add a small delay to ensure router is ready
     if (categoryId && category) {
       logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId })
     }
-  }, [categoryId, category]),
-
+  }, [categoryId, category]);
   if (!categoryId || !category) {
     return <NotFound />
   }

@@ -1,10 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
-
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
-
   const footerSections = [
     {
       title: 'Services',
@@ -37,13 +35,11 @@ const EnhancedFooter: React.FC = () => {
       ]
     }
   ],
-
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
   ],
-
   return (
     <footer className="bg-slate-950 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -68,7 +64,7 @@ const EnhancedFooter: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/70">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <a href="mailto: kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -94,7 +90,7 @@ const EnhancedFooter: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-white/70 hover:text-white transition-colors duration-200"
+                      className="text-white/70 hover: text-white transition-colors duration-200"
                     >
                       {link.name}
                     </Link>
@@ -134,5 +130,4 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   )
 },
-
-export default EnhancedFooter,
+export default EnhancedFooter;

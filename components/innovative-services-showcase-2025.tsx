@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Search, Filter, Star, CheckCircle, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, Microscope,
-  Phone, Mail, MapPin, TrendingUp, Users, Award,
-  Zap, Globe, Cpu, Database, Lock, Cloud,
-  Stethoscope, GraduationCap, Leaf, Truck
-} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 // Import all the new 2025 innovative service data
 import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
@@ -26,12 +19,11 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services',
+    description: 'Innovative fintech, DeFi, and financial services';
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -91,7 +83,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computing, DNA computing, and beyond';
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -119,12 +111,10 @@ const serviceCategories = [
     badge: 'Popular'
   }
 ],
-
 export default function InnovativeServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('name'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
   const filteredServices = serviceCategories.flatMap(category => 
     category.services.filter(service =>
       (selectedCategory === 'all' || category.id === selectedCategory) &&
@@ -133,20 +123,18 @@ export default function InnovativeServicesShowcase2025() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-  ),
-
+  );
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       case 'price':
-        return a.pricing.starter.price - b.pricing.starter.price,
+        return a.pricing.starter.price - b.pricing.starter.price;
       case 'category':
-        return a.category.localeCompare(b.category),
+        return a.category.localeCompare(b.category);
       default: return 0
     }
   }),
-
   return (
     <Layout>
       <Head>

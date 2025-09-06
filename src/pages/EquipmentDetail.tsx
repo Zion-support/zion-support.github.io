@@ -15,7 +15,6 @@ import { equipmentListings } from '@/data/equipmentData';
 import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
 import { useCurrency } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -27,17 +26,17 @@ interface EquipmentDetails {
   description: string,
   brand: string,
   category: string,
-  subcategory?: string,
+  subcategory?: string;
   images: string[],
   price: number,
   currency: string,
-  rating?: number,
-  reviewCount?: number,
+  rating?: number;
+  reviewCount?: number;
   inStock: boolean,
-  expectedShipping?: string,
+  expectedShipping?: string;
   specifications: EquipmentSpecification[],
   features: string[],
-  warranty?: string,
+  warranty?: string;
   returnPolicy?: string
 }
 
@@ -58,7 +57,7 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
-      name: spec, 
+      name: spec,
       value: '' 
     })),
     features: item.tags || [],
@@ -70,51 +69,46 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item),
+    acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc
   }, {} as { [key: string]: EquipmentDetails }),
-
 export default function EquipmentDetail() {
-  const router = useRouter(),
-  const { id } = router.query as { id?: string },
-  const { isAuthenticated, user } = useAuth(),
-  const { items, dispatch } = useCart(),
-  const { formatPrice } = useCurrency(),
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [quantity, setQuantity] = useState(1),
-  const [isAdding, setIsAdding] = useState(false),
-  const [loading, setLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
-
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
+  const { isAuthenticated, user } = useAuth();
+  const { items, dispatch } = useCart();
+  const { formatPrice } = useCurrency();
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [isAdding, setIsAdding] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
   useEffect(() => {
     async function loadEquipment() {
       if (!id) {
-        setLoading(false),
-        setError('No equipment ID provided'),
+        setLoading(false);
+        setError('No equipment ID provided');
         return
       }
 
       try {
-        setLoading(true),
-        setError(null),
-
+        setLoading(true);
+        setError(null);
         // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id],
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
         if (equipmentFromSample) {
-          setEquipment(equipmentFromSample),
-          setLoading(false),
+          setEquipment(equipmentFromSample);
+          setLoading(false);
           return
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
         if (typeof window !== 'undefined') {
           try {
-            const stored = sessionStorage.getItem(`equipment:${id}`),
+            const stored = sessionStorage.getItem(`equipment: ${id}`),
             if (stored) {
-              const storedData = JSON.parse(stored),
-              
+              const storedData = JSON.parse(stored);
               // Check if it's already in EquipmentDetails format or needs conversion
               let equipmentData: EquipmentDetails,
               if (storedData.name) {
@@ -125,8 +119,8 @@ export default function EquipmentDetail() {
                 equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing)
               }
               
-              setEquipment(equipmentData),
-              setLoading(false),
+              setEquipment(equipmentData);
+              setLoading(false);
               return
             }
           } catch (storageError) {
@@ -135,18 +129,17 @@ export default function EquipmentDetail() {
         }
 
         // If not found anywhere, set error
-        setError('Equipment not found'),
+        setError('Equipment not found');
         setLoading(false)
       } catch (error) {
         logErrorToProduction('Error loading equipment:', { data: error }),
-        setError('Failed to load equipment details'),
+        setError('Failed to load equipment details');
         setLoading(false)
       }
     }
 
     loadEquipment()
-  }, [id]),
-
+  }, [id]);
   const handleAddToCart = async () => {
     if (!equipment || !isAuthenticated) {
       toast({
@@ -156,7 +149,7 @@ export default function EquipmentDetail() {
       return
     }
 
-    setIsAdding(true),
+    setIsAdding(true);
     try {
       dispatch({
         type: 'ADD_ITEM',
@@ -164,8 +157,7 @@ export default function EquipmentDetail() {
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
-          quantity}}),
-
+          quantity}});
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`})
@@ -178,9 +170,7 @@ export default function EquipmentDetail() {
       setIsAdding(false)
     }
   },
-
-  const inCart = items.some(item => item.id === equipment?.id),
-
+  const inCart = items.some(item => item.id === equipment?.id);
   // Loading state
   if (loading) {
     return (

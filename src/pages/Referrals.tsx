@@ -17,17 +17,16 @@ import { useRouter } from 'next/router'; // Changed from useNavigate
 
 export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
-  const { isAuthenticated } = useAuth(),
+  const { isAuthenticated } = useAuth();
   const {
-    isLoading,
-    referralCode,
-    referrals,
-    rewards,
-    stats,
-    getReferralLink,
-    copyReferralLink,
-    shareOnSocialMedia} = useReferrals(),
-
+    isLoading;
+    referralCode;
+    referrals;
+    rewards;
+    stats;
+    getReferralLink;
+    copyReferralLink;
+    shareOnSocialMedia} = useReferrals();
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -38,8 +37,7 @@ export default function ReferralsPage() {
     }
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
-  const referralLink = getReferralLink(),
-
+  const referralLink = getReferralLink();
   return (
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">

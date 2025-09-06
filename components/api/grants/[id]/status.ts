@@ -9,8 +9,8 @@ function grantPath(id: string) {
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true }),
-  const p = grantPath(id),
-  if (!fs.existsSync(p)) return null,
+  const p = grantPath(id);
+  if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 
@@ -21,7 +21,7 @@ function writeGrant(record: GrantApplication) {
 
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization || '',
-  const token = header.replace('Bearer ', ''),
+  const token = header.replace('Bearer ', '');
   return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 
@@ -38,20 +38,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST'),
-    res.status(405).end('Method Not Allowed'),
+    res.setHeader('AllowPOST');
+    res.status(405).end('Method Not Allowed');
     return
   }
 
-  const existing = readGrant(id),
+  const existing = readGrant(id);
   if (!existing) {
     res.status(404).json({ error: 'Not found' }),
     return
   }
 
-  const payload = req.body as StatusUpdatePayload,
-  existing.status = payload.status,
-  existing.updatedAt = new Date().toISOString(),
-  writeGrant(existing),
+  const payload = req.body as StatusUpdatePayload;
+  existing.status = payload.status;
+  existing.updatedAt = new Date().toISOString();
+  writeGrant(existing);
   res.status(200).json({ record: existing })
 }

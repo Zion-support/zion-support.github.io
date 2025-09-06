@@ -5,24 +5,21 @@ import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   },
-
   const serviceCategories = [
     {
       title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses',
+      description: 'Innovative, focused software solutions for modern businesses';
       count: '150+',
       color: 'blue',
       services: [
@@ -51,7 +48,6 @@ export default function Services() {
       href: '/it-services'
     }
   ],
-
   const getColorClasses = (color: string) => {
     const colors = {
       blue: {
@@ -77,8 +73,7 @@ export default function Services() {
       }
     },
     return colors[color as keyof typeof colors] || colors.blue
-  },
-
+  };
   return (
     <>
       <Head>
@@ -96,7 +91,7 @@ export default function Services() {
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`text-5xl md: text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Our Services
               </h1>
@@ -104,7 +99,7 @@ export default function Services() {
                 350+ Innovative Solutions for Modern Businesses
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, 
+                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products,
                 we provide everything your business needs to thrive in the digital age.
               </p>
             </div>
@@ -115,7 +110,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
                 {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color),
+                  const colors = getColorClasses(category.color);
                   return (
                     <div 
                       key={category.title}

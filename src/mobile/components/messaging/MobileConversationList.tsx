@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
-  avatar?: string,
+  avatar?: string;
   lastMessage: string,
   timestamp: string,
   unreadCount: number,
@@ -18,13 +18,13 @@ interface Conversation {
 
 interface MobileConversationListProps {
   conversations: Conversation[],
-  activeConversation?: string,
+  activeConversation?: string;
   onSelectConversation: (id: string) => void
 }
 
 export function MobileConversationList({
   conversations,
-  activeConversation,
+  activeConversation;
   onSelectConversation
 }: MobileConversationListProps) {
   return (

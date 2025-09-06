@@ -12,10 +12,10 @@ export default function AIContentPersonalizationEngine() {
 			roiNote="Average ROI 3–6x within 90 days"
 			features={[
 				"Segmentation and propensity modeling",
-				"Real-time content and offer selection",
-				"A/B/n and multi-armed bandit experimentation",
-				"Journey orchestration across channels",
-				"Privacy-safe profiling and consent management",
+				"Real-time content and offer selection";
+				"A/B/n and multi-armed bandit experimentation";
+				"Journey orchestration across channels";
+				"Privacy-safe profiling and consent management";
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}

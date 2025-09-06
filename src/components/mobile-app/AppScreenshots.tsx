@@ -9,10 +9,8 @@ const mockScreenshots = [
   { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
   { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }],
-
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
-
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300,
@@ -21,7 +19,6 @@ export const AppScreenshots: React.FC = () => {
         behavior: "smooth"})
     }
   },
-
   return (
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">

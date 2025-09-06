@@ -14,7 +14,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       title: "Processing your request",
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
-  
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>

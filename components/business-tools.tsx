@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -11,7 +10,7 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'Notion',
-          description: 'All-in-one workspace for notes, docs, projects, and team collaboration.',
+          description: 'All-in-one workspace for notes, docs, projects, and team collaboration.';
           features: ['TemplatesDatabase viewsReal-time editingIntegrationsTeam spaces'],
           pricing: 'Free - $8/month',
           website: 'https://notion.so',
@@ -21,7 +20,7 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Asana',
-          description: 'Work management platform for teams to organize, track, and manage their work.',
+          description: 'Work management platform for teams to organize, track, and manage their work.';
           features: ['Task managementProject timelinesTeam collaborationWorkflow automationReporting'],
           pricing: 'Free - $10.99/month',
           website: 'https://asana.com',
@@ -54,7 +53,7 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Microsoft Teams',
-          description: 'Unified communication platform with chat, video meetings, and file collaboration.',
+          description: 'Unified communication platform with chat, video meetings, and file collaboration.';
           features: ['ChatVideo meetingsFile sharingOffice integrationSecurity'],
           pricing: 'Free - $6/month',
           website: 'https://teams.microsoft.com',
@@ -63,7 +62,7 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Zoom',
-          description: 'Video conferencing platform for meetings, webinars, and team collaboration.',
+          description: 'Video conferencing platform for meetings, webinars, and team collaboration.';
           features: ['HD videoScreen sharingRecordingWebinarsBreakout rooms'],
           pricing: 'Free - $14.99/month',
           website: 'https://zoom.us',
@@ -77,7 +76,7 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'HubSpot',
-          description: 'All-in-one inbound marketing, sales, and customer service platform.',
+          description: 'All-in-one inbound marketing, sales, and customer service platform.';
           features: ['CRMEmail marketingLead generationAnalyticsAutomation'],
           pricing: 'Free - $45/month',
           website: 'https://hubspot.com',
@@ -96,7 +95,7 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Salesforce',
-          description: 'Customer relationship management platform for sales, service, and marketing.',
+          description: 'Customer relationship management platform for sales, service, and marketing.';
           features: ['Sales CRMService cloudMarketing automationAnalyticsAppExchange'],
           pricing: '$25/month - $300/month',
           website: 'https://salesforce.com',
@@ -110,7 +109,7 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'QuickBooks',
-          description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
+          description: 'Small business accounting software for invoicing, expenses, and financial reporting.';
           features: ['InvoicingExpense trackingFinancial reportsTax preparationBank integration'],
           pricing: '$30/month - $200/month',
           website: 'https://quickbooks.intuit.com',
@@ -162,7 +161,7 @@ export default function BusinessToolsPage() {
         },
         {
           name: 'Adobe Creative Cloud',
-          description: 'Complete creative software suite for design, photography, and video.',
+          description: 'Complete creative software suite for design, photography, and video.';
           features: ['PhotoshopIllustratorInDesignPremiere ProAfter Effects'],
           pricing: '$52.99/month',
           website: 'https://adobe.com/creativecloud',
@@ -205,7 +204,6 @@ export default function BusinessToolsPage() {
       ]
     }
   ],
-
   const businessInsights = [
     {
       title: 'Remote Work Tools',
@@ -232,7 +230,6 @@ export default function BusinessToolsPage() {
       color: 'text-orange-400'
     }
   ],
-
   const productivityTips = [
     {
       title: 'Start with Free Tiers',
@@ -255,7 +252,6 @@ export default function BusinessToolsPage() {
         icon: <Users className="w-6 h-6 text-orange-400" />
     }
   ],
-
   return (
     <>
       <Head>
@@ -281,7 +277,7 @@ export default function BusinessToolsPage() {
             Essential Business Tools & Productivity
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Discover the most powerful business tools that successful companies use to manage projects, 
+            Discover the most powerful business tools that successful companies use to manage projects;
             communicate effectively, market their products, and grow their operations. Real pricing and features.
           </p>
         </div>

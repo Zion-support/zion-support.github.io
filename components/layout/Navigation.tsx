@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
-} from 'lucide-react',
 import Link from 'next/link';
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
-    },
-
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   const navigationItems = [
     {
       name: 'Home',
@@ -52,14 +45,12 @@ const Navigation: React.FC = () => {
       icon: Phone
     }
   ],
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   return (
     <>
       {/* Navigation Bar */}
@@ -234,7 +225,7 @@ const Navigation: React.FC = () => {
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
                                 >
                                   <Icon className="w-5 h-5 text-cyan-400" />
                                   <div>
@@ -298,5 +289,4 @@ const Navigation: React.FC = () => {
     </>
   )
 },
-
-export default Navigation,
+export default Navigation;

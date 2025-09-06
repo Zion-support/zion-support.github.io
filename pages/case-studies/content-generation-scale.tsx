@@ -17,7 +17,6 @@ export default function CaseStudyPage() {
     teamSize: '5 engineers + 3 content specialists',
     featured: false
   },
-
   return (
     <>
       <Head>

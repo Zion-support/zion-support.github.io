@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
 interface AuthConfigurationErrorProps {
-  onRetry?: () => void,
+  onRetry?: () => void;
   showSetupButton?: boolean
 }
 
@@ -16,8 +15,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
     } else {
       window.location.reload()
     }
-  },
-
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
@@ -200,4 +198,4 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
   )
 }
 
-export default AuthConfigurationError, 
+export default AuthConfigurationError,

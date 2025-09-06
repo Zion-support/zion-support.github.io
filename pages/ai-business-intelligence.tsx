@@ -1,10 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  Brain, BarChart3, TrendingUp, Users, Target, Zap, 
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function AIBusinessIntelligencePage() {
@@ -18,7 +14,7 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: BarChart3,
       title: "Real-time Dashboards",
-      description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.",
+      description: "Monitor key performance indicators in real-time with customizable, interactive dashboards.";
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -30,7 +26,7 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: Users,
       title: "Customer Insights",
-      description: "Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.",
+      description: "Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.";
       color: "from-orange-500 to-red-500"
     },
     {
@@ -42,43 +38,40 @@ export default function AIBusinessIntelligencePage() {
     {
       icon: Zap,
       title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically, saving hours of manual work each week.",
+      description: "Generate comprehensive reports automatically, saving hours of manual work each week.";
       color: "from-yellow-500 to-orange-500"
     }
   ],
-
   const benefits = [
-    "Increase revenue by 25-40% through data-driven insights",
-    "Reduce operational costs by 15-30% with process optimization",
-    "Improve customer retention by 20-35% with predictive analytics",
-    "Accelerate decision-making by 60% with real-time data",
-    "Reduce manual reporting time by 80% with automation",
+    "Increase revenue by 25-40% through data-driven insights";
+    "Reduce operational costs by 15-30% with process optimization";
+    "Improve customer retention by 20-35% with predictive analytics";
+    "Accelerate decision-making by 60% with real-time data";
+    "Reduce manual reporting time by 80% with automation";
     "Achieve 99.9% data accuracy with AI-powered validation"
-  ],
-
+  ];
   const useCases = [
     {
       industry: "Retail & E-commerce",
-      description: "Customer segmentation, inventory optimization, and demand forecasting",
+      description: "Customer segmentation, inventory optimization, and demand forecasting";
       results: "35% increase in conversion rates, 25% reduction in inventory costs"
-    },
+    };
     {
       industry: "Financial Services",
-      description: "Risk assessment, fraud detection, and portfolio optimization",
+      description: "Risk assessment, fraud detection, and portfolio optimization";
       results: "40% improvement in risk prediction, 60% faster fraud detection"
-    },
+    };
     {
       industry: "Healthcare",
-      description: "Patient outcome prediction, resource allocation, and treatment optimization",
+      description: "Patient outcome prediction, resource allocation, and treatment optimization";
       results: "30% improvement in patient outcomes, 20% reduction in operational costs"
-    },
+    };
     {
       industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
+      description: "Predictive maintenance, quality control, and supply chain optimization";
       results: "45% reduction in downtime, 35% improvement in product quality"
     }
-  ],
-
+  ];
   const pricing = [
     {
       plan: "Starter",
@@ -87,27 +80,27 @@ export default function AIBusinessIntelligencePage() {
       description: "Perfect for small businesses getting started with AI",
       features: [
         "Basic predictive analytics",
-        "5 customizable dashboards",
-        "Standard reporting",
-        "Email support",
+        "5 customizable dashboards";
+        "Standard reporting";
+        "Email support";
         "Up to 10 users"
-      ],
+      ];
       popular: false
     },
     {
       plan: "Professional",
-      price: "$1,299",
+      price: "$1,299";
       period: "/month",
       description: "Advanced features for growing businesses",
       features: [
         "Advanced predictive analytics",
-        "Unlimited dashboards",
-        "Custom reporting",
-        "Priority support",
-        "Up to 50 users",
-        "API access",
+        "Unlimited dashboards";
+        "Custom reporting";
+        "Priority support";
+        "Up to 50 users";
+        "API access";
         "Custom integrations"
-      ],
+      ];
       popular: true
     },
     {
@@ -117,17 +110,16 @@ export default function AIBusinessIntelligencePage() {
       description: "Full-scale solution for large organizations",
       features: [
         "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support team",
-        "Unlimited users",
-        "On-premise deployment",
-        "Custom training",
+        "Custom AI models";
+        "Dedicated support team";
+        "Unlimited users";
+        "On-premise deployment";
+        "Custom training";
         "SLA guarantees"
-      ],
+      ];
       popular: false
     }
   ],
-
   return (
     <>
       <Head>

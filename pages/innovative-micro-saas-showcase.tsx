@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
@@ -17,14 +11,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const stats = [
   { number: '50+', label: 'Innovative Services', icon: Star, color: 'text-cyan-400' },
   { number: '1000+', label: 'Companies Served', icon: Users, color: 'text-purple-400' },
   { number: '99.9%', label: 'Uptime', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
 ],
-
 const categories = [
   { name: 'All Services', value: 'all', icon: Globe, color: 'from-blue-500 to-cyan-600' },
   { name: 'AI & Consciousness', value: 'ai', icon: Brain, color: 'from-purple-500 to-pink-600' },
@@ -35,49 +27,42 @@ const categories = [
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' },
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
 ],
-
 export default function InnovativeMicroSaasShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState('grid'),
-  const [sortBy, setSortBy] = useState('popularity'),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [viewMode, setViewMode] = useState('grid');
+  const [sortBy, setSortBy] = useState('popularity');
   // Combine all services
   const allServices = [
     ...innovativeRealMicroSaasServices2025,
     ...emergingTechServicesEnhanced2025
   ],
-
   // Filter services based on category and search
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
-      service.name.toLowerCase().includes(selectedCategory),
-    
+      service.name.toLowerCase().includes(selectedCategory);
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-  }),
-
+  });
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
       case 'price-low':
-        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')),
+        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
       case 'price-high':
-        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')),
+        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
       default: return 0
     }
   }),
-
   return (
     <Layout>
       <Head>

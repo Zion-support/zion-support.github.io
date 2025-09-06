@@ -1,17 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Mail, Phone, MapPin, Globe, 
-  Twitter, Linkedin, Github, 
-  ArrowUp, Crown, Zap, Brain, Rocket,
-  Shield, Users, BookOpen, Briefcase, Atom
-} from 'lucide-react',
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
   label: string,
   href: string,
-  description?: string,
+  description?: string;
   external?: boolean
 }
 
@@ -76,13 +70,11 @@ const footerSections: FooterSection[] = [
     ]
   }
 ],
-
 const socialLinks = [
   { icon: <Linkedin className="w-5 h-5" />, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn', external: true },
   { icon: <Twitter className="w-5 h-5" />, href: 'https://twitter.com/ziontechgroup', label: 'Twitter', external: true },
   { icon: <Github className="w-5 h-5" />, href: 'https://github.com/ziontechgroup', label: 'GitHub', external: true }
 ],
-
 const quickLinks = [
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> },
@@ -91,12 +83,10 @@ const quickLinks = [
   { name: 'API Reference', href: '/api', icon: <Code className="w-4 h-4" /> },
   { name: 'Status', href: '/status', icon: <TrendingUp className="w-4 h-4" /> }
 ],
-
 const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   },
-
   const footerSections = [
     {
       title: 'Services',
@@ -139,14 +129,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       ]
     }
   ],
-
   const socialLinks = [
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -156,7 +144,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -167,7 +154,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       }
     }
   },
-
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
@@ -178,9 +164,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
             animate={{
-              x: [0, Math.random() * 1000, 0],
-              y: [0, Math.random() * 1000, 0],
-              opacity: [0, 0.6, 0],
+              x: [0, Math.random() * 1000, 0];
+              y: [0, Math.random() * 1000, 0];
+              opacity: [0, 0.6, 0];
               scale: [0, 1, 0]}}
             transition={{
               duration: 15 + Math.random() * 10,
@@ -228,7 +214,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </div>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, 
+                Pioneering the future with revolutionary AI consciousness, quantum computing;
                 and autonomous systems. Transforming businesses through next-generation technology.
               </p>
               
@@ -395,5 +381,4 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
     </footer>
   )
 },
-
-export default UltraAdvancedFuturisticFooter2025,
+export default UltraAdvancedFuturisticFooter2025;

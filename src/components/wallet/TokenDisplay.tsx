@@ -6,8 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
 export function TokenDisplay() {
-  const { wallet, loading } = useWallet(),
-
+  const { wallet, loading } = useWallet();
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">

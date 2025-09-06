@@ -2,38 +2,28 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
-  Globe, Database, Cloud, Lock, Palette, Target, Layers, 
-  Sparkles, Atom, Microscope, Satellite, CheckCircle, 
-  ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
-  BarChart3, Award, Clock, DollarSign
-} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
 import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 export default function Comprehensive2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [viewMode, setViewMode] = useState('grid'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [viewMode, setViewMode] = useState('grid');
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   // Combine all services
   const allServices = [
     ...nextGenAIServices2026,
     ...revolutionaryITInfrastructure2026,
     ...innovativeMicroSaas2026
   ],
-
   // Categories for filtering
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
@@ -44,31 +34,29 @@ export default function Comprehensive2026ServicesShowcase() {
     { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
     { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
   ],
-
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || 
-                             service.category.toLowerCase().includes(selectedCategory),
+                             service.category.toLowerCase().includes(selectedCategory);
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'price-high':
-          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, '')),
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
         case 'rating':
-          return b.rating - a.rating,
+          return b.rating - a.rating;
         case 'customers':
-          return b.customers - a.customers,
+          return b.customers - a.customers;
         default: return a.popular ? -1 : 1
       }
     }),
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -78,7 +66,6 @@ export default function Comprehensive2026ServicesShowcase() {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -89,7 +76,6 @@ export default function Comprehensive2026ServicesShowcase() {
       }
     }
   },
-
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
@@ -363,7 +349,7 @@ export default function Comprehensive2026ServicesShowcase() {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex flex-col sm:flex-row gap-3">
+                      <div className="flex flex-col sm: flex-row gap-3">
                         <Link
                           href={service.link}
                           className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105"

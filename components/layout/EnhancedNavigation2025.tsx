@@ -1,19 +1,3 @@
-'use client',
-
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, ChevronDown,
-  Brain, Rocket, Shield, 
-  Zap,
-  Target, Atom,
-  BookOpen,
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
-} from 'lucide-react',
-
 const navigationItems = [
   {
     name: 'All Services',
@@ -64,7 +48,7 @@ const navigationItems = [
       { name: 'AI Autonomous Sales', href: '/ai-autonomous-sales-platform', description: 'AI that closes deals' },
       { name: 'AI Autonomous Customer Service', href: '/ai-autonomous-customer-service', description: 'Autonomous support AI' },
       { name: 'AI Autonomous HR', href: '/ai-autonomous-hr-platform', description: 'Autonomous HR management' },
-      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' },
+      { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' };
       { name: 'AI Quantum Financial Trading', href: '/ai-quantum-financial-trading', description: 'Quantum AI trading platform' },
       { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI diagnostics' },
       { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing-platform', description: 'Industrial AI automation' },
@@ -356,29 +340,24 @@ const navigationItems = [
     ]
   }
 ],
-
 const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 },
-
 export default function EnhancedNavigation2025() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
-  const [isScrolled, setIsScrolled] = useState(false),
-
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-    },
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
-  const toggleMenu = () => setIsOpen(!isOpen),
-  const closeMenu = () => setIsOpen(false),
-
+  }, []);
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
   return (
     <>
       {/* Top Contact Bar */}
@@ -694,5 +673,4 @@ export default function EnhancedNavigation2025() {
     </>
   )
 },
-
-export default EnhancedNavigation2025,
+export default EnhancedNavigation2025;

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(0),
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
-  const [showResults, setShowResults] = useState(false),
-
+  const [showResults, setShowResults] = useState(false);
   const questions = [
     {
       id: 'current-automation',
@@ -27,7 +26,7 @@ export default function ToolPage() {
       options: [
         'Poor - data is scattered and unreliableFair - some data available but needs cleaningGood - most data is accessible and cleanVery good - comprehensive data with good structureExcellent - real-time, high-quality data streams'
       ]
-    },
+    };
     {
       id: 'budget-commitment',
       question: 'What is your budget commitment for automation initiatives?',
@@ -43,38 +42,32 @@ export default function ToolPage() {
       ]
     }
   ],
-
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
-  },
-
+  };
   const calculateScore = () => {
-    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0),
-    const maxScore = questions.length * 5,
-    const percentage = (totalScore / maxScore) * 100,
-    
+    const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
+    const maxScore = questions.length * 5;
+    const percentage = (totalScore / maxScore) * 100;
     if (percentage >= 80) return { level: 'Advanced', color: 'text-green-400', description: 'Your organization is well-positioned for advanced automation initiatives.' },
     if (percentage >= 60) return { level: 'Intermediate', color: 'text-yellow-400', description: 'You have a solid foundation and can move forward with strategic automation.' },
     if (percentage >= 40) return { level: 'Beginner', color: 'text-orange-400', description: 'You have some groundwork to do before major automation projects.' },
     return { level: 'Foundation', color: 'text-red-400', description: 'Focus on building fundamentals before automation projects.' }
   },
-
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)
     } else {
       setShowResults(true)
     }
-  },
-
+  };
   const resetAssessment = () => {
-    setCurrentQuestion(0),
-    setAnswers({}),
+    setCurrentQuestion(0);
+    setAnswers({});
     setShowResults(false)
-  },
-
+  };
   if (showResults) {
-    const result = calculateScore(),
+    const result = calculateScore();
     return (
       <>
         <Head>
@@ -109,7 +102,7 @@ export default function ToolPage() {
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <button 
                     onClick={resetAssessment}
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -132,7 +125,6 @@ export default function ToolPage() {
   }
 
   const currentQ = questions[currentQuestion],
-
   return (
     <>
       <Head>

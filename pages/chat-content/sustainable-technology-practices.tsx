@@ -15,5 +15,4 @@ const SustainableTechnologyPractices: NextPage = () => {
     </div>
   )
 },
-
-export default SustainableTechnologyPractices,
+export default SustainableTechnologyPractices;

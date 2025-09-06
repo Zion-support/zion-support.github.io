@@ -15,5 +15,4 @@ const AiPoweredBusinessSolutionsDiscussion: NextPage = () => {
     </div>
   )
 },
-
-export default AiPoweredBusinessSolutionsDiscussion,
+export default AiPoweredBusinessSolutionsDiscussion;

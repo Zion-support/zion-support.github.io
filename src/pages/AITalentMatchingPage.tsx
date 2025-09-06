@@ -16,19 +16,17 @@ export default function AITalentMatchingPage() {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
-
   const testimonials = [
     {
       name: "Emily Stone",
       role: "HR Director",
-      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.",
+      text: "Zion's AI talent matching connected us with exceptional engineers in days, not weeks.";
       avatar: "/placeholder.svg"},
     {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
       avatar: "/placeholder.svg"}],
-
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

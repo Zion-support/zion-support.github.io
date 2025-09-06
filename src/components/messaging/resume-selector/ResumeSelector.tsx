@@ -11,21 +11,18 @@ import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
-import {logErrorToProduction} from '@/utils/productionLogger';
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
-  const [customFile, setCustomFile] = useState<File | null>(null),
-  const [isLoading, setIsLoading] = useState(false),
-  
-  const { resume, fetchResume } = useResume(),
-  
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFile, setCustomFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const { resume, fetchResume } = useResume();
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
-      setIsLoading(true),
+      setIsLoading(true);
       try {
         await fetchResume()
       } catch (error) {
@@ -34,10 +31,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         setIsLoading(false)
       }
     },
-    
     loadResumes()
-  }, [fetchResume]),
-  
+  }, [fetchResume]);
   // Update resume options when resume data changes
   useEffect(() => {
     if (resume) {
@@ -47,23 +42,19 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         type: 'ai_resume',
         resume: resume
       }],
-      
-      setResumeOptions(options),
-      
+      setResumeOptions(options);
       // Pre-select the most recent resume
       if (options.length > 0 && selectedOption === 'recent' && options[0]) {
-        setSelectedResume(options[0]),
+        setSelectedResume(options[0]);
         onResumeSelected(options[0])
       }
     }
-  }, [resume, selectedOption, onResumeSelected]),
-  
+  }, [resume, selectedOption, onResumeSelected]);
   // Handle radio option change
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
     setSelectedOption(value),
-    
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
-      setSelectedResume(resumeOptions[0]),
+      setSelectedResume(resumeOptions[0]);
       onResumeSelected(resumeOptions[0])
     } else if (value === 'select') {
       // Reset selection until user chooses
@@ -71,22 +62,19 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     } else if (value === 'upload') {
       setSelectedResume(null)
     }
-  },
-  
+  };
   // Handle resume selection change
   const handleResumeSelect = (resumeId: string) => {
     const selected = resumeOptions.find(opt => opt.id === resumeId),
     if (selected) {
-      setSelectedResume(selected),
+      setSelectedResume(selected);
       onResumeSelected(selected)
     }
-  },
-  
+  };
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
-      
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
@@ -104,13 +92,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         type: 'custom_upload',
         file: file
       },
-      
-      setCustomFile(file),
-      setSelectedResume(customOption),
+      setCustomFile(file);
+      setSelectedResume(customOption);
       onResumeSelected(customOption)
     }
-  },
-  
+  };
   // Handle resume download
   const handleDownloadResume = async () => {
     if (!selectedResume || selectedResume.type !== 'ai_resume' || !selectedResume.resume) {
@@ -118,21 +104,18 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     }
     
     try {
-      setIsLoading(true),
-      const pdfBlob = await exportResumeToPDF(selectedResume.resume),
-      
+      setIsLoading(true);
+      const pdfBlob = await exportResumeToPDF(selectedResume.resume);
       // Create download link
-      const url = URL.createObjectURL(pdfBlob),
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = `${selectedResume.title || 'Resume'}.pdf`,
-      document.body.appendChild(link),
-      link.click(),
-      
+      const url = URL.createObjectURL(pdfBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${selectedResume.title || 'Resume'}.pdf`;
+      document.body.appendChild(link);
+      link.click();
       // Clean up
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-      
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
       toast({
         title: "Success!",
         description: "Your resume has been downloaded."})
@@ -147,12 +130,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       setIsLoading(false)
     }
   },
-  
   // Handle "Generate Resume Now" button
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')
-  },
-  
+  };
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>

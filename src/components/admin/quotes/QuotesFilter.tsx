@@ -23,13 +23,13 @@ interface QuotesFilterProps {
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter,
-  dateRange,
-  setDateRange,
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
+  setDateRange;
   onReset
 }) => {
   return (
@@ -125,4 +125,4 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-},
+};

@@ -10,17 +10,17 @@ interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
-  status?: "connected" | "disconnected" | "pending",
-  href?: string,
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
   onConnect?: () => void
 }
 
 export function IntegrationCard({
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
+  title;
+  description;
+  icon;
+  status = "disconnected";
+  href;
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">

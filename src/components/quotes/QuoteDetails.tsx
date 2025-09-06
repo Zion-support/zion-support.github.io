@@ -1,12 +1,5 @@
 
 import React from "react";
-import { 
-  Dialog,
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -21,17 +14,15 @@ interface QuoteDetailsProps {
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
-  if (!quote) return null,
-
+  if (!quote) return null;
   const formatDate = (dateString?: string) => {
-    if (!dateString) return 'Not specified',
+    if (!dateString) return 'Not specified';
     try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
       return dateString
     }
-  },
-
+  };
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -47,7 +38,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         
         <Separator className="my-4" />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           <Card>
             <CardContent className="pt-6">
               <h3 className="text-lg font-medium mb-3">Requester Information</h3>

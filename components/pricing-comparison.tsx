@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
-
 export default function PricingComparisonPage() {
   const serviceComparisons = [
     {
@@ -38,7 +37,7 @@ export default function PricingComparisonPage() {
           cons: ['Limited featuresBasic AI modelsNo team features'],
           savings: 'Same price, better features'
         }
-      ],
+      ];
       features: [
         'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates'
       ],
@@ -124,7 +123,6 @@ export default function PricingComparisonPage() {
       icon: '🚀'
     }
   ],
-
   const marketInsights = [
     {
       insight: 'Zion services are 30-60% more affordable than market leaders',
@@ -147,7 +145,6 @@ export default function PricingComparisonPage() {
       color: 'text-yellow-400'
     }
   ],
-
   return (
     <>
       <Head>

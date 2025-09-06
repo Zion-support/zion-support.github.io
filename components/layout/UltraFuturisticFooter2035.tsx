@@ -1,22 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
-  Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
-  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2,
-  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-} from 'lucide-react',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const footerSections = [
   {
     title: 'Featured Services',
@@ -125,7 +115,7 @@ const footerSections = [
   },
   {
     title: 'Resources',
-    description: 'Documentation, support, and learning',
+    description: 'Documentation, support, and learning';
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
       { name: 'Documentation', href: '/docs' },
@@ -141,7 +131,6 @@ const footerSections = [
     ]
   }
 ],
-
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -150,12 +139,10 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5" /> },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> }
 ],
-
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   },
-
   return (
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Background Effects */}
@@ -168,9 +155,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
-            `,
+            `;
             backgroundSize: '200px 200px'
           }}
           animate={{
@@ -317,5 +304,4 @@ const UltraFuturisticFooter2035: React.FC = () => {
     </footer>
   )
 },
-
-export default UltraFuturisticFooter2035,
+export default UltraFuturisticFooter2035;

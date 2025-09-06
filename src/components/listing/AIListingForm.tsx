@@ -15,20 +15,19 @@ interface AIListingFormProps {
   }) => void,
   isLoading: boolean,
   initialValues?: {
-    title?: string,
-    category?: string,
-    keyFeatures?: string,
+    title?: string;
+    category?: string;
+    keyFeatures?: string;
     targetAudience?: string
   }
 }
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || "");
+  const [category, setCategory] = useState(initialValues.category || "");
+  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
+  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
@@ -40,13 +39,12 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     }
 
     onSubmit({
-      title,
-      category,
-      keyFeatures,
+      title;
+      category;
+      keyFeatures;
       targetAudience
     })
-  },
-
+  };
   return (
     <div className="space-y-4">
       <div className="space-y-2">

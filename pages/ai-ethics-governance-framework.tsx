@@ -12,10 +12,10 @@ export default function AIEthicsGovernanceFramework() {
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
 				"AI risk register and DPIA templates",
-				"Bias/fairness tests, red-teaming workflows",
-				"Model cards, data sheets, and change logs",
-				"Prompt governance and access controls",
-				"Regulatory mapping (EU AI Act, NIST AI RMF)",
+				"Bias/fairness tests, red-teaming workflows";
+				"Model cards, data sheets, and change logs";
+				"Prompt governance and access controls";
+				"Regulatory mapping (EU AI Act, NIST AI RMF)";
 				"Training and incident response runbooks"
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}

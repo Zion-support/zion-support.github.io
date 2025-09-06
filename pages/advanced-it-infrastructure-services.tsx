@@ -2,15 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
-  Wifi, Building, Cpu as CpuIcon
-} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = {
@@ -19,14 +10,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const heroStats = [
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" /> }
 ],
-
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -69,7 +58,6 @@ const serviceCategories = [
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
 ],
-
 const heroFeatures = [
   {
     title: 'Quantum Computing',
@@ -96,11 +84,10 @@ const heroFeatures = [
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
 ],
-
 const testimonials = [
   {
     name: 'Dr. Jennifer Martinez',
-    role: 'CTO, QuantumTech Industries',
+    role: 'CTO, QuantumTech Industries';
     company: 'QuantumTech Industries',
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
     rating: 5,
@@ -108,7 +95,7 @@ const testimonials = [
   },
   {
     name: 'Robert Thompson',
-    role: 'Infrastructure Director, EdgeNet Solutions',
+    role: 'Infrastructure Director, EdgeNet Solutions';
     company: 'EdgeNet Solutions',
     content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
@@ -116,14 +103,13 @@ const testimonials = [
   },
   {
     name: 'Lisa Chang',
-    role: 'Security CISO, SecureCorp International',
+    role: 'Security CISO, SecureCorp International';
     company: 'SecureCorp International',
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
     avatar: '👩‍🔒'
   }
 ],
-
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>

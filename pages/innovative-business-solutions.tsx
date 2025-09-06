@@ -2,15 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
-  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
-} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 const contactInfo = {
@@ -19,14 +10,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const heroStats = [
   { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
   { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
 ],
-
 const serviceCategories = [
   {
     title: 'Business Intelligence & Analytics',
@@ -69,7 +58,6 @@ const serviceCategories = [
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
   }
 ],
-
 const heroFeatures = [
   {
     title: 'AI-Powered Intelligence',
@@ -96,11 +84,10 @@ const heroFeatures = [
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
 ],
-
 const testimonials = [
   {
     name: 'Michael Rodriguez',
-    role: 'CEO, GrowthTech Solutions',
+    role: 'CEO, GrowthTech Solutions';
     company: 'GrowthTech Solutions',
     content: 'Zion Tech Group\'s business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.',
     rating: 5,
@@ -108,7 +95,7 @@ const testimonials = [
   },
   {
     name: 'Sarah Johnson',
-    role: 'Marketing Director, DigitalFlow Agency',
+    role: 'Marketing Director, DigitalFlow Agency';
     company: 'DigitalFlow Agency',
     content: 'The AI marketing automation platform has revolutionized our campaigns. We\'ve seen conversion rates increase by 150% while reducing costs by 40%.',
     rating: 5,
@@ -116,14 +103,13 @@ const testimonials = [
   },
   {
     name: 'David Chen',
-    role: 'Sales Manager, TechSales Pro',
+    role: 'Sales Manager, TechSales Pro';
     company: 'TechSales Pro',
     content: 'Their sales intelligence platform has increased our sales productivity by 200%. The AI-powered lead scoring and forecasting are game-changers.',
     rating: 5,
     avatar: '👨‍💻'
   }
 ],
-
 export default function InnovativeBusinessSolutions() {
   return (
     <Layout>

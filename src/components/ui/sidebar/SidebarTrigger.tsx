@@ -9,8 +9,7 @@ interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
 }
 
 export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
-
+  const { open, toggleSidebar } = useSidebar();
   return (
     <Button
       variant="ghost"

@@ -17,5 +17,4 @@ const SystemAdministrationChat: NextPage = () => {
     </div>
   )
 },
-
-export default SystemAdministrationChat,
+export default SystemAdministrationChat;

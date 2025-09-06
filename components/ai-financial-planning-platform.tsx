@@ -1,12 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
-  Award, MessageCircle, Calculator
-} from 'lucide-react',
-
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
@@ -23,7 +17,7 @@ export default function AIFinancialPlanningPlatform() {
       icon: <Target className="w-6 h-6" />,
       title: 'Goal-Based Planning',
       description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-    },
+    };
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Automated Portfolio Management',
@@ -39,12 +33,10 @@ export default function AIFinancialPlanningPlatform() {
       title: 'Real-Time Financial Insights',
       description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
     }
-  ],
-
+  ];
   const benefits = [
     'Increase investment returns by 25%Reduce financial planning time by 70%Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%Reduce portfolio volatility by 35%Improve financial goal achievement by 50%Reduce financial planning costs by 60%Gain professional-grade financial insights'
-  ],
-
+  ];
 					<div className="mt-12">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -100,7 +92,7 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Intelligent financial planning and wealth management with AI. Get personalized plans, 
+                Intelligent financial planning and wealth management with AI. Get personalized plans,
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

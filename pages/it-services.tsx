@@ -4,21 +4,18 @@ import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   },
-
   const categories = [
     { id: 'all', name: 'All IT Services', count: 100 },
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 },
@@ -28,7 +25,6 @@ export default function ITServices() {
     { id: 'quantum', name: 'Quantum Computing', count: 10 },
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
   ],
-
   const services = [
     {
       id: 1,
@@ -53,7 +49,7 @@ export default function ITServices() {
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
-      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.';
       category: 'devops',
       features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
@@ -151,11 +147,9 @@ export default function ITServices() {
       benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
     }
   ],
-
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
-
+    : services.filter(service => service.category === selectedCategory);
   return (
     <>
       <Head>

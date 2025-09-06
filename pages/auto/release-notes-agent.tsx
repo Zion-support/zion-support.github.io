@@ -16,5 +16,4 @@ const ReleaseNotesAgent: NextPage = () => {
     </div>
   )
 },
-
-export default ReleaseNotesAgent,
+export default ReleaseNotesAgent;

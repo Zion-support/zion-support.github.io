@@ -51,7 +51,7 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z", 
+    createdAt: "2023-12-13T16:45:00Z",
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
   },
@@ -89,13 +89,11 @@ const MOCK_SUPPORT_REQUESTS = [
     category: "profile"
   }
 ],
-
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
-  
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
@@ -122,21 +120,18 @@ export default function SupportRequests() {
     }
     
     return true
-  }),
-  
+  });
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
-  const totalCount = MOCK_SUPPORT_REQUESTS.length,
-  
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const totalCount = MOCK_SUPPORT_REQUESTS.length;
   const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
-    setPriorityFilter(null),
+    setSearchQuery("");
+    setStatusFilter(null);
+    setPriorityFilter(null);
     setCategoryFilter(null)
-  },
-  
+  };
   return (
     <>
       <SEO 

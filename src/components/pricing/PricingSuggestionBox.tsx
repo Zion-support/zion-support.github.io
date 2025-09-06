@@ -15,8 +15,8 @@ interface PricingSuggestionBoxProps {
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion,
-  isLoading,
-  onApplySuggestion,
+  isLoading;
+  onApplySuggestion;
   rateType}) => {
   if (isLoading) {
     return (
@@ -41,7 +41,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
       <CardContent className="p-5 space-y-4">
@@ -91,4 +90,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
-},
+};

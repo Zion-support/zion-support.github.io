@@ -2,17 +2,6 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Shield, Zap, Target, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
-} from 'lucide-react',
-
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [
     {
@@ -20,7 +9,7 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Space Resource Mining',
       description: 'Advanced mining operations for extraterrestrial resources',
       features: ['Asteroid MiningResource ExtractionProcessing AutomationTransport Logistics'],
-      price: '$4,999',
+      price: '$4,999';
       period: 'month',
       popular: true,
       icon: <Rocket className="w-8 h-8" />
@@ -30,7 +19,7 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'AI-Powered Space Technology',
       description: 'Intelligent space systems with autonomous capabilities',
       features: ['Autonomous NavigationAI Mission ControlPredictive AnalyticsReal-time Optimization'],
-      price: '$3,999',
+      price: '$3,999';
       period: 'month',
       popular: false,
       icon: <Brain className="w-8 h-8" />
@@ -40,7 +29,7 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Brain-Computer Interface',
       description: 'Neural interface technology for space applications',
       features: ['Neural ControlCognitive EnhancementRemote OperationSafety Protocols'],
-      price: '$3,499',
+      price: '$3,499';
       period: 'month',
       popular: false,
       icon: <Cpu className="w-8 h-8" />
@@ -50,7 +39,7 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Autonomous Vehicle AI',
       description: 'AI-powered autonomous systems for space vehicles',
       features: ['Path PlanningObstacle AvoidanceMission ExecutionAdaptive Learning'],
-      price: '$2,999',
+      price: '$2,999';
       period: 'month',
       popular: false,
       icon: <Settings className="w-8 h-8" />
@@ -60,7 +49,7 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Quantum Space Communications',
       description: 'Secure quantum communication for space missions',
       features: ['Quantum EncryptionInterplanetary LinksSecure Data TransferQuantum Networks'],
-      price: '$3,799',
+      price: '$3,799';
       period: 'month',
       popular: false,
       icon: <Globe className="w-8 h-8" />
@@ -70,13 +59,12 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Space Infrastructure',
       description: 'Comprehensive space infrastructure solutions',
       features: ['Orbital StationsLunar BasesMars ColoniesSustainable Systems'],
-      price: '$5,999',
+      price: '$5,999';
       period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
     }
   ],
-
   const spaceCapabilities = [
     {
       title: 'Space Exploration',
@@ -109,7 +97,6 @@ const SpaceTechnologyPage: React.FC = () => {
       icon: <Heart className="w-6 h-6" />
     }
   ],
-
   return (
     <Layout>
       <SEO 
@@ -302,6 +289,4 @@ const SpaceTechnologyPage: React.FC = () => {
     </Layout>
   )
 },
-
-export default SpaceTechnologyPage,
-
+export default SpaceTechnologyPage;

@@ -15,5 +15,4 @@ const DataAnalyticsImplementation: NextPage = () => {
     </div>
   )
 },
-
-export default DataAnalyticsImplementation,
+export default DataAnalyticsImplementation;

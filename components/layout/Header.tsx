@@ -1,65 +1,19 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   X,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Mail,
-  ChevronDown,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  DollarSign,
-  BookOpen,
-  Calendar,
-  FileText,
-  Award,
-  Globe,
-  Search,
 } from 'lucide-react';
-
 =======
-import React from 'react';
-import Link from 'next/link';
-import Button from '../ui/Button';
->>>>>>> pr-11992
+>>>>>>> ea8e679efdc2e75b348b531330a36b7f481c36a0
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ];
-=======
-    { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }],
->>>>>>> pr-11992
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
@@ -110,8 +64,3 @@ const Header: React.FC = () => {
   )
 },
 
-<<<<<<< HEAD
-export default Header;
-=======
-export default Header,
->>>>>>> pr-11992

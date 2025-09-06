@@ -19,5 +19,4 @@ const LandingPageGenerator: NextPage = () => {
     </div>
   )
 },
-
-export default LandingPageGenerator,
+export default LandingPageGenerator;

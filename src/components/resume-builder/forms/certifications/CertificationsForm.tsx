@@ -12,7 +12,6 @@ import { format } from 'date-fns';
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
-
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
@@ -21,17 +20,15 @@ interface CertificationsFormProps {
 }
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume(),
-  const [editingId, setEditingId] = useState<string | null>(null),
-  const [error, setError] = useState<string | null>(null),
-
+  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
-    if (typeof dateValue === 'string') return dateValue,
+    if (typeof dateValue === 'string') return dateValue;
     return format(dateValue, 'yyyy-MM-dd')
-  },
-
+  };
   const form = useForm<CertificationFormValues>({
     resolver: zodResolver(certificationSchema),
     defaultValues: {
@@ -41,12 +38,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       expiration_date: '',
       credential_id: '',
       credential_url: ''}}),
-
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null),
-      let success,
-
+      let success;
       const certData: Certification = {
         name: data.name,
         issuing_organization: data.issuing_organization,
@@ -54,7 +49,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         expiration_date: data.expiration_date || undefined,
         credential_id: data.credential_id,
         credential_url: data.credential_url},
-
       if (editingId) {
         success = await updateCertification(editingId, certData)
       } else {
@@ -75,7 +69,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       setError(err.message || 'An error occurred')
     }
   },
-
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!),
     form.reset({
@@ -83,13 +76,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date)})
   },
-
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
   },
-
   return (
     <div className="space-y-6">
       <div>

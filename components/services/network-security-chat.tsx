@@ -17,5 +17,4 @@ const NetworkSecurityChat: NextPage = () => {
     </div>
   )
 },
-
-export default NetworkSecurityChat,
+export default NetworkSecurityChat;

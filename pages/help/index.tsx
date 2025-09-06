@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
-  const articles = readJson<HelpArticle[]>('help/articles.json', []),
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } }
 }
 

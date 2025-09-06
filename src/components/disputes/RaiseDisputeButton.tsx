@@ -1,39 +1,31 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { 
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription} from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
 
 interface RaiseDisputeButtonProps {
   projectId: string,
-  milestoneId?: string,
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
   className?: string
 }
 
 export function RaiseDisputeButton({ 
-  projectId,
-  milestoneId, 
-  variant = "outline", 
-  size,
+  projectId;
+  milestoneId;
+  variant = "outline";
+  size;
   className 
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const router = useRouter(),
-  
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const router = useRouter();
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
     router.push(`/dashboard/disputes/${disputeId}`)
-  },
-  
+  };
   return (
     <>
       <Button 

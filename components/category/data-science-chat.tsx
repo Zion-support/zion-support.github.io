@@ -17,5 +17,4 @@ const DataScienceChat: NextPage = () => {
     </div>
   )
 },
-
-export default DataScienceChat,
+export default DataScienceChat;

@@ -5,7 +5,7 @@ export default function InstagramRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //instagram.com/ziontechgroup')
 		}
-	}, []),
+	}, []);
 	return (
 		<>
 			<Head>

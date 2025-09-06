@@ -19,18 +19,16 @@ import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter(),
-  const id = router.query.id as string,
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [isLoading, setIsLoading] = useState(false),
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const { user } = useAuth(),
-  const { formatPrice } = useCurrency(),
-
+  const router = useRouter();
+  const id = router.query.id as string;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const { user } = useAuth();
+  const { formatPrice } = useCurrency();
   // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
-
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -53,8 +51,7 @@ export default function ListingDetail() {
     } else {
       setIsContactDialogOpen(true)
     }
-  },
-
+  };
   return (
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -85,7 +82,7 @@ export default function ListingDetail() {
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
@@ -168,7 +165,7 @@ export default function ListingDetail() {
                         <Star
                           key={i}
                           className={cn(
-                            "h-5 w-5",
+                            "h-5 w-5";
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -201,7 +198,7 @@ export default function ListingDetail() {
                       serviceId={listing.id}
                       providerId={listing.author.id}
                       buttonText="Buy Now"
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",

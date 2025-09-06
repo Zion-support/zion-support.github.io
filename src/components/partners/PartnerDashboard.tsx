@@ -13,7 +13,6 @@ export function PartnerDashboard() {
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   },
-  
   return (
     <div className="space-y-6">
       {/* Stats Overview */}

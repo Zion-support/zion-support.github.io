@@ -3,9 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
-
+  const router = useRouter();
+  const { id } = router.query;
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
     {
@@ -13,11 +12,11 @@ export default function CaseStudyResourcePage() {
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime',
+      results: '40% increase in production efficiency, 60% reduction in downtime';
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
         <h2>Executive Summary</h2>
-        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations, 
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         
         <h2>Background</h2>
@@ -27,11 +26,11 @@ export default function CaseStudyResourcePage() {
         
         <h2>Challenge</h2>
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands, 
+        and reducing operational costs. They required a solution that could adapt to changing production demands;
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>
+        <p>We implemented a comprehensive AI automation system that included: </p>
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
@@ -77,7 +76,7 @@ export default function CaseStudyResourcePage() {
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement',
+      results: '10x increase in content output, 85% improvement in engagement';
       description: 'Transforming content creation through autonomous AI systems.',
       fullContent: `
         <h2>Executive Summary</h2>
@@ -135,14 +134,14 @@ export default function CaseStudyResourcePage() {
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency 
         for continued growth and success.</p>
       `
-    },
+    };
     {
       id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      results: '50% reduction in cloud costs, 99.9% uptime achieved';
+      description: 'Building self-healing, auto-scaling cloud infrastructure.';
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 
@@ -200,10 +199,8 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
-  ],
-
-  const caseStudy = caseStudies.find(study => study.id === id),
-
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
   if (!caseStudy) {
     return (
       <>

@@ -44,7 +44,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     </CardContent>
   </Card>
 ),
-
 // Filter and sort controls for talents
 const TalentFilterControls: React.FC<{
   sortBy: string,
@@ -59,14 +58,14 @@ const TalentFilterControls: React.FC<{
   loading: boolean
 }> = ({
   sortBy,
-  setSortBy,
-  filterSpecialization,
-  setFilterSpecialization,
-  filterAvailability,
-  setFilterAvailability,
-  specializations,
-  showRecommended,
-  setShowRecommended,
+  setSortBy;
+  filterSpecialization;
+  setFilterSpecialization;
+  filterAvailability;
+  setFilterAvailability;
+  specializations;
+  showRecommended;
+  setShowRecommended;
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -127,7 +126,6 @@ const TalentFilterControls: React.FC<{
     </Button>
   </div>
 ),
-
 // Talent card component
 const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ talent, onHire }) => (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -202,8 +200,7 @@ const TalentCard: React.FC<{ talent: TalentProfile, onHire: () => void }> = ({ t
       </div>
     </CardContent>
   </Card>
-),
-
+);
 // Loading skeleton for talent grid
 const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -211,24 +208,20 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
       <SkeletonCard key={i} />
     ))}
   </div>
-),
-
+);
 // Main enhanced talents page with infinite scroll
 export default function TalentsPage() {
-  const router = useRouter(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterSpecialization, setFilterSpecialization] = useState(''),
-  const [filterAvailability, setFilterAvailability] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-  const [totalGenerated, setTotalGenerated] = useState(0),
-
+  const router = useRouter();
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterSpecialization, setFilterSpecialization] = useState('');
+  const [filterAvailability, setFilterAvailability] = useState('');
+  const [showRecommended, setShowRecommended] = useState(false);
+  const [totalGenerated, setTotalGenerated] = useState(0);
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
     // Add realistic loading delay
-    await new Promise(resolve => setTimeout(resolve, 300)),
-
+    await new Promise(resolve => setTimeout(resolve, 300));
     let allTalents: TalentProfile[] = [],
-    
     // Start with existing talent profiles
     if (page === 1) {
       allTalents = [...TALENT_PROFILES]
@@ -236,14 +229,11 @@ export default function TalentsPage() {
     
     // Generate new AI/IT talents using the auto-feed algorithm
     const startId = TALENT_PROFILES.length + (page - 1) * limit + totalGenerated,
-    const newTalents = generateAITalents(limit, startId),
-    setTotalGenerated(prev => prev + newTalents.length),
-    
+    const newTalents = generateAITalents(limit, startId);
+    setTotalGenerated(prev => prev + newTalents.length);
     allTalents = [...allTalents, ...newTalents],
-    
     // Apply filters
-    let filteredTalents = allTalents,
-    
+    let filteredTalents = allTalents;
     if (filterSpecialization) {
       filteredTalents = filteredTalents.filter(t => 
         t.professional_title?.toLowerCase().includes(filterSpecialization.toLowerCase())
@@ -262,73 +252,65 @@ export default function TalentsPage() {
     filteredTalents.sort((a, b) => {
       switch (sortBy) {
         case 'hourly-rate-low':
-          return (a.hourly_rate || 0) - (b.hourly_rate || 0),
+          return (a.hourly_rate || 0) - (b.hourly_rate || 0);
         case 'hourly-rate-high':
-          return (b.hourly_rate || 0) - (a.hourly_rate || 0),
+          return (b.hourly_rate || 0) - (a.hourly_rate || 0);
         case 'rating':
-          return (b.average_rating || 0) - (a.average_rating || 0),
+          return (b.average_rating || 0) - (a.average_rating || 0);
         case 'experience':
-          return (b.years_experience || 0) - (a.years_experience || 0),
+          return (b.years_experience || 0) - (a.years_experience || 0);
         case 'verified':
-          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0),
+          return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':
         default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
       }
     }),
-    
     // Paginate results
-    const startIndex = (page - 1) * limit,
-    const endIndex = startIndex + limit,
-    const items = filteredTalents.slice(startIndex, endIndex),
-    
+    const startIndex = (page - 1) * limit;
+    const endIndex = startIndex + limit;
+    const items = filteredTalents.slice(startIndex, endIndex);
     return {
-      items,
+      items;
       hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
       total: filteredTalents.length
     }
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]),
-
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
   // Use infinite scroll hook
   const {
     items: talents,
-    loading,
-    error,
-    hasMore,
-    total,
-    isFetching,
-    lastElementRef,
-    refresh,
-    scrollToTop,
+    loading;
+    error;
+    hasMore;
+    total;
+    isFetching;
+    lastElementRef;
+    refresh;
+    scrollToTop;
     loadMore
-  } = useInfiniteScrollPagination(fetchTalents, 16),
-
+  } = useInfiniteScrollPagination(fetchTalents, 16);
   // Refresh when filters change
   useEffect(() => {
-    refresh(),
+    refresh();
     setTotalGenerated(0)
-  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]),
-
+  }, [sortBy, filterSpecialization, filterAvailability, showRecommended]);
   // Calculate market stats
   const marketStats = useMemo(() => {
-    if (talents.length === 0) return null,
+    if (talents.length === 0) return null;
     return getTalentMarketStats(talents)
-  }, [talents]),
-
+  }, [talents]);
   // Get unique specializations
   const specializations = useMemo(() => {
     return Array.from(new Set(talents.map(t => t.professional_title?.split(' ')[0] || '').filter(Boolean)))
-  }, [talents]),
-
+  }, [talents]);
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false),
+  const [showScrollTop, setShowScrollTop] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
-    },
-    window.addEventListener('scroll', handleScroll),
+    };
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
-  }, []),
-
+  }, []);
   // Loading state
   if (loading && talents.length === 0) {
     return (

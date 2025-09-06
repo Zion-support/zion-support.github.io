@@ -1,15 +1,11 @@
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-
 export default function ClientDashboard() {
-  const { data, error, mutate } = useSWR('/api/jobs', fetcher),
-
-  if (error) return <div className="text-red-600">Failed to load</div>,
-  if (!data) return <div>Loading…</div>,
-
-  const jobs = data.jobs as any[],
-
+  const { data, error, mutate } = useSWR('/api/jobs', fetcher);
+  if (error) return <div className="text-red-600">Failed to load</div>;
+  if (!data) return <div>Loading…</div>;
+  const jobs = data.jobs as any[];
   async function closeJob(id: string) {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',

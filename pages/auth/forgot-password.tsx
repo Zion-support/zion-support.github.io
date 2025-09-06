@@ -15,5 +15,4 @@ const ForgotPassword: NextPage = () => {
     </div>
   )
 },
-
-export default ForgotPassword,
+export default ForgotPassword;

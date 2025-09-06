@@ -9,15 +9,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -28,35 +19,31 @@ interface TemplateListProps {
 
 export function TemplateList({
   templates,
-  isLoading,
-  onSelect,
+  isLoading;
+  onSelect;
   onEdit
 }: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null),
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates(),
-  const { user } = useAuth(),
-  const router = useRouter(),
-
+  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
+  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
+  const { user } = useAuth();
+  const router = useRouter();
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
   },
-
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
-      await deleteTemplate.mutateAsync(templateToDelete),
+      await deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null)
     }
-  },
-
+  };
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
       const currentPath = router.asPath,
-      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`),
+      router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return
     }
     await setDefaultTemplate.mutateAsync(templateId)
-  },
-
+  };
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-8">

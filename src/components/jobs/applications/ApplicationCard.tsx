@@ -14,26 +14,24 @@ interface ApplicationCardProps {
 }
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false),
-
+  const [expanded, setExpanded] = useState(false);
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
-  },
-
+  };
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
           </Button>
-        ),
+        );
       case "interview":
         return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> View Interview Details
           </Button>
-        ),
+        );
       case "hired":
         return (
           <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
@@ -45,12 +43,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <Button variant="outline" size="sm">
             <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
           </Button>
-        ),
-      default:
-        return null
+        );
+      default: return null
     }
   },
-
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">

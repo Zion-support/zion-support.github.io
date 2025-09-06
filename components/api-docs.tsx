@@ -5,7 +5,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       destination: '/developers/docs',
       permanent: true}}
 },
-
 export default function ApiDocsRedirect() {
   return null
 }

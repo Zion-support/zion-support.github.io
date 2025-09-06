@@ -15,5 +15,4 @@ const TechnologyImplementationStrategies: NextPage = () => {
     </div>
   )
 },
-
-export default TechnologyImplementationStrategies,
+export default TechnologyImplementationStrategies;

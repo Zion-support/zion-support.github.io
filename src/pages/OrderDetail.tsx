@@ -10,26 +10,24 @@ import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
 export default function OrderDetailPage() {
-  const router = useRouter(),
-  const { orderId } = router.query as { orderId?: string },
-  const { user } = useAuth(),
-  const { data: order, isLoading } = useGetOrderQuery(orderId),
-
+  const router = useRouter();
+  const { orderId } = router.query as { orderId?: string };
+  const { user } = useAuth();
+  const { data: order, isLoading } = useGetOrderQuery(orderId);
   const handleDownload = async () => {
-    if (!order) return,
-    const blob = await generateInvoicePdf(order),
-    const url = URL.createObjectURL(blob),
-    const link = document.createElement('a'),
-    link.href = url,
-    link.download = `invoice-${order.orderId}.pdf`,
-    document.body.appendChild(link),
-    link.click(),
-    document.body.removeChild(link),
+    if (!order) return;
+    const blob = await generateInvoicePdf(order);
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `invoice-${order.orderId}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     URL.revokeObjectURL(url)
-  },
-
+  };
   const handleResend = async () => {
-    if (!order || !user?.email) return,
+    if (!order || !user?.email) return;
     try {
       await supabase.functions.invoke('send-email', {
         body: {
@@ -43,27 +41,24 @@ export default function OrderDetailPage() {
       toast({ title: 'Failed to send receipt', variant: 'destructive' })
     }
   },
-
   const handleCopySummary = async () => {
-    if (!order) return,
+    if (!order) return;
     const summary = [
-      `Order #${order.orderId}`,
+      `Order #${order.orderId}`;
       `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
+      '';
+      'Items: ',
       ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
-      '',
+      '';
       `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
-      order.shippingAddress.name,
-      order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
-
-    await navigator.clipboard.writeText(summary),
+      '';
+      'Shipping Address: ',
+      order.shippingAddress.name;
+      order.shippingAddress.street;
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n');
+    await navigator.clipboard.writeText(summary);
     toast.success('Order summary copied to clipboard')
-  },
-
+  };
   if (isLoading || !order) {
     return (
       <div className="container max-w-3xl py-10">

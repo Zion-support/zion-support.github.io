@@ -11,9 +11,8 @@ interface TutorialPageProps {
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
   const router = useRouter(),
-  const slug = router.query.slug as string | undefined,
-  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug),
-
+  const slug = router.query.slug as string | undefined;
+  const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
   if (!tutorial) {
     return (
       <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">

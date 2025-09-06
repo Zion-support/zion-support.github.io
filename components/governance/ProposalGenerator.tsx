@@ -7,10 +7,9 @@ export type ProposalForm = {
   regionalScope: string,
   budgetOrGoals: string,
   supportingMultiverses: string,
-  language?: string,
+  language?: string;
   customPrompt?: string
-},
-
+};
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP',
@@ -20,28 +19,27 @@ export default function ProposalGenerator() {
     supportingMultiverses: '',
     language: 'English',
     customPrompt:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'}),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [draftMarkdown, setDraftMarkdown] = useState(''),
-  const [draftJson, setDraftJson] = useState<any>(null),
-  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null),
-  const [statusMessage, setStatusMessage] = useState(''),
-
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [draftMarkdown, setDraftMarkdown] = useState('');
+  const [draftJson, setDraftJson] = useState<any>(null);
+  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
+  const [statusMessage, setStatusMessage] = useState('');
   function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
     setForm((prev) => ({ ...prev, [key]: value }))
   }
 
   async function handleGenerate() {
-    setIsGenerating(true),
+    setIsGenerating(true);
     setStatusMessage('Generating draft...'),
     try {
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)}),
-      const data = await res.json(),
-      setDraftMarkdown(data.markdown || ''),
-      setDraftJson(data.json || null),
+      const data = await res.json();
+      setDraftMarkdown(data.markdown || '');
+      setDraftJson(data.json || null);
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e),
@@ -61,11 +59,11 @@ export default function ProposalGenerator() {
           markdown: draftMarkdown,
           json: draftJson,
           meta: form})}),
-      const data = await res.json(),
+      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
-      console.error(e),
+      console.error(e);
       setStatusMessage('Export failed')
     }
   }
@@ -77,7 +75,7 @@ export default function ProposalGenerator() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
-      const data = await res.json(),
+      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
     } catch (e) {
       console.error(e),

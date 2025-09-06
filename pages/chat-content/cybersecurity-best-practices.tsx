@@ -15,5 +15,4 @@ const CybersecurityBestPractices: NextPage = () => {
     </div>
   )
 },
-
-export default CybersecurityBestPractices,
+export default CybersecurityBestPractices;

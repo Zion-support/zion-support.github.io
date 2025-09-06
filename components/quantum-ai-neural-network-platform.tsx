@@ -5,31 +5,28 @@ import SEO from '../components/SEO';
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
     "Quantum-enhanced neural network architecture",
-    "Superposition-based learning algorithms",
-    "Quantum entanglement optimization",
-    "Quantum-classical hybrid training",
-    "Quantum error correction protocols",
-    "Multi-dimensional quantum states",
-    "Quantum memory management",
-    "Quantum coherence preservation",
-    "Quantum measurement optimization",
+    "Superposition-based learning algorithms";
+    "Quantum entanglement optimization";
+    "Quantum-classical hybrid training";
+    "Quantum error correction protocols";
+    "Multi-dimensional quantum states";
+    "Quantum memory management";
+    "Quantum coherence preservation";
+    "Quantum measurement optimization";
     "Cross-platform quantum synchronization"
-  ],
-
+  ];
   const benefits = [
-    "Exponential computational power",
-    "Quantum advantage in AI training",
-    "Enhanced pattern recognition",
-    "Faster convergence rates",
+    "Exponential computational power";
+    "Quantum advantage in AI training";
+    "Enhanced pattern recognition";
+    "Faster convergence rates";
     "Quantum-secure AI operations"
-  ],
-
+  ];
   const pricing = {
     starter: "$999/month",
-    professional: "$1,999/month",
+    professional: "$1,999/month";
     enterprise: "Custom pricing"
   },
-
   return (
     <div className="min-h-screen bg-black text-white">
       <SEO 
@@ -61,7 +58,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power, 
+              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power,
               quantum advantage, and unprecedented learning capabilities.
             </p>
             
@@ -233,5 +230,4 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
     </div>
   )
 },
-
-export default QuantumAINeuralNetworkPlatform,
+export default QuantumAINeuralNetworkPlatform;

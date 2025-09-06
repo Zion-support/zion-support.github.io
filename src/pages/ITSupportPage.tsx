@@ -14,9 +14,8 @@ export default function ITSupportPage() {
       icon: <ShieldCheck className="h-8 w-8" />},
     {
       title: "Multi-Channel Support",
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.",
+      description: "Get help via phone, chat, or onsite visits tailored to your needs.";
       icon: <Phone className="h-8 w-8" />}],
-
   const testimonials = [
     {
       name: "Lisa Wong",
@@ -28,7 +27,6 @@ export default function ITSupportPage() {
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
       avatar: "/placeholder.svg"}],
-
   return (
     <ServiceLandingTemplate
       title="IT Support Services"

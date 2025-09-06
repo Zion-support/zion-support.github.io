@@ -20,14 +20,14 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
   },
   {
-    name: "Authentication Service", 
+    name: "Authentication Service",
     status: "operational",
     description: "User login and registration",
     lastChecked: new Date().toISOString()
   },
   {
     name: "Payment Processing",
-    status: "operational", 
+    status: "operational",
     description: "Checkout and payment handling",
     lastChecked: new Date().toISOString()
   },
@@ -38,13 +38,11 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
   }
 ],
-
 export default function Status() {
-  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
-  const [showFallback, setShowFallback] = useState(false),
-  const [uptime, setUptime] = useState<number | null>(null),
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false);
+  const [showFallback, setShowFallback] = useState(false);
+  const [uptime, setUptime] = useState<number | null>(null);
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
-
   useEffect(() => {
     // Try to load external status page, fallback after timeout
     const timeout = setTimeout(() => {
@@ -54,14 +52,13 @@ export default function Status() {
     }, 5000), // 5 second timeout
 
     return () => clearTimeout(timeout)
-  }, [externalStatusLoaded]),
-
+  }, [externalStatusLoaded]);
   useEffect(() => {
     async function fetchUptime() {
       try {
-        const res = await fetch('/api/health'),
-        if (!res.ok) return,
-        const data = await res.json(),
+        const res = await fetch('/api/health');
+        if (!res.ok) return;
+        const data = await res.json();
         if (typeof data.uptime === 'number') {
           setUptime(data.uptime)
         }
@@ -70,64 +67,56 @@ export default function Status() {
       }
     }
     fetchUptime()
-  }, []),
-
+  }, []);
   const getStatusIcon = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="h-5 w-5 text-green-500" />,
       case 'degraded':
-        return <Clock className="h-5 w-5 text-yellow-500" />,
+        return <Clock className="h-5 w-5 text-yellow-500" />;
       case 'outage':
-        return <AlertCircle className="h-5 w-5 text-red-500" />,
+        return <AlertCircle className="h-5 w-5 text-red-500" />;
       case 'maintenance':
-        return <Clock className="h-5 w-5 text-blue-500" />,
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />
+        return <Clock className="h-5 w-5 text-blue-500" />;
+      default: return <AlertCircle className="h-5 w-5 text-gray-500" />
     }
   },
-
   const getStatusText = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
         return 'Operational',
       case 'degraded':
-        return 'Degraded Performance',
+        return 'Degraded Performance';
       case 'outage':
-        return 'Service Outage',
+        return 'Service Outage';
       case 'maintenance':
-        return 'Scheduled Maintenance',
-      default:
-        return 'Unknown'
+        return 'Scheduled Maintenance';
+      default: return 'Unknown'
     }
   },
-
   const getStatusColor = (status: ServiceStatus['status']) => {
     switch (status) {
       case 'operational':
         return 'text-green-500',
       case 'degraded':
-        return 'text-yellow-500',
+        return 'text-yellow-500';
       case 'outage':
-        return 'text-red-500',
+        return 'text-red-500';
       case 'maintenance':
-        return 'text-blue-500',
-      default:
-        return 'text-gray-500'
+        return 'text-blue-500';
+      default: return 'text-gray-500'
     }
   },
-
   const formatUptime = (seconds: number) => {
     const days = Math.floor(seconds / 86400),
-    const hours = Math.floor((seconds % 86400) / 3600),
-    const minutes = Math.floor((seconds % 3600) / 60),
+    const hours = Math.floor((seconds % 86400) / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
     const parts: string[] = [],
-    if (days > 0) parts.push(`${days}d`),
-    if (hours > 0) parts.push(`${hours}h`),
-    parts.push(`${minutes}m`),
+    if (days > 0) parts.push(`${days}d`);
+    if (hours > 0) parts.push(`${hours}h`);
+    parts.push(`${minutes}m`);
     return parts.join(' ')
-  },
-
+  };
   return (
     <>
       <SEO

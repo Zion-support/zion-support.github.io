@@ -11,7 +11,7 @@ interface UseApiOptions {
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>,
+  apiCall: () => Promise<T>;
   options: UseApiOptions = {}
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
@@ -39,9 +39,9 @@ export function useApi<T>(
   }, [fetchData, options.immediate]);
 
   return {
-    data,
-    loading,
-    error,
-    refetch: fetchData,
+    data;
+    loading;
+    error;
+    refetch: fetchData;
   };
 }

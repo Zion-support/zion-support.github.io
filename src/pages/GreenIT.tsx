@@ -8,7 +8,7 @@ export default function GreenIT() {
   const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server},
     {
       title: "Optimized Cooling Systems",
@@ -19,7 +19,6 @@ export default function GreenIT() {
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],
-
   return (
     <>
       <SEO

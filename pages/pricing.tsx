@@ -10,18 +10,15 @@ import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
-  const popularServices = getPopularServices(),
-  
+  const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -29,21 +26,20 @@ export default function PricingPage() {
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services
   ],
-
   // Enhanced service categories with pricing
   const serviceCategories = [
     {
       name: 'Next-Generation AI',
       description: 'Revolutionary AI platforms',
       services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
-      avgPrice: '$3,199/month',
+      avgPrice: '$3,199/month';
       savings: 'Save 60-80% vs. competitors'
     },
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
       services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
-      avgPrice: '$4,999/month',
+      avgPrice: '$4,999/month';
       savings: 'Save 50-70% vs. competitors'
     },
     {
@@ -57,18 +53,17 @@ export default function PricingPage() {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
       services: ['Quantum AI HybridSpace Technology PlatformQuantum Cybersecurity'],
-      avgPrice: '$5,999/month',
+      avgPrice: '$5,999/month';
       savings: 'Save 70-85% vs. competitors'
     },
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
       services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
-      avgPrice: '$2,999/month',
+      avgPrice: '$2,999/month';
       savings: 'Save 45-65% vs. competitors'
     }
   ],
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -95,7 +90,7 @@ export default function PricingPage() {
       features: [
         'Access to 200+ Premium ServicesAdvanced AI & Quantum ComputingPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security & Compliance',
         'Custom IntegrationsTeam Collaboration ToolsAPI AccessWhite-label Options'
-      ],
+      ];
       icon: <Crown className="w-8 h-8" />,
       variant: 'holographic' as const,
       popular: true,
@@ -111,7 +106,7 @@ export default function PricingPage() {
       features: [
         'Access to ALL 500+ ServicesFull Quantum AI & Autonomous SystemsDedicated Support Team (24/7)90-Day Free TrialEnterprise Analytics & AI InsightsDedicated Account Manager99.99% Uptime SLAEnterprise Security & Compliance',
         'Custom Development ServicesAdvanced Team ManagementFull API & SDK AccessCustom Branding & White-labelOn-premise Deployment OptionsAdvanced AI Training & CustomizationPriority Feature DevelopmentGlobal Infrastructure Access'
-      ],
+      ];
       icon: <Rocket className="w-8 h-8" />,
       variant: 'neural' as const,
       popular: false,
@@ -119,7 +114,6 @@ export default function PricingPage() {
       ctaVariant: 'primary' as const
     }
   ],
-
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
@@ -159,7 +153,6 @@ export default function PricingPage() {
       icon: <Rocket className="w-6 h-6" />
     }
   ],
-
   // Value propositions
   const valuePropositions = [
     {
@@ -191,7 +184,6 @@ export default function PricingPage() {
       detail: 'Uptime SLA'
     }
   ],
-
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>

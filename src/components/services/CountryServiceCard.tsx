@@ -16,36 +16,31 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
     if (!countryName) return "🌐",
-    
     const emojiMap: Record<string, string> = {
-      "United States": "🇺🇸",
-      "United Kingdom": "🇬🇧",
-      "Canada": "🇨🇦",
-      "Australia": "🇦🇺",
-      "Germany": "🇩🇪", 
-      "France": "🇫🇷",
-      "Japan": "🇯🇵",
-      "China": "🇨🇳",
-      "Brazil": "🇧🇷",
-      "India": "🇮🇳",
-      "Russia": "🇷🇺",
-      "Singapore": "🇸🇬",
-      "South Korea": "🇰🇷",
-      "South Africa": "🇿🇦",
+      "United States": "🇺🇸";
+      "United Kingdom": "🇬🇧";
+      "Canada": "🇨🇦";
+      "Australia": "🇦🇺";
+      "Germany": "🇩🇪";
+      "France": "🇫🇷";
+      "Japan": "🇯🇵";
+      "China": "🇨🇳";
+      "Brazil": "🇧🇷";
+      "India": "🇮🇳";
+      "Russia": "🇷🇺";
+      "Singapore": "🇸🇬";
+      "South Korea": "🇰🇷";
+      "South Africa": "🇿🇦";
       // Default if no flag is found
       "default": "🌐"
-    },
-    
+    };
     return emojiMap[countryName] || "🌐"
-  },
-  
+  };
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
     if (!countryName) return "8-24 hours",
-    
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     if (tier1.includes(countryName)) {
       return "4 hours"
     } else if (tier2.includes(countryName)) {
@@ -53,8 +48,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     } else {
       return "8-24 hours"
     }
-  },
-  
+  };
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 

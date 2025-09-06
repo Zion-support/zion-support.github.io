@@ -13,7 +13,6 @@ const Revolutionary2027Hero = () => {
     { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
     { icon: Sparkles, delay: 3.5, position: 'top-1/3 right-1/2' }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -23,7 +22,6 @@ const Revolutionary2027Hero = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -35,7 +33,6 @@ const Revolutionary2027Hero = () => {
       }
     }
   },
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
       {/* Enhanced Background Effects */}
@@ -54,7 +51,7 @@ const Revolutionary2027Hero = () => {
           key={index}
           className={`absolute ${item.position} text-purple-400/30`}
           animate={{
-            y: [0, -20, 0],
+            y: [0, -20, 0];
             rotate: [0, 5, -5, 0]}}
           transition={{
             duration: 4,
@@ -204,7 +201,7 @@ const Revolutionary2027Hero = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-              y: [0, -100],
+              y: [0, -100];
               opacity: [0, 1, 0]}}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -216,5 +213,4 @@ const Revolutionary2027Hero = () => {
     </section>
   )
 },
-
-export default Revolutionary2027Hero,
+export default Revolutionary2027Hero;

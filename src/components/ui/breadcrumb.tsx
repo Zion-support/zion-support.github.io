@@ -6,7 +6,7 @@ import { ChevronRight } from 'lucide-react'
 import { cn } from "@/lib/utils"
  
 const Breadcrumb = React.forwardRef<
-  HTMLElement,
+  HTMLElement;
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
@@ -15,7 +15,7 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light";
       className
     )}
     {...props}
@@ -67,7 +67,7 @@ BreadcrumbLink.displayName = "BreadcrumbLink"
  
 const BreadcrumbSeparator = ({
   children,
-  className,
+  className;
   ...props
 }: React.ComponentProps<"li">) => (
   <li
@@ -97,9 +97,9 @@ const BreadcrumbEllipsis = ({
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
 export {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
+  Breadcrumb;
+  BreadcrumbList;
+  BreadcrumbItem;
+  BreadcrumbLink;
+  BreadcrumbSeparator;
   BreadcrumbEllipsis}

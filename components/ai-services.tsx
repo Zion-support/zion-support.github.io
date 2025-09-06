@@ -46,7 +46,6 @@ const aiServices = [
     features: ['Ethical GuidelinesGovernance FrameworkCompliance Monitoring']
   }
 ],
-
 export default function AIServices() {
   return (
     <QuantumHolographicMatrixBackground intensity={1.5}>

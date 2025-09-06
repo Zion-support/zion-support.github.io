@@ -2,28 +2,16 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight,
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code,
-  Phone, Mail, MapPin, ExternalLink, ChevronDown,
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react',
-
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     id: 'ai-consciousness',
@@ -37,7 +25,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond',
+    description: 'Quantum computing, DNA computing, and beyond';
     icon: Atom,
     color: 'from-blue-500 to-cyan-500',
     services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
@@ -116,36 +104,32 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-red-500/20'
   }
 ],
-
 export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [viewMode, setViewMode] = useState('grid'),
-
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+  const [viewMode, setViewMode] = useState('grid');
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     return matchesSearch && matchesCategory
-  }),
-
+  });
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'customers':
-        return b.customers - a.customers,
+        return b.customers - a.customers;
       default: return b.popular ? 1 : -1
     }
   }),
-
   return (
     <>
       <Head>
@@ -495,7 +479,7 @@ export default function Revolutionary2025ServicesShowcase() {
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
-                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover: text-white">
                                 {service.contactInfo.mobile}
                               </a>
                             </div>

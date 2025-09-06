@@ -15,5 +15,4 @@ const FutureOfWorkAndAutomation: NextPage = () => {
     </div>
   )
 },
-
-export default FutureOfWorkAndAutomation,
+export default FutureOfWorkAndAutomation;

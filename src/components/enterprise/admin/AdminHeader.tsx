@@ -5,8 +5,7 @@ import { Download, Settings } from 'lucide-react'
 import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
-  const { company } = useCompanyWorkspace(),
-
+  const { company } = useCompanyWorkspace();
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">

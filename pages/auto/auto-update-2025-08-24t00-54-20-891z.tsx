@@ -14,5 +14,4 @@ const Page: NextPage = () => {
     </>
   )
 },
-
-export default Page,
+export default Page;

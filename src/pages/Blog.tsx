@@ -14,51 +14,45 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react'
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
 // Categories for filtering
 const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
+  "All Categories";
+  "Trends";
+  "Marketing";
+  "Sustainability";
+  "Ethics";
+  "Recruitment";
   "Infrastructure"
-],
-
+];
 export interface BlogProps {
   posts?: BlogPost[]
 }
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
   const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]),
-  const query = useDebounce(searchQuery, 300),
-  const [isLoading, setIsLoading] = useState(false),
-  const router = useRouter(),
-
+  const query = useDebounce(searchQuery, 300);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
     return () => {
-      setSearchQuery(""),
-      setSelectedCategory("All Categories"),
+      setSearchQuery("");
+      setSelectedCategory("All Categories");
       setPosts([...initialPosts])
     }
-  }, [router.asPath, initialPosts]),
-
+  }, [router.asPath, initialPosts]);
   // useEffect(() => {
   //   const interval = setInterval(() => {
-  //     setPosts(prev => [...prev, generateRandomBlogPost()]),
+  //     setPosts(prev => [...prev, generateRandomBlogPost()]);
   //   }, 120000), // every 2 minutes
-  //   return () => clearInterval(interval),
-  // }, []),
-
+  //   return () => clearInterval(interval);
+  // }, []);
   useEffect(() => {
     const fetchPosts = async () => {
-      setIsLoading(true),
+      setIsLoading(true);
       try {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
@@ -70,24 +64,18 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         setIsLoading(false)
       }
     },
-
     fetchPosts()
-  }, [query]),
-
+  }, [query]);
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-      selectedCategory === "All Categories" || post.category === selectedCategory,
-
+      selectedCategory === "All Categories" || post.category === selectedCategory;
     return matchesCategory
-  }),
-  
+  });
   // Get featured posts
-  const featuredPosts = posts.filter(post => post.isFeatured),
-
+  const featuredPosts = posts.filter(post => post.isFeatured);
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
-  
   return (
     <>
       <SEO
@@ -108,13 +96,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0],
-            if (!featuredPost) return null,
-            
+            const featuredPost = featuredPosts[0];
+            if (!featuredPost) return null;
             return (
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
                     src={featuredPost.featuredImage}
@@ -142,7 +129,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       alt={featuredPost.author.name}
                       className="w-10 h-10 rounded-full mr-3"
                       onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement,
+                        const target = e.currentTarget as HTMLImageElement;
                         target.src = "/images/blog-placeholder.svg"
                       }}
                     />
@@ -155,7 +142,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   </div>
                   <Button 
                     asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"
                   >
                     <Link href={`/blog/${featuredPost.slug}`}>
                       Read Article
@@ -243,7 +230,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
                         onError={(e) => {
-                          const target = e.currentTarget as HTMLImageElement,
+                          const target = e.currentTarget as HTMLImageElement;
                           target.src = "/images/blog-placeholder.svg"
                         }}
                       />
@@ -251,7 +238,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
+                    <span className="text-zion-cyan group-hover: text-zion-purple">Read More →</span>
                   </CardFooter>
                   </Link>
                 </Card>

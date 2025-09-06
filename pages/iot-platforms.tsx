@@ -15,5 +15,4 @@ const IotPlatforms: NextPage = () => {
     </div>
   )
 },
-
-export default IotPlatforms,
+export default IotPlatforms;

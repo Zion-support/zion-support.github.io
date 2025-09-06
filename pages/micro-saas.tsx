@@ -4,21 +4,18 @@ import { useState, useEffect } from 'react';
 import { ContactInfo } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function MicroSaaS() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
-
+  }, []);
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   },
-
   const categories = [
     { id: 'all', name: 'All Products', count: 150 },
     { id: 'ai', name: 'AI-Powered', count: 45 },
@@ -28,7 +25,6 @@ export default function MicroSaaS() {
     { id: 'productivity', name: 'Productivity', count: 15 },
     { id: 'marketing', name: 'Marketing', count: 15 }
   ],
-
   const products = [
     {
       id: 1,
@@ -139,11 +135,9 @@ export default function MicroSaaS() {
       popular: true
     }
   ],
-
   const filteredProducts = selectedCategory === 'all' 
     ? products 
-    : products.filter(product => product.category === selectedCategory),
-
+    : products.filter(product => product.category === selectedCategory);
   return (
     <>
       <Head>

@@ -4,9 +4,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-r
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation')),
-  if (!service) return null,
-
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
+  if (!service) return null;
   return (
     <Layout>
       <Head>

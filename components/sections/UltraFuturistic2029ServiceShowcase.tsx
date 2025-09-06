@@ -3,43 +3,37 @@ import { motion } from 'framer-motion';
 import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-type Service = CuttingEdgeInnovation2029 | any,
-
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[],
-  title?: string,
-  subtitle?: string,
+  title?: string;
+  subtitle?: string;
   maxServices?: number
 }
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'
 },
-
 const categoryIcons: { [key: string]: any } = {
   'AI & Consciousness': Brain,
-  'Quantum & Neuroscience': Cpu,
-  'Space Colonization': Rocket,
-  'Space Mining': Zap,
-  'Space Architecture': Globe,
-  'Space Energy': Sparkles,
-  'AI & Business': Database,
-  'Quantum & Time': Timer,
+  'Quantum & Neuroscience': Cpu;
+  'Space Colonization': Rocket;
+  'Space Mining': Zap;
+  'Space Architecture': Globe;
+  'Space Energy': Sparkles;
+  'AI & Business': Database;
+  'Quantum & Time': Timer;
   'AI & Augmented Reality': Eye
-},
-
+};
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
-  title = "2029 Ultra-Futuristic Innovations",
-  subtitle = "Experience the future of technology with our revolutionary services",
+  title = "2029 Ultra-Futuristic Innovations";
+  subtitle = "Experience the future of technology with our revolutionary services";
   maxServices = 12
 }) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation'),
-
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))],
-
   // Filter and sort services
   const filteredServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
@@ -47,19 +41,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
-          const aLevel = (a as any).innovationLevel || 'Advanced',
-          const bLevel = (b as any).innovationLevel || 'Advanced',
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
-          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
+          const aLevel = (a as any).innovationLevel || 'Advanced';
+          const bLevel = (b as any).innovationLevel || 'Advanced';
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
-          return b.rating - a.rating,
+          return b.rating - a.rating;
         default: return 0
       }
     })
-    .slice(0, maxServices),
-
+    .slice(0, maxServices);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,7 +62,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -81,7 +73,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       }
     }
   },
-
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -246,5 +237,4 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
     </section>
   )
 },
-
-export default UltraFuturistic2029ServiceShowcase,
+export default UltraFuturistic2029ServiceShowcase;

@@ -9,29 +9,27 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
 }
 
 export default function AdminIntegrationsPage() {
-  const [providers, setProviders] = useState<ProviderMeta[]>([]),
-  const [connections, setConnections] = useState<ConnectionMap>({}),
-  const [loading, setLoading] = useState(false),
-  const [selected, setSelected] = useState<string | null>(null),
+  const [providers, setProviders] = useState<ProviderMeta[]>([]);
+  const [connections, setConnections] = useState<ConnectionMap>({});
+  const [loading, setLoading] = useState(false);
+  const [selected, setSelected] = useState<string | null>(null);
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
-
   async function refresh() {
     const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json()),
-      fetch('/api/integrations/status').then(r => r.json())]),
-    setProviders(p.providers || []),
+      fetch('/api/integrations/providers').then(r => r.json());
+      fetch('/api/integrations/status').then(r => r.json())]);
+    setProviders(p.providers || []);
     setConnections(s.connections || {})
   }
 
-  useEffect(() => { refresh() }, []),
-
+  useEffect(() => { refresh() }, []);
   async function connect(providerId: string) {
     setLoading(true),
     try {
       // Open mock oauth popup
-      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700'),
-      await new Promise(r => setTimeout(r, 500)),
-      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) }),
+      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
+      await new Promise(r => setTimeout(r, 500));
+      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh()
     } finally { setLoading(false) }
   }
@@ -54,11 +52,10 @@ export default function AdminIntegrationsPage() {
 
   const grouped = useMemo(() => ({
     crm: providers.filter(p => p.category === 'crm'),
-    ats: providers.filter(p => p.category === 'ats')}), [providers]),
-
+    ats: providers.filter(p => p.category === 'ats')}), [providers]);
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] || { status: 'disconnected' },
-    const isConnected = conn.status === 'connected',
+    const isConnected = conn.status === 'connected';
     return (
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
@@ -88,9 +85,9 @@ export default function AdminIntegrationsPage() {
   }
 
   function RulesModal() {
-    if (!selected) return null,
-    const provider = providers.find(p => p.id === selected)!,
-    const isCrm = provider.category === 'crm',
+    if (!selected) return null;
+    const provider = providers.find(p => p.id === selected)!;
+    const isCrm = provider.category === 'crm';
     return (
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
@@ -164,14 +161,13 @@ export default function AdminIntegrationsPage() {
 }
 
 function ManualOverrideForm() {
-  const [jobId, setJobId] = useState(''),
-  const [disableCrmSync, setDisableCrmSync] = useState(false),
-  const [disableAtsSync, setDisableAtsSync] = useState(false),
-  const [message, setMessage] = useState(''),
-
+  const [jobId, setJobId] = useState('');
+  const [disableCrmSync, setDisableCrmSync] = useState(false);
+  const [disableAtsSync, setDisableAtsSync] = useState(false);
+  const [message, setMessage] = useState('');
   async function save() {
-    setMessage(''),
-    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+    setMessage('');
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
 

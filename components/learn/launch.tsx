@@ -5,7 +5,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       destination: '/academy/founder-course',
       permanent: false}}
 },
-
 export default function LaunchRedirect() {
   return null
 }

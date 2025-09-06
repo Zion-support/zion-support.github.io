@@ -39,7 +39,6 @@ export default function Security() {
       ]
     }
   ],
-
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -47,7 +46,6 @@ export default function Security() {
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' }
   ],
-
   return (
     <>
       <Head>

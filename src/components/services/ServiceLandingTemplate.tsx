@@ -11,7 +11,7 @@ export interface Benefit {
 
 export interface Testimonial {
   name: string,
-  role?: string,
+  role?: string;
   text: string,
   avatar?: string
 }
@@ -19,7 +19,7 @@ export interface Testimonial {
 interface ServiceLandingTemplateProps {
   title: string,
   subtitle: string,
-  heroImage?: string,
+  heroImage?: string;
   description: string,
   benefits: Benefit[],
   testimonials: Testimonial[],
@@ -29,12 +29,12 @@ interface ServiceLandingTemplateProps {
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
   title,
-  subtitle,
-  heroImage,
-  description,
-  benefits,
-  testimonials,
-  ctaText,
+  subtitle;
+  heroImage;
+  description;
+  benefits;
+  testimonials;
+  ctaText;
   ctaLink}) => {
   return (
     <div className="bg-background text-white">
@@ -142,4 +142,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
-},
+};

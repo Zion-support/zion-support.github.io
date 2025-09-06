@@ -3,23 +3,15 @@ import Layout from './layout/Layout';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Star, Users, Award, Clock, 
-  Brain, Atom, Shield, Rocket, Zap,
-  TrendingUp, Globe, Cpu, Database, Cloud,
-  Lock, Palette, Target, CheckCircle, Sparkles
-} from 'lucide-react',
-
 // Import new service data
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
 import { realITServices2025 } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
-  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3),
-  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3),
-  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3),
-
+  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
+  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
+  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
   return (
     <Layout>
       {/* Main Content */}
@@ -190,7 +182,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-                      features: service.features.slice(0, 5),
+                      features: service.features.slice(0, 5);
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon
@@ -256,7 +248,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-                      features: service.features.slice(0, 5),
+                      features: service.features.slice(0, 5);
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon
@@ -322,7 +314,7 @@ const Homepage2037: React.FC = () => {
                       description: service.description,
                       price: service.price,
                       period: service.period,
-                      features: service.features.slice(0, 5),
+                      features: service.features.slice(0, 5);
                       popular: service.popular,
                       category: service.category,
                       icon: service.icon
@@ -482,5 +474,4 @@ const Homepage2037: React.FC = () => {
     </Layout>
   )
 },
-
-export default Homepage2037,
+export default Homepage2037;

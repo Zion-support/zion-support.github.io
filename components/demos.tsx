@@ -7,10 +7,8 @@ import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
 import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
-
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator'),
-
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
       id: 'email-validator',
@@ -45,9 +43,7 @@ export default function DemosPage() {
       component: <TextAnalyzerDemo />
     }
   ],
-
-  const activeDemoData = demos.find(demo => demo.id === activeDemo),
-
+  const activeDemoData = demos.find(demo => demo.id === activeDemo);
   return (
     <>
       <Head>

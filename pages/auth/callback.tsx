@@ -15,5 +15,4 @@ const Callback: NextPage = () => {
     </div>
   )
 },
-
-export default Callback,
+export default Callback;

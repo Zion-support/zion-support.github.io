@@ -1,12 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Atom, Shield, Target, Rocket,
-  ArrowRight, Check, Star, TrendingUp, Users,
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
-} from 'lucide-react',
-
+import { Brain, Atom, Shield, Target, Rocket, ArrowRight, Check, Star, TrendingUp, Users, Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin } from 'lucide-react';
 // Import our new 2025 V2 innovative services
 import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
@@ -18,7 +13,6 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
 },
-
 const staggerContainer = {
   animate: {
     transition: {
@@ -26,7 +20,6 @@ const staggerContainer = {
     }
   }
 },
-
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
     ...innovativeMicroSaas2025ExpansionV2,
@@ -35,7 +28,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
     ...industrySpecificSolutions2025V2,
     ...emergingTechBreakthroughs2025V2
   ],
-
   const serviceCategories = [
     {
       id: 'micro-saas',
@@ -78,13 +70,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
       description: 'Breakthrough technologies of the future'
     }
   ],
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
@@ -112,7 +102,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, 
+            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
           </motion.p>
           <motion.div 

@@ -4,24 +4,22 @@ import { useWallet } from '../../hooks/useWallet';
 import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
-
 export default function TokenIntegrationsPage() {
-  const { account, connect } = useWallet(),
-  const [region, setRegion] = useState(''),
-  const [stake, setStake] = useState(''),
-  const [suggestion, setSuggestion] = useState<any>(null),
-  const [rewards, setRewards] = useState<DepinReward[] | null>(null),
-  const [depinsSyncing, setDepinsSyncing] = useState(false),
-
+  const { account, connect } = useWallet();
+  const [region, setRegion] = useState('');
+  const [stake, setStake] = useState('');
+  const [suggestion, setSuggestion] = useState<any>(null);
+  const [rewards, setRewards] = useState<DepinReward[] | null>(null);
+  const [depinsSyncing, setDepinsSyncing] = useState(false);
   async function syncDepin() {
     if (!account) {
-      await connect(),
+      await connect();
       return
     }
-    setDepinsSyncing(true),
-    const acts = await fetchDepinActivities(account),
-    const r = calculateRewards(acts),
-    setRewards(r),
+    setDepinsSyncing(true);
+    const acts = await fetchDepinActivities(account);
+    const r = calculateRewards(acts);
+    setRewards(r);
     setDepinsSyncing(false)
   }
 
@@ -30,7 +28,7 @@ export default function TokenIntegrationsPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ region, stakeUsd: stake })}),
-    const data = await res.json(),
+    const data = await res.json();
     setSuggestion(data)
   }
 

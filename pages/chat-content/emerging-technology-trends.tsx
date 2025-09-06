@@ -15,5 +15,4 @@ const EmergingTechnologyTrends: NextPage = () => {
     </div>
   )
 },
-
-export default EmergingTechnologyTrends,
+export default EmergingTechnologyTrends;

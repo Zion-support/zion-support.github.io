@@ -60,7 +60,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       description: 'Advanced learning and educational technology'
     }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -70,7 +69,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -81,7 +79,6 @@ const ComprehensiveServicesShowcase2025 = () => {
       }
     }
   },
-
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -272,5 +269,4 @@ const ComprehensiveServicesShowcase2025 = () => {
     </section>
   )
 },
-
-export default ComprehensiveServicesShowcase2025,
+export default ComprehensiveServicesShowcase2025;

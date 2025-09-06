@@ -11,7 +11,6 @@ const defaultEnv = {
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
-
 // Create a safe process object
 const createProcessObject = () => ({
   env: { ...defaultEnv },
@@ -20,7 +19,6 @@ const createProcessObject = () => ({
   arch: 'x64',
   version: '18.0.0',
   browser: true}),
-
 // Ensure process is available on globalThis
 if (typeof globalThis !== 'undefined') {
   if (typeof (globalThis as any).process === 'undefined') {
@@ -50,7 +48,6 @@ export const safeEnv = {
   NEXT_PUBLIC_APP_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_APP_URL) || '',
   NEXT_PUBLIC_SUPABASE_URL: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_URL) || '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY) || ''} as const,
-
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
   if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {
@@ -75,7 +72,5 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''},
-
-console.log('✅ Environment polyfill loaded successfully'),
-
-export default safeEnv,
+console.log('✅ Environment polyfill loaded successfully');
+export default safeEnv;

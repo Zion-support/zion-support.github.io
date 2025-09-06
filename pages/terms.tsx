@@ -1,6 +1,6 @@
 import React from 'react';
       ]
-    },
+    };
     {
       title: 'Quantum Technology Services',
       terms: [
@@ -11,19 +11,12 @@ import React from 'react';
       title: 'Cybersecurity Services',
       terms: [
         'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be sharedPenetration testing requires written authorizationIncident response follows our established protocols'
-import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
 import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, AlertTriangle, CheckCircle, 
-  User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react',
-
 const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 17, 2025',
-
+  const lastUpdated = 'January 17, 2025';
   const termsSections = [
     {
       title: 'Acceptance of Terms',
@@ -32,7 +25,7 @@ const TermsPage: React.FC = () => {
       content: [
         'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our servicesWe may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms'
       ]
-    },
+    };
     {
       title: 'Service Description',
       icon: <Globe className="w-8 h-8" />,
@@ -58,15 +51,8 @@ const TermsPage: React.FC = () => {
       ]
     }
   ],
-
   const prohibitedActivities = [
 import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  Globe, Calendar, Scale, Users, ArrowRight,
-  BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react',
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="container mx-auto px-4 text-center">
@@ -84,36 +70,35 @@ const Terms: React.FC = () => {
   const sections = [
     {
       title: 'Acceptance of Terms',
-      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`,
+      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`;
       icon: <FileText className="w-6 h-6 text-purple-400" />
     },
     {
       title: 'Use License',
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
+      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`;
       icon: <Lock className="w-6 h-6 text-blue-400" />
     },
     {
       title: 'Service Description',
-      content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`,
+      content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
       icon: <Globe className="w-6 h-6 text-green-400" />
     },
     {
       title: 'User Responsibilities',
-      content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`,
+      content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
       icon: <Users className="w-6 h-6 text-yellow-400" />
     },
     {
       title: 'Privacy and Data Protection',
-      content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`,
+      content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
       icon: <Eye className="w-6 h-6 text-cyan-400" />
     },
     {
       title: 'Intellectual Property Rights',
-      content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
+      content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
       icon: <Shield className="w-6 h-6 text-red-400" />
     }
   ],
-
   const importantNotices = [
     {
       title: 'AI Technology Risks',
@@ -131,7 +116,6 @@ const Terms: React.FC = () => {
       type: 'info'
     }
   ],
-
   return (
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-blue-900">
@@ -147,24 +131,23 @@ const termsSections = [
     title: 'Acceptance of Terms',
     icon: <CheckCircle className="w-6 h-6 text-green-400" />,
     content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'
-  },
+  };
   {
     title: 'Use License',
     icon: <Scale className="w-6 h-6 text-blue-400" />,
     content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.'
-  },
+  };
   {
     title: 'Disclaimer',
     icon: <AlertTriangle className="w-6 h-6 text-orange-400" />,
     content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.'
-  },
+  };
   {
     title: 'Limitations',
     icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
   }
 ],
-
 export default function Terms() {
   return (
     <Layout>
@@ -719,12 +702,10 @@ export default function Terms() {
                         ))}
                       </ul>
     'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities'
-  ],
-
+  ];
   const limitations = [
     'Services provided "as is" without warrantiesNo guarantee of uninterrupted serviceLimitation of liability for damagesNo responsibility for third-party contentService availability subject to changeTechnical support during business hours only'
-  ],
-
+  ];
   return (
     <ErrorBoundary>
       <SEOOptimizer />
@@ -966,7 +947,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services include AI and machine learning solutions, quantum computing services, 
+                        Our services include AI and machine learning solutions, quantum computing services;
                         IT infrastructure consulting, micro SAAS applications, business automation, and 
                         technical support.
                       </p>
@@ -1006,7 +987,7 @@ export default function Terms() {
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
-                        Our services, including software, content, and technology, are protected by copyright, 
+                        Our services, including software, content, and technology, are protected by copyright;
                         trademark, and other intellectual property laws. You retain rights to your own content.
                       </p>
                       <p className="text-gray-300 leading-relaxed">
@@ -1178,7 +1159,7 @@ export default function Terms() {
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>
                 <div className="text-gray-300 space-y-4">
                   <p>
-                    By accessing, browsing, or using our services, you acknowledge that you have read, 
+                    By accessing, browsing, or using our services, you acknowledge that you have read;
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.
                   </p>
                   <p>
@@ -1262,7 +1243,7 @@ export default function Terms() {
                   
                   <h4 className="text-lg font-semibold text-white">Disclaimer of Warranties</h4>
                   <p>
-                    Our services are provided "as is" and "as available" without warranties of any kind, 
+                    Our services are provided "as is" and "as available" without warranties of any kind;
                     either express or implied, including but not limited to warranties of merchantability 
                     or fitness for a particular purpose.
                   </p>
@@ -1352,9 +1333,8 @@ export default function Terms() {
       </div>
     </Layout>
   )
-},
-
-export default Terms,
+};
+export default Terms;
             </div>
           </section>
 
@@ -1397,5 +1377,4 @@ export default Terms,
     </ErrorBoundary>
   )
 },
-
-export default TermsPage,
+export default TermsPage;

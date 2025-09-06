@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { ShieldAlert } from 'lucide-react'
 import { useTranslation } from "react-i18next";
 export default function Unauthorized() {
-  const { t } = useTranslation(),
+  const { t } = useTranslation();
   return (
     <>
       <Header />

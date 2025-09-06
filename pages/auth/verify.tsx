@@ -15,5 +15,4 @@ const Verify: NextPage = () => {
     </div>
   )
 },
-
-export default Verify,
+export default Verify;

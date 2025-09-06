@@ -9,11 +9,9 @@ export default function HolographicAICommunicationPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
-  ],
-
+  ];
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

@@ -1,50 +1,45 @@
 import React, { forwardRef } from 'react';
-
 export type ResumeData = {
   name: string,
-  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string },
-  summary?: string,
-  skills?: string[],
-  technologies?: string[],
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
+  summary?: string;
+  skills?: string[];
+  technologies?: string[];
   experience?: Array<{
     title: string,
-    company?: string,
-    start?: string,
-    end?: string,
-    location?: string,
+    company?: string;
+    start?: string;
+    end?: string;
+    location?: string;
     bullets?: string[]
-  }>,
+  }>;
   education?: Array<{
     institution: string,
-    degree?: string,
-    start?: string,
+    degree?: string;
+    start?: string;
     end?: string
-  }>,
-  certifications?: string[],
+  }>;
+  certifications?: string[];
   portfolio?: Array<{
     title: string,
-    description?: string,
-    link?: string,
+    description?: string;
+    link?: string;
     technologies?: string[]
   }>
-},
-
+};
 export type ResumePreviewProps = {
   data: ResumeData,
-  theme?: 'light' | 'dark',
+  theme?: 'light' | 'dark';
   maxPortfolioItems?: number
-},
-
+};
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
     {children}
   </h2>
 ),
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems)),
-
+    const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
     return (
       <div
         ref={ref}
@@ -190,7 +185,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     {p.technologies?.length ? (
                       <div className="mt-1 text-xs flex flex-wrap gap-2">
                         {p.technologies.map((t, tIdx) => (
-                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark: border-gray-700">
                             {t}
                           </span>
                         ))}
@@ -206,7 +201,5 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
     )
   }
 ),
-
-ResumePreview.displayName = 'ResumePreview',
-
-export default ResumePreview,
+ResumePreview.displayName = 'ResumePreview';
+export default ResumePreview;

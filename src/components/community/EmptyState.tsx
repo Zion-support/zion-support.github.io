@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-
 interface EmptyStateProps {
   title: string,
   subtitle: string,
@@ -36,6 +35,5 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </TooltipProvider>
     </div>
   )
-},
-
-export default EmptyState,
+};
+export default EmptyState;

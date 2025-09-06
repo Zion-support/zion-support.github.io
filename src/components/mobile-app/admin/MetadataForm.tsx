@@ -14,32 +14,27 @@ interface MetadataFormProps {
 }
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form,
-  const keywords = watch("keywords"),
-  const platform = watch("platform"),
-  
+  const { control, register, watch, setValue } = form;
+  const keywords = watch("keywords");
+  const platform = watch("platform");
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
-      e.preventDefault(),
-      const value = e.currentTarget.value.trim(),
-      
+      e.preventDefault();
+      const value = e.currentTarget.value.trim();
       if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value]),
+        setValue("keywords", [...keywords, value]);
         e.currentTarget.value = ""
       }
     }
-  },
-  
+  };
   const removeKeyword = (keyword: string) => {
     setValue(
       "keywords",
       keywords.filter((k) => k !== keyword)
     )
-  },
-  
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
-  const longDescription = watch("longDescription"),
-
+  };
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
+  const longDescription = watch("longDescription");
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>

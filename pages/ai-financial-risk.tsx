@@ -4,13 +4,12 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
-  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),
+  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk'));
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>

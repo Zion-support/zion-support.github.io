@@ -14,15 +14,13 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),
-  
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
     }
     setDeleteDialogOpen(false)
-  },
-  
+  };
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">

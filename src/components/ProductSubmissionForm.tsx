@@ -6,16 +6,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
-import Image from 'next/image'; // Import next/image
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,29 +16,26 @@ import { Sparkles } from 'lucide-react'
 
 // Define the form schema with zod
 const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters"),
-  description: z.string().min(10, "Description must be at least 10 characters"),
+  title: z.string().min(3, "Title must be at least 3 characters");
+  description: z.string().min(10, "Description must be at least 10 characters");
   price: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
       message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category"),
+  category: z.string().min(1, "Please select a category");
   image: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   video: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   model: typeof window === 'undefined' ? z.any().optional() : z.instanceof(File).optional(),
   tags: z.string().optional()}),
-
 // Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>,
-
+type ProductFormValues = z.infer<typeof productSchema>;
 export function ProductSubmissionForm() {
-  const { user } = useAuth(),
-  const { toast } = useToast(),
-  const router = useRouter(),
-  const [isSubmitting, setIsSubmitting] = React.useState(false),
-  const [imagePreview, setImagePreview] = React.useState(null as string | null),
-  const [activeTab, setActiveTab] = React.useState("manual"),
-  
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const router = useRouter();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [imagePreview, setImagePreview] = React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React.useState("manual");
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
@@ -60,47 +47,40 @@ export function ProductSubmissionForm() {
       video: undefined,
       model: undefined,
       tags: ""}}),
-  
   // Handle image upload preview
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
-      form.setValue("image", file),
-      const reader = new FileReader(),
+      form.setValue("image", file);
+      const reader = new FileReader();
       reader.onloadend = () => {
         setImagePreview(reader.result as string)
-      },
+      };
       reader.readAsDataURL(file)
     }
-  },
-
+  };
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
       form.setValue("video", file)
     }
-  },
-
+  };
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (file) {
       form.setValue("model", file)
     }
-  },
-
+  };
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description),
-    form.setValue("tags", content.tags.join(", ")),
-    
+    form.setValue("description", content.description);
+    form.setValue("tags", content.tags.join(", "));
     // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
-    form.setValue("price", averagePrice),
-    
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
+    form.setValue("price", averagePrice);
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
-  },
-
+  };
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
@@ -111,8 +91,7 @@ export function ProductSubmissionForm() {
       return
     }
 
-    setIsSubmitting(true),
-    
+    setIsSubmitting(true);
     try {
       // Create the product listing
       const productData = {
@@ -126,26 +105,22 @@ export function ProductSubmissionForm() {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
-      
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
         .single(),
-        
       if (productError) {
         throw new Error(productError.message)
       }
 
       let imagePublicUrl: string | undefined,
-
       // If we have an image, upload it
       if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(imagePath, values.image),
-          
+          .upload(imagePath, values.image);
         if (uploadError) {
           throw new Error(uploadError.message)
         }
@@ -154,16 +129,14 @@ export function ProductSubmissionForm() {
         const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(imagePath),
-        imagePublicUrl = publicUrlData.publicUrl,
-          
+        imagePublicUrl = publicUrlData.publicUrl;
         // Update the product with the image URL
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({
             images: [imagePublicUrl]
           })
-          .eq('id', productRecord.id),
-          
+          .eq('id', productRecord.id);
       if (updateError) {
         throw new Error(updateError.message)
       }
@@ -171,11 +144,10 @@ export function ProductSubmissionForm() {
 
       // Upload video if provided
       if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,
+        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(videoPath, values.video),
-
+          .upload(videoPath, values.video);
         if (uploadError) {
           throw new Error(uploadError.message)
         }
@@ -183,12 +155,10 @@ export function ProductSubmissionForm() {
         const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(videoPath),
-
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id),
-
+          .eq('id', productRecord.id);
         if (updateError) {
           throw new Error(updateError.message)
         }
@@ -196,11 +166,10 @@ export function ProductSubmissionForm() {
 
       // Upload model if provided
       if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`,
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
         const { error: uploadError } = await supabase.storage
           .from('products')
-          .upload(modelPath, values.model),
-
+          .upload(modelPath, values.model);
         if (uploadError) {
           throw new Error(uploadError.message)
         }
@@ -208,12 +177,10 @@ export function ProductSubmissionForm() {
         const { data: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(modelPath),
-
         const { error: updateError } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id),
-
+          .eq('id', productRecord.id);
         if (updateError) {
           throw new Error(updateError.message)
         }
@@ -237,7 +204,6 @@ export function ProductSubmissionForm() {
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
-      
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
@@ -246,10 +212,9 @@ export function ProductSubmissionForm() {
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
-  },
-
+  };
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -269,7 +234,7 @@ export function ProductSubmissionForm() {
               control={form.control}
               name="title"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> }) => {
-                const { onChange, onBlur, value, ref } = field,
+                const { onChange, onBlur, value, ref } = field;
                 return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
@@ -402,7 +367,7 @@ export function ProductSubmissionForm() {
                           height={400} // Example height, adjust as needed
                           className="w-full h-full object-cover"
                           priority={false} // Preview images are not LCP
-                          // `sizes` might not be strictly necessary for a preview of this nature,
+                          // `sizes` might not be strictly necessary for a preview of this nature;
                           // but can be added if responsive behavior is critical here.
                           // For local object URLs, optimization via loader won't occur.
                         />
@@ -451,7 +416,7 @@ export function ProductSubmissionForm() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>

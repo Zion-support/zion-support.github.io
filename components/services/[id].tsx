@@ -5,11 +5,9 @@ import { getServiceById } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
-
 export default function ServiceDetailPage() {
-  const router = useRouter(),
-  const { id } = router.query,
-  
+  const router = useRouter();
+  const { id } = router.query;
   if (!id || typeof id !== 'string') {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -25,8 +23,7 @@ export default function ServiceDetailPage() {
     )
   }
 
-  const service = getServiceById(id),
-
+  const service = getServiceById(id);
   if (!service) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">

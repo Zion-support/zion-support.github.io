@@ -5,7 +5,7 @@ export default function YouTubeRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //youtube.com/@ziontechgroup')
 		}
-	}, []),
+	}, []);
 	return (
 		<>
 			<Head>

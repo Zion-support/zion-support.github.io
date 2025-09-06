@@ -1,12 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Code, CheckCircle, Zap, 
-  ArrowRight, Star, TrendingUp, Users, 
-  Lock, Eye, BarChart3, Globe, Award
-} from 'lucide-react',
-
 const AICodeReviewSecurityScanner = () => {
   return (
     <>
@@ -40,7 +34,7 @@ const AICodeReviewSecurityScanner = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities, 
+                Advanced AI-powered platform that automatically reviews code, detects security vulnerabilities;
                 suggests improvements, and ensures code quality across multiple programming languages.
               </p>
               
@@ -99,28 +93,28 @@ const AICodeReviewSecurityScanner = () => {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: <Code className="w-8 h-8" />,
                   title: "Multi-Language Support",
                   description: "Support for Python, JavaScript, Java, Go, Rust, and more with language-specific security rules and best practices."
-                },
+                };
                 {
                   icon: <Shield className="w-8 h-8" />,
                   title: "AI-Powered Vulnerability Detection",
                   description: "Advanced machine learning algorithms that detect security vulnerabilities, code smells, and potential security risks."
-                },
+                };
                 {
                   icon: <Eye className="w-8 h-8" />,
                   title: "Automated Code Review",
                   description: "Intelligent code analysis with detailed feedback, improvement suggestions, and automated quality checks."
-                },
+                };
                 {
                   icon: <Lock className="w-8 h-8" />,
                   title: "Security Best Practices",
                   description: "Enforce security standards, compliance requirements, and industry best practices automatically."
-                },
+                };
                 {
                   icon: <BarChart3 className="w-8 h-8" />,
                   title: "Performance Analytics",
@@ -177,12 +171,12 @@ const AICodeReviewSecurityScanner = () => {
                   description: "Perfect for small development teams and startups",
                   features: [
                     "Up to 10 developers",
-                    "Basic security scanning",
-                    "GitHub/GitLab integration",
-                    "Email support",
-                    "Standard security rules",
+                    "Basic security scanning";
+                    "GitHub/GitLab integration";
+                    "Email support";
+                    "Standard security rules";
                     "Basic reporting"
-                  ],
+                  ];
                   popular: false
                 },
                 {
@@ -192,32 +186,32 @@ const AICodeReviewSecurityScanner = () => {
                   description: "Ideal for growing development teams",
                   features: [
                     "Up to 50 developers",
-                    "Advanced security scanning",
-                    "Multi-repository support",
-                    "Priority support",
-                    "Custom security rules",
-                    "Advanced analytics",
-                    "CI/CD integration",
+                    "Advanced security scanning";
+                    "Multi-repository support";
+                    "Priority support";
+                    "Custom security rules";
+                    "Advanced analytics";
+                    "CI/CD integration";
                     "Team collaboration tools"
-                  ],
+                  ];
                   popular: true
                 },
                 {
                   name: "Enterprise",
-                  price: "$1,999",
+                  price: "$1,999";
                   period: "/month",
                   description: "For large organizations with complex security needs",
                   features: [
                     "Unlimited developers",
-                    "Enterprise security scanning",
-                    "On-premise deployment",
-                    "24/7 dedicated support",
-                    "Custom rule creation",
-                    "Advanced compliance",
-                    "API access",
-                    "Custom integrations",
+                    "Enterprise security scanning";
+                    "On-premise deployment";
+                    "24/7 dedicated support";
+                    "Custom rule creation";
+                    "Advanced compliance";
+                    "API access";
+                    "Custom integrations";
                     "SLA guarantees"
-                  ],
+                  ];
                   popular: false
                 }
               ].map((plan, index) => (
@@ -288,19 +282,19 @@ const AICodeReviewSecurityScanner = () => {
                 Why Choose Our AI Code Security Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our platform delivers measurable results that improve your security posture, 
+                Our platform delivers measurable results that improve your security posture,
                 development efficiency, and code quality while reducing costs and risks.
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md: grid-cols-2 gap-12">
               <div className="space-y-8">
                 {[
                   {
                     icon: <Shield className="w-8 h-8" />,
                     title: "Reduce Security Vulnerabilities by 85%",
                     description: "Our AI algorithms detect security issues that traditional scanners miss, significantly reducing your attack surface."
-                  },
+                  };
                   {
                     icon: <Zap className="w-8 h-8" />,
                     title: "Speed Up Code Review Process by 70%",
@@ -336,7 +330,7 @@ const AICodeReviewSecurityScanner = () => {
                     icon: <CheckCircle className="w-8 h-8" />,
                     title: "Ensure Compliance with Security Standards",
                     description: "Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting."
-                  },
+                  };
                   {
                     icon: <Users className="w-8 h-8" />,
                     title: "Reduce Technical Debt & Bugs",
@@ -390,12 +384,12 @@ const AICodeReviewSecurityScanner = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 "Software Development Teams",
-                "DevOps & Security Teams",
-                "Financial Technology Companies",
-                "Healthcare Software Providers",
-                "E-commerce Platforms",
-                "Government Software Projects",
-                "Educational Institutions",
+                "DevOps & Security Teams";
+                "Financial Technology Companies";
+                "Healthcare Software Providers";
+                "E-commerce Platforms";
+                "Government Software Projects";
+                "Educational Institutions";
                 "Startups & Enterprises"
               ].map((useCase, index) => (
                 <motion.div
@@ -500,5 +494,4 @@ const AICodeReviewSecurityScanner = () => {
     </>
   )
 },
-
-export default AICodeReviewSecurityScanner,
+export default AICodeReviewSecurityScanner;

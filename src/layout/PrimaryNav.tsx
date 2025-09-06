@@ -21,19 +21,18 @@ import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
-  const [loginOpen, setLoginOpen] = useState(false),
-  const { user } = useAuth(),
-  const isLoggedIn = !!user,
-  const isMobile = useIsMobile(),
-  const { t } = useTranslation(),
-  const router = useRouter(),
-  const [query, setQuery] = useState(''),
-  const suggestions = generateSearchSuggestions(),
-
-  let unreadCount = 0,
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
+  const isMobile = useIsMobile();
+  const { t } = useTranslation();
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const suggestions = generateSearchSuggestions();
+  let unreadCount = 0;
   try {
-    const messaging = useMessaging(),
+    const messaging = useMessaging();
     unreadCount = messaging.unreadCount
   } catch {
     // context not available
@@ -41,7 +40,7 @@ export function PrimaryNav() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
-    const trimmed = query.trim(),
+    const trimmed = query.trim();
     if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed }),
       router
@@ -50,7 +49,6 @@ export function PrimaryNav() {
         .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
     }
   },
-
   return (
     <>
       <header
@@ -91,7 +89,6 @@ export function PrimaryNav() {
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
                   setQuery(''),
-                  
                   // Track analytics event
                   if (typeof window !== 'undefined' && window.gtag) {
                     window.gtag('eventsearch_suggestion_click', {
@@ -134,7 +131,7 @@ export function PrimaryNav() {
                   </Link>
                   <Link
                     href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>

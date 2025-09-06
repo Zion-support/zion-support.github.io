@@ -17,5 +17,4 @@ const DevopsAutomationChat: NextPage = () => {
     </div>
   )
 },
-
-export default DevopsAutomationChat,
+export default DevopsAutomationChat;

@@ -1,15 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity,
-  AlertTriangle, 
-  CheckCircle,
-  X,
-  RefreshCw,
-  BarChart3,
-  Gauge
-} from 'lucide-react',
-
 interface PerformanceMetrics {
   fcp: number,
   lcp: number,
@@ -41,15 +31,13 @@ interface PerformanceRecommendation {
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false),
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
-  const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]),
-  const [isMonitoring, setIsMonitoring] = useState(false),
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null),
-
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [recommendations, setRecommendations] = useState<PerformanceRecommendation[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   const generateRecommendations = useCallback((metrics: PerformanceMetrics): PerformanceRecommendation[] => {
     const recs: PerformanceRecommendation[] = [],
-
     // FCP recommendations
     if (metrics.fcp > 2000) {
       recs.push({
@@ -58,7 +46,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'FCP is above the recommended 2-second threshold',
         priority: 'high',
         impact: 'High impact on user perception of site speed',
-        solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources',
+        solution: 'Optimize critical rendering path, reduce server response time, eliminate render-blocking resources';
         category: 'performance'
       })
     }
@@ -71,7 +59,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'LCP is above the recommended 2.5-second threshold',
         priority: 'high',
         impact: 'High impact on user experience and Core Web Vitals',
-        solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time',
+        solution: 'Optimize images, implement lazy loading, use CDN, optimize server response time';
         category: 'performance'
       })
     }
@@ -84,7 +72,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'CLS is above the recommended 0.1 threshold',
         priority: 'medium',
         impact: 'Medium impact on user experience and visual stability',
-        solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content',
+        solution: 'Set explicit dimensions for images and videos, avoid inserting content above existing content';
         category: 'user-experience'
       })
     }
@@ -97,7 +85,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         description: 'JavaScript heap usage is above 50MB',
         priority: 'medium',
         impact: 'Medium impact on long-term performance and stability',
-        solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo',
+        solution: 'Implement memory cleanup, optimize component lifecycle, use React.memo and useMemo';
         category: 'performance'
       })
     }
@@ -107,21 +95,19 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       recs.push({
         id: 'network-optimization',
         title: 'Network Performance Optimization',
-        description: 'Network connection is slow, affecting user experience',
+        description: 'Network connection is slow, affecting user experience';
         priority: 'high',
         impact: 'High impact on all performance metrics',
-        solution: 'Implement service workers, optimize bundle size, use progressive loading',
+        solution: 'Implement service workers, optimize bundle size, use progressive loading';
         category: 'performance'
       })
     }
 
     return recs
-  }, []),
-
+  }, []);
   const measurePerformance = useCallback(async () => {
     try {
-      setIsMonitoring(true),
-      
+      setIsMonitoring(true);
       // Wait for page to be fully loaded
       if (document.readyState !== 'complete') {
         await new Promise(resolve => {
@@ -130,31 +116,27 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       }
 
       // Wait a bit more for any async operations
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paint = performance.getEntriesByType('paint'),
-      
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const lcp = await new Promise<number>((resolve) => {
         if ('PerformanceObserver' in window) {
           const observer = new PerformanceObserver((list) => {
-            const entries = list.getEntries(),
-            const lastEntry = entries[entries.length - 1],
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
             resolve(lastEntry.startTime)
-          }),
+          });
           observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-          
           // Fallback timeout
           setTimeout(() => resolve(0), 5000)
         } else {
           resolve(0)
         }
-      }),
-
+      });
       const metrics: PerformanceMetrics = {
         fcp,
-        lcp,
+        lcp;
         fid: 0, // Would need user interaction to measure
         cls: 0, // Would need PerformanceObserver for CLS
         ttfb: navigation.responseStart - navigation.requestStart,
@@ -163,40 +145,33 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         memoryUsage: 'memory' in performance ? (performance as any).memory : undefined,
         networkInfo: 'connection' in navigator ? (navigator as any).connection : undefined
       },
-
-      setMetrics(metrics),
-      setRecommendations(generateRecommendations(metrics)),
+      setMetrics(metrics);
+      setRecommendations(generateRecommendations(metrics));
       setLastUpdate(new Date())
     } catch {
       // Performance measurement failed
     } finally {
       setIsMonitoring(false)
     }
-  }, [generateRecommendations]),
-
+  }, [generateRecommendations]);
   const getPerformanceScore = (metrics: PerformanceMetrics): number => {
     let score = 100,
-    
-    if (metrics.fcp > 2000) score -= 20,
-    if (metrics.lcp > 2500) score -= 25,
-    if (metrics.cls > 0.1) score -= 15,
-    if (metrics.ttfb > 600) score -= 20,
-    
+    if (metrics.fcp > 2000) score -= 20;
+    if (metrics.lcp > 2500) score -= 25;
+    if (metrics.cls > 0.1) score -= 15;
+    if (metrics.ttfb > 600) score -= 20;
     return Math.max(0, score)
-  },
-
+  };
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400',
-    if (score >= 70) return 'text-yellow-400',
+    if (score >= 70) return 'text-yellow-400';
     return 'text-red-400'
-  },
-
+  };
   const getOverallScoreBg = (score: number) => {
     if (score >= 90) return 'bg-green-500/20',
-    if (score >= 70) return 'bg-yellow-500/20',
+    if (score >= 70) return 'bg-yellow-500/20';
     return 'bg-red-500/20'
-  },
-
+  };
   if (!performanceData) {
     return (
       <div className={`p-4 bg-gray-900 rounded-lg border border-gray-700 ${className}`}>
@@ -410,5 +385,4 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     </>
   )
 },
-
-export default EnhancedPerformanceMonitor,
+export default EnhancedPerformanceMonitor;

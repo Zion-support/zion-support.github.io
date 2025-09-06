@@ -35,7 +35,6 @@ export function QuickActions() {
       color: "bg-amber-100 dark:bg-amber-900/20"
     }
   ],
-
   return (
     <Card>
       <CardHeader>

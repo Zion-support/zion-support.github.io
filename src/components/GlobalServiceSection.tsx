@@ -13,7 +13,7 @@ const services = [
     icon: <HardDrive className="h-10 w-10" />},
   {
     title: "Networking",
-    description: "Connectivity solutions including switches, routers, and network security devices",
+    description: "Connectivity solutions including switches, routers, and network security devices";
     icon: <Network className="h-10 w-10" />},
   {
     title: "24x7x365 Support",
@@ -27,7 +27,6 @@ const services = [
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
-
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">

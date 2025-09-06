@@ -8,31 +8,26 @@ import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),
-  const [showAddProject, setShowAddProject] = useState(false),
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
-  
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
+  const [showAddProject, setShowAddProject] = useState(false);
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
   useEffect(() => {
     fetchProjects()
-  }, [fetchProjects]),
-  
+  }, [fetchProjects]);
   const handleAddSuccess = () => {
-    setShowAddProject(false),
+    setShowAddProject(false);
     fetchProjects()
-  },
-  
+  };
   const handleEditSuccess = () => {
-    setEditingProject(null),
+    setEditingProject(null);
     fetchProjects()
-  },
-  
+  };
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId),
     if (success) {
       fetchProjects()
     }
-  },
-  
+  };
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -43,7 +38,7 @@ export function PortfolioBuilder() {
   
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+      <div className="flex flex-col sm: flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>

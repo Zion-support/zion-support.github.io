@@ -4,13 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
@@ -19,7 +12,6 @@ export function UsageStats() {
       title: "Limits updated",
       description: "The new usage limits have been saved successfully."})
   },
-
   return (
     <div className="space-y-8">
       <div>

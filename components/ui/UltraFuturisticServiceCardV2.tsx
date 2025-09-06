@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
-
 interface ServiceCardProps {
   service: {
     id: string,
@@ -16,7 +15,7 @@ interface ServiceCardProps {
       trialDays: number,
       setupTime: string,
       enterprise?: number
-    },
+    };
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -38,9 +37,9 @@ interface ServiceCardProps {
     customers: number,
     rating: number,
     reviews: number,
-    marketSize?: string,
+    marketSize?: string;
     growthRate?: string
-  },
+  };
   index: number
 }
 
@@ -50,25 +49,22 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
       case 'ai & consciousness':
         return <Zap className="w-5 h-5" />,
       case 'quantum & emerging tech':
-        return <Rocket className="w-5 h-5" />,
+        return <Rocket className="w-5 h-5" />;
       case 'enterprise it':
-        return <Shield className="w-5 h-5" />,
+        return <Shield className="w-5 h-5" />;
       case 'space & metaverse':
-        return <Globe className="w-5 h-5" />,
+        return <Globe className="w-5 h-5" />;
       case 'micro saas':
-        return <TrendingUp className="w-5 h-5" />,
-      default:
-        return <Zap className="w-5 h-5" />
+        return <TrendingUp className="w-5 h-5" />;
+      default: return <Zap className="w-5 h-5" />
     }
   },
-
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
       return color
     }
     return 'from-cyan-500 to-blue-500'
   },
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -267,5 +263,4 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ service, ind
     </motion.div>
   )
 },
-
-export default UltraFuturisticServiceCardV2,
+export default UltraFuturisticServiceCardV2;

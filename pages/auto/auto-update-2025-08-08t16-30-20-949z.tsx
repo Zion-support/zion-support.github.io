@@ -15,5 +15,4 @@ const AutoUpdate20250808t163020949z: NextPage = () => {
     </div>
   )
 },
-
-export default AutoUpdate20250808t163020949z,
+export default AutoUpdate20250808t163020949z;

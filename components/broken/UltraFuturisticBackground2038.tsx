@@ -1,41 +1,35 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
-  intensity?: 'low' | 'medium' | 'high',
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness',
+  intensity?: 'low' | 'medium' | 'high';
+  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
   children?: React.ReactNode
 }
 
 export default function UltraFuturisticBackground2038({ 
-  intensity = 'medium',
-  theme = 'consciousness',
+  intensity = 'medium';
+  theme = 'consciousness';
   children
 }: UltraFuturisticBackground2038Props) {
-  const canvasRef = useRef<HTMLCanvasElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const canvas = canvasRef.current,
-    if (!canvas) return,
-
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2,
-
-    const ctx = canvas.getContext('2d'),
-    if (!ctx) return,
-
+    const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 2;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     const resizeCanvas = () => {
-      const rect = containerRef.current?.getBoundingClientRect(),
+      const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
-        canvas.width = rect.width * (window.devicePixelRatio || 1),
-        canvas.height = rect.height * (window.devicePixelRatio || 1),
+        canvas.width = rect.width * (window.devicePixelRatio || 1);
+        canvas.height = rect.height * (window.devicePixelRatio || 1);
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
       }
-    },
-
-    resizeCanvas(),
-    window.addEventListener('resize', resizeCanvas),
-
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
     // Enhanced theme-based color schemes for 2038
     const getThemeColors = () => {
       switch (theme) {
@@ -83,9 +77,7 @@ export default function UltraFuturisticBackground2038({
           }
       }
     },
-
-    const colors = getThemeColors(),
-
+    const colors = getThemeColors();
     // Enhanced particle system with consciousness and quantum effects
     let particles: Array<{
       x: number,
@@ -107,17 +99,14 @@ export default function UltraFuturisticBackground2038({
       consciousness: number,
       quantumState: number
     }> = [],
-
     // Initialize particles with enhanced consciousness and quantum effects
     const initParticles = () => {
-      particles = [],
-      const particleCount = Math.floor(50 * intensityMultiplier),
-      
+      particles = [];
+      const particleCount = Math.floor(50 * intensityMultiplier);
       for (let i = 0, i < particleCount, i++) {
         const type = Math.random() > 0.7 ? 'consciousness' : 
                     Math.random() > 0.5 ? 'quantum-field' : 
-                    Math.random() > 0.3 ? 'hologram' : 'particle',
-        
+                    Math.random() > 0.3 ? 'hologram' : 'particle';
         particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
@@ -126,7 +115,7 @@ export default function UltraFuturisticBackground2038({
           size: Math.random() * 4 + 1,
           opacity: Math.random() * 0.8 + 0.2,
           color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
-          type,
+          type;
           life: Math.random() * 100,
           maxLife: 100,
           rotation: Math.random() * Math.PI * 2,
@@ -134,28 +123,25 @@ export default function UltraFuturisticBackground2038({
           phase: Math.random() * Math.PI * 2,
           amplitude: Math.random() * 20 + 10,
           frequency: Math.random() * 0.02 + 0.01,
-          entanglement: [Math.random(), Math.random()],
+          entanglement: [Math.random(), Math.random()];
           consciousness: Math.random(),
           quantumState: Math.random()
         })
       }
     },
-
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
-      if (prefersReducedMotion) return,
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height),
-      
+      if (prefersReducedMotion) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Create quantum field effects
       if (theme === 'consciousness' || theme === 'quantum') {
-        const time = Date.now() * 0.001,
+        const time = Date.now() * 0.001;
         for (let x = 0, x < canvas.width, x += 20) {
           for (let y = 0, y < canvas.height, y += 20) {
-            const noise = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time) * 0.5,
-            const alpha = (noise + 0.5) * 0.1,
+            const noise = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time) * 0.5;
+            const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
-              ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`,
+              ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
             }
           }
@@ -165,14 +151,13 @@ export default function UltraFuturisticBackground2038({
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update particle properties
-        particle.x += particle.vx,
-        particle.y += particle.vy,
-        particle.rotation += particle.rotationSpeed,
-        particle.life--,
-        particle.phase += particle.frequency,
-        particle.consciousness += 0.01,
-        particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2),
-
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+        particle.rotation += particle.rotationSpeed;
+        particle.life--;
+        particle.phase += particle.frequency;
+        particle.consciousness += 0.01;
+        particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
         // Quantum entanglement effects
         if (particle.type === 'quantum-field') {
           particles.forEach((otherParticle, otherIndex) => {
@@ -180,13 +165,13 @@ export default function UltraFuturisticBackground2038({
               const distance = Math.sqrt(
                 Math.pow(particle.x - otherParticle.x, 2) + 
                 Math.pow(particle.y - otherParticle.y, 2)
-              ),
+              );
               if (distance < 100) {
-                ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`,
-                ctx.lineWidth = 1,
-                ctx.beginPath(),
-                ctx.moveTo(particle.x, particle.y),
-                ctx.lineTo(otherParticle.x, otherParticle.y),
+                ctx.strokeStyle = `rgba(139, 92, 246, ${0.3 * (1 - distance / 100)})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(otherParticle.x, otherParticle.y);
                 ctx.stroke()
               }
             }
@@ -195,54 +180,52 @@ export default function UltraFuturisticBackground2038({
 
         // Consciousness wave effects
         if (particle.type === 'consciousness') {
-          const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude,
-          const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude,
-          
-          ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`,
-          ctx.lineWidth = 2,
-          ctx.beginPath(),
-          ctx.moveTo(particle.x, particle.y),
-          ctx.lineTo(waveX, waveY),
+          const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
+          const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
+          ctx.strokeStyle = `rgba(255, 0, 128, ${particle.opacity * 0.6})`;
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.moveTo(particle.x, particle.y);
+          ctx.lineTo(waveX, waveY);
           ctx.stroke()
         }
 
         // Holographic effects
         if (particle.type === 'hologram') {
-          const hologramSize = particle.size * (1 + Math.sin(particle.phase) * 0.3),
-          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`,
-          ctx.lineWidth = 1,
+          const hologramSize = particle.size * (1 + Math.sin(particle.phase) * 0.3);
+          ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
+          ctx.lineWidth = 1;
           ctx.strokeRect(
-            particle.x - hologramSize / 2, 
-            particle.y - hologramSize / 2, 
-            hologramSize, 
+            particle.x - hologramSize / 2;
+            particle.y - hologramSize / 2;
+            hologramSize;
             hologramSize
           )
         }
 
         // Quantum field effects
         if (particle.type === 'quantum-field') {
-          const fieldSize = particle.size * 3,
+          const fieldSize = particle.size * 3;
           const gradient = ctx.createRadialGradient(
-            particle.x, particle.y, 0,
+            particle.x, particle.y, 0;
             particle.x, particle.y, fieldSize
-          ),
-          gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity * 0.8})`),
-          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)'),
-          
-          ctx.fillStyle = gradient,
+          );
+          gradient.addColorStop(0, `rgba(139, 92, 246, ${particle.opacity * 0.8})`);
+          gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
+          ctx.fillStyle = gradient;
           ctx.fillRect(
-            particle.x - fieldSize / 2, 
-            particle.y - fieldSize / 2, 
-            fieldSize, 
+            particle.x - fieldSize / 2;
+            particle.y - fieldSize / 2;
+            fieldSize;
             fieldSize
           )
         }
 
         // Standard particle rendering
         if (particle.type === 'particle') {
-          ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`,
-          ctx.beginPath(),
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
+          ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
+          ctx.beginPath();
+          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
         }
 
@@ -250,35 +233,31 @@ export default function UltraFuturisticBackground2038({
         if (particle.x < 0 || particle.x > canvas.width || 
             particle.y < 0 || particle.y > canvas.height) {
           if (Math.random() > 0.8) { // Quantum tunneling
-            particle.x = Math.random() * canvas.width,
+            particle.x = Math.random() * canvas.width;
             particle.y = Math.random() * canvas.height
           } else {
-            particle.x = (particle.x + canvas.width) % canvas.width,
+            particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
           }
         }
 
         // Regenerate particles
         if (particle.life <= 0) {
-          particle.x = Math.random() * canvas.width,
-          particle.y = Math.random() * canvas.height,
-          particle.life = particle.maxLife,
-          particle.consciousness = Math.random(),
+          particle.x = Math.random() * canvas.width;
+          particle.y = Math.random() * canvas.height;
+          particle.life = particle.maxLife;
+          particle.consciousness = Math.random();
           particle.quantumState = Math.random() * Math.PI * 2
         }
-      }),
-
+      });
       requestAnimationFrame(animate)
-    },
-
-    initParticles(),
-    animate(),
-
+    };
+    initParticles();
+    animate();
     return () => {
       window.removeEventListener('resize', resizeCanvas)
     }
-  }, [intensity, theme]),
-
+  }, [intensity, theme]);
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none">
       <canvas
@@ -305,7 +284,7 @@ export default function UltraFuturisticBackground2038({
                   left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`}}
                 animate={{
-                  height: [32, 64, 32],
+                  height: [32, 64, 32];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 3 + i * 0.2,
@@ -349,7 +328,7 @@ export default function UltraFuturisticBackground2038({
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`}}
                 animate={{
-                  scale: [1, 1.5, 1],
+                  scale: [1, 1.5, 1];
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 6 + i * 0.5,

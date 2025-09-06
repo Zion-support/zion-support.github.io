@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
-
   if (req.method === "GET") {
     return res.status(200).json({
       route: "/multiverse/hub",

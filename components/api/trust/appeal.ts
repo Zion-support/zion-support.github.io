@@ -7,15 +7,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { userId, message, contactEmail } = req.body || {},
+  const { userId, message, contactEmail } = req.body || {};
   if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' }),
-
   const appeal: TrustAppeal = {
     userId,
-    message,
-    contactEmail,
+    message;
+    contactEmail;
     createdAt: new Date().toISOString()},
-
   try {
     await supabase.from('trust_appeals').insert(appeal)
   } catch {}

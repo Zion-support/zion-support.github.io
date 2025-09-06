@@ -27,71 +27,66 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
-
 const ServicesPage: NextPage = () => {
-  const [services, setServices] = React.useState<ServiceItem[]>([]),
-  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]),
+  const [services, setServices] = React.useState<ServiceItem[]>([]);
+  const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
   const [filters, setFilters] = React.useState<Filters>({ categories: [] }),
-  const [modalOpen, setModalOpen] = React.useState(false),
-  const [selected, setSelected] = React.useState<ServiceItem | null>(null),
-
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selected, setSelected] = React.useState<ServiceItem | null>(null);
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
-      extraServices as any[],
-      additionalEnhancedServices as any[],
-      newlyAddedServices as any[],
-      curatedMarketServices as any[],
-      realMarketServices as any[],
-      new2025Services as any[],
-      marketValidatedServices as any[],
-      moreRealServices2025 as any[],
-      realOperationalServices as any[],
-      verified2025Additions as any[],
-      realServicesQ12025 as any[],
+      extraServices as any[];
+      additionalEnhancedServices as any[];
+      newlyAddedServices as any[];
+      curatedMarketServices as any[];
+      realMarketServices as any[];
+      new2025Services as any[];
+      marketValidatedServices as any[];
+      moreRealServices2025 as any[];
+      realOperationalServices as any[];
+      verified2025Additions as any[];
+      realServicesQ12025 as any[];
       newVerifiedServicesQ22025 as any[]
-    ),
-  const byCategory: Record<string, unknown[]> = {},
-  for (const c of categories) byCategory[c] = [],
+    );
+  const byCategory: Record<string, unknown[]> = {};
+  for (const c of categories) byCategory[c] = [];
   // Normalize various category labels into our main buckets
   const categoryAliases: Record<string, string> = {
     'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'
-  },
+  };
   for (const s of all) {
-    const service = s as { category?: string },
-    const rawCat = (service.category || '').trim(),
-    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
+    const service = s as { category?: string };
+    const rawCat = (service.category || '').trim();
+    const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools');
     byCategory[mapped].push(s)
   }
 
   React.useEffect(() => {
     const next = services.filter((s) => {
       // Category
-      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false,
+      if (filters.categories.length > 0 && !s.categories.some((c) => filters.categories.includes(c))) return false;
       // Price
-      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0],
-      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD,
-      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false,
-      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false,
+      const min = s.priceFromUSD ?? s.priceRangeUSD?.[0];
+      const max = s.priceRangeUSD?.[1] ?? s.priceFromUSD;
+      if (filters.priceMin !== undefined && (min === undefined || max === undefined ? true : max < filters.priceMin)) return false;
+      if (filters.priceMax !== undefined && (min === undefined ? true : min > filters.priceMax)) return false;
       // Rating
-      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false,
+      if (filters.ratingMin !== undefined && (s.rating ?? 0) < filters.ratingMin) return false;
       // Delivery time (not available in data, simulate pass-through)
       return true
-    }),
+    });
     setFiltered(next)
-  }, [filters, services]),
-
+  }, [filters, services]);
   const availableCategories = React.useMemo(() => {
-    const set = new Set<string>(),
-    services.forEach((s) => s.categories.forEach((c) => set.add(c))),
+    const set = new Set<string>();
+    services.forEach((s) => s.categories.forEach((c) => set.add(c)));
     return Array.from(set)
-  }, [services]),
-
+  }, [services]);
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service),
     setModalOpen(true)
-  },
-
+  };
   const handleSubmit = async (values: QuoteFormValues) => {
     const res = await fetch('/api/quote-request', {
       method: 'POST',
@@ -103,11 +98,10 @@ export default function ServicesIndexPage() {
         budgetRange: values.budgetRange,
         email: values.email})}),
     if (!res.ok) {
-      const err = await res.json().catch(() => ({})),
+      const err = await res.json().catch(() => ({}));
       throw new Error(err?.message || 'Failed to submit')
     }
-  },
-
+  };
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
       <Head>
@@ -116,7 +110,7 @@ export default function ServicesIndexPage() {
       </Head>
       <div className="relative">
         <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
+        <div className="flex flex-col sm: flex-row gap-6">
           <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
           <div className="flex-1">
             <div className="mb-4 flex items-center justify-between">
@@ -141,5 +135,4 @@ export default function ServicesIndexPage() {
     </div>
   )
 },
-
-export default ServicesPage,
+export default ServicesPage;

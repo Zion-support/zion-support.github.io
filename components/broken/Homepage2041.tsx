@@ -1,53 +1,28 @@
 import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
-import { 
-  ArrowRight,
-  Star, 
-  Search,
-  Shield,
-  Globe,
-  TrendingUp,
-  Brain,
-  Atom,
-  Zap,
-  Cpu,
-  Cloud,
-  BarChart3,
-  Lock,
-  Rocket,
-  Eye,
-  Sparkles,
-  Target,
-  Users,
-  Award,
-  Clock
-} from 'lucide-react',
 import Link from 'next/link';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-saas-services';
 import { innovative2041ITServices } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 const Homepage2041: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-
+  const [searchQuery, setSearchQuery] = useState('');
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`
     }
-  },
-
+  };
   const featuredServices = [
-    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3),
-    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2),
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
+    ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
-  ],
-
+  ];
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
-      role: "Chief AI Officer, FutureTech Inc.",
+      role: "Chief AI Officer, FutureTech Inc.";
       company: "FutureTech Inc.",
       content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
       rating: 5,
@@ -55,7 +30,7 @@ const Homepage2041: React.FC = () => {
     },
     {
       name: "Marcus Rodriguez",
-      role: "VP Quantum Computing, QuantumCorp",
+      role: "VP Quantum Computing, QuantumCorp";
       company: "QuantumCorp",
       content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. We're now leading the industry in pharmaceutical innovation.",
       rating: 5,
@@ -63,21 +38,19 @@ const Homepage2041: React.FC = () => {
     },
     {
       name: "Dr. Emily Watson",
-      role: "Research Director, SpaceLabs",
+      role: "Research Director, SpaceLabs";
       company: "SpaceLabs",
       content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
       rating: 5,
       avatar: "👩‍🔬"
     }
   ],
-
   const stats = [
     { number: "500+", label: "Revolutionary Services", icon: Rocket },
     { number: "50+", label: "Quantum Solutions", icon: Atom },
     { number: "1000x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
   ],
-
   return (
     <Layout>
       {/* Main Content */}
@@ -100,9 +73,9 @@ const Homepage2041: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-                    x: [0, 60, 0],
-                    y: [0, -60, 0],
-                    opacity: [0, 0.7, 0],
+                    x: [0, 60, 0];
+                    y: [0, -60, 0];
+                    opacity: [0, 0.7, 0];
                     scale: [0.5, 1, 0.5]}}
                   transition={{
                     duration: 5 + i * 0.3,
@@ -372,5 +345,4 @@ const Homepage2041: React.FC = () => {
     </Layout>
   )
 },
-
-export default Homepage2041,
+export default Homepage2041;

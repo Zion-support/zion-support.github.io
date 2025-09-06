@@ -13,23 +13,21 @@ interface ChatMessageProps {
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
-  isUser,
+  isUser;
   timestamp}: ChatMessageProps) => {
-  const { theme } = useTheme(),
-  
+  const { theme } = useTheme();
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
   const sanitizedHtml = useMemo<{ __html: string}>(
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
-  ),
-
+  );
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
       <Avatar className="h-8 w-8">
         {isUser ? (
           <>
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarImage src="https: //i.pravatar.cc/40?img=1" alt="User avatar" />
             <AvatarFallback>U</AvatarFallback>
           </>
         ) : (
@@ -53,20 +51,19 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       )}>
         <div dangerouslySetInnerHTML={sanitizedHtml} />
         <div className={cn(
-          "text-xs mt-1",
+          "text-xs mt-1";
           isUser 
             ? "text-white/70" 
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
         )}>
-          {format(timestamp, "h:mm a")}
+          {format(timestamp, "h: mm a")}
         </div>
       </div>
     </div>
   )
 },
-
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -83,21 +80,18 @@ function escapeHtml(unsafe: string): string {
 function formatMessageWithLinks(message: string): string {
   // First, escape any HTML so that user input cannot break out of the intended
   // markup.
-  const safeText = escapeHtml(message),
-
+  const safeText = escapeHtml(message);
   // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g,
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
   let formattedMessage = safeText.replace(
-    urlRegex,
+    urlRegex;
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-
   // Replace help-center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g,
+  const helpCenterRegex = /\[([^\]]+)\]/g;
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
+    helpCenterRegex;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
-
   return formattedMessage
 }

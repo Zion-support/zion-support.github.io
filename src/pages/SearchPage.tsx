@@ -4,12 +4,6 @@ import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -21,9 +15,9 @@ interface SearchResult {
 
 function highlight(text: string, term: string) {
   if (!term) return text,
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-  const regex = new RegExp(`(${escaped})`, "gi"),
-  const parts = text.split(regex),
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
+  const parts = text.split(regex);
   return (
     <>
       {parts.map((part, i) =>
@@ -41,30 +35,26 @@ function highlight(text: string, term: string) {
 
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
-  const [query, setQuery] = useState(""),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
-    setResults([]),
+    setResults([]);
     setLoading(false)
-  }),
-
+  });
   const productResults = results.filter(
     r => r.type === 'product' || r.type === 'service'
-  ),
-  const talentResults = results.filter(r => r.type === 'talent'),
-  const docResults = results.filter(r => r.type === 'doc'),
-  const blogResults = results.filter(r => r.type === 'blog'),
+  );
+  const talentResults = results.filter(r => r.type === 'talent');
+  const docResults = results.filter(r => r.type === 'doc');
+  const blogResults = results.filter(r => r.type === 'blog');
   const marketplaceResults = [...productResults, ...talentResults],
-
   // Sync query with URL parameter changes
   useEffect(() => {
-    if (!router.isReady) return,
-    
-    const urlQuery = (router.query.q as string) || "",
+    if (!router.isReady) return;
+    const urlQuery = (router.query.q as string) || "";
     if (urlQuery !== query) {
       setQuery(urlQuery)
     }
@@ -72,8 +62,7 @@ export default function SearchPage() {
 
   // Fetch results when query changes
   useEffect(() => {
-    if (!router.isReady) return,
-    
+    if (!router.isReady) return;
     if (query.trim()) {
       fetchResults(query.trim())
     } else {
@@ -87,14 +76,14 @@ export default function SearchPage() {
       return
     }
 
-    setLoading(true),
+    setLoading(true);
     try {
-      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`),
-      const data = await res.json(),
+      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`);
+      const data = await res.json();
       if (data && data.results && Array.isArray(data.results)) {
         setResults(data.results)
       } else {
-        setResults([]),
+        setResults([]);
         logErrorToProduction('Search API response structure is not as expected:', { data: data })
       }
     } catch (error) {
@@ -103,18 +92,15 @@ export default function SearchPage() {
     } finally {
       setLoading(false)
     }
-  },
-
+  };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
-  },
-
+  };
   // Add key prop to force re-render when route changes
-  const pageKey = `search-${routeKey}-${router.asPath}`,
-
+  const pageKey = `search-${routeKey}-${router.asPath}`;
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -123,8 +109,8 @@ export default function SearchPage() {
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim(),
-              setQuery(searchTerm),
+              const searchTerm = suggestion.text.trim();
+              setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
             searchSuggestions={suggestions}

@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
-
-
 export default function CloudPlatformPage() {
   const features = [
     {
@@ -26,11 +24,9 @@ export default function CloudPlatformPage() {
       description: 'SOC 2 compliant with advanced threat protection'
     }
   ],
-
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
-  ],
-
+  ];
   return (
     <>
       <Head>

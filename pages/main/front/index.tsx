@@ -74,15 +74,15 @@ export default function FrontLanding() {
               className="mt-8 flex flex-wrap justify-center gap-3"
             >
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
-              <a href="https://github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Live Meta Factory</a>
+              <a href="https: //github.com/Zion-Holdings/zion.app/actions/workflows/autonomous-meta.yml" target="_blank" rel="noopener noreferrer" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10">Live Meta Factory</a>
             </motion.div>
 
             {/* Quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 ['24/7Autonomous'],
-                ['MainDirect Sync'],
-                ['0 OpsCloud‑Native'],
+                ['MainDirect Sync'];
+                ['0 OpsCloud‑Native'];
                 ['SafetyGuardrails']].map(([k, v]) => (
                 <motion.div
                   key={k}
@@ -105,10 +105,10 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
+              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' };
               { title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
-              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
+              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' };
               { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
               { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }].map((f) => (
               <motion.article
@@ -132,8 +132,8 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
+              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' };
+              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
               { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
               <motion.article
                 key={c.title}

@@ -15,9 +15,7 @@ export default function UltraFuturistic2029InnovationsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
-
   return (
     <>
       <Head>
@@ -130,7 +128,7 @@ export default function UltraFuturistic2029InnovationsPage() {
                 },
                 {
                   title: '🚀 Space Colonization & Mining',
-                  description: 'Automated space exploration, colonization, and resource extraction systems',
+                  description: 'Automated space exploration, colonization, and resource extraction systems';
                   icon: Rocket,
                   color: 'from-red-600 to-orange-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))

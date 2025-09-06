@@ -2,10 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
-  Phone, Mail, MapPin
-} from 'lucide-react',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
@@ -17,14 +13,12 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
   ],
-
   const serviceCategories = [
     {
       title: '🚀 AI Autonomous Ecosystem',
@@ -45,7 +39,6 @@ export default function InnovativeServicesShowcase2029() {
       services: practicalBusinessSolutionServices2029
     }
   ],
-
   return (
     <>
       <Head>
@@ -70,7 +63,7 @@ export default function InnovativeServicesShowcase2029() {
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
+                Experience the future of technology with our revolutionary AI autonomous ecosystems,
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

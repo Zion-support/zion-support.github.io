@@ -13,13 +13,13 @@ const AboutPage: React.FC = () => {
     {
       icon: Shield,
       title: "Trust & Security",
-      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
+      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.";
       color: "from-red-500 to-orange-500"
     },
     {
       icon: Users,
       title: "Human-Centric",
-      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.",
+      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.";
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -37,13 +37,12 @@ const AboutPage: React.FC = () => {
     {
       icon: Heart,
       title: "Integrity",
-      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
+      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.";
       color: "from-pink-500 to-rose-500"
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
   ArrowRight, ChevronRight, MapPin, Mail, Phone, Globe as GlobeIcon
-} from 'lucide-react',
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function AboutPage() {
@@ -53,12 +52,11 @@ export default function AboutPage() {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
   ],
-
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -70,7 +68,7 @@ export default function AboutPage() {
     {
       icon: Rocket,
       title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.';
       color: 'from-indigo-500 to-purple-500'
     },
     {
@@ -80,7 +78,6 @@ export default function AboutPage() {
       color: 'from-emerald-500 to-teal-500'
     }
   ],
-
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -89,7 +86,6 @@ export default function AboutPage() {
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
   ],
-
   const team = [
     {
       name: 'Kleber',
@@ -120,7 +116,6 @@ export default function AboutPage() {
       color: 'from-red-500 to-orange-500'
     }
   ],
-
   const milestones = [
     {
       year: '2020',
@@ -153,7 +148,6 @@ export default function AboutPage() {
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
   ],
-
 import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
@@ -212,5 +206,4 @@ export default function AboutPage() {
     </>
   )
 },
-
-export default AboutPage,
+export default AboutPage;

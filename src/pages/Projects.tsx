@@ -8,8 +8,7 @@ import Link from "next/link";
 import { Clock, Briefcase } from 'lucide-react'
 
 function ProjectsContent() {
-  const { projects, isLoading } = useProjects(),
-
+  const { projects, isLoading } = useProjects();
   return (
     <>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />

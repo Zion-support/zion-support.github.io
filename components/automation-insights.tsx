@@ -28,7 +28,6 @@ export default function AutomationInsightsPage() {
       featured: false
     }
   ],
-
   const automationTools = [
     {
       id: 'automation-framework',
@@ -52,7 +51,6 @@ export default function AutomationInsightsPage() {
       complexity: 'Beginner'
     }
   ],
-
   const successMetrics = [
     {
       metric: '227',
@@ -70,12 +68,11 @@ export default function AutomationInsightsPage() {
       label: 'Average improvement across projects'
     },
     {
-      metric: '2,960+',
+      metric: '2,960+';
       label: 'Pages Generated',
       description: 'Content created autonomously'
     }
   ],
-
   return (
     <>
       <Head>

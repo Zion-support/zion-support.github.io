@@ -1,17 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
-
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH),
+  const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true }),
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage(),
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
     id: e.id,
     title: e.title,

@@ -14,33 +14,29 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ContentGenerator() {
 
-  const { user, isLoading } = useAuth(),
-  const router = useRouter(),
-  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
-  const [customPrompt, setCustomPrompt] = useState(''),
-  const [topic, setTopic] = useState(''),
-  const [keywords, setKeywords] = useState(''),
-  const [autoPublish, setAutoPublish] = useState(false),
-  const [includeImage, setIncludeImage] = useState(true),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [previewContent, setPreviewContent] = useState<any>(null),
-  const [testEmail, setTestEmail] = useState(''),
-
+  const { user, isLoading } = useAuth();
+  const router = useRouter();
+  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog');
+  const [customPrompt, setCustomPrompt] = useState('');
+  const [topic, setTopic] = useState('');
+  const [keywords, setKeywords] = useState('');
+  const [autoPublish, setAutoPublish] = useState(false);
+  const [includeImage, setIncludeImage] = useState(true);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [previewContent, setPreviewContent] = useState<any>(null);
+  const [testEmail, setTestEmail] = useState('');
   useEffect(() => {
     if (!isLoading && !user) {
       router.push("/login?redirect=/content-generator")
     }
-  }, [user, isLoading, router]),
-
+  }, [user, isLoading, router]);
   const generateContent = async () => {
-    setIsGenerating(true),
-    setPreviewContent(null),
-    
+    setIsGenerating(true);
+    setPreviewContent(null);
     try {
-      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0),
+      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0);
       const { data, error } = await supabase.functions.invoke('generate-seo-content', {
         body: {
           contentType,
@@ -48,13 +44,11 @@ export default function ContentGenerator() {
           keywords: keywordsArray,
           // autoPublish and includeImage are not explicitly used by 'generate-seo-content'
           // but we can leave them here, the backend will ignore them if not needed.
-          autoPublish,
+          autoPublish;
           includeImage: contentType === 'blog' ? includeImage : false
         }
       }),
-      
-      if (error) throw error,
-      
+      if (error) throw error;
       setPreviewContent(data), // Expecting { generatedContent: "..." }
       toast.success(`Content for "${contentType}" generated successfully!`)
     } catch (error) {
@@ -63,16 +57,15 @@ export default function ContentGenerator() {
     } finally {
       setIsGenerating(false)
     }
-  },
-
+  };
   const sendTestNewsletter = async () => {
     if (!testEmail) {
-      toast.error("Please enter a test email address"),
+      toast.error("Please enter a test email address");
       return
     }
     
     if (!previewContent) {
-      toast.error("Generate newsletter content first"),
+      toast.error("Generate newsletter content first");
       return
     }
     
@@ -85,17 +78,14 @@ export default function ContentGenerator() {
           testMode: true,
           testEmail
         }
-      }),
-      
-      if (error) throw error,
-      
+      });
+      if (error) throw error;
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
       toast.error("Failed to send test newsletter. Please try again.")
     }
-  },
-
+  };
   // Check if user is still loading
   if (isLoading) {
     return (

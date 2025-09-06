@@ -2,36 +2,32 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
-  const router = useRouter(),
-  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>,
-  const { user, loading } = useCurrentUser(),
-  const [message, setMessage] = React.useState(''),
-  const [linkUrl, setLinkUrl] = React.useState(''),
-  const [file, setFile] = React.useState<File | null>(null),
-  const [sending, setSending] = React.useState(false),
-
+  const router = useRouter();
+  const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
+  const { user, loading } = useCurrentUser();
+  const [message, setMessage] = React.useState('');
+  const [linkUrl, setLinkUrl] = React.useState('');
+  const [file, setFile] = React.useState<File | null>(null);
+  const [sending, setSending] = React.useState(false);
   React.useEffect(() => {
     if (!loading && !user) router.replace('/auth')
-  }, [loading, user, router]),
-
-  if (!user) return null,
-
-  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message',
+  }, [loading, user, router]);
+  if (!user) return null;
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
   const context = type === 'invite'
     ? { type: 'invite', jobId, jobTitle, talentId, talentName }
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
     : { type: 'general' },
-
   const onSend = async () => {
-    if (!recipientId && !talentId) return alert('Missing recipient'),
-    if (!message.trim() && !file && !linkUrl) return,
-    setSending(true),
+    if (!recipientId && !talentId) return alert('Missing recipient');
+    if (!message.trim() && !file && !linkUrl) return;
+    setSending(true);
     let attachmentBase64: string | undefined,
     if (file) {
-      const buff = await file.arrayBuffer(),
-      const base64 = Buffer.from(buff).toString('base64'),
-      const mime = file.type || 'application/octet-stream',
+      const buff = await file.arrayBuffer();
+      const base64 = Buffer.from(buff).toString('base64');
+      const mime = file.type || 'application/octet-stream';
       attachmentBase64 = `data:${mime},base64,${base64}`
     }
     const res = await fetch('/api/messages/compose', {
@@ -41,14 +37,13 @@ export default function ComposePage() {
         recipientId: recipientId || talentId,
         body: message,
         linkUrl: linkUrl || undefined,
-        attachmentBase64,
+        attachmentBase64;
         attachmentName: file?.name,
-        context})}),
-    const data = await res.json(),
-    setSending(false),
+        context})});
+    const data = await res.json();
+    setSending(false);
     if (data?.conversation?.id) router.replace(`/messages/${data.conversation.id}`)
-  },
-
+  };
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto p-4">

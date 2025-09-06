@@ -7,14 +7,13 @@ interface ReputationDisplayProps {
 }
 
 export const ReputationDisplay = ({ 
-  reputation,
+  reputation;
   size = 'md' 
 }: ReputationDisplayProps) => {
   // Calculate next milestone
-  const currentLevel = Math.floor(reputation / 100),
-  const nextMilestone = (currentLevel + 1) * 100,
-  const progress = ((reputation % 100) / 100) * 100,
-  
+  const currentLevel = Math.floor(reputation / 100);
+  const nextMilestone = (currentLevel + 1) * 100;
+  const progress = ((reputation % 100) / 100) * 100;
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -33,7 +32,6 @@ export const ReputationDisplay = ({
       progress: "h-3"
     }
   },
-  
   return (
     <div className="space-y-1">
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
@@ -47,6 +45,5 @@ export const ReputationDisplay = ({
       </div>
     </div>
   )
-},
-
-export default ReputationDisplay,
+};
+export default ReputationDisplay;

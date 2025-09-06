@@ -10,7 +10,6 @@ import { TemplateManager } from "./templates/TemplateManager";
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -21,54 +20,48 @@ interface SmartContractBuilderProps {
 
 export function SmartContractBuilder({
   isOpen,
-  onClose,
-  talent,
-  clientName,
+  onClose;
+  talent;
+  clientName;
   onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
   }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
-  const { deploySmartContract } = useSmartContracts(),
-
+  const [deployStatus, setDeployStatus] = useState<string>('');
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+  const { deploySmartContract } = useSmartContracts();
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
   },
-
   // Convert ContractFormValues to contract content string
   
   const handleDeployContract = async () => {
-    if (!generatedContract) return,
-    
+    if (!generatedContract) return;
     try {
-      setDeployStatus('deploying'),
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),
-      
+      setDeployStatus('deploying');
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
       if (contractInfo) {
-        setDeploymentInfo(contractInfo),
-        setDeployStatus('deployed'),
+        setDeploymentInfo(contractInfo);
+        setDeployStatus('deployed');
         toast.success("Smart contract deployed successfully!")
       } else {
-        setDeployStatus('error'),
+        setDeployStatus('error');
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
       logErrorToProduction('Error deploying contract:', { data: error }),
-      setDeployStatus('error'),
+      setDeployStatus('error');
       toast.error("Failed to deploy smart contract")
     }
-  },
-
+  };
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content)
@@ -76,10 +69,9 @@ export function SmartContractBuilder({
     if (onContractGenerated) {
       onContractGenerated(contract)
     }
-    setGeneratedContract(contract),
+    setGeneratedContract(contract);
     setActiveTab("preview")
-  },
-
+  };
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">

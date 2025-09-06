@@ -19,5 +19,4 @@ const PriceIntelligenceService: NextPage = () => {
     </div>
   )
 },
-
-export default PriceIntelligenceService,
+export default PriceIntelligenceService;

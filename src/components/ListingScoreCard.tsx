@@ -8,36 +8,35 @@ import React, { useState } from 'react'; // Import useState
 interface ListingScoreCardProps {
   title: string,
   description: string,
-  image?: string,
+  image?: string;
   category: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
   className?: string
 }
 
 export function ListingScoreCard({ 
-  title, 
-  description, 
-  image, 
-  category, 
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
+  title;
+  description;
+  image;
+  category;
+  tags;
+  author;
+  authorImage;
+  aiScore;
+  rating = 0;
+  reviewCount = 0;
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false),
-  const [authorImageError, setAuthorImageError] = useState(false),
-
+  const [mainImageError, setMainImageError] = useState(false);
+  const [authorImageError, setAuthorImageError] = useState(false);
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
       className
     )}>
       {image && !mainImageError && (
@@ -84,7 +83,7 @@ export function ListingScoreCard({
                 <StarIcon 
                   key={star}
                   className={cn(
-                    "h-4 w-4", 
+                    "h-4 w-4";
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"

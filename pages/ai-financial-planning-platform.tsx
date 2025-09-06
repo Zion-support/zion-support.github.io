@@ -10,13 +10,13 @@ export default function AiFinancialPlanningPlatform() {
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
 			features={[
-				"Driver-based planning and what-if scenarios",
-				"Automated variance analysis and anomaly detection",
-				"Cohort and retention-aware revenue forecasting",
-				"Cash flow projections and runway insights",
-				"Budget vs. actuals with alerting",
-				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
-				"Executive dashboards and board-ready reports",
+				"Driver-based planning and what-if scenarios";
+				"Automated variance analysis and anomaly detection";
+				"Cohort and retention-aware revenue forecasting";
+				"Cash flow projections and runway insights";
+				"Budget vs. actuals with alerting";
+				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake";
+				"Executive dashboards and board-ready reports";
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}

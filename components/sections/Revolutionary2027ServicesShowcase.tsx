@@ -8,7 +8,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'quantum-ai-consciousness-platform',
       name: 'Quantum AI Consciousness Platform',
       description: 'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.',
-      price: '$9,999',
+      price: '$9,999';
       period: '/month',
       icon: Brain,
       color: 'from-purple-600 to-indigo-700',
@@ -21,7 +21,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'autonomous-space-mining-ai',
       name: 'Autonomous Space Mining AI',
       description: 'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.',
-      price: '$15,999',
+      price: '$15,999';
       period: '/month',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-700',
@@ -34,7 +34,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'dna-computing-platform',
       name: 'DNA Computing Platform',
       description: 'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.',
-      price: '$7,999',
+      price: '$7,999';
       period: '/month',
       icon: TestTube,
       color: 'from-green-600 to-emerald-700',
@@ -47,7 +47,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'holographic-metaverse-platform',
       name: 'Holographic Metaverse Platform',
       description: 'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.',
-      price: '$3,999',
+      price: '$3,999';
       period: '/month',
       icon: Globe,
       color: 'from-pink-600 to-rose-700',
@@ -60,7 +60,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'autonomous-healthcare-ai',
       name: 'Autonomous Healthcare AI',
       description: 'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.',
-      price: '$5,999',
+      price: '$5,999';
       period: '/month',
       icon: Microscope,
       color: 'from-red-600 to-orange-700',
@@ -73,7 +73,7 @@ const Revolutionary2027ServicesShowcase = () => {
       id: 'quantum-internet-security-gateway',
       name: 'Quantum Internet Security Gateway',
       description: 'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.',
-      price: '$8,999',
+      price: '$8,999';
       period: '/month',
       icon: Lock,
       color: 'from-indigo-600 to-purple-700',
@@ -83,14 +83,12 @@ const Revolutionary2027ServicesShowcase = () => {
       growthRate: '500% annual growth'
     }
   ],
-
   const categories = [
     { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
     { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
     { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -100,7 +98,6 @@ const Revolutionary2027ServicesShowcase = () => {
       }
     }
   },
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -112,7 +109,6 @@ const Revolutionary2027ServicesShowcase = () => {
       }
     }
   },
-
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}
@@ -273,5 +269,4 @@ const Revolutionary2027ServicesShowcase = () => {
     </section>
   )
 },
-
-export default Revolutionary2027ServicesShowcase,
+export default Revolutionary2027ServicesShowcase;

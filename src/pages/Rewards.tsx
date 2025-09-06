@@ -4,7 +4,6 @@ const REWARDS = [
   { id: 'coupon5', title: '$5 Coupon', cost: 500 },
   { id: 'premium-week', title: 'Premium Week', cost: 1000 },
   { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }],
-
 export default function RewardsPage() {
   return (
     <div className="container max-w-xl py-10">

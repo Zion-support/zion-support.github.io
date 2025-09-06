@@ -6,7 +6,6 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary";
 import { Folder } from 'lucide-react'
 import { CATEGORIES } from '@/data/categories';
 import { NextSeo } from '@/components/NextSeo';
-import {logErrorToProduction} from '@/utils/productionLogger';
 interface CategoryType {
   id: string,
   name: string,
@@ -21,14 +20,13 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
       logErrorToProduction('Categories API error:', { data: response.statusText }),
       return CATEGORIES as CategoryType[]
     }
-    const data = await response.json(),
+    const data = await response.json();
     return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
     logErrorToProduction('Categories API fetch failed:', { data: err }),
     return CATEGORIES as CategoryType[]
   }
-},
-
+};
 export interface CategoriesProps {
   categories?: CategoryType[]
 }
@@ -36,9 +34,8 @@ export interface CategoriesProps {
 export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
   const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
     fallbackData: initialCategories}),
-  const categories = data || [],
-  const isLoading = !data && !error,
-
+  const categories = data || [];
+  const isLoading = !data && !error;
   return (
     <>
       <NextSeo

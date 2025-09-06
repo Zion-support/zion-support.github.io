@@ -15,5 +15,4 @@ const Index: NextPage = () => {
     </div>
   )
 },
-
-export default Index,
+export default Index;

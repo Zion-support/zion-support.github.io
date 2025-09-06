@@ -8,8 +8,7 @@ type Props = {
   fromId: string,
   valid: boolean,
   reason?: string
-},
-
+};
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
   if (!valid) {
     return (
@@ -26,12 +25,10 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       <ReviewForm initial={{ projectId, fromRole, fromId }} />
     </main>
   )
-},
-
+};
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
-  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
-
+  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string };
   if (!projectId || !role || !fromId) {
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' } }
   }
@@ -45,9 +42,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   }
 
   const expectedFromId = role === 'client' ? project.clientId : project.talentSlug,
-  const valid = expectedFromId === fromId,
-
+  const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any
 },
-
-export default ReviewSubmitPage,
+export default ReviewSubmitPage;

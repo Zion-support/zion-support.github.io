@@ -11,7 +11,7 @@ interface MobileFilterBarProps {
 
 export function MobileFilterBar({ 
   searchTerm,
-  setSearchTerm, 
+  setSearchTerm;
   setIsMobileFilterOpen 
 }: MobileFilterBarProps) {
   return (

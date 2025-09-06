@@ -3,11 +3,9 @@ import { useState } from "react";
 import { MessageSquare } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { ChatAssistant } from "@/components/ChatAssistant";
-import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
 
-  const [isOpen, setIsOpen] = useState(false),
-
+  const [isOpen, setIsOpen] = useState(false);
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -18,7 +16,6 @@ export function ChatAssistantTrigger() {
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
         })}),
-      
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -28,15 +25,14 @@ export function ChatAssistantTrigger() {
       logErrorToProduction('Error in AI chat:', { data: error }),
       return Promise.resolve()
     }
-  },
-
+  };
   return (
     <>
       <Button
         onClick={() => setIsOpen(true)}
         size="icon"
         variant="outline"
-        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-50"
         aria-label="Open chat assistant"
       >
         <MessageSquare className="h-5 w-5" />

@@ -18,7 +18,6 @@ export default function FuturisticServices2030Page() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const all2030Services = [
     ...futuristicAIServices2030,
     ...quantumEmergingTechServices2030,
@@ -27,7 +26,6 @@ export default function FuturisticServices2030Page() {
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
   ],
-
   const serviceCategories = [
     {
       title: '🚀 Futuristic AI Services 2030',
@@ -72,7 +70,6 @@ export default function FuturisticServices2030Page() {
       description: 'Breakthrough research and development solutions'
     }
   ],
-
   return (
     <>
       <Head>
@@ -93,7 +90,7 @@ export default function FuturisticServices2030Page() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
+        <meta name="twitter: image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
         
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
@@ -105,19 +102,19 @@ export default function FuturisticServices2030Page() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "2030 Futuristic Technology Services",
-              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
+              "@type": "Service";
+              "name": "2030 Futuristic Technology Services";
+              "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
               "provider": {
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "url": "https://ziontechgroup.com"
+                "@type": "Organization";
+                "name": "Zion Tech Group";
+                "url": "https: //ziontechgroup.com"
               },
-              "url": "https://ziontechgroup.com/services/2030-futuristic-services",
+              "url": "https: //ziontechgroup.com/services/2030-futuristic-services",
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
+                "@type": "ContactPoint";
+                "telephone": "+1-302-464-0950";
+                "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
               }
             })

@@ -1,20 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-  Rocket, Shield, Cpu, Target, Microscope, Users,
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
-  Github, ArrowRight, Heart, Star, Award, CheckCircle
-} from 'lucide-react',
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceCategories = [
   {
     title: '🚀 AI & Consciousness',
@@ -71,7 +63,6 @@ const serviceCategories = [
     ]
   }
 ],
-
 const quickLinks = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
@@ -82,7 +73,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
 ],
-
 const companyInfo = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -91,7 +81,6 @@ const companyInfo = [
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
 ],
-
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -100,11 +89,9 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
 ],
-
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
-],
-
+];
 export default function UltraFuturisticFooter2030() {
   return (
     <footer className="bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden">

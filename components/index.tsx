@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
-} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
 export default function HomePage() {
-  const [currentFeature, setCurrentFeature] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setIsVisible(true),
-    
+    setIsVisible(true);
     // Auto-rotate features
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % 6)
-    }, 5000),
-    
+    }, 5000);
     return () => clearInterval(interval)
-  }, []),
-
+  }, []);
   const features = [
     {
       icon: Brain,
@@ -64,35 +55,34 @@ export default function HomePage() {
       color: "from-yellow-500 to-orange-500"
     }
   ],
-
   const services = [
     {
       title: "AI & Machine Learning",
-      description: "Custom AI solutions, neural networks, and autonomous systems",
+      description: "Custom AI solutions, neural networks, and autonomous systems";
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Quantum Computing",
-      description: "Quantum algorithms, cryptography, and quantum AI integration",
+      description: "Quantum algorithms, cryptography, and quantum AI integration";
       icon: Atom,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Cybersecurity",
-      description: "Advanced threat detection, quantum-resistant encryption",
+      description: "Advanced threat detection, quantum-resistant encryption";
       icon: Shield,
       color: "from-red-500 to-orange-500"
     },
     {
       title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions, edge computing, and DevOps",
+      description: "Scalable cloud solutions, edge computing, and DevOps";
       icon: Cloud,
       color: "from-emerald-500 to-teal-500"
     },
     {
       title: "Data Analytics",
-      description: "Big data processing, predictive analytics, and insights",
+      description: "Big data processing, predictive analytics, and insights";
       icon: BarChart3,
       color: "from-indigo-500 to-purple-500"
     },
@@ -103,14 +93,12 @@ export default function HomePage() {
       color: "from-yellow-500 to-orange-500"
     }
   ],
-
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: CheckCircle },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
     { number: "24/7", label: "Support Available", icon: Clock }
   ],
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -155,7 +143,7 @@ export default function HomePage() {
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity, 
+              Empowering businesses with cutting-edge AI, quantum computing, cybersecurity;
               and digital transformation solutions that drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

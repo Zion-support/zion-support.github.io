@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
-
 interface Service {
   id: string,
   name: string,
@@ -15,13 +14,13 @@ interface Service {
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
-  title?: string,
+  title?: string;
   subtitle?: string
 }
 
 export default function UltraFuturisticServiceShowcase2029({ 
-  services, 
-  title = "2029 Cutting-Edge Services", 
+  services;
+  title = "2029 Cutting-Edge Services";
   subtitle = "Experience the future of technology with our revolutionary solutions" 
 }: UltraFuturisticServiceShowcase2029Props) {
   return (

@@ -29,7 +29,7 @@ export const MobileAppHero: React.FC = () => {
             </div>
             
             <Link href="/open-app">
-              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover:bg-white/10">
+              <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
                 Open App
                 <ArrowRight size={20} />
               </Button>

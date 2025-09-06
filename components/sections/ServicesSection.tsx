@@ -1,19 +1,3 @@
-'use client',
-
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Brain,
-  Cloud, 
-  RefreshCw, 
-  Wifi, 
-  Shield, 
-  BarChart3,
-  ArrowRight,
-  Zap
-} from 'lucide-react',
-
 const ServicesSection: React.FC = () => {
   const services = [
     {
@@ -65,7 +49,6 @@ const ServicesSection: React.FC = () => {
       href: '/services/data-analytics'
     }
   ],
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -75,12 +58,10 @@ const ServicesSection: React.FC = () => {
       }
     }
   },
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
   },
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Elements */}
@@ -209,5 +190,4 @@ const ServicesSection: React.FC = () => {
     </section>
   )
 },
-
-export default ServicesSection,
+export default ServicesSection;

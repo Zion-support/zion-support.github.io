@@ -12,10 +12,10 @@ export default function AIConsciousnessEvolution2025() {
 			roiNote="Strategic R&D with demonstrable prototypes and IP"
 			features={[
 				"Affective signals and sentiment grounding",
-				"Self-reflection loops and memory consolidation",
-				"Safety layers for alignment and guardrails",
-				"Evaluation harness for subjective tasks",
-				"Multi-modal context fusion (text, voice, UI)",
+				"Self-reflection loops and memory consolidation";
+				"Safety layers for alignment and guardrails";
+				"Evaluation harness for subjective tasks";
+				"Multi-modal context fusion (text, voice, UI)";
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}

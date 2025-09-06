@@ -29,5 +29,4 @@ const AutoIndex: NextPage = () => {
     </div>
   )
 },
-
-export default AutoIndex,
+export default AutoIndex;

@@ -17,5 +17,4 @@ const BusinessIntelligenceChat: NextPage = () => {
     </div>
   )
 },
-
-export default BusinessIntelligenceChat,
+export default BusinessIntelligenceChat;

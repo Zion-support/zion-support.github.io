@@ -1,18 +1,15 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 type DistributionItem = { label: string, percent: number },
-
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,
-
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 export default function TokenomicsWhitepaperBuilder() {
-  const [isAdmin, setIsAdmin] = useState(true),
-  const [publicPreview, setPublicPreview] = useState(false),
-  const [legalReview, setLegalReview] = useState(false),
-
-  const [tokenName, setTokenName] = useState('ZION$'),
-  const [tokenSupply, setTokenSupply] = useState('1,000,000,000'),
-  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),
-  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [publicPreview, setPublicPreview] = useState(false);
+  const [legalReview, setLegalReview] = useState(false);
+  const [tokenName, setTokenName] = useState('ZION$');
+  const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+  const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation');
+  const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access');
   const [distribution, setDistribution] = useState<DistributionItem[]>([
     { label: 'Ecosystem & Rewards', percent: 35 },
     { label: 'Community Treasury', percent: 20 },
@@ -20,50 +17,45 @@ export default function TokenomicsWhitepaperBuilder() {
     { label: 'Investors', percent: 15 },
     { label: 'Liquidity & Market Making', percent: 10 },
     { label: 'Advisors & Partnerships', percent: 5 }]),
-  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),
-  const [jurisdiction, setJurisdiction] = useState<string>('US'),
-  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt),
-
-  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),
-
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>(''),
-  const [isGenerating, setIsGenerating] = useState<boolean>(false),
-
-  const [activeSection, setActiveSection] = useState<string>('Executive Summary'),
-
+  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported');
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
+  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]);
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {
     return generatedMarkdown || buildLocalMarkdown({
-      tokenName,
-      tokenSupply,
-      useCases,
-      rewardsLogic,
-      distribution,
-      governance,
-      jurisdiction,
+      tokenName;
+      tokenSupply;
+      useCases;
+      rewardsLogic;
+      distribution;
+      governance;
+      jurisdiction;
       legalReview})
-  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),
-
+  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]);
   async function handleGenerate() {
     try {
-      setIsGenerating(true),
+      setIsGenerating(true);
       const res = await fetch('/api/whitepaper/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },
         body: JSON.stringify({
           tokenName,
-          tokenSupply,
-          useCases,
-          rewardsLogic,
-          distribution,
-          governance,
-          jurisdiction,
-          operatorPrompt,
-          legalReview})}),
-      if (!res.ok) throw new Error('Failed to generate'),
-      const data = await res.json(),
+          tokenSupply;
+          useCases;
+          rewardsLogic;
+          distribution;
+          governance;
+          jurisdiction;
+          operatorPrompt;
+          legalReview})});
+      if (!res.ok) throw new Error('Failed to generate');
+      const data = await res.json();
       setGeneratedMarkdown(data.markdown || '')
     } catch (e) {
-      console.error(e),
+      console.error(e);
       alert('Generation failed')
     } finally {
       setIsGenerating(false)
@@ -72,25 +64,25 @@ export default function TokenomicsWhitepaperBuilder() {
 
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
-      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' }),
-      const url = URL.createObjectURL(blob),
-      const a = document.createElement('a'),
-      a.href = url,
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`,
-      document.body.appendChild(a),
-      a.click(),
-      document.body.removeChild(a),
+      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })}),
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
       if (!res.ok) {
-        alert('PDF export failed'),
+        alert('PDF export failed');
         return
       }
-      const { url } = await res.json(),
+      const { url } = await res.json();
       window.open(url, '_blank')
     }
   }
@@ -99,9 +91,9 @@ export default function TokenomicsWhitepaperBuilder() {
     setDistribution((prev) => {
       const copy = [...prev],
       const item = { ...copy[index] },
-      if (key === 'percent') item.percent = Number(value),
-      if (key === 'label') item.label = value,
-      copy[index] = item,
+      if (key === 'percent') item.percent = Number(value);
+      if (key === 'label') item.label = value;
+      copy[index] = item;
       return copy
     })
   }
@@ -118,18 +110,17 @@ export default function TokenomicsWhitepaperBuilder() {
     const res = await fetch('/api/whitepaper/share', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),
+      body: JSON.stringify({ markdown: previewMarkdown, publicPreview })});
     if (!res.ok) {
-      alert('Failed to create share link'),
+      alert('Failed to create share link');
       return
     }
-    const { url } = await res.json(),
-    await navigator.clipboard.writeText(url),
+    const { url } = await res.json();
+    await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard')
   }
 
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
-
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'];
   return (
     <>
       <Head>
@@ -216,7 +207,7 @@ export default function TokenomicsWhitepaperBuilder() {
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
+                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled: opacity-50">
                   {isGenerating ? 'Generating…' : 'Generate with GPT'}
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
@@ -260,7 +251,7 @@ function buildLocalMarkdown(input: {
   legalReview: boolean
 }) {
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n'),
-  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '',
+  const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
 
@@ -269,11 +260,11 @@ function jurisdictionalNote(j: string) {
     case 'US':
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.',
     case 'EU':
-      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',
+      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
     case 'SG':
-      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.',
+      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.';
     case 'AE':
-      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',
+      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.';
     default:
       return 'Intended strictly for utility use.'
   }
@@ -281,7 +272,7 @@ function jurisdictionalNote(j: string) {
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
+  const total = data.reduce((a, b) => a + b.percent, 0) || 1;
   return (
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -300,17 +291,15 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
-    const map: Record<string, string> = {},
+    const map: Record<string, string> = {};
     sections.forEach((s, i) => {
       if (i === 0) return, // first is H1
       const [titleLine, ...rest] = s.split('\n'),
       map[titleLine.trim()] = rest.join('\n')
-    }),
+    });
     return map
-  }, [markdown]),
-
-  const content = parts[activeSection] || '',
-
+  }, [markdown]);
+  const content = parts[activeSection] || '';
   return (
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )

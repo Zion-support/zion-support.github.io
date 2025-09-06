@@ -2,12 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock,
-  Brain, Database, TrendingUp as TrendingUpIcon, Users,
-  Target, BarChart, PieChart, Activity, Eye, Key
-} from 'lucide-react',
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -18,24 +12,19 @@ export default function QuantumSecureCommunication() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
-
   const features = [
-    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools',
+    'Quantum key distribution (QKD) encryptionEnd-to-end encryption for all communicationsQuantum-resistant algorithms and protocolsSecure file sharing and collaboration toolsReal-time encrypted messaging and video callsAudit trails and compliance reportingMulti-platform support (Web, Mobile, Desktop)Integration with existing communication tools';
     'Advanced threat detection and monitoring24/7 security monitoring and support'
-  ],
-
+  ];
   const useCases = [
     'Secure executive communicationsConfidential document sharingRegulated industry complianceResearch collaborationGovernment communications'
-  ],
-
+  ];
   const integrations = [
     'SlackMicrosoft TeamsZoomEmail systemsFile storage platforms'
-  ],
-
+  ];
   const technology = [
     'Quantum ComputingPost-Quantum CryptographyReactNode.jsWebRTCWebAssemblyDockerKubernetes'
-  ],
-
+  ];
   return (
     <UltraAdvancedFuturisticBackground 
       intensity="high" 

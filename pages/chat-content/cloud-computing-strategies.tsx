@@ -15,5 +15,4 @@ const CloudComputingStrategies: NextPage = () => {
     </div>
   )
 },
-
-export default CloudComputingStrategies,
+export default CloudComputingStrategies;

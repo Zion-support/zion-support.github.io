@@ -5,66 +5,53 @@ import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import { useEnqueueSnackbar } from '@/context';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { 
-  NotificationFilter,
-  NotificationHeader, 
-  NotificationList, 
-  NotificationFooter 
-} from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter';
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
-    unreadCount, 
-    markAsRead, 
-    markAllAsRead,
-    dismissNotification, 
-    loading,
-    filter,
-    setFilter,
+    unreadCount;
+    markAsRead;
+    markAllAsRead;
+    dismissNotification;
+    loading;
+    filter;
+    setFilter;
     fetchNotifications
-  } = useNotifications(),
-  
-  const [open, setOpen] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-  const [loadedOnce, setLoadedOnce] = useState(false),
-  const enqueueSnackbar = useEnqueueSnackbar(),
-
+  } = useNotifications();
+  const [open, setOpen] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loadedOnce, setLoadedOnce] = useState(false);
+  const enqueueSnackbar = useEnqueueSnackbar();
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
     if (open && !loadedOnce) {
       const loadNotifications = async () => {
         try {
-          await fetchNotifications(),
+          await fetchNotifications();
           setError(null)
         } catch (err) {
           logErrorToProduction('Failed to fetch notifications:', { data: err }),
-          setError("Couldn't load notifications"),
+          setError("Couldn't load notifications");
           enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
         } finally {
           setLoadedOnce(true)
         }
       },
-
       loadNotifications()
     }
-  }, [open, loadedOnce, fetchNotifications]),
-
+  }, [open, loadedOnce, fetchNotifications]);
   const handleMarkAllAsRead = async () => {
     try {
-      await markAllAsRead(),
+      await markAllAsRead();
       enqueueSnackbar("All notifications marked as read", { variant: 'success' })
     } catch (err) {
       logErrorToProduction('Failed to mark notifications as read:', { data: err }),
       enqueueSnackbar((err as any)?.response?.data?.message || (err instanceof Error ? err.message : String(err)), { variant: 'error' })
     }
   },
-
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
-
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
       <PopoverTrigger asChild>
@@ -101,4 +88,4 @@ export const NotificationCenter: React.FC = () => {
       </PopoverContent>
     </Popover>
   )
-},
+};

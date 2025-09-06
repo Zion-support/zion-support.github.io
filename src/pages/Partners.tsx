@@ -14,20 +14,18 @@ import { PartnerResources } from "@/components/partners/PartnerResources";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 export default function Partners() {
 
-  logInfo('PartnersPage rendering'),
-  const [activeTab, setActiveTab] = useState("overview"),
-  const { t } = useTranslation(),
-  const { user, isAuthenticated } = useAuth(),
-  const router = useRouter(),
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
-
+  logInfo('PartnersPage rendering');
+  const [activeTab, setActiveTab] = useState("overview");
+  const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const router = useRouter();
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
   useEffect(() => {
     async function checkHealth() {
       try {
-        const res = await fetch('/api/auth/health'),
+        const res = await fetch('/api/auth/health');
         setAuthServiceAvailable(res.ok)
       } catch (err) {
         logErrorToProduction('Partner login auth health check failed', { data: err }),
@@ -35,11 +33,10 @@ export default function Partners() {
       }
     }
     checkHealth()
-  }, []),
-
+  }, []);
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
-    logInfo('PartnersPage rendering Unauthenticated View'),
+    logInfo('PartnersPage rendering Unauthenticated View');
     return (
       <div className="container max-w-6xl py-10">
         <div className="text-center mb-8">

@@ -9,21 +9,19 @@ import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth(),
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
-
+  const { isAuthenticated, user } = useAuth();
+  const [listings, setListings] = useState<ProductListing[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   useEffect(() => {
     if (isAuthenticated && user?.id) {
-      setLoading(true),
+      setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
         .finally(() => setLoading(false))
     }
-  }, [isAuthenticated, user]),
-
+  }, [isAuthenticated, user]);
   if (!isAuthenticated) {
     return (
       <Dialog open>

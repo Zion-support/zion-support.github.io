@@ -16,11 +16,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
   }
 
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
-  const store = getFraudStore(),
+  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>;
+  const store = getFraudStore();
   const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
     source: source as any,
-    userId,
+    userId;
     status: status as any,
     label: label as any}),
   res.status(200).json({ items })

@@ -17,5 +17,4 @@ const CloudArchitectureChat: NextPage = () => {
     </div>
   )
 },
-
-export default CloudArchitectureChat,
+export default CloudArchitectureChat;

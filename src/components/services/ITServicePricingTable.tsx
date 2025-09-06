@@ -6,17 +6,15 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing,
     direction: "ascending" | "descending"
   }>({
     key: "country",
     direction: "ascending"}),
-
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
-    
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter(item => 
@@ -33,20 +31,16 @@ export function ITServicePricingTable() {
         return sortConfig.direction === "ascending" ? 1 : -1
       }
       return 0
-    }),
-    
+    });
     return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
-
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
+      direction: sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
   },
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
       <div className="flex items-center mb-6">

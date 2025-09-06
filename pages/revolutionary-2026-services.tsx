@@ -4,7 +4,6 @@ import Revolutionary2026UltimateNavigation from '../components/layout/Revolution
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
 import { Phone, Mail } from 'lucide-react';
-
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -40,25 +39,25 @@ export default function Revolutionary2026ServicesPage() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026",
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "url": "https: //ziontechgroup.com",
+              "logo": "https: //ziontechgroup.com/logo.png",
+              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
                 "addressCountry": "US"
-              },
+              };
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
+                "@type": "ContactPoint";
+                "telephone": "+1-302-464-0950";
+                "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
-              },
+              };
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]
@@ -90,13 +89,13 @@ export default function Revolutionary2026ServicesPage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
+                We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
                   icon: '🧠',
@@ -107,19 +106,19 @@ export default function Revolutionary2026ServicesPage() {
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
-                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
+                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.';
                   color: 'from-blue-500 to-cyan-500'
                 },
                 {
                   icon: '🚀',
                   title: 'Emerging Tech',
-                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',
+                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.';
                   color: 'from-green-500 to-emerald-500'
                 },
                 {
                   icon: '🏥',
                   title: 'Healthcare Innovation',
-                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',
+                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.';
                   color: 'from-teal-500 to-cyan-500'
                 },
                 {
@@ -131,7 +130,7 @@ export default function Revolutionary2026ServicesPage() {
                 {
                   icon: '🌐',
                   title: 'Global Impact',
-                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
+                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.';
                   color: 'from-indigo-500 to-purple-500'
                 }
               ].map((feature, index) => (

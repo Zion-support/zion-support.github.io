@@ -10,27 +10,24 @@ interface SuggestedJobsProps {
 }
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
+  const { user } = useAuth();
+  const currentTalentId = talentId || user?.id;
   const { 
-    isLoading,
-    updateJobMatchStatus, 
+    isLoading;
+    updateJobMatchStatus;
     categorizedMatches: { 
-      newMatches, 
-      viewedMatches, 
+      newMatches,
+      viewedMatches;
       appliedMatches 
     } 
-  } = useJobSuggestions(currentTalentId),
-
+  } = useJobSuggestions(currentTalentId);
   const handleApply = (matchId: string, jobId: string) => {
-    updateJobMatchStatus(matchId, 'applied'),
+    updateJobMatchStatus(matchId, 'applied');
     // In a real app, this might redirect to application form or open a modal
-  },
-
+  };
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
-  },
-
+  };
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">

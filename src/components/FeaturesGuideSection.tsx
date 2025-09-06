@@ -14,38 +14,38 @@ export function FeaturesGuideSection() {
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
-        "Fill in your project requirements and specifications",
-        "Review the AI-recommended matches tailored to your needs",
+        "Fill in your project requirements and specifications";
+        "Review the AI-recommended matches tailored to your needs";
         "Connect with matched talents or services directly"
-      ],
+      ];
       link: "/match",
       buttonText: "Try AI Matcher"
     },
     {
       id: "talent-directory",
       title: "Talent Directory",
-      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",
+      description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
       icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Access the talent directory from the main navigation",
-        "Use filters to narrow down by skills, experience, and pricing",
-        "Save favorite profiles for future reference",
+        "Use filters to narrow down by skills, experience, and pricing";
+        "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles"
-      ],
+      ];
       link: "/talents",
       buttonText: "Explore Talents"
     },
     {
       id: "services",
       title: "Services Marketplace",
-      description: "Discover professional services for your AI and tech needs, from development to consulting.",
+      description: "Discover professional services for your AI and tech needs, from development to consulting.";
       icon: <Zap className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Browse service categories on the marketplace",
-        "Compare service offerings and pricing options",
-        "Request customized quotes for specific requirements",
+        "Compare service offerings and pricing options";
+        "Request customized quotes for specific requirements";
         "Book and manage services through your dashboard"
-      ],
+      ];
       link: "/services",
       buttonText: "View Services"
     },
@@ -56,38 +56,38 @@ export function FeaturesGuideSection() {
       icon: <Settings className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Search the equipment catalog by category or specifications",
-        "Check availability and rental/purchase options",
-        "Request quotes for bulk orders or specialized equipment",
+        "Check availability and rental/purchase options";
+        "Request quotes for bulk orders or specialized equipment";
         "Schedule delivery or pickup through the platform"
-      ],
+      ];
       link: "/equipment",
       buttonText: "Browse Equipment"
     },
     {
       id: "analytics",
       title: "Marketplace Analytics",
-      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.",
+      description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
       icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Access analytics from your user dashboard",
-        "View interactive charts on market trends and rates",
-        "Export reports for your business planning",
+        "View interactive charts on market trends and rates";
+        "Export reports for your business planning";
         "Set up alerts for changes in your areas of interest"
-      ],
+      ];
       link: "/analytics",
       buttonText: "View Analytics"
     },
     {
       id: "ai-assistant",
       title: "Zion AI Assistant",
-      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.",
+      description: "Get real-time help, recommendations, and marketplace guidance from our AI assistant.";
       icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Click on the chat icon in the bottom right corner",
-        "Ask questions about available services or talents",
-        "Get recommendations based on your project needs",
+        "Ask questions about available services or talents";
+        "Get recommendations based on your project needs";
         "Receive step-by-step guidance for using platform features"
-      ],
+      ];
       link: "#",
       buttonText: "Chat with Assistant",
       action: "openChat"
@@ -99,29 +99,28 @@ export function FeaturesGuideSection() {
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Create or log in to your account",
-        "Navigate to 'Create Listing' in your dashboard",
-        "Choose between talent profile, service, or equipment listing",
+        "Navigate to 'Create Listing' in your dashboard";
+        "Choose between talent profile, service, or equipment listing";
         "Complete the guided form and publish your listing"
-      ],
+      ];
       link: "/create-profile",
       buttonText: "Create Listing"
     },
     {
       id: "help-center",
       title: "Help & Resources",
-      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.",
+      description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
       instructions: [
         "Visit our comprehensive knowledge base",
-        "Watch video tutorials on specific features",
-        "Join community forums to connect with other users",
+        "Watch video tutorials on specific features";
+        "Join community forums to connect with other users";
         "Contact our support team for personalized assistance"
-      ],
+      ];
       link: "/help",
       buttonText: "View Resources"
     }
   ],
-
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">

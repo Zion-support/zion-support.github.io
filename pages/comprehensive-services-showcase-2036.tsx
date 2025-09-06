@@ -11,9 +11,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036ITServices,
     ...real2036AIServices
   ],
-
   const categories = [...new Set(allServices.map(service => service.category))],
-
   return (
     <Layout>
       <SEO 
@@ -255,5 +253,4 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     </Layout>
   )
 },
-
-export default ComprehensiveServicesShowcase2036,
+export default ComprehensiveServicesShowcase2036;

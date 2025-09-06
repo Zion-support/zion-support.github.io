@@ -2,11 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target,
-  Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react',
 import Layout from '../components/layout/Layout';
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {
@@ -15,7 +10,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-
 const serviceHighlights = [
   {
     title: 'AI Code Generation',
@@ -53,7 +47,6 @@ const serviceHighlights = [
     features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
 ],
-
 const benefits = [
   {
     title: '80% Reduction in Manual Work',
@@ -80,7 +73,6 @@ const benefits = [
     color: 'text-pink-400'
   }
 ],
-
 export default function AIAutomationServices() {
   return (
     <Layout>
@@ -136,7 +128,7 @@ export default function AIAutomationServices() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business operations with cutting-edge AI automation. From code generation to customer support, 
+              Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
             

@@ -5,7 +5,7 @@ export default function FacebookRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //facebook.com/ziontechgroup')
 		}
-	}, []),
+	}, []);
 	return (
 		<>
 			<Head>

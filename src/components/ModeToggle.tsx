@@ -11,14 +11,12 @@ import { useEffect, useState } from "react"
 
 export function ModeToggle() {
 
-  const { theme, toggleTheme } = useTheme(),
-  const [isClient, setIsClient] = useState(false),
-
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
     setIsClient(true)
-  }, []),
-
+  }, []);
   // Determine the actual resolved theme for display purposes
   const resolvedTheme = (() => {
     if (!isClient) return 'light', // Default for SSR
@@ -28,37 +26,29 @@ export function ModeToggle() {
     }
     return theme
   })(),
-
-  const isDarkMode = resolvedTheme === "dark",
-
+  const isDarkMode = resolvedTheme === "dark";
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
-      const newTheme = isDarkMode ? "light" : "dark",
-
+      const newTheme = isDarkMode ? "light" : "dark";
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
-
       // Apply the new theme via ThemeProvider
-      toggleTheme(),
-
+      toggleTheme();
       // Show user feedback with a developer-centric message
       const messages = newTheme === 'dark' ? darkModeMessages : lightModeMessages
       const title = messages[Math.floor(Math.random() * messages.length)]
       toast({
-        title,
+        title;
         description: `Theme changed to ${newTheme} mode successfully`}),
-
       // Accessibility announcement for screen readers
-      const announcement = `Theme switched to ${newTheme} mode`,
-      
+      const announcement = `Theme switched to ${newTheme} mode`;
       // Create a live region announcement
-      const liveRegion = document.createElement('div'),
-      liveRegion.setAttribute('aria-livepolite'),
-      liveRegion.setAttribute('aria-atomictrue'),
-      liveRegion.className = 'sr-only',
-      liveRegion.textContent = announcement,
-      document.body.appendChild(liveRegion),
-      
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-livepolite');
+      liveRegion.setAttribute('aria-atomictrue');
+      liveRegion.className = 'sr-only';
+      liveRegion.textContent = announcement;
+      document.body.appendChild(liveRegion);
       // Clean up the announcement after it's been read
       setTimeout(() => {
         document.body.removeChild(liveRegion)
@@ -66,14 +56,13 @@ export function ModeToggle() {
       
     } catch (error) {
       logErrorToProduction('Theme toggle error:', { data: error }),
-      logIssue('Theme switch failed', { error, currentTheme: theme, resolvedTheme }),
+      logIssue('Theme switch failed', { error, currentTheme: theme, resolvedTheme });
       toast({
         title: "Theme switch failed",
         description: "Unable to change theme. Please try again.",
         variant: "destructive"})
     }
   },
-
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
     return (

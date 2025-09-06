@@ -17,5 +17,4 @@ const CybersecurityChat: NextPage = () => {
     </div>
   )
 },
-
-export default CybersecurityChat,
+export default CybersecurityChat;

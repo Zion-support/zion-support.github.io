@@ -4,9 +4,8 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-re
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function DataCatalogLineagePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage')),
-  if (!service) return null,
-
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/data-catalog-lineage'));
+  if (!service) return null;
   return (
     <Layout>
       <Head>

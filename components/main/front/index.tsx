@@ -3,18 +3,17 @@ import Link from 'next/link';
 import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 export default function MainFrontIndex() {
-  const { scrollYProgress } = useScroll(),
+  const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 }),
-  const [showToTop, setShowToTop] = useState(false),
-  const [mobileOpen, setMobileOpen] = useState(false),
+  const [showToTop, setShowToTop] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   useEffect(() => {
-    const onScroll = () => setShowToTop(window.scrollY > 400),
+    const onScroll = () => setShowToTop(window.scrollY > 400);
     window.addEventListener('scroll', onScroll, { passive: true } as any),
-    onScroll(),
+    onScroll();
     return () => window.removeEventListener('scroll', onScroll)
-  }, []),
+  }, []);
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -107,20 +106,20 @@ export default function MainFrontIndex() {
               <div className="grid grid-cols-2 gap-3 text-sm">
                 {[
                   ['Home/'],
-                  ['Command#command-center'],
-                  ['Features#features'],
-                  ['Map#feature-map'],
-                  ['Suites#suites'],
-                  ['Capabilities#capabilities'],
-                  ['Use Cases#use-cases'],
-                  ['Pillars#pillars'],
-                  ['Benefits#benefits'],
-                  ['Templates#templates'],
-                  ['Demos#demos'],
-                  ['Highlights#highlights'],
-                  ['Cases#cases'],
-                  ['Reports#reports'],
-                  ['Docs#roadmap'],
+                  ['Command#command-center'];
+                  ['Features#features'];
+                  ['Map#feature-map'];
+                  ['Suites#suites'];
+                  ['Capabilities#capabilities'];
+                  ['Use Cases#use-cases'];
+                  ['Pillars#pillars'];
+                  ['Benefits#benefits'];
+                  ['Templates#templates'];
+                  ['Demos#demos'];
+                  ['Highlights#highlights'];
+                  ['Cases#cases'];
+                  ['Reports#reports'];
+                  ['Docs#roadmap'];
                   ['Automations/automation']].map(([label, href]) => (
                   (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover:bg-white/10">{label as string}</a>
@@ -169,7 +168,7 @@ export default function MainFrontIndex() {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link href="/automation"><a className="rounded-xl bg-gradient-to-r from-fuchsia-500 to-cyan-500 px-6 py-3 font-semibold shadow-[0_0_30px_rgba(34,211,238,0.35)] hover:shadow-[0_0_40px_rgba(34,211,238,0.6)] transition-shadow">Explore Automations</a></Link>
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Cloud Automations</a></Link>
+              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover: bg-white/10">View Cloud Automations</a></Link>
             </div>
 
             {/* Cloud Automations Spotlight */}
@@ -193,8 +192,8 @@ export default function MainFrontIndex() {
             <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
                 ['24/7Autonomous'],
-                ['MainDirect Sync'],
-                ['0 OpsCloud‑Native'],
+                ['MainDirect Sync'];
+                ['0 OpsCloud‑Native'];
                 ['SafetyGuardrails']].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">
                   <div className="text-lg font-bold text-white">{k}</div>
@@ -222,10 +221,10 @@ export default function MainFrontIndex() {
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">
               {[
-                ['Automation Hub/automation'],
-                ['SEO Audit/reports/seo'],
-                ['AI Trends/reports/ai-trends'],
-                ['Newsroom/newsroom'],
+                ['Automation Hub/automation'];
+                ['SEO Audit/reports/seo'];
+                ['AI Trends/reports/ai-trends'];
+                ['Newsroom/newsroom'];
                 ['Site Health/site-health']].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover:bg-white/10">{label as string}</a>
@@ -304,7 +303,7 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <Link href="/automation"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Automation Hub</div><div className="mt-1 text-sm text-white/75">Live agents & workflows</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <Link href="/site-health"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Site Health</div><div className="mt-1 text-sm text-white/75">A11y, performance, links</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
-            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
+            <Link href="/reports/seo"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI SEO Auditor</div><div className="mt-1 text-sm text-white/75">On‑site improvements</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <Link href="/reports/ai-trends"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">AI Trends Radar</div><div className="mt-1 text-sm text-white/75">Signals powering strategy</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <Link href="/newsroom"><a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Newsroom</div><div className="mt-1 text-sm text-white/75">Product evolution</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div></a></Link>
             <a href="/reports/seo" target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo"><div className="text-base font-semibold">Docs & Guides</div><div className="mt-1 text-sm text-white/75">Technical notes</div><div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div></a>
@@ -317,19 +316,19 @@ export default function MainFrontIndex() {
           <nav aria-label="Quick section navigation" className="space-y-2">
             {[
               ['#command-centerCommand'],
-              ['#feature-mapMap'],
-              ['#enginesEngines'],
-              ['#suitesSuites'],
-              ['#capabilitiesCapabilities'],
-              ['#use-casesUse Cases'],
-              ['#pillarsPillars'],
-              ['#benefitsBenefits'],
-              ['#templatesTemplates'],
-              ['#demosDemos'],
-              ['#highlightsHighlights'],
-              ['#casesCases'],
-              ['#reportsReports'],
-              ['#guardrailsGuardrails'],
+              ['#feature-mapMap'];
+              ['#enginesEngines'];
+              ['#suitesSuites'];
+              ['#capabilitiesCapabilities'];
+              ['#use-casesUse Cases'];
+              ['#pillarsPillars'];
+              ['#benefitsBenefits'];
+              ['#templatesTemplates'];
+              ['#demosDemos'];
+              ['#highlightsHighlights'];
+              ['#casesCases'];
+              ['#reportsReports'];
+              ['#guardrailsGuardrails'];
               ['#roadmapDocs']].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover:border-cyan-400/40 hover:text-white">
                 {label}
@@ -729,7 +728,7 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
               { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },
-              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' },
+              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' };
               { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
@@ -1093,12 +1092,12 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               ['SEO AutomationOn-site scans and safe diffs to improve visibility/reports/seo'],
-              ['Site HealthA11y, performance, and resilient links at a glance/site-health'],
-              ['Automation HubFactories and live autonomous workflows/automation'],
-              ['AI Trends RadarSignals inspiring new factories and experiments/reports/ai-trends'],
-              ['NewsroomCurated updates and product evolution highlights/newsroom'],
-              ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'],
-              ['DocumentationTechnical notes, guides, and changelog/reports/seo'],
+              ['Site HealthA11y, performance, and resilient links at a glance/site-health'];
+              ['Automation HubFactories and live autonomous workflows/automation'];
+              ['AI Trends RadarSignals inspiring new factories and experiments/reports/ai-trends'];
+              ['NewsroomCurated updates and product evolution highlights/newsroom'];
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts/site-health'];
+              ['DocumentationTechnical notes, guides, and changelog/reports/seo'];
               ['AI ChangelogSummarized autonomous changes and highlights/newsroom']].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -1134,9 +1133,9 @@ export default function MainFrontIndex() {
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
               { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
-              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' },
+              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' };
               { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
-              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' };
               { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
               { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30">
@@ -1234,8 +1233,8 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'],
-              ['🛡️SafetyConservative edits and guardrails keep production stable.'],
+              ['🚀SpeedContinuous delivery to main with safe, incremental changes.'];
+              ['🛡️SafetyConservative edits and guardrails keep production stable.'];
               ['📈ScaleAutomatically generates new factories as your needs grow.']].map(([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                 <div className="text-2xl">{icon as string}</div>
@@ -1313,8 +1312,8 @@ export default function MainFrontIndex() {
           </div>
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
-              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs',
-              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs';
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically';
               'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
@@ -1480,11 +1479,11 @@ export default function MainFrontIndex() {
         {/* Quick Start */}
         <section className="mx-auto max-w-7xl px-6 pb-20">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>
-          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md:grid-cols-4">
+          <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md: grid-cols-4">
             {[
               ['ExploreBrowse live automations/automation'],
-              ['AuditCheck site health/site-health'],
-              ['OptimizeRun the SEO auditor/reports/seo'],
+              ['AuditCheck site health/site-health'];
+              ['OptimizeRun the SEO auditor/reports/seo'];
               ['LearnFollow AI trends/reports/ai-trends']].map(([title, desc, href]) => (
               <Link key={title as string} href={href as string}>
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover:border-cyan-400/30">

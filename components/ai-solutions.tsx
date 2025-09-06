@@ -6,7 +6,7 @@ export default function AISolutionsPage() {
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.';
       features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
@@ -15,7 +15,7 @@ export default function AISolutionsPage() {
     {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
       features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
       icon: '💬',
       category: 'Language AI',
@@ -24,7 +24,7 @@ export default function AISolutionsPage() {
     {
       id: 'computer-vision',
       title: 'Computer Vision',
-      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
+      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
       features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
       icon: '👁️',
       category: 'Visual AI',
@@ -58,7 +58,6 @@ export default function AISolutionsPage() {
       complexity: 'Intermediate'
     }
   ],
-
   const useCases = [
     {
       industry: 'Manufacturing',
@@ -81,11 +80,9 @@ export default function AISolutionsPage() {
       icon: '🛍️'
     }
   ],
-
   const technologies = [
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
-  ],
-
+  ];
   return (
     <>
       <Head>
