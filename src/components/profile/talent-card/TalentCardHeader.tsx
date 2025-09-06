@@ -19,7 +19,6 @@ export function TalentCardHeader(): any ({;
         <div className='flex items-center justify-between'>;
           <h3 className='text-lg font-semibold text-white flex items-center gap-1'>;
 
-      
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
@@ -33,7 +32,7 @@ export function TalentCardHeader(): any ({;
           </h3>
 
     </div>;
-  )
+  );
 };
 
 }
@@ -42,7 +41,7 @@ export function TalentCardHeader(): any ({;
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
-        <p className='text-zion-cyan text-sm'>{professionalTitle}</p>;      </div>;
+      </div>;
     </div>;
   );
 }

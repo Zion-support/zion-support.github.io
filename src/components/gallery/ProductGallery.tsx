@@ -1,13 +1,12 @@
-}
-});
+
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
 const ModelViewer = React && React.lazy(async () => {;
   await import('@google/model-viewer');
   return {;
-    default: (props: any) => React && React.createElement('model-viewer', props),
-};
+    default: (props: any) => React && React.createElement('model-viewer', props),;
+  };
 });
 interface ProductGalleryProps {;
   images: string[];
@@ -109,10 +108,7 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-          <div
-            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
-            onClick={() => setZoomed(!zoomed)}
-          >
+
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -125,7 +121,7 @@ export function ProductGallery(): any ({;
   );
 
     </Dialog>;
-  )
+  );
 };
 };
 
@@ -147,7 +143,9 @@ const ModelViewer = React.lazy(async () => {;
 interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
-  modelUrl?: string;          </TabsContent>)}
+  modelUrl?: string;
+
+          </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
         <DialogContent className='max - w-3xl p - 0'>;
@@ -163,4 +161,4 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
-<<<<<<< HEAD
+

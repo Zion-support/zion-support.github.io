@@ -1,30 +1,5 @@
-  const shareLinks = [
-    {
-      name: "Twitter",
-      icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
-      onClick: shareToTwitter
-    },
-    {
-      name: "Facebook",
-      icon: <Facebook className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
-      onClick: shareToFacebook
-    },
-    {
-      name: "LinkedIn",
-      icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
-      onClick: shareToLinkedIn
-    },
-    {
-      name: "Copy Link",
-      icon: <Link className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
-      onClick: copyLinkToClipboard
-    }],
 
-  return (    <section className="py-12 bg-zion-blue">
+    <section className="py-12 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
           <div>
@@ -34,7 +9,7 @@
 
 };
 }</div> </div> </div> </section>) ;
-}'"
+}'";
 };
 
           <div className="flex flex-wrap gap-3">
@@ -68,13 +43,13 @@ export function SocialShareSection() {;
     navigator.clipboard.writeText(window.location.href);
       .then(() => {;
         toast({;
-          title: "Link Copied!",,
-  description: "The link has been copied to your clipboard"});
+          title: "Link Copied!",;
+          description: "The link has been copied to your clipboard"});
       });
       .catch(() => {;
         toast({;
-          title: t('errors.failed_to_copy'),,
-  description: "Please try again or copy the URL manually",;
+          title: t('errors.failed_to_copy'),;
+          description: "Please try again or copy the URL manually",;
           variant: "destructive";
         });
       });
@@ -109,22 +84,11 @@ export function SocialShareSection() {;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
           <div>;
-            <h3 className='text-xl font-bold text-white mb-2'>;              Share Zion with Your Network;
+
+              Share Zion with Your Network;
             </h3>;
             <p className='text - zion - slate - light'>;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
-          <div className='flex flex-wrap gap-3'>;
-            {shareLinks && shareLinks.map((link, index) => (              <Button
-                key = {index,}
-                className={`${link && link.color} text-white`}
-                size='sm'
-                onClick={link && link.onClick}
-                aria-label={link && link.name}
-                title={link && link.name}>;
-                {link && link.icon}
-                <span className='sr-only'>{link && link.name}</span>;
-                <span aria-hidden='true'>{link && link.name}</span>;
-              </Button>;
-            ))}
+

@@ -1,16 +1,5 @@
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
-  const [chunks, setChunks] = useState<ChunkInfo[]>([])
-  const [isVisible, setIsVisible] = useState(false)
-  const [isCollecting, setIsCollecting] = useState(false)
-  const [shouldShow, setShouldShow] = useState(false)
-  useEffect((,) => {
-    // Only show in development or when explicitly enabled      localStorage.getItem('bundle-analyzer') === 'true'
+
+      localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
     setIsVisible(true)
@@ -63,39 +52,8 @@ if ( {) {
 if (return) {
   $2
 }
-    setIsCollecting (true);
-    try {
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType(
-        'resource'
-      ) as PerformanceResourceTiming[]
-      const scriptEntries = resourceEntries.filter(
-        entry =>
-          entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
-      )
-      // Calculate bundle information
-      let totalSize = 0
-      let totalLoadTime = 0
-      const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = []
-      scriptEntries.forEach(entry => {
-        const size = entry.transferSize |entry.encodedBodySize |0
-        const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
-        totalLoadTime += loadTime
-        chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
-          size
-          loadTime
-          cached
-        })
-      })
-      // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7
-      const cacheHitRate = null;
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length
-      setBundleInfo({        totalSize,
+
+        totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
@@ -166,6 +124,7 @@ if (return) {
     }
   }
 
+import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Badge } from '@/components/ui/badge',;
@@ -283,18 +242,10 @@ export function BundleAnalyzer() {;
       <div className="fixed bottom-20 right-4 z-50">
         <Button
 
+          Bundle Analyzer
         </Button>
       </div>
     )
-                onClick={collectBundleInfo}
-                disabled={isCollecting}
-                className='h-6 w-6 p-0'>;
-                <Zap className='w-3 h-3' />;
-              </Button>;
-              <Button
-                variant='ghost'
-                size='sm'
-                onClick={toggleAnalyzer}
 
                 ✕
               </Button>
@@ -337,68 +288,19 @@ export function BundleAnalyzer() {;
               </div>
               <div>
 
-                className='h-6 w-6 p-0'>;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='fixed bottom - 20 right - 4 z - 50'>;
-        <Button;
-          variant='outline';
-          size='sm';
-          on_click={toggle_analyzer}
-          className='bg - background / 80 backdrop - blur - sm'        >;
-          <Package className='w - 4 h - 4 mr - 2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>);
-  }
-  return (
-    <div className='fixed bottom - 20 right - 4 z - 50 w - 96'>;
-      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg'>;
-        <CardHeader className='pb - 2'>;
-          <div className='flex items - center justify - between'>;
-            <CardTitle className='text - sm flex items - center'>;
-              <Package className='w - 4 h - 4 mr - 2' />;
-              Bundle Analyzer;
-            </CardTitle>;
-            <div className='flex gap - 2'>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={collectBundleInfo}
-                disabled={is_collecting}
-                className='h - 6 w - 6 p - 0'              >;
-                <Zap className='w - 3 h - 3' />;
-              </Button>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={toggle_analyzer}
-                className='h - 6 w - 6 p - 0'              >;
-
-                ✕;
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
+
+                        </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
                             cached
                           </Badge>
                         )}
                       </div>
-                      <Badge
-                        className={getSizeColor(chunk.size)}
-                        variant='outline'
-                      >
+
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
@@ -421,16 +323,12 @@ if ( {) {
 } 
 
 }
-            <div className="text-xs text-muted-foreground">
-              {isCollecting ? 'Analyzing bundle...' : 'Click refresh to analyze'}
-            </div>;
-          )}        </CardContent>;
+
+        </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-
-        
 
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
@@ -511,4 +409,4 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-}
+

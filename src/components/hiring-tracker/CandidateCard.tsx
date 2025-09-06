@@ -1,4 +1,5 @@
-  const handleSaveNotes = () => {    // Here you would save the notes to the database
+
+    // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
 
@@ -110,19 +111,19 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     // Here you would save the notes to the database;
     // For now, we'll just show a toast;
     toast({;
-      title: 'Notes saved',,
-  description: 'Your notes have been saved',;
+      title: 'Notes saved',;
+      description: 'Your notes have been saved',;
     });
-    setShowNotes(false)
-};
+    setShowNotes(false);
+  };
 
   const handleHireConfirmed = () => {;
     // Hiring process completed via the modal;
     toast({;
-      title: 'Hiring process initiated',,
-  description: 'Offer has been sent to the talent.',;
-    })
-};
+      title: 'Hiring process initiated',;
+      description: 'Offer has been sent to the talent.',;
+    });
+  };
 
   const candidateName = application && application.talent_profile?.full_name || 'Candidate';
 
@@ -167,7 +168,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </p>
                   </div>
                 </div>
-                
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -177,77 +177,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
-                  </AvatarPrimitive>;
-                  <div>;
-                    <h4 className='font-medium text-sm'>{candidateName}</h4>;
-                    <p className='text-xs text-muted-foreground'>;
-                      {application && application.talent_profile?.professional_title ||;
-                        'Applicant'}
-                    </p>;
-                  </div>;
-                </div>;
 
-                <DropdownMenu>;
-                  <DropdownMenuTrigger asChild>;
-                    <Button variant='ghost' className='h-8 w-8 p-0'>;
-                      <MoreVertical className='h-4 w-4' />;
-                    </Button>;
-                  </DropdownMenuTrigger>;
-                  <DropdownMenuContent align='end'>;
-                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
-                      {showNotes ? 'Hide notes' : 'Add notes'}
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
-                      <BriefcaseIcon
-                        className='h-4 w-4 mr-2'
-                        aria-hidden='true'
-                      />{' '}
-                      Hire Candidate;
-                    </DropdownMenuItem>;
-                    <DropdownMenuItem asChild>;
-                      <Link
-                        href={`/messages?talentId=${application && application.talent_id}`}>;
-                        Message;
-                      </Link>;
-                    </DropdownMenuItem>;
-                    {application && application.resume?.file_url && (;
-                      <DropdownMenuItem asChild>;
-                        <a
-                          href={application && application.resume.file_url}
-                          target='_blank'
-                          rel='noopener noreferrer'>;
-                          View Resume;
-                        </a>;
-                      </DropdownMenuItem>;
-                    )}
-
-                  </DropdownMenuContent>;
-                </DropdownMenu>;
-              </div>;
-
-              {/* Application Info */}
-              <div className='flex flex-wrap gap-2 items-center text-xs text-muted-foreground mb-2'>;
-                <div className='flex items-center'>;
-                  <Calendar className='h-3 w-3 mr-1' />;
-                  {formatDistanceToNow(new Date(application && application.created_at), {;
-                    addSuffix: true,;
-                  })}
-                </div>;
-
-                {isStalled && (;
-                  <div className='flex items-center text-amber-500'>;
-                    <AlertTriangle className='h-3 w-3 mr-1' />;
-                    Stalled;
-                  </div>;
-                )}
-              </div>;
-
-              {/* Match Score */}
-              {application && application.match_score !== null &&;
-                application && application.match_score !== undefined && (;
-                  <div className='mb-2'>;
-                    <ScoreBadge application={application} />;
-                  </div>;
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -279,7 +209,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </Link>
                 </Button>
 
-                
                 <Button 
                   variant="outline" 
                   size="sm" 
@@ -324,7 +253,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }'"};
 ;
 
-                
                 <Button 
                   variant="default" 
                   size="sm" 
@@ -337,6 +265,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             </CardContent>;
           </Card>;
         )}
+
+      </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
         isOpen={showHireModal}
@@ -347,4 +277,4 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
     </>;
   );
 }
-;
+

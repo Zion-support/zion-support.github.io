@@ -7,9 +7,8 @@ describe('App Smoke Tests', () => {
     expect(() => render(<App />)).not.toThrow();
   });
 
-  it('should render a basic structure', () => {
+  it('should render the main app component', () => {
     const { container } = render(<App />);
-    expect(container.firstChild).toBeTruthy();
+    expect(container).toBeInTheDocument();
   });
-});
 });

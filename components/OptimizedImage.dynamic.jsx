@@ -1,2 +1,12 @@
 import React from 'react';
-<<<<<<< HEADexport default OptimizedImage.dynamic;
+
+;
+const OptimizedImage.dynamic = () => {
+  return (
+    <div data - testid="optimizedimage.dynamic">;
+      <h1 > OptimizedImage.dynamic</h1>;
+    </div>);
+}
+;
+
+export default OptimizedImage.dynamic;

@@ -254,7 +254,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>
         </div>
 
-        
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 
@@ -263,8 +262,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 
-        
-
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
         </p>
@@ -272,9 +269,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
     </Card>
   )
 
-  )
+  );
 };
-"  )
+"  );
 };
 
 },
@@ -324,19 +321,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
           </TooltipProvider>;
         </div>;
 
-        <p className='text-xs text-center text-muted-foreground pt-2'>          Based on market data & trends. You can adjust as needed.;
-        </p>;
-      </CardContent>;
-    </Card>;
-  )
-};
-"        ;
         <p className="text-xs text-center text-muted-foreground pt-2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
       </CardContent>;
     </Card>;
-  )
+  );
 };
 
 };
@@ -372,11 +362,11 @@ if ( {) {
         <CardContent className='flex items - center justify - center p - 6'>;
           <div className='text - center'>;
             <Loader2 className='h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4' />;
-            <p className='text - sm text - muted - foreground'>              Generating optimal pricing suggestion...      <Card className="border border - dashed border-muted">;
-        <CardContent className="flex items - center justify - center p-6">;
-          <div className="text-center">;
-            <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb-4" />;
-            <p className="text - sm text - muted-foreground">;
+            <p className='text - sm text - muted - foreground'>              Generating optimal pricing suggestion...      <Card className="border border - dashed border - muted">;
+        <CardContent className="flex items - center justify - center p - 6">;
+          <div className="text - center">;
+            <Loader2 className="h - 10 w - 10 animate - spin text - muted - foreground mx - auto mb - 4" />;
+            <p className="text - sm text - muted - foreground">;
             </p>;
           </div>;
         </CardContent>;
@@ -402,10 +392,10 @@ if ( {) {
           </Badge>;
         </div>;
         <div className='bg - muted / 50 rounded - md p - 3 text - center'>;
-          <span className='text - 2xl font - bold'>    <Card className="border - 2 border - dashed border - muted-foreground / 20">;
-      <CardContent className="p - 5 space-y-4">;
-        <div className="flex items - center justify-between">;
-          <h4 className="font-semibold">AI Suggested Price</h4>;
+          <span className='text - 2xl font - bold'>    <Card className="border - 2 border - dashed border - muted - foreground / 20">;
+      <CardContent className="p - 5 space - y-4">;
+        <div className="flex items - center justify - between">;
+          <h4 className="font - semibold">AI Suggested Price</h4>;
           <Badge variant="outline" className={confidence_color}>;
           </Badge>;
         </div>;
@@ -427,15 +417,15 @@ if ( {) {
                 <Button;
                   variant='default'            ${suggestion.min_rate.to_fixed (0)} - ${suggestion.max_rate.to_fixed (0)}
           </span>;
-          <span className="text - sm text - muted - foreground ml-1">;
+          <span className="text - sm text - muted - foreground ml - 1">;
             {rate_type === "hourly" ? "/hour" : " total"}
           </span>;
         </div>;
-        <div className="flex items - start space - x-2 text - sm text - muted-foreground">;
-          <Info className="h - 4 w - 4 flex - shrink - 0 mt-1" />;
+        <div className="flex items - start space - x-2 text - sm text - muted - foreground">;
+          <Info className="h - 4 w - 4 flex - shrink - 0 mt - 1" />;
           <p>{suggestion.explanation}</p>;
         </div>;
-        <div className="flex items - center justify-between">;
+        <div className="flex items - center justify - between">;
           <TooltipProvider>;
             <Tooltip>;
               <TooltipTrigger as_child>;
@@ -444,11 +434,11 @@ if ( {) {
                   on_click={onApplySuggestion}
                   className='w - full'                >;
                   <ThumbsUp className='h - 4 w - 4 mr - 2' /> Apply Suggestion                </Button>;
-                  <ThumbsUp className="h - 4 w - 4 mr-2" /> Apply Suggestion;
+                  <ThumbsUp className="h - 4 w - 4 mr - 2" /> Apply Suggestion;
                   on_click={onApplySuggestion}
-                  className="w-full";
+                  className="w - full";
                 >;
-                  <ThumbsUp className="h - 4 w - 4 mr-2" /> Apply Suggestion;
+                  <ThumbsUp className="h - 4 w - 4 mr - 2" /> Apply Suggestion;
                 </Button>;
               </TooltipTrigger>;
               <TooltipContent>;
@@ -463,7 +453,7 @@ if ( {) {
     </Card>);
 }
 ";
-        <p className="text - xs text - center text - muted - foreground pt-2">;
+        <p className="text - xs text - center text - muted - foreground pt - 2">;
           Based on market data & trends. You can adjust as needed.;
         </p>;
       </CardContent>;

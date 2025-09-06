@@ -1,1 +1,3 @@
-<<<<<<< HEAD
+
+export { default } from "./subscribe";
+

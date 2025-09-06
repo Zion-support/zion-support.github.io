@@ -1,10 +1,3 @@
-const in_standalone = window.match_media ('(display - mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
-
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches,
-        description: 'Your browser does not support app installation.'}),
-      return;
 
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -37,8 +30,8 @@ export const PwaInstallButton: React.FC = () => {;
 ;
   const onClick = async () => {;
     if (!promptEvent) {;
-      toast('Installation not available', {,
-  description: 'Your browser does not support app installation.'}),;
+      toast('Installation not available', {;
+        description: 'Your browser does not support app installation.'}),;
       return;
     }
     try {;
@@ -71,4 +64,3 @@ export const PwaInstallButton: React.FC = () => {;
   )
 },
 
-export default PwaInstallButton,

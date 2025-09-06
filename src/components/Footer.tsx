@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,14 +62,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
+
         </div>
       </div>
-    </footer>
-  );
-};
 
-export default Footer;

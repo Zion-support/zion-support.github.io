@@ -1,18 +1,5 @@
-import {
 
-export function UsageStats() {
-
-  const handleSaveChanges = () => {
-    toast({
-
-  return (
-    <div className="space-y-8">
-      <div>
-        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
-        <p className="text-muted-foreground mb-6">
-          Configure usage limits for your team to manage your subscription resources.
-        </p>
-      </div>        <Card>
+        <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
             <CardDescription>
@@ -44,8 +31,6 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-        
 
         <Card>
           <CardHeader>
@@ -80,6 +65,7 @@ export function UsageStats() {
           </CardFooter>
         </Card>
 
+        <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
             <CardDescription>
@@ -109,8 +95,6 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-
-        
 
         <Card>
           <CardHeader>
@@ -155,6 +139,7 @@ export function UsageStats() {
         </Card>
       </div>
 
+          </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
             <p className='text-sm text-muted-foreground'>
@@ -179,10 +164,10 @@ import { Progress } from '@/components/ui/progress';
 export function UsageStats() {;
   const handleSaveChanges = () => {;
     toast({;
-      title: 'Limits updated',,
-  description: 'The new usage limits have been saved successfully.',;
-    })
-};
+      title: 'Limits updated',;
+      description: 'The new usage limits have been saved successfully.',;
+    });
+  };
 
   return (
     <div className='space-y-8'>;
@@ -363,7 +348,4 @@ export function UsageStats() {;
           </CardFooter>;
         </Card>;
       </div>;
-    </div>;
-  );
-}
-;
+

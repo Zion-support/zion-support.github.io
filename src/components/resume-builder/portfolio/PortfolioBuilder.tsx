@@ -1,7 +1,5 @@
 }
 
-  
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -19,7 +17,6 @@
           Add Project
         </Button>
       </div>
-      
 
           Add Project
         </Button>
@@ -98,7 +95,6 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
 
-  
   useEffect(() => {
     fetchProjects()
   }, [fetchProjects]);
@@ -156,21 +152,15 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>
-            
-            <ProjectForm 
-              project={editingProject || undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {                setShowAddProject(false);
+
+                setShowAddProject(false);
 
                 setEditingProject(null)
 
               }}
-            />
-          </CardContent>
-        </Card>      )}
 
-      
+      )}
+
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -241,17 +231,17 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <Button;
                   on_click={() => setShowAddProject (true)}
                   className='mt - 2'                >            <CardContent>;
-              <div className="flex flex - col items - center gap-4">;
-                <div className="bg - muted / 50 p - 6 rounded-full">;
-                  <FilePlus className="h - 12 w - 12 text - muted-foreground" />;
+              <div className="flex flex - col items - center gap - 4">;
+                <div className="bg - muted / 50 p - 6 rounded - full">;
+                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
                 </div>;
-                <h3 className="text - xl font-medium">No portfolio projects yet</h3>;
-                <p className="text - muted - foreground max - w-md mx-auto">;
+                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
+                <p className="text - muted - foreground max - w-md mx - auto">;
                   Add your best work to showcase your skills and experience to potential employers.;
                 </p>;
                 <Button;
                   on_click={() => setShowAddProject (true)}
-                  className="mt-2";
+                  className="mt - 2";
 
                 >;
                   Add Your First Project;

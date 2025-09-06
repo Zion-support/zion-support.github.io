@@ -38,11 +38,7 @@ export function ITServicePricingTable() {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
       }
-      if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
-        return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
-      }
-      return 0;
-    });
+
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
@@ -59,8 +55,8 @@ export function ITServicePricingTable() {;
         sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
           ? 'descending';
           : 'ascending',;
-    })
-};
+    });
+  };
 
   return (
 

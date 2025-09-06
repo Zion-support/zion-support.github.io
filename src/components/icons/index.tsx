@@ -1510,11 +1510,6 @@ export const ZoomOut = LucideZoomOut
 // Define the props for your Icon component
 export type IconProps = SVGProps<SVGSVGElement> & {
 
-  name: keyof typeof iconMap,
-  size?: number | string,
-  className?: string
-},
-
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -1817,10 +1812,8 @@ export const Icon: React.FC<IconProps> = ({
   className
   ...props
 }) => {
-  }
-  // Render the dynamically selected Lucide icon component
-  return <LucideIconComponent size={size} className={className} {...props} />
-}  const LucideIconComponent = iconMap[name],
+
+  const LucideIconComponent = iconMap[name],
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -2447,7 +2440,7 @@ export const ZoomOut = LucideZoomOut;
 export type IconProps = SVGProps<SVGSVGElement> & {;
   name: keyof typeof iconMap;
   size?: number | string;
-  className?: string
+  className?: string;
 };
 
 // Create a map of icon names to component references;
@@ -2744,7 +2737,7 @@ const iconMap = {;
   'zap-off': LucideZapOff,;
   zap: LucideZap,;
   'zoom-in': LucideZoomIn,;
-  'zoom-out': LucideZoomOut,
+  'zoom-out': LucideZoomOut,;
 };
 
 export const Icon: React.FC<IconProps> = ({;
@@ -2760,6 +2753,6 @@ export const Icon: React.FC<IconProps> = ({;
   }
 
   // Render the dynamically selected Lucide icon component;
-  return <LucideIconComponent size={size} className={className} {...props} />
+  return <LucideIconComponent size={size} className={className} {...props} />;
 };
-<<<<<<< HEAD
+

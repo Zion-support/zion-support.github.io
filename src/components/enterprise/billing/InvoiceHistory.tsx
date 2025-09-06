@@ -1,4 +1,4 @@
-Table;
+
   TableBody;
   TableCell;
   TableHead;
@@ -25,12 +25,11 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+
+  TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { Download, FileText, Search } from 'lucide-react'
-
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
 
 export function InvoiceHistory() {
   // Mock invoice data
@@ -282,9 +281,9 @@ export function InvoiceHistory() {;
       period: "Dec 2024"}],;
   const handleDownloadInvoice = (invoiceId: string) => {    // In a real app, this would trigger a download of the invoice PDF;
     toast({;
-      title: "Downloading invoice",,
-  description: `Downloading invoice ${invoiceId} as PDF.`})
-};
+      title: "Downloading invoice",;
+      description: `Downloading invoice ${invoiceId} as PDF.`});
+  };
 
   const getBadgeForStatus = (status: string,) => {;
     switch (status) {;
@@ -296,8 +295,8 @@ export function InvoiceHistory() {;
 
   )
 }
-      case "paid": return <Badge className="bg - green-500">Paid</Badge>;
+      case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
-<<<<<<< HEAD
+

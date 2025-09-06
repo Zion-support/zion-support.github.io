@@ -49,18 +49,8 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
-  return () => observer.disconnect ();
-}, [lazy, priority, isInView]);
-//Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
-  //If it's already optimized or external,  return as - is if (|| original_src.includes ('/ next / image') ) {) {
-  $2
-}
-  //For internal images, Next.js will handle optimization return original_src;
-}';
-<defs> <linear_gradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop - color:#f3f4f6, stop - opacity:1" /> <stop offset="100%" style="stop - color:#e5e7eb, stop - opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .to_string ('base64');
-}`;
-}
-  const img_ref = useRef < HTMLDivElement>(null);  // Intersection Observer for lazy loading;
+
+  // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
   }, [lazy, priority, isInView]);
@@ -159,19 +149,19 @@ if (||) {
     }
 
     // For internal images, Next && Next.js will handle optimization;
-    return originalSrc
-};
+    return originalSrc;
+  };
 
   const handleLoad = () => {;
     setIsLoading(false);
-    onLoad?.()
-};
+    onLoad?.();
+  };
 
   const handleError = () => {;
     setHasError(true);
     setIsLoading(false);
-    onError?.()
-};
+    onError?.();
+  };
 
   // Generate blur placeholder;
   const generateBlurDataURL = () => {;
@@ -188,8 +178,8 @@ if (||) {
         </defs>;
         <rect width="100%" height="100%" fill="url(#grad)" />;
       </svg>`;
-    ).toString('base64')}`
-};
+    ).toString('base64')}`;
+  };
 
     >;
       {isInView && !hasError && (;
@@ -248,9 +238,8 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
-      {hasError && (;
-        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
-          {fallbackSrc ? (;            <img
+
+            <img
               src={fallbackSrc}
               alt={alt}
 
@@ -317,8 +306,8 @@ export function withImageOptimization<Pextends { src: string alt: string }>(;
 
     const { src, alt, ...otherProps } = props;
 
-    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
-};
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
+  };
 }
 
 // Utility to preload critical images;

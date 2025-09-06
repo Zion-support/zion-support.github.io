@@ -19,5 +19,7 @@ module.exports = {
   },
   globals: {
     KeyboardEvent: 'readonly',
-  },
+    MouseEvent: 'readonly',
+    Event: 'readonly'
+  }
 };

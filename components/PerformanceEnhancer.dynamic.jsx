@@ -1,2 +1,12 @@
 import React from 'react';
-<<<<<<< HEADexport default PerformanceEnhancer.dynamic;
+
+;
+const PerformanceEnhancer.dynamic = () => {
+  return (
+    <div data - testid="performanceenhancer.dynamic">;
+      <h1 > PerformanceEnhancer.dynamic</h1>;
+    </div>);
+}
+;
+
+export default PerformanceEnhancer.dynamic;

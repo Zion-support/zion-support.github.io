@@ -21,59 +21,14 @@ export function VerifiedBadge({
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
-  }
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-interface VerifiedBadgeProps {
 
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger asChild>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
 
-      </Tooltip>
-    </TooltipProvider>
-
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-interface VerifiedBadgeProps {;
-  verified: boolean;
-  size?: 'sm' | 'md' | 'lg';
-  /** Optional tooltip label to display */;
-  label?: string;
-
-export function VerifiedBadge(): any ({;
-  verified,;
-  size = 'sm',;
-  label = 'Verified talent',;
-}: VerifiedBadgeProps) {;
-  if (!verified) return null;
-
-  const sizeClasses = {;
-    sm: 'h-3 && 3.5 w-3 && 3.5',;
-    md: 'h-4 w-4',;
-    lg: 'h-5 w-5',
-};
-
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-
-interface VerifiedBadgeProps {;
-  verified: boolean,;
-  size?: 'sm' | 'md' | 'lg';
-  /** Optional tooltip label to display */;
-  label?: string;
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
@@ -82,8 +37,8 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
   const sizeClasses = {;
     sm: 'h-3 && 3.5 w-3 && 3.5',;
     md: 'h-4 w-4',;
-    lg: 'h-5 w-5'
-};
+    lg: 'h-5 w-5';
+  };
 
   return (
     <TooltipProvider>;
@@ -94,7 +49,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
     <TooltipProvider>;
       <Tooltip>;
         <TooltipTrigger as_child>;
-          <span className='inline - flex text - blue - 500'>            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className="inline - flex text - blue-500">;
+          <span className='inline - flex text - blue - 500'>            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className="inline - flex text - blue - 500">;
             <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
           </span>;
         </TooltipTrigger>;
@@ -107,4 +62,4 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 }
 
     </TooltipProvider>);
-}
+

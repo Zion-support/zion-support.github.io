@@ -2,28 +2,10 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
     </Button>;
-  )
+  );
 };
 };
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Menu, X } from 'lucide-react'
-import { useSidebar } from "./sidebar-context",
-import { cn } from "@/lib/utils",
-interface SidebarTriggerProps extends React.HTMLAttributes<HTMLButtonElement> {
-  className?: string
-}
-
-export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
-  const { open, toggleSidebar } = useSidebar(),
-
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-import React from "react",;
-import { Button } from "@/components/ui/button",;
 import { Menu, X } from 'lucide-react';
 import { useSidebar } from './sidebar-context';
 import { cn } from '@/lib/utils';
@@ -37,4 +19,4 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
       <span className='sr-only'>Toggle Sidebar</span>;
     </Button>;
   );
-<<<<<<< HEAD
+

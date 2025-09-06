@@ -41,7 +41,7 @@ import { Textarea } from '@/components / ui / textarea';
   PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
 const form_schema = z.object ({
-  title: z.string ().min (1, 'Title is required'),
+  title: z.string ().min (1, 'Title is required');
   description: z.string ().optional (),
   due_date: z.date ().optional (),
   amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
@@ -116,26 +116,7 @@ import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {;
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {;
-  Popover;
-  PopoverContent;
-  PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator } from './AIMilestoneGenerator';
-import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, 'Title is required'),
-  description: z && z.string().optional(),;
-  due_date: z && z.date().optional(),;
-  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
 
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues,) => void,;
   isSubmitting: boolean,;
@@ -158,12 +139,12 @@ export function AddMilestoneForm(): any ({;
   const form = useForm<MilestoneFormValues>({;
     resolver: zodResolver(formSchema),;
     defaultValues: {;
-      title: '',,
-  description: '',;
+      title: '',;
+      description: '',;
       amount: 0}}),;
   const handleSubmit = (values: MilestoneFormValues) => {;
-    onSubmit(values);    form && form.reset()
-};
+    onSubmit(values);    form && form.reset();
+  };
 
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {;
     // If there's only one milestone, submit it directly;
@@ -171,8 +152,8 @@ export function AddMilestoneForm(): any ({;
       const milestone = milestones[0];
       if (milestone) {;
         onSubmit({;
-          title: milestone.title,,
-  description: milestone.description,;
+          title: milestone.title,;
+          description: milestone.description,;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
@@ -193,12 +174,12 @@ export function AddMilestoneForm(): any ({;
 
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
-      title: milestone && milestone.title,,
-  description: milestone && milestone.description,;
+      title: milestone && milestone.title,;
+      description: milestone && milestone.description,;
       due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
       amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    })
-};
+    });
+  };
 
   return (
 
@@ -235,7 +216,7 @@ export function AddMilestoneForm(): any ({;
             render={({ field }: { field: any },) => (;
               <FormItem>;
                 <FormLabel>Title</FormLabel>;
-    <div className="space-y-6">;
+    <div className="space - y-6">;
       {/* AI Milestone Generator */}
       {project_scope && projectStartDate && (
         <AIMilestoneGenerator;
@@ -247,7 +228,7 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone = {handleAddMilestone, }
         />)}
       <Form {...form}>;
-        <form on_submit={form.handle_submit (handle_submit)} className="space-y-4">;
+        <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
           <FormField;
             control = {form.control, }
             name="title";
@@ -284,7 +265,7 @@ export function AddMilestoneForm(): any ({;
                 <FormControl>;
                   <Textarea;
                     placeholder="Describe what needs to be delivered";
-                    className="min-h-[100px]";
+                    className="min - h-[100px]";
                     {...field}
                   />;
                 </FormControl>;
@@ -295,14 +276,8 @@ export function AddMilestoneForm(): any ({;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
 
             <FormField
-              control = {form && form.control,}
-              name="due_date"
-              render={({ field }: { field: any },) => (;
-                <FormItem className="flex flex-col">;
-                  <FormLabel>Due Date (optional)</FormLabel>;
-                  <Popover>;
-                    <PopoverTrigger asChild>;
-                      <FormControl>;                        <Button
+
+                        <Button
                           variant="outline"
                           className="w-full pl-3 text-left font-normal"
                         >
@@ -328,30 +303,30 @@ export function AddMilestoneForm(): any ({;
                         initialFocus;
               </FormItem>)}
           />;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <FormField;
               control = {form.control, }
               name="due_date";
               render={({ field }: { field: any }, ) => (
-                <FormItem className="flex flex-col">;
+                <FormItem className="flex flex - col">;
                   <FormLabel > Due Date (optional)</FormLabel>;
                   <Popover>;
                     <PopoverTrigger as_child>;
                       <FormControl>;
                         <Button;
                           variant="outline";
-                          className="w - full pl - 3 text - left font-normal";
+                          className="w - full pl - 3 text - left font - normal";
                         >;
                           {field.value ? (
                             format (field.value, "PPP")) : (
-                            <span className="text - muted-foreground">;
+                            <span className="text - muted - foreground">;
                               Pick a date;
                             </span>)}
-                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" />;
+                          <CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" />;
                         </Button>;
                       </FormControl>;
                     </PopoverTrigger>;
-                    <PopoverContent className="w - auto p-0" align="start">;
+                    <PopoverContent className="w - auto p - 0" align="start">;
                       <Calendar;
                         mode="single";
                         selected = {field.value, }
@@ -442,7 +417,7 @@ export function AddMilestoneForm(): any ({;
                 </FormItem>)}
             />;
           </div>;
-          <div className="flex justify - end space - x-2 pt-4">;
+          <div className="flex justify - end space - x-2 pt - 4">;
             {on_cancel && (
               <Button;
                 type="button";
@@ -455,7 +430,7 @@ export function AddMilestoneForm(): any ({;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? (
                 <>;
-                  <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" />;
+                  <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
                   Saving...;
                 </>) : (
                 "Add Milestone")}
@@ -481,15 +456,15 @@ export function AddMilestoneForm(): any ({;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
 }/> <FormField <FormItem> <FormLabel > Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
-}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4" > <FormField <FormLabel > Due Date (optional) </FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button variant="outline" className="w - full pl - 3 text - left font-normal" >) : (<span className="text - muted-foreground" > Pick a date </span>) ";
-}<CalendarIcon className="ml - auto h - 4 w - 4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p-0" align="start" > <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Due Date (optional) </FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button variant="outline" className="w - full pl - 3 text - left font - normal" >) : (<span className="text - muted - foreground" > Pick a date </span>) ";
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar initial_focus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
 }/> <FormField <FormItem> <FormLabel > Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> </div> <Button type="button" variant="outline" on_click={
   on_cancel;
 }disabled= {
   is_submitting;
 }> Cancel </Button>) ";
-}<> <Loader2 className="mr - 2 h - 4 w - 4 animate-spin" /> Saving... </>) : ("Add Milestone");
+}<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
 }'"}
 }

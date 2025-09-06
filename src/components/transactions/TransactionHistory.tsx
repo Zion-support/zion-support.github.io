@@ -28,5 +28,6 @@ if (return []) {
               const counterparty_name = is_client;
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
-}  );
+
+  );
 }

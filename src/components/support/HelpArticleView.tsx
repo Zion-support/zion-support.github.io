@@ -26,7 +26,7 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 
     year: "numeric",;
     month: "long",;
-    day: "numeric", })
+    day: "numeric", });
 };
 }
 
@@ -91,26 +91,7 @@ function HelpArticleView() {
   // Find the article in all categories;
   let article;
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find (array => a.id === article_id);
-    // Check condition
-if ( {) {
-  $2
+
 }
-      article = found;
-      break;
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return <div > Article not found</div>;
-  }
-  const handle_feedback = (type: "helpful" | "not - helpful") =>: any {
-    setFeedbackGiven (type);
-  return new Date (date).toLocaleDateString ("en - US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric", });}
 
 ;

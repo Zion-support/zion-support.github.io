@@ -88,8 +88,8 @@ if ( {) {
   $2
 }
     return (
-      <div className="flex justify - center items - center p-8">;
-        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;
+      <div className="flex justify - center items - center p - 8">;
+        <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
       </div>);
   }
 
@@ -97,14 +97,14 @@ if ( {) {
 if ( {) {
   $2
 }
-    return (<div className="text - center p - 8 border rounded - md bg-muted / 20">;
-        <p className="text - lg text - muted-foreground">;
+    return (<div className="text - center p - 8 border rounded - md bg - muted / 20">;
+        <p className="text - lg text - muted - foreground">;
           {filter;
             ? `No jobs with status "${filter}" found.`;
 
             : "You haven't posted any jobs yet.", }
         </p>;
-        <Button as_child className="mt-4">;
+        <Button as_child className="mt - 4">;
           <Link href="/post - job">Post Your First Job</Link>;
         </Button>;
       </div>);
@@ -307,7 +307,8 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               )}
 
     </div>;
-  )
+  );
+
 };";
 return (<div className="grid gap-6 md:grid-cols-2" > {;
   jobs && jobs.map ( (job) => (<Cardkey= {
@@ -330,7 +331,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div>) ;
 }'"}
 
-    <div className="grid gap - 6 md:grid - cols-2">;
+    <div className="grid gap - 6 md:grid - cols - 2">;
       {jobs.map ((job, ) => (
         <Card;
           key = {job.id, }
@@ -339,11 +340,11 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
           }`}
           on_click = {(, ) => onSelectJob?.(job.id, job.title), }
         >;
-          <CardHeader className="p-4">;
-            <div className="flex justify - between items-start">;
+          <CardHeader className="p - 4">;
+            <div className="flex justify - between items - start">;
               <div>;
-                <CardTitle className="text-xl">{job.title}</CardTitle>;
-                <CardDescription className="mt-1">;
+                <CardTitle className="text - xl">{job.title}</CardTitle>;
+                <CardDescription className="mt - 1">;
                   Posted {format (new Date (job.created_at), "PPP")}
                 </CardDescription>;
               </div>;
@@ -352,48 +353,48 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
               </Badge>;
             </div>;
           </CardHeader>;
-          <CardContent className="p - 4 pt-0">;
-            <p className="line - clamp - 3 text - sm text - muted - foreground mb-2">;
+          <CardContent className="p - 4 pt - 0">;
+            <p className="line - clamp - 3 text - sm text - muted - foreground mb - 2">;
               {job.description}
             </p>;
-            <div className="flex flex - wrap gap - 1 mt-2">;
+            <div className="flex flex - wrap gap - 1 mt - 2">;
               {job.skills.slice (0, 3).map ((skill, index, ) => (
-                <Badge key={index} variant="outline" className="text-xs">;
+                <Badge key={index} variant="outline" className="text - xs">;
                   {skill}
                 </Badge>))}
               {job.skills.length > 3 && (
-                <Badge variant="outline" className="text-xs">;
+                <Badge variant="outline" className="text - xs">;
                   +{job.skills.length - 3} more;
                 </Badge>)}
             </div>;
-            <div className="mt - 3 text-sm">;
-              <span className="font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
+            <div className="mt - 3 text - sm">;
+              <span className="font - medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>;
-            <div className="mt - 1 text-sm">;
-              <span className="font-medium">Deadline:</span> {format (new Date (job.deadline), "PPP")}
+            <div className="mt - 1 text - sm">;
+              <span className="font - medium">Deadline:</span> {format (new Date (job.deadline), "PPP")}
             </div>;
           </CardContent>;
-          <CardFooter className="flex justify - between p - 4 pt - 0 gap-2">;
+          <CardFooter className="flex justify - between p - 4 pt - 0 gap - 2">;
             <Button variant="outline" size="sm" as_child>;
               <Link href={`/jobs/${job.id}`}>;
-                <Eye className="h - 4 w - 4 mr-1" /> View Details;
+                <Eye className="h - 4 w - 4 mr - 1" /> View Details;
               </Link>;
             </Button>;
-            <div className="flex gap-2">;
+            <div className="flex gap - 2">;
               <Button variant="outline" size="sm" as_child>;
                 <Link href={`/jobs/${job.id}/edit`}>;
-                  <Edit className="h - 4 w-4" />;
+                  <Edit className="h - 4 w - 4" />;
                 </Link>;
               </Button>;
               <Button variant="outline" size="sm">;
-                <X className="h - 4 w-4" />;
+                <X className="h - 4 w - 4" />;
               </Button>;
             </div>;
           </CardFooter>;
         </Card>))}
     </div>);
 }";
-return (<div className="grid gap - 6 md:grid - cols-2" > {
+return (<div className="grid gap - 6 md:grid - cols - 2" > {
   jobs.map ( (job) => (<Card key= {
   job.id;
 }className= {
@@ -406,11 +407,11 @@ return (<div className="grid gap - 6 md:grid - cols-2" > {
 }</p> + {
   job.skills.length - 3;
 }more </Badge>) ";
-}</div> <div className="mt - 3 text-sm"> <span className="font-medium">Budget:</span> $ {
+}</div> <div className="mt - 3 text - sm"> <span className="font - medium">Budget:</span> $ {
   job.budget.min;
 }- $ {
   job.budget.max ";
-}</div> <div className="mt - 1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w-4" /> </Button> </div> </CardFooter> </Card>) );
+}</div> <div className="mt - 1 text - sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h - 4 w - 4" /> </Button> </div> </CardFooter> </Card>) );
 }</div>);
 }'"}
             </div>
@@ -437,4 +438,4 @@ return (<div className="grid gap - 6 md:grid - cols-2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
-<<<<<<< HEAD
+

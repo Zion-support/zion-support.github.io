@@ -20,6 +20,16 @@ const PerformanceOptimizationChat: NextPage = () => {;
     </div>
       </Head>;
 
+      <main>;
+        <h1>PerformanceOptimizationChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+  );
+}
+export default PerformanceOptimizationChat;
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -61,3 +71,4 @@ const PerformanceOptimizationChat: NextPage = () => {
 ;
 export default PerformanceOptimizationChat;
 ;
+

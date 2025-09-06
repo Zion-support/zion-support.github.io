@@ -1,62 +1,22 @@
 
-interface AIEnhancementPanelProps {  title: string;
+  title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
-  onClose?: () => void,;
-  showInstructions?: boolean,;
-  initialContent?: string;
-}
-;
-export function AIEnhancementPanel({;  title,;
+
+  title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-    })
-  }
-  const handleApply = () => {
-    onApply(generatedContent)
-    if (onClose) onClose()
-  }
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
-      [field]: e.target.value})
-  },
-
-  const handleApply = () => {
-    onApply(generatedContent),
-    if (onClose) onClose()
-  },
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(generatedContent),
-    setCopied(true),
-    setTimeout(() => setCopied(false), 2000)
-  },
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
@@ -119,7 +79,35 @@ export function AIEnhancementPanel({;  title,;
               Generate Enhanced Content
             </>
           )}
-        </Button>}
+        </Button>
+
+                {copied ? (
+                  <><Check className="h-4 w-4 mr-1" /> Copied</>
+                ) : (
+                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
+                )}
+              </Button>;
+            </div>;
+            <div className='relative'>;
+              <Textarea
+                value={generatedContent}
+
+                onChange={(e) => setGeneratedContent(e.target.value)}
+                className="min-h-[200px]"
+              />
+
+            </div>
+          </div>
+        )}
+
+      {generatedContent && (
+        <CardFooter className='flex justify-between'>
+          {onClose && (
+            <Button variant='outline' onClick={onClose}>
+              Cancel
+            </Button>
+
+}
 
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
@@ -213,7 +201,7 @@ export function AIEnhancementPanel({;  title,;
 
       )};
     </Card>;
-  )
+  );
 };
 
           <Button onClick={handleApply}>;
@@ -224,4 +212,4 @@ export function AIEnhancementPanel({;  title,;
     </Card>;
   );
 }
-<<<<<<< HEAD
+

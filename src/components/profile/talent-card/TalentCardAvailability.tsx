@@ -26,8 +26,8 @@ interface TalentCardAvailabilityProps {
 
         return 'bg-blue-500/20 text-blue-400',;
       default:;
-        return 'bg-gray-500/20 text-gray-400'
-};
+        return 'bg-gray-500/20 text-gray-400';
+    };
 
   }; return 'bg-gray-500/20 text-gray-400'
     }
@@ -77,7 +77,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'full-time':;
         return 'bg-green-500/20 text-green-400',;
       case 'part-time':;
-        return 'bg-yellow-500/20 text-yellow-400';      case 'project-based':;
+
+      case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
@@ -96,8 +97,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':;
         return 'Project';
       default:;
-        return status
-};
+        return status;
 
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {

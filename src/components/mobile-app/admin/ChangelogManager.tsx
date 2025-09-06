@@ -4,14 +4,11 @@ interface ChangelogManagerProps {
 
 type ChangelogEntry = {
 
-  id: string;
-  version: string;
-  date: string;
-  changes: string,
-
 }
     })
   }
+
+  id: string,
   version: string,
   date: string,
   changes: string
@@ -48,14 +45,12 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       changes: ""
     })
   },
-  
+
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
-  }
-  )  const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
-  )
+  );
+
 };  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
@@ -64,7 +59,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     setNewEntry(prev => ({ ...prev, [name]: value }))
   }
 
-import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./MetadataManager";
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -77,6 +71,8 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
               <Input
                 placeholder="Version (e.g. 1.0.1)"
                 name="version"
+
+              />
               <Input
                 type="date"
                 name="date"
@@ -93,6 +89,8 @@ import { AppPlatform } from "./MetadataManager",;
 interface ChangelogManagerProps {;
   platform: AppPlatform;
 }
+
+    <Card className="bg-zion-blue border-zion-purple/30">;
       <CardHeader>;
         <CardTitle>Version History</CardTitle>;
       </CardHeader>;
@@ -100,12 +98,6 @@ interface ChangelogManagerProps {;
         <div className="space-y-4">;
           <div className="flex flex-col md:flex-row gap-3">;
             <div className="flex-1 grid grid-cols-2 gap-3">;
-              <Input;
-                placeholder="Version (e.g. 1.0.1)";
-                name="version";
-                value={newEntry.version}
-                onChange={handleInputChange}
-              />;
 
               <Input;
                 type="date";
@@ -131,3 +123,19 @@ interface ChangelogManagerProps {;
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
+
+                    className="text-gray-400 hover:text-red-400 p-1 h-auto"
+                  >
+                    <Trash2 className="h-4 w-4" />
+                  </Button>
+                </div>
+                <p className="text-sm whitespace-pre-wrap">{entry.changes}</p>
+              </div>
+            ))}
+
+          </div>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+

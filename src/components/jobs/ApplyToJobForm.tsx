@@ -9,9 +9,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert",
 import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 
-import { Job } from "@/types/jobs",
-import { toast } from "sonner",
-
 interface ApplyToJobFormProps {
 
   job: Job
@@ -42,7 +39,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter")
       return;
     }
-    
 
     setIsSubmitting(true)
     setError(null)
@@ -104,7 +100,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
 
-      
+  return (
 
       {error && (
         <Alert variant="destructive">
@@ -112,8 +108,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           <AlertDescription>{error}</AlertDescription>
         </Alert>
       )}
-
-      
 
       <div className="space-y-4">
         <div>
@@ -211,6 +205,7 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             onChange = {(e,) => setCoverLetter(e && e.target.value),}
             rows = {6,}
 
+        <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
             <div className="flex items-center gap-2 mt-2">
@@ -344,19 +339,19 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
               value = {selectedResumeId,}
               onValueChange = {setSelectedResumeId,}>;
               <SelectTrigger className="mt-1">;
-    <form on_submit={handle_submit} className="space-y-6">;
+    <form on_submit={handle_submit} className="space - y-6">;
       <div>;
-        <h3 className="text - lg font - medium mb-1">Apply to: {job.title}</h3>;
-        <p className="text - sm text - muted - foreground mb-4">;
+        <h3 className="text - lg font - medium mb - 1">Apply to: {job.title}</h3>;
+        <p className="text - sm text - muted - foreground mb - 4">;
           Posted {formatDistanceToNow (new Date (job.created_at), { add_suffix: true })}
         </p>;
       </div>;
       {error && (
         <Alert variant="destructive">;
-          <AlertCircle className="h - 4 w-4" />;
+          <AlertCircle className="h - 4 w - 4" />;
           <AlertDescription>{error}</AlertDescription>;
         </Alert>)}
-      <div className="space-y-4">;
+      <div className="space - y-4">;
         <div>;
           <Label html_for="cover_letter">Cover Letter</Label>;
           <Textarea;
@@ -365,24 +360,24 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
             on_change = {(e, ) => setCoverLetter (e.target.value), }
             rows = {6, }
             placeholder="Introduce yourself and explain why you are a good fit for this job...";
-            className="mt-1";
+            className="mt - 1";
           />;
-          <p className="text - xs text - muted - foreground mt-1">;
+          <p className="text - xs text - muted - foreground mt - 1">;
             Provide a brief introduction and highlight your relevant skills and experience.;
           </p>;
         </div>;
         <div>;
           <Label html_for="resume">Select Resume (Optional)</Label>;
           {isResumesLoading ? (
-            <div className="flex items - center gap - 2 mt-2">;
-              <Loader2 className="h - 4 w - 4 animate-spin" />;
+            <div className="flex items - center gap - 2 mt - 2">;
+              <Loader2 className="h - 4 w - 4 animate - spin" />;
               <span > Loading your resumes...</span>;
             </div>) : resumes && resumes.length > 0 ? (
             <Select;
               value = {selectedResumeId, }
               onValueChange = {setSelectedResumeId, }
             >;
-              <SelectTrigger className="mt-1">;
+              <SelectTrigger className="mt - 1">;
                 <SelectValue placeholder="Select a resume" />;
               </SelectTrigger>;
               <SelectContent>;
@@ -434,15 +429,10 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>
 
       <div className="flex justify-end gap-2">
+
+        <Button
           type="button"
           variant="outline"
-
-          onClick={() => {;
-            if (onSuccess) onSuccess();
-
-          disabled={isSubmitting}
-          onClick={() => {;
-            if (onSuccess) onSuccess();
 
           }}
         >;
@@ -472,4 +462,4 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
+

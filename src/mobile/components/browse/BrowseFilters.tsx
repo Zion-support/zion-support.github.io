@@ -220,7 +220,6 @@ interface BrowseFiltersProps {
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
               </SheetHeader>
 
-              
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
@@ -235,7 +234,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
 
                       <Label>Experience Level</Label>
@@ -258,7 +256,6 @@ interface BrowseFiltersProps {
                       </div>
                     </div>
 
-                    
                     <div className="space-y-2">
                       <Label>Experience (years)</Label>
                       <Slider
@@ -277,7 +274,6 @@ interface BrowseFiltersProps {
                   </>
                 )}
 
-                
                 <div className="space-y-2">
 
                   <Label>Location</Label>
@@ -294,17 +290,13 @@ interface BrowseFiltersProps {
                   </Select>
                 </div>
 
-                
                 <div className="space-y-2">
 
                   <Label>Salary Range</Label>
-                  <div className='flex gap-4 items-center'>
-                    <Input placeholder='Min' type='number' className='w-full' />
-                    <span>to</span>
-                    <Input placeholder='Max' type='number' className='w-full' />                  </div>
+
+                  </div>
                 </div>
 
-                
                 <div className="space-y-2">
 
                   <Label>Skills</Label>
@@ -341,15 +333,12 @@ interface BrowseFiltersProps {
                   </Select>;
                 </div>;
 
-                
                 <div className="flex items-center justify-between">
 
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
-
-              
 
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
@@ -364,8 +353,6 @@ interface BrowseFiltersProps {
               </SheetFooter>
             </SheetContent>
           </Sheet>
-
-          
 
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
@@ -480,10 +467,9 @@ interface BrowseFiltersProps {
 
       </div>;
     </div>;
-  )
+  );
 };
 
-          
           {activeFilters.map((filter) => (
             <Badge 
               key={filter} 

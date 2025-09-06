@@ -6,7 +6,6 @@ import { AvailabilityFilter } from "./filters/AvailabilityFilter",
 import { RegionFilter } from "./filters/RegionFilter",
 import { ExperienceFilter } from "./filters/ExperienceFilter",
 
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Filter } from 'lucide-react';
@@ -38,11 +37,7 @@ export function FilterSidebar(): any ({;
   clearFilters,;
   isMobileFilterOpen,}: FilterSidebarProps) {;
   return (
-<<<<<<< HEAD
-    <>;
-=======
-    <>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
       {/* Filter header */}
 
       <div className='flex items-center justify-between mb-6'>;
@@ -65,7 +60,6 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
-
 
   return (
     <>
@@ -133,7 +127,6 @@ export function FilterSidebar({
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
 
-
           Filters
         </h3>
         <Button 
@@ -146,8 +139,6 @@ export function FilterSidebar({
         </Button>
       </div>
 
-
-      
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from 'lucide-react';
@@ -197,7 +188,6 @@ export function FilterSidebar({;
         </Button>;
       </div>;
 
-
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -233,7 +223,6 @@ export function FilterSidebar({;
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
 
-
       {/* Availability */}
       <AvailabilityFilter
         selectedAvailability={selectedAvailability}
@@ -242,7 +231,6 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('availability')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Region */}
       <RegionFilter
@@ -253,7 +241,6 @@ export function FilterSidebar({;
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
 
-
       {/* Years of Experience */}
       <ExperienceFilter
         experienceRange={experienceRange}
@@ -262,7 +249,6 @@ export function FilterSidebar({;
         toggleSection={() => toggleSection('experience')}
 
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Price Range */}
       <PriceFilter
@@ -386,10 +372,7 @@ function FilterSidebar() {
         priceRange={priceRange}
         setPriceRange={setPriceRange}
 
-      
-
         <Button 
-
 
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}
@@ -418,8 +401,6 @@ function FilterSidebar() {
 
       {isMobileFilterOpen && (;
         <Button;
-
-
 
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
@@ -493,25 +474,4 @@ function FilterSidebar() {
       )}
     </>;
   );
-<<<<<<< HEAD
-}
 
-  );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-}
-;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

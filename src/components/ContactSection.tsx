@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -18,17 +20,57 @@ const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+    // Handle form submission
     console.log('Form submitted:', formData);
+    alert('Thank you for your message! We\'ll get back to you soon.');
   };
 
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
+
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+
   return (
-    <section className="py-16 px-4 bg-gray-50">
+    <section className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology? 
+            Ready to transform your business with cutting-edge technology?
             Let's discuss how we can help you achieve your goals.
           </p>
         </div>
@@ -38,89 +80,80 @@ const ContactSection: React.FC = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <p className="font-semibold">Email</p>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">contact@ziontechgroup.com</p>
+                    <p className="text-gray-600">support@ziontechgroup.com</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-semibold">Phone</p>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+1 (555) 987-6543</p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <p className="font-semibold">Address</p>
-                    <p className="text-gray-600">123 Tech Street, Innovation City, IC 12345</p>
+                    <h4 className="font-semibold text-gray-900">Office</h4>
+                    <p className="text-gray-600">
+                      123 Tech Street<br />
+                      Innovation District<br />
+                      San Francisco, CA 94105
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <h4 className="text-lg font-semibold mb-4">Why Choose Us?</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 24/7 Expert Support</li>
-                <li>• Custom Solutions for Your Business</li>
-                <li>• Proven Track Record</li>
-                <li>• Competitive Pricing</li>
-                <li>• Fast Implementation</li>
-              </ul>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-gray-900 mb-3">Business Hours</h4>
+              <div className="space-y-2 text-gray-600">
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
+          <div>
             <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
+                    Full Name *
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    required
                     value={formData.name}
                     onChange={handleChange}
-                    required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    Email Address *
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-              
+
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -135,26 +168,26 @@ const ContactSection: React.FC = () => {
                   placeholder="Your company name"
                 />
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
+                  Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
+                  required
+                  rows={6}
                   value={formData.message}
                   onChange={handleChange}
-                  required
-                  rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell us about your project or how we can help..."
                 />
               </div>
-              
+
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
@@ -167,4 +200,41 @@ const ContactSection: React.FC = () => {
   );
 };
 
-export default ContactSection;
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+    </section>);
+}set_errors (field_errors);
+toast ({
+  return;
+}set_errors ({
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+}";
+}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+}</div> <div> <Button > {';
+  is_submitting ? 'Sending...' : 'Send Message';
+}</Button>);
+}</div> </form> </div> </div> </div> </div> </section>);
+}'"}
+}
+;
+

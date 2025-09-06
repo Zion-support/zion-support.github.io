@@ -29,11 +29,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         { label: 'ai', value: 1 }
       ]
 
+    });
+
+  }
+
   }
 
 }
 
-}import { createServerClient } from '../../../utils / supabase / server';
+}
+
+import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
  * handler - Function description
@@ -120,5 +126,4 @@ function handler() {
   }
 }
 }
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+

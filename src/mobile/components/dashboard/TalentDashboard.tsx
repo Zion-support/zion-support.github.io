@@ -37,10 +37,6 @@ export function TalentDashboard() {
             </CardContent>
           </Card>
 
-          
-
-          
-
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -69,8 +65,6 @@ export function TalentDashboard() {
           </Card>
         </div>
       </section>
-
-      
 
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
@@ -153,7 +147,7 @@ import { Badge } from '@/components / ui / badge';
   Zap,
   BookOpen,
 } from 'lucide-react';
-import Link from 'next/link';
+import Link from 'next / link';
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -246,7 +240,7 @@ function TalentDashboard() {
                 <Button size='sm'>Apply Now</Button>;
                 <Button size='sm' variant='outline'>;
                   View Details;
-                </Button>              </div>              <div className="flex gap - 2 mt-3">;
+                </Button>              </div>              <div className="flex gap - 2 mt - 3">;
 
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
@@ -283,28 +277,28 @@ function TalentDashboard() {
               </div>;
             </div>;
             <Button variant='outline' className='w - full mt - 4'>              View All Applications      <section>;
-        <h2 className="text - lg font - medium mb-4">Application Tracker</h2>;
+        <h2 className="text - lg font - medium mb - 4">Application Tracker</h2>;
         <Card>;
-          <CardContent className="p-4">;
-            <div className="grid grid - cols - 2 gap-4">;
-              <div className="text - center p - 3 bg - primary / 5 rounded-lg">;
-                <div className="text - 2xl font - bold text-primary">3</div>;
-                <div className="text - xs text - muted-foreground">Active Applications</div>;
+          <CardContent className="p - 4">;
+            <div className="grid grid - cols - 2 gap - 4">;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">3</div>;
+                <div className="text - xs text - muted - foreground">Active Applications</div>;
               </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded-lg">;
-                <div className="text - 2xl font - bold text-primary">2</div>;
-                <div className="text - xs text - muted-foreground">Interviews Scheduled</div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">2</div>;
+                <div className="text - xs text - muted - foreground">Interviews Scheduled</div>;
               </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded-lg">;
-                <div className="text - 2xl font - bold text-primary">5</div>;
-                <div className="text - xs text - muted-foreground">Jobs Saved</div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">5</div>;
+                <div className="text - xs text - muted - foreground">Jobs Saved</div>;
               </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded-lg">;
-                <div className="text - 2xl font - bold text-primary">12</div>;
-                <div className="text - xs text - muted-foreground">Jobs Viewed</div>;
+              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
+                <div className="text - 2xl font - bold text - primary">12</div>;
+                <div className="text - xs text - muted - foreground">Jobs Viewed</div>;
               </div>;
             </div>;
-            <Button variant="outline" className="w - full mt-4">;
+            <Button variant="outline" className="w - full mt - 4">;
 
               View All Applications;
             </Button>;
@@ -312,7 +306,6 @@ function TalentDashboard() {
         </Card>;
       </section>;
 
-      
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -324,10 +317,8 @@ function TalentDashboard() {
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio">;            <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
+
+            <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
           <Button
@@ -347,9 +338,6 @@ function TalentDashboard() {
         </div>
       </section>
 
-      
-
-      
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
@@ -440,34 +428,34 @@ function TalentDashboard() {
           </Button>;
         </div>;
       </section>      <section>;
-        <h2 className="text - lg font - medium mb-4">Quick Actions</h2>;
-        <div className="grid grid - cols - 2 gap-4">;
+        <h2 className="text - lg font - medium mb - 4">Quick Actions</h2>;
+        <div className="grid grid - cols - 2 gap - 4">;
           <Button;
             variant="outline";
-            className="h - auto py - 4 flex flex - col gap-1";
+            className="h - auto py - 4 flex flex - col gap - 1";
             aria - label="Update Resume";
           >;
-            <FileText className="h - 5 w - 5 mb-1" aria - hidden="true" />;
+            <FileText className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Update Resume</span>;
           </Button>;
           <Button;
             variant="outline";
-            className="h - auto py - 4 flex flex - col gap-1";
+            className="h - auto py - 4 flex flex - col gap - 1";
             aria - label="View Portfolio";
           >;
-            <Image className="h - 5 w - 5 mb-1" aria - hidden="true" />;
+            <Image className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Portfolio</span>;
           </Button>;
           <Button;
             variant="outline";
-            className="h - auto py - 4 flex flex - col gap-1";
+            className="h - auto py - 4 flex flex - col gap - 1";
             aria - label="Set Availability";
           >;
-            <Clock className="h - 5 w - 5 mb-1" aria - hidden="true" />;
+            <Clock className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > Availability</span>;
           </Button>;
-          <Button variant="outline" className="h - auto py - 4 flex flex - col gap-1" aria - label="AI Resume Boost">;
-            <Zap className="h - 5 w - 5 mb-1" aria - hidden="true" />;
+          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1" aria - label="AI Resume Boost">;
+            <Zap className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
             <span > AI Resume Boost</span>;
           </Button>;
         </div>;
@@ -480,9 +468,9 @@ function TalentDashboard() {
         </div>;
         <Card>;
       <section>;
-        <div className="flex items - center justify - between mb-4">;
-          <h2 className="text - lg font-medium">Learning Hub</h2>;
-          <Button variant="ghost" size="sm" className="h-8">;
+        <div className="flex items - center justify - between mb - 4">;
+          <h2 className="text - lg font - medium">Learning Hub</h2>;
+          <Button variant="ghost" size="sm" className="h - 8">;
           </Button>;
         </div>;
         <Card>;
@@ -498,14 +486,14 @@ function TalentDashboard() {
                 <h3 className='font - medium'>Improve your profile visibility</h3>;
                 <p className='text - sm text - muted - foreground'>;
                   5 tips for getting noticed by clients;
-                </p>              </div>          <CardContent className="p-4">;
-            <div className="flex items - center gap-3">;
-              <div className="bg - primary / 10 p - 3 rounded-full" aria - hidden="true">;
-                <BookOpen className="h - 6 w - 6 text-primary" />;
+                </p>              </div>          <CardContent className="p - 4">;
+            <div className="flex items - center gap - 3">;
+              <div className="bg - primary / 10 p - 3 rounded - full" aria - hidden="true">;
+                <BookOpen className="h - 6 w - 6 text - primary" />;
               </div>;
               <div>;
-                <h3 className="font-medium">Improve your profile visibility</h3>;
-                <p className="text - sm text - muted-foreground">5 tips for getting noticed by clients</p>;
+                <h3 className="font - medium">Improve your profile visibility</h3>;
+                <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
             </div>;
           </CardContent>;
         </Card>;

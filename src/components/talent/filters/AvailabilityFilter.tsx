@@ -36,8 +36,6 @@ function AvailabilityFilter() {
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
-      
-
       {expanded && (
         <div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (
@@ -65,7 +63,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
-]
+
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -126,7 +124,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
 
                 checked={selected_availability.includes (option.id)}
                 onCheckedChange={() => toggle_availability (option.id)}
-            <div key={option.id} className="flex items-center">;
+            <div key={option.id} className="flex items - center">;
 import { Checkbox  } from '@/components / ui / checkbox';
 import { AvailabilityFilterProps  } from '@/types / filters';
 const AVAILABILITY_OPTIONS = [;
@@ -139,20 +137,20 @@ export /**
  */
 function AvailabilityFilter() {
   return (
-    <div className="mb - 6 border - b border - zion - blue - light pb-6">;
+    <div className="mb - 6 border - b border - zion - blue - light pb - 6">;
       <button;
         on_click={toggle_section}
-        className="flex w - full items - center justify - between text - white font-medium";
+        className="flex w - full items - center justify - between text - white font - medium";
       >;
         <span > Availability</span>;
         {expanded ? (
-          <ChevronUp className="h - 4 w - 4 text - zion - slate-light" />) : (
-          <ChevronDown className="h - 4 w - 4 text - zion - slate-light" />)}
+          <ChevronUp className="h - 4 w - 4 text - zion - slate - light" />) : (
+          <ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}
       </button>;
       {expanded && (
-        <div className="mt - 4 space-y-2">;
+        <div className="mt - 4 space - y-2">;
           {AVAILABILITY_OPTIONS.map (option => (
-            <div key={option.id} className="flex items-center">;
+            <div key={option.id} className="flex items - center">;
               <Checkbox;
                 id={`availability-${option.id}`}
                 checked={selected_availability.includes (option.id)}
@@ -161,7 +159,7 @@ function AvailabilityFilter() {
               <label;
                 html_for={`availability-${option.id}`}
                 className='ml - 2 text - sm text - zion - slate - light cursor - pointer';
-              >                {option.label}                className="ml - 2 text - sm text - zion - slate - light cursor-pointer";
+              >                {option.label}                className="ml - 2 text - sm text - zion - slate - light cursor - pointer";
               html_for="input-;
                 {option.label}
               ">;
@@ -170,11 +168,11 @@ function AvailabilityFilter() {
         </div>)}
     </div>);
   toggle_section;
-}className="flex w - full items - center justify - between text - white font-medium" > <span > Availability</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate-light" />);
+}className="flex w - full items - center justify - between text - white font - medium" > <span > Availability</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
 }</button> {
   AVAILABILITY OPTIONS.map (option => (<div key= {
   option.id ";
-}className="flex items-center" > <Checkbox > {
+}className="flex items - center" > <Checkbox > {
   option.label;
 }</label> </div>) );
 }</div>);

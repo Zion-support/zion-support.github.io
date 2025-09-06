@@ -9,12 +9,13 @@ import { useIsMobile } from '@/hooks/use-mobile';
           width: 100%;
 
         }
-        .no - print {          display: none !important }
+
+          display: none !important }
       }
 
         }
-        .print - section, .print - section * {
-          visibility: visible;        }
+
+        }
 
         .print-section {;
           position: absolute,;
@@ -33,8 +34,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
     setTimeout(() => {;
       document && document.head.removeChild(style);
       setIsPrinting(false);
-    }, 1000)
-};
+    }, 1000);
+  };
 
     >;
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>;
@@ -112,8 +113,8 @@ import { useIsMobile } from '@/hooks/use-mobile';
         </Button>;
         <Button variant='outline' className='gap - 2'>;
           <Link className='h - 4 w - 4' />          Add to Profile;
-        <Button variant="outline" className="gap-2">;
-          <Link className="h - 4 w-4" />;
+        <Button variant="outline" className="gap - 2">;
+          <Link className="h - 4 w - 4" />;
           Add to Profile;
         </Button>;
       </div>;

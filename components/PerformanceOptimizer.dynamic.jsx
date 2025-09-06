@@ -1,2 +1,12 @@
 import React from 'react';
-<<<<<<< HEADexport default PerformanceOptimizer.dynamic;
+
+;
+const PerformanceOptimizer.dynamic = () => {
+  return (
+    <div data - testid="performanceoptimizer.dynamic">;
+      <h1 > PerformanceOptimizer.dynamic</h1>;
+    </div>);
+}
+;
+
+export default PerformanceOptimizer.dynamic;

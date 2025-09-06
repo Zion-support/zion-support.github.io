@@ -1,25 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readJsonFile } from "../../../../utils/api/storage";
-import { requireSuperadminApi } from "../../../../utils/api/auth";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
+
 
   if (!requireSuperadminApi(req, res)) return;
 
-  const id = String(req.query.id |"");
-  const updates = readJsonFile("updates.json", [] as any[]);
-  const u = updates.find((x: any) => x.id === id);
-  if (!u) return res.status(404).json({ error: "Not found" });
-  res.status(200).json({ opens: u.opens |0 });
-  res.status(200).json({ opens: u.opens |0 });}
-
-  if (!u) return res.status(404).json({ error: 'Not found' });
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
 }
+
   if (!u) return res.status(404).json({ error: 'Not found' });
 
 }
@@ -29,6 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 })
 }
+
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -48,9 +33,7 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
   res.status (200).json ({ opens: u.opens || 0 });
 }
-  if (!u) return res.status(404).json({ error: 'Not found' });import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJsonFile } from '../../../../utils/api/storage';
-import { requireSuperadminApi } from '../../../../utils/api/auth';
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
@@ -103,4 +86,4 @@ function handler() {
   res.status (200).json ({ opens: u.opens || 0 });
 }
   if (!u) return res.status(404).json({ error: 'Not found' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+

@@ -1,8 +1,4 @@
-return (
-      <Link href="/" className="flex items-center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
-      </Link>);
-  }
+
 
   if (logoToUse) {
     return (
@@ -11,8 +7,6 @@ return (
       </Link>
     )
   }
-
-  
 
   return (
 
@@ -43,8 +37,8 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     return (
       <Link href='/' className='flex items-center'>;
         <img
-    <Link href="/" className="flex items-center">;
-      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
+    <Link href="/" className="flex items - center">;
+      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
     </Link>);
   // Check condition
 if ( {) {
@@ -92,4 +86,4 @@ if ( {) {
       />;
     </Link>);
 }
-<<<<<<< HEAD
+

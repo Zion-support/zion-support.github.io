@@ -13,33 +13,6 @@ interface AIMatchingResultsProps {
   serviceType?: string
 }
 
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib / ai - matchmaking';
-import { Card, CardContent } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components / ui / skeleton';
-import { cn } from '@/lib / utils';
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  is_loading?: boolean;
-  project_description?: string;
-  service_type?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem, ) => void,
-  is_loading?: boolean,
-  project_description?: string,
-  service_type?: string;
-}
-export /**
- * AIMatchingResults - Function description
- */
-function AIMatchingResults() {
-  const [active_tab, setActiveTab] = useState ('all');
-  // Group matches by category;
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -75,49 +48,14 @@ if ( {) {
         </div>;
       </div>);
   }
+
+  }
   return (
     <div className='space-y-4'>;
       <Tabs
         defaultValue='all'
         value={activeTab}
         onValueChange={setActiveTab}
-        className='w-full'>;
-        <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
-          <TabsTrigger
-            value='all'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            All ({categories && categories.all.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='talent'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Talent ({categories && categories.talent.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='services'
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Services ({categories && categories.services.length});
-          </TabsTrigger>;
-          <TabsTrigger
-            value='equipment'
-
-            className='data-[state=active]:bg-zion-purple/20'>;
-            Equipment ({categories && categories.equipment.length});
-          </TabsTrigger>;
-        </TabsList>;
-
-        {Object && Object.entries(categories).map(([tab, items]) => (;
-          <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>;
-            {items && items.length > 0 ? (;
-              items && items.map(match => {;
-                const CategoryIcon = getCategoryIcon(match && match.category);
-
-                    onClick={() => onSelectMatch && onSelectMatch(match)}                  >;
-                    <div className='flex'>;
-                      <div
-                        className={cn(
-                          'w-2',
-                          match && match.category.toLowerCase().includes('talent')
 
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
@@ -272,6 +210,8 @@ if ( {) {
                                 </div>
                               )}
                             </div>
+
+                          </div>;
                         </div>;
                       </div>;
                     </div>;
@@ -279,9 +219,6 @@ if ( {) {
             )}
           </TabsContent>;
         ))}
-
-};
-;
 
 }
       </Tabs>;
@@ -297,4 +234,4 @@ if ( {) {
           </TabsContent>))}
       </Tabs>;
     </div>);
-<<<<<<< HEAD
+

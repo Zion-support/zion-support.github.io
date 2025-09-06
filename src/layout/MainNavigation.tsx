@@ -3,7 +3,7 @@ interface MainNavigationProps {
   unreadCount?: number
   className?: string
 
-import Link from 'next/link';
+import Link from 'next / link';
 import { use_router } from 'next / router';
 import { useState } from 'react';
 import { cn } from '@/lib / utils';
@@ -123,104 +123,25 @@ interface MainNavigationProps {;
   className?: string;
 }
 
-interface MainNavigationProps {;
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-
-export function MainNavigation(): any ({;
-  isAdmin = false,;
-  unreadCount = 0,;
-  className,;
-}: MainNavigationProps) {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Add state;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { count } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items && items.length;
-  const router = useRouter(); // Changed from useLocation;
-  const { t } = useTranslation();
-
-  const handleCartClick = (e: React && React.MouseEvent,) => {;
-    if (!isAuthenticated) {;
-      e && e.preventDefault();
-      setLoginOpen(true);
-      return;
-    }
-    setIsMobileMenuOpen(false)
-};
   const baseLinks = [;
     {;
       key: 'home',;
       href: '/',;
-      matches: (path: string) => path === '/',    },;
-    {;
-      key: 'marketplace',;
-      href: '/marketplace',;
-      matches: (path: string) => path && path.startsWith('/marketplace'),    },;
-    {;
-      key: 'categories',;
-      href: '/categories',;
-      matches: (path: string) => path && path.startsWith('/categories'),    },;
-    {;
-      key: 'talent',;
-      href: '/talent',;
-      matches: (path: string) =>;
-        path && path.startsWith('/talent') && !path && path.includes('/talent-dashboard'),    },;
-    {;
-      key: 'equipment',;
-      href: '/equipment',;
-      matches: (path: string) => path && path.startsWith('/equipment'),    },;
-    {;
-      key: 'community',;
-      href: '/community',;
-      matches: (path: string) =>;
-        path && path.startsWith('/community') || path && path.startsWith('/forum'),;
-    },;
-  ];
 
-  const links = baseLinks && baseLinks.map(link => ({;
-    ...link,;
-    name: t(`nav.${link && link.key}`),;
-  }));
-  // Add authenticated-only links;
-  if (isAuthenticated) {;
-    links && links.push({;
-      key: 'dashboard',;
-      name: t('nav && nav.dashboard'),;
-      href: '/dashboard',;
-      matches: (path: string) =>;
-        path === '/dashboard' ||;
-        path === '/client-dashboard' ||;
-        path === '/talent-dashboard',;
-    });  }
-
-  // Add admin-only links;
-  if (isAdmin) {;
-    links && links.push({;
-      key: 'analytics',;
-      name: t('nav && nav.analytics'),;      href: '/analytics',;
+      href: '/analytics',;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
   return (
-    <>;
-      <button
-        className='navbar-toggler md:hidden ml-auto mr-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary' // Added ml-auto and mr-4 for positioning
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-expanded={isMobileMenuOpen}
-        aria-controls='main-navbar-collapse';
-        aria-label='Toggle navigation'      >;
-        <span className='navbar-toggler-icon'></span>;
-      </button>;      <nav
+
+      <nav
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
 
         <div
-          id='main-navbar-collapse'          className={cn(
+
+          className={cn(
 
                   href={link.href}
                   aria-label={link.name}
@@ -320,13 +241,8 @@ export function MainNavigation(): any ({;
                 </Link>;
               </li>;
             )}
-            {/* Cart icon with badge */}
-            <li className='nav-item'>;
-              <HoverCard openDelay={100}>;
-                <HoverCardTrigger asChild>;
-                  <Link
-                    href='/cart'
-                    aria-label={t('nav && nav.cart')}                    onClick={handleCartClick}
+
+                    onClick={handleCartClick}
                     className={cn(
 
                       'nav-link',
@@ -345,33 +261,8 @@ export function MainNavigation(): any ({;
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.starts_with ('/categories'),    },
-    {
-      key: 'talent',
-      href: '/talent',
-      matches: (path: string) =>;
-        path.starts_with ('/talent') && !path.includes ('/talent - dashboard'),    },
-    {
-      key: 'equipment',
-      href: '/equipment',
-      matches: (path: string) => path.starts_with ('/equipment'),    },
-    {
-      key: 'community',
-      href: '/community',
-      matches: (path: string) =>;
-        path.starts_with ('/community') || path.starts_with ('/forum'),
-    },
-  ];
-  const links = base_links.map (link => ({
-    ...link,
-    name: t (`nav.${link.key}`),
-  }));
-  // Add authenticated - only links;
-  // Check condition
-if ( {) {
-  $2}
+
+}
     links.push ({
       key: 'dashboard',
       name: t ('nav.dashboard'),
@@ -678,7 +569,7 @@ export default function Page() {; []);
 },;
     {;
 
-      matches: (path: string)  => path && path.startsWith('/contact')
+      matches: (path: string)  => path && path.startsWith('/contact');
 };
       key: 'contact',;
       href: '/contact',;
@@ -739,9 +630,9 @@ export default function Page() {; []);
       {/* Mobile Menu Button */}
       <button;
         on_click={() => setIsMobileMenuOpen (!isMobileMenuOpen)}";
-        className="lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors";
+        className="lg:hidden p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
 ";
-        {isMobileMenuOpen ? <X className="w - 6 h-6"  /> : <Menu className="w - 6 h-6"  />}      </button>;
+        {isMobileMenuOpen ? <X className="w - 6 h - 6"  /> : <Menu className="w - 6 h - 6"  />}      </button>;
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isMobileMenuOpen &&;
@@ -760,19 +651,19 @@ export default function Page() {; []);
 
 }}
             transition={{ duration: 0.3 }}";
-            className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z-50";
+            className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";
 ";
-            <div className="p-6">";
-              <div className="flex justify - between items - center mb-8">";
-                <h2 className="text - xl font - bold text-white">Menu</h2>;
+            <div className="p - 6">";
+              <div className="flex justify - between items - center mb - 8">";
+                <h2 className="text - xl font - bold text - white">Menu</h2>;
                 <button;
                   on_click={() => setIsMobileMenuOpen (false)}";
-                  className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition-colors";
+                  className="p - 2 text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors";
 ";
-                  <X className="w - 6 h-6"  />                </button>;
+                  <X className="w - 6 h - 6"  />                </button>;
               </div>;
 ";
-              <div className="space-y-2">;
+              <div className="space - y-2">;
                 {base_links.map (link: unknown <div key={link.key}>;
                     {link.children ? (
                       <div>;
@@ -886,7 +777,7 @@ export default function Page() {; []);
                           {link.name}'`;
                           <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
                         {active_dropdown === link.key && (";
-                          <div className="ml - 4 mt - 2 space-y-1">;
+                          <div className="ml - 4 mt - 2 space - y-1">;
                             {link.children.map ((child: unknown (
                               <Link;
                                 key={child.key}

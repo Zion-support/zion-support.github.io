@@ -101,7 +101,6 @@ export function ProfileHero({
           )}
 
         </AspectRatio>
-        
 
         <div className="container px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end -mt-16 md:-mt-20 relative z-10 mb-6 md:mb-10">
@@ -141,9 +140,8 @@ export function ProfileHero({
 
                   variant="outline" 
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan"
-                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
-                  )}                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+
+                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
                 </Badge>
               </div>

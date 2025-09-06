@@ -1,17 +1,11 @@
-      }
 
-      return (        <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
               <div className="flex items-center gap-2">
                 {isNetworkError ? (
                   <WifiOff className="h-4 w-4" />
                 ) : (
-
-                  <RefreshCw className="h-4 w-4" />
-                )}
-                <AlertTitle>;
-                  {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
 
                 </AlertTitle>
               </div>
@@ -27,6 +21,8 @@
                 )}
               </AlertDescription>
             </Alert>
+
+                onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
@@ -43,6 +39,7 @@
                   </>
                 )}
 
+                Reload Page
               </Button>
             </div>
             {!this.state.isOnline && (
@@ -51,12 +48,11 @@
                 <span>Offline</span>
               </div>
             )}
-            {process.env.NODE_ENV === 'development' && this.state.error && (              <details className="mt-4 rounded border p-2 text-xs">
+
+              <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
                 </summary>
-
-                <pre className="mt-2 whitespace-pre-wrap break-all">
 
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
@@ -82,8 +78,8 @@ export const useApiErrorHandler = () => {;
       scope && scope.setTag('source', 'useApiErrorHandler');
       scope && scope.setLevel('error');
       Sentry && Sentry.captureException(error);
-    })
+    });
+  };
+  return { handleApiError };
 };
-  return { handleApiError }
-};
-<<<<<<< HEAD
+
