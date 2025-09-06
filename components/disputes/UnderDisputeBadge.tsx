@@ -1,4 +1,8 @@
 import useSWR from 'swr';
+const fetcher = null;
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export function useProjectDisputeStatus(projectId: string): {
+origin/cursor/automate-test-improve-and-merge-code-2533
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -14,7 +18,6 @@ import useSWR from 'swr';
 export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
-
 
   projectId,
 }: {;
@@ -79,6 +82,17 @@ if (return null) {
   $2
 }
   return (
-    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
+    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
+    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
+      Under Dispute
+    </span>
+  );
+  return (
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
+      Under Dispute
+    </span>
+);
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

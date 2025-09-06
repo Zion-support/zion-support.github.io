@@ -3,75 +3,73 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to remove merge conflict markers and keep the main branch version
-function fixMergeConflicts(content) {
-  // Remove all merge conflict markers and keep the main branch version (after =======)
-  const lines = content.split('\n');
-  const result = [];
-  let inConflict = false;
-  let keepLines = false;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
+console.log('🔧 Starting merge conflict resolution...');
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    if (line.includes('<<<<<<< HEAD')) {
-      inConflict = true;
-      keepLines = false;
-      continue;
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false;
     }
     
-    if (line.includes('=======')) {
-      keepLines = true;
-      continue;
-    }
+    console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    if (line.includes('>>>>>>>')) {
-      inConflict = false;
-      keepLines = false;
-      continue;
-    }
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/<<<<<<< HEAD\n?/g, '');
+    content = content.replace(/=======.*?\n?/g, '');
+    content = content.replace(/>>>>>>> [a-f0-9]+.*?\n?/g, '');
     
-    if (!inConflict || keepLines) {
-      result.push(line);
-    }
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< .*?\n?/g, '');
+    content = content.replace(/=======.*?\n?/g, '');
+    content = content.replace(/>>>>>>> .*?\n?/g, '');
+    
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, content, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  return result.join('\n');
 }
 
-// Function to recursively find and fix files with merge conflicts
-function fixFilesInDirectory(dir) {
-  const files = fs.readdirSync(dir);
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  let totalFixed = 0;
+
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+
     if (stat.isDirectory()) {
-      // Skip certain directories
-      if (['node_modules', '.git', '.next', 'dist', 'build'].includes(file)) {
+      // Skip node_modules and .git directories
+      if (item === 'node_modules' || item === '.git' || item === '.next') {
         continue;
       }
-      fixFilesInDirectory(filePath);
-    } else if (file.match(/\.(tsx?|jsx?|css|json)$/)) {
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
-        
-        if (content.includes('<<<<<<< HEAD')) {
-          console.log(`Fixing merge conflicts in: ${filePath}`);
-          const fixedContent = fixMergeConflicts(content);
-          fs.writeFileSync(filePath, fixedContent, 'utf8');
-        }
+        totalFixed += processDirectory(fullPath);
       } catch (error) {
-        console.error(`Error processing ${filePath}:`, error.message);
+        console.log(`Skipping directory ${fullPath}: ${error.message}`);
+      }
+    } else if (stat.isFile()) {
+      // Process JavaScript, TypeScript, and JSX files
+      if (/\.(js|jsx|ts|tsx|json|css|html)$/.test(item)) {
+        if (fixMergeConflicts(fullPath)) {
+          totalFixed++;
+        }
       }
     }
   }
+
+  return totalFixed;
 }
 
 // Main execution
 console.log('Starting merge conflict resolution...');
-fixFilesInDirectory('./src');
-fixFilesInDirectory('./pages');
-fixFilesInDirectory('./components');
-console.log('Merge conflict resolution completed!');
+const totalFixed = processDirectory('.');
+console.log(`\nResolved conflicts in ${totalFixed} files.`);
+console.log('Merge conflict resolution complete!');

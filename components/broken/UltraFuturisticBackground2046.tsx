@@ -3,6 +3,15 @@
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
       x: number;
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+const UltraFuturisticBackground2046: React.FC;
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    // Particle class
+    class Particle {
+x: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
       y: number;
   const canvas_ref = useRef < HTMLCanvasElement>(null);
   const particles_ref = useRef < any[]>([]);
@@ -42,6 +51,22 @@ if (return) {
       size: number,
       color: string,
       life: number,
+      maxLife: number;
+      type: 'quantum' | 'neural' | 'data' | 'energy';
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
+        this.life = Math.random() * 100;
+        this.maxLife = 100;
+const types = ['quantum', 'neural', 'data', 'energy'];
+        this.type = types[Math.floor(Math.random() * types.length)] as any;
+        switch (this.type) {
+          case 'quantum':
+            this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
+origin/cursor/automate-test-improve-and-merge-code-2533
             break;
           case 'neural':;
             this && this.color = `hsl(${280 + Math && Math.random() * 40}, 80%, 70%)`;
@@ -54,6 +79,10 @@ if (return) {
             break;        }            break;
             break;        }
 
+          case 'energy':
+            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+break;
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
 
       }
@@ -70,6 +99,8 @@ if (return) {
           this.vx += (Math.random() - 0.5) * 0.5;
 
           this.vy += (Math.random() - 0.5) * 0.5
+this.vy += (Math.random() - 0.5) * 0.5;
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
 
         // Limit velocity
@@ -81,6 +112,15 @@ if (return) {
       }
       draw() {
         if (!ctx) return;
+this.vy = Math.max(-3, Math.min(3, this.vy));
+      }
+      draw() {
+        if (!ctx) return;
+const alpha = this.life / this.maxLife;
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        switch (this.type) {
+origin/cursor/automate-test-improve-and-merge-code-2533
           case 'quantum':
             // Quantum particles with wave function
             ctx.beginPath();
@@ -89,6 +129,9 @@ if (return) {
             ctx.fill();
             // Wave function rings
             for (let i = 1, i <= 3, i++) {
+// Wave function rings
+            for (let i = 1; i <= 3; i++) {
+origin/cursor/automate-test-improve-and-merge-code-2533
               ctx.beginPath();
               ctx.arc(this.x, this.y, this.size + i * 2, 0, Math.PI * 2);
               ctx.strokeStyle = this.color;
@@ -96,13 +139,17 @@ if (return) {
               ctx.globalAlpha = alpha * (0.3 - i * 0.1);
             }
             break;              ctx && ctx.stroke();
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
             }
             break;
+          case 'neural':
             // Neural network nodes
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fillStyle = this.color;
             ctx.fill();
+
             // Neural connections
             particlesRef.current.forEach(particle => {
               if (particle.type === 'neural' && particle !== this) {
@@ -222,11 +269,34 @@ if ( {) {
               }
             });
             break;                  ctx.stroke ();
+Math.pow(this.x - particle.x, 2) +
+                    Math.pow(this.y - particle.y, 2)
+                );
+                if (distance < 100) {
+                  ctx.beginPath();
+                  ctx.moveTo(this.x, this.y);
+                  ctx.lineTo(particle.x, particle.y);
+                  ctx.strokeStyle = this.color;
+                  ctx.lineWidth = 0.5;
+                  ctx.globalAlpha = alpha * (1 - distance / 100);
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
                 }
               }
             });
             break;
             ctx.fillRect(this.x - this.size/2, this.y - this.size/2, this.size, this.size);
+case 'data':
+            // Data streams
+            ctx.fillStyle = this.color;
+            ctx.fillRect(
+              this.x - this.size / 2
+              this.y - this.size / 2
+              this.size
+              this.size
+            );
+            // Data flow lines
+origin/cursor/automate-test-improve-and-merge-code-2533
             ctx.beginPath();
             ctx.moveTo(this.x, this.y);
             ctx.lineTo(this.x + this.vx * 10, this.y + this.vy * 10);
@@ -234,6 +304,7 @@ if ( {) {
             ctx.lineWidth = 1;
             ctx.stroke();
             break;
+
           case 'energy':
             // Energy particles with glow effect
             ctx.beginPath();
@@ -242,6 +313,16 @@ if ( {) {
             ctx.fill();
             // Glow effect
             const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+// Glow effect
+            const gradient = ctx.createRadialGradient(
+              this.x
+              this.y
+              0
+              this.x
+              this.y
+              this.size * 3
+            );
+origin/cursor/automate-test-improve-and-merge-code-2533
             gradient.addColorStop(0, this.color);
             gradient.addColorStop(1, 'transparent');
             ctx.fillStyle = gradient;
@@ -250,15 +331,29 @@ if ( {) {
       }
       isDead() {
         return this.life <= 0
+break;
+        }
+        ctx.restore();
+      }
+      isDead() {
+        return this.life <= 0;
+      }
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
         particlesRef.current.push(new Particle())
+for (let i = 0; i < 150; i++) {
+        particlesRef.current.push(new Particle());
+origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
     // Animation loop
     const animate = () => {
+      if (!ctx || !canvas) return;
+
+origin/cursor/automate-test-improve-and-merge-code-2533
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -275,6 +370,28 @@ if ( {) {
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 1;
       for (let i = 0, i < 20, i++) {
+// Remove dead particles and add new ones
+        if (particle.isDead()) {
+          particlesRef.current[index] = new Particle();
+        }
+      });
+      // Draw quantum field lines
+      drawQuantumField(ctx, canvas.width, canvas.height);
+// Draw neural network grid
+      drawNeuralGrid(ctx, canvas.width, canvas.height);
+      animationRef.current = requestAnimationFrame(animate);
+    }
+    // Quantum field lines
+    const drawQuantumField = (
+      ctx: CanvasRenderingContext2D
+      width: number
+      height: number
+    ) => {
+      const time = Date.now() * 0.001;
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+      for (let i = 0; i < 20; i++) {
+origin/cursor/automate-test-improve-and-merge-code-2533
         ctx.beginPath();
         const x = (i / 20) * width;
         const y = Math.sin(time + i * 0.5) * 50 + height / 2;
@@ -289,10 +406,35 @@ if ( {) {
       }
     }
     // Neural network grid
+        for (let j = 0; j < height; j += 10) {
+          const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
+          ctx.lineTo(x + Math.sin(time + j * 0.01) * 20, j);
+        }
+
+        ctx.stroke();
+      }
+    }
+    // Neural network grid
+const drawNeuralGrid = (
+      ctx: CanvasRenderingContext2D,
+      width: number,
+      height: number
+    ) => {
+      ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
+      ctx.lineWidth = 0.5;
+      const gridSize = 50;
+      for (let x = 0; x < width; x += gridSize) {
+        for (let y = 0; y < height; y += gridSize) {
+          const offset =
+            Math.sin(time + x * 0.01) * Math.cos(time + y * 0.01) * 10;
+          ctx.beginPath();
+origin/cursor/automate-test-improve-and-merge-code-2533
           ctx.moveTo(x + offset, y);
           ctx.lineTo(x + gridSize + offset, y);
           ctx.moveTo(x, y + offset);
           ctx.lineTo(x, y + gridSize + offset);
+ctx.stroke();
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
       }
     }
@@ -303,6 +445,10 @@ if ( {) {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
+cancelAnimationFrame(animationRef.current);
+      }
+    };
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>;
@@ -615,7 +761,7 @@ if ( {) {
         ))}
       </div>;
     </div>;
-  );
+  )
 };
 
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
@@ -651,3 +797,17 @@ export default UltraFuturisticBackground2046);
 ;
 export default UltraFuturisticBackground2046;
 ;
+              duration: Math.random() * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}
+          />
+        ))}
+      </div>
+    </div>
+);
+};
+
+export default UltraFuturisticBackground2046;
+origin/cursor/automate-test-improve-and-merge-code-2533

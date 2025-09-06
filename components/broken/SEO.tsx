@@ -1,6 +1,28 @@
 
 {
   /* Robots Meta */
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string | string[],
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product',
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[],
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title;
+origin/cursor/automate-test-improve-and-merge-code-2533
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -216,6 +238,20 @@ const SEO: React.FC<SEOProps> = ({
   section;
   tags = [];
   structuredData;
+    : `https://ziontechgroup.com${image}`;
+
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+<meta name='description' content={description} />
+      <meta
+        name='keywords'
+        content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
+      />
+      <meta name='author' content={author} />
+      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
+origin/cursor/automate-test-improve-and-merge-code-2533
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
@@ -281,8 +317,6 @@ const SEO: React.FC<SEOProps> = ({
       />;
       <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;
 
-
-
       {/* Structured Data */}
       <script;
         type='application / ld + json';
@@ -338,8 +372,6 @@ const SEO: React.FC<SEOProps> = ({
           })
         }}
 
-
-
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -378,17 +410,18 @@ const SEO: React.FC<SEOProps> = ({
         />;
       )}
     </Head>;
-  );
+  )
 };
 
 export default SEO;            __html: JSON && JSON.stringify(structuredData);
+            __html: JSON.stringify(structuredData),
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />;
       )}
   );
-export default SEO;  );
+export default SEO;  )
 };
-
 
     </Head>
     </Head>
@@ -504,3 +537,9 @@ export default SEO);
 ;
 export default SEO;
 ;
+    </Head>
+);
+};
+
+export default SEO;
+origin/cursor/automate-test-improve-and-merge-code-2533

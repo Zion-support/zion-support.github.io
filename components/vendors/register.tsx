@@ -89,6 +89,39 @@ function on_submit() {
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
 
+import { FormEvent, useState } from 'react';
+export default function VendorRegisterPage() {
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<string | null>(null),
+
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setMessage(null);
+          slug: String(payload.slug),
+          name: String(payload.name),
+          servicesOffered: String(payload.servicesOffered || '')
+.split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+          teamSize: Number(payload.teamSize |0)
+          about: String(payload.about |'')
+          verificationDocs: String(payload.verificationDocs |'')
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean)
+          caseStudies: []
+        })
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error |'Failed to submit');
+      setMessage('Application submitted. Await approval.');
+      form.reset();
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setLoading(false);
+origin/cursor/automate-test-improve-and-merge-code-2533
       form.reset()
     } catch (err: any) {
       setMessage(err.message)
@@ -98,7 +131,7 @@ function on_submit() {
   }
 
   return (
-    <div className='max-w-2xl mx-auto space-y-6'>
+<div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
       </h1>
@@ -371,3 +404,5 @@ function on_submit() {
 
 
 
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

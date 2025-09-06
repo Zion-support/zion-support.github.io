@@ -2,6 +2,11 @@ import OpenAI from 'openai';
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
+
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+export function createOpenAIClient(apiKey: string): OpenAIClient {;
+pr-12243
   return new OpenAI({ apiKey });
 export async function generateJobPost(
   openai: OpenAIClient
@@ -15,6 +20,7 @@ Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+pr-12243
 
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
@@ -23,17 +29,25 @@ export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
 
 
+pr-12243
 Company: ${opts.company |'Confidential'}
 Location: ${opts.location |'Remote'}
 Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
 Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
+pr-12243
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
     model: 'gpt-4o-mini';
     input: prompt
   });
+
+  return completion && completion.output_text
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-2156
+pr-12243
 type OpenAIClient = OpenAI;
 ;
 export function createOpenAIClient (api_key: string): OpenAIClient {
@@ -59,6 +73,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
 }
 
@@ -78,3 +94,11 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 }
 
 }
+    model: 'gpt-4o-mini',
+    input: prompt,
+  });
+  return completion.output_text;
+  return completion.output_text
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

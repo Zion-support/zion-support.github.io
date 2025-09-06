@@ -5,6 +5,8 @@
 export const Playwright.config = () => {
   // Implementation here
   return null;
+trace: on-first-retry' 
+origin/cursor/automate-test-improve-and-merge-code-2533
 };
 reporter: [ ['list'], ['json', {
 
@@ -35,3 +37,9 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: firefox',  //     use: { ...devices['Desktop Firefox'] },  //   }
   //   {
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   };
+  // ]
+});
+  //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
+  // ]
+origin/cursor/automate-test-improve-and-merge-code-2533

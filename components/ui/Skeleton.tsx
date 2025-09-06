@@ -88,3 +88,10 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
       `}</style>
 
 
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

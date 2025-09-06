@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 // Security Configuration
 export const securityConfig = {
   // Content Security Policy
+=======
+
+
+>>>>>>> pr-12243
   csp: {
     directives: {
 
@@ -14,6 +19,10 @@ export const securityConfig = {
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-12243
       upgradeInsecureRequests: [],
     },
   },
@@ -35,6 +44,7 @@ export const securityConfig = {
 
 export default securityConfig;
 
+<<<<<<< HEAD
       upgradeInsecureRequests: []
     }
   }
@@ -76,3 +86,5 @@ export default securityConfig;
   }
 };
 export default securityConfig;
+=======
+>>>>>>> pr-12243

@@ -1,0 +1,68 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
+// @ts-ignore
+import data from '../../data/arxiv-research.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/arxiv-research.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/arxiv-research.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/arxiv-research.json',
+
+
+export default function ArxivResearchPage() {
+
+  const items: any[] = (data?.items |[]).slice(0, 40)
+
+=======
+  const items: any[] = (data?.items || []).slice(0, 40);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <EnhancedLayout>
+      <div className="max-w-5xl mx-auto py-10">
+        <h1 className="text-3xl font-bold">ArXiv Research</h1>
+        <ul className="mt-6 space-y-4">
+          {items.map((it, idx) => (
+            <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+              <a href={it.link} target="_blank" rel="noreferrer" className="font-medium underline">
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors || []).join(', ')}</div>
+
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.summary}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+<<<<<<< HEAD
+  );
+};
+
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors || []).join(', ')}</div>
+              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.summary}</p>
+            </li>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </ul>;
+      </div>;
+    </EnhancedLayout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+=======
+  )
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

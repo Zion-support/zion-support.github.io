@@ -13,6 +13,11 @@ export async function getServerSideProps() {;
     generatedAt = json.generatedAt |''
 
 
+import fs from 'fs';
+import path from 'path';
+type RouteInfo = any;
+    generatedAt = json.generatedAt || ''
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -72,3 +77,4 @@ function SiteMapIntelPage() {
         </table>;
       </div>;
     </div>);
+origin/cursor/automate-test-improve-and-merge-code-2533

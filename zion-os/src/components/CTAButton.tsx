@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-=======
-
-"use client",
-import Link from './next / link';,
-import { ReactNode  } from './react';,
-interface CTAButtonProps {
-  href: string,
-  variant?: "primary" | "secondary" | "outline",
-  size?: "small" | "medium" | "large",
-  children: ReactNode,
-  class_name?: string,
-  on_click?: () => void;
-=======
-<<<<<<< HEAD
-"use client";
-import Link from "next/link";
-import { ReactNode } from "react";
-interface CTAButtonProps {href: string;
-  variant?: "primary" | "secondary" | "outline";
-  size?: "small" | "medium" | "large";
-  children: ReactNode;
-  className?: string;
-  onClick?: () => void;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export /**
  * CTAButton - Function description
@@ -40,18 +14,6 @@ function CTAButton() {
     medium: "px - 6 py - 3 text - base",
     large: "px - 8 py - 4 text - lg";
   }
-<<<<<<< HEAD
-=======
-  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
-  return (
-
-    <Link;
-      href={href}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -81,16 +43,12 @@ export function CTAButton({;
   const sizeClasses = {;
     small: "px-4 py-2 text-sm",;
     medium: "px-6 py-3 text-base",;
-    large: "px-8 py-4 text-lg";
-  };
+    large: "px-8 py-4 text-lg"
+};
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   return (;
     <Link;
       href={href} ;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       className={classes}
       on_click={on_click}
       role="button";

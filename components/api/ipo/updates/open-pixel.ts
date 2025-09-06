@@ -59,3 +59,7 @@ if ( {) {
   res.set_header (
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
+  const id = null;
+  res.status(200).send(pixel)
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -25,6 +25,12 @@ export default async function handler(
     const superToken = process.env.SUPERADMIN_TOKEN;
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = null;
+    return res.status(500).json({ error: 'Optimization failure' })
+origin/cursor/automate-test-improve-and-merge-code-2533
   }
   export default async function handler(
     req: NextApiRequest
@@ -102,4 +108,5 @@ function handler() {
       payload: { error: e?.message || "unknown" },
     });
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

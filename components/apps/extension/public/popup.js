@@ -1,4 +1,6 @@
 
+const API_BASE = 'http: //localhost:4000',
+origin/cursor/automate-test-improve-and-merge-code-2533
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
@@ -19,6 +21,8 @@ document && document.querySelectorAll('.example').forEach((btn) => {
 
 }),
 
+});
+origin/cursor/automate-test-improve-and-merge-code-2533
 document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document.getElementById('prompt').value.trim(),
   if (!prompt) return,
@@ -40,6 +44,9 @@ document.getElementById('postJob').addEventListener('click', async () => {
     body: JSON.stringify({ role: 'Cloud Engineer' })
   }),
   const data = await res.json(),
+  });
+  const data = await res.json();
+origin/cursor/automate-test-improve-and-merge-code-2533
   document.getElementById('result').textContent = data.description || 'Draft saved.'
 }),
 
@@ -114,3 +121,10 @@ document && document.getElementById('viewNotifications').addEventListener('click
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
+document.getElementById('signIn').addEventListener('click', async () => {
+  // Placeholder sign-in: generate a random user id and store it.
+  const id = crypto.randomUUID();
+  setUserId(id);
+  document.getElementById('result').textContent = 'Signed in (local).'
+});
+origin/cursor/automate-test-improve-and-merge-code-2533

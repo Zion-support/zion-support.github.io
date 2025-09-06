@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+}
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+};
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -11,6 +21,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 
@@ -233,6 +244,7 @@ class SyncStorage {
       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   }
+<<<<<<< HEAD
 }
 // Singleton instance
 export const syncStorage = new SyncStorage();
@@ -372,10 +384,13 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -386,6 +401,9 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
@@ -396,6 +414,8 @@ const default_state: SyncState = {
 }
 }
 }
+<<<<<<< HEAD
+=======
   const entity_id = getEntityId (event);
   const current_version = state.latestVersionByEntityId[entity_id] || 0;
   const is_newer = event.version > current_version;
@@ -467,3 +487,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  return events;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

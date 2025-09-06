@@ -1,4 +1,14 @@
 
+import React, { useEffect, useRef } from 'react';
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+// Particle system const particles: Array< {
+  // Wrap around edges if (particle.x < 0) particle.x = canvas.width;
+if (particle.x > canvas.width) particle.x = 0;
+if (particle.y < 0) particle.y = canvas.height;
+if (particle.y > canvas.height) particle.y = 0;
+// Draw particle requestAnimationFrame (animate)
+origin/cursor/automate-test-improve-and-merge-code-2533
 }
 animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
@@ -26,6 +36,13 @@ import React, { useEffect, useRef } from 'react';
   children,;
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
+  /* Floating Circles */
+}<motion.div
+export default function UltraFuturisticBackground2028({
+  children,
+}: UltraFuturisticBackground2028Props) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2028Props {
@@ -54,6 +71,12 @@ interface UltraFuturisticBackground2028Props {;
 
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
+export default function UltraFuturisticBackground2028({ children }: UltraFuturisticBackground2028Props) {
+  const canvasRef = null;
+              ease: "easeInOut"
+  useEffect(() => {
+    const canvas = canvasRef.current;
+origin/cursor/automate-test-improve-and-merge-code-2533
     if (!canvas) return;
   /* Floating Circles */;
 }<motion.div;
@@ -87,6 +110,9 @@ if (return) {
     const particles: Array<{
       coordinate_x: number;
       coordinate_y: number;
+x: number;
+      y: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
       vx: number;
       vy: number;
       size: number;
@@ -99,11 +125,27 @@ if (return) {
       color: string,
         opacity: Math.random() * 0.5 + 0.3
       })
+    // Create particles
+    for (let i = 0; i < 100; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+color: ['#8b5cf6', '#3b82f6', '#06b6d4', '#10b981'][
+          Math.floor(Math.random() * 4)
+        ],
+        opacity: Math.random() * 0.5 + 0.3,
+      });
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
+particles.forEach(particle => {
+origin/cursor/automate-test-improve-and-merge-code-2533
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
@@ -118,6 +160,8 @@ if (return) {
         ctx.globalAlpha = particle.opacity;
         ctx.fill();
         // Draw connections
+particles.forEach(otherParticle => {
+origin/cursor/automate-test-improve-and-merge-code-2533
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
@@ -126,6 +170,28 @@ if (return) {
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
             ctx.strokeStyle = particle.color;
+ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        });
+      });
+
+      requestAnimationFrame(animate);
+    };
+
+    animate();
+    // Handle resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+window.removeEventListener('resize', handleResize);
+    };
+origin/cursor/automate-test-improve-and-merge-code-2533
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
@@ -146,9 +212,11 @@ if (return) {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
+        className='absolute inset-0 w-full h-full pointer-events-none'
+origin/cursor/automate-test-improve-and-merge-code-2533
         style={{ zIndex: 0 }}
       {/* Gradient Overlays */}
-      <div
+<div
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'
         style={{ zIndex: 1 }}
       />
@@ -178,10 +246,25 @@ if (return) {
             scale: [1, 1.2, 1]
             opacity: [0.2, 0.5, 0.2],            rotate: [45, -315];
             scale: [1, 1.2, 1];
+            rotate: [45, 405],
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-blue-500/30 rotate-45'
+origin/cursor/automate-test-improve-and-merge-code-2533
           animate={{
-            rotate: [45, -315]
-            scale: [1, 1.2, 1]
-            opacity: [0.2, 0.5, 0.2],          }}
+            rotate: [45, -315],
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.5, 0.2],
+          }}
           transition={{
             duration: 10
             repeat: Infinity
@@ -199,6 +282,23 @@ if (return) {
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{
             ease: 'easeInOut',            ease: "easeInOut"
+            duration: 10,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45'
+          animate={{
+            rotate: [45, 405],
+            scale: [1, 1.15, 1],
+            opacity: [0.25, 0.55, 0.25],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+ease: 'easeInOut',
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
         />
             duration: 12,
@@ -245,10 +345,29 @@ if (return) {
           animate={{
             y: [0, 25, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
+        <motion.div
+className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
+          animate={{
+            y: [0, -20, 0],
+            opacity: [0.3, 0.6, 0.3],
+          }}
           transition={{
-            duration: 7
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
+            duration: 6,
+            repeat: Infinity,
+ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+className='absolute top-2/3 right-1/4 w-20 h-20 border border-blue-400/40 rounded-full'
+          animate={{
+            y: [0, 25, 0],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+origin/cursor/automate-test-improve-and-merge-code-2533
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+ease: 'easeInOut',
           }}
           animate={{
             y: [0, -15, 0]
@@ -262,6 +381,18 @@ if (return) {
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
+        />
+        <motion.div
+className='absolute bottom-1/3 right-1/3 w-12 h-12 border border-cyan-400/40 rounded-full'
+          animate={{
+            y: [0, -15, 0],
+            opacity: [0.25, 0.55, 0.25],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+ease: 'easeInOut',
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
 
           }}
@@ -356,6 +487,48 @@ if (return) {
             delay: 4,            ease: "linear"
 
             delay: 4
+<div
+        className='absolute inset-0 pointer-events-none'
+        style={{ zIndex: 3 }}
+      >
+        <motion.div
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
+          animate={{
+            y: [0, 1000],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+ease: 'linear',
+          }}
+        />
+
+        <motion.div
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent'
+          animate={{
+            y: [0, 1000],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+ease: 'linear',
+            delay: 2,
+          }}
+        />
+        <motion.div
+className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent'
+          animate={{
+            y: [0, 1000],
+            opacity: [0, 1, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+ease: 'linear',
+            delay: 4,
+origin/cursor/automate-test-improve-and-merge-code-2533
           }}
             duration: 8,
             repeat: Infinity,
@@ -371,7 +544,7 @@ if (return) {
         />;
       </div>;
       {/* Quantum Particles */}
-      <div
+<div
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 4 }}
       >
@@ -419,6 +592,15 @@ if (return) {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 3,
+ease: 'easeInOut',
+origin/cursor/automate-test-improve-and-merge-code-2533
             }}
           />
         ))}
@@ -457,6 +639,8 @@ if (return) {
       <div className='relative' style={{ z_index: 10 }}>        {children}
       </div>;
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;
+<div className='relative' style={{ zIndex: 10 }}>
+origin/cursor/automate-test-improve-and-merge-code-2533
         {children}
       </div>;
       {/* Bottom Glow */}
@@ -467,3 +651,10 @@ if (return) {
     </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 }} />;
     </div>);
 }
+<div
+        className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
+        style={{ zIndex: 5 }}
+      />
+    </div>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533

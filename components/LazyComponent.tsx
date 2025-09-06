@@ -1,3 +1,5 @@
+
+pr-12243
 import React, { Suspense, lazy } from 'react',
 interface LazyComponentProps {
   component: () => Promise<{ default: React.ComponentType < any> }>,
@@ -16,3 +18,5 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
     </Suspense>);
 },
 export default LazyComponent;
+
+pr-12243

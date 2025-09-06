@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+class TokenStore {
+  private config: any = {};
+
+  setConfig(config: any) {
+    this.config = config;
+  }
+
+  getConfig() {
+    return this.config;
+  }
+}
+
+export const tokenStore = new TokenStore();
+export interface TokenConfig {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   tokenName: string;
   tokenSymbol: string;
 
@@ -8,12 +25,16 @@
 export interface TokenConfig {
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TokenConfig {
 =======
 =======
@@ -34,6 +55,8 @@ export interface TokenConfig {;
   maxIssueAmount: number;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +74,7 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -80,6 +104,8 @@ class TokenStore {
     minIssueAmount: 1
     maxIssueAmount: 10000
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -100,6 +126,7 @@ export interface TokenStoreData {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export const tokenStore = new TokenStore();
@@ -135,6 +162,8 @@ function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -142,6 +171,7 @@ function readFromDisk(): TokenStoreData | null {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 
@@ -195,6 +225,8 @@ export const token_store = new TokenStore ();
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -207,9 +239,25 @@ export const token_store = new TokenStore ();
   } catch {
     return null;
   }
-  setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig }
+
+function writeToDisk(data: TokenStoreData): void {
+  try {
+    ensureDataDir();
+    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
+  } catch {}
+
+class InMemoryTokenStore {
+  private data: TokenStoreData;
+
+  constructor() {
+    const fromDisk = readFromDisk();
+    this.data = fromDisk ?? {
+      wallets: {},
+      transactions: [],
+      config: DEFAULT_TOKEN_CONFIG,
+    };
   }
+<<<<<<< HEAD
 }
 export const tokenStore = new TokenStore();
 
@@ -229,3 +277,49 @@ export const tokenStore = new TokenStore();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+
+  getData(): TokenStoreData {
+    return this.data;
+  }
+
+  save(): void {
+    writeToDisk(this.data);
+  }
+
+const store = new InMemoryTokenStore();
+
+export const tokenStore = {
+  getConfig(): TokenConfig {
+    return store.getData().config;
+  },
+  setConfig(config: TokenConfig): void {
+    store.getData().config = config;
+    store.save();
+  },
+  getWallet(userId: string): Wallet {
+    const wallets = store.getData().wallets;
+    if (!wallets[userId]) {
+      wallets[userId] = { userId, balance: 0 };
+      store.save();
+    }
+    return wallets[userId];
+  },
+  setWalletBalance(userId: string, balance: number): Wallet {
+    const wallets = store.getData().wallets;
+    wallets[userId] = { userId, balance };
+    store.save();
+    return wallets[userId];
+  },
+  addTransaction(tx: TokenTransaction): void {
+    store.getData().transactions.unshift(tx);
+    store.save();
+  },
+  getTransactions(userId?: string): TokenTransaction[] {
+    const txs = store.getData().transactions;
+    if (!userId) return txs;
+    return txs.filter(t => t.userId === userId);
+  },
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

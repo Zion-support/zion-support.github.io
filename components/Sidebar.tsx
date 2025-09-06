@@ -1,4 +1,6 @@
 
+pr-12243
+
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -21,6 +23,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
+pr-12243
   return (
     <AnimatePresence>
       {isOpen && (
@@ -40,6 +43,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+
+pr-12243
           >
             <div className="p-6">
               {/* Header */}
@@ -53,10 +58,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <button
                   onClick={onClose}
                   className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
+
+pr-12243
                 >
                   <X className="w-6 h-6" />
                 </button>
               </div>
+
+pr-12243
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -92,6 +101,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                 ))}
               </nav>
+
+pr-12243
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -129,6 +140,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <LogOut className="h-5 w-5" />
                   <span className="font-medium">Sign Out</span>
                 </button>
+
+pr-12243
               </div>
             </div>
           </motion.div>
@@ -372,6 +385,8 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
 export default Sidebar;
 ;
+
+pr-12243
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -412,6 +427,7 @@ const navigation = {
 import React from 'react';
 import Link from 'next/link';
 import { Home, Settings, User, LogOut } from 'lucide-react';
+pr-12243
 
 interface SidebarProps {
   isOpen: boolean;
@@ -471,3 +487,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
+pr-12243

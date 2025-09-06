@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  X, 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  X,
+  Home,
+  Users,
+  Briefcase,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
   Star,
   CheckCircle,
   ArrowRight,
@@ -41,8 +41,8 @@ import {
   Server,
   Shield,
   Zap,
-  Lock
-} from 'lucide-react';
+  Lock,
+} from "lucide-react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -51,38 +51,54 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const quickLinks = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'Services', href: '/services', icon: Briefcase },
-    { name: 'Solutions', href: '/solutions', icon: Target },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    { name: "Home", href: "/", icon: Home },
+    { name: "Services", href: "/services", icon: Briefcase },
+    { name: "Solutions", href: "/solutions", icon: Target },
+    { name: "About", href: "/about", icon: Users },
+    { name: "Contact", href: "/contact", icon: Phone },
   ];
 
   const serviceLinks = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/it-services', icon: Server },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: Zap },
-    { name: 'Security', href: '/security', icon: Shield },
-    { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud },
-    { name: 'Database Solutions', href: '/database-solutions', icon: Database }
+    { name: "AI Services", href: "/ai-services", icon: Brain },
+    { name: "IT Services", href: "/it-services", icon: Server },
+    { name: "Micro SaaS", href: "/micro-saas", icon: Zap },
+    { name: "Security", href: "/security", icon: Shield },
+    { name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
+    { name: "Database Solutions", href: "/database-solutions", icon: Database },
   ];
 
   const solutionLinks = [
-    { name: 'Enterprise Solutions', href: '/enterprise-solutions', icon: Building2 },
-    { name: 'Startup Solutions', href: '/startup-solutions', icon: Rocket },
-    { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Workflow },
-    { name: 'Cloud Migration', href: '/solutions/cloud-migration', icon: Cloud },
-    { name: 'AI Implementation', href: '/solutions/ai-implementation', icon: Brain },
-    { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: Shield }
+    {
+      name: "Enterprise Solutions",
+      href: "/enterprise-solutions",
+      icon: Building2,
+    },
+    { name: "Startup Solutions", href: "/startup-solutions", icon: Rocket },
+    {
+      name: "Digital Transformation",
+      href: "/solutions/digital-transformation",
+      icon: Workflow,
+    },
+    {
+      name: "Cloud Migration",
+      href: "/solutions/cloud-migration",
+      icon: Cloud,
+    },
+    {
+      name: "AI Implementation",
+      href: "/solutions/ai-implementation",
+      icon: Brain,
+    },
+    { name: "Cybersecurity", href: "/solutions/cybersecurity", icon: Shield },
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Our Team', href: '/team', icon: Users },
-    { name: 'Careers', href: '/careers', icon: Briefcase },
-    { name: 'Partners', href: '/partners', icon: Handshake },
-    { name: 'News', href: '/news', icon: Newspaper },
-    { name: 'Contact', href: '/contact', icon: Phone }
+    { name: "About Us", href: "/about", icon: Users },
+    { name: "Our Team", href: "/team", icon: Users },
+    { name: "Careers", href: "/careers", icon: Briefcase },
+    { name: "Partners", href: "/partners", icon: Handshake },
+    { name: "News", href: "/news", icon: Newspaper },
+    { name: "Contact", href: "/contact", icon: Phone },
   ];
 
   return (
@@ -100,9 +116,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        initial={{ x: "-100%" }}
+        animate={{ x: isOpen ? 0 : "-100%" }}
+        transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
       >
         <div className="p-6">
@@ -112,7 +128,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="ml-3 text-xl font-bold text-gray-900">
+                Zion Tech Group
+              </span>
             </div>
             <button
               onClick={onClose}
@@ -218,7 +236,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
               <div className="flex items-center text-gray-600">
                 <MapPin className="h-4 w-4 mr-3 text-blue-500" />
-                <span className="text-sm">123 Tech Street, Innovation City</span>
+                <span className="text-sm">
+                  123 Tech Street, Innovation City
+                </span>
               </div>
             </div>
           </div>
@@ -239,7 +259,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </motion.div>
     </>
-  );
+  )
 };
 
 export default Sidebar;

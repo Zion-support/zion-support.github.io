@@ -6,10 +6,8 @@
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
 
-
-  'Content-Type': 'application/json' ;
+  'Content-Type': 'application/json' 
 };
-
 
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
@@ -28,6 +26,29 @@ budgetRange: values.budgetRange;
   handleSubmit
 }/> </div>)
 };export default ServicesPage;
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import React from 'react',
+import SEO from '../../components/SEO',
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
+import Card from '../../components/ui/Card';
+import Link from 'next/link';
+import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices  } from '../../data/additional-real-services';
+import { extraServices  } from '../../data/extra-services';
+import { newlyAddedServices  } from '../../data/newly-added-services';
+import { curatedMarketServices  } from '../../data/curated-market-services';
+import { realMarketServices  } from '../../data/real-market-services';
+import { new2025Services  } from '../../data/new-2025-services';
+import { marketValidatedServices  } from '../../data/market-validated-services';
+import { moreRealServices2025  } from '../../data/more-real-services-2025';
+import { realOperationalServices } from '../../data/real-operational-services';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025'
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
+
+const mapLocalToServiceItem = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ServicesIndexPage () {
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
@@ -227,15 +248,15 @@ if ( {) {
         <meta name="description" content="Discover curated IT services. Request quotes with AI - assisted summaries." />;
       </Head>;
       <div className="relative">;
-        <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to - purple - 500" />;
-        <div className="flex flex - col sm: flex - row gap - 6">;
+        <div className="absolute -z - 10 -top - 40 -left - 40 w - 96 h - 96 rounded - full blur - 3xl opacity - 40 bg - gradient - to - tr from - cyan - 400 via - blue - 500 to-purple-500" />;
+        <div className="flex flex - col sm: flex-row gap-6">;
           <MarketplaceFilters available_categories={available_categories} value={filters} on_change={set_filters} />;
-          <div className="flex - 1">;
-            <div className="mb - 4 flex items - center justify - between">;
-              <h1 className="text - 2xl font - semibold text - white">Services</h1>;
-              <div className="text - sm text - white / 70">{filtered.length} results</div>;
+          <div className="flex-1">;
+            <div className="mb - 4 flex items-center justify-between">;
+              <h1 className="text - 2xl font-semibold text-white">Services</h1>;
+              <div className="text-sm text-white / 70">{filtered.length} results</div>;
             </div>;
-            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 5">;
+            <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols-3 gap-5">;
               {filtered.map ((service) => (
                 <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />))}
 
@@ -243,10 +264,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
-
-
-
 
       <QuoteRequestModal
         open={modalOpen}
@@ -268,3 +285,8 @@ export default ServicesPage;
 ;
 export default ServicesPage;
 ;
+  handleSubmit 
+}/> </div>) 
+};
+export default ServicesPage;
+origin/cursor/automate-test-improve-and-merge-code-2533

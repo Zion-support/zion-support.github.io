@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface DevIdentity {
 
 export interface DevIdentity {;
@@ -12,11 +15,14 @@ export interface DevIdentity {;
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
@@ -43,6 +49,8 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   }
   return { isAuthenticated: false, roles: [] }
 }
+<<<<<<< HEAD
+=======
   if (token && adminToken && token === adminToken) {
 
 =======
@@ -59,6 +67,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (token && adminToken && token === adminToken) {
 
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
@@ -67,10 +76,13 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   return { isAuthenticated: false, roles: [] }
 }
 
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function requireRoles(
   req: NextApiRequest
   res: NextApiResponse
@@ -88,11 +100,15 @@ export function requireRoles(
   }
   return identity;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 
 }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -269,6 +285,11 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

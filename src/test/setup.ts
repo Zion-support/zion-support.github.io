@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-12243
 // Test setup file for Jest
 import "@testing-library/jest-dom";
 
@@ -5,12 +9,21 @@ import "@testing-library/jest-dom";
 Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-12243
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 // Mock window && window.matchMedia
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-12243
     matches: false,
     media: query,
     onchange: null,
@@ -22,30 +35,53 @@ Object && Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-
 // Mock IntersectionObserver
+<<<<<<< HEAD
 global.IntersectionObserver = class IntersectionObserver {
+=======
+
+>>>>>>> pr-12243
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
+<<<<<<< HEAD
 global.ResizeObserver = class ResizeObserver {
+=======
+
+>>>>>>> pr-12243
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+=======
+// Global test setup
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
+
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(), unobserve: jest.fn(), disconnect: jest.fn(), }));
+
+// Mock console methods
+global.console = {
+  ...console, warn: jest.fn(), error: jest.fn(), };
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
 
-
 beforeAll(() => {
   console.error = (...args: any[]) => {
+<<<<<<< HEAD
     if (true) {}
+=======
+
+>>>>>>> pr-12243
     ) {
       return;
     }
@@ -57,6 +93,7 @@ beforeAll(() => {
     if (
       typeof args[0] === "string" &&
       (args[0].includes("Warning:") || args[0].includes("Deprecated:"))
+<<<<<<< HEAD
   
   console && console.warn = (...args: any[]) => {
 
@@ -111,6 +148,9 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
+=======
+
+>>>>>>> pr-12243
     ) {
       return;
     }
@@ -120,6 +160,7 @@ if (
 });
 
 afterAll(() => {
+<<<<<<< HEAD
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
@@ -131,3 +172,6 @@ after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
+=======
+
+>>>>>>> pr-12243

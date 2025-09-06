@@ -25,24 +25,31 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
+    <div className="mb-6">;
+      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
+        Sort by;
+      </label>;
+      <Select value={sortOption} onValueChange={setSortOption}>;
+        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectValue placeholder="Sort by" />;
+        </SelectTrigger>;
+        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
+          <SelectItem value="relevance">Relevance</SelectItem>;
+          <SelectItem value="rating">Highest Rating</SelectItem>;
+          <SelectItem value="experience">Most Experienced</SelectItem>;  );
 }
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-  );
->>>>>>> main
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Select,
   SelectContent,
   SelectItem,
@@ -55,15 +62,15 @@ export /**
  */
 function SortFilter() {
   return (
-    <div className="mb - 6">;
-      <label className="text - sm font - medium text - zion - slate - light mb - 2 block">;
+    <div className="mb-6">;
+      <label className="text - sm font - medium text - zion - slate - light mb-2 block">;
         Sort by;
       </label>;
       <Select value={sort_option} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
+        <SelectTrigger className="bg - zion - blue border - zion - blue - light text-white">;
           <SelectValue placeholder="Sort by" />;
         </SelectTrigger>;
-        <SelectContent className="bg - zion - blue border - zion - blue - light text - white">;
+        <SelectContent className="bg - zion - blue border - zion - blue - light text-white">;
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
@@ -73,16 +80,6 @@ function SortFilter() {
       </Select>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
   )
 
           <SelectItem value="price-low">Price:Low to High</SelectItem>;
@@ -107,10 +104,3 @@ function SortFilter() {
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  )
-
-import {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

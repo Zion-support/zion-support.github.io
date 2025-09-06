@@ -4,7 +4,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 ) {;
   const method = (req.method || 'POST').toUpperCase();
 
-
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
@@ -86,3 +85,8 @@ function handler() {
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
+    return res.status(405).json({ error: 'Method not allowed' });
+  const method = null;
+  return res.status(200).json({ email: text })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

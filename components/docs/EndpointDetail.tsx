@@ -5,6 +5,14 @@ import TryItConsole from './TryItConsole';
   endpoint,
 }: {;
 
+import { EndpointSpec } from '../../data/api-docs/types';
+export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
+  return (
+    <div className="space-y-4">
+export default function EndpointDetail({
+  endpoint
+}: {
+origin/cursor/automate-test-improve-and-merge-code-2533
   endpoint: EndpointSpec;
 }) {
 
@@ -12,6 +20,7 @@ import TryItConsole from './TryItConsole';
 
     <div className='space-y-4'>
 
+origin/cursor/automate-test-improve-and-merge-code-2533
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
           {endpoint.title}
@@ -37,6 +46,16 @@ import TryItConsole from './TryItConsole';
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.method}</span>
           <code className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.path}</code>
           <span className="px-2 py-0.5 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">{endpoint.visibility}</span>
+          </span>
+        </div>
+      </div>
+      <div>
+<div className='font-medium mb-2'>Code Examples</div>
+        <CodeSamples samples={endpoint.samples} />
+      </div>
+      <div>
+<div className='font-medium mb-2'>Try It</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <TryItConsole
           method={endpoint && endpoint.method}
           path={endpoint && endpoint.path}
@@ -48,6 +67,22 @@ import TryItConsole from './TryItConsole';
 
 
 
+            (endpoint.auth |[]).includes('jwt') |
+            (endpoint.auth |[]).includes('wallet')
+          }
+        />
+      </div>
+      {endpoint.rateLimits && endpoint.rateLimits.length > 0 && (
+        <div>
+          <div className='font-medium mb-2'>Rate Limits</div>
+          <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
+            {endpoint.rateLimits.map((r, idx) => (
+              <li key={idx}>
+                {r.tier}: {r.limitPerMinute}/min
+                {r.burst ? `, burst ${r.burst}` : ''}
+              </li>
+            ))}
+origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>
         </div>
       )}
@@ -93,6 +128,8 @@ import TryItConsole from './TryItConsole';
       )}
 
       {endpoint.errors && endpoint.errors.length > 0 && (
+{endpoint.errors && endpoint.errors.length > 0 && (
+origin/cursor/automate-test-improve-and-merge-code-2533
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
           <ul className='list-disc pl-5 text-sm text-high-contrast-muted'>
@@ -105,6 +142,8 @@ import TryItConsole from './TryItConsole';
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
             ))}
 
+              </li>
+origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
           </ul>
         </div>
@@ -177,4 +216,5 @@ import TryItConsole from './TryItConsole';
 
 }
 
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

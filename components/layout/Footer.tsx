@@ -192,6 +192,9 @@ const Footer: React.FC = () => {
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
+
+
+pr-12243
               </div>
             </div>
           </div>
@@ -211,6 +214,11 @@ const Footer: React.FC = () => {
           <p className="text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
+
+            </div>
+          </div>
+
+pr-12243
         </div>
       </div>
     </footer>
@@ -218,3 +226,4 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+pr-12243

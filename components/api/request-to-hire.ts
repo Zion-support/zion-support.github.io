@@ -24,7 +24,6 @@ import path from 'path';
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
-
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
@@ -38,6 +37,24 @@ import path from 'path';
       requesterName,
       requesterEmail,
       projectInfo,
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+    req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
+  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
+    return res.status(400).json({ error: 'Missing required fields' });
+  }
+  try {
+    const timestamp = null;
+    return res.status(500).json({ error: 'Internal error' })
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
     });
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests');
@@ -69,4 +86,21 @@ import path from 'path';
 }
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
+      timestamp
+      talentSlug
+      requesterName
+      requesterEmail
+      projectInfo
+    }
+    const file = path.join(
+      dir
+      `request-${timestamp.replace(/[:.]/g, '-')}.json`
+    );
+    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
+    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    console.error('Request-to-hire failed', err);
+return res.status(500).json({ error: 'Internal error' });
+origin/cursor/automate-test-improve-and-merge-code-2533
   }

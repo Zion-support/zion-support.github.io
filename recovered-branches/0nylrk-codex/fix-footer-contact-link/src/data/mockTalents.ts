@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 import { ProfileData } from '@/types/profile';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -53,10 +56,16 @@ import { ProfileData } from '@/types/profile';
       {
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import { ProfileData } from '@/types/profile';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import { ProfileData } from "@/types/profile";
 // Mock talent profiles for development and testing
 export const MOCK_TALENTS: ProfileData[] = [
   {
+<<<<<<< HEAD
 
       {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -2209,6 +2218,8 @@ contact_email: "david.martinez@example.com";
 }];
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2222,3 +2233,6 @@ contact_email: "david.martinez@example.com";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,11 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
+=======
+// Zion Tech Group Website JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
         })
     }),
     
@@ -57,12 +72,18 @@
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -70,6 +91,7 @@ function performSearch(query) {
     if (searchResults) {
         const results = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
@@ -77,6 +99,9 @@ function performSearch(query) {
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
@@ -348,6 +373,7 @@ document.addEventListener('DOMContentLoaded', function() {;
         } else {;
             backToTopBtn.classList.remove('visible');
         }
+<<<<<<< HEAD
     }),;
     // Initialize tooltips;
     initializeTooltips(),;
@@ -364,20 +390,56 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
 
             ).join('')
 
+=======
+    }));
+    // Initialize tooltips
+    initializeTooltips();
+    // Initialize modals
+    initializeModals()
+}),
+
+}) 
+// Search function
+function performSearch(query) {
+    // This would typically make an API call to search your content
+    // For now, we'll simulate search results
+    const searchResults = document.querySelector('.search-results');
+    if ({
+        const results = [
+            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
+            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
+            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' };
+            { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
+        ].filter(item =>
+            item.title.toLowerCase().includes(query)
+        ));
+        if (results.length > 0) {
+            searchResults.innerHTML = results.map(result =>
+                `<a href="${result.url}" class="search-result-item">${result.title}</a>`
+            ).join('');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             searchResults.style.display = 'block'
+<<<<<<< HEAD
+=======
 =======
         if (results && results.length > 0) {
             searchResults && searchResults.innerHTML = results && results.map(result => 
@@ -385,6 +447,7 @@ function performSearch(query) {;
             ).join(''),
             searchResults && searchResults.style.display = 'block'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         } else {
             searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults && searchResults.style.display = 'block'
@@ -395,10 +458,14 @@ function performSearch(query) {;
 // Counter animation
 function animateCounter(element) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const timer = setInterval(() => {
 
         current += step
@@ -408,30 +475,82 @@ function animateCounter(element) {
         }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
         
         const suffix = element && element.textContent.replace(/\d/g, ''),
         element && element.textContent = Math && Math.floor(current) + suffix
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    const target = parseInt(element.textContent.replace(/\D/g, ''))
+    const duration = 2000
+    const step = target / (duration / 16)
+    let current = 0
+    const timer = setInterval(() => {
+        current += step;
+        if ({
+            current = target);
+            clearInterval(timer)
+        }
+        
+        const suffix = element.textContent.replace(/\d/g, '');
+        element.textContent = Math.floor(current) + suffix
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }, 16)
 }
 // Tooltip initialization
 function initializeTooltips() {
+<<<<<<< HEAD
 
 
+=======
+    const tooltipElements = document.querySelectorAll('[data-tooltip]');
+    tooltipElements.forEach(element => {
+        element.addEventListener('mouseenter', function(e) {
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip',
+            tooltip.textContent = this.dataset.tooltip,
+            document.body.appendChild(tooltip);
+            const rect = this.getBoundingClientRect();
+            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
+            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
+            
+            this.tooltip = tooltip
+        })
+        element.addEventListener('mouseleave', function() {
+            if (this.tooltip) {
+                this.tooltip.remove();
+                this.tooltip = null
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             }
         })
     })
 }
 // Modal initialization
 function initializeModals() {
+<<<<<<< HEAD
 
 
+=======
+    const modalTriggers = document.querySelectorAll('[data-modal]');
+    const modals = document.querySelectorAll('.modal');
+    modalTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            const modalId = this.dataset.modal;
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             }
         })
     })
     // Close modal on overlay click
+<<<<<<< HEAD
 
 
             }
@@ -439,11 +558,30 @@ function initializeModals() {
         // Close modal on close button click
 
 
+=======
+    modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = ''
+            }
+        })
+        // Close modal on close button click
+        const closeBtn = modal.querySelector('.modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             })
         }
     })
     // Close modal on escape key
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
@@ -532,6 +670,8 @@ function initializeTooltips() {;
         element.addEventListener('mouseleave', function() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -617,12 +757,16 @@ if ( {) {
 }
                 this.tooltip.remove (),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 this.tooltip = null;
             }
         });
     });
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -663,6 +807,8 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
+<<<<<<< HEAD
+=======
 =======
 // Modal initialization;
 /**
@@ -722,6 +868,7 @@ if ( {) {
                     document.body.style.overflow = '';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 }
             });
         }
@@ -729,6 +876,9 @@ if ( {) {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     modal.classList.remove('active')
 
                 }
@@ -740,6 +890,14 @@ if ( {) {
     if ('performance' in window) {
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
+=======
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = ''
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 }
             })
         }
@@ -747,20 +905,36 @@ if ( {) {
 }
 // Performance monitoring
 function logPerformance() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if ('performance' in window) {
+=======
+    if ({
+        const perfData = performance.getEntriesByType('navigation')[0]);
+        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -770,25 +944,45 @@ window.addEventListener('error', function(e) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     console.error('JavaScript Error:', e.error)
 
+=======
+    console.error('JavaScript Error:', e.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Send to error tracking service
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
+<<<<<<< HEAD
 
 
+=======
+    console.log('Event tracked:', eventName, eventData);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     // Implement your analytics tracking here
 }
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  entries.forEach (entry => {
+  if (entry.isIntersecting) {
+  lastScrollTop = scrollTop 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 
   entries && entries.forEach (entry => {
@@ -839,6 +1033,17 @@ function track_event() {
     console.log ('Event tracked:', event_name, event_data),
     // Implement your analytics tracking here;
 }
+=======
+  entries.forEach (entry => {
+  if (entry.isIntersecting) {
+  
+
+}) 
+}//Newsletter subscription submitBtn.disabled = true;
+//Simulate subscription (replace with actual API call) //Reset form this.reset ();
+//Reset button after delay //Initialize tooltips initializeTooltips ();
+//Initialize modals initializeModals () 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.for_each (entry => {
@@ -872,6 +1077,7 @@ if ( {) {
  */
 function if() {
   const results = [ {
+<<<<<<< HEAD
 
   title: 'Quantum Computing Services', url: '/services/quantum-computing' 
 }].filter (item => item && item.title.toLowerCase () .includes (query) );
@@ -886,31 +1092,80 @@ function if() {
   if (e && e.key === 'Escape') {
   modals && modals.forEach (modal => {
   if (modal && modal.classList.contains ('active') ) {
+=======
+  title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' 
+};
+{
+  title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' 
+};
+{
+  title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' 
+};
+{
+  title: 'Quantum Computing Services', url: '/services/quantum-computing' 
+}].filter (item => item.title.toLowerCase () .includes (query) );
+
+
+}//Counter animation //Close modal on overlay click modals.forEach (modal => {
+  modal.addEventListener ('click', function (e) {
+  if (e.target === this) {
+  
+
+});
+//Close modal on escape key document.addEventListener ('keydown', function (e) {
+  if (e.key === 'Escape') {
+  modals.forEach (modal => {
+  if (modal.classList.contains ('active') ) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   
 
 }) 
 }//Performance monitoring 
 
+<<<<<<< HEAD
 }//Error tracking window && window.addEventListener ('error', function (e) {
   console && console.error ('JavaScript Error:', e && e.error);
 //Send to error tracking service 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+}//Error tracking window.addEventListener ('error', function (e) {
+  console.error ('JavaScript Error:', e.error);
+//Send to error tracking service 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
+  
 }) {
-  //Implement your analytics tracking here
+  //Implement your analytics tracking here 
 }//Track page views trackEvent ('page view', {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  page: window.location.pathname;
+title: document.title 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 });
 //Track button clicks document.addEventListener ('click', function (e) {
   if (e.target.matches ('.btn') ) {
   trackEvent ('button click', {
+<<<<<<< HEAD
 
+=======
+  button text: e.target.textContent;
+button class: e.target.className;
+});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Track button clicks
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
+<<<<<<< HEAD
+=======
 =======
 
   page: window && window.location.pathname;
@@ -946,10 +1201,12 @@ document && document.addEventListener('click', function(e) {
             page: window && window.location.pathname
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         })
     }
 })
 // Log performance when page is fully loaded
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -1018,6 +1275,45 @@ document.addEventListener('click', function(e) {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+;
+// Performance monitoring;
+function logPerformance() {;
+    if ('performance' in window) {;
+        const perfData = window.window.window.performance.getEntriesByType('navigation')[0],;
+        // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),;
+        // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms');
+    }
+}
+;
+// Error tracking;
+window.addEventListener('error', function(e) {;
+    console.error('JavaScript Error:', e.error),;
+    // Send to error tracking service;
+}),;
+// Analytics tracking (replace with your analytics service);
+function trackEvent(eventName, eventData = {}) {;
+    // // // console.log('Event tracked:', eventName, eventData),;
+    // Implement your analytics tracking here;
+}
+;
+// Track page views;
+trackEvent('page_view', {;
+    page: window.location.pathname,;
+    title: document.title;
+}),;
+// Track button clicks;
+document.addEventListener('click', function(e) {;
+    if (e.target.matches('.btn')) {;
+        trackEvent('button_click', {;
+            button_text: e.target.textContent,;
+            button_class: e.target.className,;
+            page: window.location.pathname;
+        });
+    }
+}),;
+// Log performance when page is fully loaded;
+=======
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
   // Check condition
@@ -1076,6 +1372,7 @@ window.addEventListener ('load', log_performance),
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
@@ -1083,5 +1380,12 @@ window.addEventListener ('load', log_performance),
 <<<<<<< HEAD
 window.addEventListener('load', logPerformance),;
 =======
+<<<<<<< HEAD
+window.addEventListener('load', logPerformance),;
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+window.addEventListener('load', logPerformance);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

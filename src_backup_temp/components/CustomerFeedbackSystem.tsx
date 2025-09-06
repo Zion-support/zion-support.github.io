@@ -394,8 +394,8 @@ showStats: tru e,;
       tags: [],;
   ;
   ;
-  verified: fals e;
-    };';
+  verified: fals e
+};';
 ';';
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};';
@@ -403,8 +403,8 @@ showStats: tru e,;
   // Handle helpful/unhelpful votes'
         return {;';
           ...f,;';';
-          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';';
-    };
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';'
+};
 ;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
@@ -413,8 +413,8 @@ showStats: tru e,;
         return {;
           ...f,;
           helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
-          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
-    };
+          unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful}
+};
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' }
     );
     setShowFeedbackForm(false)};
@@ -443,8 +443,8 @@ showStats: tru e,;
       'product': 'text-green-400 bg-green-400/20','';';
       'support': 'text-purple-400 bg-purple-400/20',;  ;';';
   ;'';';
-  'overall': 'text-zion-cyan bg-zion-cyan/20';';
-    };';';
+  'overall': 'text-zion-cyan bg-zion-cyan/20';'
+};';';
 ;
   // Get sentiment color;
     switch(sentiment) {;
@@ -460,8 +460,8 @@ showStats: tru e,;
       'product': 'text-green-400 bg-green-400/20','
       'support': 'text-purple-400 bg-purple-400/20',;  ;
   ;'
-  'overall': 'text-zion-cyan bg-zion-cyan/20';
-    };
+  'overall': 'text-zion-cyan bg-zion-cyan/20'
+};
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
   return ()
     <div className="w-full max-w-6xl mx-auto p-6">
@@ -823,7 +823,7 @@ showStats: tru e,;
               <div className="space-y-4">
                 {/* Rating */}
                 <div>
-                  <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>
+                  <label className="block text-sm font - medium text-zinc-300 mb-2">Rating</label>
                   <div  className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
                         onClick={ () => setNewFeedback(prev => ({ ...prev,;

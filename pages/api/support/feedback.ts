@@ -1,6 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { readJson, writeJson } from '../../../utils/fsDb';
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+=======
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb'
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { articleId, helpful } = req.body as { articleId: string, helpful: boolean }
@@ -9,5 +22,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const feedback = readJson<any[]>('support/feedback.json', [])
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
+<<<<<<< HEAD
+
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '[^']*';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { articleId, helpful } = req.body as { articleId: string, helpful: boolean },
+  if (!articleId || helpful;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return res.status(200).json({ ok: true })
 };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

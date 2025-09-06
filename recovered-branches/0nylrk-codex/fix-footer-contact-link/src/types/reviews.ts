@@ -1,18 +1,10 @@
-export type ReviewStatus = "pending" | "approved" | "rejected";
-
+export type ReviewStatus = 'pending' | 'approved' | 'rejected';
+;
 export interface Review {
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface Review {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export interface Review {export interface Review {
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -31,38 +23,15 @@ export interface Review {
   report_count: number;
   reviewer_profile?: {
     display_name: string;
-    avatar_url?: string;
-  };
-}
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-export interface ReviewReport {;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    display_name: string
     avatar_url?: string
-  }
+};
 }
-export interface ReviewReport {
 
 export interface ReviewReport {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export interface ReviewReport {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+export interface ReviewReport {export interface ReviewReport {
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
-  status: "pending" | "resolved" | "dismissed";
-  created_at: string;
-  resolved_at?: string;
-}
+  status: 'pending' | 'resolved' | 'dismissed';}

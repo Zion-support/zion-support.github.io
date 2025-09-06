@@ -30,7 +30,7 @@ export type Trend = {;
   title: string,;
   highlights: string[],;
   summary: string,;
-  tags: string[];
+  tags: string[]
 };
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'dataai-trends && trends.json');
@@ -56,7 +56,7 @@ export type Trend = {
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[];
+  tags: string[]
 };
 
 export async function getServerSideProps() {;
@@ -66,17 +66,19 @@ export async function getServerSideProps() {;
     items = JSON.parse(raw)
   } catch {}
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
+import fs from 'fs';
+import path from 'path';
+export type Trend = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return { props: { items } }
 }
 
     </div>;
 
-
 );
 }
   );
 }
-
 
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
@@ -86,23 +88,24 @@ export default /**
  */
 function AiTrendsPage() {
   return (
-    <div className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">AI Automation: Trend Watch</h1>;
-      <p className="text - gray - 600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
-      <div className="grid grid - cols - 1 gap - 4">;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation: Trend Watch</h1>;
+      <p className="text-gray-600">Autonomously generated insights on AI, dev tools, and cloud trends.</p>;
+      <div className="grid grid - cols-1 gap-4">;
         {items.map ((t) => (
-          <div key={t.id} className="border rounded p - 4 space - y-2">;
-            <div className="flex items - center justify - between">;
-              <div className="font - medium">{t.title}</div>;
-              <div className="text - xs text - gray - 500">{new Date (t.date).toLocaleDateString ()}</div>;
+          <div key={t.id} className="border rounded p-4 space-y-2">;
+            <div className="flex items-center justify-between">;
+              <div className="font-medium">{t.title}</div>;
+              <div className="text - xs text-gray-500">{new Date (t.date).toLocaleDateString ()}</div>;
             </div>;
-            <div className="text - sm text - gray - 700">{t.summary}</div>;
-            <ul className="list - disc pl - 5 text - sm text - gray - 700">;
+            <div className="text - sm text-gray-700">{t.summary}</div>;
+            <ul className="list - disc pl - 5 text - sm text-gray-700">;
               {t.highlights.map ((h, i) => (<li key={i}>{h}</li>))}
             </ul>;
-            <div className="flex flex - wrap gap - 2 pt - 1">;
-              {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg - gray - 100">{tag}</span>))}
+            <div className="flex flex - wrap gap-2 pt-1">;
+              {t.tags.map (tag => (<span key={tag} className="text - xs px - 2 py - 0.5 rounded bg-gray-100">{tag}</span>))}
             </div>;
           </div>))}
       </div>;
     </div>);
+origin/cursor/automate-test-improve-and-merge-code-2533

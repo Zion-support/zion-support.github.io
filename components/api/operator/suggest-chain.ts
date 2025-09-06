@@ -1,9 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+pr-12243
 import { CHAINS } from '../../../utils/chains';
 
 
   const stake = Number(stakeUsd || 0);
 
+origin/cursor/automate-test-improve-and-merge-code-382a
+import { CHAINS } from '../../../utils/chains';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {},
+  const stake = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -18,6 +27,12 @@ export default async function handler(
 
   const stake = Number(stakeUsd || 0);
 
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { region, stakeUsd } = req.body || {};
+  const stake = Number(stakeUsd || 0);
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
   // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
@@ -26,10 +41,15 @@ export default async function handler(
 
 
 
+pr-12243
+
+
 
 
 
   let candidates = ['polygon', 'bnb', 'avalanche'];
+let candidates = ['polygon', 'bnb', 'avalanche'];
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (stake > 5000) candidates = ['arbitrum', 'optimism', 'ethereum'];
   const regionLc = (region |'').toString().toLowerCase();
   if (regionLc.includes('apac') |regionLc.includes('asia')) {
@@ -54,6 +74,7 @@ export default async function handler(
   }
   let candidates = ['polygonbnbavalanche'];
   if (stake > 5000) candidates = ['arbitrumoptimismethereum'];
+pr-12243
   const ranked = candidates && candidates.map(k => ({ key: k, chain: (CHAINS as any)[k] }));
   res
     .status(200)
@@ -146,3 +167,8 @@ if (||) {
   const ranked = candidates.map ((k) => ({ key: k, chain: (CHAINS as any)[k] }));
   res.status (200).json ({ recommendation: ranked[0], alternatives: ranked.slice (1) });
 }
+    .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
+  res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

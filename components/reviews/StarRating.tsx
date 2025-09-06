@@ -1,3 +1,6 @@
+
+
+pr-12243
 }
  > <polygon points="12 2 15 9 22 9 17 14 19 22 12 18 5 22 7 14 2 9 9 9 12 2" /> </svg> </button>) ;
 }) ;
@@ -57,11 +60,28 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
             key={star}
             type="button"
             className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
+
+
+import React, { useState } from 'react';
+type Props = any;
+  const stars = [1, 2, 3, 4, 5];
+  return (
+<div className='flex items-center gap-1'>
+      {stars.map(star => {
+        const active = (hovered ?? value) >= star;
+            onMouseEnter={() => !readOnly && setHovered(star)}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
             aria-label={`${star} star`}
           >;
             <svg
+
+
+xmlns='http://www.w3.org/2000/svg'
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
               width={size}
               height={size}
               view_box='0 0 24 24';
@@ -101,3 +121,13 @@ export default StarRating;              width={size}
 }
 ;
 export default StarRating;
+
+;
+
+    </div>
+  );
+};
+
+export default StarRating;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

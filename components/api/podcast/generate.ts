@@ -3,12 +3,25 @@ import { v4 as uuidv4  } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
+
+
+pr-12243
 const EPISODES_PATH = path && path.join(
   process && process.cwd(),
   'data',
   'podcast',
   'episodes && episodes.json'
+const EPISODES_PATH = null;
+    return res.status(500).json({ error: error?.message || 'Unknown error' })
+};
+const EPISODES_PATH = path.join(
+  process.cwd()
+  'data'
+  'podcast'
+  'episodes.json'
+origin/cursor/automate-test-improve-and-merge-code-2533
 );
+
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -21,6 +34,13 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
 };
 episodes && episodes.unshift (episode);
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+if (!fs.existsSync(EPISODES_PATH))
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+}
+episodes.unshift (episode);
+origin/cursor/automate-test-improve-and-merge-code-2533
 writeEpisodes (episodes);
 function writeEpisodes(episodes: any[]) {
   ensureStorage();
@@ -31,6 +51,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
+pr-12243
 function readEpisodes(): any[] {
   ensureStorage();
   return JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8'))
@@ -41,6 +62,13 @@ function writeEpisodes(episodes: any[]) {
 }
 
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+origin/cursor/automate-test-improve-and-merge-code-382a
+pr-12243
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
@@ -52,6 +80,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+
+  const { persona, invitee, topic, operatorPrompt } = req.body || {};
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -60,6 +92,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 4) YouTube and Spotify descriptions
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
+
+  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
+
+let generated: any = null;
+  try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    let content: string;
+    if (apiKey) {
+      const openai = new OpenAI({ apiKey });
+      const completion = await openai.chat.completions.create({
+        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
+        messages: [
+{ role: 'system', content: system },
+          { role: 'user', content: user },
+        ],
+        temperature: 0.8,
+        max_tokens: 2048,
+      });
+      content = completion.choices?.[0]?.message?.content |'';
+      content = JSON.stringify({
+        title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?'
           'How does Zion practically onboard talent and organizations?'
@@ -109,6 +164,10 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   };
 }
 
+}
+}
+
+pr-12243
 
     const episode = {
 
@@ -215,10 +274,9 @@ Return a strict JSON object with keys: title, questions (array), time_markers { 
     if (!generated || !generated && generated.title || !generated && generated.transcript) {
       return res
         .status(500)
-        .json({ error: 'Failed to generate structured content' });    }
-    const episodes = readEpisodes();
-    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
+        .json({ error: 'Failed to generate structured content' });
     }
+
     const episodes = readEpisodes();
 
 
@@ -400,3 +458,32 @@ time_markers: generated.time_markers || {
     const episode = {
 }
 }
+id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated.title,
+      questions: generated.questions || [],
+      timeMarkers: generated.timeMarkers || {
+        intro: '00:00',
+        segments: [],
+        closing: '14:30',
+      },
+      transcript: generated.transcript,
+      youtubeDescription: generated.youtubeDescription || '',
+      spotifyDescription: generated.spotifyDescription || '',
+      bestQuote: generated.bestQuote || '',
+      audio: {},
+    };
+    episodes.unshift(episode);
+    writeEpisodes(episodes);
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
+}
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

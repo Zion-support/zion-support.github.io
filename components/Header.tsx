@@ -1,3 +1,5 @@
+'use client';
+pr-12243
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -460,3 +462,5 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+export default Header;
+pr-12243

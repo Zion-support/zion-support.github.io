@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
 
 interface SetupProps {
@@ -14,9 +18,6 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -48,6 +49,7 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 =======
@@ -67,3 +69,16 @@ export default function Setup({ }: SetupProps) {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import '@testing-library/jest-dom'
+import { cleanup } from '@testing-library/react'
+import { afterEach, vi } from 'vitest'
+
+// Ensure React Testing Library cleans up and mocks are restored between tests
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

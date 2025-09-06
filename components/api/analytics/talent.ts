@@ -1,7 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 
+import { createServerClient } from '../../../utils/supabase/server';
+pr-12243
+
       supabase
+import { createServerClient } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const supabase = null;
+        { label: 'ai', value: 1 }]})
+  try {
+    const supabase = createServerClient();
+    const talentId = (req.query.talentId as string) |null
+    const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
+supabase
+origin/cursor/automate-test-improve-and-merge-code-2533
         .from('profile_views')
         .select('id, talent_id')
         .eq('talent_id', talentId)
@@ -29,6 +43,7 @@ import { createServerClient } from '../../../utils/supabase/server';
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
+pr-12243
 
     });
 
@@ -37,6 +52,7 @@ import { createServerClient } from '../../../utils/supabase/server';
 
 }
 }
+pr-12243
 
 
   }
@@ -44,6 +60,10 @@ import { createServerClient } from '../../../utils/supabase/server';
 }
 
 }
+
+}
+ursor/fix-website-loading-errors-and-merge-6662
+pr-12243
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -131,3 +151,7 @@ function handler() {
   }
 }
 }
+}
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

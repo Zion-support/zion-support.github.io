@@ -47,3 +47,4 @@ export async function getStaticProps() {;
     return { props: { data: { updated_at: null, proposals: [] } } }
   }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533

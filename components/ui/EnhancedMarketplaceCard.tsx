@@ -1,3 +1,5 @@
+
+pr-12243
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -11,6 +13,7 @@ interface EnhancedMarketplaceCardProps {
   href: string, image?: string
 import React from 'react';
 import { Star, Heart, ShoppingCart } from 'lucide-react';
+pr-12243
 
 interface MarketplaceCardProps {
   title: string;
@@ -68,3 +71,4 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
+pr-12243

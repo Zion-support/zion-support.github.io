@@ -12,7 +12,7 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <h1>Homepage2040</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 visible: {
   opacity: 1, transition: {
@@ -75,6 +75,12 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Star, 
+import React, { Suspense, lazy, useState, useEffect } from 'react',
+import Layout from './layout/Layout',
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Star;
+origin/cursor/automate-test-improve-and-merge-code-2533
   Brain, Atom, Shield, Zap, TrendingUp, Globe;
   Rocket, Target, Users, Cpu, Eye, Network;
   Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
@@ -82,6 +88,8 @@ import {
   Sparkles, Infinity as InfinityIcon, Zap as Lightning
 } from 'lucide-react';
 
+ } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';
 import { emergingTechServices2025V2 } from '../data/2025-emerging-tech-services-v2';
@@ -209,34 +217,34 @@ const Homepage2040: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
-      <main className="relative z - 10" id="main">;
+      <main className="relative z-10" id="main">;
         {/* Hero Section with Enhanced Background */}
         <section;
-          className="min - h-screen flex items - center justify - center px - 4 relative overflow - hidden";
+          className="min - h-screen flex items - center justify - center px-4 relative overflow-hidden";
           aria - labelledby="hero - heading";
         >;
           {/* Enhanced Futuristic Background Elements */}
-          <div className="absolute inset - 0 pointer - events - none">;
+          <div className="absolute inset - 0 pointer-events-none">;
             {/* Animated geometric shapes */}
             <motion.div;
               variants={floating_variants}
               animate="float";
-              className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 20 rounded - lg";
+              className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan-400 / 20 rounded-lg";
             ></motion.div>;
             <motion.div;
               variants={floating_variants}
               animate="float";
               style={{ animation_delay: '1s' }}
-              className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
+              className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple-400 / 20 rounded-full";
             ></motion.div>;
             <motion.div;
               variants={floating_variants}
               animate="float";
               style={{ animation_delay: '2s' }}
-              className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
+              className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink-400 / 20 transform rotate-45";
             ></motion.div>;
             {/* Quantum particle effects */}
-            <div className="absolute inset - 0">;
+            <div className="absolute inset-0">;
               {[...Array (20)].map ((_, i) => (
                 <motion.div;
                   key={i}
@@ -268,9 +276,7 @@ const Homepage2040: React.FC = () => {
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
 
-
               <motion.h1 
-
 
                 variants={itemVariants}
                 id="hero-heading"
@@ -279,9 +285,7 @@ const Homepage2040: React.FC = () => {
                 Zion Tech Group
               </motion.h1>
 
-
               <motion.p 
-
 
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
@@ -313,7 +317,6 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-
 
               {/* Enhanced Trust Indicators */}
               <motion.div
@@ -381,7 +384,6 @@ const Homepage2040: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
-
 
         {/* Enhanced Stats Section */}
         <section className="py-20 px-4 relative">;
@@ -462,8 +464,8 @@ const Homepage2040: React.FC = () => {
                       </div>;
                     )}
                       {/* Service Price */}
-                      <div className="mb - 6">;
-                        <span className="text - 2xl font - bold text - cyan - 400">;
+                      <div className="mb-6">;
+                        <span className="text - 2xl font - bold text-cyan-400">;
                           {service.price}
 
                       {/* CTA Button */}
@@ -486,10 +488,10 @@ const Homepage2040: React.FC = () => {
                       {/* CTA Button */}
                       <Link;
                         href={service.link}
-                        className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow - cyan - 400 / 25";
+                        className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 400 to - blue - 500 text - white font - semibold rounded - xl hover:from - cyan - 500 hover:to - blue - 600 transition - all duration - 300 focus:outline - none focus:ring - 4 focus:ring - cyan - 400 / 50 group - hover:shadow - lg group - hover:shadow-cyan-400 / 25";
                       >;
                         Learn More;
-                        <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition - transform duration - 300" />;
+                        <ArrowRight className="w - 5 h - 5 ml - 2 group - hover:translate - x-1 transition-transform duration-300" />;
                       </Link>;
                     </motion.div>))}
                 </motion.div>;
@@ -515,9 +517,7 @@ const Homepage2040: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true }}
 
-
               <motion.div 
-
 
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
@@ -558,6 +558,7 @@ const Homepage2040: React.FC = () => {
   )
 }
 
-
 export default Homepage2040;
 
+const LazyServiceCard = null;
+origin/cursor/automate-test-improve-and-merge-code-2533

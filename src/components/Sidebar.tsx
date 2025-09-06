@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </nav>
       </div>
     </div>
-  );
+  )
 };
 
 export default Sidebar;

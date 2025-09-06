@@ -28,6 +28,19 @@ import React, { useState } from 'react';
 export default function CodeSamples({ samples }: Props) {;
 
 
+interface Props {
+samples: { language: 'curl' | 'javascript' | 'python'; code: string }[];
+
+const tabs: Array<{
+  key: Props['samples'][number]['language'];
+  label: string;
+}> = [
+  { key: 'curl', label: 'cURL' }
+  { key: 'javascript', label: 'JavaScript' }
+  { key: 'python', label: 'Python' }
+];
+export default function CodeSamples({ samples }: Props) {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
   return (
@@ -66,6 +79,13 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map(s => [s && s.language, s && s.code]));
 
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' }];
+export default function CodeSamples({ samples }: Props) {
+  const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
+  const sampleMap = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
@@ -91,7 +111,8 @@ export default function CodeSamples(): any ({ samples }: Props) {;
           </button>
         ))}
       </div>
-      <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>        <code>{sampleMap[active] |''}</code>
+<pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm'>
+        <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>
   );
@@ -168,3 +189,5 @@ function CodeSamples() {
         <code>{sample_map[active] || ''}</code>;
       </pre>;
     </div>);
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

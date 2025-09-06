@@ -36,3 +36,8 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 
 
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+  const labels = null;
+  return <VerifiedBadge labels={labels} />
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

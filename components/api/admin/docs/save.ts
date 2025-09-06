@@ -14,6 +14,12 @@ function ensureDir(dir: string) {
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const DOCS_DIR = null;
+    res.status(200).json({ ok: true, version: ts })
+origin/cursor/automate-test-improve-and-merge-code-2533
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
@@ -24,6 +30,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
     res.status(200).json({ ok: true, version: ts })
+    const body = req.body;
+
+const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+
+    const ts = new Date()
+      .toISOString()
+      .replace(/[-:T.Z]/g, '')
+      .slice(0, 14);
+    fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
+    fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+
+res.status(200).json({ ok: true, version: ts });
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ();
@@ -55,4 +75,5 @@ function ensure_dir() {
     res.status (500).json ({ error: 'Failed to save content' });
   }
   }
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

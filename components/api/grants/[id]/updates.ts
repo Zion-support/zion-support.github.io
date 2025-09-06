@@ -10,6 +10,13 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
 function readGrant(id: string): GrantApplication | null {
+  return path.join(GRANTS_DIR, `${id}.json`);
+
+function readGrant(id: string): GrantApplication | null {
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
+return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
+
+origin/cursor/automate-test-improve-and-merge-code-2533
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(
@@ -17,6 +24,8 @@ function writeGrant(record: GrantApplication) {
     JSON && JSON.stringify(record, null, 2),
     'utf8'
 
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -107,6 +116,10 @@ if ( {) {
 }
     const { content } = req.body as { content?: string }
     if (!content |!content.trim())
+  if (req.method === 'POST') {
+    const { content } = req.body as { content?: string };
+if (!content || !content.trim())
+origin/cursor/automate-test-improve-and-merge-code-2533
       return res.status(400).json({ error: 'Missing content' });
     const update = {
       id: uuidv4()
@@ -129,3 +142,8 @@ if ( {) {
 
 
 
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
+  res.status(405).end('Method Not Allowed')
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

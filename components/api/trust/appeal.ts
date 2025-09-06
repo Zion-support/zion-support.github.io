@@ -1,24 +1,40 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+pr-12243
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
 export default async function handler(
   req: NextApiRequest
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { userId, message, contactEmail } = req.body || {};
+  if (!userId || !message) return res.status(400).json({ error: 'Missing userId or message' });
+  const appeal: TrustAppeal;
+origin/cursor/automate-test-improve-and-merge-code-2533
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
-  const { userId, message, contactEmail } = req.body |{}
-  if (!userId |!message)
+
+  const { userId, message, contactEmail } = req.body || {};
+  if (!userId || !message)
     return res.status(400).json({ error: 'Missing userId or message' });
+
   const appeal: TrustAppeal = {
-    userId
-    message
-    contactEmail
-    createdAt: new Date().toISOString()
-  }
+    userId,
+    message,
+    contactEmail,
+    createdAt: new Date().toISOString(),
+  };
+
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal);
   } catch {}
@@ -35,17 +51,32 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { userId, message, contactEmail } = req && req.body || {};
   if (!userId || !message) return res && res.status(400).json({ error: 'Missing userId or message' });
+pr-12243
   const appeal: TrustAppeal = {
     userId;
     message;
     contactEmail;
     createdAt: new Date().toISOString()}
 
+
+  return res.status(200).json({ ok: true, appeal });
+origin/cursor/automate-test-improve-and-merge-code-2533
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
   return res && res.status(200).json({ ok: true, appeal });
 }
+
+
+
+
+  return res && res.status(200).json({ ok: true, appeal });
+}
+
+
+  return res && res.status(200).json({ ok: true, appeal });
+}
+pr-12243
 import type { TrustAppeal } from '../../../utils / types / trust';
 import { supabase } from '../../../utils / supabase / client';
 ;
@@ -97,6 +128,8 @@ if ( {) {
   } catch {}
 return res.status (200).json ({ ok: true, appeal });
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
 
 return res.status(200).json({ ok: true, appeal });
@@ -104,3 +137,5 @@ return res.status(200).json({ ok: true, appeal });
 
   return res.status(200).json({ ok: true, appeal });
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

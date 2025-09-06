@@ -2,7 +2,7 @@ export type AccessLevel = "public" | "private" | "admin";
 
 export interface SearchResult {
   id: string;
-  title: string;
+  title: string,
   description: string;
   type: string;
   rating?: number;
@@ -27,8 +27,8 @@ export interface SearchFilters {
   maxRating?: number;
   priceRange?: {
     min?: number;
-    max?: number;
-  };
+    max?: number
+};
 }
 
 // Mock data for search results
@@ -183,6 +183,10 @@ export function suggestDidYouMean(query: string): string[] {
   if (query.includes("frontend")) {
     suggestions.push("ui", "ux", "design");
   }
-
-  return suggestions.slice(0, 3); // Return max 3 suggestions
+  
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
+  return results;
 }

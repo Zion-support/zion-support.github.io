@@ -2,6 +2,10 @@ import path from 'path';
 import fs from 'fs';
 
 
+import DocsLayout from '../../../components/docs/DocsLayout';
+import CodeBlock from '../../../components/docs/CodeBlock';
+export type Section = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
   title: string;
   html?: string;
@@ -24,6 +28,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   return { props: { docs } };
 };
 
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
@@ -54,6 +59,8 @@ export default function ApiDocsPage({ docs }: PageProps) {
       {docs.sections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-24">
           <h2 className="text-2xl font-semibold">{section.title}</h2>
+          <h2 className='text-2xl font-semibold'>{section.title}</h2>
+origin/cursor/automate-test-improve-and-merge-code-2533
           {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
@@ -112,9 +119,19 @@ function ApiDocsPage() {
             </div>)}
         </section>))}
     </DocsLayout>);
+<div className='space-y-4 mt-4'>
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>
+                  {c.content}
+                </CodeBlock>
+origin/cursor/automate-test-improve-and-merge-code-2533
               ))}
             </div>
           )}
         </section>
       ))}
 
+    </DocsLayout>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Source map endpoint' });
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> main
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -35,9 +60,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> pr-12243
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export default /**
  * handler - Function description
@@ -64,7 +101,11 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+<<<<<<< HEAD
+      res.status(400).json({ error: "Invalid path" }),
+=======
       res.status(400).json({ error: "Invalid path" })
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -127,6 +168,9 @@ export default function handler(req, res) {
   }
 }
   res.setHeader("Allow", "GET, POST")
+=======
+  const identity = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   res.status(405).end("Method Not Allowed")
 ;
   res.setHeader("Allow", "GET, POST");

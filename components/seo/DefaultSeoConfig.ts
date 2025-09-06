@@ -1,3 +1,6 @@
+
+
+pr-12243
 import type { DefaultSeoProps } from 'next-seo';
 
   defaultTitle: 'Zion Tech Solutions';
@@ -23,10 +26,15 @@ const config: DefaultSeoProps = {
     twitter: {
     handle: '@ziontech', site: '@ziontech',
     cardType: 'summary_large_image'};
+pr-12243
   additionalMetaTags: [
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
+
+
+
+pr-12243
 import type { DefaultSeoProps } from 'next - seo';
   default_title: 'Zion Tech Solutions';
   title_template: '%s | Zion Tech Solutions',
@@ -52,3 +60,8 @@ export default config;
 export default config
 
 
+import type { DefaultSeoProps } from 'next-seo';
+const config: DefaultSeoProps;
+export default config;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

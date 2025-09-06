@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -25,10 +28,23 @@ exports && exports.config = { schedule: '0 * * * *' };
 
 
 exports && exports.handler = async () => {
+=======
+const path = require('path');
+const { spawnSync } = require('child_process');
+function runNode(relPath, args = []) {
+  const abs = path.resolve(__dirname, '....', relPath);
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+}
+
+exports.config = { schedule: '0 * * * *' };
+exports.handler = async () => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const logs = [];
   const step = (name, fn) => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
+<<<<<<< HEAD
 
     if (stdout) logs && logs.push(stdout);
     if (stderr) logs && logs.push(stderr);
@@ -49,6 +65,7 @@ exports && exports.handler = async () => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -154,6 +171,8 @@ exports.handler = async () => {
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -208,3 +227,16 @@ exports.config = { schedule: '0 * * * *';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`);
+    return status
+  },
+
+  step('newsroom:generate', () => runNode('automation/newsroom-generator.cjs'));
+  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
+  return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs.join('\n') }
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

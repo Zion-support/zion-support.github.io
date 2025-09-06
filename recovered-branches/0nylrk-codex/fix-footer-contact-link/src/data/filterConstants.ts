@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -21,7 +24,11 @@ export const COMMON_SKILLS = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 // Common skills for filtering
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -36,6 +43,8 @@ export const COMMON_SKILLS = [
   'Cloud Architecture'
   'TensorFlow',];
 // Regions
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -65,6 +74,7 @@ export const COMMON_SKILLS = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const REGIONS = [  "Machine Learning";
   "Python";
   "JavaScript";
@@ -75,6 +85,8 @@ export const REGIONS = [  "Machine Learning";
   "Kubernetes";
   "DevOps";
   "Cloud Architecture";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -93,10 +105,13 @@ export const REGIONS = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -107,6 +122,7 @@ export const REGIONS = [
   "Africa"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 // Common skills for filtering
 export const COMMON_SKILLS = [
@@ -235,4 +251,10 @@ export const COMMON_SKILLS = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   "Africa";
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+export const COMMON_SKILLS = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

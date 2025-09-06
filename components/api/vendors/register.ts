@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+
+pr-12243
 import {getVendorBySlug, register_vendor} from '../../../utils / vendor - store';
 export default /**
  * handler - Function description
@@ -14,7 +16,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST')
   if (req.method !== 'POST');
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {},
+  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
+  try {
+    const vendor = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(405).json({ error: 'Method not allowed' });
+pr-12243
   if (req.method !== 'POST')
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -31,6 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } = req.body |{}
   if (!slug |!name)
     return res.status(400).json({ error: 'Missing required fields' });
+pr-12243
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {
@@ -39,6 +50,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     services_offered,
     team_size,
     about,
+    const vendor = registerVendor({
+      slug;
+      name;
+
+pr-12243
       slug,
       name,
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [],
@@ -65,12 +81,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const vendor = registerVendor({
       slug;
       name;
+      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
+      caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
+    res.status(201).json({ vendor })
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+
+    res && res.status(500).json({ error: e && e.message });
+  }    res && res.status(500).json({ error: e && e.message })
+  };
+}
+
+pr-12243
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }
@@ -79,6 +107,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     res && res.status(201).json({ vendor });
   } catch (e: any) {
+pr-12243
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -116,6 +145,10 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
   }    res.status (500).json ({ error: e.message });
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
     res.status(500).json({ error: e.message });
   }    res.status(500).json({ error: e.message })
@@ -123,3 +156,5 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
 }
   }
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

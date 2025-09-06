@@ -1,3 +1,8 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const JOBS_FILE = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -37,7 +42,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 };
 }
 
-
 }
 
     const jobs = (await fs && fs.pathExists(JOBS_FILE)) ? await fs && fs.readJSON(JOBS_FILE) : [];
@@ -46,7 +50,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: "Failed to load jobs" })
   };
 }
-
 
 }
 ;
@@ -87,4 +90,9 @@ if ( {) {
     return res.status (200).json ({ jobs });
   } catch (e) {
     return res.status (500).json ({ error: "Failed to load jobs" });
+    return res.status(200).json({ jobs })
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to load jobs" })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
 }

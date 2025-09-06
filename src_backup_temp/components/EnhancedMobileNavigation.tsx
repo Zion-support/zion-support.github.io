@@ -41,15 +41,15 @@ const navigationItems: NavigationIte m[] = [{';
 ';';
     label: 'Home',';';
     path: '/',';
-    icon: Hom e,';';
-    description: 'Welcome to Zion Tech Group'
+    icon: Hom e,';',
+  description: 'Welcome to Zion Tech Group'
   },
   {';
 ';';
     label: 'About',';';
     path: '/about',';
-    icon: Inf o,';';
-    description: 'Learn about our comp and mission'
+    icon: Inf o,';',
+  description: 'Learn about our comp and mission'
   },
   {';
 ';';
@@ -60,56 +60,56 @@ const navigationItems: NavigationIte m[] = [{';
 ';';
         label: 'AI & Machine Learning',';';
         path: '/services/ai',';
-        icon: Brai n,';';
-        description: 'Cutting-edge AI solutions'
+        icon: Brai n,';',
+  description: 'Cutting-edge AI solutions'
       },
       {';
 ';';
         label: 'Cybersecurity',';';
         path: '/services/cybersecurity',';
-        icon: Shiel d,';';
-        description: 'Advanced security services'
+        icon: Shiel d,';',
+  description: 'Advanced security services'
       },
       {';
 ';';
         label: 'Cloud Services',';';
         path: '/services/cloud',';
-        icon: Clou d,';';
-        description: 'Scalable cloud solutions'
+        icon: Clou d,';',
+  description: 'Scalable cloud solutions'
       },
       {';
 ';';
         label: 'Digital Transformation',';';
         path: '/services/transformation',';
-        icon: Za p,';';
-        description: 'Business transformation services'
+        icon: Za p,';',
+  description: 'Business transformation services'
       },
       {';
 ';';
         label: 'Infrastructure',';';
         path: '/services/infrastructure',';
-        icon: Serve r,';';
-        description: 'IT infrastructure solutions'
+        icon: Serve r,';',
+  description: 'IT infrastructure solutions'
       },
       {';
 ';';
         label: 'Consulting',';';
         path: '/services/consulting',';
-        icon: User s,';';
-        description: 'Strategic IT consulting'
+        icon: User s,';',
+  description: 'Strategic IT consulting'
     ]}, {';
 ';';
     label: 'Solutions',';';
     path: '/solutions',';
-    icon: Rocke t,';';
-    description: 'Industry-specific solutions'
+    icon: Rocke t,';',
+  description: 'Industry-specific solutions'
   },
   {';
 ';';
     label: 'Contact',';';
     path: '/contact',';
-    icon: Phon e,';';
-    description: 'Get in touch with us'
+    icon: Phon e,';',
+  description: 'Get in touch with us'
 ];';
  {;';';
     label: 'Documentation',';';
@@ -122,8 +122,8 @@ export const EnhancedMobileNavigation: Reac t.FC = () => {
 const navigationItems: NavigationIte m[] = [{;
     label: 'Home',;
     path: '/',;
-    icon: Hom e,;
-    description: 'Welcome to Zion Tech Group';
+    icon: Hom e,,
+  description: 'Welcome to Zion Tech Group';
 const "navigationItems": "NavigationIte m[] = [{;
     "label": 'Home'",;
     "path": '/',;

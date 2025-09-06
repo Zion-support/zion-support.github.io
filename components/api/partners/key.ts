@@ -1,3 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
   authenticateRequest
   listApiKeys
   saveApiKeys;
@@ -17,7 +21,8 @@ export default async function handler(
   }
   const auth = await authenticateRequest(req);
   if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });  }
+    return res.status(401).json({ error: 'Unauthorized' });
+  }
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
@@ -27,6 +32,8 @@ export default async function handler(
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
 
 import type { NextApiRequest, NextApiResponse } from "next";
+const existing = keys.find(k => k.id === apiKey.id);
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,6 +49,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const keys = await listApiKeys();
   // Deactivate old key
   const existing = keys.find((k) => k.id === apiKey.id);
+  const auth = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
@@ -76,3 +85,16 @@ if ( {) {
 if ( {) {
   $2
 }
+id: uuidv4(),
+    partnerId: auth.partner.id,
+    key: uuidv4(),
+    active: true,
+    createdAt: now,
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
+  };
+  keys.push(newKey as any);
+  await saveApiKeys(keys);
+  return res.status(201).json({ apiKey: newKey.key });
+  return res.status(201).json({ apiKey: newKey.key })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

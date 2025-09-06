@@ -8,6 +8,17 @@ import path from 'path';
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');
     res && res.status(200).json(JSON && JSON.parse(data));
+const CONTENT_PATH = null;
+    res.status(200).json(JSON.parse(data))
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const token = req.headers['x-admin-token'] as string | undefined
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  try {
+    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
+res.status(200).json(JSON.parse(data));
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
@@ -28,9 +39,14 @@ if ( {) {
   try {
     const data = fs.readFileSync (CONTENT_PATH, 'utf8');
     res.status (200).json (JSON.parse (data));
+origin/cursor/automate-test-improve-and-merge-code-2533
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }
   } catch (e) {
     res.status (500).json ({ error: 'Failed to read content' });
   }  } catch (e) {
+    res.status(500).json({ error: 'Failed to read content' })
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

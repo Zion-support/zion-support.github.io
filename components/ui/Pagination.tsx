@@ -1,11 +1,28 @@
 
 
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+export type PaginationProps = any;
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  page,
+  pageSize,
+  total,
+  onChange,
+}: PaginationProps) {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-    if (p >= 1 && p <= totalPages) onChange(p);
-  }
+if (p >= 1 && p <= totalPages) onChange(p);
+  };
+
   return (
     <div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton
@@ -29,6 +46,13 @@
     </div>;
   );
 
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -146,23 +170,23 @@ if (return null) {
       {current_page > 1 ? (
         <Link;
           href={`${base_url}?page=${current_page - 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
-          <ChevronLeft className="w - 4 h - 4 mr - 1" />;
+          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
+          <ChevronLeft className="w - 4 h-4 mr-1" />;
           Previous;
         </Link>) : (
-        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
-          <ChevronLeft className="w - 4 h - 4 mr - 1" />;
+        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
+          <ChevronLeft className="w - 4 h-4 mr-1" />;
           Previous;
         </span>)}
       {/* Page Numbers */}
-      <div className="flex items - center space - x-1">;
+      <div className="flex items-center space-x-1">;
         {getPageNumbers ().map ((page, index) => {
           // Check condition
 if ( {) {
   $2
 }
             return (
-              <span key={index} className="px - 3 py - 2 text - sm text - gray - 500">;
+              <span key={index} className="px - 3 py - 2 text - sm text-gray-500">;
                 ...;
               </span>);
 }
@@ -187,19 +211,22 @@ if ( {) {
       {current_page < total_pages ? (
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
-          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
+          className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray-700 transition-colors">;
           Next;
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
+          <ChevronRight className="w - 4 h-4 ml-1" />;
         </Link>) : (
-        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
+        <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor-not-allowed">;
           Next;
 }
 }
 }
-          <ChevronRight className="w - 4 h - 4 ml - 1" />;
+          <ChevronRight className="w - 4 h-4 ml-1" />;
         </span>)}
     </nav>);
 }
 
   );
 
+export default Pagination;
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

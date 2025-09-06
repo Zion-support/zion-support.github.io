@@ -34,7 +34,7 @@ function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
 
-
 export default function OrgChartGovernancePage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 
+origin/cursor/automate-test-improve-and-merge-code-2533

@@ -9,6 +9,8 @@ type Note = {;
   target_id: string; // unique identifier for the target;
 import React, { useEffect, useMemo, useState } from 'react';
   targetType: string; // e.g., 'user' | 'listing'
+export type AdminNotesPanelProps = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
   targetId: string; // unique identifier for the target
 }
 ;
@@ -37,12 +39,28 @@ type Note = {
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
 
+  authorId: string;
+  createdAt: number;
+}
+export default function AdminNotesPanel({
+  targetType,
+  targetId,
+}: AdminNotesPanelProps) {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
+  async function fetchNotes() {
+    try {
+      setLoading(true);
+const res = await fetch(
+        `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
+        {
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
+origin/cursor/automate-test-improve-and-merge-code-2533
         }
       );
       if (!res && res.ok) {;
@@ -53,8 +71,15 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         method: 'POST',
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
+      const data = await res.json();
+      setNotes(data.notes |[]);
+    } finally {
+      setLoading(false);
+    }
+  }
+origin/cursor/automate-test-improve-and-merge-code-2533
   useEffect(() => {
-    if (isAdmin) fetchNotes();    if (isAdmin) fetchNotes()
+if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
   async function addNote() {
     if (!text.trim()) return;
@@ -70,6 +95,16 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         body: JSON.stringify({ targetType, targetId, text })
     } finally {
       setAdding(false);    }      if (!res.ok) {
+        method: 'POST',
+headers: {
+          'Content-Type': 'application/json',
+          'X-Admin': isAdmin ? 'true' : 'false',
+          'X-Admin-User': adminId,
+        },
+        body: JSON.stringify({ targetType, targetId, text }),
+      });
+      if (!res.ok) {
+origin/cursor/automate-test-improve-and-merge-code-2533
         alert('Failed to add note');
         return;
       }
@@ -77,6 +112,13 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setAdding(false);    }
 
 
+      await fetchNotes();
+    } finally {
+      setAdding(false);
+      await fetchNotes()
+    } finally {
+      setAdding(false)
+origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
 
@@ -86,7 +128,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
 
   if (!isAdmin) {
     return (
-      <div className='rounded border p-3'>
+<div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
           <input
             id='isAdminToggle'
@@ -307,10 +349,8 @@ if ( {) {
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
-                </div>                <div>{n.text}</div>          <ul className="space-y-2">
-            {notes.map((n) => (
-              <li key={n.id} className="rounded border p-2 text-sm">
-                <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+                </div>
+                <div>{n.text}</div>
               </li>
             ))}
           </ul>
@@ -613,3 +653,6 @@ if ( {) {
       </div>;
     </div>);
 }
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

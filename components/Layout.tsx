@@ -174,6 +174,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
+pr-12243
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -262,7 +263,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
 };
 
 export default Layout;
+main
+main
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+pr-12243

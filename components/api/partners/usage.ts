@@ -1,9 +1,13 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, calculateUsageSummary } from "../../../utils/api/partnerAuth";
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
   authenticateRequest
   calculateUsageSummary;
   authenticateRequest,;
   calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
-
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -18,7 +22,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const summary = await calculateUsageSummary(auth && auth.partner.id);
   return res && res.status(200).json({ summary })
 }
-
 
   authenticate_request,
   calculateUsageSummary,
@@ -65,3 +68,14 @@ if ( {) {
   const summary = await calculateUsageSummary (auth.partner.id);
   return res.status (200).json ({ summary });
 
+  const summary = await calculateUsageSummary(auth.partner.id);
+  return res.status(200).json({ summary });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "GET") {
+    res.setHeader("Allow", "GET");
+    return res.status(405).json({ error: "Method Not Allowed" })
+  }
+  const auth = null;
+  return res.status(200).json({ summary })
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

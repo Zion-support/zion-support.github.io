@@ -1,3 +1,4 @@
+pr-12243
 
 
 }
@@ -5,6 +6,10 @@
 
 export default function SecurityAudit({ report }: Props) {
 };
+</pre> </div>) ;
+export default function SecurityAudit(): any ({ report }: Props) {;
+origin/cursor/automate-test-improve-and-merge-code-382a
+pr-12243
 </pre> </div>)
  
 };
@@ -12,6 +17,7 @@ export default function SecurityAudit({ report }: Props) {
 
 
 export default function SecurityAudit({ report }: Props) {
+pr-12243
   return (
     <div className="space-y-4">
       <header className="space-y-1">
@@ -29,16 +35,21 @@ export default function SecurityAudit({ report }: Props) {
 
 );
 }
+pr-12243
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">;
 {JSON && JSON.stringify(report, null, 2)}
       </pre>;
     </div>;
   );
 }
+
+
+pr-12243
   );
 }
 
 
+pr-12243
 }
 </pre> </div>);
 export default /**
@@ -59,6 +70,8 @@ function SecurityAudit() {
       </pre>;
     </div>);
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+pr-12243
 
 }
 </pre> </div>)
@@ -68,6 +81,19 @@ function SecurityAudit() {
  
 };
 </pre> </div>) 
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+}
+
+type Props = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -88,3 +114,5 @@ export default function SecurityAudit({ report }: Props) {
 }
   );
 }
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

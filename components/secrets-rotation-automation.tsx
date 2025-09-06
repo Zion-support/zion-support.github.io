@@ -21,6 +21,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+pr-12243
 
 
 import React from "react";
@@ -61,6 +62,7 @@ export default function SecretsRotationAutomationPage() {
 
 export default function SecretsRotationAutomationPage() {
   const features = [
+pr-12243
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -121,6 +123,14 @@ export default function SecretsRotationAutomationPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
+
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+
+    </>);
+pr-12243
   return (
   return (
   return (
@@ -181,6 +191,11 @@ export default function SecretsRotationAutomationPage() {
           </div>;
         </section>;
       </main>;
+
+}
+
+
+pr-12243
     </>);
 }
 
@@ -191,6 +206,8 @@ export default function SecretsRotationAutomationPage() {
 	const features = [
 		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)Cloud KMS and Vault support'
 	];
+	const features = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
 	return (
 		<>
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs." />
@@ -260,30 +277,31 @@ return (
             <a
               href="/contact"
               className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-gray-200"
+origin/cursor/automate-test-improve-and-merge-code-2533
             >
               Start from $199/mo
             </a>
             <a
-              href="/pricing"
-              className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10"
+              href='/pricing'
+              className='px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10'
             >
               Pricing
             </a>
             <a
-              href="https://developer.hashicorp.com/vault"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://developer.hashicorp.com/vault'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> HashiCorp Vault Docs
+              <ExternalLink className='w-4 h-4' /> HashiCorp Vault Docs
             </a>
             <a
-              href="https://cloud.google.com/kms"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+              href='https://cloud.google.com/kms'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
             >
-              <ExternalLink className="w-4 h-4" /> Google Cloud KMS
+              <ExternalLink className='w-4 h-4' /> Google Cloud KMS
             </a>
           </div>
         </section>
@@ -352,7 +370,10 @@ return (
   );
 }
 
+pr-12243
             </a>;
           </div>;
         </section>;
       </main>;
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

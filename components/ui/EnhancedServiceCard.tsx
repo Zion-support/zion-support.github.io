@@ -1,4 +1,10 @@
   }
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import {
+origin/cursor/automate-test-improve-and-merge-code-2533
   Star
   ExternalLink
   ArrowRight
@@ -17,6 +23,7 @@
   Zap,;
 } from 'lucide-react';
 
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface EnhancedServiceCardProps {
   service: {
 import {;
@@ -57,6 +64,40 @@ interface EnhancedServiceCardProps {;
         duration: 0.6,
       }
     }
+    textColor: string;
+    link: string;
+    marketPosition: string;
+    targetAudience: string;
+    trialDays: number;
+    setupTime: string;
+    category: string;
+    realService: boolean;
+    technology: string[];
+    integrations: string[];
+    useCases: string[];
+    roi: string;
+    competitors: string[];
+    marketSize: string;
+    growthRate: string;
+    variant: string;
+    contactInfo: {
+      mobile: string;
+      email: string;
+      address: string;
+      website: string
+    },
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
+    reviews: number
+  }
+}
+
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
+  const cardVariants = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
     hover: {
       coordinate_y: -8,
       scale: 1.02,
@@ -80,6 +121,15 @@ interface EnhancedServiceCardProps {;
       transition: {
         duration: 0.6,
     >;
+        duration: 0.6,
+ease: 'easeInOut' as const,
+      },
+    },
+  };
+
+  
+    >
+origin/cursor/automate-test-improve-and-merge-code-2533
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service && service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -99,6 +149,19 @@ interface EnhancedServiceCardProps {;
       {/* Popular Badge */}
 
 
+      {service.popular && (
+        <div className='absolute top-4 right-4 z-10'>
+          <motion.div
+            className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+<Star className='w-3 h-3 fill-current' />
+            POPULAR
+          </motion.div>
+        </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
       )}
 
 
@@ -110,6 +173,8 @@ interface EnhancedServiceCardProps {;
       {/* Card Content */}
       <div className='relative p-6'>
 
+<div className='relative p-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
         {/* Header */}
         <div className='flex items-start justify-between mb-4'>
           <motion.div
@@ -160,6 +225,30 @@ interface EnhancedServiceCardProps {;
           {service.description}
         </p>
         {/* Key Metrics */}
+          <div className='text-right'>
+            <div className='text-2xl font-bold text-white'>{service.price}</div>
+            <div className='text-sm text-gray-400'>{service.period}</div>
+          </div>
+        </div>
+        {/* Title & Tagline */}
+<h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
+          {service.tagline}
+        </p>
+        {/* Description */}
+<p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>
+          {service.description}
+        </p>
+        {/* Key Metrics */}
+<div className='grid grid-cols-2 gap-4 mb-6'>
+          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
+            <div className='text-cyan-400 text-lg font-bold'>
+              {service.customers}+
+            </div>
+            <div className='text-xs text-gray-400'>Customers</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -175,10 +264,9 @@ interface EnhancedServiceCardProps {;
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
+            <div className='text-xs text-gray-400'>Rating</div>
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
-          <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
-            <div className="text-purple-400 text-lg font-bold">{service.rating}</div>
-            <div className="text-xs text-gray-400">Rating</div>
         </div>
             whileHover='hover'>;
             {service && service.icon}
@@ -239,6 +327,23 @@ interface EnhancedServiceCardProps {;
                 className="flex items-center gap-2 text-sm text-gray-300"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
+        {/* Features Preview */}
+<div className='mb-6'>
+          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
+            <Zap className='w-4 h-4 text-yellow-400' />
+            Key Features
+          </h4>
+          <div className='space-y-2'>
+            {service.features.slice(0, 3).map((feature, index) => (
+              <motion.div
+                key={index}
+                className='flex items-center gap-2 text-sm text-gray-300'
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >
+<div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {feature}
               </motion && motion.div>;
             ))}
@@ -246,12 +351,17 @@ interface EnhancedServiceCardProps {;
               <div className='text-xs text-gray-500 mt-2'>              <div className="text-xs text-gray-500 mt-2">;
                 +{service && service.features.length - 3} more features;
               </div>;
+            {service.features.length > 3 && (
+<div className='text-xs text-gray-500 mt-2'>
+                +{service.features.length - 3} more features
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
             )}
 
 
 
         {/* Market Info */}
-        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+<div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
               Market Size
@@ -291,6 +401,19 @@ interface EnhancedServiceCardProps {;
           </div>
           <div className="flex items-center gap-2 text-gray-400">
             <Shield className="w-4 h-4" />
+            <span className='text-xs text-yellow-400'>{service.roi}</span>
+          </div>
+        </div>
+        {/* Trial & Setup Info */}
+<div className='flex items-center justify-between mb-6 text-sm'>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Clock className='w-4 h-4' />
+            {service.trialDays} day trial
+          </div>
+          <div className='flex items-center gap-2 text-gray-400'>
+            <Shield className='w-4 h-4' />
+            {service.setupTime}
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
           </div>;
@@ -353,6 +476,8 @@ interface EnhancedServiceCardProps {;
         <div className='flex gap-3'>
 
 
+<div className='flex gap-3'>
+origin/cursor/automate-test-improve-and-merge-code-2533
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
@@ -380,6 +505,17 @@ interface EnhancedServiceCardProps {;
           <motion.a
             href={service.link}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <ArrowRight className='w-4 h-4' />
+          </motion.a>
+        </div>
+        {/* Contact Info */}
+<div className='mt-4 pt-4 border-t border-white/10'>
+          <div className='text-xs text-gray-500 text-center'>
+            Contact: {service.contactInfo.email}
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
@@ -676,3 +812,10 @@ export default EnhancedServiceCard;
 };
 
 
+<div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+    </motion.div>
+  );
+};
+
+export default EnhancedServiceCard;
+origin/cursor/automate-test-improve-and-merge-code-2533

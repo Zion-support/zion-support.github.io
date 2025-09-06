@@ -1,10 +1,12 @@
 {
-<<<<<<< HEAD
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
+  "timestamp": "2025-09-06T20:40:15.907Z",
+  "duration": "124s",
+origin/cursor/automate-test-improve-and-merge-code-646c
   "results": {
     "syntaxFixes": 0,
-    "buildSuccess": true,
+    "buildSuccess": false,
     "testsPassed": 0,
     "optimizations": 0,
     "errors": [
@@ -16,129 +18,150 @@
       {
         "command": "npm run format",
         "description": "Prettier Code Formatting",
-        "error": "spawnSync /bin/sh ENOBUFS"
+        "error": "spawnSync /bin/sh ETIMEDOUT"
       },
       {
         "command": "npm run type-check",
         "description": "TypeScript Type Checking",
-        "error": "spawnSync /bin/sh ENOBUFS"
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run build",
+        "description": "Application Build",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
       },
       {
         "command": "npm run test:smoke",
         "description": "Smoke Tests",
-        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
       },
       {
         "command": "npm test -- --passWithNoTests",
         "description": "Jest Tests",
-        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nError: Cannot parse /workspace/backup-problematic-files/temp-exclude/zion-os/package.json as JSON: Expected property name or '}' in JSON at position 2 (line 2 column 1)\n    at Object.worker (/workspace/node_modules/jest-haste-map/build/worker.js:267:13)\n    at execFunction (/workspace/node_modules/jest-worker/build/processChild.js:297:17)\n    at execHelper (/workspace/node_modules/jest-worker/build/processChild.js:285:5)\n    at execMethod (/workspace/node_modules/jest-worker/build/processChild.js:288:5)\n    at process.messageListener (/workspace/node_modules/jest-worker/build/processChild.js:196:7)\n    at process.emit (node:events:518:28)\n    at emit (node:internal/child_process:949:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:91:21)\n"
       }
     ]
   },
   "summary": {
     "syntaxFixes": 0,
-    "buildSuccess": true,
+    "buildSuccess": false,
     "testsPassed": 0,
     "totalErrors": 5
-=======
-<<<<<<< HEAD
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
-=======
-  "timestamp": "2025-09-06T10:44:46.097Z",
-  "totalDuration": 76866,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-<<<<<<< HEAD
       "duration": 7037,
-=======
       "duration": 22421,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+  "timestamp": "2025-09-06T08:34:04.724Z",
+  "duration": 397290,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 84429,
+origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
-      "warnings": []
+      "warnings": [
+        "Command failed: npm audit --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      ]
     },
     "codeQuality": {
       "success": false,
-<<<<<<< HEAD
       "duration": 27333,
-=======
       "duration": 27631,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "success": true,
+      "duration": 56422,
+origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-<<<<<<< HEAD
       "duration": 1719,
-=======
       "duration": 1683,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 1450,
+origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 1719,
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
-<<<<<<< HEAD
       "duration": 6250,
-=======
       "duration": 6198,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 11039,
+origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 6250,
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "success": false,
       "duration": 39,
 "errors": [],
-=======
-      "success": true,
-      "duration": 43,
-      "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
-=======
       "success": true,
       "duration": 46,
       "errors": [],
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
+      "errors": [],
+origin/cursor/automate-test-improve-and-merge-code-2533
       "warnings": []
     },
     "accessibilityImprovement": {
       "success": false,
-<<<<<<< HEAD
       "duration": 9508,
-=======
       "duration": 9692,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "duration": 0,
+origin/cursor/automate-test-improve-and-merge-code-2533
+      "duration": 9508,
       "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
       "success": true,
-<<<<<<< HEAD
       "duration": 6736,
-=======
       "duration": 7154,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
+ursor/automate-test-improve-and-merge-code-e883
+      "success": false,
+      "duration": 0,
+origin/cursor/automate-test-improve-and-merge-code-2533
       "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-<<<<<<< HEAD
       "duration": 1612,
-=======
-      "duration": 2037,
->>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+origin/cursor/expand-services-advertise-and-build-project-c28b
+    "totalErrors": 6
+origin/cursor/automate-test-improve-and-merge-code-646c
   }
 }
+      "success": false,
+      "duration": 0,
+      "errors": [],
+      "warnings": []
+    }
+  },
+  "summary": {
+    "totalTasks": 8,
+    "successfulTasks": 4,
+    "failedTasks": 4
+  }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+  ]
+}
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

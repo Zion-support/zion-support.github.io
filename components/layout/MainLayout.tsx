@@ -46,6 +46,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
+pr-12243
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -66,11 +67,15 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
+
+pr-12243
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
+pr-12243
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
@@ -91,6 +96,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
+
+pr-12243
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -103,3 +110,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
 };
 
 export default MainLayout;
+
+pr-12243

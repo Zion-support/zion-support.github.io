@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+  try {
+      return {
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -6,6 +10,7 @@
   try {
       return {
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     const confidence =
       typeof parsed && parsed.confidence === 'number'
@@ -22,7 +27,10 @@
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
   reasoning: string;
+<<<<<<< HEAD
+=======
 =======
 
         label: 'SUSPICIOUS',
@@ -47,6 +55,7 @@ export interface GptClassification {
   reasoning: string;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
@@ -55,20 +64,36 @@ export interface GptClassification {
   }export interface GptResult {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
+<<<<<<< HEAD
   }export interface GptResult {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   label: string;
   confidence: number;
   reasoning: string
 }
 
+<<<<<<< HEAD
+
+
+
+
+}
+=======
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -111,3 +136,7 @@ export interface GptClassification {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

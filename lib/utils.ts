@@ -28,8 +28,8 @@ export function debounce<T extends (...args: any[]) => any>(
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(..._args), wait);
-  };
+    timeout = setTimeout(() => func(..._args), wait)
+};
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -80,3 +80,42 @@ export function slugify(str: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
+}  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));}
+  return twMerge(clsx(inputs));
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+}
+origin/automation-improvements-final
+
+export function formatDate(date: Date | string | number): string {
+
+},
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""import { type ClassValue, clsx } from 'clsx';,
+import { twMerge } from 'tailwind-merge';,
+
+export function cn(...inputs: ClassValue[]) {}
+  return twMerge(clsx(inputs));
+}export function formatDate(date: Date | string | number): string {
+
+  return new Intl && Intl.DateTimeFormat("en-US", {
+    month: "long", day: "numeric",
+    year: "numeric",
+}
+
+};
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d}
+}
+}
+}
+};
+pr-12243

@@ -1,9 +1,132 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  }) => void
+  isLoading: boolean;  initialValues?: {
+    title?: string
+    category?: string
+    keyFeatures?: string
+    targetAudience?: string
+  };    title: string
+    category: string
+    keyFeatures: string
+    targetAudience: string
+  },) => void
+  isLoading: boolean
+    title?: string
+    category?: string
+    keyFeatures?: string
+    targetAudience?: string
+  }
+=======
+import React, { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Sparkles } from 'lucide-react';
+
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from 'lucide-react'
+interface AIListingFormProps {
+  onSubmit: (formData: {
+    title: string;
+    category: string;
+    keyFeatures: string;
+    targetAudience: string
+targetAudience?: string;
+  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+export function AIListingForm({
+  onSubmit,
+  isLoading,
+  initialValues = {},
+}: AIListingFormProps) {
+  const { toast } = useToast();
+  const [title, setTitle] = useState(initialValues.title || '');
+  const [category, setCategory] = useState(initialValues.category || '');
+  const [keyFeatures, setKeyFeatures] = useState(
+    initialValues.keyFeatures || ''
+  );
+  const [targetAudience, setTargetAudience] = useState(
+    initialValues.targetAudience || ''
+  );
+
+  const handleSubmit = () => {
+    if (!title |!category) {
+      toast({
+<<<<<<< HEAD
+      return
+=======
+title: 'Missing required fields',
+        description: 'Please provide at least a title and category.',
+        variant: 'destructive',
+      });
+      return;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+    }
+    onSubmit({
+    })
+  }
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  return (
+    <div className='space-y-4'>
+      <div className='space-y-2'>
+        <label
+          htmlFor='title'
+          className='text-sm font-medium text-zion-slate-light'
+        >
+          Title
+        </label>
+        <Input
+          id='title'
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          placeholder='Enter your product or service title'
+          className='bg-zion-blue border border-zion-blue-light text-white'
+          disabled={isLoading}        />
+      </div>
+      <div className='space-y-2'>
+        <label
+          htmlFor='category'
+          className='text-sm font-medium text-zion-slate-light'
+        >
+          Category
+        </label>
+        <Input
+          id='category'
+          value={category}
+          onChange={e => setCategory(e.target.value)}
+          placeholder='e.g. AI Tool, Digital Product, Service'
+          className='bg-zion-blue border border-zion-blue-light text-white'
+          disabled={isLoading}        />
+      targetAudience
+    })
+  };
+
+
+  return (
+    <div className="space-y-4">
+        />
+      </div>
+      <div className="space-y-2">
+        <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>
+=======
 return (
 
         disabled={isLoading || !title || !category}
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'>        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2";
           id="title";
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Input
           id="category"
           value={category}
@@ -13,9 +136,12 @@ return (
           disabled={isLoading}
         />
       </div>
+<<<<<<< HEAD
       <div className="space-y-2">
         <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>
         <Textarea
+<<<<<<< HEAD
+=======
 
 
 
@@ -31,6 +157,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
 
@@ -79,14 +206,20 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
 
   return (
     <div className="space-y-4">
+<<<<<<< HEAD
+=======
         />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>
       <div className="space-y-2">
         <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>
         <Input
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -235,7 +368,10 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
         <Input;
           id="title";
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter your product or service title"
@@ -271,37 +407,110 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           id="targetAudience"
           value={targetAudience}
           onChange={(e) => setTargetAudience(e.target.value)}
+<<<<<<< HEAD
+=======
 
           placeholder="e.g. Developers, Marketers, Startups";
           className="bg-zion-blue border border-zion-blue-light text-white";
 
           disabled={isLoading}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         />;
       </div>;
       <Button;
 
         onClick={handleSubmit}
+<<<<<<< HEAD
+        disabled={isLoading |!title |!category}
+        disabled={isLoading || !title || !category}
+
+          disabled={isLoading}
+        onClick={handleSubmit}
+=======
 
         disabled={isLoading || !title || !category}
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
+=======
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       >
         {isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
             <Sparkles className="h-4 w-4 mr-2" />
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+<Sparkles className='h-4 w-4 mr-2' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
             Generate Optimized Content
           </>
         )}
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }: AIListingFormProps) {
   if (!title |!category) {
   toast ({
+<<<<<<< HEAD
+  return
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>)
+}</Button> </div>)
+}'"
+}
+        />;
+      </div>;
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading || !title || !category}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
+        {isLoading ? (;
+          <>Generating Optimized Content...</>;
+        ) : (;
+          <>;
+            <Sparkles className='h-4 w-4 mr-2' />            Generate Optimized Content            <Sparkles className="h-4 w-4 mr-2" />;
+            Generate Optimized Content;
+          </>;
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) 
+}</Button> </div>) 
+}'";
+};
+}
+}
+}
+
+            <Sparkles className="h-4 w-4 mr-2" />
+            Generate Optimized Content
+          </>
+        )}
+      </Button>;
+    </div>;
+  );
+=======
   return;
 }/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {"
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+}: AIListingFormProps) {;
+  if (!title || !category) {;
+  toast ({;
+  return;
+}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+  isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
+}</Button> </div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

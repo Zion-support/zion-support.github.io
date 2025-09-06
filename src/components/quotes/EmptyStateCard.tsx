@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 
+<<<<<<< HEAD
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
@@ -18,7 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
-},;
+
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
 
@@ -36,7 +37,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
 
   type: 'active' | 'archived'
-
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
@@ -57,7 +57,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 
-
           }
         </p>
       </CardContent>
@@ -75,7 +74,6 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
       </CardContent>;
     </Card>;
   );
-
 
 export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
   const is_active = type === 'active';
@@ -101,3 +99,6 @@ export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {
 }
 
 };
+=======
+type EmptyStateCardProps = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

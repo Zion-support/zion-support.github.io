@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> pr-12243
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -23,6 +27,7 @@ export const preloadCriticalResources = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
+<<<<<<< HEAD
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
   const images = document.querySelectorAll ('img');
@@ -89,3 +94,5 @@ export const optimizeBundleSize = () => {
 
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
+>>>>>>> pr-12243

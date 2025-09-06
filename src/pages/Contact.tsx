@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -33,103 +34,65 @@ const Contact = () => {
     }, 2000);
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <SEOHead
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with our team for AI and technology solutions. We're here to help transform your business."
-        keywords="contact, support, AI solutions, technology consulting"
-      />
+=======
+import React from 'react';
 
-      <div className="container mx-auto px-4 py-16">
+const Contact: React.FC = () => {
+>>>>>>> pr-12243
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Get In Touch
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and technology? Let's discuss your needs and create a solution that works for you.
+          <h1 className="text-5xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get in touch with our team to discuss your project requirements and how we can help you achieve your goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg">Email</h3>
-                    <p className="text-gray-600">info@ziontechgroup.com</p>
-                    <p className="text-gray-600">support@ziontechgroup.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 987-6543</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg">Address</h3>
-                    <p className="text-gray-600">
-                      123 Technology Drive<br />
-                      Suite 100<br />
-                      San Francisco, CA 94105
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-blue-600 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-lg">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-gray-600">Saturday: 10:00 AM - 4:00 PM</p>
-                    <p className="text-gray-600">Sunday: Closed</p>
-                  </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">📞</div>
+                <div>
+                  <h3 className="font-semibold text-white">Phone</h3>
+                  <p className="text-gray-300">+1 302 464 0950</p>
+                  <p className="text-sm text-gray-400">Available 9 AM - 6 PM EST</p>
                 </div>
               </div>
-            </div>
-
-            {/* Quick Response */}
-            <div className="bg-blue-50 rounded-lg p-6">
-              <h3 className="font-semibold text-lg mb-2">Quick Response</h3>
-              <p className="text-gray-600 mb-4">
-                We typically respond to all inquiries within 24 hours during business days.
-              </p>
-              <div className="flex items-center text-green-600">
-                <CheckCircle className="h-5 w-5 mr-2" />
-                <span className="text-sm font-medium">Average response time: 2 hours</span>
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">✉️</div>
+                <div>
+                  <h3 className="font-semibold text-white">Email</h3>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                  <p className="text-sm text-gray-400">We respond within 24 hours</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="text-2xl">📍</div>
+                <div>
+                  <h3 className="font-semibold text-white">Address</h3>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold mb-6">Send us a Message</h2>
-
-            {isSubmitted ? (
-              <div className="text-center py-12">
-                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                <p className="text-gray-600 mb-6">
-                  Thank you for your message. We'll get back to you within 24 hours.
-                </p>
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Send Another Message
-                </button>
+          
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-white mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                  placeholder="Your name"
+                />
               </div>
+<<<<<<< HEAD
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -256,6 +219,45 @@ const Contact = () => {
                 </button>
               </form>
             )}
+=======
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-white mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                  placeholder="How can we help?"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white/10 text-white placeholder-gray-400"
+                  placeholder="Tell us about your project..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+>>>>>>> pr-12243
           </div>
         </div>
       </div>

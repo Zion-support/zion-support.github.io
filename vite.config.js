@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -9,43 +8,19 @@ export default defineConfig({
     open: true,
     host: true,
   },
-  server: {
-    port: 3000,
-    open: true,
-    host: true
-  },
   build: {
     outDir: "dist",
     sourcemap: true,
-    minify: "terser",
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          ui: ["framer-motion", "lucide-react"],
-          router: ["react-router-dom"]
-        }
-      }
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-<<<<<<< HEAD
-        drop_debugger: true
-      }
-    }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
-  }
-});
-=======
-        drop_debugger: true,
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
       },
     },
   },
   optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
 });
->>>>>>> main

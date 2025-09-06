@@ -1,3 +1,6 @@
+
+
+pr-12243
 const id = String(req.query.id || '');
   const updates = readJsonFile('updates.json', [] as any[]);
   const u = updates.find((x: any) => x.id === id),
@@ -10,6 +13,7 @@ import { readJsonFile } from "../../../../utils/api/storage";
 import { requireSuperadminApi } from "../../../../utils/api/auth";
 import PDFDocument from "pdfkit";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+pr-12243
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -53,6 +57,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const doc = new PDFDocument({ size: "A4", margin: 50 });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+  const id = null;
+  doc.end()
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown();
@@ -61,6 +70,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc.fillColor("black").fontSize(14).text("Summary");
   doc.fontSize(12).text(u.summary |"");
   doc.moveDown();
+
+pr-12243
   const id = String(req && req.query.id || "");
   const updates = readJsonFile("updates && updates.json", [] as any[]);
   const u = updates && updates.find((x: any) => x && x.id === id);
@@ -96,10 +107,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+pr-12243
   doc.fontSize(14).text('KPIs');
   doc.fontSize(12).text(u.kpis || '');
   doc.end()
 }
+pr-12243
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile  } from '../../../../utils / api / storage';
 import { requireSuperadminApi  } from '../../../../utils / api / auth';
@@ -140,6 +153,9 @@ function handler() {
   doc.font_size (12).text (u.kpis || "");
   doc.end ();
   doc.end ();
+}
+
+pr-12243
   doc.end();
 
 
@@ -156,3 +172,8 @@ function handler() {
   doc.fontSize(12).text(u.kpis || '');
   doc.end();
   doc.end();
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+doc.end();
+origin/cursor/automate-test-improve-and-merge-code-2533
+pr-12243

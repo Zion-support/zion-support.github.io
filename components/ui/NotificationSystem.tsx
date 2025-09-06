@@ -2,12 +2,15 @@
 
   id: string;
   type: "success" | "error" | "warning" | "info";
+
+pr-12243
   title?: string;
   message: string;
   duration?: number;
 }
 
 
+pr-12243
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
@@ -61,10 +64,10 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
-
 import React from 'react';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+pr-12243
 
 interface Notification {
   id: string;
@@ -79,32 +82,6 @@ interface NotificationContextType {
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
 }
-
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
-
-interface NotificationProviderProps {
-  children: ReactNode;
-}
-
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-
-  const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
-    
-    setNotifications(prev => [...prev, newNotification]);
-
-    if (notification.duration !== 0) {
-      setTimeout(() => {
-        removeNotification(id);
-      }, notification.duration || 5000);
-    }
-  };
-
-  const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
 
   return (
     <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
@@ -131,6 +108,8 @@ const NotificationContainer: React.FC = () => {
           notification={notification}
           onRemove={removeNotification}
         />
+
+pr-12243
       ))}
     </div>
   );
@@ -163,6 +142,7 @@ const NotificationItem: React.FC<{
     info: Info,
   };
 
+pr-12243
   const colors = {
     success: 'bg-green-500',
     error: 'bg-red-500',
@@ -198,3 +178,4 @@ export const useNotifications = () => {
   }
   return context;
 };
+pr-12243

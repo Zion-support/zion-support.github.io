@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
+  project_name: string;
+  scope_summary: string;
+  start_date: Date; import React, { useState } from 'react';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks / useMilestoneGenerator';
+import { Loader2, Sparkles, Check } from 'lucide-react';
+import { Badge } from '@/components / ui / badge';
+=======
   projectName: string;
   scopeSummary: string;
   startDate: Date; import React, { useState } from 'react'
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
 import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneSuggestionsProps {
 
 
@@ -15,6 +25,50 @@ interface MilestoneSuggestionsProps {
 
 
 
+=======
+
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
+interface MilestoneSuggestionsProps {
+projectName: string;
+  scopeSummary: string;
+  startDate: Date;
+  endDate?: Date;
+  projectType: string;
+  onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
+
+export function MilestoneSuggestions({
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
+  onMilestonesGenerated,
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } =
+    useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`,
+startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || 'Other',
+    };
+
+    const milestones = await generateMilestones(input);
+
+    if (milestones.length > 0) {
+      setShowSuggestions(true);
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export function MilestoneSuggestions({
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -78,11 +132,19 @@ export function MilestoneSuggestions(): any ({;
   startDate;
   endDate;
   projectType;
+<<<<<<< HEAD
 
 }: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
   const [ showSuggestions, setShowSuggestions ] = useState(false),
 
 
+=======
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const handleGenerateMilestones = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
   };
@@ -92,12 +154,17 @@ export function MilestoneSuggestions(): any ({;
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
     }
+<<<<<<< HEAD
+  }
+=======
   },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
   const formatDate = (dateString: string) => {
     try {
+<<<<<<< HEAD
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
       return dateString
@@ -130,10 +197,18 @@ export function MilestoneSuggestions({
 
 
 
+=======
+return format(parseISO(dateString), 'MMM dd, yyyy');
+    } catch (error) {
+      return dateString;
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
+<<<<<<< HEAD
 
 
           variant="outline"
@@ -148,15 +223,28 @@ export function MilestoneSuggestions({
 
 
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+=======
+          variant='outline'
+          onClick={handleGenerateMilestones}
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className='w-full'        >
+          {isGenerating ? (
+            <>
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Generating milestones...
             </>
           ) : (
             <>
+<<<<<<< HEAD
 
               <Sparkles className="mr-2 h-4 w-4" />
 
 
 
+=======
+<Sparkles className='mr-2 h-4 w-4' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               Suggest Project Milestones with AI
             </>
           disabled={isGenerating || !scopeSummary || !startDate}
@@ -189,6 +277,7 @@ export function MilestoneSuggestions({
           )}
         </Button>
       )}
+<<<<<<< HEAD
 
           <CardHeader className="pb-3">
 
@@ -196,13 +285,24 @@ export function MilestoneSuggestions({
 
             <CardTitle className="text-lg flex items-center">
               <Sparkles className="h-5 w-5 mr-2 text-primary" />
+=======
+      {showSuggestions && generatedMilestones.length > 0 && (
+        <Card>
+<CardHeader className='pb-3'>
+            <CardTitle className='text-lg flex items-center'>
+              <Sparkles className='h-5 w-5 mr-2 text-primary' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               AI-Suggested Milestones
             </CardTitle>
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
 
 
             <div className="space-y-3">
+=======
+<div className='space-y-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className="p-3 border rounded-lg bg-muted/10">
                   <div className="flex items-center justify-between mb-1">
@@ -214,10 +314,11 @@ export function MilestoneSuggestions({
                         AI Suggested
                       </Badge>
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className='text-sm text-muted-foreground'>
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
+<<<<<<< HEAD
 
             <div className="space-y-3">
 
@@ -238,11 +339,18 @@ export function MilestoneSuggestions({
 
                   <p className="text-sm text-muted-foreground">{milestone.description}</p>
                   <div className="flex justify-between items-center mt-2 text-sm">
+=======
+                  <p className='text-sm text-muted-foreground'>
+                    {milestone.description}
+                  </p>
+                  <div className='flex justify-between items-center mt-2 text-sm'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
               ))}
 
+<<<<<<< HEAD
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 
@@ -252,12 +360,17 @@ export function MilestoneSuggestions({
 
 
                 <Check className="h-4 w-4 mr-1 text-green-500" />
+=======
+<div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
+                <Check className='h-4 w-4 mr-1 text-green-500' />
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 These milestones will be added to your contract
               </div>
             </div>
           </CardContent>
         </Card>
       )}
+<<<<<<< HEAD
 
 
       {showSuggestions && generatedMilestones && generatedMilestones.length > 0 && (;
@@ -436,3 +549,17 @@ export function MilestoneSuggestions({
   );
 }
 ;
+=======
+    </div>
+  );
+};
+<Button variant="outline" onClick={;
+  handleGenerateMilestones ;
+}> {";
+  isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>) ;
+}</Button>) ;
+}AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+}<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) ;
+}</div>) ;
+}"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

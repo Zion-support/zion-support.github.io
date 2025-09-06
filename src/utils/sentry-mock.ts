@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Mock implementation for Sentry to prevent Node.js module import issues during build
+// This mock provides all the necessary Sentry APIs without importing any Node.js modules
+<<<<<<< HEAD
+
+const noop = () => {};
+const noopReturn = () => null;
+const noopPromise = () => Promise.resolve();
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -6,6 +23,78 @@ const mockSentry = {
   captureMessage: noop,
   captureEvent: noop,
   addBreadcrumb: noop,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  setContext: noop,
+  setTag: noop,
+  setUser: noop,
+  setLevel: noop,
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({}),
+  }),
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+=======
+  startTransaction: () => mockTransaction,
+  finishTransaction: noop,
+  // Error boundary and React integration
+  ErrorBoundary: ({ children }: any) => children,
+  withErrorBoundary: (component: any) => component,
+  showReportDialog: noop,
+// Browser-specific methods
+  onLoad: noop,
+  wrap: (fn: (...args: any[]) => any) => fn,
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  // Server-specific methods (Node.js)
+  Handlers: {
+    requestHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    errorHandler:
+      () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+    tracingHandler:
+      () => (_req: any, _res: any, next: (...args: any[]) => any) =>
+        next(),
+  },
+
+  // Integrations
+  Integrations: {
+    BrowserTracing: class BrowserTracing {
+      constructor() {}
+    },
+    Replay: class Replay {
+      constructor() {}
+    },
+    Breadcrumbs: class Breadcrumbs {
+      constructor() {}
+    },
+  },
+
+  // Utilities
+  withScope: (callback: (scope: any) => void) => callback({}),
+  configureScope: noop,
+  getCurrentHub: () => ({
+    getClient: () => mockSentry,
+    getScope: () => ({}),
+    pushScope: () => ({}),
+    popScope: () => true,
+    withScope: (callback: (scope: any) => void) => callback({}),
+  }),
+};
+
+export default mockSentry;
+=======
+>>>>>>> pr-12243
   configureScope: noop,
   withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   setUser: noop,
@@ -52,6 +141,13 @@ const mockSentry = {
   // Next && Next.js specific
   withSentryConfig: (config: any,) => config,
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -237,6 +333,13 @@ const mock_sentry = {
     Debug: 'debug'
   }
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+>>>>>>> pr-12243
 
 export const init = mockSentry && mockSentry.init;
 export const captureException = mockSentry && mockSentry.captureException;
@@ -275,6 +378,7 @@ export const Severity = mockSentry && mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
+<<<<<<< HEAD
 
 
 
@@ -368,4 +472,14 @@ export const SDK_VERSION = mock_sentry.SDK_VERSION;
 export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
+<<<<<<< HEAD
 // All exports are already defined above;
+=======
+// All exports are already defined above;
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> pr-12243
