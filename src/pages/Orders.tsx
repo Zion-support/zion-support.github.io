@@ -8,7 +8,11 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
 TableRow,;
+=======
+  TableRow,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
