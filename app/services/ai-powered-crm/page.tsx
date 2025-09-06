@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI-Powered CRM Platform | Zion Tech Group',
-  description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
-  keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
+  title: 'AI-Powered CRM | Zion Tech Group',
+  description: 'Revolutionary AI-powered CRM platform that automates customer interactions, predicts sales opportunities, and delivers personalized experiences at scale.',
+  keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, customer insights, AI-powered sales'
 };
 
 }
@@ -91,11 +91,12 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI-Powered CRM Platform
+          AI-Powered CRM
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Transform your sales process with intelligent automation, predictive analytics, and AI-driven insights. 
-          Boost conversion rates by 40% and accelerate revenue growth.
+          Transform your customer relationships with our AI-powered CRM platform.
+          Automate interactions, predict opportunities, and deliver personalized
+          experiences at scale.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -108,8 +109,8 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
             href="mailto:kleber@ziontechgroup.com?subject=AI CRM Inquiry"
             className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
           >
-            Get Free Demo
-          </a>
+            Watch Demo
+          </Link>
         </div>
       </section>
 

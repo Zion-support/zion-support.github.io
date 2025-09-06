@@ -114,7 +114,7 @@ export const metadata = {
             href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
           >
-            Get AI Consultation
+            Get Started Today
           </a>
           <a
             href="tel:+13024640950"
