@@ -1,6 +1,6 @@
 # SEO Audit (Autonomous)
 
-Generated: 2025-09-06T00:25:06.916Z
+Generated: 2025-09-06T00:57:27.834Z
 
 | File | Title | Meta | Links | Images |
 |---|---:|---:|---:|---:|
@@ -25,7 +25,7 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/accessibility.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/automation-status.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/fraud.tsx | Yes | Yes | 0 | 0 |
-| pages/admin/index.tsx | No | No | 0 | 0 |
+| pages/admin/index.tsx | Yes | No | 0 | 0 |
 | pages/admin/integrations.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/kyc.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/learn/index.tsx | Yes | Yes | 0 | 0 |
@@ -34,10 +34,10 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/admin/partners.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/pitch-generator.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/reviews.tsx | Yes | Yes | 0 | 0 |
-| pages/admin/source-map.tsx | No | No | 0 | 0 |
+| pages/admin/source-map.tsx | Yes | No | 0 | 0 |
 | pages/admin/support-requests.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/tokens.tsx | Yes | Yes | 0 | 0 |
-| pages/admin/translations.tsx | No | No | 0 | 0 |
+| pages/admin/translations.tsx | Yes | No | 0 | 0 |
 | pages/admin/usage-analytics.tsx | Yes | Yes | 0 | 0 |
 | pages/admin/web3.tsx | Yes | Yes | 0 | 0 |
 | pages/advanced-ai-automation-services.tsx | Yes | Yes | 2 | 0 |
@@ -55,20 +55,20 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/ai-consciousness-evolution-2025.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-content-intelligence-platform.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-content-personalization-engine.tsx | Yes | Yes | 2 | 0 |
-| pages/ai-creativity-studio.tsx | No | No | 0 | 0 |
+| pages/ai-creativity-studio.tsx | Yes | No | 0 | 0 |
 | pages/ai-customer-service.tsx | Yes | Yes | 0 | 0 |
 | pages/ai-customer-success-platform.tsx | Yes | Yes | 2 | 0 |
-| pages/ai-education-platform.tsx | No | No | 0 | 0 |
+| pages/ai-education-platform.tsx | Yes | No | 0 | 0 |
 | pages/ai-emotion-intelligence-platform.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-emotional-intelligence-training.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-ethics-governance-framework.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-evals.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-evaluation-orchestrator.tsx | Yes | Yes | 1 | 0 |
-| pages/ai-financial-intelligence.tsx | No | No | 0 | 0 |
+| pages/ai-financial-intelligence.tsx | Yes | No | 0 | 0 |
 | pages/ai-financial-planning-platform.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-financial-risk.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-healthcare-diagnostics-pro.tsx | Yes | Yes | 2 | 0 |
-| pages/ai-healthcare-diagnostics.tsx | No | No | 0 | 0 |
+| pages/ai-healthcare-diagnostics.tsx | Yes | No | 0 | 0 |
 | pages/ai-hr-analytics-platform.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-hr-recruitment.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-iot-platform.tsx | Yes | Yes | 2 | 0 |
@@ -79,12 +79,12 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/ai-powered-decision-engine.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-powered-devops-platform.tsx | Yes | Yes | 2 | 0 |
 | pages/ai-powered-it-asset-management.tsx | Yes | No | 4 | 0 |
-| pages/ai-predictive-maintenance-platform.tsx | No | No | 0 | 0 |
+| pages/ai-predictive-maintenance-platform.tsx | Yes | No | 0 | 0 |
 | pages/ai-sales-automation.tsx | No | Yes | 0 | 0 |
 | pages/ai-sales-intelligence-platform.tsx | No | No | 0 | 0 |
 | pages/ai-seo-optimization.tsx | No | Yes | 0 | 0 |
 | pages/ai-services.tsx | Yes | Yes | 0 | 0 |
-| pages/ai-sustainability-platform.tsx | No | No | 0 | 0 |
+| pages/ai-sustainability-platform.tsx | Yes | No | 0 | 0 |
 | pages/ai-video-editing.tsx | No | Yes | 0 | 0 |
 | pages/ai-website-personalization.tsx | No | Yes | 0 | 0 |
 | pages/analytics.tsx | Yes | Yes | 4 | 0 |
@@ -120,7 +120,7 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/auto/release-notes-agent.tsx | Yes | Yes | 1 | 0 |
 | pages/auto/seo-audit.tsx | Yes | Yes | 1 | 0 |
 | pages/auto/taxonomy-agent.tsx | Yes | Yes | 1 | 0 |
-| pages/automated-financial-analytics-platform.tsx | No | No | 0 | 0 |
+| pages/automated-financial-analytics-platform.tsx | Yes | No | 0 | 0 |
 | pages/automation/agentic-news.tsx | No | No | 0 | 0 |
 | pages/automation/arxiv-research.tsx | No | No | 0 | 0 |
 | pages/automation/cloud.tsx | Yes | No | 3 | 0 |
@@ -159,7 +159,7 @@ Generated: 2025-09-06T00:25:06.916Z
 | pages/blog/index.tsx | Yes | No | 0 | 0 |
 | pages/blog/performance-optimization.tsx | Yes | Yes | 0 | 0 |
 | pages/blog.tsx | No | Yes | 1 | 0 |
-| pages/book-builder.tsx | No | No | 0 | 0 |
+| pages/book-builder.tsx | Yes | No | 0 | 0 |
 | pages/browser-automation-cloud.tsx | No | Yes | 0 | 0 |
 | pages/calendar.tsx | Yes | Yes | 3 | 0 |
 | pages/careers.tsx | Yes | Yes | 0 | 0 |
