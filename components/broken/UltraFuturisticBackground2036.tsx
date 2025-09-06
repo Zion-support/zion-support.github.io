@@ -233,50 +233,27 @@ export default function UltraFuturisticBackground2036({;
       }
       window.removeEventListener('resize', resizeCanvas);
     }
-<<<<<<< HEAD
-  }, [variant, intensity]),
 
-  return (
-    <div className=&quot;fixed inset-0 -z-10 overflow-hidden&quot;>
-      <canvas
-        ref={canvasRef}
-        className=&quot;w-full h-full&quot;
-=======
   }, [variant, intensity]),;
   return (;
     <div className="fixed inset-0 -z-10 overflow-hidden">;
       <canvas;
         ref={canvasRef}
         className="w-full h-full";
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
         style={{ display: 'block' }}
       />;
       {/* Additional overlay effects */}
-<<<<<<< HEAD
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        {/* Grid overlay for cyber variant */}
-        {variant === 'cyber' && (
-          <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]&quot; />
-=======
+
       <div className="absolute inset-0 pointer-events-none">;
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (;
           <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
         )}
 ;
         {/* Quantum field lines */}
-<<<<<<< HEAD
-        {variant === 'quantum' && (
-          <div className=&quot;absolute inset-0&quot;>
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className=&quot;absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent&quot;
-                style={{
-                  left: `${(i + 1) * 12.5}%`,
-                  transform: 'translateX(-50%)'
-=======
+
         {variant === 'quantum' && (;
           <div className="absolute inset-0">;
             {[...Array(8)].map((_, i) => (;
@@ -286,7 +263,7 @@ export default function UltraFuturisticBackground2036({;
                 style={{;
                   left: `${(i + 1) * 12.5}%`,;
                   transform: 'translateX(-50%)';
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
                 }}
                 animate={{;
                   opacity: [0.3, 0.8, 0.3]}}
@@ -300,15 +277,7 @@ export default function UltraFuturisticBackground2036({;
         )}
 ;
         {/* AI neural network overlay */}
-<<<<<<< HEAD
-        {variant === 'ai' && (
-          <div className=&quot;absolute inset-0&quot;>
-            {[...Array(6)].map((_, i) => (
-              <motion.div
-                key={i}
-                className=&quot;absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent&quot;
-                style={{
-=======
+
         {variant === 'ai' && (;
           <div className="absolute inset-0">;
             {[...Array(6)].map((_, i) => (;
@@ -316,7 +285,7 @@ export default function UltraFuturisticBackground2036({;
                 key={i}
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-green-400/20 to-transparent";
                 style={{;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
                   top: `${(i + 1) * 16.67}%`}}
                 animate={{;
                   opacity: [0.2, 0.6, 0.2]}}

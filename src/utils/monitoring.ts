@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-// Monitoring utilities
-export const logEvent = (event: string) => {
-  console.log('Event logged:', event);
-};
 
-export const trackPerformance = () => {
-  console.log('Tracking performance...');
-};
-=======
 
 // Monitoring and analytics setup;
 export const setupAnalytics = () => {;
@@ -50,12 +41,4 @@ export const trackErrors = () => {;
         valu: e: 1;
       });
     }
-<<<<<<< HEAD
-  })
-},
 
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
-  });
-};
->>>>>>> cursor/automate-test-improve-and-merge-code-4094

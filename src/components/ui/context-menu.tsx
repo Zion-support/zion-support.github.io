@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import * as React from &quot;react&quot;
-import * as ContextMenuPrimitive from &quot;@radix-ui/react-context-menu&quot;
-import { Check, ChevronRight, Circle } from 'lucide-react'
 
-import { cn } from &quot;@/lib/utils&quot;
-
-const ContextMenu = ContextMenuPrimitive.Root
-
-const ContextMenuTrigger = ContextMenuPrimitive.Trigger
-
-const ContextMenuGroup = ContextMenuPrimitive.Group
-
-const ContextMenuPortal = ContextMenuPrimitive.Portal
-
-const ContextMenuSub = ContextMenuPrimitive.Sub
-
-const ContextMenuRadioGroup = ContextMenuPrimitive.RadioGroup
-
-const ContextMenuSubTrigger = React.forwardRef<
-  React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>,
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {
-    inset?: boolean
-=======
 import * as React from "react";
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
 import { Check, ChevronRight, Circle } from 'lucide-react';
@@ -36,42 +13,22 @@ const ContextMenuSubTrigger = React.forwardRef<;
   React.ElementRef<typeof ContextMenuPrimitive.SubTrigger>,;
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubTrigger> & {;
     inset?: boolean;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
   }
 >(({ className, inset, children, ...props }, ref) => (;
   <ContextMenuPrimitive.SubTrigger;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
-      &quot;flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground&quot;,
-      inset && &quot;pl-8&quot;,
-      className
-=======
+
     className={cn(;
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",;
       inset && "pl-8",;
       className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     )}
     {...props}
   >;
     {children}
-<<<<<<< HEAD
-    <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
-  </ContextMenuPrimitive.SubTrigger>
-))
-ContextMenuSubTrigger.displayName = ContextMenuPrimitive.SubTrigger.displayName
 
-const ContextMenuSubContent = React.forwardRef<
-  React.ElementRef<typeof ContextMenuPrimitive.SubContent>,
-  React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.SubContent>
->(({ className, ...props }, ref) => (
-  <ContextMenuPrimitive.SubContent
-    ref={ref}
-    className={cn(
-      &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
-      className
-=======
     <ChevronRight className="ml-auto h-4 w-4" />;
   </ContextMenuPrimitive.SubTrigger>;
 ));
@@ -85,7 +42,7 @@ const ContextMenuSubContent = React.forwardRef<;
     className={cn(;
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
       className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     )}
     {...props}
   />;
@@ -98,15 +55,11 @@ const ContextMenuContent = React.forwardRef<;
   <ContextMenuPrimitive.Portal>;
     <ContextMenuPrimitive.Content;
       ref={ref}
-<<<<<<< HEAD
-      className={cn(
-        &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;,
-        className
-=======
+
       className={cn(;
         "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md animate-in fade-in-80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",;
         className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
       )}
       {...props}
     />;
@@ -121,17 +74,12 @@ const ContextMenuItem = React.forwardRef<;
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Item;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-      inset && &quot;pl-8&quot;,
-      className
-=======
+
     className={cn(;
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
       inset && "pl-8",;
       className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     )}
     {...props}
   />;
@@ -143,20 +91,7 @@ const ContextMenuCheckboxItem = React.forwardRef<;
 >(({ className, children, checked, ...props }, ref) => (;
   <ContextMenuPrimitive.CheckboxItem;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-      className
-    )}
-    checked={checked}
-    {...props}
-  >
-    <span className=&quot;absolute left-2 flex h-3.5 w-3.5 items-center justify-center&quot;>
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className=&quot;h-4 w-4&quot; />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
-=======
+
     className={cn(;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
       className;
@@ -169,7 +104,7 @@ const ContextMenuCheckboxItem = React.forwardRef<;
         <Check className="h-4 w-4" />;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     {children}
   </ContextMenuPrimitive.CheckboxItem>;
 ));
@@ -181,19 +116,7 @@ const ContextMenuRadioItem = React.forwardRef<;
 >(({ className, children, ...props }, ref) => (;
   <ContextMenuPrimitive.RadioItem;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
-      &quot;relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50&quot;,
-      className
-    )}
-    {...props}
-  >
-    <span className=&quot;absolute left-2 flex h-3.5 w-3.5 items-center justify-center&quot;>
-      <ContextMenuPrimitive.ItemIndicator>
-        <Circle className=&quot;h-2 w-2 fill-current&quot; />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
-=======
+
     className={cn(;
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",;
       className;
@@ -205,7 +128,7 @@ const ContextMenuRadioItem = React.forwardRef<;
         <Circle className="h-2 w-2 fill-current" />;
       </ContextMenuPrimitive.ItemIndicator>;
     </span>;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     {children}
   </ContextMenuPrimitive.RadioItem>;
 ));
@@ -218,17 +141,12 @@ const ContextMenuLabel = React.forwardRef<;
 >(({ className, inset, ...props }, ref) => (;
   <ContextMenuPrimitive.Label;
     ref={ref}
-<<<<<<< HEAD
-    className={cn(
-      &quot;px-2 py-1.5 text-sm font-semibold text-foreground&quot;,
-      inset && &quot;pl-8&quot;,
-      className
-=======
+
     className={cn(;
       "px-2 py-1.5 text-sm font-semibold text-foreground",;
       inset && "pl-8",;
       className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
     )}
     {...props}
   />;
@@ -242,21 +160,7 @@ const ContextMenuSeparator = React.forwardRef<;
     ref={ref}
     className={cn(&quot;-mx-1 my-1 h-px bg-border&quot;, className)}
     {...props}
-<<<<<<< HEAD
-  />
-))
-ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName
 
-const ContextMenuShortcut = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => {
-  return (
-    <span
-      className={cn(
-        &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;,
-        className
-=======
   />;
 ));
 ContextMenuSeparator.displayName = ContextMenuPrimitive.Separator.displayName;
@@ -269,31 +173,13 @@ const ContextMenuShortcut = ({;
       className={cn(;
         "ml-auto text-xs tracking-widest text-muted-foreground",;
         className;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
       )}
       {...props}
     />;
   );
 }
-<<<<<<< HEAD
-ContextMenuShortcut.displayName = &quot;ContextMenuShortcut&quot;
 
-export {
-  ContextMenu,
-  ContextMenuTrigger,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuCheckboxItem,
-  ContextMenuRadioItem,
-  ContextMenuLabel,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuGroup,
-  ContextMenuPortal,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-=======
 ContextMenuShortcut.displayName = "ContextMenuShortcut";
 export {;
   ContextMenu,;
@@ -310,6 +196,6 @@ export {;
   ContextMenuSub,;
   ContextMenuSubContent;
   ContextMenuSubTrigger;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
   ContextMenuRadioGroup}
 ;

@@ -32,18 +32,7 @@ export const metadata: Metadata = {;
     images: ['/og-image.jpg']};
   viewport: 'width=device-width, initial-scale=1';
   themeColor: '#000000'}
-<<<<<<< HEAD
 
-export default function RootLayout({
-  children}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
-      <body className={`${inter.className} bg-black text-white antialiased`}>
-        <Navigation />
-        <main className=&quot;min-h-screen&quot;>
-=======
 ;
 export default function RootLayout({;
   children}: {;
@@ -54,7 +43,7 @@ export default function RootLayout({;
       <body className={`${inter.className} bg-black text-white antialiased`}>;
         <Navigation />;
         <main className="min-h-screen">;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
           {children}
         </main>;
         <Footer />;
