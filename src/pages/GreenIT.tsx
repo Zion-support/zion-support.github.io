@@ -1,5 +1,3 @@
-
-
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -57,8 +55,6 @@ export default function GreenIT() {;
     },;
   ];
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
@@ -69,7 +65,6 @@ export default function GreenIT() {;
       icon: Cloud},
     {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
@@ -84,7 +79,6 @@ export default function GreenIT() {;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <h2 className='text-3xl font-bold text-white mb-6'>
                     Sustainable IT for a Better Future
@@ -252,7 +246,6 @@ export default function GreenIT() {;
     {;
       title: "Renewable Energy Integration",;
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       icon: Leaf}
   ]
 
@@ -299,7 +292,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-=======
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
@@ -336,7 +328,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt - 8">;
                     <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       Explore Green IT Solutions;
                     </Button>;
                   </div>;
@@ -344,12 +335,9 @@ export default function GreenIT() {;
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 
-=======
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <img
                     src='https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
                     alt='Green IT sustainability'
@@ -825,14 +813,12 @@ export default function GreenIT (...args: unknown[]): unknown {
         'Meet compliance requirements',
         'Enhance stakeholder communication',
         'Track progress toward goals';
-=======
 
 
       ],
       savings: 'Time and resource savings',
       implementation: '6 - 8 weeks',
       pricing: 'Starting from $8, 000';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   ];
 
@@ -1436,7 +1422,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                       {solution && solution.description}
                     </p>                  </div>;
 
-=======
                   />
                 </div>
               </div>
@@ -1450,7 +1435,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -1459,7 +1443,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
                   </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
               </div>;
             </div>;
@@ -1477,7 +1460,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
@@ -1487,7 +1469,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
                   <ul className="text-zion-slate-light space-y-2">
@@ -1501,11 +1482,9 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             </div>
           </div>
 
-=======
 
 
           
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -1516,11 +1495,8 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
             </Button>
 
-=======
             </Button>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </main>
@@ -1775,13 +1751,11 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 </div>;
               </motion.div>) ) }
 
-=======
   )
 
 export { GreenIT, GreenIT };
 };
 
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -1973,15 +1947,12 @@ export default function GreenIT() {;
             </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-=======
           </motion.div>;
         </div>;
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export { GreenIT }
 export { GreenIT }
 export { GreenIT }
@@ -1991,13 +1962,6 @@ export { GreenIT, GreenIT }
   );
 }
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

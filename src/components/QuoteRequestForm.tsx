@@ -1,6 +1,3 @@
-
-
-
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
 import {useToast} from "@/hooks/use-toast"
@@ -43,7 +40,6 @@ const serviceStepSchema = z.object({
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     contactInfo: {
       name: ""
       email: ""
@@ -108,19 +104,14 @@ export function QuoteRequestForm() {;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
-=======
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+
 import { useState } from './react';
 import {log_debug, logErrorToProduction} from '@/utils / production_logger';
 import { use_toast } from '@/hooks / use - toast';
@@ -180,7 +171,3 @@ function QuoteRequestForm() {
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

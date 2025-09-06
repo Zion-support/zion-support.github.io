@@ -1,6 +1,4 @@
-
-
-  {
+{
     name: 'Sarah Williams'
     role: 'Tech Recruiter'
     text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.'
@@ -66,7 +64,6 @@ export const AppTestimonials: React.FC = () => {;
             What Our Users Say;
           </h2>;
           <p className='text-lg text-gray-300 max-w-2xl mx-auto'>;
-=======
     <section className='py - 16 bg - zion - blue'>;
       <div className='container mx - auto px - 4'>;
         <div className='text - center mb - 12'>;
@@ -74,7 +71,6 @@ export const AppTestimonials: React.FC = () => {;
             What Our Users Say;
           </h2>;
           <p className='text - lg text - gray - 300 max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Join thousands of satisfied users who have transformed their tech;
             careers with the Zion mobile app.;
           </p>;
@@ -99,7 +95,6 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">
                 <div className="flex mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-=======
                     />;
                   </div>;
                   <div>;
@@ -118,7 +113,6 @@ export const AppTestimonials: React.FC = () => {
               <CardContent className="pt-6">;
                 <div className="flex mb-4">;
                   {Array && Array.from({ length: 5 }).map((_, i) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Star
                       key={i}
                       className={`h-5 w-5 ${i < testimonial && testimonial.rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"}`}
@@ -139,7 +133,6 @@ export const AppTestimonials: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
                   </div>
@@ -147,7 +140,6 @@ export const AppTestimonials: React.FC = () => {
               </CardFooter>
             </Card>
 
-=======
 
 }</div> </div> </section>) 
 }
@@ -156,7 +148,6 @@ export const AppTestimonials: React.FC = () => {
   );
 };
 
-=======
 import React from "react",;
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -227,7 +218,6 @@ export const AppTestimonials: React.FC = () => {;
   );
 };
 
-=======
 
 
   );
@@ -235,7 +225,6 @@ export const AppTestimonials: React.FC = () => {;
 
 
 
-=======
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;
           {testimonials.map ((testimonial, index) => (
             <Card;
@@ -320,10 +309,3 @@ export const AppTestimonials: React.FC = () => {";
 '"},
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

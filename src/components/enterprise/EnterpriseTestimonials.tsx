@@ -1,7 +1,3 @@
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {
 
   Carousel;
@@ -9,7 +5,6 @@ import {
   CarouselItem;
   CarouselNext;
   CarouselPrevious} from "@/components/ui/carousel";
-=======
 
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
@@ -56,7 +51,6 @@ export function EnterpriseTestimonials() {
 };
 }
 
-=======
 
                       />
                     </div>
@@ -94,7 +88,6 @@ const testimonials = [
     company: "FutureTech Systems",
 
     image: "/placeholder.svg"}];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function EnterpriseTestimonials() {
   return (
@@ -205,7 +198,6 @@ export function EnterpriseTestimonials() {;
                   </blockquote>;
                   <div className='flex items-center gap-4'>;
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <img
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
@@ -233,7 +225,6 @@ export function EnterpriseTestimonials() {;
 
           </CarouselContent>;
           <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
-=======
 import React from 'react';
 import { Quote } from 'lucide-react';
 import {
@@ -338,7 +329,6 @@ function EnterpriseTestimonials() {
           </CarouselContent>;
           <div className='flex justify - center gap - 2 mt - 8'>            <CarouselPrevious />          <div className="flex justify - center gap - 2 mt - 8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <CarouselPrevious />;
             <CarouselNext />;
           </div>;
@@ -346,18 +336,10 @@ function EnterpriseTestimonials() {
       </div>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

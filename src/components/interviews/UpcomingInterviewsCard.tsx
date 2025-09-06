@@ -1,6 +1,4 @@
-
-
-        // Filter for confirmed interviews in the future
+// Filter for confirmed interviews in the future
         const upcoming = interviews
           .filter(
             interview =>
@@ -21,7 +19,6 @@
         logErrorToProduction('Error loading upcoming interviews:', {
           data: error
         })
-=======
 
           .sort((a, b) => 
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
@@ -63,7 +60,6 @@
               </div>
 
 
-=======
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -71,7 +67,6 @@ import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
 import { format, isPast, parseISO } from "date-fns",;
 import Link from "next/link",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Calendar, Clock, Video } from 'lucide-react';
 import { Avatar } from '@/components / ui / avatar';
 import { logErrorToProduction } from '@/utils / production_logger';
@@ -102,7 +97,6 @@ function UpcomingInterviewsCard() {
         logErrorToProduction ('Error loading upcoming interviews:', {
           data: error,
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
         setIsLoading (false);
       }
@@ -156,13 +150,11 @@ export function UpcomingInterviewsCard() {;
   }, []);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
         <CardHeader>;
           <CardTitle className='text-lg flex items-center'>;
             <Video className='h-5 w-5 mr-2 text-zion-purple' />;
-=======
     load_interviews ();
   }, []);
   // Check condition
@@ -174,7 +166,6 @@ if ( {) {
         <CardHeader>;
           <CardTitle className='text - lg flex items - center'>;
             <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Upcoming Interviews;
           </CardTitle>;
         </CardHeader>;
@@ -187,7 +178,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   if (upcomingInterviews.length === 0) {
     return (
@@ -211,7 +201,6 @@ if ( {) {
         </CardContent>
       </Card>
     )
-=======
           </div>;
         </CardContent>;
       </Card>;
@@ -240,13 +229,11 @@ if ( {) {
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
 
 
-=======
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -278,14 +265,11 @@ if ( {) {
                   <div className="flex justify-between items-start">
                     <p className="font-medium line-clamp-1">
                       {interview.title || "Interview"}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </p>
                     {isStartingSoon && (
                       <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
-=======
     <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
       <CardHeader>;
         <CardTitle className='text-lg flex items-center'>;
@@ -345,7 +329,6 @@ if ( {) {
                       <span className='text-xs px-1 && 1.5 py-0 && 0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>;
                         Soon;
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
 
                   </div>
@@ -367,13 +350,11 @@ if ( {) {
             </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Button>
         </div>
       </CardContent>
     </Card>
   )
-=======
                   </div>;
                 </div>;
               </div>;
@@ -383,7 +364,6 @@ if ( {) {
 
         <div className='mt-4 pt-3 border-t border-zion-blue-light/40'>;
           <Button asChild size='sm' variant='outline' className='w-full'>;
-=======
           <div className='space - y-4'>;
             {[1, 2].map (index => (
               <div key={i} className='flex items - center gap - 3 animate - pulse'>;
@@ -487,26 +467,17 @@ if ( {) {
         </div>;
         <div className='mt - 4 pt - 3 border - t border - zion - blue - light / 40'>;
           <Button as_child size='sm' variant='outline' className='w - full'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             <Link href='/interviews'>View All Interviews</Link>;
           </Button>;
         </div>;
       </CardContent>;
 
 }
-=======
 
 
 
-=======
     </Card>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

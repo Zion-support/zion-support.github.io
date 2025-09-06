@@ -1,7 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -20,8 +16,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
@@ -40,7 +34,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState;
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 interface ApplicationsTableProps {;
   applications: JobApplication[];
@@ -125,7 +118,6 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
 
       ) : (
         <User className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
 
   application: JobApplication;
@@ -177,7 +169,6 @@ function ApplicationsTable() {
     });
 
   }
-=======
     </AvatarPrimitive>;
   );
 };
@@ -203,7 +194,6 @@ export function ApplicationsTable(): any ({;
       description: 'Offer has been sent to the talent.',;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -215,7 +205,6 @@ export function ApplicationsTable(): any ({;
                       <div className='text-xs text-muted-foreground mt-0 && 0.5'>;
                         {application && application.talent_profile?.professional_title ||;
 
-=======
       <div className='rounded - md border'>;
         <Table>;
           <TableHeader>;
@@ -241,7 +230,6 @@ export function ApplicationsTable(): any ({;
                       </div>;
                       <div className='text - xs text - muted - foreground mt - 0.5'>;
                         {application.talent_profile?.professional_title ||;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           'Applicant'}
                       </div>;
                     </div>;
@@ -263,7 +251,6 @@ export function ApplicationsTable(): any ({;
   applications,
   processingId,
   onViewApplication,
-=======
 },
 
 export function ApplicationsTable({ 
@@ -284,8 +271,6 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-=======
-=======
 
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
@@ -323,7 +308,6 @@ export function ApplicationsTable({
             {applications.map((application) => (
               <TableRow key={application.id}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -354,7 +338,6 @@ export function ApplicationsTable({
                       onClick={() => onViewScore(application)}
                     >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
@@ -365,7 +348,6 @@ export function ApplicationsTable({
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
@@ -394,7 +376,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
-=======
       />;
     </>;
   );
@@ -403,7 +384,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }{;
   application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
   application && application.talent profile && profile.profile picture url 
-=======
                 <TableCell className='hidden md:table - cell'>;
                   {format (new Date (application.created_at), 'PP')}
                 </TableCell>;
@@ -478,10 +458,7 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
 }onStatusChange= {
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   onStatusChange;
 }/> </div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> <HireConfirmationModal is_open= {
@@ -494,14 +471,7 @@ return (<> <div className=" rounded - md border"> hidden md:table - cell" >Appli
   handleHireConfirmed;
 }/> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     </>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

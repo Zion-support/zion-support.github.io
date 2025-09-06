@@ -1,11 +1,7 @@
-
-
 import { Check, X } from 'lucide-react'
 
-=======
 
 
-=======
 TableBody,
   TableCell,
   TableHead,
@@ -28,7 +24,6 @@ import { Badge } from "@/components/ui/badge",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -192,7 +187,6 @@ export function EnterprisePricingTable() {;
                         <Badge className='mb-2 bg-zion-purple'>;
                           Most Popular;
                         </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       )}
                       <span className='font-bold text-xl'>{plan && plan.name}</span>;
                       <div className='flex items-baseline mt-1'>;
@@ -220,11 +214,9 @@ export function EnterprisePricingTable() {;
                     </div>;
                   </TableHead>;
 
-=======
             Choose the perfect plan for your team size and requirements
           </p>
         </div>
-=======
 
 
 
@@ -246,7 +238,6 @@ export function EnterprisePricingTable() {;
                         <span className="text-sm text-muted-foreground ml-1">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {plan.billing}
                         </span>
                       </div>
@@ -265,11 +256,9 @@ export function EnterprisePricingTable() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </Button>
                     </div>
                   </TableHead>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
 
 
@@ -282,7 +271,6 @@ export function EnterprisePricingTable() {;
                   {plans && plans.map(plan => (;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <TableCell
                       key={`${plan && plan.name}-${feature && feature.name}`}
                       className='text-center'>;
@@ -295,7 +283,6 @@ export function EnterprisePricingTable() {;
                       ) : (;
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />;
 
-=======
                   <TableCell className="font-medium">{feature.name}</TableCell>
                   {plans.map((plan) => (
                     <TableCell key={`${plan.name}-${feature.name}`} className="text-center">
@@ -304,7 +291,6 @@ export function EnterprisePricingTable() {;
                       ) : (
                         <X className="h-5 w-5 text-muted-foreground mx-auto" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       )}
                     </TableCell>;
                   ))}
@@ -319,14 +305,12 @@ export function EnterprisePricingTable() {;
       </div>
     </section>
 
-=======
 
       </div>;
     </section>;
   );
 };
 
-=======
               </TableRow>;
             </TableHeader>;
             <TableBody>;
@@ -366,7 +350,6 @@ export function EnterprisePricingTable() {;
   );
 }
 
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from 'lucide-react';
@@ -536,10 +519,4 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

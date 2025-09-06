@@ -1,5 +1,3 @@
-
-
 import { Loader2 } from 'lucide-react';
 import { NavigationButtonsProps } from "./types";
 export const NavigationButtons = ({;
@@ -21,7 +19,6 @@ export const NavigationButtons = ({;
   nextLabel = 'Next',;
   isLoading = false,;
 }: NavigationButtonsProps) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='flex justify-between'>;
       {onBack && (;
@@ -48,11 +45,3 @@ export const NavigationButtons = ({;
           {nextLabel}
         </Button>;
       )}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

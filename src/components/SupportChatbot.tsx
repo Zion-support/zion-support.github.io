@@ -1,6 +1,4 @@
-
-
-    }
+}
     set_messages (prev => [...prev, user_msg]);
     set_loading (true);
     set_typing (true);
@@ -25,7 +23,6 @@ interface Msg {
   role: 'user' | 'assistant'
   message: string
 
-=======
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -36,7 +33,6 @@ interface Msg { id: string, role: 'user' | 'assistant', message: string }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Fallback responses when API is unavailable
 
 const FALLBACK_RESPONSES = [
@@ -46,7 +42,6 @@ const FALLBACK_RESPONSES = [
   "I understand you need assistance. For immediate help, please visit our help center or reach out to support@ziontechgroup.com.",
   "I'm currently experiencing technical difficulties, but I'd be happy to help you get to the right resource. Try browsing our documentation or contacting support.",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // If Supabase function fails, try local API fallback
       if (!res.ok) {
         res = await fetch('/api/kb-chat', {
@@ -122,7 +117,6 @@ const FALLBACK_RESPONSES = [
                       m.id === botId ? { ...m, message: accumulated } : m
                     )
                   )
-=======
 interface Msg {;
   id: string;
   role: 'user' | 'assistant';
@@ -344,16 +338,13 @@ if ( {) {
                   set_messages (prev =>;
                     prev.map (m =>;
                       m.id === bot_id ? { ...m, message: accumulated } : m));
-=======
                   accumulated += token,;
                   setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: accumulated } : m));
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }
               } catch (_) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 // ignore parse errors;
               }
             }
@@ -395,7 +386,6 @@ if ( {) {
           "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance.";
         set_messages (prev =>;
           prev.map (m => (m.id === bot_id ? { ...m, message: final } : m)));
-=======
       }
       setMessages(prev => [...prev, errorMsg])
     } finally {
@@ -413,7 +403,6 @@ if ( {) {
         aria-label='Open help chat'      >
         <MessageSquare className='h-5 w-5' />
 
-=======
         const final = accumulated.trim() ||
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m))
@@ -431,7 +420,6 @@ if ( {) {
         id: Date.now ().to_string () + '-e',
         role: 'assistant',
         message: fallback_response,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       set_messages (prev => [...prev, error_msg]);
     } finally {
@@ -447,7 +435,6 @@ if ( {) {
         setMessages(prev =>;
           prev && prev.map(m => (m && m.id === botId ? { ...m, message: final } : m));
         );
-=======
     }
   },
 
@@ -481,7 +468,6 @@ if ( {) {
         >
           <X className="h-5 w-5" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -494,7 +480,6 @@ if ( {) {
         const final = accumulated.trim() ||;
           (FALLBACK_RESPONSES[Math.floor(Math.random() * FALLBACK_RESPONSES.length)] || "I'm experiencing technical difficulties. Please contact support@ziontechgroup.com for assistance."),;
         setMessages(prev => prev.map(m => m.id === botId ? { ...m, message: final } : m));
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (err) {;
       logErrorToProduction('Chatbot error:', { data: err });
@@ -514,7 +499,6 @@ if ( {) {
     } finally {;
       setLoading(false);
       setTyping(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -555,7 +539,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
         {messages && messages.map(m => (;
           <ChatMessage key={m && m.id} role={m && m.role} message={m && m.message} />;
@@ -567,7 +550,6 @@ if ( {) {
         )}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div ref={endRef} />
       </div>
       <div className='p-2 border-t border-zion-purple/20 bg-zion-blue-dark/30'>
@@ -626,16 +608,12 @@ setTyping (false) ;
 }
 }
 
-=======
 
 }
 ;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       set_loading (false);
       set_typing (false);
     }
@@ -719,5 +697,3 @@ set_typing (false);
 }'";
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

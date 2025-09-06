@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +40,6 @@ export default function AdminDashboard() {;
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
     "url": "https://app && app.ziontechgroup.com/features/admin-dashboard";
 
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -59,17 +55,13 @@ export default function AdminDashboard() {
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
 
 
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -101,7 +93,6 @@ export default function AdminDashboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -136,7 +127,6 @@ export default function AdminDashboard() {
               <p className='font-semibold'>Who can access the dashboard?</p>;
               <p className='text-zion-slate-light'>;
 
-=======
       <SEO;
         title='Admin Dashboard';
         description='Gain insight into your marketplace with powerful administration tools.';
@@ -203,7 +193,6 @@ export default function AdminDashboard() {
               <p className='font - semibold'>Who can access the dashboard?</p>;
               <p className='text - zion - slate - light'>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 Only authorized admins and moderators with the proper roles.;
               </p>;
             </div>;
@@ -223,16 +212,9 @@ export default function AdminDashboard() {
       </main>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

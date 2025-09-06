@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -47,7 +45,6 @@ function TalentDashboardContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
@@ -59,7 +56,6 @@ function TalentDashboardContent() {;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <Card className='mb-8'>
               <CardHeader className='pb-2'>
@@ -117,7 +113,6 @@ function TalentDashboardContent() {;
                       <MessageSquare className="h-4 w-4 mr-2" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       Messages
                     </Link>
                   </Button>
@@ -125,7 +120,6 @@ function TalentDashboardContent() {;
               </CardContent>
             </Card>
 
-=======
 
             
 
@@ -169,7 +163,6 @@ function TalentDashboardContent() {;
       <SEO;
         title="Talent Dashboard | Zion AI Marketplace";
         description="Your personalized talent dashboard with job matches and professional opportunities.";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
@@ -218,7 +211,6 @@ function TalentDashboardContent() {;
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.displayName || 'User'}</CardTitle>;
-=======
 import { useState, useEffect } from 'react';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -312,7 +304,6 @@ function TalentDashboardContent() {
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.display_name || 'User'}</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <CardDescription>;
                         {user?.headline || 'AI Professional'}
                       </CardDescription>;
@@ -358,7 +349,6 @@ function TalentDashboardContent() {
             <Card className="mt-8">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <CardHeader>
                 <CardTitle className='text-lg'>Quick Stats</CardTitle>
               </CardHeader>
@@ -396,7 +386,6 @@ function TalentDashboardContent() {
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value='applications'>My Applications</TabsTrigger>
@@ -412,7 +401,6 @@ function TalentDashboardContent() {
               <TabsContent value="applications" className="mt-0">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <MyApplications />
                 <div className='mt-4 flex justify-center'>
                   <Button variant='outline' asChild>
@@ -432,7 +420,6 @@ function TalentDashboardContent() {
                     <p className="text-muted-foreground">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       You haven't saved any jobs yet.
                     </p>
                     <Button className='mt-4' asChild>
@@ -527,14 +514,12 @@ function TalentDashboardContent() {
     </>;
   );
 
-=======
 
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 };
 
-=======
 }
 ;
 
@@ -547,10 +532,7 @@ export default function TalentDashboard() {;
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
             {show_advanced && (
@@ -639,11 +621,4 @@ function TalentDashboard() {
       <TalentDashboardContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,15 +1,9 @@
-
-
-
-
 }
 
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -220,7 +214,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 
 
 
-=======
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -350,10 +343,7 @@ export default function EquipmentPage() {;
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 }
 // Main export with error boundary;
@@ -366,10 +356,4 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

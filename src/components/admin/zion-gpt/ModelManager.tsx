@@ -1,6 +1,4 @@
-
-
-      // If activating, deactivate all other models with the same purpose;
+// If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
@@ -12,7 +10,6 @@ if ( {) {
           .eq('purpose', purpose);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
       // Update this model;
@@ -54,12 +51,9 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full">;
@@ -126,7 +120,6 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
-=======
 
                     {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
                       <Button
@@ -138,7 +131,6 @@ if ( {) {
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                         <span className="ml-1">Check</span>;
                       </Button>;
@@ -160,7 +152,6 @@ if ( {) {
                           <>
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </Button>;
                     ) : (;
@@ -176,16 +167,11 @@ if ( {) {
                     )}
                   </TableCell>;
                 </TableRow>;
-=======
 
                         title={model.errorMessage || "Training failed"}
 
-=======
                         title = {model.errorMessage || "Training failed",}
-=======
                         title={model.errorMessage || "Training failed"}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
@@ -194,8 +180,6 @@ if ( {) {
                   </TableCell>;
                 </TableRow>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
@@ -208,7 +192,6 @@ if ( {) {
 
 }
 
-=======
   },
   return (
     <Card className="w - full">;
@@ -298,12 +281,3 @@ if ( {) {
     </Card>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

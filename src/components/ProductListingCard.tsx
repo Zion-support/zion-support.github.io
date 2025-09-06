@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -56,11 +53,8 @@ interface ProductListingCardProps {
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
   detailBasePath?: string;
-=======
 import Image from 'next/image'; // Import next/image
 
-=======
-=======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -88,7 +82,6 @@ interface ProductListingCardProps {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const ProductListingCardComponent = ({
   listing,
   view = 'grid',
@@ -279,10 +272,8 @@ const ProductListingCardComponent = ({;
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -313,7 +304,6 @@ const ProductListingCardComponent = ({;
           if(e && e.key === 'Enter' || e && e.key === ' ') {;
             e && e.preventDefault () ;
 
-=======
         // Check condition
 if ( {) {
   $2
@@ -360,7 +350,6 @@ if ( {) {
   $2
 }
             e.prevent_default ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             handleViewListing () }
         }}
       >;
@@ -369,7 +358,6 @@ if ( {) {
           {/* Ensure this container has dimensions */}
 
 
-=======
         onKeyDown={(e) => {
 
           if (e.key === 'Enter' || e.key === ' ') {
@@ -399,27 +387,23 @@ if ( {) {
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {stockStatus}
             </Badge>;
           )}
 
           <FavoriteButton itemId={listing && listing.id} />;
-=======
 
            <FavoriteButton itemId={listing.id} />;
 
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Content */}
       <div
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
           {/* Category & Rating */}
 
-=======
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
 
@@ -430,10 +414,8 @@ if ( {) {
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Title & Description */}
 
           <Image;
@@ -508,12 +490,10 @@ if ( {) {
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
-=======
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {listing.uspHeadline}
               </p>
             )}
@@ -534,20 +514,16 @@ if ( {) {
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
 
-=======
 
 
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Footer with price and button */}
 
           </div>;
@@ -622,7 +598,6 @@ if ( {) {
               }}
               disabled={loading}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {loading ? (
                 <>
@@ -649,8 +624,6 @@ if ( {) {
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 router.push('/checkout')
               }}
               disabled = {loading,}
@@ -851,12 +824,10 @@ ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
 
-=======
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
 
-=======
             
             {onRequestQuote && (
               <Button 
@@ -939,19 +910,9 @@ export default ProductListingCard;
 '"`;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

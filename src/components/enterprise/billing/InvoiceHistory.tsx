@@ -1,7 +1,4 @@
-
-
-
-  Table;
+Table;
   TableBody;
   TableCell;
   TableHead;
@@ -18,7 +15,6 @@ import { Badge } from "@/components/ui/badge"
 import { Download, FileText, Search } from 'lucide-react'import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
 
-=======
 import React from "react";
 import {
 
@@ -30,7 +26,6 @@ import {
   TableHead,
   TableHeader,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   TableRow} from "@/components/ui/table",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -41,7 +36,6 @@ import { Input } from "@/components/ui/input",
 import { toast } from "@/hooks/use-toast",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function InvoiceHistory() {
   // Mock invoice data
 
@@ -104,12 +98,10 @@ function InvoiceHistory() {
   const getBadgeForStatus = (status: string, ) =>: any {
     switch (status) {
 
-=======
 
       id: "INV-1234",
       date: "May 1, 2025",
       amount: "$1,999.00",
-=======
       id: "INV-1234",
 
       status: "paid",
@@ -146,8 +138,6 @@ function InvoiceHistory() {
       title: "Downloading invoice"
       description: `Downloading invoice ${invoiceId} as PDF.`})
 
-=======
-=======
       date: "Dec 1, 2024",
       amount: "$1,999.00",
       status: "paid",
@@ -312,14 +302,10 @@ export function InvoiceHistory() {;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
         return <Badge variant="outline">{status}</Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
   )
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       case "paid": return <Badge className="bg - green - 500">Paid</Badge>;
         return <Badge variant="destructive">Overdue</Badge>;
       default:;
@@ -328,11 +314,6 @@ export function InvoiceHistory() {;
   );
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

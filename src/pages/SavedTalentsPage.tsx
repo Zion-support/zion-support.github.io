@@ -1,6 +1,4 @@
-
-
-        }
+}
 
         const { data, error } = await supabase;
           .from ('saved_talents');
@@ -60,10 +58,8 @@ if ( {) {
 
   const handleRequestHire = (talent: TalentProfile) =>: any {
     log_info ('Request to hire:', { data: talent });    toast ({
-=======
 
 
-=======
           .eq("user_id", user.id),
 
         if (error) {
@@ -181,7 +177,6 @@ export default function SavedTalentsPage() {;
   };
   const handleRequestHire = (talent: TalentProfile) => {;
     logInfo('Request to hire:', { data: talent });    toast({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
     });
@@ -230,18 +225,13 @@ if ( {) {
 
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
-=======
-=======
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         if (error) {
           throw error
         }
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Fetch the updated talent profile and add it to the list
         const { data: talentData, error: talentError } = await supabase
           .from('talent_profiles')
@@ -309,11 +299,9 @@ export default function SavedTalentsPage() {;
           error instanceof Error ? error : undefined,;
           { message: 'Error fetching saved talents' }
         );
-=======
 
           return;
 
-=======
           .single(),
   
         if (talentError) {
@@ -332,7 +320,6 @@ export default function SavedTalentsPage() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -347,7 +334,6 @@ export default function SavedTalentsPage() {;
 
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -358,7 +344,6 @@ export default function SavedTalentsPage() {;
               title="No Saved Talents"
               description="You haven't saved any talents yet."
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
@@ -372,7 +357,6 @@ export default function SavedTalentsPage() {;
         setSavedTalents(prevTalents =>;
           prevTalents.filter(talent => talent.id !== talentId);
         ),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         toast({;
           title: 'Error',;
           description: 'Failed to load saved talents. Please try again later.',;
@@ -481,8 +465,6 @@ export default function SavedTalentsPage() {;
         description: 'Failed to update saved talents. Please try again later.',;
         variant: 'destructive',;
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         // Fetch the updated talent profile and add it to the list;
         const { data: talent_data, error: talent_error } = await supabase;
           .from ('talent_profiles');
@@ -533,7 +515,6 @@ if ( {) {
         description: 'Failed to update saved talents. Please try again later.',
         variant: 'destructive',
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -571,7 +552,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
@@ -693,7 +673,6 @@ toast ({;
 };'";
 return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents && savedTalents.length === 0 ? (<div className="py-8" > <EmptyState<TalentCard key= {
   talent && talent.id 
-=======
   user id: user.id, talent id: talent_id;
 }]);
 // Check condition
@@ -720,10 +699,7 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }onRequestHire= {
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   handleRequestHire;
 }is_authenticated= {
   !!user;
@@ -731,15 +707,9 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>);
 }</div> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </div>;
     </>;
   );
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

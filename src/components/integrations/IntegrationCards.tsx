@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface IntegrationCardProps {
   title: string
   description: string
@@ -27,10 +24,8 @@ import {;
   Briefcase,;
   Users,;
 } from 'lucide-react';
-=======
 
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface IntegrationCardProps {;
   title: string;
@@ -50,8 +45,6 @@ export function IntegrationCard({
   status = "disconnected",
   href,
   onConnect}: IntegrationCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className='overflow-hidden'>;
       <CardHeader className='pb-2'>;
@@ -109,7 +102,6 @@ interface IntegrationCardProps {
   status?: "connected" | "disconnected" | "pending"
   href?: string
   onConnect?: () => void
-=======
               className='flex items-center gap-1'>;
               <span>Manage</span>;
               <ExternalLink className='h-3 && 3.5 w-3 && 3.5' />;
@@ -120,7 +112,6 @@ interface IntegrationCardProps {
             <span>Connect</span>;
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
-=======
 
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
@@ -130,7 +121,6 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
@@ -141,7 +131,6 @@ interface IntegrationCardProps {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function IntegrationCard(): any ({;
@@ -196,7 +185,6 @@ export function IntegrationCard(): any ({;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
 
-=======
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -216,10 +204,8 @@ export function IntegrationCard(): any ({;
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         )}
 
-=======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
           </Button>;
         )}
@@ -232,12 +218,10 @@ export function IntegrationCard(): any ({;
 
 
 export function IntegrationCards() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
 
-=======
   );
 }
 
@@ -245,7 +229,6 @@ export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
       <IntegrationCard
-=======
 
 
         title="Slack"
@@ -253,8 +236,6 @@ export function IntegrationCards() {
         icon={<Slack className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Slack clicked')}
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
@@ -263,15 +244,12 @@ export function IntegrationCards() {
 
 
         onConnect={() => logDebug('Connect Salesforce clicked')}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
     </div>
   )
-=======
       />;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
@@ -285,7 +263,6 @@ export function IntegrationCards() {
 }
 
 
-=======
       />;
     </div>;
   );
@@ -294,7 +271,6 @@ export function IntegrationCards() {
   );
 }
 
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -460,10 +436,4 @@ function IntegrationCards() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,4 @@
-
-
-  }
+}
 });
 interface ProductGalleryProps {
 
@@ -113,7 +111,6 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -203,7 +200,6 @@ function ProductGallery() {
                   src={model_url}
                   alt='3d model';
                   camera - controls;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   style={{ width: '100%', height: '100%' }}
                 />;
               </Suspense>;
@@ -221,14 +217,12 @@ function ProductGallery() {
 
     </Dialog>;
   );
-=======
 
     </Dialog>;
   );
 };
 };
 
-=======
 import React, { useState, Suspense } from 'react',;
 import {;
   Dialog,;
@@ -250,13 +244,10 @@ interface ProductGalleryProps {;
   modelUrl?: string;
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }
-=======
 
-=======
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -275,7 +266,3 @@ interface ProductGalleryProps {;
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

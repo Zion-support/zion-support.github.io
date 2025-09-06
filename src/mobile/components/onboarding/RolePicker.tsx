@@ -1,6 +1,4 @@
-
-
-          className={`cursor-pointer transition-all ${
+className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
@@ -24,7 +22,6 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = "talent" | "client" | null,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
@@ -42,7 +39,6 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
       </p>;
 
       <div className='space-y-3 mt-6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent'
@@ -94,7 +90,6 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
                 <Check className='h-5 w-5 text-primary' />;
               )}
 
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -170,16 +165,7 @@ function RolePicker() {
       </div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

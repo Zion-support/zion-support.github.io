@@ -1,6 +1,4 @@
-
-
-  summary: string | undefined;
+summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
@@ -105,8 +103,3 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

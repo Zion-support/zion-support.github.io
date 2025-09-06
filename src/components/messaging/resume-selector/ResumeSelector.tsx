@@ -1,6 +1,4 @@
-
-
-  // Fetch resume data when component mounts
+// Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
 
@@ -31,12 +29,9 @@ function ResumeSelector() {
     const load_resumes = async () => {
       setIsLoading (true);
 
-=======
 
       setIsLoading(true),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       try {
         await fetch_resume ();
       } catch (error) {
@@ -58,7 +53,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   const { resume, fetchResume } = useResume();
 
-=======
         setIsLoading(false)
 
   ;
@@ -66,7 +60,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   );
 };
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
@@ -106,17 +99,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

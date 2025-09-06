@@ -1,6 +1,3 @@
-
-
-
 interface AIMilestoneGeneratorProps {;
   scope: string;
   startDate: string;
@@ -21,7 +18,6 @@ interface AIMilestoneGeneratorProps {;
       startDate
       endDate
       projectType
-=======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -70,7 +66,6 @@ if ( {) {
       start_date,
       end_date,
       project_type,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     await generate_milestones (input);
     // Initially select all milestones;
@@ -103,11 +98,9 @@ if ( {) {
       return format (parseISO (date_string), 'MMM dd, yyyy');
     } catch (error) {
 
-=======
       return dateString
     }
   }
-=======
 
 
 
@@ -194,7 +187,6 @@ export function AIMilestoneGenerator(): any ({;
       return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {;
       return dateString;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -202,7 +194,6 @@ export function AIMilestoneGenerator(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;
@@ -215,7 +206,6 @@ export function AIMilestoneGenerator(): any ({;
 
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
-=======
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
@@ -223,7 +213,6 @@ export function AIMilestoneGenerator(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -297,7 +286,6 @@ export function AIMilestoneGenerator(): any ({;
                             variant='secondary'
                             className='ml-2 flex items-center'>;
                             <Sparkles className='w-3 h-3 mr-1' />;
-=======
       return date_string;
     }
   }
@@ -359,7 +347,6 @@ export function AIMilestoneGenerator(): any ({;
                             className='ml - 2 flex items - center';
                           >;
                             <Sparkles className='w - 3 h - 3 mr - 1' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             AI Suggested;
                           </Badge>;
                         </div>;
@@ -402,7 +389,6 @@ export function AIMilestoneGenerator(): any ({;
                     <Button
 
 
-=======
                       variant="ghost"
                       size="sm"
                       onClick={(e) => {
@@ -412,8 +398,6 @@ export function AIMilestoneGenerator(): any ({;
                       className="mr-2"
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     >
                       <Plus className='h-4 w-4' />
                     </Button>
@@ -455,10 +439,8 @@ export function AIMilestoneGenerator(): any ({;
                 </AccordionItem>;
 
               ))}
-=======
               ))}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Accordion>;
           </CardContent>;
         </Card>;
@@ -468,7 +450,6 @@ export function AIMilestoneGenerator(): any ({;
   );
 }
 
-=======
                     <Button;
                       variant='ghost';
                       size='sm';
@@ -498,8 +479,3 @@ export function AIMilestoneGenerator(): any ({;
         </Card>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

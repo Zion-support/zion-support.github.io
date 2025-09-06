@@ -1,8 +1,5 @@
-
-
-          {quickLinks.map((link, index) => (
+{quickLinks.map((link, index) => (
             <Link
-=======
 import React from 'react';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
@@ -78,7 +75,6 @@ function QuickAccess() {
         <div className='grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 gap - 4 max - w-6xl mx - auto'>;
           {quick_links.map ((link, index) => (
             <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               key={index}
               href={link.link}
 
@@ -98,7 +94,6 @@ function Page() {";
     { name: "Innovation", count: 10, color: "from - green - 500 to - teal - 500" }, ";
     { name: "Business", count: 14, color: "from - indigo - 500 to - purple - 500" }      scale: 1,
 
-=======
 
 import { motion  } from 'framer-motion';
 export default function Page() {";
@@ -106,7 +101,6 @@ export default function Page() {";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       transition: {
         duration: 0.5, ";
         ease: "ease_out"}}}
@@ -507,13 +501,11 @@ export default function Page() {;";
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>;
               </motion && motion.div>;
             </motion && motion.div>;
-=======
 
 
 export default QuickAccess;
 ;
 
-=======
               className="group bg-zion-blue relative border border-zion-blue-light hover:border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
             >
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
@@ -538,10 +530,7 @@ export default QuickAccess;}
 export default QuickAccess;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   { opacity: 0,
   scale: 0.8;
 }}
@@ -578,10 +567,3 @@ export default QuickAccess;
     </section>);
 export default QuickAccess }
 export default QuickAccess;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

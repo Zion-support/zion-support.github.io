@@ -1,12 +1,11 @@
+import React from 'react';
 
+const PdfExportButton = () => {
+  return (
+    <div>
+      {/* PdfExportButton component */}
+    </div>
+  );
+};
 
-
-=======
-}
-}
-
-;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default PdfExportButton;

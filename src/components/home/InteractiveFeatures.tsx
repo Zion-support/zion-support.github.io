@@ -1,5 +1,3 @@
-
-
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next / link';
 import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
@@ -52,10 +50,7 @@ function InteractiveFeatures() {
   ];
   const handle_toggle = (index: number) =>: any {
     setOpenIndex (prev => (prev === index ? null : index));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -145,7 +140,6 @@ export function InteractiveFeatures(): any ({;
   const handleToggle = (index: number) => {;
     setOpenIndex(prev => (prev === index ? null : index));
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
@@ -153,7 +147,6 @@ export function InteractiveFeatures(): any ({;
             <Card;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={index}
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
@@ -178,7 +171,6 @@ export function InteractiveFeatures(): any ({;
 
                   'transition-all duration-300',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   openIndex === index
                     ? 'max-h-48 opacity-100 p-6 pt-0'
                     : 'max-h-0 opacity-0 p-0'
@@ -193,7 +185,6 @@ export function InteractiveFeatures(): any ({;
                       href={feature && feature.link}
                       className='flex items-center gap-1'>;
                       Learn more <ArrowRight className='h-4 w-4' />;
-=======
 
                   "transition-all duration-300",
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
@@ -219,29 +210,18 @@ export default InteractiveFeatures;
 }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         </div>;
       </div>;
     </section>;
   );
 
-=======
 
 
-=======
             </Card>))}
         </div>;
       </div>;
     </section>);
 export default InteractiveFeatures;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
 export default InteractiveFeatures;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

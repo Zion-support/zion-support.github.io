@@ -1,16 +1,12 @@
-
-
-    return (
+return (
       <div className='flex'>;
         {[1, 2, 3, 4, 5].map(star => (;
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
           />;
-=======
 
 import {  Dialog,  Dialog,
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -43,9 +39,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-=======
           />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
 
@@ -63,7 +57,6 @@ import {
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Star, Flag, User } from 'lucide-react';
 import { Review } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -147,7 +140,6 @@ if (return null) {
       .join ("");
       .toUpperCase ();
       .substring (0, 2);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
 
@@ -157,7 +149,6 @@ if (return null) {
           {review.is_anonymous ? (
 
   }
-=======
       </div>;
     );
   },;
@@ -181,7 +172,6 @@ if (return null) {
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
-=======
     <div className="border rounded - lg p - 4 bg - card">;
       <div className="flex justify - between items - start mb - 3">;
         <div className="flex items - center gap - 3">;
@@ -201,9 +191,7 @@ if (return null) {
                   {review && review.reviewer_profile?.display_name ? ;
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
-=======
                 </AvatarFallback>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               )}
             </Avatar>;
           )}
@@ -216,7 +204,6 @@ if (return null) {
 
 
       
-=======
 
               </Badge>
             )}
@@ -236,7 +223,6 @@ if (return null) {
                 </span>
               </Badge>
             )}
-=======
               <Badge variant='outline' className='flex gap - 1 items - center'>;
                 Communication;
                 <span className='ml - 1 text - yellow - 500'>;
@@ -257,7 +243,6 @@ if (return null) {
                   {review.timeliness_rating}/5;
                 </span>;
               </Badge>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {review.would_work_again !== undefined && (
               <Badge;
                 variant={review.would_work_again ? 'default' : 'secondary'}
@@ -285,7 +270,6 @@ if (return null) {
 
 
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
             {review.communication_rating && (
@@ -330,8 +314,6 @@ if (return null) {
             {review.would_work_again !== undefined && (
               <Badge;
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Badge>
             )}
             {review.quality_rating && (
@@ -354,7 +336,6 @@ if (return null) {
 
               <Badge 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg - green - 100 text - green - 800 hover:bg - green - 200" : "bg - gray - 100 text - gray - 800 hover:bg - gray - 200"}`}
               >;
@@ -473,7 +454,6 @@ if (return null) {
                 className={`${review && review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}>;
                 {review && review.would_work_again ? "Would work again" : "Would not work again"}
               </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             )}
           </div>;
         </div>;
@@ -488,9 +468,7 @@ if (return null) {
           <DialogTrigger asChild>
             <Button variant='ghost' size='sm' className='text-muted-foreground'>
               <Flag className='h-3 w-3 mr-1' />              Report
-=======
       
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -499,12 +477,9 @@ if (return null) {
 
               Report
 
-=======
               Report
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>
           </DialogTrigger>
           <DialogContent>
@@ -519,7 +494,6 @@ if (return null) {
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
-=======
 
       <div className='mt-3 flex justify-end'>;
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>;
@@ -531,7 +505,6 @@ if (return null) {
           <DialogTrigger asChild>;
             <Button variant="ghost" size="sm" className="text-muted-foreground">;
               <Flag className="h-3 w-3 mr-1" />;
-=======
               </Badge>)}
           </div>;
         </div>)}
@@ -545,7 +518,6 @@ if (return null) {
           <DialogTrigger as_child>;
             <Button variant="ghost" size="sm" className="text - muted - foreground">;
               <Flag className="h - 3 w - 3 mr - 1" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
@@ -570,7 +542,6 @@ if (return null) {
 
 
 
-=======
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -583,7 +554,6 @@ if (return null) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="min-h-[100px]"
             />
             
@@ -602,7 +572,6 @@ if (return null) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </DialogFooter>
           </DialogContent>
@@ -618,7 +587,6 @@ if (return null) {
     </div>;
   );
 
-=======
               <DialogTitle > Report Review</DialogTitle>;
               <DialogDescription>;
                 If you believe this review violates our community guidelines,
@@ -691,9 +659,3 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
   !report_reason.trim () || is_reporting;
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

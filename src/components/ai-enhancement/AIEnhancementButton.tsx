@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const handleEnhance = async () => {
+const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
       toast({
@@ -11,7 +8,6 @@
 
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-=======
 
       }),
       return
@@ -68,7 +64,6 @@ if ( {) {
       toast ({
         title: "Content applied",
         description: "AI - enhanced content has been applied."});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
   const handle_regenerate = async () => {
@@ -144,7 +139,6 @@ export function AIEnhancementButton(): any ({;
     }
 
 
-=======
   },
   
   const handleRegenerate = async () => {
@@ -158,9 +152,7 @@ export function AIEnhancementButton(): any ({;
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (showActions) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -228,7 +220,6 @@ export function AIEnhancementButton(): any ({;
 }</Button>) ;
 }"}
 
-=======
   // Check condition
 if ( {) {
   $2
@@ -292,9 +283,6 @@ if ( {) {
 }return (<Button) : (<Sparkles className=" h - 4 w - 4" />);
 }</Button>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
     >
@@ -304,6 +292,3 @@ if ( {) {
         <Sparkles className="h-4 w-4" />
       )}
       <span className="text-xs">{buttonText}</span>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

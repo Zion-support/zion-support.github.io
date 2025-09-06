@@ -1,13 +1,7 @@
-
-
-=======
-
-
-    }
+}
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>;
@@ -47,7 +41,6 @@
             size="sm" 
 
             onClick = {handleViewProfile,}
-=======
           
           <Button 
             variant="outline" 
@@ -56,7 +49,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
@@ -96,7 +88,6 @@
         onClose = {() => setIsHireModalOpen(false),}
         userDetails = {userProfile,}
 
-=======
 
       
       {/* Hire Request Modal */}
@@ -112,10 +103,7 @@
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { use_router } from 'next / router';
 interface TalentCardFooterProps {
   profile: TalentProfile,
@@ -216,10 +204,4 @@ if ( {) {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

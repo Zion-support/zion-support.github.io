@@ -1,5 +1,3 @@
-
-
 }
 }
 }
@@ -38,7 +36,6 @@ export const usePerformanceMetrics = () => {
   return { metrics, recordRender }
 }
 
-=======
 import React from 'react';
 
 export default function PerformanceOptimized() {
@@ -200,7 +197,6 @@ export const: OptimizedImage: React.FC<{,;
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Debounced search hook
 export const useDebouncedSearch = (value: string, delay: number = 300) => {
   const [debouncedValue, setDebouncedValue] = React.useState(value)
@@ -208,7 +204,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
     const handler = setTimeout(() => {
       setDebouncedValue(value)
     }, delay)
-=======
 // Debounced search hook;
 export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {,
   const [debounced_value, setDebouncedValue] = React.useState (value);
@@ -216,7 +211,6 @@ export const useDebouncedSearch = (value: string, delay: number = 300) =>: any {
     const handler = set_timeout (() => {
       setDebouncedValue (value);
     }, delay);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return () => {
       clear_timeout (handler);
 }
@@ -269,7 +263,6 @@ export const usePerformanceMetrics = () = > {; const [metrics, setMetrics] = Rea
 };
 
 
-=======
 import React, { memo, useMemo, useCallback } from 'react',
 ,
 // Higher-order component for performance optimization,
@@ -324,7 +317,6 @@ export const useStableCallback = <T extends (...args: any[]) => any>(,
   return { metrics, recordRender };
 };
 
-=======
 ,
 // Image optimization component,
 export const OptimizedImage: React.FC<{,
@@ -410,11 +402,8 @@ export const usePerformanceMetrics = () => {,
     })),
   }, []),
 ,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return { metrics, recordRender };
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 // Performance metrics collection;
 export const usePerformanceMetrics = () =>: any {
   const [metrics, set_metrics] = React.useState ({
@@ -429,11 +418,5 @@ export const usePerformanceMetrics = () =>: any {
 }
   return { metrics, record_render }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 },
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

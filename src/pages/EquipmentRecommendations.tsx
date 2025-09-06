@@ -1,7 +1,3 @@
-
-
-
-
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -30,7 +26,6 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
-=======
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components/ProductListingCard';
 import {useAuth} from '@/hooks/useAuth';
@@ -58,12 +53,10 @@ export default function EquipmentRecommendations() {;
   const [listings, setListings] = useState<ProductListing[]>([]),;
   const [loading, setLoading] = useState<boolean>(false),;
   const [error, setError] = useState<boolean>(false),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   useEffect((,) => {;
     if (isAuthenticated && user?.id) {;
 
-=======
 import { useEffect, useState } from 'react';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useAuth } from '@/hooks/useAuth';
@@ -94,15 +87,12 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         .finally((,) => setLoading(false));
         .finally(() => setLoading(false));
 
-=======
         .finally(() => setLoading(false))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }, [isAuthenticated, user]);
 
   if (!isAuthenticated) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
 
@@ -115,13 +105,11 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
           </Button>
         </DialogContent>
       </Dialog>
     )
-=======
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>;
             <Link href='/auth/login?returnTo=/equipment/recommendations'>;
               Sign In;
@@ -131,19 +119,16 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
         </DialogContent>;
       </Dialog>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
 
       </div>;
     </div>;
   );
 
-=======
 import {useEffect, useState} from 'react';
 import {ProductListingCard} from '@/components / ProductListingCard';
 import {use_auth} from '@/hooks / use_auth';
@@ -235,11 +220,6 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import React, {;
@@ -49,11 +47,9 @@ const EnhancedLoading: React.FC<{;
         <div className='relative'>;
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className='absolute inset-0 rounded-full border-2 border-primary'
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
   progress?: number;
   message?: string;
   show_progress?: boolean;
@@ -77,7 +73,6 @@ const EnhancedLoading: React.FC<{;
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -87,7 +82,6 @@ const EnhancedLoading: React.FC<{;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -106,10 +100,8 @@ const EnhancedError: React.FC<{
             <AlertTriangle className="h-6 w-6 text-red-600" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
-=======
         </div>;
       </div>;
     </CardContent>;
@@ -131,7 +123,6 @@ const EnhancedError: React.FC<{;
             <AlertTriangle className='h-6 w-6 text-red-600' />;
           ) : (;
             <WifiOff className='h-6 w-6 text-red-600' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
         <div className='text-center'>;
@@ -147,7 +138,6 @@ const EnhancedError: React.FC<{;
           </p>;
           {retryCount > 0 && (;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
-=======
           </h3>
 
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
@@ -158,7 +148,6 @@ const EnhancedError: React.FC<{;
           </p>
           {retryCount > 0 && (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
@@ -177,7 +166,6 @@ const EnhancedError: React.FC<{;
 
             Try Again
           </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
             />)}
@@ -328,7 +316,6 @@ const useNetworkStatus = () =>: any {
       })
     }
           >
-=======
       </div>;
     </CardContent>;
   </Card>;
@@ -473,7 +460,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
     }
 
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EnhancedError
 
           error={loadingState.error}
@@ -487,7 +473,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Success state
   if (DynamicComponent) {
@@ -518,7 +503,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             className = {className,}>;
             <DynamicComponent {...props}>{children}</DynamicComponent>;
           </motion && motion.div>;
-=======
 
             className={className}
           >;
@@ -541,7 +525,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
 ) => {;
   return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     <DynamicComponentLoader
       importFn = {importFn,}
       {...(options |{})}
@@ -559,7 +542,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -748,7 +730,6 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // Note: These are examples - uncomment and install types as needed;
 // export const DynamicChartComponent = createDynamicComponent (
 //   (, ) => import ('recharts').then (module => ({ default: module.LineChart })),
-=======
 
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
 
@@ -764,7 +745,6 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 // );
 // export const DynamicThreeComponent = createDynamicComponent (
 //   (, ) => import ('three').then (module => ({ default: module.WebGLRenderer })),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 //   {
 //     loading_component: () => (
 //       <div className="w - full h - 96 bg - muted animate - pulse rounded - lg flex items - center justify - center">;
@@ -805,18 +785,10 @@ export const createDynamicComponent = <T extends ComponentType < any>>(
 
 export default DynamicComponentLoader;export default DynamicComponentLoader ;
 
-=======
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
 // );
 
 export default DynamicComponentLoader;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

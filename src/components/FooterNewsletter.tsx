@@ -1,7 +1,4 @@
-
-
-      {/* Honeypot field */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+{/* Honeypot field */}
       <input
 
         onChange={e => setHoneypot(e && e.target.value)}
@@ -15,7 +12,6 @@
         disabled={isSubmitting}
 
         className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
-=======
 
         type="text"
 
@@ -25,7 +21,6 @@
         tabIndex={-1}
 
 
-=======
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -35,7 +30,6 @@
         disabled={isSubmitting}
         className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
       >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {isSubmitting ? (;
           <>;
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
@@ -43,7 +37,6 @@
           </>;
         ) : (;
           'Subscribe';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
       </Button>;
     </form>;
@@ -52,7 +45,6 @@
 } ;
 } ;
 
-=======
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
@@ -176,10 +168,3 @@ if ( {) {
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

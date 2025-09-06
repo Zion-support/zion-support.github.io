@@ -1,7 +1,4 @@
-
-
-
-  return (
+return (
     <ApiDocsLayout>
       <div className='max-w-4xl'>
         <h1 className='text-4xl font-bold text-white mb-6'>
@@ -93,7 +90,6 @@ export function ApiDocsHub() {;
           Zion AI Marketplace API;
         </h1>;
         <p className='text-zinc-400 text-lg mb-12'>;
-=======
 import React from 'react';
 import Link from 'next / link';
 import {
@@ -153,7 +149,6 @@ function ApiDocsHub() {
           Zion AI Marketplace API;
         </h1>;
         <p className='text - zinc - 400 text - lg mb - 12'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Welcome to the Zion AI Marketplace API documentation. Here you'll find;
           comprehensive guides and documentation to help you start working with;
           our API as quickly as possible.;
@@ -189,8 +184,6 @@ function ApiDocsHub() {
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>
           <Link
             href='/developers/portal'
@@ -225,9 +218,7 @@ function ApiDocsHub() {
 
 
 
-=======
 
-=======
         <div className='grid gap - 6 md:grid - cols - 2'>;
           {sections.map (section => (
             <Link;
@@ -268,11 +259,6 @@ function ApiDocsHub() {
       </div>;
     </ApiDocsLayout>);
 export default ApiDocsHub;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </ApiDocsLayout>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

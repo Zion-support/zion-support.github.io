@@ -1,5 +1,3 @@
-
-
 export function DynamicListingPage({
 
   title,
@@ -9,7 +7,6 @@ export function DynamicListingPage({
   categoryFilters,
   initialPrice = { min: 0, max: 10000 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
@@ -22,7 +19,6 @@ export function DynamicListingPage({
   const isGrid = view === "grid",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className='h-4 w-4' />
@@ -33,7 +29,6 @@ export function DynamicListingPage({
 
 
     setCurrentPriceFilter([min, max])
-=======
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { GradientHeading } from '@/components / GradientHeading';
@@ -128,7 +123,6 @@ if ( {) {
   $2
 }
     setCurrentPriceFilter ([min, max]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   let filtered_listings: ProductListing[] = [];
   try {
@@ -136,7 +130,6 @@ if ( {) {
 
     filteredListings = allListings.filter(listing => {      const matchesSearch = null;
 
-=======
     <LayoutGrid className="h-4 w-4" />
   ),
   const [isLoading, setIsLoading] = useState(false),
@@ -217,8 +210,6 @@ if ( {) {
         selectedRating === null ||
         (listing.rating !== undefined && listing.rating >= selectedRating),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return (
         matchesSearch &&
         matchesCategory &&
@@ -310,7 +301,6 @@ if ( {) {
             category: listing.category
             image: listing.images?.[0]
           }
-=======
   const handleRequestQuote = (listing_id: string) =>: any {
     setIsLoading (true);
     const listing = all_listings.find (item => item.id === listing_id);
@@ -332,7 +322,6 @@ if ( {) {
             category: listing.category,
             image: listing.images?.[0],
           },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
         // Check condition
 if ( {) {
@@ -537,10 +526,8 @@ export function DynamicListingPage(): any ({;
       }
     }, 500);
   }
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug
@@ -550,7 +537,6 @@ export function DynamicListingPage(): any ({;
             title: listing.title,
             category: listing.category,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -566,13 +552,11 @@ export function DynamicListingPage(): any ({;
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Categories
                 </label>
                 <div className='space-y-2'>
                   {categoryFilters.map(filter => (
 
-=======
                     <div key={filter.value} className="flex items-center">
                       <Checkbox
                         id={`cat-${filter.value}`}
@@ -621,7 +605,6 @@ export function DynamicListingPage(): any ({;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
             {description}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>;
         </div>;
 
@@ -655,7 +638,6 @@ export function DynamicListingPage(): any ({;
                         {filter.label}
                       </label>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </div>;
@@ -674,7 +656,6 @@ export function DynamicListingPage(): any ({;
                           className='text-white'>                          {b || 'N/A'}
                         </SelectItem>;
 
-=======
 
                     value={selectedBrand}
                     onValueChange={(value: string) => setSelectedBrand(value)}
@@ -691,15 +672,12 @@ export function DynamicListingPage(): any ({;
                           {b || 'N/A'}
                         </SelectItem>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </SelectContent>;
                   </Select>;
                 </div>;
               )}
 
-=======
 
 
 
@@ -707,7 +685,6 @@ export function DynamicListingPage(): any ({;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                   Specifications;
                 </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Input
 
 
@@ -722,14 +699,12 @@ export function DynamicListingPage(): any ({;
                 />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               {availabilityOptions.length > 0 && (
                 <div className='mb-6'>
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                     Availability
                   </label>
-=======
                   className='bg-zion-blue border border-zion-blue-light text-white'                />;
               </div>;
 
@@ -738,7 +713,6 @@ export function DynamicListingPage(): any ({;
                   <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                     Availability;
                   </label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Select
 
                           key={a || 'unknown-availability'}
@@ -746,14 +720,12 @@ export function DynamicListingPage(): any ({;
                           className='text-white'>                          {a || 'N/A'}
                         </SelectItem>;
 
-=======
 
                     value={selectedAvailability}
                     onValueChange={(value: string) =>;
                       setSelectedAvailability(value);
                     }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
                     <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
@@ -768,8 +740,6 @@ export function DynamicListingPage(): any ({;
                           {a || 'N/A'}
                         </SelectItem>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </SelectContent>;
                   </Select>;
@@ -785,14 +755,12 @@ export function DynamicListingPage(): any ({;
                   Price Range
                 </label>
                 <div className='mt-6 px-2'>
-=======
 
               <div className='mb-6'>;
                 <label className='text-sm font-medium text-zion-slate-light block mb-2'>;
                   Price Range;
                 </label>;
                 <div className='mt-6 px-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Slider
 
 
@@ -800,7 +768,6 @@ export function DynamicListingPage(): any ({;
 
 
                     defaultValue={[0, priceRange.max]}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     min={0}
                     max={priceRange && priceRange.max}
                     step={priceRange && priceRange.max / 100}
@@ -813,7 +780,6 @@ export function DynamicListingPage(): any ({;
                   <div className="flex justify-between text-sm text-zion-slate-light">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
                     <span>${currentPriceFilter[1].toLocaleString()}</span>
                   </div>
@@ -859,7 +825,6 @@ export function DynamicListingPage(): any ({;
                             <Star
                               key={i}
                               className='h-3 w-3 fill-zion-cyan text-zion-cyan'                            />;
-=======
 
 
               <div className="mb-6">
@@ -878,7 +843,6 @@ export function DynamicListingPage(): any ({;
                       }}
                       aria-pressed={selectedRating === rating}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
@@ -896,8 +860,6 @@ export function DynamicListingPage(): any ({;
                               className="h-3 w-3 fill-zion-cyan text-zion-cyan"
                             />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ))}
                           <span className='ml-1'>& Up</span>;
                         </div>;
@@ -916,7 +878,6 @@ export function DynamicListingPage(): any ({;
                   setSelectedAvailability("all")
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }}
               >
                 Clear All
@@ -940,7 +901,6 @@ export function DynamicListingPage(): any ({;
                   setSpecQuery('');
                   setSelectedAvailability('all');
                 }}
-=======
     <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
       <div className='container mx - auto'>;
         <div className='text - center mb - 12'>;
@@ -1109,7 +1069,6 @@ export function DynamicListingPage(): any ({;
                   setSelectedAvailability ('all');
                 }}
 
-=======
 
 
           <div className="lg:col-span-3">
@@ -1135,7 +1094,6 @@ export function DynamicListingPage(): any ({;
                   setSpecQuery(""),;
                   setSelectedAvailability("all");
                 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >;
                 Clear All;
               </Button>;
@@ -1162,7 +1120,6 @@ export function DynamicListingPage(): any ({;
                 <div className="flex items-center gap-2 ml-auto">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Select value={sortOption} onValueChange={setSortOption}>
                     <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
                       <SelectValue placeholder='Sort' />
@@ -1206,7 +1163,6 @@ export function DynamicListingPage(): any ({;
                         Price: High to Low;
                       </SelectItem>;
                       <SelectItem value='rating' className='text-white'>;
-=======
           <div className='lg:col - span - 3'>;
             <div className='bg - zion - blue - dark rounded - lg p - 4 mb - 6 border border - zion - blue - light'>;
               <div className='flex flex - col md:flex - row gap - 4'>;
@@ -1255,7 +1211,6 @@ export function DynamicListingPage(): any ({;
                   >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {ToggleViewIcon}
                     <span className='sr-only'>;
                       {isGrid ? 'List view' : 'Grid view'}
@@ -1266,7 +1221,6 @@ export function DynamicListingPage(): any ({;
               <p className="text-zion-slate-light">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Showing {filteredListings.length} results
                 {selectedCategories.length > 0 &&
                   ` in ${selectedCategories.join(', ')}`}
@@ -1274,8 +1228,6 @@ export function DynamicListingPage(): any ({;
               </p>
             </div>
             {isLoading ? (
-=======
-=======
                   <Button;
                     variant='outline';
                     size='icon';
@@ -1286,7 +1238,6 @@ export function DynamicListingPage(): any ({;
                     {ToggleViewIcon}
                     <span className='sr - only'>;
                       {is_grid ? 'List view' : 'Grid view'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </Button>;
                 </div>;
@@ -1350,11 +1301,9 @@ export function DynamicListingPage(): any ({;
                         <Skeleton height={24} width="25%" />
                         <Skeleton height={32} width="25%" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
@@ -1377,7 +1326,6 @@ export function DynamicListingPage(): any ({;
                   />;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>;
             ) : (;
@@ -1392,7 +1340,6 @@ export function DynamicListingPage(): any ({;
 
 
 
-=======
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -1407,7 +1354,6 @@ export function DynamicListingPage(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   Clear All
                 </Button>
@@ -1477,7 +1423,6 @@ setSelectedRating (null)"> Clear All </Button> </div> </div> <div className="lg:
 }</div> > {;
   filteredListings && filteredListings.map ( (listing) => (<ProductListingCardkey= {
   listing && listing.id 
-=======
                   </div>))}
               </div>) : filtered_listings.length > 0 ? (
               <div;
@@ -1636,15 +1581,11 @@ setSelectedRating (null)
 }</div> </div> </div> </div>)
 }'"  )
 }
-=======
 
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   detailBasePath;
 }/>) ) ";
 }</div> No listings found </h3> <p className="text - zion - slate - light mb - 6" > Try adjusting your filters or search query </p> <Button clear_categories ();
@@ -1656,7 +1597,3 @@ setSelectedRating (null);
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

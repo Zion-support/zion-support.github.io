@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -15,7 +13,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
-=======
 import * as React from 'react';
 import {
   RefreshCw,
@@ -30,7 +27,6 @@ import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type:;
     | 'products';
     | 'categories';
@@ -41,9 +37,7 @@ export interface EmptyStateProps {
     | 'network';
     | 'loading';
 
-=======
 
-=======
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -104,13 +98,8 @@ const defaultContent = {
 
       
 
-=======
 
-=======
       
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {type === 'error' && (
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>If this issue continues, please contact our support team.</p>
@@ -249,7 +238,6 @@ export function ProductsEmptyState ({
             {t('general && general.check_status_page')}{' '}
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
-=======
 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -281,7 +269,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 
-=======
             {t('general.check_status_page')}
             {" "}
             <Link href="https://status.zion.ai" className="underline">
@@ -308,13 +295,11 @@ export function ProductsEmptyState(): any ({;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
         onClick: onAddProduct,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }
 
       : undefined;
-=======
 
   return (
     <EmptyState
@@ -358,11 +343,8 @@ export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) 
 } ;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',
         on_click: onAddProduct,
       }
@@ -387,9 +369,3 @@ export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

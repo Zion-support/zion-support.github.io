@@ -1,8 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  body: string
-=======
+body: string
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components / ui / button';
@@ -23,7 +19,6 @@ const initial_posts: DiscussionPost[] = [;
     id: 1,  time: string,
   title: string,
   body: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 const initial_posts: DiscussionPost[] = [;
   {
@@ -66,8 +61,6 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew (false);
 
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState, useMemo } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -130,18 +123,15 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew(false);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
               className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle,
 
         body: newBody},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ...posts])
     setNewTitle("")
     setNewBody("")
     setShowNew(false)
-=======
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
@@ -180,7 +170,6 @@ export const CommunityDiscussion: React.FC = () => {;
     setNewTitle ("");
     setNewBody ("");
     setShowNew (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
@@ -201,7 +190,6 @@ export const CommunityDiscussion: React.FC = () => {;
       {
         id: Date.now(),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -223,7 +211,6 @@ export const CommunityDiscussion: React.FC = () => {;
         >
           {showNew ? "Cancel" : "New Post"}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </Button>
       </div>
       {showNew && (
@@ -290,7 +277,6 @@ export const CommunityDiscussion: React.FC = () => {;
     setShowNew(false);
   };
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
@@ -309,7 +295,6 @@ export const CommunityDiscussion: React.FC = () => {;
           size="sm";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={() => setShowNew((v) => !v)}
         >;
           {showNew ? "Cancel" : "New Post"}
@@ -339,14 +324,12 @@ export const CommunityDiscussion: React.FC = () => {;
                 size="sm"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
 
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
                 disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
-=======
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
         <MessageCircle size={28} className="text - zion - cyan" />;
@@ -452,7 +435,6 @@ export const CommunityDiscussion: React.FC = () => {;
   );
 };
 
-=======
         </Card>)}
       <div className='flex flex - col gap - 6'>;
         {posts.map (post => (
@@ -531,9 +513,3 @@ export const CommunityDiscussion: React.FC = () => {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

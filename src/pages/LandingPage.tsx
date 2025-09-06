@@ -1,18 +1,13 @@
-
-
-  BarChart3,;
+BarChart3,;
   Smartphone,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
 
-=======
 
 
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-=======
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",
@@ -40,7 +35,6 @@ export default function LandingPage() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -87,7 +81,6 @@ export default function LandingPage() {
       link: '/mobile-launch',;
     },;
 
-=======
 export default /**
  * LandingPage - Function description
  */
@@ -134,7 +127,6 @@ function LandingPage() {
       icon: <Smartphone className='h - 6 w - 6 text - zion - purple' />,
       link: '/mobile - launch',
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -187,7 +179,6 @@ function LandingPage() {
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
 
-=======
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -219,7 +210,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
     {
       title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,
-=======
 
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
@@ -286,7 +276,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -332,12 +321,10 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <FeaturesGuideSection />;
 
 
-=======
 
 ;
 
 
-=======
     <div className='min - h-screen bg - zion - blue text - white'>;
       <SEO;
         title={t ('home.seo_title')}
@@ -401,8 +388,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <BenefitsSection />;
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
@@ -410,7 +395,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <BlogSection />;
 
 
-=======
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />;
       {/* Add social share section to encourage users to spread the word */}
@@ -418,10 +402,4 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <FloatingCTA />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

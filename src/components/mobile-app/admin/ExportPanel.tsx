@@ -1,6 +1,3 @@
-
-
-
 import React from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -116,7 +113,6 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
               </Button>;
               <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
                 <Download className="mr-2 h-4 w-4" />;
-=======
       // Create download link;
       const blob = new Blob ([content], { type: format === 'json' ? 'application / json' : 'text / csv' }),
       const url = URL.createObjectURL (blob),
@@ -176,20 +172,7 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
       </CardContent>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

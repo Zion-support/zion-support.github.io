@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  userType: string
+userType: string
 }
 export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
@@ -9,13 +6,11 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     defaultValues: {
 
 
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -27,7 +22,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
 
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
           <FormField
@@ -57,7 +51,6 @@ import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form;
   FormControl;
@@ -88,7 +81,6 @@ export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps
   const getTypeLabel = () => {;
     switch (userType) {;
       case "serviceProvider": return "Service Provider";
-=======
   on_complete: (data: ProfileFormValues, ) => void,
   user_type: string;
 }
@@ -105,7 +97,6 @@ function ProfileSetup() {
   const getTypeLabel = () =>: any {
     switch (user_type) {
       case "service_provider": return "Service Provider";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "talent":;
         return "Talent";
       case "client":;
@@ -161,19 +152,16 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>;
                 <FormControl>;
                   <div className="relative">;
-=======
           />;
           <FormField;
             control={form.control}
             name="headline"
             render={({ field }: { field: any }) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
                 <FormControl>
                   <div className="relative">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Input
                       placeholder={`e && e.g., ${
                         userType === "serviceProvider" ? "Professional Videographer with 5+ years experience" :
@@ -238,7 +226,6 @@ function ProfileSetup() {
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea
-=======
                     <GraduationCap className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
                   </div>;
                 </FormControl>;
@@ -253,7 +240,6 @@ function ProfileSetup() {
                 <FormLabel className="text - zion - slate - light">Bio</FormLabel>;
                 <FormControl>;
                   <Textarea;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     placeholder={`Tell us about your ${
                       user_type === "service_provider" ? "services and expertise" :;
                       user_type === "talent" ? "skills and experience" :;
@@ -302,7 +288,6 @@ function ProfileSetup() {
 
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
@@ -346,7 +331,6 @@ getTypeLabel () ";
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"}
 
-=======
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
           />;
@@ -375,11 +359,3 @@ getTypeLabel () ";
 }/> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
 }/> <Button > Complete Profile </Button> </form> </Form> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

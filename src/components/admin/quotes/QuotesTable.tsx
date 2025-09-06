@@ -1,7 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 }
 export const QuotesTable: React.FC<QuotesTableProps> = ({
 
@@ -16,7 +12,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
-=======
   quotes,
   isArchived = false,
   isLoading,
@@ -26,8 +21,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
   deleteQuote,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onViewDetails
 },) => {
   return (
@@ -73,7 +66,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                   {quote.talent_name |'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
-=======
   quotes;
   is_archived = false;
 import React from './react';
@@ -148,7 +140,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>;
                 <TableCell className="text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {quote.requester_name}
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -172,7 +163,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {isArchived ? (
                       <>
                         <Button
@@ -206,7 +196,6 @@ import { ;
 } from "@/components/ui/dropdown-menu";import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import {formatDate} from "@/utils/dateUtils";
-=======
                           size="icon"
                           className="text-red-500"
                           onClick={() => {
@@ -281,7 +270,6 @@ import {;
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 import { formatDate } from "@/utils/dateUtils",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
   isArchived?: boolean;
@@ -384,7 +372,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </Button>;
                         <Button
                           variant="ghost" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           size="icon"
                           className="text-red-500"
                           onClick = {() => {;
@@ -439,7 +426,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </TableCell>;
@@ -453,7 +439,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '";
 
 
-=======
         </TableBody>;
       </Table>;
     </div>;
@@ -462,10 +447,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
 '"
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </div>;
                 </TableCell>;
                 <TableCell className="text - white">;
@@ -567,10 +549,3 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 '";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

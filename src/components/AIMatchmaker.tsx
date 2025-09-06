@@ -1,8 +1,4 @@
-
-
 import { Sparkles, Search } from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
@@ -12,7 +8,6 @@ import { AIMatchingResults } from '@/components/AIMatchingResults';
 import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 
@@ -33,7 +28,6 @@ interface AIMatchmakerProps {
 
 
 
-=======
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
   const [query, setQuery] = useState(""),
   const [isMatchmaking, setIsMatchmaking] = useState(false),
@@ -51,7 +45,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
 
       // Set empty matches to show no results found UI
       setMatches([])
-=======
 import { useState } from 'react';
 import { toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -128,7 +121,6 @@ function AIMatchmaker() {
       });
       // Set empty matches to show no results found UI;
       set_matches ([]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
       setIsMatchmaking(false)
@@ -141,7 +133,6 @@ function AIMatchmaker() {
           matches
 
 
-=======
 interface AIMatchmakerProps {;
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -278,7 +269,6 @@ if ( {) {
       <CardContent>
         <div className="space-y-4">
           <div className="space-y-2">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Textarea
               placeholder="Describe what you need... (e && e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
               value={query}
@@ -309,19 +299,16 @@ if ( {) {
 
           {hasSearched && (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
 
-=======
 
 
 }
 }
 
-=======
               projectDescription={query}
             />;
           )}
@@ -333,10 +320,7 @@ if ( {) {
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <div className='space - y-4'>;
           <div className='space - y-2'>;
             <Textarea;
@@ -370,10 +354,3 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

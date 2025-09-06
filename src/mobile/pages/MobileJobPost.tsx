@@ -1,9 +1,4 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const goToNextStep = () => {
+const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")
     } else if (currentStep === "requirements") {
@@ -79,7 +74,6 @@ if ( {) {
         return <DetailsStep />;
     }
   }
-=======
 
 import React, { useState } from "react";
 import {MobileHeader} from "@/mobile/components/common/MobileHeader";
@@ -131,14 +125,11 @@ export function MobileJobPost() {;
     }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     }
 
   },
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")
@@ -165,15 +156,12 @@ export function MobileJobPost() {;
   },
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main className="flex-1 py-4 pb-24 px-4">
         <div className="mb-6 flex justify-between">
           <div className="flex space-x-1">
@@ -187,7 +175,6 @@ export function MobileJobPost() {;
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" className="flex gap-1">
             <Zap className="h-4 w-4" /> AI Assist
           </Button>
@@ -195,7 +182,6 @@ export function MobileJobPost() {;
 
 
 
-=======
         
 
         {renderStepContent()}
@@ -206,8 +192,6 @@ export function MobileJobPost() {;
               variant="outline" 
               className="flex-1 gap-1" 
               onClick={goToPrevStep}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
               <ChevronLeft className="h-4 w-4" /> Back
             </Button>
@@ -243,12 +227,10 @@ export function MobileJobPost() {;
 
 
           <Button
-=======
 
           
           <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="flex-1 gap-1"
             onClick = {goToNextStep,}>;
             {currentStep === "preview" ? "Publish Job" : "Continue"}
@@ -258,7 +240,6 @@ export function MobileJobPost() {;
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <BottomNavigation />
     </div>
   )
@@ -272,7 +253,6 @@ function DetailsStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="title">Job Title</Label>
         <Input id="title" placeholder="e.g. Senior React Developer" />
@@ -282,7 +262,6 @@ function DetailsStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="company">Company Name</Label>
         <Input id="company" placeholder="Your company name" />
@@ -292,7 +271,6 @@ function DetailsStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="location">Location</Label>
         <Select defaultValue="remote">
@@ -311,7 +289,6 @@ function DetailsStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="jobType">Job Type</Label>
         <Select>
@@ -328,9 +305,7 @@ function DetailsStep() {
       </div>
 
     <div className="min - h-screen flex flex - col">;
-=======
 
-=======
       
 
       <div className="space-y-2">
@@ -345,8 +320,6 @@ function DetailsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-=======
-=======
 
 import React, { useState } from "react",;
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",;
@@ -502,7 +475,6 @@ function RequirementsStep() {
     "React", "TypeScript", "Node.js"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -522,7 +494,6 @@ function RequirementsStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="education">Education</Label>
         <Select>
@@ -628,7 +599,6 @@ function RequirementsStep() {;
 
       <div className="space-y-2">;
         <Label htmlFor="experience">Experience Level</Label>;
-=======
     <div className="space - y-4">;
       <h2 className="text - lg font - medium">Job Requirements</h2>;
       <div className="space - y-2">;
@@ -667,7 +637,6 @@ function RequirementsStep() {;
 
 
 
-=======
       
 
       <div className="space-y-2">
@@ -676,19 +645,16 @@ function RequirementsStep() {;
           {skills.map((skill) => (
             <Badge 
               key={skill} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
 
 
-=======
       
 
       <div className="space-y-2">
@@ -711,8 +677,6 @@ function RequirementsStep() {;
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function BudgetStep() {
   return (
     <div className="space-y-4">
@@ -722,7 +686,6 @@ function BudgetStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="paymentType">Payment Type</Label>
         <Select>
@@ -741,7 +704,6 @@ function BudgetStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label>Salary Range</Label>
         <div className="flex gap-4 items-center">
@@ -765,7 +727,6 @@ function BudgetStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="deadline">Application Deadline</Label>
         <Input type="date" id="deadline" />
@@ -775,7 +736,6 @@ function BudgetStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="startDate">Expected Start Date</Label>
         <Input type="date" id="startDate" />
@@ -785,7 +745,6 @@ function BudgetStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Label htmlFor="duration">Project Duration</Label>
         <Select>
@@ -805,7 +764,6 @@ function BudgetStep() {
 
 
 
-=======
       
 
       <div className="space-y-2">
@@ -817,8 +775,6 @@ function BudgetStep() {
 
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function PreviewStep() {
   return (
     <div className="space-y-4">
@@ -828,7 +784,6 @@ function PreviewStep() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
@@ -838,7 +793,6 @@ function PreviewStep() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
@@ -849,7 +803,6 @@ function PreviewStep() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-1 text-sm mt-4">
             <p className="font-medium">Salary Range:</p>
             <p>$80,000 - $120,000 USD / year</p>
@@ -859,7 +812,6 @@ function PreviewStep() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Experience Level:</p>
             <p>Senior</p>
@@ -869,7 +821,6 @@ function PreviewStep() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="space-y-1 text-sm mt-3">
             <p className="font-medium">Application Deadline:</p>
             <p>December 15, 2023</p>
@@ -879,7 +830,6 @@ function PreviewStep() {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-4 pt-3 border-t border-border">
             <h4 className="font-medium mb-2">Description</h4>
             <p className="text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>
@@ -1063,7 +1013,6 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
 }/> </div> </div>) '";
 }<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node && Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"}
 
-=======
       <div className="space - y-2">;
         <Label > Required Skills</Label>;
         <div className="flex flex - wrap gap - 2 mb - 3">;
@@ -1244,9 +1193,3 @@ min - h-screen flex flex - col"> <MobileHeader </div> <Button variant=" outline"
   3;
 }/> </div> </div>) '";
 }<Card> <CardContent className=" p - 4"> <h3 className=" font - bold text - lg">Senior React Developer</h3> <p className=" text - muted - foreground">TechCorp Inc. • Remote • Full - time</p> <div className=" flex gap - 2 my - 3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space - y-1 text - sm mt - 3"> <p className=" font - medium">Experience Level:</p> <p > Senior</p> </div> </div> <div className=" mt - 4 pt - 3 border - t border - border"> <h4 className=" font - medium mb - 2">Description</h4> <p className=" text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w - full" >Edit Job Post</Button> </div> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

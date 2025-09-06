@@ -1,20 +1,15 @@
-
-
-  }
+}
 
   () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
-=======
 );
 export const DynamicBarChart = dynamic (
   () => import ('recharts').then (mod => ({ default: mod.BarChart })),
 
   {    loading: LoadingSkeleton,
     ssr: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
   () => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),
-=======
 );
 // TODO: Uncomment when these components are available;
 // export const DynamicPDFGenerator = dynamic (
@@ -47,7 +42,6 @@ export const DynamicVirtualList = dynamic (
 
   {    loading: LoadingSkeleton,
     ssr: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 
 // Replace: import Chart from '../components/charts/Chart';// With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
@@ -55,22 +49,16 @@ export const DynamicVirtualList = dynamic (
 // Usage examples: // Replace: import Chart from '../components/charts/Chart'
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents'
 
-=======
 
 
-=======
 );
 // Usage examples:;
 // Replace: import Chart from '../components / charts / Chart';// With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
 // With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
 // Usage examples: // Replace: import Chart from '../components / charts / Chart';
 // With: import { DynamicChart as Chart } from '@/utils / dynamic_components';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
 import React from 'react',
 import dynamic from 'next/dynamic',
 const LoadingSpinner = () => React.createElement('div',
@@ -87,7 +75,6 @@ const LoadingSkeleton = () => React.createElement('div',
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
@@ -97,5 +84,3 @@ const LoadingSkeleton = () => React.createElement('div',
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

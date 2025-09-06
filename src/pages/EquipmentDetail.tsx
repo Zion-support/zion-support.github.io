@@ -1,6 +1,4 @@
-
-
-  }
+}
 // Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipment_listings.reduce (
@@ -231,7 +229,6 @@ export default function EquipmentDetail() {;
                 equipmentData = convertProductListingToEquipmentDetails(;
                   storedData as ProductListing;
                 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
               setEquipment(equipmentData)
               setLoading(false)
@@ -265,7 +262,6 @@ export default function EquipmentDetail() {;
 
 
 
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -434,7 +430,6 @@ export default function EquipmentDetail() {;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
@@ -443,7 +438,6 @@ export default function EquipmentDetail() {;
         description: 'Please log in to add items to cart',
         variant: 'destructive',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       })
       return
     }
@@ -453,7 +447,6 @@ export default function EquipmentDetail() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       dispatch({
         type: 'ADD_ITEM'
@@ -498,7 +491,6 @@ if ( {) {
     } finally {
       setIsAdding (false);
     }
-=======
 
           id: equipment.id,
           name: equipment.name,
@@ -519,7 +511,6 @@ if ( {) {
         </div>
       </>
     )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   const in_cart = items.some (item => item.id === equipment?.id);
   // Loading state;
@@ -698,11 +689,9 @@ if ( {) {
               ? [{ url: equipment && equipment.images[0] }];
               : undefined,;
 
-=======
 
               : undefined,
 
-=======
 ;
     loadEquipment();
   }, [id]),;
@@ -813,8 +802,6 @@ if ( {) {
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }}
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
@@ -833,7 +820,6 @@ if ( {) {
             >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Equipment
             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
@@ -850,13 +836,10 @@ if ( {) {
 
           <div className='grid lg:grid-cols-2 gap-12'>;
 
-=======
 
 
           <div className="grid lg:grid-cols-2 gap-12">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
@@ -882,7 +865,6 @@ if ( {) {
 
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
-=======
 
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
@@ -896,7 +878,6 @@ if ( {) {
                     <button
                       key={index}
                       onClick={() => setSelectedImageIndex(index)}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
                         selectedImageIndex === index;
                           ? 'border-zion-cyan';
@@ -912,7 +893,6 @@ if ( {) {
 
                       />
                     </button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
@@ -927,7 +907,6 @@ if ( {) {
               className="space-y-6"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0 && 0.4 }}>;
@@ -952,13 +931,11 @@ if ( {) {
                             i < Math && Math.floor(equipment && equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
-=======
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {equipment.category}
                   </Badge>
                   <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
@@ -980,8 +957,6 @@ if ( {) {
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }`}
                         />;
                       ))}
@@ -1018,12 +993,10 @@ if ( {) {
                   <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {equipment.expectedShipping}
                   </span>
                 </div>
               </div>
-=======
   // Error state;
   // Check condition
 if ( {) {
@@ -1203,7 +1176,6 @@ if ( {) {
                   </span>;
                 </div>;
               </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Description */}
 
 
@@ -1212,9 +1184,7 @@ if ( {) {
                 <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
-=======
                       equipment && equipment.inStock ? 'text-green-400' : 'text-yellow-400'
                     }>;
                     {equipment && equipment.expectedShipping}
@@ -1232,7 +1202,6 @@ if ( {) {
                 </p>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Specifications */}
 
                         className='flex justify-between py-2 border-b border-zion-blue-light'>;
@@ -1243,7 +1212,6 @@ if ( {) {
                           {spec && spec.value || 'Enterprise Grade'}
                         </span>                      </div>;
 
-=======
               {equipment.specifications.length > 0 && (
 
                 <div className="space-y-4">
@@ -1255,8 +1223,6 @@ if ( {) {
                         <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
                       </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                 </div>;
@@ -1287,15 +1253,12 @@ if ( {) {
                       className="h-8 w-8 p-0"
                     >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       +
                     </Button>
                   </div>
                 </div>
 
                       className='h-8 w-8 p-0'                    >;
-=======
                 </p>;
               </div>;
               {/* Specifications */}
@@ -1370,7 +1333,6 @@ if ( {) {
                       Free Shipping;
                     </p>;
                     <p className='text-xs'>;
-=======
                 <Button;
                   on_click={handleAddToCart}
                   disabled={is_adding || !equipment.in_stock}
@@ -1397,10 +1359,7 @@ if ( {) {
 
 ;
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Warranty */}
                 {equipment && equipment.warranty && (;
                   <div className='flex gap-3 text-zion-slate-light'>;
@@ -1430,7 +1389,6 @@ if ( {) {
 ;
 
 
-=======
               </div>;
             </motion && motion.div>;
           </div>;
@@ -1440,10 +1398,7 @@ if ( {) {
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 {/* Warranty */}
                 {equipment.warranty && (
                   <div className='flex gap - 3 text - zion - slate - light'>;
@@ -1521,12 +1476,5 @@ if ( {'") {
 }</div> </motion.div> </div> </div> </div> </>);
 }'"}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

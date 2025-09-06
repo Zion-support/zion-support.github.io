@@ -1,16 +1,11 @@
-
-
-
-  title: string;  showBack?: boolean;  title: string
+title: string;  showBack?: boolean;  title: string
   showBack?: boolean
   showNotifications?: boolean
   showSettings?: boolean
   className?: string
   onNotificationsClick?: () => void
-=======
 interface MobileHeaderProps {
   title: string,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   showBack?: boolean;
   showNotifications?: boolean;
   showSettings?: boolean;
@@ -36,7 +31,6 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -55,7 +49,6 @@ export function MobileHeader({
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
             </Button>
-=======
 interface MobileHeaderProps {;
   title: string;  showBack?: boolean;  title: string,;
   showBack?: boolean;
@@ -63,7 +56,6 @@ interface MobileHeaderProps {;
   showSettings?: boolean;
   className?: string;
   onNotificationsClick?: () => void;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   onSettingsClick?: () => void;
 
 export function MobileHeader(): any ({;
@@ -95,7 +87,6 @@ export function MobileHeader(): any ({;
               <ChevronLeft className="h-5 w-5" />;
               <span className="sr-only">Back</span>;
             </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
           <h1 className="text-lg font-medium leading-none truncate">;
             {title}
@@ -118,17 +109,13 @@ export function MobileHeader(): any ({;
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
               <Settings className='h-5 w-5' />;
               <span className='sr-only'>Settings</span>;
-=======
 
             <Button 
-=======
               <span className='sr-only'>Settings</span>            </Button>            <Button 
-=======
             <Button 
 
 
               variant="ghost" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               size="icon"
               onClick={onSettingsClick}
             >
@@ -140,7 +127,6 @@ export function MobileHeader(): any ({;
 }
 }
 
-=======
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -159,7 +145,6 @@ interface MobileHeaderProps {;
 ;
 export function MobileHeader({;
   title,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   showBack = false,;
   showNotifications = false,;
   showSettings = false,;
@@ -174,7 +159,6 @@ export function MobileHeader({;
       <div className='flex items-center justify-between h-14 px-4'>;
         <div className='flex items-center'>;
           {showBack && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Button
               variant='ghost'
               size='icon'
@@ -184,7 +168,6 @@ export function MobileHeader({;
               <ChevronLeft className='h-5 w-5' />;
               <span className='sr-only'>Back</span>;
             </Button>;
-=======
             <Button 
               variant="ghost" 
               size="icon"
@@ -193,7 +176,6 @@ export function MobileHeader({;
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
             </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
           <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
         </div>;
@@ -218,9 +200,4 @@ export function MobileHeader({;
           )}
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

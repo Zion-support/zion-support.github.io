@@ -1,6 +1,4 @@
-
-
-  isDeploying
+isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
     network: 'none'
@@ -119,7 +117,6 @@ export function SmartContractDeployment({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="w-full">
       <CardHeader>
@@ -198,7 +195,6 @@ export function SmartContractDeployment(): any ({ ;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
-=======
   const handleDownloadSolidity = () =>: any {
     // Create a blob from the Solidity code;
     const blob = new Blob ([solidity_code], { type: 'text / plain' }),
@@ -219,7 +215,6 @@ export function SmartContractDeployment(): any ({ ;
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <ShieldCheck className="h - 5 w - 5 text - primary" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Smart Contract Deployment;
         </CardTitle>;
         <CardDescription>;
@@ -239,14 +234,12 @@ export function SmartContractDeployment(): any ({ ;
               id="deploy-blockchain"
               aria-label="Deploy to blockchain"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               })}
 
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
@@ -259,14 +252,12 @@ export function SmartContractDeployment(): any ({ ;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 
-=======
 
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
                   className="flex flex-col space-y-1"
                 >
@@ -283,7 +274,6 @@ export function SmartContractDeployment(): any ({ ;
 
 
 
-=======
               
 
               <div className="space-y-2">
@@ -294,7 +284,6 @@ export function SmartContractDeployment(): any ({ ;
                   value={deploymentOptions.walletAddress || ''}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex items-center space-x-2">
                 <Switch
                   id="use-escrow"
@@ -313,17 +302,14 @@ export function SmartContractDeployment(): any ({ ;
                   defaultValue={deploymentOptions && deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions;                    network: value as BlockchainNetwork;
-=======
 
 
-=======
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
                     useEscrow: checked;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   })}
                   className="flex flex-col space-y-1";
                 >;
@@ -357,7 +343,6 @@ export function SmartContractDeployment(): any ({ ;
                   checked={deploymentOptions && deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;                    useEscrow: checked;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
@@ -382,7 +367,6 @@ export function SmartContractDeployment(): any ({ ;
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardFooter className="flex justify-between">
         <Button variant="outline" onClick={handleDownloadSolidity}>
           <Download className="mr-2 h-4 w-4" />
@@ -393,7 +377,6 @@ export function SmartContractDeployment(): any ({ ;
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Button onClick={handleDeployContract} disabled={isDeploying}>
           {isDeploying ? (
             <>
@@ -429,7 +412,6 @@ export function SmartContractDeployment(): any ({ ;
           ) : (;
             'Deploy Contract';
           )}
-=======
 
 
         </Button>;
@@ -438,10 +420,7 @@ export function SmartContractDeployment(): any ({ ;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -532,11 +511,5 @@ export function SmartContractDeployment(): any ({ ;
   is_deploying ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Deploying... </>) : ('Deploy Contract');
 }</Button> </CardFooter> </Card>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

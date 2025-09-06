@@ -1,6 +1,4 @@
-
-
-  totalSize: number;
+totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
@@ -16,7 +14,6 @@
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-=======
 import React, { useState, useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -67,7 +64,6 @@ if (return) {
     setIsVisible (true);
     collectBundleInfo ();
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const collectBundleInfo = async () => {
     // Check condition
 if (return) {
@@ -87,7 +83,6 @@ if (return) {
 
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
-=======
       // Get performance entries for script resources;
       const resource_entries = performance.getEntriesByType (
         'resource') as PerformanceResourceTiming[];
@@ -125,7 +120,6 @@ if (return) {
       });
       set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction ('Failed to collect bundle info:', { data: error });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsCollecting (false);
     }
@@ -163,11 +157,9 @@ if ( {) {
     }
   }
 
-=======
 
 
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -307,7 +299,6 @@ export function BundleAnalyzer() {;
 
 
   if (!isVisible) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className='fixed bottom-20 right-4 z-50'>;
         <Button
@@ -321,19 +312,16 @@ export function BundleAnalyzer() {;
           <Package className="w-4 h-4 mr-2" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Bundle Analyzer
         </Button>
       </div>
     )
-=======
           className='bg-background/80 backdrop-blur-sm'>;
           <Package className='w-4 h-4 mr-2' />;
           Bundle Analyzer;
         </Button>;
       </div>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <div className='fixed bottom-20 right-4 z-50 w-96'>;
@@ -364,7 +352,6 @@ export function BundleAnalyzer() {;
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ✕
               </Button>
             </div>
@@ -407,7 +394,6 @@ export function BundleAnalyzer() {;
               <div>
 
                 className='h-6 w-6 p-0'>;
-=======
   // Check condition
 if ( {) {
   $2
@@ -481,11 +467,9 @@ if ( {) {
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </div>;
@@ -508,7 +492,6 @@ if ( {) {
 
 
 }
-=======
         </CardContent>;
       </Card>;
     </div>;
@@ -516,13 +499,10 @@ if ( {) {
 } ;
 
 
-=======
 
         
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;
@@ -603,10 +583,3 @@ if ( {) {
       </Card>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
