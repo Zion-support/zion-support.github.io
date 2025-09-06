@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Footer: React.FC = () => {
   return (
@@ -72,3 +73,8 @@ const Footer: React.FC = () => {
           </p>
         </div>
       </div>
+    </motion.footer>
+  );
+};
+
+export default Footer;

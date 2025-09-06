@@ -4,11 +4,7 @@ import { Menu, X, Search } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import SearchModal from './SearchModal';
 
-interface HeaderProps {
-  onMenuClick: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
@@ -27,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    onMenuClick();
   };
 
   return (
@@ -80,7 +75,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-<<<<<<< HEAD
           <div className="md:hidden py-4 border-t border-gray-700">
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
@@ -89,42 +83,17 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
               <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
             </nav>
-=======
-          <div className="lg:hidden absolute top-16 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-slate-700/20">
-            <div className="px-4 py-4 space-y-4">
-              <div className="flex justify-center space-x-4">
-                <button
-                  onClick={() => {
-                    setIsSearchOpen(true);
-                    setIsMenuOpen(false);
-                  }}
-                  className="flex items-center justify-center w-10 h-10 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  title="Search"
-                >
-                  <Search className="w-5 h-5" />
-                </button>
-                <ThemeToggle />
-              </div>
-              <div className="space-y-2">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className="block text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
->>>>>>> 46ebcd4bae20034d704ddf3bff01504bb44c7d4a
           </div>
         )}
-
-        {/* Search Modal */}
-        <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
       </div>
+
+      {/* Search Modal */}
+      {isSearchOpen && (
+        <SearchModal
+          isOpen={isSearchOpen}
+          onClose={() => setIsSearchOpen(false)}
+        />
+      )}
     </header>
   );
 };
