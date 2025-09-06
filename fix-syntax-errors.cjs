@@ -1,94 +1,81 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// List of files with syntax errors
-const filesToFix = [
-  'components/Header.tsx',
-  'components/OptimizedImage.tsx',
-  'components/Sidebar.tsx',
-  'components/SimpleLayout.tsx',
-  'components/SkeletonLoader.tsx',
-  'components/layout/EnhancedFooter.tsx',
-  'components/layout/Footer.tsx',
-  'components/layout/Header.tsx',
-  'components/layout/Layout.tsx',
-  'components/layout/MainLayout.tsx',
-  'components/performance/LazyComponent.tsx',
-  'components/performance/OptimizedImage.tsx',
-  'components/ui/EnhancedMarketplaceCard.tsx',
-  'components/ui/InteractiveNavigation.tsx',
-  'components/ui/NotificationSystem.tsx'
-];
+console.log('🔧 Fixing syntax errors in the codebase...');
 
+// Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix common syntax errors
-    content = content
-      // Fix import statements - replace commas with semicolons
-      .replace(/import\s+[^;]+,\s*$/gm, (match) => match.replace(/,\s*$/, ';'))
-      // Fix object properties - replace commas with colons
-      .replace(/"([^"]+)",\s*$/gm, '"$1",')
-      .replace(/'([^']+)',\s*$/gm, "'$1',")
-      // Fix function parameters
-      .replace(/,\s*\)/g, ')')
-      .replace(/,\s*}/g, '}')
-      .replace(/,\s*]/g, ']')
-      // Fix semicolons in wrong places
-      .replace(/;\s*;/g, ';')
-      .replace(/,\s*;/g, ';')
-      // Fix malformed object syntax
-      .replace(/\{\s*,/g, '{')
-      .replace(/,\s*\}/g, '}')
-      // Fix array syntax
-      .replace(/\[\s*,/g, '[')
-      .replace(/,\s*\]/g, ']')
-      // Fix function declarations
-      .replace(/,\s*\)\s*=>/g, ') =>')
-      .replace(/,\s*\)\s*{/g, ') {')
-      // Remove extra commas and semicolons
-      .replace(/,\s*,/g, ',')
-      .replace(/;\s*;/g, ';')
-      // Fix React component syntax
-      .replace(/React\.FC<\{[^}]*,\s*\}\s*>/g, (match) => match.replace(/,\s*}/, '}'))
-      // Fix useState calls
-      .replace(/useState\([^)]*,\s*\)/g, (match) => match.replace(/,\s*\)/, ')'))
-      // Fix useEffect calls
-      .replace(/useEffect\([^)]*,\s*\)/g, (match) => match.replace(/,\s*\)/, ')'))
-      // Fix return statements
-      .replace(/return\s+[^;]*,\s*$/gm, (match) => match.replace(/,\s*$/, ''))
-      // Fix JSX syntax
-      .replace(/<\s*,\s*>/g, '<>')
-      .replace(/,\s*>/g, '>')
-      // Fix template literals
-      .replace(/`[^`]*,\s*`/g, (match) => match.replace(/,\s*`/, '`'))
-      // Clean up multiple newlines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Fix trailing commas in objects and arrays
-      .replace(/,(\s*[}\]])/g, '$1');
+    let modified = false;
 
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Fixed syntax errors in ${filePath}`);
-    return true;
+    // Fix merge conflict markers
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
+      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      modified = true;
+    }
+
+    // Fix unterminated string literals
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Fix unterminated strings
+      if (line.includes('"') && !line.match(/".*"/)) {
+        if (line.includes('"') && !line.includes('\\"')) {
+          lines[i] = line.replace(/"([^"]*)$/, '"$1"');
+          modified = true;
+        }
+      }
+      
+      // Fix unterminated template literals
+      if (line.includes('`') && !line.match(/`.*`/)) {
+        lines[i] = line.replace(/`([^`]*)$/, '`$1`');
+        modified = true;
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, lines.join('\n'));
+      return true;
+    }
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
+  }
+  return false;
+}
+
+// Function to fix specific file types
+function fixFile(filePath) {
+  const ext = path.extname(filePath);
+  if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
+    return fixSyntaxErrors(filePath);
+  }
+  return false;
+}
+
+// Get all files with syntax errors
+const files = execSync('find src -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
+
+let fixedCount = 0;
+let totalFiles = files.length;
+
+console.log(`Found ${totalFiles} files to check`);
+
+for (const file of files) {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
   }
 }
 
-console.log('🔧 Starting syntax error fixes...');
-
-let fixedCount = 0;
-filesToFix.forEach(file => {
-  const fullPath = path.join('/workspace', file);
-  if (fs.existsSync(fullPath)) {
-    if (fixSyntaxErrors(fullPath)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`⚠️  File not found: ${file}`);
-  }
-});
-
-console.log(`\n🎉 Fixed syntax errors in ${fixedCount}/${filesToFix.length} files`);
+console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
+console.log('🎯 Syntax error fixing complete!');

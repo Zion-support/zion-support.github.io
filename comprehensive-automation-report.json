@@ -1,65 +1,144 @@
 {
-  "timestamp": "2025-09-05T21:47:46.362Z",
-  "totalDuration": 35237,
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T17:31:43.872Z",
+  "duration": "46s",
+  "results": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "ESLint Auto-fix",
+        "error": "spawnSync /bin/sh ETIMEDOUT"
+      },
+      {
+        "command": "npm run format",
+        "description": "Prettier Code Formatting",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Type Checking",
+        "error": "spawnSync /bin/sh ENOBUFS"
+      },
+      {
+        "command": "npm run test:smoke",
+        "description": "Smoke Tests",
+        "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      },
+      {
+        "command": "npm test -- --passWithNoTests",
+        "description": "Jest Tests",
+        "error": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Unexpected token '}'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
+  },
+  "summary": {
+    "syntaxFixes": 0,
+    "buildSuccess": true,
+    "testsPassed": 0,
+    "totalErrors": 5
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+=======
+  "timestamp": "2025-09-06T10:44:46.097Z",
+  "totalDuration": 76866,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 4784,
+<<<<<<< HEAD
+      "duration": 7037,
+=======
+      "duration": 22421,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 4703,
-      "errors": [
-        "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3724) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
-      ],
+<<<<<<< HEAD
+      "duration": 27333,
+=======
+      "duration": 27631,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-      "duration": 1428,
+<<<<<<< HEAD
+      "duration": 1719,
+=======
+      "duration": 1683,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
-      "duration": 11123,
+<<<<<<< HEAD
+      "duration": 6250,
+=======
+      "duration": 6198,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "success": false,
+      "duration": 39,
+"errors": [],
+=======
       "success": true,
-      "duration": 45,
+      "duration": 43,
       "errors": [],
+>>>>>>> cursor/automate-test-improve-and-merge-code-88cd
+=======
+      "success": true,
+      "duration": 46,
+      "errors": [],
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "warnings": []
     },
-    "accessibilityImprovements": {
+    "accessibilityImprovement": {
       "success": false,
-      "duration": 1426,
-      "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:4121) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nA configuration object specifies rule \"jsx-a11y/alt-text\", but could not find plugin \"jsx-a11y\".\n\nCommon causes of this problem include:\n\n1. The \"jsx-a11y\" plugin is not defined in your configuration file.\n2. The \"jsx-a11y\" plugin is not defined within the same configuration object in which the \"jsx-a11y/alt-text\" rule is applied.\n\n"
-      ],
+<<<<<<< HEAD
+      "duration": 9508,
+=======
+      "duration": 9692,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
       "success": true,
-      "duration": 10285,
+<<<<<<< HEAD
+      "duration": 6736,
+=======
+      "duration": 7154,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 1440,
+<<<<<<< HEAD
+      "duration": 1612,
+=======
+      "duration": 2037,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
       "errors": [],
       "warnings": []
     }
-  },
-  "recommendations": [
-    "Review and fix code quality issues",
-    "Enhance accessibility features"
-  ]
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  }
 }

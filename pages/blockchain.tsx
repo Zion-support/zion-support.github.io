@@ -1,179 +1,387 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next / head';
+import ErrorBoundary from '../components / ErrorBoundary';
+export default /**
+ * Blockchain - Function description
+ */
+function Blockchain() {
+  return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    <>;
+      <Head>;
+=======
+    <>;
+      <Head>;
+        <title > Blockchain Services - Zion Tech Group</title>;
+import React from 'react'
+import Head from 'next/head'
+import ErrorBoundary from '../components/ErrorBoundary'
+export default function Blockchain() {
+  return (
+    <>
+      <Head>
+        <title>Blockchain Services - Zion Tech Group</title>
+        <title>Blockchain Services - Zion Tech Group</title>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+;
+        <meta
+          name="description"
+          content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
+        />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">
+              Blockchain Services
+            </h1>
+            <p className="text-xl text-slate-300 text-center">
+              Cutting-edge blockchain and Web3 solutions for the future.
+            </p>
+          </div>
+        </main>
+      </ErrorBoundary>
+    </>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import React from 'react';
+import Head from 'next / head';
+import ErrorBoundary from '../components / ErrorBoundary';
+export default /**
+ * Blockchain - Function description
+ */
+function Blockchain() {
+  return (
+<<<<<<< HEAD
+
+    <>;
+      <Head>;
 import React from 'react';
 import Head from 'next/head';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function Blockchain(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>Blockchain Services - Zion Tech Group</title>;
+        <meta name="description" content="Blockchain and Web3 solutions including smart contracts, DeFi, and cryptocurrency development." />;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+      </Head>;
+      <ErrorBoundary level="page">;
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
+          <div className="container mx-auto px-4 py-16">;
+            <h1 className="text-4xl font-bold text-center mb-8">Blockchain Services</h1>;
+            <p className="text-xl text-slate-300 text-center">;
+              Cutting-edge blockchain and Web3 solutions for the future.;
+            </p>;
+          </div>;
+        </main>;
+      </ErrorBoundary>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    <>;
+      <Head>;
+        <title > Blockchain Services - Zion Tech Group</title>;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+        <title > Blockchain Services - Zion Tech Group</title>;
+
+
+        <title>Blockchain Services - Zion Tech Group</title>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import Head from 'next/head';
 import Link from 'next/link';
-import { Shield, DollarSign, Users, Lock, Globe, BarChart3 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Shield, 
+  Zap, 
+  Globe, 
+  Lock, 
+  ArrowRight, 
+  CheckCircle, 
+  Users, 
+  Award, 
+  Phone, 
+  Mail, 
+  MapPin 
+} from 'lucide-react';
+import MainLayout from '../src/components/layout/MainLayout';
 
-export default function Blockchain() {
-  const services = [
-    {
-      icon: Shield,
-      title: 'Smart Contract Development',
-      description: 'Secure, audited smart contracts for various blockchain platforms.',
-      features: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Custom Blockchains']
-    },
-    {
-      icon: DollarSign,
-      title: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols.',
-      features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics']
-    },
-    {
-      icon: Users,
-      title: 'NFT Marketplace',
-      description: 'Complete NFT marketplace solutions with minting and trading.',
-      features: ['Minting Platform', 'Auction System', 'Royalty Management', 'Metadata Storage']
-    },
-    {
-      icon: Lock,
-      title: 'Security Audits',
-      description: 'Comprehensive security analysis for blockchain applications.',
-      features: ['Code Review', 'Vulnerability Assessment', 'Penetration Testing', 'Compliance Check']
-    },
-    {
-      icon: Globe,
-      title: 'Cross-Chain Solutions',
-      description: 'Interoperability solutions for multi-blockchain ecosystems.',
-      features: ['Bridge Development', 'Cross-Chain Swaps', 'Asset Migration', 'Universal Protocols']
-    },
-    {
-      icon: BarChart3,
-      title: 'Blockchain Analytics',
-      description: 'Data analysis and insights for blockchain transactions.',
-      features: ['Transaction Tracking', 'Pattern Analysis', 'Risk Assessment', 'Compliance Reporting']
-    }
-  ];
+const features = [
+  {
+    icon: Shield,
+    title: 'Smart Contracts',
+    description: 'Secure, self-executing contracts with automated enforcement and transparent terms.'
+  },
+  {
+    icon: Zap,
+    title: 'DeFi Solutions',
+    description: 'Decentralized finance applications including lending, borrowing, and trading platforms.'
+  },
+  {
+    icon: Globe,
+    title: 'NFT Marketplaces',
+    description: 'Custom NFT platforms for digital art, collectibles, and unique digital assets.'
+  },
+  {
+    icon: Lock,
+    title: 'Security Audits',
+    description: 'Comprehensive smart contract audits to ensure security and prevent vulnerabilities.'
+  }
+];
 
+const services = [
+  {
+    title: 'Smart Contract Development',
+    description: 'Custom smart contracts for various blockchain platforms including Ethereum, BSC, and Polygon.',
+    features: ['Solidity Development', 'Gas Optimization', 'Multi-chain Support', 'Testing & Deployment'],
+    pricing: 'Starting at $5,000'
+  },
+  {
+    title: 'DeFi Platform Development',
+    description: 'Complete decentralized finance solutions with advanced trading and liquidity features.',
+    features: ['DEX Development', 'Yield Farming', 'Liquidity Pools', 'Token Economics'],
+    pricing: 'Starting at $15,000'
+  },
+  {
+    title: 'NFT Marketplace',
+    description: 'Custom NFT platforms with minting, trading, and marketplace functionality.',
+    features: ['NFT Minting', 'Marketplace UI', 'Royalty System', 'Wallet Integration'],
+    pricing: 'Starting at $8,000'
+  },
+  {
+    title: 'Blockchain Integration',
+    description: 'Integrate blockchain technology into existing applications and systems.',
+    features: ['API Integration', 'Wallet Connectivity', 'Transaction Management', 'Real-time Updates'],
+    pricing: 'Starting at $3,000'
+  }
+];
+
+const stats = [
+  { number: '50+', label: 'Blockchain Projects' },
+  { number: '15+', label: 'DeFi Platforms' },
+  { number: '25+', label: 'Smart Contracts' },
+  { number: '99.9%', label: 'Security Score' }
+];
+
+export default function BlockchainPage() {
   return (
-    <div>
-      <Head>
-        <title>Blockchain Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain development services including smart contracts, DeFi, NFTs, and security audits." />
-      </Head>
-      
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-br from-purple-900 to-indigo-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Blockchain Solutions
-              </h1>
-              <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
-                Build the future with secure, scalable blockchain solutions. 
-                From smart contracts to DeFi protocols, we deliver cutting-edge blockchain technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Get Started
-                </Link>
-                <Link href="/pricing" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors">
-                  View Pricing
-                </Link>
-              </div>
-            </div>
+    <MainLayout
+      title="Blockchain Solutions - Zion Tech Group"
+      description="Expert blockchain development services including smart contracts, DeFi platforms, NFT marketplaces, and blockchain integration solutions."
+      keywords="blockchain development, smart contracts, DeFi, NFT marketplace, cryptocurrency, blockchain integration"
+      canonical="https://ziontechgroup.com/blockchain"
+    >
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-6xl font-bold mb-6"
+            >
+              Blockchain Solutions
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl mb-8 text-gray-200"
+            >
+              Transform your business with cutting-edge blockchain technology. 
+              From smart contracts to DeFi platforms, we build secure, scalable solutions.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                Get Started Today
+              </Link>
+              <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                View Case Studies
+              </Link>
+            </motion.div>
           </div>
         </div>
+      </section>
 
-        {/* Services Grid */}
-        <div className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Blockchain Services
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                End-to-end blockchain development and consulting services for modern businesses.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                        <IconComponent className="w-6 h-6 text-purple-600" />
-                      </div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-600 mb-6">{service.description}</p>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-500">
-                          <div className="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </div>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-center"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="text-4xl font-bold text-purple-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Technology Stack */}
-        <div className="bg-gray-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Technology Stack
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We work with the latest blockchain technologies and frameworks.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">ETH</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Ethereum</h3>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">POL</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Polygon</h3>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-yellow-600">BSC</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">BSC</h3>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">SOL</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">Solana</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-purple-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Build on Blockchain?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Let&apos;s discuss your blockchain project and how we can help bring your vision to life.
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Blockchain Expertise</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We specialize in developing secure, scalable blockchain solutions that drive innovation and create value.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <div className="text-purple-600 mb-4">
+                    <IconComponent className="w-12 h-12 mx-auto" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive blockchain development services tailored to your business needs.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-purple-600">{service.pricing}</span>
+                  <Link 
+                    href="/contact"
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                  >
+                    Get Quote
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-6">Ready to Build on Blockchain?</h2>
+            <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              Let's discuss your blockchain project and create a secure, innovative solution that drives your business forward.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                 Start Your Project
               </Link>
-              <a href="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-colors">
-                Call Now
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
+                Call +1 302 464 0950
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </main>
-    </div>
+      </section>
+    </MainLayout>
   );
 }
+>>>>>>> main

@@ -39,7 +39,7 @@ info() {
 # Main implementation function
 main() {
     log "🚀 Starting Ultimate PM2 System Implementation"
-    log "=============================================="
+    log "===="
     
     # Step 1: Create necessary directories
     create_directories
@@ -63,7 +63,7 @@ main() {
     generate_implementation_report
     
     log "🎉 Ultimate PM2 System Implementation Completed Successfully!"
-    log "============================================================="
+    log "====="
 }
 
 create_directories() {

@@ -1,6 +1,91 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  User, 
+  ArrowRight, 
+  Tag, 
+  ExternalLink,
+import { 
+  ArrowRight, 
+  ExternalLink, 
+  Calendar, 
+  User, 
+  Building,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  TrendingUp,
+  Award,
+  Clock,
+<<<<<<< HEAD
+  Target,
+  Zap,
+=======
+=======
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+<<<<<<< HEAD
+  User, 
+  ArrowRight, 
+  Tag, 
+  ExternalLink,
+import { 
+  ArrowRight, 
+  ExternalLink, 
+  Calendar, 
+  User, 
+  Building,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Building,
+  TrendingUp,
+  Award,
+  Clock,
+<<<<<<< HEAD
+  Target,
+  Zap,
+=======
+=======
+import React from 'react';
+<<<<<<< HEAD
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+import MainLayout from '../src/components/layout/MainLayout';
+<<<<<<< HEAD
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+import { motion } from 'framer-motion';
+import {
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+  Shield,
+=======
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
   Users,
   Clock,
   CheckCircle,
@@ -10,15 +95,103 @@ import Link from 'next/link';
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+  Globe,
+  Award,
+  Clock,
+  BarChart3,
+  Cloud,
+  Shield
+} from 'lucide-react';
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
 
 const caseStudies = [
   {
     id: 1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+    title: "AI-Powered Customer Service Transformation",
+    client: "Global E-commerce Retailer",
+    industry: "E-commerce",
+    challenge: "High customer service costs and inconsistent response quality",
+    solution: "Implemented AI-powered chatbot and intelligent routing system",
+<<<<<<< HEAD
+    results: "60% reduction in support costs, 40% faster response times",
+    category: "AI Solutions",
+    duration: "3 months",
+    teamSize: "8 developers",
+    technologies: ["AI/ML", "NLP", "Python", "AWS"],
+    featured: true,
+    metrics: {
+      costReduction: "60%",
+      responseTime: "40%",
+      customerSatisfaction: "85%",
+      roi: "300%"
+    },
+    testimonial: {
+      quote: "The AI solution transformed our customer service operations. We've seen incredible improvements in efficiency and customer satisfaction.",
+      author: "Sarah Johnson",
+      role: "VP of Customer Experience"
+    }
+  },
+  {
+    id: 2,
+    title: "Cloud Infrastructure Migration",
+    client: "Financial Services Company",
+    industry: "Financial Services",
+    challenge: "Legacy on-premise infrastructure causing scalability issues",
+    solution: "Complete migration to AWS with microservices architecture",
+    results: "99.9% uptime, 50% cost reduction, 3x faster deployment",
+    category: "IT Services",
+    duration: "6 months",
+    teamSize: "12 engineers",
+    technologies: ["AWS", "Kubernetes", "Docker", "Terraform"],
+    featured: true,
+    metrics: {
+      uptime: "99.9%",
+      costReduction: "50%",
+      deploymentSpeed: "3x",
+      scalability: "10x"
+    },
+    testimonial: {
+      quote: "The cloud migration was seamless and exceeded our expectations. Our infrastructure is now more reliable and cost-effective.",
+      author: "Michael Chen",
+      role: "CTO"
+    }
+  },
+  {
+    id: 3,
+=======
+>>>>>>> main
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
     title: "Healthcare AI Platform Transformation",
     client: "MedTech Solutions",
     industry: "Healthcare",
     challenge: "Manual patient data processing and diagnosis delays",
     solution: "AI-powered diagnostic platform with real-time analysis",
+<<<<<<< HEAD
+<<<<<<< HEAD
     results: [
       "85% reduction in diagnosis time",
       "60% improvement in accuracy",
@@ -62,6 +235,222 @@ const caseStudies = [
       "Real-time threat detection",
       "Automated compliance reporting"
     ],
+=======
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+=======
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+    results: [
+      "60% reduction in support costs",
+      "40% faster response times",
+      "95% customer satisfaction rate",
+      "$2M annual savings"
+    ],
+    duration: "3 months",
+    team: "8 experts",
+    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"],
+    image: "/images/case-studies/ecommerce-ai.jpg"
+<<<<<<< HEAD
+  },
+<<<<<<< HEAD
+=======
+  {
+<<<<<<< HEAD
+    id: 4,
+    title: "Micro SaaS Platform Development",
+    client: "Startup Accelerator",
+    industry: "Technology",
+    challenge: "Need for scalable SaaS platform to support multiple startups",
+    solution: "Multi-tenant SaaS platform with AI-powered features",
+    results: "500+ active users, 99.9% uptime, $50K MRR",
+    category: "Micro SaaS",
+    duration: "4 months",
+    teamSize: "6 developers",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
+    featured: false,
+    metrics: {
+      activeUsers: "500+",
+      uptime: "99.9%",
+      mrr: "$50K",
+      growth: "400%"
+    },
+    testimonial: {
+      quote: "The platform has been instrumental in our growth.",
+      author: "Emily Rodriguez",
+      role: "Founder & CEO"
+    }
+  },
+<<<<<<< HEAD
+=======
+  {
+<<<<<<< HEAD
+    id: 4,
+    title: "Micro SaaS Platform Development",
+    client: "Startup Accelerator",
+    industry: "Technology",
+    challenge: "Need for scalable SaaS platform to support multiple startups",
+    solution: "Multi-tenant SaaS platform with AI-powered features",
+    results: "500+ active users, 99.9% uptime, $50K MRR",
+    category: "Micro SaaS",
+    duration: "4 months",
+    teamSize: "6 developers",
+    technologies: ["React", "Node.js", "PostgreSQL", "Redis"],
+    featured: false,
+    metrics: {
+      activeUsers: "500+",
+      uptime: "99.9%",
+      mrr: "$50K",
+      growth: "400%"
+    },
+    testimonial: {
+      quote: "The platform has been instrumental in our growth.",
+      author: "Emily Rodriguez",
+      role: "Founder & CEO"
+    }
+  },
+  {
+    id: 5,
+    title: "Cybersecurity Implementation",
+    client: "Government Agency",
+    industry: "Government",
+    challenge: "Strengthening cybersecurity posture and compliance",
+    solution: "Comprehensive security framework with zero-trust architecture",
+    results: "100% compliance, 90% reduction in security incidents",
+    category: "IT Services",
+    duration: "8 months",
+    teamSize: "15 security experts",
+    technologies: ["Zero Trust", "SIEM", "EDR", "Compliance"],
+    featured: true,
+    metrics: {
+      compliance: "100%",
+      incidentReduction: "90%",
+      threatDetection: "95%",
+      responseTime: "50%"
+    },
+    testimonial: {
+      quote: "Our security posture has been significantly strengthened. The implementation was thorough and professional.",
+      author: "David Wilson",
+      role: "CISO"
+    }
+  },
+  {
+    id: 5,
+    title: "Cybersecurity Implementation",
+    client: "Government Agency",
+    industry: "Government",
+    challenge: "Strengthening cybersecurity posture and compliance",
+    solution: "Comprehensive security framework with zero-trust architecture",
+    results: "100% compliance, 90% reduction in security incidents",
+    category: "IT Services",
+    duration: "8 months",
+    teamSize: "15 security experts",
+    technologies: ["Zero Trust", "SIEM", "EDR", "Compliance"],
+    featured: true,
+    metrics: {
+      compliance: "100%",
+      incidentReduction: "90%",
+      threatDetection: "95%",
+      responseTime: "50%"
+    },
+    testimonial: {
+      quote: "Our security posture has been significantly strengthened. The implementation was thorough and professional.",
+      author: "David Wilson",
+      role: "CISO"
+    }
+  },
+  {
+=======
+  },
+  {
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+    id: 6,
+    title: "Educational Technology Platform",
+    client: "Online Learning Company",
+    industry: "Education",
+    challenge: "Scaling online learning platform to support 100K+ students",
+    solution: "Cloud-native platform with AI-powered personalization",
+    results: "100K+ students, 95% satisfaction rate, 50% increase in engagement",
+    category: "Micro SaaS",
+    duration: "5 months",
+    teamSize: "10 developers",
+    technologies: ["React", "AI/ML", "Video Streaming", "Analytics"],
+    image: "/images/case-studies/education-platform.jpg",
+    featured: false
+  },
+  {
+<<<<<<< HEAD
+    id: 4,
+=======
+    id: 6,
+>>>>>>> main
+    title: 'Healthcare AI Transformation',
+    client: 'Regional Medical Center',
+    industry: 'Healthcare',
+    challenge: 'Improve patient diagnosis accuracy and reduce wait times',
+    solution: 'Implemented AI-powered diagnostic tools and automated patient triage system',
+    results: [
+      '40% reduction in diagnosis time',
+      '25% improvement in accuracy',
+      '60% decrease in patient wait times',
+      '95% patient satisfaction rate'
+    ],
+    technologies: ['Machine Learning', 'Computer Vision', 'Natural Language Processing'],
+    duration: '6 months',
+    teamSize: '8 developers',
+    image: '/case-studies/healthcare-ai.jpg',
+    icon: Brain
+  },
+  {
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+    id: 2,
+    title: "Cloud Migration for Financial Services",
+    client: "Regional Bank",
+    industry: "Financial Services",
+    challenge: "Legacy systems limiting scalability and innovation",
+    solution: "Complete cloud migration with microservices architecture",
+    results: [
+      "99.9% uptime achieved",
+      "50% faster application deployment",
+      "30% reduction in infrastructure costs",
+      "Enhanced security compliance"
+    ],
+    duration: "6 months",
+    team: "12 experts",
+    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"],
+    image: "/images/case-studies/cloud-migration.jpg"
+  },
+  {
+    id: 3,
+    title: "Cybersecurity Enhancement for Healthcare",
+    client: "Healthcare Network",
+    industry: "Healthcare",
+    challenge: "Increasing cyber threats and compliance requirements",
+    solution: "Comprehensive security framework and threat detection system",
+    results: [
+      "Zero security breaches",
+      "100% compliance with HIPAA",
+      "24/7 threat monitoring",
+      "50% faster incident response"
+    ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+<<<<<<< HEAD
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     technologies: ["Cybersecurity", "Zero-Trust", "Compliance"],
     duration: "8 months",
     team: "15 experts",
@@ -80,6 +469,20 @@ const caseStudies = [
       "Predictive maintenance implementation",
       "Real-time quality monitoring"
     ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    technologies: ['Cybersecurity', 'SIEM', 'Machine Learning', 'Blockchain'],
+    duration: '4 months',
+    teamSize: '6 developers',
+    image: '/case-studies/retail-security.jpg',
+    icon: Shield
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
     technologies: ["IoT", "Data Analytics", "Machine Learning"],
     duration: "10 months",
     team: "20 experts",
@@ -120,10 +523,56 @@ const caseStudies = [
     duration: "12 months",
     team: "25 experts",
     image: "/api/placeholder/600/400"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   }
 ];
 
 const industries = [
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+  { name: 'All', count: caseStudies.length },
+  { name: 'Healthcare', count: caseStudies.filter(cs => cs.industry === 'Healthcare').length },
+  { name: 'Finance', count: caseStudies.filter(cs => cs.industry === 'Finance').length },
+  { name: 'E-commerce', count: caseStudies.filter(cs => cs.industry === 'E-commerce').length },
+  { name: 'Education', count: caseStudies.filter(cs => cs.industry === 'Education').length }
+];
+
+const categories = [
+  { name: 'All', count: caseStudies.length },
+  { name: 'AI Solutions', count: caseStudies.filter(cs => cs.category === 'AI Solutions').length },
+  { name: "IT Services", count: 25, icon: Shield },
+  { name: "Micro SaaS", count: 15, icon: Cloud }
+];
+=======
+<<<<<<< HEAD
+  { name: "Healthcare", count: 12, icon: User },
+  { name: "Finance", count: 8, icon: Building },
+  { name: "Manufacturing", count: 6, icon: Globe },
+  { name: "Retail", count: 10, icon: Target },
+  { name: "Technology", count: 15, icon: Zap },
+  { name: "Education", count: 7, icon: Award }
+=======
+<<<<<<< HEAD
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   "All Industries",
   "Healthcare",
   "E-commerce",
@@ -586,11 +1035,63 @@ export default function CaseStudies() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Start Your Success Story?
+              </h2>
+              <p className="text-xl mb-8 max-w-2xl mx-auto">
+                Let us help you achieve similar results. Contact our team to discuss 
+                your project requirements and get a customized solution.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold inline-flex items-center justify-center"
+                >
+                  <ArrowRight className="w-5 h-5 mr-2" />
+                  Start Your Project
+                </a>
+                <a
+                  href="/services"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Explore Our Services
+                </a>
+=======
+<<<<<<< HEAD
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
             <motion.div
@@ -618,12 +1119,48 @@ export default function CaseStudies() {
                 >
                   View AI Services
                 </Link>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/expand-services-advertise-and-build-project-9473
+>>>>>>> main
+>>>>>>> main
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+=======
+        </section>
+      </div>
+    </MainLayout>
+<<<<<<< HEAD
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+>>>>>>> bda99e5abd16efb90ee02549943231847392138b
+=======
+<<<<<<< HEAD
+>>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> 781a25673e534b82e65bf7d34ef223e1e93789fb
+>>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
   );
 }
