@@ -1,36 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-=======
-<<<<<<< HEAD
-export const metadata = { 
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
-  title: 'IT Services | Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
-};
-=======
 import React from 'react';
 import Link from 'next/link';
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 
 interface ITServiceProps {
   title: string;
@@ -56,12 +29,6 @@ function ITService({ title, description, price, features, benefits, icon, href }
         </div>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-<<<<<<< HEAD
-      <ul className="text-gray-600 space-y-2">
-        {solutions.map((solution) => (
-          <li key={solution} className="flex items-center">
-            <span className="text-blue-500 mr-2">•</span> {solution}
-=======
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
@@ -366,7 +333,6 @@ function ITServiceCard({ title, description, features, price, icon }: {
           <li key={index} className="flex items-center text-sm text-gray-600">
             <span className="text-green-500 mr-2">✓</span>
             {feature}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </li>
         ))}
       </ul>
@@ -374,18 +340,6 @@ function ITServiceCard({ title, description, features, price, icon }: {
   );
 }
 
-<<<<<<< HEAD
-function ITBenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-=======
 function Item({ title, details }: { title: string; details: string[] }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6">
@@ -398,23 +352,12 @@ function Item({ title, details }: { title: string; details: string[] }) {
           </li>
         ))}
       </ul>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>
   );
 }
 
 function Pricing() {
   return (
-<<<<<<< HEAD
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IT Service Pricing</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Assessment" 
-          price="$4k–$10k" 
-          features={["2 weeks", "Cloud review", "Security audit", "Roadmap", "Recommendations"]} 
-          popular={false}
-=======
     <section className="py-12">
       <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">IT Service Packages</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -430,15 +373,10 @@ function Pricing() {
             "Technology roadmap",
             "Implementation recommendations"
           ]} 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
         <Plan 
           name="Implementation" 
           price="$15k–$50k" 
-<<<<<<< HEAD
-          features={["4–8 weeks", "Infra as code", "CI/CD", "Monitoring", "Security hardening"]} 
-          popular={true}
-=======
           duration="4–8 weeks"
           features={[
             "Infrastructure as Code setup",
@@ -448,16 +386,10 @@ function Pricing() {
             "Performance optimization",
             "Documentation & training"
           ]} 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         />
         <Plan 
           name="Managed Services" 
           price="$5k+/mo" 
-<<<<<<< HEAD
-          features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
-          popular={false}
-        />
-=======
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
         <ul className="space-y-1">
@@ -478,7 +410,6 @@ function Pricing() {
             </span>
           ))}
         </div>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       </div>
     </Link>
   );
@@ -531,7 +462,6 @@ function PricingTier({ name, price, period, description, features, popular = fal
         }`}
       >
         {cta}
-=======
           duration="Ongoing"
           features={[
             "24/7 monitoring & on-call",
@@ -571,21 +501,12 @@ function Plan({ name, price, duration, features }: {
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
       >
         Get Started
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </a>
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/fix-website-loading-errors-final
-=======
 
-<<<<<<< HEAD
-function CTASection() {
-=======
 export default function ITServicesPage() {
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -872,9 +793,6 @@ export default function ITServicesPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
  * ITServicesPage - Function description
  */
@@ -888,12 +806,7 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  * Plan - Function description
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
-=======
 }
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
-=======
 
 function ContactSection() {
   return (
@@ -927,4 +840,3 @@ function ContactSection() {
     </section>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

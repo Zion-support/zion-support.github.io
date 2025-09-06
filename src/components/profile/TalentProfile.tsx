@@ -122,7 +122,6 @@ function TalentProfile() {
   const { is_authenticated } = use_auth ();
   // Create proper availability object from talent profile;
   const availability: Availability = {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`

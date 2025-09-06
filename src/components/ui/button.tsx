@@ -8,8 +8,6 @@
   disabled = false,
   style
 }) => {
-<<<<<<< HEAD
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -107,7 +105,6 @@ if ( {) {
       <Link href={href} className={classes} style={style}>;
         {content}
       </Link>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   return (
     <button;
@@ -115,8 +112,6 @@ if ( {) {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-<<<<<<< HEAD
-=======
 
     </button>;
   );
@@ -131,4 +126,3 @@ export default Button;
 }
 export { Button }
 export default Button;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

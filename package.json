@@ -4,19 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
-=======
-    "dev": "next dev",
-    "build": "next build",
-<<<<<<< HEAD
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit"
-=======
-    "build:netlify": "node scripts/build-with-error-handling.js",
->>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "start": "vite preview --port 4173",
@@ -33,9 +22,6 @@
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
-<<<<<<< HEAD
-    "prepare": "echo 'Husky prepare script disabled'"
-=======
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -275,8 +261,6 @@
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
@@ -312,31 +296,8 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
-    "@sendgrid/mail": "^8.1.5",
-=======
-<<<<<<< HEAD
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.294.0",
-    "next": "15.5.2",
-    "postcss": "^8",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-hook-form": "^7.48.2",
-    "tailwind-merge": "^2.0.0",
-    "tailwindcss": "^3.3.0",
-=======
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
->>>>>>> main
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -393,9 +354,7 @@
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     "tailwindcss-animate": "^1.0.7",
-<<<<<<< HEAD
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
   },
@@ -406,20 +365,6 @@
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
-=======
-    "typescript": "^5"
-  },
-  "devDependencies": {
-<<<<<<< HEAD
-    "@types/jest": "^29.5.8",
-    "eslint": "^8",
-    "eslint-config-next": "15.5.2",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
-  }
-}
-=======
->>>>>>> main
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -465,20 +410,12 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-<<<<<<< HEAD
     "vite": "^7.1.4"
-=======
-    "vite": "^7.1.4",
-    "web-vitals": "^5.1.0"
->>>>>>> main
   },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=10.0.0"
   },
-<<<<<<< HEAD
-  "repository": {
-=======
   "postcss": {
     "plugins": {
       "tailwindcss": {},
@@ -487,7 +424,6 @@
   },
   "repository": {
     "type": "git",
->>>>>>> main
     "url": "git+https://github.com/Zion-Holdings/zion.app.git"
   },
   "keywords": [
@@ -502,7 +438,3 @@
   "author": "Zion Tech Group",
   "license": "MIT"
 }
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

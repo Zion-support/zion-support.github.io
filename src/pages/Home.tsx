@@ -1,34 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
 import { motion } from 'framer-motion';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import ServiceCard from '../components/ServiceCard';
 import ParticleBackground from '../components/ParticleBackground';
-<<<<<<< HEAD
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Globe,
-  Lightbulb,
-  Shield,
-  Zap,
-  Target
-=======
   Zap,
   Shield,
   Globe,
@@ -37,9 +12,7 @@ import {
   Smartphone,
   Cloud
 } from 'lucide-react';
-=======
 import { BackToTopButton } from '../components/BackToTopButton';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
 
 const Home: React.FC = () => {
   const containerVariants = {
@@ -65,30 +38,6 @@ const Home: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Header onMenuClick={() => {}} />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <GradientHeading text="Welcome to Zion Tech Group" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              Leading provider of AI-powered technology solutions and enterprise services. 
-              Transform your business with cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Button size="lg" asChild>
-                <Link to="/contact">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/about">Learn More</Link>
-              </Button>
-=======
     <div className="relative">
       <ParticleBackground particleCount={30} />
       <motion.div 
@@ -155,7 +104,6 @@ const Home: React.FC = () => {
             <div className="text-center">
               <div className="text-4xl font-bold text-yellow-400 mb-2">50+</div>
               <div className="text-gray-300">Expert Team</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
             </div>
           </div>
         </motion.div>
@@ -214,17 +162,12 @@ const Home: React.FC = () => {
           </Button>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </>
-=======
       </motion.div>
       <BackToTopButton />
     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-cf6c
   );
 };
 
-=======
 
 const Home: React.FC = () => {
   return (
@@ -247,5 +190,4 @@ const Home: React.FC = () => {
   );
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default Home;

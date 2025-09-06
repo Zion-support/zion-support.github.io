@@ -7,16 +7,6 @@ export default function BlockchainSolutionsPage() {
   return ( 
     <div className="animate-fade-in">
       <section className="py-12">
-<<<<<<< HEAD
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Blockchain Solutions
-          </h1>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Cutting-edge blockchain development services including DeFi protocols, NFT platforms, 
-            smart contracts, and Web3 applications that drive innovation and growth.
-          </p>
-=======
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Blockchain Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BlockchainServiceCard
@@ -194,7 +184,6 @@ export default function BlockchainSolutionsPage() {
             price="$15k–$50k"
             icon="📊"
           />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
 
         {/* Core Blockchain Services */}
