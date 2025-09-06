@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -26,6 +28,7 @@ import _React from 'react'; import Head from 'next/head'; export default functio
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react'; import Head from 'next / head'; export default /**
  * CaseStudiesPage - Function description
  */

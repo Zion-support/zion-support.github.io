@@ -4,13 +4,19 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:netlify": "node scripts/build-with-error-handling.js",
+>>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
-    "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
+    "lint": "next lint",
     "lint:fix": "eslint . --fix",
     "lint:check": "eslint . --max-warnings 0",
     "type-check": "tsc --noEmit",
@@ -263,18 +269,28 @@
     "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
     "@babel/core": "^7.28.4",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "@fastify/cors": "^11.1.0",
     "@fastify/rate-limit": "^10.3.0",
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
+<<<<<<< HEAD
+=======
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
+<<<<<<< HEAD
     "@next/swc-linux-x64-gnu": "^15.5.2",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    "@next/swc-linux-x64-gnu": "^14.2.32",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -296,8 +312,25 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "@reduxjs/toolkit": "^2.9.0",
+    "@sendgrid/mail": "^8.1.5",
+    "@stripe/stripe-js": "^7.9.0",
+=======
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
+=======
+    "@reduxjs/toolkit": "^2.8.2",
+    "@stripe/stripe-js": "^2.3.0",
+    "@sendgrid/mail": "^8.1.5",
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+    "@reduxjs/toolkit": "^2.9.0",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -346,12 +379,12 @@
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.8.2",
-    "sharp": "^0.34.3",
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
     "react-i18next": "^15.7.3",
     "react-is": "^19.1.1",
+    "react-router-dom": "^7.8.2",
+    "sharp": "^0.34.3",
     "sonner": "^2.0.7",
     "swr": "^2.3.6",
     "tailwind-merge": "^3.3.1",
@@ -363,9 +396,6 @@
     "@esbuild/linux-x64": "^0.25.9"
   },
   "devDependencies": {
-    "@axe-core/cli": "^4.10.2",
-    "@axe-core/react": "^4.10.2",
-    "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
@@ -376,7 +406,10 @@
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^15.5.2",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
+<<<<<<< HEAD
+=======
     "@testing-library/dom": "^10.4.1",
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
@@ -390,8 +423,8 @@
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
-    "eslint": "^9.35.0",
     "axe-core": "^4.10.3",
+    "eslint": "^9.35.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -411,7 +444,15 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
+<<<<<<< HEAD
     "vite": "^7.1.4"
+=======
+    "vite": "^7.1.4",
+    "web-vitals": "^5.1.0"
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-191f
   },
   "engines": {
     "node": ">=18.0.0",
@@ -438,4 +479,8 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

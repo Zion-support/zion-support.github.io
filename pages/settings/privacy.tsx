@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
 
@@ -25,48 +24,6 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
-=======
-
-
-import React, { useEffect, useState } from 'react',
-=======
-import React, { useEffect, useState } from 'react',;
-;
-=======
-import React, { useEffect, useState } from 'react',
-
-
-export default function PrivacySettingsPage() {
-  const [userId, setUserId] = useState(''),
-  const [optOut, setOptOut] = useState(false),
-  const [loading, setLoading] = useState(false),
-  const [message, setMessage] = useState(''),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const load = async () => {
-
-    if (!userId) return;
-    setLoading(true);
-    setMessage('');
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
-    const json = await res.json();
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
-    else setMessage(json.error || 'Failed to load');
-    setLoading(false)
-  };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-export default function PrivacySettingsPage() {
-
-
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -80,48 +37,13 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
-<<<<<<< HEAD
-=======
-  };
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id');
-    if (savedUser) setUserId(savedUser)
-  }, []);
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
     load()
-<<<<<<< HEAD
   }
 
   },
-=======
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-=======
-
-=======
-
-  },
-
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id')
-    if (savedUser) setUserId(savedUser)
-
-  }, []),
-
-  const onSaveUser = () => {
-    localStorage.setItem('user-id', userId)
-    load()
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -143,9 +65,7 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
-<<<<<<< HEAD
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
   );
@@ -158,13 +78,6 @@ export default function PrivacySettingsPage() {
 
 }
 
-=======
-
-=======
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -240,7 +153,3 @@ if (return, ) {
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

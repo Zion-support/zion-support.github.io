@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+              }
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               onClose(), // Close mobile menu on any click
             }}
           >
@@ -34,4 +38,7 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
 
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

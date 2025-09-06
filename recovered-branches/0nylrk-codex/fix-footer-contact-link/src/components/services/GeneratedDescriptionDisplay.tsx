@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -27,6 +29,7 @@ import { Check, Pencil } from "lucide-react",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -57,6 +60,14 @@ export function GeneratedDescriptionDisplay({
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
+<<<<<<< HEAD
+  const handleSave = () => {
+    onSave(editedDescription),
+    setIsEditing(false),
+    toast({
+
+
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const handleSave = () => {;
@@ -67,6 +78,7 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved.",
     });
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -76,6 +88,8 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
+<<<<<<< HEAD
+=======
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -197,11 +211,15 @@ export function GeneratedDescriptionDisplay({ ;
             size="sm" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;

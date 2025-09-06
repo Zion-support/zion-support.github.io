@@ -61,10 +61,6 @@ import React from 'react';
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
@@ -96,29 +92,6 @@ export default function AIPoweredDevOpsPlatformPage() {
 	)
 }
 
-<<<<<<< HEAD
-=======
-=======
-import Head from 'next / head';
-import Layout from '../components / layout / Layout';
-export default /**
- * AIPoweredDevOpsPlatformPage - Function description
- */
-function AIPoweredDevOpsPlatformPage() {
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function AIPoweredDevOpsPlatformPage() {
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>;
       <Head>;
@@ -154,7 +127,3 @@ export default function AIPoweredDevOpsPlatformPage() {
 ;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,8 +1,14 @@
 
 <<<<<<< HEAD
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+=======
+<<<<<<< HEAD
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
 import { Badge  } from '@/components / ui / badge';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuoteStatusCardsProps {
   status_counts: {
 
@@ -126,6 +132,8 @@ interface QuoteStatusCardsProps {
     responded: number;
     accepted: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -142,6 +150,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface QuoteStatusCardsProps {
   statusCounts: {
     new: number,
@@ -229,8 +238,11 @@ interface QuoteStatusCardsProps {;
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
   return (;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   statusCounts,;
@@ -242,6 +254,8 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
         <CardHeader className="pb-2">;
           <CardTitle className="text-lg font-medium text-white flex justify-between items-center">;
             New Requests;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Badge className="bg-blue-500">{statusCounts && statusCounts.new}</Badge>;
@@ -272,6 +286,7 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Unreviewed quote requests;
           </p>;
         </CardContent>;
@@ -393,6 +408,8 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
 
 export default QuoteStatusCards;
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -411,12 +428,15 @@ export default QuoteStatusCards;
 
 export default QuoteStatusCards;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>);
 }
 ;
     closed: number;};
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = (_{_statusCounts}) => {_return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -537,3 +557,4 @@ export default QuoteStatusCards;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

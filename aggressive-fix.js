@@ -1,11 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 =======
@@ -61,11 +70,23 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function createValidReactComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('')
@@ -136,10 +157,69 @@ function processDirectory(dirPath) {
         if (fixFile(fullPath)) {
           fixedCount++;
         }
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("")
+    .replace(/[^a-zA-Z0-9]/g, "");
+  return `import React from "react"; export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"> <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-8"> ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )}`;
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function createValidReactComponent(filePath) {
+  const fileName = path.basename(filePath, path.extname(filePath));
+  const componentName = fileName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join("")
+    .replace(/[^a-zA-Z0-9]/g, "");
+  return `import React from "react";
+export default function ${componentName}() {
+<<<<<<< HEAD
+}`;
+}
+=======
+}`;
+}
+  } catch (error) {
+    console.error (`Error processing directory ${dir_path}:`, error.message);
+    return 0;
+  }
+    const content = fs && fs.readFileSync(filePath, "utf8");
+    // Check if it's a React component file
+    if (filePath && filePath.endsWith(".jsx") || filePath && filePath.endsWith(".tsx")) {
+      // If file is empty or has syntax errors, create a valid component
+
+        const newContent = createValidReactComponent(filePath);
+        fs.writeFileSync(filePath, newContent);
+        console.log(`Fixed: ${filePath}`);
+        return 1;
+      }
+    }
+    return 0;
+  } catch (error) {
+    return 0;
+  }
+
+function processDirectory(dirPath) {
+  try {
+        fixedCount += fixFile(fullPath);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       }
     }
     return fixedCount;
   } catch (error) {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     console.error(`Error processing directory ${dirPath}:`, error.message);
     return 0;
   }
@@ -262,20 +342,27 @@ function process_directory() {
     return fixed_count;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error (`Error processing directory ${dir_path}:`, error.message);
     return 0;
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const content = fs && fs.readFileSync(filePath, "utf8");
     // Check if it's a React component file
     if (filePath && filePath.endsWith(".jsx") || filePath && filePath.endsWith(".tsx")) {
       // If file is empty or has syntax errors, create a valid component
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -284,6 +371,7 @@ function process_directory() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const newContent = createValidReactComponent(filePath);
         fs.writeFileSync(filePath, newContent);
         console.log(`Fixed: ${filePath}`);
@@ -297,6 +385,8 @@ function process_directory() {
 
 function processDirectory(dirPath) {
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     if (!fs && fs.existsSync(dirPath)) {
@@ -316,11 +406,14 @@ function processDirectory(dirPath) {
       } else if (stat && stat.isFile() && (item && item.endsWith(".js") || item && item.endsWith(".jsx") || item && item.endsWith(".ts") || item && item.endsWith(".tsx"))) {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         fixedCount += fixFile(fullPath);
       }
     }
     return fixedCount;
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     console && console.error(`Error processing directory ${dirPath}:`, error && error.message);
@@ -381,4 +474,10 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

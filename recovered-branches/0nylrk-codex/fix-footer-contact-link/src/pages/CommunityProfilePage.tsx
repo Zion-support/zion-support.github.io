@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -22,6 +24,7 @@ import UserBadges from "@/components/community/UserBadges";
 import ReputationDisplay from "@/components/community/ReputationDisplay";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -39,9 +42,12 @@ import ReputationDisplay from "@/components/community/ReputationDisplay";
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -60,6 +66,8 @@ const mockUser: CommunityUser = {
       icon: "Award"
       color: "#10B981"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -75,6 +83,7 @@ const mockUser: CommunityUser = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "badge2"
       name: "Top Contributor"
@@ -82,6 +91,8 @@ const mockUser: CommunityUser = {
       icon: "Trophy"
       color: "#F59E0B"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -97,6 +108,7 @@ const mockUser: CommunityUser = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "badge3"
       name: "First Post"
@@ -104,6 +116,8 @@ const mockUser: CommunityUser = {
       icon: "Star"
       color: "#6366F1"
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -204,11 +218,14 @@ const userPosts: ForumPost[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   {
     id: "11"
     title: "How to structure an AI prompt for best results"
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -233,6 +250,7 @@ const userPosts: ForumPost[] = [
     content: "Here's my approach to monitoring AI systems in production environments..."
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     authorId: "user1"
     authorName: "Alex Johnson"
     authorAvatar: "https://i.pravatar.cc/150?img=3"
@@ -244,6 +262,8 @@ const userPosts: ForumPost[] = [
     upvotes: 24
     downvotes: 0
     replyCount: 6
+<<<<<<< HEAD
+=======
   }
 <<<<<<< HEAD
 ];
@@ -377,6 +397,7 @@ export default function CommunityProfilePage() {
 =======
       <SEO 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return (
     <AppLayout>
@@ -389,7 +410,10 @@ export default function CommunityProfilePage() {
 
       <SEO 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -621,6 +645,8 @@ export default function CommunityProfilePage() {;
     setIsLoading(false);
   }, [userId]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -648,6 +674,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -657,6 +684,8 @@ export default function CommunityProfilePage() {;
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -673,6 +702,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <AppLayout>;
         <div className="container py-8">;
           <h1>User not found</h1>;
@@ -683,6 +713,8 @@ export default function CommunityProfilePage() {;
       </AppLayout>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -701,6 +733,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -734,6 +767,9 @@ export default function CommunityProfilePage() {;
                       </svg>
                     </span>
 <<<<<<< HEAD
+  return (
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -742,6 +778,7 @@ export default function CommunityProfilePage() {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <AppLayout>;
       <SEO
         title={`${user && user.name}'s Profile | Community Forum | Zion AI Marketplace`}
@@ -791,6 +828,9 @@ export default function CommunityProfilePage() {;
                       </svg>;
                     </span>;
 <<<<<<< HEAD
+  return (
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -798,6 +838,7 @@ export default function CommunityProfilePage() {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   )}
                 </CardTitle>;
                 {user && user.role && (;
@@ -808,6 +849,8 @@ export default function CommunityProfilePage() {;
                 {user && user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -929,10 +972,13 @@ export default function CommunityProfilePage() {;
           </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       </div>
     </AppLayout>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -942,10 +988,13 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -985,11 +1034,14 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <p className="text-sm text-muted-foreground">Posts</p>;
                     </CardContent>;
                   </Card>;
                   <Card>;
                     <CardContent className="p-4 text-center">;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                       <div className="text-2xl font-bold">{user && user.replyCount}</div>;
@@ -998,6 +1050,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <p className="text-sm text-muted-foreground">Replies</p>;
                     </CardContent>;
                   </Card>;
@@ -1014,6 +1067,8 @@ export default function CommunityProfilePage() {;
                 <TabsTrigger value="posts">Posts</TabsTrigger>;
                 <TabsTrigger value="activity">Recent Activity</TabsTrigger>;
               </TabsList>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
               <TabsContent value="posts" className="mt-6">;
@@ -1034,6 +1089,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     ))}
                   </div>;
                 ) : (;
@@ -1043,6 +1099,8 @@ export default function CommunityProfilePage() {;
                     </CardContent>;
                   </Card>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1064,6 +1122,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           {formatDistanceToNow(new Date("2025-04-10T14:30:00Z"), { addSuffix: true })}
                         </div>;
                         <div>;
@@ -1097,6 +1156,8 @@ export default function CommunityProfilePage() {;
                       <li className="flex items-start gap-4">;
                         <div className="min-w-fit text-sm text-muted-foreground">;
                           {formatDistanceToNow(new Date("2025-03-25T08:20:00Z"), { addSuffix: true })}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1615,6 +1676,7 @@ export default function CommunityProfilePage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         </div>;
                       </li>;
                     </ul>;
@@ -1633,6 +1695,11 @@ export default function CommunityProfilePage() {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </AppLayout>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </AppLayout>);
@@ -1685,3 +1752,4 @@ isModerator: false
     </AppLayout>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

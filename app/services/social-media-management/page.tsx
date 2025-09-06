@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Social Media Management Platform | Zion Tech Group',
-  description: 'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.'
+  description: 'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.',
 };
 
 export default function SocialMediaManagementPage() {
@@ -11,43 +11,43 @@ export default function SocialMediaManagementPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build comprehensive social media management tools with scheduling, analytics, content creation, and team collaboration.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Content Management" 
+          <Item
+            title="Content Management"
             details={[
-              "Multi-platform posting",
-              "Content calendar",
-              "Bulk upload & scheduling",
-              "Hashtag research tools",
-              "Content templates",
-              "Media library",
-              "Content approval workflows"
-            ]} 
+              'Multi-platform posting',
+              'Content calendar',
+              'Bulk upload & scheduling',
+              'Hashtag research tools',
+              'Content templates',
+              'Media library',
+              'Content approval workflows',
+            ]}
           />
-          <Item 
-            title="Analytics & Insights" 
+          <Item
+            title="Analytics & Insights"
             details={[
-              "Cross-platform analytics",
-              "Engagement tracking",
-              "ROI measurement",
-              "Audience insights",
-              "Competitor analysis",
-              "Custom reporting",
-              "Real-time monitoring"
-            ]} 
+              'Cross-platform analytics',
+              'Engagement tracking',
+              'ROI measurement',
+              'Audience insights',
+              'Competitor analysis',
+              'Custom reporting',
+              'Real-time monitoring',
+            ]}
           />
-          <Item 
-            title="Team Collaboration" 
+          <Item
+            title="Team Collaboration"
             details={[
-              "User roles & permissions",
-              "Content approval system",
-              "Team messaging",
-              "Client management",
-              "White-label options",
-              "API access",
-              "Custom integrations"
-            ]} 
+              'User roles & permissions',
+              'Content approval system',
+              'Team messaging',
+              'Client management',
+              'White-label options',
+              'API access',
+              'Custom integrations',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Social Media Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Basic Platform" 
-          price="$15k–$30k" 
+        <Plan
+          name="Basic Platform"
+          price="$15k–$30k"
           duration="6–8 weeks"
           features={[
-            "3 platform connections",
-            "Basic scheduling",
-            "Content calendar",
-            "Simple analytics",
-            "Team management",
-            "Mobile app",
-            "Basic support"
-          ]} 
+            '3 platform connections',
+            'Basic scheduling',
+            'Content calendar',
+            'Simple analytics',
+            'Team management',
+            'Mobile app',
+            'Basic support',
+          ]}
         />
-        <Plan 
-          name="Professional Platform" 
-          price="$30k–$60k" 
+        <Plan
+          name="Professional Platform"
+          price="$30k–$60k"
           duration="8–12 weeks"
           features={[
-            "All major platforms",
-            "Advanced scheduling",
-            "AI content tools",
-            "Comprehensive analytics",
-            "Client management",
-            "White-label options",
-            "Priority support"
-          ]} 
+            'All major platforms',
+            'Advanced scheduling',
+            'AI content tools',
+            'Comprehensive analytics',
+            'Client management',
+            'White-label options',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise Platform" 
-          price="$60k+" 
+        <Plan
+          name="Enterprise Platform"
+          price="$60k+"
           duration="10–16 weeks"
           features={[
-            "Everything in Professional",
-            "Custom integrations",
-            "Advanced AI features",
-            "Custom reporting",
-            "Dedicated support",
-            "SLA guarantees",
-            "Custom development"
-          ]} 
+            'Everything in Professional',
+            'Custom integrations',
+            'Advanced AI features',
+            'Custom reporting',
+            'Dedicated support',
+            'SLA guarantees',
+            'Custom development',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Social Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=Social Media Management Platform Inquiry"
         className="block w-full mt-6 bg-pink-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors"
       >

@@ -1,36 +1,8 @@
-<<<<<<< HEAD
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useMemo, useState } from 'react';
-
-
-const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
 
-<<<<<<< HEAD
 export default function TokenomicsWhitepaperBuilder() {;
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
@@ -118,26 +90,15 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
   const [activeSection, setActiveSection] =;
     useState<string>('Executive Summary');
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
 export default function TokenomicsWhitepaperBuilder(req, res) {
   try {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-export default function TokenomicsWhitepaperBuilder() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
-<<<<<<< HEAD
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),;
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),;
   const [distribution, setDistribution] = useState<DistributionItem[]>([;
@@ -151,10 +112,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   const [jurisdiction, setJurisdiction] = useState<string>('US');
   const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
   const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('Executive Summary');
@@ -194,37 +151,6 @@ export default function TokenomicsWhitepaperBuilder() {;
           'X-Admin': isAdmin ? 'true' : 'false',;
         },;
         body: JSON && JSON.stringify({;
-<<<<<<< HEAD
-=======
-=======
-    { label: 'Advisors & Partnerships', percent: 5 }]),;
-  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
-  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
-  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
-  const previewMarkdown = useMemo(() => {;
-    return generatedMarkdown || buildLocalMarkdown({;
-      tokenName;
-      tokenSupply;
-      useCases;
-      rewardsLogic;
-      distribution,;
-      governance,;
-      jurisdiction,;
-      legalReview});
-  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),;
-  async function handleGenerate() {;
-    try {
-      setIsGenerating(true);
-      const res = await fetch('/api/whitepaper/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
-        body: JSON.stringify({;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -233,18 +159,6 @@ export default function TokenomicsWhitepaperBuilder() {;
           governance,;
           jurisdiction,;
           operatorPrompt,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          legalReview,;
-        }),;
-      });
-      if (!res && res.ok) throw new Error('Failed to generate');
-      const data = await res && res.json();
-      setGeneratedMarkdown(data && data.markdown || '');
-    } catch (e) {;
-      console && console.error(e);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       alert('Generation failed');
     } finally {;
       setIsGenerating(false);    }
@@ -289,10 +203,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   }
 
       const item = { ...copy[index] }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       URL.revokeObjectURL(url)
     } else {
       const res = await fetch('/api/whitepaper/export', {
@@ -311,7 +221,6 @@ export default function TokenomicsWhitepaperBuilder() {;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev];
-=======
 }
       const { url } = await res.json();
       window.open(url, '_blank');
@@ -329,47 +238,11 @@ export default function TokenomicsWhitepaperBuilder() {;
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
-<<<<<<< HEAD
       const item = { ...copy[index] };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
       copy[index] = item;
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      const item = { ...copy[index] };
-      if (key === 'percent') item.percent = Number(value);
-      if (key === 'label') item.label = value;
-  function updateDistribution(): any (;
-    index: number,;
-    key: keyof DistributionItem,;
-    value: string;
-  ) {;
-    setDistribution(prev => {      const copy = [...prev];
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      const item = { ...copy[index] };
-      if (key === 'percent') item && item.percent = Number(value);
-      if (key === 'label') item && item.label = value;
-    { label: 'Advisors & Partnerships', percent: 5 },
-  ]);
-  const [governance, set_governance] = useState < string>(
-    'One - token - one - vote with quadratic weighting for proposals; staking required for proposal submission; delegated voting supported');
-  const [jurisdiction, set_jurisdiction] = useState < string>('US');
-  const [operator_prompt, setOperatorPrompt] = useState < string>(
-    defaultOperatorPrompt);
-;
-  const total_percent = useMemo (
-    () => distribution.reduce ((acc, d) => acc + (Number (d.percent) || 0), 0),
-    [distribution]);
-  const [generated_markdown, setGeneratedMarkdown] = useState < string>('');
-  const [is_generating, setIsGenerating] = useState < boolean>(false);
-;
-  const [active_section, setActiveSection] =;
-    useState < string>('Executive Summary');
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const preview_markdown = useMemo (() => {
     return (
       generated_markdown ||;
@@ -498,44 +371,7 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
-=======
 
-<<<<<<< HEAD
-=======
-  const sections = [;
-    'Executive Summary',;
-    'Market Context',;
-    'Utility & Usage',;
-    'Rewards System',;
-    'Distribution',;
-    'Governance Model',;
-    'Risks + Disclaimers',;
-  /**
- * addDistributionItem - Function description
- */
-function addDistributionItem() {
-    set_distribution (prev => [...prev, { label: 'New Allocation', percent: 0 }]);
-  }
-  /**
- * removeDistributionItem - Function description
- */
-function removeDistributionItem() {
-    set_distribution (prev => prev.filter ((_, i) => i !== index));  }
-  async /**
- * handleShareableLink - Function description
- */
-function handleShareableLink() {
-    const res = await fetch ('/api / whitepaper / share', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ markdown: preview_markdown, public_preview }),
-    });
-    // Check condition
-if ( {) {
-  $2
-}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className='px-3 py-1 rounded-md bg-indigo-600 text-white'>;
         <title > Tokenomics Whitepaper Generator</title>;
       </Head>;
@@ -559,22 +395,10 @@ if ( {) {
               />;
               <span > Public after launch</span>;
             </label>;
-<<<<<<< HEAD
-=======
-            <button;
-              on_click={handleShareableLink}
-              className='px - 3 py - 1 rounded - md bg - indigo - 600 text - white';
-            >;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Create Share Link;
             </button>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
           <div className='space - y-6'>;
             <div className='rounded - lg border p - 4 space - y-4'>;
@@ -631,10 +455,6 @@ if ( {) {
                     className='w - full border rounded - md px - 3 py - 2';
                     value={jurisdiction}
                     on_change={e => set_jurisdiction (e.target.value)}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   >;
                     <option value='US'>US</option>;
                     <option value='EU'>EU</option>;
@@ -642,182 +462,14 @@ if ( {) {
                     <option value='AE'>UAE</option>;
                   </select>;
                 </div>;
-<<<<<<< HEAD
-=======
-
-                    onChange={e => setLegalReview(e && e.target.checked)}
-                  />;
-                  <label htmlFor='legalReview' className='text-sm'>;
-                <div className='flex items - center gap - 2'>;
-                  <input;
-                    id='legal_review';
-                    type='checkbox';
-                    checked={legal_review}
-                    on_change={e => setLegalReview (e.target.checked)}
-                  />;
-                  <label html_for='legal_review' className='text - sm'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Submit to Counsel;
                   </label>                </div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-=======
-
-                    className='px-3 py-1 rounded-md bg-gray-900 text-white'>;
-            <div className='rounded - lg border p - 4 space - y-3'>;
-              <h3 className='font - medium'>Distribution</h3>;
-              <div className='space - y-2'>;
-                {distribution.map ((item, idx) => (
-                  <div;
-                    key={idx}
-                    className='grid grid - cols - 12 gap - 2 items - center';
-                  >;
-                    <input;
-                      className='col - span - 6 border rounded - md px - 3 py - 2';
-                      value={item.label}
-                      on_change={e =>;
-                        update_distribution (idx, 'label', e.target.value);
-                      }
-                    />;
-                    <input;
-                      className='col - span - 4 border rounded - md px - 3 py - 2';
-                      type='number';
-                      min={0}
-                      max={100}
-                      value={item.percent}
-                      on_change={e =>;
-                        update_distribution (idx, 'percent', e.target.value);
-                      }
-                    />;
-                    <button;
-                      on_click={() => removeDistributionItem (idx)}
-                      className='col - span - 2 px - 3 py - 2 rounded - md bg - rose - 600 text - white';
-                    >;
-                      Remove;
-                    </button>;
-                  </div>))}
-                <div className='flex items - center justify - between text - xs opacity - 70'>;
-                  <span > Total: {total_percent}%</span>;
-                  <button;
-                    on_click={addDistributionItem}
-                    className='px - 3 py - 1 rounded - md bg - gray - 900 text - white';
-                  >;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Add allocation;
                   </button>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
-
-                  className='px-4 py-2 rounded-md border';
-              <div className='mt - 3'>                <DistributionDonut data={distribution} />;
-              </div>;
-            </div>;
-            <div className='rounded - lg border p - 4 space - y-3'>;
-              <h3 className='font - medium'>Operator Prompt</h3>;
-              <textarea;
-                className='w - full border rounded - md px - 3 py - 2';
-                rows={4}
-                value={operator_prompt}
-                on_change={e => setOperatorPrompt (e.target.value)}
-              />;
-              <div className='flex gap - 3'>;
-                <button;
-                  disabled={!is_admin || is_generating}
-                  on_click={handle_generate}
-                  className='px - 4 py - 2 rounded - md bg - indigo - 600 text - white disabled:opacity - 50';
-                >;
-                  {is_generating ? 'Generating…' : 'Generate with GPT'}
-                </button>;
-                <button;
-                  on_click={() => setGeneratedMarkdown ('')}
-                  className='px - 4 py - 2 rounded - md border';
-
-                >;
-                  Clear AI Draft;
-                </button>;
-              </div>;
-            </div>;
-
-                  className='px-3 py-2 rounded-md border';
-=======
-            <div className='rounded - lg border p - 4 space - y-2'>;
-              <h3 className='font - medium'>Output</h3>;
-              <div className='flex gap - 3'>;
-                <button;
-                  on_click={() => handle_download ('md')}
-                  className='px - 3 py - 2 rounded - md border';
-                >;
-                  Download .md;
-                </button>;
-                <button;
-                  on_click={() => handle_download ('pdf')}
-                  className='px - 3 py - 2 rounded - md border';
-
-                >;
-                  Download PDF;
-                </button>              </div>;
-            </div>;
-          </div>;
-
-
-function buildLocalMarkdown(): any (input: {;
-
-  tokenName: string;
-  tokenSupply: string;
-  useCases: string;
-  rewardsLogic: string;
-  distribution: DistributionItem[];
-  governance: string;
-  jurisdiction: string;
-  legalReview: boolean;
-}) {;
-  const distLines = input && input.distribution;
-    .map(d => `- ${d && d.label}: ${d && d.percent}%`);
-    .join('\n');
-  const disclaimer = input && input.legalReview;
-    ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`;
-    : '';
-  return `# ${input && input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input && input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input && input.useCases}.\n\n## Rewards System\n${input && input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input && input.tokenSupply}.\n\n## Governance Model\n${input && input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input && input.jurisdiction)}${disclaimer}\n`;
-function jurisdictionalNote(): any (j: string) {;
-  switch (j) {;
-    case 'US':;
-      return 'The token is intended for utility purposes and not as a security within the meaning of U && U.S. securities laws.';
-    case 'EU':;
-      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
-    case 'SG':;
-      return 'Intended utility token under MAS guidance; prospective purchasers should not view it as capital markets products.';
-    case 'AE':;
-      return 'Intended utility token within relevant UAE free zone guidance; not an investment product.';
-    default:;
-      return 'Intended strictly for utility use.';
-  }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const sections = [
-    'Executive Summary'
-    'Market Context'
-    'Utility & Usage'
-    'Rewards System'
-    'Distribution'
-    'Governance Model'
-    'Risks + Disclaimers'
-  ];
-=======
-}
-  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>
       <Head>
@@ -838,19 +490,6 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-          <div className='space-y-6'>
-            <div className='rounded-lg border p-4 space-y-4'>
-              <h2 className='font-medium'>Builder Inputs</h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
@@ -859,10 +498,6 @@ function jurisdictionalNote(): any (j: string) {;
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div>
                   <label className="text-xs opacity-70">Token name</label>
                   <input className="w-full border rounded-md px-3 py-2" value={tokenName} onChange={(e) => setTokenName(e.target.value)} />
@@ -894,15 +529,6 @@ function jurisdictionalNote(): any (j: string) {;
                 </div>
 
 
-<<<<<<< HEAD
-=======
-                <div className="flex items-center gap-2">
-                  <input id="legalReview" type="checkbox" checked={legalReview} onChange={(e) => setLegalReview(e.target.checked)} />
-                  <label htmlFor="legalReview" className="text-sm">Submit to Counsel</label>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
               </div>
             </div>
@@ -916,18 +542,6 @@ function jurisdictionalNote(): any (j: string) {;
                     <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                ))}
-=======
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
@@ -951,67 +565,10 @@ function jurisdictionalNote(): any (j: string) {;
                   className='px-4 py-2 rounded-md border'
                 >
                   Clear AI Draft
-<<<<<<< HEAD
-=======
-=======
-
-            <div className="rounded-lg border p-4 space-y-3">
-              <h3 className="font-medium">Operator Prompt</h3>
-              <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
-              <div className="flex gap-3">
-
-                <button disabled={!isAdmin || isGenerating} onClick={handleGenerate} className="px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50">
-                  {isGenerating ? 'Generating…' : 'Generate with GPT'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </button>
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <div className='rounded-lg border p-4 space-y-2'>
-              <h3 className='font-medium'>Output</h3>
-              <div className='flex gap-3'>
-                <button
-                  onClick={() => handleDownload('md')}
-                  className='px-3 py-2 rounded-md border'
-                >
-                  Download .md
-                </button>
-                <button
-                  onClick={() => handleDownload('pdf')}
-                  className='px-3 py-2 rounded-md border'
-                >
-                  Download PDF
-                </button>              </div>
-            </div>
-          </div>
-          <div className='rounded-lg border p-4'>
-            <div className='flex items-center justify-between mb-3'>
-              <div className='flex gap-2 overflow-x-auto'>
-                {sections.map(s => (
-                  <button
-                    key={s}
-                    onClick={() => setActiveSection(s)}
-                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}
-                  >
-                    {s}
-                  </button>
-                ))}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
@@ -1026,10 +583,6 @@ function jurisdictionalNote(): any (j: string) {;
               <div className="flex gap-2 overflow-x-auto">
                 {sections.map((s) => (
                   <button key={s} onClick={() => setActiveSection(s)} className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}</button>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1037,38 +590,14 @@ function jurisdictionalNote(): any (j: string) {;
 }
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-              </div>
-<span className="text-xs opacity-60">Auto-updating preview</span>
-=======
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </div>
             <MarkdownPreview markdown={previewMarkdown} activeSection={activeSection} />
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
 
@@ -1085,7 +614,6 @@ function buildLocalMarkdown(input: {;
   jurisdiction: string;
   legalReview: boolean;
 }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
@@ -1136,24 +664,15 @@ function jurisdictional_note() {
 function DistributionDonut(): any ({ data }: { data: DistributionItem[] }) {;
   // Simple textual donut placeholder until a chart lib is added;
   const total = data && data.reduce((a, b) => a + b && b.percent, 0) || 1;
-<<<<<<< HEAD
 
 
 
-=======
-
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
 function jurisdictionalNote(j: string) {;
   switch (j) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-<<<<<<< HEAD
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
   const total = data.reduce((a, b) => a + b.percent, 0) || 1,
@@ -1165,55 +684,7 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
             <div className="h-2 bg-indigo-600 rounded" style={{ width: `${(d.percent / total) * 100}%` }} />
           </div>
           <span className="w-48 truncate">{d.label} ({d.percent}%)</span>
-=======
-    case 'EU':;
-      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',;
-    case 'SG':;
-      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.',;
-    case 'AE':;
-      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',;
-    default:;
-      return 'Intended strictly for utility use.';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-function DistributionDonut({ data }: { data: DistributionItem[] }) {
-  // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
-
-
-function MarkdownPreview(): any ({;
-  markdown,;
-  activeSection,;
-}: {;
-  markdown: string;
-  activeSection: string;
-}) {  // Very lightweight section filter: split by headings;
-  const parts = useMemo(() => {;
-    const sections = markdown && markdown.split(/\n## /g),;
-    const map: Record<string, string> = {};
-    sections && sections.forEach((s, i) => {;
-      if (i === 0) return; // first is H1;
-      const [titleLine, ...rest] = s && s.split('\n');
-      map[titleLine && titleLine.trim()] = rest && rest.join('\n');
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
-<<<<<<< HEAD
       ))}
     </div>
   );
@@ -1223,11 +694,6 @@ function MarkdownPreview({
 }: {
   markdown: string;
   activeSection: string;
-<<<<<<< HEAD
-=======
-}) {  // Very lightweight section filter: split by headings
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g)
     const map: Record<string, string> = {}
@@ -1235,7 +701,6 @@ function MarkdownPreview({
       if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
-<<<<<<< HEAD
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -1244,20 +709,11 @@ function MarkdownPreview({
       if (i === 0) return; // first is H1;
       const [titleLine, ...rest] = s && s.split('\n');
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     case 'EU':;
       return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
     case 'SG':;
@@ -1315,10 +771,6 @@ if (return) {
 ;
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1333,12 +785,6 @@ if (return) {
 }
 function MarkdownPreview({ markdown, activeSection }: { markdown: string, activeSection: string }) {
   // Very lightweight section filter: split by headings
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
@@ -1351,7 +797,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   }, [markdown]),
   const content = parts[activeSection] || '',
   return (
-<<<<<<< HEAD
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
 ;
@@ -1378,8 +823,3 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 }
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

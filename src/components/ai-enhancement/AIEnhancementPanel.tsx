@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+interface AIEnhancementPanelProps {
+=======
 import React, { useState } from 'react';
 import {;
   Card,;
@@ -17,11 +21,29 @@ import {;
 } from '@/hooks/useAIContentEnhancer';
 
 interface AIEnhancementPanelProps {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string;
   defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
+<<<<<<< HEAD
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
+import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',;
+interface AIEnhancementPanelProps {;
+  title: string,;
+  defaultOptions: AIEnhancementOptions,;
+  onApply: (content: string) => void,;
+  onClose?: () => void,;
+  showInstructions?: boolean,;
+  initialContent?: string;
+}
+;
+export function AIEnhancementPanel({;
+=======
 
 import React, { useState } from 'react';
 import {
@@ -90,11 +112,15 @@ if ( {) {
 
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title,;
   defaultOptions,;
   onApply,;
   onClose,;
   showInstructions = true,;
+<<<<<<< HEAD
+
+=======
   initialContent = '',;
 }: AIEnhancementPanelProps) {;
   const [options, setOptions] = useState<AIEnhancementOptions>({;
@@ -132,16 +158,50 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
+<<<<<<< HEAD
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+      [field]: e.target.value})
+  },
+
+  const handleApply = () => {
+    onApply(generatedContent),
+    if (onClose) onClose()
+  },
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000)
+  },
+=======
 
       ...options,
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -156,7 +216,10 @@ export function AIEnhancementPanel(): any ({;
         <div className="space-y-2">
           <label className="text-sm font-medium">Content to enhance</label>
           <Textarea
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             placeholder="Enter your content to enhance..."
             className="min-h-[100px]"
             value={options.content}
@@ -193,11 +256,14 @@ export function AIEnhancementPanel(): any ({;
         )}
 
         {/* Generate button */}
+<<<<<<< HEAD
+=======
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -213,6 +279,8 @@ export function AIEnhancementPanel(): any ({;
             </>
           )}
         </Button>
+<<<<<<< HEAD
+=======
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -242,6 +310,7 @@ export function AIEnhancementPanel(): any ({;
               >
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -264,15 +333,20 @@ export function AIEnhancementPanel(): any ({;
         )}
 
 
+<<<<<<< HEAD
+=======
       
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {generatedContent && (
         <CardFooter className='flex justify-between'>
           {onClose && (
             <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
+<<<<<<< HEAD
+=======
       </CardContent>;
 
       {generatedContent && (;
@@ -285,6 +359,7 @@ export function AIEnhancementPanel(): any ({;
 
     </Card>;
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
@@ -390,4 +465,7 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

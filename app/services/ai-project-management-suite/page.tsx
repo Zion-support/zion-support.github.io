@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Project Management Suite | Zion Tech Group',
   description: 'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
-  keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI'
+  keywords: 'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
 };
 
 interface FeatureProps {
@@ -154,14 +154,14 @@ export default function AIProjectManagementSuitePage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {[
-            { name: "Jira", icon: "🎫", description: "Issue tracking" },
-            { name: "Asana", icon: "📋", description: "Task management" },
-            { name: "Trello", icon: "📌", description: "Kanban boards" },
-            { name: "Monday.com", icon: "📅", description: "Work management" },
-            { name: "Slack", icon: "💬", description: "Team communication" },
-            { name: "Microsoft Teams", icon: "👥", description: "Collaboration" },
-            { name: "GitHub", icon: "🐙", description: "Code management" },
-            { name: "Figma", icon: "🎨", description: "Design collaboration" }
+            { name: 'Jira', icon: '🎫', description: 'Issue tracking' },
+            { name: 'Asana', icon: '📋', description: 'Task management' },
+            { name: 'Trello', icon: '📌', description: 'Kanban boards' },
+            { name: 'Monday.com', icon: '📅', description: 'Work management' },
+            { name: 'Slack', icon: '💬', description: 'Team communication' },
+            { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
+            { name: 'GitHub', icon: '🐙', description: 'Code management' },
+            { name: 'Figma', icon: '🎨', description: 'Design collaboration' },
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className="text-3xl mb-3">{integration.icon}</div>
@@ -227,12 +227,12 @@ export default function AIProjectManagementSuitePage() {
             period="month"
             description="Perfect for small teams"
             features={[
-              "Up to 10 team members",
-              "Basic AI task automation",
-              "Project templates",
-              "Basic analytics",
-              "Email support",
-              "5 active projects"
+              'Up to 10 team members',
+              'Basic AI task automation',
+              'Project templates',
+              'Basic analytics',
+              'Email support',
+              '5 active projects',
             ]}
             cta="Start Free Trial"
           />
@@ -242,14 +242,14 @@ export default function AIProjectManagementSuitePage() {
             period="month"
             description="Most popular for growing teams"
             features={[
-              "Up to 50 team members",
-              "Advanced AI features",
-              "Resource optimization",
-              "Risk prediction",
-              "Advanced analytics",
-              "Priority support",
-              "Unlimited projects",
-              "API access"
+              'Up to 50 team members',
+              'Advanced AI features',
+              'Resource optimization',
+              'Risk prediction',
+              'Advanced analytics',
+              'Priority support',
+              'Unlimited projects',
+              'API access',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -260,14 +260,14 @@ export default function AIProjectManagementSuitePage() {
             period="month"
             description="For large organizations"
             features={[
-              "Unlimited team members",
-              "Full AI optimization suite",
-              "Custom AI training",
-              "White-label options",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "Custom integrations",
-              "Advanced reporting"
+              'Unlimited team members',
+              'Full AI optimization suite',
+              'Custom AI training',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Custom integrations',
+              'Advanced reporting',
             ]}
             cta="Contact Sales"
           />

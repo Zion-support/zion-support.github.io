@@ -6,48 +6,20 @@
   res && res.end();
 
 }
-<<<<<<< HEAD
-=======
-  const { provider } = req.query as { provider: string };
-  const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
-  res.writeHead(302, { Location: callbackUrl });
-  res.end()
-import type { NextApiRequest, NextApiResponse } from './next';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { provider } = req.query as { provider: string }
-  const callback_url = `/api / integrations / oauth/${provider}/callback?code = mock_code & state = mock_state`;
-  res.write_head (302, { Location: callback_url });
-  res.end ();
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { provider } = req.query as { provider: string };
   const callbackUrl = `/api/integrations/oauth/${provider}/callback?code=mock_code&state=mock_state`;
   res.writeHead(302, { Location: callbackUrl });
   res.end();
-<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -62,8 +34,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

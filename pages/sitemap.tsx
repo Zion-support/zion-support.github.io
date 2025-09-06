@@ -1,9 +1,25 @@
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+export default function SitemapPage() {
+  return (
+    <MainLayout title="Sitemap - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the sitemap page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 import { 
@@ -17,87 +33,6 @@ import {
   BarChart3, 
   Settings, 
   Globe, 
-<<<<<<< HEAD
-=======
-  ArrowRight 
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-
-
-} from 'lucide-react';
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-const sitemapData = [;
-  {;
-    category: 'Main Pages',;
-    pages: [;
-      { name: 'Home', url: '/', icon: Home },;
-      { name: 'About', url: '/about', icon: Users },;
-      { name: 'Contact', url: '/contact', icon: Globe },;
-      { name: 'Services', url: '/services', icon: Settings }
-    ];
-  },;
-  {;
-    category: 'Services',;
-    pages: [;
-      { name: 'AI Services', url: '/ai-services', icon: Brain },;
-      { name: 'IT Services', url: '/it-services', icon: Network },;
-      { name: 'Micro SaaS', url: '/micro-saas', icon: Target },;
-      { name: 'Cloud Services', url: '/services/cloud', icon: Cloud },;
-      { name: 'Cybersecurity', url: '/services/cybersecurity', icon: Shield },;
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: BarChart3 }
-    ];
-  },;
-  {;
-    category: 'Solutions',;
-    pages: [;
-      { name: 'Cloud Migration', url: '/solutions/cloud-migration', icon: Cloud },;
-      { name: 'Digital Transformation', url: '/solutions/digital-transformation', icon: Settings },;
-      { name: 'Custom Solutions', url: '/solutions/custom', icon: Target }
-    ];
-  },;
-  {;
-    category: 'Resources',;
-    pages: [;
-      { name: 'Documentation', url: '/docs', icon: Globe },;
-      { name: 'API Documentation', url: '/api-docs', icon: Settings },;
-      { name: 'Guides', url: '/guides', icon: Globe },;
-
-=======
-import React from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
   Home,
   Brain,
@@ -152,10 +87,6 @@ const sitemap_data = [;
   }
 ];
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -183,23 +114,6 @@ export default function SitemapPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.6 }}
-              className="text-center">;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-                Site <span className="text-yellow-400">Map</span>;
-              </h1>;
-              <p className="text-xl mb-8 max-w-3xl mx-auto">;
-                Navigate through all our pages, services, and resources;
-              </p>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Sitemap Content */}
         <section className="py-16">;
           <div className="max-w-7xl mx-auto px-4">;
@@ -232,11 +146,6 @@ export default function SitemapPage() {;
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export default /**
  * SitemapPage - Function description
@@ -334,36 +243,15 @@ import {
         </section>;
       </div>;
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
-=======
-    </>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 
-=======
 
 
 
 }
 
 
-<<<<<<< HEAD
-=======
-=======
-
-
-=======
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {
 
 import { 
@@ -412,15 +300,6 @@ function SitemapPage() {
     }
     {
       href: '/explore'
-<<<<<<< HEAD
-=======
-      label: '🔍 Explore'
-      description: 'Browse services by category and technology area'
-    }
-    {
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
@@ -541,40 +420,12 @@ function SitemapPage() {
     }
     {
       href: '/search'
-<<<<<<< HEAD
-=======
-      label: '🔎 Search'
-      description: 'Search across all services and content'
-    }
-  ];
-
-;
-  const external_links = [;
-    {
-      href: 'https://github.com / ai - factory',
-      label: 'GitHub',
-      description: 'Open source projects and code examples',
-    },
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       href: 'https://docs.ziontechgroup.com'
       label: 'Documentation'
       description: 'Technical documentation and guides'
     }
     {
-<<<<<<< HEAD
-=======
-
-      href: 'https://status.ziontechgroup.com',
-      label: 'System Status',
-      description: 'Real - time system status and uptime',
-    },  ];
-;
-  const contact_info = [;
-    { type: 'Phone', value: '+1 (302) 464 - 0950', action: 'tel:+13024640950' },
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       type: 'Email'
       value: 'kleber@ziontechgroup.com'
@@ -769,13 +620,6 @@ export default function SitemapPage() {;
     { href: '/explore', label: '🔍 Explore', description: 'Browse services by category and technology area' },
     { href: '/contact', label: '📧 Contact', description: 'Get in touch and start your project' }
   ];
-<<<<<<< HEAD
-=======
-
-
-  const contactInfo = [;
-    { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {;
       type: 'Email',;
       value: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -831,7 +675,6 @@ export default function SitemapPage() {;
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Sitemap | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
@@ -856,8 +699,6 @@ export default function SitemapPage() {;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <meta name="description" content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category." />
         <meta property="og:title" content="Sitemap | Zion Tech Group" />
         <meta property="og:description" content="Complete website sitemap and navigation guide." />
@@ -885,10 +726,6 @@ export default function SitemapPage() {;
         <title>Sitemap | Zion Tech Group</title>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
 
 
@@ -902,12 +739,6 @@ export default function SitemapPage() {;
               Tech Group.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <a
                 href='#main-pages'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
@@ -916,17 +747,10 @@ export default function SitemapPage() {;
               </a>;
               <a
                 href='/search'
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
       {/* Main Pages */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -968,8 +792,6 @@ export default function SitemapPage() {;
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
               <motion.div
                 key={page.href}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
             className='mb-16'>;
@@ -981,20 +803,10 @@ export default function SitemapPage() {;
               and services;
             </p>;
           </motion && motion.div>;
-<<<<<<< HEAD
-=======
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
-              <motion&& motion.div
-                key={page && page.href}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {mainPages.map((page, index) => (
               <motion.div
@@ -1047,29 +859,10 @@ export default function SitemapPage() {;
       {/* Service Categories */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-
-
-      {/* Service Categories */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Service Categories */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1126,10 +919,6 @@ export default function SitemapPage() {;
             viewport={{ once: true }}
 
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -1139,7 +928,6 @@ export default function SitemapPage() {;
               by category
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.href}
@@ -1148,8 +936,6 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             className="mb-16"
           >
@@ -1165,7 +951,6 @@ export default function SitemapPage() {;
             {serviceCategories.map((category, index) => (
 
               <motion.div
-<<<<<<< HEAD
               >
                 <Link
                   href={category.href}
@@ -1190,51 +975,10 @@ export default function SitemapPage() {;
       {/* Featured Services */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-                key={category.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            className='mb-16'>;
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
-              Service Categories;
-            </h2>;
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>;
-              Browse our comprehensive range of technology solutions organized;
-              by category;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
-              <motion&& motion.div
-                key={category && category.href}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
-      {/* Featured Services */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Featured Services */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1304,8 +1048,6 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
           >
@@ -1315,7 +1057,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -1324,8 +1065,6 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             className="mb-16"
           >
@@ -1341,7 +1080,6 @@ export default function SitemapPage() {;
             {featuredServices.map((service, index) => (
 
               <motion.div
-<<<<<<< HEAD
               >
                 <Link
                   href={service.href}
@@ -1364,49 +1102,10 @@ export default function SitemapPage() {;
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-                key={service.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            className='mb-16'>;
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
-              Featured Services;
-            </h2>;
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
-              <motion&& motion.div
-                key={service && service.href}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
-      {/* Resources & Tools */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Resources & Tools */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1481,10 +1180,6 @@ export default function SitemapPage() {;
             viewport={{ once: true }}
 
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -1492,7 +1187,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
               <motion.div
                 key={resource.href}
@@ -1501,8 +1195,6 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             className="mb-16"
           >
@@ -1518,7 +1210,6 @@ export default function SitemapPage() {;
             {resources.map((resource, index) => (
 
               <motion.div
-<<<<<<< HEAD
               >
                 <Link
                   href={resource.href}
@@ -1543,49 +1234,10 @@ export default function SitemapPage() {;
       {/* External Resources */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
-=======
-                key={resource.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            className='mb-16'>;
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
-              Resources & Tools;
-            </h2>;
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
-              <motion&& motion.div
-                key={resource && resource.href}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
-      {/* External Resources */}
-      <section className='py-20 px-6'>;
-        <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* External Resources */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1660,10 +1312,6 @@ export default function SitemapPage() {;
             viewport={{ once: true }}
 
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -1671,7 +1319,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -1680,8 +1327,6 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             className="mb-16"
           >
@@ -1697,7 +1342,6 @@ export default function SitemapPage() {;
             {externalLinks.map((link, index) => (
 
               <motion.div
-<<<<<<< HEAD
               >
                 <a
                   href={link.href}
@@ -1724,49 +1368,10 @@ export default function SitemapPage() {;
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>          <motion.div
-=======
-                key={link.href}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            className='mb-16'>;
-            <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
-              External Resources;
-            </h2>;
-            <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
-            </p>;
-          </motion && motion.div>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
-              <motion&& motion.div
-                key={link && link.href}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-
-
-      {/* Contact Information */}
-      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
-        <div className='max-w-4xl mx-auto'>          <motion&& motion.div
-
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Contact Information */}
-      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='mb-16'
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1839,10 +1444,6 @@ export default function SitemapPage() {;
             viewport={{ once: true }}
 
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -1852,7 +1453,6 @@ export default function SitemapPage() {;
               project
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.type}
@@ -1861,8 +1461,6 @@ export default function SitemapPage() {;
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             className="mb-16"
           >
@@ -1878,16 +1476,10 @@ export default function SitemapPage() {;
             {contactInfo.map((contact, index) => (
 
               <motion.div
-<<<<<<< HEAD
               >
                 <h3 className='text-lg font-bold text-white mb-3'>
                   {contact.type}
                 </h3>
-=======
-                key={contact.type}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className='mb-16'>;
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>;
               Contact Information;
@@ -1903,10 +1495,6 @@ export default function SitemapPage() {;
                 key={contact && contact.type}
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -1928,10 +1516,6 @@ export default function SitemapPage() {;
                 </a>;
               </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
@@ -1939,16 +1523,11 @@ export default function SitemapPage() {;
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-<<<<<<< HEAD
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-=======
-className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 >
                   {contact.value}
                 </a>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1957,8 +1536,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
           </div>
         </div>
       </section>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             ))}
 
@@ -1981,10 +1558,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               Use our search functionality or contact us directly for assistance;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
       {/* Quick Navigation */}
@@ -1994,11 +1567,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2035,11 +1603,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -2048,7 +1611,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               Use our search functionality or contact us directly for assistance
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href='/search'
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -2057,28 +1619,14 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
               </Link>;
               <Link
                 href='/contact'
-<<<<<<< HEAD
   ),
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 ursor/integrate-build-improve-and-re-verify-8f7d
 
   )
-=======
 
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
   )
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }animate= {
   {
   opacity: 1, y: 0
@@ -2099,11 +1647,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </motion && motion.div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <SmartFooter />;
     </div>;
   ),;
@@ -2123,11 +1666,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion && motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion && motion.div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -2135,13 +1673,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-=======
-
-  duration: 0 && 0.8 
-}viewport= {
-  {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   once: true 
 
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> <SmartFooter /> </div>) ;
@@ -2149,12 +1680,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
   )
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >;
             <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
               Site Map;
@@ -2470,410 +1995,9 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>;
       </section>;
       <SmartFooter />;
-<<<<<<< HEAD
 }
-}
-=======
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 <<<<<<< HEAD
-      type: 'Address',
-      value: 'Middletown, DE',
-      action: 'https://maps.google.com/?q = Middletown, DE',
-    },
-  ];
-;
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950 text - white'>;
-      <Head>;
-        <title > Sitemap | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category.";
-        />;
-        <meta property='og:title' content='Sitemap | Zion Tech Group' />;
-        <meta;
-          property='og:description';
-          content='Complete website sitemap and navigation guide.';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / sitemap' />      </Head>;
-      <SmartHeader />;
-      {/* Hero Section */}
-      <section className='pt - 32 pb - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
-              Site Map;
-            </h1>;
-            <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed mb - 8'>;
-              Navigate our comprehensive website and discover all the AI - powered;
-              technology solutions, resources, and information available at Zion;
-              Tech Group.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <a;
-                href='#main - pages';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105';
-              >;
-                Explore Site;
-                <ArrowRight className='w - 5 h - 5 ml - 2' />;
-              </a>;
-              <a;
-                href='/search';
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
-              >;
-                Search Site;
-                <Search className='w - 5 h - 5 ml - 2' />              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Main Pages */}
-      <section id='main - pages' className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Main Pages;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Core pages that provide essential information about our company;
-              and services;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {main_pages.map ((page, index) => (
-              <motion.div;
-                key={page.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={page.href}
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {page.label}
-                    </h3>;
-                    <ChevronRight className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {page.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Service Categories */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Service Categories;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Browse our comprehensive range of technology solutions organized;
-              by category;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>            {service_categories.map ((category, index) => (
-              <motion.div;
-                key={category.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={category.href}
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - lg font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {category.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {category.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Featured Services */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Featured Services;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Our most popular and innovative technology solutions;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {featured_services.map ((service, index) => (
-              <motion.div;
-                key={service.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={service.href}
-                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <div className='flex items - center justify - between mb - 3'>;
-                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300 truncate'>;
-                      {service.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0' />;
-                  </div>;
-                  <p className='text - white / 60 text - xs'>{service.category}</p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Resources & Tools */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Resources & Tools;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources, tools, and information to help you succeed;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>            {resources.map ((resource, index) => (
-              <motion.div;
-                key={resource.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <Link;
-                  href={resource.href}
-                  className='block p - 4 rounded - xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105';
-                >;
-                  <div className='flex items - center justify - between mb - 3'>;
-                    <h3 className='text - sm font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {resource.label}
-                    </h3>;
-                    <ChevronRight className='w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 60 text - xs leading - relaxed'>;
-                    {resource.description}
-                  </p>                </Link>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* External Resources */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              External Resources;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>              Additional resources and tools hosted on external platforms;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {external_links.map ((link, index) => (
-              <motion.div;
-                key={link.href}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='group';
-              >;
-                <a;
-                  href={link.href}
-                  target='_blank';
-                  rel='noopener noreferrer';
-                  className='block p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-                >;
-                  <div className='flex items - center justify - between mb - 4'>;
-                    <h3 className='text - xl font - bold text - white group - hover:text - cyan - 300 transition - colors duration - 300'>;
-                      {link.label}
-                    </h3>;
-                    <ExternalLink className='w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300' />;
-                  </div>;
-                  <p className='text - white / 70 text - sm leading - relaxed'>;
-                    {link.description}
-                  </p>                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Information */}
-      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-4xl mx - auto'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className='mb - 16';
-          >;
-            <h2 className='text - 3xl font - bold text - white mb - 4 text - center'>;
-              Contact Information;
-            </h2>;
-            <p className='text - white / 60 text - center max - w-2xl mx - auto'>;
-              Get in touch with us for consultations, support, or to start your;
-              project;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>            {contact_info.map ((contact, index) => (
-              <motion.div;
-                key={contact.type}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='text - center p - 6 rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl';
-              >;
-                <h3 className='text - lg font - bold text - white mb - 3'>;
-                  {contact.type}
-                </h3>;
-                <a;
-                  href={contact.action}
-                  target={
-                    contact.action.starts_with ('http') ? '_blank' : '_self';
-                  }
-                  rel={
-                    contact.action.starts_with ('http');
-                      ? 'noopener noreferrer';
-                      : '';
-                  }
-                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium'                >;
-                  {contact.value}
-                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Quick Navigation */}
-      <section className='py - 20 px - 6'>;
-        <div className='max - w-4xl mx - auto text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
-              Need Help Finding Something?;
-            </h2>;
-            <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>;
-              Use our search functionality or contact us directly for assistance;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Link;
-                href='/search';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl';
-              >;
-                Search Site;
-                <Search className='w - 5 h - 5 ml - 2' />;
-              </Link>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10';
-              >;
-                Contact Support;
-                <Mail className='w - 5 h - 5 ml - 2' />              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <SmartFooter />;
-    </div>),
-}animate= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}> <h1 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6" > Site Map </h1> </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#main - pages" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105" > Explore Site <ArrowRight className="w - 5 h - 5 ml - 2" /> </Link> <a href="/search" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Main Pages </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Service Categories </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Featured Services </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300 flex - shrink - 0" /> </div> </Link> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Resources & Tools </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w - 4 h - 4 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </Link> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > External Resources </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w - 5 h - 5 text - white / 60 group - hover:text - cyan - 400 transition - colors duration - 300" /> </div> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 3xl font - bold text - white mb - 4 text - center" > Contact Information </h2> <p className="text - white / 60 text - center max - w-2xl mx - auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}viewport= {
-  {
-  once: true;
-}> Need Help Finding Something? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <Link href="/search" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl" > Search Site <Search className="w - 5 h - 5 ml - 2" /> </Link> <Link href="/contact" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Contact Support <Mail className="w - 5 h - 5 ml - 2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>));
 =======
-
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-export default function SitemapPage() {
-  return (
-    <MainLayout title="Sitemap - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
-        <p className="text-lg text-gray-700">
-          This is a placeholder for the sitemap page.
-        </p>
-      </div>
-    </MainLayout>
-  );
-}
->>>>>>> main
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+import * as React from 'react'
+import * as React from 'react'
+import {
+  RefreshCw
+  Wifi
+  Server
+  ShoppingCart
+  Users
+  Wrench
+  Lightbulb
+} from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
+
+export interface EmptyStateProps {
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNode
+=======
 import React from 'react';
 import * as React from 'react';
 import {;
@@ -38,6 +64,7 @@ export interface EmptyStateProps {
     | 'loading';
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
@@ -49,12 +76,18 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     onClick: () => void;
   },;
   icon?: React.ReactNode;
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -93,12 +126,33 @@ const defaultContent = {
     title: 'Loading...',
 
 
+<<<<<<< HEAD
+      
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+        {displayDescription}
+      </p>;
+      {action && (;
+        <Button;
+          onClick={action.onClick}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
+          {action.label}
+        </Button>
+      )}
+=======
           {action.label}
         </Button>
       )}
 
       
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       
       {type === 'error' && (
@@ -106,6 +160,8 @@ const defaultContent = {
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
+<<<<<<< HEAD
+=======
 
 
       
@@ -219,6 +275,7 @@ export function ProductsEmptyState ({
   onAddProduct,
   is_authenticated = false,
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }: {
   onRetry?: () => void
   onAddProduct?: () => void
@@ -297,6 +354,8 @@ export function ProductsEmptyState({;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
+<<<<<<< HEAD
+=======
         onClick: onAddProduct,;
       }
     : onRetry;
@@ -304,6 +363,7 @@ export function ProductsEmptyState({;
 
       : undefined;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <EmptyState
       type="categories"
@@ -312,6 +372,16 @@ export function ProductsEmptyState({;
   );
 }
 
+<<<<<<< HEAD
+  const customDescription = isAuthenticated;
+    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
+    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+  return (;
+    <EmptyState;
+      type="products";
+      action={action}
+      description={customDescription}
+=======
 
   const customDescription = isAuthenticated;
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
@@ -326,10 +396,13 @@ export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
     <EmptyState
       type="talent"
       action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     />;
   );
 }
 
+<<<<<<< HEAD
+=======
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
   return (
     <EmptyState
@@ -365,6 +438,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -392,4 +466,7 @@ export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
 export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
       />);
 }
+<<<<<<< HEAD
+=======
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

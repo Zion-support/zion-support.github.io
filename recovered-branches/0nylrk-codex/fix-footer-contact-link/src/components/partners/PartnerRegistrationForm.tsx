@@ -13,6 +13,8 @@ import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -37,6 +39,7 @@ export function PartnerRegistrationForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -51,6 +54,8 @@ import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -59,6 +64,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -74,15 +80,20 @@ const partnerFormSchema = z.object({
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 export function PartnerRegistrationForm() {;
@@ -101,6 +112,7 @@ export function PartnerRegistrationForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -119,6 +131,8 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -178,6 +192,7 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -185,6 +200,8 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -217,6 +234,7 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
             status: 'pending', // Partners need approval
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         ])
         .select();
@@ -226,7 +244,10 @@ type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -253,6 +274,8 @@ const partnerFormSchema = z.object({;
   bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function PartnerRegistrationForm() {;
@@ -262,10 +285,13 @@ export function PartnerRegistrationForm() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 type PartnerFormValues = z && z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -273,6 +299,7 @@ export function PartnerRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const form = useForm<PartnerFormValues>({;
     resolver: zodResolver(partnerFormSchema),;
     defaultValues: {;
@@ -291,6 +318,8 @@ export function PartnerRegistrationForm() {;
       .from('partner_profiles');
       .select('id');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       .eq('user_id', user && user.id);
       .single();
@@ -301,11 +330,17 @@ export function PartnerRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (existingPartner) {;
       toast({;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
+<<<<<<< HEAD
+      setIsSubmitting(false);
+      return true;
+    }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -343,6 +378,7 @@ export function PartnerRegistrationForm() {;
       return true;
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     setIsSubmitting(true);
     try {;
@@ -459,6 +495,8 @@ if (return) {
             website: data.website |null
             social_media: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -473,11 +511,14 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Insert new partner profile;
       const { data: newPartner, error } = await supabase;
         .from('partner_profiles');
         .insert([;
           {;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             user_id: user && user.id,;
@@ -499,10 +540,13 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         ]);
         .select();
       if (error) throw error;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -549,10 +593,13 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
     } catch (error: any) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error('Error submitting partner application:', error);
@@ -561,6 +608,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Submission failed"
         description: error.message |"There was a problem submitting your application."
@@ -568,6 +616,8 @@ if (return) {
         variant: "destructive"})
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -577,6 +627,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   return (
@@ -593,6 +644,8 @@ if (return) {
                 control={form && form.control}
                 name="name"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Name / Brand</FormLabel>
@@ -605,10 +658,13 @@ if (return) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ]);
         .select(),;
       if (error) throw error,;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
                 )}
@@ -657,6 +713,7 @@ if (return) {
     } finally {;
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 <<<<<<< HEAD
 =======
@@ -1533,6 +1590,8 @@ export function PartnerRegistrationForm() {;
         </Form>;
       </CardContent>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </Card>);
@@ -1541,12 +1600,15 @@ export function PartnerRegistrationForm() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Button>
           </form>
         </Form>
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1632,9 +1694,13 @@ data: existingCode
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 }
 
 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

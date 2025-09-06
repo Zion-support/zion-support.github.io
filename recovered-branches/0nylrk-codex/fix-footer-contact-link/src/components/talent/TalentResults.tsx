@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { TalentProfile } from "@/types/talent",
 import { ActiveFilters } from "@/components/talent/ActiveFilters",
@@ -21,9 +24,12 @@ import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -34,6 +40,8 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -60,6 +68,7 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -73,6 +82,8 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
     clearFilters: () => void
   }
 }
@@ -86,6 +97,7 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function TalentResults({;
   filteredTalents;
   isLoading;
@@ -114,12 +126,15 @@ export function TalentResults({
   return (
     <div className="flex-1">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
@@ -149,10 +164,13 @@ interface TalentResultsProps {;
     selectedRegions: string[],;
     toggleRegion: (region: string) => void,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     priceRange: [number, number];
 
     setPriceRange: (range: [number, number]) => void;
@@ -183,6 +201,8 @@ export function TalentResults(): any ({;
   return (
     <div className="flex-1">;
       {/* Active filters */}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -257,12 +277,18 @@ export function TalentResults({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
+<<<<<<< HEAD
+        handleRequestHire={handleRequestHire}
+        savedTalentIds={saved_talents}
+        onToggleSave={handleToggleSave}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -342,10 +368,14 @@ function TalentResults() {
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -354,6 +384,7 @@ function TalentResults() {
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
@@ -361,6 +392,8 @@ function TalentResults() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -447,3 +480,4 @@ export function TalentResults(_{_filteredTalents, _isLoading, _viewProfile, _han
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

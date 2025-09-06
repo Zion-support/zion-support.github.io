@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -98,6 +100,7 @@ export interface InvoiceRecord {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   companyId: string;
   number: string;
   amountUsd: number;
@@ -105,12 +108,15 @@ export interface InvoiceRecord {;
   periodEndIso: string;
   status: 'paid' | 'open' | 'void' | 'past_due';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -194,6 +200,8 @@ export interface CompanyRecord {
   name: string,
   slug: string, // e.g. acme;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
   logoUrl?: string,;
@@ -246,6 +254,7 @@ export interface CompanyRecord {;
   invoices: InvoiceRecord[];
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -260,9 +269,12 @@ export interface CompanyRecord {;
   invoices: InvoiceRecord[];
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

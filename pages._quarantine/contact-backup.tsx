@@ -1,4 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from 'next'
+const "ContactBackup": NextPage = () => {
+  return (
+    <div className="container mx-auto px-4 py-20">
+      <h1 className="text-3xl font-bold mb-4">Contact</h1>
+      <p className="text-gray-700">This is a backup contact page.</p>
+    </div>
+  )
+}
+export default ContactBackup
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import type { NextPage } from 'next';
 const "ContactBackup": NextPage = () => {;
   return (
@@ -8,6 +23,11 @@ const "ContactBackup": NextPage = () => {;
     </div>;
   );
 }
+<<<<<<< HEAD
+export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
+=======
 <<<<<<< HEAD
 
 
@@ -46,6 +66,9 @@ import type { NextPage } from 'next' const ContactBackup: NextPage = () => { ret
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup;
 <<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._quarantine/contact-backup.tsx
 =======
@@ -66,3 +89,5 @@ const "ContactBackup": NextPage = () => {
 export default ContactBackup
 import type { NextPage } from 'next' const ContactBackup: NextPage = () => { return ( <div className="container mx-auto px-4 py-20"> <h1 className="text-3xl font-bold mb-4">Contact</h1> <p className="text-gray-700">This is a backup contact page.</p> </div> ) } export default ContactBackup
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

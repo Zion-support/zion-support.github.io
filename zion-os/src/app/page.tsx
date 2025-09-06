@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
   const features = [
@@ -44,6 +46,7 @@ export default function HomePage() {
       title: &quot;AI-Powered Intelligence&quot;
       description: &quot;ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.&quot;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       features: [
         &quot;Job & Talent Marketplace&quot;
         &quot;Token System + Rewards&quot;
@@ -140,6 +143,8 @@ export default function HomePage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       icon: &quot;🚀&quot;,
       title: &quot;One - Click Deployment & quot;,
       description: &quot;Launch your complete digital economy in minutes with our unified deployment protocol.&quot;,
@@ -167,6 +172,7 @@ export default function HomePage() {
       description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -234,6 +240,11 @@ export default function HomePage() {
         "Blog + Roadmap Setup"
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
+<<<<<<< HEAD
+    }
+  ],
+  return (
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     }
@@ -257,6 +268,7 @@ export default function HomePage() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <br />
               <span className=&quot;text-white&quot;>AI-Powered Digital Economies</span>
             </h1>
@@ -334,8 +346,11 @@ export default function HomePage() {
               <FeatureCard
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <section className=&quot;relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-7xl mx - auto text - center & quot;>;
           <div className=&quot;hero - gradient absolute inset - 0 -z - 10 & quot;></div>;
@@ -375,7 +390,10 @@ export default function HomePage() {
           <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8&quot;>;
             {features.map ((feature, index) => (
               <FeatureCard;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="min-h-screen">
       {/* Hero Section */}
 <<<<<<< HEAD
@@ -476,7 +494,10 @@ export default function HomePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {features.map((feature, index) => (
               <FeatureCard
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={index}
                 icon={feature.icon}
                 title={feature.title}
@@ -490,9 +511,12 @@ export default function HomePage() {
       {/* CTA Section */}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="glass-effect rounded-2xl p-12 animate-slide-up">
@@ -521,8 +545,11 @@ export default function HomePage() {
       </section>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 <section className=&quot;py - 20 px - 4 sm:px - 6 lg:px - 8&quot;>;
         <div className=&quot;max - w-4xl mx - auto text - center & quot;>;
           <div className=&quot;glass - effect rounded - 2xl p - 12 animate - slide - up & quot;>;
@@ -567,6 +594,8 @@ export default function HomePage() {
         </div>;
       </section>;
     </div>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -629,3 +658,4 @@ export default function HomePage() {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

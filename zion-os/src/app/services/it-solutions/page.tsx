@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 import { useState } from "react",;
@@ -296,6 +298,7 @@ export default function ITSolutionsPage() {;
     <div className="space-y-8">;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { useState  } from './react';,
 interface ITService {

@@ -1,14 +1,20 @@
+<<<<<<< HEAD
+=======
 
 "use client",;
 export default function AIAutomationPage() {;
   return (;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 export default /**
  * AIAutomationPage - Function description
@@ -164,6 +170,8 @@ export default function AIAutomationPage() {;
         </div>;
       </div>;
       {/* Pricing Tiers */}
+<<<<<<< HEAD
+=======
 
 <div className="space - y-6">;
         <h2 className="text - 2xl font - semibold text - center">Pricing Plans</h2>;
@@ -215,6 +223,7 @@ export default function AIAutomationPage() {;
         </div>;
       </div>;
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Contact Section */}
       <div className="bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - lg p - 8 text - white text - center">;
         <h2 className="text - 2xl font - bold mb - 4">Ready to Automate Your Business?</h2>;

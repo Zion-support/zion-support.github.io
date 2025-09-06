@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 async function getFile(owner, repo, path, token) {
   try {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
@@ -10,11 +13,14 @@ async function getFile(owner, repo, path, token) {
     headers: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       Authorization: `token ${token}`,
       Accept: 'application/vnd && vnd.github+json',
     },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   });
   if (resp && resp.status === 404) return null;
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
@@ -26,12 +32,15 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
   const body = {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     message: message || `chore(automation): update ${path}`,
     content: Buffer && Buffer.from(content).toString('base64'),
   };
   if (existing?.sha) body && body.sha = existing && existing.sha;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`;
   const resp = await fetch(url, {
     method: 'PUT'
@@ -63,6 +72,8 @@ if (body.sha = existing.sha) {
     headers: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       Authorization: `token ${token}`,
 
@@ -79,6 +90,7 @@ if (body.sha = existing.sha) {
       'Accept': 'application/vnd.github+json'
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }),
   if (resp && resp.status === 404) return null,
@@ -86,6 +98,8 @@ if (body.sha = existing.sha) {
   return resp && resp.json()
 }
 async function upsertFile({ owner, repo, path, content, message, token }) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -142,6 +156,7 @@ function get_file() {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Authorization': `token ${token}`,
       'Accept': 'application / vnd.github + json';
     }
@@ -192,7 +207,10 @@ if ( {) {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 module.exports = { upsertFile },
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

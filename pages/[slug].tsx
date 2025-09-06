@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -47,8 +46,6 @@ const service = useMemo(() => {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 class ErrorBoundary extends React.Component {
@@ -87,42 +84,6 @@ if (return by_link) {
   }, [slug]);
 import React, { useMemo } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-
-type Service = typeof enhancedRealMicroSaasServices[number];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[])
-    .concat(newlyAddedServices as unknown as Service[])
-    .concat(curatedMarketServices as Service[])
-    .concat(new2025Services as unknown as Service[])
-=======
-
-function getAllServices(): any (): Service[] {;
-  return enhancedRealMicroSaasServices;
-    .concat(extraServices as Service[], additionalEnhancedServices as Service[]);
-    .concat(newlyAddedServices as unknown as Service[]);
-    .concat(curatedMarketServices as Service[]);
-    .concat(new2025Services as unknown as Service[]);
-		.concat(marketValidatedServices as unknown as Service[]);
-		.concat(moreRealServices2025 as unknown as Service[]);
-		.concat(verified2025Additions as unknown as Service[]);
-		.concat(realServicesQ12025 as unknown as Service[]);
-		.concat(realEnterpriseServices2025 as unknown as Service[]);
-=======
-    if (byLink) return byLink;
-  }, [slug]);
-=======
-import React, { useMemo } from 'react';
-import Head from 'next/head';
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -139,16 +100,8 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 type Service = typeof enhancedRealMicroSaasServices[number];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
     .concat(extraServices as Service[], additionalEnhancedServices as Service[])
@@ -156,18 +109,10 @@ function getAllServices(): Service[] {
     .concat(curatedMarketServices as Service[])
     .concat(new2025Services as unknown as Service[])
 		.concat(marketValidatedServices as unknown as Service[]);
-<<<<<<< HEAD
 		.concat(moreRealServices2025 as unknown as Service[]);
 		.concat(verified2025Additions as unknown as Service[]);
 		.concat(realServicesQ12025 as unknown as Service[]);
 		.concat(realEnterpriseServices2025 as unknown as Service[]);
-=======
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]);
 		.concat(realMarketAugmentations2025 as unknown as Service[]);
 		.concat(additionalLiveServices2025 as unknown as Service[]);
@@ -177,12 +122,6 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(realQ4Services2025 as unknown as Service[]);
 		.concat(real2025Q4Additions as unknown as Service[]);
-<<<<<<< HEAD
-=======
-		.concat(realMarketServicesExtended as unknown as Service[]);
-<<<<<<< HEAD
-		.concat(real2026Q1Additions as unknown as Service[]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 	const services = getAllServices(),
@@ -197,7 +136,6 @@ export async function getStaticProps() {
 	const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '')
 	let service: Service | undefined = services.find((s) => toSlug(s.id |'') === incomingSlug |toSlug(s.name |'') === incomingSlug)
 	if (!service) {return { notFound: true }
-<<<<<<< HEAD
 	}
 	return {props: { service }
 	}
@@ -419,50 +357,11 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 	return (
 
 
-=======
-=======
-
-function toSlug(): any (value: string): string {;
-	return value && value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-function getExistingRootPageSlugs(): any (): Set<string> {;
-	const pagesDir = path && path.join(process && process.cwd(), 'pages'),;
-	const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-	const reserved = new Set<string>(['apireportsservices']),;
-	const slugs = new Set<string>(),;
-		}
-		// Directories at root (folder routes);
-		if (entry && entry.isDirectory()) {;
-			slugs && slugs.add(entry && entry.name);
-	}
-	return slugs;
-export async function getStaticPaths() {;
-	const services = getAllServices(),;
-	const slugs = new Set<string>(),;
-	 })),;
-		fallback: false;
-	}
-export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
-	const services = getAllServices(),;
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),;
-	let service: Service | undefined = services && services.find((s) => toSlug(s && s.id || '') === incomingSlug || toSlug(s && s.name || '') === incomingSlug),;
-	if (!service) {;
-		return { notFound: true }
-	}
-	return {props: { service }
-	}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline |service.description} />
 				<link rel="canonical" href={canonical} />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 export default function RootServiceDetailPage(): any ({ service }: { service: Service }) {;
@@ -472,18 +371,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				<title>{service && service.name} | Zion Tech Group</title>;
 				<meta name="description" content={service && service.tagline || service && service.description} />;
 				<link rel="canonical" href={canonical} />;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
-<<<<<<< HEAD
 								},
 								offers: {
 									"@type": "Offer",
@@ -607,19 +499,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-<<<<<<< HEAD
 								))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -633,20 +517,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-							</ul>
-						</Card>
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>
-							<div className="flex flex-wrap gap-2">
-
-
-								{(service.integrations || []).slice(0, 12).map((i: string) => (
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 							</div>
 						</Card>
 					</div>
@@ -657,28 +527,14 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-<<<<<<< HEAD
-=======
-
-								</a>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 								</a>
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
 								<div className="flex items-start gap-2 text-gray-300">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -686,19 +542,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								<Button href="/contact" className="w-full">Talk to Sales</Button>
 							</div>
 						</Card>
-<<<<<<< HEAD
-=======
-
-
-
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
-
-
-							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
 						</Card>
@@ -706,119 +549,6 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD
-=======
-
-
-								"@context": "https://schema && schema.org",
-								"@type": "Service",								name: service && service.name,
-								description: service && service.tagline || service && service.description,
-								url: canonical,
-								provider: {
-									"@type": "Organization",
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup && ziontechgroup.com"
-								},
-								offers: {
-									"@type": "Offer",
-									price: (service && service.price || '').replace(/[^0-9.]/g, ''),									priceCurrency: "USD",
-									availability: "https://schema && schema.org/InStock"
-								}
-							}
-							null
-							2
-							)}
-				/>;			</Head>;
-          {/* Service Details */}
-          <div className="grid md:grid-cols-2 gap-12 mb-16">;
-            <Card className="p-8">;
-              <h2 className="text-2xl font-bold text-white mb-6">Service Details</h2>;
-              <div className="space-y-4">;
-                <div>;
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Category</h3>;
-                  <p className="text-slate-300">{service && service.category}</p>;
-                </div>;
-                <div>;
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Price</h3>;
-                  <p className="text-slate-300">{service && service.price} {service && service.period}</p>;
-                </div>;
-                <div>;
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Trial Period</h3>;
-                  <p className="text-slate-300">{service && service.trialDays} days free trial</p>;
-                </div>;
-                <div>;
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Setup Time</h3>;
-                  <p className="text-slate-300">{service && service.setupTime}</p>;
-                </div>;
-              </div>;
-            </Card>;
-            <Card className="p-8">;
-              <h2 className="text-2xl font-bold text-white mb-6">Features</h2>;
-              <ul className="space-y-3">;
-                {service && service.features.map((feature, index) => (;
-                  <li key={index} className="flex items-start gap-3">;
-                    <Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
-                    <span className="text-slate-300">{feature}</span>;
-                  </li>;
-                ))}
-              </ul>;
-            </Card>;
-          </div>;
-						<Card className="p-6 bg-black/40 border border-gray-700/50">;
-							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
-							<ul className="space-y-2 text-gray-300">;
-								{(service && service.features || []).slice(0, 12).map((f: string) => (;
-									<li key={f} className="flex items-start gap-2">;
-										<Check className="w-4 h-4 mt-0 && 0.5 text-emerald-400" />;
-										<span>{f}</span>;
-									</li>;
-								))}
-							</ul>;
-						</Card>;
-						<Card className="p-6 bg-black/40 border border-gray-700/50">;
-							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
-							<div className="flex flex-wrap gap-2">;
-								{(service && service.integrations || []).slice(0, 12).map((i: string) => (;
-									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>;
-								))}
-							</div>;
-						</Card>;
-					</div>;
-					<div className="space-y-6">;
-						<Card className="p-6 bg-black/40 border border-gray-700/50">;
-							<div className="text-3xl font-bold text-white">{service && service.price} <span className="text-base text-gray-400">{service && service.period}</span></div>;
-							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>;
-							<div className="mt-4 space-y-3">;
-								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
-									<Phone className="w-4 h-4" /> +1 302 464 0950;
-								</Link>;
-								<a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup && ziontechgroup.com;
-								</Link>								<div className="flex items-start gap-2 text-gray-300">;
-									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709;
-								</div>;
-							</div>;
-							<div className="mt-6">;
-								<Button href="/contact" className="w-full">Talk to Sales</Button>;
-							</div>;
-						</Card>;
-						<Card className="p-6 bg-black/40 border border-gray-700/50">;
-							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>;
-							<a href={service && service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
-								Open canonical page <ExternalLink className="w-4 h-4" />;
-							</a>;
-						</Card>;
-					</div>;
-				</div>;
-			</div>;
-		</UltraFuturisticBackground>;
-	);
-
-
-=======
-	)
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 function getAllServices (): Service[] {
   return enhancedRealMicroSaasServices;
@@ -858,7 +588,6 @@ const pages_dir = path.join (process.cwd (), 'pages'),
 const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
 const reserved = new Set < string>(['apireportsservices']),
 const slugs = new Set < string>(),
-=======
 
 ;
 
@@ -867,7 +596,6 @@ const slugs = new Set < string>(),
 }
 }
 
-=======
 	);
   } catch (error) {
     console.error("Error:", error);
@@ -875,7 +603,6 @@ const slugs = new Set < string>(),
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   // Directories at root (folder routes);
   if () {) {
@@ -909,12 +636,3 @@ if ( {) {
 }
   return { not_found: true }
   }
-<<<<<<< HEAD
-=======
-
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

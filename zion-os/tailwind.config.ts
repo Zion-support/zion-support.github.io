@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / components/**/*.{js, ts, jsx, tsx, mdx}&quot;,
     &quot;./src / app/**/*.{js, ts, jsx, tsx, mdx}&quot;],
@@ -53,6 +56,8 @@ const config: Config = {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
   plugins: []}
 
@@ -60,3 +65,4 @@ const config: Config = {
 
 export default config;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,22 +1,30 @@
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ErrorCode {
   code: string;
   http_status: number;
   message: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -26,6 +34,7 @@ export interface EndpointSpec {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 
 export interface CodeSample {;
@@ -45,9 +54,12 @@ export interface ErrorCode {;
 export interface EndpointSpec {;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description: string;
@@ -65,6 +77,9 @@ export interface EndpointSpec {;
 <<<<<<< HEAD
 export interface SectionSpec {
 =======
+<<<<<<< HEAD
+export interface SectionSpec {
+=======
 
   versions: string[]; // e && e.g., ['v1'] or ['v1','v2']
 
@@ -78,6 +93,7 @@ export interface SectionSpec {
 export interface SectionSpec {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
 
 export interface SectionSpec {;
@@ -85,17 +101,26 @@ export interface SectionSpec {;
 <<<<<<< HEAD
 export interface SectionSpec {
 =======
+<<<<<<< HEAD
+export interface SectionSpec {
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ApiDocsSpec {
 
 
 export interface ApiDocsSpec {;
+<<<<<<< HEAD
+=======
 =======
 
 ;
@@ -108,10 +133,13 @@ export interface ApiDocsSpec {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
   sections: SectionSpec[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -125,6 +153,7 @@ export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
 ;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type Visibility = 'public' | 'partner' | 'internal';
 ;
 export interface CodeSample {
@@ -158,6 +187,10 @@ export interface EndpointSpec {
   lastUpdatedIso: string
 
 =======
+<<<<<<< HEAD
+  lastUpdatedIso: string
+
+=======
 
 
   lastUpdatedIso: string
@@ -166,6 +199,7 @@ export interface EndpointSpec {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 }
 
@@ -179,9 +213,12 @@ export interface EndpointSpec {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
 export type Visibility = 'public' | 'partner' | 'internal',;
 export interface CodeSample {;
@@ -242,5 +279,10 @@ export interface ApiDocsSpec {;
   lastUpdatedIso: string;
 }
 =======
+<<<<<<< HEAD
+  lastUpdatedIso: string;
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

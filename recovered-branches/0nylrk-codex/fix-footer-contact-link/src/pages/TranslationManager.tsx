@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 class ErrorBoundary extends React.Component {
@@ -28,6 +30,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -45,6 +48,8 @@ import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -61,6 +66,7 @@ export default function TranslationManager() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -83,9 +89,12 @@ export default function TranslationManager() {
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
   const [translations, setTranslations] = useState<Record<string, any>>({});
@@ -93,6 +102,10 @@ export default function TranslationManager() {
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
+    supportedLanguages.forEach(lang => {
+      const res = i18n.getResourceBundle(lang.code, selectedNamespace),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,10 +147,13 @@ export default function TranslationManager() {
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (res) {
         // Flatten nested objects for easier management
         const flattenObject = (obj: any, prefix = '') => {
           return Object.keys(obj).reduce((acc, key) => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -236,6 +252,7 @@ if ( {) {
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               acc[`${pre}${key}`] = obj[key]
 
 
@@ -315,7 +332,10 @@ if ( {) {
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -375,6 +395,8 @@ if ( {) {
               acc[`${pre}${key}`] = obj[key];
             }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             return acc;
 <<<<<<< HEAD
 
@@ -389,10 +411,13 @@ if ( {) {
     // Get all unique keys across all languages;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const allKeys = new Set<string>();
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setFilteredKeys(Array && Array.from(allKeys));
@@ -408,6 +433,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
@@ -415,6 +441,11 @@ if ( {) {
       setFilteredKeys(Array && Array.from(allKeys));
       return;
     }
+<<<<<<< HEAD
+        }
+      })
+    });
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -478,6 +509,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -488,6 +520,8 @@ if ( {) {
       setIsSaving(false),
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -496,10 +530,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -595,11 +632,14 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -637,6 +677,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -646,6 +687,8 @@ if ( {) {
       }
       // Update edited translations with auto-translated content
       setEditedTranslations({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -702,10 +745,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
     } catch (error) {
+<<<<<<< HEAD
+      console.error(`Error translating key ${key}:`, error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error(`Error translating key ${key}:`, error);
@@ -715,10 +762,13 @@ if ( {) {
 =======
       console.error(`Error translating key ${key}:`, error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -755,18 +805,25 @@ if ( {) {
     <>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <SEO
         title={t('translation.manager_title')}
       <SEO 
         title={t('translation.manager_title')} 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       <SEO 
         title={t('translation.manager_title')} 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -799,6 +856,8 @@ if ( {) {
         ...editedTranslations[key]
         [lang]: value
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
       // Update edited translations with auto-translated content;
@@ -847,6 +906,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         description={t('translation.manager_description')}
       />
       <Header />
@@ -858,8 +918,11 @@ if ( {) {
           <CardContent>
             <div className="space-y-6">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -906,6 +969,8 @@ if ( {) {
         <Card>;
           <CardHeader>;
             <CardTitle className="text-2xl">{t('translation && translation.manager_title')}</CardTitle>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1148,6 +1213,7 @@ export default function TranslationManager() {;
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         ...editedTranslations;
         [key]: translatedText;
       });
@@ -1161,6 +1227,8 @@ export default function TranslationManager() {;
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1193,6 +1261,7 @@ export default function TranslationManager() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -1232,6 +1301,8 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1380,6 +1451,7 @@ export default function TranslationManager() {;
                                 size="sm" ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                   )}
                                 </div>
                               ))}
@@ -1389,7 +1461,10 @@ export default function TranslationManager() {;
 
                               <Button 
                                 size="sm" 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -1409,6 +1484,9 @@ export default function TranslationManager() {;
                                   </>;
                                 )}
                               <Button
+<<<<<<< HEAD
+                              <Button
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -1432,6 +1510,7 @@ export default function TranslationManager() {;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 size="sm"
                                 variant="secondary"
 <<<<<<< HEAD
@@ -1471,6 +1550,8 @@ export default function TranslationManager() {;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1612,6 +1693,7 @@ export default function TranslationManager() {;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                         )}
                         <div className="p-3 flex items-center justify-end">;
                           {editingKey === key ? null : (;
@@ -1635,6 +1717,8 @@ export default function TranslationManager() {;
                             </Button>;
                           )}
                         </div>;
+<<<<<<< HEAD
+=======
                       </div>;
                     ))}
                   </div>;
@@ -1989,12 +2073,15 @@ if ( {) {
                           )}
                         </div>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2156,3 +2243,4 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

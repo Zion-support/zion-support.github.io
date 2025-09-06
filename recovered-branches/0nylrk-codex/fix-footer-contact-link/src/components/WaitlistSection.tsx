@@ -7,12 +7,15 @@ import {useToast} from "@/hooks/use-toast";
 import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
@@ -20,6 +23,8 @@ export function WaitlistSection() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -29,6 +34,7 @@ export function WaitlistSection() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -39,9 +45,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -49,6 +58,9 @@ export function WaitlistSection() {
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -78,11 +90,14 @@ export function WaitlistSection() {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     
     setIsSubmitting(true),
     
     try {
       // Simulating an API call
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
@@ -93,10 +108,16 @@ export function WaitlistSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
+<<<<<<< HEAD
+      setEmail(""),
+      setName(""),
+      setRole(""),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       setEmail("");
@@ -112,12 +133,15 @@ export function WaitlistSection() {
       setName(""),
       setRole(""),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setAgreeTerms(false)
     } catch (error) {
       toast({
         variant: "destructive"
         title: "Something went wrong"
         description: "Please try again later."})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -173,6 +197,7 @@ if ( {) {
         title: "Something went wrong",
         description: "Please try again later."});
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -239,6 +264,8 @@ if ( {) {
 <<<<<<< HEAD
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -356,10 +383,13 @@ export function WaitlistSection() {;
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input
                 id="name"
                 placeholder="John Smith"
                 value={name}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -380,11 +410,14 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input
                 id="email"
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -422,10 +455,13 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input
                 id="role"
                 placeholder="IT Manager, Developer, Business Owner, etc."
                 value={role}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -448,6 +484,7 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 checked={agreeTerms}
                 onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
               />;
@@ -505,11 +542,14 @@ export function WaitlistSection() {;
     </section>
   )
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -535,8 +575,11 @@ export function WaitlistSection() {;
       return;
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 className="text-sm text-zion-slate font-normal">;
@@ -557,6 +600,11 @@ export function WaitlistSection() {;
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
               {isSubmitting ? "Processing..." : "Complete Registration"}
 <<<<<<< HEAD
+
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -573,6 +621,7 @@ export function WaitlistSection() {;
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -631,6 +680,8 @@ export function WaitlistSection() {;
             </p>;
           </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
             <div className="space - y-2">;
@@ -643,10 +694,13 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input;
                 id="name";
                 placeholder="John Smith";
                 value={name}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_name (e.target.value)}
@@ -665,11 +719,14 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input;
                 id="email";
                 type="email";
                 placeholder="you@company.com";
                 value={email}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_email (e.target.value)}
@@ -688,10 +745,13 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Input;
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                 on_change={(e) => set_role (e.target.value)}
@@ -724,10 +784,13 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
             <Button;
@@ -754,6 +817,7 @@ export function WaitlistSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Button>;
           </form>;
         </div>;
@@ -766,6 +830,11 @@ export function WaitlistSection() {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </section>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </section>);
@@ -800,3 +869,4 @@ return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overf
     </section>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

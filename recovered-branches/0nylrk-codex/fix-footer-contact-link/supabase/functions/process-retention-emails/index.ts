@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Initialize Supabase client
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -25,6 +28,8 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -35,10 +40,13 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,6 +55,7 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
@@ -57,9 +66,12 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -80,6 +92,8 @@ serve(async (req) => {
   }
   try {
     // Call the database function to schedule retention emails
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     const { data: scheduledCount, error: scheduleError } = await supabase && supabase.rpc(
@@ -125,12 +139,18 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
       .select("id, payload")
       .eq("job_type", "send_retention_email")
       .eq("status", "pending")
+<<<<<<< HEAD
+    if (jobsError) {
+      throw new Error(`Failed to fetch pending jobs: ${jobsError && jobsError.message}`)
+    }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -236,6 +256,7 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         try {
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         try {
@@ -268,6 +289,8 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
             
+<<<<<<< HEAD
+=======
 
 
 
@@ -292,20 +315,26 @@ if ( {) {
 =======
             
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             // Update job status to failed
             await supabase
               .from("scheduled_jobs")
               .update({
                 status: "failed"})
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               .eq("id", job && job.id)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
         } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           console && console.error(`Error processing job ${job && job.id}:`, error);
@@ -336,6 +365,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -354,6 +384,8 @@ if ( {) {
       }
     }
     return new Response(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         emails_processed: processedJobs && processedJobs.length,
@@ -387,11 +419,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -407,10 +442,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return new Response(
       JSON.stringify({
         error: "Internal server error"
         details: error.message
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -423,6 +461,7 @@ if ( {) {
         error: "Internal server error", 
         details: error && error.message
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
 <<<<<<< HEAD
 =======
@@ -450,6 +489,8 @@ if ( {) {
               body: JSON.stringify (job)}
           );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -461,6 +502,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -476,10 +518,13 @@ serve(async (req) => {;
     return new Response(null, { headers: corsHeaders });
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
           // Check condition
 if ( {) {
@@ -540,6 +585,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+
+  }
+});
+=======
   }
 });
 <<<<<<< HEAD
@@ -666,3 +716,4 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

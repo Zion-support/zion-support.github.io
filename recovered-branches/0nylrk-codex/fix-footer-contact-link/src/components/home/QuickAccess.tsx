@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -11,6 +13,7 @@ import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphon
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -37,6 +40,8 @@ export function QuickAccess() {
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
+<<<<<<< HEAD
+=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -55,6 +60,7 @@ export function QuickAccess() {
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       link: "/match";
     };
       link: "/match"
@@ -68,13 +74,18 @@ export function QuickAccess() {
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -90,12 +101,15 @@ export function QuickAccess() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Service Marketplace"
       description: "Discover professional services"
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -111,12 +125,15 @@ export function QuickAccess() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
       link: "/equipment"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -132,11 +149,14 @@ export function QuickAccess() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       title: "Community"
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -347,6 +367,7 @@ function QuickAccess() {
 
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -542,6 +563,8 @@ export function QuickAccess() {;
     </section>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -588,3 +611,4 @@ Smartphone const quickLinks = [ {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -72,6 +72,16 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title,
   subtitle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  heroImage,
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   description,
   benefits,
 
@@ -143,6 +153,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
       {benefits.length > 0 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
@@ -163,6 +177,49 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             </div>;
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Benefits
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+                  {benefit.icon && (
+                    <div className="mb-4 text-blue-600">
+                      {benefit.icon}
+
+          </p>;
+        </div>;
+      </section>;
+
+      {benefits && benefits.length > 0 && (;
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
+              Benefits;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {benefits && benefits.map((benefit, index) => (;
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
+                  {benefit && benefit.icon && (;
+                    <div className="mb-4 text-blue-600">;
+                      {benefit && benefit.icon}
+                    </div>;
+
+                  )}
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       )}
 
 
@@ -180,9 +237,21 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 </div>;
 
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+<<<<<<< HEAD
+            </div>;
+          </div>;
+        </section>;
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       )}
 
                     </div>)}
@@ -209,12 +278,27 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </section>)}
 
       {stats.length > 0 && (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
         <section className="py - 16 px - 4">;
           <div className="max - w-7xl mx - auto">;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (
                 <div key={index}>;
                   <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+<<<<<<< HEAD
+=======
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              {stats.map((stat, index) => (
+                <div key={index}>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
                     {stat.value}
 
 
@@ -231,9 +315,21 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 </div>;
 
               ))}
+<<<<<<< HEAD
             </div>;
           </div>;
         </section>;
+=======
+<<<<<<< HEAD
+            </div>;
+          </div>;
+        </section>;
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
       )}
 
 
@@ -248,7 +344,16 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
           <a
             href={ctaLink}
+<<<<<<< HEAD
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+=======
+<<<<<<< HEAD
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
+=======
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+          >
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
             {ctaText}
 
           </a>;
@@ -272,7 +377,19 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
+<<<<<<< HEAD
                   </div>
+=======
+<<<<<<< HEAD
+                  </div>
+=======
+<<<<<<< HEAD
+                  </div>
+=======
+                  </div>;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -313,10 +430,29 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
                   </div>
                 </CardFooter>
               </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+                    </div>;
+                  </div>;
+                </CardFooter>;
+              </Card>;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </div>
         </div>
@@ -328,7 +464,19 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
+<<<<<<< HEAD
           <a href={ctaLink}>{ctaText}</a>
+=======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
+          <a href={ctaLink}>{ctaText}</Link>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </Button>
       </section>
     </div>

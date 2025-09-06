@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  className?: string,
+  children?: React.ReactNode
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
+import {cn} from "@/lib/utils";
+interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+  className?: string;
+  children?: React && React.ReactNode;
+}
+  );
+}
+  )
+
+  )
+
+import React from "react",;
+import { cn } from "@/lib/utils",;
+interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
+  className?: string;
+  children?: React.ReactNode;
+}
+=======
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarGroupContentProps
@@ -19,6 +53,7 @@ export function SidebarGroupContent({
     </div>
   );
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function SidebarGroupContent({ className, children, ...props }: SidebarGroupContentProps) {;
   return (;
@@ -30,6 +65,8 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
     <div className={cn("space-y-1", className)} {...props}>;
       {children}
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </div>;
   );
@@ -48,6 +85,7 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className={cn("space-y-1", className)} {...props}>;
       {children}
 import React from './react';
@@ -67,7 +105,10 @@ function SidebarGroupContent() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

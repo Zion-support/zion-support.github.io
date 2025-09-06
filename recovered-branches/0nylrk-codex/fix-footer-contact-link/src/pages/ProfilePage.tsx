@@ -24,15 +24,35 @@ import {
 
 
 
+<<<<<<< HEAD
+
+import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/components/ui/use-toast";
+import {SEO} from "@/components/SEO";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "@/components/profile/HireNowCTA";
+import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { profileId } = useParams() as { profileId?: string };
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -41,6 +61,8 @@ export default function ProfilePage() {
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -50,6 +72,7 @@ export default function ProfilePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setIsLoading(true),
       setIsError(false),
       try {
@@ -57,6 +80,8 @@ export default function ProfilePage() {
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
           .single(),
@@ -70,6 +95,7 @@ export default function ProfilePage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (error) {
           throw error;
         }
@@ -87,6 +113,52 @@ export default function ProfilePage() {
         console.error("Error fetching profile:", error),
         setIsError(true),
         toast({
+<<<<<<< HEAD
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
+          variant: "destructive"})
+      } finally {
+        setIsLoading(false)
+import { useState, useEffect } from "react",;
+import { useParams } from "react-router-dom",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/components/ui/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+import {;
+  Star,;
+  MapPin,;
+  Clock,;
+  Link as LinkIcon,;
+  Github,;
+  Twitter,;
+  Linkedin,;
+  CheckCircle2;
+} from "lucide-react",;
+
+export default function ProfilePage() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { profileId } = useParams() as { profileId?: string };
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true);
+      setIsError(false);
+      try {;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+=======
           title: "Error",
           description: "Failed to load profile. Please try again later.",
           variant: "destructive",
@@ -106,6 +178,7 @@ export default function ProfilePage() {
   if (isLoading) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   if (isLoading) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -132,6 +205,8 @@ export default function ProfilePage() {
       </div>;
     );
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -164,18 +239,27 @@ export default function ProfilePage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
+=======
         description={
           profileData.bio || "View the profile of this talented individual."
         }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       />
       <AppHeader />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
+<<<<<<< HEAD
+  return (
+    <>;
+      <SEO
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -283,6 +367,7 @@ export default function ProfilePage() {
     <>;
       <SEO
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {/* Main Content Area */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -374,6 +459,14 @@ export default function ProfilePage() {
                       </Badge>
                     ))}
 <<<<<<< HEAD
+            </div>;
+            {/* Bio Section */}
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">;
+              <h2 className="text-xl font-bold text-white mb-3">About Me</h2>;
+              <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
+            </div>;
+=======
+<<<<<<< HEAD
                   </div>;
                 </div>;
               )}
@@ -387,6 +480,7 @@ export default function ProfilePage() {
               </p>
             </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Portfolio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
@@ -399,6 +493,10 @@ export default function ProfilePage() {
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
+<<<<<<< HEAD
+              </div>;
+            </div>;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
@@ -425,6 +523,7 @@ export default function ProfilePage() {
               </div>
             </div>
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
@@ -511,6 +610,20 @@ export default function ProfilePage() {
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
+
+              }}
+            />;
+            {/* Placeholder for other sidebar elements */}
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+=======
                 id: profileData?.id || "",
                 full_name: profileData?.full_name || "",
                 professional_title: profileData?.professional_title || "",
@@ -599,3 +712,4 @@ if (isLoading) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

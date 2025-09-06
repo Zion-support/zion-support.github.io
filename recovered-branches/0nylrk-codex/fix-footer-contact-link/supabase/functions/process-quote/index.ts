@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
@@ -48,10 +50,13 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface Service {
   id: string;
   title: string
   category: string
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -115,6 +120,7 @@ interface QuoteDetails {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 interface QuoteDetails {
   description: string;
@@ -122,11 +128,14 @@ interface QuoteDetails {
   budget: string;
   timeframe: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   startDate?: string
   endDate?: string
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
@@ -150,6 +159,8 @@ interface QuoteDetails {;
   startDate?: string,;
   endDate?: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -158,6 +169,7 @@ interface QuoteDetails {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 interface RequestBody {
   service: Service | null
@@ -166,10 +178,13 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -213,6 +228,8 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
         if (!error && user) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
       const authHeader = req.headers.get('Authorization');
@@ -224,6 +241,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           userId = user.id
 ;
   try {;
@@ -245,6 +263,8 @@ serve(async (req) => {
     } catch (authError) {
       console && console.log("Auth error:", authError);
       // Continue without user identity
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -275,6 +295,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             model: 'gpt-4o-mini';
             messages: [
               {
@@ -297,6 +318,8 @@ serve(async (req) => {
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
                 Service: ${service?.title |'Custom Service'}
                 Category: ${service?.category |'N/A'}
@@ -304,6 +327,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -332,6 +356,10 @@ serve(async (req) => {
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
 <<<<<<< HEAD
+                Service: ${service?.title || 'Custom Service'}
+                Category: ${service?.category || 'N/A'}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -353,11 +381,15 @@ serve(async (req) => {
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
+<<<<<<< HEAD
+              }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -395,6 +427,7 @@ serve(async (req) => {
 =======
               }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ],;
             temperature: 0.5;
           });
@@ -403,12 +436,15 @@ serve(async (req) => {
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ];
@@ -416,12 +452,15 @@ serve(async (req) => {
           })
         });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         const aiResult = await openAIResponse && openAIResponse.json();
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       }
     } catch (openAIError) {
@@ -552,6 +591,8 @@ if ( {) {
           service_title: service?.title |'Custom Service';
           service_category: service?.category;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -581,11 +622,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           status: 'pending'
         }
       ])
       .select();
     if (error) throw error;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -604,6 +648,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 });
@@ -635,6 +680,8 @@ if (throw error) {
       status: 500,
       headers: { ...cors_headers, 'Content - Type': 'application / json' }});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -653,6 +700,7 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -688,6 +736,8 @@ if (throw error) {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 <<<<<<< HEAD
@@ -752,3 +802,4 @@ if (error) throw error;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

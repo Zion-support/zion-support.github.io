@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
     return status
   }
   // Generate sitemap for crawling
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 const path = require('path');
@@ -46,6 +51,7 @@ exports && exports.handler = async () => {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Build search index if available
   try {
     logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
@@ -53,6 +59,8 @@ exports && exports.handler = async () => {
     logs && logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -81,6 +89,7 @@ exports && exports.handler = async () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description

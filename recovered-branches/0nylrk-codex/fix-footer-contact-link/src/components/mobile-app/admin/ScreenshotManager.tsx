@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -10,6 +12,7 @@ import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -65,9 +68,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -85,6 +91,8 @@ type Screenshot = {
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -92,11 +100,14 @@ type Screenshot = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
     }
     // Limit the number of screenshots
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -207,6 +218,7 @@ type Screenshot = {
   };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -265,12 +277,15 @@ type Screenshot = {
   },
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   
   
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -278,12 +293,15 @@ type Screenshot = {
       </CardHeader>
       <CardContent>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -450,6 +468,10 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
+<<<<<<< HEAD
+            isDragging
+              ? "border-zion-cyan bg-zion-cyan/10"
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -472,6 +494,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -499,6 +522,8 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -556,6 +581,7 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
@@ -595,9 +621,12 @@ export const ScreenshotManager:React.FC<ScreenshotManagerProps> = ({ platform })
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
         </div>;
       </CardContent>;
@@ -773,6 +802,8 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -849,3 +880,4 @@ return filtered;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

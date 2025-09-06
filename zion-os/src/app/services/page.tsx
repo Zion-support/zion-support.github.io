@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import Link from 'next / link';
 export default /**
@@ -22,6 +24,7 @@ export default function ServicesPage() {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;

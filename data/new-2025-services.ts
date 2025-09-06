@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 };
@@ -11,6 +13,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -18,6 +21,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     ],
     popular: true,
     icon: '🛡️',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -95,6 +100,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: true;
     icon: '🛡️';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - rose - 600 to - red - 700';
     text_color: 'text - rose - 300';
     link: 'https://ziontechgroup.com / services / llm - safety - observability - suite';
@@ -104,8 +110,11 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     setup_time: '30 minutes';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'AI & Data';
     real_service: true;
     technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'];
@@ -115,10 +124,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.8,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 11
   }
   {
@@ -182,11 +194,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['Temporal (schedules)AirflowCloud Scheduler'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
     reviews: 19
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$8B workflow automation';
     growth_rate: '22% CAGR';
     variant: 'quantum - matrix';
@@ -205,11 +220,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     price: '$199';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-automation-pro';
     marketPosition: 'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Legal, privacy and security teams';
     trialDays: 14;
     setupTime: '1-3 days';
@@ -239,11 +257,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['TranscendOneTrustDidomi'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
     reviews: 13
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$4B privacy tech';
     growth_rate: '28% CAGR';
     variant: 'quantum - cyberpunk';
@@ -260,6 +281,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     name: 'API Contract Testing Hub';
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners';
     price: '$79';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -282,16 +305,20 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Node.jsOpenAPIGraphQL'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['GitHubGitLabCircleCI'];
     use_cases: ['Prevent breaking changes_improve API reliability'];
     roi: 'Cut API incidents by 50% within 60 days';
     competitors: ['StoplightOpticRedocly'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 10
   }
   {
@@ -321,6 +348,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '💸';
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-finops-copilot';
@@ -330,6 +359,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     trialDays: 14;
     setupTime: '1 day';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - amber - 600 to - orange - 700';
     text_color: 'text - amber - 300';
     link: 'https://ziontechgroup.com / services / cloud - cost - finops - copilot';
@@ -346,10 +376,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['CloudHealthVantageCloudZero'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 14
   }
   {
@@ -379,12 +412,15 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📧';
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/email-deliverability-warmup-monitor';
     marketPosition: 'Practical alternative to costly consulting retainers.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     targetAudience: 'Growth, marketing and ops teams';
     trialDays: 7;
     setupTime: '2 hours';
@@ -407,11 +443,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['MailreachWarmup InboxLemlist'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
     reviews: 12
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$2B email tooling';
     growth_rate: '18% CAGR';
     variant: 'ai - futuristic';
@@ -430,10 +469,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     price: '$89';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/vector-search-starter-pro',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition: 'Faster than bespoke experiments, production-minded templates.';
     targetAudience: 'Product and data teams';
     trialDays: 14;
@@ -474,10 +516,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     customers: 31;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 16
   }
   {
@@ -533,10 +578,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['Salt SecurityNoname Security'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 8
   }
   {
@@ -567,6 +615,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📈';
 
     color: 'from - lime - 600 to - green - 700';
@@ -581,10 +631,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['OpenTelemetryPrometheusNode.js'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['GrafanaDatadogPagerDuty'];
     use_cases: ['Define SLOsAlert on burn_improve reliability'];
     roi: 'Reduce alert fatigue by 30%+ while focusing on user impact';
     competitors: ['Nobl9Datadog SLO'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -592,6 +645,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 9
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$15B observability';
     growth_rate: '19% CAGR';
     variant: 'quantum - matrix';
@@ -608,6 +662,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     name: 'AI Website Personalization Pro';
     tagline: 'On - site experiences tailored by intent and persona';
     price: '$129';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -630,16 +686,20 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Next.js_edge functions'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['SegmentRudderStackGoogle Analytics'];
     use_cases: ['Increase conversion_tailor content_experiment fast'];
     roi: 'Boost conversion by 10–25% in 60 days';
     competitors: ['MutinyOptimizely'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 13
   }
   {
@@ -711,6 +771,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     customers: 19;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.8,
 
@@ -718,6 +780,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 9;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   {
     id: 'managed - postgres - ha - pro';
@@ -732,6 +795,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: false;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🗄️';
 
     color: 'from - cyan - 700 to - teal - 700';
@@ -743,6 +808,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     setup_time: '1 - 2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Enterprise IT';
     real_service: true;
     technology: ['PostgreSQLPatroniPgBouncer'];
@@ -760,10 +826,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     customers: 8;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 5
   }
   {
@@ -817,11 +886,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     use_cases: ['Outbound emails_lead nurturing_meeting booking'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     roi: 'Increase meetings by 20–50%';
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 21
     competitors: ['SmartleadReply.io_apollo.io'];
     market_size: '$5B sales tech';
@@ -842,6 +914,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     price: '$119';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     period: '/month',
     description: 'Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.';
@@ -859,6 +933,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     setup_time: '1 - 2 days';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Enterprise IT';
     real_service: true;
     technology: ['GoeBPFSQLite'];
@@ -868,11 +943,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['AxoniusLansweeper'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
     reviews: 6
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$7B ITAM';
     growth_rate: '17% CAGR';
     variant: 'quantum - holographic';
@@ -889,6 +967,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     name: 'Edge Feature Flags Pro';
     tagline: 'Zero - latency feature rollout and A / B at the edge';
     price: '$99';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -908,6 +988,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     setup_time: '1 day';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     category: 'Developer Tools';
     real_service: true;
     technology: ['Edge FunctionsTypeScript'];
@@ -917,10 +998,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['LaunchDarklyGrowthBookStatsig'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 7
   }
   {
@@ -981,10 +1065,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['OpenAI finetune UIHF AutoTrain'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 6
   }
   {
@@ -1003,10 +1090,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     textColor: 'text-emerald-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-monitor-pro',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     marketPosition: 'Opinionated budgets and PRs, not just charts.';
     targetAudience: 'Frontend and platform teams';
     trialDays: 14;
@@ -1050,10 +1140,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['SpeedCurveCalibre'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.5,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 5
   }
   {
@@ -1083,6 +1176,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📚';
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-governance-registry';
@@ -1092,6 +1187,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     trialDays: 14;
     setupTime: '2 days';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - slate - 700 to - gray - 700';
     text_color: 'text - slate - 300';
     link: 'https://ziontechgroup.com / services / ai - governance - registry';
@@ -1108,15 +1204,20 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     competitors: ['Model governance suites'];
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     rating: 4 && 4.6,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     reviews: 6
   }
 ];
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1137,6 +1238,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Inline middleware, policy DSL, exporters and dashboards.',
     launch_date: '2025 - 03 - 10',
     customers: 25,
@@ -1144,6 +1246,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     reviews: 11,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -1159,12 +1263,15 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Human - readable schedules',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Idempotency keys and dedupe',
       'Multi - cloud triggers',
       'Jitter and backoff tuning',
       'DLQ with webhooks and alerts',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '⏱️',
@@ -1182,6 +1289,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     technology: ['Node.js', 'CRON', 'Cloud Functions'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Netlify', 'Vercel', 'AWS', 'GCP'],
     use_cases: ['Scheduled syncs', 'Data pipelines', 'Maintenance tasks'],
     roi: 'Cut failed schedules by 90% with automated retries and DLQ',
@@ -1201,6 +1309,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'gdpr - dsar - automation - pro',
@@ -1213,6 +1323,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Identity verification and consent',
       'Connectors for common SaaS',
       'Data discovery and redaction',
@@ -1220,6 +1331,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Evidence reports and exports',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔐',
@@ -1230,6 +1343,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Pragmatic and affordable alternative to full privacy vaults for SMBs.',
     target_audience: 'Legal, privacy and security teams',
     trial_days: 14,
@@ -1237,11 +1351,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     category: 'Enterprise IT',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['TypeScript', 'Node.js', 'PostgreSQL'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['Google Workspace', 'Salesforce', 'HubSpot', 'Zendesk'],
     use_cases: ['Right to access', 'Right to erase', 'Compliance evidence'],
     roi: 'Reduce DSAR handling time by 80%',
@@ -1261,6 +1378,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'api - contract - testing - hub',
@@ -1273,6 +1392,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Schema diff and breaking checks',
       'PR status and GitHub app',
       'Examples and mock server',
@@ -1280,6 +1400,8 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'Slack notifications',
     ],
     popular: false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '📜',
@@ -1290,6 +1412,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     market_position:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs.',
     target_audience: 'Backend and platform teams',
     trial_days: 14,
@@ -1297,11 +1420,14 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     category: 'Developer Tools',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     real_service: true,
     technology: ['Node.js', 'OpenAPI', 'GraphQL'],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: ['GitHub', 'GitLab', 'CircleCI'],
     use_cases: ['Prevent breaking changes', 'Improve API reliability'],
     roi: 'Cut API incidents by 50% within 60 days',
@@ -1320,14 +1446,19 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 =======
     id: 'cloud - cost - finops - copilot',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
     price: '$99',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     description:;
@@ -1377,10 +1508,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 =======
     id: 'email - deliverability - warmup - monitor',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
     price: '$59',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     description:;
@@ -1480,10 +1614,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 =======
     id: 'api - security - attack - surface - scanner',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     description:;
@@ -1627,10 +1764,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
       'SAML/OIDC templates',
     id: 'sso - scim - starter - kit',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months',
     price: '$149',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     description:;
@@ -1773,10 +1913,13 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 =======
     id: 'it - asset - discovery - agent - pro',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
     price: '$119',
     period: '/month',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     description:;
@@ -1966,16 +2109,22 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 =======
     id: 'ai - governance - registry',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
     price: '$129',
     period: '/month',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 reviews: 6,
   },;
 ];
     reviews: 6
 
+<<<<<<< HEAD
+=======
 =======
     description:;
       'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
@@ -2484,6 +2633,7 @@ reviews: 6,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 
@@ -2495,6 +2645,10 @@ reviews: 6,
 <<<<<<< HEAD
 ];
 =======
+<<<<<<< HEAD
+];
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

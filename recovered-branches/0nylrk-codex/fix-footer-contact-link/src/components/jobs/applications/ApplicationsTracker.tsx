@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -113,16 +115,22 @@ export function ApplicationsTracker() {;
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (isLoading) {;
     return <LoadingState />;
   }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   
   const filteredApplications = statusFilter === 'all' 
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,6 +144,7 @@ export function ApplicationsTracker() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -183,6 +192,8 @@ export function ApplicationsTracker() {;
         </Button>;
         <Button
           size="sm"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -255,11 +266,14 @@ export function ApplicationsTracker() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -271,6 +285,7 @@ export function ApplicationsTracker() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -471,6 +486,9 @@ export function ApplicationsTracker() {;
         </Button>;
       </div>;
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <div className="grid gap - 4 md:grid - cols - 1 lg:grid - cols - 2">;
@@ -532,3 +550,4 @@ if (isLoading) {
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

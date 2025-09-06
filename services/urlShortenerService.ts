@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface ShortUrl {
 export interface ShortUrl {;
   id: string;
@@ -34,6 +37,11 @@ export interface ShortUrl {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+export interface ShortUrl {
+  id: string;
+}
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -65,10 +73,13 @@ export interface ShortUrl {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,6 +98,7 @@ export interface ShortUrl {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface ClickEvent {
   id: string;
@@ -119,12 +131,15 @@ export interface ClickEvent {;
   city: string;
   device: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
   browser: string
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const shortCode = request && request.customCode || this && this.generateShortCode(),
     
     if (this && this.urls.has(shortCode)) {
@@ -219,6 +234,8 @@ class UrlShortenerService {
       total_clicks: 0;
       unique_visitors: 0;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -245,10 +262,13 @@ class UrlShortenerService {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       referrers: [];
       countries: [];
       devices: [];
       browsers: [];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -301,6 +321,7 @@ class UrlShortenerService {
 export interface ShortUrl {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -384,6 +405,8 @@ class UrlShortenerService {;
       url.isActive = false,;
       return null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -395,6 +418,7 @@ class UrlShortenerService {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface ShortUrl {;
 
@@ -404,14 +428,19 @@ export interface ShortUrl {;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -478,6 +507,7 @@ export interface ShortUrl {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -649,6 +679,8 @@ class UrlShortenerService {;
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -661,6 +693,7 @@ class UrlShortenerService {;
     return this && this.analytics.get(shortCode) || null
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
@@ -675,6 +708,8 @@ class UrlShortenerService {;
     return true
   }
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -716,6 +751,7 @@ class UrlShortenerService {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return true
   }
   private generateShortCode(): string {
@@ -723,6 +759,9 @@ class UrlShortenerService {;
     let result = '';
     for (let i = 0, i < 6, i++) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return result
   }
@@ -730,6 +769,8 @@ class UrlShortenerService {;
     return Math.random().toString(36).substr(2, 9)
   }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -769,6 +810,7 @@ class UrlShortenerService {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -893,6 +935,8 @@ if ( {) {
   }
   async importData(data: any): Promise<void> {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     this && this.urls = new Map(data && data.urls);
     this && this.analytics = new Map(data && data.analytics),
@@ -924,10 +968,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 export const urlShortenerService = new UrlShortenerService();
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       urls: Array && Array.from(this && this.urls.entries());
@@ -952,6 +999,7 @@ export const urlShortenerService = new UrlShortenerService();
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Utility methods for data persistence (in a real app, this would use a database);
   async export_data (): Promise < any> {
     return {
@@ -976,6 +1024,8 @@ export const urlShortenerService = new UrlShortenerService ();
 <<<<<<< HEAD
 
 export const urlShortenerService = new UrlShortenerService();
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -1057,3 +1107,4 @@ export const urlShortenerService = new UrlShortenerService();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 className?: string;
   style?: React && React.CSSProperties;
 
@@ -57,6 +59,7 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const highlightsData = [
 
     {
@@ -191,6 +194,8 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
               </CardContent>;
             </Card>;
           ))}
+<<<<<<< HEAD
+=======
 
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           {highlights_data.map ((category, index) => (
@@ -544,3 +549,4 @@ export function FeatureHighlights() {;
 '"`);
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

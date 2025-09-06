@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
@@ -20,6 +22,7 @@ interface FraudTabContentProps {
 import React from "react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 import React from "react",
@@ -33,6 +36,8 @@ interface FraudTabContentProps {
           <p className="text-muted-foreground">
             This tab will show fraud flags that are still pending admin review.
           </p>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 import React from './react';
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
@@ -113,6 +118,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
       );
         </div>
@@ -120,9 +126,12 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       ),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     case 'dangerous':
       return (
         <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
@@ -133,6 +142,11 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
           </p>
         </div>
 <<<<<<< HEAD
+      );
+      ),
+    
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -152,6 +166,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       ),
     
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     case 'actioned':
       return (
         <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
@@ -166,6 +181,10 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
       return null
 
 
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -182,6 +201,7 @@ export const FraudTabContent:React.FC<FraudTabContentProps> = ({ tabValue }) => 
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -213,6 +233,11 @@ interface FraudTabContentProps {
             This tab shows high-priority dangerous flags requiring immediate attention.;
           </p>;
         </div>;
+<<<<<<< HEAD
+      );
+  }
+};
+=======
 <<<<<<< HEAD
       ),;
 <<<<<<< HEAD
@@ -314,3 +339,4 @@ default:
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

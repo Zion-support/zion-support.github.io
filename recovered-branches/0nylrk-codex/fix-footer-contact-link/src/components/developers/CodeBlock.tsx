@@ -19,6 +19,8 @@ interface CodeBlockProps {;
   className?: string;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 export function CodeBlock(): any ({ ;
@@ -31,12 +33,15 @@ export function CodeBlock(): any ({ ;
 export function CodeBlock(): any ({ ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   code;
   language = 'bash';
   showLineNumbers = false;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
+=======
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
@@ -74,6 +79,7 @@ import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
@@ -101,6 +107,8 @@ interface CodeBlockProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -111,10 +119,13 @@ export function CodeBlock({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -122,10 +133,13 @@ export function CodeBlock({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -139,6 +153,7 @@ export function CodeBlock({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code);
     setCopied(true);
@@ -148,6 +163,8 @@ export function CodeBlock({
     setTimeout(() => {
       setCopied(false)
     }, 2000)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -211,6 +228,7 @@ export function CodeBlock({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
@@ -332,6 +350,8 @@ function CodeBlock() {
 ;
 export default CodeBlock;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -415,3 +435,4 @@ export default CodeBlock;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

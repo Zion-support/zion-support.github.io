@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -18,16 +22,21 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -38,12 +47,15 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
     title: "AI Talent Matching"
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -59,11 +71,14 @@ const features = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />
     title: "1-Click Hiring"
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -79,11 +94,14 @@ const features = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />
     title: "Resume Builder"
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -100,11 +118,14 @@ const features = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     icon: <Zap className="h-10 w-10 text-zion-cyan" />
     title: "Real-time Notifications"
     description: "Get instant alerts about new job opportunities, messages, and hiring requests."
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -120,6 +141,7 @@ const features = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -142,6 +164,8 @@ export const AppFeatures: React.FC = () => {
               </CardContent>
             </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -151,6 +175,7 @@ export const AppFeatures: React.FC = () => {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -181,6 +206,8 @@ const features = [;
     title: "AI Talent Matching",;
     description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements.";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -188,11 +215,14 @@ const features = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,;
     title: "1-Click Hiring",;
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click.";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -200,10 +230,13 @@ const features = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     icon: <Award className="h-10 w-10 text-zion-cyan" />,;
     title: "Resume Builder",;
     description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   };
@@ -259,6 +292,7 @@ export const AppFeatures: React.FC = () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -267,6 +301,8 @@ export const AppFeatures: React.FC = () => {;
             Everything you love about Zion, now in your pocket. Our mobile app brings all the powerful features you need to succeed.;
           </p>;
         </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -303,6 +339,7 @@ export const AppFeatures: React.FC = () => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Brain, Clock, Award, Zap } from './lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
@@ -356,6 +393,8 @@ export const AppFeatures: React.FC = () => {
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -400,3 +439,4 @@ export const AppFeatures: React.FC = () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

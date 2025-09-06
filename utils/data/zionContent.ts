@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
@@ -59,6 +62,8 @@ export type WikiContent = {
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -176,10 +181,13 @@ export function buildMarkdownFromWiki (wiki: WikiContent): string {
   const infobox = `| | |;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 |---|---|;
 | Founder | ${wiki.infobox.founder} |;
 | Launch Year | ${wiki.infobox.launch_year} |;
 | Token | ${wiki.infobox.token} |;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -258,12 +266,16 @@ export type DocsContent = {
   productOverview: WikiSection;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
   publicRoadmap: WikiSection;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
 export function generateZionWiki(): WikiContent {;
@@ -272,10 +284,13 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
+<<<<<<< HEAD
+=======
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
@@ -284,7 +299,12 @@ export function generateZionWiki(): WikiContent {;
       id: 'history-launch',;
       id: 'history-launch';
 =======
+<<<<<<< HEAD
+      id: 'history-launch',;
+      id: 'history-launch';
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
       title: 'History and Launch',;
@@ -322,11 +342,16 @@ export function generateZionWiki(): WikiContent {;
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
   const references = [;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
   return { title, intro, infobox, sections, references   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
 }
 =======
 
@@ -349,6 +374,7 @@ export function slugify (input: string): string {
     .trim ();
     .replace (/\s+/g, '-');
     .replace (/-+/g, '-');
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 =======
@@ -515,6 +541,9 @@ export function slugify(input: string): string {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+}
+=======
 }
 =======
 
@@ -522,3 +551,4 @@ export function slugify(input: string): string {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

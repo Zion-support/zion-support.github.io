@@ -16,6 +16,8 @@ import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Define form schema;
 const serviceProfileSchema = z && z.object({;
@@ -48,6 +50,7 @@ export function ServiceProviderRegistrationForm() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -84,8 +87,11 @@ import { useAuth } from "@/hooks/useAuth";
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Define form schema;
 const serviceProfileSchema = z && z.object({;
   name: z && z.string().min(2, "Name must be at least 2 characters long");
@@ -122,6 +128,8 @@ const serviceProfileSchema = z.object({
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -140,6 +148,7 @@ export function ServiceProviderRegistrationForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     message: "Rate must be a number"}),
   availability: z.enum(["available", "limited", "unavailable"]),
   enhancedProfile: z.boolean().default(true),
@@ -147,6 +156,8 @@ export function ServiceProviderRegistrationForm() {
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -168,6 +179,7 @@ export function ServiceProviderRegistrationForm() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -183,6 +195,10 @@ export function ServiceProviderRegistrationForm() {
       website: ""}})
   // Handle adding service tags
   const handleAddService = () => {
+<<<<<<< HEAD
+    const serviceInput = form.getValues("services"),
+    if (serviceInput && !serviceTags.includes(serviceInput)) {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     const serviceInput = form.getValues("services");
@@ -220,11 +236,14 @@ export function ServiceProviderRegistrationForm() {
     const serviceInput = form.getValues("services"),
     if (serviceInput && !serviceTags.includes(serviceInput)) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -248,6 +267,7 @@ export function ServiceProviderRegistrationForm() {
     }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -255,9 +275,12 @@ export function ServiceProviderRegistrationForm() {
     if (!formData.bio |formData.bio.length < 20) {
   };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -305,6 +328,8 @@ export function ServiceProviderRegistrationForm() {;
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 
 =======
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
@@ -317,6 +342,7 @@ export function ServiceProviderRegistrationForm() {;
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({;
     resolver: zodResolver(serviceProfileSchema),;
@@ -341,6 +367,11 @@ export function ServiceProviderRegistrationForm() {;
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
     }
+<<<<<<< HEAD
+    } finally {
+      setIsGenerating (false);
+    }
+=======
 
 =======
     const serviceInput = form.getValues("services"),;
@@ -381,10 +412,15 @@ export function ServiceProviderRegistrationForm() {;
       setIsGenerating (false);
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Generate enhanced profile with AI
@@ -404,10 +440,13 @@ export function ServiceProviderRegistrationForm() {;
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -437,6 +476,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -465,6 +505,8 @@ export function ServiceProviderRegistrationForm() {;
       if (error) {;
         throw new Error(error.message);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -473,10 +515,13 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -485,10 +530,14 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
     } catch (error: any) {
+<<<<<<< HEAD
+      console.error("Error generating enhanced profile:", error),
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console.error("Error generating enhanced profile:", error);
@@ -498,10 +547,13 @@ export function ServiceProviderRegistrationForm() {;
 =======
       console.error("Error generating enhanced profile:", error),
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Generation failed"
         description: error.message |"There was an error generating your enhanced profile. Please try again."
         variant: "destructive"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -603,6 +655,7 @@ function ServiceProviderRegistrationForm() {
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
 =======
@@ -715,6 +768,8 @@ if ( {) {
 }
           setServiceTags ([...service_tags, ...new_services]);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
@@ -730,6 +785,7 @@ if ( {) {
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
@@ -737,11 +793,14 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   },
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
@@ -750,6 +809,8 @@ if ( {) {
         description: "Please add at least one service to your profile."
         variant: "destructive"})
       return
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   };
@@ -949,6 +1010,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -957,6 +1019,8 @@ if ( {) {
 }
         throw new Error ("User not authenticated");
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1020,6 +1084,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
@@ -1139,6 +1204,8 @@ if ( {) {
       const { data: userData } = await supabase && supabase.auth.getUser(),;
       const userEmail = userData && userData.user?.email;
 
+<<<<<<< HEAD
+=======
       // Create the service profile;
       const { data: profileData, error } = await supabase;
         .from('profiles');
@@ -1168,10 +1235,13 @@ if ( {) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         .select(),
 
       if (error) throw error,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1180,12 +1250,15 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
       /*
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -1323,12 +1396,16 @@ if ( {) {
               `
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             }
           })
         } catch (emailError) {
@@ -1353,6 +1430,8 @@ if ( {) {
       setIsSubmitting(false)
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   },
 
@@ -1364,6 +1443,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -1466,6 +1546,8 @@ if ( {) {
                           <FormMessage className="text-red-400" />
                         </FormItem>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -1476,6 +1558,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       // Get user email for notification;
       const { data: userData } = await supabase.auth.getUser(),;
@@ -1615,6 +1698,8 @@ if ( {) {
   }
 
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1951,6 +2036,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;
@@ -2440,15 +2526,20 @@ export function ServiceProviderRegistrationForm() {;
                             </div>;
                           </FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
                     />;
                   </div>;
                 </div>;
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -2461,6 +2552,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -2486,6 +2578,8 @@ export function ServiceProviderRegistrationForm() {;
                             src={uploadedAvatar}
                             alt="Avatar preview"
                             className="w-full h-full object-cover"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                           />;
@@ -2528,10 +2622,13 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       <input
                         type="file"
                         accept="image/*"
                         className="hidden"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
                         onChange={handleAvatarUpload}
@@ -2592,6 +2689,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     For best results, use an image at least 400x400 pixels in JPG, PNG, or GIF format.;
                   </p>;
                 </div>;
@@ -2715,6 +2813,8 @@ export function ServiceProviderRegistrationForm() {;
                       </div>;
                       <FormControl>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 />;
@@ -2786,17 +2886,21 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
                       disabled={isGenerating}>;
                       <Sparkles className="mr-2 h-4 w-4" />;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>;
                   </div>;
@@ -2864,6 +2968,8 @@ export function ServiceProviderRegistrationForm() {;
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -2896,6 +3002,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <Badge
                                 key={index}
                                 className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">;
@@ -3422,6 +3529,8 @@ export function ServiceProviderRegistrationForm() {;
                                 id="available"
                                 value="available"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                                 checked={field && field.value === "available"}
@@ -3461,10 +3570,13 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <input
                                 type="radio"
                                 id="limited"
                                 value="limited"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3507,10 +3619,13 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                               <input
                                 type="radio"
                                 id="unavailable"
                                 value="unavailable"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -3632,6 +3747,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                                 Currently Unavailable;
                               </label>;
                             </div>;
@@ -3704,6 +3820,8 @@ export function ServiceProviderRegistrationForm() {;
           </form>;
         </Form>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3861,3 +3979,4 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

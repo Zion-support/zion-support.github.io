@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -14,6 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
@@ -752,6 +758,9 @@ export const BLOG_POSTS: BlogPost[] = [;
   }
 ];
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -762,3 +771,4 @@ export const BLOG_POSTS: BlogPost[] = [;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

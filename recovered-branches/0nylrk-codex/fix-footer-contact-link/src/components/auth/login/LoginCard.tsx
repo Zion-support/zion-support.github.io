@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -15,6 +17,7 @@ import { SocialLogin } from "./SocialLogin";
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from "react-router-dom",
 
 export function LoginCard() {
@@ -28,7 +31,16 @@ import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;
   return (;
 <<<<<<< HEAD
+
+
+
+
+export function LoginCard() {
+  return (
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
         <h2 className="text-3xl font-bold tracking-tight text-white">;
@@ -36,6 +48,8 @@ export function LoginCard() {;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           <Link
             to="/signup"
@@ -94,10 +108,13 @@ export function LoginCard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Sign up;
           </Link>;
         </p>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -109,11 +126,14 @@ export function LoginCard() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
       <div className="bg - zion - blue - dark rounded - lg p - 6">;
         <LoginForm />;
         <SocialLogin />;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -133,3 +153,4 @@ export function LoginCard() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

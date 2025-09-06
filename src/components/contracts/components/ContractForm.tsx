@@ -8,6 +8,8 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
+=======
 const formSchema = z && z.object({;
   projectName: z && z.string().min(1, "Project name is required");
   scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
@@ -67,3 +69,4 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

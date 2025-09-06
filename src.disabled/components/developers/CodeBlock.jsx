@@ -1,4 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator.clipboard.writeText(' typeof content === 'string' ? "content": content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
+=======
+import React from\';react\' \"export\": default function CodeBlock({ children,code,language = \'text\',className = \',\' showLineNumbers = false}) {\' const content = code || children || \'' return()\' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>\" <div className=\'flex items-center justify-between mb-2\'>\' <span className=\'text-xs text-gray-400 uppercase tracking-wide\'>\' {language}\' </span> <button onClick={() => navigator.clipboard.writeText(\' typeof content === \'string\' ? \"content\": content.toString()\' )\'}\' className=\'text-\"xs\": text-gray-400 hover: text-white: transition-colors\' >\' Copy </button> </div>\' <pre className=\'text-sm text-gray-100\'>\' <code>{conten,t}</code>\' </pre> </div> ) } \'"\'" \''\';\'"
+const React from";react" export: default function CodeBlock({ children,code,language = "text",className = "," showLineNumbers = false}) {" const content = code | children | "" return()" <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className="flex items-center justify-between mb-2">" <span className="text-xs text-gray-400 uppercase tracking-wide">" {language}" </span> <button onClick={() => navigator.clipboard.writeText(" typeof content === "string" ? content: content.toString()" )"}" className="text-xs: text-gray-400 hover: text-white: transition-colors" >" Copy </button> </div>" <pre className="text-sm text-gray-100">" <code>{conten,t}</code>" </pre> </div> ) } """" """;""""`"`
+import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator.clipboard.writeText(' typeof content === 'string' ? "content": content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 
 <<<<<<< HEAD
@@ -30,6 +41,9 @@ import React from\';react\' \"export\": default function CodeBlock({ children,co
 const React from";react" export: default function CodeBlock({ children,code,language = "text",className = "," showLineNumbers = false}) {" const content = code | children | "" return ()" <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className="flex items-center justify-between mb-2">" <span className="text-xs text-gray-400 uppercase tracking-wide">" {language}" </span> <button onClick={() => navigator && navigator.clipboard.writeText(" typeof content === "string" ? content: content && content.toString()" )"}" className="text-xs: text-gray-400 hover: text-white: transition-colors" >" Copy </button> </div>" <pre className="text-sm text-gray-100">" <code>{conten,t}</code>" </pre> </div> ) } """" """;""""`"`
 import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return ()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator && navigator.clipboard.writeText(' typeof content === 'string' ? "content": content && content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
 <<<<<<< HEAD
+import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return ()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator && navigator.clipboard.writeText(' typeof content === 'string' ? "content": content && content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,6 +52,9 @@ import _React from';react' "export": default function CodeBlock({ children,code,
 =======
 import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return ()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator && navigator.clipboard.writeText(' typeof content === 'string' ? "content": content && content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 <<<<<<< HEAD
 import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator.clipboard.writeText(' typeof content === 'string' ? "content": content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
@@ -47,3 +64,5 @@ const React from";react" export: default function CodeBlock({ children,code,lang
 import _React from';react' "export": default function CodeBlock({ children,code,language = 'text',className = ',' showLineNumbers = false}) {' const content = code || children || '' return()' <div className={`bg-gray-900 rounded-lg p-4 overflow-x-auto ${className}`}>" <div className='flex items-center justify-between mb-2'>' <span className='text-xs text-gray-400 uppercase tracking-wide'>' {language}' </span> <button onClick={() => navigator.clipboard.writeText(' typeof content === 'string' ? "content": content.toString()' )'}' className='text-"xs": text-gray-400 hover: text-white: transition-colors' >' Copy </button> </div>' <pre className='text-sm text-gray-100'>' <code>{conten,t}</code>' </pre> </div> ) } '"'" ''';'"
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

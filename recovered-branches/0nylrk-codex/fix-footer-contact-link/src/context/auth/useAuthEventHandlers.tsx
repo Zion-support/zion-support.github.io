@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
@@ -20,9 +23,12 @@ import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Custom hook for auth event handling
  */
@@ -42,6 +48,8 @@ export function useAuthEventHandlers(
       if (mappedUser) {
         checkNewRegistration(mappedUser)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -59,6 +67,7 @@ export function useAuthEventHandlers(
     }, 0);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }, 0);
     }, 0),
@@ -67,15 +76,20 @@ export function useAuthEventHandlers(
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile'),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: "Complete your profile"
         description: "Please complete your profile information to get started"
         variant: "default"})
       navigate('/onboarding')
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -91,20 +105,27 @@ export function useAuthEventHandlers(
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 /**;
@@ -294,6 +315,8 @@ export function useAuthEventHandlers(): any (;
   const navigate = useNavigate(),;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
@@ -301,6 +324,7 @@ export function useAuthEventHandlers(): any (;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 

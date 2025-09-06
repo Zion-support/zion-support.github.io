@@ -3,8 +3,13 @@ command = "npm ci && npm run build"
 publish = "dist"
 
 [build.environment]
+<<<<<<< HEAD
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> main
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -13,9 +18,21 @@ publish = "dist"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+=======
+<<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 # Security and caching headers for static assets
 [[headers]]
@@ -43,7 +60,17 @@ publish = "dist"
     X-Permitted-Cross-Domain-Policies = "none"
     Origin-Agent-Cluster = "?1"
 
+<<<<<<< HEAD
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
+=======
 # Static redirects for exported site
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 [[redirects]]
 from = "/ai-customer-success-platform"
 to = "/services/ai-customer-success-platform/"
@@ -80,6 +107,18 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+=======
+<<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

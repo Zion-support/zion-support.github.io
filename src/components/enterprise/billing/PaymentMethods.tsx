@@ -1,9 +1,12 @@
+<<<<<<< HEAD
+=======
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -12,6 +15,13 @@ import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
 
+<<<<<<< HEAD
+import React from "react"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function PaymentMethods() {
   // Mock payment methods
 
@@ -43,12 +53,17 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
+      isDefault: false}
+  ],
+=======
 
 
 
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <Card>
@@ -143,19 +158,25 @@ export function PaymentMethods() {;
                 </p>
 
 
+<<<<<<< HEAD
+=======
                 <p className="text-sm text-muted-foreground">
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
 
 
+<<<<<<< HEAD
+=======
             <div className="flex gap-2">
               {!method.isDefault && (
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
@@ -170,6 +191,11 @@ export function PaymentMethods() {;
 
         <Button className="gap-1">
 
+<<<<<<< HEAD
+      </CardContent>
+      <CardFooter>
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
@@ -269,6 +295,8 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
+<<<<<<< HEAD
+=======
 
   );
 }
@@ -379,3 +407,4 @@ function PaymentMethods() {
     </Card>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

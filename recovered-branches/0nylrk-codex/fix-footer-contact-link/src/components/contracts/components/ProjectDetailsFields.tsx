@@ -1,5 +1,7 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { format } from "date-fns";
@@ -27,6 +29,7 @@ interface ProjectDetailsFieldsProps {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -88,6 +91,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -102,11 +107,16 @@ import {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/popover";
 
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
+<<<<<<< HEAD
+  form: UseFormReturn<ContractFormValues>;
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -130,6 +140,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
   form: UseFormReturn<ContractFormValues>;
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       <FormField
@@ -143,6 +154,11 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <Input placeholder="AI Website Development" {...field} />;
             </FormControl>;
             <FormMessage />;
+<<<<<<< HEAD
+      <FormField
+        control={form && form.control}
+        name="scopeSummary"
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -205,10 +221,13 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         render={({ field }) => (;
           <FormItem>;
             <FormLabel>Scope Summary</FormLabel>;
             <FormControl>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <Textarea
@@ -219,6 +238,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </FormItem>)}
       />;
       <FormField;
@@ -232,6 +252,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
                 placeholder="Describe the project scope, deliverables, and expectations...";
                 className="min - h-[120px]";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -241,6 +263,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {...field}
               />;
             </FormControl>;
@@ -248,6 +271,8 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
               Be specific about what is included and any limitations;
             </FormDescription>;
             <FormMessage />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -290,6 +315,7 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <FormField
           control={form && form.control}
           name="startDate"
@@ -638,15 +664,20 @@ export function ProjectDetailsFields({ form } ProjectDetailsFieldsProps) {;
     </>;
   );
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </FormItem>)}
         />;
       </div>;
     </>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
             </FormItem>;
@@ -686,3 +717,4 @@ FormMessage interface ProjectDetailsFieldsProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

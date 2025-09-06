@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+  const handleSaveNotes = () => {
+=======
 const handleSaveNotes = () => {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
@@ -182,6 +186,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+<<<<<<< HEAD
+=======
                   </AvatarPrimitive>;
                   <div>;
                     <h4 className='font-medium text-sm'>{candidateName}</h4>;
@@ -255,6 +261,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   <div className='mb-2'>;
                     <ScoreBadge application={application} />;
                   </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 )}
               {/* Notes Section */}
               {showNotes && (;
@@ -348,6 +355,8 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             </CardContent>;
           </Card>;
         )}
+<<<<<<< HEAD
+=======
 
       </Draggable>;
 
@@ -740,6 +749,7 @@ function CandidateCard() {
   handleHireConfirmed;
 }/> </>);
 }'"}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -751,4 +761,7 @@ function CandidateCard() {
     </>;
   );
 }
+<<<<<<< HEAD
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

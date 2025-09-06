@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+    <div className="min-h-screen">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -43,6 +46,7 @@ export default function EnterpriseITPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -67,6 +71,8 @@ export default function EnterpriseITPage() {;
                 </h2>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,
@@ -78,6 +84,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -136,6 +143,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -147,6 +156,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -169,6 +179,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -180,6 +192,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -201,6 +214,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -212,6 +227,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -233,6 +249,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -244,6 +262,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -287,6 +306,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -298,6 +319,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -382,6 +404,8 @@ export default function EnterpriseITPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
               <p className="text - gray - 400">;
@@ -393,6 +417,7 @@ export default function EnterpriseITPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 identifying opportunities and challenges.;
               </p>;
             </div>;

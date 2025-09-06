@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 import {z} from 'zod';
@@ -10,6 +12,7 @@ export const certificationSchema = z.object({;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { z } from 'zod';
 // Define schema for form validation
 
@@ -18,8 +21,11 @@ import {z} from 'zod';
 // Define schema for form validation
 export const certificationSchema = z.object({;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import {z} from 'zod';
 // Define schema for form validation
@@ -36,12 +42,15 @@ export const certificationSchema = z.object({;
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { z } from 'zod',;
 // Define schema for form validation;
 export const certificationSchema = z.object({;
@@ -52,7 +61,10 @@ export const certificationSchema = z.object({;
   credential_id: z.string().optional(),;
   credential_url: z.string().optional()});
 export type CertificationFormValues = z.infer<typeof certificationSchema>;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {z} from 'zod';
 // Define schema for form validation;
 export const certification_schema = z.object ({
@@ -65,6 +77,8 @@ export const certification_schema = z.object ({
 ;
 export type CertificationFormValues = z.infer < typeof certification_schema>;
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -94,3 +108,4 @@ export type CertificationFormValues = z.infer<typeof certificationSchema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

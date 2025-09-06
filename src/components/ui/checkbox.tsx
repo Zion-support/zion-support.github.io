@@ -13,6 +13,22 @@ const Checkbox = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
+<<<<<<< HEAD
+      className
+    )}
+    {...props}
+  >
+    <CheckboxPrimitive.Indicator
+      className={cn("flex items-center justify-center text-current")}
+    >
+      <Check className="h-3 w-3" />
+    </CheckboxPrimitive.Indicator>
+  </CheckboxPrimitive.Root>
+))
+
+export { Checkbox }
+;
+=======
 import React from 'react';
 'use client';
 
@@ -74,3 +90,4 @@ Checkbox.display_name = CheckboxPrimitive.Root.display_name;
 export { Checkbox }
 
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

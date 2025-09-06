@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -44,6 +46,7 @@ interface ContractHeaderProps {
     </div>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -54,6 +57,8 @@ interface ContractHeaderProps {;
 ;
 export function ContractHeader({ onCreateClick }: ContractHeaderProps) {;
   return (;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -71,6 +76,7 @@ export function ContractHeader({ onCreateClick } ContractHeaderProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="flex justify-between items-center mb-8">;
       <div>;
         <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;
@@ -130,6 +136,9 @@ function ContractHeader() {
 }
 
 
+<<<<<<< HEAD
+}
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -161,3 +170,4 @@ function ContractHeader() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

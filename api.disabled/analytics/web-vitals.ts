@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 export {};
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> main
@@ -21,6 +25,7 @@ module.exports = {};
 module.exports = {};
 module.exports = {};
 module.exports = {};
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = {};
 <<<<<<< HEAD
 module.exports = {};
@@ -39,4 +44,20 @@ module.exports = {};
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+export {};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+module.exports = {};
+module.exports = {};
+module.exports = {};
+module.exports = {};
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

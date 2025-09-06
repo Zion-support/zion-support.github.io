@@ -28,6 +28,9 @@ if (return []) {
               const counterparty_name = is_client;
                 ? transaction.provider?.display_name || 'Service Provider';
                 : 'Client';
+<<<<<<< HEAD
+}
+=======
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
                   <CardHeader className="pb-3">;
@@ -132,5 +135,6 @@ if (return []) {
         )}
       </div>;
     </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }

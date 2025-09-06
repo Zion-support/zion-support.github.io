@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-r
 import {toast} from "@/hooks/use-toast";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
@@ -19,13 +22,19 @@ import { toast } from "@/hooks/use-toast";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ResourceItem {
 
   id: string
@@ -41,6 +50,8 @@ export function PartnerResources() {
     {
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       type: 'image',
@@ -54,6 +65,7 @@ export function PartnerResources() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'brand-guidelines'
       title: 'Brand Guidelines'
@@ -62,6 +74,8 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -77,6 +91,7 @@ export function PartnerResources() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'banner-templates'
       title: 'Social Media Banners'
@@ -85,6 +100,8 @@ export function PartnerResources() {
       icon: <FileImage className="h-10 w-10 text-zion-purple" />
       url: '#'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -100,6 +117,7 @@ export function PartnerResources() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'promotional-video'
       title: 'Promotional Video'
@@ -108,6 +126,8 @@ export function PartnerResources() {
       icon: <FileVideo className="h-10 w-10 text-red-500" />
       url: '#'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -123,6 +143,7 @@ export function PartnerResources() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'email-templates'
       title: 'Email Templates'
@@ -131,6 +152,8 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -146,6 +169,7 @@ export function PartnerResources() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: 'talking-points'
       title: 'Talking Points'
@@ -154,6 +178,8 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />
       url: '#'
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -169,12 +195,15 @@ export function PartnerResources() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
     toast({
       title: "Download started"
       description: `Downloading ${resource.title}`
       variant: "default"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -262,6 +291,7 @@ function PartnerResources() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space - y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -356,6 +386,10 @@ export function PartnerResources() {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
+                  <Button
+                    onClick={() => handleDownload(resource)}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
@@ -566,11 +600,14 @@ export function PartnerResources() {;
                   <Button
                     onClick={() => handleDownload(resource)}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     size="sm";
                     variant="outline";
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -580,13 +617,17 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
 =======
             ))}
@@ -652,10 +693,13 @@ export function PartnerResources() {;
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </CardContent>;
       </Card>;
@@ -680,6 +724,8 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </Button>;
                 </CardContent>;
+<<<<<<< HEAD
+=======
               </Card>;
             ))}
           </div>;
@@ -708,10 +754,13 @@ export function PartnerResources() {;
                   </Button>;
                 </CardContent>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -758,10 +807,13 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </ul>;
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -780,10 +832,13 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <CardDescription>;
             Need help with your affiliate marketing? Contact our partner support team.;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -804,6 +859,7 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Contact Partner Support;
           </Button>;
         </CardContent>;
@@ -820,6 +876,8 @@ export function PartnerResources() {;
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     </div>;
   );
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -833,3 +891,4 @@ export function PartnerResources() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
@@ -12,6 +14,7 @@ import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -22,6 +25,8 @@ const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -36,10 +41,13 @@ const corsHeaders = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface HireRequest {
   talent: {
     id: string;
     full_name: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,6 +78,7 @@ interface HireRequest {
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -77,6 +86,8 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -88,10 +99,13 @@ import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,6 +115,7 @@ import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -123,6 +138,8 @@ interface HireRequest {
     budgetMin: number,
     budgetMax: number
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -130,6 +147,7 @@ interface HireRequest {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
@@ -154,10 +172,13 @@ interface HireRequest {;
     budgetMin: number,;
     budgetMax: number;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
 interface EnhancedContent {
@@ -165,6 +186,8 @@ interface EnhancedContent {
   projectType: string
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -173,6 +196,7 @@ interface EnhancedContent {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -194,6 +218,8 @@ serve(async (req) => {
     const supabase = createClient(
     const { talent, requester, project } = requestData;
     // Format budget for display
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -225,11 +251,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (openAiKey) {
       try {
         const configuration = new Configuration({
           apiKey: openAiKey});
         const openai = new OpenAIApi(configuration);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -259,6 +288,7 @@ serve(async (req) => {
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         const prompt = `
 
 =======
@@ -273,10 +303,13 @@ serve(async (req) => {
           Please provide:
           1. A brief summary of this project (max 100 characters)
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           2. Classify this project into one category (e && e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
 <<<<<<< HEAD
           
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           Format your response as JSON: {
             "summary": "Brief summary here"
             "projectType": "Project type here"
@@ -359,6 +392,8 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
         `;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
     budget_min: number,
@@ -471,10 +506,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         try {
           // Extract JSON from the response
           const jsonMatch = responseText && responseText.match(/\{[\s\S]*\}/);
           if (jsonMatch) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -526,6 +564,7 @@ if ( {) {
         console.error("Error generating enhanced content:", aiError);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         // Continue without enhanced content
       }
     }
@@ -534,6 +573,8 @@ if ( {) {
       .from('hire_requests')
       .insert([
         {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           talent_id: talent.id
           requester_id: requester.id |null, // May be null if user is not authenticated
@@ -551,10 +592,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       ])
       .select();
     if (requestError) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
@@ -571,6 +615,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
           }
@@ -611,6 +656,10 @@ if ( {) {
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
 <<<<<<< HEAD
+    }
+    
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -629,12 +678,18 @@ if ( {) {
     }
     
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // 3. Create notification for the admin
     // Fetch admin users
     const { data: adminUsers, error: adminError } = await supabase
       .from('profiles')
       .select('id')
       .eq('user_typeadmin')
+<<<<<<< HEAD
+    if (adminError) {
+      console && console.error("Error fetching admin users:", adminError)
+    }
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -662,6 +717,7 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Create notification for admin (if any found)
     if (adminUsers && adminUsers.length > 0) {
       adminId = adminUsers[0].id
@@ -739,6 +795,8 @@ if ( {) {
       admin_id = admin_users[0].id,
       const adminNotificationContent = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         title: `New hiring request for ${talent && talent.full_name}`;
         message: `${requester && requester.name} (${requester && requester.email}) wants to hire ${talent && talent.full_name} for a project with budget ${budgetDisplay}.`;
@@ -755,11 +813,14 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         related_id: requestRecord[0].id
       }
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -773,6 +834,7 @@ if ( {) {
         console && console.error("Error creating admin notification:", notificationError)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
     // 4. Send email notification to talent
@@ -787,6 +849,9 @@ if ( {) {
             <p><strong>Budget:</strong> ${budgetDisplay}</p>
             <p><strong>Timeline:</strong> ${project && project.timeline}</p>
             <p><strong>Overview:</strong></p>
+<<<<<<< HEAD
+            <p>${project.overview}</p>
+=======
 <<<<<<< HEAD
             <p>${project && project.overview}</p>
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent && enhancedContent.summary}</p>` : ''}
@@ -830,6 +895,7 @@ if ( {) {
 =======
             <p>${project.overview}</p>
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: `New hiring request for ${talent.full_name}`,
         message: `${requester.name} (${requester.email}) wants to hire ${talent.full_name} for a project with budget ${budgetDisplay}.`,
         type: "hire_request",
@@ -847,6 +913,8 @@ if ( {) {
         
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -871,6 +939,7 @@ if ( {) {
             <p>${project.overview}</p>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // 3. Create notification for the admin;
     // Fetch admin users;
@@ -922,6 +991,8 @@ if ( {) {
             <p><strong>Timeline:</strong> ${project.timeline}</p>;
             <p><strong>Overview:</strong></p>;
             <p>${project.overview}</p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         title: `New hiring request for ${talent && talent.full_name}`;
         message: `${requester && requester.name} (${requester && requester.email}) wants to hire ${talent && talent.full_name} for a project with budget ${budgetDisplay}.`;
@@ -1015,10 +1086,13 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1029,10 +1103,13 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return new Response(
         request_id: requestRecord[0].id
       {
+<<<<<<< HEAD
+=======
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 200}
     );
@@ -1072,6 +1149,7 @@ if ( {) {
         request_id: requestRecord[0].id
       }),
       {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { ...corsHeaders, "Content-Type": "application/json" }
         status: 200}
     )
@@ -1085,9 +1163,12 @@ if ( {) {
       });
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
     )
@@ -1102,12 +1183,15 @@ if ( {) {
       }),
       {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         headers: { ...corsHeaders, "Content-Type": "application/json" },
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
@@ -1148,6 +1232,8 @@ if ( {) {
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
@@ -1166,10 +1252,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         status: 500}
     );
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1427,3 +1516,4 @@ error: error.message
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

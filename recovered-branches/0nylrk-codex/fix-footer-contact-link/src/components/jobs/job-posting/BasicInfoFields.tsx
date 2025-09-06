@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   FormField
   FormItem
   FormLabel
   FormControl
   FormMessage
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {;
   FormField,;
   FormItem,;
@@ -21,6 +27,8 @@ import {;
   FormLabel,
   FormControl,
   FormMessage,;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -52,10 +60,13 @@ FormField
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -63,6 +74,7 @@ import { Card, CardContent } from "@/components/ui/card";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -114,6 +126,8 @@ interface BasicInfoFieldsProps {
 }
 
 
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -150,6 +164,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space-y-4">
       <FormField
@@ -524,6 +539,8 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   }}
                   {...rest}
+<<<<<<< HEAD
+=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -536,6 +553,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
                   }}
                   {...rest}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <FormField
           control={control}
           name="budgetMax"
@@ -615,6 +633,8 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   {...rest}
+<<<<<<< HEAD
+=======
                 />;
               </FormControl>;
               <FormMessage />;
@@ -756,6 +776,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
                   }}
                   {...rest}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -767,15 +788,20 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
               <FormMessage />;
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -785,10 +811,13 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
       </Card>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -816,6 +845,7 @@ export const BasicInfoFields:React.FC<BasicInfoFieldsProps> = ({ control }) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onSuggestionApplied={handleSuggestionApplied}
           />;
         </CardContent>;
@@ -971,6 +1001,8 @@ return (<div className="space-y-4" > <FormField control= {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
+<<<<<<< HEAD
+=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -979,3 +1011,4 @@ return (<div className="space-y-4" > <FormField control= {
 =======
 };
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

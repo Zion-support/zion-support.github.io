@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from "https: //esm ;
 =======
@@ -27,12 +32,15 @@ const corsHeaders = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -41,14 +49,18 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight request
   if (req && req.method === "OPTIONS") {
@@ -69,6 +81,9 @@ serve(async (req) => {
   }
   try {
     const supabaseClient = createClient(
+<<<<<<< HEAD
+    // Parse the request body
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -121,10 +136,13 @@ serve(async (req) => {
 =======
     // Parse the request body
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Query analytics events
     const { data, error } = await supabaseClient
       .from("analytics_events")
       .select("event_type, created_at")
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
       .gte("created_at", startDate && startDate.toISOString());
@@ -141,11 +159,14 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (error) {
       console && console.error("Error fetching analytics data:", error);
       throw error
     }
     // Group events by date and event type
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -222,11 +243,14 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
       }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     const eventsByDate = {};
@@ -246,11 +270,14 @@ serve(async (req) => {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     });
     // Convert to array for easier consumption by frontend
       headers: {
         ...corsHeaders
         "Content-Type": "application/json"}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -284,6 +311,7 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 200})
   } catch (error) {
     console && console.error("Error:", error && error.message);
@@ -366,6 +394,10 @@ if ( {) {
         ...cors_headers,
         "Content - Type": "application / json"}
       status: 500});
+<<<<<<< HEAD
+  }
+});
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -513,3 +545,4 @@ data.forEach ( (event) => {
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

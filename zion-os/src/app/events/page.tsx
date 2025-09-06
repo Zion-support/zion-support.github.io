@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+    <div className="min-h-screen">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -43,6 +46,7 @@ export default function EventsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -72,6 +76,8 @@ export default function EventsPage() {;
                 </h2>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
                 <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   Our flagship annual conference bringing together technology leaders, innovators,
@@ -83,6 +89,7 @@ export default function EventsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
@@ -152,6 +159,8 @@ export default function EventsPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Conferences</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -163,6 +172,7 @@ export default function EventsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
@@ -177,6 +187,8 @@ export default function EventsPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Webinars</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -188,6 +200,7 @@ export default function EventsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -272,6 +285,8 @@ export default function EventsPage() {;
               </h3>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <p className="text - gray - 400 mb - 4 leading - relaxed">;
                 Hands - on workshop covering the basics of quantum computing, qubits,
@@ -283,6 +298,7 @@ export default function EventsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

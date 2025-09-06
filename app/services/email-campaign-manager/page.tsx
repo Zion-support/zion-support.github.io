@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "AI Email Campaign Manager | Zion Tech Group",
+  title: 'AI Email Campaign Manager | Zion Tech Group',
   description:
-    "Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.",
+    'Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.',
 };
 
 export default function EmailCampaignManagerPage() {
@@ -68,11 +68,11 @@ export default function EmailCampaignManagerPage() {
               period="per month"
               description="Perfect for small businesses and entrepreneurs"
               features={[
-                "Up to 1,000 contacts",
-                "Basic automation",
-                "Email templates",
-                "Basic analytics",
-                "Email support",
+                'Up to 1,000 contacts',
+                'Basic automation',
+                'Email templates',
+                'Basic analytics',
+                'Email support',
               ]}
               popular={false}
             />
@@ -82,12 +82,12 @@ export default function EmailCampaignManagerPage() {
               period="per month"
               description="Ideal for growing businesses and marketing teams"
               features={[
-                "Up to 10,000 contacts",
-                "Advanced automation",
-                "AI personalization",
-                "Advanced analytics",
-                "Priority support",
-                "A/B testing",
+                'Up to 10,000 contacts',
+                'Advanced automation',
+                'AI personalization',
+                'Advanced analytics',
+                'Priority support',
+                'A/B testing',
               ]}
               popular={true}
             />
@@ -97,12 +97,12 @@ export default function EmailCampaignManagerPage() {
               period="per month"
               description="For large organizations with complex needs"
               features={[
-                "Unlimited contacts",
-                "Custom automation",
-                "Advanced AI features",
-                "24/7 support",
-                "Custom integrations",
-                "Dedicated account manager",
+                'Unlimited contacts',
+                'Custom automation',
+                'Advanced AI features',
+                '24/7 support',
+                'Custom integrations',
+                'Dedicated account manager',
               ]}
               popular={false}
             />
@@ -296,7 +296,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 ${popular ? "border-pink-500 bg-pink-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-6 ${popular ? 'border-pink-500 bg-pink-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="bg-pink-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -320,8 +320,8 @@ function PricingCard({
       <button
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
-            ? "bg-pink-600 text-white hover:bg-pink-700"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? 'bg-pink-600 text-white hover:bg-pink-700'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
         Start Free Trial

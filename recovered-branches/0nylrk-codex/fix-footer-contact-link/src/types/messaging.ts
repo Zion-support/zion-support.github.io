@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   attachment_url?: string,
   attachment_name?: string;
@@ -12,6 +14,7 @@ export interface Conversation {
 export interface Message {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -20,6 +23,8 @@ export interface Message {;
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
   attachment_url?: string
@@ -30,6 +35,7 @@ export interface Message {;
 export interface Conversation {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Conversation {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
@@ -37,6 +43,8 @@ export interface Conversation {
   other_user: {
     id: string;
     name: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -49,10 +57,13 @@ export interface Conversation {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   name: string;
   avatar_url?: string;
   last_message?: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -65,10 +76,13 @@ export interface Conversation {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -214,6 +228,7 @@ export interface MessagingContextType {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
@@ -222,6 +237,9 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -232,3 +250,4 @@ export interface MessagingContextType {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

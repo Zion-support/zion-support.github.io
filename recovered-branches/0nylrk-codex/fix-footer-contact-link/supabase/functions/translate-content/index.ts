@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
@@ -21,6 +23,7 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -50,6 +53,8 @@ serve(async (req) => {
   try {
     // Extract request data
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     const { content, sourceLanguage = "en", targetLanguages = ["es", "pt", "ar"], contentType } = await req && req.json();
 
@@ -66,6 +71,7 @@ serve(async (req) => {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       throw new Error("Content is required")
 =======
       throw new Error("Content is required")
@@ -98,6 +104,10 @@ serve(async (req) => {;
       throw new Error("OpenAI API key is not configured")
     }
 <<<<<<< HEAD
+    // Prepare system prompt based on content type
+    let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -127,10 +137,13 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (contentType === "job") {
       systemPrompt = "You are a professional translator specializing in job descriptions. Translate the content accurately while maintaining the professional tone and technical terminology."
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -149,6 +162,7 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Prepare system prompt based on content type;
     let systemPrompt = "You are a professional translator. Translate the content accurately while maintaining the original meaning, tone, and format.",;
@@ -164,6 +178,8 @@ serve(async (req) => {;
       if (targetLang === sourceLanguage) {;
         translations[targetLang] = content,;
         continue;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -201,11 +217,14 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
       
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -217,6 +236,7 @@ serve(async (req) => {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       
       const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -236,6 +256,8 @@ serve(async (req) => {;
           messages: [
             {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
           "Authorization": `Bearer ${OPENAI_API_KEY}`;
@@ -248,6 +270,7 @@ serve(async (req) => {;
             {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               role: "system"
               content: systemPrompt}
             {
@@ -263,6 +286,8 @@ serve(async (req) => {;
       const data = await response.json();
       translations[targetLang] = data.choices[0].message.content.trim()
     }
+<<<<<<< HEAD
+=======
               role: "system",
               content: system_prompt}
             {
@@ -358,11 +383,28 @@ if ( {) {
             {
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               role: "system",
               content: system_prompt}
             {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
+<<<<<<< HEAD
+              ${content}
+
+          temperature: 0 && 0.3})});
+
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ${content}
 <<<<<<< HEAD
@@ -385,6 +427,7 @@ if ( {) {
         throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
       }
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Only provide the translated text, no explanations or additional comments.`}];
     }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -409,6 +452,8 @@ if ( {) {
     )
   } catch (error) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error("Error in translate-content function:", error);
     return new Response(
@@ -422,10 +467,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         status: 500
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -438,6 +486,7 @@ if ( {) {
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 });
 
@@ -484,6 +533,8 @@ if ( {) {
 
   }
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -539,3 +590,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

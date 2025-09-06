@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Resend} from "npm: resend@2 ;
 =======
@@ -12,6 +14,7 @@ import {Resend} from "npm: resend@2 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -40,10 +43,13 @@ interface SendNewsletterRequest {
   previewText: string;
   body: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   testMode?: boolean
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -51,6 +57,8 @@ import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -58,6 +66,7 @@ import { Resend } from "npm: resend@2.0.0",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -68,6 +77,8 @@ interface SendNewsletterRequest {
   body: string,
   testMode?: boolean,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -75,6 +86,7 @@ interface SendNewsletterRequest {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   testEmail?: string
 }
 serve(async (req) => {
@@ -82,6 +94,8 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
 <<<<<<< HEAD
@@ -162,6 +176,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         status: 200})
     }
     // In production, we would fetch subscriber emails from the database
@@ -170,6 +185,8 @@ serve(async (req) => {
     const emailResponse = {
       id: "test-email-id"
       message: "Email would be sent to all subscribers in production"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -184,6 +201,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       status: 500})
   }
 });
@@ -346,6 +364,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
+<<<<<<< HEAD
+=======
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -450,3 +470,4 @@ status: 200
   }
 });
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

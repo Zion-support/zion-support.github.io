@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -33,6 +36,9 @@
     email: string;
     address: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   customers: number;
   rating: number;
   reviews: number;
@@ -712,6 +718,9 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   maxPrice: number
 ) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
@@ -719,12 +728,15 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 };    return price >= minPrice && price <= maxPrice
   })
 }
+<<<<<<< HEAD
+=======
 =======
 
   })
 }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1011,6 +1023,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 };
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 
@@ -1018,6 +1032,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1038,6 +1053,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
   });
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
@@ -1045,3 +1062,4 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

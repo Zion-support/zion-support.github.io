@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 const LazyComponent = React && React.lazy(() => import('./LazyComponent'));
 // Example: Route-based code splitting
@@ -10,6 +12,7 @@ const HeavyComponent = React && React.lazy(() => import('./HeavyComponent')),
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Example: Dynamic imports for better code splitting;
 const LazyComponent = React.lazy (() => import ('./LazyComponent'));
 ;

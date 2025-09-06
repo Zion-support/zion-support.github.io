@@ -1,14 +1,22 @@
 <<<<<<< HEAD
+export interface CuttingEdge2029Service {
+=======
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface CuttingEdge2029Service {
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface CuttingEdge2029Service {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
+export interface CuttingEdge2029Service {
+
+=======
 <<<<<<< HEAD
 export interface CuttingEdge2029Service {
 
@@ -18,6 +26,7 @@ export interface CuttingEdge2029Service {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -48,6 +57,8 @@ export interface CuttingEdge2029Service {;
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     website: string;
@@ -143,6 +154,7 @@ export interface CuttingEdge2029Service {;
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Automated space mining',
       'Colony infrastructure automation',
       'Resource extraction optimization',
@@ -155,6 +167,8 @@ export interface CuttingEdge2029Service {;
       'Space colony planning',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🚀',
@@ -188,6 +202,7 @@ export interface CuttingEdge2029Service {;
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -201,6 +216,8 @@ export interface CuttingEdge2029Service {;
     rating: 5 && 5.0,
     reviews: 3,
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -285,6 +302,7 @@ export interface CuttingEdge2029Service {;
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Digital consciousness creation',
       'Metaverse AI beings',
       'Virtual consciousness training',
@@ -297,6 +315,8 @@ export interface CuttingEdge2029Service {;
       'Digital consciousness security',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🌌',
@@ -330,6 +350,7 @@ export interface CuttingEdge2029Service {;
     contact_info: {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -343,6 +364,8 @@ export interface CuttingEdge2029Service {;
     rating: 4 && 4.8,
     reviews: 15,
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -359,6 +382,7 @@ export interface CuttingEdge2029Service {;
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Autonomous decision making',
       'Self - optimizing operations',
       'Automated business strategy',
@@ -372,6 +396,8 @@ export interface CuttingEdge2029Service {;
     ],
     popular: true,
     icon: '🏢',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -444,6 +470,7 @@ export interface CuttingEdge2029Service {;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface CuttingEdgeInnovation2029V2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -523,14 +550,19 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     contactInfo: {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -545,6 +577,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
     realImplementation: true

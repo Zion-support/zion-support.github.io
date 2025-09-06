@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
   {
@@ -16,6 +18,7 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Centralized API management',
       'Security and access controls',
       'API lifecycle management',
@@ -26,6 +29,8 @@
       'Integration with enterprise systems',
     ],
     popular: true,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     icon: '🔌',
@@ -39,10 +44,13 @@
     target_audience:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise IT teams, API development teams, Security teams, Compliance officers',
     trial_days: 30,
     setup_time: '7 - 10 days',
     category: 'Enterprise API Management',
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -65,6 +73,7 @@
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise platform with API gateway, governance engine, and security controls.',
     launch_date: '2025 - 01 - 08',
     customers: 45,
@@ -72,6 +81,8 @@
     reviews: 32,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -90,6 +101,7 @@
       'Single sign - on (SSO)',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Identity governance and administration',
       'Privileged access management',
       'Compliance and audit reporting',
@@ -100,12 +112,15 @@
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '🆔',
 
       'Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP',
     ],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: [
       'Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'
     ]
@@ -120,6 +135,8 @@
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -154,6 +171,7 @@
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',
     launch_date: '2025 - 01 - 12',
     customers: 67,
@@ -161,6 +179,8 @@
     reviews: 45,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -177,6 +197,7 @@
       'AI - powered workflow optimization',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Complex process automation',
       'Enterprise system integration',
       'Workflow analytics and insights',
@@ -188,12 +209,15 @@
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '⚙️',
 
       'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow',
     ],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: [
       'SAP, Oracle, Salesforce, Workday, Custom enterprise systems'
     ]
@@ -210,6 +234,8 @@
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -246,6 +272,7 @@
     implementation_details:;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise platform with AI engine, workflow automation, and system integrations.',
     launch_date: '2025 - 01 - 15',
     customers: 34,
@@ -253,6 +280,8 @@
     reviews: 26,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -268,6 +297,7 @@
     features: [;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Infrastructure monitoring',
       'Application performance monitoring',
       'Business metrics tracking',
@@ -280,12 +310,15 @@
     popular: true,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     icon: '📊',
 
       'Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL',
     ],
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     integrations: [
       'AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'
     ]
@@ -300,6 +333,8 @@
     contactInfo: contact
     realImplementation: true
     implementationDetails:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -337,11 +372,14 @@
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launch_date: '2025 - 01 - 18',
     customers: 56,
     rating: 4 && 4.8,
     reviews: 38,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -360,6 +398,7 @@
   }
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
@@ -386,8 +425,12 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 <<<<<<< HEAD
 ];	{
 =======
+<<<<<<< HEAD
+];	{
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
@@ -396,15 +439,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		textColor: 'text-blue-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-governance-automation';
 		marketPosition: 'Enterprise-grade data governance that automates complex compliance and quality management processes.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Fortune 500 companies, Financial services, Healthcare organizations, Government agencies';
 		trialDays: 45;
 		setupTime: '10-15 days';
 		category: 'Enterprise Data Management';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -412,6 +460,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		technology: ['Python, Apache Atlas, Apache Ranger, React, Node && Node.js, PostgreSQL, Elasticsearch'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems'];
 		useCases: ['Data governance, Compliance automation, Data quality management, Master data management'];
 		roi: 'Reduce compliance costs by 40% and improve data quality by 60%'
@@ -426,10 +475,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 23;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.8,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 18
 	}
 	{
@@ -448,10 +500,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		textColor: 'text-green-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-api-governance-platform',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Enterprise API governance that ensures security, compliance, and operational excellence.';
 		targetAudience: 'Enterprise IT teams, API development teams, Security teams, Compliance officers';
 		trialDays: 30;
@@ -459,11 +514,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		category: 'Enterprise API Management';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		realService: true,
 		technology: ['Java, Spring Boot, React, Node && Node.js, PostgreSQL, Redis, Kong'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems'];
 		useCases: ['API governance, Security management, Compliance automation, Developer experience'];
 		roi: 'Improve API security by 80% and reduce governance overhead by 50%'
@@ -478,10 +536,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 45;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 32
 	}
 	{
@@ -500,10 +561,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		textColor: 'text-purple-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-identity-access-management-suite',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		marketPosition: 'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.';
 		targetAudience: 'Enterprise security teams, IT administrators, Compliance officers, HR teams';
 		trialDays: 30;
@@ -511,11 +575,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		category: 'Enterprise Security';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		realService: true,
 		technology: ['Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'];
 		useCases: ['Identity management, Access control, Security compliance, User provisioning'];
 		roi: 'Reduce security incidents by 60% and improve compliance by 80%'
@@ -530,10 +597,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 67;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.8,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 45
 	}
 	{
@@ -552,15 +622,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		textColor: 'text-orange-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-workflow-automation-platform';
 		marketPosition: 'Enterprise workflow automation that combines AI intelligence with enterprise-grade reliability.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'Enterprise operations teams, Process improvement teams, IT teams, Business analysts';
 		trialDays: 30;
 		setupTime: '10-15 days';
 		category: 'Enterprise Automation';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -568,6 +643,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['SAP, Oracle, Salesforce, Workday, Custom enterprise systems'];
 		useCases: ['Process automation, Workflow optimization, Enterprise integration, Operational efficiency'];
 		roi: 'Increase operational efficiency by 40% and reduce process costs by 30%'
@@ -582,10 +658,13 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		customers: 34;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		rating: 4 && 4.7,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		reviews: 26
 	}
 	{
@@ -604,15 +683,20 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		textColor: 'text-cyan-300';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-monitoring-and-observability-suite';
 		marketPosition: 'Enterprise monitoring that provides comprehensive visibility and intelligent operations.',
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		targetAudience: 'DevOps teams, IT operations, SRE teams, Business intelligence teams';
 		trialDays: 30;
 		setupTime: '7-10 days';
 		category: 'Enterprise Monitoring';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -620,6 +704,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 		integrations: ['AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'];
 		useCases: ['Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'];
 		roi: 'Reduce downtime by 70% and improve incident response time by 80%'
@@ -633,12 +718,17 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		launchDate: '2025-01-18';
 		customers: 56;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];
 ;
 
 	}
 ];
 
+<<<<<<< HEAD
+=======
 =======
 
 		rating: 4 && 4.8,
@@ -651,6 +741,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: 'enterprise - data - governance - automation';
   name: 'Enterprise Data Governance Automation',
   tagline: 'Automated data governance, compliance, and quality management for enterprise data';

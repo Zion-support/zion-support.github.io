@@ -4,8 +4,11 @@ return (
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -25,7 +28,10 @@ interface StepProgressProps {
 
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
@@ -34,8 +40,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
@@ -54,6 +63,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           }}
         />
       </div>
+<<<<<<< HEAD
+=======
 
             width: `${(steps && steps.findIndex(s => s && s.id === currentStep) / (steps && steps.length - 1)) * 100}%`,;
           }}
@@ -64,6 +75,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         {steps && steps.map(step => {;
           const status = getStepStatus(step && step.id);
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           return (
             <div key={step && step.id} className='flex flex-col items-center relative'>;
               <div
@@ -74,6 +86,8 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'bg-zion-cyan border-2 border-zion-purple'
                       : 'bg-zion-blue-light text-zion-slate-light'
+<<<<<<< HEAD
+=======
                 )}>;
                 {status === 'complete' ? (;
                   <CheckIcon className='h-4 w-4' />;
@@ -83,6 +97,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   </span>;
                 )}
               </div>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -91,8 +106,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'                )}                  "text-xs mt-2 font-medium"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   "text-zion-slate-light"
 
                 )}
@@ -102,7 +120,14 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
+<<<<<<< HEAD
+                ) : (
+                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
+                )}
+              </div>
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -125,7 +150,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 {step && step.label}
 
 ;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -199,6 +227,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+}
+=======
   (steps && steps.findIndex (s => s && s.id === currentStep) / (steps && steps.length - 1) ) * 100 ;
 }%` ;
 
@@ -316,3 +347,4 @@ if (return "current", ) {
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

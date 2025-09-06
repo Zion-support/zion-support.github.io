@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -12,6 +14,7 @@
 import React, { useState } from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   Dialog;
   DialogContent;
@@ -19,9 +22,12 @@ import {
   DialogTitle;
   DialogDescription;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -31,6 +37,8 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -39,6 +47,7 @@ import {useNavigate} from "react-router-dom";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -47,18 +56,23 @@ import {
   DialogTitle,
   DialogDescription,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,6 +91,7 @@ import { useNavigate } from "react-router-dom",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -87,10 +102,13 @@ export interface MessageTalentModalProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function MessageTalentModal({;
   talent;
   isOpen;
@@ -122,13 +140,18 @@ export function MessageTalentModal({
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -150,12 +173,15 @@ export function MessageTalentModal({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -191,6 +217,7 @@ export function MessageTalentModal(): any ({;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       return;
     }
@@ -304,6 +331,8 @@ function MessageTalentModal() {
       await createConversation(;
         talent && talent.user_id;
         message;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -605,6 +634,7 @@ export function MessageTalentModal({;
   return (;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -615,6 +645,9 @@ export function MessageTalentModal({;
         <DialogHeader>;
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
+<<<<<<< HEAD
+              <AvatarFallback className="bg-zion-blue-dark text-white">;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
@@ -629,6 +662,7 @@ export function MessageTalentModal({;
 =======
               <AvatarFallback className="bg-zion-blue-dark text-white">;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -638,6 +672,8 @@ export function MessageTalentModal({;
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -653,6 +689,7 @@ export function MessageTalentModal({;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
                 {talent.full_name.charAt(0).toUpperCase()}
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {talent && talent.full_name.charAt(0).toUpperCase()}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </AvatarFallback>;
@@ -682,6 +719,8 @@ export function MessageTalentModal({;
               value={message}
               onChange={(e) => setMessage(e && e.target.value)}
               rows={5}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
               className="w-full bg-zion-blue-dark/30 border-zion-purple/20 text-white focus:ring-zion-purple";
@@ -764,12 +803,15 @@ export function MessageTalentModal({;
         <DialogFooter className="gap-2 sm:gap-0">
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Button
             type="button"
             variant="outline"
             onClick={onClose}
           <Button
             type="button"
+<<<<<<< HEAD
+=======
             onClick={handleSendMessage}
             disabled={isSubmitting}
 <<<<<<< HEAD
@@ -835,6 +877,7 @@ export function MessageTalentModal({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
             type="button" ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={handleSendMessage}
             disabled={isSubmitting}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
@@ -886,6 +929,8 @@ contextData);
   setIsSubmitting (false) 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 };
@@ -909,3 +954,4 @@ return (<Dialog open= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Search, Sliders } from "lucide-react";
@@ -19,9 +22,12 @@ import { Input } from "@/components/ui/input";
 import { Search, Sliders } from "lucide-react",
 import { Input } from "@/components/ui/input",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -29,6 +35,8 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -55,6 +63,7 @@ export function MobileFilterBar({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -77,6 +86,8 @@ export function MobileFilterBar({
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -168,6 +179,7 @@ export function MobileFilterBar({;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -203,6 +215,8 @@ function MobileFilterBar() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -230,3 +244,4 @@ function MobileFilterBar() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

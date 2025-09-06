@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Mobile App Development | Zion Tech Group',
-  description: 'Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.'
+  description: 'Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.',
 };
 
 export default function MobileAppDevelopmentPage() {
@@ -8,37 +8,37 @@ export default function MobileAppDevelopmentPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Mobile App Development</h1>
       <p className="text-xl text-gray-600 mb-12">Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Native Development" 
+        <FeatureCard
+          title="Native Development"
           features={[
-            "iOS Swift/Objective-C",
-            "Android Kotlin/Java",
-            "Platform-specific features",
-            "Optimal performance"
-          ]} 
+            'iOS Swift/Objective-C',
+            'Android Kotlin/Java',
+            'Platform-specific features',
+            'Optimal performance',
+          ]}
         />
-        <FeatureCard 
-          title="Cross-Platform" 
+        <FeatureCard
+          title="Cross-Platform"
           features={[
-            "React Native",
-            "Flutter development",
-            "Xamarin solutions",
-            "Code sharing"
-          ]} 
+            'React Native',
+            'Flutter development',
+            'Xamarin solutions',
+            'Code sharing',
+          ]}
         />
-        <FeatureCard 
-          title="App Services" 
+        <FeatureCard
+          title="App Services"
           features={[
-            "UI/UX design",
-            "Backend integration",
-            "App store deployment",
-            "Maintenance & updates"
-          ]} 
+            'UI/UX design',
+            'Backend integration',
+            'App store deployment',
+            'Maintenance & updates',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Mobile App Development?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function MobileAppDevelopmentPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Mobile App?</h2>
         <p className="text-gray-600 mb-6">Start with a free consultation to discuss your app idea and requirements.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP App" 
-          price="$19,999" 
+        <Plan
+          name="MVP App"
+          price="$19,999"
           features={[
-            "Basic functionality",
-            "Simple UI/UX",
-            "1 platform (iOS or Android)",
-            "2 months development"
-          ]} 
+            'Basic functionality',
+            'Simple UI/UX',
+            '1 platform (iOS or Android)',
+            '2 months development',
+          ]}
         />
-        <Plan 
-          name="Professional App" 
-          price="$49,999" 
+        <Plan
+          name="Professional App"
+          price="$49,999"
           features={[
-            "Advanced features",
-            "Custom UI/UX design",
-            "Both platforms",
-            "Backend integration",
-            "4 months development"
-          ]} 
+            'Advanced features',
+            'Custom UI/UX design',
+            'Both platforms',
+            'Backend integration',
+            '4 months development',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise App" 
-          price="$99,999+" 
+        <Plan
+          name="Enterprise App"
+          price="$99,999+"
           features={[
-            "Complex functionality",
-            "Custom backend",
-            "Advanced integrations",
-            "Dedicated team",
-            "6+ months development"
-          ]} 
+            'Complex functionality',
+            'Custom backend',
+            'Advanced integrations',
+            'Dedicated team',
+            '6+ months development',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-rose-600 text-white hover:bg-rose-700' 
+          popular
+            ? 'bg-rose-600 text-white hover:bg-rose-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

@@ -95,6 +95,8 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
 
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
 =======
 
@@ -135,6 +137,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
   },
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -162,9 +165,12 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <Badge 
           variant="outline" 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           className={`${getStatusColor(availability.status)} text-sm py-1 px-3 mb-4 md:mb-0 w-fit`}
         >
           {getStatusText(availability.status)}
@@ -191,6 +197,8 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
                   <span>{slot.hours}</span>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -315,6 +323,7 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
             ))}
@@ -379,6 +388,8 @@ function ProfileAvailability() {
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -408,3 +419,4 @@ function ProfileAvailability() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

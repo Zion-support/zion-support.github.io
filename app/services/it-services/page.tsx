@@ -1,10 +1,23 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const metadata = { 
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
+};
+=======
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
 import React from 'react';
 import Link from 'next/link';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 interface ITServiceProps {
   title: string;
@@ -807,6 +820,12 @@ export default function ITServicesPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
  * ITServicesPage - Function description
  */
@@ -821,6 +840,9 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
 }
+<<<<<<< HEAD
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
 
 function ContactSection() {
   return (
@@ -1256,3 +1278,4 @@ function MetricCard({ number, label, description }: {
   );
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-134f
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

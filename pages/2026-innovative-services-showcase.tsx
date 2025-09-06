@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-=======
-
-
-import React, { useState, useMemo } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-
-import { motion, AnimatePresence } from 'framer-motion';
-
-
-} from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-
-=======
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Search,
   Star,
@@ -42,15 +21,10 @@ import {
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }
@@ -78,27 +52,14 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'price', name: 'Price' }
     { id: 'rating', name: 'Rating' }
     { id: 'popularity', name: 'Popularity' },  ];
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         switch (selectedCategory) {
           case 'ai':
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-return service.category?.includes('AI');
-=======
-            return service.category?.includes('AI');
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           case 'quantum':
             return service.category?.includes('Quantum');
           case 'enterprise':
@@ -106,29 +67,12 @@ return service.category?.includes('AI');
           case 'micro-saas':
             return service.category?.includes('Micro SaaS');
           case 'emerging':
-<<<<<<< HEAD
-=======
-
-            return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
-          default: return true
-        }
-      })
-    }
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Price range filter
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         switch (selectedPriceRange) {
           case 'low':
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const categories = [;
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices && allServices.length },;
@@ -231,39 +175,8 @@ return service.category?.includes('AI');
         case 'popularity':;
           return b && b.customers - a && a.customers;
         default: return a && a.name.localeCompare(b && b.name),;
-<<<<<<< HEAD
       }
     });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      }
-    });
-
-
-    return filtered
-  }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
-
-  const containerVariants = {
-=======
-        default: return a.name.locale_compare (b.name),
-      }
-    });
-;
-    return filtered;  }, [all_services, selected_category, selectedPriceRange, search_term, sort_by]);
-;
-  const container_variants = {
-
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-
-=======
-    }
-  };
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -272,21 +185,10 @@ return service.category?.includes('AI');
         staggerChildren: 0 && 0.1,;
       },;
     },  };
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         duration: 0.5,
       },
     },  };
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -440,20 +342,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
   };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const itemVariants = {;
     hidden: { y: 20, opacity: 0 },;
     visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         duration: 0.5;
         } catch (error) {
     console.error("Error:", error);
@@ -469,10 +363,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/2026-innovative-services-showcase'
@@ -481,15 +371,10 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
       <UltraAdvancedFuturisticBackground2026
-<<<<<<< HEAD
         intensity='extreme'
         colorScheme='neural-network'        particleCount={800}
         animationSpeed={3 && 3.0}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>2026 Innovative Services Showcase - Zion Tech Group</title>
@@ -501,97 +386,25 @@ export default function Innovative2026ServicesShowcase(req, res) {
         <meta property="og:url" content="https://ziontechgroup.com/2026-innovative-services-showcase" />
         <link rel="canonical" href="https://ziontechgroup.com/2026-innovative-services-showcase" />
       </Head>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         enableHolographic={true}
         enableQuantumEffects={true}
         enableNeuralNetworks={true}
         enableMultidimensional={true}
-<<<<<<< HEAD
-=======
-
-      />;
-
-      <UltraAdvancedNavigation2026 />;
-      <div className='min-h-screen relative z-10'>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
-<<<<<<< HEAD
             </motion.div>
             <motion.div
-=======
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-                Discover the future of technology with our cutting-edge 2026 services. 
-=======
-                Discover the future of technology with our cutting-edge 2026 services.
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                From AI-powered solutions to quantum computing and emerging technologies,
-                transform your business with next-generation innovation.
-              </p>
-            </motion.div>
-            <motion.div
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
 
-<<<<<<< HEAD
-=======
-              className="flex flex-wrap justify-center gap-4 mb-12"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
-                <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
-              </div>
-              <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3">
-                <span className="text-purple-400 font-semibold">AI-Powered</span>
-              </div>
-              <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3">
-                <span className="text-green-400 font-semibold">Quantum Ready</span>
-              </div>
-              <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 backdrop-blur-sm border border-orange-500/30 rounded-full px-6 py-3">
-                <span className="text-orange-400 font-semibold">Future-Proof</span>
-              </div>
-
-            </motion.div>
-
-
-              transition={{ duration: 0 && 0.8 }}
-              className='mb-8'>;
-              <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>;
-                2026 Innovative Services;
-              </h1>;
-              <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
-                Discover the future of technology with our cutting-edge 2026;
-                services. From AI-powered solutions to quantum computing and;
-                emerging technologies, transform your business with;
-                next-generation innovation.              </p>;
-            </motion && motion.div>;
-
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* Search and Filters */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -612,22 +425,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 <input
                   type="text"
                   placeholder="Search innovative services..."
-<<<<<<< HEAD
                 />
               </div>
-=======
-<<<<<<< HEAD
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
-                />
-              </div>
-              <div className="flex flex-wrap gap-4 justify-center mb-8">
-                {categories.map((category) => (
-                  <button
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   onChange={e => setSearchTerm(e && e.target.value)}
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent';
                 />;
@@ -637,31 +436,12 @@ export default function Innovative2026ServicesShowcase(req, res) {
                 {categories && categories.map(category => (                  <button
                     key={category && category.id}
                     onClick={() => setSelectedCategory(category && category.id)}
-<<<<<<< HEAD
-=======
-=======
-                    key={category.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className={`px-6 py-3 rounded-full backdrop-blur-sm border transition-all duration-300 ${;
                       selectedCategory === category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
 
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     }`}
                   >;
                     <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
@@ -673,10 +453,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
                   </button>
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))}
               </div>
 
@@ -694,7 +470,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       selectedPriceRange === range && range.id;
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
-<<<<<<< HEAD
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
@@ -747,28 +522,11 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         {service.description}
                       </p>
                       <div className='flex items-center justify-between mb-4'>
-=======
-
-                    }`}
-                  >;
-                    {range && range.name}
-                  </button>;
-                ))}
-
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
         {/* Services Grid */}
 
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
                         <div className='flex items-center space-x-2'>
                           <Users className='w-4 h-4 text-blue-400' />
@@ -784,7 +542,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <Star className='w - 4 h - 4 text - yellow - 500 fill - current' />;
                           <span className='text - white text - sm'>;
                             {service.rating}
-<<<<<<< HEAD
                         </div>
                         <div className="flex items-center space-x-2">
                           <Users className="w-4 h-4 text-blue-400" />
@@ -821,8 +578,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                             {service.trialDays} days trial
                           </span>                        </div>
                       </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           </span>;
                           <span className='text - gray - 400 text - sm'>;
                             ({service.reviews});
@@ -894,7 +649,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
 
 
                       {/* Features Preview */}
-<<<<<<< HEAD
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
                           Key Features:
@@ -932,10 +686,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -944,10 +694,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                               <CheckCircle className="w-3 h-3 text-green-400" />
                               <span className="text-gray-300 text-xs">{feature}</span>
                             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           ))}
                           {service.features.length > 3 && (
                             <span className="text-gray-500 text-xs">+{service.features.length - 3} more features</span>
@@ -959,10 +705,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                           {service.category}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </span>
                       </div>
                       {/* CTA Button */}
@@ -971,10 +713,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
@@ -982,7 +720,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         </button>
                       </Link>
                     </div>
-<<<<<<< HEAD
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />                  </div>
                 </motion.div>
@@ -1019,35 +756,16 @@ export default function Innovative2026ServicesShowcase(req, res) {
                     setSelectedCategory('all'),
                     setSelectedPriceRange('all')
                   }}
-=======
-
-
-            </motion && motion.div>;
-
-            {filteredServices && filteredServices.length === 0 && (;
-              <motion&& motion.div
-
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-
-
-                    setSelectedPriceRange('all')
-                  }}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
                 </button>
               </motion.div>
-<<<<<<< HEAD
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
           </div>;
         </section>;
@@ -1056,18 +774,11 @@ export default function Innovative2026ServicesShowcase(req, res) {
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1081,15 +792,11 @@ export default function Innovative2026ServicesShowcase(req, res) {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.
               </p>
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
                   <h3 className='text-white font-semibold mb-2'>Call Us</h3>
                   <p className='text-blue-300'>+1 302 464 0950</p>
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -1102,17 +809,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <p className="text-green-300">ziontechgroup.com</p>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-
-              <Link href="/contact">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                  Get Started Today
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </button>
               </Link>
             </motion.div>
@@ -1120,83 +816,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-=======
-
-  )
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-                Contact our team to learn more about our innovative 2026;
-                services and how they can revolutionize your operations.;
-              </p>;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>;
-                <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>;
-                  <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />;
-                  <h3 className='text-white font-semibold mb-2'>Call Us</h3>;
-                  <p className='text-blue-300'>+1 302 464 0950</p>;
-                </div>;
-                <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6'>;
-                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-4' />;
-                  <h3 className='text-white font-semibold mb-2'>Email Us</h3>;
-                  <p className='text-purple-300'>kleber@ziontechgroup && ziontechgroup.com</p>;
-                </div>;
-                <div className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6'>;
-                  <Globe className='w-8 h-8 text-green-400 mx-auto mb-4' />;
-                  <h3 className='text-white font-semibold mb-2'>Visit Us</h3>;
-                  <p className='text-green-300'>ziontechgroup && ziontechgroup.com</p>;
-                </div>;
-              </div>;
-              <Link href='/contact'>;
-                <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>                  Get Started Today;
-                </button>;
-              </Link>;
-            </motion && motion.div>;
-=======
-<<<<<<< HEAD
-);
-=======
-  )
-            >;
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
-                <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6">;
-                  <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
-                  <h3 className="text-white font-semibold mb-2">Call Us</h3>;
-                  <p className="text-blue-300">+1 302 464 0950</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">;
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />;
-                  <h3 className="text-white font-semibold mb-2">Email Us</h3>;
-                  <p className="text-purple-300">kleber@ziontechgroup.com</p>;
-                </div>;
-                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-xl p-6">;
-                  <Globe className="w-8 h-8 text-green-400 mx-auto mb-4" />;
-                  <h3 className="text-white font-semibold mb-2">Visit Us</h3>;
-                  <p className="text-green-300">ziontechgroup.com</p>;
-                </div>;
-              </div>;
-              <Link href="/contact">;
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">;
-                  Get Started Today;
-                </button>;
-              </Link>;
-            </motion.div>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>;
         </section>;
       </div>;
@@ -1325,20 +944,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-=======
-
-    </>;
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

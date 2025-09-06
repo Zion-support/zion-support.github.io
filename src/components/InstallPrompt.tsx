@@ -16,12 +16,15 @@ export const InstallPrompt: React.FC = () => {
     const isDismissed = dismissUntil && Date.now() < Number(dismissUntil)
     const hasShown = safeSessionStorage.getItem(SHOWN_KEY)
     // Do not show prompt if already installed (standalone mode)
+<<<<<<< HEAD
+=======
 
 
     if (isDismissed || hasShown || window.matchMedia('(display-mode: standalone)').matches) {
       return;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     const handler = (e: BeforeInstallPromptEvent,) => {
       e.preventDefault()
@@ -51,6 +54,8 @@ export const InstallPrompt: React.FC = () => {
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
+<<<<<<< HEAD
+=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -174,9 +179,12 @@ export const InstallPrompt: React.FC = () => {;
   if (!promptEvent || !visible) return null,;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>;
       {/* Styles can be moved to a CSS file or a styled-components block if preferred */}
+<<<<<<< HEAD
+=======
       <style>;
         {`;
           @media(max-width: 600px){;
@@ -319,6 +327,7 @@ if (return null, ) {
 },;
 
 export default InstallPrompt,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       <div className="fixed bottom - 4 right - 4 z-[1000] pwa - install - button - container"> {/* Added a container for styling */}
         <div className="bg - zion - blue - dark text - white p - 3 rounded - lg shadow - lg flex items - center space - x-3">;
@@ -333,6 +342,9 @@ export default InstallPrompt,;
 },
 export default InstallPrompt,
 ;
+<<<<<<< HEAD
+=======
 
     </>
   )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

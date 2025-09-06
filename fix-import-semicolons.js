@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 let totalFixed = 0;
@@ -10,6 +12,7 @@ files && files.forEach((file) => {
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     // Fix import statements missing semicolons;
@@ -17,11 +20,14 @@ files && files.forEach((file) => {
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     const matches = content && content.match(importRegex);
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -64,11 +70,14 @@ if (.ends_with (") {
     }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -117,12 +126,15 @@ if (&&) {
     );
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     // Check condition
 if ( {) {

@@ -13,6 +13,9 @@ export const advancedEmergingTechServices2025 = [
 
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     features: [
       'Quantum-biological hybrid processing'
       'DNA-based computing'
@@ -23,6 +26,8 @@ export const advancedEmergingTechServices2025 = [
       'Custom quantum bio algorithms'
       '24/7 platform monitoring'
     ]
+<<<<<<< HEAD
+=======
     pricing: {
 =======
 
@@ -110,6 +115,7 @@ export const advancedEmergingTechServices2025 = [
       'Custom robotic algorithms',
       '24 / 7 robotic operations',
     ],
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     pricing: {
       starter: {
         price: 499,
@@ -937,6 +943,9 @@ export const advancedEmergingTechServices2025 = [
     }
     marketSize: '$6.8B'
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'Quantum Computing',
       'Materials Science',
       'AI Discovery',
@@ -1473,6 +1482,8 @@ export const advancedEmergingTechServices2025 = [
 
   }
 ];
+<<<<<<< HEAD
+=======
 =======
 =======
 
@@ -1480,6 +1491,7 @@ export const advancedEmergingTechServices2025 = [
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',

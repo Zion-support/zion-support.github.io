@@ -2,6 +2,9 @@
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 =======
 <<<<<<< HEAD
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+=======
+<<<<<<< HEAD
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -10,6 +13,7 @@ exports && exports.handler = async function () {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const endpoints = [
       '/'
       '/learn'
@@ -26,6 +30,8 @@ exports && exports.handler = async function () {
         const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -51,6 +57,7 @@ exports && exports.handler = async function () {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -86,6 +93,8 @@ exports && exports.handler = async function () {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       statusCode: 200,
@@ -105,11 +114,14 @@ exports.handler = async function() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -164,6 +176,7 @@ exports.handler = async function() {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const { upsert_file } = require ('./_lib / github');
 ;
 exports.handler = async function () {

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   burst_limit: number,
   window_size: number;
@@ -18,6 +20,7 @@ export interface RateLimitConfig {
 export interface RateLimitRule {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
@@ -33,6 +36,8 @@ export interface RateLimitConfig {
   requestsPerDay: number;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export interface RateLimitRule {
 
 export interface RateLimitRule {;
@@ -43,12 +48,15 @@ export interface RateLimitRule {;
 }
 export interface RateLimitRule {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   pattern: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
   config: RateLimitConfig;
   enabled: boolean;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +70,7 @@ export interface RateLimitRule {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface RateLimitStats {
   endpoint: string;
@@ -72,6 +81,8 @@ export interface RateLimitStats {
   last_request: Date;
   current_usage: {
     minute: number;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -138,10 +149,13 @@ export interface RateLimitStats {
 }
 export interface APIKey {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   key: string;
   permissions: string[];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -155,6 +169,7 @@ export interface APIKey {
 
 }
 export interface RateLimitViolation {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   api_key: string;
 <<<<<<< HEAD
@@ -193,6 +208,8 @@ export interface RateLimitViolation {;
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
@@ -207,6 +224,7 @@ export interface RateLimitViolation {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export class APIRateLimiterService {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   private apiKey: string;
 
   private baseUrl: string
@@ -296,6 +314,8 @@ if ( {) {
       return {
         ...rule;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -311,6 +331,7 @@ if ( {) {
         createdAt: new Date(),
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -396,6 +417,8 @@ export class APIRateLimiterService {;
     }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -429,6 +452,7 @@ export class APIRateLimiterService {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
@@ -448,7 +472,10 @@ if ( {) {
         throw new Error (`Failed to fetch rate limit rules: ${response.status_text}`);
       }
       return await response.json ();
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       // Mock rules for demo;
       return [;
@@ -506,6 +533,8 @@ if ( {) {
             requestsPerHour: 1000;
             requestsPerDay: 10000;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -536,6 +565,7 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         {
           id: 'rule_2';
@@ -546,6 +576,8 @@ if ( {) {
             requestsPerMinute: 10;
             requestsPerHour: 100;
             requestsPerDay: 1000;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -573,6 +605,7 @@ if ( {) {
           updatedAt: new Date()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       ];
     }
@@ -763,10 +796,13 @@ export class APIRateLimiterService {;
       if (!existingRule) {
         throw new Error('Rule not found')
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -791,8 +827,13 @@ if ( {) {
   $2
 }
         throw new Error ('Rule not found');
+<<<<<<< HEAD
+      }
+      
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return {
         ...existing_rule;
         ...updates;
@@ -853,6 +894,8 @@ if ( {) {
       }
     }
   }
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -875,6 +918,7 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
@@ -884,13 +928,20 @@ if ( {) {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -948,6 +999,8 @@ if ( {) {
             minute: 8;
             hour: 95,
             day: 650;
+<<<<<<< HEAD
+=======
         }
       ];
     }
@@ -1176,19 +1229,25 @@ if ( {) {
 export interface RateLimitConfig {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       ];
     }
   }
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
         }
       ]
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1201,6 +1260,7 @@ export interface RateLimitConfig {;
 
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
@@ -1511,6 +1571,8 @@ if ( {) {
           key: 'zion_web123';
           permissions: ['readwrite'];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1551,6 +1613,7 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         {
           id: 'key_2';
@@ -1714,6 +1777,8 @@ if ( {) {
         {
           id: 'violation_1';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1765,10 +1830,13 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1823,6 +1891,7 @@ if ( {) {
           userAgent: 'ZionMobileApp/1 && 1.0'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           api_key: 'zion_web123';
           endpoint: '/api / users';
           method: 'GET',
@@ -1830,6 +1899,8 @@ if ( {) {
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1839,6 +1910,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         {
           id: 'violation_2';
@@ -1879,6 +1951,8 @@ if ( {) {
     }
   }> {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1915,12 +1989,15 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1941,6 +2018,7 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       topEndpoints: stats
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
@@ -2051,6 +2129,8 @@ if ( {) {
           blocked: stat.blocked_requests,
           averageResponseTime: stat.averageResponseTime;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2112,11 +2192,14 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }));
       violations: {
         total: violations.length;
         by_reason: violationsByReason,
         recent: violations.slice (0, 10);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -2125,6 +2208,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
   }
@@ -2159,6 +2243,8 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Starter';
     price: 25;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2189,11 +2275,14 @@ export const API_RATE_LIMITER_PRICING = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2221,11 +2310,14 @@ export const API_RATE_LIMITER_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2255,6 +2347,7 @@ export const API_RATE_LIMITER_PRICING = {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -2262,6 +2355,8 @@ export const API_RATE_LIMITER_PRICING = {;
     name: 'Starter',;
     price: 25,;
     period: '/month',;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2273,10 +2368,15 @@ export const API_RATE_LIMITER_PRICING = {;
       'SLA guarantee';
     ];
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
+<<<<<<< HEAD
+  }
+};
+=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
@@ -2615,3 +2715,4 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

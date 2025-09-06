@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge";
@@ -19,14 +22,22 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function TalentPool() {
   // Mock talent data
 
   const talents = [
     {
+<<<<<<< HEAD
+      case "available": return <Badge className="bg-green-500">Available</Badge>;
+      case "interviewing":;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -221,6 +232,7 @@ export function TalentPool() {;
       case "interviewing":;
         return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Interviewing</Badge>;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
 
@@ -293,10 +305,13 @@ export function TalentPool() {;
             <CardTitle>Dedicated Talent Pool</CardTitle>;
             <CardDescription>Candidates matched to your company</CardDescription>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -328,6 +343,8 @@ function TalentPool() {
       skills: ["Agile", "Roadmapping", "User Research"],
       status: "available",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       match: 88;
     }
   ];
@@ -356,10 +373,13 @@ function TalentPool() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
           <Button size="sm">View All</Button>;
         </div>;
       </CardHeader>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -375,6 +395,7 @@ function TalentPool() {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   <Badge key={index} variant="secondary" className="text-xs">
                     {skill}
                   </Badge>;
@@ -499,6 +520,8 @@ default: return <Badge variant="outline"> {
 }</Badge> 
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
 
 };
@@ -538,3 +561,4 @@ return (<Card> <CardHeader> <div className="flex items-center justify-between" >
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

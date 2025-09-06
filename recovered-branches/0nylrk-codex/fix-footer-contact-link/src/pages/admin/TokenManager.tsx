@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -14,6 +16,7 @@ import {useEffect, useState} from 'react';
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -41,8 +44,11 @@ import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import {useEffect, useState} from 'react';
@@ -58,6 +64,10 @@ import {useEffect, useState} from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  };
+
+=======
   const isAdmin = user?.userType === 'admin';
 
 =======
@@ -173,6 +183,7 @@ if ( {) {
   };
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -193,10 +204,13 @@ export default function TokenManager() {;
   const [amount, setAmount] = useState(0),;
   const isAdmin = user?.userType === 'admin',;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   useEffect(() => {;
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
@@ -250,6 +264,8 @@ export default function TokenManager() {;
 <<<<<<< HEAD
       .limit(100);
     if (!error) setTransactions(data || []);
+<<<<<<< HEAD
+=======
   };
 
 =======
@@ -261,17 +277,21 @@ export default function TokenManager() {;
       .limit(100);
     if (!error) setTransactions(data || []);
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleIssue = async (type: 'earn' | 'burn') => {;
     if (!userId || amount <= 0) return,;
     const res = await fetch(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       body: JSON && JSON.stringify({ userId, amount })});
     if (res && res.ok) {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({;
         title: 'Success',;
         description: 'Transaction processed';
@@ -446,6 +466,8 @@ export default function TokenManager() {;
         <Footer />;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     </ProtectedRoute>);
@@ -521,4 +543,5 @@ return (<ProtectedRoute adminOnly> <div> <Header /> <div className="min-h-screen
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

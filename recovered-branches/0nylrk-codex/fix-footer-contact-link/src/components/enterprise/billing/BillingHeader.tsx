@@ -72,6 +72,8 @@ export function BillingHeader() {;
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <p className="text - muted - foreground">;
@@ -102,6 +104,7 @@ import { Link } from "react-router-dom",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -128,6 +131,8 @@ export function BillingHeader() {
         Manage your subscription, view invoice history, and update payment methods.
       </p>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -139,6 +144,7 @@ export function BillingHeader() {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -183,4 +189,7 @@ export function BillingHeader() {;
 
 
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

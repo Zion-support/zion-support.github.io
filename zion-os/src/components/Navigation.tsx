@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -46,6 +51,7 @@ export function Navigation() {;
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -223,6 +229,8 @@ export function Navigation() {;
             </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
           </div>)}
 
@@ -232,6 +240,7 @@ export function Navigation() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -310,6 +319,8 @@ export function Navigation() {;
       </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     </nav>;
   );
@@ -318,3 +329,4 @@ export function Navigation() {;
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

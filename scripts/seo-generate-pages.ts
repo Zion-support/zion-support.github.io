@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
+const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+=======
+<<<<<<< HEAD
 
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 
@@ -29,10 +34,13 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' }
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' }
   { prompt: 'LLM Engineers in Toronto', region: 'Toronto', service: 'LLM' }
   { prompt: 'Cybersecurity Experts in Berlin', region: 'Berlin', service: 'security' }];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,6 +55,7 @@ const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       })
     });
     req && req.on('error', reject);
@@ -82,6 +91,8 @@ async function post_json (url: string, body: any): Promise < any> {
       res.on ('data', (d: any) => (buf += d)),
       res.on ('end', () => {
         try { resolve (JSON.parse (buf)) } catch { resolve ({}) }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -180,6 +191,7 @@ main().catch((e) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /* eslint-disable no-console */;
 import fs from 'fs',;
 import path from 'path',;
@@ -204,10 +216,13 @@ async function postJson(url: string, body: any): Promise<any> {;
       res.on('end', () => {;
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
     });
     req.on ('error', reject);
@@ -244,6 +259,9 @@ main ().catch ((e) => {
 
 
 
+<<<<<<< HEAD
+;
+=======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -323,3 +341,4 @@ main().catch((e) => {;
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

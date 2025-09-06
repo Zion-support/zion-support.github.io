@@ -10,10 +10,13 @@ import { AlertCircle, FileText, Loader2 } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns",
 
 
+<<<<<<< HEAD
+=======
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplyToJobFormProps {
 
   job: Job
@@ -113,6 +116,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     } catch (err: any) {
       setError(err.message |"Failed to submit application")
       toast.error("Failed to submit application")
+<<<<<<< HEAD
+=======
     import { use_router } from 'next / router';
 import { useJobApplications  } from '@/hooks / useJobApplications';
 import { use_resume  } from '@/hooks / use_resume';
@@ -192,12 +197,16 @@ if ( {) {
   },
   
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
 
 
+<<<<<<< HEAD
+=======
       
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {error && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
@@ -306,9 +315,12 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
             rows = {6,}
 
 
+<<<<<<< HEAD
+=======
         
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <div>
           <Label htmlFor="resume">Select Resume (Optional)</Label>
           {isResumesLoading ? (
@@ -317,7 +329,10 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
               <span>Loading your resumes...</span>
             </div>
           ) : resumes && resumes.length > 0 ? (
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Select
               value={selectedResumeId}
               onValueChange={setSelectedResumeId}
@@ -535,16 +550,21 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 
 
       <div className="flex justify-end gap-2">
+<<<<<<< HEAD
+=======
             onChange = {(e,) => setResumeFile(e && e.target.files?.[0] || null),}
           />;
         </div>;
       </div>;
 
       <div className="flex justify-end gap-2">;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Button
           type="button"
           variant="outline"
 
+<<<<<<< HEAD
+=======
           onClick={() => {;
             if (onSuccess) onSuccess();
 
@@ -553,6 +573,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         >;
           Cancel;
@@ -585,6 +606,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
                     return (
                       <SelectItem key={resume.id} value={resume.id}>;
                         {resume.basic_info.title || "Untitled Resume"}
@@ -672,3 +695,4 @@ handle_submit;
 }"}
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

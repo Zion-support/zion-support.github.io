@@ -5,6 +5,8 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -12,6 +14,7 @@ import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Pl
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -28,6 +31,8 @@ import {
   HelpCircle
 } from "lucide-react",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -36,6 +41,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function FeaturesGuideSection() {
   const features = [
@@ -51,8 +57,11 @@ export function FeaturesGuideSection() {
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -60,17 +69,23 @@ export function FeaturesGuideSection() {
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Connect with matched talents or services directly"
       ]
       link: "/match"
@@ -93,6 +108,8 @@ export function FeaturesGuideSection() {;
         "Navigate to the AI Matcher page from the homepage or marketplace";
         "Fill in your project requirements and specifications";
         "Review the AI-recommended matches tailored to your needs";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         "Connect with matched talents or services directly";
@@ -158,6 +175,7 @@ function FeaturesGuideSection() {
       button_text: "Explore Talents";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
@@ -179,16 +197,21 @@ function FeaturesGuideSection() {
         "Contact talents directly or request quotes through their profiles";
       ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       link: "/talents"
       buttonText: "Explore Talents"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       id: "services"
       title: "Services Marketplace"
       description: "Discover professional services for your AI and tech needs, from development to consulting.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -230,10 +253,13 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Book and manage services through your dashboard"
       ]
       link: "/services"
       buttonText: "View Services"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -250,12 +276,15 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "equipment"
       title: "Equipment Catalog"
       description: "Rent or buy specialized hardware and tech equipment for AI development and research."
       icon: <Settings className="h-10 w-10 text-zion-purple" />
       instructions: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -302,11 +331,14 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     {
       id: "analytics"
       title: "Marketplace Analytics"
       description: "Gain insights into industry trends, pricing benchmarks, and marketplace activity.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -330,18 +362,24 @@ function FeaturesGuideSection() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       instructions: [
         "Access analytics from your user dashboard",
         "View interactive charts on market trends and rates",
         "Export reports for your business planning",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Set up alerts for changes in your areas of interest"
       ]
       link: "/analytics"
       buttonText: "View Analytics"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -370,19 +408,25 @@ function FeaturesGuideSection() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       instructions: [
         "Click on the chat icon in the bottom right corner",
         "Ask questions about available services or talents",
         "Get recommendations based on your project needs",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Receive step-by-step guidance for using platform features"
       ]
       link: "#"
       buttonText: "Chat with Assistant"
       action: "openChat"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -399,12 +443,15 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       id: "publishing"
       title: "List Your Services"
       description: "Showcase your AI and tech expertise by creating your own listings on the marketplace."
       icon: <Plus className="h-10 w-10 text-zion-cyan" />
       instructions: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -523,18 +570,27 @@ function FeaturesGuideSection() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       instructions: [
         "Visit our comprehensive knowledge base",
         "Watch video tutorials on specific features",
         "Join community forums to connect with other users",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         "Contact our support team for personalized assistance"
       ]
       link: "/help"
       buttonText: "View Resources"
+<<<<<<< HEAD
+        "Choose between talent profile, service, or equipment listing";
+        "Complete the guided form and publish your listing";
+      ];
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -566,6 +622,7 @@ function FeaturesGuideSection() {
         "Complete the guided form and publish your listing";
       ];
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       icon: <BarChart3 className="h - 10 w - 10 text - zion - cyan" />,
       instructions: [;
         "Access analytics from your user dashboard";
@@ -623,6 +680,8 @@ function FeaturesGuideSection() {
 ;
   return (
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -655,10 +714,13 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -666,6 +728,7 @@ function FeaturesGuideSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Link } from "react-router-dom",;
 import { GradientHeading } from "./GradientHeading",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -816,6 +879,15 @@ export function FeaturesGuideSection() {;
           </p>;
         </div>;
 <<<<<<< HEAD
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+            {features.slice(4).map(feature => (
+              <TabsTrigger
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
         <Tabs default_value="ai - matcher" className="w - full max - w-5xl mx - auto">;
           <TabsList className="grid grid - cols - 2 md:grid - cols - 4 gap - 2 bg - zion - blue rounded - lg p - 1 mb - 8">;
@@ -824,6 +896,7 @@ export function FeaturesGuideSection() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={feature.id}
                 value={feature.id}
 
@@ -850,6 +923,8 @@ export function FeaturesGuideSection() {;
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
               >;
                 {feature.title}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -1161,6 +1236,7 @@ export function FeaturesGuideSection() {;
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
               >;
                 {feature.title}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 key={feature.id}
                 value={feature.id}
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
@@ -1175,6 +1251,8 @@ export function FeaturesGuideSection() {;
             </TabsContent>;
           ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         </Tabs>
         <div className="mt-12 text-center">
           <Button
@@ -1182,6 +1260,7 @@ export function FeaturesGuideSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild
           >
@@ -1256,6 +1335,8 @@ export function FeaturesGuideSection() {;
               Explore Full Marketplace;
               <ArrowRight className="ml - 2 h - 4 w - 4" />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 };
@@ -1281,6 +1362,7 @@ export function FeaturesGuideSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </Link>;
           </Button>;
         </div>;
@@ -1323,6 +1405,8 @@ HelpCircle const features = [ {
 }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1332,3 +1416,4 @@ HelpCircle const features = [ {
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

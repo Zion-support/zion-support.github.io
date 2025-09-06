@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-<<<<<<< HEAD
 };
 
 type Props = { items: TalentItem[] };
@@ -18,28 +13,6 @@ import path from 'path',
 import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
-=======
-
-
-type TalentItem = {;
-
-  talentSlug: string;
-  talentName: string;
-  averageRating: number;
-  totalReviews: number;
-
-=======
-
-
-};
-type Props = { items: TalentItem[] };
-
-
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -50,7 +23,6 @@ type Props = { items: TalentItem[] },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -70,7 +42,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
-<<<<<<< HEAD
   );
 }
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -79,17 +50,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     "public"
     "automations"
     "top-talents.json"
-=======
-
-
-};
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const p = path && path.join(;
-    process && process.cwd(),;
-    "public",;
-    "automations",;
-    "top-talents && talents.json",;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
   let items: TalentItem[] = [];
   try {;
@@ -101,51 +61,6 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   return { props: { items } }
 }
 export default TopTalentsPage;
-<<<<<<< HEAD
-=======
-
-
-=======
-import type { NextPage, GetServerSideProps } from './next';
-import fs from './fs';
-import path from './path';
-import Link from './next / link';
-;
-type TalentItem = {
-  talent_slug: string;
-  talent_name: string;
-  average_rating: number;
-  total_reviews: number;
-}
-;
-type Props = { items: TalentItem[] }
-;
-const TopTalentsPage: NextPage < Props> = ({ items }) => {
-  return (
-    <main className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">Top Talents — Auto Generated</h1>;
-      <div className="grid gap - 3">;
-        {items.map ((t) => (
-          <Link key={t.talent_slug} href={`/talent/${t.talent_slug}`}>;
-            <div className="enhanced - card hover:shadow - lg cursor - pointer flex items - center justify - between">;
-              <div>;
-                <div className="font - medium">{t.talent_name}</div>;
-                <div className="text - sm text - gray - 600">;
-                  {t.average_rating.to_fixed (1)}★ • {t.total_reviews} reviews;
-                </div>;
-              </div>;
-              <span className="pill">Auto</span>;
-            </div>;
-          </Link>))}
-        {!items.length && <div className="enhanced - card">No data yet.</div>}
-      </div>;
-    </main>);
-}
-;
-export const getServerSideProps: GetServerSideProps = async () => {
-  const p = path.join (
-    process.cwd (),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     "public",
     "automations",
     "top - talents.json",
@@ -159,7 +74,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } }
 }
 ;
-<<<<<<< HEAD
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
@@ -172,19 +86,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 };
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {
 
-<<<<<<< HEAD
 export default TopTalentsPage;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export default TopTalentsPage;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -11,6 +11,8 @@ import {useState} from "react";
 import {AnalyticsChart} from "./AnalyticsChart";
 type TimeRange = '7d' | '30d' | '90d' | '365d';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export function UserBehaviorStats() {
@@ -18,6 +20,7 @@ export function UserBehaviorStats() {
 export function UserBehaviorStats() {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -47,6 +50,8 @@ export function UserBehaviorStats() {;
     queryFn: async () => {
       // Convert timeRange to days
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -62,6 +67,7 @@ export function UserBehaviorStats() {;
       const days = parseInt(timeRange.replace('d', ''));
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days
@@ -83,6 +89,8 @@ export function UserBehaviorStats() {;
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0;
           eventsByDate[date][event.event_type]++
         });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const days = parseInt(timeRange.replace('d', '')),
@@ -183,6 +191,7 @@ export function UserBehaviorStats() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -337,7 +346,10 @@ export function UserBehaviorStats() {;
     const allKeys = new Set<string>();
   }),
   }),
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   // Get the event types for chart data keys
   const getEventTypes = () => {
@@ -348,6 +360,8 @@ export function UserBehaviorStats() {;
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)
       })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -368,12 +382,15 @@ export function UserBehaviorStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Format event type names for better display
   const formatEventType = (type: string) => {
     return type
       .split('_')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -400,10 +417,13 @@ export function UserBehaviorStats() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           description="Button and link interactions"
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.button_click |0), 0) |0
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -437,6 +457,7 @@ export function UserBehaviorStats() {;
             behaviorData?.reduce((sum, day) => sum + (day && day.button_click || 0), 0) || 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     const allKeys = new Set<string>();
     behaviorData && behaviorData.forEach(item => {;
@@ -444,7 +465,10 @@ export function UserBehaviorStats() {;
         if (key !== 'date') allKeys && allKeys.add(key);
       });
     });
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m14 && m14.5 12 && 12.5-4-4"/><path d="M8 6 && 6.2A3 3 0 1 0 6 && 6.2 8"/><circle cx="12" cy="12" r="10"/></svg>;
@@ -452,6 +476,8 @@ export function UserBehaviorStats() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />;
@@ -477,10 +503,13 @@ export function UserBehaviorStats() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
           }
+<<<<<<< HEAD
+=======
 
         />;
         <EventTypeCard
@@ -520,18 +549,24 @@ export function UserBehaviorStats() {;
           icon={;
             <svg xmlns="http://www && www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 17H7"/><path d="M17 17h-5"/><path d="M7 12h10"/><path d="M7 7h2"/><path d="M17 7h-5"/></svg>;
           }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           description="Goal completions"
           isLoading={isLoading}
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion |0), 0) |0
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <EventTypeCard 
           title="Conversions" 
           description="Goal completions"
           isLoading={isLoading}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -566,6 +601,7 @@ export function UserBehaviorStats() {;
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           count={
             behaviorData?.reduce((sum, day) => sum + (day.conversion || 0), 0) || 0
           count={;
@@ -579,15 +615,21 @@ export function UserBehaviorStats() {;
         title="User Behavior Over Time"
         description="Track different types of user interactions"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         data={behaviorData |[]}
         data={behaviorData || []}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         type="line"
         dataKeys={getEventTypes()}
         timeRange={timeRange}
         onTimeRangeChange={(range: TimeRange) => setTimeRange(range)}
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       />;
@@ -795,6 +837,7 @@ function EventTypeCard() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -948,6 +991,8 @@ function EventTypeCard({ title, description, count, icon, isLoading } EventTypeC
               ) :(;
                 new Intl.NumberFormat().format(count);
               )}
+<<<<<<< HEAD
+=======
             </div>
           </div>
         </div>
@@ -958,10 +1003,13 @@ function EventTypeCard({ title, description, count, icon, isLoading } EventTypeC
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </div>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1002,3 +1050,4 @@ if (manualError) throw manualError;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

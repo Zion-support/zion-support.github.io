@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -11,6 +14,8 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -28,11 +33,14 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -56,6 +64,7 @@ serve(async (req: Request) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -74,6 +83,8 @@ serve(async (req: Request) => {
   }
   try {
     const supabase = createClient(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       supabaseUrl;
@@ -108,6 +119,7 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -134,6 +146,8 @@ serve(async (req: Request) => {
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -145,6 +159,7 @@ serve(async (req: Request) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (jobsError) {
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
@@ -168,6 +183,8 @@ serve(async (req: Request) => {
       )
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -187,10 +204,13 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
         const reminderResponse = await fetch(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
@@ -231,12 +251,15 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -256,12 +279,15 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
             processedJobs && processedJobs.push(job && job.id)
           }
         } else {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
           console && console.error("Failed to send reminder for job:", job && job.id);
 <<<<<<< HEAD
@@ -279,6 +305,7 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
@@ -297,6 +324,8 @@ serve(async (req: Request) => {
       }
     }
     return new Response(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         processed_jobs: processedJobs && processedJobs.length,
@@ -327,11 +356,14 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     console && console.error(error);
@@ -344,6 +376,7 @@ serve(async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -370,6 +403,8 @@ const cors_headers = {
 ;
 serve (async (req: Request) => {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -381,6 +416,7 @@ serve (async (req: Request) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -391,10 +427,13 @@ const corsHeaders = {;
     "authorization, x-client-info, apikey, content-type"},;
 serve(async (req: Request) => {;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle CORS;
   // Check condition
 if ( {) {
@@ -519,6 +558,11 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+
+  }
+});
+=======
   }
 });
 <<<<<<< HEAD
@@ -647,3 +691,4 @@ serve(async (req:Request) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

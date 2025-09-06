@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface CybersecurityQuantumService {
 export interface CybersecurityQuantumService {;
   id: string;
@@ -12,8 +15,11 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   {
@@ -42,6 +48,8 @@ export interface CybersecurityQuantumService {;
     support:
       '24/7 security support, threat hunting training, custom development, and dedicated security manager.'
     compliance: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -119,6 +127,7 @@ export interface CybersecurityQuantumService {;
 
     icon: '🕵️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - indigo - 600',
     popular: true,
     launch_date: '2024 - 02 - 01',
@@ -129,6 +138,8 @@ export interface CybersecurityQuantumService {;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security',
     ],
@@ -136,6 +147,7 @@ export interface CybersecurityQuantumService {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'
     roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.'
@@ -151,6 +163,8 @@ export interface CybersecurityQuantumService {;
       'Active Directory, LDAP, SAML, OAuth, Custom identity providers'
     ]
     support:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -226,6 +240,7 @@ export interface CybersecurityQuantumService {;
 
     icon: '🛡️',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - blue - 500 to - cyan - 600',
     popular: true,
     launch_date: '2024 - 01 - 20',
@@ -234,6 +249,8 @@ export interface CybersecurityQuantumService {;
     reviews: 1400,
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -313,6 +330,7 @@ export interface CybersecurityQuantumService {;
 
     icon: '🔮',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - purple - 500 to - pink - 600',
     popular: true,
     launch_date: '2024 - 03 - 01',
@@ -323,6 +341,8 @@ export interface CybersecurityQuantumService {;
   {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
       'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6,570/year), Qualys ($2,000-5,000/year), and Rapid7 ($2,000-8,000/year). Our advantage: AI intelligence and automated remediation.',
     competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
@@ -330,6 +350,7 @@ export interface CybersecurityQuantumService {;
     realImplementation: true,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     implementationDetails:
       'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'
     roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.'
@@ -347,8 +368,11 @@ export interface CybersecurityQuantumService {;
     support:
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
@@ -364,6 +388,9 @@ export interface CybersecurityQuantumService {;
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 =======
@@ -440,8 +467,11 @@ export interface CybersecurityQuantumService {;
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     icon: '🔍',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -450,6 +480,8 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.8,
     reviews: 1900,
   },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -489,10 +521,16 @@ export interface CybersecurityQuantumService {;
 
     icon: '🔍';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     color: 'from - green - 500 to - emerald - 600';
     popular: true;
     launch_date: '2024 - 02 - 15';
     customers: 2500;
+<<<<<<< HEAD
+    rating: 4.8,
+    reviews: 1900;
+  }
+=======
 <<<<<<< HEAD
     rating: 4.8,
     reviews: 1900;
@@ -517,6 +555,7 @@ export interface CybersecurityQuantumService {;
 ];
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 =======
 <<<<<<< HEAD

@@ -23,6 +23,8 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
 }
+<<<<<<< HEAD
+=======
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast(),
@@ -246,6 +248,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>;
       </CardContent>;
     </Card>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 

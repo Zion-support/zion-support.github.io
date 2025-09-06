@@ -55,6 +55,8 @@ interface SearchFilters {
   location?: string | null;
   budget?: { min: number, max: number } | null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   availability?: string | null;
 }
@@ -70,6 +72,7 @@ export function useAISearch() {
   const [loading, setLoading] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -107,6 +110,8 @@ export function useAISearch() {
   const [loading, setLoading] = useState(false),
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const search = async (query: string) => {
     setLoading(true),
     try {
@@ -121,6 +126,7 @@ export function useAISearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export /**
  * useAISearch - Function description
  */
@@ -131,6 +137,8 @@ function useAISearch() {
   const search = async (query: string) => {
     set_loading (true);
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -146,6 +154,7 @@ function useAISearch() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ query })}
@@ -154,6 +163,8 @@ function useAISearch() {
       const filters: SearchFilters = data.filters || {},
 
       const items: SearchResult[] = [],
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,18 +212,25 @@ function useAISearch() {
           if (!matchSkill(t.skills)) return,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         return skills?.some((s) =>
           filters && filters.skills!.some((f) => s && s.toLowerCase().includes(f && f.toLowerCase()))
         )
         TALENT_PROFILES.forEach((t) => {
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return,
           if (!matchSkill(t.skills)) return,
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })
         })
       }
       if (!filters.type |filters.type === "job" |filters.type === "all") {
         JOB_POSTS.forEach((j) => {
+<<<<<<< HEAD
+          if (!matchSkill(j.skills)) return,
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           if (!matchSkill(j.skills)) return;
@@ -222,6 +240,7 @@ function useAISearch() {
 =======
           if (!matchSkill(j.skills)) return,
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           items.push({ id: j.id, type: "job", title: j.title, description: j.description })
         })
       }
@@ -229,12 +248,15 @@ function useAISearch() {
         PROJECTS.forEach((p) => {
           items.push({ id: p.id, type: "project", title: p.job?.title |"Project", description: p.scope_summary })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       };
       if (!filters && filters.type || filters && filters.type === "talent" || filters && filters.type === "all") {
         TALENT_PROFILES && TALENT_PROFILES.forEach((t) => {
@@ -253,16 +275,21 @@ function useAISearch() {
         PROJECTS && PROJECTS.forEach((p) => {
           items && items.push({ id: p && p.id, type: "project", title: p && p.job?.title || "Project", description: p && p.scope_summary })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         })
       }
       setResults(items)
     } catch (err) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error("search error", err);
@@ -275,6 +302,7 @@ function useAISearch() {
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       setResults([])
     } finally {
       setLoading(false)
@@ -301,6 +329,8 @@ if (return true, ) {
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -318,6 +348,7 @@ if (return true, ) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -347,11 +378,14 @@ export function useAISearch() {;
           if (!matchSkill(t.skills)) return,;
           items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         });
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
 ;
       // Check condition
@@ -408,6 +442,8 @@ if ( {) {
 }
   }
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return { results, loading, search }
@@ -497,3 +533,4 @@ export function useAISearch() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 id?: string,;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   title: string,;
   description: string,;
   images?: string[],;
@@ -8,6 +11,8 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
+<<<<<<< HEAD
+=======
 
 interface ListingCardProps {;
   id?: string;
@@ -21,6 +26,7 @@ interface ListingCardProps {;
   profileType?: 'service' | 'talent';
 
 export function ListingCard(): any ({;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id,;
   title,;
   description,;
@@ -29,6 +35,8 @@ export function ListingCard(): any ({;
   tags,;
   author,;
   className,;
+<<<<<<< HEAD
+=======
   profileType = 'service',;
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -85,6 +93,7 @@ export function ListingCard(): any ({;
       )}
     >
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -92,11 +101,14 @@ export function ListingCard(): any ({;
             alt={title}
 
 
+<<<<<<< HEAD
+=======
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
           />
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -108,6 +120,8 @@ export function ListingCard(): any ({;
 
 
 
+<<<<<<< HEAD
+=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
@@ -115,12 +129,19 @@ export function ListingCard(): any ({;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 
 
+<<<<<<< HEAD
+            ))}
+          </div>
+        )}
+
+=======
               </Badge>;
 
 
@@ -155,6 +176,7 @@ export function ListingCard(): any ({;
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -169,11 +191,16 @@ export function ListingCard(): any ({;
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       </div>;
     </Link>;
   );
 }
+<<<<<<< HEAD
+=======
 
 ;"}) })"
   );
@@ -271,3 +298,4 @@ function ListingCard() {
     </Link>);
 }"}) })";
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

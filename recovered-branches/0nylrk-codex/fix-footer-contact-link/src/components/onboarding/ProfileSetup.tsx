@@ -12,6 +12,8 @@ import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -26,6 +28,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -42,6 +45,8 @@ import {
   FormLabel,
   FormMessage} from "@/components/ui/form",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -50,6 +55,7 @@ import {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const profileSchema = z.object({
   displayName: z.string().min(2, "Name must be at least 2 characters"),
@@ -59,6 +65,8 @@ const profileSchema = z.object({
 type ProfileFormValues = z.infer<typeof profileSchema>,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -66,6 +74,7 @@ type ProfileFormValues = z.infer<typeof profileSchema>,
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -78,6 +87,8 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -158,6 +169,7 @@ function ProfileSetup() {
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     switch (userType) {
       case "serviceProvider": return "Service Provider",
 
@@ -187,6 +199,8 @@ function ProfileSetup() {
   return (
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -206,6 +220,7 @@ function ProfileSetup() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form.control}
             name="displayName"
@@ -225,6 +240,9 @@ function ProfileSetup() {
       default:;
         return "User";
     }
+<<<<<<< HEAD
+  }
+=======
 <<<<<<< HEAD
   };
   return (;
@@ -281,6 +299,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 =======
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <FormField
             control={form && form.control}
             name="displayName"
@@ -318,6 +337,8 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
               </FormItem>;
 
@@ -326,6 +347,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             )}
           <FormField
             control={form && form.control}
@@ -420,6 +442,8 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
                   />;
                 </FormControl>;
@@ -536,6 +560,7 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Complete Profile;
           </Button>;
         </form>;
@@ -544,6 +569,8 @@ export function ProfileSetup({ onComplete, userType } ProfileSetupProps) {;
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -591,8 +618,12 @@ getTypeLabel ()
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 ;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -23,6 +25,7 @@ import ReplyForm from "@/components/community/ReplyForm";
 import {useToast} from "@/hooks/use-toast";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -44,9 +47,12 @@ import { useToast } from "@/hooks/use-toast";
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -66,12 +72,15 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -107,6 +116,8 @@ const mockReplies: ForumReply[] = [
     upvotes: 12
     downvotes: 0
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -114,6 +125,7 @@ const mockReplies: ForumReply[] = [
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "reply2"
     postId: "1"
@@ -138,6 +150,8 @@ const mockReplies: ForumReply[] = [
     upvotes: 15
     downvotes: 0
     isAnswer: true
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -174,6 +188,7 @@ const mockReplies: ForumReply[] = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "reply4"
     postId: "1"
@@ -185,6 +200,8 @@ const mockReplies: ForumReply[] = [
     upvotes: 4
     downvotes: 0
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -403,10 +420,13 @@ export default function ForumPostPage() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user } = useAuth();
   const { toast } = useToast();
   const [post, setPost] = useState(mockPost);
   const [replies, setReplies] = useState(mockReplies);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -485,6 +505,7 @@ export default function ForumPostPage() {
   // For this demo, we'll assume the post is found;
   if (!post) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
 <<<<<<< HEAD
 =======
@@ -519,6 +540,8 @@ export default function ForumPostPage() {
 <<<<<<< HEAD
     );
   }
+<<<<<<< HEAD
+=======
 
 
   },
@@ -534,6 +557,7 @@ export default function ForumPostPage() {
     );
   }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -545,6 +569,8 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded"
       description: "You downvoted this post"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -560,6 +586,7 @@ export default function ForumPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -569,6 +596,8 @@ export default function ForumPostPage() {
     }
     // Create a new reply
     const newReply: ForumReply = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -585,10 +614,13 @@ export default function ForumPostPage() {
       upvotes: 0
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       downvotes: 0
     }
     setReplies([...replies, newReply]);
     setPost({ ...post, replyCount: post.replyCount + 1 })
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       id: `reply${Date.now()}`,
@@ -626,6 +658,7 @@ export default function ForumPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer
     if (!isAuthor && !isAdminOrMod) {
@@ -633,6 +666,8 @@ export default function ForumPostPage() {
         title: "Permission denied"
         description: "Only the original poster or moderators can mark answers"
         variant: "destructive"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -705,6 +740,7 @@ export default function ForumPostPage() {
         description: "Only the original poster or moderators can mark answers",;
         variant: "destructive";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       });
       return;
     }
@@ -726,6 +762,8 @@ export default function ForumPostPage() {
       ...reply,
       isAnswer: reply.id === replyId
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
       }),
@@ -741,11 +779,17 @@ export default function ForumPostPage() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     })),
     
     setReplies(updatedReplies),
     setPost({ ...post, isAnswered: true }),
     
+<<<<<<< HEAD
+    toast({
+      title: "Answer marked"
+      description: "The reply has been marked as the accepted answer"})
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -770,6 +814,7 @@ export default function ForumPostPage() {
       title: "Answer marked"
       description: "The reply has been marked as the accepted answer"})
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -780,6 +825,8 @@ export default function ForumPostPage() {
     toast({
       title: "Report submitted"
       description: "A moderator will review this content"})
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -806,11 +853,14 @@ export default function ForumPostPage() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned"
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})
   }
   const handleLockPost = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     if (!isAdminOrMod) return;
     setPost({ ...post, isLocked: !post.isLocked })
@@ -830,6 +880,7 @@ export default function ForumPostPage() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked"
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
@@ -837,7 +888,10 @@ export default function ForumPostPage() {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   },
   
@@ -883,6 +937,8 @@ export default function ForumPostPage() {
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (
                     <Badge variant="outline" className="mt-1">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1145,6 +1201,7 @@ export default function ForumPostPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       {post.authorRole}
                     </Badge>
                   )}
@@ -1162,6 +1219,8 @@ export default function ForumPostPage() {;
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -1177,6 +1236,7 @@ export default function ForumPostPage() {;
     setPost({ ...post, isAnswered: true }),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     toast({;
       title: "Answer marked",;
@@ -1441,6 +1501,8 @@ export default function ForumPostPage() {;
                 </Badge>;
               ))}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             </div>;
@@ -1470,6 +1532,7 @@ export default function ForumPostPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button
                   variant="outline"
                   size="sm"
@@ -1496,6 +1559,8 @@ export default function ForumPostPage() {;
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1564,6 +1629,7 @@ export default function ForumPostPage() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Button
                       variant="ghost"
                       size="sm"
@@ -1580,6 +1646,8 @@ export default function ForumPostPage() {;
                     </Button>;
                   </>;
                 )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2060,6 +2128,7 @@ if (return) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {!post.isLocked && (
             <div className="mb-8">
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
@@ -2071,6 +2140,11 @@ if (return) {
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
                 </Alert>
+<<<<<<< HEAD
+              )}
+            </div>
+          )}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2132,6 +2206,7 @@ if (return) {
             </div>
           )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           {post.isLocked && (
             <Alert className="mb-8">
               <AlertDescription className="flex items-center">
@@ -2144,6 +2219,11 @@ if (return) {
             {replies
               .filter(reply => !reply.isAnswer)
               .map(reply => (
+<<<<<<< HEAD
+                <ReplyCard
+                  key={reply.id}
+                  reply={reply}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2192,6 +2272,7 @@ if (return) {
                   canMarkAnswer={!post && post.isAnswered && (isAuthor || isAdminOrMod)}
                 />;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                   onMarkAnswer={() => handleMarkAsAnswer(reply.id)}
 
                   canMarkAnswer={!post.isAnswered && (isAuthor || isAdminOrMod)}
@@ -2274,6 +2355,8 @@ if (return) {
         </div>;
       </div>;
     </AppLayout>);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -2403,3 +2486,4 @@ downvotes: 0
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

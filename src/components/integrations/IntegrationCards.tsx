@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface IntegrationCardProps {
   title: string
   description: string
@@ -184,7 +188,10 @@ export function IntegrationCard(): any ({;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -201,6 +208,8 @@ export function IntegrationCard(): any ({;
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
+<<<<<<< HEAD
+=======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 
@@ -223,6 +232,7 @@ export function IntegrationCards() {
       <IntegrationCard
 
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function IntegrationCards() {
@@ -245,6 +255,8 @@ export function IntegrationCards() {
 
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
+<<<<<<< HEAD
+=======
     </div>
   )
       />;
@@ -253,6 +265,7 @@ export function IntegrationCards() {
 }        icon={<Briefcase className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <IntegrationCard
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
@@ -260,13 +273,18 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Teams clicked')}
 
 
+<<<<<<< HEAD
+=======
 }
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       />;
     </div>;
   );
 }
+<<<<<<< HEAD
+=======
 
   );
 }
@@ -437,3 +455,4 @@ function IntegrationCards() {
     </div>);
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,15 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Micro SaaS Solutions | Zion Tech Group',
   description: 'Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.',
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
 };
+<<<<<<< HEAD
+=======
+import React from 'react';
+import Link from 'next/link';
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -25,6 +35,7 @@ export default function MicroSaaSPage() {
           From MVP to scale, we handle everything so you can focus on growth.
         </p>
       </section>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       <section className="py-12">
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Micro SaaS Solutions</h2>
@@ -629,6 +640,14 @@ export default function MicroSAASPage() {
     <div className="max-w-6xl mx-auto px-4 py-8">
 >>>>>>> cursor/expand-services-advertise-and-build-project-134f
       {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Micro SaaS Solutions
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Complete SaaS development from concept to deployment. We build scalable, secure, and user-friendly micro SaaS applications that drive business growth.
+=======
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           Micro SaaS Solutions
@@ -636,6 +655,7 @@ export default function MicroSAASPage() {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Complete micro SaaS development from concept to scale. We build, deploy, and optimize 
           your SaaS product with billing, authentication, analytics, and growth features.
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -740,6 +760,10 @@ export default function MicroSAASPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
+}
+>>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+=======
 }
 <<<<<<< HEAD
 }
@@ -784,3 +808,4 @@ function MicroSAASCard({ title, description, href, icon, pricing, features, cate
   );
 }
 >>>>>>> cursor/expand-services-advertise-and-build-project-134f
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

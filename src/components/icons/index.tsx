@@ -1512,6 +1512,8 @@ export const ZoomOut = LucideZoomOut
 export type IconProps = SVGProps<SVGSVGElement> & {
 
 
+<<<<<<< HEAD
+=======
   name: keyof typeof iconMap,
   size?: number | string,
   className?: string
@@ -1519,6 +1521,7 @@ export type IconProps = SVGProps<SVGSVGElement> & {
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Create a map of icon names to component references
 const iconMap = {
   home: LucideHome
@@ -1823,9 +1826,16 @@ export const Icon: React.FC<IconProps> = ({
   className
   ...props
 }) => {
+<<<<<<< HEAD
+  }
+  // Render the dynamically selected Lucide icon component
+  return <LucideIconComponent size={size} className={className} {...props} />
+}
+=======
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const LucideIconComponent = iconMap[name],
 
 
@@ -2769,6 +2779,8 @@ export const Icon: React.FC<IconProps> = ({;
   // Render the dynamically selected Lucide icon component;
   return <LucideIconComponent size={size} className={className} {...props} />;
 };
+<<<<<<< HEAD
+=======
 
 
 
@@ -3699,3 +3711,4 @@ export default Icon, // Default export the Icon component;
 export const Icons = icon_map, // Export the map if you need to refer to available icons;
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 }
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ProductGalleryProps {
 
 const ReactPlayer = React && React.lazy(() => import('react-player'));
@@ -111,6 +114,12 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
+<<<<<<< HEAD
+          <div
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            onClick={() => setZoomed(!zoomed)}
+          >
+=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -206,6 +215,7 @@ function ProductGallery() {
             </AspectRatio>;
 
           >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             <img
               src={images[selected] |images[0] |''}
@@ -242,12 +252,15 @@ interface ProductGalleryProps {;
   images: string[],;
   videoUrl?: string,;
   modelUrl?: string;
+<<<<<<< HEAD
+=======
 
 }
 }
 
 }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -264,5 +277,8 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

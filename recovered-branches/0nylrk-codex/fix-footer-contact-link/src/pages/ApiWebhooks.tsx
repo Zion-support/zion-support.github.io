@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -22,6 +24,7 @@ export function ApiWebhooks() {
   "created_at": "2023-06-10T15: 42:31Z";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock";
@@ -34,17 +37,22 @@ export function ApiWebhooks() {
 
   const newApplicationPayload = `{
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "application_id": "app-123456";
     "job_id": "job-789";
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -331,6 +339,7 @@ app && app.listen(3000, () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "application_id": "app-123456",
     "job_id": "job-789",
     "talent_id": "talent-456",
@@ -342,16 +351,21 @@ app && app.listen(3000, () => {;
 }`,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const newHirePayload = `{
   "event_type": "talent_hired",
   "created_at": "2023-06-12T09:15:22Z",
   "data": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -368,6 +382,7 @@ app && app.listen(3000, () => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "project_id": "project-123",
     "job_id": "job-456",
     "client_id": "client-789",
@@ -379,16 +394,21 @@ app && app.listen(3000, () => {;
 }`,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const quoteReceivedPayload = `{
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
   "data": {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -447,6 +467,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     "quote_id": "quote-123",
     "client_id": "client-456",
     "talent_id": "talent-789",
@@ -459,6 +480,8 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 }`,
 
   const messageReceivedPayload = `{
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -509,6 +532,7 @@ function verifyWebhookSignature(req, res, next) {
   next()
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "event_type": "message_received",
   "created_at": "2023-06-18T14:22:15Z",
   "data": {
@@ -633,6 +657,8 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       // // // console.log('New application received:', data.application_id),
       // Process the new application...
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -687,6 +713,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     default:
       // // // console.log('Unknown event type:', event_type)
   }
@@ -695,6 +722,41 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+;
+// Webhook endpoint with signature verification;
+app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
+  const { event_type, data } = req.body,;
+  // Handle different event types;
+  switch (event_type) {;
+    case 'new_application':;
+      // // // console.log('New application received:', data.application_id),;
+      // Process the new application...;
+      break,;
+    case 'talent_hired':;
+      // // // console.log('Talent hired:', data.talent_id),;
+      // Update your system...;
+      break,;
+    case 'quote_received':;
+      // // // console.log('New quote received:', data.quote_id),;
+      // Process the quote...;
+      break,;
+    case 'message_received':;
+      // // // console.log('New message received:', data.message_id),;
+      // Process the message...;
+      break,;
+    default:;
+      // // // console.log('Unknown event type:', event_type);
+  }
+;
+  // Always return a 200 response quickly;
+  res.status(200).send('Webhook received');
+}),;
+app.listen(3000, () => {;
+  // // // console.log('Webhook server listening on port 3000');
+}),`,;
+  return (;
+=======
 =======
 });
 app.listen(3000, () => {
@@ -810,6 +872,7 @@ app.listen(3000, () => {
   )
 
 }),
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
@@ -995,6 +1058,8 @@ app.listen(3000, () => {
   );
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1280,6 +1345,7 @@ export default ApiWebhooks;
         <p>Here's an example of verifying a webhook in Node.js:</p>;
         ;
         <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
         <h2>Testing Webhooks</h2>;
         <p>;
@@ -1376,4 +1442,7 @@ export default ApiWebhooks;
 
 
 export default ApiWebhooks;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

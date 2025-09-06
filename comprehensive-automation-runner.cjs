@@ -1,23 +1,37 @@
 #!/usr/bin/env node
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -130,6 +144,8 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
       // Build the application
@@ -332,6 +348,7 @@ module.exports = HealthCheckAutomation;`;
     try {
       // Run all automation steps
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();
@@ -370,6 +387,12 @@ module.exports = HealthCheckAutomation;`;
 // Run if called directly
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
+<<<<<<< HEAD
+  runner.run().catch(console.error);
+}
+
+module.exports = ComprehensiveAutomationRunner;
+=======
   runner.runAllAutomations().catch(error => {
     console.error('Comprehensive automation runner failed:', error);
     process.exit(1);
@@ -377,3 +400,4 @@ if (require.main === module) {
 }
 
 module.exports = ComprehensiveAutomationRunner;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

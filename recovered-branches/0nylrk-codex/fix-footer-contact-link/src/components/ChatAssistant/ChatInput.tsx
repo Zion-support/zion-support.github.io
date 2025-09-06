@@ -37,6 +37,8 @@ interface ChatInputProps {;
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
   const [message, setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -80,6 +82,7 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -119,10 +122,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
 <<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
 =======
@@ -181,6 +187,8 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"
         placeholder="Type your message..."
         value={message}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         onChange={(e) => setMessage(e && e.target.value)}
@@ -245,6 +253,7 @@ if (&& !disabled) {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
@@ -341,6 +350,8 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
   )
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -350,3 +361,4 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
   )
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

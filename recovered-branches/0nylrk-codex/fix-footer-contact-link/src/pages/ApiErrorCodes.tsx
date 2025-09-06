@@ -1,5 +1,13 @@
 <<<<<<< HEAD
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+=======
+<<<<<<< HEAD
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 <<<<<<< HEAD
 
@@ -7,6 +15,8 @@
 export function ApiErrorCodes() {
 
   const errorExample = `{
+<<<<<<< HEAD
+=======
 =======
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -75,12 +85,15 @@ import { CodeBlock } from "@/components/developers/CodeBlock",
 export function ApiErrorCodes() {
 
   const errorExample = `{
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "error": "validation_error",
   "message": "The request was invalid",
   "details": [
     {
       "field": "title",
       "error": "Title is required"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "error": "Title is required";
@@ -136,6 +149,7 @@ function ApiErrorCodes() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     },
     }
@@ -148,16 +162,21 @@ function ApiErrorCodes() {
 }`,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const rateLimitExample = `{
   "error": "rate_limit_exceeded",
   "message": "Rate limit exceeded. Try again in 30 seconds",
   "retry_after": 30
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 }`,
@@ -172,6 +191,7 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const errorCodes = [
     {
       status: 400
@@ -179,6 +199,8 @@ function ApiErrorCodes() {
       message: "The request was invalid. Check the details for specific field errors."
       details: "Includes field-specific validation errors."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -194,12 +216,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 400
       code: "invalid_request"
       message: "The request is invalid or malformed."
       details: "The request could not be processed due to syntactical errors."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -215,12 +240,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 401
       code: "invalid_token"
       message: "Invalid or expired API key."
       details: "The provided API key is incorrect, expired, or revoked."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -236,12 +264,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 403
       code: "forbidden"
       message: "You don't have permission to access this resource."
       details: "Your API key doesn't have the required permissions for this operation."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -257,12 +288,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 404
       code: "not_found"
       message: "The requested resource was not found."
       details: "The specified ID does not exist or is not accessible."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -278,12 +312,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 409
       code: "conflict"
       message: "The request conflicts with the current state of the resource."
       details: "For example, trying to create a duplicate resource or updating a resource that has been modified."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -299,12 +336,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 429
       code: "rate_limit_exceeded"
       message: "Rate limit exceeded. Try again later."
       details: "Includes retry_after parameter indicating when to retry."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -320,12 +360,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 500
       code: "internal_error"
       message: "An unexpected error occurred."
       details: "Something went wrong on our end. If the problem persists, contact support."
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -341,12 +384,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       status: 503
       code: "service_unavailable"
       message: "Service temporarily unavailable."
       details: "The API is temporarily unavailable due to maintenance or high load."
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -362,12 +408,15 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const rateLimits = [
     {
       endpoint: "All GET endpoints"
       limit: "100 requests per minute"
       notes: "Aggregate limit across all GET endpoints"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -383,11 +432,14 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "All POST endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all POST endpoints"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -403,11 +455,14 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "All PUT/PATCH endpoints"
       limit: "30 requests per minute"
       notes: "Aggregate limit across all PUT/PATCH endpoints"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -423,11 +478,14 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "All DELETE endpoints"
       limit: "15 requests per minute"
       notes: "Aggregate limit across all DELETE endpoints"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -443,11 +501,14 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "/api/jobs (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -463,11 +524,14 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "/api/talent (Search)"
       limit: "50 requests per minute"
       notes: "Higher limit for common search operations"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -484,10 +548,13 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     {
       endpoint: "Webhook delivery"
       limit: "N/A"
       notes: "Webhooks don't count against your rate limits"
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -745,10 +812,13 @@ function ApiErrorCodes() {
   return (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
           If you're encountering persistent errors or need higher rate limits, please 
           <a href="#" className="text-zion-cyan"> contact our support team</Link>.
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -761,10 +831,13 @@ function ApiErrorCodes() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </p>
       </div>
     </ApiDocsLayout>
   )
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1040,6 +1113,7 @@ export function ApiErrorCodes() {;
         <h2>Error Format</h2>;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p>;
           When an error occurs, the API will return an appropriate HTTP status code along with ;
           a JSON response body containing details about the error.;
@@ -1047,6 +1121,8 @@ export function ApiErrorCodes() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
     <ApiDocsLayout>;
       <div className="max-w-3xl prose prose-invert">;
@@ -1211,12 +1287,16 @@ export function ApiErrorCodes() {;
       details: "The API is temporarily unavailable due to maintenance or high load.";
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "error": "validation_error";
   "message": "The request was invalid";
   "details": [;
     {;
       "field": "title";
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   ];
 }`;
@@ -1230,6 +1310,8 @@ export function ApiErrorCodes() {;
     }
   ];
   return (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <ApiDocsLayout>;
       <div className="max - w-3xl prose prose - invert">;
@@ -1330,10 +1412,14 @@ export function ApiErrorCodes() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <p>;
           To ensure fair usage and protect the API from abuse, we enforce rate limits on all endpoints.;
           The limits are based on the number of requests per minute per API key.;
         </p>;
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1343,6 +1429,7 @@ export function ApiErrorCodes() {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default ApiErrorCodes;
 
         <div className="overflow - x-auto mb - 8">;
@@ -1398,6 +1485,8 @@ export default ApiErrorCodes;
 
         <ul>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
           <li><code > X-RateLimit - Limit</code>: The maximum number of requests allowed per minute</li>;
           <li><code > X-RateLimit - Remaining</code>: The number of requests remaining in the current window</li>;
@@ -1424,6 +1513,7 @@ export default ApiErrorCodes;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li>;
           <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li>;
           <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp)</li>;
@@ -1444,6 +1534,9 @@ export default ApiErrorCodes;
         </p>;
 export default ApiErrorCodes;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

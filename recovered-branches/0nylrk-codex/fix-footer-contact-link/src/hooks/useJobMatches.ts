@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -13,6 +15,7 @@ export function useJobMatches(jobId: string) {;
   const [isProcessing, setIsProcessing] = useState(false);
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -23,8 +26,11 @@ export function useJobMatches(jobId: string) {
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -63,6 +69,8 @@ function useJobMatches() {
         .from("job_talent_matches")
         .select(`
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -77,6 +85,7 @@ function useJobMatches() {
           talent_profile: talent_id(
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             id;
             user_id;
             full_name;
@@ -86,10 +95,13 @@ function useJobMatches() {
             bio;
             years_experience;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
             key_projects
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           *,
           talent_profile:talent_id(
             id,
@@ -102,6 +114,8 @@ function useJobMatches() {
             years_experience,
             key_projects,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -109,10 +123,13 @@ function useJobMatches() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             skills
           )
         `)
         .eq("job_id", jobId)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -217,11 +234,14 @@ if (throw error) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Refresh the matches list
       await fetchMatches()
     } catch (error) {
       console && console.error("Error triggering AI matching:", error);
       toast({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -270,11 +290,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -292,6 +315,7 @@ if (throw error) {
     triggerAIMatching
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -366,6 +390,8 @@ export function useJobMatches(jobId: string) {;
       const response = await supabase.functions.invoke ('job - talent - matcher', {
         body: { job_id }});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
         title: "Matching Failed",
         description: "Could not process talent matching. Please try again later.",
@@ -379,6 +405,7 @@ export function useJobMatches(jobId: string) {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       if (throw new Error (response.error.message)) {
   $2
@@ -396,12 +423,15 @@ export function useJobMatches(jobId: string) {;
         description: "Could not process talent matching. Please try again later.",
         variant: "destructive"});
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsProcessing (false);
     }
@@ -422,6 +452,9 @@ export function useJobMatches(jobId: string) {;
 
   }
 <<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -436,3 +469,4 @@ export function useJobMatches(jobId: string) {;
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

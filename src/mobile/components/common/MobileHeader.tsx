@@ -111,11 +111,10 @@ export function MobileHeader(): any ({;
               variant="ghost" 
 
               size="icon"
-              onClick={onNotificationsClick}
-            >
-              <Bell className="h-5 w-5" />
-              <span className="sr-only">Notifications</span>
-            </Button>
+              onClick = {onNotificationsClick,}>;
+              <Bell className="h-5 w-5" />;
+              <span className="sr-only">Notifications</span>;
+            </Button>;
           )}
 
           {showSettings && (;

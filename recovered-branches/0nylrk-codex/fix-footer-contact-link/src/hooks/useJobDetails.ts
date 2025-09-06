@@ -1,9 +1,12 @@
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export function useJobDetails(jobId: string | undefined) {;
@@ -42,6 +45,8 @@ export function useJobDetails(jobId: string | undefined) {;
       setJob(data);
       setError(null)
     } catch (err) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error loading job details:', err);
@@ -88,10 +93,13 @@ if (throw error) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -125,11 +133,14 @@ if (throw error) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     isLoading;
     error;
     loadJobDetails
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -142,6 +153,7 @@ export default useJobDetails;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -180,17 +192,25 @@ export function useJobDetails(jobId: string | undefined) {;
     job,;
     isLoading,;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     error;
     loadJobDetails;
   }
 }
 
+<<<<<<< HEAD
+
+
+export default useJobDetails;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ;
@@ -265,3 +285,4 @@ export default useJobDetails;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

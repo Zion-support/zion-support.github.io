@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 export interface Project {
   id: string;
   title: string;
@@ -13,6 +15,7 @@ export interface Project {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs';
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -145,9 +148,12 @@ import { CurrentUser } from './auth';
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface Milestone {
   id: string;
   title: string;
@@ -160,6 +166,11 @@ export interface Milestone {
   updated_at: string;
 }
 <<<<<<< HEAD
+  return projects.find(p => p.id === id) |null;
+
+  return projects && projects.find(p => p && p.id === id) || null,
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -170,6 +181,7 @@ export interface Milestone {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function getAllProjects(): Project[] {
 =======
@@ -187,11 +199,14 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
   const newProject: Project = {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
@@ -246,6 +261,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     status: 'pending',
     createdAt: new Date().toISOString(),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 =======
@@ -259,6 +276,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   }
 
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
 =======
@@ -568,6 +586,8 @@ if (return false) {
 }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -579,3 +599,4 @@ if (return false) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

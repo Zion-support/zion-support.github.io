@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+    <div className="min-h-screen">;
+=======
+<<<<<<< HEAD
 =======
 
 
@@ -43,6 +46,7 @@ export default function ZionOSPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-screen">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -77,6 +81,8 @@ export default function ZionOSPage() {;
               </h2>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <p className="text - lg text - gray - 300 mb - 6 leading - relaxed">;
                 Zion OS is a revolutionary platform that enables anyone to create, deploy,
@@ -88,10 +94,13 @@ export default function ZionOSPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and manage sovereign digital economies powered by artificial intelligence.;
                 Our unified deployment protocol makes it possible to launch complex;
                 economic systems in minutes, not months.;
               </p>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -105,6 +114,7 @@ export default function ZionOSPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 or creating a new token ecosystem, Zion OS provides all the tools you need;
                 to succeed in the digital economy revolution.;
               </p>;
@@ -240,6 +250,8 @@ export default function ZionOSPage() {;
               </div>;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
               <h3 className="text - xl font - semibold mb - 3">Configure</h3>;
               <p className="text - gray - 400">;
@@ -251,6 +263,7 @@ export default function ZionOSPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 including governance rules, token economics, and marketplace settings.;
               </p>;
             </div>;
@@ -258,6 +271,8 @@ export default function ZionOSPage() {;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -271,6 +286,7 @@ export default function ZionOSPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 smart contracts, and governance systems in minutes.;
               </p>;
             </div>;
@@ -278,6 +294,8 @@ export default function ZionOSPage() {;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 4">;
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -291,6 +309,7 @@ export default function ZionOSPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 and building your digital community.;
               </p>;
             </div>;

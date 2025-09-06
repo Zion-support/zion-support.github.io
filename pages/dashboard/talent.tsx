@@ -1,14 +1,10 @@
 
-<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 const STEPS = [
   { key: 'profile', label: 'Profile completed' }
   { key: 'skills', label: 'Skills added' }
   { key: 'availability', label: 'Availability set' }
   { key: 'match', label: 'First match received' }
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -21,7 +17,6 @@ const STEPS = [
 type StepKey = typeof STEPS[number]['key'];
 
 export default function TalentDashboard() {
-<<<<<<< HEAD
     profile: false
     skills: false
     availability: false
@@ -31,9 +26,6 @@ export default function TalentDashboard() {
     availability: false,
     match: false,;
   });
-=======
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.talent');
@@ -44,40 +36,6 @@ export default function TalentDashboard() {
   useEffect(() => {
 
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import EnhancedCard from '../../components/ui/EnhancedCard';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useEffect, useState } from 'react';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-const STEPS = [;
-  { key: 'profile', label: 'Profile completed' },;
-  { key: 'skills', label: 'Skills added' },;
-  { key: 'availability', label: 'Availability set' },;
-<<<<<<< HEAD
-  { key: 'match', label: 'First match received' },;
-] as const;
-type StepKey = (typeof STEPS)[number]['key'];
-const STEPS = [
-  { key: 'profile', label: 'Profile completed' },
-  { key: 'skills', label: 'Skills added' },
-  { key: 'availability', label: 'Availability set' },
-  { key: 'match', label: 'First match received' }] as const,
-type StepKey = typeof STEPS[number]['key'];
-export default function TalentDashboard() {
-  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ profile: false, skills: false, availability: false, match: false }),
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem('onboarding.talent');
-      if (raw) setCompleted(JSON.parse(raw))
-    } catch {}
-  }, []);
-  useEffect(() => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
     profile: false,;
@@ -163,10 +121,6 @@ const STEPS = [;
                 </EnhancedButton>              )}
             </li>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -174,10 +128,6 @@ const STEPS = [;
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
@@ -210,18 +160,9 @@ const STEPS = [;
               ) : (
 
 
-<<<<<<< HEAD
 }
 
 
-=======
-=======
-
-
-}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -234,20 +175,12 @@ const STEPS = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </ul>;
       </EnhancedCard>;
     </div>;
   );
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -345,21 +278,8 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

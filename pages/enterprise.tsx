@@ -1,80 +1,10 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-      destination: '/plans/enterprise',
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-import type { GetServerSideProps } from 'next',
-import type { GetServerSideProps } from 'next';
-
-import type { GetServerSideProps } from 'next',;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/plans/enterprise'
-      permanent: false}}
-}
-export default function EnterpriseRedirect() { return null }
-
-},
-;
-export default function EnterpriseRedirect() { return null };
-import type { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = async () => {;
-  return {;
-    redirect: {;
-      destination: '/plans/enterprise';
-      permanent: false}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-};
-export default function EnterpriseRedirect() { return null   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+=======
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -92,7 +22,7 @@ import {
   Database,
   Lock
 } from 'lucide-react';
-import MainLayout from '../src/components/layout/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const features = [
   {
@@ -338,4 +268,75 @@ export default function EnterprisePage() {
     </MainLayout>
   );
 }
->>>>>>> main
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+      permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+
+      destination: '/plans/enterprise',
+      permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+import type { GetServerSideProps } from 'next',
+import type { GetServerSideProps } from 'next';
+
+import type { GetServerSideProps } from 'next',;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/plans/enterprise'
+      permanent: false}}
+}
+export default function EnterpriseRedirect() { return null }
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+},
+;
+export default function EnterpriseRedirect() { return null };
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = async () => {;
+  return {;
+    redirect: {;
+      destination: '/plans/enterprise';
+      permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default function EnterpriseRedirect() { return null   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

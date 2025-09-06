@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -12,6 +14,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",
 import { Globe } from "lucide-react",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -20,9 +23,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
@@ -31,10 +37,13 @@ interface CountrySelectorProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
@@ -85,11 +94,16 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   }, []);
   }, []),
   
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null
     onCountryChange(country)
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
@@ -101,6 +115,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   }
   },
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -144,6 +159,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import {useState, useEffect} from "react";
@@ -157,10 +174,13 @@ import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { useState, useEffect } from "react",;
 import { Globe } from "lucide-react",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -168,11 +188,14 @@ import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricin
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
   selectedCountry: CountryPricing | null;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function CountrySelector(): any ({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
@@ -261,12 +284,18 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectValue placeholder="Select a country" />;
         </SelectTrigger>;
         <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
           <div className="p-2 border-b border-zion-blue-light">;
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
+<<<<<<< HEAD
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
+            ))}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -313,6 +342,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               </SelectItem>
             ))}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
           <div className="p-2">;
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
@@ -323,6 +353,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
@@ -428,3 +460,4 @@ return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

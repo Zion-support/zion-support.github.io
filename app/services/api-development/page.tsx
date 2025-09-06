@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'API Development | Zion Tech Group',
-  description: 'Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.'
+  description: 'Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.',
 };
 
 export default function APIDevelopmentPage() {
@@ -8,37 +8,37 @@ export default function APIDevelopmentPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">API Development</h1>
       <p className="text-xl text-gray-600 mb-12">Build robust, scalable APIs with our expert development services. RESTful, GraphQL, and microservices architecture solutions.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="API Design & Development" 
+        <FeatureCard
+          title="API Design & Development"
           features={[
-            "RESTful API design",
-            "GraphQL implementation",
-            "Microservices architecture",
-            "API documentation"
-          ]} 
+            'RESTful API design',
+            'GraphQL implementation',
+            'Microservices architecture',
+            'API documentation',
+          ]}
         />
-        <FeatureCard 
-          title="Integration & Testing" 
+        <FeatureCard
+          title="Integration & Testing"
           features={[
-            "Third-party integrations",
-            "API testing & validation",
-            "Performance optimization",
-            "Security implementation"
-          ]} 
+            'Third-party integrations',
+            'API testing & validation',
+            'Performance optimization',
+            'Security implementation',
+          ]}
         />
-        <FeatureCard 
-          title="API Management" 
+        <FeatureCard
+          title="API Management"
           features={[
-            "Rate limiting",
-            "Authentication & authorization",
-            "Monitoring & analytics",
-            "Version control"
-          ]} 
+            'Rate limiting',
+            'Authentication & authorization',
+            'Monitoring & analytics',
+            'Version control',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-fuchsia-50 to-pink-50 border border-fuchsia-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our API Development Services?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function APIDevelopmentPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your API?</h2>
         <p className="text-gray-600 mb-6">Start with a free consultation to design the perfect API architecture for your needs.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Basic API" 
-          price="$7,999" 
+        <Plan
+          name="Basic API"
+          price="$7,999"
           features={[
-            "Simple REST API",
-            "Basic authentication",
-            "API documentation",
-            "2 weeks support"
-          ]} 
+            'Simple REST API',
+            'Basic authentication',
+            'API documentation',
+            '2 weeks support',
+          ]}
         />
-        <Plan 
-          name="Advanced API" 
-          price="$19,999" 
+        <Plan
+          name="Advanced API"
+          price="$19,999"
           features={[
-            "Complex API architecture",
-            "Advanced security",
-            "Performance optimization",
-            "1 month support",
-            "Testing & validation"
-          ]} 
+            'Complex API architecture',
+            'Advanced security',
+            'Performance optimization',
+            '1 month support',
+            'Testing & validation',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise API" 
-          price="$49,999+" 
+        <Plan
+          name="Enterprise API"
+          price="$49,999+"
           features={[
-            "Microservices architecture",
-            "Custom integrations",
-            "Dedicated team",
-            "3 months support",
-            "White-label solution"
-          ]} 
+            'Microservices architecture',
+            'Custom integrations',
+            'Dedicated team',
+            '3 months support',
+            'White-label solution',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-fuchsia-600 text-white hover:bg-fuchsia-700' 
+          popular
+            ? 'bg-fuchsia-600 text-white hover:bg-fuchsia-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

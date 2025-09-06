@@ -1,6 +1,8 @@
 #!/usr/bin/env node;
 // Accessibility Implementation Script;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -51,3 +53,4 @@ console.log('✅ Accessibility implementation completed'),;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

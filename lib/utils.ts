@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -84,6 +86,9 @@ export function slugify(str: string): string {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
@@ -106,17 +111,25 @@ origin/automation-improvements-final
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 =======
 export function cn(...inputs: ClassValue[]) {;
   return twMerge(clsx(inputs));,
 }
 const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+<<<<<<< HEAD
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { type ClassValue, clsx } from 'clsx';,
 import { twMerge } from 'tailwind-merge';,
+
 export function cn(...inputs: ClassValue[]) {}
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 export function formatCurrency(amount: number, currency = "USD"): string {
@@ -199,6 +212,8 @@ export function format_currency (amount: number, currency = "USD"): string {
 >>>>>>> main
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 };
@@ -224,10 +239,16 @@ origin/main
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 };
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -242,5 +263,22 @@ origin/main
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+}
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
+};
+<<<<<<< HEAD
+
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+<<<<<<< HEAD
 >>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

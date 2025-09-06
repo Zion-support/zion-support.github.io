@@ -1,18 +1,37 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+<<<<<<< HEAD
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Webinars - Zion Tech Group"
+      description="Upcoming webinars and events"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
 import React from 'react';
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 =======
 import React from 'react',;
 import SEO from '../components/SEO',;
@@ -24,14 +43,9 @@ import React from 'react';
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Layout from '../components/Layout';
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
->>>>>>> main
 
-const Page = () => {
+export default function WebinarsPage() {
   return (
-<<<<<<< HEAD
     <>
       <SEO
         title='Webinars | Zion Tech Group'
@@ -57,8 +71,7 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -66,6 +79,7 @@ origin/automation-improvements-final
 				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
 				<p className="text-gray-300">No upcoming webinars at this time. Check back soon.</p>
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -76,30 +90,18 @@ origin/automation-improvements-final
 				<p className=&quot;text-gray-300&quot;>No upcoming webinars at this time. Check back soon.</p>
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			</div>
 		</>
 	)
 
-<<<<<<< HEAD
 }
 <<<<<<< HEAD
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import SEO from '../components / SEO',
 export default /**
@@ -115,7 +117,6 @@ return (
   </div>;
   </>);
 }
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -136,24 +137,5 @@ origin/automation-improvements-final
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-    <MainLayout
-      title="Webinars - Zion Tech Group"
-      description="Upcoming webinars and events"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Webinars</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
->>>>>>> main
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

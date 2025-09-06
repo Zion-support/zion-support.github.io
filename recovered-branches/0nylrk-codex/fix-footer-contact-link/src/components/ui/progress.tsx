@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+import {cn} from '@/lib/utils';
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -10,10 +13,16 @@ import {cn} from '@/lib/utils';
 =======
 import {cn} from '@/lib/utils';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils"
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -67,6 +76,7 @@ const Progress = React.forwardRef<;
 
 import { cn } from "@/lib/utils"
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -81,6 +91,8 @@ const Progress = React && React.forwardRef<;
     ref={ref}
     className={cn(
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -91,6 +103,7 @@ const Progress = React && React.forwardRef<;
     <ProgressPrimitive.Indicator
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 export { Progress };
@@ -148,6 +161,8 @@ export { Progress }
 
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
       className="h-full w-full flex-1 bg-primary transition-all"
@@ -184,3 +199,4 @@ export { Progress }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

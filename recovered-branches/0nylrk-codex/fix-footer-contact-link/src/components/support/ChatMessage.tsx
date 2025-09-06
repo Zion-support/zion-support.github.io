@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -13,6 +15,7 @@ import {format} from "date-fns";
 import {useTheme} from "@/hooks/useTheme";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils",
@@ -21,9 +24,12 @@ import { useTheme } from "@/hooks/useTheme";
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ChatMessageProps {
 
   message: string
@@ -33,6 +39,8 @@ interface ChatMessageProps {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 
@@ -41,6 +49,7 @@ interface ChatMessageProps {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   const { theme } = useTheme();
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
@@ -48,8 +57,12 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
   
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -67,6 +80,8 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           </>
         ) : (
           <>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -124,6 +139,7 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
         ) : (;
           <>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <AvatarImage
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
@@ -147,6 +163,8 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
           </>;
         )}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -165,12 +183,15 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -201,6 +222,7 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -228,6 +250,8 @@ export function ChatMessage({ message, isUser, timestamp } ChatMessageProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         )}>;
           {format(timestamp, "h:mm a")}
+<<<<<<< HEAD
+=======
           "text-xs mt-1";
           isUser
             ? "text-white/70"
@@ -275,6 +299,7 @@ function formatMessageWithLinks(message: string): string {
         )}>;
           {format(timestamp, "h:mm a")}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -285,6 +310,10 @@ function formatMessageWithLinks(message: string): string {
   return formattedMessage
 
 
+<<<<<<< HEAD
+
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -299,6 +328,7 @@ function formatMessageWithLinks(message: string): string {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -355,6 +385,8 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 // Function to convert URLs and help links to actual clickable links;
@@ -380,6 +412,7 @@ function formatMessageWithLinks(): any (message: string): string {;
     </div>;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
@@ -402,6 +435,8 @@ export /**
 function ChatMessage() {
   const { theme } = use_theme ();
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   return (
     <div className={cn ("flex items - start gap - 3", is_user && "flex - row - reverse")}>;
@@ -513,3 +548,4 @@ function formatMessageWithLinks(message: string): string {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

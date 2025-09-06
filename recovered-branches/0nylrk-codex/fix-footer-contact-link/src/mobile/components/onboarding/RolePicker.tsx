@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+
+
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,6 +25,8 @@ type UserRole = "talent" | "client" | null;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -30,15 +39,19 @@ type UserRole = "talent" | "client" | null;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Briefcase, Users, Check } from "lucide-react",
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -49,17 +62,31 @@ interface RolePickerProps {
 }
 
 <<<<<<< HEAD
+export function RolePicker({ onSelect }: RolePickerProps) {;
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+export function RolePicker({ onSelect }: RolePickerProps) {
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+  const [selectedRole, setSelectedRole] = useState<UserRole>(null),
+
+=======
+<<<<<<< HEAD
 =======
 
 type UserRole = "talent" | "client" | null,
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
   const handleSelect = (role: UserRole) => {
+<<<<<<< HEAD
+    setSelectedRole(role)
+    onSelect(role)
+=======
     (setSelectedRole(role), onSelect(role));
   };
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="space-y-4 px-4">
@@ -69,6 +96,22 @@ type UserRole = "talent" | "client" | null,
       </p>
 
       <div className="space-y-3 mt-6">
+<<<<<<< HEAD
+
+  const handleSelect = (role: UserRole) => {;
+    setSelectedRole(role),;
+    onSelect(role);
+  };
+  return (
+    <div className="space-y-4 px-4">;
+      <h2 className="text-xl font-medium">What brings you to Zion?</h2>;
+      <p className="text-muted-foreground">Choose how you want to use our platform</p>;
+      <div className="space-y-3 mt-6">;
+interface RolePickerProps {
+  on_select: (role: UserRole) => void;
+}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === "talent"
@@ -140,8 +183,11 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
         <Card
+<<<<<<< HEAD
+=======
 =======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === "client"
@@ -150,6 +196,9 @@ export function RolePicker({ onSelect } RolePickerProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
           }`}
+<<<<<<< HEAD
+          onClick={() => handleSelect('client')}
+=======
           onClick={() => handleSelect("client")}
         >
           <CardContent className="p-5">
@@ -193,6 +242,7 @@ export function RolePicker({ onSelect } RolePickerProps) {;
               : "border - border hover:border - primary / 40";
           }`}
           on_click={() => handle_select ('talent')}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         >;
           <CardContent className="p - 5">;
             <div className="flex items - center">;
@@ -203,6 +253,11 @@ export function RolePicker({ onSelect } RolePickerProps) {;
                 <h3 className="font - medium">I'm offering services</h3>;
                 <p className="text - sm text - muted - foreground">Find work and showcase your skills</p>;
               </div>;
+<<<<<<< HEAD
+              {selectedRole === 'client' && (;
+                <Check className="h-5 w-5 text-primary" />;
+              )}
+=======
               {selected_role === 'talent' && (
                 <Check className="h - 5 w - 5 text - primary" />)}
 =======
@@ -286,10 +341,13 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </div>;
           </CardContent>;
         </Card>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,3 +379,4 @@ space-y-3 mt-6"> <Card className= {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

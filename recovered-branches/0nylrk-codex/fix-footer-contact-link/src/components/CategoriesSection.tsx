@@ -25,6 +25,8 @@ const categories = [;
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 =======
@@ -57,10 +59,13 @@ import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,6 +75,7 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const categories = [
   {
     title: "Services",
@@ -90,6 +96,8 @@ const categories = [
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -97,6 +105,7 @@ const categories = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -106,6 +115,8 @@ const categories = [
 const specialServices = [
   {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -116,6 +127,7 @@ const specialServices = [
     link: "/it-onsite-services"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 
@@ -153,6 +165,9 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 const categories = [;
   {;
     title: "Services",;
+<<<<<<< HEAD
+    description: "On-demand IT support, consulting, development, and more";
+=======
 <<<<<<< HEAD
     description: "On-demand IT support, consulting, development, and more",;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -197,6 +212,7 @@ const specialServices = [;
 =======
     description: "On-demand IT support, consulting, development, and more";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
 
@@ -530,6 +546,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </div>;
       </div>;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     </section>);
@@ -589,3 +607,4 @@ interface CategoriesSectionProps {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

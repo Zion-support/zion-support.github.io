@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 }})};
@@ -24,6 +26,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
@@ -33,6 +36,8 @@ export default SyntaxFixer;
     files.forEach(file => {;
       try {;
         let content = fs.readFileSync(file, "utf8");
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -98,6 +103,7 @@ if ( {) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Main execution;
 // Check condition
 if ( {) {
@@ -214,12 +220,15 @@ if ( {) {
   }
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
         content = content.replace (/export\s+([^, ]+), \s*$/gm, 'export $1, ');
 ;
         if () {) {
   $2
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
           modified = true;
         }
@@ -269,6 +278,8 @@ if ( {) {
     return files;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 ;
   async run () {
     this.log ("🚀 Starting Syntax Fixer");
@@ -280,6 +291,7 @@ if ( {) {
       this.log (`🎯 Syntax Fixer completed. Fixes applied: ${this.fixes_applied}`);
 ;
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   async run() {this.log("🚀 Starting Syntax Fixer");
     try {;
       await this.fixSyntaxErrors();
@@ -437,11 +449,19 @@ this.log("=" * 50),
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-28da
+
+;
+=======
 <<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
 
@@ -465,6 +485,7 @@ if ( {, ) {
 export default SyntaxFixer,
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
@@ -570,8 +591,11 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 export default SyntaxFixer;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -4,11 +4,14 @@ interface TalentDirectoryHeaderProps {
   description: string;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 import React from "react",;
 interface TalentDirectoryHeaderProps {;
   title: string,;
   description: string;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function TalentDirectoryHeader({
@@ -114,6 +117,8 @@ function TalentDirectoryHeader() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 =======
@@ -151,3 +156,4 @@ description: string
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

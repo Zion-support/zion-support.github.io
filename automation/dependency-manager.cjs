@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -22,6 +24,7 @@
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -382,6 +385,14 @@ if ( {})
       process.exit(1)})};
 module.exports = DependencyManager;
 <<<<<<< HEAD
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+module.exports = DependencyManager;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD
 module.exports = DependencyManager;
 =======
@@ -389,6 +400,7 @@ module.exports = DependencyManager;
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module.exports = DependencyManager;
 module.exports = DependencyManager;
 <<<<<<< HEAD
@@ -397,8 +409,13 @@ module.exports = DependencyManager;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 module.exports = DependencyManager;
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

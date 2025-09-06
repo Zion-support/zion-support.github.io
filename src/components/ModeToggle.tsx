@@ -2,30 +2,44 @@ import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
       return window.matchMedia('(prefers-color-scheme: dark)').matches
         ? 'dark'
         : 'light'
+<<<<<<< HEAD
+=======
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components / ui / button';
 import {
@@ -74,6 +88,7 @@ if ( {) {
       return window.match_media ('(prefers - color - scheme: dark)').matches;
         ? 'dark';
         : 'light';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     return theme;
   })();
@@ -87,12 +102,38 @@ if ( {) {
     try {
 
 
+<<<<<<< HEAD
+  const handleToggle = () => {
+    try {
+      // Determine the new theme we are switching TO
+      // Accessibility announcement for screen readers
+      const announcement = `Theme switched to ${newTheme} mode`
+      // Create a live region announcement
+      const liveRegion = document.createElement('div')
+      liveRegion.setAttribute('aria-live', 'polite')
+      liveRegion.setAttribute('aria-atomic', 'true')
+      liveRegion.className = 'sr-only'
+      liveRegion.textContent = announcement
+      document.body.appendChild(liveRegion)
+      // Clean up the announcement after it's been read
+      setTimeout(() => {
+        document.body.removeChild(liveRegion)
+      }, 1000) } catch (error) {
+      logErrorToProduction('Theme toggle error:', { data: error })
+      logIssue('Theme switch failed', {
+        error
+        currentTheme: theme
+        resolvedTheme
+      })
+      toast({
+=======
     }
   }
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     
 
 
@@ -171,7 +212,10 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
@@ -183,7 +227,10 @@ export function ModeToggle() {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             variant="ghost"
             size="icon"
 import { Moon, Sun } from 'lucide-react';
@@ -203,16 +250,24 @@ import {;
 import { useTheme } from '@/components/ThemeProvider';
 import { logIssue } from '@/utils/logIssue';
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { toast } from "@/hooks/use-toast";
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+<<<<<<< HEAD
+=======
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Use the ThemeProvider hook directly to ensure no conflicts;
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
+=======
 export function ModeToggle() {;
   const { theme, toggleTheme } = useTheme();
   const [isClient, setIsClient] = useState(false);
@@ -299,6 +354,7 @@ export function ModeToggle() {;
       </Button>;
     );
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return (
     <TooltipProvider>;
@@ -309,11 +365,32 @@ export function ModeToggle() {;
             variant="ghost";
             size="icon";
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             onClick={handleToggle}
             aria-pressed={isDarkMode}
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
+<<<<<<< HEAD
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
+            ) : (
+              <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
+            )}
+            {/* Enhanced visual indicator */}
+            <div
+              className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
+                isDarkMode
+                  ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'
+                  : 'bg-slate-600 dark:bg-slate-400'
+              } opacity-70 group-hover:opacity-100`}
+            />
+            <span className='sr-only'>
+              Toggle theme. Current: {resolvedTheme}. Click to switch to{' '}
+              {isDarkMode ? 'light' : 'dark'}.
+=======
 
             />;
 
@@ -347,6 +424,7 @@ export function ModeToggle() {;
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
             )}
 ;
@@ -360,6 +438,12 @@ export function ModeToggle() {;
             <span className="sr-only">
               Toggle theme. Current: {resolvedTheme}. Click to switch to {isDarkMode ? 'light' : 'dark'}.
 
+<<<<<<< HEAD
+            {isDarkMode ? (
+              <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
+            ) : (
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             </span>
           </Button>
         </TooltipTrigger>
@@ -368,13 +452,18 @@ export function ModeToggle() {;
             <p className="text-sm font-medium">Theme: {resolvedTheme}</p>
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
+<<<<<<< HEAD
+=======
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <p className="text-xs opacity-60 mt-1">Following system preference</p>
             )}
           </div>;
         </TooltipContent>;
       </Tooltip>;
     </TooltipProvider>;
+<<<<<<< HEAD
+=======
   );
 
 
@@ -384,6 +473,7 @@ export function ModeToggle() {;
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
@@ -498,4 +588,24 @@ if ( {") {
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);
 }'"}
 }
+<<<<<<< HEAD
+};
+if (!isClient) {";
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
+  /* Changed to bg-muted for theme consistency */ ";
+}<span className="sr-only" >Loading theme toggle</span> </Button>) ";
+}return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) ;
+}{;
+  /* Enhanced visual indicator */ ;
+}<div className= {;
+  `absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {';
+  isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': 'bg-slate-600 dark:bg-slate-400' ;
+}opacity-70 group-hover:opacity-100` ;
+}/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
+}</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
+}'"
+  );
+}
+=======
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

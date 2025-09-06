@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react';
 import Link from 'next/link';
 
@@ -131,6 +135,10 @@ export default function HomePage() {
 =======
           <a
             href="https://ziontechgroup.com"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
@@ -269,6 +277,11 @@ export default function HomePage() {
             ]}
             icon="🚀"
           />
+<<<<<<< HEAD
+          <Card
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ServiceCard
             title="AI Services"
             href="/services/ai-services"
@@ -325,6 +338,26 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<<<<<<< HEAD
+          <FeatureCard
+            title="Fast Delivery"
+            description="Rapid prototyping and deployment with modern tools and practices."
+          />
+          <FeatureCard
+            title="Scalable Architecture"
+            description="Built for growth with cloud-native, microservices architecture."
+          />
+          <FeatureCard
+            title="24/7 Support"
+            description="Round-the-clock monitoring and support for your critical systems."
+          />
+          <FeatureCard
+            title="Cost Effective"
+            description="Optimized solutions that reduce operational costs and improve efficiency."
+          />
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
@@ -396,4 +429,33 @@ export default function HomePage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+
+function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
+  return (
+    <Link
+      href={href}
+      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+      <p className="text-gray-600 leading-relaxed">{description}</p>
+    </Link>
+  );
+}
+
+function FeatureCard({ title, description }: { title: string; description: string }) {
+  return (
+    <div className="text-center p-6">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  );
+}
+=======
+=======
+}
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

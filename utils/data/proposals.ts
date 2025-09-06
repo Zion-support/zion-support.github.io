@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -22,6 +24,7 @@ export type ProposalMeta = {;
   status: ProposalStatus,;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -248,6 +251,8 @@ export function getProposal(id: string): ProposalMeta | null {try {;
   } catch {return null;
   }
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -495,11 +500,14 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -527,6 +535,7 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({;
     ...meta;
@@ -684,6 +693,9 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
   return updateProposalMeta (id, (meta) => ({
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+<<<<<<< HEAD
+}
+=======
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -693,3 +705,4 @@ export function update_artifacts (id: string, artifacts: Partial < ProposalMeta[
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

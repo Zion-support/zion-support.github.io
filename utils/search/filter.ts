@@ -183,6 +183,16 @@ export function suggestDidYouMean(query: string): string[] {
   if (query.includes("frontend")) {
     suggestions.push("ui", "ux", "design");
   }
+<<<<<<< HEAD
+  
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
+;
+export const sort_results = (results: any[], sort_by: string) =>: any {
+  // Add search sorting functionality here;
+  return results;
+}
+=======
 
   return suggestions.slice(0, 3); // Return max 3 suggestions
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

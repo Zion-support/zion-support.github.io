@@ -1,29 +1,5 @@
 <<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 =======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {getWalletSummary} from '../../../utils / token / service';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { user_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'Missing user_id' });
-  }
-  try {
-    const summary = getWalletSummary (user_id);
-    return res.status (200).json (summary);
-  } catch (err: any) {
-    return res.status (500).json ({ error: err.message || 'Unknown error' });
-  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
@@ -58,6 +34,7 @@ import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {getWalletSummary} from '../../../utils/token/service';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -72,10 +49,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status(500).json({ error: err.message || 'Unknown error' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { getWalletSummary } from "../../../utils/token/service",
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getWalletSummary } from "../../../utils/token/service"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query,
+  const { userId } = req.query
   if (!userId || typeof userId !== "string") {
     return res.status(400).json({ error: "Missing userId" })
     } catch (error) {
@@ -102,7 +79,7 @@ if ( {) {
   }
 }
   try {
-    const summary = getWalletSummary(userId),
+    const summary = getWalletSummary(userId)
     return res.status(200).json(summary)
   } catch (err: any) {
   }
@@ -111,11 +88,6 @@ if ( {) {
 
 
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
     return res.status (500).json ({ error: err.message || 'Unknown error' });
   }
@@ -123,7 +95,6 @@ if ( {) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -219,6 +219,8 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -411,6 +413,7 @@ export default App;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -516,6 +519,10 @@ const App = () =>: any {
         </Suspense>;
         <Toaster />;
 <<<<<<< HEAD
+
+export default App;
+=======
+<<<<<<< HEAD
         <SonnerToaster position="top-right" />;
       </ThemeProvider>;
     </WhitelabelProvider>;
@@ -549,3 +556,4 @@ export default App;
 
 export default App;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

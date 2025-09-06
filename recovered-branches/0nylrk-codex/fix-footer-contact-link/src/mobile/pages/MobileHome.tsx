@@ -6,12 +6,16 @@ import { TalentDashboard } from "../components/dashboard/TalentDashboard";
 import { useAuth } from "@/hooks/useAuth";
 export function MobileHome() {
   const { user } = useAuth();
+<<<<<<< HEAD
+  const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
+=======
   const isClient = user?.userType === "employer" || user?.userType === "buyer";
 
 =======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -33,9 +37,12 @@ export function MobileHome() {
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -44,9 +51,12 @@ export function MobileHome() {
         showSettings
       />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
       <main className="py-4">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {isClient ? <ClientDashboard /> : <TalentDashboard />}
       </main>
 
@@ -80,6 +90,8 @@ function MobileHome() {
       <BottomNavigation />;
     </div>);
 }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -132,3 +144,4 @@ min-h-screen" > <MobileHeader showNotifications showSettings /> </main> <BottomN
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

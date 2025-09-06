@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
 "use client",;
 interface LoadingSpinnerProps {;
@@ -18,6 +20,7 @@ export function LoadingSpinner({ size = "medium", className = "" }: LoadingSpinn
     <div className={`${sizeClasses[size]} ${className}`} role="status" aria-label="Loading">;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large",

@@ -11,10 +11,25 @@ import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
 <<<<<<< HEAD
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection",
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup",
+import { Steps, Step } from "@/components/ui/steps",
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+export default function Onboarding() {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -23,6 +38,8 @@ export default function Onboarding() {;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 
 
@@ -87,11 +104,14 @@ export default function Onboarding() {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },
 
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -100,11 +120,14 @@ export default function Onboarding() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
       return
     } else if (type === "talent") {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -186,6 +209,7 @@ export default function Onboarding() {;
 
       navigate('/login');
       return;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
 
@@ -228,6 +252,8 @@ export default function Onboarding() {;
     const dbUserType = mapUserTypeToDatabase(userType),
     
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -235,6 +261,7 @@ export default function Onboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       await updateProfile({
         id: user.id
@@ -244,6 +271,8 @@ export default function Onboarding() {;
         headline: data.headline
         profileComplete: true
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -261,12 +290,15 @@ export default function Onboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -284,10 +316,13 @@ export default function Onboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -311,19 +346,25 @@ export default function Onboarding() {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Redirect to dashboard
       navigate(dashboardRoute)
     } catch (error) {
       console.error('Error updating profile:', error),
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       toast({
         title: 'Error'
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 
@@ -339,10 +380,13 @@ export default function Onboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -354,6 +398,7 @@ export default function Onboarding() {;
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return null
 
     const dbUserType = mapUserTypeToDatabase(userType);
@@ -400,6 +445,9 @@ export default function Onboarding() {;
     return null;
   }
   return (
+<<<<<<< HEAD
+      case "serviceProvider": return "creator";
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -462,6 +510,7 @@ export default function Onboarding() {;
 =======
       case "serviceProvider": return "creator";
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "talent":;
         return "jobSeeker";
       navigate('/talent-onboarding');
@@ -471,6 +520,9 @@ export default function Onboarding() {;
       return;
     }
   }
+<<<<<<< HEAD
+  return (
+=======
 <<<<<<< HEAD
 ;
   return (;
@@ -567,6 +619,7 @@ export default function Onboarding() {;
 =======
   return (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Step
                   key={index}
                   status={
@@ -582,6 +635,8 @@ export default function Onboarding() {;
                   description={step && step.description}
                 />;
               ))}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
             </Steps>;
@@ -630,16 +685,20 @@ export default function Onboarding() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <Button
                   variant="outline"
                   className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light"
                   onClick={() => setCurrentStep(0)}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
@@ -801,6 +860,10 @@ if ( {) {
                   Back to Role Selection;
                 </Button>;
 <<<<<<< HEAD
+              </div>;
+            )}
+=======
+<<<<<<< HEAD
               </div>)}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -841,6 +904,7 @@ if ( {) {
               </div>;
             )}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </div>;
       </div>;
@@ -853,6 +917,11 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
+;
+    </>);
+}
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     </>);
@@ -906,3 +975,4 @@ return null;
     </>);
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
 import React from 'react'
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const features = [
   {
     title: 'Private Hiring Portal'
@@ -39,6 +42,8 @@ const features = [
     icon: Globe
   }
 ]
+<<<<<<< HEAD
+=======
 const features = [;
   {;
     title: 'Private Hiring Portal',;
@@ -152,6 +157,7 @@ function EnterpriseFeatures() {
           {features && features.map(feature => (;
             <div
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div
               key={feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'            >
@@ -206,6 +212,8 @@ export function EnterpriseFeatures() {
             Our enterprise solutions offer powerful tools designed for large teams and complex hiring needs
           </p>
         </div>
+<<<<<<< HEAD
+=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
@@ -266,6 +274,7 @@ export function EnterpriseFeatures() {;
   );
 
   );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
         <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
@@ -276,6 +285,13 @@ export function EnterpriseFeatures() {;
               <div className='h - 12 w - 12 rounded - lg bg - primary / 10 flex items - center justify - center mb - 5'>;
                 <feature.icon className='h - 6 w - 6 text - primary' />;
               </div>;
+<<<<<<< HEAD
+          ))}
+        </div>
+      </div>;
+    </section>;
+  );
+=======
               <h3 className='font - bold text - xl mb - 3'>{feature.title}</h3>;
               <p className='text - muted - foreground'>{feature.description}</p>            </div>;
               <h3 className="font - bold text - xl mb - 3">{feature.title}</h3>;
@@ -299,3 +315,4 @@ export function EnterpriseFeatures() {;
 
 }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

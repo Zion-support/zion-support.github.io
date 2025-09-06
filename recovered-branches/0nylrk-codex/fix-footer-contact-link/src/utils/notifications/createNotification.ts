@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -8,6 +10,7 @@ import { CreateNotificationParams, CreateNotificationResult } from './types';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -22,6 +25,8 @@ export async function createNotification({;
   sendEmail = false;
   actionUrl = null;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -40,10 +45,13 @@ import { CreateNotificationParams, CreateNotificationResult } from './types',
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -51,10 +59,21 @@ export async function createNotification({
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userId;
   title;
   message;
   type;
+<<<<<<< HEAD
+
+  actionText = null
+}: CreateNotificationParams): Promise<CreateNotificationResult> {
+  void actionUrl,
+  void actionText,
+  try {
+    // Call the create_notification database function
+
+=======
 
 <<<<<<< HEAD
   relatedId = null;
@@ -161,10 +180,13 @@ export async function createNotification({;
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -174,6 +196,7 @@ export async function createNotification({;
   } catch (error) {;
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error('Error creating notification:', error);
 
     console && console.error('Error creating notification:', error);
@@ -234,6 +257,8 @@ if ( {) {
     return { success: false, error }
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -259,3 +284,4 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

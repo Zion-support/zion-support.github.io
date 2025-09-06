@@ -43,9 +43,12 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>
       
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Animated floating particles */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
@@ -53,6 +56,8 @@ export function HeroSection() {
         <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
         <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-pulse"></div>
       </div>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -70,11 +75,14 @@ export function HeroSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="container relative z-10 px-4 mx-auto text-center">
         <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold">
           The Future of Tech & AI Marketplace
         </GradientHeading>
         <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
           The world's first free marketplace dedicated to high-tech and
@@ -110,6 +118,7 @@ export function HeroSection() {
     </section>
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
   )
@@ -174,6 +183,8 @@ export function HeroSection() {;
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6"
             size="lg"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -181,6 +192,7 @@ export function HeroSection() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Button  } from '@/components / ui / button';
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Link  } from './react-router-dom';
@@ -241,6 +253,9 @@ function HeroSection() {
           <Button;
             variant="outline";
 <<<<<<< HEAD
+          >;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
             className="border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue - dark text - lg py - 6";
             size="lg";
@@ -260,10 +275,13 @@ function HeroSection() {
 =======
           >;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Link to="/marketplace">Explore Marketplace</Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -304,3 +322,4 @@ function HeroSection() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

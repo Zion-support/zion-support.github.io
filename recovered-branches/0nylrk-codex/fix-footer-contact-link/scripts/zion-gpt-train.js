@@ -28,12 +28,15 @@ const {
   OPENAI_API_KEY
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 } = process.env
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
@@ -151,6 +154,8 @@ function buildTrainingPairs(records) {
       completion: stripPii(job.description)
     })
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   }
   for (const resume of records.resumes) {
     pairs.push({
@@ -184,6 +189,7 @@ async function saveJsonl(pairs, filePath) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
 
@@ -196,6 +202,8 @@ async function saveJsonl(pairs, filePath) {;
       prompt: stripPii(log.question)
 
       completion: stripPii(log.answer)
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -228,11 +236,14 @@ function buildTrainingPairs(records) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     })
   }
   return pairs
 }
 async function saveJsonl(pairs, filePath) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -340,6 +351,7 @@ async function createFineTune(filePath) {
   console.log('Fine-tune job created:', job.id)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -369,6 +381,8 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   }),
   const job = await jobRes && jobRes.json(),
@@ -532,6 +546,7 @@ main ().catch ((err) => {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 async function main() {
 
@@ -545,6 +560,17 @@ main().catch((err) => {
   console.error('Training workflow failed', err)
 
 <<<<<<< HEAD
+
+
+
+
+
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+}),
+;
+=======
+<<<<<<< HEAD
 });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -552,12 +578,15 @@ main().catch((err) => {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -572,10 +601,13 @@ main().catch((err) => {
 }),
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -745,3 +777,4 @@ await createFineTune ('training-data.jsonl')
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

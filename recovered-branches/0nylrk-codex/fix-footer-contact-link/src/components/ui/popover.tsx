@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -22,11 +24,15 @@ import { cn } from "@/lib/utils"
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const Popover = PopoverPrimitive.Root
 const PopoverTrigger = PopoverPrimitive.Trigger
 const PopoverContent = React.forwardRef<
   React.ElementRef<typeof PopoverPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>
+<<<<<<< HEAD
+>(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >(({ className, align = &quot;center&quot;, sideOffset = 4, ...props }, ref) => (
@@ -36,12 +42,15 @@ const PopoverContent = React.forwardRef<
 =======
 >(({ className, align = "center", sideOffset = 4, ...props }, ref) => (
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <PopoverPrimitive.Portal>
     <PopoverPrimitive.Content
       ref={ref}
       align={align}
       sideOffset={sideOffset}
       className={cn(
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -58,6 +67,7 @@ const PopoverContent = React.forwardRef<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         className
       )}
       {...props}
@@ -66,11 +76,14 @@ const PopoverContent = React.forwardRef<
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { Popover, PopoverTrigger, PopoverContent }
 export { Popover, PopoverTrigger, PopoverContent }
 ;
@@ -88,6 +101,8 @@ export { Popover, PopoverTrigger, PopoverContent }
 ;
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -95,6 +110,7 @@ export { Popover, PopoverTrigger, PopoverContent }
 export { Popover, PopoverTrigger, PopoverContent }
 ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { Popover, PopoverTrigger, PopoverContent };
 export { Popover, PopoverTrigger, PopoverContent }
 <<<<<<< HEAD
@@ -144,9 +160,12 @@ const PopoverContent = React.forwardRef<;
     />;
   </PopoverPrimitive.Portal>));
 PopoverContent.display_name = PopoverPrimitive.Content.display_name;
+<<<<<<< HEAD
+=======
 export { Popover, PopoverTrigger, PopoverContent }
 <<<<<<< HEAD
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { Popover, PopoverTrigger, PopoverContent }
       sideOffset={sideOffset}
       className={cn(;
@@ -171,4 +190,7 @@ React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 export { Popover, PopoverTrigger, PopoverContent }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

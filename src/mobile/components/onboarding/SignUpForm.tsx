@@ -10,7 +10,11 @@ import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
+export function SignUpForm() {;
+=======
 export function SignUpForm() {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 ;
@@ -66,8 +70,13 @@ function SignUpForm() {
     try {;
       setShowVerificationMessage(false), // Reset verification message;
       if (signupMode) {;
+<<<<<<< HEAD
+        const result = await signUp(formData && formData.email, formData && formData.password, {;
+          name: formData && formData.name}),;
+=======
         const result = await signUp(formData.email, formData.password, {;
           name: formData.name}),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (result?.error) {;
           throw new Error(result.error as any), // Cast to any if type is AuthError;
         }
@@ -82,10 +91,18 @@ function SignUpForm() {
           setShowVerificationMessage(true);
         } else {;
           // Only navigate if email verification is not required;
+<<<<<<< HEAD
+          router && router.push("/mobile");
+        };
+      } else {;
+        const { error } = await login(formData && formData.email, formData && formData.password);
+
+=======
           router.push("/mobile");
         }
       } else {;
         const { error } = await login(formData.email, formData.password),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         if (error) {;
           throw new Error(error);
         }
@@ -101,11 +118,19 @@ function SignUpForm() {
       setIsLoading(false)
     }
   };
+<<<<<<< HEAD
+
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
+<<<<<<< HEAD
+      setError(err && err.message);
+=======
       setError(err.message);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
 
   },

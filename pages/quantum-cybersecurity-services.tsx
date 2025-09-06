@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
@@ -98,8 +97,6 @@ export default function QuantumCybersecurityServices() {
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
             </motion.p>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -116,7 +113,6 @@ export default function QuantumCybersecurityServices() {
 
 
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -147,19 +143,6 @@ export default function QuantumCybersecurityServices() {
                 Get Started
               </Link>
             </motion.div>
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              className='text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed'>;
-              Unbreakable security powered by quantum computing and advanced AI;
-              algorithms. Protect your business from tomorrow's threats today.            </motion && motion.p>;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* Key Benefits */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -191,65 +174,12 @@ export default function QuantumCybersecurityServices() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Services Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-<<<<<<< HEAD
-=======
-        <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-className="text-center mb-16"
-=======
-<<<<<<< HEAD
-        {/* Services Section */}
-        <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        {/* Services Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -260,12 +190,6 @@ className="text-center mb-16"
                 Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumCybersecurityServices.map((service, index) => (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <motion.div
 
 
@@ -304,68 +228,15 @@ className="text-center mb-16"
                     theme='cyberpunk'                  />;
                 </motion && motion.div>;
 
-<<<<<<< HEAD
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <UltraFuturisticServiceCard2026 
                     service={service} 
-=======
-=======
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {quantumCybersecurityServices.map((service, index) => (
-                <motion.div
-                  key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 50 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                >
-<<<<<<< HEAD
-                  <UltraFuturisticServiceCard2026 
-                    service={service} 
-=======
-                  <UltraFuturisticServiceCard2026
-                    service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     variant="premium"
                     theme="cyberpunk"
                   />
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -377,13 +248,6 @@ className="text-center mb-16"
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-=======
-
-              ))}
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -398,7 +262,6 @@ className="text-center mb-16"
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
 
               transition={{ duration: 0 && 0.8 }}
               className='text-center mb-16'>;
@@ -410,18 +273,6 @@ className="text-center mb-16"
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion&& motion.div
 
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Why Quantum Security?;
-                </span>;
-              </h2>;
-            </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion&& motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -429,14 +280,6 @@ className="text-center mb-16"
                 </span>
               </h2>
             </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <motion.div
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
@@ -444,49 +287,16 @@ className="text-center mb-16"
                 </p>
                 <ul className="text-gray-400 space-y-2">
                   <li>• RSA encryption will be vulnerable</li>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <li>• Current SSL/TLS certificates at risk</li>
                   <li>• Blockchain security compromised</li>
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
-<<<<<<< HEAD
-=======
               <motion.div
-
-
-                className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'>;
-                <h3 className='text-2xl font-bold text-white mb-4'>;
-                  The Quantum Threat;
-                </h3>;
-                <p className='text-gray-300 mb-4'>;
-                  Quantum computers will eventually break current encryption;
-                  standards, making traditional security obsolete.;
-                </p>;
-                <ul className='text-gray-400 space-y-2'>                  <li>• RSA encryption will be vulnerable</li>;
-                  <li>• Current SSL/TLS certificates at risk</li>;
-                  <li>• Blockchain security compromised</li>;
-                  <li>• Financial systems exposed</li>;
-                </ul>;
-              </motion && motion.div>;
-              <motion&& motion.div
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              <motion.div
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
@@ -494,10 +304,6 @@ className="text-center mb-16"
                 </p>
                 <ul className="text-gray-400 space-y-2">
                   <li>• Post-quantum cryptography</li>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <li>• Quantum key distribution</li>
                   <li>• AI-enhanced threat detection</li>
                   <li>• Future-proof security architecture</li>
@@ -506,94 +312,17 @@ className="text-center mb-16"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-
-                className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'>;
-                <h3 className='text-2xl font-bold text-white mb-4'>;
-                  Our Quantum Solution;
-                </h3>;
-                <p className='text-gray-300 mb-4'>;
-                  We provide quantum-resistant security that protects against;
-                  both current and future threats.;
-                </p>;
-                <ul className='text-gray-400 space-y-2'>                  <li>• Post-quantum cryptography</li>;
-                  <li>• Quantum key distribution</li>;
-                  <li>• AI-enhanced threat detection</li>;
-                  <li>• Future-proof security architecture</li>;
-                </ul>;
-              </motion && motion.div>;
-            </div>;
-          </div>;
-        </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>                  Advanced Security Features;
-                </span>;
-              </h2>;
-            </motion && motion.div>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion&& motion.div
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-className="text-center mb-16"
-=======
-<<<<<<< HEAD
-        {/* Security Features Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-=======
-        {/* Security Features Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="text-center mb-16"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -601,35 +330,14 @@ className="text-center mb-16"
                 </span>
               </h2>
             </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
-              <motion.div
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className='text-center'>;
                 <div className='text-6xl mb-4'>🤖</div>;
                 <h3 className='text-xl font-semibold text-white mb-2'>;
@@ -644,155 +352,7 @@ className="text-center mb-16"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
-
-        {/* Contact Section */}
-        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
-          <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-                className="text-center"
-=======
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
-=======
-                className='text-center'
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔒</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Zero Trust Architecture</h3>
-                <p className="text-gray-400 text-sm">Never trust, always verify approach to security.</p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔄</div>
-                <h3 className="text-xl font-semibold text-white mb-2">Continuous Monitoring</h3>
-                <p className="text-gray-400 text-sm">24/7 threat detection and response.</p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.3 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
-                <p className="text-gray-400 text-sm">Automated threat response and incident resolution.</p>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
                 <p className="text-gray-400 text-sm">Comprehensive security insights and reporting.</p>
@@ -800,19 +360,6 @@ className="text-center mb-16"
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
-
-        {/* Contact Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -835,30 +382,7 @@ className="text-center mb-16"
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >
-<<<<<<< HEAD
-=======
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className='text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6'>;
-                <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>;
-                  Secure Your Future Today;
-                </span>;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'>;
-                Don't wait for quantum computers to break your security. Contact;
-                us now to implement quantum-resistant protection.;
-              </p>;
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>;
-                <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>;
-                  <div className='text-3xl mb-4'>📱</div>;
-                  <h3 className='text-xl font-semibold text-white mb-2'>;
-                    Phone;
-                  </h3>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <a
                     href='tel:+13024640950'
                     className='text-indigo-400 hover:text-indigo-300 transition-colors'>;
@@ -1114,67 +638,17 @@ className="text-center mb-16"
 
                     +1 302 464 0950
                   </a>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    +1 302 464 0950
-                  </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                   <div className="text-3xl mb-4">✉️</div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                   <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">
                     kleber@ziontechgroup.com
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                  </a>
-=======
-                  </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                   <div className="text-3xl mb-4">📍</div>
                   <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                   <p className="text-gray-300 text-sm">
-<<<<<<< HEAD
-                  Secure Your Future Today
-                </span>
-              </h2>
-              <p className=&quot;text-xl text-gray-300 mb-8&quot;>
-                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
-              </p>
-              
-              <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
-                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
-                  <div className=&quot;text-3xl mb-4&quot;>📱</div>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Phone</h3>
-                  <a href=&quot;tel:+13024640950&quot; className=&quot;text-indigo-400 hover:text-indigo-300 transition-colors&quot;>
-                    +1 302 464 0950
-                  </Link>
-                </div>
-                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
-                  <div className=&quot;text-3xl mb-4&quot;>✉️</div>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email</h3>
-                  <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-indigo-400 hover:text-indigo-300 transition-colors&quot;>
-                    kleber@ziontechgroup.com
-                  </Link>
-                </div>
-                <div className=&quot;bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6&quot;>
-                  <div className=&quot;text-3xl mb-4&quot;>📍</div>
-                  <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Address</h3>
-                  <p className=&quot;text-gray-300 text-sm&quot;>
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     364 E Main St STE 1008<br />
                     Middletown DE 19709
                   </p>
@@ -1182,36 +656,17 @@ className="text-center mb-16"
               </div>
 
 
-<<<<<<< HEAD
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
                   Start Your Security Assessment
-<<<<<<< HEAD
                 </a>
-=======
-<<<<<<< HEAD
-                </a>
-=======
-                </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="https://ziontechgroup.com"
                   className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
                   Visit Our Website
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </a>
               </div>
             </motion.div>
@@ -1219,51 +674,6 @@ className="text-center mb-16"
         </section>
       </UltraFuturisticBackground2026>
     </>
-<<<<<<< HEAD
-=======
-
-
-                  href='https://ziontechgroup && ziontechgroup.com'
-                  className='border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
-                  Visit Our Website;
-                </a>;
-=======
-
-  )
-            >;
-              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">;
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">;
-                  Secure Your Future Today;
-                </span>;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📱</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    +1 302 464 0950;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">✉️</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    kleber@ziontechgroup.com;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📍</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-                  <p className="text-gray-300 text-sm">;
-                    364 E Main St STE 1008<br />;
-                    Middletown DE 19709;
-                  </p>;
-                </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </motion && motion.div>;
           </div>;
@@ -1273,12 +683,10 @@ className="text-center mb-16"
   );
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
                 <a;
                   href='mailto:kleber@ziontechgroup.com';
@@ -1288,59 +696,6 @@ className="text-center mb-16"
                 <a;
                   href='https://ziontechgroup.com';
                   className='border - 2 border - indigo - 400 text - indigo - 400 px - 8 py - 4 rounded - xl text - lg font - semibold hover:bg - indigo - 400 hover:text - black transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30'                >;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-  );
-=======
-  )
-            >;
-              <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">;
-                <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">;
-                  Secure Your Future Today;
-                </span>;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.;
-              </p>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📱</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>;
-                  <a href="tel:+13024640950" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    +1 302 464 0950;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">✉️</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Email</h3>;
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-indigo-400 hover:text-indigo-300 transition-colors">;
-                    kleber@ziontechgroup.com;
-                  </a>;
-                </div>;
-                <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">;
-                  <div className="text-3xl mb-4">📍</div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-                  <p className="text-gray-300 text-sm">;
-                    364 E Main St STE 1008<br />;
-                    Middletown DE 19709;
-                  </p>;
-                </div>;
-              </div>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <a;
-                  href="mailto:kleber@ziontechgroup.com";
-                  className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
-                >;
-                  Start Your Security Assessment;
-                </a>;
-                <a;
-                  href="https://ziontechgroup.com";
-                  className="border-2 border-indigo-400 text-indigo-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-indigo-400 hover:text-black transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30";
-                >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Visit Our Website;
                 </a>;
               </div>;
@@ -1348,10 +703,6 @@ className="text-center mb-16"
           </div>;
         </section>;
       </UltraFuturisticBackground2026>;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </>;
   );
   } catch (error) {
@@ -1359,9 +710,3 @@ className="text-center mb-16"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

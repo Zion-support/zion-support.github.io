@@ -1,14 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {
       },
     ],
   },
   {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 =======
@@ -40,6 +45,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [;
@@ -171,6 +177,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     availability_type: 'project',
     is_verified: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.'
     id: "t-001", user_id: "user-001",
@@ -184,6 +192,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
 import { TalentProfile } from "@/types/talent",
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample talent profiles with realistic data for the talent directory
 export const TALENT_PROFILES: TalentProfile[] = [
   {
@@ -219,6 +228,9 @@ export const TALENT_PROFILES: TalentProfile[] = [
   },
 ];
 <<<<<<< HEAD
+;
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -239,3 +251,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
 =======
 ;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

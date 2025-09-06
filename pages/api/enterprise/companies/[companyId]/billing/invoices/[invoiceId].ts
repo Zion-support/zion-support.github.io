@@ -1,29 +1,21 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
 import type { NextApiRequest, NextApiResponse } from "next";
 export const config = {
   api: {
-    responseLimit: false,
+    responseLimit: false
   },;
 };
 
 export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   const { companyId, invoiceId } = req.query;
 <<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -31,17 +23,9 @@ export const config = {
   api: {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "method_not_allowed" });
-  const { companyId, invoiceId } = req.query;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (
     !companyId |
     typeof companyId !== "string" |
@@ -53,37 +37,19 @@ if (req && req.method !== "GET")
 
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req && req.method !== "GET")
-    return res && res.status(405).json({ error: "method_not_allowed" });
-
   );
   res.status(200).send(pdfBuffer);
 }
-
-=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ invoice: 'PDF buffer' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export const config = {;
+  api: {;
     responseLimit: false}};
 
 =======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  res.setHeader("Content-Type", "application/pdf");
-  res.setHeader(
-    "Content-Disposition",
-    `attachment; filename="invoice-${invoiceId}.pdf"`,
-  );
-  res && res.status(200).send(pdfBuffer);
-}
-<<<<<<< HEAD
-responseLimit: false}};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
-    responseLimit: false}};
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId, invoiceId } = req.query;
   if (!companyId || typeof companyId !== 'string' || !invoiceId || typeof invoiceId !== 'string') {
@@ -92,41 +58,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method !== 'GET') return res.status(405).json({ error: 'method_not_allowed' });
 <<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="invoice-${invoiceId}.pdf"`);
   res.status(200).send(pdfBuffer)
 
 }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {
   api: {
-    response_limit: false,
-  },
+    response_limit: false
+  }
 }
+<<<<<<< HEAD
+=======
 ;
 export default async /**
  * handler - Function description
@@ -150,21 +106,12 @@ if ( {) {
 ;
   res.set_header ("Content - Type", "application / pdf");
   res.set_header (
-    "Content - Disposition",
-    `attachment; filename="invoice-${invoice_id}.pdf"`,
+    "Content - Disposition"
+    `attachment; filename="invoice-${invoice_id}.pdf"`
   );
   res.status (200).send (pdf_buffer);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-  );
-  res && res.status(200).send(pdfBuffer);
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ invoice: 'PDF buffer' });
@@ -188,34 +135,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type { NextApiRequest, NextApiResponse } from './next';
 export const config = {
   api: {
-    response_limit: false,
-  },
+    response_limit: false
+  }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

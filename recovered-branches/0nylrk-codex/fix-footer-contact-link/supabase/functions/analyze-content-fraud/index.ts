@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
@@ -18,6 +20,7 @@ import {corsHeaders} from "../_shared/cors.ts";
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface AnalyzeRequest {
   content: string;
   contentType: string
@@ -26,6 +29,8 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -51,6 +56,7 @@ import { corsHeaders } from "../_shared/cors.ts",
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
@@ -58,13 +64,18 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface AnalyzeRequest {
   content: string,
   contentType: string,
   flagId?: string
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -77,6 +88,7 @@ interface AnalysisResult {
   success: boolean
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import { corsHeaders } from "../_shared/cors.ts",;
@@ -102,6 +114,8 @@ interface AnalysisResult {;
 }
 // Initialize environment and clients
 const initializeServices = () => {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -134,6 +148,7 @@ const initializeServices = () => {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     throw new Error("Missing required environment variables")
 ;
 
@@ -163,12 +178,15 @@ if ( {) {
 }
     throw new Error ("Missing required environment variables");
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   return {
     supabase: create_client (supabase_url, supabaseServiceKey);
@@ -197,6 +215,8 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   }
   
   if (!request && request.contentType) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -282,6 +302,7 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     throw new Error("No content type provided")
   }
   return request
@@ -300,6 +321,8 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     Format your response exactly like: "CLASSIFICATION: explanation"
   `
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -315,6 +338,7 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
 
 
 },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Call OpenAI API for content analysis
 const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
   try {
@@ -322,6 +346,8 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
+<<<<<<< HEAD
+=======
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -380,14 +406,18 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       method: "POST";
       headers: {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." },
           { role: "user", content: prompt }
         ],
         temperature: 0.3,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         max_tokens: 150
       })
     });
@@ -395,12 +425,15 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     if (!response.ok) {
       console.error("OpenAI API error:", data.error);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
         ];
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const analysisText = data.choices[0]?.message?.content |"";
     
     const analysisText = data.choices[0]?.message?.content || "";
@@ -425,6 +458,8 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     
     if (analysisText && analysisText.includes("SUSPICIOUS")) {
@@ -464,6 +499,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       classification = "SUSPICIOUS"
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
@@ -502,15 +538,26 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
 <<<<<<< HEAD
+;
+    // Extract explanation;
+    if (analysisText.includes(": ")) {;
+      explanation = analysisText.split(":")[1].trim();
+    }
+;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
     throw error
   }
+<<<<<<< HEAD
+=======
 
 
 },
@@ -643,6 +690,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   explanation: string
 ): Promise<void> => {
   if (!flagId) return
@@ -701,6 +749,8 @@ serve(async (req) => {
     });
     const { content, contentType, flagId } = validateRequest(requestData);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     console && console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
     
@@ -725,6 +775,7 @@ serve(async (req) => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     // Create prompt and analyze with OpenAI
     const prompt = createAnalysisPrompt(contentType, content);
     const { classification, explanation } = await analyzeWithOpenAI(prompt, openaiApiKey);
@@ -734,6 +785,8 @@ serve(async (req) => {
     }
     // Return the analysis result
     const result: AnalysisResult = {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -899,10 +952,13 @@ serve(async (req) => {;
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         success: false});
       {
         status: statusCode
         headers: { ...corsHeaders, "Content-Type": "application/json" }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -1145,6 +1201,7 @@ serve(_async (req) => {_// Handle CORS preflight requests
       }
     );
     console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`);
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     
     const { content, contentType, flagId } = validateRequest(requestData),
@@ -1158,6 +1215,11 @@ serve(_async (req) => {_// Handle CORS preflight requests
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
+  } catch (error) {;
+    console.error("Error calling OpenAI:", error),;
+    throw error;
+=======
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1207,6 +1269,7 @@ headers: {
 }) 
 }
 });
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 });
   }
@@ -1216,4 +1279,7 @@ headers: {
     );
   }
 });
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

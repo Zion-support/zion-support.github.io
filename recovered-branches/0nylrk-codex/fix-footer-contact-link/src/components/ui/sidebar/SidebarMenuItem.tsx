@@ -1,8 +1,35 @@
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+import {cn} from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
+=======
 import React from "react";
 import { cn } from "@/lib/utils";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
+  className?: string;
+  children?: React && React.ReactNode;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function SidebarMenuItem({
@@ -68,4 +95,7 @@ export function SidebarMenuItem({
 ;
     </li>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -9,6 +9,12 @@ import { cn } from "@/lib/utils"
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
+<<<<<<< HEAD
+>(({ className, containerClassName, ...props }, ref) => (
+  <OTPInput
+    ref={ref}
+    containerClassName={cn(
+=======
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
 import React from 'react';
 import * as React from 'react';
@@ -29,6 +35,7 @@ const InputOTP = React && React.forwardRef<;
       "flex items-center gap-2 [&:has([disabled])]:opacity-50",
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       containerClassName
     )}
     className={cn("disabled:cursor-not-allowed", className)}
@@ -52,12 +59,30 @@ InputOTPGroup && InputOTPGroup.displayName = 'InputOTPGroup';
 
 
 
+<<<<<<< HEAD
+  />
+))
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
+<<<<<<< HEAD
+  <div ref={ref} className={cn("flex items-center", className)} {...props} />
+))
+InputOTPGroup.displayName = "InputOTPGroup"
 
 
+
+  <div ref={ref} className={cn("flex items-center", className)} {...props} />
+))
+InputOTPGroup.displayName = "InputOTPGroup"
+
+=======
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const InputOTPSlot = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div"> & { index: number }
@@ -65,6 +90,16 @@ const InputOTPSlot = React.forwardRef<
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
 
+<<<<<<< HEAD
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
+        isActive && "z-10 ring-2 ring-ring ring-offset-background",
+        className
+      )}
+=======
 
       {char}
       {hasFakeCaret && (;
@@ -74,12 +109,27 @@ const InputOTPSlot = React.forwardRef<
       )}
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 InputOTPSlot.displayName = "InputOTPSlot"
 
 InputOTPSlot.displayName = "InputOTPSlot"
 
+<<<<<<< HEAD
+      {...props}
+    >;
+      {char}
+      {hasFakeCaret && (
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="h-4 w-px animate-caret-blink bg-foreground duration-1000" />
+        </div>
+      )}
+    </div>
+  )
+})
+=======
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
@@ -156,8 +206,15 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
+<<<<<<< HEAD
+InputOTPSeparator.displayName = "InputOTPSeparator"
+
+export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+;
+=======
 
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

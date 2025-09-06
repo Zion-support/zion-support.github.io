@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -38,6 +40,7 @@ import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {cn} from '@/lib/utils';
 import {ButtonProps, buttonVariants} from '@/components/ui/button';
 const Pagination = ({ className, ...props }: React.ComponentProps<'nav'>) => (
@@ -62,6 +65,8 @@ import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
     aria-label='pagination'
     className={cn('mx-auto flex w-full justify-center', className)}
     {...props}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
   />
 <<<<<<< HEAD
@@ -149,6 +154,7 @@ type PaginationLinkProps = {
 >(({ className, ...props }, ref) => (
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   <ul
     ref={ref}
     className={cn('flex flex-row items-center gap-1', className)}
@@ -197,9 +203,12 @@ const PaginationLink = ({
   isActive,
   size = "icon",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   ...props
 }: PaginationLinkProps) => (
 =======
@@ -236,6 +245,8 @@ type PaginationLinkProps = {
     aria-current={isActive ? 'page' : undefined}
     className={cn(
       buttonVariants({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -425,6 +436,7 @@ PaginationNext.displayName = "PaginationNext"
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const PaginationEllipsis = ({
   className
   ...props
@@ -448,6 +460,8 @@ const PaginationEllipsis = ({;
 <<<<<<< HEAD
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
+<<<<<<< HEAD
+=======
 =======
 =======
 );
@@ -466,6 +480,7 @@ const PaginationEllipsis = ({
 
 PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
@@ -473,10 +488,13 @@ PaginationEllipsis && PaginationEllipsis.displayName = 'PaginationEllipsis';
     <span className="sr-only">More pages</span>
   </span>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 )
 PaginationEllipsis.displayName = "PaginationEllipsis"
 
@@ -611,6 +629,8 @@ export {
   PaginationLink,
   PaginationNext,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -620,6 +640,7 @@ export {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   />;
 ));
 PaginationContent.displayName = "PaginationContent";
@@ -735,6 +756,8 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
 }
 ;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   PaginationPrevious} />) Pagination.displayName = "Pagination" const PaginationContent = React.forwardRef< HTMLUListElement;
 />) ) PaginationContent.displayName = "PaginationContent" const PaginationItem = React.forwardRef< HTMLLIElement;
 ) ) PaginationItem.displayName = "PaginationItem" React.ComponentProps<"a"> 
@@ -754,3 +777,4 @@ PaginationEllipsis.displayName = "PaginationEllipsis";
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

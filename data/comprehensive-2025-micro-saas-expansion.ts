@@ -26,10 +26,13 @@ name: 'AI Healthcare Diagnostics Platform';
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
+<<<<<<< HEAD
+=======
 
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 price: '$599';
 period: '/month';
 description: 'Revolutionary AI platform that provides accurate medical diagnostics, treatment recommendations, and patient monitoring with FDA compliance.';
@@ -39,6 +42,8 @@ features: [ 'AI - powered medical image analysis (X - ray, MRI, CT) Symptom anal
 'Real - time diagnostic accuracy tracking_multi - specialty coverage (cardiology, radiology, oncology) ';
 'Automated report generation_telemedicine integration capabilities' ];
 popular: true;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 icon: '🏥';
@@ -52,6 +57,7 @@ trial_days: 30;
 setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Healthcare AI';
 real_service: true;
 technology: ['Deep Learning, Computer Vision, Python, TensorFlow, PyTorch'];
@@ -59,6 +65,8 @@ integrations: ['Epic, Cerner, Allscripts, PACS systems, Telemedicine platforms']
 use_cases: ['Medical imaging analysis_diagnostic assistance', 'Treatment planning_patient monitoring'];
 roi: 'Average 500% ROI through improved diagnostic accuracy and reduced misdiagnosis costs';
 competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -79,6 +87,7 @@ capabilities: ['Multi - modality imaging_real - time analysis', 'Clinical decisi
 market_advantage: 'Highest accuracy rate in the market with comprehensive multi - specialty coverage';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Fintech AI Services {
   id: 'ai - fintech - intelligence - platform';
@@ -95,6 +104,8 @@ features: [ 'Real - time market analysis and prediction_automated trading strate
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '💰';
 
 color: 'from - yellow - 600 to - orange - 600';
@@ -106,6 +117,7 @@ trial_days: 14;
 setup_time: '1 week';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Fintech AI';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -113,6 +125,8 @@ integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, Coinbase
 use_cases: ['Algorithmic trading_risk management', 'Portfolio optimization_market analysis'];
 roi: 'Average 400% ROI through improved trading performance and risk reduction';
 competitors: ['Alpaca, QuantConnect, AlgoTrader, MetaTrader'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -133,6 +147,7 @@ capabilities: ['Multi - asset trading_advanced analytics', 'Risk management_regu
 market_advantage: 'First platform to combine AI - powered trading, risk management, and compliance in one solution';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Cybersecurity AI Services {
   id: 'ai - cybersecurity - threat - hunting';
@@ -149,6 +164,8 @@ features: [ 'AI - powered threat hunting and detection_zero false positive guara
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '🛡️';
 
 color: 'from - red - 600 to - pink - 600';
@@ -160,6 +177,7 @@ trial_days: 30;
 setup_time: '1 week';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Cybersecurity';
 real_service: true;
 technology: ['Machine Learning, Deep Learning, Python, TensorFlow, PyTorch'];
@@ -167,6 +185,8 @@ integrations: ['SIEM systems, EDR platforms, Threat intelligence feeds, Cloud pr
 use_cases: ['Threat detection_incident response', 'Security monitoring_compliance management'];
 roi: 'Average 350% ROI through reduced security incidents and automated response';
 competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -187,6 +207,7 @@ capabilities: ['Advanced threat hunting_real - time detection', 'Automated respo
 market_advantage: 'Only platform with zero false positive guarantee and automated incident response';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //IoT & Smart City Services {
   id: 'iot - smart - city - platform';
@@ -203,6 +224,8 @@ features: [ 'Smart traffic management and optimization_energy consumption monito
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '🏙️';
 
 color: 'from - indigo - 600 to - purple - 600';
@@ -217,10 +240,13 @@ real_service: true;
 technology: ['IoT, Edge Computing, AI / ML, Python, Node.js, React'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 integrations: ['Traffic systems, Energy grids, Waste management, Environmental sensors'];
 use_cases: ['Traffic optimization_energy management', 'Waste optimization_environmental monitoring'];
 roi: 'Average 600% ROI through operational efficiency and cost savings';
 competitors: ['Cisco Kinetic, Siemens MindSphere, IBM Watson IoT, Microsoft Azure IoT'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -241,6 +267,7 @@ capabilities: ['Comprehensive monitoring_real - time optimization', 'Data analyt
 market_advantage: 'Most comprehensive smart city platform with integrated citizen engagement features';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Blockchain & DeFi Services {
   id: 'blockchain - defi - intelligence';
@@ -257,6 +284,8 @@ features: [ 'AI - powered blockchain transaction analysisDeFi strategy optimizat
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '🔗';
 
 color: 'from - emerald - 600 to - teal - 600';
@@ -271,10 +300,13 @@ real_service: true;
 technology: ['Blockchain, AI / ML, Python, Solidity, Web3.js, React'];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 integrations: ['Ethereum, Solana, Polygon, Binance Smart Chain, Major DeFi protocols'];
 use_cases: ['Blockchain analysisDeFi optimization', 'Portfolio management_risk assessment'];
 roi: 'Average 800% ROI through improved DeFi strategies and risk reduction';
 competitors: ['Chainalysis, Elliptic, CipherTrace, TRM Labs'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -295,6 +327,7 @@ capabilities: ['Multi - chain analysisAI - powered insights', 'DeFi optimization
 market_advantage: 'First platform to combine AI - powered blockchain analysis with DeFi optimization';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Quantum Computing Services {
   id: 'quantum - computing - as - a-service';
@@ -311,6 +344,8 @@ features: [ 'Access to 1000+ qubit quantum computersAI - powered quantum algorit
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '⚛️';
 
 color: 'from - purple - 600 to - violet - 600';
@@ -322,6 +357,7 @@ trial_days: 30;
 setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Quantum Computing';
 real_service: true;
 technology: ['Quantum Computing, AI / ML, Python, Qiskit, Cirq, Q#'];
@@ -329,6 +365,8 @@ integrations: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon 
 use_cases: ['Drug discovery_financial modeling', 'CryptographyOptimization problems'];
 roi: 'Average 1000% ROI through breakthrough discoveries and research acceleration';
 competitors: ['IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, Amazon Braket'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -349,6 +387,7 @@ capabilities: ['Multi - processor supportAI - powered algorithms', 'Real - time 
 market_advantage: 'First platform to combine quantum computing access with AI - powered optimization';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Space Technology Services {
   id: 'space - resource - intelligence';
@@ -365,6 +404,8 @@ features: [ 'AI - powered asteroid resource identification_satellite mission opt
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '🚀';
 
 color: 'from - slate - 600 to - gray - 600';
@@ -376,6 +417,7 @@ trial_days: 30;
 setup_time: '3 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Space Technology';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Python, TensorFlow, Satellite imagery analysis'];
@@ -383,6 +425,8 @@ integrations: ['NASA APIs, ESA data, Commercial satellite providers, Space weath
 use_cases: ['Resource discovery_mission optimization', 'Debris tracking_traffic management'];
 roi: 'Average 700% ROI through optimized missions and resource discovery';
 competitors: ['Maxar, Planet Labs, Airbus Defence and Space, Thales Alenia Space'];
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -403,6 +447,7 @@ capabilities: ['AI - powered analysis_real - time monitoring', 'Mission planning
 market_advantage: 'First platform to combine AI - powered resource discovery with mission optimization';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 //Autonomous Systems Services {
   id: 'autonomous - systems - orchestration';
@@ -419,6 +464,8 @@ features: [ 'Multi - vehicle autonomous coordinationAI - powered route optimizat
 popular: true;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 icon: '🤖';
 
 color: 'from - cyan - 600 to - blue - 600';
@@ -430,6 +477,7 @@ trial_days: 30;
 setup_time: '2 weeks';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 category: 'Autonomous Systems';
 real_service: true;
 technology: ['AI / ML, Computer Vision, Robotics, Python, TensorFlow, ROS'];
@@ -438,6 +486,9 @@ use_cases: ['Fleet management_route optimization', 'Safety monitoring_maintenanc
 roi: 'Average 450% ROI through operational efficiency and safety improvements';
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -453,6 +504,7 @@ launch_date: '2024 - 03 - 10';
 customers: 89;
 rating: 4 && 4.7;
 reviews: 67;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 =======
 
@@ -463,8 +515,11 @@ import { ServiceVariant } from '../types/service-variants',
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -783,6 +838,9 @@ market_advantage: 'First platform to provide comprehensive orchestration of mult
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

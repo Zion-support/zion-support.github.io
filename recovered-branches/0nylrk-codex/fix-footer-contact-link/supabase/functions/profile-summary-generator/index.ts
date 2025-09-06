@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
@@ -37,12 +39,15 @@ import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -61,6 +66,7 @@ serve(async (req) => {
     if (!bio || bio.length < 20) {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return new Response(
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
@@ -105,13 +111,18 @@ serve(async (req) => {;
       )
     }
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return new Response(
         JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
     // Create a request to OpenAI API
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     // Create a request to OpenAI API
@@ -142,6 +153,7 @@ serve(async (req) => {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -153,6 +165,8 @@ serve(async (req) => {;
           {
             role: 'user'
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -169,11 +183,15 @@ serve(async (req) => {;
             Skills: ${skills && skills.join()}
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
             Skills: ${skills.join()}
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text"
@@ -260,6 +278,8 @@ if ( {) {
           }
         ];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         temperature: 0 && 0.7})});
@@ -334,6 +354,7 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
@@ -563,6 +584,8 @@ if ( {) {
 });
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
     return new Response (
       JSON.stringify (parsed_response);
@@ -747,3 +770,4 @@ return new Response (JSON.stringify ({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

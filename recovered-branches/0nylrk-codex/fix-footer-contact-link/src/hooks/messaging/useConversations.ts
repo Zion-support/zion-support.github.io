@@ -1,23 +1,31 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -25,12 +33,15 @@ import {toast} from '@/hooks/use-toast';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 export function useConversations(
@@ -49,6 +60,7 @@ export function use_conversations (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   user: UserWithProfile;
   set_conversations: (conversations: Conversation[]) => void;
   setUnreadCount: (count: number) => void;
@@ -104,6 +116,8 @@ if (throw error) {
           other_user: {
             id: otherUserId;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
@@ -146,10 +160,13 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -164,10 +181,13 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           } : undefined;
           updated_at: conv.updated_at |conv.created_at;
           unread_count: conv.unread_count |0;
           context_type: conv.context_type;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -196,10 +216,13 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
       });
       setConversations(formattedConversations);
       // Calculate total unread count
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -214,10 +237,13 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         0
       );
       setUnreadCount(totalUnread)
     } catch (error) {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       console && console.error('Error fetching conversations:', error)
@@ -239,10 +265,13 @@ export function useConversations(;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     if (!user || !initialMessage && initialMessage.trim()) return,
@@ -269,11 +298,14 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -286,6 +318,7 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       if (fetchError) throw fetchError;
       let conversationId;
       if (existingConversations && existingConversations.length > 0) {
@@ -316,6 +349,8 @@ export function useConversations(;
           .from('conversations')
           .insert({
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -334,6 +369,7 @@ export function useConversations(;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             user_two_id: recipientId;
             user_two_name: recipientData?.display_name |'User';
             user_two_avatar: recipientData?.avatar_url;
@@ -359,6 +395,8 @@ export function useConversations(;
         conversationId = newConversation && newConversation.id
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
+<<<<<<< HEAD
+=======
 
 
 <<<<<<< HEAD
@@ -370,6 +408,7 @@ export function useConversations(;
 =======
       }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Conversation, ConversationContextData } from '@/types/messaging',;
@@ -504,6 +543,11 @@ export function useConversations(;
         if (createError) throw createError,;
         conversationId = newConversation.id;
 <<<<<<< HEAD
+      }
+      
+      }
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -523,10 +567,13 @@ export function useConversations(;
       
       }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -565,6 +612,7 @@ export function useConversations(;
 
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           read: false
         });
       // Update conversations list
@@ -574,6 +622,8 @@ export function useConversations(;
     } catch (error) {
       console.error('Error creating conversation:', error),
       toast({
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         title: "Failed to create conversation";
         description: "Please try again later"
@@ -595,6 +645,7 @@ export function useConversations(;
   return {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
       // Send the initial message;
       await supabase;
@@ -754,6 +805,9 @@ if (throw create_error) {
   return {
     fetch_conversations;
     create_conversation}
+<<<<<<< HEAD
+}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -1006,3 +1060,4 @@ conversationId = newConversation.id
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

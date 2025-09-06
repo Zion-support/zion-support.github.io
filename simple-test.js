@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -24,6 +30,7 @@
 
 
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node const fs = require('fs') const path = require('path')  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';););  } catch(error) { } const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { ) { ) { }} else { } }); if () { ) { ) { }} else { } const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { ) { ) { }} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)}  if ( { ) { { }} else { issues.forEach(issue => )}     
 #!/usr/bin/env node const fs = require('fs') const path = require('path')  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';););  } catch(error) { } const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { ) { ) { }} else { } }); if () { ) { ) { }} else { } const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { ) { ) { }} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)}  if ( { ) { { }} else { issues.forEach(issue => )}     
 #!/usr/bin/env node const fs = require('fs') const path = require('path')  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';););  } catch(error) { } const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { ) { ) { }} else { } }); if () { ) { ) { }} else { } const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { ) { ) { }} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)}  if ( { ) { { }} else { issues.forEach(issue => )}     
@@ -42,13 +49,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node const fs = require('fs') const path = require('path')  try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';););  } catch(error) { } const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { ) { ) { }} else { } }); if () { ) { ) { }} else { } const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { ) { ) { }} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)}  if ( { ) { { }} else { issues.forEach(issue => )}     
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 #!/usr/bin/env node
 /**
  * Simple Test Script;
@@ -104,6 +118,15 @@ console.log('2. Run npm install if node_modules is missing');
 console.log('3. Run npm run build to test build process');
 console.log('4. Run npm test to run test suit,e');
 <<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
+#!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+#!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -153,8 +176,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
 #!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 #!/usr/bin/env node const fs = require('fs') const path = require('path') console.log('🧪 Running Simple Tests...'); try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8';);); console.log('✅ Package.json is valid'); console.log(` - Name: ${packageJson.name}`);console.log(` - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,',error.message)} const requiredFiles = [ 'src/App.tsx;'; 'src/main.tsx'; 'package.json'; 'next.config.js']requiredFiles.forEach(file => { if () { console.log(`✅ ${file} exists`)) { ) { console.log(`✅ ${file} exists`)}} else { console.log(`❌ ${file} missing`)} }); if () { console.log('✅ node_modules directory exist,s',)) { ) { console.log('✅ node_modules directory exist,s',)}} else { console.log('❌ node_modules directory missing')} const issues = []; try { const appContent = fs.readFileSync('src/App.tsx','utf8';); if () { console.log('✅ App.tsx has React import')) { ) { console.log('✅ App.tsx has React import')}} else { issues.push('App.tsx missing React import')} } catch (error) { issues.push(`Cannot read App.tsx: ${error.message }`)} console.log('\n📊 Test Summary: '); if ( { console.log('✅ All basic tests passe,d',)) { { console.log('✅ All basic tests passe,d',)}} else { console.log('❌ Issues found: ');issues.forEach(issue => console.log(` - ${issue}`);)} console.log('\n🎯 Next steps: '); console.log('1. Fix any issues found above'); console.log('2. Run npm install if node_modules is missing'); console.log('3. Run npm run build to test build process'); console.log('4. Run npm test to run test suit,e');
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface QRCodeOptions {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface QRCodeOptions {
 export interface QRCodeOptions {;
   text: string;
@@ -17,11 +20,14 @@ export interface QRCodeOptions {;
   logo?: {
     url: string;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     width: number,
     height: number;
@@ -43,6 +49,8 @@ export interface QRCodeOptions {;
   generated_at: Date;
   size: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -58,11 +66,14 @@ export interface QRCodeOptions {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
   id: string;
   name: string;
   description: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -148,6 +159,7 @@ class QRCodeService {
   options: Partial < QRCodeOptions>,
   category: 'business' | 'personal' | 'social' | 'custom';
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 class QRCodeService {
   private readonly DEFAULT_OPTIONS: Partial < QRCodeOptions> = {
@@ -155,6 +167,8 @@ class QRCodeService {
     foreground_color: '#000000';
     background_color: '#FFFFFF';
     errorCorrectionLevel: 'M';
+<<<<<<< HEAD
+=======
 
     margin: 4,
     format: 'svg';
@@ -163,11 +177,14 @@ class QRCodeService {
   private readonly ERROR_CORRECTION_LEVELS = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     L: { level: 'L', name: 'Low', capacity: 0.07 }
     M: { level: 'M', name: 'Medium', capacity: 0.15 }
     Q: { level: 'Q', name: 'Quartile', capacity: 0.25 }
     H: { level: 'H', name: 'High', capacity: 0.30 }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -202,6 +219,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
@@ -214,13 +232,18 @@ class QRCodeService {
 ;
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return {
       data_url;
       options: final_options;
       generated_at: new Date ();
       size: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -252,10 +275,13 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     }
   }
   async generateBusinessCardQR(data: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -264,12 +290,15 @@ class QRCodeService {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         width: final_options.size!,
         height: final_options.size!;
       }
     }
   }
   async generateBusinessCardQR (data: {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
@@ -279,11 +308,14 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     name: string;
     company: string;
     title: string;
     email: string;
     phone: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -308,6 +340,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       text: vcard;
       size: 300;
       errorCorrectionLevel: 'H'
@@ -320,6 +353,8 @@ class QRCodeService {
     encryption: 'WPA' | 'WEP' | 'nopass'
     hidden?: boolean
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,6 +377,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       text: wifiString;
       size: 256;
       errorCorrectionLevel: 'M'
@@ -353,6 +389,8 @@ class QRCodeService {
     subject?: string
     body?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -375,6 +413,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       text: mailto;
       size: 256;
       errorCorrectionLevel: 'M'
@@ -385,6 +424,8 @@ class QRCodeService {
     phone: string
     message?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -407,6 +448,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       text: smsString;
       size: 256;
       errorCorrectionLevel: 'M'
@@ -419,6 +461,8 @@ class QRCodeService {
     altitude?: number
     name?: string
   }): Promise<QRCodeResult> {
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -441,6 +485,7 @@ class QRCodeService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       text: geoString;
       size: 256;
       errorCorrectionLevel: 'M'
@@ -449,6 +494,8 @@ class QRCodeService {
   }
   getTemplates(): QRCodeTemplate[] {
     return [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -497,6 +544,7 @@ class QRCodeService {
         category: 'personal'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface QRCodeOptions {;
   text: string,;
   size?: number,;
@@ -902,12 +950,15 @@ class QRCodeService {;
         category: 'personal';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 
 export interface QRCodeOptions {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       }
     ];
   }
@@ -941,6 +992,8 @@ export interface QRCodeOptions {;
   getErrorCorrectionInfo(): Record<string any> {;
     return this.ERROR_CORRECTION_LEVELS;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -951,6 +1004,7 @@ export interface QRCodeOptions {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   private validateOptions(options: QRCodeOptions): void {
 
@@ -968,6 +1022,8 @@ export interface QRCodeOptions {;
       throw new Error('Margin must be between 0 and 10')
     }
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
     
@@ -1011,12 +1067,15 @@ export interface QRCodeOptions {;
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
     const size = options.size!;
     const margin = options.margin!;
     const contentSize = size - (margin * 2);
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1026,6 +1085,7 @@ export interface QRCodeOptions {;
 =======
     const contentSize = size - (margin * 2);
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1063,6 +1123,9 @@ export interface QRCodeOptions {;
         <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
         <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}</text>
       </svg>
+<<<<<<< HEAD
+  private generateVCard(data: any): string {
+=======
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1139,11 +1202,14 @@ if (.length === 0) {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     vcard += `FN:${data.name}\n`;
     vcard += `ORG:${data.company}\n`;
     vcard += `TITLE:${data.title}\n`;
     vcard += `EMAIL:${data.email}\n`;
     vcard += `TEL:${data.phone}\n`;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1187,6 +1253,7 @@ if (.length === 0) {) {
       wifiString += `P:${data.password},`
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     `,
     
     return `data: image/svg+xml,base64,${btoa(svg)}`
@@ -1212,6 +1279,8 @@ if (.length === 0) {) {
     if (data.encryption !== 'nopass') {;
       wifiString += `P:${data.password},`;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     
@@ -1223,12 +1292,15 @@ if (.length === 0) {) {
     return vcard
   }
   private generateWiFiString(data: any): string {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 
 
     }
     if (data.hidden) {
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -1248,6 +1320,7 @@ if (.length === 0) {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     let wifiString = 'WIFI:',
     wifiString += `S:${data && data.ssid},`;
     wifiString += `T:${data && data.encryption},`;
@@ -1257,8 +1330,11 @@ if (.length === 0) {) {
     if (data && data.hidden) {
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       wifiString += 'H: true,'
     }
 
@@ -1266,6 +1342,10 @@ if (.length === 0) {) {
     
 
 
+<<<<<<< HEAD
+      wifiString += 'H: true,'
+    }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1282,10 +1362,16 @@ if (.length === 0) {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     wifiString += ;
     return wifiString
   }
   private generateMailtoString(data: any): string {
+<<<<<<< HEAD
+    }
+    return mailto
+  }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1312,6 +1398,7 @@ if (.length === 0) {) {
       mailto += `?${params.join('&')}`;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 =======
@@ -1320,12 +1407,15 @@ if (.length === 0) {) {
     return mailto
   }
 
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
     }
     return mailto
   }
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   private generateSMSString(data: any): string {
     let smsString = `sms:${data.phone}`;
     if (data.message) {
@@ -1353,6 +1443,8 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,;
     if (data.altitude) {;
       geoString += `,${data.altitude}`;
+<<<<<<< HEAD
+=======
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -1409,6 +1501,7 @@ if (.length === 0) {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -1460,6 +1553,8 @@ if (.length === 0) {) {
     maxCapacity: number
   } {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1483,10 +1578,13 @@ if (.length === 0) {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return {
       canFit: textLength <= maxCapacity;
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel
       maxCapacity
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1526,6 +1624,7 @@ if (.length === 0) {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
@@ -1533,6 +1632,8 @@ if (.length === 0) {) {
     return []
   }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1542,16 +1643,20 @@ if (.length === 0) {) {
     // In a real app, this would save to storage
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.log('QR Code saved:', qrCode.options.text)
   }
 }
 export const qrCodeService = new QRCodeService();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   saveQRCode(qrCode: QRCodeResult): void {
@@ -1668,6 +1773,8 @@ export const qrCodeService = new QRCodeService ();
 =======
 
 export const qrCodeService = new QRCodeService();
+<<<<<<< HEAD
+=======
 export interface QRCodeOptions {;
   text:string,;
   size?:number,;
@@ -2081,3 +2188,4 @@ export const qrCodeService = new QRCodeService();
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

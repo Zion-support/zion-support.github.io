@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -16,6 +18,7 @@ import {Badge} from "@/components/ui/badge";
 import React from "react";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Card } from "@/components/ui/card";
 import {
   Table;
@@ -29,15 +32,21 @@ import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -49,6 +58,8 @@ import {
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -58,6 +69,7 @@ import { Badge } from "@/components/ui/badge",
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -69,6 +81,8 @@ const syncLogs = [
     timestamp: "2024-05-20T12:30:45Z"
     details: "Successfully synced contact data for Job #1234"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -84,6 +98,7 @@ const syncLogs = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "2"
     integration: "Greenhouse"
@@ -92,6 +107,8 @@ const syncLogs = [
     timestamp: "2024-05-20T10:15:22Z"
     details: "New applicant created in Greenhouse from Zion application"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -107,6 +124,7 @@ const syncLogs = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "3"
     integration: "HubSpot"
@@ -115,6 +133,8 @@ const syncLogs = [
     timestamp: "2024-05-19T16:45:12Z"
     details: "Failed to update deal - API rate limit exceeded"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -130,6 +150,7 @@ const syncLogs = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "4"
     integration: "Zoho CRM"
@@ -138,6 +159,8 @@ const syncLogs = [
     timestamp: "2024-05-19T14:22:33Z"
     details: "Job synced but some fields were skipped due to mapping issues"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -153,6 +176,7 @@ const syncLogs = [
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {
     id: "5"
     integration: "Lever"
@@ -161,6 +185,8 @@ const syncLogs = [
     timestamp: "2024-05-18T09:10:05Z"
     details: "Updated candidate status to 'Interview Scheduled'"
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -204,11 +230,14 @@ export function IntegrationsSyncLog() {
         return <Badge variant="destructive">Error</Badge>,
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "warning":
         return <Badge className="bg-amber-500">Warning</Badge>
       default:
         return <Badge variant="outline">Unknown</Badge>
     }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -226,6 +255,7 @@ export function IntegrationsSyncLog() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card>
       <div className="p-4">
@@ -251,6 +281,8 @@ export function IntegrationsSyncLog() {
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -258,6 +290,7 @@ export function IntegrationsSyncLog() {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             ))}
           </TableBody>
         </Table>
@@ -266,9 +299,12 @@ export function IntegrationsSyncLog() {
   )
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -280,12 +316,15 @@ import {;
   TableRow} from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 // Sample data for integration sync logs;
 const syncLogs = [;
   {;
@@ -296,6 +335,8 @@ const syncLogs = [;
     timestamp: "2024-05-20T12:30:45Z",;
     details: "Successfully synced contact data for Job #1234";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -303,10 +344,13 @@ const syncLogs = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "2",;
     integration: "Greenhouse",;
     event: "applicant_created",;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     status: "success", ;
@@ -321,6 +365,7 @@ const syncLogs = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "3",;
     integration: "HubSpot",;
@@ -329,6 +374,8 @@ const syncLogs = [;
     timestamp: "2024-05-19T16:45:12Z",;
     details: "Failed to update deal - API rate limit exceeded";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -336,6 +383,7 @@ const syncLogs = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "4",;
     integration: "Zoho CRM",;
@@ -344,6 +392,8 @@ const syncLogs = [;
     timestamp: "2024-05-19T14:22:33Z",;
     details: "Job synced but some fields were skipped due to mapping issues";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   };
 =======
@@ -351,6 +401,7 @@ const syncLogs = [;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   {;
     id: "5",;
     integration: "Lever",;
@@ -359,6 +410,8 @@ const syncLogs = [;
     timestamp: "2024-05-18T09:10:05Z",;
     details: "Updated candidate status to 'Interview Scheduled'";
   }
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 ];
@@ -369,10 +422,13 @@ export function IntegrationsSyncLog() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case "success": return <Badge className="bg-green-500">Success</Badge>;
       case "error":;
         return <Badge variant="destructive">Error</Badge>;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 
@@ -451,6 +507,7 @@ export function IntegrationsSyncLog() {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card>;
       <div className="p-4">;
@@ -483,6 +540,8 @@ export function IntegrationsSyncLog() {;
 <<<<<<< HEAD
 =======
             ))}
+<<<<<<< HEAD
+=======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </TableBody>;
         </Table>;
@@ -498,6 +557,7 @@ export function IntegrationsSyncLog() {;
 =======
             ))}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
@@ -546,6 +606,8 @@ const sync_logs = [;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export /**
  * IntegrationsSyncLog - Function description
@@ -655,3 +717,4 @@ return (<Card> <div className="p-4" > hidden md:table-cell" >Details</TableHead>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

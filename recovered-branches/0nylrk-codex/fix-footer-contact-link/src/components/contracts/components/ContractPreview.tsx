@@ -4,12 +4,15 @@ import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface ContractPreviewProps {;
   contractContent?: string;
   generatedContract?: string, // Added to support both naming conventions;
 =======
 =======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -17,7 +20,10 @@ import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from './react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -61,6 +67,8 @@ function ContractPreview() {
 =======
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
@@ -76,10 +84,16 @@ import { SmartContractInfo } from "@/types/smart-contracts",
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+<<<<<<< HEAD
+}
+export function ContractPreview({
+  contractContent;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -125,16 +139,22 @@ export function ContractPreview({
 =======
   const displayContent = contractContent || generatedContract || "",
   
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   talent?: TalentProfile;
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="space - y-4">;
       <div className="flex justify - between items - center mb - 4">;
         <h2 className="text - 2xl font - bold">Contract Preview</h2>;
         {status === 'ready' ? (
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -274,6 +294,7 @@ export function ContractPreview({ ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800">;
@@ -293,6 +314,8 @@ export function ContractPreview({ ;
         {/* Render the contract content as markdown or formatted text */}
         <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground">;
           {displayContent}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 
         </div>;
@@ -339,6 +362,7 @@ export function ContractPreview({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">;
         {onClose && (;
@@ -346,6 +370,8 @@ export function ContractPreview({ ;
             Close;
           </Button>;
         )}
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -394,6 +420,7 @@ export function ContractPreview({ ;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
@@ -482,6 +509,8 @@ export function ContractPreview({ ;
     </div>);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   ),;}
@@ -528,3 +557,4 @@ deploymentInfo
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

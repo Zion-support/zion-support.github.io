@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method === "GET") {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -30,33 +17,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(201).json(created);
 
 <<<<<<< HEAD
-
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 =======
 
 
@@ -64,6 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     const companies = store.listCompanies();
@@ -158,8 +133,6 @@ export default function handler(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 
@@ -171,11 +144,7 @@ export default function handler(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
