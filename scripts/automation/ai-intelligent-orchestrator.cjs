@@ -3,7 +3,10 @@
  * AI-Powered Intelligent Orchestrator;
  * Advanced decision-making system for PM2 process management;
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
@@ -31,4 +34,7 @@ const { execSync } = require('child_process')
       "action"
         "type"
       this.log(` Learning model update "failed"`)
+<<<<<<< HEAD
       this.log(` Fatal "error"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -8,11 +9,14 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from '@jest/globals';
 import AppMinimal from './AppMinimal';
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
   it('displays correct content', () => {
     render(<AppMinimal />);
@@ -27,10 +31,13 @@ describe('AppMinimal', () => {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
 });'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 </AppMinimal>'
@@ -43,3 +50,14 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import AppM
 =======
 </AppMinimal>'
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+import { render, screen } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import AppMinimal from './AppMinimal'
+describe('AppMinimal'
+  it('renders without crashing'
+    expect(screen.getByRole('main'
+  it('displays correct content'
+  it('handles user interactions'
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

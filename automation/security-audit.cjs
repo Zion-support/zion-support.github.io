@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+=======
+}},
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+// Security checks
+const securityChecks = [{
+    "name": 'Dependency Vulnerability Scan',
+    "action": () => {
+      try {
+        execSync('npm audit --audit-level=moderate', { "stdio": 'pipe' });
+      } catch (error) {
+      }
+    },
+  },
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     }},
   {
     "name": 'Environment Variables Check',
@@ -14,6 +32,15 @@
       });
 
       
+<<<<<<< HEAD
+=======
+
+      
+
+      
+
+      
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     }},
   {
     "name": 'API Security Check',
@@ -35,6 +62,15 @@
             securityIssues++;
           }
         });
+<<<<<<< HEAD
+=======
+        console.log(
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+        );
+      }
+    },
+  },
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
         
       }
@@ -59,6 +95,13 @@
             cspFound++;
           }
         });
+<<<<<<< HEAD
+=======
+        console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
+      }
+    },
+  },
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
         
       }
@@ -110,6 +153,12 @@ const report = {
     "successful": successCount,
     "failed": totalCount - successCount}};
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
@@ -118,6 +167,7 @@ if (!fs.existsSync(reportsDir)) {
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -130,6 +180,8 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -143,3 +195,9 @@ console.log('� Security Audit Starting...\n')
     "name"
     "name"
     "status"
+<<<<<<< HEAD
+=======
+    "status"
+    "status"
+    "status"
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

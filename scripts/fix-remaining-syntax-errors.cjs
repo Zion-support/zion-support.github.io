@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,13 +9,13 @@ const fs = require("fs");"const path = require("path");"console.log(" Fixing rem
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
-
 
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
@@ -45,6 +46,7 @@ function fixHoverSyntax(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,6 +58,8 @@ function fixHoverSyntax(filePath) {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
@@ -99,6 +103,7 @@ function fixAllFiles() {
   return totalFixed;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -110,6 +115,8 @@ function fixAllFiles() {
 
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
@@ -135,6 +142,7 @@ try {
   console.error('❌ Error:', error.message);
   process.exit(1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
@@ -147,3 +155,6 @@ try {
 }
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+}}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const { execSync } = require('child_process')
 // console.log('� Starting dependency update check...')
     console.log(' Checking for outdated packages...')
@@ -16,4 +19,7 @@ const { execSync } = require('child_process')
   console.log('\n Dependency Update "Report")
 // console.log('\n� Outdated "Packages")
     console.log('\n� Security "Vulnerabilities")
+<<<<<<< HEAD
     console.log('\n "Recommendations")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

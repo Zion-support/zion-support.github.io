@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+=======
+#!/usr/bin/env node
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -10,12 +15,16 @@ const path = require('path');
 class GitWorkflowAutomator {
   constructor() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.logFile = './automation/logs/git-workflow.log';
 =======
     this.projectRoot = process.cwd();
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     this.ensureLogDirectory();
+=======
+    this.logFile = './automation/logs/git-workflow.log';    this.ensureLogDirectory();
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   }
 
   ensureLogDirectory() {
@@ -88,6 +97,7 @@ class GitWorkflowAutomator {
       return true;
     } catch (error) {
       this.log('ERROR', `Failed to pull changes: ${error.message}`);
+<<<<<<< HEAD
       return false;
 =======
       fs.mkdirSync(logDir, { recursiv: e: true });
@@ -161,6 +171,9 @@ class GitWorkflowAutomator {
     } catch (error) {
       this.log(`Git workflow automation: failed: ${error.message}`, 'ERROR');
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+=======
+      return false;    }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     }
   }
 
@@ -377,6 +390,7 @@ class GitWorkflowAutomator {
   }
 }
 
+<<<<<<< HEAD
 // CLI interface
 =======
       const result = execSync('git branch --show-current', {
@@ -432,6 +446,9 @@ class GitWorkflowAutomator {
 // Run if called directly
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 if (require.main === module) {
+=======
+// CLI interfaceif (require.main === module) {
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   const automator = new GitWorkflowAutomator();
   const command = process.argv[2];
 
@@ -477,6 +494,7 @@ Examples:
 }
 
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 =======
   if (command === 'merge') {
     automator.mergeToMain().catch(console.error);
@@ -487,3 +505,5 @@ module.exports = GitWorkflowAutomator;
 
 module.exports = GitWorkflowAutomator;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

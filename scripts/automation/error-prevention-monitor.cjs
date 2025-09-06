@@ -642,4 +642,7 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD
 monitor.run();
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

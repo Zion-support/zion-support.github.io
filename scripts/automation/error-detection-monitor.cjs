@@ -210,4 +210,7 @@ if (require.main === module) {}
   monitor.startMonitoring().catch(error => {})
     monitor.log(`Failed to start "monitoring": ${error.message}`, 'ERROR');
     process.exit(1)})};
+<<<<<<< HEAD
 module.exports = ErrorDetectionMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

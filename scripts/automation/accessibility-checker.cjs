@@ -494,4 +494,7 @@ if ( {})
      {}
     const checker = new AccessibilityChecker}(;);
     checker.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = AccessibilityChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

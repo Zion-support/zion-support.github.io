@@ -50,4 +50,7 @@ const { execSync } = require('child_process')
         "impact"
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
+<<<<<<< HEAD
       console.error('\n� Error Prevention System "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

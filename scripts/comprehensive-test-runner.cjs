@@ -8,4 +8,7 @@ console.log('🧪 Starting Comprehensive Test Runner...')
     addTest('Unit Tests', 'skipped', 0, { "reason"})
     runCommand('PYTHONPATH="$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py"
     addTest('Python Unit Tests', 'skipped', 0, { "reason"})
+<<<<<<< HEAD
 console.log('\n Test Results "Summary")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

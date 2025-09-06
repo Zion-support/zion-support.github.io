@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -76,4 +79,7 @@ const path = require("path")
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
+<<<<<<< HEAD
     console.error(" CI pipeline "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

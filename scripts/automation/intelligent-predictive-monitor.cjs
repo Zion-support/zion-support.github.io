@@ -68,4 +68,7 @@ const path = require("path")
 // console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
+<<<<<<< HEAD
   console.error(" Intelligent Predictive Monitor "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

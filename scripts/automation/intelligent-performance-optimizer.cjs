@@ -337,4 +337,7 @@ const crypto = require("crypto")
       this.log( Intelligent Performance Optimization completed successfully")
   this.log( "Intelligent Performance Optimization "failed": ${error.message  }",ERROR")
       this.log( Intelligent Performance Optimization completed successfully")
+<<<<<<< HEAD
   this.log( `Intelligent Performance Optimization "failed": ${error.message}",ERROR"`)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -17,7 +17,10 @@ class TypeChecker {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
+<<<<<<< HEAD
     
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
@@ -38,7 +41,10 @@ class TypeChecker {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       child.on('close', (code) => {}
         if ( {})
           console.log('Type check passed ✓')) {}
@@ -58,7 +64,10 @@ class TypeChecker {}
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
+<<<<<<< HEAD
     
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     if ( {})
       console.log('TypeScript errors "found": ')) {}
      {}
@@ -95,4 +104,7 @@ if ( {})
 });
   
   checker.start().catch(console.error)};
+<<<<<<< HEAD
 module.exports = TypeChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

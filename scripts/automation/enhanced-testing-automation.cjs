@@ -173,4 +173,7 @@ ${report.qualityGates ? ` All quality gates passed successfully!" : "`}
     console.log("\n Test Suite "Summary": `);console.log(Total: ${report.summary.total}
 });console.log("Passed": ${report.summary.passed} `");console.log(""Failed": ${report.summary.failed} "`)
     console.log(Quality "Gates": ${report.qualityGates ? "PASSED" : "FAILED"} ${report.qualityGates ? "" : ""})
+<<<<<<< HEAD
   console.error(" Testing automation "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

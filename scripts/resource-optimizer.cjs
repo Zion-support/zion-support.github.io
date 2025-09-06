@@ -60,4 +60,7 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "impact"
+<<<<<<< HEAD
       console.error('\n� Resource Optimizer "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

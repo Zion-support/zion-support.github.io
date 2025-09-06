@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
   const baseUrl ,=
   https: //ziontechgroup.com'';;
@@ -7,11 +8,45 @@ export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
 import React from 'react';
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
+=======
+import React from 'react';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 interface SitemapProps {
   // Add props here as needed
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+interface SitemapProps {
+  // Add props here as needed
+}
+
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+interface SitemapProps {
+  // Add props here as needed
+}
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   res.status(200).send(sitemap)}
 import * as React from 'react';
 
@@ -33,6 +68,7 @@ export default function Sitemap({ }: SitemapProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -42,3 +78,45 @@ export default function Sitemap({ }: SitemapProps) {
 >>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+}
+
+
+=======
+
+=======
+=======
+}
+
+
+
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+}
+}
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

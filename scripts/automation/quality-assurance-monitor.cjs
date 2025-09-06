@@ -79,4 +79,7 @@ class QualityAssuranceMonitor {}
 if (require.main === module) {}
   const monitor = new QualityAssuranceMonitor();
   monitor.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = QualityAssuranceMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

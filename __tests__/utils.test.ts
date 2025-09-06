@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = {};
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -9,3 +10,11 @@ module.exports = {};
 =======
 module.exports = {};
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+// Mock test for utils
+describe('Utils', () => {
+  it('should work correctly', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

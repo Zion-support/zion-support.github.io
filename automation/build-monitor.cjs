@@ -2,9 +2,31 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 const { promisify } = require('util');
+<<<<<<< HEAD
 
 const execAsync = promisify(exec);
 
+=======
+const execAsync = promisify(exec);
+class BuildMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(
+      this.projectRoot,
+      'automation/logs/build-monitor.log'
+    );
+    this.buildReportFile = path.join(
+      this.projectRoot,
+      'automation/logs/build-report.json'
+    );
+    this.lastBuild = null;
+    this.buildInterval = 300000; // 5 minutes
+    this.isRunning = false;
+const execAsync = promisify(exec);
+
+const execAsync = promisify(exec);
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 class BuildMonitor {}
   constructor() {}
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
@@ -22,6 +44,23 @@ class BuildMonitor {}
     const startTime = Date.now();
     try {}
       this.log('Starting build process...');
+<<<<<<< HEAD
+=======
+      execSync('npm run clean', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 30000,
+      });
+      this.log('Build cleaned');
+      const buildOutput = execSync('npm run build', {
+        cwd: this.projectRoot,
+        encoding: 'utf8',
+        timeout: 300000,
+      });
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
       const { stdout, stderr } = await execAsync('npm run build', {})
         "cwd": process.cwd(),
@@ -31,6 +70,17 @@ class BuildMonitor {}
 
       const endTime = Date.now();
       const duration = endTime - startTime;
+<<<<<<< HEAD
+=======
+      this.lastBuild = {
+        timestamp: new Date().toISOString(),
+        success: true,
+        buildTime,
+        output: buildOutput,
+
+      const endTime = Date.now();
+      const duration = endTime - startTime;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
       const buildResult = {}
         "timestamp": new Date().toISOString(),
@@ -45,6 +95,21 @@ class BuildMonitor {}
       };
       this.lastBuildTime = new Date();
       this.log(`Build completed successfully in ${duration}ms`);
+<<<<<<< HEAD
+=======
+      this.log(`Build completed successfully in ${buildTime}ms`);
+      await this.saveBuildReport();
+    } catch (error) {
+      this.log(`Build failed: ${error.message}`);
+      this.lastBuild = {
+        timestamp: new Date().toISOString(),
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
       return buildResult;
     } catch (error) {}
@@ -63,6 +128,38 @@ class BuildMonitor {}
         this.buildHistory.shift();
       };
       this.log(`Build failed after ${duration}"ms": ${error.message}`);
+<<<<<<< HEAD
+=======
+  async handleBuildFailure(error) {
+    this.log('Handling build failure...');
+    try {
+      execSync('npm run lint:fix', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 60000,
+      });
+      this.log('Applied linting fixes');
+      execSync('npm run build', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 300000,
+      });
+      this.log('Build fixed and completed successfully');
+    } catch (fixError) {
+      this.log(`Failed to fix build: ${fixError.message}`);
+      await this.reportBuildFailure(fixError);
+    }
+  }
+  async saveBuildReport() {
+    const report = {
+      lastBuild: this.lastBuild,
+      projectRoot: this.projectRoot,
+      nodeVersion: process.version,
+      platform: process.platform,
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
       return buildResult;
     };
@@ -74,6 +171,28 @@ class BuildMonitor {}
         "cwd": process.cwd(),
         "timeout": 60000}
 });
+<<<<<<< HEAD
+=======
+  async reportBuildFailure(error) {
+    try {
+      const failureReport = {
+        timestamp: new Date().toISOString(),
+        error: error.message,
+        stack: error.stack,
+        projectRoot: this.projectRoot,
+      };
+      const failureFile = path.join(
+        this.projectRoot,
+        'automation/logs/build-failure-report.json'
+      );
+      fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
+      this.log('Build failure reported');
+    } catch (_) {}
+  }
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
       this.log('Type check completed successfully');
       return { "success": true, "output": stdout, "errors": stderr };
@@ -166,6 +285,12 @@ class BuildMonitor {}
     try {}
       this.log('Optimizing build...');
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       // Clean up first;
       await this.cleanupOldBuilds();
 
@@ -229,6 +354,22 @@ if (require.main === module) {}
     console.error('Build Monitor "failed": ', error);
     process.exit(1);
   }
+<<<<<<< HEAD
 });
 };
+=======
+});
+};
+module.exports = BuildMonitor;
+}
+const monitor = new BuildMonitor();
+monitor.start().catch(error => {
+  console.error('Failed to start build monitor:', error);
+  process.exit(1);
+});
+});
+};
+});
+};
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 module.exports = BuildMonitor;

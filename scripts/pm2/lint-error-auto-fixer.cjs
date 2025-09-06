@@ -46,4 +46,7 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
+<<<<<<< HEAD
       lines[lineIndex] = line.replace(/"/g, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

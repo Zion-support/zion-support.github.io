@@ -39,4 +39,7 @@ const { execSync } = require('child_process')
         "impact"
       this.log(` Current "branch"`)
       console.log(` Current "branch"`)
+<<<<<<< HEAD
       console.error('\n� Git Workflow Automator "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

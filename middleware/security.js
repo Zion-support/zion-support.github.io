@@ -3,15 +3,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
 
+<<<<<<< HEAD
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -47,3 +51,77 @@ export function securityMiddleware(request) {
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+
+export function securityMiddleware(request) {;
+
+
+  const response = NextResponse.next();
+  const response = NextResponse && NextResponse.next();
+  const response = NextResponse.next();
+  // Add security headers
+  const headers = getSecurityHeaders();
+  headers && headers.forEach(({ key, value }) => {
+    response && response.headers.set(key, value);
+  });
+  // Add HSTS header for HTTPS
+  return response;// Security headers middleware
+// Security headers middleware
+
+export function securityHeaders(req, res, next) {
+
+  Object && Object.entries({
+
+
+
+
+
+
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+    'X-Content-Type-Options': 'nosniff',
+    'X-Frame-Options': 'DENY',
+    'X-XSS-Protection': '1; mode=block',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+  }).forEach(([key, value]) => {
+    res.setHeader(key, value);
+  });
+  next();
+}
+
+}
+    response.headers.set (
+      'Strict - Transport - Security',
+      'max - age = 31536000; includeSubDomains; preload');
+  }
+  return response;// Security headers middleware;
+export /**
+ * security_headers - Function description
+ */
+function security_headers() {
+  Object.entries ({
+    'X - Content - Type - Options': 'nosniff',
+    'X - Frame - Options': 'DENY',
+    'X - XSS - Protection': '1; mode = block',
+    'Referrer - Policy': 'strict - origin - when - cross - origin',
+    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
+    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
+  }).for_each (([key, value]) => {
+    res.set_header (key, value);
+  });
+;
+  next ();
+}
+}
+
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

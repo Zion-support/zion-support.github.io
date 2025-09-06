@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from '@jest/globals';
 import App from '../App';
@@ -21,10 +22,13 @@ describe('App', () => {
 =======
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<App />)}
 }); it('handles user interactions',() => { render(<App />)})}
 });'
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 });
@@ -33,3 +37,12 @@ import { render, screen, describe, it, expect } from 'lucide-react'; import App 
 =======
 </App>'
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+import { render, screen } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import App from '../App'
+describe('App'
+  it('renders without crashing'
+    expect(screen.getByRole('main'
+  it('displays correct content'
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

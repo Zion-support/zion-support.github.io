@@ -235,4 +235,7 @@ class HealthChecker {}
 if (require.main === module) {}
   const checker = new HealthChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = HealthChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -61,6 +61,7 @@ fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -71,6 +72,8 @@ console.log('✅ Fixed SEO.tsx');
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
@@ -96,6 +99,10 @@ const talentFixed = talentContent
 fs.writeFileSync('src/components/talent/TalentCard.jsx', talentFixed, 'utf8');
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const filesToFix = ['components/ContactForm.tsx',
   'components/ErrorBoundary.tsx',
   'components/PerformanceMonitor.tsx',
@@ -109,6 +116,7 @@ fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
 =======
@@ -119,6 +127,8 @@ console.log('✅ Fixed use-toast.ts');
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
@@ -134,7 +144,10 @@ const servicesFixed = servicesContent
   .replace(/reviewCount: 156/g, '"reviewCount": 156');
 fs.writeFileSync('src/data/enhancedServices.ts', servicesFixed, 'utf8');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 // Fix useAuth.tsx - fix malformed function
 const authContent = fs.readFileSync('src/hooks/useAuth.tsx', 'utf8');
 const authFixed = authContent
@@ -145,6 +158,10 @@ const authFixed = authContent
 fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 ) {
     ) {
     if (processFile(file)) {
@@ -154,8 +171,11 @@ fs.writeFileSync('src/hooks/useAuth.tsx', authFixed, 'utf8');
 
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 if ( {
   ) {
      {
@@ -165,6 +185,7 @@ console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -172,6 +193,11 @@ console.log('✨ Final comprehensive fixes completed!');
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+console.log('✨ Final comprehensive fixes completed!');
+  }} else {
+  }
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')
@@ -213,3 +239,7 @@ const fs = require('fs')
   .replace(/reviewCount: 156/g, '"reviewCount")
   .replace(/"isAuthenticated": tru e,/g, '"isAuthenticated")
   .replace(/"isLoading": fals e/g, '"isLoading")
+<<<<<<< HEAD
+=======
+  .replace(/"isLoading": fals e/g, '"isLoading")
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

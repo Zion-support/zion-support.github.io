@@ -47,4 +47,7 @@ const { execSync } = require("child_process")
       this.log("� Maintenance Script completed successfully")
       return { "success"}
       this.log(`� Maintenance "failed": ${error.message}`, "error"`)
+<<<<<<< HEAD
       return { "success": false, "error"}
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

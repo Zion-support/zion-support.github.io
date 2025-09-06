@@ -5,11 +5,16 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
+<<<<<<< HEAD
 console.log('=====================================');
+=======
+console.log('==');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -33,6 +38,11 @@ function removeMergeConflictMarkers(content) {
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -112,6 +122,7 @@ function processFile(filePath) {
 
     // Check for merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,6 +183,8 @@ function findFilesWithConflicts() {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
             files.push(fullPath);
           }
         } catch (error) {
@@ -183,7 +196,40 @@ function findFilesWithConflicts() {
   
   searchDirectory('/workspace');
   return files;
+      // Remove any remaining conflict markers;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, "utf8")
+        this.resolvedFiles.push(filePath)
+        this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
+<<<<<<< HEAD
+=======
+    } catch (error) {
+      this.errors.push({ file: filePath, error: error.message })
+      this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
+}
+  }
+  cleanupBuildArtifacts() {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
+      ".next",
+      "node_modules/.cache",
+      "dist",
+      "build",
+      "*.log",
+      "package-lock.json"]
+    for (const artifact of artifactsToRemove) {
+      try {
+        if (fs.existsSync(artifact)) {
+          execSync(`rm -rf ${artifact}`, { cwd: this.projectRoot })
+          this.log(`🗑️ Removed ${artifact}`),,
+}
+      } catch (error) {
+        this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Main execution
 async function main() {

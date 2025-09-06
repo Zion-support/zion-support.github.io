@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 const fs = require('fs')
 const path = require('path')
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const { execSync } = require('child_process')
 console.log(' Enhanced Automation System Starting...')
         this.logDir = 'automation-reports'
@@ -40,4 +43,7 @@ console.log(' Enhanced Automation System Starting...')
         "command"
         execSync(check.command, { "stdio"})
             this.log(`System "error"`)
+<<<<<<< HEAD
     console.error('Automation system "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,18 +1,22 @@
+<<<<<<< HEAD
 export function securityMiddleware("request": NextRequest) {;
   const response = NextResponse.next();
   // Apply security headers;
   securityHeaders.forEach(({ key, value }) => {;
     response.headers.set(key, value)});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   // Apply Content Security Policy;
-  const cspString = Object.entries(contentSecurityPolicy.directives);
-    .map(([key, values]) => `${key} ${values.join(" ")}`);
+  const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);
+    .map(([key, values]) => `${key} ${values && values.join(" ")}`);
     .join("; ");
-  response.headers.set("Content-Security-Policy", cspString);
+  response && response.headers.set("Content-Security-Policy", cspString);
   // Rate limiting headers;
-  response.headers.set("X-RateLimit-Limit", "100");
-  response.headers.set("X-RateLimit-Remaining", "99");
-  response.headers.set("X-RateLimit-Reset", new Date(Date.now() + 3600000).toISOString());
+  response && response.headers.set("X-RateLimit-Limit", "100");
+  response && response.headers.set("X-RateLimit-Remaining", "99");
+  response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
   return response}
+<<<<<<< HEAD
 ;
 export const config = {;
   "matcher": [;
@@ -31,3 +35,5 @@ export function securityMiddleware(request: NextRequest) {; const response = Nex
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -83,4 +86,7 @@ NEXT_PUBLIC_API_URL="http"
 // console.log("\n  Fixes "Applied": ")
     console.log("\n New Features "Added": ")
     console.log(`\n� Detailed report saved "to"`)
+<<<<<<< HEAD
   console.error("Fatal "error")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

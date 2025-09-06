@@ -156,4 +156,7 @@ console.log( AI optimization report saved to ${reportPath}")
   recommendations.push("� Memory optimization opportunities available")
   recommendations.push(♿ Accessibility improvements recommended for better user experience")
   console.log("🤖 Starting AI Code Optimizer...")
+<<<<<<< HEAD
   console.error(" AI Code Optimizer "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

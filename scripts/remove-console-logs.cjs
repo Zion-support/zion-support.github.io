@@ -59,7 +59,10 @@ function processFile(filePath) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
     return 0}
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
@@ -124,5 +127,8 @@ function main() {
 
 if (require.main === module) {
   main().catch(console.error)}
+<<<<<<< HEAD
 
 module.exports = { removeConsoleStatements, processFile };
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

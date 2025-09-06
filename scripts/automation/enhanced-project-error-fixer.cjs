@@ -198,4 +198,7 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
+<<<<<<< HEAD
   this.log("Remaining "errors": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

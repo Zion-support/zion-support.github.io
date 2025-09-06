@@ -41,4 +41,7 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
+<<<<<<< HEAD
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

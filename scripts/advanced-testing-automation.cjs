@@ -77,4 +77,7 @@ const { execSync } = require('child_process')
     this.log(` "Failed"`)
     this.log(` Success "Rate"`)
       this.log(`Advanced Testing Automation "failed"`)
+<<<<<<< HEAD
     console.error('Advanced testing automation "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

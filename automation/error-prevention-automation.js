@@ -1,13 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 log(message) {
     const timestamp = new Date().toISOString(});
     const logMessage = `[${timestamp}] ${message}\;n;`;
     );
     fs.appendFileSync(this.logFile, logMessage)}
+<<<<<<< HEAD
  async runErrorPrevention() { try { this.log("Running error prevention checks."); const startTime = Date.now(); const results = { timestamp: new Date().toISOString()," checks: {}," fixes: {}," errors: {} / Run all prevention checks results.checks.linting = await this.checkLinting(); results.checks.types = await this.checkTypes(); results.checks.build = await this.checkBuild(); results.checks.dependencies = await this.checkDependencies(); results.checks.security = await this.checkSecurity(); results.checks.performance = await this.checkPerformance(); / Apply fixes if needed results.fixes = await this.applyFixes(results.checks); const endTime = Date.now(); results.duration = endTime - startTime; this.lastRun = results; await this.saveReport(results); this.log(`Error prevention completed in ${results.duration}ms`); } catch (error) {"` this.log(`Error prevention failed: ${error.message}`);" await this.reportError("error-prevention", error); } } async checkLinting() { try {" this.log("Checking linting."); " const result = execSync("npm run lint", { " cwd: this.projectRoot,"" encoding: "utf8"," timeout: 30000 return {" success: true," output: result," errors: 0," warnings: 0 }; } catch (error) {" const output = error.stdout | error.stderr | ""; const errorCount = (output.match(/error/g) | []).length; const warningCount = (output.match(/warning/g) | []).length; return {" success: false," output: output," errors: errorCount," warnings: warningCount," needsFix: true }} } async checkTypes() { try {" this.log("Checking types."); " const result = execSync("npm run type-check", { " cwd: this.projectRoot,"" encoding: "utf8"," timeout: 30000 return {" success: true," output: result," errors: 0 }; } catch (error) {" const output = error.stdout | error.stderr | ""; const errorCount = (output.match(/error/g) | []).length; return {" success: false," output: output," errors: errorCount," needsFix: true }; } } async checkBuild() { try {" this.log("Checking build."); " const result = execSync("npm run build", { " cwd: this.projectRoot,"" encoding: "utf8"," timeout: 300000 return {" success: true," output: result," errors: 0 }; } catch (error) {" const output = error.stdout | error.stderr | ""; const errorCount = (output.match(/error/g) | []).length; return {" success: false," output: output," errors: errorCount," needsFix: true }; } } async checkDependencies() { try {" this.log("Checking dependencies."); " const result = execSync("npm outdated", { " cwd: this.projectRoot,"" encoding: "utf8"," timeout: 30000 return {" success: true," output: result," outdated: 0 return {" success: false," output: output," outdated: outdatedCount," needsFix: true }; } else { return {" success: false," output: error.message," outdated: 0," needsFix: false }; } } } async checkSecurity() { try {" this.log("Checking security."); " const result = execSync("npm audit --audit-level=moderate", { " cwd: this.projectRoot,"" encoding: "utf8"," timeout: 120000 return {" success: true," output: result," vulnerabilities: 0 }; } catch (error) {" const output = error.stdout | error.stderr | ""; const vulnerabilities = this.parseVulnerabilities(output); return {" success: false," output: output," vulnerabilities: vulnerabilities," needsFix: true }} } async checkPerformance() { try {" this.log("Checking performance."); / Check build size" const buildDir = path.join(this.projectRoot, ".next"); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir); } / Check memory usage const memoryUsage = process.memoryUsage(); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100; " success: true," buildSize: buildSize," memoryUsage: memoryUsagePercent," needsOptimization: buildSize > 100 * 1024 * 1024 | memoryUsagePercent > 80 }; } catch (error) { return {" success: false," output: error.message," needsOptimization: false }; } } parseVulnerabilities(output) { const vulnerabilities = {" critical: 0," high: 0," moderate: 0," low: 0 }; try { const criticalMatch = output.match(/(\d+) critical;/;); const highMatch = output.match(/(\d+) high;/;); const moderateMatch = output.match(/(\d+) moderate;/;); const lowMatch = output.match(/(\d+) low;/;); if (vulnerabilities.critical = parseInt(criticalMatch[1])) { vulnerabilities.critical = parseInt(criticalMatch[1])} if (vulnerabilities.high = parseInt(highMatch[1])) { vulnerabilities.high = parseInt(highMatch[1])} if (vulnerabilities.moderate = parseInt(moderateMatch[1])) { vulnerabilities.moderate = parseInt(moderateMatch[1])} if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {"` this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities) { vulnerabilities.low = parseInt(lowMatch[1])} catch (error) {"` this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities}} getDirectorySize(dirPath) { let totalSize = ;0; try { const files = fs.readdirSync(dirPath;); for (const file of files) { const filePath = path.join(dirPath, file;); const stats = fs.statSync(filePath;); if (!fs.existsSync(logDir)) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { / Ignore errors } return totalSize) { ) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { / Ignore errors } return totalSize}} async applyFixes(checks) { const fixes = ;{}; try { / Fix linting issues if ( {" this.log("Applying linting fixes.")) { {" this.log("Applying linting fixes.")} try {"" execSync("npm run lint: fix", { cwd: this.projectRoot, timeout: 60000 });"" fixes.linting = { success: true, message: "Linting fixes applied" }} catch (error) {" fixes.linting = { success: false, message: error.message }} } / Fix dependency issues if ( {" this.log("Updating dependencies.")) { {" this.log("Updating dependencies.")} try {"" execSync("npm update", { cwd: this.projectRoot, timeout: 300000 });"" fixes.dependencies = { success: true, message: "Dependencies updated" }} catch (error) {" fixes.dependencies = { success: false, message: error.message }} } / Fix security issues if ( {" this.log("Applying security fixes.")) { {" this.log("Applying security fixes.")} try {"" execSync("npm audit fix", { cwd: this.projectRoot, timeout: 300000 });"" fixes.security = { success: true, message: "Security fixes applied" }} catch (error) {" fixes.security = { success: false, message: error.message }} } / Optimize performance if ( {" this.log("Applying performance optimizations.")) { {" this.log("Applying performance optimizations.")} try {"" execSync("npm run clean", { cwd: this.projectRoot, timeout: 30000 });"" execSync("npm run build", { cwd: this.projectRoot, timeout: 300000 });"" fixes.performance = { success: true, message: "Performance optimizations applied" }} catch (error) {" fixes.performance = { success: false, message: error.message }} } } catch (error) {"` this.log(`Failed to apply fixes: ${error.message}`)} return fixes} async saveReport(results) { const report = { .results," projectRoot: this.projectRoot," nodeVersion: process.version," platform: process.platform }; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))} async reportError(type, error) { const errorReport = {" timestamp: new Date().toISOString()," type: type," error: error.message," stack: error.stack," projectRoot: this.projectRoot }; " const errorFile = path.join(this.projectRoot, "automation/logs/error-prevention-error.json";); fs.writeFileSync(errorFile, JSON.stringify(errorReport, null, 2)); "` this.log(`Error reported: ${type}`)} async start() { this.isRunning = true;" this.log("Error Prevention Automation started"); / Initial run await this.runErrorPrevention(); / Set up interval for regular runs setInterval(async () => { if ( { await this.runErrorPrevention()} }, this.runInterval)) { { await this.runErrorPrevention()} }, this.runInterval)} / Handle graceful shutdown" process.on("SIGTERM", () => {" this.log("Received SIGTERM, shutting down gracefully"); this.isRunning = false; process.exit(0)}); " process.on("SIGINT", () => {" this.log("Received SIGINT, shutting down gracefully"); this.isRunning = false; process.exit(0)})}}/ Start the error prevention automationconst automation = new ErrorPreventionAutomation;(;);automation.start().catch(error => {"" console.error("Failed to start error prevention automation: ", error); process.exit(1)});='"`'"`
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   async runErrorPrevention() {}
     try {}
       this.log('Running error prevention checks...');',
@@ -19,6 +25,7 @@ log(message) {
         "errors": {}",
       // Run all prevention checks;
 ;      results.checks.linting = await this.checkLinting();
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -26,6 +33,8 @@ log(message) {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node
 /**
  * Error Prevention Automation - PM2 Automation Script
@@ -60,13 +69,17 @@ class ErrorPreventionAutomation {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   log(message) {
     const timestamp = new Date().toISOString(;
   });
     const logMessage = `[${timestamp}] ${message}\;n;`;
     console.log(logMessage.trim(););
     fs.appendFileSync(this.logFile, logMessage)}
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -74,6 +87,8 @@ class ErrorPreventionAutomation {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runErrorPrevention() {
     try {
@@ -83,12 +98,16 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         timestamp: new Date().toISOString(),
         checks: {},
         fixes: {},
         errors: {}
      ; ;};
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -96,10 +115,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         "timestamp": new Date().toISOString(),
         "checks": {},
         "fixes": {},
         "errors": {}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -112,6 +134,9 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+     };
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       // Run all prevention checks
       results.checks.linting = await this.checkLinting();
@@ -123,7 +148,10 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       // Apply fixes if needed;
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();
@@ -416,13 +444,17 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       this.log('Received SIGINT, shutting down gracefully');',
       this.isRunning = false;,
       process.exit(0)})}
+<<<<<<< HEAD
 }
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 // Start the error prevention automation;
 const automation = new ErrorPreventionAutomation;(;);
 automation.start().catch(error => {}),
   _console.error('Failed to start error prevention "automation": ', error);',
   process.exit(1)});,
 ;
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -430,6 +462,8 @@ automation.start().catch(error => {}),
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       // Apply fixes if needed
       results.fixes = await this.applyFixes(results.checks);
       const endTime = Date.now();
@@ -449,10 +483,13 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -461,6 +498,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -474,6 +512,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -500,10 +540,13 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -512,6 +555,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -525,6 +569,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -549,10 +595,13 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 300000
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 300000
@@ -561,6 +610,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 300000
       };);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -574,6 +624,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 300000
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -598,10 +650,13 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 30000
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 30000
@@ -610,6 +665,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
       };);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -623,6 +679,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 30000
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -631,7 +689,10 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       }} catch (error) {
       if ( {
         // npm outdated returns 1 when there are outdated packages) {
@@ -640,6 +701,7 @@ automation.start().catch(error => {}),
   }
         const output = error.stdout || ;';';
         const outdatedCount = (output.match(/\n/g) || []).length -;1; // Subtract header line
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -647,6 +709,8 @@ automation.start().catch(error => {}),
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 };
     } catch (error) {
       if (error.status === 1) {
@@ -676,10 +740,13 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 120000
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         cwd: this.projectRoot,
         encoding: 'utf8',
         timeout: 120000
@@ -688,6 +755,7 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 120000
       };);
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -701,6 +769,8 @@ automation.start().catch(error => {}),
         "encoding": 'utf8',
         "timeout": 120000
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 });ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       return {
         "success": true,
@@ -732,12 +802,16 @@ automation.start().catch(error => {}),
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       // Check memory usage
       const memoryUsage = process.memoryUsage(;
   });
       const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0;
       return {;
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -745,11 +819,17 @@ automation.start().catch(error => {}),
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
         "success": true,
         "buildSize": buildSize,
         "memoryUsage": memoryUsagePercent,
         "needsOptimization": buildSize > 100 * 1024 * 1024 || memoryUsagePercent > 80
+<<<<<<< HEAD
+=======
+
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       };
     } catch (error) {
       return {
@@ -764,12 +844,16 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       critical: 0,
       high: 0,
       moderate: 0,
       low: 0
    ; ;};
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -777,6 +861,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       "critical": 0,
       "high": 0,
       "moderate": 0,
@@ -803,6 +889,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       this.log(`Failed to parse vulnerabilities: ${error.message}`)}
     return vulnerabilities;
@@ -814,6 +901,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       this.log(`Failed to parse "vulnerabilities": ${error.message}`)}
     return vulnerabilities}}
   getDirectorySize(dirPath) {
@@ -841,11 +930,15 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     return totalSize;
   }}
   async applyFixes(checks) {
     const fixes = ;{;};
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -853,6 +946,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     return totalSize}}
   async applyFixes(checks) {
     const fixes = ;{};
@@ -906,7 +1001,10 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       this.log(`Failed to apply fixes: ${error.message}`)}
     return fixes;}
   async saveReport(results) {
@@ -916,6 +1014,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       nodeVersion: process.version,
       platform: process.platform
    ; ;};
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -923,6 +1022,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       this.log(`Failed to apply "fixes": ${error.message}`)}
     return fixes}
   async saveReport(results) {
@@ -938,13 +1039,17 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       timestamp: new Date().toISOString(),
       type: type,
       error: error.message,
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -952,6 +1057,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       "timestamp": new Date().toISOString(),
       "type": type,
       "error": error.message,
@@ -976,6 +1083,7 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }, this.runInterval);
   }
@@ -986,6 +1094,8 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     }, this.runInterval)}
     // Handle graceful shutdown
     process.on('SIGTERM', () => {
@@ -1005,6 +1115,7 @@ automation.start().catch(error => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node const fs = require('fs') const path = require('path') const { execSync } = class ErrorPreventionAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/error-prevention.log'); this.reportFile = path.join(this.projectRoot,'automation/logs/error-prevention-report.json'); this.lastRun = null; this.runInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Error Prevention Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runErrorPrevention() { try { this.log('Running error prevention checks...'); const startTime = Date.now(); const results = { timestamp: new Date().toISOString(),checks: {},fixes: {},errors: {}  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 results.checks.linting = await this.checkLinting(); results.checks.types = await this.checkTypes(); results.checks.build = await this.checkBuild(); results.checks.dependencies = await this.checkDependencies(); results.checks.security = await this.checkSecurity(); results.checks.performance = await this.checkPerformance(); results.fixes = await this.applyFixes(results.checks); const endTime = Date.now(); results.duration = endTime - startTime; this.lastRun = results; await this.saveReport(results); this.log(`Error prevention completed in ${results.duration}ms`)} catch (error) { this.log(`Error prevention failed: ${error.message}`); await this.reportError('error-prevention',error)} } async checkLinting() { try { this.log('Checking linting...'); const result = execSync('npm run lint',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0,warnings: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length; return { success: false,output: output,errors: errorCount,warnings: warningCount,needsFix: true }} } async checkTypes() { try { this.log('Checking types...'); const result = execSync('npm run type-check',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkBuild() { try { this.log('Checking build...'); const result = execSync('npm run build',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 300000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkDependencies() { try { this.log('Checking dependencies...'); const result = execSync('npm outdated',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,outdated: 0  }} catch (error) { if (error.status === 1) { const output = error.stdout || ''; const outdatedCount = (output.match(/\n/g) || []).length - 1;  }} catch (error) { if ( { { const output = error.stdout || ;';'; const outdatedCount = (output.match(/\n/g) || []).length -; ;1; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: false,output: output,outdated: outdatedCount,needsFix: true }} else { return { success: false,output: error.message,outdated: 0,needsFix: false }} } } async checkSecurity() { try { this.log('Checking security...'); const result = execSync('npm audit --audit-level=moderate',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 120000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,vulnerabilities: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const vulnerabilities = this.parseVulnerabilities(output); return { success: false,output: output,vulnerabilities: vulnerabilities,needsFix: true }} } async checkPerformance() { try { this.log('Checking performance...'); const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} const memoryUsage = process.memoryUsage(); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;  return {  const memoryUsage = process.memoryUsage(}); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0; return {; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 success: true,buildSize: buildSize,memoryUsage: memoryUsagePercent,needsOptimization: buildSize > 100 * 1024 * 1024 || memoryUsagePercent > 80 }} catch (error) { return { success: false,output: error.message,needsOptimization: false }} } parseVulnerabilities(output) { const vulnerabilities = { critical: 0,high: 0,moderate: 0,low: 0 }; try { const criticalMatch = output.match(/(\d+) critical;/;); const highMatch = output.match(/(\d+) high;/;); const moderateMatch = output.match(/(\d+) moderate;/;); const lowMatch = output.match(/(\d+) low;/;); if (vulnerabilities.critical = parseInt(criticalMatch[1])) { vulnerabilities.critical = parseInt(criticalMatch[1])} if (vulnerabilities.high = parseInt(highMatch[1])) { vulnerabilities.high = parseInt(highMatch[1])} if (vulnerabilities.moderate = parseInt(moderateMatch[1])) { vulnerabilities.moderate = parseInt(moderateMatch[1])} if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities) { vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities}} getDirectorySize(dirPath) { let totalSize = ;0; try { const files = fs.readdirSync(dirPath;); for (const file of files) { const filePath = path.join(dirPath,file;); const stats = fs.statSync(filePath;); if (!fs.existsSync(logDir)) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize) { ) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize}} async applyFixes(checks) { const fixes = ;{}; try { if ( { this.log('Applying linting fixes...')) { { this.log('Applying linting fixes...')} try { execSync('npm run lint:fix',{ cwd: this.projectRoot,timeout: 60000 }); fixes.linting = { success: true,message: 'Linting fixes applied' }} catch (error) { fixes.linting = { success: false,message: error.message }} } if ( { this.log('Updating dependencies...')) { { this.log('Updating dependencies...')} try { execSync('npm update',{ cwd: this.projectRoot,timeout: 300000 }); fixes.dependencies = { success: true,message: 'Dependencies updated' }} catch (error) { fixes.dependencies = { success: false,message: error.message }} } if ( { this.log('Applying security fixes...')) { { this.log('Applying security fixes...')} try { execSync('npm audit fix',{ cwd: this.projectRoot,timeout: 300000 }); fixes.security = { success: true,message: 'Security fixes applied' }} catch (error) { fixes.security = { success: false,message: error.message }} } if ( { this.log('Applying performance optimizations...')) { { this.log('Applying performance optimizations...')} try { execSync('npm run clean',{ cwd: this.projectRoot,timeout: 30000 }); execSync('npm run build',{ cwd: this.projectRoot,timeout: 300000 }); fixes.performance = { success: true,message: 'Performance optimizations applied' }} catch (error) { fixes.performance = { success: false,message: error.message }} } } catch (error) { this.log(`Failed to apply fixes: ${error.message}`)} return fixes} async saveReport(results) { const report = { ...results,projectRoot: this.projectRoot,nodeVersion: process.version,platform: process.platform }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2))} async reportError(type,error) { const errorReport = { timestamp: new Date().toISOString(),type: type,error: error.message,stack: error.stack,projectRoot: this.projectRoot }; const errorFile = path.join(this.projectRoot,'automation/logs/error-prevention-error.json';); fs.writeFileSync(errorFile,JSON.stringify(errorReport,null,2)); this.log(`Error reported: ${type}`)} async start() { this.isRunning = true; this.log('Error Prevention Automation started'); await this.runErrorPrevention(); setInterval(async () => { if ( { await this.runErrorPrevention()} },this.runInterval)) { { await this.runErrorPrevention()} },this.runInterval)} process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} } const automation = new ErrorPreventionAutomation;(;); automation.start().catch(error => { console.error('Failed to start error prevention automation:',error); process.exit(1)});
 =======
 #!/usr/bin/env node const fs = require('fs') const path = require('path') const { execSync } = class ErrorPreventionAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/error-prevention.log'); this.reportFile = path.join(this.projectRoot,'automation/logs/error-prevention-report.json'); this.lastRun = null; this.runInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Error Prevention Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runErrorPrevention() { try { this.log('Running error prevention checks...'); const startTime = Date.now(); const results = { timestamp: new Date().toISOString(),checks: {},fixes: {},errors: {}  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 results.checks.linting = await this.checkLinting(); results.checks.types = await this.checkTypes(); results.checks.build = await this.checkBuild(); results.checks.dependencies = await this.checkDependencies(); results.checks.security = await this.checkSecurity(); results.checks.performance = await this.checkPerformance(); results.fixes = await this.applyFixes(results.checks); const endTime = Date.now(); results.duration = endTime - startTime; this.lastRun = results; await this.saveReport(results); this.log(`Error prevention completed in ${results.duration}ms`)} catch (error) { this.log(`Error prevention failed: ${error.message}`); await this.reportError('error-prevention',error)} } async checkLinting() { try { this.log('Checking linting...'); const result = execSync('npm run lint',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0,warnings: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length; return { success: false,output: output,errors: errorCount,warnings: warningCount,needsFix: true }} } async checkTypes() { try { this.log('Checking types...'); const result = execSync('npm run type-check',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkBuild() { try { this.log('Checking build...'); const result = execSync('npm run build',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 300000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkDependencies() { try { this.log('Checking dependencies...'); const result = execSync('npm outdated',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,outdated: 0  }} catch (error) { if (error.status === 1) { const output = error.stdout || ''; const outdatedCount = (output.match(/\n/g) || []).length - 1;  }} catch (error) { if ( { { const output = error.stdout || ;';'; const outdatedCount = (output.match(/\n/g) || []).length -; ;1; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: false,output: output,outdated: outdatedCount,needsFix: true }} else { return { success: false,output: error.message,outdated: 0,needsFix: false }} } } async checkSecurity() { try { this.log('Checking security...'); const result = execSync('npm audit --audit-level=moderate',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 120000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,vulnerabilities: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const vulnerabilities = this.parseVulnerabilities(output); return { success: false,output: output,vulnerabilities: vulnerabilities,needsFix: true }} } async checkPerformance() { try { this.log('Checking performance...'); const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} const memoryUsage = process.memoryUsage(); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;  return {  const memoryUsage = process.memoryUsage(}); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0; return {; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 success: true,buildSize: buildSize,memoryUsage: memoryUsagePercent,needsOptimization: buildSize > 100 * 1024 * 1024 || memoryUsagePercent > 80 }} catch (error) { return { success: false,output: error.message,needsOptimization: false }} } parseVulnerabilities(output) { const vulnerabilities = { critical: 0,high: 0,moderate: 0,low: 0 }; try { const criticalMatch = output.match(/(\d+) critical;/;); const highMatch = output.match(/(\d+) high;/;); const moderateMatch = output.match(/(\d+) moderate;/;); const lowMatch = output.match(/(\d+) low;/;); if (vulnerabilities.critical = parseInt(criticalMatch[1])) { vulnerabilities.critical = parseInt(criticalMatch[1])} if (vulnerabilities.high = parseInt(highMatch[1])) { vulnerabilities.high = parseInt(highMatch[1])} if (vulnerabilities.moderate = parseInt(moderateMatch[1])) { vulnerabilities.moderate = parseInt(moderateMatch[1])} if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities) { vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities}} getDirectorySize(dirPath) { let totalSize = ;0; try { const files = fs.readdirSync(dirPath;); for (const file of files) { const filePath = path.join(dirPath,file;); const stats = fs.statSync(filePath;); if (!fs.existsSync(logDir)) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize) { ) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize}} async applyFixes(checks) { const fixes = ;{}; try { if ( { this.log('Applying linting fixes...')) { { this.log('Applying linting fixes...')} try { execSync('npm run lint:fix',{ cwd: this.projectRoot,timeout: 60000 }); fixes.linting = { success: true,message: 'Linting fixes applied' }} catch (error) { fixes.linting = { success: false,message: error.message }} } if ( { this.log('Updating dependencies...')) { { this.log('Updating dependencies...')} try { execSync('npm update',{ cwd: this.projectRoot,timeout: 300000 }); fixes.dependencies = { success: true,message: 'Dependencies updated' }} catch (error) { fixes.dependencies = { success: false,message: error.message }} } if ( { this.log('Applying security fixes...')) { { this.log('Applying security fixes...')} try { execSync('npm audit fix',{ cwd: this.projectRoot,timeout: 300000 }); fixes.security = { success: true,message: 'Security fixes applied' }} catch (error) { fixes.security = { success: false,message: error.message }} } if ( { this.log('Applying performance optimizations...')) { { this.log('Applying performance optimizations...')} try { execSync('npm run clean',{ cwd: this.projectRoot,timeout: 30000 }); execSync('npm run build',{ cwd: this.projectRoot,timeout: 300000 }); fixes.performance = { success: true,message: 'Performance optimizations applied' }} catch (error) { fixes.performance = { success: false,message: error.message }} } } catch (error) { this.log(`Failed to apply fixes: ${error.message}`)} return fixes} async saveReport(results) { const report = { ...results,projectRoot: this.projectRoot,nodeVersion: process.version,platform: process.platform }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2))} async reportError(type,error) { const errorReport = { timestamp: new Date().toISOString(),type: type,error: error.message,stack: error.stack,projectRoot: this.projectRoot }; const errorFile = path.join(this.projectRoot,'automation/logs/error-prevention-error.json';); fs.writeFileSync(errorFile,JSON.stringify(errorReport,null,2)); this.log(`Error reported: ${type}`)} async start() { this.isRunning = true; this.log('Error Prevention Automation started'); await this.runErrorPrevention(); setInterval(async () => { if ( { await this.runErrorPrevention()} },this.runInterval)) { { await this.runErrorPrevention()} },this.runInterval)} process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} } const automation = new ErrorPreventionAutomation;(;); automation.start().catch(error => { console.error('Failed to start error prevention automation:',error); process.exit(1)});
@@ -1017,3 +1128,5 @@ automation.start().catch(error => {
 =======
 #!/usr/bin/env node const fs = require('fs') const path = require('path') const { execSync } = class ErrorPreventionAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot,'automation/logs/error-prevention.log'); this.reportFile = path.join(this.projectRoot,'automation/logs/error-prevention-report.json'); this.lastRun = null; this.runInterval = 60000; this.isRunning = false; this.setupLogging(); this.log('Error Prevention Automation started')} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile,logMessage)}   log(message) { const timestamp = new Date().toISOString(}); const logMessage = `[${timestamp}] ${message}\;n;`; console.log(logMessage.trim();); fs.appendFileSync(this.logFile,logMessage)} ursor/migrate-github-actions-to-pm2-and-clean-up-5599 async runErrorPrevention() { try { this.log('Running error prevention checks...'); const startTime = Date.now(); const results = { timestamp: new Date().toISOString(),checks: {},fixes: {},errors: {}  };  }; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 results.checks.linting = await this.checkLinting(); results.checks.types = await this.checkTypes(); results.checks.build = await this.checkBuild(); results.checks.dependencies = await this.checkDependencies(); results.checks.security = await this.checkSecurity(); results.checks.performance = await this.checkPerformance(); results.fixes = await this.applyFixes(results.checks); const endTime = Date.now(); results.duration = endTime - startTime; this.lastRun = results; await this.saveReport(results); this.log(`Error prevention completed in ${results.duration}ms`)} catch (error) { this.log(`Error prevention failed: ${error.message}`); await this.reportError('error-prevention',error)} } async checkLinting() { try { this.log('Checking linting...'); const result = execSync('npm run lint',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0,warnings: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; const warningCount = (output.match(/warning/g) || []).length; return { success: false,output: output,errors: errorCount,warnings: warningCount,needsFix: true }} } async checkTypes() { try { this.log('Checking types...'); const result = execSync('npm run type-check',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkBuild() { try { this.log('Checking build...'); const result = execSync('npm run build',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 300000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,errors: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const errorCount = (output.match(/error/g) || []).length; return { success: false,output: output,errors: errorCount,needsFix: true }} } async checkDependencies() { try { this.log('Checking dependencies...'); const result = execSync('npm outdated',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 30000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,outdated: 0  }} catch (error) { if (error.status === 1) { const output = error.stdout || ''; const outdatedCount = (output.match(/\n/g) || []).length - 1;  }} catch (error) { if ( { { const output = error.stdout || ;';'; const outdatedCount = (output.match(/\n/g) || []).length -; ;1; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: false,output: output,outdated: outdatedCount,needsFix: true }} else { return { success: false,output: error.message,outdated: 0,needsFix: false }} } } async checkSecurity() { try { this.log('Checking security...'); const result = execSync('npm audit --audit-level=moderate',{ cwd: this.projectRoot,encoding: 'utf8',timeout: 120000  });  };); ursor/migrate-github-actions-to-pm2-and-clean-up-5599 return { success: true,output: result,vulnerabilities: 0 }} catch (error) { const output = error.stdout || error.stderr || ''; const vulnerabilities = this.parseVulnerabilities(output); return { success: false,output: output,vulnerabilities: vulnerabilities,needsFix: true }} } async checkPerformance() { try { this.log('Checking performance...'); const buildDir = path.join(this.projectRoot,'.next'); let buildSize = 0; if (fs.existsSync(buildDir)) { buildSize = this.getDirectorySize(buildDir)} const memoryUsage = process.memoryUsage(); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;  return {  const memoryUsage = process.memoryUsage(}); const memoryUsagePercent = (memoryUsage.heapUsed / memoryUsage.heapTotal) * 1;0;0; return {; ursor/migrate-github-actions-to-pm2-and-clean-up-5599 success: true,buildSize: buildSize,memoryUsage: memoryUsagePercent,needsOptimization: buildSize > 100 * 1024 * 1024 || memoryUsagePercent > 80 }} catch (error) { return { success: false,output: error.message,needsOptimization: false }} } parseVulnerabilities(output) { const vulnerabilities = { critical: 0,high: 0,moderate: 0,low: 0 }; try { const criticalMatch = output.match(/(\d+) critical;/;); const highMatch = output.match(/(\d+) high;/;); const moderateMatch = output.match(/(\d+) moderate;/;); const lowMatch = output.match(/(\d+) low;/;); if (vulnerabilities.critical = parseInt(criticalMatch[1])) { vulnerabilities.critical = parseInt(criticalMatch[1])} if (vulnerabilities.high = parseInt(highMatch[1])) { vulnerabilities.high = parseInt(highMatch[1])} if (vulnerabilities.moderate = parseInt(moderateMatch[1])) { vulnerabilities.moderate = parseInt(moderateMatch[1])} if (vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities) { vulnerabilities.low = parseInt(lowMatch[1])} catch (error) { this.log(`Failed to parse vulnerabilities: ${error.message}`)} return vulnerabilities}} getDirectorySize(dirPath) { let totalSize = ;0; try { const files = fs.readdirSync(dirPath;); for (const file of files) { const filePath = path.join(dirPath,file;); const stats = fs.statSync(filePath;); if (!fs.existsSync(logDir)) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize) { ) { totalSize += this.getDirectorySize(filePath)} else { totalSize += stats.size} } } catch (error) { } return totalSize}} async applyFixes(checks) { const fixes = ;{}; try { if ( { this.log('Applying linting fixes...')) { { this.log('Applying linting fixes...')} try { execSync('npm run lint:fix',{ cwd: this.projectRoot,timeout: 60000 }); fixes.linting = { success: true,message: 'Linting fixes applied' }} catch (error) { fixes.linting = { success: false,message: error.message }} } if ( { this.log('Updating dependencies...')) { { this.log('Updating dependencies...')} try { execSync('npm update',{ cwd: this.projectRoot,timeout: 300000 }); fixes.dependencies = { success: true,message: 'Dependencies updated' }} catch (error) { fixes.dependencies = { success: false,message: error.message }} } if ( { this.log('Applying security fixes...')) { { this.log('Applying security fixes...')} try { execSync('npm audit fix',{ cwd: this.projectRoot,timeout: 300000 }); fixes.security = { success: true,message: 'Security fixes applied' }} catch (error) { fixes.security = { success: false,message: error.message }} } if ( { this.log('Applying performance optimizations...')) { { this.log('Applying performance optimizations...')} try { execSync('npm run clean',{ cwd: this.projectRoot,timeout: 30000 }); execSync('npm run build',{ cwd: this.projectRoot,timeout: 300000 }); fixes.performance = { success: true,message: 'Performance optimizations applied' }} catch (error) { fixes.performance = { success: false,message: error.message }} } } catch (error) { this.log(`Failed to apply fixes: ${error.message}`)} return fixes} async saveReport(results) { const report = { ...results,projectRoot: this.projectRoot,nodeVersion: process.version,platform: process.platform }; fs.writeFileSync(this.reportFile,JSON.stringify(report,null,2))} async reportError(type,error) { const errorReport = { timestamp: new Date().toISOString(),type: type,error: error.message,stack: error.stack,projectRoot: this.projectRoot }; const errorFile = path.join(this.projectRoot,'automation/logs/error-prevention-error.json';); fs.writeFileSync(errorFile,JSON.stringify(errorReport,null,2)); this.log(`Error reported: ${type}`)} async start() { this.isRunning = true; this.log('Error Prevention Automation started'); await this.runErrorPrevention(); setInterval(async () => { if ( { await this.runErrorPrevention()} },this.runInterval)) { { await this.runErrorPrevention()} },this.runInterval)} process.on('SIGTERM',() => { this.log('Received SIGTERM,shutting down gracefully'); this.isRunning = false; process.exit(0)}); process.on('SIGINT',() => { this.log('Received SIGINT,shutting down gracefully'); this.isRunning = false; process.exit(0)})} } const automation = new ErrorPreventionAutomation;(;); automation.start().catch(error => { console.error('Failed to start error prevention automation:',error); process.exit(1)});
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

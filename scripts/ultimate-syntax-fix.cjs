@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -6,6 +7,8 @@ const { execSync } = require('child_process');
 console.log('🔧 Ultimate Syntax Fix');
 console.log('======================');
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -132,5 +135,8 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
+<<<<<<< HEAD
 
 console.log('\n🎉 Ultimate syntax fix completed!');
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

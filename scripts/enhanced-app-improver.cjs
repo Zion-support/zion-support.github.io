@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")""
     console.log(" Enhanced App Improver Starting...");""
       console.error(" Error during "improvements":", error.message);"}"
@@ -102,4 +105,7 @@ module.exports = DeploymentAutomation";"
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"
+<<<<<<< HEAD
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

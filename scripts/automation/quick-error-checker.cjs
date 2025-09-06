@@ -66,4 +66,7 @@ const path = require("path")
           "file": ".eslintrc.js"
           "timestamp"
   type: "eslint-config-fix"
+<<<<<<< HEAD
           "file": "
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -149,4 +152,7 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
+<<<<<<< HEAD
   process.on(")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

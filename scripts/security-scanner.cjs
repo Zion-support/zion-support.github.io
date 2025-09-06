@@ -23,4 +23,7 @@ const { execSync } = require('child_process')
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
+<<<<<<< HEAD
         pattern: /secret\s*=\s*['"][^'']
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -181,4 +181,7 @@ class AutomationScriptFixer {}
 if (require.main === module) {}
   const fixer = new AutomationScriptFixer();
   fixer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = AutomationScriptFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

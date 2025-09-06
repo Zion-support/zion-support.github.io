@@ -19,9 +19,12 @@ class BuildTestAutomation {}
     }};
   log(message, type = 'info') {}
     const timestamp = new Date().toISOString(;);
+<<<<<<< HEAD
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
     
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     this.report.steps.push({})
       timestamp,
       type,
@@ -143,4 +146,7 @@ if ( {})
      {}
   const automation = new BuildTestAutomation}(;);
   automation.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = BuildTestAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

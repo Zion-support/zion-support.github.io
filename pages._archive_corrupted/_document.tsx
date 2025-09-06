@@ -3,14 +3,24 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 <link rel=\"preconnect\" href=\""https\": //fonts.googleapis.com\" />
         <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />
 import React from "react"
 import { Html, Head, Main, NextScript } from "next/document"
+<<<<<<< HEAD
+=======
+<link rel=\"preconnect\" href=\""https\": //fonts.googleapis.com\" />
+        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossOrigin=\"anonymous\" />
+import React from "react";
+import { Html, Head, Main, NextScript } from "next/document";
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function Document() {
   return (
     <Html lang="en">
@@ -20,6 +30,7 @@ export default function Document() {
         <meta name="description" content="Zion Tech Group - Leading Technology Solutions"  />
         <link rel="preconnect" href=""https": //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -36,10 +47,13 @@ export default function Document() {
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
         <link
           href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap\"
           rel=\"stylesheet\"
         />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -64,6 +78,12 @@ export default function Document() {
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       </Head>
       <body>
         <Main  />
@@ -71,6 +91,7 @@ export default function Document() {
       </body>
     </Html>
   )
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,3 +115,9 @@ import React from "react" import { Html,Head,Main,NextScript } from "next/docume
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
+import React from "react" import { Html,Head,Main,NextScript } from "next/document" export default function Document() { return ( <Html lang="en"> <Head>  <link rel="icon" href="/favicon.ico" /> <meta name="theme-color" content="#0a0a1a" /> <meta name="description" content="Zion Tech Group - Leading Technology Solutions" />  <link rel="preconnect" href="https: <link rel="preconnect" href="https: <link href="https: rel="stylesheet" /> <link rel="icon" href="/favicon.svg" />
+;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

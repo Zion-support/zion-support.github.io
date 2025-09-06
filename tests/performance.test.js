@@ -1,7 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 interface Performance.testProps {
   // Add props here as needed
 }
+=======
+
+interface Performance.testProps {
+  // Add props here as needed
+<<<<<<<< HEAD:corrupted_backup/performance.test.js
+}
+
+========
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:tests/performance.test.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 export default function Performance.test({ }: Performance.testProps) {
   return (
     <div>
@@ -10,7 +21,21 @@ export default function Performance.test({ }: Performance.testProps) {
     </div>
   );
 <<<<<<< HEAD
+=======
+<<<<<<<< HEAD:corrupted_backup/performance.test.js
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+<<<<<<< HEAD
 }
 =======
 }
+<<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+}
+========
+
+
+>>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:tests/performance.test.js
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

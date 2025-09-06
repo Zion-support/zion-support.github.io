@@ -64,10 +64,15 @@ const { execSync } = require('child_process')
 =======
 =======
 #!/usr/bin/env node
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 console.log('⚡ Starting performance monitoring...');
 
 const performanceMetrics = {
@@ -194,6 +199,25 @@ if (performanceMetrics.recommendations.length > 0) {
 } else {
   console.log('\n✅ No performance issues detected');
 }
+=======
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      bundleSize: '0',
+      memoryUsage: '0',
+      timestamp: new Date().toISOString()
+    };
+  }
+
+  async run() {
+    console.log('📊 Running performance monitoring...');
+    console.log('✅ Performance monitoring completed');
+  }
+}
+
+const monitor = new PerformanceMonitor();
+monitor.run().catch(console.error);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));

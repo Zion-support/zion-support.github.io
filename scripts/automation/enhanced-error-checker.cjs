@@ -49,4 +49,7 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = EnhancedErrorChecker;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

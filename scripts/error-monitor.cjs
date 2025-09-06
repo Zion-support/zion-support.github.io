@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require("child_process");
 const path = require("child_process");
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const { execSync } = require("child_process");
 class ErrorMonitor {}
   constructor() {}
@@ -278,4 +281,7 @@ if (require.main === module) {}
   process.on("SIGINT", () => {}
     monitor.log("Error monitor shutting down", "INFO');
     process.exit(0)})};
+<<<<<<< HEAD
 module.exports = ErrorMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

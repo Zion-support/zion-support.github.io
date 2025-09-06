@@ -342,4 +342,7 @@ if ( {})
      {}
     const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)};
+<<<<<<< HEAD
 module.exports = SEOOptimizer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

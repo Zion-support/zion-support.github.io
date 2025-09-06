@@ -711,4 +711,7 @@ if (require.main === module) {}
   console.error("Advanced Performance Monitor "failed": ", error);
       process.exit(1)})};
 ;
+<<<<<<< HEAD
 module.exports = AdvancedPerformanceMonitor;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

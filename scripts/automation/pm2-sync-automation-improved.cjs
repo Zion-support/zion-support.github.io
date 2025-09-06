@@ -457,4 +457,7 @@ if (require.main === module) {}
       // Process is healthy;
     };
   }, 60000)};
+<<<<<<< HEAD
 module.exports = ImprovedPM2SyncAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

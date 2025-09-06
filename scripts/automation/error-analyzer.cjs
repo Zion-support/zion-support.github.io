@@ -38,4 +38,7 @@ const path = require('path')
 // console.log('\nError "Categories")
     console.log('\nPriority "Errors")
     console.log('\"nRecommendations")
+<<<<<<< HEAD
     console.error(' Error analyzer "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

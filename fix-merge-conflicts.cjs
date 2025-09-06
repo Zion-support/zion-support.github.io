@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
@@ -27,20 +28,42 @@ function fixMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       return false;
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
+<<<<<<< HEAD
     // Split by merge conflict markers
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
     let conflictType = '';
+=======
+    // Remove merge conflict markers and keep the second version (after =======)
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let inConflict = false;
+    let keepVersion = false;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+<<<<<<< HEAD
         inConflict = true;
         conflictType = 'head';
         continue;
@@ -62,6 +85,32 @@ function fixMergeConflicts(filePath) {
     
     // Write the fixed content
     fs.writeFileSync(filePath, fixedLines.join('\n'));
+=======
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepVersion = false;
+        continue;
+      }
+      
+      if (line.includes('=======')) {
+        keepVersion = true;
+        continue;
+      }
+      
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepVersion = false;
+        continue;
+      }
+      
+      if (!inConflict || keepVersion) {
+        fixedLines.push(line);
+      }
+    }
+    
+    const fixedContent = fixedLines.join('\n');
+    fs.writeFileSync(filePath, fixedContent, 'utf8');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -69,6 +118,7 @@ function fixMergeConflicts(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
@@ -184,10 +234,26 @@ function findFilesWithConflicts(dir) {
         } catch (error) {
           // Skip files that can't be read
         }
+=======
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += findAndFixConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixMergeConflicts(filePath)) {
+        fixedCount++;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       }
     }
   }
   
+<<<<<<< HEAD
   traverse(dir);
   return files;
 }
@@ -208,3 +274,30 @@ for (const file of filesWithConflicts) {
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 Merge conflict resolution complete!');
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+=======
+  return fixedCount;
+}
+
+// Fix conflicts in src/pages directory
+const pagesDir = path.join(__dirname, 'src', 'pages');
+if (fs.existsSync(pagesDir)) {
+  const fixedCount = findAndFixConflicts(pagesDir);
+  console.log(`Fixed merge conflicts in ${fixedCount} files`);
+} else {
+  console.log('src/pages directory not found');
+}
+
+// Also fix other common directories
+const otherDirs = ['src/components', 'src'];
+for (const dir of otherDirs) {
+  const fullPath = path.join(__dirname, dir);
+  if (fs.existsSync(fullPath)) {
+    const fixedCount = findAndFixConflicts(fullPath);
+    if (fixedCount > 0) {
+      console.log(`Fixed merge conflicts in ${fixedCount} files in ${dir}`);
+    }
+  }
+}
+
+console.log('Merge conflict fixing completed!');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

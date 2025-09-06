@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -307,6 +308,8 @@ optimizer.run().catch(error => {
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 #!/usr/bin/env node;
 /**
  * PM2 Build Optimizer Service;
@@ -337,6 +340,7 @@ class BuildOptimizer {}
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -347,6 +351,8 @@ class BuildOptimizer {}
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -354,6 +360,7 @@ class BuildOptimizer {}
   async analyzeBundleSize() {}
     try {}
       this.log('Analyzing bundle size...');
+      
       
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
@@ -366,6 +373,9 @@ class BuildOptimizer {}
         const stats = fs.statSync(file.path);
         return total + stats.size;
       }, 0);
+
+      this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      
 
       this.log(`Total bundle "size": ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       
@@ -386,12 +396,14 @@ class BuildOptimizer {}
   getBundleFiles(dir) {}
     const files = [];
     
+    
     const scanDir = (currentDir) => {}
       try {}
         const items = fs.readdirSync(currentDir);
         for (const item of items) {}
           const itemPath = path.join(currentDir, item);
           const stat = fs.statSync(itemPath);
+          
           
           if (stat.isDirectory()) {}
             scanDir(itemPath);
@@ -409,6 +421,7 @@ class BuildOptimizer {}
       };
     };
 
+
     scanDir(dir);
     return files;
   };
@@ -420,6 +433,7 @@ class BuildOptimizer {}
     try {}
       this.log('Starting build optimization...');
       
+      
       // Clean previous build;
       if (fs.existsSync('dist')) {}
         fs.rmSync('dist', { "recursive": true, "force": true }
@@ -429,11 +443,13 @@ class BuildOptimizer {}
       const buildCommand = this.getOptimizedBuildCommand();
       this.log(`"Running": ${buildCommand}`);
       
+      
       execSync(buildCommand, { })
         "stdio": 'pipe',
         "cwd": process.cwd();
       }
 });
+
 
       this.log('Build optimization completed');
       return { "success": true };
@@ -445,6 +461,7 @@ class BuildOptimizer {}
   getOptimizedBuildCommand() {}
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     const buildScript = packageJson.scripts?.build || 'npm run build';
+    
     
     // Add optimization flags if supported;
     if (buildScript.includes('vite')) {}
@@ -462,6 +479,7 @@ class BuildOptimizer {}
     try {}
       this.log('Checking tree shaking effectiveness...');
       
+      
       // This is a simplified check - in practice, you'd analyze the bundle;
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
@@ -470,6 +488,7 @@ class BuildOptimizer {}
       // Look for unused code patterns;
       const bundleFiles = this.getBundleFiles(distDir);
       let unusedCodeFound = 0;
+
 
       for (const file of bundleFiles) {}
         try {}
@@ -483,6 +502,7 @@ class BuildOptimizer {}
         };
       };
       this.log(`Tree shaking check completed. Potential unused code in ${unusedCodeFound} files`);
+      
       
       return {}
         "checked": true,
@@ -502,12 +522,16 @@ class BuildOptimizer {}
     try {}
       this.log('Checking code splitting implementation...');
       
+      
       const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": 'No dist directory found' };
       };
       const bundleFiles = this.getBundleFiles(distDir);
       const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
+      
+      this.log(`Found ${chunkFiles.length} chunk files`);
+      
       
       this.log(`Found ${chunkFiles.length} chunk files`);
       
@@ -570,6 +594,7 @@ if (require.main === module) {}
   buildOptimizer.start().catch(console.error);
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = BuildOptimizer;
 =======
 <<<<<<< HEAD
@@ -582,3 +607,7 @@ module.exports = BuildOptimizer;
 module.exports = BuildOptimizer;
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+module.exports = BuildOptimizer;module.exports = BuildOptimizer;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -356,4 +356,7 @@ if (require.main === module) {}
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
+<<<<<<< HEAD
 module.exports = BuildErrorAutoFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

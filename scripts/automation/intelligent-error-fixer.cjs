@@ -109,4 +109,7 @@ console.log("🤖 Starting intelligent error fixer...")
       execSync(command, { "stdio": "pipe" }
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
+<<<<<<< HEAD
   const sourceDirs = ["src", "components", "pages"]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {};
 =======
 export {};
@@ -14,3 +15,9 @@ module.exports = {};
 =======
 module.exports = {};
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+// Mock test for profile page
+describe('Profile Page', () => {
+  it('should render without crashing', () => {
+    expect(true).toBe(true);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

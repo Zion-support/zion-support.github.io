@@ -82,4 +82,7 @@ const { execSync } = require("child_process")
       this.log(` Fatal error in security "audit"`)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
+<<<<<<< HEAD
     console.error(" Security audit "failed": ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

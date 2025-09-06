@@ -52,4 +52,7 @@ const { execSync, spawn } = require("child_process")
     this.log("Continuous mode started. Press Ctrl+C to stop.", "info")
   if (args.includes("--continuous") || args.includes("-c")
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
+<<<<<<< HEAD
     automation.runContinuousMode(interval).catch(console.error)} else if (args.includes(")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

@@ -63,3 +63,9 @@ const { execSync, spawn } = require('child_process')
       this.log('⚠  Some automation phases failed. Check the report above.', 'WARNING')
     this.log(' Starting Improved Master Automation Orchestrator', 'PHASE')
       this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+<<<<<<< HEAD
+=======
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+      this.log(`Fatal error in automation: ${error.message}`, 'ERROR'`)
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

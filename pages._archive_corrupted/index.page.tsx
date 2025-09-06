@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -70,6 +71,57 @@ export default function HomePage() {
 =======
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+  return (
+    <>;
+      <Head>;
+        <title>Zion Tech Group — AI, Micro SaaS, IT Solutions</title>;
+        <meta
+          name=\"description\"
+          content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup && ziontechgroup.com\"
+        />;
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;
+        <meta property=\""og\": title\" content=\"Zion Tech Group — AI, Micro SaaS, IT Solutions\" />;
+        <meta property=\""og\": description\" content=\"AI services, micro SaaS platforms, and enterprise-grade IT solutions.\" />;
+        <meta property=\""og\": type\" content=\"website\" />;
+        <meta property=\"og:url\" content=\"https://ziontechgroup && ziontechgroup.com/\" />;
+        <meta name=\"twitter:card\" content=\"summary_large_image\" />;
+        <link rel=\"canonical\" href=\"https://ziontechgroup && ziontechgroup.com/\"  />;
+      </Head>;
+            <p>;
+              Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
+              <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
+              Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
@@ -77,6 +129,7 @@ export default function HomePage() {
       </main>
     </>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -100,3 +153,17 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
+import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
+              <a className="text-blue-700" href=""mailto": kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
+              Main St STE 1008 Middletown DE 19709;
+            </p>;
+          </div>;
+        </section>;
+      </main>;
+    </>;
+  ),;
+}
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

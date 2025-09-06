@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 export default function handler(req, res) {
@@ -61,6 +62,8 @@ async function handler(req, res) {
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
     });
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
     res.statusCode = 200;
     res.json({ 
@@ -73,6 +76,7 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
+<<<<<<< HEAD
 }
 
 export default withErrorLogging(handler);
@@ -90,3 +94,23 @@ export default function handler(req,res) { res.status(200).json({ message: 'Chec
 =======
 >>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+      url: session.url
+    })
+  } catch (err) {,
+    // console.error('Checkout session API error:, err),
+    res.statusCode = 500,
+    res.json({ error: err.message || 'Checkout session creation failed' })
+  };
+};
+export default withErrorLogging(handler),
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

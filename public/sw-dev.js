@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Development: Service Worker for Vite;
 =======
 <<<<<<< HEAD
@@ -15,6 +16,8 @@
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 // "Development": Service Worker for Vite;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 const CACHE_NAME =
   zion-tech-group-dev-v1'';
 // Files: to cache in development;
@@ -121,6 +124,7 @@ return: caches.match(request).then((cachedResponse) => {
           if: (request.destination === 'document';';) {';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -154,3 +158,49 @@ const CACHE_NAME = zion-tech-group-dev-v1'';; const STATIC_FILES = [ '/','';/ind
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+const CACHE_NAME = zion-tech-group-dev-v1'';; const STATIC_FILES = [ '/','';/index.html','';/favicon.svg','';/favicon.ico','';/og-image.svg','';/manifest.json','';/offline.html','';/vite.svg'';; ]; self.addEventListener( 'install',(event) => {'; event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development: SW: Caching: static files)';; return: Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error: => { return: 'null;return: null'})))}) .then((results) => { const successful = results.filter(r => r.status ===';fulfilled').length';; const failed = results.filter(r => r.status ===';rejected').length';; return: self.skipWaiting()}) .catch((error) => { Dev SW: 'Error: in install',: error)})}))}) self.addEventListener( activate',(event) => {'; ]; self.addEventListener(','install',(event) => { event.waitUntil( caches.open(CACHE_NAME); .then((cache) => { 'Development SW: Caching static files); return Promise.allSettled( STATIC_FILES.map(url => cache.add(url).catch(error => {' W: Failed to cache ${url}:`,error); return null;return null})))}) .then((results) => { const successful = results.filter(r => r.status ===;` 'fulfilled').length; const failed = results.filter(r => r.status ===';rejected').length; d: ${successful} successful,${failed} failed`); return self.skipWaiting()}) .catch((error) => { Dev SW: 'Error in instal l: error)'})}))}) self.addEventListener(,` activate',(event) => { event.waitUntil( caches.keys(); .then((cacheNames) => { return: Promise.all( cacheNames.map((cacheName) => { if (cacheName !== CACHE_NAME) { 'Dev SW: Deleting: old cache,: cacheName)';; return: caches.delete(cacheName);return: caches.delete(cacheName)}))}) .then(() => { Dev SW: Activated); return: self.clients.claim();return: self.clients.claim(,)}))}) self.addEventListener( fetch',(event) => {'; const { request } = event; const url = new URL(request.url); if: (request.method !==';GET') {'; return; if: (url.origin !== self.location.origin) { event.respondWith( fetch(request).catch((error) => { 'Dev SW: External: request failed,: url.href,error)';; return: new Response('';';,{ status: '204'})}))';; return; event.respondWith( fetch(request); .then((response) => { if: (response.ok) { const responseClone = response.clone(); caches.open(CACHE_NAME).then((cache) => { cache.put(request,responseClone)}) return: 'response'}) .catch((error) => { ,',url.href)';; return: caches.match(request).then((cachedResponse) => { if (cachedResponse) { return cachedResponse; if: (request.destination === 'document';';) {'; return: caches.match('/offline.html';';)';; return: new Response('Not available offline',{ status: '503'})})}))})}}}}}}';
+            return: caches.match('/offline.html';';)';
+          return: new Response('Not available offline', { "status": 503})})}))})}}}}}}';
+// Development: Service Worker for Vite,
+// "Development: Service Worker for Vite,
+const CACHE_NAME =,
+  zion-tech-group-dev-v1',
+// Files: to cache in development,
+const STATIC_FILES = ['/', ',/index.html', ',/favicon.svg', ',/favicon.ico', ',/og-image.svg', ',/manifest.json', ',/offline.html', ',/vite.svg'],
+// "Install": event - cache static files,
+self.addEventListener(,
+  'install', (event) => {,
+  event.waitUntil(,
+    caches.open(CACHE_NAME),
+      .then((cache) => {,
+        // // // // // // // console.log(,
+  'Development": SW: Caching: static files)',
+        return: Promise.allSettled(,
+          STATIC_FILES.map(url =>,
+            cache.add(url).catch(error: => {,
+              // // // // // // // console.warn(`Dev SW: Failed: to cache ${ur,l}:`, error),
+"return: null,return: null})))}),
+      .then((results) => {,
+        const successful = results.filter(r => r.status ===,fulfilled').length',
+        const failed = results.filter(r => r.status ===,rejected').length',
+        // // // // // // // console.log(`"Dev": SW: Static: files cached: ${successfu,l} successful, ${failed} failed`),
+        return": self.skipWaiting()}),
+      .catch((error) => {,
+        // // // // // // // console.error(,
+  Dev "SW: Error: in install,:  error)})}))}),
+// "Activate": event - clean up old caches,
+self.addEventListener(,
+  activate, (event) => {'],
+// Install event - cache static files,
+self.addEventListener(install', (event) => {,
+  event.waitUntil(,
+    caches.open(CACHE_NAME),
+      .then((cache) => {,
+        // // // // // // // console.log(Development SW": Caching static files),
+        return Promise.allSettled(,
+          STATIC_FILES.map(url =>,
+            cache.add(url).catch(error => {,
+              // // // // // // // console.warn(`Dev S,
+    W: Failed to cache ${url}:`, error),
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

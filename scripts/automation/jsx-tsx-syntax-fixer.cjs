@@ -19,4 +19,7 @@ console.log(' Starting JSX/TSX syntax fixer...')
       execSync('npm run type-check', { "stdio"})
       "summary"
       "status"
+<<<<<<< HEAD
   console.error(' JSX/TSX syntax fixer failed to "start")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

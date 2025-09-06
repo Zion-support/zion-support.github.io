@@ -1,13 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
 import AccessibilityManager from '../components/AccessibilityManager';';
+<<<<<<< HEAD
 >>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
 import React from 'react';
 import { render, screen } from '@testing-library/react';
@@ -34,3 +38,29 @@ describe('AccessibilityManager', () => {
 =======
 });
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+describe('AccessibilityManager', () => {'}
+  test('renders without crashing', () => {'}
+    render(<AccessibilityManager />);,
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();';,
+  });,
+  test('displays correct content', () => {'}
+    render(<AccessibilityManager />);,
+  });,
+  test('handles user interactions', () => {'}
+    render(<AccessibilityManager />);,
+  });,
+  test('applies correct styling', () => {'}
+    render(<AccessibilityManager />);,
+  });
+import _React from 'react'
+'
+import '@testing-library/jest-dom';
+import AccessibilityManager from '../components/AccessibilityManager';
+describe('AccessibilityManager', () => {'
+  test('renders without crashing', () => {'
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
+  test('displays correct content', () => {'
+  test('handles user interactions', () => {'
+  test('applies correct styling', () => {'
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

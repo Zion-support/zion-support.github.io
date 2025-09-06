@@ -57,4 +57,7 @@ console.log(' Starting enhanced error detection and fixing automation...')
     execSync('npm install --force', { "stdio"})
     return { "type": 'peer-dependency', "action"}
     return { "type": 'peer-dependency', "action"}
+<<<<<<< HEAD
     console.error(' Enhanced error detection "failed")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

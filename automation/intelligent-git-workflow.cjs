@@ -1,261 +1,218 @@
 #!/usr/bin/env node
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 class IntelligentGitWorkflow {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.workflowResults = [];
-    this.gitStatus = {};
+    this.workflowResults = {
+      timestamp: new Date().toISOString(),
+      operations: [],
+      status: 'unknown',
+      recommendations: []
+    };
   }
 
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [GIT-WORKFLOW] ${message}`);
-  }
-
-  async checkGitStatus() {
-    this.log('📊 Checking Git status...');
+  async runWorkflow() {
+    console.log('🔄 Starting Intelligent Git Workflow...');
     
     try {
-      const status = execSync('git status --porcelain', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+      // Check git status
+      await this.checkGitStatus();
       
-      const changes = status.trim().split('\n').filter(line => line.length > 0);
+      // Check for uncommitted changes
+      await this.checkUncommittedChanges();
       
-      this.gitStatus = {
-        hasChanges: changes.length > 0,
-        changes: changes,
-        totalChanges: changes.length
-      };
+      // Check branch status
+      await this.checkBranchStatus();
       
-      this.workflowResults.push({
-        type: 'git_status',
-        status: 'completed',
-        details: `Found ${changes.length} changes`
-      });
+      // Check for merge conflicts
+      await this.checkMergeConflicts();
+      
+      // Generate recommendations
+      this.generateRecommendations();
+      
+      console.log('✅ Git Workflow completed');
       
     } catch (error) {
-      this.log(`❌ Git status check failed: ${error.message}`);
-      this.gitStatus = { hasChanges: false, changes: [], totalChanges: 0 };
+      console.error('❌ Git Workflow failed:', error.message);
+      this.workflowResults.status = 'error';
     }
   }
 
-  async checkBranches() {
-    this.log('🌿 Checking branches...');
-    
+  async checkGitStatus() {
     try {
-      const branches = execSync('git branch -a', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const hasChanges = status.trim().length > 0;
+      
+      this.workflowResults.operations.push({
+        operation: 'git-status',
+        success: true,
+        result: hasChanges ? 'dirty' : 'clean',
+        details: status
       });
       
-      const currentBranch = execSync('git branch --show-current', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      }).trim();
+      this.workflowResults.status = hasChanges ? 'dirty' : 'clean';
       
-      this.workflowResults.push({
-        type: 'branches',
-        status: 'completed',
-        details: `Current branch: ${currentBranch}`,
-        currentBranch: currentBranch
+    } catch (error) {
+      this.workflowResults.operations.push({
+        operation: 'git-status',
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  async checkUncommittedChanges() {
+    try {
+      const diff = execSync('git diff --name-only', { encoding: 'utf8' });
+      const staged = execSync('git diff --cached --name-only', { encoding: 'utf8' });
+      
+      this.workflowResults.operations.push({
+        operation: 'uncommitted-changes',
+        success: true,
+        result: {
+          unstaged: diff.trim().split('\n').filter(f => f),
+          staged: staged.trim().split('\n').filter(f => f)
+        }
       });
       
     } catch (error) {
-      this.log(`❌ Branch check failed: ${error.message}`);
+      this.workflowResults.operations.push({
+        operation: 'uncommitted-changes',
+        success: false,
+        error: error.message
+      });
+    }
+  }
+
+  async checkBranchStatus() {
+    try {
+      const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
+      const remoteBranches = execSync('git branch -r', { encoding: 'utf8' });
+      const aheadBehind = execSync(`git rev-list --left-right --count origin/${currentBranch}...HEAD`, { encoding: 'utf8' });
+      
+      const [ahead, behind] = aheadBehind.trim().split('\t').map(Number);
+      
+      this.workflowResults.operations.push({
+        operation: 'branch-status',
+        success: true,
+        result: {
+          currentBranch,
+          ahead,
+          behind,
+          remoteBranches: remoteBranches.trim().split('\n').filter(b => b.trim())
+        }
+      });
+      
+    } catch (error) {
+      this.workflowResults.operations.push({
+        operation: 'branch-status',
+        success: false,
+        error: error.message
+      });
     }
   }
 
   async checkMergeConflicts() {
-    this.log('🔀 Checking for merge conflicts...');
-    
     try {
-      const status = execSync('git status', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      const hasConflicts = status.includes('UU') || status.includes('AA') || status.includes('DD');
       
-      const hasConflicts = status.includes('both modified') || 
-                          status.includes('both added') || 
-                          status.includes('deleted by us') ||
-                          status.includes('deleted by them');
-      
-      this.workflowResults.push({
-        type: 'merge_conflicts',
-        status: hasConflicts ? 'conflicts_found' : 'clean',
-        details: hasConflicts ? 'Merge conflicts detected' : 'No merge conflicts'
+      this.workflowResults.operations.push({
+        operation: 'merge-conflicts',
+        success: true,
+        result: hasConflicts ? 'conflicts-found' : 'no-conflicts',
+        details: hasConflicts ? status : null
       });
       
     } catch (error) {
-      this.log(`❌ Merge conflict check failed: ${error.message}`);
+      this.workflowResults.operations.push({
+        operation: 'merge-conflicts',
+        success: false,
+        error: error.message
+      });
     }
   }
 
-  async checkRemoteStatus() {
-    this.log('🌐 Checking remote status...');
+  generateRecommendations() {
+    const recommendations = [];
     
-    try {
-      const remotes = execSync('git remote -v', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+    // Check if there are uncommitted changes
+    const uncommittedOp = this.workflowResults.operations.find(op => op.operation === 'uncommitted-changes');
+    if (uncommittedOp && uncommittedOp.success) {
+      const { unstaged, staged } = uncommittedOp.result;
       
-      const hasOrigin = remotes.includes('origin');
-      
-      if (hasOrigin) {
-        // Check if we're ahead/behind
-        const status = execSync('git status -uno', { 
-          stdio: 'pipe',
-          encoding: 'utf8'
-        });
-        
-        const isAhead = status.includes('Your branch is ahead');
-        const isBehind = status.includes('Your branch is behind');
-        
-        this.workflowResults.push({
-          type: 'remote_status',
-          status: 'completed',
-          details: `Remote status: ${isAhead ? 'ahead' : isBehind ? 'behind' : 'up to date'}`,
-          isAhead: isAhead,
-          isBehind: isBehind
-        });
-      } else {
-        this.workflowResults.push({
-          type: 'remote_status',
-          status: 'no_remote',
-          details: 'No remote repository configured'
+      if (unstaged.length > 0) {
+        recommendations.push({
+          type: 'warning',
+          message: 'You have unstaged changes. Consider staging them.',
+          action: 'git add .'
         });
       }
       
-    } catch (error) {
-      this.log(`❌ Remote status check failed: ${error.message}`);
+      if (staged.length > 0) {
+        recommendations.push({
+          type: 'info',
+          message: 'You have staged changes ready to commit.',
+          action: 'git commit -m "Your commit message"'
+        });
+      }
     }
-  }
-
-  async suggestActions() {
-    this.log('💡 Generating workflow suggestions...');
     
-    const suggestions = [];
-    
-    // Check if there are uncommitted changes
-    if (this.gitStatus.hasChanges) {
-      suggestions.push({
-        priority: 'high',
-        action: 'commit_changes',
-        message: 'You have uncommitted changes. Consider committing them.',
-        command: 'git add . && git commit -m "Your commit message"'
-      });
+    // Check branch status
+    const branchOp = this.workflowResults.operations.find(op => op.operation === 'branch-status');
+    if (branchOp && branchOp.success) {
+      const { ahead, behind } = branchOp.result;
+      
+      if (ahead > 0) {
+        recommendations.push({
+          type: 'info',
+          message: `Your branch is ${ahead} commits ahead of origin. Consider pushing.`,
+          action: 'git push origin <branch-name>'
+        });
+      }
+      
+      if (behind > 0) {
+        recommendations.push({
+          type: 'warning',
+          message: `Your branch is ${behind} commits behind origin. Consider pulling.`,
+          action: 'git pull origin <branch-name>'
+        });
+      }
     }
     
     // Check for merge conflicts
-    const conflictResult = this.workflowResults.find(r => r.type === 'merge_conflicts');
-    if (conflictResult && conflictResult.status === 'conflicts_found') {
-      suggestions.push({
-        priority: 'critical',
-        action: 'resolve_conflicts',
+    const conflictOp = this.workflowResults.operations.find(op => op.operation === 'merge-conflicts');
+    if (conflictOp && conflictOp.success && conflictOp.result === 'conflicts-found') {
+      recommendations.push({
+        type: 'error',
         message: 'Merge conflicts detected. Resolve them before proceeding.',
-        command: 'git status to see conflicted files, then resolve manually'
+        action: 'git status to see conflicted files, then resolve and commit'
       });
     }
     
-    // Check remote status
-    const remoteResult = this.workflowResults.find(r => r.type === 'remote_status');
-    if (remoteResult && remoteResult.isBehind) {
-      suggestions.push({
-        priority: 'medium',
-        action: 'pull_changes',
-        message: 'Your branch is behind remote. Consider pulling latest changes.',
-        command: 'git pull origin main'
-      });
-    }
-    
-    if (remoteResult && remoteResult.isAhead) {
-      suggestions.push({
-        priority: 'medium',
-        action: 'push_changes',
-        message: 'Your branch is ahead of remote. Consider pushing changes.',
-        command: 'git push origin main'
-      });
-    }
-    
-    this.workflowResults.push({
-      type: 'suggestions',
-      status: 'generated',
-      details: `Generated ${suggestions.length} suggestions`,
-      suggestions: suggestions
-    });
-    
-    return suggestions;
+    this.workflowResults.recommendations = recommendations;
   }
 
-  async executeWorkflow() {
-    this.log('🔄 Executing intelligent Git workflow...');
+  saveReport() {
+    const reportFile = path.join(__dirname, 'reports', 'git-workflow-report.json');
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.writeFileSync(reportFile, JSON.stringify(this.workflowResults, null, 2));
     
-    const suggestions = await this.suggestActions();
-    
-    // Execute high priority actions automatically
-    const highPriorityActions = suggestions.filter(s => s.priority === 'high');
-    
-    for (const action of highPriorityActions) {
-      if (action.action === 'commit_changes') {
-        try {
-          this.log(`Executing: ${action.message}`);
-          execSync('git add .', { stdio: 'pipe' });
-          execSync('git commit -m "Automated commit by intelligent workflow"', { stdio: 'pipe' });
-          this.log('✅ Changes committed successfully');
-        } catch (error) {
-          this.log(`❌ Failed to commit changes: ${error.message}`);
-        }
-      }
-    }
-  }
-
-  generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      gitStatus: this.gitStatus,
-      workflowResults: this.workflowResults,
-      summary: {
-        totalChanges: this.gitStatus.totalChanges,
-        hasConflicts: this.workflowResults.some(r => r.type === 'merge_conflicts' && r.status === 'conflicts_found'),
-        suggestionsCount: this.workflowResults.find(r => r.type === 'suggestions')?.suggestions?.length || 0
-      }
-    };
-
-    const reportPath = path.join(this.projectRoot, 'git-workflow-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Workflow report saved to: ${reportPath}`);
-    
-    return report;
-  }
-
-  async run() {
-    this.log('🚀 Starting Intelligent Git Workflow...');
-    
-    try {
-      await this.checkGitStatus();
-      await this.checkBranches();
-      await this.checkMergeConflicts();
-      await this.checkRemoteStatus();
-      await this.executeWorkflow();
-      
-      const report = this.generateReport();
-      
-      this.log('✅ Intelligent Git Workflow completed!');
-      this.log(`📈 Processed ${report.summary.totalChanges} changes and generated ${report.summary.suggestionsCount} suggestions`);
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Intelligent Git Workflow failed: ${error.message}`);
-      throw error;
-    }
+    console.log(`📊 Git workflow report saved to: ${reportFile}`);
   }
 }
 
-// Run the workflow
-const workflow = new IntelligentGitWorkflow();
-workflow.run().catch(console.error);
+// Run if called directly
+if (require.main === module) {
+  const workflow = new IntelligentGitWorkflow();
+  workflow.runWorkflow()
+    .then(() => {
+      workflow.saveReport();
+    })
+    .catch(console.error);
+}
+
+module.exports = IntelligentGitWorkflow;

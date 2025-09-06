@@ -181,11 +181,14 @@ export const "AIChatbotSystem": React.FC<AIChatbotSystemProps> = ({})
   // Toggle voice input;
   const toggleVoiceInput = useCallback(() => {}
     setIsListening(!isListening)}, [isListening]);
+<<<<<<< HEAD
 
   // Rate response;
   const rateResponse = useCallback(("messageId": string, "rating": 'positive' | 'negative') => {}
     console.log(\"Rated message \${messageId} as \${rating}\")}, []);
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   return ()
     <>
       {/* Chat Toggle Button */};
@@ -436,4 +439,7 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Component Replacer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
 module.exports = ComponentReplacer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
