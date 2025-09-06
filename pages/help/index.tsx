@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export async function getStaticProps() {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles }   } catch (error) {
@@ -15,19 +11,11 @@ export async function getStaticProps() {
   }
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
@@ -50,18 +38,11 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
                       Last updated {new Date(a && a.updatedAt).toLocaleDateString()}
                     </div>                  </a>;
                 </Link>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))}
           </div>;
         </div>;
       ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   );
   const categories = Array.from(new Set(articles.map((a) => a.category)));
@@ -86,16 +67,12 @@ export default function HelpIndex(): any ({ articles }: { articles: HelpArticle[
                   </a>
 
 import Link from 'next/link';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { readJson  } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
 
-
 import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-
 
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
@@ -117,20 +94,12 @@ export async function getStaticProps() {;
 }
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
               ))}
           </div>;
         </div>;
       ))}
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -145,12 +114,8 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                   <a className="enhanced-card hover:shadow-md">
                     <div className="font-medium">{a.title}</div>
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                   </a>
                 </Link>
-=======
                   </Link>
                 </Link>
               ))}
@@ -158,24 +123,14 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
         </div>
       ))}
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                   </a>
                 </Link>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     </div>
   )
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
                 </Link>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from 'next / link';
 import {read_json} from '../../utils / fs_db';
 import type { HelpArticle } from '../../utils / support';
@@ -213,23 +168,13 @@ function HelpIndex() {
     </div>);
 ;
 
-
 }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 );
 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -249,19 +194,4 @@ function HelpIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

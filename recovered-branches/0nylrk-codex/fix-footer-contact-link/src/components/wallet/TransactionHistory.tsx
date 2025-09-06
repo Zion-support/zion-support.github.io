@@ -13,16 +13,10 @@ import { Badge } from "@/components/ui/badge";
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {
   const { transactions, loading } = useWallet();
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   if (loading) {;
 
-=======
-
-
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card>
         <CardHeader>
@@ -192,9 +186,7 @@ export function TransactionHistory() {
                       </Badge>;
                     </div>))}
                 </div>)}
-<<<<<<< HEAD
 
-=======
               {burnTransactions.length === 0 ? (;
                 <p className="text-center py-8 text-muted-foreground">No tokens spent yet</p>;
               ) :(;
@@ -213,20 +205,14 @@ export function TransactionHistory() {
                     </div>;                  ))}
                 </div>;
               )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ScrollArea>;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </Card>);
 }
 
-=======
     </Card>;
   ),;}
  export function TransactionHistory () {
@@ -246,6 +232,3 @@ return (<Card> <CardHeader> <CardTitle>Transaction History</CardTitle> <CardDesc
 }</ScrollArea> </TabsContent> </Tabs> </CardContent> </Card>) 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

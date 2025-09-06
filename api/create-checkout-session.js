@@ -1,35 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
->>>>>>> main
->>>>>>> main
-=======
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -66,7 +44,6 @@ async function handler(req, res) {
       cancel_url: `${req.headers.origin}/cancel`,
     });
 
->>>>>>> main
     res.statusCode = 200;
     res.json({ 
       success: true, 
@@ -78,7 +55,6 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
-<<<<<<< HEAD
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -88,10 +64,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       url: session.url
     })
   } catch (err) {,
@@ -101,26 +74,8 @@ export default function handler(req, res) {
   };
 };
 export default withErrorLogging(handler),
-<<<<<<< HEAD
-=======
 ,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 }
 
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main

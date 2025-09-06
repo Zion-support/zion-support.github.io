@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -35,7 +34,6 @@ export default function SEO({
     </Head>
   );
 }
-=======
 
 import React from './react';
 import Head from './next / head';
@@ -72,4 +70,3 @@ export default function SEO({
 export default SEO;
 }
 export default SEO;
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332

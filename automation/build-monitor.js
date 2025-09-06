@@ -1,12 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -14,16 +7,7 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -161,14 +145,6 @@ class BuildMonitor {
       } catch (error) {
         this.log('Could not read previous report', 'WARN');
       }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
     this.isRunning = false;
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
     this.logLevel = process.env.LOG_LEVEL || 'info';
@@ -187,17 +163,7 @@ class BuildMonitor {
       console.log(logMessage);
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     const report = {
       ...results,
       trends: {
@@ -250,16 +216,7 @@ class BuildMonitor {
   }
   async run() {
     this.log('Starting build health check...');
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
   async checkBuildStatus() {
     try {
       this.log('info', 'Checking build status...');
@@ -279,33 +236,14 @@ class BuildMonitor {
         this.log('warn', 'No build found, triggering build...');
         await this.triggerBuild();
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
-=======
       if (report.healthScore < 70) {
         this.log('Build health is below threshold. Consider immediate action.', 'WARN');
       }
     } catch (error) {
       this.log(`Error in build monitor: ${error.message}`, 'ERROR');
     }
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-      
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-      
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
+
       return true;
     } catch (error) {
       this.log('error', `Build check failed: ${error.message}`);
@@ -505,26 +443,9 @@ class BuildMonitor {
 // Handle command line arguments
 const monitor = new BuildMonitor();
 if (require.main === module) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const monitor = new BuildMonitor();
   monitor.run().catch(console.error);
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
   const command = process.argv[2];
   switch (command) {
     case 'start':
@@ -551,16 +472,7 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -695,17 +607,7 @@ class BuildMonitor {
 // Main execution
 if (require.main === module) {
   const monitor = new BuildMonitor(),
-<<<<<<< HEAD
-=======
   monitor.run().catch(console.error)}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 
 module.exports = BuildMonitor;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 module.exports = BuildMonitor;
->>>>>>> main

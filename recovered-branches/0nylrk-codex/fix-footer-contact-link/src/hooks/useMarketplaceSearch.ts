@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -9,8 +6,6 @@ import {generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS} 
 export function useMarketplaceSearch() {
   // Search state;
   const [searchQuery, setSearchQuery] = useState("");
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useMemo } from "react",
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion, FilterOptions } from "@/types/search";
@@ -33,7 +28,6 @@ export function useMarketplaceSearch() {
     () => generateFilterOptions();
     [];
   );
-<<<<<<< HEAD
 import { SearchSuggestion, FilterOptions } from "@/types/search",
 import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 
@@ -54,22 +48,12 @@ export function useMarketplaceSearch() {
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions(),
     []),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-  
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
     return MARKETPLACE_LISTINGS.filter(listing => {
@@ -78,8 +62,6 @@ export function useMarketplaceSearch() {
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) |
         listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Product type filter
       const matchesProductType = selectedProductTypes.length === 0 |
         selectedProductTypes.includes(listing.category);
@@ -87,10 +69,8 @@ export function useMarketplaceSearch() {
       const matchesLocation = selectedLocations.length === 0 |
         (listing.location && selectedLocations.includes(listing.location));
       // Availability filter
-<<<<<<< HEAD
       const matchesAvailability = selectedAvailability.length === 0 |
         (listing.availability && selectedAvailability.includes(listing.availability));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const matchesSearch = !searchQuery || 
         listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -107,14 +87,7 @@ export function useMarketplaceSearch() {
       // Availability filter
       const matchesAvailability = selectedAvailability.length === 0 || 
         (listing.availability && selectedAvailability.includes(listing.availability)),
-      
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Rating filter
       const matchesRating = selectedRating === null |
         (listing.rating !== undefined && listing.rating >= selectedRating)
@@ -122,18 +95,11 @@ export function useMarketplaceSearch() {
         matchesProductType &&
         matchesLocation &&
         matchesAvailability &&
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       const matchesSearch = !searchQuery || 
-=======
       const matchesSearch = !searchQuery || 
 const matchesSearch = !searchQuery || 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       const matchesSearch = !searchQuery || 
 const matchesSearch = !searchQuery || 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
@@ -152,30 +118,19 @@ const matchesSearch = !searchQuery ||
         matchesAvailability && 
         matchesRating
     })
-<<<<<<< HEAD
-
 
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
-  
 
-
-<<<<<<< HEAD
-=======
         matchesRating
     })
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
   }, [searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]),
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle filter changes
   const handleFilterChange = (filterType: string, value: string) => {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
-<<<<<<< HEAD
-<<<<<<< HEAD
           prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
         );
         break;
@@ -187,12 +142,8 @@ const matchesSearch = !searchQuery ||
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
 
-=======
           prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
         );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -264,22 +215,12 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         break;
       default: break;
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Clear all filters;
   const clearAllFilters = () =>: any {
@@ -290,12 +231,7 @@ function useMarketplaceSearch() {
     setSelectedRating (null);
   }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     search_query;
     setSearchQuery;
@@ -308,13 +244,9 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     filter_options;
 
-=======
-=======
           prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
         ),
         break,
@@ -325,25 +257,19 @@ function useMarketplaceSearch() {
         break,
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
       default: break
     }
-<<<<<<< HEAD
 
   },
-  
 
-=======
   },
-  
 
   }
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Clear all filters
   const clearAllFilters = () => {
     setSearchQuery(""),
@@ -351,9 +277,7 @@ function useMarketplaceSearch() {
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
-<<<<<<< HEAD
 
-=======
   }
   return {
     searchQuery;
@@ -371,7 +295,6 @@ function useMarketplaceSearch() {
     filterOptions
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
   return {
@@ -387,14 +310,9 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -486,10 +404,6 @@ export function useMarketplaceSearch() {;
   }
 }
 ;
-<<<<<<< HEAD
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useCallback, useEffect, useMemo, useState } from 'react',;
 import Head from 'next/head',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
@@ -45,23 +38,14 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>{slices}</svg>
   )
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { GetServerSideProps } from 'next';
 import { requireAdminRole } from '../../utils/auth';
 import DatePicker from 'react-datepicker';
-<<<<<<< HEAD
-=======
 
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0));
-=======
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const result = await requireAdminRole(ctx);
@@ -97,9 +81,6 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
 function LineChart({ data, width = 360, height = 140 }: { data: { date: string, value: number }[], width?: number, height?: number }) {
@@ -126,11 +107,6 @@ function Funnel({ data }: { data: Datum[] }) {
       ))}
     </div>
   )
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return <path key={d.label} d={path} fill={colors[i % colors.length]} />
   })
 import React, { useCallback, useEffect, useMemo, useState } from 'react',
@@ -145,7 +121,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Check condition
 if (return result, ) {
   $2
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
   return result;
 },
@@ -191,8 +166,6 @@ function LineChart() {
       <polyline fill="none" stroke="#3b82f6" stroke_width="2" points={points} />;
     </svg>);
 }
-<<<<<<< HEAD
-=======
 
 /**
  * Funnel - Function description
@@ -201,24 +174,15 @@ function Funnel() {
 
   return (
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="flex flex-col gap-2">
       {data.map((d, i) => (
         <div key={d.label} className="bg-purple-500 text-white text-sm px-3 py-2 rounded" style={{ width: `${100 - i * 12}%` }}>
 
-
-=======
           {d.label}: {d.value  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
         </div>;
       ))  } catch (error) {
@@ -236,10 +200,6 @@ function Funnel() {
 ;
 export default function UsageAnalytics(req, res) {
   try {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [start, setStart] = useState<Date>(new Date(Date.now() - 29 * 24 * 3600 * 1000));
   const [end, setEnd] = useState<Date>(new Date());
   const [userType, setUserType] = useState<string>('all');
@@ -247,14 +207,11 @@ export default function UsageAnalytics(req, res) {
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
 
-
       const res = await fetch(`/api/admin/analytics/summary?${params.toString()}`);
       const json = await res.json();
       setPagesMostUsed(json.pagesMostUsed || []);
       setEvents(json.events || []);
       setLine(json.line || []);
-<<<<<<< HEAD
-=======
       setFunnel(json.funnel || [])
 export default /**
  * UsageAnalytics - Function description
@@ -282,7 +239,6 @@ function UsageAnalytics() {
       set_loading (false);
     }
 
-
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
             <div className="font-medium mb-2">Most Used Features</div>
@@ -292,26 +248,17 @@ function UsageAnalytics() {
                 {pagesMostUsed.slice(0, 6).map((d) => (
                   <li key={d.label} className="flex justify-between gap-4 min-w-[180px]"><span>{d.label}</span><span className="text-gray-500">{d.value}</span></li>
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </ul>
             </div>
           </div>
 
-
           <div className="border rounded p-4 bg-white/70 dark:bg-gray-900 lg:col-span-2">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="font-medium mb-2">Events Over Time</div>
             <LineChart data={line} />
             <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
@@ -324,13 +271,8 @@ function UsageAnalytics() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="border rounded p-4 bg-white/70 dark:bg-gray-900">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="font-medium mb-2">Funnel</div>
           <Funnel data={funnel} />
         </div>
@@ -339,22 +281,15 @@ function UsageAnalytics() {
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }, [start, end, user_type]),
   useEffect (() => { refresh () }, []),
   return (
@@ -421,8 +356,3 @@ function UsageAnalytics() {
     </EnhancedLayout>);
 }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

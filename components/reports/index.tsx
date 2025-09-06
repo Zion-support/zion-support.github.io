@@ -16,14 +16,9 @@ export default function ReportsIndex() {
     <div className="min-h-screen bg-slate-950 text-white">;
       <main className="container mx-auto px-4 py-12 max-w-7xl">;
         {/* Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
         {/* Back to Home */}
 
-
-=======
         <div className="mt-12 text-center">
 
         {/* Content Categorizer Component */  } catch (error) {
@@ -47,8 +42,6 @@ export default function ReportsIndex() {
         </div>;
         {/* Content Categorizer Component */}
         <ContentCategorizer />;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Back to Home */}
         <div className='mt-12 text-center'>;
           <Link
@@ -96,22 +89,14 @@ function ReportsIndex() {
             className='inline - flex items - center gap - 2 text - cyan - 300 hover:text - cyan - 200 transition - colors duration - 200';
           >            ← Back to home        <div className="mt - 12 text - center">;
           <Link href="/" className="inline - flex items - center gap - 2 text - cyan - 300 hover: text - cyan - 200 transition - colors duration - 200">;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ← Back to home;
           </Link>;
         </div>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   );
 }
-=======
         <div className="mt-12 text-center">
-=======
 
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
@@ -124,14 +109,9 @@ function ReportsIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="mt-12 text-center">
 
-
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
-<<<<<<< HEAD
-=======
         {/* Header */}
         <div className=&quot;mb-8&quot;>
           <h1 className=&quot;text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent&quot;>
@@ -172,10 +152,8 @@ export default function ReportsIndex() {
             href='/'
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'
           >            ← Back to home        <div className="mt-12 text-center">
-=======
   );
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Content Categorizer Component */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -189,34 +167,18 @@ export default function ReportsIndex() {
 }
         <div className="mt-12 text-center">
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ← Back to home
           </Link>
         </div>
       </main>
-<<<<<<< HEAD
 
     </div>);
 }
-
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 
     </div>
     </div>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 }
@@ -236,15 +198,9 @@ export default function ReportsIndex() {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
     </div>);
 }
 
-
-
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

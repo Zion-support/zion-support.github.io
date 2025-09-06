@@ -1,49 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {supabase} from "@/integrations/supabase/client";
 
 import type { UserDetails } from "@/types/auth";
 
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
  */
 
 export const cleanupAuthState = () => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
   // Remove standard auth tokens
 
-
-=======
   // Remove standard auth tokens
-
 
   // Remove standard auth tokens;
   localStorage.removeItem('supabase.auth.token');
@@ -51,15 +32,10 @@ export const cleanupAuthState = () => {
   localStorage.removeItem('supabase.auth.token');
   localStorage.removeItem('supabase.auth.token'),
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Remove all Supabase auth keys from localStorage
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       localStorage.removeItem(key)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   localStorage && localStorage.removeItem('supabase && supabase.auth.token');
   
@@ -68,8 +44,6 @@ export const cleanupAuthState = () => {
     if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
       localStorage && localStorage.removeItem(key)
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
   Object && Object.keys(sessionStorage || {}).forEach((key) => {
@@ -79,12 +53,7 @@ export const cleanupAuthState = () => {
     }
   })
 }
-<<<<<<< HEAD
-=======
 
-
-=======
-=======
   localStorage && localStorage.removeItem('supabase && supabase.auth.token');
   
     }
@@ -102,9 +71,6 @@ export const cleanupAuthState = () => {
     }
   })
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -124,27 +90,11 @@ export const cleanupAuthState = () => {;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
       sessionStorage.removeItem(key);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   })
 },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * Utility function to check new user registration and schedule welcome emails
  */
@@ -154,17 +104,12 @@ export const checkNewRegistration = async (user: UserDetails) => {
     const { data: existingCampaign } = await supabase
       .from("email_campaigns")
       .select("id")
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       .eq("user_id", user.id)
 
       .eq("campaign_type", "welcome_series")
 
-
-=======
       .eq("campaign_type", "welcome_series")
-
 
       .eq("user_id", user.id)
       .eq("campaign_type", "welcome_series");
@@ -173,18 +118,12 @@ export const checkNewRegistration = async (user: UserDetails) => {
       .maybeSingle();
       .maybeSingle(),
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // If no welcome email sent yet, schedule one
     if (!existingCampaign) {
       // Create a scheduled job for the welcome email
       await supabase
         .from("scheduled_jobs")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { supabase } from '@/integrations / supabase / client';
 import type { UserDetails } from "@/types / auth";
 /**;
@@ -236,19 +175,13 @@ if ( {) {
       await supabase;
         .from ("scheduled_jobs");
         .insert ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           job_type: "send_retention_email";
           scheduled_for: new Date ().toISOString ();
           status: "pending";
           payload: {
           }
         });
-<<<<<<< HEAD
-=======
 
-=======
             user_type: user && user.userType || "unknown",
             display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
 
@@ -269,51 +202,28 @@ if ( {) {
             display_name: user.displayName |user.email?.split("@")[0] |"User"
           }
         });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         }),
-        
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Create entry in email_campaigns table
       await supabase
         .from("email_campaigns")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-=======
-=======
           user_id: user && user.id;
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           user_id: user.id,
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-=======
             user_id: user.id;
             email_type: "welcome_series";
             user_type: user.userType |"unknown"
@@ -326,9 +236,6 @@ if ( {) {
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -361,11 +268,7 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             email_type: "welcome_series",;
             user_type: user.userType || "unknown",;
             display_name: user.displayName || user.email?.split("@")[0] || "User";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         });
 ;
@@ -381,41 +284,26 @@ export const checkNewRegistration = async (user: UserDetails) => {;
             email_type: "welcome_series";
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             user_type: user && user.userType || "unknown",
             display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
             user_type: user.user_type || "unknown",
             display_name: user.display_name || user.email?.split ("@")[0] || "User";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         });
     }
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error);
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   }
 }
 
-<<<<<<< HEAD
-=======
     console.error ("Error checking or scheduling welcome email:", error);
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     console.error ("Error checking or scheduling welcome email:", error);
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -498,8 +386,5 @@ export const checkNewRegistration = async (user:UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error);
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

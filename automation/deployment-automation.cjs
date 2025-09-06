@@ -1,14 +1,10 @@
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 /**
  * Deployment Automation for Zion Tech Group
  * Automated deployment with health checks and rollback capabilities
  */
 
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -375,14 +371,11 @@ if (require.main === module) {
   automation.runDeploymentAutomation().catch(error => {
     console.error('Deployment automation failed:', error);
     process.exit(1);
-<<<<<<< HEAD
   });
 }
 
 module.exports = DeploymentAutomation;
-=======
 });
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -567,5 +560,3 @@ if (require.main === module) {
 }
 
 module.exports = DeploymentAutomation;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> main

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 
 console.log('🏥 Running Health Check...');
 
-=======
 console.log('🏥 Running Health Check...');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -23,14 +19,7 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
-<<<<<<< HEAD
-=======
-=======
 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   "timestamp": new Date().toISOString(),
   "checks": {},
   "status": 'healthy'};
@@ -94,9 +83,6 @@ try {
 const reportPath = `health-check-report-${Date.now()}.json`;
 fs.writeFileSync(reportPath, JSON.stringify(healthCheck, null, 2));
 
-
-
-
 // Print summary
 const totalChecks = Object.keys(healthCheck.checks).length;
 const okChecks = Object.values(healthCheck.checks).filter(
@@ -105,10 +91,6 @@ const okChecks = Object.values(healthCheck.checks).filter(
 const errorChecks = Object.values(healthCheck.checks).filter(
   check => check.status === 'error'
 ).length;
-
-
-
-
 
 }`);
 
@@ -119,18 +101,12 @@ if (healthCheck.status === 'healthy') {
   
   process.exit(1);
 }
-=======
 #!/usr/bin/env node
 
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -138,7 +114,6 @@ class HealthChecker {
     this.errors = [];
   }
 
-<<<<<<< HEAD
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -362,22 +337,19 @@ if (require.main === module) {}
 });
 };
 module.exports = HealthChecker;
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node
 
 /**
  * Health Check Monitor
  * Monitors application health and provides alerts
  */
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🩺 Zion Tech Group - System Health Check');
-console.log('==========================================');
+console.log('');
 
 const healthReport = {
     timestamp: new Date().toISOString(),
@@ -395,7 +367,6 @@ function runCheck(name, checkFunction) {
     healthReport.summary.total++;
     console.log(`\n🔍 Checking: ${name}`);
     
-=======
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -423,7 +394,6 @@ class HealthCheckMonitor {
   }
 
   async runCommand(command, description) {
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -438,7 +408,6 @@ class HealthCheckMonitor {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message };
     }
-<<<<<<< HEAD
 }
 
 // Check if Node.js is working
@@ -555,7 +524,6 @@ runCheck('Automation Scripts', () => {
             message: 'All automation scripts are present',
             files: existingFiles
         };
-=======
   }
 
   async checkApplicationHealth() {
@@ -579,11 +547,9 @@ runCheck('Automation Scripts', () => {
     
     if (healthy) {
       this.log('✅ Application is healthy');
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     } else {
       this.log('❌ Application health issues detected', 'ERROR');
     }
-<<<<<<< HEAD
 });
 
 // Check disk space
@@ -678,7 +644,7 @@ const reportPath = 'health-check-report.json';
 fs.writeFileSync(reportPath, JSON.stringify(healthReport, null, 2));
 
 console.log('\n📊 Health Check Summary');
-console.log('=======================');
+console.log('==');
 console.log(`Total Checks: ${healthReport.summary.total}`);
 console.log(`✅ Passed: ${healthReport.summary.passed}`);
 console.log(`⚠️  Warnings: ${healthReport.summary.warnings}`);
@@ -694,15 +660,6 @@ if (healthReport.status === 'unhealthy') {
 } else {
     process.exit(0);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
   log(message, type = "INFO") {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] [${type}] ${message}`);
@@ -833,7 +790,7 @@ if (healthReport.status === 'unhealthy') {
 
   async run() {
     this.log("🎯 Starting Health Check Process...");
-    this.log("===================================");
+    this.log("");
     try {
       await this.checkNodeVersion();
       await this.checkPackageJson();
@@ -843,7 +800,7 @@ if (healthReport.status === 'unhealthy') {
       await this.checkBuildCapability();
       
       this.log("\n📊 HEALTH CHECK REPORT");
-      this.log("======================");
+      this.log("=");
       this.log(`Checks Passed: ${this.checks.length}`);
       this.log(`Errors Found: ${this.errors.length}`);
       
@@ -882,17 +839,6 @@ if (healthReport.status === 'unhealthy') {
 
 const checker = new HealthChecker();
 checker.run().catch(console.error);
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 31ef851138fd26c05f3cc955272d6690995f1d05
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
 
     return healthy;
   }
@@ -992,5 +938,3 @@ if (require.main === module) {
 }
 
 module.exports = HealthCheckMonitor;
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

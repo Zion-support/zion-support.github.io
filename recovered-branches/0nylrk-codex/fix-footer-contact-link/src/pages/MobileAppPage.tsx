@@ -30,16 +30,9 @@ const MobileAppPage: React.FC = () => {
     </AppLayout>
   );
 };
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default MobileAppPage;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
@@ -53,9 +46,6 @@ const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>;
       <SEO;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React from "react",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -73,9 +63,6 @@ const MobileAppPage:React.FC = () => {;
       <SEO ;
     <AppLayout>;
       <SEO;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         title="Zion AI Marketplace App";
         description="Hire top AI talent or find global IT jobs on the go. Download the Zion app now.";
         keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs";
@@ -89,13 +76,8 @@ const MobileAppPage:React.FC = () => {;
 
 },
 
-
 export default MobileAppPage;
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       ;
       <MobileAppHero />;
       ;
@@ -118,6 +100,3 @@ export default MobileAppPage,; const MobileAppPage: React.FC = () => {
   );
 },;
 export default MobileAppPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

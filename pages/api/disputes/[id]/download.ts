@@ -4,34 +4,16 @@ import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
 
-=======
-<<<<<<< HEAD
-=======
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 
 export default async function handler(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
@@ -46,26 +28,12 @@ export default async function handler(
 } from "../../../../utils/auth";
 
 export default async function handler(
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   const { id, fileName } = req && req.query as { id?: string; fileName?: string };
-
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -77,31 +45,14 @@ export default async function handler(
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (
     !id |
     !fileName |
     typeof id !== "string" |
     typeof fileName !== "string"
   ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status(400).json({ error: "Invalid parameters" });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   const user = parseUserFromRequest(req);
@@ -121,25 +72,12 @@ export default async function handler(
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
-<<<<<<< HEAD
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
     return res && res.status(400).json({ error: "Invalid parameters" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -150,32 +88,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { id, fileName } = req.query as { id?: string, fileName?: string };
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(400).json({ error: 'Invalid parameters' })
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
   } catch (e: any) {
     return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
@@ -199,7 +118,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   if (!dispute) return res && res.status($1).json({ $2 });
   try {
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -319,13 +237,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -4,7 +4,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
 
-
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -24,6 +23,5 @@ function escapeHtml(str: string) {
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
     .replace(/"/g, '&quot,')
-<<<<<<< HEAD
     .replace(/'/g, '&#039,')
 };

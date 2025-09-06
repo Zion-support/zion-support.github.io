@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
-=======
 
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -15,17 +12,12 @@ export default function VerifyPage() {
   const [role, setRole] = useState<KycRole>('client');
   const [profile, setProfile] = useState<KycProfile | null>(null);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [requiredDocs, setRequiredDocs] = useState<KycDocumentMeta['kind'][]>([]);
   const [optionalDocs, setOptionalDocs] = useState<KycDocumentMeta['kind'][]>([]);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [fullLegalName, setFullLegalName] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
-<<<<<<< HEAD
-=======
-
 
     const uploaded = new Set((profile.documents || []).map((d) => d.kind));
     const required = requiredDocs.length;
@@ -36,18 +28,13 @@ export default function VerifyPage() {
     return Math.max(base, submitted, approved)
   }, [profile, requiredDocs]);
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async function start() {
     setBusy(true);
     setMessage('');
     const res = await fetch('/api/kyc/start', {
 
-<<<<<<< HEAD
-
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
@@ -61,7 +48,6 @@ const data = await res.json();
     }
     setBusy(false)
   }
-
 
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
@@ -90,7 +76,6 @@ if (return 0) {
     const have = Array.from (uploaded).filter (key =>;
       required_docs.includes (k as any)).length;
     const base = required > 0 ? Math.round ((have / required) * 80) : 0; // up to 80%;
-=======
   const progress = useMemo(() => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const base = required > 0 ? Math.round((have / required) * 80) : 0, // up to 80%;
@@ -129,7 +114,6 @@ if (return 0) {
       setProfile(data && data.profile);
       setRequiredDocs(data && data.requiredDocuments);
       setOptionalDocs(data && data.optionalDocuments);
-=======
   async function upload(kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
     if (!filename) return;
@@ -143,13 +127,11 @@ if (return 0) {
     if (data.ok) {;
       setProfile(data.profile);
 
-
     } else {;
       setMessage(data && data.error || 'Failed to start');
     }
     setBusy(false);  }
 
-=======
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, kind, filename })});
@@ -161,7 +143,6 @@ if (return 0) {
     }
     setBusy(false)
   }
-
 
   async function submit() {
     setBusy(true);
@@ -180,11 +161,8 @@ const data = await res.json();
     setBusy(false)
   }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
   async function upload(): any (kind: KycDocumentMeta['kind']) {;
     const filename = prompt(`Enter filename for ${kind}`) || '';
-=======
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
@@ -205,8 +183,6 @@ const data = await res.json();
     setBusy(false);  }
   async function upload(kind: KycDocumentMeta['kind']) {
     const filename = prompt(`Enter filename for ${kind}`) |'';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {;
@@ -264,10 +240,6 @@ const data = await res.json();
         <p className="text-sm text-gray-600 mb-6">Guided step-by-step KYC/AML verification with progress tracking.</p>
       body: JSON && JSON.stringify({ userId, kind, filename }),;
     });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const data = await res && res.json();
     if (data && data.ok) {;
       setProfile(data && data.profile);
@@ -275,7 +247,6 @@ const data = await res.json();
       setMessage(data && data.error || 'Upload failed');
     }
     setBusy(false);  }
-
 
     } else {;
       setMessage(data && data.error || 'Submit failed');
@@ -393,22 +364,14 @@ if ( {) {
           <div className="mb-4">
             <VerifiedBadge labels={labels} />
           </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <div>
             <label className="block text-sm font-medium">User ID</label>
             <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
@@ -432,35 +395,24 @@ if ( {) {
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessName} onChange={(e) => setBusinessName(e.target.value)} />
               </div>
               <div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label className="block text-sm font-medium">Registration number</label>
                 <input className="mt-1 w-full border rounded px-3 py-2" value={businessReg} onChange={(e) => setBusinessReg(e.target.value)} />
               </div>
             </>
-<<<<<<< HEAD
           )}
         </div>
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>
 <div className="mb-6">
-=======
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
         </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="mb-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <button disabled={busy} onClick={start} className="rounded bg-blue-600 text-white px-4 py-2 disabled:opacity-50">Start/Update</button>
         </div>
 
@@ -469,7 +421,6 @@ if ( {) {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-gray-600">Progress</span>
-<<<<<<< HEAD
               </div>
             </div>
             <section>
@@ -480,15 +431,11 @@ if ( {) {
                     d => d.kind === k
                   );
                     >
-=======
                 <span className="text-sm font-medium">{progress}% {profile.status === 'submitted' && '→ Pending ID'} {profile.status === 'approved' && '→ Approved'}</span>
               </div>
               <div className="w-full bg-gray-100 rounded h-3 overflow-hidden">
                 <div className="bg-blue-600 h-3" style={{ width: `${progress}%` }} />
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
             </div>
             <section>
@@ -543,38 +490,21 @@ if ( {) {
                     </div>;
                   );                })}
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div>
                         <div className="text-sm font-medium">{k}</div>
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   )
                 })}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </section>
             {optionalDocs.length > 0 && (
@@ -602,10 +532,6 @@ if ( {) {
               </section>;
             )}
 
-
-<<<<<<< HEAD
-=======
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
@@ -620,9 +546,6 @@ if ( {) {
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
 
-
-
-=======
                     )
 ;
   const labels = getBadgeLabels(profile || undefined);
@@ -699,15 +622,12 @@ if ( {) {
               </button>;
             </div>;
 
-
-=======
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
-=======
                       <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   )
@@ -720,7 +640,6 @@ if ( {) {
             </section>
             {optionalDocs.length > 0 && (
               <section>
-<<<<<<< HEAD
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
                 <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
@@ -729,25 +648,18 @@ if ( {) {
                     );
                       >
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k),
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         <div>
                           <div className="text-sm font-medium">{k}</div>
                           <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Optional'}</div>
                         </div>
                         <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     )
                   })}
                 </div>
@@ -816,23 +728,17 @@ if ( {) {
               </section>)}
             <div>;
               <button;
-=======
-<<<<<<< HEAD
                     );                  })}
                 </div>
               </section>
             )}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div>
               <button
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 disabled={
                   busy |
                   profile.status === 'submitted' |
                   profile.status === 'approved'
                 }
-<<<<<<< HEAD
                 onClick={submit}
                 className='rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50'
               >
@@ -980,8 +886,6 @@ if ( {) {
                   busy ||;
                   profile.status === 'submitted' ||;
                   profile.status === 'approved';
-=======
-<<<<<<< HEAD
                 on_click={submit}
                 className='rounded bg - green - 600 text - white px - 4 py - 2 disabled:opacity - 50';
               >;
@@ -992,10 +896,6 @@ if ( {) {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section>;
               <h2 className="font-semibold mb-2">Required documents</h2>;
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">;
@@ -1044,7 +944,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
@@ -1053,14 +952,10 @@ if ( {) {
       </main>
     </>
 );
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
             <div>
               <button disabled={busy || profile.status === 'submitted' || profile.status === 'approved'} onClick={submit} className="rounded bg-green-600 text-white px-4 py-2 disabled:opacity-50">Submit for review</button>
             </div>
-
 
             {message && <div className="text-sm text-blue-700">{message}</div>  } catch (error) {
     console.error("Error:", error);
@@ -1081,10 +976,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import SEO from '../components/SEO';
 
@@ -17,13 +13,10 @@ export default function ResourcesPage() {
       <div className="container mx-auto px-4 py-16 text-white">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Resources</h1>
-<<<<<<< HEAD
-=======
           <p className="mt-3 text-gray-300">Docs, guides, and references to help you evaluate and deploy faster. Contact: +1 302 464 0950 • kleber@ziontechgroup.com</p>
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-
 
             { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' },
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
@@ -36,15 +29,11 @@ export default function ResourcesPage() {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
               <div className="text-sm text-gray-400">Resource</div>
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
-<<<<<<< HEAD
-=======
               <div className="mt-3 text-cyan-300">Open →</div>
             </Link>
 
@@ -84,7 +73,6 @@ function ResourcesPage() {
     </UltraFuturisticBackground>);
 },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Whitepapers */}
       <section id="whitepapers" className="py - 20 bg - slate - 50">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -92,11 +80,7 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -130,12 +114,7 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Whitepapers & Guides</h2>
@@ -146,8 +125,6 @@ function ResourcesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {whitepapers.map((paper, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
 
             className="text - center mb - 16";
           >;
@@ -160,13 +137,10 @@ function ResourcesPage() {
             {whitepapers.map ((paper, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={paper.title}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                 className="bg - white rounded - 2xl shadow - lg overflow - hidden hover:shadow - xl transition - all duration - 300";
               >;
                 <div className="bg - gradient - to - br from - blue - 500 to - cyan - 500 p - 8">;
@@ -174,8 +148,6 @@ function ResourcesPage() {
                     <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
                       {paper.category}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={paper.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,31 +168,19 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {paper.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                     <span className="text-white/80 text-sm">{paper.pages} pages</span>
                   </div>
@@ -233,9 +193,6 @@ function ResourcesPage() {
                       {paper.downloadCount} downloads
                     </span>
                     <a
-<<<<<<< HEAD
-=======
-
 
                       href={paper.downloadUrl  } catch (error) {
     console.error("Error:", error);
@@ -243,9 +200,6 @@ function ResourcesPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                     >
                       <Download className="w-5 h-5" />
@@ -254,8 +208,6 @@ function ResourcesPage() {
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
                     </span>;
                     <span className="text - white / 80 text - sm">{paper.pages} pages</span>;
@@ -282,7 +234,6 @@ function ResourcesPage() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Case Studies */}
       <section className="py - 20 bg - white">;
         <div className="max - w-7xl mx - auto px - 6">;
@@ -290,11 +241,7 @@ function ResourcesPage() {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -326,12 +273,7 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Case Studies</h2>
@@ -342,8 +284,6 @@ function ResourcesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
 
             className="text - center mb - 16";
           >;
@@ -356,12 +296,10 @@ function ResourcesPage() {
             {case_studies.map ((study, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={study.title}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
@@ -370,8 +308,6 @@ function ResourcesPage() {
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
                   {study.industry}
                   {study.industry  } catch (error) {
-=======
-
 
                 key={study.title  } catch (error) {
     console.error("Error:", error);
@@ -394,26 +330,17 @@ function ResourcesPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-<<<<<<< HEAD
                       {paper.category}
-=======
                       {paper.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </span>
                     <span className="text-white/80 text-sm">{paper.pages} pages</span>
                   </div>
@@ -422,15 +349,12 @@ function ResourcesPage() {
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
-
                   {study.industry  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
@@ -442,7 +366,6 @@ function ResourcesPage() {
                         <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span>{result}</span>
                       </li>
-
 
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -458,8 +381,6 @@ function ResourcesPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                 >
                   <span>Read Case Study</span>
@@ -505,7 +426,6 @@ function ResourcesPage() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
 
-
                 </Link>
               </motion.div>
             ))  } catch (error) {
@@ -540,8 +460,6 @@ function ResourcesPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
@@ -575,7 +493,6 @@ function ResourcesPage() {
                   <span className="inline - block bg - white / 20 px - 3 py - 1 rounded - full text - sm text - white">;
                     {video.category}
 
-
                 key={video.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -597,7 +514,6 @@ function ResourcesPage() {
   }
 }
 
-
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
@@ -610,8 +526,6 @@ function ResourcesPage() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
                 <div className="p-6">
@@ -622,14 +536,11 @@ function ResourcesPage() {
                   </div>
                   <a
 
-
                     href={video.watchUrl  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{study.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">{study.description}</p>
@@ -641,10 +552,7 @@ function ResourcesPage() {
                         <ArrowRight className="w-3 h-3 text-blue-500 flex-shrink-0" />
                         <span>{result}</span>
                       </li>
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                   >
                     Watch Video
@@ -652,8 +560,6 @@ function ResourcesPage() {
                 </div>
                 <a
                   href={study.readUrl}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -667,20 +573,12 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
                 >
                   <span>Read Case Study</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
       {/* Videos */}
       <section className="py - 20 bg - slate - 900">;
-=======
-<<<<<<< HEAD
                 </a>
               </motion.div>
 
@@ -706,19 +604,14 @@ function ResourcesPage() {
 
       {/* Documentation */}
       <section className="py - 20 bg - white">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="max - w-7xl mx - auto px - 6">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
                 </Link>
               </motion.div>
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -727,20 +620,14 @@ function ResourcesPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
       {/* Videos */  } catch (error) {
-=======
       {/* Documentation */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
       <section className="py-20 bg-slate-900">
-=======
       <section className="py-20 bg-white">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }  } catch (error) {
@@ -758,7 +645,6 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Video Resources</h2>
@@ -774,10 +660,7 @@ function ResourcesPage() {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 key={video.title  } catch (error) {
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
@@ -805,9 +688,7 @@ function ResourcesPage() {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 
-
                 key={doc.title  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -827,37 +708,21 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-6 text-center">
                   <Play className="w-12 h-12 text-white mx-auto mb-3" />
                   <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     {video.category}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {video.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
-<<<<<<< HEAD
 
                   {doc.type  } catch (error) {
                 <div className="p-6">
@@ -898,22 +763,14 @@ function ResourcesPage() {
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
                   {doc.type}
                   {doc.type  } catch (error) {
-=======
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
-
                   {doc.type  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </span>
                 <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">{doc.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-6">{doc.description}</p>
@@ -922,30 +779,19 @@ function ResourcesPage() {
                   <span>Updated {doc.lastUpdated}</span>
                 </div>
                 <a
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   href={doc.downloadUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105"
                 >
                   Download
                 </a>
               </motion.div>
-<<<<<<< HEAD
       {/* CTA */}
-=======
 
                 className="bg - slate - 50 rounded - 2xl p - 8 hover:bg - slate - 100 transition - all duration - 300 transform hover:-translate - y-2";
               >;
@@ -980,8 +826,6 @@ function ResourcesPage() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.6 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -995,11 +839,7 @@ function ResourcesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -1021,24 +861,16 @@ function ResourcesPage() {
           >
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
             <p className="text-xl text-blue-100 mb-8">
-<<<<<<< HEAD
               Can't find what you're looking for? Our team is here to help with custom research
 
               Can't find what you're looking for? Our team is here to help with custom research,
               Can't find what you're looking for? Our team is here to help with custom research, 
               Can't find what you're looking for? Our team is here to help with custom research,
-=======
 
               Can't find what you're looking for? Our team is here to help with custom research,
 
-=======
               Can't find what you're looking for? Our team is here to help with custom research, 
-=======
               Can't find what you're looking for? Our team is here to help with custom research,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -1061,7 +893,6 @@ function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
-<<<<<<< HEAD
           >;
             <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
             <p className="text-xl text-blue-100 mb-8">;
@@ -1071,10 +902,6 @@ function ResourcesPage() {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">;
               <a;
                 href="/contact";
-=======
-
-=======
-=======
 
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -1095,8 +922,6 @@ function ResourcesPage() {
   }
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">Need More Resources?</h2>;
             <p className="text - xl text - blue - 100 mb - 8">;
@@ -1107,16 +932,12 @@ function ResourcesPage() {
               <a;
                 href="/contact";
                 className="bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >;
                 Contact Our Experts;
               </a>;
               <a;
                 href="/contact";
-<<<<<<< HEAD
-=======
                 className="border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >;
                 Request Custom Research;
               </a>;
@@ -1125,8 +946,6 @@ function ResourcesPage() {
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
     </>);
               <a
                 href=&quot;/contact&quot;
@@ -1140,18 +959,12 @@ function ResourcesPage() {
               >
                 Request Custom Research
               </Link>
-=======
-=======
                 key={doc.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1167,4 +980,3 @@ export default function ResourcesPage() {
     </MainLayout>
   );
 }
->>>>>>> main

@@ -12,25 +12,16 @@ async function ensure() {
   }
 }
 export default async function handler(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
-
   await ensure();
-<<<<<<< HEAD
   if (req && req.method === "GET") {
     const data = await fs && fs.readJson(FILE_PATH);
     return res && res.status(200).json(data);
 
-=======
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -38,8 +29,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
   await ensure();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
@@ -55,15 +44,10 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
 
   await ensure();
   if (req.method === "GET") {
@@ -87,14 +71,6 @@ export default async function handler(
   }
   res.status(405).json({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -120,25 +96,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data)
 
-<<<<<<< HEAD
   }
     const data = await fs.readJson(FILE_PATH);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-
 
   res.status(405).json({ error: 'Method not allowed' })
 
-
 }
-=======
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const comment = {
-<<<<<<< HEAD
       id: Date && Date.now().toString(),
       proposalId: body && body.proposalId,
       region: body && body.region || "Global",
@@ -153,24 +121,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.status(405).json({ error: "Method not allowed" });
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon',
-=======
       id: Date.now().toString(),
       proposalId: body.proposalId,
       region: body.region || 'Global',
       author: body.author || 'anon',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       text: body.text || '',
       createdAt: new Date().toISOString()
     };
@@ -199,7 +156,6 @@ async function ensure() {;
     return res.status(500).json({ error: "Internal server error" });
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
@@ -248,11 +204,6 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -358,9 +309,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

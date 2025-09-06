@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TalentCardBadges = () => {
   return (
     <div>
@@ -7,5 +6,4 @@ const TalentCardBadges = () => {
     </div>
   );
 };
-
 export default TalentCardBadges;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Mail,
   Phone,
   MapPin,
@@ -7,16 +6,11 @@
   Linkedin,
   Instagram,
   Github,;
-=======
-
-
 
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -56,23 +50,12 @@ import {;
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-
-=======
 
 import React from 'react';
 import Link from 'next/link';
 
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -82,12 +65,7 @@ import Link from 'next/link';
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     solutions: [
       { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       { name: "Startup Solutions", href: "/startup-solutions" }
@@ -121,20 +99,13 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" }
     ]
   }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
     { name: "LinkedIn", href: "#", icon: Linkedin }
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
-<<<<<<< HEAD
-=======
 
   const footerLinks = {;
     services: [;
@@ -178,7 +149,6 @@ import Link from 'next/link';
       { name: "Accessibility", href: "/accessibility" },;
     ],;
   };
-=======
   ];
 
 const microSaasCategories = [
@@ -191,9 +161,6 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const socialLinks = [;
     { name: "Facebook", href: "#", icon: Facebook },;
@@ -202,9 +169,6 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const microSaasCategories = [
   { title: 'Marketing Tools', icon: Target, count: 15 },
   { title: 'Productivity', icon: Settings, count: 12 },
@@ -215,14 +179,7 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -232,8 +189,6 @@ const microSaasCategories = [
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}>;
               <div className="flex items-center space-x-2 mb-6">;
@@ -263,7 +218,6 @@ const microSaasCategories = [
             </motion && motion.div>;
           </div>;
 
-
           {/* Services */}
           <div>;
             <motion&& motion.div
@@ -285,7 +239,6 @@ const microSaasCategories = [
               </ul>;
             </motion && motion.div>;
           </div>;
-
 
           {/* Solutions */}
           <div>;
@@ -309,8 +262,6 @@ const microSaasCategories = [
             </motion && motion.div>;
           </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Company */}
           <div>;
             <motion&& motion.div
@@ -328,15 +279,11 @@ const microSaasCategories = [
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-=======
 
               </ul>;
             </motion && motion.div>;
           </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Resources & Legal */}
           <div>;
             <motion&& motion.div
@@ -365,10 +312,7 @@ origin/automation-improvements-final
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
                   <li key={index}>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <Link
                       href={link && link.href}
                       className="text-gray-400 hover:text-white transition-colors">;
@@ -376,24 +320,12 @@ origin/automation-improvements-final
                     </Link>;
                   </li>;
                 ))}
-<<<<<<< HEAD
-=======
 
               </ul>;
             </motion && motion.div>;
           </div>;
         </div>;
 
-
-
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
@@ -401,25 +333,7 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-
-<<<<<<< HEAD
-
-
-
-=======
-=======
-
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
@@ -440,12 +354,7 @@ origin/automation-improvements-final
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -525,14 +434,7 @@ origin/automation-improvements-final
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-<<<<<<< HEAD
-=======
 
-            
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -550,11 +452,7 @@ origin/automation-improvements-final
                 </a>
               ))}
             </motion.div>
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -566,14 +464,6 @@ origin/automation-improvements-final
                 Cookie Policy
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
         </div>
       </div>
@@ -584,7 +474,6 @@ origin/automation-improvements-final
       </div>;
     </footer>;
   );
-=======
 import MainLayout from '../../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -604,4 +493,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

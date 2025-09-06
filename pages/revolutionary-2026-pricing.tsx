@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -28,21 +23,11 @@ export default function Revolutionary2026Pricing() {
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
-
-=======
 
 import {;
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users,;
@@ -51,17 +36,11 @@ import {;
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List;
 } from 'lucide-react',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
@@ -69,11 +48,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
-<<<<<<< HEAD
-=======
 
-
-=======
 import React, { useState, useMemo } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -129,7 +104,6 @@ if ( {) {
   $2
 }
           return service.category.includes ('Enterprise') || service.category.includes ('Business');
-=======
           return service.category.includes('AI') |service.category.includes('Machine Learning')
         } else if (selectedCategory === 'quantum') {
           return service.category.includes('Quantum') |service.category.includes('Space')
@@ -137,8 +111,6 @@ if ( {) {
           return service.category.includes('Emerging') |service.category.includes('Technology')
         } else if (selectedCategory === 'enterprise') {
           return service.category.includes('Enterprise') |service.category.includes('Business')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
 
         return true;
@@ -176,10 +148,7 @@ if ( {) {
     })
     return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services])
-<<<<<<< HEAD
-=======
   const categories = [
-
 
 export default function Revolutionary2026Pricing(req, res) {
   try {
@@ -296,21 +265,17 @@ export default function Revolutionary2026Pricing(req, res) {
 
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
 
-
   },
-
 
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length
-=======
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
@@ -319,7 +284,6 @@ export default function Revolutionary2026Pricing(req, res) {
 ];
   const priceRanges = [
 
-=======
     // Price filter;
     // Check condition
 if ( {) {
@@ -394,8 +358,6 @@ if (return b.customers - a.customers, ) {
     { id: 'high', name: '$5K - $20K / month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) |0
       return acc + price
@@ -404,12 +366,9 @@ if (return b.customers - a.customers, ) {
     highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) |0))
     popularServices: all2026Services.filter(s => s.popular).length
 
-
   },
 
   return (
-
-
 
     >
       <div className="min-h-screen">
@@ -425,7 +384,6 @@ if (return b.customers - a.customers, ) {
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
 
-
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -438,14 +396,11 @@ if (return b.customers - a.customers, ) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
 
-=======
   ],
   const sort_options = [;
     { id: 'price - low', name: 'Price Low to High' },
@@ -493,8 +448,6 @@ if (return b.customers - a.customers, ) {
           <meta property="og:type" content="website" />;
           <link rel="canonical" href="https://ziontechgroup.com / revolutionary - 2026 - pricing" />;
         </Head>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length }
@@ -516,7 +469,6 @@ if (return b.customers - a.customers, ) {
     { id: 'popularity', name: 'Most Popular' }
     { id: 'name', name: 'Name A-Z' }
   ]
-=======
 export default function Revolutionary2026Pricing(req, res) {
   try {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -629,32 +581,18 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) |0
       return acc + price
@@ -662,37 +600,22 @@ export default function Revolutionary2026Pricing(req, res) {
     lowestPrice: Math.min(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) |0))
     highestPrice: Math.max(...all2026Services.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')) |0))
     popularServices: all2026Services.filter(s => s.popular).length
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground
       intensity="extreme"
-=======
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground 
       intensity="extreme" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       colorScheme="neural-network"
-<<<<<<< HEAD
       particleCount={500}
       animationSpeed={2.5}
       enableHolographic={true}
       enableQuantumEffects={true}
       enableNeuralNetwork={true}
-=======
-<<<<<<< HEAD
-=======
     <UltraAdvancedFuturisticBackground
       intensity="extreme"
       colorScheme="neural-network"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       particleCount={500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -718,11 +641,6 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       <div className="min-h-screen">
         <Head>
@@ -736,13 +654,9 @@ export default function Revolutionary2026Pricing(req, res) {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-pricing" />
         </Head>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Enhanced Navigation */}
-<<<<<<< HEAD
         <EnhancedNavigation2026 />
         {/* Hero Section */}
-=======
         <EnhancedNavigation2026 />;
 
         {/* Hero Section */}
@@ -754,7 +668,6 @@ export default function Revolutionary2026Pricing(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -777,8 +690,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -788,10 +699,6 @@ export default function Revolutionary2026Pricing(req, res) {
               </h1>
               <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -851,8 +758,6 @@ export default function Revolutionary2026Pricing(req, res) {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -874,21 +779,17 @@ export default function Revolutionary2026Pricing(req, res) {
           </div>
         </section>
 
-
         {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
 
-=======
               className="bg - black / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 6 max - w-2xl mx - auto";
             >;
               <h3 className="text - xl font - bold text - white mb - 4 text - center">Need Custom Pricing?</h3>;
@@ -919,7 +820,6 @@ export default function Revolutionary2026Pricing(req, res) {
                 <div className="flex flex - wrap gap - 2">;
                   {categories.map ((category) => (
                     <button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       key={category.id}
                       on_click={() => setSelectedCategory (category.id)}
                       className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
@@ -928,9 +828,6 @@ export default function Revolutionary2026Pricing(req, res) {
                           : 'bg - black / 40 text - gray - 300 hover:bg - black / 60 hover:text - white';
                       }`}
 
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -942,26 +839,15 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -982,16 +868,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1000,41 +877,20 @@ export default function Revolutionary2026Pricing(req, res) {
                 </span>
               </h1>
               <p className="text-gray-300 text-xl max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions. 
                 Get maximum ROI with our revolutionary services.
               </p>
               {/* Pricing Statistics */}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 Transparent, competitive pricing for our cutting-edge AI, quantum computing, and emerging technology solutions.
                 Get maximum ROI with our revolutionary services.
               </p>
-<<<<<<< HEAD
               {/* Pricing Statistics */}
-=======
               {/* Pricing Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-
-
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-xl p-4">
                   <div className="text-2xl font-bold text-purple-400">{pricingStats.totalServices}+</div>
@@ -1054,18 +910,13 @@ export default function Revolutionary2026Pricing(req, res) {
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
             {/* Contact Information */}
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
 
-
-=======
-=======
             {/* Contact Information */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1092,12 +943,6 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6 max-w-2xl mx-auto"
             >
               <h3 className="text-xl font-bold text-white mb-4 text-center">Need Custom Pricing?</h3>
@@ -1118,34 +963,17 @@ export default function Revolutionary2026Pricing(req, res) {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Filters */}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-6">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 {/* Category Filter */}
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
@@ -1156,7 +984,6 @@ export default function Revolutionary2026Pricing(req, res) {
                         selectedCategory === category.id
                           ? 'bg-purple-600 text-white'
                           : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-white'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       }`}
                     >;
                       {category.icon} {category.name} ({category.count});
@@ -1167,8 +994,6 @@ export default function Revolutionary2026Pricing(req, res) {
                 <div className="flex flex - wrap gap - 2">;
                   {price_ranges.map ((range) => (
                     <button;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       key={range.id}
                       on_click={() => setSelectedPriceRange (range.id)}
                       className={`px - 3 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
@@ -1178,11 +1003,7 @@ export default function Revolutionary2026Pricing(req, res) {
                       }`}
                     >;
                       {range.name}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1276,21 +1097,13 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="px-3 py-2 bg-black/60 border border-purple-500/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-500/60"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
-<<<<<<< HEAD
                         {option.name}
-=======
 
-=======
                     </button>))}
                 </div>;
 
@@ -1303,11 +1116,8 @@ export default function Revolutionary2026Pricing(req, res) {
                   >;
                     {sort_options.map ((option) => (
                       <option key={option.id} value={option.id}>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         {option.name}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {option.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1325,20 +1135,12 @@ export default function Revolutionary2026Pricing(req, res) {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
         {/* Services Pricing Grid */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-8">
@@ -1352,11 +1154,9 @@ export default function Revolutionary2026Pricing(req, res) {
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-<<<<<<< HEAD
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-=======
 
                       </option>))}
                   </select>;
@@ -1365,7 +1165,6 @@ export default function Revolutionary2026Pricing(req, res) {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
         {/* Services Pricing Grid */}
         <section className="py - 12 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -1385,8 +1184,6 @@ export default function Revolutionary2026Pricing(req, res) {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1402,12 +1199,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="text-center py-20"
                 >
                   <div className="text-gray-400 text-xl">
@@ -1418,11 +1210,7 @@ export default function Revolutionary2026Pricing(req, res) {
                 </motion.div>
               ) : (
                 <motion.div
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   initial={{ opacity: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1438,18 +1226,11 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 >
                   {filteredServices.map((service, index) => (
                     <motion.div
-<<<<<<< HEAD
-=======
 
                   className="text - center py - 20";
                 >;
@@ -1468,14 +1249,10 @@ export default function Revolutionary2026Pricing(req, res) {
                   {filtered_services.map ((service, index) => (
                     <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       key={service.id}
                       initial={{ opacity: 0, coordinate_y: 20 }}
                       animate={{ opacity: 1, coordinate_y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-
 
                       key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -1498,9 +1275,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="group relative"
                     >
                       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -1517,9 +1291,6 @@ export default function Revolutionary2026Pricing(req, res) {
                           <div className="mb - 6">;
                             <div className="text - 4xl font - bold text - white mb - 2">;
                               {service.price}
-<<<<<<< HEAD
-=======
-
 
                         {/* Service Header */  } catch (error) {
     console.error("Error:", error);
@@ -1571,9 +1342,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="mb-6">
                           <h4 className="text-white font-semibold mb-3 flex items-center">
                             <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
@@ -1585,9 +1353,6 @@ export default function Revolutionary2026Pricing(req, res) {
                                 <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                                 <span>{feature}</span>
                               </li>
-<<<<<<< HEAD
-=======
-
 
                             ))  } catch (error) {
     console.error("Error:", error);
@@ -1602,9 +1367,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className="grid grid-cols-2 gap-4 text-sm mb-6">
                           <div>
                             <span className="text-gray-400">Category:</span>
@@ -1626,7 +1388,6 @@ export default function Revolutionary2026Pricing(req, res) {
                             <div className="text-white">{service.setupTime}</div>
                           </div>
                         </div>
-<<<<<<< HEAD
                         {/* ROI and Market Info */}
                         <div className="mb-6 p-3 bg-purple-900/20 rounded-lg">
                           <div className="text-sm text-purple-300 mb-2">
@@ -1636,9 +1397,7 @@ export default function Revolutionary2026Pricing(req, res) {
                             <strong>Market:</strong> {service.marketSize} | <strong>Growth:</strong> {service.growthRate}
                           </div>
                         </div>
-=======
 
-=======
                               <span className="text - lg text - gray - 400">{service.period}</span>;
                             </div>;
                             <div className="text - gray - 400 text - sm">;
@@ -1695,9 +1454,7 @@ export default function Revolutionary2026Pricing(req, res) {
                         {/* Action Buttons */}
                         <div className="flex flex - col gap - 3">;
                           <Link;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             href={service.link}
-
 
                         {/* ROI and Market Info */  } catch (error) {
     console.error("Error:", error);
@@ -1733,18 +1490,12 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-200 flex items-center justify-center group-hover:scale-105"
                           >
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                           </Link>
                           <a
-<<<<<<< HEAD
-=======
-
 
                             href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
@@ -1752,23 +1503,17 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             className="bg-black/40 hover:bg-black/60 text-white font-semibold py-3 px-6 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                           >
                             <Phone className="w-4 h-4 mr-2" />
                             Contact Sales
                           </a>
                         </div>
-<<<<<<< HEAD
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
-=======
-
 
                         {/* Badges */  } catch (error) {
     console.error("Error:", error);
@@ -1776,11 +1521,7 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <div className="absolute top-4 right-4 flex flex-col gap-2">
-=======
-=======
                             className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold py - 3 px - 6 rounded - xl transition - all duration - 200 flex items - center justify - center group - hover:scale - 105";
                           >;
                             Learn More;
@@ -1796,10 +1537,8 @@ export default function Revolutionary2026Pricing(req, res) {
                         </div>;
                         {/* Badges */}
                         <div className="absolute top - 4 right - 4 flex flex - col gap - 2">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           {service.popular && (
 
-=======
                             <div className="bg - gradient - to - r from - yellow - 400 to - orange - 500 text - black text - xs font - bold px - 3 py - 1 rounded - full">;
                               POPULAR;
                             </div>)}
@@ -1807,9 +1546,7 @@ export default function Revolutionary2026Pricing(req, res) {
                             <div className="bg - gradient - to - r from - purple - 400 to - pink - 400 text - white text - xs font - bold px - 3 py - 1 rounded - full">;
                               CUSTOM;
                             </div>)}
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1852,12 +1589,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -1868,10 +1600,7 @@ export default function Revolutionary2026Pricing(req, res) {
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
 
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -1883,20 +1612,13 @@ export default function Revolutionary2026Pricing(req, res) {
             </motion.div>;
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Value Proposition */}
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -1904,21 +1626,15 @@ export default function Revolutionary2026Pricing(req, res) {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
                 <p className="text-gray-300">
-<<<<<<< HEAD
                   making them the smartest investment for your business.
                 </p>
               </motion.div>
-=======
-
 
                   Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI, 
 
-
                   making them the smartest investment for your business.
                 </p>
               </motion.div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text - center";
               >;
                 <div className="w - 16 h - 16 bg - gradient - to - br from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 6">;
@@ -1936,12 +1652,7 @@ export default function Revolutionary2026Pricing(req, res) {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -1972,7 +1683,6 @@ export default function Revolutionary2026Pricing(req, res) {
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                   Access the latest AI, quantum computing, and emerging technologies before they become mainstream.
                   Stay ahead of the competition with our innovative solutions.
                 </p>
@@ -2003,10 +1713,7 @@ export default function Revolutionary2026Pricing(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -2015,19 +1722,13 @@ export default function Revolutionary2026Pricing(req, res) {
                 <h3 className="text-xl font-bold text-white mb-4">Expert Support</h3>
                 <p className="text-gray-300">
 
-
-
-
                   with implementation, training, and ongoing optimization.
                 </p>
               </motion.div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-=======
                 className="text - center";
               >;
                 <div className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - pink - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 6">;
@@ -2051,7 +1752,6 @@ export default function Revolutionary2026Pricing(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-
 
         {/* Call to Action */  } catch (error) {
     console.error("Error:", error);
@@ -2082,9 +1782,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="bg-gradient-to-r from-purple-900/40 to-cyan-900/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -2092,22 +1789,16 @@ export default function Revolutionary2026Pricing(req, res) {
               </h2>
               <p className="text-gray-300 text-xl mb-8 leading-relaxed">
 
-
-
-
                 and discover how we can accelerate your business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-<<<<<<< HEAD
                   className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call {contactInfo.mobile}
                 </a>
                 <a
-=======
-
 
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
@@ -2130,9 +1821,6 @@ export default function Revolutionary2026Pricing(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-black/40 hover:bg-black/60 text-white font-semibold py-4 px-8 rounded-xl border border-purple-500/30 hover:border-purple-500/60 transition-all duration-200 flex items-center justify-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -2140,15 +1828,9 @@ export default function Revolutionary2026Pricing(req, res) {
                 </a>
               </div>
               <div className="mt-8 text-gray-400 text-sm">
-<<<<<<< HEAD
-=======
-
 
                 <p>Visit us at: <a href={contactInfo.website} className="text-purple-400 hover:text-purple-300">{contactInfo.website}</Link></p>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <p className="mt-2">{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -2156,7 +1838,6 @@ export default function Revolutionary2026Pricing(req, res) {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
@@ -2166,13 +1847,8 @@ export default function Revolutionary2026Pricing(req, res) {
 
 }
 
-=======
-
-=======
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="bg - gradient - to - r from - purple - 900 / 40 to - cyan - 900 / 40 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl p - 12";
             >;
               <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -2208,14 +1884,4 @@ export default function Revolutionary2026Pricing(req, res) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

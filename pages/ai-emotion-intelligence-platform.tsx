@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -23,19 +18,14 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
 },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const features = [
   {
     icon: Eye,
     title: 'Real-time Emotion Detection',
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
-<<<<<<< HEAD
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
   },
   {
     icon: MessageCircle,
@@ -61,25 +51,16 @@ const features = [
     icon: Shield,
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 const contactInfo = {
-<<<<<<< HEAD
-=======
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -92,7 +73,6 @@ const features = [
     icon: Eye,
     title: 'Real-time Emotion Detection',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
   }
   {
@@ -120,14 +100,9 @@ const features = [
     title: 'Real-time Alerts'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     icon: Users
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
     title: 'Sales Enhancement'
     description: 'Identify customer emotions during sales calls to optimize conversion rates'
@@ -143,11 +118,7 @@ const features = [
     description: 'Monitor employee emotional states to support mental health and productivity'
     icon: Heart
   }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const pricing = [
   {
     name: 'Starter'
@@ -159,33 +130,19 @@ const pricing = [
     ]
     popular: false
     cta: 'Get Started'
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Up to 10,000 emotion analyses per monthFull emotion detection (27 emotions)Priority supportAdvanced API accessCustom emotion trainingReal-time alertsAdvanced analyticsMulti-language support'
     ]
     popular: true
     cta: 'Start Free Trial'
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [
       'Unlimited emotion analysesCustom emotion modelsDedicated support teamWhite-label solutionsAdvanced integrationsCustom reportingSLA guaranteesOn-premise deployment'
     ]
     popular: false
     cta: 'Contact Sales'
   }
-
-<<<<<<< HEAD
-=======
-
-
-=======
 
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone,;
@@ -236,7 +193,6 @@ const features = [;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 ],;
@@ -305,11 +261,6 @@ const pricing = [;
   }
 }
 ],
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AIEmotionIntelligencePlatform() {
   return (
     <>
@@ -322,8 +273,6 @@ export default function AIEmotionIntelligencePlatform() {
       </Head>
       <UltraFuturisticBackground2030>
         <UltraFuturisticNavigation2030 />
-<<<<<<< HEAD
-=======
 
 import React from 'react',
 import Head from 'next / head',
@@ -449,7 +398,6 @@ function AIEmotionIntelligencePlatform() {
       <UltraFuturisticBackground2030>;
         <UltraFuturisticNavigation2030 />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
         <section className="relative min - h-screen flex items - center justify - center overflow - hidden pt - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -460,9 +408,6 @@ function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-=======
-
 
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -495,19 +440,12 @@ function AIEmotionIntelligencePlatform() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -518,12 +456,7 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
@@ -540,12 +473,7 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
@@ -560,12 +488,7 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
@@ -586,12 +509,7 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -618,25 +536,18 @@ function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
-<<<<<<< HEAD
-=======
 
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"><100ms</div>
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
                 <div className="text-gray-400 text-sm">Satisfaction Increase</div>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline - flex items - center px - 4 py - 2 rounded - full bg - gradient - to - r from - pink - 500 / 20 to - purple - 500 / 20 border border - pink - 500 / 30 text - pink - 300 text - sm font - medium mb - 6">;
                 <Sparkles className="w - 4 h - 4 mr - 2" />;
@@ -718,8 +629,6 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -731,14 +640,10 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0.8, delay: 1.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">;
               <div className="text-center">;
                 <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">27</div>;
@@ -795,7 +700,6 @@ function AIEmotionIntelligencePlatform() {
               {features.map ((feature, index) => (
                 <motion.div;
 
-
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -804,8 +708,6 @@ function AIEmotionIntelligencePlatform() {
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
 
-<<<<<<< HEAD
-=======
                   viewport={{ once: true }} className="group p - 8 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 hover:border - pink - 500 / 30 transition - all duration - 300 transform hover:scale - 105 hover:bg - white / 10">;
                   <div className="w - 16 h - 16 bg - gradient - to - r from - pink - 500 to - purple - 500 rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300">;
                     <feature.icon className="w - 8 h - 8 text - white" />;
@@ -817,7 +719,6 @@ function AIEmotionIntelligencePlatform() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Use Cases Section */}
 
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
@@ -838,8 +739,6 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -853,17 +752,11 @@ function AIEmotionIntelligencePlatform() {
               {use_cases.map ((use_case, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -872,8 +765,6 @@ function AIEmotionIntelligencePlatform() {
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </motion.div>
 
-<<<<<<< HEAD
-=======
                   viewport={{ once: true }} className="p - 8 rounded - 2xl bg - gradient - to - br from - white / 5 to - white / 10 border border - white / 10 hover:border - pink - 500 / 30 transition - all duration - 300">;
                   <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - 2xl flex items - center justify - center mb - 6">;
                     <use_case.icon className="w - 8 h - 8 text - white" />;
@@ -885,7 +776,6 @@ function AIEmotionIntelligencePlatform() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Pricing Section */}
 
         <section id="pricing" className="py - 20">;
@@ -904,10 +794,6 @@ function AIEmotionIntelligencePlatform() {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <motion.div
@@ -934,28 +820,13 @@ function AIEmotionIntelligencePlatform() {
                   }`}
                 >;
                   {plan.popular && (
-<<<<<<< HEAD
-=======
 
-
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
@@ -970,8 +841,6 @@ function AIEmotionIntelligencePlatform() {
                         <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
-<<<<<<< HEAD
-=======
 
                     <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
                       <span className="px - 4 py - 2 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white text - sm font - semibold rounded - full">;
@@ -995,7 +864,6 @@ function AIEmotionIntelligencePlatform() {
                   </ul>;
                   <Link;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`block w - full text - center py - 3 px - 6 rounded - xl font - semibold transition - all duration - 300 ${
                       plan.popular;
@@ -1004,11 +872,7 @@ function AIEmotionIntelligencePlatform() {
                     }`}
                   >;
                     {plan.cta}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1051,12 +915,7 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -1064,20 +923,11 @@ function AIEmotionIntelligencePlatform() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </Link>;
                 </motion.div>))}
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Contact Section */}
         <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
@@ -1087,15 +937,11 @@ function AIEmotionIntelligencePlatform() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
                   <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
-<<<<<<< HEAD
-=======
-
 
                     {contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
@@ -1104,17 +950,11 @@ function AIEmotionIntelligencePlatform() {
 }
                   </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
                   <span className="text-gray-300 text-sm">Email Us</span>
                   <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
-<<<<<<< HEAD
-=======
-
 
                     {contactInfo.email  } catch (error) {
     console.error("Error:", error);
@@ -1123,17 +963,11 @@ function AIEmotionIntelligencePlatform() {
 }
                   </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
                   <span className="text-gray-300 text-sm">Visit Us</span>
                   <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
-<<<<<<< HEAD
-=======
-
 
                     {contactInfo.website.replace('https://', '')  } catch (error) {
     console.error("Error:", error);
@@ -1142,37 +976,24 @@ function AIEmotionIntelligencePlatform() {
 }
                   </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Get Started?;
@@ -1228,8 +1049,3 @@ function AIEmotionIntelligencePlatform() {
     </>);
 }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -30,11 +30,6 @@ const mockCourses = [
   },
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
@@ -76,7 +71,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return true;
     });
     res.status(200).json({ courses: filtered });
-
 
     res.status(200).json({ courses: filtered });
   } catch (e: any) {

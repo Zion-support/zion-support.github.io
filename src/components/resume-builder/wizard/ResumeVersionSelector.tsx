@@ -1,30 +1,24 @@
 import { useResume } from '@/hooks/useResume';
 interface ResumeVersionSelectorProps {
-  currentResume: Resume;
-  onResumeChange: (resumeId: string) => void
-
-
+  currentResume: Resume;,
+  onResumeChange: (resumeId:,  string) => void,
 export function ResumeVersionSelector(): any ({;
   currentResume,;
   onResumeChange,;
-}: ResumeVersionSelectorProps) {;
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
+}:,  ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume();,
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false);,
+  const [newResumeTitle, setNewResumeTitle] = useState('');,
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);,
   const [isLoading, setIsLoading] = useState(false);
-
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle && newResumeTitle.trim()) {;
-
       setIsLoading(true);
       const resumeId = await createResume({ title: newResumeTitle && newResumeTitle.trim() });
       if (resumeId) {;
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-
-
 import { useState } from 'react';
 import {import { useState } from 'react';
 import {
@@ -46,16 +40,16 @@ import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react';
 import { Resume } from '@/types / resume';
 import { use_resume } from '@/hooks / use_resume';
 interface ResumeVersionSelectorProps {
-  current_resume: Resume;
-  onResumeChange: (resume_id: string) => void;
+  current_resume: Resume;,
+  onResumeChange: (resume_id:,  string) => void;,
 export /**
  * ResumeVersionSelector - Function description
  */
 function ResumeVersionSelector() {
-  const { create_resume, fetch_resume } = use_resume ();
-  const [saveDialogOpen, setSaveDialogOpen] = useState (false);
-  const [newResumeTitle, setNewResumeTitle] = useState ('');
-  const [existing_resumes, setExistingResumes] = useState < Resume[]>([]);
+  const { create_resume, fetch_resume } = use_resume ();,
+  const [saveDialogOpen, setSaveDialogOpen] = useState (false);,
+  const [newResumeTitle, setNewResumeTitle] = useState ('');,
+  const [existing_resumes, setExistingResumes] = useState < Resume[]>([]);,
   const [is_loading, setIsLoading] = useState (false);
   const handleCreateNewVersion = async () => {
     if () {) {
@@ -74,35 +68,23 @@ if ( {) {
       setIsLoading (false);
     }
   }
-
-
-
-
-
-
-
-
   return (
-
-        setNewResumeTitle('')
+        setNewResumeTitle('')'
       }
       setIsLoading(false)
     }
   };
-
-
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-sm text-muted-foreground">Resume:</span>
+    <div className="flex items-center gap-2">"
+      <span className="text-sm text-muted-foreground">Resume:</span>"
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />
+          <Button variant="outline" size="sm" className="gap-2">"
+            {currentResume?.basic_info?.title || 'My Resume'}'
+            <ChevronDown className="h-4 w-4" />"
           </Button>
         </DropdownMenuTrigger>
-
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align="end">"
           {existingResumes.map((resume) => (
             <DropdownMenuItem
     <div className='flex items - center gap - 2'>;
@@ -110,7 +92,7 @@ if ( {) {
       <DropdownMenu>;
         <DropdownMenuTrigger as_child>;
           <Button variant='outline' size='sm' className='gap - 2'>;
-            {current_resume?.basic_info?.title || 'My Resume'}
+            {current_resume?.basic_info?.title || 'My Resume'}'
             <ChevronDown className='h - 4 w - 4' />;
           </Button>;
         </DropdownMenuTrigger>;
@@ -127,18 +109,15 @@ if ( {) {
               on_click={() => onResumeChange (resume.id!)}
               className="cursor - pointer";
             >;
-
-
-              className="cursor-pointer"
+              className="cursor-pointer""
             >
               {resume.basic_info.title}
-
     <div className='flex items-center gap-2'>;
       <span className='text-sm text-muted-foreground'>Resume:</span>;
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
           <Button variant='outline' size='sm' className='gap-2'>;
-            {currentResume?.basic_info?.title || 'My Resume'}
+            {currentResume?.basic_info?.title || 'My Resume'}'
             <ChevronDown className='h-4 w-4' />;
           </Button>;
         </DropdownMenuTrigger>;
@@ -157,31 +136,24 @@ if ( {) {
             >;
               {resume && resume.basic_info.title}
             </DropdownMenuItem>;
-
           ))}
-
           <DropdownMenuSeparator />
-          <DropdownMenuItem 
-
-
+          <DropdownMenuItem
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
-
             onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer"
+            className="cursor-pointer""
           >
-            <Plus className="h-4 w-4 mr-2" />
+            <Plus className="h-4 w-4 mr-2" />"
             Save as new version
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
             className='cursor-pointer'          >;
             <Plus className='h-4 w-4 mr-2' />            Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
             <Plus className="h-4 w-4 mr-2" />;
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer";
@@ -201,40 +173,25 @@ if ( {) {
             className="cursor - pointer";
           >;
             <Plus className="h - 4 w - 4 mr - 2" />;
-
             Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
-
-
-
-      
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md">"
           <DialogHeader>
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
-          <div className="py-4">
-            <Input
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
-
-
-
-
-              placeholder="Enter resume title (e.g. DevOps Resume)"
+          <div className="py-4">"
+            <Input value={newResumeTitle}
+              onChange={(e) = /> setNewResumeTitle(e.target.value)}
+              placeholder="Enter resume title (e.g. DevOps,  Resume)""
             />
           </div>
           <DialogFooter>
-
-            <Button 
-              variant="outline" 
-
-
-
-              <Save className="h-4 w-4" />
+            <Button
+              variant="outline" "
+              <Save className="h-4 w-4" />"
               Save
             </Button>
           </DialogFooter>
@@ -243,15 +200,15 @@ if ( {) {
     </div>
   )
               disabled={!newResumeTitle && newResumeTitle.trim() || isLoading}
-              className='gap-2'
+              className='gap-2''
               value = {newResumeTitle,}
               onChange = {(e,) => setNewResumeTitle(e && e.target.value),}
-              placeholder="Enter resume title (e && e.g. DevOps Resume)";
+              placeholder="Enter resume title (e && e.g. DevOps,  Resume)";
             />;
           </div>;
           <DialogFooter>;
             <Button
-              variant="outline" 
+              variant="outline" "
               onClick = {() => setSaveDialogOpen(false),}
             >;
               Cancel;
@@ -260,8 +217,8 @@ if ( {) {
               onClick = {handleCreateNewVersion,}
               disabled = {!newResumeTitle && newResumeTitle.trim() || isLoading,}
               className="gap-2">;
-              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}
-              <Save className='h-4 w-4' />              Save              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+              {isLoading && <Loader2 className='h-4 w-4 animate-spin' />}'
+              <Save className='h-4 w-4' />              Save              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}"
               <Save className="h-4 w-4" />;
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
         <DialogContent className='sm:max - w-md'>;
@@ -269,10 +226,10 @@ if ( {) {
             <DialogTitle > Save as new resume version</DialogTitle>;
           </DialogHeader>;
           <div className='py - 4'>;
-            <Input;
+            <Input ;
               value={newResumeTitle}
-              on_change={e => setNewResumeTitle (e.target.value)}
-              placeholder='Enter resume title (e.g. DevOps Resume)';
+              on_change={e = /> setNewResumeTitle (e.target.value)}
+              placeholder='Enter resume title (e.g. DevOps,  Resume)';
             />;
           </div>;
           <DialogFooter>;
@@ -285,7 +242,7 @@ if ( {) {
               className='gap - 2';
               value = {newResumeTitle, }
               on_change = {(e, ) => setNewResumeTitle (e.target.value), }
-              placeholder="Enter resume title (e.g. DevOps Resume)";
+              placeholder="Enter resume title (e.g. DevOps,  Resume)";
             />;
           </div>;
           <DialogFooter>;
@@ -300,23 +257,17 @@ if ( {) {
               disabled = {!newResumeTitle.trim () || is_loading, }
               className="gap - 2";
             >;
-              {is_loading && <Loader2 className='h - 4 w - 4 animate - spin' />}
-              <Save className='h - 4 w - 4' />              Save              {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}
+              {is_loading && <Loader2 className='h - 4 w - 4 animate - spin' />}'
+              <Save className='h - 4 w - 4' />              Save              {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}"
               <Save className="h - 4 w - 4" />;
               Save;
             </Button>;
           </DialogFooter>;
         </DialogContent>;
       </Dialog>;
-
-
 }
-
 }
-
-
 ;
-
     </div>);
 }
 > {
@@ -325,3 +276,4 @@ if ( {) {
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);
 }";
 }
+}}))

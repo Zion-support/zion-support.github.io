@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from "fs";
 import path from "path";
@@ -14,21 +13,14 @@ function fixImportSyntax(filePath) {
       const fixedImports = imports.replace(/;/g, ",");
       return match.replace(imports, fixedImports);
     });
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 
     // Fix missing commas in import statements;
-
 
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-<<<<<<< HEAD
-=======
         .filter((item) => item.trim());
         .join(", ");
       return match.replace(imports, fixedImports);
@@ -37,7 +29,6 @@ function fixImportSyntax(filePath) {
 
     content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Fix function parameter syntax errors
     content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g
@@ -46,12 +37,9 @@ function fixImportSyntax(filePath) {
         return match.replace(params, fixedParams);
       }
     );
-<<<<<<< HEAD
-=======
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
-=======
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -100,16 +88,12 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       modified = true;
     }
     return modified;
   } catch (error) {
-<<<<<<< HEAD
-=======
 
     const items = fs && fs.readdirSync(currentDir);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
@@ -118,8 +102,6 @@ function fixImportSyntax() {
         // Skip certain directories
         if (
           [
-<<<<<<< HEAD
-=======
             "node_modules",
             ".git",
             ".next",
@@ -131,7 +113,6 @@ function fixImportSyntax() {
             "backup-merge-conflicts",
             "apps",
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ].includes(item)
         ) {
           continue;
@@ -145,27 +126,18 @@ function fixImportSyntax() {
       }
     }
   }
-<<<<<<< HEAD
-=======
-
 
 console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);
   }
 }
-<<<<<<< HEAD
-=======
-
 
 console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 
-=======
   traverse (dir);
   return files;
 }
@@ -185,4 +157,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

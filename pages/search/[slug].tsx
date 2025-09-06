@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-<<<<<<< HEAD
 import ProductCard from '@/components/ProductCard';
 import { TalentCard  } from '@/components/talent/TalentCard';
 import { CategoryCard  } from '@/components/CategoryCard';
@@ -19,43 +14,29 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   title: string;
   description?: string;
   slug: string;
   image?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   author?: {;
     name: string;
-=======
   author?: {
     name: string;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     avatar?: string;
   }
   tags?: string[];
   category?: string;
   date?: string;
-<<<<<<< HEAD
-=======
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
-<<<<<<< HEAD
-=======
 
 ;
 
@@ -65,7 +46,6 @@ interface ProductSearchResult extends BaseSearchResult {;
   price?: number;
   rating?: number;
 interface TalentSearchResult extends BaseSearchResult {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   type: 'talent';
   rating?: number;
 
@@ -78,20 +58,14 @@ interface CategorySearchResult extends BaseSearchResult {
 
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
-<<<<<<< HEAD
-=======
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 type SearchResult =;
   | ProductSearchResult;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
-<<<<<<< HEAD
-=======
-
 
 // Type guard functions;
 const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
@@ -106,33 +80,17 @@ const hasRating = (;
 
 interface SearchResultsPageProps {;
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react'
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Search, Filter, Grid, List } from 'lucide-react';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -145,9 +103,6 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 interface BaseSearchResult {
   id: string,
   title: string,
@@ -199,7 +154,6 @@ interface SearchResultsPageProps {
   slug: string,
   totalCount: number
 }
-=======
 interface BaseSearchResult {;
   id: string;
   title: string;
@@ -261,33 +215,17 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult =>;
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
 interface SearchResultsPageProps {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface OfflineFilters {
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   sortBy?: string;
   category?: string;
   minPrice?: number;
   maxPrice?: number;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           return aPrice - bPrice;        });
         break;
       case 'price_desc':;
@@ -297,15 +235,8 @@ interface OfflineFilters {
           return bPrice - aPrice;        });
         break;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -469,13 +400,7 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           return bRating - aRating;
         });
         break;
@@ -492,10 +417,6 @@ export default function SearchResultsPage({
   return { results: paginated, totalCount: all.length };
     all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           return aPrice - bPrice
         });
         break;
@@ -508,9 +429,6 @@ export default function SearchResultsPage({
         break;
       case 'rating':
         all.sort((a, b) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
           return bRating - aRating
@@ -524,14 +442,10 @@ export default function SearchResultsPage({
   }
   const start = (page - 1) * limit;
 
-
   const paginated = all && all.slice(start, start + limit);
   return { results: paginated, totalCount: all && all.length };
-=======
 
   return { results: paginated, totalCount: all.length };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default function SearchResultsPage(): any ({;
   initialResults,;
@@ -539,24 +453,16 @@ export default function SearchResultsPage(): any ({;
   slug,;
   totalCount,;
 
-
 }: SearchResultsPageProps) {  const router = useRouter();
   initialResults;
   query;
   slug;
   totalCount}: SearchResultsPageProps) {
   const router = useRouter();
-<<<<<<< HEAD
 
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,13 +477,7 @@ export default function SearchResultsPage(): any ({;
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -591,8 +491,6 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
-<<<<<<< HEAD
-=======
 
       logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
       const params = new URLSearchParams({
@@ -601,8 +499,6 @@ export default function SearchResultsPage(req, res) {
         limit: '12',
         sort: sortBy}),
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
-
-=======
 
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
@@ -616,15 +512,10 @@ export default function SearchResultsPage(req, res) {
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
-<<<<<<< HEAD
-=======
-
 
   // Fetch search results;
   const fetchResults = async (searchTerm: string, page = 1) => {;
@@ -656,8 +547,6 @@ export default function SearchResultsPage(req, res) {
     } catch (error) {;
       logErrorToProduction('Error fetching search results:', { data: error });
 
-=======
-
       if (!response.ok) {;
         throw new Error(`Search API error: ${response.status}`);
         } catch (error) {
@@ -687,9 +576,6 @@ export default function SearchResultsPage(req, res) {
         minPrice: minPrice ? Number(minPrice) : undefined,;
         maxPrice: maxPrice ? Number(maxPrice) : undefined,;
 
-
-
-=======
         minRating: minRating ? Number(minRating) : undefined}),;
 
       setTotalResults(offline.totalCount);
@@ -711,8 +597,6 @@ export default function SearchResultsPage(req, res) {
   }
 }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Handle search input change;
   const handleSearch = (newQuery: string) => {;
     setSearchQuery(newQuery),;
@@ -723,7 +607,6 @@ export default function SearchResultsPage(req, res) {
       setCurrentPage(1);    }
   };
 
-<<<<<<< HEAD
   useEffect(() => {;
     if (debouncedQuery.trim()) {;
       fetchResults(debouncedQuery, 1);
@@ -734,26 +617,19 @@ export default function SearchResultsPage(req, res) {
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
-=======
     fetchResults(searchQuery, nextPage)
   };
   const categories = Array.from(
     new Set(results.map((r) => r.category).filter(Boolean));
   );
-<<<<<<< HEAD
   const filteredResults = results.filter((r) => {
     if (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       categoryFilter !== 'all' &&
       categoryFilter &&
       r.category !== categoryFilter
     ) {
-<<<<<<< HEAD
-=======
 
-
-=======
     if (debouncedQuery.trim()) {;
 
       fetchResults(debouncedQuery, 1);
@@ -783,13 +659,11 @@ export default function SearchResultsPage(req, res) {
       categoryFilter &&;
       r && r.category !== categoryFilter;
     ) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return false;
 
     if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
       if ((r && r.rating ?? 0) < Number(minRating)) {;
 
-=======
     date: b.published_date,
   }));
   let all = [...product_results, ...talent_results, ...blog_results];
@@ -1018,7 +892,6 @@ if ( {) {
       if (< Number (min_rating)) {) {
   $2
 }
-=======
       return false;
     }
     if (minPrice && r.type === 'product') {
@@ -1031,20 +904,16 @@ if ( {) {
     }
     if (minRating && (r.type === 'product' |r.type === 'talent')) {
       if ((r.rating ?? 0) < Number(minRating)) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         return false;
       }
     }
     return true;  });
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
       if (!acc[result.type]) acc[result.type] = [];
       acc[result.type]!.push(result);
-<<<<<<< HEAD
       return false;
       } catch (error) {
     console.error("Error:", error);
@@ -1120,25 +989,17 @@ if ( {) {
       acc[result.type]!.push(result);
 
       return acc
-=======
 
       return acc
     };
     {} as Record<string, SearchResult[]>;
   );
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
       case 'equipment':
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Group results by type for better display;
   const groupedResults = filteredResults && filteredResults.reduce(;
     (acc, result) => {;
@@ -1147,17 +1008,13 @@ if ( {) {
       return acc;
     },;
     {} as Record<string, SearchResult[]>  );
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const renderResultCard = (result: SearchResult) => {;
     switch (result && result.type) {;
       case 'product':;
       case 'equipment':;
         return (
           <div key={result && result.id} data-testid='result-card'>            <ProductCard
-<<<<<<< HEAD
               product={{
                 id: result.id
                 name: result.title
@@ -1174,14 +1031,11 @@ if ( {) {
                 updated_at: new Date().toISOString()
                 stock: (result as any).stock
                 in_stock: ((result as any).stock |0) > 0,              }}
-=======
 
-=======
         return (
           <div key={result.id} data-testid="result-card">
             <ProductCard
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               product={{
 
                 id: result && result.id,
@@ -1214,10 +1068,7 @@ if (acc[result.type] = []) {
         return (
           <div key={result.id} data - testid='result - card'>            <ProductCard;
               product={{
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 id: result.id,
                 name: result.title,
                 title: result.title,
@@ -1232,9 +1083,6 @@ if (acc[result.type] = []) {
                 created_at: new Date ().toISOString (),
                 updated_at: new Date ().toISOString (),
                 stock: (result as any).stock,
-<<<<<<< HEAD
-=======
-
 
         );
       case 'talent':;
@@ -1257,10 +1105,8 @@ if (acc[result.type] = []) {
               onViewProfile={(id: string) => {;
                 router && router.push(`/talent/${id}`);
 
-=======
           <div key={result.id} data-testid="result-card">
             <TalentCard
-=======
                 in_stock: ((result as any).stock || 0) > 0,              }}
             />;
           </div>);
@@ -1269,10 +1115,7 @@ if (acc[result.type] = []) {
           <div key={result.id} data - testid='result - card'>            <TalentCard;
 
               talent={{
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 id: result.id,
                 user_id: result.id,
                 full_name: result.title,
@@ -1284,7 +1127,6 @@ if (acc[result.type] = []) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-<<<<<<< HEAD
                 availability_type: 'available'}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1322,34 +1164,27 @@ if (acc[result.type] = []) {
           </div>
         );
       default:
-=======
-
 
             />;
           </div>;
         );
       default:;
 
-=======
         return (
           <div
             key={result.id}
             className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
             data-testid="result-card"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h3 className='font-semibold'>{result.title}</h3>
             <p className='text-gray-600 dark:text-gray-200'>
               {result.description}
             </p>
           </div>
-<<<<<<< HEAD
-=======
         )
     }
 
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           >;
             <h3 className='font-semibold'>{result && result.title}</h3>;
@@ -1357,11 +1192,8 @@ if (acc[result.type] = []) {
               {result && result.description}
             </p>;
           </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         );    }
-<<<<<<< HEAD
   }
-<<<<<<< HEAD
   };
 
           <div key={result.id} data-testid="result-card">
@@ -1400,18 +1232,13 @@ if (acc[result.type] = []) {
   return (
     <>;
       <SEO
-=======
 
 }
   },
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO
-<<<<<<< HEAD
         title={`Search Results for "${query}" - Zion Marketplace`}
         description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
         keywords={`${query}, search, marketplace, products, talent, services`}
@@ -1436,22 +1263,15 @@ if (acc[result.type] = []) {
                   {filteredResults && filteredResults.length > 0;
                     ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
 
-=======
-
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-=======
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
           {/* Search Header */}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         title={`Search Results for "${query}" - Zion Marketplace`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1473,35 +1293,20 @@ if (acc[result.type] = []) {
   }
 }
       />
-<<<<<<< HEAD
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
-=======
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
-<<<<<<< HEAD
-=======
           {/* Search Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -1514,24 +1319,17 @@ if (acc[result.type] = []) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     : `No results found for "${query}"`}
 
                 </p>;
               </div>;
 
-
               {/* Search Input */}
-
 
                 <Input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-=======
                     : `No results found for "${query}"`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1539,11 +1337,9 @@ if (acc[result.type] = []) {
 }
                 </p>
               </div>
-<<<<<<< HEAD
               {/* Search Input */}
               <div className='relative w-full lg:w-96'>
                 <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
-=======
               {/* Search Input */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1551,12 +1347,6 @@ if (acc[result.type] = []) {
 }
               <div className="relative w-full lg:w-96">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Input
                   type="text"
                   value={searchQuery  } catch (error) {
@@ -1569,18 +1359,13 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
-<<<<<<< HEAD
               </div>
             </div>
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
-
 
                   onChange={e => handleSearch(e && e.target.value)}
                   placeholder='Search marketplace...';
@@ -1588,45 +1373,29 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
 
-
-
             {/* Controls */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
                   data-testid="filter-button"
                 >
-<<<<<<< HEAD
-=======
                   <Filter className="h-4 w-4" />
                   Filters
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </Button>
                 <select
-
 
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm';
                   data-testid='sort-select';
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 router.push (`/talent/${id}`);
               }}
               onRequestHire={talent => {
@@ -1707,10 +1476,6 @@ if (acc[result.type] = []) {
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
                   data - testid='sort - select';
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 >;
                   <option value='relevance'>Relevance</option>;
                   <option value='newest'>Newest</option>;
@@ -1718,9 +1483,6 @@ if (acc[result.type] = []) {
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
 
-
-<<<<<<< HEAD
-=======
                 <select
                   value={categoryFilter}
                   onChange={e => setCategoryFilter(e && e.target.value)}
@@ -1740,7 +1502,6 @@ if (acc[result.type] = []) {
                 >
 
                 <div className="flex items-center gap-1">
-=======
 
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
@@ -1759,16 +1520,12 @@ if (acc[result.type] = []) {
                 </select>
                 <div className="flex items-center gap-1">
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <input
                     type="number"
                     placeholder="Min $"
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
-=======
                 <div className='flex items-center gap-1'>
-=======
                   <option value="all">All Categories</option>
                   {categories.map((c) => (
                     <option key={c} value={c}>
@@ -1785,12 +1542,6 @@ if (acc[result.type] = []) {
 }
                 </select>
                 <div className="flex items-center gap-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1804,23 +1555,18 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
                   <input
                     type="number"
                     placeholder="Max $"
-<<<<<<< HEAD
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
-=======
-<<<<<<< HEAD
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
-=======
                     value={maxPrice  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1831,11 +1577,8 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <select
                   value={minRating}
@@ -1844,9 +1587,6 @@ if (acc[result.type] = []) {
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
                 </div>;
                   onChange={(e) => setMinRating(e.target.value)}
-<<<<<<< HEAD
-=======
-=======
                   value={minRating  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1857,8 +1597,6 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
                   <option value="">All Ratings</option>
@@ -1867,16 +1605,12 @@ if (acc[result.type] = []) {
                   <option value="2">2★ & up</option>
                 </select>
               </div>
-<<<<<<< HEAD
-=======
-
 
                 <select
                   value={minRating}
                   onChange={e => setMinRating(e && e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm';
 
-=======
                 <select;
                   value={category_filter}
                   on_change={e => setCategoryFilter (e.target.value)}
@@ -1908,7 +1642,6 @@ if (acc[result.type] = []) {
                   on_change={e => setMinRating (e.target.value)}
                   className='px - 3 py - 1 border border - gray - 300 rounded - md text - sm';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 >;
                   <option value=''>All Ratings</option>;
                   <option value='4'>4★ & up</option>;
@@ -1916,7 +1649,6 @@ if (acc[result.type] = []) {
                   <option value='2'>2★ & up</option>;
                 </select>;
               </div>;
-
 
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
@@ -1934,13 +1666,8 @@ if (acc[result.type] = []) {
                   data-testid='view-mode-list';
                   className={viewMode === 'list' ? 'active' : ''}
 
-
-=======
-
               <div className="flex items-center gap-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1963,8 +1690,6 @@ if (acc[result.type] = []) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-<<<<<<< HEAD
-=======
 
                   variant={viewMode === 'list' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1983,19 +1708,12 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 >;
                   <List className='h-4 w-4' />                </Button>;
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
 
-
-
-=======
               <div className='flex items - center gap - 2'>;
                 <Button;
                   variant={view_mode === 'grid' ? 'default' : 'outline'}
@@ -2017,7 +1735,6 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Loading State */}
 
           {loading && results.length === 0 && (
@@ -2035,24 +1752,14 @@ if (acc[result.type] = []) {
                     {type}s ({typeResults.length})
 
                   </h2>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
               {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
                 <div key={type}>;
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
-=======
-<<<<<<< HEAD
               <div className='flex items-center gap-2'>
-=======
               <div className="flex items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -2075,7 +1782,6 @@ if (acc[result.type] = []) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
-<<<<<<< HEAD
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size='sm'
                   onClick={() => setViewMode('list')}
@@ -2092,7 +1798,6 @@ if (acc[result.type] = []) {
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>            </div>
           )}
           {/* Empty State */}
-=======
                   variant={viewMode === 'list' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2116,15 +1821,12 @@ if (acc[result.type] = []) {
               </div>;
             </div>;
           </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Loading State */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
           {loading && results.length === 0 && (
-<<<<<<< HEAD
-=======
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
@@ -2139,17 +1841,10 @@ if (acc[result.type] = []) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
-<<<<<<< HEAD
           {filteredResults && filteredResults.length > 0 && (;
             <div className='space-y-8'>;
               {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
@@ -2157,8 +1852,6 @@ if (acc[result.type] = []) {
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
 
-=======
-<<<<<<< HEAD
           )}
           {/* Results */}
           {filteredResults.length > 0 && (
@@ -2167,8 +1860,6 @@ if (acc[result.type] = []) {
                 <div key={type}>
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults.length})
                   </h2>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div
                     className={
                       viewMode === 'grid'
@@ -2180,41 +1871,28 @@ if (acc[result.type] = []) {
                 </div>;
               ))}
               {/* Load More Button */}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     )}
                   </Button>;
                 </div>;
               )}
             </div>;
           )}
-<<<<<<< HEAD
-=======
-
 
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`    );
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`),
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`;
     );
-<<<<<<< HEAD
     let results = [];
     let totalCount = 0;
       const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
-=======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     let results = [];
     let totalCount = 0;
 
@@ -2289,15 +1967,11 @@ if ( {) {
       total_count = data.total_count || results.length;
       log_info (`Server - side fetch successful: ${results.length} results`);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
-<<<<<<< HEAD
-=======
-
 
     if (response && response.ok) {;
       const data = await response && response.json();
@@ -2333,8 +2007,6 @@ if ( {) {
     };  }
 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -2387,11 +2059,6 @@ total_count: offline.total_count,
 }
 ;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2506,17 +2173,11 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
-<<<<<<< HEAD
     } else {;
       logErrorToProduction(;
         `Search API error: ${response.status} ${response.statusText}`);
@@ -2559,9 +2220,3 @@ export const getServerSideProps: GetServerSideProps<;
 }
 };
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   attachment_url?: string,
   attachment_name?: string;
@@ -6,12 +5,8 @@
 // Define the shape of a conversation;
 
 export interface Conversation {
-<<<<<<< HEAD
-=======
 // Define the shape of a message
 export interface Message {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   sender_id: string;
   recipient_id: string;
@@ -20,7 +15,6 @@ export interface Message {;
   read: boolean;
   sender_name?: string;
   sender_avatar?: string;
-<<<<<<< HEAD
 
   attachment_url?: string
 
@@ -28,50 +22,33 @@ export interface Message {;
 }
 // Define the shape of a conversation
 export interface Conversation {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export interface Conversation {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   user_id: string;
   other_user: {
     id: string;
     name: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     avatar_url?: string,
     user_type?: string;
 
-=======
     avatar_url?: string
     user_type?: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   name: string;
   avatar_url?: string;
   last_message?: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     content: string,
     created_at: string;
 
-=======
     content: string
     created_at: string
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   updated_at: string;
   unread_count: number;
   context_type?: 'job' | 'talent' | 'general';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   context_id?: string,
   context_data?: ConversationContextData;
 }
@@ -82,11 +59,6 @@ export interface ConversationContextData {
   description?: string;
   image_url?: string;
 }
-
-=======
-
-
-=======
 
   context_id?: string
 
@@ -127,7 +99,6 @@ export interface MessagingContextType {;
 
   loadMessages: (conversationId: string) => Promise<void>
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Define the shape of a message;
 export interface Message {;
   id: string,;
@@ -172,7 +143,6 @@ export interface ConversationContextData {;
   image_url?: string;
 }
 ;
-<<<<<<< HEAD
 
 // Define the shape of the messaging context;
 export interface MessagingContextType {
@@ -192,7 +162,6 @@ export interface MessagingContextType {
   markAsRead: (conversation_id: string) => Promise < void>;
   /**;
 
-=======
 // Define the shape of the messaging context;
 export interface MessagingContextType {;
   messages: Message[],;
@@ -211,9 +180,6 @@ export interface MessagingContextType {;
   ) => Promise<void>,;
   markAsRead: (conversationId: string) => Promise<void>,;
   /**;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
@@ -222,13 +188,5 @@ export interface MessagingContextType {;
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

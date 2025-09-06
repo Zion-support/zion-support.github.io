@@ -41,15 +41,11 @@ export function RegionFilter({
                 onCheckedChange={() => toggleRegion(region.id)}
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
-<<<<<<< HEAD
               <label
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -59,8 +55,6 @@ const REGION_OPTIONS = [;
   { id: "Asia", label: "Asia" },;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { id: "Africa", label: "Africa" }
 ];
 export function RegionFilter({
@@ -81,23 +75,14 @@ export function RegionFilter({
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </button>;
 
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
             <div key={region && region.id} className="flex items-center">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -112,7 +97,6 @@ export function RegionFilter({
         </div>;
       )}
   );
-=======
     </div>
   );
 }
@@ -128,12 +112,7 @@ const REGION_OPTIONS = [;
   { id: "Africa", label: "Africa" },
 ];
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
 export /**
  * RegionFilter - Function description
  */
@@ -224,6 +203,3 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

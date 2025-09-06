@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
 type Note = {
@@ -10,10 +9,6 @@ type Note = {
   createdAt: number
 },
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
   if (req.method === 'GET') {
     const { targetType, targetId } = req.query,
     if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' }),
@@ -23,7 +18,6 @@ type Note = {
       .sort((a, b) => b.createdAt - a.createdAt),
     return res.status(200).json({ notes })
   }
-<<<<<<< HEAD
 
   if (req.method === 'POST') {
     const authorId = String(req.headers['x-admin-user'] || 'admin'),

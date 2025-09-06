@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 import React from 'react',
 export default function PerformanceOptimization() {
   return (
@@ -38,12 +37,10 @@ import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
   return (;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
 export default function PerformanceOptimization() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import Link from 'next / link';
 import React from 'react',
@@ -206,8 +203,6 @@ function PerformanceOptimization() {
                   performance and help identify optimization opportunities.;
                 </p>;
               </section>;
-<<<<<<< HEAD
-=======
 
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - fuchsia - 400'>;
@@ -279,13 +274,10 @@ function PerformanceOptimization() {
                 </h2>;
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Autonomous systems often process massive amounts of data.;
                   Optimizing data pipelines is essential for maintaining;
                   performance:;
                 </p>;
-<<<<<<< HEAD
-=======
 
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
                   <li>;
@@ -307,14 +299,11 @@ function PerformanceOptimization() {
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Our data pipelines achieve 10x performance improvements;
                   through intelligent caching, parallel processing, and;
                   optimized data formats.;
                 </p>;
               </section>;
-<<<<<<< HEAD
-=======
 
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - purple - 400'>;
@@ -364,13 +353,10 @@ function PerformanceOptimization() {
 
                 <p className='text - white / 90 mb - 4'>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   This proactive approach ensures that performance issues are;
                   identified and resolved before they impact user experience.;
                 </p>;
               </section>;
-<<<<<<< HEAD
-=======
 
               <div className='mt - 12 p - 6 bg - white / 10 rounded - xl border border - white / 20'>;
                 <h3 className='text - xl font - semibold mb - 4 text - cyan - 400'>;
@@ -378,23 +364,16 @@ function PerformanceOptimization() {
                 </h3>;
                 <p className='text - white / 80 mb - 4'>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Ready to unlock the full potential of your autonomous;
                   technology? Our performance optimization expertise can help;
                   you achieve peak efficiency.;
                 </p>;
-<<<<<<< HEAD
-=======
 
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
-=======
 import Head from 'next/head';
 import Link from 'next/link';
-=======
 };
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {
@@ -651,7 +630,6 @@ export default function PerformanceOptimization(req, res) {
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300';
                   >;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     View Success Stories;
                   </Link>;
                 </div>;
@@ -660,14 +638,6 @@ export default function PerformanceOptimization(req, res) {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
-=======
 
-
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

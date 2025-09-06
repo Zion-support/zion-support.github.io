@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -20,25 +14,16 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-<<<<<<< HEAD
-=======
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     
     return this.props.children;
   }
@@ -49,9 +34,6 @@ import Layout from "../components/Layout";
 
 import React from 'react';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
     return this.props.children;
   }
 }
@@ -135,7 +117,6 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -151,7 +132,6 @@ import {
   Phone,
   Mail,
   MapPin,
->>>>>>> main
   Star,
   Clock,
   Users,
@@ -163,7 +143,6 @@ import {
 } from 'lucide-react';
 const aiServices = [
   {
-<<<<<<< HEAD
     title: "Machine Learning Models",
     description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
     icon: Brain,
@@ -229,10 +208,8 @@ const aiServices = [
     id: 6,
     name: 'Conversational AI & Chatbots',
     description: 'Intelligent virtual assistants and customer service automation',
-=======
     title: 'Natural Language Processing',
     description: 'Advanced text analysis and language understanding for your business.',
->>>>>>> main
     icon: MessageSquare,
     features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
     price: '$1,500/month',
@@ -258,7 +235,6 @@ const aiServices = [
     title: 'Machine Learning Models',
     description: 'Custom ML models tailored to your specific business needs.',
     icon: Brain,
-<<<<<<< HEAD
     features: [
       'Molecular property prediction',
       'Drug-target interaction modeling',
@@ -328,11 +304,9 @@ const aiServices = [
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
     features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
     price: '$3,000/month',
     benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
->>>>>>> main
   }
 }
   } catch (error) {
@@ -368,34 +342,15 @@ import React from "react";
 import Layout from "../components/Layout";
 origin/automation-improvements-final
 
-<<<<<<< HEAD
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -405,15 +360,6 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -583,14 +529,6 @@ export default function AIServices() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AIServices() {;
   return (
     <Layout
@@ -609,14 +547,6 @@ export default function AIServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -642,24 +572,12 @@ function AIServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               AI Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       description="Comprehensive AI solutions for modern businesses"
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
     >
@@ -1361,14 +1279,9 @@ origin/automation-improvements-final
       </div>
     </Layout>;
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
             </p>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1381,29 +1294,13 @@ origin/automation-improvements-final
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 }
 
-<<<<<<< HEAD
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
 
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1470,7 +1367,6 @@ export default function AIServices() {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 AI Services
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
                 Transform your business with cutting-edge artificial intelligence solutions
@@ -1490,7 +1386,6 @@ export default function AIServices() {
                 >
                   Schedule Demo
                 </motion.button>
-=======
 export default function AIServicesPage() {
   return (
     <MainLayout
@@ -1600,7 +1495,6 @@ export default function AIServicesPage() {
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
                 <span>+1 302 464 0950</span>
->>>>>>> main
               </div>
               <div className="flex items-center text-white">
                 <Mail className="h-5 w-5 mr-2" />
@@ -1616,29 +1510,12 @@ export default function AIServicesPage() {
       </div>
     </MainLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 }
 
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
-=======
 }
 }
     </Layout>);
@@ -1649,10 +1526,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

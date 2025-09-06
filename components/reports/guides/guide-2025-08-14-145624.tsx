@@ -1,28 +1,16 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
 export default function Page() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
         <title>Guide — Capabilities Live Implementation</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'
@@ -45,13 +33,9 @@ export default function Page() {
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -60,21 +44,14 @@ export default function Page() {
       </main>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
 
-=======
-=======
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Page() {
 
   return (
-<<<<<<< HEAD
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Capabilities Live Implementation</title>;
@@ -90,18 +67,12 @@ export default function Page() {
       </main>;
     </div>;
   );
-<<<<<<< HEAD
 
 }
 
-=======
-=======
 export default function Page() {
   return (
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -160,14 +131,6 @@ function Page() {
       </main>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/main/front" target="_blank" rel="noopener">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -180,16 +143,10 @@ function Page() {
     </div>
   );export default function Page() {
   return (
-<<<<<<< HEAD
 
 export default function Page() {
   return (
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Guide — Capabilities Live Implementation</title>
@@ -203,12 +160,6 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/main/front\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/main/front</a></p><h2>Overview</h2><p>Focus: capabilities, live, site, seo, front, systems.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
-<<<<<<< HEAD
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -242,8 +193,6 @@ export default function Page() {
     </div>
   );
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>;
   );
 }
@@ -275,8 +224,3 @@ export default function Page(req, res) {
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

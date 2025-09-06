@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const server = http && http.createServer((req, res) => {
   if (req && req.url === '/' || req && req.url === '/index && index.html') {
@@ -25,25 +23,18 @@ const server = http && http.createServer((req, res) => {
   }
 })
 const PORT = 8080
-=======
 
-=======
       res && res.writeHead(200, { 'Content-Type': 'text/html' }),
       res && res.end(data)
     })
   } else if (req && req.url === '/online-check') {
     // Endpoint to check if we're online
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
     res && res.end('Not found')
 
-
-
-<<<<<<< HEAD
 const server = http.createServer((req, res) => {
   if (req.url === '/' |req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
@@ -68,7 +59,6 @@ const server = http.createServer((req, res) => {
   }
 })
 const PORT = 8080
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       res.writeHead(200, { 'Content-Type': 'text/html' }),;
       res.end(data);
     });
@@ -81,32 +71,18 @@ const PORT = 8080
     res.end('Not found');
   }
 }),
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-=======
   }
 })
 const PORT = 8080
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 server.listen(PORT, () => {
   // // // console.log(`
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 server.listen(PORT, () => {
   // // // console.log(`
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -117,48 +93,31 @@ server.listen(PORT, () => {
 ║     dependencies. Most features will not work until you install  ║
 ║     the required npm packages.                                   ║
 ║                                                                  ║
-<<<<<<< HEAD
-<<<<<<< HEAD
 ║  🔍 See OFFLINE-DEV-README && README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup && setup.sh                                    ║
 ║     2. Run: ./setup && setup.sh npm                                       ║
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║
 ║                                                                  ║
 ║  🌐 When internet is available: ║
 ║     1. Run: chmod +x setup.sh                                    ║
 ║     2. Run: ./setup.sh npm                                       ║
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ║     3. Run: npm run dev                                          ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 `)
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
 });
 
 }),
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
-<<<<<<< HEAD
 
 });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const http = require ('http'),
 const fs = require ('fs'),
 const path = require ('path'),
@@ -194,8 +153,6 @@ if ( {) {
 const PORT = 8080,
 server.listen (PORT, () => {
   console.log (`;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -206,14 +163,8 @@ server.listen (PORT, () => {
 ║     dependencies. Most features will not work until you install  ║;
 ║     the required npm packages.                                   ║;
 ║                                                                  ║;
-<<<<<<< HEAD
-<<<<<<< HEAD
 ║  🔍 See OFFLINE - DEV - README.md for detailed instructions.         ║;
-=======
 ║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ║                                                                  ║;
 ║  🌐 When internet is available: ║;
 ║     1. Run: chmod +x setup.sh                                    ║;
@@ -224,18 +175,10 @@ server.listen (PORT, () => {
 `);
 }),
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }),
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }),
-
 
 const http = require('http'),;
 const fs = require('fs'),;
@@ -293,7 +236,4 @@ server.listen(PORT, () => {;
 }║ ║ ║ ║ ℹ️ This is a placeholder server that doesn't require npm ║ ║ dependencies. Most features will not work until you install ║ ║ the required npm packages. ║ ║ ║ ║ 🔍 See OFFLINE-DEV-README.md for detailed instructions. ║ ║ ║ ║ 🌐 When internet is available: ║ ║ 1. Run: chmod +x setup.sh ║ ║ 2. Run: ./setup.sh npm ║ ║ 3. Run: npm run dev ║ ║ ║ ╚══════════════════════════════════════════════════════════════════╝ `) 
 });
 }),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

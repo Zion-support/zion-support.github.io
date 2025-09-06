@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AICustomerSuccessPlatform() {
 	return (
 		<ServiceLanding
@@ -31,18 +17,8 @@ export default function AICustomerSuccessPlatform() {
 				"Expansion signals for upsell/cross-sell"
 				"Executive QBR reports and cohort analytics"
 
-
-=======
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
 ;
 export default /**
@@ -69,14 +45,7 @@ return (
     industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
     canonical="https: //ziontechgroup.com / ai - customer - success - platform";
   />);
-<<<<<<< HEAD
 }
-
-
-<<<<<<< HEAD
-=======
-=======
-
 
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
@@ -107,10 +76,6 @@ export default function AICustomerSuccessPlatform() {
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 export default function AICustomerSuccessPlatform() {_return (
 		<ServiceLanding
@@ -133,32 +98,13 @@ export default function AICustomerSuccessPlatform() {_return (
 	)
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			pricePerMonthUSD={1999  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			implementationWeeks="Implementation: 2–4 weeks"
 			roiNote="Average ROI 4–10x within 90 days"
 			features={[
@@ -168,21 +114,13 @@ export default function AICustomerSuccessPlatform() {_return (
 				"Expansion signals for upsell/cross-sell",
 				"Executive QBR reports and cohort analytics",
 				"Integrations: HubSpot, Salesforce, Zendesk, Intercom, Segment"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 			]}
 			industries={["SaaS", "Fintech", "Media", "E‑commerce"]}
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -205,13 +143,3 @@ export default function AICustomerSuccessPlatform() {_return (
   }
 }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

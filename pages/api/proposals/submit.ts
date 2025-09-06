@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
@@ -14,27 +13,16 @@ async function submitByEmail(
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
-<<<<<<< HEAD
   const transporter = nodemailer.createTransport({
     host
     port
@@ -96,9 +84,6 @@ import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const host = process && process.env.EMAIL_HOST;
   const port = Number(process && process.env.EMAIL_PORT || 587);
   const user = process && process.env.EMAIL_USER;
@@ -133,10 +118,8 @@ function submitByEmail() {
     secure: port === 465,
     auth: { user, pass },
   });
-<<<<<<< HEAD
 
   try {
-=======
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
 
@@ -155,7 +138,6 @@ function submitByEmail() {
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
@@ -171,15 +153,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
       await submitByEmail(to, subject, text)
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
-
 
       ensRecordHash = `0x${hash}`;
       update_artifacts (id, { ensRecordHash });
@@ -192,8 +169,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .status(500)
 
       .json({ error: error?.message |"Submission failed" });
-<<<<<<< HEAD
-=======
 
   }
 }
@@ -214,22 +189,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined;
     try {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
     } catch {}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
-<<<<<<< HEAD
 }
 
   const from = process.env.EMAIL_FROM || user;
@@ -264,7 +232,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
   }
 }
@@ -278,14 +245,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .status (500);
       .json ({ error: error?.message || "Submission failed" });
 
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 
 }
 
-
-
-
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

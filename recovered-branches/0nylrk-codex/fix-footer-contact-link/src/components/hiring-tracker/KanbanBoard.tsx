@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-=======
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -17,8 +13,6 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -48,10 +42,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
   index: number;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 interface DropResult {;
@@ -60,14 +50,6 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   droppableId: string
 
   index: number
@@ -105,21 +87,12 @@ const COLUMNS = [
 interface KanbanBoardProps {
   jobId?: string
 
-
-
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -144,10 +117,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -169,13 +138,7 @@ interface DropResult {;
   destination?: DnDLocation | null;
 }
 
-
-
-<<<<<<< HEAD
-=======
 ;
-
-=======
 
 ;
 
@@ -194,11 +157,8 @@ interface DropResult {;
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
   {;
@@ -225,15 +185,11 @@ const COLUMNS = [;
 interface KanbanBoardProps {;
   jobId?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
-
-=======
 
 import { useState, useEffect } from "react",;
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
@@ -293,16 +249,11 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId),;
   const [columns, setColumns] = useState<Record<string JobApplication[]>>({}),;
   const isMobile = useIsMobile(),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Initialize columns with applications based on their status;
   useEffect(() => {;
     if (applications) {;
       // Group applications by status;
-<<<<<<< HEAD
-<<<<<<< HEAD
       const groupedApplications = COLUMNS && COLUMNS.reduce((acc, column) => {;
         acc[column && column.id] = applications && applications.filter(app => app && app.status === column && column.id);
         return acc;
@@ -322,18 +273,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination && destination.index === source && source.index)) {;
       return;
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
-
-<<<<<<< HEAD
-=======
-
-
-
-    
       const groupedApplications = COLUMNS.reduce((acc, column) => {;
         acc[column.id] = applications.filter(app => app.status === column.id),;
         return acc;
@@ -350,9 +290,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {;
       return;
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
@@ -378,24 +315,15 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         description: "Please try again"
         variant: "destructive"})
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
-  
 
-=======
   },
-  
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   },
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -408,13 +336,9 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
-<<<<<<< HEAD
 
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
@@ -449,12 +373,9 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
   };
 
   if (isLoading) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-=======
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
@@ -478,8 +399,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return,;
     }
     ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
     if (!application) return,;
@@ -520,10 +439,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card key={i} className="h-[500px]">;
             <CardHeader>;
               <Skeleton className="h-8 w-24" />;
@@ -532,33 +447,17 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         ))}
       </div>;
     );
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (!applications || applications && applications.length === 0) {;
 
-
-  
   if (!applications || applications.length === 0) {
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
-=======
   if (!applications || applications && applications.length === 0) {;
     return (
     ),;
@@ -566,10 +465,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
   ;
   if (!applications || applications.length === 0) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card className="text-center py-16">;
         <CardContent>;
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
@@ -578,24 +474,15 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
           </p>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <DragDropContext onDragEnd={handleDragEnd}>;
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>;
         {COLUMNS && COLUMNS.map(column => (;
           <KanbanColumn
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from './react';
 import { DragDropContext, Droppable, Draggable } from './react - beautiful - dnd';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -744,9 +631,7 @@ if ( {) {
       <div className={`grid ${is_mobile ? 'grid - cols - 1 gap - y-6' : 'grid - cols - 1 md:grid - cols - 3 lg:grid - cols - 5 gap - 4'} overflow - x-auto`}>;
         {COLUMNS.map (column => (
           <KanbanColumn;
-<<<<<<< HEAD
 
-=======
         ))}
       </div>
     )
@@ -770,26 +655,17 @@ if ( {) {
       <div className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}>
         {COLUMNS.map(column => (
           <KanbanColumn
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             key={column && column.id}
             id={column && column.id}
             title={column && column.title}
             description={column && column.description}
             applications={columns[column && column.id] || []}
             count={columns[column && column.id]?.length || 0}
-<<<<<<< HEAD
-=======
     ),;
   }
   ;
@@ -803,7 +679,6 @@ if ( {) {
             description={column.description}
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           />;
 
             applications={columns[column.id] || []}
@@ -813,28 +688,18 @@ if ( {) {
         ))}
       </div>;
     </DragDropContext>;
-<<<<<<< HEAD
   );
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />))}
       </div>;
     </DragDropContext>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   ),; interface DnDLocation {
   droppableId: string;
 index: number 
@@ -930,6 +795,3 @@ if (isLoading) {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

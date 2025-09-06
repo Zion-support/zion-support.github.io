@@ -15,10 +15,6 @@ export function EducationList({
     return null;
   }
 
-
-
-
-
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
@@ -35,9 +31,6 @@ export function EducationList({
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Education</h3>
       {educationEntries.map((edu) => (
@@ -52,7 +45,6 @@ export function EducationList({
   );
 }
 ;
-
 
 import { Education } from '@/types/resume',;
 import { EducationItem } from './EducationItem',;
@@ -102,6 +94,3 @@ export function EducationList({ educationEntries, onEdit, onDelete } EducationLi
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

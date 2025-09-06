@@ -4,33 +4,20 @@ import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
-<<<<<<< HEAD
-=======
 const contactInfo = {
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
   Brain, Rocket, Target, Cpu, Globe, Eye,
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
@@ -39,26 +26,15 @@ import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
-<<<<<<< HEAD
 const contactInfo = {
-=======
 
 const contactInfo = {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 };
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function InnovationsPage() {
   return (
     <UltraFuturisticBackground2029>
@@ -69,9 +45,6 @@ export default function InnovationsPage() {
           <meta name="keywords" content="AI innovations, quantum computing, space technology, enterprise solutions, Zion Tech Group, 2029 technology" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-=======
-
 
           {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
@@ -79,17 +52,11 @@ export default function InnovationsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <meta property="og:title" content="2029 Innovations - Zion Tech Group" />
           <meta property="og:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/innovations" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-<<<<<<< HEAD
-=======
-
 
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
@@ -97,19 +64,12 @@ export default function InnovationsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="2029 Innovations - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our groundbreaking 2029 innovations in AI consciousness, quantum computing, space technology, and enterprise solutions." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         </Head>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Enhanced Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -121,20 +81,12 @@ export default function InnovationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.div
-<<<<<<< HEAD
-=======
 
-=======
 import React from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -191,8 +143,6 @@ function InnovationsPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -208,29 +158,18 @@ function InnovationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
-
-              
 
               <motion.h1
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-=======
               <motion.h1
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -249,11 +188,7 @@ function InnovationsPage() {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-5xl md:text-7xl font-bold mb-8"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2029 Innovations
@@ -263,28 +198,19 @@ function InnovationsPage() {
                   Breakthrough
                 </span>
               </motion.h1>
-<<<<<<< HEAD
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
-=======
-
-              
 
               <motion.p
-<<<<<<< HEAD
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness
-=======
               <motion.p
 
-
-=======
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -300,27 +226,17 @@ function InnovationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
                 Experience the future today with our revolutionary innovations in AI consciousness,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 quantum computing, space technology, and enterprise solutions that are reshaping
                 industries and unlocking unprecedented possibilities.
               </motion.p>
               <motion.div
-<<<<<<< HEAD
-=======
-
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -338,11 +254,7 @@ function InnovationsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               >
                 <a
                   href="#innovations"
@@ -350,9 +262,6 @@ function InnovationsPage() {
                 >
                   <Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
-<<<<<<< HEAD
-=======
-
 
                 </Link>
                 <a
@@ -362,9 +271,6 @@ function InnovationsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
                 >
                   <Mail className="w-5 h-5 mr-2" />
@@ -374,10 +280,7 @@ function InnovationsPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-=======
                 className="mb - 8";
               >;
                 <div className="inline - flex items - center justify - center w - 24 h - 24 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full mb - 6">;
@@ -433,7 +336,6 @@ function InnovationsPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Innovation Categories Overview */}
         <section className="py - 20">;
           <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
@@ -442,11 +344,7 @@ function InnovationsPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -482,9 +380,6 @@ function InnovationsPage() {
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-
-
-
                 of what's possible in technology and business transformation.
               </p>
             </motion.div>
@@ -514,11 +409,8 @@ function InnovationsPage() {
                   icon: Brain,
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
-<<<<<<< HEAD
-=======
 
                   color: 'from - violet - 600 via - purple - 600 to - indigo - 600',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management'];
                 },
                 {
@@ -528,10 +420,7 @@ function InnovationsPage() {
                   color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
                   features: ['Quantum - AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading'];
                 },
-<<<<<<< HEAD
-=======
                 {
-<<<<<<< HEAD
                   icon: Rocket,
                   title: 'Space Technology',
 description: 'Next - generation space exploration and metaverse digital reality',
@@ -555,7 +444,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-
 
                   } catch (error) {
     console.error("Error:", error);
@@ -590,9 +478,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="group"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
@@ -601,7 +486,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                         <category.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-<<<<<<< HEAD
                       </p>
                     </div>
                     <div className="space-y-3">
@@ -630,8 +514,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-
 
                         {category.title  } catch (error) {
     console.error("Error:", error);
@@ -646,12 +528,9 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       </p>
                     </div>
                     
-=======
                   className="group";
                 >;
                   <div className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - cyan - 500 / 20 hover:border - cyan - 500 / 40 transition - all duration - 500 h - full hover:transform hover:scale - 105 backdrop - blur - sm`}>;
@@ -665,7 +544,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                       <p className="text - gray - 300 mb - 6 leading - relaxed">;
                         {category.description}
 
-=======
                       </p>;
                     </div>;
                     <div className="space - y-3">;
@@ -674,9 +552,7 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                           <div className="w - 2 h - 2 bg - cyan - 400 rounded - full"></div>;
                           {feature}
                         </div>))}
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -732,12 +608,7 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -745,20 +616,14 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-
-
-
                 for businesses worldwide.
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-<<<<<<< HEAD
                 {
 
                   stats: '2029+ Future-ready'
-=======
-=======
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
@@ -789,7 +654,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   description: 'Solutions designed for the next decade of technological advancement',
                   stats: '2029+ Future - ready';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 }
 
               ].map ((item, index) => (
@@ -800,9 +664,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
 
                   } catch (error) {
     console.error("Error:", error);
@@ -837,9 +698,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
@@ -847,8 +705,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {item.title}
-<<<<<<< HEAD
-=======
                   </h3>;
                   <p className="text - gray - 300 mb - 6 leading - relaxed">;
                     {item.description}
@@ -857,22 +713,16 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
 
                     {item.stats}
 
-=======
-=======
-
                     {item.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {item.description}
                   </p>
                   <div className="text-cyan-400 font-bold text-lg">
-<<<<<<< HEAD
-=======
                     {item.stats  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -914,9 +764,6 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center"
             >
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
@@ -925,16 +772,10 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
                 </h2>
                 <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 
-
-
-
                   Transform your business and lead your industry into the future.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
-<<<<<<< HEAD
-=======
-
 
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`  } catch (error) {
     console.error("Error:", error);
@@ -942,22 +783,13 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
-<<<<<<< HEAD
-=======
-
 
                   </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className="flex items-center space-x-6 text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -974,24 +806,18 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
           </div>
         </section>
 
-
   );
 };
 
-=======
         {/* Enhanced Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-=======
 }
 
-=======
 }
 
-=======
               className="text - center";
             >;
               <div className="bg - gradient - to - r from - gray - 900 / 80 to - gray - 800 / 80 border border - gray - 700 / 50 rounded - 2xl p - 12 backdrop - blur - sm">;
@@ -1038,6 +864,3 @@ description: 'AI - powered enterprise solutions and intelligent business optimiz
 
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

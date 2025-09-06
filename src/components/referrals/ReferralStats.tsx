@@ -1,32 +1,25 @@
 interface ReferralStatsProps {
-  stats: ReferralStatsType
-  isLoading: boolean
-
-
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReferralStats as ReferralStatsType } from "@/types/referrals",
-import { Award, Share, Star, TrendingUp } from 'lucide-react'
-
-
-
+  stats: ReferralStatsType,
+  isLoading: boolean,
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card","
+import { ReferralStats as ReferralStatsType } from "@/types/referrals","
+import { Award, Share, Star, TrendingUp } from 'lucide-react''
 interface ReferralStatsProps {
-
-  stats: ReferralStatsType
-  isLoading: boolean
+  stats: ReferralStatsType,
+  isLoading: boolean,
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType } from '@/types / referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 interface ReferralStatsProps {
-  stats: ReferralStatsType;
-  is_loading: boolean;
+  stats: ReferralStatsType;,
+  is_loading: boolean;,
 export /**
  * ReferralStats - Function description
  */
 function ReferralStats() {
-  const stat_cards = [;
+  const stat_cards = [;,
     {
-      title: 'Total Referrals',
+      title: 'Total Referrals','
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
 import { ReferralStats as ReferralStatsType  } from '@/types / referrals';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
@@ -35,14 +28,13 @@ interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
 }
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+export function ReferralStats({ stats, isLoading }:,  ReferralStatsProps) {,
   const statCards = [
     {
-
 interface ReferralStatsProps {;
-  stats: ReferralStatsType;
-  isLoading: boolean;
-export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
+  stats: ReferralStatsType;,
+  isLoading: boolean;,
+export function ReferralStats(): any ({ stats, isLoading }:,  ReferralStatsProps) {;,
   const statCards = [;
     {;
       title: 'Total Referrals',;
@@ -51,12 +43,11 @@ import { ReferralStats as ReferralStatsType } from "@/types/referrals";
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-
 interface ReferralStatsProps {;
   stats: ReferralStatsType,;
   isLoading: boolean;
 }
-export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) {;
+export function ReferralStats(): any ({ stats, isLoading }:,  ReferralStatsProps) {;,
   const statCards = [;
     {;
       title: 'Total Referrals',;
@@ -82,13 +73,11 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
       description: 'Credits earned from referrals',;
     },;
   ];
-
-
   return (
     <div className='grid gap-4 md:grid-cols-2 lg:grid-cols-4'>;
       {statCards && statCards.map((card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
-            <CardTitle className='text-sm font-medium'>{card && card.title}</CardTitle>            {card && card.icon}
+            <CardTitle className='text-sm font-medium'>{card && card.title}</CardTitle>            {card && card.icon}'
           </CardHeader>;
           <CardContent>;
             {isLoading ? (;
@@ -114,59 +103,52 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
               <>;
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
-
             )}
           </CardContent>;
         </Card>;
       ))}
-
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">"
       {statCards.map((card, i) => (
         <Card key={i}>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">"
+            <CardTitle className="text-sm font-medium">{card.title}</CardTitle>"
             {card.icon}
           </CardHeader>
           <CardContent>
             {isLoading ? (
-
-
-              <div className="h-6 w-20 bg-muted animate-pulse rounded" />
-
-
+              <div className="h-6 w-20 bg-muted animate-pulse rounded" />"
             ) : (
               <>
-                <div className="text-2xl font-bold">{card.value}</div>
-                <p className="text-xs text-muted-foreground">{card.description}</p>
-
-      title: 'Total Referrals',
-      icon: <Share className='h - 5 w - 5 text - muted - foreground' />,
-      description: "People you've invited",
+                <div className="text-2xl font-bold">{card.value}</div>"
+                <p className="text-xs text-muted-foreground">{card.description}</p>"
+      title: 'Total Referrals','
+      icon: <Share className='h - 5 w - 5 text - muted - foreground' />,'
+      description: "People you've invited","
     },
     {
-      title: 'Completed',
+      title: 'Completed','
       value: stats.completed_referrals,
-      icon: <Star className='h - 5 w - 5 text - muted - foreground' />,
-      description: 'Signed up & completed onboarding',
+      icon: <Star className='h - 5 w - 5 text - muted - foreground' />,'
+      description: 'Signed up & completed onboarding','
     },
     {
-      title: 'Pending',
+      title: 'Pending','
       value: stats.pending_referrals,
-      icon: <TrendingUp className='h - 5 w - 5 text - muted - foreground' />,
-      description: 'Not yet completed onboarding',
+      icon: <TrendingUp className='h - 5 w - 5 text - muted - foreground' />,'
+      description: 'Not yet completed onboarding','
     },
     {
-      title: 'Total Rewards',
-      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : '-',
-      icon: <Award className='h - 5 w - 5 text - muted - foreground' />,
-      description: 'Credits earned from referrals',
+      title: 'Total Rewards','
+      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : '-','
+      icon: <Award className='h - 5 w - 5 text - muted - foreground' />,'
+      description: 'Credits earned from referrals','
     },
   ];
   return (
     <div className='grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4'>;
       {stat_cards.map ((card, i) => (        <Card key={i}>;
           <CardHeader className='flex flex - row items - center justify - between space - y-0 pb - 2'>;
-            <CardTitle className='text - sm font - medium'>{card.title}</CardTitle>            {card.icon}
+            <CardTitle className='text - sm font - medium'>{card.title}</CardTitle>            {card.icon}'
           </CardHeader>;
           <CardContent>;
             {is_loading ? (
@@ -174,12 +156,10 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
             <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
     <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
       {stat_cards.map ((card, i) => (
-
 }
 }
 }
 }
-
               </>
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
@@ -189,7 +169,7 @@ interface ReferralStatsProps {;
   isLoading: boolean;
 }
 ;
-export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
+export function ReferralStats({ stats, isLoading }:,  ReferralStatsProps) {;,
   const statCards = [;
     {;
       title: "Total Referrals",;
@@ -209,12 +189,11 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     {;
       title: "Total Rewards",;
       value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",;
-      icon: <Award className="h-5 w-5 text-muted-foreground" />;
+      icon: <Award className="h-5 w-5 text-muted-foreground" />;",
       description: "Credits earned from referrals"}];
   return (;
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">;
       {statCards.map((card, i) => (;
-
         <Card key={i}>;
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">;
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>;
@@ -235,5 +214,5 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {;
     </div>;
   );
 }
-
 ;
+}}}}}}}}}}}}})))))))))))))]]

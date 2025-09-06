@@ -11,8 +11,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Mock data for featured posts;
 const featuredPosts: ForumPost[] = [;
   {;
@@ -24,7 +22,6 @@ const featuredPosts: ForumPost[] = [;
     authorAvatar: "https://i && i.pravatar.cc/150?img=3",;
     authorRole: "Verified Talent",;
     categoryId: "ai-tools",;
-=======
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -47,7 +44,6 @@ const featuredPosts: ForumPost[] = [
     authorAvatar: "https://i.pravatar.cc/150?img=3"
     authorRole: "Verified Talent"
     categoryId: "ai-tools"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     tags: ["machine-learning", "fine-tuning", "gpt"];
     createdAt: "2025-04-01T12:00:00Z",;
     updatedAt: "2025-04-01T12:00:00Z",;
@@ -73,11 +69,6 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,;
     isPinned: true,;
     isFeatured: true;
-
-
-<<<<<<< HEAD
-=======
-
 
 import { useState } from "react",
 import { Link } from "react-router-dom",
@@ -180,9 +171,6 @@ export default function CommunityPage() {
 
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -202,7 +190,6 @@ const featuredPosts: ForumPost[] = [
     replyCount: 12,
     isAnswered: true,
     isFeatured: true
-<<<<<<< HEAD
   },
   {
     id: "2",
@@ -220,7 +207,6 @@ const featuredPosts: ForumPost[] = [
     replyCount: 8,
     isPinned: true,
     isFeatured: true
-<<<<<<< HEAD
 
   }
 ];
@@ -272,9 +258,6 @@ const recentPosts: ForumPost[] = [;
   }
 ];
 
-
-
-=======
   }
 ],
 
@@ -336,34 +319,21 @@ export default function CommunityPage() {;
   const [activeTab, setActiveTab] = useState("categories");
   return (
     <AppLayout>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
   
   return (
-<<<<<<< HEAD
 
     <AppLayout>;
 
-=======
     <AppLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Community Forum | Zion AI Marketplace"
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
         keywords="community, forum, discussion, AI marketplace, questions, answers"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-
-=======
-=======
       />
       <div className="container py-8">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
@@ -400,8 +370,6 @@ export default function CommunityPage() {
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
 
-
-
               ))}
             </div>
           </TabsContent>
@@ -410,9 +378,6 @@ export default function CommunityPage() {
     </AppLayout>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -516,12 +481,9 @@ export default function CommunityPage() {;
         title="Community Forum | Zion AI Marketplace";
         description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals.";
         keywords="community, forum, discussion, AI marketplace, questions, answers";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
-=======
       />;
 
 import { useState } from "react",;
@@ -634,9 +596,6 @@ export default function CommunityPage() {;
       />;
       ;
       />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">;
           <div>;
@@ -645,12 +604,9 @@ export default function CommunityPage() {;
               Join the conversation, ask questions, and share your knowledge;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
-=======
 import { useState } from './react';
 import { Link } from './react-router-dom';
 import { Button } from '@/components / ui / button';
@@ -771,49 +727,33 @@ function CommunityPage() {
           </div>;
           <Button as_child>;
             <Link to={user ? "/community / create" : "/login?next=/community / create"}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           ;
           <Button asChild>;
             <Link to={user ? "/community/create" :"/login?next=/community/create"}>;
           <Button asChild>;
             <Link to={user ? "/community/create" : "/login?next=/community/create"}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Create New Post;
             </Link>;
           </Button>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <Tabs default_value="categories" value={active_tab} onValueChange={setActiveTab} className="mb - 8">;
           <TabsList className="mb - 6">;
 
-=======
         ;
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
           <TabsList className="mb-6">;
         <Tabs defaultValue="categories" value={activeTab} onValueChange={setActiveTab} className="mb-8">;
           <TabsList className="mb-6">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <TabsTrigger value="categories">Categories</TabsTrigger>;
             <TabsTrigger value="featured">Featured</TabsTrigger>;
             <TabsTrigger value="recent">Recent</TabsTrigger>;
           </TabsList>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <TabsContent value="categories">;
             <ForumCategories />;
           </TabsContent>;
           <TabsContent value="featured">;
-<<<<<<< HEAD
             <div className="space - y-4">;
               {featured_posts.map ((post) => (
                 <PostCard key={post.id} post={post} />))}
@@ -824,7 +764,6 @@ function CommunityPage() {
               {recent_posts.map ((post) => (
                 <PostCard key={post.id} post={post} />))}
 
-=======
           ;
           <TabsContent value="categories">;
             <ForumCategories />;
@@ -842,27 +781,14 @@ function CommunityPage() {
               {recentPosts.map((post) => (;
                 <PostCard key={post.id} post={post} />;
               ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </TabsContent>;
         </Tabs>;
       </div>;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </AppLayout>);
 }
@@ -877,10 +803,7 @@ function CommunityPage() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </AppLayout>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

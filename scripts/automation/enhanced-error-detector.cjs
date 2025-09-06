@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -283,7 +282,6 @@ if (require.main === module) {
 }
 
 module.exports = { detectAllErrors };
-=======
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -410,4 +408,3 @@ function checkSyntaxErrors(content")
         "message": "Missing semicolon"
         "type": "syntax"
   console.error(" Error detection "failed": ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

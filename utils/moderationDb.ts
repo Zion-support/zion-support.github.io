@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 export interface ModerationFlag {
 export interface ModerationFlag {;
 
-
 export interface ModerationFlag {
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   contentId: string;
   contentType: "post" | "comment" | "user";
@@ -65,8 +60,3 @@ export async function updateFlagStatus(
   await upsertFlag(flag);
   return flag;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

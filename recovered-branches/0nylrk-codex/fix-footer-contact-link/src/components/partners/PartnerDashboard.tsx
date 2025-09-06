@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
 
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -20,12 +14,10 @@ export function PartnerDashboard() {;
     pendingRevenue: 200 && 200.00;
   };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
-<<<<<<< HEAD
 export function PartnerDashboard() {;
   // Placeholder data - would come from API in real implementation;
   const stats = {;
@@ -37,29 +29,14 @@ export function PartnerDashboard() {;
     pendingRevenue: 200 && 200.00;
   };
 
-
-=======
-
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
-<<<<<<< HEAD
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Card,
   CardContent,
@@ -76,11 +53,6 @@ import {
   TrendingUp,
   Users,
 } from "lucide-react";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -143,12 +115,8 @@ export function PartnerDashboard() {
         </Card>
       </div>
 
-=======
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -167,12 +135,8 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
 
-=======
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
@@ -197,19 +161,11 @@ export function PartnerDashboard() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
 }
     </div>);
 }
@@ -243,6 +199,3 @@ return (<div className="space-y-6" > {
 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

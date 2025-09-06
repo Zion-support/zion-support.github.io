@@ -1,37 +1,22 @@
 
 
-
-
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
 import { Card, CardContent } from '@/components / ui / card';
 import { Avatar } from '@/components / ui / avatar';
 import { Quote } from './lucide-react';
 const testimonials = [;
-<<<<<<< HEAD
 
-=======
 const testimonials = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
     role: "CTO, DataMind Solutions";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     avatar: "https://i.pravatar.cc / 150?img = 32",
     company: "DataMind"},
   {
@@ -46,9 +31,7 @@ const testimonials = [
     role: "Independent AI Consultant",
     avatar: "https://i.pravatar.cc / 150?img = 28",
     company: "AI Systems"},
-<<<<<<< HEAD
 
-=======
     avatar: "https://i.pravatar.cc/150?img=32"
     company: "DataMind"}
   {
@@ -63,25 +46,13 @@ const testimonials = [
     role: "Independent AI Consultant"
     avatar: "https://i.pravatar.cc/150?img=28"
     company: "AI Systems"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-=======
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Carousel,
   CarouselContent,
@@ -91,15 +62,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -126,14 +89,6 @@ const testimonials = [
     avatar: "https://i.pravatar.cc/150?img=67",
     company: "EcoTech"}],
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function TestimonialCarousel() {
   return (
     <section className="py-20 bg-zion-blue-dark">
@@ -145,13 +100,6 @@ export function TestimonialCarousel() {
           </p>
         </div>
         <div className="max-w-5xl mx-auto px-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const testimonials = [;
   {;
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",;
@@ -177,12 +125,9 @@ const testimonials = [;
     role: "Operations Manager, EcoTech Systems";
     avatar: "https://i && i.pravatar.cc/150?img=67",;
     company: "EcoTech"}],;
-<<<<<<< HEAD
 
 export function TestimonialCarousel() {;
   return (
-<<<<<<< HEAD
-=======
 
 import {;
   Carousel,;
@@ -222,9 +167,6 @@ const testimonials = [;
 ;
 export function TestimonialCarousel() {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -233,13 +175,8 @@ export function TestimonialCarousel() {;
             Discover how Zion is transforming the tech and AI marketplace ecosystem;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className="max-w-5xl mx-auto px-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Carousel
     avatar: "https://i.pravatar.cc / 150?img = 67",
     company: "EcoTech"}],
@@ -262,12 +199,9 @@ function TestimonialCarousel() {
               align: "start"
 
               loop: true}}
-<<<<<<< HEAD
-=======
           <Carousel
             opts={{
               align: "start"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               loop: true}}
             className="w-full"
@@ -305,17 +239,10 @@ function TestimonialCarousel() {
     </section>
   )
 
-
 };
 
-<<<<<<< HEAD
-=======
-=======
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Carousel,;
   CarouselContent,;
@@ -389,17 +316,11 @@ export function TestimonialCarousel() {;
                   </Card>;
                 </CarouselItem>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </CarouselContent>;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
-<<<<<<< HEAD
-=======
             className="w - full";
           >;
             <CarouselContent>;
@@ -427,8 +348,6 @@ export function TestimonialCarousel() {;
             <div className="flex justify - center mt - 8 gap - 2">;
               <CarouselPrevious className="relative static left - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover: bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
               <CarouselNext className="relative static right - 0 translate - y-0 bg - zion - blue - dark border - zion - purple / 30 text - zion - cyan hover:bg - zion - blue - light hover:text - zion - cyan hover:border - zion - purple" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         ;
         <div className="max-w-5xl mx-auto px-8">;
           <Carousel;
@@ -463,18 +382,12 @@ export function TestimonialCarousel() {;
             <div className="flex justify-center mt-8 gap-2">;
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
               <CarouselNext className="relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </Carousel>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     </section>);
-=======
 
 ;
     </section>;
@@ -509,14 +422,6 @@ company: "AI Systems"
 }
     </section>;
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

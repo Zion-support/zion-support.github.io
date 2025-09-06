@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { Star } from 'lucide-react';
 import Head from 'next/head';
@@ -58,9 +55,6 @@ export default function MicroSAAS() {
     }
   ];
 
-  
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -76,13 +70,8 @@ export default function MicroSAAS() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
   );
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -311,4 +300,3 @@ export default function MicroSAASPage() {
     </MainLayout>
   );
 }
->>>>>>> main

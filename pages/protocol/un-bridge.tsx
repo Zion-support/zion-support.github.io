@@ -23,10 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',;
-
 
   });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
@@ -38,7 +36,6 @@ import React, { useState } from 'react';
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));  }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   async function generate() {
     setLoading(true);
     try {
@@ -46,22 +43,15 @@ import React, { useState } from 'react';
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-<<<<<<< HEAD
 export default function UNBridge(req, res) {
   try {
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
 
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative',;
-<<<<<<< HEAD
-=======
-=======
           ...form
           supportingMultiverses: form.supportingMultiverses
             .split(',')
@@ -120,25 +110,16 @@ export default function UNBridge(req, res) {
       setLoading(false);
     }
 
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default function UNBridge(req, res) {
   try {
   const [form, setForm] = useState({;
     title: 'Zion DAO x Digital Labor Initiative';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     targetInstitution: 'UN Development Programme',;
     type: 'Workforce Dev',;
     regionalScope: 'Global South',;
     budgetOrResolution: 'USD 3M over 24 months',;
     supportingMultiverses: 'Digital Labor, AI Ethics',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     promptAssist:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
     language: 'en',;
@@ -165,14 +146,12 @@ export default function UNBridge(req, res) {
             .map(s => s && s.trim());
             .filter(Boolean),;
         }),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       const data = await res && res.json();
       setResult(data);
     } finally {;
       setLoading(false);
     }  }
-
 
     try {;
       const res = await fetch('/api/proposals/translate', {;
@@ -186,7 +165,6 @@ export default function UNBridge(req, res) {
       setLoading(false);
     }  }
 
-
       });
       // Refresh meta;
       const list = await fetch('/api/proposals/list');
@@ -199,8 +177,6 @@ export default function UNBridge(req, res) {
       setLoading(false);
     }  }
 
-
-
   async function submit(): any (channels: string[]) {;
     if (!result?.meta?.id) return;
     setLoading(true),;
@@ -209,10 +185,6 @@ export default function UNBridge(req, res) {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ id: result && result.meta.id, channels }),;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       const data = await res && res.json();
       setResult((r: any) => ({ ...r, meta: data && data.meta }));
@@ -405,11 +377,8 @@ export default function UNBridge(req, res) {
         <div className="space-y-3">
           <label className="block">
             <span className="text-sm">Title</span>
-<<<<<<< HEAD
 <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
-=======
             <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           </label>
           <label className="block">
             <span className="text-sm">Target institution</span>
@@ -418,21 +387,15 @@ export default function UNBridge(req, res) {
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
-<<<<<<< HEAD
 <label className="block">
-=======
           <label className="block">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
           </label>
@@ -449,20 +412,14 @@ export default function UNBridge(req, res) {
             <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
           </label>
           <div className="flex gap-3">
-<<<<<<< HEAD
-=======
             <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
           </div>
         </div>
-
-
 
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
             {result?.markdown || 'No draft yet'}
-=======
-<<<<<<< HEAD
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
@@ -511,7 +468,6 @@ export default function UNBridge(req, res) {
             >
               Submit (Email)
             </button>
-=======
         <div className="space-y-3">
           <div className="text-sm opacity-70">Output</div>
           <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
@@ -520,8 +476,6 @@ export default function UNBridge(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
           <div className="flex items-center gap-2">
             <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
@@ -529,7 +483,6 @@ export default function UNBridge(req, res) {
             <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
           </div>
           {translated && (
-<<<<<<< HEAD
             <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
               {translated  } catch (error) {
     console.error("Error:", error);
@@ -544,19 +497,12 @@ export default function UNBridge(req, res) {
 }
           </div>
           <div className="flex items-center gap-2">
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
           {result?.meta && (
             <div className="text-sm space-y-1">
               <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-<<<<<<< HEAD
-=======
               {result.meta.artifacts?.markdownPath && (
-<<<<<<< HEAD
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
               {result.meta.artifacts?.pdfPath && (
@@ -671,13 +617,9 @@ if (return) {
     } finally {
       set_loading (false);
     }
-=======
-
 
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</Link></div>
               )  } catch (error) {
     console.error("Error:", error);
@@ -854,8 +796,6 @@ if (return) {
             </div>)}
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
 
     </div>;
   );
@@ -865,7 +805,3 @@ if (return) {
   }
 }
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

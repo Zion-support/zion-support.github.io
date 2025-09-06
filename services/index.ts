@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 
 ;
 // Export service types and interfaces;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export type {
   ShortUrl;
   UrlAnalytics;
@@ -17,13 +12,8 @@ export type {
 ;
 
 export type {
-=======
-<<<<<<< HEAD
-=======
 // Export all micro SaaS services;
 // Export all micro SaaS services
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
@@ -35,144 +25,65 @@ export { textAnalysisService } from './textAnalysisService';
   CreateShortUrlRequest;
 } from './urlShortenerService';
 export type {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export type {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
 } from './passwordGeneratorService';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 
 export type {
-=======
-<<<<<<< HEAD
-=======
 ;
 
 ;
 export type {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export type {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export type {
-
 
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
 } from './qrCodeService';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 
 export type {
-=======
-<<<<<<< HEAD
-=======
 ;
 
 ;
 export type {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export type {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export type {
-
 
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
   FileInfo;
 } from './fileConverterService';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
 
 export type {
-=======
-<<<<<<< HEAD
-=======
 ;
 
 ;
 export type {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export type {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Export service types and interfaces
 export type {;
   ShortUrl;
@@ -205,17 +116,10 @@ export type {;
 export type {
 
 export type {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export type {
-
 
 export type {;
 export type {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -223,19 +127,12 @@ export type {
   KeywordAnalysis;
   LanguageDetection;
   EntityExtraction;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   TextSummary;
 } from './textAnalysisService';
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   TextSummary;
 } from './textAnalysisService';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 // Service categories for easy discovery;
 export const SERVICE_CATEGORIES = {
@@ -260,53 +157,25 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES_METADATA = {
   url_shortener: {
     name: 'URL Shortener',
-<<<<<<< HEAD
-=======
   url_shortener: {
     name: 'URL Shortener',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-=======
 
     name: 'URL Shortener',;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
     name: 'URL Shortener',;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: 'Free',
     api_endpoint: '/api / url - shortener';
   }
   password_generator: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   TextSummary
 } from './textAnalysisService';
 // Service categories for easy discovery
@@ -343,21 +212,11 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/url-shortener'
   }
   passwordGenerator: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
     category: 'UTILITIES';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
@@ -365,8 +224,6 @@ export const SERVICES_METADATA = {
     pricing: 'Free',
     api_endpoint: '/api / password - generator';
 
-<<<<<<< HEAD
-=======
     pricing: 'Free',
     api_endpoint: '/api / password - generator';
     features: [
@@ -374,39 +231,21 @@ export const SERVICES_METADATA = {
     ];
     pricing: 'Free'
     apiEndpoint: '/api/password-generator'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
     icon: '📱';
     category: 'UTILITIES';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: 'Free',
     api_endpoint: '/api / qr - code - generator';
   }
   file_converter: {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     features: [
       'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
     ];
@@ -414,48 +253,25 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/qr-code-generator'
   }
   fileConverter: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
     category: 'MEDIA';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
 
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
 
-=======
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
@@ -463,133 +279,64 @@ export const SERVICES_METADATA = {
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
     category: 'ANALYSIS';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
 
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
 
-<<<<<<< HEAD
-=======
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ];
     pricing: 'Free (Basic) / $19.99/month (Pro)'
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-=======
-<<<<<<< HEAD
-=======
   return {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 // Service usage statistics
 export const getServiceStats = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   return {
-=======
   return {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   return {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     totalUsers: 15420;
     totalRequests: 2847500;
     averageResponseTime: 125
     services: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -771,39 +518,20 @@ textAnalysis: {
   users: 3890, requests: 11500, avgResponse: 178 
 }
 
-<<<<<<< HEAD
     }
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -859,13 +587,6 @@ export const SERVICE_CATEGORIES = {;
     name: 'Analysis & Insights',;
     description: 'Text analysis and content insights',;
     services: ['textAnalysis'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 } as const;
@@ -882,10 +603,7 @@ export const getServiceStatus = () =>: any {
 }
 ;
 // Service usage statistics;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   }
 } as const,;
 // Service metadata for the application;
@@ -957,10 +675,7 @@ export const getServiceStatus = () => {;
   }
 },;
 // Service usage statistics;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const getServiceStats = () => {;
   return {;
     totalUsers: 15420,;
@@ -971,31 +686,15 @@ export const getServiceStats = () => {;
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },;
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 }
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 export const getServiceStats = () =>: any {
   return {
@@ -1011,10 +710,3 @@ export const getServiceStats = () =>: any {
     }
   }
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

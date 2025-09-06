@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -18,15 +12,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -46,26 +32,11 @@ async function ensureStore() {;
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
@@ -76,8 +47,6 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -109,13 +78,7 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req && req.method === "POST") {
     const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
@@ -132,8 +95,6 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
     const item = {
       id: body.id
       title: body.title
@@ -158,9 +119,7 @@ async function ensureStore() {
   res && res.status(405).json({ error: "Method not allowed" });
 
   res && res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
 
-=======
 }
     const raw = await fs.readFile(FILE_PATH, 'utf8');
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
@@ -187,14 +146,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(item)
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   res && res.status(405).json({ error: "Method not allowed" });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -244,32 +198,16 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   res.status (405).json ({ error: "Method not allowed" });
-=======
   res.status(405).json({ error: "Method not allowed" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (req.method === 'GET') {
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
@@ -297,13 +235,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -317,16 +249,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/main
 origin/automation-improvements-final
@@ -41,15 +34,6 @@ import { ;
 
 } from 'lucide-react';
 import Layout from '../../components/Layout';
-<<<<<<< HEAD
-=======
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 const solutions = [
   {
@@ -103,10 +87,7 @@ const solutions = [
       "Ongoing Support"
     ]
     color: "from-orange-600 to-orange-800"
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const solutions = [;
   {;
     title: "Enterprise Solutions",;
@@ -179,8 +160,6 @@ const stats = [;
 ];
 
 export default function SolutionsPage() {;
-<<<<<<< HEAD
-=======
 
   return (
     <Layout
@@ -205,9 +184,6 @@ export default function SolutionsPage() {;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Technology Solutions for{' '}
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -430,8 +406,6 @@ const SolutionsPage: NextPage = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
 
-<<<<<<< HEAD
-=======
   }
 }
       ];
@@ -443,9 +417,7 @@ const SolutionsPage: NextPage = () => {
   ],
   return (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
-
 
                 efficiency, and innovation across all industries.
               </p>
@@ -461,7 +433,6 @@ const SolutionsPage: NextPage = () => {
   const solutions = [
     // Healthcare Solutions
     {
-<<<<<<< HEAD
 category: "Healthcare & Life Sciences",
       solutions: [
         {
@@ -493,7 +464,6 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
       category: "Healthcare & Life Sciences",
       solutions: [
         {
@@ -524,12 +494,8 @@ category: "Healthcare & Life Sciences",
           icon: "💻"
         }
       ]
-<<<<<<< HEAD
     };
-=======
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Financial Services Solutions
     {
       category: "Financial Services & FinTech",
@@ -537,12 +503,9 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Risk Assessment",
           description: "Machine learning-based risk assessment and fraud detection for financial institutions.",
-<<<<<<< HEAD
           useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"];
           benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"];
           pricing: "$30,000 - $120,000";
-=======
-<<<<<<< HEAD
           useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"];
           benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"];
           pricing: "$30,000 - $120,000";
@@ -569,11 +532,9 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["Banks", "Credit unions", "Insurance companies", "Investment firms"],
           benefits: ["Reduced fraud losses", "Better risk management", "Compliance automation", "Improved customer experience"],
           pricing: "$30,000 - $120,000",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           link: "https://ziontechgroup.com/solutions/financial-risk-ai",
           icon: "🏦"
         };
@@ -596,28 +557,18 @@ category: "Healthcare & Life Sciences",
           icon: "📋"
         }
       ]
-<<<<<<< HEAD
     };
-=======
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Manufacturing & Industry 4.0
     {
       category: "Manufacturing & Industry 4.0",
       solutions: [
         {
           name: "IoT Manufacturing Platform",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.";
           useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"];
           benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"];
           pricing: "$50,000 - $200,000";
-<<<<<<< HEAD
-=======
           link: "https://ziontechgroup.com/solutions/iot-manufacturing",
           icon: "🏭"
         };
@@ -641,12 +592,10 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           description: "Comprehensive IoT solution for smart manufacturing, predictive maintenance, and quality control.",
           useCases: ["Production lines", "Quality control", "Predictive maintenance", "Supply chain management"],
           benefits: ["Reduced downtime", "Improved quality", "Cost optimization", "Real-time monitoring"],
           pricing: "$50,000 - $200,000",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           link: "https://ziontechgroup.com/solutions/iot-manufacturing",
           icon: "🏭"
         };
@@ -669,12 +618,8 @@ category: "Healthcare & Life Sciences",
           icon: "🔄"
         }
       ]
-<<<<<<< HEAD
     };
-=======
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Retail & E-commerce Solutions
     {
       category: "Retail & E-commerce",
@@ -682,12 +627,9 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Customer Analytics",
           description: "Advanced customer behavior analysis and personalized marketing automation platform.",
-<<<<<<< HEAD
           useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"];
           benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"];
           pricing: "$20,000 - $80,000";
-=======
-<<<<<<< HEAD
           useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"];
           benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"];
           pricing: "$20,000 - $80,000";
@@ -714,11 +656,9 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["Online retail", "Brick-and-mortar stores", "Marketplaces", "Subscription services"],
           benefits: ["Increased sales", "Better customer retention", "Personalized experiences", "Marketing optimization"],
           pricing: "$20,000 - $80,000",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           link: "https://ziontechgroup.com/solutions/retail-analytics",
           icon: "🛒"
         };
@@ -741,12 +681,8 @@ category: "Healthcare & Life Sciences",
           icon: "🥽"
         }
       ]
-<<<<<<< HEAD
     };
-=======
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Education & Training Solutions
     {
       category: "Education & Training",
@@ -754,12 +690,9 @@ category: "Healthcare & Life Sciences",
         {
           name: "AI-Powered Learning Platform",
           description: "Personalized learning platform with AI-driven content recommendations and adaptive assessments.",
-<<<<<<< HEAD
           useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"];
           benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"];
           pricing: "$25,000 - $100,000";
-=======
-<<<<<<< HEAD
           useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"];
           benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"];
           pricing: "$25,000 - $100,000";
@@ -786,11 +719,9 @@ category: "Healthcare & Life Sciences",
         }
       ]
     };
-=======
           useCases: ["K-12 education", "Higher education", "Corporate training", "Professional development"],
           benefits: ["Personalized learning", "Better engagement", "Improved outcomes", "Scalable delivery"],
           pricing: "$25,000 - $100,000",
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           link: "https://ziontechgroup.com/solutions/ai-learning",
           icon: "🎓"
         };
@@ -813,22 +744,14 @@ category: "Healthcare & Life Sciences",
           icon: "📊"
         }
       ]
-<<<<<<< HEAD
     };
-=======
     },
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Government & Public Sector
     {
       category: "Government & Public Sector",
       solutions: [
         {
           name: "Smart City Platform",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.";
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"];
           benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"];
@@ -858,10 +781,7 @@ category: "Healthcare & Life Sciences",
 
     }
   ];
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 
               </div>
@@ -872,8 +792,6 @@ category: "Healthcare & Life Sciences",
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
-<<<<<<< HEAD
-=======
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -922,7 +840,6 @@ category: "Healthcare & Life Sciences",
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -947,7 +864,6 @@ category: "Healthcare & Life Sciences",
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
 
-
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                   Every Business;
                 </span>;
@@ -968,13 +884,10 @@ category: "Healthcare & Life Sciences",
           </div>;
         </section>;
 
-
-
         {/* Solutions Grid */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -992,11 +905,6 @@ category: "Healthcare & Life Sciences",
               {solutions.map((solution, index) => {;
                 const IconComponent = solution.icon;
                 const IconComponent = solution.icon;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
@@ -1010,18 +918,13 @@ category: "Healthcare & Life Sciences",
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               {solutions && solutions.map((solution, index) => {;
                 const IconComponent = solution && solution.icon;
-<<<<<<< HEAD
-=======
-
 
                 return (
-
 
                     whileHover={{ y: -5 }}>;
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>;
                       <IconComponent className="w-8 h-8 text-white" />;
                     </div>;
-
 
                           {feature}
                         </li>;
@@ -1029,9 +932,6 @@ category: "Healthcare & Life Sciences",
 
                     </ul>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <Link
                       href={solution && solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
@@ -1042,7 +942,6 @@ category: "Healthcare & Life Sciences",
                 );
               })}
 
-
         {/* Industries Section */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -1050,7 +949,6 @@ category: "Healthcare & Life Sciences",
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
 
                   key={index}
                   className="text-center p-6 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group cursor-pointer"
@@ -1067,7 +965,6 @@ category: "Healthcare & Life Sciences",
                   </div>;
                 </motion && motion.div>;
               ))}
-
 
         {/* Stats Section */}
         <section className="py-20 bg-gray-900 text-white">;
@@ -1087,7 +984,6 @@ category: "Healthcare & Life Sciences",
                   <div className="text-gray-300 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
@@ -1119,17 +1015,11 @@ category: "Healthcare & Life Sciences",
   );
 }
 
-
 };
 
 export default SolutionsPage;
-<<<<<<< HEAD
                   <motion.div;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <motion.div;
-=======
           description: "Comprehensive smart city solution for urban planning, traffic management, and citizen services.",
           useCases: ["Urban planning", "Traffic management", "Public safety", "Citizen services"],
           benefits: ["Improved efficiency", "Better citizen experience", "Cost reduction", "Data-driven decisions"],
@@ -1157,7 +1047,6 @@ export default SolutionsPage;
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
       ];
@@ -1168,9 +1057,7 @@ export default SolutionsPage;
 }
   ],
   return (
-<<<<<<< HEAD
     <Layout 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title="Solutions - Zion Tech Group"
       description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
       keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
@@ -1196,11 +1083,8 @@ export default SolutionsPage;
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
                 From startups to enterprises, we provide tailored technology solutions that drive growth
-=======
                 From startups to enterprises, we provide tailored technology solutions that drive growth, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 efficiency, and innovation across all industries.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1226,8 +1110,6 @@ export default SolutionsPage;
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Our Solution Categories
-<<<<<<< HEAD
-=======
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -1238,16 +1120,12 @@ export default SolutionsPage;
                 const IconComponent = solution.icon;
                 return (
                   <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={index}
                     className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group";
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                     while_hover={{ coordinate_y: -5 }}
                   >;
                     <div className={`w - 16 h - 16 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform`}>;
@@ -1268,16 +1146,13 @@ export default SolutionsPage;
                     </ul>;
                     <Link;
                       href={solution.href}
-<<<<<<< HEAD
                       className="inline - flex items - center text - blue - 600 hover:text - blue - 700 font - semibold group - hover:text - purple - 600 transition - colors";
                     >;
                       <span > Explore {solution.title}</span>;
                       <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform" />;
                     </Link>;
                   </motion.div>);
-=======
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
         <title>Industry Solutions - Zion Tech Group | Tailored Technology Solutions</title>
@@ -1314,7 +1189,6 @@ export default SolutionsPage;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We offer comprehensive technology solutions tailored to different business needs and stages.
@@ -1331,7 +1205,6 @@ export default SolutionsPage;
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
                     viewport={{ once: true }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     whileHover={{ y: -5 }}
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
@@ -1343,14 +1216,7 @@ export default SolutionsPage;
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {solution.description}
                     </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -1362,7 +1228,6 @@ export default SolutionsPage;
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
-=======
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
@@ -1424,28 +1289,18 @@ export default SolutionsPage;
                         </li>))}
                     </ul>;
                     <Link;
-<<<<<<< HEAD
-=======
                       href={solution.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </motion.div>
                 );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               })}
             </div>;
           </div>;
@@ -1537,36 +1392,23 @@ export default SolutionsPage;
         </section>;
       </div>;
     </Layout>);
-<<<<<<< HEAD
-=======
 }
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 ;
 export default SolutionsPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <Link;
                       href={solution.link  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     >
                       <span>Explore {solution.title}</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
                   </motion.div>
                 );
               })}
@@ -1907,21 +1749,13 @@ export default SolutionsPage,
     </div>;
   );
 },;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export default SolutionsPage;
 
-<<<<<<< HEAD
 export default SolutionsPage;
-=======
 
 export default SolutionsPage;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../../src/components/layout/MainLayout';
 
@@ -1937,4 +1771,3 @@ export default function SolutionsPage() {
     </MainLayout>
   );
 }
->>>>>>> main

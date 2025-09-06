@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -33,12 +30,9 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
     website: string;
   }
 
-=======
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -59,7 +53,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Advanced platform that uses AI to create, manage, and optimize content across all channels. Not just content generation - intelligent content strategy and optimization.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI content creation',
         'Content strategy optimization',
         'Multi - channel management',
@@ -72,8 +65,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'ROI tracking',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '📝',
 
         'AI/ML',
@@ -91,7 +82,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Natural Language Processing',
         'Content Management',
         'SEO Tools',
@@ -99,10 +89,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
-=======
 
-=======
       integrations: [;
         'WordPress',
         'Shopify',
@@ -129,7 +116,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas - content',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -143,8 +129,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4 && 4.9,
       reviews: 89,
     },
-<<<<<<< HEAD
-=======
 
         'AI-powered lead scoring',
     // CRM Intelligence Platform;
@@ -159,7 +143,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       features: [;
         'AI - powered lead scoring',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Predictive analytics',
         'Automated follow - ups',
         'Customer behavior analysis',
@@ -171,8 +154,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Integration capabilities',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '📊',
 
         'AI/ML',
@@ -190,7 +171,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Predictive Analytics',
         'CRM Systems',
         'Automation',
@@ -198,10 +178,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
-=======
 
-=======
       integrations: [;
         'Salesforce',
         'HubSpot',
@@ -225,7 +202,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas - crm',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -239,8 +215,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4 && 4.9,
       reviews: 125,
     },
-<<<<<<< HEAD
-=======
 
         'AI-powered analytics',
         'Automated decision-making',
@@ -270,7 +244,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '🧠',
 
-=======
       color: 'from - purple - 500 to - indigo - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / decision - engine - platform',
@@ -327,7 +300,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 78,
     },
 
-=======
     // E - commerce Optimization Platform;
     {
       id: 'ecommerce - optimization - platform',
@@ -339,7 +311,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Advanced platform that uses AI to optimize every aspect of e - commerce operations, from product recommendations to pricing strategies and customer experience.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI product recommendations',
         'Dynamic pricing optimization',
         'Customer behavior analysis',
@@ -352,8 +323,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Performance tracking',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🛒',
 
         'AI/ML',
@@ -371,7 +340,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Recommendation Systems',
         'Dynamic Pricing',
         'E - commerce',
@@ -379,10 +347,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
-=======
 
-=======
       integrations: [;
         'Shopify',
         'WooCommerce',
@@ -409,7 +374,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas - ecommerce',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -423,10 +387,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4 && 4.8,
       reviews: 95,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // HR Automation Platform;
     {
       id: 'hr - automation - platform',
@@ -439,7 +400,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Revolutionary HR platform that uses AI to automate recruitment, employee management, performance tracking, and HR analytics for improved organizational efficiency.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI recruitment automation',
         'Employee performance tracking',
         'HR analytics and insights',
@@ -452,8 +412,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Reporting and dashboards',
       ],
       popular: false,
-<<<<<<< HEAD
-=======
       icon: '👥',
 
         'AI/ML',
@@ -471,7 +429,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'HR Management',
         'Automation',
         'Analytics',
@@ -479,10 +436,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
-=======
 
-=======
       integrations: [;
         'ATS platforms',
         'HRIS systems',
@@ -505,7 +459,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas - hr',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -519,10 +472,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4 && 4.8,
       reviews: 58,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Financial Analytics Platform;
     {
       id: 'financial - analytics - platform',
@@ -549,7 +499,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: true,
       icon: '💰',
 
-=======
       color: 'from - yellow - 500 to - amber - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / financial - analytics - platform',
@@ -606,7 +555,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 52,
     },
 
-=======
     // Supply Chain Intelligence Platform;
     {
       id: 'supply - chain - intelligence',
@@ -633,7 +581,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       popular: false,
       icon: '🚚',
 
-=======
       color: 'from - gray - 500 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / supply - chain - intelligence',
@@ -694,7 +641,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       reviews: 38,
     },
 
-=======
     // Marketing Automation Platform;
     {
       id: 'marketing - automation - platform',
@@ -707,7 +653,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Advanced platform that uses AI to automate marketing campaigns, optimize performance, and provide intelligent insights for maximum marketing ROI.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'AI campaign optimization',
         'Automated marketing workflows',
         'Customer segmentation',
@@ -720,8 +665,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Integration capabilities',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '📢',
 
         'AI/ML',
@@ -739,7 +682,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Marketing Automation',
         'Customer Analytics',
         'Personalization',
@@ -747,10 +689,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React',
         'Node && Node.js',
       ],
-<<<<<<< HEAD
-=======
 
-=======
       integrations: [;
         'Email platforms',
         'Social media tools',
@@ -776,7 +715,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas - marketing',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -790,14 +728,9 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       rating: 4 && 4.9,
       reviews: 82,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Project Management Intelligence Platform;
     {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: 'project - management - intelligence',
       name: 'AI Project Management Intelligence Platform',
       tagline:;
@@ -821,8 +754,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       ],
       popular: false,
       icon: '📋',
-<<<<<<< HEAD
-=======
 
         'AI/ML',
       color: 'from - indigo - 500 to - purple - 600',
@@ -847,7 +778,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Node && Node.js',
       ],
 
-=======
       integrations: [;
         'Project management tools',
         'Time tracking systems',
@@ -880,9 +810,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       },
       real_implementation: true,
       implementation_details:;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launch_date: '2025 - 03 - 05',
       customers: 75,
@@ -891,10 +819,8 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
     },;
 
-
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -930,7 +856,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     features: [
       'AI content creationContent strategy optimizationMulti-channel managementPerformance analyticsSEO optimizationContent personalizationBrand voice consistencyContent calendar automation';
       'Collaboration toolsROI tracking'
-=======
       id: 'project-management-intelligence'
       name: 'AI Project Management Intelligence Platform'
       tagline:
@@ -956,7 +881,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       color: 'from-indigo-500 to-purple-600'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/project-management-intelligence'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       marketPosition:
         'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.'
       targetAudience:
@@ -990,8 +914,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       growthRate: '250%+ annual growth'
       variant: 'saas-project'
       contactInfo: {
-<<<<<<< HEAD
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -999,26 +921,21 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
       launchDate: '2025-03-05'
       customers: 75
       rating: 4.8
       reviews: 45
     }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launchDate: '2025-03-05',
       customers: 75,
       rating: 4.8,
       reviews: 45,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI project planningResource optimizationRisk assessmentPerformance trackingAutomated reportingTeam collaborationTimeline optimizationBudget management';
       'Integration capabilitiesCustom dashboards'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '📝',
     color: 'from-blue-500 to-cyan-600', textColor: 'text-blue-400',
@@ -1052,7 +969,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1490,7 +1406,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     launchDate: '2025-03-05',;
     customers: 75,;
     rating: 4.8;
-=======
 
     popular: false, icon: '📋',
     color: 'from-indigo-500 to-purple-600', textColor: 'text-indigo-400',
@@ -1513,25 +1428,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     rating: 4 && 4.8,
 
     reviews: 45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     real_implementation: true,
     implementation_details: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
     launch_date: '2025 - 03 - 05', customers: 75,
     rating: 4.8,
     reviews: 45;
-<<<<<<< HEAD
 ];
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
-=======
-
-
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1972,21 +1878,11 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     reviews: 45;
 ];
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -2425,12 +2321,5 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     customers: 75,;
     rating: 4.8;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

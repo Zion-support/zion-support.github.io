@@ -1,10 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}

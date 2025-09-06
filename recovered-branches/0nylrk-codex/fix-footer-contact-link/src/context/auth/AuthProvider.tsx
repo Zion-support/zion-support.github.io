@@ -8,11 +8,8 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
-=======
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -24,58 +21,37 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers",;
 import { mapProfileToUser } from "./profileMapper",;
 ;
 export const AuthProvider = ({ children } { children:React.ReactNode }) => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const { ;
     user, setUser, ;
     isLoading, setIsLoading, ;
     onboardingStep, setOnboardingStep ;
-<<<<<<< HEAD
-=======
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
     user, setUser
     isLoading, setIsLoading
     onboardingStep, setOnboardingStep
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useAuthState();
 
   const navigate = useNavigate();
   const location = useLocation();
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const {;
     login: loginImpl,;
     signup: signupImpl,;
 
-<<<<<<< HEAD
-=======
   const {
     login: loginImpl
     signup: signupImpl
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     logout;
     resetPassword;
     updateProfile;
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
-<<<<<<< HEAD
-<<<<<<< HEAD
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading);
 
-
-
-=======
-=======
     loginWithWeb3
   } = useAuthOperations(setUser, setIsLoading);
   // Wrapper for login to match the AuthContextType interface
@@ -89,9 +65,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -101,39 +74,24 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
     isLoading, setIsLoading, 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
 
-=======
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
 
-  
     onboardingStep, setOnboardingStep ;
   } = useAuthState();
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     onboardingStep, setOnboardingStep 
   } = useAuthState(),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const navigate = useNavigate(),
   const location = useLocation(),
@@ -161,17 +119,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
-<<<<<<< HEAD
     cleanupAuthState(),
-    
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
         if (session?.user) {
@@ -179,36 +128,21 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
             const { data: profile, error } = await getFromProfiles()
               .select('*')
               .eq('id', session.user.id)
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
-=======
 
               .single();
             if (profile) {
               const mappedUser = mapProfileToUser(session.user, profile);
               setUser(mappedUser);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               .single(),
 
             if (profile) {
               const mappedUser = mapProfileToUser(session.user, profile),
               setUser(mappedUser),
-              
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               // Show welcome toast when user logs in
               if (event === 'SIGNED_IN') {
                 handleSignedIn(mappedUser)
               }
-<<<<<<< HEAD
             } else if (error) {
               console.error("Error fetching user profile:", error),
               setUser(null)
@@ -216,16 +150,13 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           } catch (error) {
             console.error("Error fetching user profile:", error),
             setUser(null)
-<<<<<<< HEAD
 
-=======
           }
         } else {
           setUser(null);
           // Show logout toast when user logs out
           if (event === 'SIGNED_OUT') {
             handleSignedOut()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from "react",;
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",;
 import { useAuthOperations } from "../../hooks/useAuthOperations",;
@@ -255,10 +186,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     loginWithTwitter,;
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Wrapper for login to match the AuthContextType interface;
   const login = async (email: string, password: string) => {;
     return loginImpl({ email, password });
@@ -274,8 +202,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     cleanupAuthState();
 
     const { data: { subscription } } = supabase && supabase.auth.onAuthStateChange(;
-<<<<<<< HEAD
-=======
   // Wrapper for login to match the AuthContextType interface;
   const login = async (email: string, password: string) => {;
     return loginImpl({ email, password });
@@ -288,13 +214,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     // Clean up any potential stale auth state before setting up listeners;
     cleanupAuthState(),;
     const { data: { subscription } } = supabase.auth.onAuthStateChange(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       async (event, session) => {;
         if (session?.user) {;
           try {;
             const { data: profile, error } = await getFromProfiles();
               .select('*');
-<<<<<<< HEAD
               .eq('id', session && session.user.id);
               .single();
 
@@ -302,24 +226,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
               const mappedUser = mapProfileToUser(session && session.user, profile);
               setUser(mappedUser);
 
-=======
               .eq('id', session.user.id);
               .single(),;
             if (profile) {;
               const mappedUser = mapProfileToUser(session.user, profile),;
               setUser(mappedUser),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               // Show welcome toast when user logs in;
               if (event === 'SIGNED_IN') {;
                 handleSignedIn(mappedUser);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }
             } else if (error) {;
-<<<<<<< HEAD
-=======
               }
             } else if (error) {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               console && console.error("Error fetching user profile:", error);
               setUser(null);
             }
@@ -330,66 +248,39 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
         } else {;
           setUser(null);
 
-
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
         setIsLoading(false);
       }
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
     );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Initial session check;
     supabase && supabase.auth.getSession().then(({ data: { session } }) => {;
       if (!session) {;
         setIsLoading(false);
       }
     });
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       }
     });
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return () => {;
       subscription && subscription.unsubscribe();
     }
   }, [navigate]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const authContextValue = {;
     user;
     isLoading;
     isAuthenticated: !!user,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
               console.error("Error fetching user profile:", error),;
               setUser(null);
             }
@@ -421,20 +312,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     user;
     isLoading;
     isAuthenticated: !!user
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     login;
     signup;
     logout;
     resetPassword;
     updateProfile;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect } from './react';
 import { supabase, getFromProfiles } from '../../integrations / supabase / client';
 import { useAuthOperations } from '../../hooks / useAuthOperations';
@@ -461,37 +344,22 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     logout;
     reset_password;
     update_profile;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     onboardingStep;
   };
 
-
   return (
     <AuthContext && AuthContext.Provider value={authContextValue}>;
       {children}
-<<<<<<< HEAD
 
     </AuthContext && AuthContext.Provider>;
   );
 };
 
-=======
-=======
-=======
     </AuthContext.Provider>
   )
     ),;
@@ -518,7 +386,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     loginWithFacebook,;
     loginWithTwitter,;
     loginWithWeb3,;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     onboardingStep;
   };
   return (;
@@ -528,13 +395,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
   return (
     <AuthContext && AuthContext.Provider value={authContextValue}>;
       {children}
-<<<<<<< HEAD
     </AuthContext && AuthContext.Provider>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useAuthOperations (set_user, setIsLoading);
 ;
   // Wrapper for login to match the AuthContextType interface;
@@ -640,15 +503,8 @@ if ( {) {
     </AuthContext.Provider>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
-
-=======
-=======
 
 };
 
@@ -662,7 +518,6 @@ if ( {) {
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -678,8 +533,6 @@ if ( {) {
     user,;
     isLoading,;
     isAuthenticated: !!user,;
-<<<<<<< HEAD
-=======
   } = useAuthState(),;
   ;
   const navigate = useNavigate(),;
@@ -777,7 +630,6 @@ if (event === 'SIGNEDOUT') {
     user,;
     isLoading,;
     isAuthenticated:!!user,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     login,;
     signup,;
     logout,;
@@ -788,24 +640,15 @@ if (event === 'SIGNEDOUT') {
     loginWithTwitter,;
     loginWithWeb3,;
     onboardingStep;
-<<<<<<< HEAD
-=======
   },;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   };
   return (;
     <AuthContext.Provider value={authContextValue}>;
       {children}
     </AuthContext.Provider>;
-<<<<<<< HEAD
   );
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   ),;},
  export const AuthProvider = ({
@@ -871,6 +714,3 @@ data: {
 };
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

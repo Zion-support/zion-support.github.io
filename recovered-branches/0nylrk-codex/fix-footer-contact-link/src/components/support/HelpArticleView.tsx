@@ -61,7 +61,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>
 
             <div className="flex items-center space-x-3">
-=======
 
   if (!article) {;
     return <div>Article not found</div>;
@@ -100,7 +99,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>;
 
             <div className="flex items-center space-x-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 variant="outline"
                 size="sm"
@@ -153,7 +151,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   );
 }
 
-
                 on_click={() => handle_feedback ("not - helpful")}
                 disabled={feedback_given !== null}
               >;
@@ -186,9 +183,6 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
-
-=======
-
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {

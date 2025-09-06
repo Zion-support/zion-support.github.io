@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,10 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -44,24 +38,14 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-<<<<<<< HEAD
 
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -85,7 +69,6 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-<<<<<<< HEAD
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
   const filterOptions = generateFilterOptions();
   const navigate = useNavigate(),
@@ -94,21 +77,10 @@ export default function Marketplace() {
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -116,12 +88,7 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -153,14 +120,7 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -178,38 +138,25 @@ export default function Marketplace() {;
     if (selectedRating && (!listing.rating |listing.rating < selectedRating)) {
       return false
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
     console.log(`Filter changed: ${filterType} = ${value}`)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     
     return true
   }),
   
   const handleFilterChange = (filterType: string, value: string) => {
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     return true
   });
   const handleFilterChange = (filterType: string, value: string) => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-<<<<<<< HEAD
-<<<<<<< HEAD
         );
         break;
       case 'location':
@@ -220,9 +167,6 @@ export default function Marketplace() {;
       case 'availability':
         setSelectedAvailability(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
   const filterOptions = generateFilterOptions();
@@ -275,31 +219,23 @@ export default function Marketplace() {;
       case 'availability':;
         setSelectedAvailability(prev => ;
           prev && prev.includes(value) ? prev && prev.filter(item => item !== value) : [...prev, value];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         );
         break;
     }
-<<<<<<< HEAD
 
   };
 
   const clearAllFilters = () => {;
 
-=======
   };
   const clearAllFilters = () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setSearchQuery("");
     setSelectedProductTypes([]);
     setSelectedLocations([]);
     setSelectedAvailability([]);
-<<<<<<< HEAD
-
 
   },
-  
 
-=======
         ),
         break,
       case 'location':
@@ -316,37 +252,22 @@ export default function Marketplace() {;
   }
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         );
         break;
   },
-  
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const clearAllFilters = () => {
     setSearchQuery(""),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
     setSelectedRating(null)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-  
 
-
-<<<<<<< HEAD
-=======
   }
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId)
@@ -354,24 +275,12 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }),
-      
 
-
-<<<<<<< HEAD
-=======
       });
       }),
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -381,13 +290,7 @@ export default function Marketplace() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
     return true;
   }),;
@@ -416,10 +319,7 @@ export default function Marketplace() {;
     setSelectedProductTypes([]),;
     setSelectedLocations([]),;
     setSelectedAvailability([]),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setSelectedRating(null);
   };
 
@@ -438,16 +338,11 @@ export default function Marketplace() {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
-<<<<<<< HEAD
 
-=======
             id: listing && listing.id,;
             title: listing && listing.title,;
             category: listing && listing.category,;
             image: listing && listing.images?.[0];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -561,11 +456,7 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
     setSelectedRating(null);
   },;
   // Handle requesting a quote;
@@ -581,35 +472,19 @@ if ( {) {
         state: {;
           serviceType: listing.category,;
           specificItem: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
         }
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-
 
   },
   };
   },
-
-
 
   return (
 
@@ -800,7 +675,6 @@ navigate("/request-quote", {state: {
                 selectedLocations
                 selectedAvailability,
 
-
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
@@ -839,29 +713,17 @@ navigate("/request-quote", {state: {
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
 
-
-            
-
-
           }
         }
       })
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   };
   },
 
-<<<<<<< HEAD
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   };
   },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
     <AppLayout>;
@@ -883,7 +745,6 @@ navigate("/request-quote", {state: {
           </p>;
         </div>;
         {/* Search and filter bar */}
-<<<<<<< HEAD
         <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 mb - 8">;
           <div className="flex flex - col md:flex - row gap - 4">;
             <div className="relative flex - 1">;
@@ -918,8 +779,6 @@ navigate("/request-quote", {state: {
                 selectedLocations
                 selectedAvailability,
 
-=======
-=======
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -934,11 +793,9 @@ navigate("/request-quote", {state: {
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-1">
-=======
         <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 mb-8">;
           <div className="flex flex-col md:flex-row gap-4">;
             <div className="relative flex-1">;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <EnhancedSearchInput
                 value={searchQuery}
                 onChange={setSearchQuery}
@@ -959,20 +816,14 @@ navigate("/request-quote", {state: {
           <div className="lg: col - span - 1">;
             <FilterSidebar;
               filters={{
-<<<<<<< HEAD
                 selectedProductTypes;
                 selectedLocations;
                 selectedAvailability
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 selectedRating
                 selected_locations;
                 selected_availability,
@@ -997,14 +848,7 @@ navigate("/request-quote", {state: {
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
-<<<<<<< HEAD
 
-
-            
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 selectedRating
               }}
               filterOptions={filterOptions}
@@ -1034,9 +878,6 @@ navigate("/request-quote", {state: {
               </p>
             </div>
             
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (
@@ -1053,13 +894,6 @@ navigate("/request-quote", {state: {
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
                     We couldn't find any listings matching your filters. Try adjusting your search criteria.
                   </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </p>;
             </div>;
 
@@ -1084,14 +918,9 @@ navigate("/request-quote", {state: {
                     className="bg-zion-purple hover:bg-zion-purple-dark">;
                     Clear Filters;
                   </Button>;
-<<<<<<< HEAD
                 </div>;
               )}
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onRemoveRating={() => setSelectedRating (null)}
               onClearSearch={() => setSearchQuery ("")}
             />;
@@ -1124,11 +953,6 @@ navigate("/request-quote", {state: {
                   </Button>;
                 </div>)}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           ;
           {/* Main content */}
           <div className="lg:col-span-3">;
@@ -1190,24 +1014,16 @@ navigate("/request-quote", {state: {
     </AppLayout>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </AppLayout>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </AppLayout>;
   ),; const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
 const filterOptions = generateFilterOptions ();
@@ -1296,6 +1112,3 @@ Discover professional services and products for your AI and tech projects. Brows
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -4,33 +4,22 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {;
   children: React && React.ReactNode;
 }
-
 interface State {;
   hasError: boolean,;
   error?: Error;
 }
-
 export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
-  constructor(props: Props) {;
+  constructor(props:,  Props) {;,
     super(props);
-
-
   }
-
-  static getDerivedStateFromError(error: Error): State {;
+  static getDerivedStateFromError(error:,  Error): State {;,
     return { hasError: true, error }
   }
-
-
-
   }
-
   render() {;
     if (this && this.state.hasError) {;
       return (
-
-
-                <Button onClick={() => window.location.reload()} variant="default">
+                <Button onClick={() => window.location.reload()} variant="default">"
                   Refresh Page
                 </Button>
               </div>
@@ -38,18 +27,12 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
           </Card>
         </div>
       )
-
-
-
     return this.props.children
   }      )
     }
-
     return this.props.children;
   };
 } ;
-
-
 }
                   onClick={() => window && window.location.reload()}
                   variant='default';
@@ -73,21 +56,15 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
         </div>;
       );
     }
-
     return this && this.props.children;
   }      );
-
-
     }
-
     return this && this.props.children;
   };
-
-
-  static getDerivedStateFromError (error: Error): State {
+  static getDerivedStateFromError (error:,  Error): State {,
     return { has_error: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {,
     logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack });
   }
   render () {
@@ -143,5 +120,4 @@ if ( {) {
     }
     return this.props.children;
   }
-
 } ;

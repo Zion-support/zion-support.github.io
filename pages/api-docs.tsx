@@ -1,37 +1,22 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import React from 'react';
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 import React from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
-
-
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { 
   ArrowRight,
   Server,
   Lock,
   Brain,
   Cloud;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 const apiEndpoints = [
   {
@@ -100,24 +85,14 @@ const apiEndpoints = [;
   }
 ];
 
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function APIDocsPage() {
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
@@ -132,21 +107,11 @@ export default function APIDocsPage() {;
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />;
       </Head>;
 
-=======
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
 
-
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
 
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
@@ -172,7 +137,6 @@ export default function APIDocsPage() {;
         </div>;
       </section>;
 
-
       {/* API Endpoints Section */}
       <section className="py-20 bg-white">;
         <div className="container mx-auto px-4">;
@@ -180,8 +144,6 @@ export default function APIDocsPage() {;
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -195,7 +157,6 @@ import {
 ;
 const api_endpoints = [;
   {
-=======
 import React from 'react';
 import Head from 'next/head';
 import MainLayout from '../src/components/layout/MainLayout';
@@ -218,12 +179,10 @@ import Link from 'next/link';
 
 const apiEndpoints = [
   {
->>>>>>> main
     title: 'Authentication API',
     description: 'Secure authentication and authorization endpoints',
     icon: Lock,
     methods: ['POST', 'GET', 'PUT', 'DELETE'],
-<<<<<<< HEAD
     endpoint: '/api / auth';
   },
   {
@@ -292,7 +251,6 @@ function APIDocsPage() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
           >;
             <h2 className="text - 4xl font - bold text - gray - 900 mb - 4">API Endpoints</h2>;
             <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
@@ -303,7 +261,6 @@ function APIDocsPage() {
             {api_endpoints.map ((endpoint, index) => {
 
               const IconComponent = endpoint.icon;
-=======
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -312,9 +269,7 @@ function APIDocsPage() {
           </motion.div>
           <div className="grid md:grid-cols-2 gap-8">
             {apiEndpoints.map((endpoint, index) => {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               const IconComponent = endpoint.icon;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
@@ -327,8 +282,6 @@ function APIDocsPage() {
             {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
               const IconComponent = endpoint && endpoint.icon;
               return (
-<<<<<<< HEAD
-=======
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}>;
@@ -355,8 +308,6 @@ function APIDocsPage() {
                     </div>;
                   </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <Link
                     href={`/api-docs/${endpoint && endpoint.endpoint.replace('/api/', '')}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors">;
@@ -366,31 +317,18 @@ function APIDocsPage() {
                 </motion && motion.div>;
               );
             })}
-<<<<<<< HEAD
-=======
 
           </div>;
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
-
-=======
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -402,67 +340,31 @@ function APIDocsPage() {
         </p>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
-
-=======
-=======
 import React from 'react',
 import Head from 'next/head',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
 
-<<<<<<< HEAD
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
-<<<<<<< HEAD
-=======
-=======
-=======
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -472,9 +374,7 @@ export default function ApiDocsPage() {
           </a>{' '}
           for the full reference.
         </p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -490,20 +390,13 @@ export default function ApiDocsPage() {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {;
 export default function ApiDocsPage() {;
   return (
-=======
-
-
 
   );
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>
@@ -511,27 +404,17 @@ export default function ApiDocsPage() {;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
-=======
 );
-<<<<<<< HEAD
 origin/main
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </>
   )
 }
-<<<<<<< HEAD
 }
     </Layout>;
 );
     </>
   )
-=======
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </>
   )
 import React from 'react';
@@ -539,18 +422,13 @@ import Head from 'next/head';
 export default function ApiDocsPage(req, res) {
   try {
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title>API Docs | Zion Tech Group</title>;
         <meta name='description' content='API reference and guides.' />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
-<<<<<<< HEAD
-=======
-=======
 
 }
-=======
     </>
   )
 import React from 'react';
@@ -563,26 +441,18 @@ export default function ApiDocsPage(req, res) {
         <title>API Docs | Zion Tech Group</title>;
         <meta name="description" content="API reference and guides." />;
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </Head>;
       <div className="container mx-auto px-4 py-16 text-gray-200">;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
-<<<<<<< HEAD
 
-
-=======
       </div>;
-<<<<<<< HEAD
     </Layout>;
   );
     </>;
   );
 }
 
-
-=======
                 <motion.div;
                   key={index}
                   className="bg - white rounded - xl shadow - lg p - 8 border border - gray - 100";
@@ -667,13 +537,7 @@ function ApiDocsPage() {
     </Layout>);
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     endpoints: [
       '/api/auth/login',
       '/api/auth/register',
@@ -808,4 +672,3 @@ export default function APIDocsPage() {
     </MainLayout>
   );
 }
->>>>>>> main

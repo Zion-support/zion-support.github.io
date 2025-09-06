@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
@@ -28,19 +27,6 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   current.count++;
   rateLimitMap.set (key, current);
   return true;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
-
 
 // Rate limiting utilities
 export interface RateLimitConfig {
@@ -129,8 +115,6 @@ export function rateLimit(config: RateLimitConfig) {
   };
 }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -190,17 +174,5 @@ if ( {) {
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

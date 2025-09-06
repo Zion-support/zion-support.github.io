@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React from 'react',;
@@ -10,17 +9,10 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 export default function MDMPage() {
   const features = [
     'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const pricing = [
     { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
     { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
@@ -30,18 +22,12 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <Layout>
       <Head>
         <title>Mobile Device Management (MDM) | Zion Tech Group</title>
         <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" />
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -53,16 +39,10 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-<<<<<<< HEAD
-=======
-
 
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </header>
           <section>
@@ -73,11 +53,9 @@ export default function MDMPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </section>
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -85,9 +63,7 @@ export default function MDMPage() {
 }
             </div>
           </section>
-<<<<<<< HEAD
 <section>
-=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Typical Pricing Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -113,7 +89,6 @@ export default function MDMPage() {
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
 
-
                 </Link>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -121,12 +96,8 @@ export default function MDMPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </section>
-
 
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
@@ -137,22 +108,15 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -235,8 +199,3 @@ function MDMPage() {
     </Layout>);
 }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

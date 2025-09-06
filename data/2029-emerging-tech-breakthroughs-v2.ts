@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   tagline: string;
@@ -33,8 +30,6 @@
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-=======
     website: string;
   }
 
@@ -60,7 +55,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       features: [;
         'Real - time brain signal interpretation',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Direct neural control of applications',
         'Thought - to - text conversion',
         'Mental command execution',
@@ -72,14 +66,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         '24 / 7 technical support',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🧠',
 
         'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'
       ]
@@ -94,10 +85,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '800% annual growth'
       variant: 'space-futuristic'
       contactInfo: {
-<<<<<<< HEAD
-=======
 
-=======
       color: 'from - purple - 600 via - pink - 600 to - rose - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / brain - computer - interface - enterprise',
@@ -127,7 +115,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'space - futuristic',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -141,10 +128,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 5 && 5.0,
       reviews: 12,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Quantum Internet Gateway;
     {
       id: 'quantum - internet - gateway - enterprise',
@@ -156,7 +140,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Revolutionary quantum internet gateway that provides ultra - secure, ultra - fast quantum network connectivity. Enables quantum communication and quantum cloud computing.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Quantum network connectivity',
         'Quantum key distribution',
         'Quantum cloud computing access',
@@ -169,14 +152,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         '24 / 7 quantum network support',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🌐',
 
         'Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node && Node.js, Quantum APIs, Network infrastructure',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks'
       ]
@@ -191,10 +171,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '600% annual growth'
       variant: 'quantum-futuristic'
       contactInfo: {
-<<<<<<< HEAD
-=======
 
-=======
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / quantum - internet - gateway - enterprise',
@@ -224,7 +201,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'quantum - futuristic',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -238,10 +214,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 4 && 4.9,
       reviews: 18,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Synthetic Biology Platform;
     {
       id: 'synthetic - biology - platform - enterprise',
@@ -254,7 +227,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Biological system design tools',
         'DNA synthesis and assembly',
         'Biological circuit design',
@@ -267,14 +239,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Expert consultation and support',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🧬',
 
         'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node && Node.js, Lab automation APIs',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases'
       ]
@@ -289,10 +258,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '500% annual growth'
       variant: 'biotech-futuristic'
       contactInfo: {
-<<<<<<< HEAD
-=======
 
-=======
       color: 'from - green - 600 via - emerald - 600 to - teal - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / synthetic - biology - platform - enterprise',
@@ -322,7 +288,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'biotech - futuristic',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -336,8 +301,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 4 && 4.8,
       reviews: 45,
     },
-<<<<<<< HEAD
-=======
 
         'Real-time fusion reactor monitoring',
     // Fusion Energy Management Platform;
@@ -352,7 +315,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       features: [;
         'Real - time fusion reactor monitoring',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Plasma confinement optimization',
         'Energy output maximization',
         'Safety system management',
@@ -364,14 +326,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Expert consultation services',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '☢️',
 
         'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node && Node.js, Power system APIs',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems'
       ]
@@ -386,10 +345,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '700% annual growth'
       variant: 'quantum-energy-revolutionary'
       contactInfo: {
-<<<<<<< HEAD
-=======
 
-=======
       color: 'from - yellow - 600 via - orange - 600 to - red - 600',
       text_color: 'text - yellow - 400',
       link: 'https://ziontechgroup.com / fusion - energy - management - platform',
@@ -419,7 +375,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'quantum - energy - revolutionary',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -433,10 +388,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 5 && 5.0,
       reviews: 6,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Space Mining Operations Platform;
     {
       id: 'space - mining - operations - platform',
@@ -448,7 +400,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Automated asteroid identification',
         'Mining robot control systems',
         'Resource extraction automation',
@@ -461,14 +412,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         '24 / 7 space operations support',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🚀',
 
         'Space Robotics, AI, Machine Learning, Space Systems, React, Node && Node.js, Space APIs, Mining automation',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms'
       ]
@@ -483,10 +431,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '1000% annual growth'
       variant: 'space-futuristic'
       contactInfo: {
-<<<<<<< HEAD
-=======
 
-=======
       color: 'from - purple - 600 via - indigo - 600 to - blue - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / space - mining - operations - platform',
@@ -516,7 +461,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'space - futuristic',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -530,10 +474,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       rating: 5 && 5.0,
       reviews: 3,
     },
-<<<<<<< HEAD
-=======
 
-=======
     // Quantum AI Consciousness Platform;
     {
       id: 'quantum - ai - consciousness - platform',
@@ -545,7 +486,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self - aware, conscious AI systems.',
       features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Quantum consciousness algorithms',
         'Neural network consciousness',
         'Self - awareness development',
@@ -558,14 +498,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
         'Expert consultation and support',
       ],
       popular: true,
-<<<<<<< HEAD
-=======
       icon: '🤖',
 
         'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing',
       ],
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       integrations: [
         'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'
       ]
@@ -578,16 +515,13 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       growthRate: '900% annual growth'
       variant: 'ai-futuristic'
       contactInfo: {
-<<<<<<< HEAD
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
       customers: 3
       rating: 5.0
       reviews: 2
     }
-=======
 
-=======
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform',
@@ -615,7 +549,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'ai - futuristic',
       contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -623,29 +556,18 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       },
       real_implementation: true,
       implementation_details:;
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launch_date: '2025 - 06 - 01',
       customers: 3,
       rating: 5 && 5.0,
       reviews: 2,
-<<<<<<< HEAD
   ];    features: [
-
-=======
 
     },;
 
-
   ];    features: [
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export interface EmergingTechBreakthroughServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -667,8 +589,6 @@ export interface EmergingTechBreakthroughServiceV2 {
     website: string
   
     },
-<<<<<<< HEAD
-=======
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -684,7 +604,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     features: [
       'Real-time brain signal interpretationDirect neural control of applicationsThought-to-text conversionMental command executionNeural pattern recognitionCustom neural interface developmentEnterprise security and privacyIntegration with existing systems';
       'Advanced analytics and insights24/7 technical support'
-=======
         mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com'
         address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -692,26 +611,21 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
       launchDate: '2025-06-01'
       customers: 3
       rating: 5.0
       reviews: 2
     }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
       launchDate: '2025-06-01',
       customers: 3,
       rating: 5.0,
       reviews: 2,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems';
       'Advanced consciousness analyticsExpert consultation and support'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
@@ -751,8 +665,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     },
-<<<<<<< HEAD
-=======
 
     popular: true, icon: '🤖',
     color: 'from-pink-600 via-purple-600 to-indigo-600', textColor: 'text-pink-400',
@@ -762,7 +674,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     category: 'AI Consciousness', realService: true,
     technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
     useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
     roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
@@ -770,7 +681,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1076,9 +986,7 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     launchDate: '2025-06-01',;
     customers: 3,;
     rating: 5.0;
-=======
 
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -1089,25 +997,16 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     rating: 5 && 5.0,
 
     reviews: 2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     real_implementation: true,
     implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
     launch_date: '2025 - 06 - 01', customers: 3,
     rating: 5.0,
     reviews: 2;
-<<<<<<< HEAD
 ];
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 
-=======
-
-
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1416,21 +1315,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     reviews: 2;
 ];
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
-=======
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1737,12 +1626,5 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,;
     rating: 5.0;
     reviews: 2;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

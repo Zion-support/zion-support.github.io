@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
->>>>>>> main
 /**
  * AI Code Quality Analyzer
  * Analyzes code quality using AI-powered insights
  */
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 
@@ -72,7 +67,6 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       console.error('❌ AI code quality analysis failed:', error.message);
       return { success: false, error: error.message };
-=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -93,7 +87,6 @@ const { execSync } = require('child_process')
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -325,17 +318,12 @@ class AICodeQualityAnalyzer {
     } catch (error) {
       this.log(`❌ AI code quality analysis: failed: ${error.message}`);
       process.exit(1);
->>>>>>> main
     }
   }
 }
 
-<<<<<<< HEAD
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.analyzeCodeQuality();
-=======
 // Run the analyzer
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> main

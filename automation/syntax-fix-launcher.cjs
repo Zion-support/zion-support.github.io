@@ -1,11 +1,8 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 /**
  * Syntax Fix Launcher
  * Launches syntax fixing operations
  */
-=======
->>>>>>> main
 
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +10,6 @@ const { execSync } = require('child_process');
 
 class SyntaxFixLauncher {
   constructor() {
-<<<<<<< HEAD
     this.logsDir = path.join(__dirname, 'logs');
     this.ensureLogsDir();
   }
@@ -68,9 +64,8 @@ class SyntaxFixLauncher {
           
           // Remove merge conflict markers
           content = content.replace(/<<<<<<< .*\n/g, '');
-          content = content.replace(/======= .*\n/g, '');
-          content = content.replace(/>>>>>>> .*\n/g, '');
-          
+          content = content.replace(/ .*\n/g, '');
+          content = content.replace(/          
           // Clean up extra whitespace
           content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
           
@@ -179,7 +174,6 @@ if (args.includes('quick-fix')) {
   console.log('Usage: node syntax-fix-launcher.js quick-fix');
   process.exit(1);
 }
-=======
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
@@ -309,4 +303,3 @@ if (args.includes('quick-fix')) {
 // Run the launcher
 const launcher = new SyntaxFixLauncher();
 launcher.run().catch(console.error);
->>>>>>> main

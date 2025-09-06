@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   };
 
 export async function parseQueryToFilters(
@@ -99,9 +98,4 @@ export async function parseQueryToFilters(
 
   return filters;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

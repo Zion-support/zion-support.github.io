@@ -24,31 +24,19 @@ async function fetchFromGitHub(): Promise<any[]> {
         results.push({ id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights })
       } catch {
         // ignore;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchFromGitHub(): Promise<any[]> {;
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
-<<<<<<< HEAD
-
 
       } catch {
-<<<<<<< HEAD
         // ignore;
-=======
         // ignore
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
     return results
@@ -56,7 +44,6 @@ async function fetchFromGitHub(): Promise<any[]> {
     return [];
   }
 }
-<<<<<<< HEAD
   }
 const remote = await fetchFromGitHub()
 

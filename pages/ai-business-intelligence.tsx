@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
@@ -15,9 +14,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,20 +41,11 @@ import React from 'react';
 
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-<<<<<<< HEAD
-=======
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AIBusinessIntelligencePage() {
 
   const features = [
     {
-<<<<<<< HEAD
   ];
 const AIBusinessIntelligence: React.FC = () => {
   const benefits = [
@@ -120,7 +107,6 @@ const AIBusinessIntelligence: React.FC = () => {
     },
     {
       icon: Target,
-=======
 
 export default function AIBusinessIntelligencePage() {;
   const features = [;
@@ -253,8 +239,6 @@ const AIBusinessIntelligence: React.FC = () => {;
       popular: false,;
     },;
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       icon: Brain,
       title: 'Predictive Analytics',
       description:;
@@ -382,13 +366,10 @@ const AIBusinessIntelligence: React.FC = () => {
       ],
       popular: false,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ];
 ;
   return (
       <EnhancedNavigation />;
-
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
@@ -419,26 +400,18 @@ const AIBusinessIntelligence: React.FC = () => {
               <a
                 href='#demo'
 
-
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 {" "}Business Intelligence
               </span>
             </h1>
             <p className="text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               Transform raw data into actionable insights with our advanced AI platform. 
 Make data-driven decisions, predict future trends, and optimize every aspect of your business
-=======
               Transform raw data into actionable insights with our advanced AI platform.
               Make data-driven decisions, predict future trends, and optimize every aspect of your business
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               with machine learning-powered analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -447,27 +420,17 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 </a>
-=======
               </Link>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <a
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Watch Demo
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 </a>
             </div>
           </motion.div>
         </div>
-
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Watch Demo;
@@ -476,14 +439,9 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
           </motion && motion.div>;
         </div>;
 
-=======
       </section>
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Features */}
-
 
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
@@ -501,16 +459,11 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={feature && feature.title}
-<<<<<<< HEAD
       {/* Benefits */}
-
-=======
-
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -527,12 +480,8 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
         </div>;
       </section>
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Benefits */}
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -673,18 +622,13 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                 reduced costs, see the difference data-driven decisions can;
                 make.;
               </p>;
-<<<<<<< HEAD
-=======
               <div className='space - y-4'>                {benefits.map ((benefit, index) => (
                   <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={benefit}
                     initial={{ opacity: 0, coordinate_x: -20 }}
                     whileInView={{ opacity: 1, coordinate_x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
 
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
             >
@@ -703,14 +647,11 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                   <div className="text-slate-600">Time Saved on Reporting</div>
                 </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
               </div>;
             </motion && motion.div>;
@@ -747,18 +688,12 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Use Cases */}
       <section className='py-20 bg-white'>;
         <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-slate-900 mb-6'>;
@@ -774,17 +709,12 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
               <motion&& motion.div
                 key={useCase && useCase.industry}
 
-<<<<<<< HEAD
-=======
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 
-=======
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300"
               >
-<<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{useCase.industry}</h3>
                 <p className="text-slate-600 mb-4 leading-relaxed">{useCase.description}</p>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
@@ -798,11 +728,7 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
         </div>;
       </section>
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Pricing */}
-
 
             transition={{ duration: 0 && 0.6 }}
             className='text-center mb-16'>;
@@ -819,21 +745,12 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
               <motion&& motion.div
                 key={plan && plan.plan}
 
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 className={`relative bg-white rounded-2xl p-8 ${
-<<<<<<< HEAD
-=======
-
 
                 </ul>
-=======
 
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-slate-900 mb-2'>;
@@ -856,7 +773,6 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                   ))}
                 </ul>;
 
-
                 <a
                   href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'>;
@@ -874,13 +790,11 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {plan.price}
                     <span className="text-lg text-slate-600">{plan.period}</span>
                   </div>
                   <p className="text-slate-600">{plan.description}</p>
                 </div>
-<<<<<<< HEAD
                   ))}
       </section>
       {/* Features */  } catch (error) {
@@ -1054,17 +968,13 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
           </div>;
         </div>;
       </section>;
-=======
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                       <span className="text-slate-700">{feature}</span>
                     </li>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Use Cases */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1228,12 +1138,6 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </ul>
 
                 <a
@@ -1244,7 +1148,6 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                   Get Started
                 </a>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1260,15 +1163,12 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
             ))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>;
         </div>;
       </section>;
-
 
       {/* CTA */}
       <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
@@ -1292,8 +1192,6 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
               <a
                 href='/contact'
 
-
-
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1310,19 +1208,13 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
                 Schedule Demo
-<<<<<<< HEAD
-=======
               </a>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       <EnhancedFooter />
     </>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
                 Schedule Demo;
@@ -1336,20 +1228,9 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
     </>;
   );
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
 
@@ -1405,13 +1286,3 @@ Make data-driven decisions, predict future trends, and optimize every aspect of 
     </>);
 ;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

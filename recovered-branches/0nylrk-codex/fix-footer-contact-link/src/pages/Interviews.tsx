@@ -102,8 +102,6 @@ function InterviewsContent() {;
       ));
   };
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -134,10 +132,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {upcomingInterviews.length}
                 </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
               )}
             </TabsTrigger>
             <TabsTrigger value="pending">
@@ -146,8 +140,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
                 </span>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -196,7 +188,6 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
           </TabsContent>
         </Tabs>
       </main>
@@ -216,9 +207,6 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>;
         </div>;
       ));
@@ -335,8 +323,6 @@ export default function Interviews() {
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Interviews() {;
   return (
     <ProtectedRoute>;
@@ -347,13 +333,6 @@ export default function Interviews() {;
 
 ;
 
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </>);
 }
 export default /**
@@ -365,10 +344,6 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     </>;
   ),;
 }
@@ -382,6 +357,3 @@ export default function Interviews() {;
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

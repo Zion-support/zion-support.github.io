@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
   ];
@@ -31,21 +30,16 @@
     </div>;
   );
 
-
 import React from "react";
 import Head from "next/head";
 
-
 export default function SitemapPage() {
-
 
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
 
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -109,7 +103,6 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const links = [;
     { name: "Home", href: "/" },;
     { name: "Services", href: "/services" },;
@@ -123,10 +116,7 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },;
     { name: "Support", href: "/support" },;
     { name: "Contact", href: "/contact" },;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
@@ -156,13 +146,9 @@ export default function SitemapPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
-=======
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -190,15 +176,10 @@ export default function SitemapPage() {;
 				</ul>
 			</div>
 		</div>
-<<<<<<< HEAD
 	);
 
-=======
 );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from './react';
 import Head from './next / head';
 export default /**
@@ -218,12 +199,9 @@ function SitemapPage() {
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
-<<<<<<< HEAD
 
     { name: "Contact", href: "/contact" },;
 
-
-=======
     { name: "Contact", href: "/contact" },
 import React from 'react';
 import Head from 'next/head';
@@ -232,8 +210,6 @@ import Head from "next/head";
 
 export default function SitemapPage() {
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const links = [
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
@@ -339,11 +315,7 @@ function SitemapPage() {
     { name: "Services Advertising", href: "/services - advertising" },
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
-<<<<<<< HEAD
     { name: "Contact", href: "/contact" },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ];
   return (
     <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
@@ -414,13 +386,4 @@ function SitemapPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

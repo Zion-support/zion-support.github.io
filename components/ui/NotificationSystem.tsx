@@ -1,22 +1,17 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
 
 export interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
-=======
-
 
   id: string;
   type: "success" | "error" | "warning" | "info";
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   title?: string;
   message: string;
   duration?: number;
 }
 
-<<<<<<< HEAD
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (id: string) => void;
@@ -108,7 +103,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
   return (
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
       {visibleNotifications.map(notification => (
-=======
 
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
@@ -163,7 +157,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return `${baseStyles} ${typeStyles[type]}`;
 };
 
-
 import React from 'react';
 
 interface Notification {
@@ -181,14 +174,12 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <div
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
-<<<<<<< HEAD
               <div className="flex items-start space-x-2">
                 {getIcon(notification.type)}
                 <div className="flex-1">
@@ -215,7 +206,6 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 };
 
 export default NotificationSystem;
-=======
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -298,6 +288,3 @@ if (return null) {
 
 }
 
-
-
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

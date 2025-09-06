@@ -12,7 +12,6 @@
     const data = await res.json()
     setItems(data.proposals |[])
 
-<<<<<<< HEAD
   }
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
     const res = await fetch('/api/proposals/list'),
@@ -39,8 +38,6 @@ export default function InternationalProposals(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
-=======
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -66,26 +63,14 @@ function update_status() {
     const data = await res.json (),
     set_items (data.proposals || []);
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">International Proposals</h1>;
       {loading ? (
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</Link>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -106,12 +91,7 @@ function update_status() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -119,13 +99,9 @@ function update_status() {
                 <button onClick={() => updateStatus(p.id, 'Rejected')} className="px-2 py-1 border rounded">Mark Rejected</button>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-=======
 }
 
-=======
         <div > Loading…</div>) : (
         <div className="grid gap - 4">;
           {items.map ((p) => (
@@ -181,21 +157,13 @@ function update_status() {
   )
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         </div>
       )}
     </div>
   );
 };
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -206,7 +174,6 @@ function update_status() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
       )  } catch (error) {
     console.error("Error:", error);
@@ -219,11 +186,6 @@ function update_status() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

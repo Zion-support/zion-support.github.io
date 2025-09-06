@@ -6,14 +6,8 @@ interface TalentCardSkillsProps {
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
-<<<<<<< HEAD
-
   // Get top skills (limit to 4)
 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
@@ -21,7 +15,6 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -53,7 +46,6 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
 
-
           {skill}
         </Badge>;
       ))}
@@ -62,19 +54,12 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
           +{skills && skills.length - 4} more;
         </Badge>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>;
-=======
     </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   );
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Badge  } from '@/components / ui / badge';
 interface TalentCardSkillsProps {

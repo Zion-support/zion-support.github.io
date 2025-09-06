@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { 
   Newspaper;
   Calendar, 
   User, 
   Tag, 
   ArrowRight, 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ExternalLink;
   TrendingUp;
   Award;
@@ -20,7 +13,6 @@ ExternalLink;
   Globe;
   Brain;
   Atom;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Zap
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -33,11 +25,6 @@ import {
   User,
   Tag,
   ArrowRight,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ExternalLink,
   TrendingUp,
   Award,
@@ -45,24 +32,15 @@ import {
   Globe,
   Brain,
   Atom,
-<<<<<<< HEAD
-=======
 
   Zap
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 const NewsPage: React.FC = () => {
   const news_articles = [;
     {
-<<<<<<< HEAD
-=======
 
-
-
-=======
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -124,11 +102,7 @@ const NewsPage: React.FC = () => {;
   }
 }
 
-
-
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const latestNews = [
     {
       id: 4
@@ -156,7 +130,6 @@ const NewsPage: React.FC = () => {;
     }
     {
 
-
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
@@ -166,7 +139,6 @@ const NewsPage: React.FC = () => {;
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
-
 
       tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
     }
@@ -205,7 +177,6 @@ const NewsPage: React.FC = () => {;
       featured: false
       image: '/images/news/european-expansion.jpg'
       tags: ['ExpansionEuropeInternationalGrowth']
-
 
       } catch (error) {
     console.error("Error:", error);
@@ -282,7 +253,6 @@ const NewsPage: React.FC = () => {;
       year: 'numeric',
       month: 'long',
 
-
       day: 'numeric'
     })
   }
@@ -297,7 +267,6 @@ export default function NewsPage() {
           <meta name="description" content="Stay updated with Zion Tech Group's latest news, product launches, partnerships, and industry insights. Read about our breakthroughs in AI, quantum computing, and emerging technologies." />
         </Head>
 
-
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
@@ -306,19 +275,16 @@ export default function NewsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-=======
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-
 
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -336,8 +302,6 @@ export default function NewsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -409,15 +373,12 @@ excerpt: 'Recognition as one of the world's most innovative AI companies highlig
       tags: ['RecognitionForbesAI LeadershipInnovation'];
     },
     {
-=======
   Zap
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform'
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.'
       author: 'Press Team'
@@ -452,22 +413,12 @@ const NewsPage: React.FC = () => {
       image: '/images/news/quantum-azure-partnership.jpg'
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
-<<<<<<< HEAD
   ]
-<<<<<<< HEAD
-
 
 const NewsPage: React.FC = () => {
   const news_articles = [;
     {
 
-
-
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -528,12 +479,7 @@ const NewsPage: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const latestNews = [
     {
       id: 4
@@ -560,7 +506,6 @@ const NewsPage: React.FC = () => {;
       tags: ['RecognitionForbesAI LeadershipInnovation']
     }
     {
-<<<<<<< HEAD
       tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
     }
     {
@@ -786,8 +731,6 @@ const NewsPage: React.FC = () => {;
       tags: ['RecognitionForbesAI LeadershipInnovation']
     }
     {
-=======
-<<<<<<< HEAD
       id: 6
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"'
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.'
@@ -797,16 +740,10 @@ const NewsPage: React.FC = () => {;
       readTime: '8 min read'
       featured: false
       image: '/images/news/quantum-drug-discovery.jpg'
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
       category: 'research',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       date: '2025 - 01 - 03',
       author: 'Dr. Michael Rodriguez',
       read_time: '8 min read',
@@ -949,7 +886,6 @@ function NewsPage() {
               </p>;
             </motion.div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Category Filter */}
         <section className="py - 10 px - 4">;
           <div className="container mx - auto max - w-6xl">;
@@ -957,7 +893,6 @@ function NewsPage() {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
                 Stay updated with the latest developments, breakthroughs, and innovations
                 from Zion Tech Group and the technology industry.
               </p>
@@ -985,15 +920,11 @@ function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="flex flex - wrap justify - center gap - 4";
             >;
               {categories.map ((category, index) => (
                 <button;
                   key={category}
-
-
 
               className="flex flex-wrap justify-center gap-4"
             >
@@ -1007,7 +938,6 @@ function NewsPage() {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-<<<<<<< HEAD
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600";
 import React, { useState } from 'react',;
 import React from 'react',;
@@ -1111,15 +1041,11 @@ export default function NewsPage() {
     ? newsItems
     : newsItems.filter(item => item.category === selectedCategory)
   const featuredNews = newsItems.filter(item => item.featured)
-=======
-
-=======
 
 export default function NewsPage() {
   const newsItems = [
     {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
       category: "Awards & Recognition",
       date: "January 15, 2025",
@@ -1190,7 +1116,6 @@ export default function NewsPage() {
       featured: false,
       icon: Globe,
       color: "from-indigo-500 to-purple-500"
-<<<<<<< HEAD
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1203,13 +1128,10 @@ export default function NewsPage() {
     ? newsItems
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
-=======
 
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -1220,8 +1142,6 @@ export default function NewsPage() {
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
       <EnhancedNavigation />
-<<<<<<< HEAD
-=======
 
                   className={`px - 6 py - 3 rounded - xl font - semibold transition - all duration - 300 ${
                     category === "All News";
@@ -1332,7 +1252,6 @@ function NewsPage() {
       </Head>;
       <EnhancedNavigation />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -1340,9 +1259,6 @@ function NewsPage() {
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -1368,9 +1284,6 @@ function NewsPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -1381,20 +1294,12 @@ function NewsPage() {
             </p>
           </motion.div>
           <motion.div
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1410,33 +1315,19 @@ function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology
 
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
             className="mb - 8";
-=======
 
       {/* Featured News */  } catch (error) {
     console.error("Error:", error);
@@ -1444,16 +1335,11 @@ function NewsPage() {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {featuredNews.length > 0 && (
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ],;
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {;
     const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory;
@@ -1560,7 +1446,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {;
-<<<<<<< HEAD
   Newspaper,;
   Calendar,;
   User,;
@@ -1612,7 +1497,6 @@ const NewsPage: React.FC = () => {;
       featured: true,;
       image: '/images/news/quantum-azure-partnership.jpg',;
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership'];
-=======
   Newspaper, Globe, Award, Users, Rocket, Brain,;
   ArrowRight, ExternalLink, Calendar, Tag, Star;
 } from 'lucide-react',;
@@ -1692,14 +1576,11 @@ export default function NewsPage(req, res) {
       featured: false,;
       icon: Globe,;
       color: "from-indigo-500 to-purple-500";
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
   ],;
   const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],;
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -1741,8 +1622,6 @@ export default function NewsPage(req, res) {
   }
 }
             className="mb-8";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6">;
               News & Press;
@@ -1770,8 +1649,6 @@ export default function NewsPage(req, res) {
           <div className="max - w-7xl mx - auto">;
             <motion.div;
 
-<<<<<<< HEAD
-=======
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1793,9 +1670,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -1804,8 +1678,6 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredNews.map((item, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 12";
             >;
@@ -1816,14 +1688,11 @@ export default function NewsPage(req, res) {
               {featured_news.map ((item, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl overflow - hidden hover:border - blue - 500 / 30 transition - all duration - 300";
                 >;
                   <div className="p - 8">;
@@ -1834,7 +1703,6 @@ export default function NewsPage(req, res) {
                       <div className="flex items - center gap - 2">;
                         <span className="text - sm text - white / 60 bg - white / 5 px - 3 py - 1 rounded - full">;
                           {item.category}
-
 
                   key={item.title  } catch (error) {
     console.error("Error:", error);
@@ -1862,8 +1730,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="p-8">
@@ -1873,21 +1739,13 @@ export default function NewsPage(req, res) {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </span>
                         <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
                           Featured
@@ -1912,8 +1770,6 @@ export default function NewsPage(req, res) {
                     </button>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-=======
 
                         </span>;
                         <span className="text - xs text - white / 40 bg - white / 5 px - 2 py - 1 rounded">;
@@ -1973,7 +1829,6 @@ export default function NewsPage(req, res) {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1994,17 +1849,12 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2067,12 +1917,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
@@ -2083,8 +1928,6 @@ export default function NewsPage(req, res) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.filter(item => !item.featured).map((item, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
 
             className="text - center mb - 16";
           >;
@@ -2097,14 +1940,11 @@ export default function NewsPage(req, res) {
             {filtered_news.filter (item => !item.featured).map ((item, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={item.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                 className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 backdrop - blur - xl border border - white / 10 rounded - 2xl overflow - hidden hover:border - blue - 500 / 30 transition - all duration - 300";
               >;
                 <div className="p - 6">;
@@ -2114,7 +1954,6 @@ export default function NewsPage(req, res) {
                     </div>;
                     <span className="text - xs text - white / 60 bg - white / 5 px - 2 py - 1 rounded - full">;
                       {item.category}
-
 
                 key={item.title  } catch (error) {
     console.error("Error:", error);
@@ -2142,8 +1981,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
@@ -2152,21 +1989,13 @@ export default function NewsPage(req, res) {
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {item.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{item.title}</h3>
@@ -2186,8 +2015,6 @@ export default function NewsPage(req, res) {
                   </button>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
                     </span>;
                   </div>;
@@ -2219,7 +2046,6 @@ export default function NewsPage(req, res) {
                     <a;
                       href={`/news/${news.id}`}
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2234,40 +2060,24 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
                     <a
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       href={`/news/${news.id}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
-=======
-
 
                     </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>
                 </motion.div>
               ))}
@@ -2280,9 +2090,6 @@ export default function NewsPage(req, res) {
       </section>
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-=======
-
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -2300,9 +2107,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -2313,8 +2117,6 @@ export default function NewsPage(req, res) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
-<<<<<<< HEAD
-=======
 
                       className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium";
                     >;
@@ -2346,19 +2148,15 @@ export default function NewsPage(req, res) {
               {news_articles.filter (article => !article.featured).map ((article, index) => (
                 <motion.article;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={article.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-<<<<<<< HEAD
-=======
                   className="bg - gray - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex items - center gap - 4 mb - 4">;
                     <span className="px - 3 py - 1 bg - cyan - 500 / 20 text - cyan - 400 text - sm font - medium rounded - full border border - cyan - 500 / 30">;
                       {article.category}
-
 
                   key={article.title  } catch (error) {
     console.error("Error:", error);
@@ -2381,27 +2179,17 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {article.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">{article.title}</h3>
@@ -2409,9 +2197,6 @@ export default function NewsPage(req, res) {
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-<<<<<<< HEAD
-=======
-
 
                       {new Date(article.date).toLocaleDateString()  } catch (error) {
     console.error("Error:", error);
@@ -2427,9 +2212,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -2437,11 +2219,7 @@ export default function NewsPage(req, res) {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Newsletter Signup */}
               <h2 className="text - 3xl lg:text - 4xl font - bold text - white mb - 6">;
                 Stay Updated;
@@ -2455,8 +2233,6 @@ export default function NewsPage(req, res) {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2470,11 +2246,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
@@ -2498,10 +2270,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
@@ -2521,8 +2289,6 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
                 <motion.article
-<<<<<<< HEAD
-=======
 
             >;
               <h2 className="text - 4xl font - bold mb - 6">Stay Updated</h2>;
@@ -2544,14 +2310,11 @@ export default function NewsPage(req, res) {
               {press_releases.map ((release, index) => (
                 <motion.article;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={release.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
                 >;
                   <div className="flex items - center gap - 2 mb - 3">;
@@ -2565,7 +2328,6 @@ export default function NewsPage(req, res) {
                   </h3>;
                   <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                     {release.excerpt}
-
 
                   key={release.title  } catch (error) {
     console.error("Error:", error);
@@ -2593,34 +2355,22 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {release.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                     <span className="text-gray-400 text-sm">{release.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {release.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2633,20 +2383,13 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </p>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
                     <span className="text-gray-400 text-sm">{release.date}</span>
                   </div>
                 </motion.article>
-<<<<<<< HEAD
-=======
 
                   </p>;
                   <div className="flex items - center gap - 2">;
@@ -2658,7 +2401,6 @@ export default function NewsPage(req, res) {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* News Categories */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -2667,9 +2409,6 @@ export default function NewsPage(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -2708,9 +2447,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2723,8 +2459,6 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -2739,14 +2473,11 @@ export default function NewsPage(req, res) {
               {news_categories.map ((category, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="text - center group cursor - pointer";
                 >;
                   <div className="w - 16 h - 16 bg - white / 10 backdrop - blur - lg rounded - 2xl flex items - center justify - center mx - auto mb - 3 group - hover:bg - purple - 500 / 20 transition - all duration - 300 border border - white / 20">;
@@ -2772,7 +2503,6 @@ export default function NewsPage(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
 
                   key={category.name  } catch (error) {
     console.error("Error:", error);
@@ -2800,16 +2530,11 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {category.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2862,12 +2587,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2880,8 +2600,6 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
                 <motion.article
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -2896,14 +2614,11 @@ export default function NewsPage(req, res) {
               {recent_news.map ((news, index) => (
                 <motion.article;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={news.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 p - 6 rounded - 2xl border border - gray - 700 / 30 hover:border - purple - 500 / 50 transition - all duration - 300 group";
                 >;
                   <div className="flex items - center gap - 2 mb - 3">;
@@ -2917,7 +2632,6 @@ export default function NewsPage(req, res) {
                   </h3>;
                   <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                     {news.excerpt}
-
 
                   key={news.title  } catch (error) {
     console.error("Error:", error);
@@ -2945,34 +2659,22 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                     <span className="text-gray-400 text-sm">{news.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {news.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -2985,12 +2687,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -3003,11 +2700,7 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.article>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Media Contact */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-4xl mx - auto text - center">;
@@ -3017,8 +2710,6 @@ export default function NewsPage(req, res) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3032,11 +2723,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -3060,31 +2747,19 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
 
-
                 For press inquiries, media interviews, or additional information,
 
-<<<<<<< HEAD
                 For press inquiries, media interviews, or additional information, 
                 For press inquiries, media interviews, or additional information,
-=======
-=======
                 For press inquiries, media interviews, or additional information, 
-=======
                 For press inquiries, media interviews, or additional information,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -3094,15 +2769,9 @@ export default function NewsPage(req, res) {
                 >
                   Contact Media Team
                   <Mic className="ml-2 w-5 h-5" />
-<<<<<<< HEAD
-=======
-
 
                 </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="/press"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
@@ -3114,11 +2783,8 @@ export default function NewsPage(req, res) {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       {/* CTA Section */}
-=======
 
-=======
             >;
               <h2 className="text - 4xl font - bold text - white mb - 4">;
                 Media Inquiries;
@@ -3147,7 +2813,6 @@ export default function NewsPage(req, res) {
         </section>;
       </div>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* CTA Section */}
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -3157,18 +2822,12 @@ export default function NewsPage(req, res) {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -3192,26 +2851,16 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Explore our latest research, industry insights, and technology breakthroughs
               that are shaping the future of AI and quantum computing.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
 
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -3219,9 +2868,6 @@ export default function NewsPage(req, res) {
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-
-
-
 
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
@@ -3235,13 +2881,10 @@ export default function NewsPage(req, res) {
     </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
       {/* Call to Action */}
       <section className="py-20">
@@ -3249,9 +2892,6 @@ export default function NewsPage(req, res) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-=======
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6">;
               Ready to Stay Informed?;
@@ -3311,9 +2951,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -3325,10 +2962,7 @@ export default function NewsPage(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </Link>
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
@@ -3353,11 +2987,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
@@ -3376,10 +3006,7 @@ export default function NewsPage(req, res) {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Latest News */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3408,12 +3035,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -3426,8 +3048,6 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {filteredNews.filter(news => !news.featured).map((news, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -3442,14 +3062,11 @@ export default function NewsPage(req, res) {
               {filtered_news.filter (news => !news.featured).map ((news, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={news.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="flex gap - 6 p - 6 bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="w - 24 h - 24 bg - gradient - to - br from - cyan - 500 / 20 to - purple - 500 / 20 rounded - xl flex items - center justify - center flex - shrink - 0">;
@@ -3469,7 +3086,6 @@ export default function NewsPage(req, res) {
                     </h3>;
                     <p className="text - gray - 300 text - sm mb - 3 line - clamp - 2">;
                       {news.excerpt}
-
 
                   key={news.id  } catch (error) {
     console.error("Error:", error);
@@ -3497,8 +3113,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -3507,10 +3121,7 @@ export default function NewsPage(req, res) {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs border border-purple-500/30">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {news.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -3538,12 +3149,7 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
                       <span>{formatDate(news.date)}</span>
@@ -3551,9 +3157,6 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-=======
-
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -3574,17 +3177,12 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
                     </p>;
                     <div className="flex items - center justify - between text - xs text - gray - 400">;
@@ -3615,7 +3213,6 @@ export default function NewsPage(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -3653,9 +3250,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -3668,8 +3262,6 @@ export default function NewsPage(req, res) {
             <div className="max-w-4xl mx-auto space-y-6">
               {pressReleases.map((release, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -3684,14 +3276,11 @@ export default function NewsPage(req, res) {
               {press_releases.map ((release, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={release.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <h3 className="text - xl font - bold text - white mb - 3">;
@@ -3699,7 +3288,6 @@ export default function NewsPage(req, res) {
                   </h3>;
                   <p className="text - gray - 300 mb - 4">;
                     {release.summary}
-
 
                   key={release.title  } catch (error) {
     console.error("Error:", error);
@@ -3750,9 +3338,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </span>
                     <a
                       href="/contact"
@@ -3762,8 +3347,6 @@ export default function NewsPage(req, res) {
                     </a>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-=======
 
                   </p>;
                   <div className="flex items - center justify - between">;
@@ -3790,7 +3373,6 @@ export default function NewsPage(req, res) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -3829,9 +3411,6 @@ export default function NewsPage(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -3844,8 +3423,6 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {mediaResources.map((resource, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -3860,14 +3437,11 @@ export default function NewsPage(req, res) {
               {media_resources.map ((resource, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={resource.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
                   className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 rounded - 2xl border border - gray - 700 / 50 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <h3 className="text - xl font - bold text - white mb - 3">;
@@ -3880,7 +3454,6 @@ export default function NewsPage(req, res) {
                     <div className="flex items - center gap - 4 text - sm text - gray - 400">;
                       <span className="px - 2 py - 1 bg - gray - 700 / 50 rounded">;
                         {resource.type}
-=======
 
                   key={resource.title  } catch (error) {
     console.error("Error:", error);
@@ -3923,50 +3496,33 @@ export default function NewsPage(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {resource.type  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </span>;
                       <span>{resource.size}</span>;
                     </div>;
                     <a;
 
-<<<<<<< HEAD
-
-=======
                       href={resource.download  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
                     </a>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-=======
 
                       className="text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 300 font - medium";
                     >;
@@ -3974,7 +3530,6 @@ export default function NewsPage(req, res) {
                     </a>;
                   </div>;
                 </motion.div>))}
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -3985,7 +3540,6 @@ export default function NewsPage(req, res) {
             </div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10">;
           <div className="container mx - auto px - 4 text - center">;
@@ -4021,12 +3575,7 @@ export default function NewsPage(req, res) {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -4082,10 +3631,6 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />
       <div className="max-w-3xl mx-auto">
@@ -4095,7 +3640,6 @@ export default function NewsPage(req, res) {
       <EnhancedFooter />
     </div>
   )
-<<<<<<< HEAD
 };
 ;
 }
@@ -4132,25 +3676,14 @@ export default function NewsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 };
 ;
 }
 
 }
 
-<<<<<<< HEAD
 }
-=======
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="min - h-[60vh] px - 6 py - 24">;
       <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
       <div className="max - w-3xl mx - auto">;
@@ -4162,14 +3695,7 @@ export default function NewsPage(req, res) {
 }
 
 ;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -4190,4 +3716,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

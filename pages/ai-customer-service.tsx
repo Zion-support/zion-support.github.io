@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 import React from 'react',
 import Head from 'next / head',
@@ -14,11 +9,6 @@ export default /**
  */
 function AICustomerService() {
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <Head>;
         <title > AI Customer Service | Zion Tech Group</title>;
@@ -33,13 +23,7 @@ function AICustomerService() {
       </div>;
     </>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
       </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>
         <section className=&quot;container mx-auto px-4 py-20&quot;>
@@ -91,17 +75,7 @@ export default function AICustomerService(req, res) {
 ;
 
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 ;
 ;
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

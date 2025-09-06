@@ -9,23 +9,19 @@ interface CardProps {
   icon?: string;
 }
 
-<<<<<<< HEAD
 function Card({ title, href, description, bullets, icon }: CardProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-=======
 function Card({ title, href, description, bullets = [], icon }: CardProps) {
   return (
     <Link
       href={href}
       className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-blue-300"
     >
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <div className="flex items-center mb-4">
         {icon && <span className="text-2xl mr-3">{icon}</span>}
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>
       </div>
-<<<<<<< HEAD
       <p className="text-gray-600 mb-4">{description}</p>
       {bullets && (
         <ul className="space-y-2 mb-6">
@@ -33,7 +29,6 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
             <li key={index} className="flex items-start">
               <span className="text-green-500 mr-2">✓</span>
               <span className="text-gray-600 text-sm">{bullet}</span>
-=======
       <p className="text-gray-600 leading-relaxed mb-4">{description}</p>
       {bullets.length > 0 && (
         <ul className="space-y-1">
@@ -41,12 +36,10 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
             <li key={index} className="text-sm text-gray-600 flex items-center">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
               {bullet}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
             </li>
           ))}
         </ul>
       )}
-<<<<<<< HEAD
       <Link
         href={href}
         className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -54,7 +47,6 @@ function Card({ title, href, description, bullets = [], icon }: CardProps) {
         Learn More
       </Link>
     </div>
-=======
     </Link>
   );
 }
@@ -81,13 +73,11 @@ function ServiceCard({ title, href, description, bullets = [], icon }: CardProps
         </ul>
       )}
     </Link>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
   );
 }
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       {/* Hero Section */}
       <section className="text-center py-12 md:py-20">
@@ -106,7 +96,6 @@ export default function HomePage() {
           <Link
             href="/contact"
             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-=======
     <div className="space-y-16">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
@@ -120,28 +109,23 @@ export default function HomePage() {
           <Link
             href="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           >
             Get Started
           </Link>
-<<<<<<< HEAD
           <Link
             href="/services"
             className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-gray-400 transition-colors"
-=======
           <a
             href="https://ziontechgroup.com"
             target="_blank"
             rel="noopener noreferrer"
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           >
             View Services
           </Link>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
@@ -246,7 +230,6 @@ export default function HomePage() {
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
       {/* Featured Services */}
       <section className="py-12">
         <div className="text-center mb-12">
@@ -360,20 +343,17 @@ export default function HomePage() {
       <section className="py-12">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
             Let's discuss how we can help you achieve your technology goals
           </p>
-<<<<<<< HEAD
           <Link
             href="/contact"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Get Started Today
           </Link>
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -391,7 +371,6 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         </div>
       </section>
     </div>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-<<<<<<< HEAD
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description:
 
@@ -33,12 +32,10 @@ export default function ServicesOverviewPage() {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description:
     "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-=======
 
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 };
 
 export default function ServicesOverviewPage() {
@@ -80,7 +77,6 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-<<<<<<< HEAD
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
@@ -101,23 +97,18 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS Solutions"
           description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
           bullets={[
-<<<<<<< HEAD
             "Foundational architecture",
             "Billing + subscriptions", 
             "Growth analytics"
-=======
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           ]}
           icon="🚀"
           pricing="From $2,999/month"
@@ -125,28 +116,23 @@ export default function ServicesOverviewPage() {
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-<<<<<<< HEAD
           description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-=======
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
             "15+ AI service categories",
             "Custom LLM development",
             "Enterprise AI integration"
           ]}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           icon="🤖"
           pricing="From $5,000/project"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-<<<<<<< HEAD
           description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-=======
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
             "15+ IT service categories",
@@ -191,7 +177,6 @@ export default function ServicesOverviewPage() {
           ]}
           icon="🎓"
           pricing="From $30,000/project"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         />
         <ServiceCard
           href="/services/blockchain-solutions"
@@ -207,15 +192,11 @@ export default function ServicesOverviewPage() {
           description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
           bullets={["Process automation", "Workflow optimization", "AI automation"]}
           icon="⚡"
-<<<<<<< HEAD
-=======
           pricing="From $2,500/month"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
-<<<<<<< HEAD
       <CTA />
           description="Business intelligence, predictive analytics, and data engineering"
           bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
@@ -244,7 +225,6 @@ export default function ServicesOverviewPage() {
         />
       </div>
       <CTA />{" "}
-=======
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
           bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
           icon="📊"
@@ -287,7 +267,6 @@ export default function ServicesOverviewPage() {
       </section>
       
       <CTA />
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
     </div>
   );
 }
@@ -297,12 +276,9 @@ function ServiceCard({
   title,
   description,
   bullets,
-<<<<<<< HEAD
   icon
-=======
   icon,
   pricing
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 }: {
   href: string;
   title: string;
@@ -316,8 +292,6 @@ function ServiceCard({
       href={href}
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
-<<<<<<< HEAD
-=======
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
@@ -336,7 +310,6 @@ function ServiceCard({
     </Link>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 
 function StatCard({ 
   number, 
@@ -353,7 +326,6 @@ function StatCard({
       <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
       <div className="text-sm text-gray-600">{description}</div>
     </div>
-<<<<<<< HEAD
       {" "}
       <div className="text-4xl mb-4">{icon}</div>{" "}
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -370,8 +342,6 @@ function StatCard({
         ))}{" "}
       </ul>{" "}
     </Link>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
   );
 }
 
@@ -382,16 +352,13 @@ function CTA() {
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
         {" "}
         Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
-=======
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
       </p>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"

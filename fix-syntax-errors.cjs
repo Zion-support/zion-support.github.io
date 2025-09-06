@@ -9,7 +9,6 @@ function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-<<<<<<< HEAD
 
     // Fix common syntax errors
     const fixes = [
@@ -20,8 +19,7 @@ function fixSyntaxErrors(filePath) {
       },
       // Fix merge conflict markers
       {
-        pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g,
-        replacement: ''
+        pattern: /[\s\S]*?[\s\S]*?        replacement: ''
       },
       // Fix malformed function declarations
       {
@@ -72,13 +70,11 @@ function findAndFixApiFiles(dir) {
     } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
-=======
 
     // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`  🔄 Fixing merge conflicts in ${filePath}`);
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-      modified = true;
+      content = content.replace(/[\s\S]*?[\s\S]*?      modified = true;
     }
 
     // Fix unterminated string literals
@@ -98,7 +94,6 @@ function findAndFixApiFiles(dir) {
       if (line.includes('`') && !line.match(/`.*`/)) {
         lines[i] = line.replace(/`([^`]*)$/, '`$1`');
         modified = true;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
       }
     }
 
@@ -109,7 +104,6 @@ function findAndFixApiFiles(dir) {
   } catch (error) {
     console.log(`  ❌ Error fixing ${filePath}: ${error.message}`);
   }
-<<<<<<< HEAD
 
   return fixedCount;
 }
@@ -118,7 +112,6 @@ console.log('Starting syntax error fixes...');
 const apiDir = '/workspace/pages/api';
 const fixedCount = findAndFixApiFiles(apiDir);
 console.log(`Fixed ${fixedCount} files`);
-=======
   return false;
 }
 
@@ -152,4 +145,3 @@ for (const file of files) {
 
 console.log(`\n✅ Fixed ${fixedCount} files out of ${totalFiles}`);
 console.log('🎯 Syntax error fixing complete!');
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
@@ -32,8 +31,6 @@ export default function Home() {
       </div>
     );
   }
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -67,15 +64,10 @@ export default function HomePage() {
     </Layout>
   );
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 origin/main
 import Link from 'next/link';
 import Head from 'next/head';
-
 
         {/* Features Section */}
         <section className="py-20 bg-slate-900/50">
@@ -86,9 +78,6 @@ import { ContactInfo, AnimationState  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary',
 import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
-
-
-
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -107,7 +96,6 @@ export default function Home() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-<<<<<<< HEAD
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
@@ -128,7 +116,6 @@ export default function Home() {
     );
   }
 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -138,11 +125,9 @@ export default function Home() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions" />
-=======
         <title>
           Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions
         </title>
@@ -154,7 +139,6 @@ export default function Home() {
           name="keywords"
           content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
         />
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
@@ -162,10 +146,8 @@ export default function Home() {
         <link rel="canonical" href={contact.site} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<<<<<<< HEAD
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta property="og:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
         <meta
           property="og:title"
           content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
@@ -174,16 +156,13 @@ export default function Home() {
           property="og:description"
           content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
         />
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <meta property="og:url" content={contact.site} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
         <meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
         <meta name="twitter:description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions." />
-=======
         <meta
           name="twitter:title"
           content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
@@ -192,14 +171,12 @@ export default function Home() {
           name="twitter:description"
           content="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
         />
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -284,7 +261,6 @@ export default function Home() {
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
-=======
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group',
@@ -322,7 +298,6 @@ import React from 'react';
           }
         >
           <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative py-20 px-4 text-center overflow-hidden" role="banner" aria-labelledby="hero-title">
           {/* Animated Background */}
@@ -554,12 +529,10 @@ import React from 'react';
                   View All IT Services
                   <ChevronRightIcon className="w-5 h-5 ml-2" />
                 </Link>
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Services Overview */}
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
@@ -572,7 +545,6 @@ import React from 'react';
                 <p className="text-slate-300 mb-6">
                   Innovative, focused software solutions including AI-Powered Video Clip Maker,
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
-=======
 
         {/* Contact Section */}
         <section className="py-20 px-4 relative overflow-hidden">
@@ -630,7 +602,6 @@ import React from 'react';
             </div>
           </div>
         </section>
-=======
             {/* Hero Section */}
             <section
               className="py-20 px-4 text-center"
@@ -648,7 +619,6 @@ import React from 'react';
                   className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                 >
                   Innovative Micro SaaS, AI Services & IT Solutions
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
                   <li>• AI-Powered Video Clip Maker</li>
@@ -664,11 +634,8 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
                   Advanced artificial intelligence solutions including autonomous AI agents,
-=======
                   Advanced artificial intelligence solutions including autonomous AI agents, 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -685,11 +652,8 @@ import React from 'react';
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>
                 <p className="text-slate-300 mb-6">
-<<<<<<< HEAD
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions,
-=======
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
@@ -703,7 +667,6 @@ import React from 'react';
                   View All IT Services →
                 </Link>
               </div>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -737,55 +700,36 @@ import React from 'react';
           </main>
         </Suspense>
         {/* <PerformanceMonitor
-=======
             </section>
->>>>>>> origin/main
           </main>
         </Suspense>
         <PerformanceMonitor 
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
           showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
           onThresholdExceeded={(metrics) => {
             console.warn('Performance thresholds exceeded:', metrics)
           }}
-<<<<<<< HEAD
         /> */}
       </ErrorBoundary>
     </>
   )
 }
-=======
         />
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
 
           </div>;
         </section>;
 
-
-
-
         {/* Services Section */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -793,16 +737,7 @@ import React from 'react';
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
-<<<<<<< HEAD
-=======
 
-=======
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -841,19 +776,11 @@ import React from 'react';
                 </div>
               ))}
             </motion.div>
-<<<<<<< HEAD
           </div>
         </section>
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-bf80
           </div>
         </section>
 
@@ -944,14 +871,7 @@ import React from 'react';
           </div>;
         </section>;
 
-
-
-
-
-
         {/* Why Choose Us */}
-
-
 
 origin/automation-improvements-final
         {/* Why Choose Us */}
@@ -974,9 +894,6 @@ origin/automation-improvements-final
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
             </motion.div>
-
-=======
-
 
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
@@ -1126,10 +1043,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 </Link>
               </div>
             </motion.div>
-=======
-
-
-
 
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -1154,5 +1067,3 @@ origin/automation-improvements-final
     </MainLayout>
   );
 }
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

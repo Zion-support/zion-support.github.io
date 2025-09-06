@@ -1,7 +1,5 @@
 import Link from 'next/link';
-
 import { useAuth } from '@/hooks/useAuth';
-
 import React, { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -11,114 +9,104 @@ import { Badge } from '@/components / ui / badge';
 import Link from 'next / link';
 import { use_auth } from '@/hooks / use_auth';
 ;
-
 interface OrderItem {
-  id: string;
-  name: string;
-  quantity: number;
-  price: number;
+  id: string;,
+  name: string;,
+  quantity: number;,
+  price: number;,
   image?: string;
 }
 interface Order {
-  id: string;
-  orderId: string;
-  date: string;
-  status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';
-  total: number;
-  items: OrderItem[];
-  shippingAddress: {
-    name: string;
-    street: string;
-    city: string;
-    state: string;
-    zipCode: string;
+  id: string;,
+  orderId: string;,
+  date: string;,
+  status: 'pending' | 'processing' | 'shipped' | 'delivered' | 'cancelled';',
+  total: number;,
+  items: OrderItem[];,
+  shippingAddress: {,
+    name: string;,
+    street: string;,
+    city: string;,
+    state: string;,
+    zipCode: string;,
     country: string;
   }
-
-  payment_method: {
-    type: string;
+  payment_method: {,
+    type: string;,
     last4: string;
   }
   tracking_number?: string;
 }
-const getStatusColor = (status: string) =>: any {
-
+const getStatusColor = (status:,  string) =>: any {,
   switch (status) {
-    case 'pending':
+    case 'pending':'
       return 'bg-yellow-100 text-yellow-800';
-    case 'processing':
+    case 'processing':'
       return 'bg-blue-100 text-blue-800';
-    case 'shipped':
+    case 'shipped':'
       return 'bg-purple-100 text-purple-800';
-    case 'delivered':
+    case 'delivered':'
       return 'bg-green-100 text-green-800';
-    case 'cancelled':
+    case 'cancelled':'
       return 'bg-red-100 text-red-800';
     default:
       return 'bg-gray-100 text-gray-800';
   }
 }
-
 ;
-const getStatusIcon = (status: string) =>: any {
-
+const getStatusIcon = (status:,  string) =>: any {,
   switch (status) {
-    case 'delivered':
+    case 'delivered':'
       return <CheckCircle className="h-4 w-4" />;
-    case 'shipped':
+    case 'shipped':'
       return <Package className="h-4 w-4" />;
-    case 'processing':
+    case 'processing':'
       return <Clock className="h-4 w-4" />;
     default:
       return <Clock className="h-4 w-4" />;
   }
 }
-
   switch (status) {
-    case 'pending':
+    case 'pending':'
       return 'bg-yellow-100 text-yellow-800';
-    case 'processing':
+    case 'processing':'
       return 'bg-blue-100 text-blue-800';
-    case 'shipped':
+    case 'shipped':'
       return 'bg-purple-100 text-purple-800';
-    case 'delivered':
+    case 'delivered':'
       return 'bg-green-100 text-green-800';
-    case 'cancelled':
+    case 'cancelled':'
       return 'bg-red-100 text-red-800';
     default:
       return 'bg-gray-100 text-gray-800';
   }
 }
-const getStatusIcon = (status: string) => {
+const getStatusIcon = (status:,  string) => {,
   switch (status) {
-    case 'delivered':
+    case 'delivered':'
       return <CheckCircle className="h-4 w-4" />;
-    case 'shipped':
+    case 'shipped':'
       return <Package className="h-4 w-4" />;
-    case 'processing':
+    case 'processing':'
       return <Clock className="h-4 w-4" />;
     default:
       return <Clock className="h-4 w-4" />;
   }
-
 };
-
 export default function OrderDetail() {;
-
-
   const router = useRouter();
   const { user } = useAuth();
-  const [order, setOrder] = useState<Order | null>(null);
+  const [order, setOrder] = useState<Order | null>(null);,
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // Mock data - replace with actual API call
-    const mockOrder: Order = {
-      id: router.query.id as string |'1'
-      orderId: 'ORD-2024-001'
-      date: '2024-01-15'
-      status: 'shipped'
-      total: 299.99
-      items: [
+    const mockOrder: Order = {,
+      id: router.query.id as string |'1'',
+      orderId: 'ORD-2024-001'',
+      date: '2024-01-15'',
+      status: 'shipped'',
+      total: 299.99,
+      items: [,
 ;
 export default /**
  * OrderDetail - Function description
@@ -126,101 +114,90 @@ export default /**
 function OrderDetail() {
   const router = use_router ();
   const { user } = use_auth ();
-  const [order, set_order] = useState < Order | null>(null);
+  const [order, set_order] = useState < Order | null>(null);,
   const [loading, set_loading] = useState (true);
 ;
   useEffect (() => {
     // Mock data - replace with actual API call;
-    const mock_order: Order = {
-      id: router.query.id as string || '1',
-      order_id: 'ORD - 2024 - 001',
-      date: '2024 - 01 - 15',
-      status: 'shipped',
+    const mock_order: Order = {,
+      id: router.query.id as string || '1','
+      order_id: 'ORD - 2024 - 001','
+      date: '2024 - 01 - 15','
+      status: 'shipped','
       total: 299.99,
-      items: [;
+      items: [;,
         {
-          id: '1'
-          name: 'Premium Web Development Service'
-          quantity: 1
+          id: '1'',
+          name: 'Premium Web Development Service'',
+          quantity: 1,
           price: 299.99
         }
-
 export default function OrderDetailPage() {;
   const router = useRouter();
   const { orderId } = router && router.query as { orderId?: string };
   const { user } = useAuth();
   const { data: order, isLoading } = useGetOrderQuery(orderId);
-
   const handleDownload = async () => {;
     if (!order) return;
     const blob = await generateInvoicePdf(order);
     const url = URL && URL.createObjectURL(blob);
     const link = document && document.createElement('a');
     link && link.href = url;
-    link && link.download = `invoice-${order && order.orderId}.pdf`;
+    link && link.download = `invoice-${order && order.orderId}.pdf`;`
     document && document.body.appendChild(link);
     link && link.click();
     document && document.body.removeChild(link);
     URL && URL.revokeObjectURL(url);
   };
-
   const handleResend = async () => {;
     if (!order || !user?.email) return;
     try {;
       await supabase && supabase.functions.invoke('send-email', {;
-        body: {;
+        body: {;,
           to: user && user.email,;
-          subject: `Receipt for order ${order && order.orderId}`,;
-          html: `<p>Thank you for your purchase. Total ${order && order.total}.</p>`,;
+          subject: `Receipt for order ${order && order.orderId}`,;`
+          html: `<p>Thank you for your purchase. Total ${order && order.total}.</p>`,;`
         },;
       });
       toast({ title: 'Receipt sent!' });
     } catch (err) {;
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
-
     }
     setOrder(mockOrder);
     setLoading(false);
-  }, [router.query.id]);
+  }, [router.query.id]);,
   if (loading) {
-
-
   const handleCopySummary = async () => {;
     if (!order) return;
-    const summary = [;
-      `Order #${order && order.orderId}`,;
-      `Date: ${new Date(order && order.date).toLocaleDateString()}`,;
+    const summary = [;,
+      `Order #${order && order.orderId}`,;`
+      `Date: ${new Date(order && order.date).toLocaleDateString()}`,;`
       '',;
       'Items:',;
       ...order && order.items.map(;
-        i => `${i && i.name} x${i && i.quantity} - $${i && i.price.toFixed(2)}`;
+        i => `${i && i.name} x${i && i.quantity} - $${i && i.price.toFixed(2)}`;`
       ),      '',;
-      `Total: $${order && order.total.toFixed(2)}`,;
+      `Total: $${order && order.total.toFixed(2)}`,;`
       '',;
       'Shipping Address:',;
       order && order.shippingAddress.name,;
       order && order.shippingAddress.street,;
-      `${order && order.shippingAddress.city}, ${order && order.shippingAddress.state} ${order && order.shippingAddress.zip}`,;
-
+      `${order && order.shippingAddress.city}, ${order && order.shippingAddress.state} ${order && order.shippingAddress.zip}`,;`
     ].join('\n');
-
     await navigator && navigator.clipboard.writeText(summary);
     toast && toast.success('Order summary copied to clipboard');
   };
-
-
-
       ],
-      shipping_address: {
-        name: 'John Doe',
-        street: '123 Main St',
-        city: 'New York',
-        state: 'NY',
-        zip_code: '10001',
+      shipping_address: {,
+        name: 'John Doe','
+        street: '123 Main St','
+        city: 'New York','
+        state: 'NY','
+        zip_code: '10001','
         country: 'USA';
       },
-      payment_method: {
-        type: 'credit_card',
+      payment_method: {,
+        type: 'credit_card','
         last4: '4242';
       },
       tracking_number: 'TRK123456789';
@@ -228,76 +205,72 @@ export default function OrderDetailPage() {;
 ;
     set_order (mock_order);
     set_loading (false);
-  }, [router.query.id]);
+  }, [router.query.id]);,
 ;
   // Check condition
 if ( {) {
   $2
 }
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="animate-pulse">
-          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
-          <div className="space-y-4">
+      <div className="container mx-auto px-4 py-8">"
+        <div className="animate-pulse">"
+          <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>"
+          <div className="space-y-4">",
             {[1, 2, 3].map(i => (
-              <div key={i} className="h-32 bg-gray-200 rounded"></div>
+              <div key={i} className="h-32 bg-gray-200 rounded"></div>"
             ))}
           </div>
         </div>
       </div>
     );
   }
-
   if (isLoading || !order) {;
     return (
       <div className='container max-w-3xl py-10'>;
         <Skeleton className='h-6 w-full' />;
       </div>;
-
     );
   }
   return (
-
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-6">
-        <Link href="/orders">
-          <Button variant="ghost" className="mb-4">
-            <ArrowLeft className="h-4 w-4 mr-2" />
+    <div className="container mx-auto px-4 py-8">"
+      <div className="mb-6">"
+        <Link href="/orders" />"
+          <Button variant="ghost" className="mb-4">"
+            <ArrowLeft className="h-4 w-4 mr-2" />"
             Back to orders
           </Button>
         </Link>
-        <h1 className="text-3xl font-bold">Order Details</h1>
-
+        <h1 className="text-3xl font-bold">Order Details</h1>"
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">"
         {/* Order Summary */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-6">"
           <Card>
             <CardHeader>
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between">"
                 <CardTitle>Order #{order.orderId}</CardTitle>
                 <Badge className={getStatusColor(order.status)}>
                   {getStatusIcon(order.status)}
-                  <span className="ml-1 capitalize">{order.status}</span>
+                  <span className="ml-1 capitalize">{order.status}</span>"
                 </Badge>
               </div>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600">"
                 Date: {new Date(order.date).toLocaleDateString()}
               </p>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                <h3 className="font-semibold">Items:</h3>
+              <div className="space-y-4">"
+                <h3 className="font-semibold">Items:</h3>"
                 {order.items.map((item) => (
-                  <div key={item.id} className="flex items-center justify-between py-2 border-b">
+                  <div key={item.id} className="flex items-center justify-between py-2 border-b">"
                     <div>
-                      <p className="font-medium">{item.name}</p>
-                      <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>
+                      <p className="font-medium">{item.name}</p>"
+                      <p className="text-sm text-gray-600">Quantity: {item.quantity}</p>"
                     </div>
-                    <p className="font-semibold">${item.price.toFixed(2)}</p>
+                    <p className="font-semibold">${item.price.toFixed(2)}</p>"
                   </div>
                 ))}
-                <div className="flex justify-between text-lg font-bold pt-4">
+                <div className="flex justify-between text-lg font-bold pt-4">"
                   <span>Total:</span>
                   <span>${order.total.toFixed(2)}</span>
                 </div>
@@ -307,14 +280,14 @@ if ( {) {
           {/* Shipping Address */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2" />
+              <CardTitle className="flex items-center">"
+                <MapPin className="h-5 w-5 mr-2" />"
                 Shipping Address
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-1">
-                <p className="font-medium">{order.shippingAddress.name}</p>
+              <div className="space-y-1">"
+                <p className="font-medium">{order.shippingAddress.name}</p>"
                 <p>{order.shippingAddress.street}</p>
                 <p>
                   {order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zipCode}
@@ -326,17 +299,17 @@ if ( {) {
           {/* Payment Information */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center">
-                <CreditCard className="h-5 w-5 mr-2" />
+              <CardTitle className="flex items-center">"
+                <CreditCard className="h-5 w-5 mr-2" />"
                 Payment Information
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-1">
-                <p className="font-medium">
-                  {order.paymentMethod.type === 'credit_card' ? 'Credit Card' : order.paymentMethod.type}
+              <div className="space-y-1">"
+                <p className="font-medium">"
+                  {order.paymentMethod.type === 'credit_card' ? 'Credit Card' : order.paymentMethod.type}'
                 </p>
-                <p className="text-gray-600">**** **** **** {order.paymentMethod.last4}</p>
+                <p className="text-gray-600">**** **** **** {order.paymentMethod.last4}</p>"
               </div>
             </CardContent>
           </Card>
@@ -349,7 +322,7 @@ if ( {) {
       <div className="container mx - auto px - 4 py - 8">;
         <div className="text - center">;
           <h1 className="text - 2xl font - bold mb - 4">Order not found</h1>;
-          <Link href="/orders">;
+          <Link href="/orders" />;
             <Button>;
               <ArrowLeft className="h - 4 w - 4 mr - 2" />;
               Back to orders;
@@ -361,7 +334,7 @@ if ( {) {
   return (
     <div className="container mx - auto px - 4 py - 8">;
       <div className="mb - 6">;
-        <Link href="/orders">;
+        <Link href="/orders" />;
           <Button variant="ghost" className="mb - 4">;
             <ArrowLeft className="h - 4 w - 4 mr - 2" />;
             Back to orders;
@@ -433,7 +406,7 @@ if ( {) {
             <CardContent>;
               <div className="space - y-1">;
                 <p className="font - medium">;
-                  {order.payment_method.type === 'credit_card' ? 'Credit Card' : order.payment_method.type}
+                  {order.payment_method.type === 'credit_card' ? 'Credit Card' : order.payment_method.type}'
                 </p>;
                 <p className="text - gray - 600">**** **** **** {order.payment_method.last4}</p>;
               </div>;
@@ -441,36 +414,34 @@ if ( {) {
           </Card>;
         </div>;
         {/* Order Status & Tracking */}
-        <div className="space-y-6">
+        <div className="space-y-6">"
           <Card>
             <CardHeader>
               <CardTitle>Order Status</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Order placed</span>
+              <div className="space-y-4">"
+                <div className="flex items-center space-x-3">"
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>"
+                  <span className="text-sm">Order placed</span>"
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Payment confirmed</span>
+                <div className="flex items-center space-x-3">"
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>"
+                  <span className="text-sm">Payment confirmed</span>"
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Processing</span>
+                <div className="flex items-center space-x-3">"
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>"
+                  <span className="text-sm">Processing</span>"
                 </div>
-                {order.status === 'shipped' && (
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm">Shipped</span>
+                {order.status === 'shipped' && ('
+                  <div className="flex items-center space-x-3">"
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>"
+                    <span className="text-sm">Shipped</span>"
                   </div>
                 )}
-                {order.status === 'delivered' && (
-
+                {order.status === 'delivered' && ('
     <div className='container max-w-3xl py-10 space-y-6'>;
       <h1 className='text-3xl font-bold'>Order #{order && order.orderId}</h1>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Items</h2>;
         <ul className='space-y-1'>;
@@ -483,22 +454,19 @@ if ( {) {
           ))}
         </ul>;
       </div>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Shipping Address</h2>;
         <p>{order && order.shippingAddress.name}</p>;
         <p>{order && order.shippingAddress.street}</p>;
         <p>;
-          {order && order.shippingAddress.city}, {order && order.shippingAddress.state}{' '}
+          {order && order.shippingAddress.city}, {order && order.shippingAddress.state}{' '}'
           {order && order.shippingAddress.zip}
         </p>;
       </div>;
-
       <div>;
         <h2 className='font-semibold mb-2'>Tracking</h2>;
         <OrderTimeline events={order && order.trackingEvents} />;
       </div>;
-
       <div className='flex gap-3'>;
         <Button onClick={handleDownload}>Download PDF Invoice</Button>;
         <Button variant='outline' onClick={handleCopySummary}>;
@@ -508,16 +476,11 @@ if ( {) {
           Resend Receipt;
         </Button>;
       </div>;
-
-      <Link href='/orders' className='text-zion-purple underline'>;
+      <Link href='/orders' className='text-zion-purple underline' />;
         Back to orders;
       </Link>;
     </div>;
-
   );
-
-
-
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -545,9 +508,6 @@ if ( {) {
     </div>);
 ;
 }
-
-
-
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button',;
@@ -570,7 +530,7 @@ export default function OrderDetailPage() {;
     const url = URL.createObjectURL(blob),;
     const link = document.createElement('a'),;
     link.href = url,;
-    link.download = `invoice-${order.orderId}.pdf`,;
+    link.download = `invoice-${order.orderId}.pdf`,;`
     document.body.appendChild(link),;
     link.click(),;
     document.body.removeChild(link),;
@@ -580,10 +540,10 @@ export default function OrderDetailPage() {;
     if (!order || !user?.email) return,;
     try {;
       await supabase.functions.invoke('send-email', {;
-        body: {;
+        body: {;,
           to: user.email,;
-          subject: `Receipt for order ${order.orderId}`,;
-          html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;
+          subject: `Receipt for order ${order.orderId}`,;`
+          html: `<p>Thank you for your purchase. Total ${order.total}.</p>`;`
         }
       }),;
       toast({ title: 'Receipt sent!' });
@@ -591,35 +551,30 @@ export default function OrderDetailPage() {;
       toast({ title: 'Failed to send receipt', variant: 'destructive' });
     }
   },
-
   const handleCopySummary = async () => {
     if (!order) return,
-    const summary = [
-      `Order #${order.orderId}`,
-      `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '',
-      'Items:',
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
-      '',
-      `Total: $${order.total.toFixed(2)}`,
-      '',
-      'Shipping Address:',
+    const summary = [,
+      `Order #${order.orderId}`,`
+      `Date: ${new Date(order.date).toLocaleDateString()}`,`
+      '','
+      'Items:','
+      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),`
+      '','
+      `Total: $${order.total.toFixed(2)}`,`
+      '','
+      'Shipping Address:','
       order.shippingAddress.name,
       order.shippingAddress.street,
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
-
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),'
     await navigator.clipboard.writeText(summary),
-    toast.success('Order summary copied to clipboard')
+    toast.success('Order summary copied to clipboard')'
   },
-
   if (isLoading || !order) {
     return (
-      <div className="container max-w-3xl py-10">
-        <Skeleton className="h-6 w-full" />
-
-
+      <div className="container max-w-3xl py-10">"
+        <Skeleton className="h-6 w-full" />"
       </div>
     )
   }
-
   return (
+}}}}})]

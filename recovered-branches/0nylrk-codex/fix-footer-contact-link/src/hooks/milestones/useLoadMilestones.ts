@@ -1,22 +1,10 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -55,41 +43,23 @@ export const useLoadMilestones = (projectId?: string) => {;
           .eq('milestone_id', milestone.id)
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-        
         activitiesMap[milestone && milestone.id] = activitiesData || []
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         activitiesMap[milestone && milestone.id] = activitiesData || []
         activitiesMap[milestone.id] = activitiesData |[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
-<<<<<<< HEAD
-=======
-=======
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -103,17 +73,9 @@ if ( {) {
   $2
 }
       setIsLoading (false);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-        
         activitiesMap[milestone.id] = activitiesData || []
 
-<<<<<<< HEAD
-=======
-=======
       console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err.message)
       toast.error("Failed to fetch milestones")
@@ -136,11 +98,7 @@ if ( {) {
   }
 }
 
-        
         activitiesMap[milestone.id] = activitiesData || []
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -155,10 +113,6 @@ export const useLoadMilestones = (projectId?: string) => {;
   const fetchMilestones = async () => {;
     if (!projectId) {;
       setIsLoading(false),;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const useLoadMilestones = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [milestones, set_milestones] = useState < Milestone[]>([]);
@@ -172,7 +126,6 @@ if ( {) {
   $2
 }
       setIsLoading (false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return;
     }
     try {
@@ -199,8 +152,6 @@ if (throw milestones_error) {
           .select (`;
             *;
             created_by_profile:profiles ! user_id (display_name, avatar_url);
-<<<<<<< HEAD
-=======
       return;
     }
 ;
@@ -221,9 +172,6 @@ if (throw milestones_error) {
           .select(`;
             *,;
             created_by_profile:profiles!user_id(display_name, avatar_url);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           `);
       }
       
@@ -237,8 +185,6 @@ if (throw milestones_error) {
       setIsLoading(false)
     }
   };
-
-
 
           .eq ('milestone_id', milestone.id);
           .order ('created_at', { ascending: false });
@@ -294,9 +240,6 @@ if ( {) {
     isLoading,;
     error;
     refetch: fetchMilestones;
-<<<<<<< HEAD
-
-
 
       }
       set_activities (activities_map);
@@ -305,15 +248,11 @@ if ( {) {
       console.error ("Error fetching milestones:", err);
       set_error ("Failed to fetch milestones: " + err.message),
       toast.error ("Failed to fetch milestones");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-<<<<<<< HEAD
 
-=======
       setIsLoading (false);
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   // Fetch milestones when component mounts or project_id changes;
   useEffect (() => {
@@ -325,29 +264,20 @@ if ( {) {
     }
   }, [project_id]);
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return {
     milestones;
     activities;
     is_loading;
     error;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     refetch: fetch_milestones;
       setIsLoading(false)
 
-
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
 ;
 
-=======
 ;
 
 import { useState, useEffect } from 'react',;
@@ -460,6 +390,3 @@ refetch: fetchMilestones
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -22,18 +22,11 @@ const faqs = [;
   {;
     question: "Are there any fees for listing my products or services?",;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
-=======
-
-=======
-=======
 
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
-=======
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 import { GradientHeading } from "./GradientHeading",
 import {
@@ -42,7 +35,6 @@ import {
   AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?"
@@ -51,7 +43,6 @@ const faqs = [
     question: "What types of AI jobs can I find or post on Zion?"
     answer: "Zion hosts a wide range of AI-related job opportunities including machine learning engineers, data scientists, AI researchers, computer vision specialists, NLP experts, AI product managers, and more. Employers can post any tech or AI-related position, and job seekers can publish their CV with AI-specific skills highlighted for better matching."}
   {
-<<<<<<< HEAD
     question: "What IT equipment is available for purchase or rental?"
     answer: "Zion offers a comprehensive range of IT equipment including servers (rack, tower, blade), storage solutions (SAN, NAS, DAS), networking equipment (switches, routers, firewalls), power supplies, and complete rack solutions. All equipment is available for purchase or flexible rental terms, with options for new, refurbished, or certified used equipment."}
   {
@@ -66,7 +57,6 @@ const faqs = [
 import {GradientHeading} from "./GradientHeading";
 import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
 import {FileText} from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { GradientHeading } from "./GradientHeading",
 import {
   Accordion,
@@ -75,11 +65,6 @@ import {
   AccordionTrigger} from "@/components/ui/accordion",
 import { FileText } from "lucide-react",
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",
@@ -99,21 +84,13 @@ const faqs = [
   {
     question: "Are there any fees for listing my products or services?",
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export function FaqSection() {;
   return (
 
-<<<<<<< HEAD
-=======
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { GradientHeading } from './GradientHeading';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components / ui / accordion';
 import { FileText } from './lucide-react';
@@ -159,21 +136,13 @@ function FaqSection() {
             {faqs.map ((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border - zion - purple / 10">;
                 <AccordionTrigger className="text - white hover:text - zion - cyan">;
-<<<<<<< HEAD
 
                   {faq.question}
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
 
 };
-
-<<<<<<< HEAD
-=======
-=======
 
 export function FaqSection() {
   return (
@@ -208,8 +177,6 @@ export function FaqSection() {
   )
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 export function FaqSection() {;
   return (
@@ -219,7 +186,6 @@ export function FaqSection() {;
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading",;
 import {;
   Accordion,;
@@ -247,16 +213,12 @@ const faqs = [;
     question: "Are there any fees for listing my products or services?",;
     answer: "No, publishing your products, services, job listings, or CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibility, but the basic listing service has no costs attached."}];
 export function FaqSection() {;
-<<<<<<< HEAD
   return (;
-<<<<<<< HEAD
 
-=======
                   {faq.question}
                 </AccordionTrigger>;
                 <AccordionContent className="text - zion - slate - light">;
                   {faq.answer}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <section className="py-20 bg-zion-blue" id="faq">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -273,7 +235,6 @@ export function FaqSection() {;
           </div>;
 
           <Accordion type="single" collapsible className="w-full">;
-<<<<<<< HEAD
             {faqs && faqs.map((faq, index) => (;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
@@ -281,7 +242,6 @@ export function FaqSection() {;
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
                   {faq && faq.answer}
-=======
 
 import { GradientHeading } from "./GradientHeading",;
 import {;
@@ -336,7 +296,6 @@ export function FaqSection() {;
                 </AccordionTrigger>;
                 <AccordionContent className="text-zion-slate-light">;
                   {faq.answer}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </AccordionContent>;
               </AccordionItem>;
             ))}
@@ -344,14 +303,9 @@ export function FaqSection() {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD
   );
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </AccordionContent>;
               </AccordionItem>))}
           </Accordion>;
@@ -359,16 +313,8 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 ;
   ),;}
@@ -407,6 +353,3 @@ answer: "Zion's Green IT initiative focuses on sustainable IT practices througho
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

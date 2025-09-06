@@ -1,20 +1,9 @@
-<<<<<<< HEAD
 
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface TalentCardHeaderProps {;
   fullName: string,;
   professionalTitle: string,;
@@ -31,10 +20,6 @@ export function TalentCardHeader(): any ({ ;
   availabilityType;
   yearsExperience;
 }: TalentCardHeaderProps) {;
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { BadgeCheck } from "lucide-react",
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -48,12 +33,8 @@ interface TalentCardHeaderProps {
   yearsExperience: number;
 }
   availabilityType;
-<<<<<<< HEAD
 import { TalentCardAvatar } from "./TalentCardAvatar",
 import { TalentCardAvailability } from "./TalentCardAvailability",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -67,9 +48,6 @@ interface TalentCardHeaderProps {
   availabilityType,
   yearsExperience
 }: TalentCardHeaderProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex items-start gap-4 mb-4">;
@@ -79,7 +57,6 @@ interface TalentCardHeaderProps {
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
 
-=======
   return (
 
   availabilityType;
@@ -116,18 +93,12 @@ export function TalentCardHeader({ ;
       <div className="flex-1">;
         <div className="flex items-center justify-between">;
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (;
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function TalentCardHeader({ ;
   fullName;
 export function TalentCardHeader({ 
@@ -155,13 +126,8 @@ export function TalentCardHeader({
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-<<<<<<< HEAD
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { BadgeCheck } from "lucide-react",;
 import { TalentCardAvatar } from "./TalentCardAvatar",;
@@ -192,14 +158,11 @@ export function TalentCardHeader({;
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
             )}
-<<<<<<< HEAD
 
           </h3>;
 
-=======
           </h3>;
           </h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
 
@@ -208,12 +171,7 @@ export function TalentCardHeader({;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -246,15 +204,9 @@ function TalentCardHeader() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
           ;
@@ -293,6 +245,3 @@ yearsExperience
 }/> </div> </div> </div>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

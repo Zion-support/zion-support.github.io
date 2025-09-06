@@ -21,8 +21,6 @@ export default function CompanyWorkspace() {
       </div>
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   if (error || !company) {
     return <Navigate to="/not-found" />;
@@ -43,7 +41,6 @@ export default function CompanyWorkspace() {
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />;
   }
-<<<<<<< HEAD
 
   return (
     <ProtectedRoute>
@@ -68,11 +65,7 @@ export default function CompanyWorkspace() {
     </ProtectedRoute>
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -91,8 +84,6 @@ function CompanyWorkspace() {
   const { user } = use_auth ();
   const { company, is_loading, error } = useCompanyWorkspace (company_slug);
   const { is_whitelabel, tenant, brand_name } = use_whitelabel ();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Check condition
 if ( {) {
@@ -139,12 +130,8 @@ if ( {) {
       </main>;
       <Footer />;
     </ProtectedRoute>);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 }
-
 
 import React from "react",;
 import { Header } from "@/components/Header",;
@@ -266,16 +253,9 @@ export default function CompanyWorkspace() {_const { companySlug} = useParams() 
     </ProtectedRoute>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 }
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

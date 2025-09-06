@@ -35,7 +35,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     return []
   }
 }
-<<<<<<< HEAD
 
 function featureFromPath(page?: string): string {
   if (!page) return 'other',
@@ -66,9 +65,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     byDay[day] = (byDay[day] || 0) + 1
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -98,11 +94,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const day = r.at.slice(0, 10);
     byDay[day] = (byDay[day] || 0) + 1;
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value),

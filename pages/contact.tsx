@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> main
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,8 +25,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-
-
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
@@ -42,12 +35,7 @@ origin/automation-improvements-final
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -107,29 +95,15 @@ export default function Contact() {
 }
   };
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import Layout from "../components/Layout";
 export default function Contact() {
@@ -163,16 +137,7 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -181,14 +146,8 @@ const ContactPage: React.FC = () => {
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 name='description'
-=======
           name='description'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -264,13 +223,8 @@ name='description'
                   <ContactForm />
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-=======
 
 }
-=======
-
 
             </div>
           </div>
@@ -296,17 +250,11 @@ name='description'
     </Layout>;
 
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
 
     </>
 
   );
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 import React from './react';
 import Layout from "../components / Layout";
@@ -337,9 +285,6 @@ function Contact() {
       </div>;
     </Layout>);
 }
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -651,39 +596,19 @@ function Contact() {
                   </li>
                 </ul>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     </Layout>;
-=======
     </>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     <MainLayout
       title="Contact - Zion Tech Group"
       description="Get in touch with Zion Tech Group for all your technology needs"
@@ -713,7 +638,6 @@ function Contact() {
     </MainLayout>
   );
 }
-=======
 import Head from 'next/head';
 
 export default function Contact() {
@@ -778,5 +702,3 @@ export default function Contact() {
     </>
   );
 }
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -100,13 +98,10 @@ const achievements = [
     icon: Users
   }
 ];
->>>>>>> main
-
 
 import React from "react";
 import Layout from "../components/Layout";
 
-<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -135,26 +130,12 @@ import {
   TrendingUp;
 } from 'lucide-react';
 
-
-
-=======
-=======
 import React from 'react';
 
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -162,10 +143,6 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-<<<<<<< HEAD
-=======
-
-
 
     },
     {
@@ -200,10 +177,7 @@ const AboutPage: React.FC = () => {
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     {
       icon: Shield,
       title: "Trust & Security",
@@ -240,10 +214,7 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-<<<<<<< HEAD
-=======
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -251,16 +222,11 @@ import SmartFooter from '../components/SmartFooter';
 }
   ];
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-<<<<<<< HEAD
-=======
-
 
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
     console.error("Error:", error);
@@ -269,65 +235,42 @@ export default function AboutPage() {
 }
   ],
 
-
-=======
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
-<<<<<<< HEAD
-=======
-
 
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
       color: 'from-purple-500 to-pink-500'
     },
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
-<<<<<<< HEAD
-=======
-
 
     },
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
-<<<<<<< HEAD
-=======
-
 
       color: 'from-indigo-500 to-purple-500'
     },
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       icon: Users,
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
-<<<<<<< HEAD
-=======
-
 
       } catch (error) {
     console.error("Error:", error);
@@ -336,17 +279,12 @@ export default function AboutPage() {
 }
   ],
 
-
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
@@ -354,20 +292,6 @@ export default function AboutPage() {
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
 
-
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/automation-improvements-final
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -390,8 +314,6 @@ export default function AboutPage() {
       color: 'from-purple-500 to-pink-500'
     },
     {
-<<<<<<< HEAD
-=======
       name: 'Quantum Team',
       role: 'Quantum Computing',
       description: 'Specialists in quantum algorithms and quantum-resistant cryptography',
@@ -451,7 +373,6 @@ import Head from 'next/head',
 import Button from '../components/ui/Button',
 export default function AboutPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>About | Zion Tech Group</title>
@@ -503,25 +424,15 @@ export default function AboutPage() {
   )
 },
 export default AboutPage,
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import Layout from "../components/Layout";
 export default function About() {
 export default function About() {;
   return (
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="About Us - Zion Tech Group"
-
 
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
       <div className="min-h-screen bg-gray-50 py-20">;
@@ -540,21 +451,11 @@ export default function About() {;
           </div>;
         </div>;
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </Layout>;
-
 
   );
 }
-<<<<<<< HEAD
-=======
 
-=======
-
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -601,15 +502,9 @@ export default function About() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 {/* Values Section */}
-=======
 
         {/* Values Section */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -731,12 +626,8 @@ export default function About() {;
       </div>
     </>
   );
-<<<<<<< HEAD
 name: 'Kleber',
-=======
-=======
       name: 'Kleber',
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
       image: '/api/placeholder/150/150',
@@ -857,22 +748,7 @@ export default function AboutPage() {
   )
 
 export default AboutPage;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -903,12 +779,6 @@ function About() {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     <MainLayout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group's mission, values, and team. We're dedicated to delivering cutting-edge technology solutions."
@@ -997,4 +867,3 @@ function About() {
     </MainLayout>
   );
 }
->>>>>>> main

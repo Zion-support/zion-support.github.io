@@ -1,43 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -50,11 +24,6 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
@@ -89,9 +58,6 @@ export function ReferralLink({
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface ReferralLinkProps {;
   referralLink: string,;
   onCopy: () => void,;
@@ -121,9 +87,6 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Input
               value={referralLink}
               readOnly
@@ -256,7 +219,6 @@ function ReferralLink() {
             >;
               <Share className="h - 4 w - 4" />;
 
-=======
             <Button ;
               variant="outline" ;
               size="sm";
@@ -264,28 +226,17 @@ function ReferralLink() {
               onClick={() => onShare('linkedin')}
             >;
               <Share className="h-4 w-4" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               LinkedIn;
             </Button>;
           </div>;
         </div>;
       </CardFooter>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Card>);
 }
 
-=======
-
   )
-=======
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   )
   )
@@ -313,9 +264,6 @@ mt-6"> <CardHeader> <CardTitle className=" flex items-center gap-2"> <Link class
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   )
   )
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

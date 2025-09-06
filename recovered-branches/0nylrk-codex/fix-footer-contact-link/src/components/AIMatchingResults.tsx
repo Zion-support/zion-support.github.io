@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -14,26 +8,18 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface AIMatchingResultsProps {;
   matches: MatchResultItem[],;
   onSelectMatch?: (match: MatchResultItem) => void,;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string;
 }
-<<<<<<< HEAD
-
 
 export function AIMatchingResults(): any ({;
 
-=======
 export function AIMatchingResults(): any ({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   matches;
   onSelectMatch;
 
@@ -42,10 +28,6 @@ export function AIMatchingResults(): any ({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",
 import { MatchResultItem } from "@/lib/ai-matchmaking",
 import { Card, CardContent } from "@/components/ui/card",
@@ -56,24 +38,14 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   isLoading?: boolean;
   projectDescription?: string;
 import { Skeleton } from "@/components/ui/skeleton",
 import { cn } from "@/lib/utils",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   isLoading?: boolean;
   projectDescription?: string;
 interface AIMatchingResultsProps {;
@@ -93,30 +65,18 @@ interface AIMatchingResultsProps {;
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all");
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   serviceType?: string
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
   serviceType?: string
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AIMatchingResults({;
   matches;
   onSelectMatch;
@@ -138,39 +98,22 @@ export function AIMatchingResults({
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState("all"),
-  
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
-=======
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
     if (lowerCategory.includes("equipment")) return Monitor
     return BriefcaseIcon
-<<<<<<< HEAD
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
   
   // Get the icon for a category
@@ -180,11 +123,7 @@ export function AIMatchingResults({
     if (lowerCategory.includes("equipment")) return Monitor,
     return BriefcaseIcon
   },
-  
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -211,10 +150,7 @@ export function AIMatchingResults({
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -240,10 +176,7 @@ export function AIMatchingResults({;
   serviceType: _serviceType = "";
 }: AIMatchingResultsProps) {;
   const [activeTab, setActiveTab] = useState("all"),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   // Group matches by category;
   const categories = {;
     all: matches,;
@@ -261,10 +194,7 @@ export function AIMatchingResults({;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-<<<<<<< HEAD
-=======
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -318,10 +248,7 @@ export function AIMatchingResults({;
   },;
   if (isLoading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="space-y-4">;
         <Skeleton className="h-10 w-full" />;
         <div className="space-y-3">;
@@ -330,18 +257,12 @@ export function AIMatchingResults({;
           <Skeleton className="h-[120px] w-full" />;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
-
 
   if (matches && matches.length === 0) {;
 
     return (
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (matches && matches.length === 0) {;
     return (
     ),;
@@ -351,13 +272,9 @@ export function AIMatchingResults({;
     return (;
     );
   }
-<<<<<<< HEAD
 ;
   if (matches.length === 0) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
         <CardContent className="pt-6">;
           <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
@@ -370,28 +287,12 @@ export function AIMatchingResults({;
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           )}
         </CardContent>;
       </Card>;
     );
   }
-<<<<<<< HEAD
-
-
-  
-
-
-=======
-  
-
 
           )}
         </CardContent>
@@ -399,9 +300,6 @@ export function AIMatchingResults({;
     )
   }
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -421,13 +319,6 @@ export function AIMatchingResults({;
         </TabsList>
         {Object.entries(categories).map(([tab, items]) => (
           <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -527,23 +418,17 @@ if ( {) {
               items.map ((match) => {
                 const CategoryIcon = getCategoryIcon (match.category);
                 return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   return (
-=======
   return (
     ),;
   }
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">;
         <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">;
           <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">;
-<<<<<<< HEAD
             All ({categories && categories.all.length});
           </TabsTrigger>;
           <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">;
@@ -575,7 +460,6 @@ if ( {) {
                         match && match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
 
                         "bg-green-500"
-=======
                         "bg-green-500"
             All ({categories.all.length});
           </TabsTrigger>;
@@ -607,35 +491,24 @@ if ( {) {
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :;
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :;
                         "bg-green-500";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                         "bg-green-500"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       )} />;
                       <div className="flex-1 p-4">;
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                             {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
                             ) : (;
-=======
                             {match.image ? (;
                               <AvatarImage src={match.image} />;
                             ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                             {match && match.image ? (;
                               <AvatarImage src={match && match.image} />;
                             ) : (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               <AvatarFallback className="bg-zion-purple/20">;
                                 <CategoryIcon className="h-6 w-6 text-zion-purple" />;
                               </AvatarFallback>;
                             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                           </Avatar>;
 
@@ -650,7 +523,6 @@ if ( {) {
                                   <div className="font-medium text-white">${match && match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
                                     {match && match.category.toLowerCase().includes("talent") ? "/hour" : ""}
-=======
                           </Avatar>;
                           ;
                           <div className="flex-1">;
@@ -664,12 +536,10 @@ if ( {) {
                                   <div className="font-medium text-white">${match.price}</div>;
                                   <div className="text-xs text-zion-slate-light">;
                                     {match.category.toLowerCase().includes("talent") ? "/hour" :""}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                                   </div>;
                                 </div>;
                               )}
                             </div>;
-<<<<<<< HEAD
 
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
@@ -681,7 +551,6 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
-=======
                   <Card;
                     key={match.id}
                     className="bg - zion - blue - dark border - zion - blue - light overflow - hidden transition - all hover:border - zion - purple / 50 cursor - pointer";
@@ -724,8 +593,6 @@ if ( {) {
                                 <Badge key={i} variant="outline" className="text - xs bg - zion - blue - dark text - white border - zion - blue - light">;
                                   {skill}
                                 </Badge>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                             ;
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">;
@@ -736,19 +603,14 @@ if ( {) {
                                   {skill}
                                 </Badge>;
                               ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                                   {skill}
                                 </Badge>;
                               ))}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             </div>;
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   </Card>);
               })) : (
@@ -759,7 +621,6 @@ if ( {) {
       </Tabs>;
     </div>);
 
-=======
                   </Card>;
                 ),;
               });
@@ -874,7 +735,4 @@ if (isLoading) {
       </Tabs>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }

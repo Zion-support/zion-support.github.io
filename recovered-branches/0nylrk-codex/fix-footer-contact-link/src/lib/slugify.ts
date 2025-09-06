@@ -1,24 +1,15 @@
 
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-=======
-=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-<<<<<<< HEAD
-=======
 
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
@@ -26,15 +17,12 @@ export function slugify(title: string, separator = "-"): string {;
 export function slugify(title: string, separator = "-"): string {
   const sep = separator,
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function slugify(title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return title
     .trim()
@@ -60,26 +48,13 @@ export function unslugify(slug: string, separator = "-"): string {
     .join(" ");
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function slugify (title: string, separator = "-"): string {
   const sep = separator;
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
 
-
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function slugify(title: string, separator = "-"): string {;
   const sep = separator,;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -102,10 +77,6 @@ export function slugify(title: string, separator = "-"): string {;
 */;
 export function unslugify (slug: string, separator = "-"): string {
   return slug;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     .split (separator);
     .filter (Boolean);
@@ -143,23 +114,11 @@ export function slugify(title: string, separator = "-"): string {;
  */;
 export function unslugify(slug: string, separator = "-"): string {;
   return slug;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .split(separator);
     .filter(Boolean);
     .map(w => w.charAt(0).toUpperCase() + w.slice(1));
     .join(" ");
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

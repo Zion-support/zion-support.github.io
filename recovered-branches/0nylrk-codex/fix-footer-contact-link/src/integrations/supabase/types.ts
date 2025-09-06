@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type Json =;
   | string;
@@ -9,7 +7,6 @@ export type Json =;
   | { [key: string]: Json | undefined }
   | Json[];
 
-=======
 export type Json =;
   | string;
   | number;
@@ -23,23 +20,16 @@ export type Json =
   | null
   | { [key: string]: Json | undefined }
   | Json[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type Database = {
   public: {
     Tables: {
       ai_chats: {
         Row: {
-<<<<<<< HEAD
-<<<<<<< HEAD
           created_at: string;
           id: string;
           message: string;
           response: string;
           user_id: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         Insert: {
           created_at?: string;
@@ -147,16 +137,10 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       api_logs: {;
         Row: {;
 
-<<<<<<< HEAD
-=======
           created_at: string
           id: string
           message: string
@@ -307,9 +291,6 @@ export type Database = {
           user_id?: string | null
       api_logs: {;
         Row: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -321,15 +302,9 @@ export type Database = {
           user_agent: string | null;
           user_id: string | null;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Insert: {
-=======
         Insert: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         Insert: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           api_key_id?: string | null;
           created_at?: string;
           endpoint: string;
@@ -341,14 +316,8 @@ export type Database = {
           user_agent?: string | null;
           user_id?: string | null;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Update: {
-=======
         Update: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           api_key_id?: string | null;
           created_at?: string;
           endpoint?: string;
@@ -359,52 +328,35 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
-=======
         }
         Relationships: [
           {
-=======
         }
         Relationships: [;
           {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             foreignKeyName: "api_logs_api_key_id_fkey"
             columns: ["api_key_id"]
             isOneToOne: false
             referencedRelation: "api_keys"
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "api_logs_api_key_id_fkey";
             columns: ["api_key_id"];
             isOneToOne: false;
             referenced_relation: "api_keys";
             referenced_columns: ["id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-            referencedColumns: ["id"]
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
             referencedColumns: ["id"]
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+          }
+
+            referencedColumns: ["id"]
+
             referencedColumns: ["id"];
           };
             referencedColumns: ["id"]
@@ -414,7 +366,6 @@ export type Database = {
         Relationships: [;
           {
           }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -706,9 +657,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             referencedColumns: ["id"];
           };
             referencedColumns: ["id"]
@@ -1010,29 +958,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "fraud_flags_reviewed_by_fkey";
             columns: ["reviewed_by"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+
+          },
+
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -1206,9 +1146,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -1389,27 +1326,17 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           },
 
-
-<<<<<<< HEAD
-=======
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "job_applications_resume_id_fkey"
             columns: ["resume_id"]
             isOneToOne: false
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             foreignKeyName: "job_applications_job_id_fkey";
             columns: ["job_id"];
@@ -1417,9 +1344,7 @@ export type Database = {
             referenced_relation: "jobs";
             referenced_columns: ["id"];
           }
-=======
 
-=======
             foreignKeyName: "job_applications_job_id_fkey";
             columns: ["job_id"];
             isOneToOne: false;
@@ -1427,9 +1352,7 @@ export type Database = {
             referenced_columns: ["id"];
           }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           },
-
 
           {
             foreignKeyName: "job_applications_resume_id_fkey";
@@ -1437,12 +1360,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -1534,9 +1451,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -1634,29 +1548,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "project_milestones"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "milestone_activities_milestone_id_fkey";
             columns: ["milestone_id"];
             isOneToOne: false;
             referenced_relation: "project_milestones";
             referenced_columns: ["id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+
+          },
+
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -1766,7 +1672,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
             foreignKeyName: "partner_payouts_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -1984,8 +1889,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2331,29 +2234,21 @@ export type Database = {
             isOneToOne: true
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "profiles_id_fkey";
             columns: ["id"];
             isOneToOne: true;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+
+          },
+
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -2404,9 +2299,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2464,32 +2356,24 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "project_milestones_created_by_fkey";
             columns: ["created_by"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           }
 
           },
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+          }
+
+          },
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -2497,9 +2381,6 @@ export type Database = {
             referenced_relation: "projects";
             referenced_columns: ["id"];
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2539,29 +2420,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "project_notes_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
             referenced_relation: "projects";
             referenced_columns: ["id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+
+          },
+
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -2612,9 +2485,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2672,37 +2542,23 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           },
 
-
-<<<<<<< HEAD
-=======
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "projects_job_id_fkey"
             columns: ["job_id"]
             isOneToOne: false
             referencedRelation: "jobs"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             foreignKeyName: "projects_client_id_fkey";
             columns: ["client_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           }
           {
@@ -2757,7 +2613,6 @@ export type Database = {
           viewed_at?: string | null;
         }
         Update: {
-<<<<<<< HEAD
           budget_display?: string | null;
           budget_max?: number | null;
           budget_min?: number | null;
@@ -2780,8 +2635,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2863,23 +2716,17 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "quote_requests_requester_id_fkey";
             columns: ["requester_id"];
             isOneToOne: false;
             referenced_relation: "profiles";
             referenced_columns: ["id"];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
 
           },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -2888,14 +2735,10 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
-<<<<<<< HEAD
-
 
       referral_codes: {;
         Row: {;
 
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -2929,51 +2772,29 @@ export type Database = {
           user_id?: string
       referral_codes: {;
         Row: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           code: string;
           created_at: string;
           id: string;
           updated_at: string;
           user_id: string;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Insert: {
-=======
         Insert: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         Insert: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           code: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id: string;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Update: {
-=======
         Update: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           code?: string;
           created_at?: string;
           id?: string;
           updated_at?: string;
           user_id?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         Relationships: [;
           {
@@ -3017,8 +2838,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-=======
         }
         Relationships: [
           {
@@ -3067,30 +2886,18 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           },
 
-
-<<<<<<< HEAD
-=======
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "referral_rewards_referral_id_fkey"
             columns: ["referral_id"]
             isOneToOne: false
             referencedRelation: "referrals"
             referencedColumns: ["id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             foreignKeyName: "referral_rewards_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -3100,16 +2907,12 @@ export type Database = {
 
           },
 
-
           {
             foreignKeyName: "referral_rewards_referral_id_fkey";
             columns: ["referral_id"];
             isOneToOne: false;
             referenced_relation: "referrals";
             referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -3170,9 +2973,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -3239,52 +3039,31 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "partner_profiles"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           },
 
-
-<<<<<<< HEAD
-=======
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "referrals_referral_code_fkey"
             columns: ["referral_code"]
             isOneToOne: false
             referencedRelation: "referral_codes"
             referencedColumns: ["code"]
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
           },
 
-
-=======
           },
-
 
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "referrals_referred_id_fkey"
             columns: ["referred_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             foreignKeyName: "referrals_partner_id_fkey";
             columns: ["partner_id"];
             isOneToOne: false;
@@ -3293,7 +3072,6 @@ export type Database = {
           }
 
           },
-
 
           {
             foreignKeyName: "referrals_referral_code_fkey";
@@ -3308,9 +3086,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -3320,14 +3095,10 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-<<<<<<< HEAD
-
 
       reminder_logs: {;
         Row: {;
 
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -3370,9 +3141,6 @@ export type Database = {
           user_id?: string
       reminder_logs: {;
         Row: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -3382,15 +3150,9 @@ export type Database = {
           sent_at: string | null;
           user_id: string;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Insert: {
-=======
         Insert: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         Insert: {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           clicked_at?: string | null;
           email_body: string;
           email_subject: string;
@@ -3400,14 +3162,8 @@ export type Database = {
           sent_at?: string | null;
           user_id: string;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         Update: {
-=======
         Update: {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           clicked_at?: string | null;
           email_body?: string;
           email_subject?: string;
@@ -3416,14 +3172,7 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         Relationships: [;
           {
@@ -3465,8 +3214,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-=======
         }
         Relationships: [
           {
@@ -3549,29 +3296,21 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "review_reports_reporter_id_fkey";
             columns: ["reporter_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
-<<<<<<< HEAD
 
-          }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           }
 
           },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+          }
+
+          },
+
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -3637,9 +3376,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -3712,30 +3448,18 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "projects"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           },
 
-
-<<<<<<< HEAD
-=======
           }
           },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "reviews_reviewee_id_fkey"
             columns: ["reviewee_id"]
             isOneToOne: false
             referencedRelation: "user_metrics"
             referencedColumns: ["user_id"]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             foreignKeyName: "reviews_project_id_fkey";
             columns: ["project_id"];
             isOneToOne: false;
@@ -3745,16 +3469,12 @@ export type Database = {
 
           },
 
-
           {
             foreignKeyName: "reviews_reviewee_id_fkey";
             columns: ["reviewee_id"];
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -3904,9 +3624,6 @@ export type Database = {
         }
         Relationships: [;
           {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -4062,23 +3779,17 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "whitelabel_tenants"
             referencedColumns: ["id"]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
             foreignKeyName: "tenant_administrators_tenant_id_fkey";
             columns: ["tenant_id"];
             isOneToOne: false;
             referenced_relation: "whitelabel_tenants";
             referenced_columns: ["id"];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           }
 
           },
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -4364,9 +4075,6 @@ export type Database = {
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
           }];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           }
           },
           {
@@ -4654,23 +4362,16 @@ export type Database = {
             referencedRelation: "talent_resumes"
             referencedColumns: ["id"]
           }]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
     Views: {
       conversion_rates: {
         Row: {
-<<<<<<< HEAD
-<<<<<<< HEAD
           conversion_count: number | null;
           conversion_rate: number | null;
           conversion_type: string | null;
           date: string | null;
           view_count: number | null;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
         Relationships: [];
       }
@@ -4707,10 +4408,6 @@ export type Database = {
         Relationships: [];
       }
     }
-<<<<<<< HEAD
-
-
-=======
 
           conversion_count: number | null
           conversion_rate: number | null
@@ -4766,17 +4463,11 @@ export type Database = {
           days_since_login: number
           onboarding_status: Json
         }[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     Functions: {;
       check_users_needing_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: {;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           user_id: string;
           email: string;
           display_name: string;
@@ -4786,14 +4477,7 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -4809,16 +4493,10 @@ export type Database = {
         }
         Returns: string;
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       create_scheduled_reminders: {;
         Args: Record<PropertyKey never>;
-=======
         Args: Record < PropertyKey, never>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         Returns: undefined;
       }
       flag_suspicious_content: {
@@ -4853,45 +4531,27 @@ export type Database = {
       get_current_tenant_id: {
         Args: Record < PropertyKey, never>;
         Returns: string;
-<<<<<<< HEAD
       get_current_tenant_id: {;
         Args: Record<PropertyKey never>;
         Returns: string;
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       get_event_distribution: {
         Args: { days_back?: number }
         Returns: {
-<<<<<<< HEAD
-<<<<<<< HEAD
           date: string;
           event_type: string;
           count: number;
         }[];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       hash_api_key: {
         Args: { api_key: string }
         Returns: string;
       }
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
-=======
         Args: Record < PropertyKey, never>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         Returns: number;
       }
       trigger_resume_scoring: {
@@ -4908,9 +4568,6 @@ export type Database = {
       }
     }
     Enums: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   | { [key:string]:Json | undefined }
   | Json[];
 ;
@@ -7179,24 +6836,15 @@ export type Database = {;
       }
     }
     Enums:{;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       api_key_scope:;
         | "jobs:read";
         | "jobs:write";
         | "talent:read";
         | "quotes:write";
         | "webhooks:manage";
-<<<<<<< HEAD
-<<<<<<< HEAD
       fraud_severity: "safe" | "suspicious" | "dangerous";
-=======
       fraud_severity:"safe" | "suspicious" | "dangerous";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       fraud_severity: "safe" | "suspicious" | "dangerous";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       quote_request_status:;
         | "new";
         | "in_review";
@@ -7204,10 +6852,6 @@ export type Database = {;
         | "responded";
         | "closed";
         | "archived";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       referral_status: "pending" | "completed" | "expired";
     }
     CompositeTypes: {
@@ -7215,18 +6859,12 @@ export type Database = {;
     }
   }
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 type DefaultSchema = Database[Extract < keyof Database, "public">];
 export type Tables<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -7247,12 +6885,8 @@ export type Tables<;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R;
       }
-<<<<<<< HEAD
 
-=======
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
           date: string
           event_type: string
@@ -7312,15 +6946,9 @@ export type Tables<
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-<<<<<<< HEAD
 
-
-=======
     | { schema: keyof Database }
     | { schema: keyof Database },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7339,35 +6967,19 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ? R
       : never
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ? R;
       : never;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -7384,25 +6996,14 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
     | keyof DefaultSchema["Tables"]
 
-
-<<<<<<< HEAD
-=======
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Tables"]
     | { schema: keyof Database }
     | { schema: keyof Database },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7417,35 +7018,19 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ? I
       : never
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       ? I;
       : never;
     : never;
 export type TablesUpdate<;
   DefaultSchemaTableNameOrOptions extends;
     | keyof DefaultSchema["Tables"];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -7462,25 +7047,14 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
     | keyof DefaultSchema["Tables"]
 
-
-<<<<<<< HEAD
-=======
     | keyof DefaultSchema["Tables"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Tables"]
     | { schema: keyof Database }
     | { schema: keyof Database },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -7495,28 +7069,16 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ? U
       : never
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     | keyof DefaultSchema["Enums"];
     | { schema: keyof Database };
     | keyof DefaultSchema["Enums"]
     | { schema: keyof Database }
     | { schema: keyof Database },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
   }
@@ -7655,10 +7217,6 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
         Update: infer U;
       }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       ? U;
       : never;
@@ -7666,13 +7224,7 @@ export type TablesUpdate<;
 export type Enums<;
   DefaultSchemaEnumNameOrOptions extends;
     | keyof DefaultSchema["Enums"];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
@@ -7680,25 +7232,17 @@ export type Enums<;
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
     | keyof DefaultSchema["Enums"]
 
-
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
-=======
     | { schema: keyof Database },;
   EnumName extends DefaultSchemaEnumNameOrOptions extends {;
     schema: keyof Database;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -7706,8 +7250,6 @@ export type Enums<;
 export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
@@ -7715,12 +7257,7 @@ export type CompositeTypes<
 export type CompositeTypes<;
   PublicCompositeTypeNameOrOptions extends;
     | keyof DefaultSchema["CompositeTypes"];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -7728,42 +7265,27 @@ export type CompositeTypes<;
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
     | keyof DefaultSchema["CompositeTypes"]
 
-
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
-=======
     | { schema: keyof Database },;
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {;
     schema: keyof Database;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
     : never
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
     : never;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const Constants = {
   public: {
     Enums: {
@@ -7780,31 +7302,20 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 
 ;
-=======
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const Constants = {
   public: {
     Enums: {
 
       api_key_scope: [
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         "archived"],
       referral_status: ["pending", "completed", "expired"]}}} as const;
 ;
@@ -7938,7 +7449,4 @@ export const Constants = {;
         "closed",;
         "archived"];
       referral_status: ["pending", "completed", "expired"]}}} as const;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

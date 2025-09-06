@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-<<<<<<< HEAD
   title: 'AI-Powered Project Management Platform | Zion Tech Group',
   description: 'Intelligent project management with AI task prioritization, resource optimization, risk prediction, and automated reporting. Increase team productivity by 50% with smart project insights.',
   keywords: 'AI project management, task automation, resource optimization, project analytics, team productivity, smart scheduling'
@@ -276,7 +275,6 @@ function FeatureCard({ icon, title, description, benefits }: {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
-=======
   title: 'AI Project Management Platform | Zion Tech Group',
   description: 'Intelligent project management with AI-driven task prioritization, resource optimization, and predictive analytics. Increase team productivity by 45% with smart automation.',
   keywords: 'AI project management, task automation, resource optimization, team productivity, project analytics, smart scheduling'
@@ -293,7 +291,6 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
       <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2">
@@ -308,7 +305,6 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
   );
 }
 
-<<<<<<< HEAD
 function PricingCard({ name, price, period, description, features, popular }: {
   name: string;
   price: string;
@@ -319,7 +315,6 @@ function PricingCard({ name, price, period, description, features, popular }: {
 }) {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
-=======
 function PricingTier({ 
   name, 
   price, 
@@ -337,7 +332,6 @@ function PricingTier({
 }) {
   return (
     <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -377,7 +371,6 @@ function PricingTier({
   );
 }
 
-<<<<<<< HEAD
 function CaseStudy({ company, industry, result, description, metrics }: {
   company: string;
   industry: string;
@@ -406,7 +399,6 @@ function CaseStudy({ company, industry, result, description, metrics }: {
           ))}
         </div>
       </div>
-=======
 export default function AIProjectManagementPage() {
   return (
     <div className="space-y-16">
@@ -733,7 +725,6 @@ export default function AIProjectManagementPage() {
           <p>📧 kleber@ziontechgroup.com</p>
         </div>
       </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
     </div>
   );
 }

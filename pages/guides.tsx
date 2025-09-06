@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -21,18 +19,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-=======
-
 
   return (
     <Layout>;
@@ -82,7 +73,6 @@ import Layout from "./components/Layout";
           </div>;
         </section>;
 
-
         {/* Categories Section */}
         <section id="categories" className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -123,7 +113,6 @@ import Layout from "./components/Layout";
             </div>;
           </div>;
         </section>;
-
 
         {/* Guides Grid */}
         <section id="guides" className="py-16 bg-gray-50">;
@@ -175,18 +164,12 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-=======
 
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
-
-
 
 import {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   BookOpen,
   Clock,
   User,
@@ -686,8 +669,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         }`}
                       >
                         {guide.difficulty}
-<<<<<<< HEAD
-=======
 
                         }`}>;
                         {guide && guide.difficulty}
@@ -714,7 +695,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                         <div className="flex items-center">;
                           {[...Array(5)].map((_, i) => (;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -723,8 +703,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                               fill="currentColor"
                             />;
                           ))}
-<<<<<<< HEAD
-=======
 
                         </div>;
                         <span className="ml-2 text-sm text-gray-600">;
@@ -735,20 +713,16 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {guide && guide.tags.map((tag) => (;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <span
                           key={tag}
                           className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">;
                           {tag}
                         </span>;
                       ))}
-<<<<<<< HEAD
-=======
 
                     </div>;
                     <div className="flex gap-2">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <Link
                         href="#"
                         className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center inline-flex items-center justify-center">;
@@ -764,15 +738,11 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
 
             </div>;
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -796,13 +766,9 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                 </Link>;
                 <Link
                   href="/contact"
-<<<<<<< HEAD
 import Layout from '../components/Layout';
 
-=======
-
 import Layout from '../components/Layout';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function GuidesPage() {
   
     >
@@ -819,16 +785,7 @@ export default function GuidesPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </Layout>
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
@@ -840,18 +797,7 @@ export default function GuidesPage() {
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </Layout>;
   );
                       </span>;
@@ -958,7 +904,6 @@ export default function GuidesPage() {
       </div>;
     </Layout>);
 }
-=======
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -978,4 +923,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

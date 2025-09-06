@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
@@ -8,9 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-=======
-
-
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -18,13 +14,10 @@ function summarizeModules(
   const active = [
     ...Object && Object.entries(modules)
       .filter(([, v]) => v)
-<<<<<<< HEAD
-=======
 
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -45,12 +38,9 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
 
-=======
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
     ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
@@ -66,8 +56,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   try {
 
@@ -86,7 +74,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     } = body;
 
-
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
@@ -95,13 +82,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
-<<<<<<< HEAD
-=======
 
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const outputActions = {
       zionGPT: {
         initialized: true
@@ -190,8 +173,6 @@ if ( {) {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
-<<<<<<< HEAD
-=======
 
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
@@ -199,7 +180,6 @@ if ( {) {
         summit: "/summit",
       },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       publicPages: [
         "/about"
         "/manifesto"
@@ -250,18 +230,14 @@ if ( {) {
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
-<<<<<<< HEAD
       operator,
       access,
     });
-
-=======
 
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
     };
-
 
       operator,
       access,
@@ -270,7 +246,6 @@ if ( {) {
 
     return res && res.status(500).json({ error: err && err.message || "Internal error" });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
       version: 'Zion OS v1.0.0'};
@@ -285,18 +260,11 @@ if ( {) {
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
     return res.status (500).json ({ error: err.message || "Internal error" });
-=======
-<<<<<<< HEAD
     return res.status(500).json({ error: err.message |"Internal error" });
-=======
     return res.status(500).json({ error: err.message || "Internal error" });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -331,19 +299,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
   try {
     const body = req.body || {};
     const {
       instanceName,
-<<<<<<< HEAD
       tokenActivation
     } = body;
 
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
     
-=======
       defaultLanguage,
       deploymentRegion,
       tokenActivation,
@@ -384,7 +349,6 @@ export default async function handler(req, res) {
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     const outputActions = {
       zionGPT: {
         initialized: true,
@@ -407,7 +371,6 @@ export default async function handler(req, res) {
       },
       publicPages: []
     };
-<<<<<<< HEAD
 
     res.status(200).json({
       success: true,
@@ -421,7 +384,6 @@ export default async function handler(req, res) {
     return;
   }
 }
-=======
     res.status(200).json({
       success: true,
       provisionId,
@@ -572,12 +534,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

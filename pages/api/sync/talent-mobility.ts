@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -7,8 +6,6 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -16,14 +13,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
-<<<<<<< HEAD
-=======
 
   };
   if (!personId || !fromNation || !toNation || !role || !startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -31,7 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
-<<<<<<< HEAD
     eventId: uuidv4()
     type: "talent_mobility" as const
     payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
@@ -50,10 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     originInstanceId: state.config.instanceId,
     version,
     timestamp: Date.now()},
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 
   upsertEvent(state, event);
   writeState(state);
@@ -63,10 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)

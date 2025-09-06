@@ -15,10 +15,8 @@ export default function Profile() {
       navigate("/login?redirect=/profile");
     }
   }, [user, isLoading, navigate]);
-<<<<<<< HEAD
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <>
         <Header />
@@ -29,7 +27,6 @@ export default function Profile() {
       </>
     );
   }
-
 
   if (!user) {;
     return (
@@ -98,10 +95,7 @@ export default function Profile() {
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -116,7 +110,6 @@ export default function Profile() {;
     if (!isLoading && !user) {;
       toast.error("Please log in to view your profile"),;
       navigate("/login?redirect=/profile");
-<<<<<<< HEAD
 
     }
   }, [user, is_loading, navigate]);
@@ -148,7 +141,6 @@ if ( {) {
             <Button;
               on_click={() => navigate ("/login?redirect=/profile")}
               className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
-=======
     }
   }, [user, isLoading, navigate]);
   if (isLoading) {;
@@ -174,14 +166,12 @@ if ( {) {
             <Button;
               onClick={() => navigate("/login?redirect=/profile")}
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             >;
               Go to Login;
             </Button>;
           </div>;
         </div>;
         <Footer />;
-<<<<<<< HEAD
       </>);
   }
   return (
@@ -207,8 +197,6 @@ if ( {) {
                   }}
                   variant="outline";
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                   {user.displayName ? user.displayName.split(' ').map(name => name[0]).join('') :user.email?.charAt(0)}
       </>;
     );
@@ -237,9 +225,6 @@ if ( {) {
                   }}
                   variant="outline";
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Logout;
                 </Button>;
@@ -249,18 +234,12 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ); export default function Profile () {
   const {
@@ -282,6 +261,3 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-cente
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

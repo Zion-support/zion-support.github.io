@@ -46,15 +46,10 @@ export default function AIMatcherPage() {
       }));
   };
 
-<<<<<<< HEAD
-=======
   }
 
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Header />
@@ -96,9 +91,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             <AIMatchmaker 
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
 import { useState } from "react",;
@@ -110,7 +102,6 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
@@ -174,10 +165,6 @@ if (|| category === "hardware") {) {
             <AIMatchmaker;
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             ;
             <AIMatchmaker ;
               serviceType={selectedCategory === "all" ? "" :selectedCategory}
@@ -185,25 +172,15 @@ if (|| category === "hardware") {) {
             <AIMatchmaker;
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
           </div>;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; const handleMatchSelect = (match: MatchResult) => {
   //Get the item type from the category //Navigate to the quote request page with the selected item navigate ("/request-quote", {
@@ -211,7 +188,6 @@ if (|| category === "hardware") {) {
   serviceType: itemType;
 specificItem: match.item 
 }
-
 
 }) 
 };
@@ -222,6 +198,3 @@ min-h-screen bg-zion-blue py-12 px-4"> <div className=" container mx-auto"> <div
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

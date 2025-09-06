@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface AmlMatch {
   list: string;
   name: string;
@@ -36,8 +35,6 @@ let provider: AmlProvider = new MockAmlProvider();
 
 export type { AmlProvider, AmlResult, AmlMatch };
 export { provider };
-=======
-<<<<<<< HEAD
 export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
   name: string;
@@ -106,12 +103,6 @@ export function getAmlProvider(): AmlProvider {
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
-=======
-
-
-
-
-=======
 
 // Singleton instance
 export const amlManager = new AmlManager();
@@ -164,14 +155,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

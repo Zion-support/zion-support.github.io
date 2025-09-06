@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   className?: string;
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
 import { cn } from '@/lib / utils';
-
 
 interface AppStoreButtonsProps {
   class_name?: string;
@@ -14,42 +10,30 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
 interface AppStoreButtonsProps {;
 
   className?: string;
-=======
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
 import { cn } from '@/lib / utils';
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface AppStoreButtonsProps {
   class_name?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   appStoreUrl?: string;
   googlePlayUrl?: string;
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
 
-
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 
-=======
-=======
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Apple, GithubIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -71,19 +55,12 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
-<<<<<<< HEAD
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   onAppStoreClick
   onGooglePlayClick
 }) => {
@@ -127,7 +104,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   className;
   appStoreUrl = "#";
   googlePlayUrl = "#";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   onAppStoreClick,;
   onGooglePlayClick;
 }) => {;
@@ -138,26 +114,15 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       onAppStoreClick?.();
     }
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleGooglePlayClick = (e: React && React.MouseEvent<HTMLAnchorElement>) => {;
     if (!googlePlayUrl || googlePlayUrl === "#") {;
       e && e.preventDefault();
       console && console.log("Google Play download clicked"),;
       onGooglePlayClick?.();
 
-<<<<<<< HEAD
     }
   }
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
@@ -182,37 +147,19 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <div className="text-xl font-semibold">App Store</div>
         </div>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
 
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </Link>
-
 
       <a 
         href={googlePlayUrl} 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       </a>
       <a
         href={googlePlayUrl}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </Link>
 
       <a 
         href={googlePlayUrl} 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -232,18 +179,11 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           <div className="text-xs">GET IT ON</div>
           <div className="text-xl font-semibold">Google Play</div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </a>
     </div>
   )
 
-=======
-
 };
-
-=======
-=======
 
 };
 
@@ -253,9 +193,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -267,7 +204,6 @@ interface AppStoreButtonsProps {;
   onAppStoreClick?: () => void,;
   onGooglePlayClick?: () => void;
 }
-<<<<<<< HEAD
 ;
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
   className,;
@@ -291,13 +227,10 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
     }
   };
   return (;
-<<<<<<< HEAD
 
-=======
     }
   }
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
         href={appStoreUrl} 
@@ -305,8 +238,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
         onClick={handleAppStoreClick}
         target="_blank"
         rel="noopener noreferrer">;
-<<<<<<< HEAD
-=======
 
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
@@ -354,14 +285,12 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
         target="_blank";
         rel="noopener noreferrer";
       >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Apple className="h-8 w-8 mr-3" />;
         <div>;
           <div className="text-xs">Download on the</div>;
           <div className="text-xl font-semibold">App Store</div>;
         </div>;
       </a>;
-<<<<<<< HEAD
 
       <a
         href={googlePlayUrl} 
@@ -377,7 +306,6 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
           <path d="M19 && M19.0261 9 && 9.88815L5.88954 2 && 2.49333C5.81156 2 && 2.44681 5 && 5.72164 2 && 2.42791 5 && 5.63326 2 && 2.43864C5.54462 2 && 2.44905 5 && 5.46167 2 && 2.48954 5 && 5.39685 2 && 2.55272L9.15586 7 && 7.91327L19.0261 9 && 9.88815Z" fill="white" />;
           <path d="M19 && M19.1546 10 && 10.648C19.2181 10 && 10.5731 19 && 19.2584 10 && 10.4814 19 && 19.2703 10 && 10.3838C19.2823 10 && 10.2863 19 && 19.2655 10 && 10.1876 19 && 19.2221 10 && 10.0995C19.1789 10 && 10.0116 19 && 19.1105 9 && 9.93801 19 && 19.0263 9 && 9.88803L9.15613 7 && 7.91315L6.5082 11 && 11.2062L19.1546 10 && 10.648Z" fill="white" />;
           <path d="M5 && M5.14551 14 && 14.7177C5.11404 14 && 14.8045 5 && 5.10804 14 && 14.898 5 && 5.12834 14 && 14.9875C5.14865 15 && 15.0768 5 && 5.19447 15 && 15.1582 5 && 5.2608 15 && 15.2235C5.32714 15 && 15.2887 5 && 5.4115 15 && 15.3351 5 && 5.50418 15 && 15.3575C5.59685 15 && 15.3796 5 && 5.69396 15 && 15.3768 5 && 5.78534 15 && 15.3491L18.9141 10 && 10.8053L6.5082 11 && 11.2062L5.14551 14 && 14.7177Z" fill="white" />;
-=======
 ;
       <a ;
       <a;
@@ -396,7 +324,6 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
           <path d="M19.0261 9.88815L5.88954 2.49333C5.81156 2.44681 5.72164 2.42791 5.63326 2.43864C5.54462 2.44905 5.46167 2.48954 5.39685 2.55272L9.15586 7.91327L19.0261 9.88815Z" fill="white" />;
           <path d="M19.1546 10.648C19.2181 10.5731 19.2584 10.4814 19.2703 10.3838C19.2823 10.2863 19.2655 10.1876 19.2221 10.0995C19.1789 10.0116 19.1105 9.93801 19.0263 9.88803L9.15613 7.91315L6.5082 11.2062L19.1546 10.648Z" fill="white" />;
           <path d="M5.14551 14.7177C5.11404 14.8045 5.10804 14.898 5.12834 14.9875C5.14865 15.0768 5.19447 15.1582 5.2608 15.2235C5.32714 15.2887 5.4115 15.3351 5.50418 15.3575C5.59685 15.3796 5.69396 15.3768 5.78534 15.3491L18.9141 10.8053L6.5082 11.2062L5.14551 14.7177Z" fill="white" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         </svg>;
         <div>;
           <div className="text-xs">GET IT ON</div>;
@@ -405,16 +332,11 @@ export const AppStoreButtons:React.FC<AppStoreButtonsProps> = ({ ;
       </a>;
     </div>;
   );
-<<<<<<< HEAD
 };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -484,19 +406,10 @@ if ( {) {
     </div>);
 }
 ;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 export default AppStoreButtons;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default AppStoreButtons;
-
 
 },; interface AppStoreButtonsProps {
   className?: string;
@@ -517,6 +430,3 @@ onAppStoreClick?. () h-8 w-8 mr-3"/> <div> <div className=" text-xs">Download on
 };
 
 export default AppStoreButtons;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

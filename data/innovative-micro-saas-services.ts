@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -46,18 +45,11 @@
     mobile: string;
     email: string;
     address: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -837,29 +829,22 @@
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.'
     launchDate: '2024-01-01'
     customers: 8
     rating: 4.9
     reviews: 6
-<<<<<<< HEAD
-=======
-=======
       'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.',
     launchDate: '2024-01-01',
     customers: 8,
     rating: 4.9,
     reviews: 6,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   },];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
     realImplementation: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     implementationDetails: 'Advanced autonomous vehicle platform with quantum AI, real-time processing, and comprehensive safety protocols. Includes fleet management and performance analytics.';
     launchDate: '2024-01-01';
     customers: 8;
@@ -870,7 +855,6 @@
 // New Innovative Micro-SaaS Services
 export const newInnovativeServices = [
   {
-<<<<<<< HEAD
       'Complete space mission control platform with AI integration and real-time operations'
     launchDate: '2024-08-01'
     customers: 12
@@ -948,13 +932,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     period: '/month',;
     description: 'Revolutionary brain-computer interface powered by quantum AI, enabling direct neural communication, cognitive enhancement, and unprecedented human-AI symbiosis.',;
 
-=======
-
-
   {
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - internet - security - platform',
     name: 'Quantum Internet Security Platform',
     tagline: 'Unhackable quantum - secured internet infrastructure',
@@ -978,10 +957,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     popular: true,
     icon: '🌐',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - internet - security - platform',
@@ -1033,17 +1008,12 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     rating: 4 && 4.8,
     reviews: 12,
   },
-<<<<<<< HEAD
   {
 
       'AI-powered production planning',
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'AI-powered production planning',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'ai - powered - autonomous - manufacturing',
     name: 'AI - Powered Autonomous Manufacturing',
     tagline: 'Fully autonomous manufacturing with AI optimization',
@@ -1067,10 +1037,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     popular: true,
     icon: '🏭',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - autonomous - manufacturing',
@@ -1128,10 +1094,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
   },
   {
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered financial trading with predictive analytics',
@@ -1153,11 +1115,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       '24 / 7 trading operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading - platform',
@@ -1200,7 +1159,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     variant: 'quantum - financial',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1215,10 +1173,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     reviews: 15,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'space - technology - mission - control',
     name: 'Space Technology Mission Control',
     tagline: 'Complete space mission management and satellite operations',
@@ -1228,7 +1183,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       'Comprehensive space mission control platform for satellite operations, mission planning, and space exploration. Manage multiple missions simultaneously with AI assistance.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite mission control',
       'Orbital mechanics calculation',
       'Mission planning and optimization',
@@ -1241,11 +1195,8 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
       '24 / 7 mission support',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🚀',
 
-=======
     color: 'from - blue - 600 to - purple - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / space - technology - mission - control',
@@ -1288,7 +1239,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     variant: 'quantum - space',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1301,10 +1251,7 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [;
     customers: 12,
     rating: 4 && 4.9,
     reviews: 6,
-<<<<<<< HEAD
-=======
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
 
@@ -2940,12 +2887,6 @@ export const newInnovativeServices = [
   }
 ];
 ;
-<<<<<<< HEAD
-=======
-
-=======
 
 export interface InnovativeMicroSaasService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

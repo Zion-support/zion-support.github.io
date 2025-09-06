@@ -75,7 +75,6 @@ export default function VideoCall() {;
     isScreenSharing?: boolean,;
     isHost?: boolean;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: string,
     name: string,
     avatar?: string
@@ -90,12 +89,8 @@ export default function VideoCall() {;
       isVideoEnabled: true,;
       isMuted: false;
     }
-<<<<<<< HEAD
 
-
-=======
   ]),
-=======
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -105,7 +100,6 @@ export default function VideoCall() {;
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleJoinCall = () => {
     setIsJoining(true),
@@ -117,13 +111,9 @@ export default function VideoCall() {;
         description: `You have joined meeting room ${roomId}`
       })
     }, 1500)
-<<<<<<< HEAD
-
 
   ]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleJoinCall = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsJoining(true);
     // Simulate connection delay;
     setTimeout(() => {;
@@ -134,26 +124,17 @@ export default function VideoCall() {;
       });
     }, 1500);
   };
-<<<<<<< HEAD
 
   const handleLeaveCall = () => {;
 
-=======
   const handleLeaveCall = () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
-<<<<<<< HEAD
 
-
-=======
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
 
   const handleLeaveCall = () => {
@@ -243,7 +224,6 @@ export default function VideoCall() {;
   );
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -252,7 +232,6 @@ export default function VideoCall() {;
   ]);
 ;
 ;
-<<<<<<< HEAD
   const handleLeaveCall = () =>: any {
     setHasJoined (false);
     toast.info ("Call ended", {
@@ -317,11 +296,8 @@ export default function VideoCall() {;
       </main>;
       <Footer />;
     </>);
-<<<<<<< HEAD
 }
 
-=======
-=======
   ),; roomId 
 }` 
 }) 
@@ -349,7 +325,6 @@ toast (`$ {
 }joined the call`) 
 }
 ;
-
 
 ;
 
@@ -388,14 +363,6 @@ return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom room
     </>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 ;
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

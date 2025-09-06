@@ -24,11 +24,8 @@
       '24 / 7 quantum space operations center',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🛰️',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - space - communications',
@@ -42,7 +39,6 @@
     real_service: true,
     technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum communication',
       'Satellite technology',
       'React',
@@ -52,10 +48,7 @@
       'AWS',
       'Custom quantum hardware',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'Satellite systems',
       'Ground stations',
@@ -82,7 +75,6 @@
     variant: 'quantum - space',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -97,8 +89,6 @@
     reviews: 12,
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI-powered drug molecule design',
     id: 'ai - biotech - drug - discovery',
@@ -111,7 +101,6 @@
     features: [;
       'AI - powered drug molecule design',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum computing drug simulation',
       'Predictive drug efficacy modeling',
       'Automated clinical trial design',
@@ -123,11 +112,8 @@
       '24 / 7 AI drug discovery operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🧬',
 
-=======
     color: 'from - green - 600 to - blue - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - biotech - drug - discovery',
@@ -141,7 +127,6 @@
     real_service: true,
     technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI algorithms',
       'Quantum computing',
       'Machine learning',
@@ -152,10 +137,7 @@
       'AWS',
       'Biotech tools',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'Lab equipment',
       'Research databases',
@@ -174,20 +156,16 @@
     roi: 'Pharmaceutical companies report 1000% ROI through accelerated drug discovery and reduced development costs.',
     competitors: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Traditional drug discovery',
       'Basic AI drug tools',
       'Manual research methods',
     ],
-<<<<<<< HEAD
-=======
 
     market_size: '$1.5T pharmaceutical market, AI segment growing 600% annually',
     growth_rate: '600% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -202,8 +180,6 @@
     reviews: 6,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24/7 production with 99 && 99.99% efficiency and zero downtime.',
     features: [
@@ -216,7 +192,6 @@
       'Revolutionary autonomous AI factory platform that operates manufacturing facilities without human intervention. Achieves 24 / 7 production with 99.99% efficiency and zero downtime.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Fully autonomous manufacturing',
       'AI - powered quality control',
       'Predictive maintenance automation',
@@ -229,11 +204,8 @@
       '24 / 7 autonomous operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🏭',
 
-=======
     color: 'from - orange - 600 to - red - 700',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / autonomous - ai - factory',
@@ -247,7 +219,6 @@
     real_service: true,
     technology: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI algorithms',
       'Robotics',
       'IoT sensors',
@@ -258,10 +229,7 @@
       'AWS',
       'Manufacturing systems',
     ],
-<<<<<<< HEAD
-=======
 
-=======
     integrations: [;
       'ERP systems',
       'MES systems',
@@ -289,7 +257,6 @@
     variant: 'ai - futuristic',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -354,18 +321,14 @@
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   reviews: number
 }
 
 export const emergingTechServices: EmergingTechService[] = [
   // Quantum Internet & Communication Services
   {
-<<<<<<< HEAD
-=======
 
     id: 'quantum-internet-security-platform', name: 'Quantum Internet Security Platform',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     tagline: 'Unhackable quantum-secured internet infrastructure',
     price: '$12,999',
     period: '/month',
@@ -472,23 +435,15 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35;
     rating: 4.8,
     reviews: 28;
-<<<<<<< HEAD
-=======
 
   }
-
-=======
 
 export interface EmergingTechService {;
 
   }
 
 ];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
-=======
     realImplementation: true
     implementationDetails:
       'Fully functional AI robotics platform with computer vision, predictive maintenance, and multi-robot coordination. Includes robotic operations center and 24/7 support.'
@@ -1244,24 +1199,18 @@ export interface EmergingTechService {;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
     launchDate: '2024-09-01'
     customers: 35
     rating: 4.8
     reviews: 28
   }
-=======
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01',
     customers: 35,
     rating: 4.8,
     reviews: 28,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1274,17 +1223,9 @@ export interface EmergingTechService {;
     rating: 4.8
 
     reviews: 28
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   }
 ];
-=======
 export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string,;
   name: string,;
   tagline: string,;
@@ -1806,7 +1747,6 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
 
   }
 ];
@@ -2084,13 +2024,5 @@ export const emergingTechServices: EmergingTechService[] = [
     reviews: 28;
   }
 ;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

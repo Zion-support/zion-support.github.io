@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 const Dashboard: NextPage = () => {
   return (
@@ -20,9 +10,6 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
@@ -30,12 +17,6 @@ const Dashboard: NextPage = () => {
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
 
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -52,11 +33,6 @@ const Dashboard: NextPage = () => {
   }
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
@@ -66,8 +42,6 @@ const Dashboard: NextPage = () => {
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           icon={<span>🧰</span>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -83,15 +57,11 @@ const Dashboard: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         />
       </section>
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       </section>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section>
         <h2 className="text-lg font-semibold mb-2">Messages</h2>
         <EmptyState
@@ -107,13 +77,6 @@ const Dashboard: NextPage = () => {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -134,9 +97,7 @@ const Dashboard: NextPage = () => {
           secondary_action={{ label: 'Explore talent', href: '/talent' }}
         />;
       </section>;
-<<<<<<< HEAD
 
-=======
         <h2 className=&quot;text-lg font-semibold mb-2&quot;>Messages</h2>
         <EmptyState
           title=&quot;No messages yet&quot;
@@ -176,12 +137,7 @@ export default Dashboard,;
 }
         />;
       </section>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
 import type { NextPage } from 'next',
 import Head from 'next / head',
 import EmptyState from '../../components / ui / EmptyState',
@@ -203,23 +159,8 @@ const Dashboard: NextPage = () => {
         />;
       </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
 },;
 export default Dashboard;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

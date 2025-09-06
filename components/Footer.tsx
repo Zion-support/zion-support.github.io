@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -270,7 +269,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
           {/* Services */}
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -317,11 +315,9 @@ export default function Footer() {
             </div>
           </div>
           
->>>>>>> main
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-<<<<<<< HEAD
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                     className="text-gray-300 hover:text-white transition-colors"
@@ -329,8 +325,6 @@ export default function Footer() {
                     {link.name}
                   </Link>
                 </li>
-
-
 
             <h3 className="text-lg font-semibold mb-6>Services</h3>
             <div className="space-y-4">
@@ -385,14 +379,12 @@ export default function Footer() {
             </ul>;
           </div>;
 
-
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
             <ul className="space-y-2">;
               {footerLinks && footerLinks.solutions.map((link) => (;
                 <li key={link && link.name}>;
-
 
           {/* Solutions */}
           <div>
@@ -427,7 +419,6 @@ export default function Footer() {
             </ul>;
           </div>;
 
-
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -450,8 +441,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-
-
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
@@ -531,7 +520,6 @@ export default function Footer() {
                     <social.icon className=h-5 w-5" />
                   </a>
                 ))}
-=======
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</Link></li>
@@ -553,12 +541,10 @@ export default function Footer() {
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
->>>>>>> main
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 mt-8 pt-8>
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -590,7 +576,6 @@ export default function Footer() {
                 Terms of Service;
               </Link>;
               <Link
-=======
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
@@ -599,4 +584,3 @@ export default function Footer() {
     </footer>
   );
 }
->>>>>>> main

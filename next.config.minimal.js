@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
-<<<<<<< HEAD
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -23,29 +16,19 @@ const next_config = {
 module.exports = next_config;
 ;
 
-=======
-
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   trailingSlash: false,
   distDir: '.next',
 };
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: "standalone",
   trailingSlash: false,
-<<<<<<< HEAD
   distDir: '.next',
 };
 /** @type {import('next').NextConfig} */;
@@ -68,10 +51,8 @@ module.exports = nextConfig;};
 export default nextConfig;
 const nextConfig = {,
   reactStrictMode: true,
-=======
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
@@ -96,13 +77,10 @@ const nextConfig = {
       };
     }
     return config;
-=======
->>>>>>> main
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
-<<<<<<< HEAD
   pageExtensions: ['tsxtsjsxjs'],
   trailingSlash: true,
   // Image optimization,
@@ -184,19 +162,12 @@ module.exports = nextConfig;
 
 module.exports = nextConfig;
 module.exports = nextConfig;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 module.exports = nextConfig;
 module.exports = nextConfig;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   distDir: ".next",
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
   
@@ -287,9 +258,7 @@ module.exports = nextConfig;
         permanent: true,
       },
     ];
->>>>>>> 380d5be269a380502c5b88f5cbeaaaacd40bbf12
   }
 };
 
 export default nextConfig;
->>>>>>> main

@@ -1,37 +1,21 @@
 if (!id) return;
       try {;
-        const res = await fetch(`/api/products/${id}`);
-
-
-
-
+        const res = await fetch(`/api/products/${id}`);`
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
+        logErrorToProduction('Error fetching product', { data: err })'
       }
-
-
     };
-
-
-
-    // Only fetch if id is available (from router)
+    // Only fetch if id is available (from,  router)
     if (id) {
       fetchProduct();
-
-
-
-
     }
-
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
-
     return <div className="p-6 text-white">Loading product details...</div>;
   }
   if (!product) {
-
         if (res && res.ok) {;
           const data = await res && res.json();
           setProduct(data);
@@ -41,17 +25,13 @@ if (!id) return;
         logErrorToProduction('Error fetching product', { data: err });
       }
     };
-
-    // Only fetch if id is available (from router);
+    // Only fetch if id is available (from,  router);
     if (id) {;
       fetchProduct();
     }
   }, [id]), // id is now from router && router.query;
-
-
-    return <div className="p-6 text-white">Product not found</div>
+    return <div className="p-6 text-white">Product not found</div>"
   }, [id]), // id is now from router.query;
-
   if (!product && !id) { // If no id from router yet, it might still be loading;
     return <div className="p-6 text-white">Loading product details...</div>;
   }
@@ -68,67 +48,54 @@ if (!id) return;
       type: 'ADD_ITEM',;
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
     });
-    toast && toast.success(`1× ${product && product.title} added`);
+    toast && toast.success(`1× ${product && product.title} added`);`
     setTimeout(() => setAdding(false), 500);
   };
     setTimeout(() => setAdding(false), 500)
   }
-
   return (
     <>;
       <SEO
-
-
-
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
-        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+      <div className="min-h-screen bg-zion-blue p-6 text-white">"
+        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>"
         {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64">
-            <Image
-
-              src = {product.images[0] |'/placeholder.svg',}
-              alt = {product.title,}
-
-
-              src={product.images[0] || '/placeholder.svg'}
+          <div className="mb-4 relative w-full h-64">"
+            <Image,
+              src = {product.images[0] |'/placeholder.svg',}'
+              alt = {product.title,},
+              src={product.images[0] || '/placeholder.svg'}'
               alt={product.title}
-
-              className="object-cover rounded-md"
+              className="object-cover rounded-md""
             />
           </div>
         ) : null}
-        <p className="mb-6">{product.description}</p>
-
+        <p className="mb-6">{product.description}</p>"
         title = {product && product.title,}
-        description = {product && product.description,}
+        description = {product && product.description,},
         ogImage = {product && product.images?.[0],}
       />;
       <div className="min-h-screen bg-zion-blue p-6 text-white">;
         <h1 className="text-2xl font-bold mb-4">{product && product.title}</h1>;
         {product && product.images?.length ? (;
           <div className="mb-4 relative w-full h-64">;
-            <Image
-              src = {product && product.images[0] || '/placeholder && placeholder.svg',}
+            <Image,
+              src = {product && product.images[0] || '/placeholder && placeholder.svg',}'
               alt = {product && product.title,}
-              className="object-cover rounded-md"
+              className="object-cover rounded-md""
             />;
           </div>;
         ) : null}
         <p className="mb-6">{product && product.description}</p>;
         <Button onClick={handleAdd} disabled={adding || inCart}>;
-
-          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}'
         </Button>;
       </div>;
     </>;
   );
-
 }
-//Only fetch if id is available (from router) ;
-
+//Only fetch if id is available (from,  router) ;
 }
-
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
 import {NEW_PRODUCTS} from '@/data / newProductsData';
@@ -145,7 +112,7 @@ function ProductPage() {
   const id = typeof raw_id === 'string' ? raw_id : undefined;
   const [product, set_product] = useState (
     NEW_PRODUCTS.find ((p) => p.id === id) || null);
-  const { items, dispatch } = use_cart ();
+  const { items, dispatch } = use_cart ();,
   const [adding, set_adding] = useState (false);
   useEffect (() => {
     // Update product if id changes and is available from router.query;
@@ -154,9 +121,9 @@ if ( {) {
   $2
 }
       const found_product = NEW_PRODUCTS.find ((p) => p.id === id);
-      set_product (found_product || null);
+      set_product (found_product ||,  null);
     }
-  }, [id]);
+  }, [id]);,
 ;
         </Button>;
       </div>;
@@ -165,7 +132,7 @@ if ( {) {
 }
 ;
 }
-//Only fetch if id is available (from router) ;
+//Only fetch if id is available (from,  router) ;
 }const in_cart = items.some (index => i.id === product.id);
 const handle_add = () =>: any {
   // Check condition
@@ -174,21 +141,21 @@ if (return) {
 }
 set_adding (true);
 dispatch ({
-  type: 'ADD ITEM';
-payload: {
+  type: 'ADD ITEM';',
+payload: {,
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
 ;
 });
-toast.success (`1× $ {
+toast.success (`1× $ {`
   product.title ;
-}added`);
+}added`);`
 set_timeout ( () => set_adding (false), 500) ;
 }
 product.title ;
 }description= {
   product.description ;
 }og_image= {
-  product.images?.[0] ;
+  product.images?.[0] ;,
 }/> </Button> </div> </>) ;
 }';
 }

@@ -12,18 +12,10 @@ const benefits = [;
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
     icon: <Bot className="w - 8 h - 8" />},
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
 
-<<<<<<< HEAD
-
-=======
-=======
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
@@ -39,22 +31,10 @@ const benefits = [
 import {GradientHeading} from "./GradientHeading";
 import {FeatureCard} from "./FeatureCard";
 import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const benefits = [
   {
     title: "AI-Powered Matchmaking",
@@ -64,14 +44,6 @@ const benefits = [
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
     icon: <Globe className="w-8 h-8" />},
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     title: "24/7 Support"
     description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey."
@@ -80,11 +52,6 @@ const benefits = [
     title: "Cost Reduction"
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors."
     icon: <TrendingDown className="w-8 h-8" />}]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
 export function BenefitsSection() {
   return (
@@ -103,7 +70,6 @@ export function BenefitsSection() {
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const benefits = [;
   {;
     title: "AI-Powered Matchmaking",;
@@ -121,22 +87,14 @@ const benefits = [;
     title: "Cost Reduction",;
     description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",;
     icon: <TrendingDown className="w-8 h-8" />}],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 export function BenefitsSection() {;
   return (
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <FeatureCard
 
 };
 
-<<<<<<< HEAD
-=======
-=======
               key={index}
               title={benefit.title}
               description={benefit.description}
@@ -150,8 +108,6 @@ export function BenefitsSection() {;
   )
 }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
             <FeatureCard
 }
@@ -159,7 +115,6 @@ export function BenefitsSection() {;
 
 };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -183,9 +138,6 @@ const benefits = [;
 export function BenefitsSection() {;
   return (;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { GradientHeading } from "./GradientHeading",;
 import { FeatureCard } from "./FeatureCard",;
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",;
@@ -210,9 +162,6 @@ const benefits = [;
 ;
 export function BenefitsSection() {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue-light">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-16">;
@@ -221,12 +170,9 @@ export function BenefitsSection() {;
             Experience the next generation of tech marketplace with features designed to maximize efficiency and value;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
 
-=======
           {benefits && benefits.map((benefit, index) => (;
             <FeatureCard
               key={index}
@@ -236,22 +182,12 @@ export function BenefitsSection() {;
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
             />;
           ))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
       </div>;
     </section>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     icon: <Globe className="w - 8 h - 8" />},
   {
     title: "24 / 7 Support",
@@ -287,15 +223,9 @@ function BenefitsSection() {
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
-
 
 ;
         ;
@@ -333,16 +263,8 @@ icon: <Clock className="w-8 h-8" />
 }</div> </div> </section>) 
 }
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {benefits.map((benefit, index) => (;
             <FeatureCard;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

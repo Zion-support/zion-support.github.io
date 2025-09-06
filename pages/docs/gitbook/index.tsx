@@ -4,9 +4,7 @@ import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
 
-
 function list(dir: string, baseDir: string) {
-
 
   return items.map((name) => {
     const full = path.join(dir, name)
@@ -14,11 +12,7 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -26,13 +20,7 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
-<<<<<<< HEAD
-=======
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -46,12 +34,7 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   });
   } catch (error) {
@@ -76,13 +59,9 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
 import fs from 'fs',
@@ -132,9 +111,6 @@ function DocsIndex() {
 
                     {it.rel}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </li>
               ))}
             </ul>
@@ -142,14 +118,9 @@ function DocsIndex() {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-=======
 
-=======
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </a>;
                 </li>))}
             </ul>;
@@ -157,26 +128,15 @@ function DocsIndex() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 };
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                   </Link>
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -197,11 +157,6 @@ function DocsIndex() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

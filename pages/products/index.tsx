@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 class ErrorBoundary extends React.Component {
@@ -23,16 +22,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-<<<<<<< HEAD
 import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -40,16 +30,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, Globe, Award, Search } from 'lucide-react';
 import Layout from '../../components/Layout';
-
-<<<<<<< HEAD
-=======
 
 const products = [;
   {;
@@ -140,23 +125,9 @@ const ProductsIndex: NextPage = () => {;
     return matchesCategory && matchesSearch;
   });
 
-=======
-
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 const Index: NextPage = () => {
   return (
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <Layout
       title="Products - Zion Tech Group"
       description="Discover our comprehensive suite of technology products designed to transform your business operations."
@@ -187,7 +158,6 @@ const Index: NextPage = () => {
           </div>;
         </section>;
 
-
         {/* Search and Filter Section */}
         <section className="py-12 bg-white">;
           <div className="container mx-auto px-4">;
@@ -206,7 +176,6 @@ const Index: NextPage = () => {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
                 </div>;
               </div>;
-
 
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2 justify-center mb-8">;
@@ -235,10 +204,6 @@ const Index: NextPage = () => {
                   }}
 
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
@@ -413,8 +378,6 @@ const ProductsIndex: NextPage = () => {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
                       </div>;
                     </div>;
@@ -430,15 +393,12 @@ const ProductsIndex: NextPage = () => {
                         {product && product.features.map((feature, idx) => (;
                           <li key={idx} className="flex items-center text-sm text-gray-600">;
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             {feature}
                           </li>;
                         ))}
                             {benefit}
                           </li>;
                         ))}
-<<<<<<< HEAD
-=======
                       </ul>;
                     </div>;
                     <div className="space-y-2 mb-6">;
@@ -467,8 +427,6 @@ const ProductsIndex: NextPage = () => {
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -490,26 +448,18 @@ const ProductsIndex: NextPage = () => {
                 <Link
                   href="/contact"
 
-
 export default Index;
 import type { NextPage } from 'next',
 import Head from 'next/head',
 const Index: NextPage = () => {
   return (
 
-
-
-
-=======
-=======
     <div>
       <Head>
         <title>Index - Zion Tech Solutions</title>
-<<<<<<< HEAD
         <meta name='description' content='Index page' />
       </Head>
 ursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Contact Sales;
@@ -523,21 +473,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   );
 };
 
-
-
-=======
-=======
-
         <meta name="description" content="Index page" />
       </Head>
-      
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export default ProductsIndex;
 import type { NextPage } from 'next';
 import Head from 'next/head';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
@@ -551,24 +492,14 @@ export default Index;
 }
 export default Index;
 
-<<<<<<< HEAD
 },
 export default Index,
 
-
-
-=======
-=======
   )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export default Index;
 
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -677,22 +608,14 @@ export default Index;
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
 
 export default ProductsIndex;
 
   )
 
-
-=======
 },
 export default Index,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../../components/layout/MainLayout';
 
@@ -713,4 +636,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

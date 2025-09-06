@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 #!/usr/bin/env node;
 ;const fs = require('fs');
 const path = require('path');
@@ -12,7 +5,6 @@ const { execSync } = require('child_process');
 ;
 /**;
  * Advanced App Optimizer;
-<<<<<<< HEAD
  * Comprehensive optimization script for the application;
  */;
 class AdvancedAppOptimizer {;
@@ -315,8 +307,6 @@ if (require.main === module) {;
 }
 ;
 module.exports = AdvancedAppOptimizer;
-=======
->>>>>>> main
  * Comprehensive optimization for the Zion Tech Group application;
  */
 
@@ -344,7 +334,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
-<<<<<<< HEAD
  * Comprehensive optimization for the application;
  */;
 const fs = require("fs")
@@ -630,10 +619,6 @@ if (require.main === module) {
   optimizer.run().catch(console.error),,
 }
 module.exports = AdvancedAppOptimizer
-=======
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -944,6 +929,3 @@ if (require.main === module) {
 }
 
 module.exports = AdvancedAppOptimizer;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

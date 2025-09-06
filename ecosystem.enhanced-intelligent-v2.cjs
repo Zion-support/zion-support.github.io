@@ -26,7 +26,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // AI-Powered Code Analysis & Auto-Fixing
     {
       name: 'ai-code-analyzer',
@@ -40,7 +39,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
-=======
     // AI-Powered Code Analysis & Auto-Fixing;
     {}
       "name": 'ai-code-analyzer',
@@ -54,7 +52,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'comprehensive',
         AUTO_FIX: 'true'
@@ -66,7 +63,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Smart Performance Optimizer
     {
       name: 'smart-performance-optimizer',
@@ -80,7 +76,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
-=======
     // Smart Performance Optimizer;
     {}
       "name": 'smart-performance-optimizer',
@@ -94,7 +89,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         OPTIMIZATION_LEVEL: 'aggressive',
         PERFORMANCE_MONITORING: 'true'
@@ -106,7 +100,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Intelligent Dependency Manager
     {
       name: 'intelligent-dependency-manager',
@@ -120,7 +113,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
-=======
     // Intelligent Dependency Manager;
     {}
       "name": 'intelligent-dependency-manager',
@@ -134,7 +126,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AUTO_UPDATE: 'true',
         SECURITY_FIRST: 'true',
@@ -147,7 +138,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Smart Deployment Automation
     {
       name: 'smart-deployment-automation',
@@ -161,7 +151,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 30000,
       env: {
-=======
     // Smart Deployment Automation;
     {}
       "name": 'smart-deployment-automation',
@@ -175,7 +164,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 30000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AUTO_DEPLOY: 'false', // Set to true for automatic deployment
         ROLLBACK_ENABLED: 'true',
@@ -188,7 +176,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Intelligent Repository Manager
     {
       name: 'intelligent-repository-manager',
@@ -202,7 +189,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 10000,
       env: {
-=======
     // Intelligent Repository Manager;
     {}
       "name": 'intelligent-repository-manager',
@@ -216,7 +202,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 10000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AUTO_MERGE: 'false', // Set to true for automatic merging
         CONFLICT_RESOLUTION: 'intelligent',
@@ -229,7 +214,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Advanced Development Workflow
     {
       name: 'advanced-development-workflow',
@@ -243,7 +227,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-=======
     // Advanced Development Workflow;
     {}
       "name": 'advanced-development-workflow',
@@ -257,7 +240,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         WORKFLOW_MODE: 'continuous',
         QUALITY_GATES: 'enabled'
@@ -269,7 +251,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Intelligent CI/CD Orchestrator
     {
       name: 'intelligent-cicd-orchestrator',
@@ -283,7 +264,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 15000,
       env: {
-=======
     // Intelligent CI/CD Orchestrator;
     {}
       "name": 'intelligent-cicd-orchestrator',
@@ -297,7 +277,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 15000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         PIPELINE_MODE: 'intelligent',
         AUTO_DEPLOYMENT: 'false'
@@ -309,7 +288,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Enhanced CI/CD Automation
     {
       name: 'enhanced-ci-cd-automation',
@@ -323,7 +301,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 10000,
       env: {
-=======
     // Enhanced CI/CD Automation;
     {}
       "name": 'enhanced-ci-cd-automation',
@@ -337,7 +314,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 10000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         QUALITY_GATES: 'strict',
         PARALLEL_JOBS: '4'
@@ -349,7 +325,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Enhanced Testing Automation
     {
       name: 'enhanced-testing-automation',
@@ -363,7 +338,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 20000,
       env: {
-=======
     // Enhanced Testing Automation;
     {}
       "name": 'enhanced-testing-automation',
@@ -377,7 +351,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 20000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         TEST_STRATEGY: 'comprehensive',
         PARALLEL_TESTS: 'true'
@@ -389,7 +362,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Enhanced Security Automation
     {
       name: 'enhanced-security-automation',
@@ -403,7 +375,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 25000,
       env: {
-=======
     // Enhanced Security Automation;
     {}
       "name": 'enhanced-security-automation',
@@ -417,7 +388,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 25000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         SECURITY_LEVEL: 'maximum',
         VULNERABILITY_SCANNING: 'true'
@@ -429,7 +399,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Project Health Monitor
     {
       name: 'project-health-monitor',
@@ -443,7 +412,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-=======
     // Project Health Monitor;
     {}
       "name": 'project-health-monitor',
@@ -457,7 +425,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         HEALTH_CHECKS: 'comprehensive',
         MONITORING_INTERVAL: '300000'
@@ -469,7 +436,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // PM2 Sync Automation
     {
       name: 'pm2-sync-automation',
@@ -483,7 +449,6 @@ module.exports = {}
       max_memory_restart: '1G',
       restart_delay: 2000,
       env: {
-=======
     // PM2 Sync Automation;
     {}
       "name": 'pm2-sync-automation',
@@ -497,7 +462,6 @@ module.exports = {}
       "max_memory_restart": '1G',
       "restart_delay": 2000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         SYNC_MODE: 'continuous',
         PROCESS_MONITORING: 'true'
@@ -509,7 +473,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Link Checker Automation
     {
       name: 'link-checker-automation',
@@ -523,7 +486,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
-=======
     // Link Checker Automation;
     {}
       "name": 'link-checker-automation',
@@ -537,7 +499,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         CHECK_DEPTH: 'deep',
         EXTERNAL_LINKS: 'true'
@@ -549,7 +510,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // TypeScript Syntax Fixer
     {
       name: 'typescript-syntax-fixer',
@@ -563,7 +523,6 @@ module.exports = {}
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
-=======
     // TypeScript Syntax Fixer;
     {}
       "name": 'typescript-syntax-fixer',
@@ -577,7 +536,6 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AUTO_FIX: 'true',
         STRICT_MODE: 'true'
@@ -589,7 +547,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Console Error Fixer
     {
       name: 'console-error-fixer',
@@ -603,7 +560,6 @@ module.exports = {}
       max_memory_restart: '256M',
       restart_delay: 3000,
       env: {
-=======
     // Console Error Fixer;
     {}
       "name": 'console-error-fixer',
@@ -617,7 +573,6 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 3000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         ERROR_DETECTION: 'real-time',
         AUTO_FIX: 'true'
@@ -629,7 +584,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Quality Checks
     {
       name: 'quality-checks',
@@ -643,7 +597,6 @@ module.exports = {}
       max_memory_restart: '256M',
       restart_delay: 10000,
       env: {
-=======
     // Quality Checks;
     {}
       "name": 'quality-checks',
@@ -657,7 +610,6 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 10000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         QUALITY_STANDARDS: 'high',
         COVERAGE_THRESHOLD: '80'
@@ -669,7 +621,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Security Audit
     {
       name: 'security-audit',
@@ -683,7 +634,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 20000,
       env: {
-=======
     // Security Audit;
     {}
       "name": 'security-audit',
@@ -697,7 +647,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 20000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         AUDIT_LEVEL: 'comprehensive',
         VULNERABILITY_ALERTS: 'true'
@@ -709,7 +658,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Continuous Improvement
     {
       name: 'continuous-improvement',
@@ -723,7 +671,6 @@ module.exports = {}
       max_memory_restart: '256M',
       restart_delay: 60000,
       env: {
-=======
     // Continuous Improvement;
     {}
       "name": 'continuous-improvement',
@@ -737,7 +684,6 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 60000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         IMPROVEMENT_MODE: 'automatic',
         LEARNING_ENABLED: 'true'
@@ -749,7 +695,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Daily Build Test
     {
       name: 'daily-build-test',
@@ -763,7 +708,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 120000,
       env: {
-=======
     // Daily Build Test;
     {}
       "name": 'daily-build-test',
@@ -777,7 +721,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 120000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         BUILD_STRATEGY: 'comprehensive',
         NOTIFICATION_ENABLED: 'true'
@@ -789,7 +732,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Health Check
     {
       name: 'health-check',
@@ -803,7 +745,6 @@ module.exports = {}
       max_memory_restart: '256M',
       restart_delay: 5000,
       env: {
-=======
     // Health Check;
     {}
       "name": 'health-check',
@@ -817,7 +758,6 @@ module.exports = {}
       "max_memory_restart": '256M',
       "restart_delay": 5000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         HEALTH_CHECK_INTERVAL: '120000',
         ALERT_THRESHOLD: 'medium'
@@ -829,7 +769,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Security Scanner
     {
       name: 'security-scanner',
@@ -843,7 +782,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 30000,
       env: {
-=======
     // Security Scanner;
     {}
       "name": 'security-scanner',
@@ -857,7 +795,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 30000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         SCAN_DEPTH: 'comprehensive',
         REAL_TIME_SCANNING: 'true'
@@ -869,7 +806,6 @@ module.exports = {}
       time: true
     },
 
-<<<<<<< HEAD
     // Performance Monitor
     {
       name: 'performance-monitor',
@@ -883,7 +819,6 @@ module.exports = {}
       max_memory_restart: '512M',
       restart_delay: 5000,
       env: {
-=======
     // Performance Monitor;
     {}
       "name": 'performance-monitor',
@@ -897,7 +832,6 @@ module.exports = {}
       "max_memory_restart": '512M',
       "restart_delay": 5000,
       "env": {}
->>>>>>> main
         NODE_ENV: 'production',
         MONITORING_INTERVAL: '180000',
         PERFORMANCE_ALERTS: 'true'
@@ -910,15 +844,12 @@ module.exports = {}
     }
   ],
 
-<<<<<<< HEAD
   // PM2 Deploy configuration
   deploy: {
     production: {
-=======
   // PM2 Deploy configuration;
   "deploy": {}
     production: {}
->>>>>>> main
       user: 'node',
       host: 'your-production-server.com',
       ref: 'origin/main',

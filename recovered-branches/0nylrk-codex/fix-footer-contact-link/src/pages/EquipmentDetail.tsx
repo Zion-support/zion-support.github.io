@@ -8,16 +8,11 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 interface EquipmentSpecification {
   name: string,
   value: string
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EquipmentDetails {
   id: string,
   name: string,
@@ -36,12 +31,10 @@ interface EquipmentSpecification {
 
 }
 
-
 }
 // Sample data - in a real app this would come from an API
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
   "pro-camera-x1000": {
-<<<<<<< HEAD
 
     id: "pro-camera-x1000"
     name: "Pro Camera X1000"
@@ -64,33 +57,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EquipmentSpecification {;
   name: string,;
   value: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface EquipmentDetails {;
   id: string,;
   name: string,;
   description: string,;
   brand: string,;
   category: string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { Header } from '@/components / Header';
@@ -117,11 +96,7 @@ interface EquipmentDetails {
   price: number,;
   currency: string,;
   rating?: number;
-<<<<<<< HEAD
 
-
-
-=======
   subcategory?: string,;
   images: string[],;
   price: number,;
@@ -134,9 +109,6 @@ interface EquipmentDetails {
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 // Sample data - in a real app this would come from an API
@@ -148,26 +120,16 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     brand: "CineTech",
     category: "Equipment",
     subcategory: "Cameras",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
     images: [
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 6999
@@ -177,12 +139,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     inStock: true
     expectedShipping: "3-5 business days"
     specifications: [
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
   "pro-camera-x1000": {;
@@ -214,36 +171,24 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Battery Life", value: "~3 hours continuous recording" },;
       { name: "Weight", value: "4 && 4.5 lbs (body only)" },;
       { name: "Connectivity", value: "HDMI 2 && 2.1, USB-C, Wi-Fi, Bluetooth" }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     ];
     features: [;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "Advanced 8K full-frame sensor";
       "16+ stops of dynamic range";
       "Internal RAW recording";
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       "Weather-sealed magnesium alloy body",;
 
-=======
       "Weather-sealed magnesium alloy body",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
-<<<<<<< HEAD
 
-
-=======
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" }
       { name: "Resolution", value: "8K (8192 x 4320)" }
       { name: "Dynamic Range", value: "16+ stops" }
@@ -253,7 +198,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Storage", value: "Dual CFexpress Type B" }
       { name: "Battery Life", value: "~3 hours continuous recording" }
       { name: "Weight", value: "4.5 lbs (body only)" }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       { name: "Sensor", value: "Full-frame CMOS (36 x 24 mm)" },
       { name: "Resolution", value: "8K (8192 x 4320)" },
       { name: "Dynamic Range", value: "16+ stops" },
@@ -263,13 +207,11 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Storage", value: "Dual CFexpress Type B" },
       { name: "Battery Life", value: "~3 hours continuous recording" },
       { name: "Weight", value: "4.5 lbs (body only)" },
-<<<<<<< HEAD
 
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
 
-=======
       { name: "Connectivity", value: "HDMI 2.1, USB-C, Wi-Fi, Bluetooth" }
     ],
     features: [
@@ -294,7 +236,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     brand: "AudioTech"
     category: "Equipment"
     subcategory: "Audio"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "Advanced 8K full-frame sensor",
       "16+ stops of dynamic range",
       "Internal RAW recording",
@@ -316,19 +257,13 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     brand: "AudioTech",
     category: "Equipment",
     subcategory: "Audio",
-<<<<<<< HEAD
-
 
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
-=======
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
     ]
     price: 3499
@@ -346,12 +281,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" }
       { name: "Effects", value: "8 stereo effects processors" }
       { name: "Recording", value: "64-channel USB interface" }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       { name: "Weight", value: "32 lbs" }
     ],
     features: [
@@ -371,9 +301,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
 
 },
 
-
-<<<<<<< HEAD
-=======
 }
 export default function EquipmentDetail() {
   const { equipmentId } = useParams() as { equipmentId?: string }
@@ -398,7 +325,6 @@ export default function EquipmentDetail() {
   // In a real app, this would fetch from an API
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined,
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   if (!equipment) {
     return (
       <>
@@ -416,19 +342,14 @@ export default function EquipmentDetail() {
     )
   }
   const handleAddToCart = () => {
-<<<<<<< HEAD
 
     setIsAdding(true),
-    
 
-=======
     setIsAdding(true),
-    
 
     setIsAdding(true);
     setIsAdding(true),
     
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -437,24 +358,17 @@ export default function EquipmentDetail() {
         description: `${quantity}x ${equipment.name} added to your cart.`})
     }, 800)
 
-<<<<<<< HEAD
-=======
   }
   const handleBuyNow = () => {
     setIsAdding(true);
   }
   const handleBuyNow = () => {
     setIsAdding(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   const handleBuyNow = () => {
     setIsAdding(true),
-    
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Simulate API call
     setTimeout(() => {
       setIsAdding(false),
@@ -465,11 +379,8 @@ export default function EquipmentDetail() {
 
   },
 
-<<<<<<< HEAD
-=======
   }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
     <>
@@ -505,10 +416,7 @@ export default function EquipmentDetail() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 // Sample data - in a real app this would come from an API;
 const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
@@ -554,10 +462,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       "Anamorphic de-squeeze options",;
       "Custom 3D LUT support";
     ],;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     warranty: "2 years manufacturer warranty",;
     returnPolicy: "30-day return policy for unused items in original packaging";
   };
@@ -565,8 +470,6 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     id: "audio-mixer-pro",;
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.";
-<<<<<<< HEAD
-=======
     warranty: "2 years manufacturer warranty",;
     returnPolicy: "30-day return policy for unused items in original packaging";
   },;
@@ -574,26 +477,22 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
     id: "audio-mixer-pro",;
     name: "AudioMixer Pro Digital Mixing Console",;
     description: "Professional digital mixing console designed for studio recording, live sound mixing, and post-production applications. Features 32 channels, premium preamps, extensive routing options, and intuitive control interface.",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     brand: "AudioTech",;
     category: "Equipment",;
     subcategory: "Audio",;
     images: [;
-<<<<<<< HEAD
       "https://images && images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
       "https://images && images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800";
     ],;
     price: 3499,;
     currency: "$",;
     rating: 4 && 4.8,;
-=======
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800",;
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800";
     ],;
     price: 3499,;
     currency: "$",;
     rating: 4.8,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     reviewCount: 42,;
     inStock: true,;
     expectedShipping: "5-7 business days",;
@@ -606,16 +505,12 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {;
       { name: "Dynamics", value: "Compressor/Gate on all channels" },;
       { name: "Effects", value: "8 stereo effects processors" },;
       { name: "Recording", value: "64-channel USB interface" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       { name: "Weight", value: "32 lbs" }
-<<<<<<< HEAD
-=======
       "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support";
     ];
       { name: "Weight", value: "32 lbs" }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ];
     features: [;
       "32-channel digital mixer with 24 premium mic preamps";
@@ -713,10 +608,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "iOS and Android remote control app";
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       "Integrated WiFi for wireless control";
     ],;
     warranty: "3 years manufacturer warranty",;
@@ -732,15 +624,10 @@ export default function EquipmentDetail() {;
 
   // In a real app, this would fetch from an API;
   const equipment = equipmentId ? SAMPLE_EQUIPMENT[equipmentId] : undefined;
-<<<<<<< HEAD
 
   if (!equipment) {;
 
-=======
   if (!equipment) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <>;
         <Header />;
@@ -784,12 +671,7 @@ if ( {) {
           </div>;
         </div>;
         <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleAddToCart = () => {;
     setIsAdding(true);
 
@@ -813,11 +695,8 @@ if ( {) {
         description: `Preparing your order for ${equipment && equipment.name}.`});
     }, 800);
   };
-<<<<<<< HEAD
-
 
   return (
-=======
   return (
 
 import { useState } from "react",;
@@ -992,19 +871,14 @@ export default function EquipmentDetail() {;
     }, 800);
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 {/* Main Image */}
@@ -1022,49 +896,27 @@ export default function EquipmentDetail() {;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
                     {equipment && equipment.images.map((image, index) => (;
 
-=======
                 <div className="aspect-video w-full relative">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       >;
                         <img
                           src={image} 
                           alt={`${equipment && equipment.name} - image ${index + 1}`} 
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           className="w-full h-full object-cover"
                         />;
                       </div>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
                     ))}
                   </div>;
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
 
               {/* Product Details Tabs */}
@@ -1114,8 +966,6 @@ export default function EquipmentDetail() {;
                             <span className="text-zion-slate-light">{feature}</span>;
                           </li>;
                         ))}
-<<<<<<< HEAD
-=======
       </>);
   }
   const handleAddToCart = () =>: any {
@@ -1195,7 +1045,6 @@ export default function EquipmentDetail() {;
                   <TabsContent value="description" className="mt - 4">;
                     <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6">;
                       <p className="text - zion - slate - light whitespace - pre - line">;
-<<<<<<< HEAD
                         {equipment.description}
                       </p>;
                     </div>;
@@ -1222,10 +1071,6 @@ export default function EquipmentDetail() {;
                             <span className="text - zion - slate - light">{feature}</span>;
                           </li>))}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                   <img ;
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
@@ -1333,23 +1178,13 @@ export default function EquipmentDetail() {;
                 </Tabs>
               </div>
             </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </ul>;
                     </div>;
                   </TabsContent>;
                 </Tabs>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -1363,7 +1198,6 @@ export default function EquipmentDetail() {;
                       {equipment && equipment.subcategory}
                     </Badge>;
                   )}
-<<<<<<< HEAD
 
                 </div>;
 
@@ -1371,22 +1205,9 @@ export default function EquipmentDetail() {;
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
-
-=======
-
-                
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment && equipment.name}</h1>;
                 <p className="text-zion-cyan mb-4">Brand: {equipment && equipment.brand}</p>;
 
-                
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -1395,27 +1216,18 @@ export default function EquipmentDetail() {;
                         <Star
                           key={i}
                           className={`h-5 w-5 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
-=======
-=======
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                             i < Math.floor(equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                               : "text-zion-slate-light"
                           }`}
-=======
                             i < Math && Math.floor(equipment && equipment.rating!) 
                               ? "text-zion-cyan fill-zion-cyan" 
                               : "text-zion-slate-light"
@@ -1450,39 +1262,22 @@ export default function EquipmentDetail() {;
                             i < Math.floor(equipment.rating!) ;
                               ? "text-zion-cyan fill-zion-cyan" ;
                               :"text-zion-slate-light";                          }`}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                               : "text-zion-slate-light"
                           }`}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         />;
                       ))}
                     </div>;
                     <span className="text-sm text-zion-slate-light">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {equipment && equipment.rating.toFixed(1)} ({equipment && equipment.reviewCount} reviews);
                     </span>;
                   </div>;
                 )}
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 {/* Price */}
                 <div className="text-3xl font-bold text-white mb-4">;
                   {equipment && equipment.currency}{equipment && equipment.price.toLocaleString()}
                 </div>;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Stock Status */}
                 <div className="mb-6">;
                   {equipment && equipment.inStock ? (;
@@ -1501,9 +1296,6 @@ export default function EquipmentDetail() {;
                       <span>Out of Stock</span>;
                     </div>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
@@ -1571,19 +1363,11 @@ export default function EquipmentDetail() {;
                 <div className="mb-6">
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
                     <button 
 
-
-<<<<<<< HEAD
-=======
                     <button
                     <button 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
                       disabled={quantity <= 1 |!equipment.inStock}
@@ -1596,22 +1380,13 @@ export default function EquipmentDetail() {;
                       value={quantity}
                       readOnly
                     />
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
                     <button 
 
-
-=======
                     <button 
-
 
                     <button
                     <button 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
@@ -1622,22 +1397,13 @@ export default function EquipmentDetail() {;
                 </div>
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
                   <Button 
 
-
-=======
                   <Button 
-
 
                   <Button
                   <Button 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={handleBuyNow}
                     disabled={isAdding |!equipment.inStock}
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
@@ -1645,24 +1411,12 @@ export default function EquipmentDetail() {;
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
                   <Button 
 
-
-<<<<<<< HEAD
-=======
                   <Button 
-
 
                   <Button
                   <Button 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"
@@ -1672,14 +1426,8 @@ export default function EquipmentDetail() {;
                     Add to Cart
                   </Button>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 </div>;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
                       {equipment.rating.toFixed(1)} ({equipment.reviewCount} reviews);
                     </span>;
@@ -1708,16 +1456,10 @@ export default function EquipmentDetail() {;
                     </div>;                  )}
                 </div>;
                 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {/* Quantity */}
                 <div className="mb-6">;
                   <label className="text-sm text-zion-slate-light block mb-2">Quantity</label>;
                   <div className="flex items-center border border-zion-blue-light rounded-md w-32">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <button
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => Math && Math.max(1, prev - 1))}
@@ -1735,9 +1477,6 @@ export default function EquipmentDetail() {;
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50"
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment && equipment.inStock}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <button ;
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50";
                       onClick={() => setQuantity(prev => Math.max(1, prev - 1))}
@@ -1755,17 +1494,11 @@ export default function EquipmentDetail() {;
                       className="px-3 py-1 text-zion-slate-light hover:text-white disabled:opacity-50";
                       onClick={() => setQuantity(prev => prev + 1)}
                       disabled={!equipment.inStock}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       +;
                     </button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">;
@@ -1781,9 +1514,6 @@ export default function EquipmentDetail() {;
                     disabled={isAdding || !equipment && equipment.inStock}
                     variant="outline"
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 ;
                 {/* Purchase Buttons */}
                 <div className="space-y-3 mb-6">;
@@ -1801,28 +1531,19 @@ export default function EquipmentDetail() {;
                     variant="outline";
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
                   >;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <ShoppingCart className="h-4 w-4 mr-2" />;
                     Add to Cart;
                   </Button>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
 
-=======
                 ;
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div className="flex gap-3 text-zion-slate-light">;
                     <Truck className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                     <div>;
@@ -1830,41 +1551,28 @@ export default function EquipmentDetail() {;
                       <p className="text-xs">For orders over $100 within the US</p>;
                     </div>;
                   </div>;
-<<<<<<< HEAD
-
 
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;
-=======
                   ;
                   {/* Warranty */}
                   {equipment.warranty && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                 {/* Additional Info */}
                 <div className="space-y-4 border-t border-zion-blue-light pt-4">;
                   {/* Shipping */}
                   {/* Warranty */}
                   {equipment && equipment.warranty && (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex gap-3 text-zion-slate-light">;
                       <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;
                         <p className="text-white text-sm font-medium">Warranty</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <p className="text-xs">{equipment && equipment.warranty}</p>;
                       </div>;
                     </div>;
                   )}
 
-
-
                   {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {/* Return Policy */}
                   {equipment && equipment.returnPolicy && (;
                         <p className="text-xs">{equipment.warranty}</p>;
@@ -1873,24 +1581,15 @@ export default function EquipmentDetail() {;
                   ;
                   {/* Return Policy */}
                   {equipment.returnPolicy && (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div className="flex gap-3 text-zion-slate-light">;
                       <RotateCcw className="h-5 w-5 text-zion-cyan flex-shrink-0" />;
                       <div>;
                         <p className="text-white text-sm font-medium">Returns</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <p className="text-xs">{equipment && equipment.returnPolicy}</p>;
                       </div>;
                     </div>;
                   )}
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Right Column - Purchase Info */}
             <div className="lg:col - span - 1">;
               <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">;
@@ -2049,11 +1748,6 @@ export default function EquipmentDetail() {;
                       </div>;
                     </div>)}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                         <p className="text-xs">{equipment.returnPolicy}</p>;
                       </div>;
                     </div>;
@@ -2068,9 +1762,6 @@ export default function EquipmentDetail() {;
     </>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>;
               </div>;
             </div>;
@@ -2078,17 +1769,12 @@ export default function EquipmentDetail() {;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; interface EquipmentSpecification {
   name: string;
@@ -2215,6 +1901,3 @@ if (!equipment) {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

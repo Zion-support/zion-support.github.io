@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -25,9 +22,6 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 import Layout from "../components/Layout";
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ITServices() {
   return (
     <Layout
@@ -37,19 +31,14 @@ export default function ITServices() {
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-<<<<<<< HEAD
-=======
 
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
-<<<<<<< HEAD
-=======
 
             <p className="text-gray-600">IT Services page is under construction.</p>
 
@@ -57,7 +46,6 @@ export default function ITServices() {
         </div>
       </div>
     </Layout>
-=======
 export default function ITServices() {;
   return (
     <Layout
@@ -75,7 +63,6 @@ export default function ITServices() {;
           </div>;
           <div className="text-center">;
             <p className="text-gray-600">;
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -100,27 +87,16 @@ function ITServices() {
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               IT Services page is under construction.;
             </p>;
           </div>;
         </div>;
       </div>;
 
-=======
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import { Star } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> main
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -211,7 +187,6 @@ const stats = [
   { number: "500+", label: "Systems Managed" },
   { number: "15min", label: "Average Response Time" }
 ];
-<<<<<<< HEAD
     >
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
@@ -222,8 +197,6 @@ const stats = [
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact" 
@@ -338,7 +311,6 @@ const stats = [
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaS.map((solution, index) => (
-=======
 
 export default function ITServicesPage() {
   return (
@@ -366,7 +338,6 @@ export default function ITServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
->>>>>>> main
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -393,7 +364,6 @@ export default function ITServicesPage() {
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
                   <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                 </div>
-<<<<<<< HEAD
                 <p className="text-gray-600 mb-4">
                   {solution.description}
                 </p>
@@ -409,7 +379,6 @@ export default function ITServicesPage() {
                   <div className="text-2xl font-bold text-green-600">
                     {solution.pricing}
                   </div>
-=======
                 
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 
@@ -439,7 +408,6 @@ export default function ITServicesPage() {
                 
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-blue-400">{service.price}</div>
->>>>>>> main
                   <Link
                     href="/contact"
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
@@ -451,15 +419,12 @@ export default function ITServicesPage() {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-=======
 
->>>>>>> main
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -472,7 +437,6 @@ export default function ITServicesPage() {
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to discuss your IT needs and get expert solutions.
             </p>
-<<<<<<< HEAD
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
@@ -558,7 +522,6 @@ export default function ITServicesPage() {
             <div className="mt-8 text-gray-600">
               <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
               <div className="flex items-center text-white">
                 <Phone className="h-5 w-5 mr-2" />
@@ -572,7 +535,6 @@ export default function ITServicesPage() {
                 <MapPin className="h-5 w-5 mr-2" />
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
->>>>>>> main
             </div>
           </motion.div>
         </div>
@@ -580,13 +542,4 @@ export default function ITServicesPage() {
     </MainLayout>
   );
 
-
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

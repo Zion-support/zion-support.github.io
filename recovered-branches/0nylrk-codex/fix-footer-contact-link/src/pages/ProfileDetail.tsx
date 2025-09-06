@@ -38,14 +38,11 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-<<<<<<< HEAD
-=======
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {;
     const fetchProfile = async () => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setIsLoading(true);
       setError(null);
       try {;
@@ -53,23 +50,15 @@ export default function ProfileDetail() {
           setError("Profile ID is missing.");
           return;
         }
-<<<<<<< HEAD
-
 
           .single(),
 
-
-
-=======
           .single();
           .single(),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           .single();
           .single(),
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (error) {
           throw new Error(error.message);
         }
@@ -90,30 +79,18 @@ export default function ProfileDetail() {
         setIsLoading(false);
       }
 
-
-=======
-
-=======
     }
     fetchProfile()
   }, [profileId]);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       } finally {
         setIsLoading(false)
       }
     }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
 
     fetchProfile();
   }, [profileId]);
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -135,59 +112,37 @@ export default function ProfileDetail() {
       </div>
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   if (error) {;
 
     return (
-=======
   if (error) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
 ;
   if (error) {;
     return (;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   if (!profileData) {;
 
-=======
   if (!profileData) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return (
 ;
   if (!profileData) {;
     return (;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <>;
       <SEO
-<<<<<<< HEAD
 
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={
@@ -197,12 +152,8 @@ export default function ProfileDetail() {
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description={profileData && profileData.bio || "Check out this talent's profile on Zion!"}
-=======
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
@@ -304,14 +255,10 @@ export default function ProfileDetail() {
       <SEO;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <Header />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -332,10 +279,6 @@ export default function ProfileDetail() {
                   </Avatar>;
                   <div>;
                     <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {profileData && profileData.full_name}
                       {profileData && profileData.is_verified && (;
                         <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
@@ -373,21 +316,16 @@ export default function ProfileDetail() {
               </CardContent>
             </Card>
 
-
                 </div>;
               </CardContent>;
             </Card>;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                 </div>
               </CardContent>
             </Card>
                 </div>;
               </CardContent>;
             </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -449,13 +387,10 @@ export default function ProfileDetail() {
                 )}
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
                 </div>;
               </CardContent>;
             </Card>;
 
-=======
                 <div className="flex flex-wrap gap-4 text-sm">;
                   {profileData.location && (;
                     <div className="flex items-center text-zion-slate-light">;
@@ -478,24 +413,20 @@ export default function ProfileDetail() {
               </CardContent>;
             </Card>;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
               </CardHeader>;
               <CardContent>;
-<<<<<<< HEAD
                 <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
 
-=======
                 <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>;
               </CardContent>;
             </Card>;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Skills Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -503,28 +434,21 @@ export default function ProfileDetail() {
               </CardHeader>;
               <CardContent>;
                 <div className="flex flex-wrap gap-2">;
-<<<<<<< HEAD
                   {profileData && profileData.skills?.map((skill: string, index: number) => (;
-=======
                   {profileData.skills?.map((skill:string, index:number) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
                   )) || <p className="text-zion-slate-light">No skills provided.</p>}
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {/* Experience Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
               </CardHeader>;
               <CardContent>;
-<<<<<<< HEAD
                 {profileData && profileData.experience ? (;
                   profileData && profileData.experience.map((exp: any, index: number) => (;
                     <div key={index} className="mb-4">;
@@ -540,8 +464,6 @@ export default function ProfileDetail() {
               </CardContent>;
             </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
                 {profileData.experience ? (;
                   profileData.experience.map((exp:any, index:number) => (;
                     <div key={index} className="mb-4">;
@@ -556,9 +478,6 @@ export default function ProfileDetail() {
               </CardContent>;
             </Card>;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -589,21 +508,14 @@ export default function ProfileDetail() {
                     No portfolio links provided.
                   </p>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               </CardContent>;
             </Card>;
           </div>;
 
-
-=======
               </CardContent>;
             </Card>;
           </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
@@ -651,7 +563,6 @@ export default function ProfileDetail() {
               </div>
             </div>
 
-
               }}
             />;
             {/* Contact Information */}
@@ -660,8 +571,6 @@ export default function ProfileDetail() {
               <div className="flex flex-col space-y-3">;
               </div>;
             </div>;
-
-
 
               </div>;
             </div>;
@@ -710,20 +619,11 @@ export default function ProfileDetail() {
                   </a>;
                 )}
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
             />;
             {/* Contact Information */}
@@ -902,9 +802,6 @@ export default function ProfileDetail() {
                     LinkedIn;
                   </a>)}
 
-<<<<<<< HEAD
-=======
-=======
               }}
             />
             {/* Contact Information */}
@@ -951,9 +848,6 @@ export default function ProfileDetail() {
                     Twitter
                   </Link>
                 )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {profileData.linkedin_url && (
                   <a
                     href={profileData.linkedin_url}
@@ -963,8 +857,6 @@ export default function ProfileDetail() {
                   >
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   </Link>
                 )}
@@ -978,12 +870,8 @@ export default function ProfileDetail() {
   );
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; import {
   MapPin;
@@ -1050,6 +938,3 @@ try {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

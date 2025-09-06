@@ -1,28 +1,16 @@
-<<<<<<< HEAD
 
 
 import * as React from "react"
 
-
-
-<<<<<<< HEAD
-=======
 import * as React from &quot;react&quot;
 import * as React from "react"
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * React 18 introduced `useId` for generating unique IDs. If an older
  * React version is used where `useId` is unavailable, this hook provides
  * a small fallback that mimics the API using `useRef`.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import * as React from &quot;react & quot;
 
 export function useReactId(): string {
@@ -30,7 +18,6 @@ export function useReactId(): string {
 
     return (React as any).useId()
   }
-
 
 ;
 /**;
@@ -50,12 +37,9 @@ if (.use_id === &quot) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
 
 ;
 
-
-=======
     id_ref.current = Math.random ().to_string (36).slice (2);
   }
   return id_ref.current;
@@ -90,6 +74,3 @@ export function useReactId(): string {
   return idRef.current;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,41 +1,32 @@
 return (
     <>;
-
   projectId: string,
   milestoneId?: string,
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link","
+  size?: "default" | "sm" | "lg" | "icon","
   className?: string
 }
-
-export function RaiseDisputeButton({ 
-
-
-
+export function RaiseDisputeButton({
   projectId,
-  milestoneId, 
-  variant = "outline", 
+  milestoneId,
+  variant = "outline", "
   size,
-  className 
-}: RaiseDisputeButtonProps) {
-
-
+  className
+}:,  RaiseDisputeButtonProps) {
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className='sm:max-w-[550px]'>
+        <DialogContent className='sm:max-w-[550px]'>',
           <DialogHeader>
             <DialogTitle>Raise a Dispute</DialogTitle>
             <DialogDescription>
-              Please provide details about the issue you're experiencing with
+              Please provide details about the issue you're experiencing with'
               this project.
             </DialogDescription>
           </DialogHeader>
-
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
         Raise Dispute;
       </Button>;
-
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;,
         <DialogContent className='sm:max-w-[550px]'>;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
@@ -48,23 +39,20 @@ export function RaiseDisputeButton({
         Raise Dispute;
       </Button>;
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
-        <DialogContent className='sm:max - w-[550px]'>;
+        <DialogContent className='sm:max - w-[550px]'>;,
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
-
             <DialogDescription>;
               Please provide details about the issue you're experiencing with;
               this project.;
             </DialogDescription>;
           </DialogHeader>;
-
             onCancel={() => setIsDialogOpen(false)}          />;
         </DialogContent>;
       </Dialog>;
     </>;
   );
 }
-
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
@@ -74,10 +62,7 @@ export function RaiseDisputeButton({
       </Dialog>;
     </>);
 }
-
-
-          
-          <DisputeForm 
+          <DisputeForm
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -103,12 +88,12 @@ export function RaiseDisputeButton({;
   variant = "outline",;
   size,;
   className;
-}: RaiseDisputeButtonProps) {;
+}:,  RaiseDisputeButtonProps) {;,
   const [isDialogOpen, setIsDialogOpen] = useState(false),;
   const router = useRouter(),;
-  const handleDisputeCreated = (disputeId: string) => {;
+  const handleDisputeCreated = (disputeId:,  string) => {;,
     setIsDialogOpen(false);
-    router.push(`/dashboard/disputes/${disputeId}`);
+    router.push(`/dashboard/disputes/${disputeId}`);`
   };
   return (;
     <>;
@@ -121,7 +106,7 @@ export function RaiseDisputeButton({;
         <ShieldAlert className="h-4 w-4 mr-2" />;
         Raise Dispute;
       </Button>;
-      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>;,
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
@@ -138,6 +123,5 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
-
 }
 ;

@@ -1,31 +1,14 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -33,49 +16,27 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
 
 export function AIEnhancementButton({;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   buttonText?: string;
   className?: string;
 }
-<<<<<<< HEAD
 export function AIEnhancementButton({
 
 export function AIEnhancementButton({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   buttonText = "Enhance with AI";
-
 
   const handleEnhance = async () => {;
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
@@ -83,8 +44,6 @@ export function AIEnhancementButton({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-
-
 
     setError(null);
     const enhancedContent = await enhanceContent(;
@@ -93,19 +52,12 @@ export function AIEnhancementButton({;
       context;
     );
 
-
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
-
-=======
-
-=======
-=======
   buttonText = "Enhance with AI";
-
 
   const handleEnhance = async () => {;
     if (!currentContent || currentContent && currentContent.trim().length < 10) {;
@@ -113,10 +65,6 @@ export function AIEnhancementButton({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   buttonText = "Enhance with AI";
   className;
@@ -133,14 +81,11 @@ export function AIEnhancementButton({;
       context;
     );
 
-
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
     }
   };
 
-
-<<<<<<< HEAD
   buttonText = "Enhance with AI";
   className
 }: AIEnhancementButtonProps) {
@@ -163,9 +108,6 @@ export function AIEnhancementButton({;
   }
 
   buttonText = "Enhance with AI";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -195,15 +137,7 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
     setError(null);
     const enhancedContent = await enhanceContent(
       currentContent;
@@ -215,8 +149,6 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -228,13 +160,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
-  
-<<<<<<< HEAD
-  
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   return (
     <Button
       type="button"
@@ -242,13 +168,10 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
-<<<<<<< HEAD
-<<<<<<< HEAD
       disabled={isEnhancing}>;
       {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) : (;
-=======
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -305,24 +228,14 @@ export function AIEnhancementButton({;
       {isEnhancing ? (;
         <Loader2 className="h-3 w-3 animate-spin" />;
       ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Sparkles className="h-3 w-3" />;
       )}
 
       <span className="text-xs">{buttonText}</span>;
     </Button>;
-<<<<<<< HEAD
   );
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
 interface AIEnhancementButtonProps {
   current_content: string,
@@ -339,12 +252,7 @@ function AIEnhancementButton() {
   const { enhance_content, is_enhancing } = useResumeEnhancer ();
   const [error, set_error] = useState < string | null>(null);
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
   const handle_enhance = async () => {
     // Check condition
 if (.length < 10) {) {
@@ -402,6 +310,3 @@ context);
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

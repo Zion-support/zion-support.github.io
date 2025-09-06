@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import {;
@@ -8,54 +7,35 @@ import {;
   CardHeader,;
   CardTitle,;
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React, { useEffect } from "react";
 import { useDisputes } from "@/hooks/useDisputes";
 import { DisputesList } from "./DisputesList";
 import {
-<<<<<<< HEAD
 
-=======
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
 
-=======
-
 export function DisputeDashboard() {
 
   const { disputes, isLoading, refetch } = useDisputes();
-
-
 
   useEffect(() => {;
     refetch();
   }, [refetch]);
 
-
-=======
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
@@ -63,8 +43,6 @@ import { ShieldAlert } from "lucide-react";
 export function DisputeDashboard() {
 
   const { disputes, isLoading, refetch } = useDisputes();
-
-
 
   useEffect(() => {;
     refetch();
@@ -96,7 +74,6 @@ import { ShieldAlert } from "lucide-react",
 export function DisputeDashboard() {
   const { disputes, isLoading, refetch } = useDisputes(),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {
     refetch()
   }, [refetch]),
@@ -105,17 +82,8 @@ export function DisputeDashboard() {
   const underReviewDisputes = disputes.filter(d => d.status === 'under_review'),
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),
 
-<<<<<<< HEAD
-
-
   return (
 
-
-        
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -124,33 +92,14 @@ export function DisputeDashboard() {
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>
         </div>
         
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button onClick={refetch} variant="outline">
           Refresh
         </Button>
       </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-      
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
-
-
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid gap-4 md:grid-cols-3">
         <Card>
           <CardHeader className="pb-2">
@@ -161,10 +110,7 @@ import { ShieldAlert } from "lucide-react";
             <CardDescription>Awaiting review</CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 export function DisputeDashboard() {;
   const { disputes, isLoading, refetch } = useDisputes();
   useEffect(() => {;
@@ -196,58 +142,42 @@ export function DisputeDashboard() {;
   const resolvedDisputes = disputes.filter(d => d.status === 'resolved'),;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
           <h1 className="text-3xl font-bold">Dispute Resolution Center</h1>;
-<<<<<<< HEAD
           <p className="text-muted-foreground">;
             Manage and resolve disputes between clients and talents;
           </p>;
         </div>;
 
-=======
           <p className="text-muted-foreground">Manage and resolve disputes between clients and talents</p>;
         </div>;
         ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Button onClick={refetch} variant="outline">;
           Refresh;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
-=======
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="grid gap-4 md:grid-cols-3">;
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Open Disputes</span>;
-<<<<<<< HEAD
               <span className="text-xl font-bold">{openDisputes && openDisputes.length}</span>;
-=======
               <span className="text-xl font-bold">{openDisputes.length}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </CardTitle>;
             <CardDescription>Awaiting review</CardDescription>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-red-100 rounded-full h-2 && 2.5 dark:bg-red-900/20`}>;
               <div
                 className="bg-red-600 h-2 && 2.5 rounded-full"
                 style={{
-<<<<<<< HEAD
 
-
-=======
             <div
               className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}
             >
@@ -260,7 +190,6 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>
               <div className="bg-red-600 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -268,48 +197,27 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Under Review</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <span className="text-xl font-bold">
                 {underReviewDisputes.length}
               </span>
-=======
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardTitle>
             <CardDescription>Being actively processed</CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   width: `${Math && Math.min(100, (openDisputes && openDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
             </div>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
 
-=======
             <div className={`w-full bg-red-100 rounded-full h-2.5 dark:bg-red-900/20`}>;
               <div className="bg-red-600 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (openDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -318,35 +226,25 @@ export function DisputeDashboard() {;
           </CardContent>;
         </Card>;
         ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Under Review</span>;
-<<<<<<< HEAD
               <span className="text-xl font-bold">;
                 {underReviewDisputes && underReviewDisputes.length}
               </span>;
-=======
               <span className="text-xl font-bold">{underReviewDisputes.length}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </CardTitle>;
             <CardDescription>Being actively processed</CardDescription>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-yellow-100 rounded-full h-2 && 2.5 dark:bg-yellow-900/20`}>;
               <div
                 className="bg-yellow-500 h-2 && 2.5 rounded-full"
                 style={{
-<<<<<<< HEAD
 
-
-=======
             <div
               className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}
             >
@@ -359,7 +257,6 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
@@ -367,43 +264,24 @@ export function DisputeDashboard() {;
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-        
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-lg font-medium flex justify-between items-center">
               <span>Resolved</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <span className="text-xl font-bold">
                 {resolvedDisputes.length}
               </span>
-=======
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </CardTitle>
             <CardDescription>Successfully concluded</CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
-=======
 
-=======
                   width: `${Math && Math.min(100, (underReviewDisputes && underReviewDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
 
@@ -416,27 +294,20 @@ export function DisputeDashboard() {;
                   width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`
                 }}
               ></div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>
               <div className="bg-green-500 h-2.5 rounded-full" style={{ 
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` 
               }}></div>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </div>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
 
-=======
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       
       <DisputesList disputes={disputes} isLoading={isLoading} />
     </div>
@@ -496,13 +367,11 @@ export function DisputeDashboard() {;
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{;
                 width: `${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
               }}></div>;
-<<<<<<< HEAD
 
             </div>;
           </CardContent>;
         </Card>;
 
-=======
             <div className={`w-full bg-yellow-100 rounded-full h-2.5 dark:bg-yellow-900/20`}>;
               <div className="bg-yellow-500 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (underReviewDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -514,39 +383,27 @@ export function DisputeDashboard() {;
             </div>;
           </CardContent>;
         </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Card>;
           <CardHeader className="pb-2">;
             <CardTitle className="text-lg font-medium flex justify-between items-center">;
               <span>Resolved</span>;
-<<<<<<< HEAD
               <span className="text-xl font-bold">;
                 {resolvedDisputes && resolvedDisputes.length}
               </span>;
-=======
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>;
               <span className="text-xl font-bold">{resolvedDisputes.length}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </CardTitle>;
             <CardDescription>Successfully concluded</CardDescription>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div
               className={`w-full bg-green-100 rounded-full h-2 && 2.5 dark:bg-green-900/20`}>;
               <div
                 className="bg-green-500 h-2 && 2.5 rounded-full"
                 style={{
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   width: `${Math && Math.min(100, (resolvedDisputes && resolvedDisputes.length / Math && Math.max(1, disputes && disputes.length)) * 100)}%`,
                 }}></div>;
-=======
 import React, { useEffect } from './react';
 import { use_disputes  } from '@/hooks / use_disputes';
 import { DisputesList  } from './DisputesList';
@@ -653,9 +510,7 @@ function DisputeDashboard() {
                   width: `${Math.min (100, (resolved_disputes.length / Math.max (1, disputes.length)) * 100)}%`,
                 }}
               ></div>;
-<<<<<<< HEAD
 
-=======
             <div className={`w-full bg-green-100 rounded-full h-2.5 dark:bg-green-900/20`}>;
               <div className="bg-green-500 h-2.5 rounded-full" style={{ ;
                 width:`${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%` ;
@@ -664,27 +519,18 @@ function DisputeDashboard() {
               <div className="bg-green-500 h-2.5 rounded-full" style={{;
                 width: `${Math.min(100, (resolvedDisputes.length / Math.max(1, disputes.length)) * 100)}%`;
               }}></div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <DisputesList disputes={disputes} is_loading={is_loading} />;
     </div>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 
@@ -718,7 +564,4 @@ container mx-auto p-4 space-y-6"> <div className=" flex flex-wrap items-center j
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

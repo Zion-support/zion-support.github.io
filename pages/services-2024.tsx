@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   Search,
   Filter,
@@ -20,11 +19,6 @@ import {;
   Brain, Atom, Cpu, Shield, Database, Cloud,;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
-
-
-=======
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -48,26 +42,16 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 
-
-<<<<<<< HEAD
-=======
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<
@@ -75,8 +59,6 @@ import Link from 'next/link';
   >('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Combine all services;
   const allServices = [;
     ...realMicroSaasServices2024,;
@@ -132,7 +114,6 @@ import Link from 'next/link';
           aValue = a && a.name.toLowerCase();
           bValue = b && b.name.toLowerCase();
       }
-<<<<<<< HEAD
       }
     });
     return filtered;
@@ -192,7 +173,6 @@ import Link from 'next/link';
       icon: CheckCircle
       count: allServices.filter(s => s.variant.includes('customer')).length
     },  ];
-=======
 
           break;
         case 'rating':;
@@ -204,8 +184,6 @@ import Link from 'next/link';
           b_value = parse_int (b.customers.replace (/[^0 - 9]/g, ''));
           break;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain;
     if (variant.includes('security')) return Shield;
@@ -219,7 +197,6 @@ import Link from 'next/link';
     return Sparkles
   };
 
-
   const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
     if (variant.includes('security')) return 'from-red-500 to-pink-500';
@@ -229,15 +206,7 @@ import Link from 'next/link';
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-<<<<<<< HEAD
-=======
 
-=======
-=======
-
-
-
-=======
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -314,8 +283,6 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -336,14 +303,9 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return 'from-gray-500 to-slate-500'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -419,10 +381,6 @@ const Services2024Page: React.FC = () => {;
   }
 }
   ],
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -445,16 +403,11 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/services-2024' />;
       </Head>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
@@ -462,12 +415,9 @@ const Services2024Page: React.FC = () => {;
         <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
-<<<<<<< HEAD
       <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
       <div className='relative z-10 min-h-screen'>
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
 
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -476,12 +426,8 @@ const Services2024Page: React.FC = () => {;
 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <UltraFuturisticBackground2034 intensity={0.8} theme="quantum" />
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */  } catch (error) {
@@ -507,30 +453,20 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
-=======
-
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Future-Ready
                 </span>
                 <br />
@@ -541,12 +477,9 @@ const Services2024Page: React.FC = () => {;
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-=======
               
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
@@ -558,13 +491,7 @@ const Services2024Page: React.FC = () => {;
                 <br />
                 <span className="text-white">Solutions</span>
               </h1>
-<<<<<<< HEAD
-=======
-              
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Experience the next generation of AI, quantum security, and enterprise IT solutions. 
                 Transform your business with our revolutionary 2024 service portfolio.
@@ -573,20 +500,12 @@ const Services2024Page: React.FC = () => {;
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
                   <div className="text-gray-400">Revolutionary Services</div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
                   <div className="text-gray-400">Service Categories</div>
                 </div>
-<<<<<<< HEAD
-=======
                 <div className="text-center">
                   <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
                   <div className="text-gray-400">Average Rating</div>
@@ -595,14 +514,10 @@ const Services2024Page: React.FC = () => {;
                   <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
                   <div className="text-gray-400">Happy Customers</div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}>;
               <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>;
@@ -653,18 +568,12 @@ const Services2024Page: React.FC = () => {;
           </div>;
         </section>;
 
-
         {/* Search and Filters */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
-<<<<<<< HEAD
-=======
-=======
                 {/* Search */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -673,12 +582,6 @@ const Services2024Page: React.FC = () => {;
                 <div className="lg:col-span-2">
                   <div className="relative">
                     <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -687,27 +590,20 @@ const Services2024Page: React.FC = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
-
 
                       onChange={e => setSearchQuery(e && e.target.value)}
                       className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />;
                   </div>;
                 </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Category Filter */}
                 <div>;
                   <select
                     value={selectedCategory}
 
-
-<<<<<<< HEAD
                     ))}
                   </select>
                 </div>
@@ -738,27 +634,18 @@ const Services2024Page: React.FC = () => {;
                   </select>;
                 </div>;
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
 
                   </select>;
                 </div>;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 <div className="flex space-x-2">
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value as any)}
@@ -771,8 +658,6 @@ const Services2024Page: React.FC = () => {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
         return a_value > b_value ? 1 : -1;
       } else {
         return a_value < b_value ? 1 : -1;
@@ -1007,17 +892,13 @@ if ( {) {
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
                     {sortOrder === 'asc' ? '↑' : '↓'}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-=======
                   <button;
                     on_click={() =>;
                       setSortOrder (sort_order === 'asc' ? 'desc' : 'asc');
@@ -1025,16 +906,12 @@ if ( {) {
                     className='px - 4 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white rounded - lg hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 200';
                   >                    {sort_order === 'asc' ? '↑' : '↓'}
 
-=======
-
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')} className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
                     {sortOrder === 'asc' ? '↑' : '↓'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </button>;
                 </div>;
               </div>;
@@ -1090,11 +967,7 @@ if ( {) {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <motion.div
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1110,7 +983,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */  } catch (error) {
@@ -1123,7 +995,6 @@ if ( {) {
                           {React.createElement(getVariantIcon(service.variant), {
                             className: `w-6 h-6 text-cyan-400`
                           })  } catch (error) {
-=======
 
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
@@ -1138,20 +1009,14 @@ if ( {) {
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
 
-
-
                         </div>
                       </div>
 
-=======
-
                       {/* Service Info */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
@@ -1164,14 +1029,12 @@ if ( {) {
                       </h3>
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service.tagline}
                       </p>
-=======
 
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
                         {service.name}
                       </h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {service.tagline}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </p>
                       <div className='flex items-start justify-between mb-4'>;
                         <div className='w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center'>;
@@ -1182,17 +1045,12 @@ if ( {) {
                             }
                           )}
                         </div>;
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <div className='text-right'>;
                           <div className='text-2xl font-bold text-cyan-400'>;
                             {service && service.price}
                           </div>;
                           <div className='text-sm text-gray-400'>per month</div>                        </div>;
                       </div>;
-<<<<<<< HEAD
 
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
@@ -1201,11 +1059,8 @@ if ( {) {
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
                       </p>;
 
-
-
                       {/* Features */}
 
-=======
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>;
                         {service && service.name}
@@ -1213,11 +1068,8 @@ if ( {) {
                       <p className='text-gray-300 mb-4 leading-relaxed'>                        {service && service.tagline}
                       </p>;
 
-
-
                       {/* Features */}
 
-=======
                       {/* Service Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1242,8 +1094,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
                         <div className="space-y-2">
@@ -1257,8 +1107,6 @@ if ( {) {
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
-<<<<<<< HEAD
-=======
 
                           </div>;
                           <div className='text - sm text - gray - 400'>per month</div>                        </div>;
@@ -1290,7 +1138,6 @@ if ( {) {
                           {service.features.length > 3 && (
                             <div className='text - sm text - cyan - 400'>                              +{service.features.length - 3} more features;
                             </div>)}
-=======
 
                           )  } catch (error) {
     console.error("Error:", error);
@@ -1306,7 +1153,6 @@ if ( {) {
                           <div className='flex items - center justify - center space - x-1 mb - 1'>;
                             <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
                             <span className='text - sm font - semibold text - white'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               {service.rating}
                             </span>;
                           </div>;
@@ -1315,10 +1161,7 @@ if ( {) {
                         <div className='text - center'>;
                           <div className='text - sm font - semibold text - white mb - 1'>;
                             {service.customers}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
@@ -1337,10 +1180,8 @@ if ( {) {
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
                       </div>
-<<<<<<< HEAD
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
-=======
 
                         </div>;
                       </div>;
@@ -1368,14 +1209,10 @@ if ( {) {
                           <div className='text-xs text-gray-400'>Launched</div>                        </div>;
                       </div>;
 
-
                       {/* CTA */}
 
-=======
                       <div className="flex items-center justify-between">
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1383,41 +1220,25 @@ if ( {) {
 }
                       <div className="flex items-center justify-between">
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-<<<<<<< HEAD
                           {service.variant.replace('-futuristic', '').replace('- ')}
-=======
-<<<<<<< HEAD
                           {service.variant.replace('-futuristic', '').replace('- ')}
 
-=======
                           {service.variant.replace('-futuristic', '').replace('- ')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </div>
                       </div>
                     </div>
                   </motion.div>
-<<<<<<< HEAD
-=======
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
@@ -1468,11 +1289,8 @@ if ( {) {
   }
 }
 
-<<<<<<< HEAD
-=======
           </div>;
         </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
@@ -1531,7 +1349,6 @@ if ( {) {
                 the future of technology.;
               </p>;
 
-
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1539,10 +1356,7 @@ if ( {) {
                 Get started today and experience the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-<<<<<<< HEAD
-=======
 <Link
-=======
           </div>
         </section>
         {/* CTA Section */}
@@ -1555,7 +1369,6 @@ if ( {) {
               className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
-=======
                       <div className="grid grid-cols-3 gap-4 mb-6">;
                         <div className="text-center">;
                           <div className="flex items-center justify-center space-x-1 mb-1">;
@@ -1632,11 +1445,6 @@ if ( {) {
 }
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -1644,9 +1452,7 @@ if ( {) {
                 Get started today and experience the future of technology.
               </p>
               <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Link
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
                   <Zap className="w-5 h-5" />
                   <span>Get Started Today</span>
@@ -1655,31 +1461,23 @@ if ( {) {
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
-<<<<<<< HEAD
                 <Link
                   href=&quot;/contact&quot; className=&quot;flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold&quot;>
                   <Zap className=&quot;w-5 h-5&quot; />
                   <span>Get Started Today</span>
                 </Link>
-<<<<<<< HEAD
-=======
                 <Link
                   href=&quot;/pricing-2033&quot; className=&quot;flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold&quot;>
                   <span>View Pricing Plans</span>
                   <ArrowRight className=&quot;w-4 h-4&quot; />
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </>
-
 
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;
                   <span>View Pricing Plans</span>;
@@ -1694,10 +1492,6 @@ if ( {) {
 };
 export default Services2024Page;
 
-<<<<<<< HEAD
-=======
-
-=======
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
                 <Link;
                   href='/contact';
@@ -1712,10 +1506,7 @@ export default Services2024Page;
                 >;
                   <span > View Pricing Plans</span>;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 export default Services2024Page,
         <section className="px-4 sm:px-6 lg:px-8 mb-20">;
@@ -1753,38 +1544,23 @@ export default Services2024Page,
                   <span > Get Started Today</span>;
                 </Link>;
                 <Link;
-<<<<<<< HEAD
                   href='/pricing - 2033';
                   className='flex items - center space - x-2 border border - cyan - 500 / 30 text - cyan - 400 px - 8 py - 4 rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 200 font - semibold';
                 >;
                   <span > View Pricing Plans</span>;
                   <ArrowRight className='w - 4 h - 4' />                </Link>;
-=======
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">;
                   <span>View Pricing Plans</span>;
                   <ArrowRight className="w-4 h-4" />;
                 </Link>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
       </div>;
-<<<<<<< HEAD
     </>),
 }
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Services2024Page;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

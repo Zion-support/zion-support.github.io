@@ -27,12 +27,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
-
-
 import {useCurrentUser} from '../../utils/auth';
-<<<<<<< HEAD
-=======
-
 
 const REASONS = [;
   'Scope Disagreement',;
@@ -45,16 +40,11 @@ const REASONS = [;
 ] as const;
 type ReasonType = (typeof REASONS)[number];
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 
-<<<<<<< HEAD
-=======
 const REASONS = [
   'Scope Disagreement',
   'Quality Issues',
@@ -63,7 +53,6 @@ const REASONS = [
   'Communication Breakdown',
   'Other',
 ] as const;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -73,14 +62,8 @@ const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
   const router = useRouter();
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const [projectId, setProjectId] = useState(qProjectId || '');
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
@@ -185,14 +168,7 @@ const reader = new FileReader();
     } finally {;
 
       setSubmitting(false);    }
-<<<<<<< HEAD
 
-=======
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -211,13 +187,8 @@ import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
 const REASONS = [;
-<<<<<<< HEAD
-=======
-=======
 
 const REASONS = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   'Scope Disagreement',
   'Quality Issues',
   'Delivery Delay',
@@ -225,10 +196,6 @@ const REASONS = [
   'Communication Breakdown',
   'Other',
 ] as const;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 type ReasonType = (typeof REASONS)[number];
 ;
@@ -272,7 +239,6 @@ function handle_submit() {
     try {
       const res = await fetch ('/api / disputes', {
         method: 'POST',
-
 
   return (
 
@@ -415,10 +381,8 @@ if ( {) {
         </form>;
       </div>;
 
-
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
-
 
 function toBase64(): any (file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
@@ -427,9 +391,7 @@ function toBase64(): any (file: File): Promise<string> {;
     reader && reader.onerror = reject;
     reader && reader.readAsDataURL(file);
 
-
   });
-
 
     reader.readAsDataURL(file)
   })
@@ -447,10 +409,6 @@ const reader = new FileReader ();
 }
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -461,7 +419,6 @@ const reader = new FileReader ();
     reader.readAsDataURL(file);
   });
 
-<<<<<<< HEAD
 }
 }
   } catch (error) {
@@ -469,8 +426,4 @@ const reader = new FileReader ();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

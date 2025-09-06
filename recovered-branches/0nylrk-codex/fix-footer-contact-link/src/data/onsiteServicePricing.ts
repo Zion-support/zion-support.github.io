@@ -1,24 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
 export interface CountryPricing {
 
-=======
   { country: "Zimbabwe", pricePerIncident: 60.50 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 export interface CountryPricing {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   country: string;
   pricePerIncident: number;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Afghanistan', pricePerIncident: 131.04 }
   { country: 'Albania', pricePerIncident: 110.41 }
@@ -251,8 +240,6 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Yemen', pricePerIncident: 320.66 }
   { country: 'Zambia', pricePerIncident: 62.01 }
   { country: 'Zimbabwe', pricePerIncident: 60.5 },];  { country: "Afghanistan", pricePerIncident: 131.04 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   { country: "Albania", pricePerIncident: 110.41 }
   { country: "Algeria", pricePerIncident: 92.26 }
   { country: "American Samoa", pricePerIncident: 193.60 }
@@ -712,7 +699,6 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Zambia", pricePerIncident: 62.01 };
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 
-
 export interface CountryPricing {;
   country: string,;
 
@@ -720,7 +706,6 @@ export interface CountryPricing {;
   pricePerIncident: number;
 }
 
-<<<<<<< HEAD
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
   { country: "Albania", pricePerIncident: 110.41 },
@@ -1189,7 +1174,6 @@ export const onsiteServicePricing: CountryPricing[] = [;
   { country: "Zimbabwe", pricePerIncident: 60.50 }
 ];
 
-
 export interface CountryPricing {
 
   { country: "Zimbabwe", pricePerIncident: 60.50 }
@@ -1197,6 +1181,3 @@ export interface CountryPricing {
   country: string;
   pricePerIncident: number;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

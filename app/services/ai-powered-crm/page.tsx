@@ -3,13 +3,10 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered CRM Platform | Zion Tech Group',
-<<<<<<< HEAD
   description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence'
-=======
   description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.',
   keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence'
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
 };
 
 interface FeatureCardProps {
@@ -102,7 +99,6 @@ export default function AIPoweredCRMPage() {
           AI-Powered CRM Platform
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
           Transform your sales process with intelligent automation, predictive analytics, and AI-driven insights. 
           Our CRM platform increases conversion rates by 40% and reduces sales cycle time by 60%.
         </p>
@@ -112,7 +108,6 @@ export default function AIPoweredCRMPage() {
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Get Free Demo
-=======
           Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior, 
           and automates follow-ups. Boost sales by 40% with AI-driven insights and automation.
         </p>
@@ -122,7 +117,6 @@ export default function AIPoweredCRMPage() {
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Request Demo
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
           </a>
           <a
             href="tel:+13024640950"
@@ -138,16 +132,12 @@ export default function AIPoweredCRMPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Revolutionary AI Features</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
             Our AI-powered CRM goes beyond traditional customer management to provide intelligent insights and automation.
-=======
             Our AI-powered CRM goes beyond traditional customer management with intelligent automation and predictive insights.
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-<<<<<<< HEAD
             icon="🎯"
             title="AI Lead Scoring"
             description="Machine learning algorithms analyze customer behavior, engagement patterns, and demographic data to score leads with 95% accuracy."
@@ -155,7 +145,6 @@ export default function AIPoweredCRMPage() {
               "95% scoring accuracy",
               "Real-time lead prioritization",
               "Behavioral pattern analysis",
-=======
             icon="🧠"
             title="AI Lead Scoring"
             description="Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns and engagement history."
@@ -164,12 +153,10 @@ export default function AIPoweredCRMPage() {
               "Behavioral pattern analysis",
               "Engagement prediction",
               "Priority recommendations",
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
               "Custom scoring models"
             ]}
           />
           <FeatureCard
-<<<<<<< HEAD
             icon="🤖"
             title="Automated Follow-ups"
             description="AI-powered email sequences and call scheduling based on customer behavior and optimal timing predictions."
@@ -189,7 +176,6 @@ export default function AIPoweredCRMPage() {
               "Lifetime value forecasting",
               "Sales opportunity scoring",
               "Revenue forecasting"
-=======
             icon="📊"
             title="Predictive Analytics"
             description="Forecast sales outcomes, identify upsell opportunities, and predict customer churn with advanced AI models."
@@ -211,12 +197,10 @@ export default function AIPoweredCRMPage() {
               "Optimal timing detection",
               "Personalized content",
               "A/B testing automation"
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
             ]}
           />
           <FeatureCard
             icon="💬"
-<<<<<<< HEAD
             title="AI Chat Assistant"
             description="Intelligent chatbot handles initial customer inquiries, qualifies leads, and schedules meetings automatically."
             benefits={[
@@ -233,20 +217,17 @@ export default function AIPoweredCRMPage() {
             benefits={[
               "Call sentiment analysis",
               "Deal progression tracking",
-=======
             title="Conversation Intelligence"
             description="Analyze call recordings, emails, and meetings to extract insights and improve sales performance."
             benefits={[
               "Call transcription & analysis",
               "Sentiment analysis",
               "Key phrase detection",
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
               "Coaching recommendations",
               "Performance insights"
             ]}
           />
           <FeatureCard
-<<<<<<< HEAD
             icon="🔄"
             title="Workflow Automation"
             description="Smart automation handles repetitive tasks, data entry, and follow-up processes to increase team productivity."
@@ -255,7 +236,6 @@ export default function AIPoweredCRMPage() {
               "Data synchronization",
               "Process optimization",
               "Team productivity boost"
-=======
             icon="🎯"
             title="Smart Segmentation"
             description="Automatically segment customers based on behavior, preferences, and predicted lifetime value."
@@ -277,12 +257,10 @@ export default function AIPoweredCRMPage() {
               "Best practice recommendations",
               "ROI tracking",
               "Success metrics"
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
             ]}
           />
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Pricing */}
       <section className="py-12 bg-gray-50 rounded-lg">
@@ -537,7 +515,6 @@ function CaseStudy({ company, industry, result, description, metrics }: {
           ))}
         </div>
       </div>
-=======
 
       {/* ROI Section */}
       <section className="py-12 bg-gray-50 rounded-lg">
@@ -684,7 +661,6 @@ function CaseStudy({ company, industry, result, description, metrics }: {
           <p>📧 kleber@ziontechgroup.com</p>
         </div>
       </section>
->>>>>>> cursor/expand-services-advertise-and-build-project-1551
     </div>
   );
 }

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
@@ -9,14 +6,8 @@
 
 export default function AutomationStatusPage() {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 }</div>) import { useEffect, useState } from 'react';
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
@@ -28,26 +19,18 @@ export default function AutomationStatusPage() {;
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     fetch('/automation/status && status.json');
       .then((r) => r && r.json());
       .then((j) => setStatus(j));
       .catch(() => setStatus(null));
-<<<<<<< HEAD
 
   }, []);
   return (
 
-=======
   }, []);
   return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>;
       {status ? (;
@@ -62,15 +45,9 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }, []);
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 </div>) : (<div className="text - sm text - gray - 500" >No status available yet.</div>);
 }</div>) import { useEffect, useState } from 'react';
 export default /**
@@ -98,19 +75,7 @@ function AutomationStatusPage() {
         <div className="text - sm text - gray - 500">No status available yet.</div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   );
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

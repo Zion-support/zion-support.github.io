@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 ;
 const fs = require('fs');
@@ -114,15 +113,12 @@ class PerformanceOptimizer {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-=======
-<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.reportFile = path.join(__dirname, '../logs/performance-optimization-report.json');
   }
 
   async optimizePerformance() {
-    
-    
+
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx']);
     const optimizations = [];
 
@@ -215,13 +211,6 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceOptimizer;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -230,7 +219,6 @@ const path = require('path')
     const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
         const content = fs.readFileSync(file, 'utf8')
     optimized = optimized.replace(/imports+{s*([^}]+)s*}s+froms+['"]([^'')]
-=======
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -250,7 +238,6 @@ class PerformanceOptimizer {
       caching: null,
       overall: { status: 'unknown', score: 0 }
     };
->>>>>>> main
   }
 
   getBundleRecommendations(totalSize, fileCount) {
@@ -437,7 +424,6 @@ class PerformanceOptimizer {
 
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
-<<<<<<< HEAD
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
@@ -753,7 +739,4 @@ monitor.runBundleAnalysis()
 }
 const optimizer = new PerformanceOptimizer()
 optimizer.run().catch(console.error)
-=======
 optimizer.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

@@ -1,29 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
->>>>>>> main
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       
       if ( {
         ) {
@@ -40,8 +18,7 @@ const path = require('path')
 
   async performMerge(branchName) {
     try {
-      
-      
+
       // Create backup before merge
       if ( {
         await this.createBackup(`pre-merge-${branchName}`)}
@@ -86,9 +63,7 @@ const path = require('path')
         "strategy": this.config.mergeStrategy,
         "success": true
       })}
-      
-      
-      
+
       // Clean up branch
       await this.cleanupBranch(branchName)} catch (error) {
       console.error(`❌ Failed to merge ${branchName}:`, error);
@@ -220,8 +195,7 @@ const path = require('path')
   }
 
   async handleNewCommit(repoInfo) {
-    
-    
+
     // Check if commit should trigger automatic actions
     const commitMessage = repoInfo.lastCommit[1].toLowerCase(;);
     
@@ -241,8 +215,7 @@ const path = require('path')
   }
 
   async handleUncommittedChanges(repoInfo) {
-    
-    
+
     // Analyze changes
     const changes = repoInfo.statu;s;
     const changeTypes = {
@@ -251,9 +224,7 @@ const path = require('path')
       "deleted": changes.filter(c => c.startsWith('D')).length,
       "renamed": changes.filter(c => c.startsWith('R')).length
    };
-    
-    
-    
+
     // Auto-commit if configured
     if () {
       await this.autoCommit(changes)}
@@ -321,8 +292,7 @@ const path = require('path')
     }
 
   async performFullAnalysis() {
-    
-    
+
     try {
       const analysis = {
         "timestamp": new Date().toISOString(),
@@ -431,9 +401,7 @@ const path = require('path')
   }
 
   async notifyManualIntervention(branchName, resolution) {
-    
-    
-    
+
     // Save notification for later review
     const notification = {
       "branch": branchName,
@@ -490,14 +458,6 @@ const path = require('path')
 // Start the Intelligent Git Automation
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
-=======
-<<<<<<< HEAD
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -569,7 +529,4 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
       console.error('Error loading "history")
-<<<<<<< HEAD
       console.error('Error loading "history")
-=======
->>>>>>> main

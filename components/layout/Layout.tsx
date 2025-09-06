@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Head from 'next/head';
-=======
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 
 import Header from '../Header';
@@ -13,11 +10,6 @@ import Header from './Header';
 import Footer from './Footer';
 import Header from '../Header';
 import Footer from '../Footer';
-
-
-
-
-
 
 ;
 import React from 'react';
@@ -50,11 +42,9 @@ function Layout() {
       <Header />;
       <main>;
 
-
   "./Footer"import Footer  from "react./Footer,;
 export default function Layout({ children }: LayoutProps) {;
   return (;
-
 
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
@@ -99,14 +89,11 @@ function Layout() { return <div>{children}</div>; type LayoutProps = { children:
  */
 function Layout() { return <div>{children}</div> } " ;
 }}
-=======
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
-<<<<<<< HEAD
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
@@ -124,7 +111,6 @@ export default function Layout({ children, title = "Zion Tech Group", descriptio
     </>
   );
 }
-=======
   keywords?: string;
 }
 
@@ -140,5 +126,3 @@ export default function Layout({
     </div>
   );
 }
->>>>>>> main
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332

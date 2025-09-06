@@ -1,36 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
-=======
-=======
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
 }
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
 
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
 import {WorkExperience} from '@/types/resume';
@@ -45,12 +28,7 @@ interface WorkExperienceSectionProps {
 }
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -61,21 +39,12 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -95,31 +64,14 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
-<<<<<<< HEAD
   if (sortedWorkExperience.length === 0) return null,
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -136,17 +88,12 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
               <p className="text-sm">{work.company_name}</p>
               {work.location && (
                 <span className="text-sm">{work.location}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 interface WorkExperienceSectionProps {;
   workExperience: WorkExperience[];
-=======
 interface WorkExperienceSectionProps {
   work_experience: WorkExperience[];
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
               )}
             </div>;
@@ -155,15 +102,11 @@ interface WorkExperienceSectionProps {
             )}
           </div>;
         ))}
-<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 }
-
-=======
-=======
 
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -218,9 +161,6 @@ export function WorkExperienceSection({ workExperience } WorkExperienceSectionPr
         ))}
       </div>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * WorkExperienceSection - Function description
  */
@@ -281,10 +221,6 @@ if (return null) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  if (sortedWorkExperience.length === 0) return null;
 ) 
@@ -302,6 +238,3 @@ if (return null) {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

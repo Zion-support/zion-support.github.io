@@ -1,27 +1,15 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getFraudStore } from '../../../../utils/fraud/store';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { getFraudStore } from '../../../../utils/fraud/store',;
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token']
   if (!process.env.ADMIN_TOKEN) return true, // allow if not configured
   return token === process.env.ADMIN_TOKEN
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -39,19 +27,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     userId
     status: status as any
     label: label as any})
-<<<<<<< HEAD
 
   res.status(200).json({ items })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   res.status(200).json({ items })
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getFraudStore } from '../../../../utils / fraud / store',
 function ensure_admin (req: NextApiRequest): boolean {
@@ -61,15 +42,8 @@ if (return true, // allow if not configured) {
   $2
 }
   return token === process.env.ADMIN_TOKEN;
-=======
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -87,12 +61,7 @@ function ensureAdmin(req: NextApiRequest): boolean {;
   }
 
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 export default async /**
  * handler - Function description
@@ -111,11 +80,7 @@ if ( {) {
     res.status (401).json ({ error: 'Unauthorized' }),
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   const { limit = '50', offset = '0', source, user_id, status, label } = req.query as Record < string, string>,
   const store = getFraudStore (),
   const items = await store.list_flagged (parse_int (limit, 10), parse_int (offset, 10), {
@@ -141,9 +106,7 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   } catch (error) {
     console.error("Error:", error);
@@ -168,7 +131,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   if (!ensureAdmin(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
@@ -180,10 +142,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
@@ -212,14 +171,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,
   const store = getFraudStore(),
@@ -231,13 +183,4 @@ export default async function handler(req, res) {
   res.status(200).json({ items });
 };
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

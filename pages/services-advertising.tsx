@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -17,11 +10,6 @@ export default function ServicesAdvertisingPage() {
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   ],
 				{/* New: Core micro SaaS and AI additions */  } catch (error) {
     console.error("Error:", error);
@@ -29,14 +17,8 @@ export default function ServicesAdvertisingPage() {
   }
 }
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
   ],
-=======
   ],
-
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
@@ -44,15 +26,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
   const pricingRefs = [
@@ -66,15 +42,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -104,9 +74,6 @@ export default function ServicesAdvertisingPage() {
               {[ 
               {[
 
-
-=======
-
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
@@ -116,20 +83,13 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-<<<<<<< HEAD
-=======
-
 
                     {o.points.map((p) => (<li key={p}>{p}</li>))  } catch (error) {
     console.error("Error:", error);
@@ -144,9 +104,6 @@ export default function ServicesAdvertisingPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </section>
           <section>
@@ -168,15 +125,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $40–$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -185,15 +136,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $30–$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -202,15 +147,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $15–$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -219,15 +158,9 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
-<<<<<<< HEAD
-=======
-
 
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -308,12 +241,7 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </section>
           <section>
@@ -321,8 +249,6 @@ export default function ServicesAdvertisingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[ 
               {[
-
-
 
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
@@ -432,12 +358,7 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -448,9 +369,6 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-<<<<<<< HEAD
-=======
-
 
                   {a.title  } catch (error) {
     console.error("Error:", error);
@@ -464,9 +382,6 @@ export default function ServicesAdvertisingPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </section>
           <section>
@@ -482,13 +397,8 @@ export default function ServicesAdvertisingPage() {
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
-<<<<<<< HEAD
-=======
               </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
           </section>
           <section>
@@ -520,17 +430,8 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-=======
-
 };
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import React from 'react',
 import SEO from '../components / SEO',
@@ -919,15 +820,9 @@ return (
     </UltraAdvancedFuturisticBackground>);
 }
 
-
-
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
-
 
 ;
 
@@ -1823,14 +1718,7 @@ export default function ServicesAdvertisingPage(req, res) {
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react',
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any (
@@ -2218,9 +2106,5 @@ return (
     </UltraAdvancedFuturisticBackground>);
 }
 
-
-
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

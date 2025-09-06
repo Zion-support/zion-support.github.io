@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -20,11 +11,6 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -64,7 +50,6 @@ export function TransactionHistory() {
 
   const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
 
-<<<<<<< HEAD
   const { data: transactions, isLoading, error, refetch } = useQuery({
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {
@@ -177,9 +162,6 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
 
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -190,29 +172,24 @@ interface Transaction {;
   status: 'pending' | 'completed' | 'refunded' | 'cancelled',;
   in_escrow: boolean,;
   created_at: string,;
-<<<<<<< HEAD
   completed_at?: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {;
     display_name?: string;
   };
-=======
   completed_at?: string,;
   refunded_at?: string,;
   cancelled_at?: string,;
   provider?: {;
     display_name?: string;
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   service?: {;
     title?: string;
   }
 }
-<<<<<<< HEAD
 
 export function TransactionHistory() {;
-=======
 ;
 export function TransactionHistory() {;
   const { user } = useAuth(),;
@@ -252,7 +229,6 @@ export function TransactionHistory() {;
       }),
       
       if (error) throw error,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   const { user } = useAuth();
   const { toast } = useToast();
@@ -599,52 +575,26 @@ interface Transaction {_id: string;
   refunded_at?: string;
   cancelled_at?: string;
   provider?: {
-      
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
       refetch()
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       console.error("Error managing transaction:", error);
-=======
       console.error("Error managing transaction:", error),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       console.error("Error managing transaction:", error),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Error"
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-  
 
-
-<<<<<<< HEAD
-=======
   }
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -656,43 +606,25 @@ interface Transaction {_id: string;
           <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">
             <Clock className="w-3 h-3 mr-1" /> Pending
           </Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
         );
-=======
         ),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         ),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'completed':
         return (
           <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">
             <CheckCircle2 className="w-3 h-3 mr-1" /> Completed
           </Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
         );
-=======
         ),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         ),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'refunded':
         return (
           <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">
             <RefreshCcw className="w-3 h-3 mr-1" /> Refunded
           </Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
         );
-=======
         ),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         ),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       case 'cancelled':
         return (
           <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">
@@ -706,39 +638,21 @@ interface Transaction {_id: string;
           </Badge>
         )
     }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-  
 
-
-<<<<<<< HEAD
-=======
   }
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
-<<<<<<< HEAD
-
 
   },
 
-
-
   if (error) {
-<<<<<<< HEAD
-=======
   const { data: transactions, isLoading, error, refetch } = useQuery({;
     queryKey: ['transactions', user?.id, filter];
     queryFn: async () => {;
@@ -775,8 +689,6 @@ interface Transaction {_id: string;
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('manage-transaction', {;
         body: { transactionId, action }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       });
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
@@ -794,9 +706,6 @@ interface Transaction {_id: string;
   }
   return (
 
-<<<<<<< HEAD
-
-=======
     display_name?: string;};
   service?: {_title?: string;};
 }
@@ -993,7 +902,6 @@ export function TransactionHistory() {_const { user} = useAuth();
           <div className="space-y-4">
             {transactions.map((transaction) => {
 
-
               const isClient = user?.id === transaction.user_id;
               const isPending = transaction.status === 'pending';
               const isInEscrow = transaction.in_escrow;
@@ -1003,7 +911,6 @@ export function TransactionHistory() {_const { user} = useAuth();
               const counterpartyName = isClient
                 ? transaction.provider?.display_name |'Service Provider'
                 : 'Client';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               const isClient = user?.id === transaction.user_id,
               const isPending = transaction.status === 'pending',
               const isInEscrow = transaction.in_escrow,
@@ -1014,14 +921,7 @@ export function TransactionHistory() {_const { user} = useAuth();
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -1035,13 +935,7 @@ export function TransactionHistory() {_const { user} = useAuth();
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }),;
       if (error) throw error,;
       toast({;
@@ -1117,68 +1011,53 @@ export function TransactionHistory() {_const { user} = useAuth();
   }
 ;
   return (;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light overflow-hidden">;
       <div className="p-6">;
         <div className="flex items-center justify-between mb-6">;
           <h2 className="text-2xl font-bold text-white">Transaction History</h2>;
-<<<<<<< HEAD
 
           <div className="flex space-x-2">;
             <Button
               size="sm" 
               variant={filter === 'all' ? 'default' : 'outline'} 
-=======
           <div className="flex space-x-2">;
             <Button;
               size="sm";
               variant={filter === 'all' ? 'default' : 'outline'} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClick={() => setFilter('all')}
               className={filter === 'all' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >;
               All;
             </Button>;
-<<<<<<< HEAD
             <Button
               size="sm" 
               variant={filter === 'pending' ? 'default' : 'outline'} 
-=======
             <Button;
               size="sm";
               variant={filter === 'pending' ? 'default' : 'outline'} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClick={() => setFilter('pending')}
               className={filter === 'pending' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >;
               Pending;
             </Button>;
-<<<<<<< HEAD
             <Button
               size="sm" 
               variant={filter === 'completed' ? 'default' : 'outline'} 
-=======
             <Button;
               size="sm";
               variant={filter === 'completed' ? 'default' : 'outline'} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClick={() => setFilter('completed')}
               className={filter === 'completed' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >;
               Completed;
             </Button>;
-<<<<<<< HEAD
             <Button
               size="sm" 
               variant={filter === 'escrow' ? 'default' : 'outline'} 
-=======
             <Button;
               size="sm";
               variant={filter === 'escrow' ? 'default' : 'outline'} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               onClick={() => setFilter('escrow')}
               className={filter === 'escrow' ? 'bg-zion-purple text-white' : 'text-zion-slate-light'}
             >;
@@ -1186,10 +1065,7 @@ export function TransactionHistory() {_const { user} = useAuth();
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {isLoading ? (;
           Array(3).fill(0).map((_, i) => (;
             <div key={i} className="mb-4">;
@@ -1213,7 +1089,6 @@ export function TransactionHistory() {_const { user} = useAuth();
           ));
         ) : transactions && transactions.length > 0 ? (;
           <div className="space-y-4">;
-<<<<<<< HEAD
             {transactions && transactions.map((transaction) => {;
               const isClient = user?.id === transaction && transaction.user_id;
               const isPending = transaction && transaction.status === 'pending';
@@ -1228,7 +1103,6 @@ export function TransactionHistory() {_const { user} = useAuth();
 
               return (
                 <Card key={transaction && transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
-=======
             {transactions.map((transaction) => {;
               const isClient = user?.id === transaction.user_id,;
               const isPending = transaction.status === 'pending',;
@@ -1241,30 +1115,19 @@ export function TransactionHistory() {_const { user} = useAuth();
                 : 'Client';
               return (;
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <CardHeader className="pb-3">;
                     <div className="flex justify-between items-start">;
                       <div>;
                         <CardTitle className="text-white text-lg">;
-<<<<<<< HEAD
                           {transaction && transaction.service?.title || 'Service Payment'}
-=======
                           {transaction.service?.title || 'Service Payment'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </CardTitle>;
                         <CardDescription className="text-zion-slate-light">;
                           {isClient ? (;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           )}
                         </CardDescription>
                       </div>
@@ -1285,19 +1148,13 @@ export function TransactionHistory() {_const { user} = useAuth();
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
 
-=======
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
 
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :
@@ -1308,10 +1165,6 @@ export function TransactionHistory() {_const { user} = useAuth();
                             transaction.completed_at |
                             transaction.refunded_at |
                             transaction.cancelled_at!
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                         </CardDescription>;
                       </div>;
                       {getStatusBadge(transaction && transaction.status, transaction && transaction.in_escrow)}
@@ -1456,72 +1309,58 @@ export function TransactionHistory() {_const { user} = useAuth();
                           {new Date(                            transaction.completed_at || 
                             transaction.refunded_at || 
                             transaction.cancelled_at!
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           ).toLocaleDateString()}
                         </span>;
                       </div>;
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   </CardContent>;
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
                     {canRelease && (;
                       <Button
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'release')}
-=======
                   </CardContent>;
                   <CardFooter className="flex justify-end gap-2 bg-zion-blue/20 pt-3">;
                     {canRelease && (;
                       <Button ;
                         onClick={() => handleManageTransaction(transaction.id, 'release')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         size="sm";
                         className="bg-green-600 hover:bg-green-700 text-white";
                       >;
                         <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds;
-<<<<<<< HEAD
                       </Button>;
                     )}
 
                     {canRefund && (;
                       <Button
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'refund')}
-=======
                       </Button>;                    )}
                     ;
                     {canRefund && (;
                       <Button ;
                         onClick={() => handleManageTransaction(transaction.id, 'refund')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         size="sm";
                         variant="outline";
                         className="text-zion-slate-light border-zion-blue-light";
                       >;
                         <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund;
-<<<<<<< HEAD
                       </Button>;
                     )}
 
                     {canCancel && (;
                       <Button
                         onClick={() => handleManageTransaction(transaction && transaction.id, 'cancel')}
-=======
                       </Button>;                    )}
                     ;
                     {canCancel && (;
                       <Button ;
                         onClick={() => handleManageTransaction(transaction.id, 'cancel')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         size="sm";
                         variant="outline";
                         className="text-red-400 border-red-400/30 hover:bg-red-400/10";
                       >;
                         <XCircle className="mr-1 h-4 w-4" /> Cancel;
                       </Button>;
-<<<<<<< HEAD
 
                     )}
                   </CardFooter>;
@@ -1531,7 +1370,6 @@ export function TransactionHistory() {_const { user} = useAuth();
 
           </div>;
         ) : (;
-=======
                     )}
                   </CardFooter>;
                 </Card>;
@@ -1541,7 +1379,6 @@ export function TransactionHistory() {_const { user} = useAuth();
             })}
           </div>;
         ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg">;
             <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4">;
               <ArrowRight className="h-8 w-8 text-zion-slate-light" />;
@@ -1551,27 +1388,20 @@ export function TransactionHistory() {_const { user} = useAuth();
             <p className="text-zion-slate-light max-w-md mx-auto">;
               {filter !== 'all' ;
                 ? `You don't have any ${filter} transactions. Try changing the filter or make a new transaction.`;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
           </div>;
         )}
-<<<<<<< HEAD
 
-=======
                 :"You haven't made any transactions yet. Once you make a payment or receive one, it will appear here."}
             </p>;
           </div>;
         )}
       </div>;
     </div>;
-=======
 ;
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Check condition
 if (throw error) {
   $2
@@ -1810,7 +1640,6 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
                           ).toLocaleDateString()}
                         </span>
                       </div>
@@ -1869,20 +1698,10 @@ if ( {) {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 
-
-
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

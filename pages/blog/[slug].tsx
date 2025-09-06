@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -22,12 +15,6 @@ import path from 'path',;
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -36,33 +23,19 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-
 
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-
 interface BlogPostPageProps {
-<<<<<<< HEAD
   /**;
   * Preloaded blog post for static generation. Can be null if not found.;
   */;
   initial_post: BlogPost | null;
 }
 
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -70,7 +43,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
-
 
       setError(null), // Clear any previous error
     } else if (slug) {
@@ -80,26 +52,19 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
 
-
         setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-<<<<<<< HEAD
 // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
-=======
         // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         setError('Article not found')
       }
     }
   }, [slug, initialPost])
-<<<<<<< HEAD
-=======
   if (error) {
     return <div>{error}</div>
 
-=======
 const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
   const router = use_router (),
   const { slug } = router.query,
@@ -109,9 +74,7 @@ const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
     // Check condition
 if ( {) {
   $2
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
     return null;
@@ -150,14 +113,12 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
   }
   const articleLd = {
     author: post.author.name
     publishedTime: post.publishedDate
     tags: post.tags |[]}
   const body = (post as any).body |post.content
-=======
     return <div>{error}</div>;
   }
   // Check condition
@@ -167,23 +128,17 @@ if ( {) {
     return <div > Article not found</div>;
   }
 
-=======
   const article_ld = {
 
     author: post.author.name,
     published_time: post.published_date,
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     tags: post.tags || []},
   const body = (post as any).body || post.content;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <>;
       <AdvancedSEO;
         title={post.title}
         description={post.excerpt}
-<<<<<<< HEAD
-=======
 
         image={post.featured_image}
         type="article";
@@ -192,15 +147,11 @@ if ( {) {
       <main className="prose dark:prose - invert max - w-3xl mx - auto py - 8">;
         <h1>{post.title}</h1>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {post.excerpt && <p className="lead">{post.excerpt}</p>}
         <div className="flex items - center gap - 3 mb - 6">;
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
-<<<<<<< HEAD
-=======
-
 
 }
       } catch (error) {
@@ -273,18 +224,11 @@ if ( {) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {post.author.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -296,21 +240,13 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
         </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
-<<<<<<< HEAD
-=======
 
-=======
             className="w - 10 h - 10 rounded - full";
             on_error={(e) => {
               const target = e.current_target as HTMLImageElement,
@@ -330,11 +266,8 @@ if ( {) {
           <div className="aspect-[16 / 9] w - full relative overflow - hidden rounded - lg mb - 6">;
             <img;
               src={post.featured_image}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               alt={post.title}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               src={post.featuredImage  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,21 +278,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
 
-<<<<<<< HEAD
-=======
-
-=======
               className="object - cover w - full h - full";
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
@@ -405,10 +329,7 @@ if ( {) {
   return { props: { initial_post: post }, revalidate: 60 }
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -420,7 +341,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -484,7 +404,3 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
 }
 };
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-=======
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({
@@ -15,7 +10,6 @@ const createJestConfig = nextJest({
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
@@ -29,7 +23,6 @@ const customJestConfig = {
       ]
     }]
   },
-<<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.(js|jsx|ts|tsx)',
     '<rootDir>/src/**/*.(test|spec).(js|jsx|ts|tsx)'
@@ -48,10 +41,8 @@ const customJestConfig = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   verbose: true,
   collectCoverage: false,
-<<<<<<< HEAD
   testTimeout: 10000,
 };
-=======
   collectCoverageFrom: [
     'components/**/*.{js,jsx,ts,tsx}',
     'pages/**/*.{js,jsx,ts,tsx}',
@@ -74,8 +65,6 @@ const customJestConfig = {
 }
 
 module.exports = createJestConfig(customJestConfig)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   coverageReporters: ['text', 'lcov'],
   coverageThreshold: {
     global: {
@@ -86,4 +75,3 @@ module.exports = createJestConfig(customJestConfig)
     }
   }
 };
->>>>>>> main

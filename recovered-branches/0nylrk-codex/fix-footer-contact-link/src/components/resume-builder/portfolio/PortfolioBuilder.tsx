@@ -33,9 +33,6 @@ export function PortfolioBuilder() {
       fetchProjects();
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   };
 
   if (isLoading) {
@@ -85,9 +82,6 @@ export function PortfolioBuilder() {
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
@@ -97,8 +91,6 @@ export function PortfolioBuilder() {
               key={project && project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
-<<<<<<< HEAD
-<<<<<<< HEAD
               onDelete={handleDeleteProject}
             />;
           ))}
@@ -209,21 +201,16 @@ if ( {) {
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   Add Your First Project;
                 </Button>;
               </div>;
             </CardContent>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           </Card>))}
     </div>);
 }
 
-=======
           </Card>;
         );
       )}
@@ -247,6 +234,3 @@ if ( {) {
 {editingProject ? "Edit Project" : "Add New Project"}
             </h2>
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

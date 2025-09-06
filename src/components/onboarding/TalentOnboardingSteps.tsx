@@ -1,5 +1,4 @@
 return <OnboardingTracker steps={steps} />
-
 import React from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
@@ -10,41 +9,39 @@ export /**
  */
 function TalentOnboardingSteps() {
   const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-
-
-  const steps: OnboardingStep[] = [
+  const onboarding_status = useOnboardingStatus ();,
+  const steps: OnboardingStep[] = [;,
+  const steps: OnboardingStep[] = [,
     {
-      id: "profile",
-      label: "Complete your profile",
+      id: "profile","
+      label: "Complete your profile","
       completed: onboardingStatus.profileCompleted,
-      link: "/profile",
-      action: "Update",
+      link: "/profile","
+      action: "Update","
     },
     {
-      id: "skills",
-      label: "Add your top skills",
+      id: "skills","
+      label: "Add your top skills","
       completed: onboardingStatus.skillsAdded,
-      link: "/profile/skills",
-      action: "Add Skills",
+      link: "/profile/skills","
+      action: "Add Skills","
     },
     {
-      id: "availability",
-      label: "Set your availability",
+      id: "availability","
+      label: "Set your availability","
       completed: onboardingStatus.availabilitySet,
-      link: "/profile/availability",
-      action: "Set",
+      link: "/profile/availability","
+      action: "Set","
     },
     {
-      id: "match",
-      label: "Receive your first job match",
+      id: "match","
+      label: "Receive your first job match","
       completed: onboardingStatus.matchReceived,
-      link: "/talent-dashboard",
-      action: "View Matches",
+      link: "/talent-dashboard","
+      action: "View Matches","
     },
   ];
-
-      id: "match",
-      label: "Receive your first job match",
+      id: "match","
+      label: "Receive your first job match","
       completed: onboardingStatus.matchReceived,
+}]

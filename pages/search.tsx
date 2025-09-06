@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 
 
 class ErrorBoundary extends React.Component {
@@ -24,30 +22,18 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-<<<<<<< HEAD
-=======
 
 import {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Search,
   Filter,
   ArrowRight,
@@ -66,11 +52,7 @@ import {
   X,
   ChevronDown,
   ChevronUp;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 const searchResults = [
   {
@@ -152,7 +134,6 @@ const filters = [
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
-<<<<<<< HEAD
 export default function SearchPage() {
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
@@ -199,19 +180,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
-=======
-
 
 export default function SearchPage() {
 
-
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-
-=======
 
 import { 
   Search, Filter, Grid, List, ArrowRight, ExternalLink, 
@@ -222,16 +196,10 @@ import {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function SearchPage() {
-
-
 
 export default function SearchPage() {
 
-
-
-<<<<<<< HEAD
 import {;
   Search,;
   Filter,;
@@ -329,18 +297,11 @@ const categories = [;
   { name: 'Company', count: 2 }
 ];
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function SearchPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [showFilters, setShowFilters] = useState(false);
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -677,8 +638,6 @@ export default function SearchPage(req, res) {
       </Head>
 
       <div className="min-h-screen bg-gray-50">
-=======
-
 
   const filteredResults = searchResults && searchResults.filter(result => {;
     const matchesQuery = result && result.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -686,21 +645,11 @@ export default function SearchPage(req, res) {
     const matchesCategory = selectedCategory === 'All' || result && result.category === selectedCategory;
     const matchesFilter = selectedFilter === 'All' || result && result.type === selectedFilter;
 
-
     return matchesQuery && matchesCategory && matchesFilter;
   });
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return matchesQuery && matchesCategory && matchesFilter;
   });
 
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
 
     <Layout>;
@@ -717,7 +666,6 @@ export default function SearchPage(req, res) {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
       <SmartHeader />
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -768,7 +716,6 @@ export default function SearchPage(req, res) {
 }
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
-=======
 
               transition={{ duration: 0 && 0.8 }}>;
               <h1 className="text-5xl font-bold mb-6">;
@@ -778,17 +725,11 @@ export default function SearchPage(req, res) {
                 Find the information you need quickly and easily.;
               </p>;
 
-
               {/* Search Bar */}
-<<<<<<< HEAD
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
 
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
@@ -796,7 +737,6 @@ export default function SearchPage(req, res) {
                     type="text"
                     placeholder="Search for services, guides, articles..."
                     value={searchQuery}
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
@@ -809,14 +749,7 @@ export default function SearchPage(req, res) {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex flex-wrap gap-4">
-=======
 
-
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300";
                   />;
@@ -825,7 +758,6 @@ export default function SearchPage(req, res) {
             </motion && motion.div>;
           </div>;
         </section>;
-
 
 import Head from 'next / head';
 import Link from 'next / link';
@@ -1014,10 +946,6 @@ function SearchPage() {
                         : 'bg - gray - 100 text - gray - 700 hover:bg - gray - 200';
                     }`}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* View Mode Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1077,14 +1005,11 @@ function SearchPage() {
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
 
-
-
                   >
                     {term}
                   </button>
                 ))}
               </div>
-
 
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
@@ -1092,12 +1017,8 @@ function SearchPage() {
             </div>
             {showFilters && (
               <motion.div
-<<<<<<< HEAD
-=======
-=======
                 </button>;
                 {categories && categories.map((category) => (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <button
                     key={category && category.name}
                     onClick={() => setSelectedCategory(category && category.name)}
@@ -1110,9 +1031,6 @@ function SearchPage() {
                     {category && category.name} ({category && category.count});
                   </button>;
                 ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               </div>;
               <div className="text-sm text-gray-600">;
                 {filteredResults && filteredResults.length} results found;
@@ -1120,17 +1038,12 @@ function SearchPage() {
             </div>;
             {showFilters && (;
               <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="mt-4 p-4 bg-gray-50 rounded-lg"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
 
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
                   )  } catch (error) {
@@ -1200,18 +1113,13 @@ function SearchPage() {
   }
 }
                 className="mt-6 pt-6 border-t border-white/20"
-<<<<<<< HEAD
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
-=======
-
 
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <button
                       key={filter && filter.name}
                       onClick={() => setSelectedFilter(filter && filter.name)}
@@ -1220,7 +1128,6 @@ function SearchPage() {
                           ? 'bg-blue-600 text-white';
                           : 'bg-white text-gray-700 hover:bg-gray-100';
                       }`}
-<<<<<<< HEAD
                       {filter.name} ({filter.count})
                     </button>
                   ))}
@@ -1230,20 +1137,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                   ))}
                 </div>
 origin/automation-improvements-final
-=======
 
                   ))}                </div>
 
-=======
                   ))}
                 </div>
->>>>>>> origin/automation-improvements-final
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ))}
                 </div>
               </motion.div>
@@ -1268,13 +1167,9 @@ origin/automation-improvements-final
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                           {category.icon} {category.name  } catch (error) {
@@ -1526,12 +1421,7 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -1586,10 +1476,6 @@ origin/automation-improvements-final
                     initial={{ opacity: 0, coordinate_y: 20 }}
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   >;
                     <div className="flex items - start justify - between">;
                       <div className="flex - 1">;
@@ -1606,15 +1492,8 @@ origin/automation-improvements-final
                             className="hover:text - blue - 600 transition - colors";
                           >;
                             {result.title}
-<<<<<<< HEAD
-=======
 
                       </Link>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -1623,9 +1502,6 @@ origin/automation-improvements-final
     category: 'all',
     status: 'all',
     priceRange: 'all',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     technology: 'all'
 });
   const [sortBy, setSortBy] = useState('relevance');
@@ -2137,7 +2013,6 @@ className="mt-6 pt-6 border-t border-white/20"
         </div>
       </section>
 
-
       {/* Search Results */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -2149,12 +2024,7 @@ className="mt-6 pt-6 border-t border-white/20"
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
-=======
-<<<<<<< HEAD
     technology: 'all',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </div>
       </section>
 
@@ -2172,36 +2042,26 @@ className="mt-6 pt-6 border-t border-white/20"
               {isSearching
                 ? 'Searching...'
                 : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             </p>
           </div>
 
           {/* Loading State */}
           {isSearching && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
             </div>
-=======
             <div className='text-center py-20'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
                 <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
               </div>
               <p className='text-white/60'>Searching our services...</p>            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -2214,7 +2074,6 @@ className="mt-6 pt-6 border-t border-white/20"
                 onClick={clearFilters}
 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
-=======
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
@@ -2227,8 +2086,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               <button
                 onClick={clearFilters}
                 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 Clear All Filters
               </button>
             </div>
@@ -2236,13 +2093,9 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
-=======
             <AnimatePresence mode='wait'>
               <div
                 className={
@@ -2251,17 +2104,12 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                     : 'space-y-6'
                 }
               >                {searchResults.map((service, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                       viewMode === 'grid' 
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
@@ -2298,7 +2146,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
-=======
                       viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
@@ -2355,15 +2202,10 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             </div>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <div className="flex items-center justify-between">
                         <a
                           href={service.link}
@@ -2380,28 +2222,15 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                         </a>
                       </div>
 
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
-=======
                       </Link>                    </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   </motion.div>
                 ))}
               </div>
 
-
             ) : (
               <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}>;
                     <div className="flex items-start justify-between">;
                       <div className="flex-1">;
@@ -2441,18 +2270,8 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
               </div>;
             ) : (;
               <motion&& motion.div
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             ) : (
               <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="text-center py-16"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -2465,7 +2284,6 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                   Try adjusting your search terms or filters.;
                 </p>;
                 <button
-<<<<<<< HEAD
                   onClick={() => {
 )
                         <div className="flex flex-col items-end gap-2">
@@ -2517,14 +2335,11 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
                         </a>
                       </div>
 
-
-
 </Link>
                     </div>
                   </motion.div>
                 ))}
               </div>
-
 
             ) : (
               <motion.div
@@ -2585,8 +2400,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                   Try adjusting your search terms or filters.;
                 </p>;
                 <button
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   onClick={() => {;
                     setSearchQuery('');
                     setSelectedCategory('All');
@@ -2598,14 +2411,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 </button>;
               </motion && motion.div>;
             )}
-<<<<<<< HEAD
-=======
 
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Popular Searches */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -2613,9 +2422,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
                 Popular Searches;
@@ -2624,7 +2430,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Common searches to help you find what you're looking for.;
               </p>;
             </motion && motion.div>;
-
 
             <div className="flex flex-wrap gap-3 justify-center">;
               {[;
@@ -2735,7 +2540,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 >;
                   {term}
                 </motion.button>))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>;
           </div>;
         </section>;
@@ -2743,29 +2547,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
   );
 
-<<<<<<< HEAD
-=======
-=======
-=======
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </AnimatePresence>
           )}
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
-=======
-<<<<<<< HEAD
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -2789,11 +2578,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                   >
                     {_term}
 
-=======
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
               <p className="text-white/60 mb-6">
@@ -2811,7 +2598,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
                     {term}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   </button>
                 ))}
               </div>
@@ -2819,21 +2605,16 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
           )}
         </div>
       </section>
-<<<<<<< HEAD
-=======
 <SmartFooter />
     </div>
 
   );
 
   )
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   )
 }
@@ -2848,43 +2629,22 @@ origin/main
 origin/automation-improvements-final
 )
 }
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-
 
   )
 }
 
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 )
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 )
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Layout>);
 }  );
 }
 );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -2905,4 +2665,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

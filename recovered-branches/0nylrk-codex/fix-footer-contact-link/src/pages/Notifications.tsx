@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,23 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -55,14 +36,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -83,15 +57,7 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -109,9 +75,6 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 },
 
@@ -131,24 +94,17 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 },
-
 
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 };
 
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -158,13 +114,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
       return <Badge className="bg-zion-purple">Hire Request</Badge>;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -203,10 +153,6 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const NotificationCard: React.FC<{
   notification: {
@@ -217,10 +163,7 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
-<<<<<<< HEAD
 
-
-=======
     action_text?: string
   }
   onMarkAsRead: (id: string) => Promise<void>
@@ -230,9 +173,6 @@ const NotificationCard: React.FC<{
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -269,17 +209,10 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
       return <AlertCircle className={cn(className, "text-yellow-500")} />,;
     default:;
       return <Bell className={cn(className, "text-gray-500")} />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -312,27 +245,12 @@ const NotificationCard: React.FC<{;
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   };
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -341,10 +259,6 @@ const NotificationCard: React.FC<{;
       <div className="flex items-start gap-4">;
         <div className="mt-1">;
           {getNotificationIcon(notification && notification.type, "h-6 w-6")}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>;
         <div className="flex-1">;
           <div className="flex justify-between">;
@@ -358,15 +272,12 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
-<<<<<<< HEAD
 
               </div>;
             </div>;
 
             <div className="flex items-center gap-2">;
               {!notification && notification.read && (;
-
-=======
 
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -492,17 +403,11 @@ const NotificationCard: React.FC<{;
             </div>
             <div className="flex items-center gap-2">
               {!notification.read && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Button
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-<<<<<<< HEAD
-<<<<<<< HEAD
                   onClick={() => onMarkAsRead(notification && notification.id)}
-=======
             ;
             <div className="flex items-center gap-2">;
               {!notification.read && (;
@@ -511,55 +416,40 @@ const NotificationCard: React.FC<{;
                   size="sm";
                   className="h-8 w-8 p-0";
                   onClick={() => onMarkAsRead(notification.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <Check className="h-4 w-4 text-green-400" />;
                   <span className="sr-only">Mark as read</span>;
                 </Button>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                   onClick={() => onMarkAsRead(notification.id)}
                 >
                   <Check className="h-4 w-4 text-green-400" />
                   <span className="sr-only">Mark as read</span>
                 </Button>
               )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 onClick={() => onDismiss(notification && notification.id)}
-=======
                 onClick={() => onDismiss(notification && notification.id)}
               <Button;
                 variant="ghost";
                 size="sm";
                 className="h-8 w-8 p-0";
                 onClick={() => onDismiss(notification.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               >;
                 <Trash2 className="h-4 w-4 text-red-400" />;
                 <span className="sr-only">Dismiss</span>;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
 
           <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
 
           {notification && notification.action_url && notification && notification.action_text && (;
 
-=======
                 onClick={() => onDismiss(notification.id)}
               >
                 <Trash2 className="h-4 w-4 text-red-400" />
@@ -569,21 +459,15 @@ const NotificationCard: React.FC<{;
           </div>
           <p className="text-zion-slate-light mb-3">{notification.message}</p>
           {notification.action_url && notification.action_text && (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-<<<<<<< HEAD
-<<<<<<< HEAD
               onClick={handleAction}>;
               {notification && notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
-=======
           ;
           <p className="text-zion-slate-light mb-3">{notification.message}</p>;
           ;
@@ -607,22 +491,16 @@ const NotificationCard: React.FC<{;
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
   );
 };
 
 export default function NotificationsPage() {;
   const {;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     filteredNotifications;
     unreadCount;
     action_text?: string;
@@ -718,19 +596,12 @@ function NotificationsPage() {
     dismiss_notification;
     loading;
     filter;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 },
 
 export default function NotificationsPage() {
-<<<<<<< HEAD
 
-=======
   const {;
     filteredNotifications;
     unreadCount;
@@ -739,7 +610,6 @@ export default function NotificationsPage() {
     dismissNotification;
     loading;
     filter;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const {
     filteredNotifications,
     unreadCount,
@@ -748,24 +618,17 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
-<<<<<<< HEAD
 
     setFilter
 
   } = useNotifications() as NotificationContextType,
-  
-
 
   return (
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <>;
       <SEO
         title="Notifications | Zion AI Marketplace" 
         description="View and manage your notifications on the Zion AI Marketplace." 
-<<<<<<< HEAD
-=======
   ),;
 },;
 ;
@@ -786,7 +649,6 @@ export default function NotificationsPage() {;
       <SEO ;
         title="Notifications | Zion AI Marketplace" ;
         description="View and manage your notifications on the Zion AI Marketplace." ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8 min-h-screen">;
@@ -800,40 +662,28 @@ export default function NotificationsPage() {;
             </h1>;
             <p className="text-muted-foreground">Stay updated with the latest activities and reminders</p>;
           </div>;
-<<<<<<< HEAD
 
           {unreadCount > 0 && (;
 
             <Button
               variant="outline"
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               variant="outline"
           ;
           {unreadCount > 0 && (;
             <Button;
               variant="outline";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onClick={() => markAllAsRead()}
             >;
               <Check className="mr-2 h-4 w-4" />;
               Mark all as read;
             </Button>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         </div>;
 
-=======
         </div>;
         ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="mb-8">;
           <Tabs defaultValue={filter} onValueChange={(value) => setFilter(value as any)}>;
             <TabsList className="grid w-full max-w-md grid-cols-5">;
@@ -850,16 +700,12 @@ export default function NotificationsPage() {;
                   <Skeleton className="h-24 w-full rounded-lg" />;
                   <Skeleton className="h-24 w-full rounded-lg" />;
                 </div>;
-<<<<<<< HEAD
               ) : filteredNotifications && filteredNotifications.length === 0 ? (;
-=======
               ) :filteredNotifications.length === 0 ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <div className="text-center py-12 bg-muted rounded-lg">;
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
                   <h3 className="text-xl font-medium">No notifications found</h3>;
                   <p className="text-muted-foreground mt-1">;
-<<<<<<< HEAD
 
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
@@ -877,9 +723,6 @@ export default function NotificationsPage() {;
                 </div>;
               )}
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     set_filter;
   } = use_notifications () as NotificationContextType;
 ;
@@ -942,11 +785,6 @@ export default function NotificationsPage() {;
                     />))}
                 </div>)}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                     {filter === 'all' ? "You don't have any notifications yet" :`You don't have any ${filter} notifications`}
                   </p>;
                 </div>;
@@ -1031,25 +869,17 @@ export default function NotificationsPage() {;
     </>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; 
 }
@@ -1114,6 +944,3 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

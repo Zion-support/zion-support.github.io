@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {useState, useEffect} from 'react';
 import {use_form} from 'react - hook - form';
@@ -9,12 +8,7 @@ import {use_navigate} from 'react-router-dom';
 import {job_schema, JobSchemaType} from './validation';
 import { use_auth } from '@/hooks / use_auth';
 
-
-<<<<<<< HEAD
-=======
 import {useState, useEffect} from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,10 +17,6 @@ import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -43,14 +33,7 @@ export interface JobPostingProps {;
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -59,28 +42,15 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
 }
-<<<<<<< HEAD
-
 
   const { user } = useAuth(),
   const navigate = useNavigate(),
 
-<<<<<<< HEAD
-=======
-  
 export interface JobPostingProps {
   jobId?: string,
   onSuccess?: () => void
@@ -96,7 +66,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
   const { user } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -104,11 +73,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
-
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema);
     defaultValues: {
-<<<<<<< HEAD
 
 export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
   const { user } = use_auth ();
@@ -124,13 +91,9 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     resolver: zod_resolver (job_schema);
     default_values: {
 
-=======
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema),
     defaultValues: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: '';
       company: '';
       location: '';
@@ -146,13 +109,10 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       expiry_date: '';
       is_remote: false;
       category: '';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       toast && toast.error("You must be logged in to post a job");
       navigate("/login"),
 
-=======
       status: ''
       external_apply_link: ''}
     mode: "onChange"});
@@ -161,52 +121,32 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     if (!user) {
       toast.error("You must be logged in to post a job");
       navigate("/login")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return
     }
     setIsLoading(true);
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       const publishedDate = startDate ? startDate && startDate.toString() : '';
       const expiryDate = endDate ? endDate && endDate.toString() : '';
 
-
-=======
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         is_remote: isRemote,
         user_id: user && user.id};
 
-
-=======
         is_remote: isRemote
         user_id: user.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       console.error("Error in job form submission:", error);
       toast.error(error.message |"Failed to process form");
       throw error
@@ -228,8 +168,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
     submitJob
   }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       title: '',
       company: '',
@@ -318,7 +256,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
-<<<<<<< HEAD
 
 export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
   const { user } = use_auth ();
@@ -361,7 +298,6 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
       const publishedDate = startDate ? startDate && startDate.toString() : '';
       const expiryDate = endDate ? endDate && endDate.toString() : '';
 
-
       const jobData = {
         ...values;
         published_date: publishedDate;
@@ -370,25 +306,17 @@ export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
         is_remote: isRemote,
         user_id: user && user.id};
 
-
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console && console.error("Error in job form submission:", error);
       toast && toast.error(error && error.message || "Failed to process form");
 
       throw error
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       throw error
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       status: '',
       external_apply_link: ''}
     mode: "on_change"});
@@ -421,7 +349,6 @@ if ( {) {
   $2
 }
         on_success ();
-<<<<<<< HEAD
 
       title: '',
       company: '',
@@ -449,12 +376,6 @@ if ( {) {
       navigate("/login"),
       return
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       return job_data;
     } catch (error: any) {
@@ -462,12 +383,8 @@ if ( {) {
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       setIsLoading (false);
     }
@@ -482,19 +399,14 @@ if ( {) {
     setIsRemote;
     initial_values;
     setInitialValues;
-<<<<<<< HEAD
     submit_job;
-=======
       setIsLoading(false)
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 
 ;
 
-=======
       }
       
       return jobData
@@ -519,8 +431,6 @@ if ( {) {
     initialValues;
     setInitialValues;
     submitJob
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       return jobData;
     } catch (error: any) {;
@@ -548,7 +458,6 @@ if ( {) {
 };
   }
 }
-<<<<<<< HEAD
 
 ;
 
@@ -556,6 +465,3 @@ if ( {) {
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

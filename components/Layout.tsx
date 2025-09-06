@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -9,9 +8,6 @@ interface LayoutProps {
 }
 
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
-=======
-<<<<<<< HEAD
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -187,7 +183,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 };
 export default Layout;
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -232,13 +227,11 @@ export default function Layout({
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -248,7 +241,6 @@ export default function Layout({
     </>
   );
 }
-=======
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -277,5 +269,3 @@ export default function Layout({
     </>
   );
 }
->>>>>>> main
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332

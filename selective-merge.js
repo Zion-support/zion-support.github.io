@@ -5,7 +5,6 @@ console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
 const mainSourceDirs = [
-=======
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -28,8 +27,6 @@ const mainSourceDirs = [;
   'layout/',
   'legal/',
   'integrations/',
-<<<<<<< HEAD
-=======
 
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
@@ -46,9 +43,7 @@ const mainSourceDirs = [;
     // Get the latest commit from the clean-merge-services-improvements branch
     const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
     console && console.log(`Latest commit: ${latestCommit}`);
-    
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {

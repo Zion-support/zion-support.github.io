@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
 import { useState  } from 'react';
 import { Conversation, Message  } from '@/types/messaging';
 /**
@@ -11,9 +8,6 @@ import { Conversation, Message  } from '@/types/messaging';
 export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]),
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -22,23 +16,11 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Conversation, Message} from '@/types / messaging';
 /**;
@@ -65,9 +47,7 @@ function useConversationState() {
     set_conversations;
     unread_count;
     setUnreadCount;
-<<<<<<< HEAD
 
-=======
   return {
     // State
     messages;
@@ -78,9 +58,6 @@ function useConversationState() {
     setConversations;
     unreadCount;
     setUnreadCount;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     activeConversation;
 import { useState } from 'react',;
 import { Conversation, Message } from '@/types/messaging',;
@@ -109,10 +86,7 @@ export function useConversationState() {;
     setActiveConversation;
     is_loading;
     setIsLoading}
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
 
 import { useState } from 'react',;
@@ -149,7 +123,4 @@ export function useConversationState() {;
     isLoading;
     setIsLoading}
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

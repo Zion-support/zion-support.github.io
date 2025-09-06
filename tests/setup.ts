@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -29,7 +28,6 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
-=======
 import React from 'react';
 
 interface SetupProps {
@@ -44,4 +42,3 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
->>>>>>> main

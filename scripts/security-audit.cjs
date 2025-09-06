@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔒 Running security audit...');
 console.log('✅ Security audit completed');
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -24,7 +21,6 @@ function log(msg, level = "INFO")
     log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
     log("No sensitive files found in repo root")
   log(" Security audit completed")
-=======
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -190,5 +186,3 @@ class SecurityAuditor {
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

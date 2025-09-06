@@ -17,8 +17,6 @@ export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   // Get category from URL query params if available
   const initialCategory = searchParams.get("category") as ForumCategory | null;
@@ -50,15 +48,11 @@ export default function CreatePostPage() {;
       });
     }
   }
-=======
-=======
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
-
 
   return (
     <AppLayout>
@@ -123,11 +117,9 @@ export default function CreatePostPage() {;
         title="Create New Post | Community Forum | Zion AI Marketplace";
         description="Create a new discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, create post, new thread";
-<<<<<<< HEAD
 
       />;
 
-=======
       />;
 
 import { useState, useEffect } from "react",;
@@ -191,7 +183,6 @@ export default function CreatePostPage() {;
       />;
       ;
       />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -200,10 +191,7 @@ export default function CreatePostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Create Post</span>;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} />;
@@ -211,12 +199,7 @@ export default function CreatePostPage() {;
     </AppLayout>;
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, useSearchParams } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -239,7 +222,6 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
-<<<<<<< HEAD
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -289,15 +271,10 @@ function CreatePostPage() {
         <PostForm initial_values={initial_values} on_submit={handle_submit} />;
       </div>;
     </AppLayout>);
-<<<<<<< HEAD
 }
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         ;
         <h1 className="text-3xl font-bold mb-8">Create New Post</h1>;
         ;
@@ -333,6 +310,3 @@ return (<AppLayout> <SEO title="Create New Post | Community Forum | Zion AI Mark
 }/> </div> </AppLayout>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

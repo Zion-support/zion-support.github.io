@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -8,8 +7,6 @@ export const metadata = {
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
   keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
 };
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 import React from 'react';
 import Link from 'next/link';
 
@@ -20,18 +17,15 @@ export const metadata = {
 
 export default function AIServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           AI Services & Solutions
-=======
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           AI Services
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Comprehensive artificial intelligence solutions to transform your business. From machine learning 
@@ -105,7 +99,6 @@ export default function AIServicesPage() {
             pricing="From $149/month"
             features={["Blog writing", "Marketing copy", "Social media posts", "SEO optimization"]
           />
-<<<<<<< HEAD
           <AIServiceCard
             title="AI Supply Chain Optimization"
             description="Intelligent supply chain management with demand forecasting and logistics optimization"
@@ -215,7 +208,6 @@ export default function AIServicesPage() {
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-=======
         </div>
       </section>
 
@@ -374,7 +366,6 @@ function AIServiceCard({ title, description, href, icon, pricing, features }: {
       <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
       </h3>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <p className="text-gray-600 mb-4">{description}</p>
       <ul className="space-y-2 mb-4">
         {features.map((feature, index) => (
@@ -384,7 +375,6 @@ function AIServiceCard({ title, description, href, icon, pricing, features }: {
           </li>
         ))}
       </ul>
-<<<<<<< HEAD
     </div>
   );
 }
@@ -490,27 +480,21 @@ function CTASection() {
             </span>
           ))}
         </div>
-=======
       <div className="text-lg font-semibold text-blue-600">
         {pricing}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       </div>
     </Link>
   );
 }
 
-<<<<<<< HEAD
 export default function AIServicesPage() {
-=======
 function TechCard({ name, icon }: { name: string; icon: string }) {
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
   return (
     <div className="text-center bg-white p-4 rounded-lg shadow-md border border-gray-200">
       <div className="text-3xl mb-2">{icon}</div>
       <div className="text-sm font-semibold text-gray-900">{name}</div>
     </div>
   );
-<<<<<<< HEAD
 export const metadata = { title: 'AI Services | Zion Tech Group' } export default /**
  * AIPage - Function description
  */
@@ -526,7 +510,6 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
 }
 }
-=======
 }
 
 function IndustryCard({ icon, title, description, solutions }: {
@@ -581,4 +564,3 @@ function MetricCard({ number, label, description }: {
     </div>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-134f

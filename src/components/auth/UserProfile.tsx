@@ -12,12 +12,12 @@ import type {
   Session,
 } from '@supabase / supabase - js';
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,
+  onUserChange?: (user: SupabaseUser |,  null) => void,
 export default /**
  * UserProfile - Function description
  */
 function UserProfile() {
-  const [user, set_user] = useState < SupabaseUser | null>(null);
+  const [user, set_user] = useState < SupabaseUser | null>(null);,
   const [loading, set_loading] = useState (true);
   const router = use_router ();
   useEffect (() =></SupabaseUser> {
@@ -26,26 +26,23 @@ function UserProfile() {
       const {
         data: { session },
       } = await supabase.auth.get_session ();
-      set_user (session?.user ?? null);
+      set_user (session?.user ??,  null);
       set_loading (false);
-      onUserChange?.(session?.user ?? null);
-
+      onUserChange?.(session?.user ??,  null);
     }
     getInitialSession ();
     // Listen for auth changes;
     const {
-
       data: { subscription },
     } = supabase.auth.onAuthStateChange (
-      (event: AuthChangeEvent, session: Session | null) => {
-        set_user (session?.user ?? null);
+      (event: AuthChangeEvent, session: Session |,  null) => {,
+        set_user (session?.user ??,  null);
         set_loading (false);
-        onUserChange?.(session?.user ?? null),
-
+        onUserChange?.(session?.user ??,  null),
       }
     );
     return () => subscription.unsubscribe ();
-  }, [onUserChange]);
+  }, [onUserChange]);,
   const handleSignOut = async () => {
     await supabase.auth.sign_out ();
   }
@@ -55,7 +52,6 @@ function UserProfile() {
   // Check condition
 if ( {) {
   $2
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import { supabase } from '@/utils/supabase/client';
@@ -66,7 +62,7 @@ import { User, LogOut, LogIn } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
 interface UserProfileProps {;
-  onUserChange?: (user: SupabaseUser | null) => void;
+  onUserChange?: (user: SupabaseUser |,  null) => void;
 }
     return (
       <Card className='w - full max - w-sm'>;
@@ -78,32 +74,25 @@ interface UserProfileProps {;
         </CardContent>;
       </Card>);
   }
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 'use client';
-
 import React, { useEffect, useState } from 'react';
 import {supabase} from '@/utils/supabase/client';
 import {Button} from '@/components/ui/button';
@@ -116,50 +105,41 @@ import type {;
   AuthChangeEvent,;
   Session,;
 } from '@supabase/supabase-js';
-
 interface UserProfileProps {;
-  onUserChange?: (user: SupabaseUser | null) => void,;
-
-export default function UserProfile(): any ({ onUserChange }: UserProfileProps) {;
-  const [user, setUser] = useState<SupabaseUser | null>(null);
+  onUserChange?: (user: SupabaseUser |,  null) => void,;
+export default function UserProfile(): any ({ onUserChange }:,  UserProfileProps) {;,
+  const [user, setUser] = useState<SupabaseUser | null>(null);,
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-
   useEffect(() =></SupabaseUser> {;
     // Get initial session;
     const getInitialSession = async () => {;
       const {;
         data: { session },;
       } = await supabase && supabase.auth.getSession();
-      setUser(session?.user ?? null);
+      setUser(session?.user ??,  null);
       setLoading(false);
-      onUserChange?.(session?.user ?? null);
+      onUserChange?.(session?.user ??,  null);
     };
-
     getInitialSession();
-
     // Listen for auth changes;
     const {;
       data: { subscription },;
     } = supabase && supabase.auth.onAuthStateChange(;
-      (event: AuthChangeEvent, session: Session | null) => {;
-        setUser(session?.user ?? null);
+      (event: AuthChangeEvent, session: Session |,  null) => {;,
+        setUser(session?.user ??,  null);
         setLoading(false);
-        onUserChange?.(session?.user ?? null),;
+        onUserChange?.(session?.user ??,  null),;
       }
     );
-
     return () => subscription && subscription.unsubscribe();
-  }, [onUserChange]);
-
+  }, [onUserChange]);,
   const handleSignOut = async () => {;
     await supabase && supabase.auth.signOut();
   };
-
   const handleSignIn = () => {;
     router && router.push('/auth/login');
   };
-
   if (loading) {;
     return (
       <Card className='w-full max-w-sm'>;
@@ -172,8 +152,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </Card>;
     );
   }
-
-
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -192,8 +170,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
-
-
           Sign Out
         </Button>;
       </CardContent>;
@@ -201,16 +177,12 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   );
 }
 }
-
-        
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
-
+        <Button onClick={handleSignOut} variant="outline" className="w-full">"
+          <LogOut className="h-4 w-4 mr-2" />"
           Sign Out
         </Button>
       </CardContent>
     </Card>
-
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -227,7 +199,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
           <div className='flex items-center gap-2'>;
             <span className='text-sm font-medium'>Status:</span>;
             <Badge variant={user && user.email_confirmed_at ? 'default' : 'secondary'}>;
-              {user && user.email_confirmed_at ? 'Verified' : 'Unverified'}
+              {user && user.email_confirmed_at ? 'Verified' : 'Unverified'}'
             </Badge>;
           </div>;
           <div className='flex items-center gap-2'>;
@@ -237,7 +209,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
             </span>;
           </div>;
         </div>;
-
         <Button onClick={handleSignOut} variant='outline' className='w-full'>;
           <LogOut className='h-4 w-4 mr-2' />;
           Sign Out;
@@ -245,11 +216,8 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </CardContent>;
     </Card>;
   );
-
-
   )
-} 
-
+}
   // Check condition
 if ( {) {
   $2
@@ -287,7 +255,7 @@ if ( {) {
           <div className='flex items - center gap - 2'>;
             <span className='text - sm font - medium'>Status:</span>;
             <Badge variant={user.email_confirmed_at ? 'default' : 'secondary'}>;
-              {user.email_confirmed_at ? 'Verified' : 'Unverified'}
+              {user.email_confirmed_at ? 'Verified' : 'Unverified'}'
             </Badge>;
           </div>;
           <div className='flex items - center gap - 2'>;
@@ -303,3 +271,4 @@ if ( {) {
         </Button>;
       </CardContent>;
     </Card>);
+}

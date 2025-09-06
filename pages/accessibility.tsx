@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,7 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
   Eye
   Ear
   Hand
@@ -36,17 +34,12 @@ import React from 'react';
   Zap
   FileText
   Settings
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
-=======
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   Eye,
   Ear,
@@ -59,10 +52,7 @@ import { motion } from 'framer-motion';
   Hand, 
   Brain, 
   CheckCircle, 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   AlertTriangle,
   Globe,
   Users,
@@ -70,12 +60,7 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from 'lucide-react';
 const accessibility_features = [;
   {
@@ -144,11 +129,7 @@ const accessibilityFeatures = [;
     ];
   }
 ];
-<<<<<<< HEAD
 
-
-
-=======
 const standardsCompliance = [;
   {;
     standard: "WCAG 2 && 2.1 AA",;
@@ -245,29 +226,15 @@ const accessibilityGuidelines = [;
   }
 ];
 
-=======
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AccessibilityPage() {
-=======
 interface AccessibilityProps {
   className?: string;
 }
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -278,22 +245,13 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -310,9 +268,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -324,22 +279,12 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -488,8 +433,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -504,7 +447,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -524,20 +466,11 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   </ul>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
 
             </div>
           </div>
         </section>
 
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </MainLayout>
             </div>;
@@ -578,9 +511,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">;
                 Have Questions About Accessibility?;
@@ -601,7 +531,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 }
     title: "Visual Accessibility",
@@ -1022,9 +951,6 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
-<<<<<<< HEAD
-=======
-=======
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1044,27 +970,15 @@ function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </MainLayout>;
   );
 };
 
 export default Accessibility;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -1193,4 +1107,3 @@ export default function AccessibilityPage() {
     </MainLayout>
   );
 }
->>>>>>> main

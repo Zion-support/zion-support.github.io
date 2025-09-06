@@ -1,5 +1,4 @@
 import React from 'react';
-
 const PdfExportButton = () => {
   return (
     <div>
@@ -7,5 +6,4 @@ const PdfExportButton = () => {
     </div>
   );
 };
-
 export default PdfExportButton;

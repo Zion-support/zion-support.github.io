@@ -15,14 +15,12 @@ import {;
   useAIContentEnhancer,;
   AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
-
 interface AIEnhancementPanelProps {;
-  title: string;
-  defaultOptions: AIEnhancementOptions;
-  onApply: (content: string) => void;
+  title: string;,
+  defaultOptions: AIEnhancementOptions;,
+  onApply: (content:,  string) => void;,
   onClose?: () => void;
   showInstructions?: boolean;
-
 import React, { useState } from 'react';
 import {
   Card,
@@ -40,21 +38,21 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
   AIEnhancementOptions,
 } from '@/hooks / useAIContentEnhancer';
 interface AIEnhancementPanelProps {
-  title: string;
-  default_options: AIEnhancementOptions;
-  on_apply: (content: string) => void;
+  title: string;,
+  default_options: AIEnhancementOptions;,
+  on_apply: (content:,  string) => void;,
   on_close?: () => void;
   show_instructions?: boolean;
   initial_content?: string;
 export /**
  * AIEnhancementPanel - Function description
  */
-function AIEnhancementPanel() {
+function AIEnhancementPanel() {,
   const [options, set_options] = useState < AIEnhancementOptions>({
     ...default_options,
     content: initial_content || default_options.content,
-  });
-  const [generated_content, setGeneratedContent] = useState < string>('');
+  });,
+  const [generated_content, setGeneratedContent] = useState < string>('');,
   const [copied, set_copied] = useState (false);
   const { enhance_content, is_enhancing } = useAIContentEnhancer ();
   const handle_generate = async () => {
@@ -74,7 +72,6 @@ if ( {) {
       ...options,
       [field]: e.target.value,
     });
-
   }
   const handle_apply = () =>: any {
     on_apply (generated_content);
@@ -87,7 +84,6 @@ if ( {) {
     set_copied (true);
     set_timeout (() => set_copied (false), 2000);
   }
-
   initialContent?: string;
 export function AIEnhancementPanel(): any ({;
   title,;
@@ -96,119 +92,94 @@ export function AIEnhancementPanel(): any ({;
   onClose,;
   showInstructions = true,;
   initialContent = '',;
-}: AIEnhancementPanelProps) {;
+}:,  AIEnhancementPanelProps) {;,
   const [options, setOptions] = useState<AIEnhancementOptions>({;
     ...defaultOptions,;
     content: initialContent || defaultOptions && defaultOptions.content,;
   });
-  const [generatedContent, setGeneratedContent] = useState<string>('');
+  const [generatedContent, setGeneratedContent] = useState<string>('');,
   const [copied, setCopied] = useState(false);
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
     if (result) {;
       setGeneratedContent(result);
     }
   };
-
-
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
-
-
         {/* Context input */}
         <div className='space-y-2'>;
           <label className='text-sm font-medium'>Context (optional)</label>;
           <Textarea
-            placeholder='Add any relevant context to guide the AI...'
-            className='min-h-[60px]'
-
+            placeholder='Add any relevant context to guide the AI...'',
+            className='min-h-[60px]''
             value={options && options.context}
             onChange={e => handleInputChange(e, 'context')}          />;
         </div>;
-
-
-
-
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    field: keyof AIEnhancementOptions
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    field: keyof,  AIEnhancementOptions
   ) => {
     setOptions({
-
       ...options,
-
-
-
-
   return (
-    <Card className="w-full max-w-2xl mx-auto">
+    <Card className="w-full max-w-2xl mx-auto">"
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
+        <CardTitle className="flex items-center gap-2">"
+          <Sparkles className="h-5 w-5 text-primary" />"
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4">"
         {/* Input area */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Content to enhance</label>
+        <div className="space-y-2">"
+          <label className="text-sm font-medium">Content to enhance</label>"
           <Textarea
-
-            placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
+            placeholder="Enter your content to enhance...""
+            className="min-h-[100px]"",
             value={options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
+            onChange={(e) => handleInputChange(e, 'content')}'
           />;
         </div>;
         {/* Context input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
+        <div className="space-y-2">"
+          <label className="text-sm font-medium">Context (optional)</label>"
           <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
+            placeholder="Add any relevant context to guide the AI...""
+            className="min-h-[60px]"",
             value={options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
+            onChange={(e) => handleInputChange(e, 'context')}'
           />;
         </div>;
-
         {/* Instructions input (optional) */}
         {showInstructions && (;
           <div className='space-y-2'>;
             <label className='text-sm font-medium'>;
               Special instructions (optional);
             </label>;
-            <Input
-
-              placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
+            <Input placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'""
               value={options.instructions}
-
-          disabled={isEnhancing || (!options.content && !options.context)}        >
-
-              onChange={(e) => handleInputChange(e, 'instructions')}
+          disabled={isEnhancing || (!options.content && !options.context)} />
+              onChange={(e) => handleInputChange(e, 'instructions')}'
             />;
           </div>;
         )}
-
         {/* Generate button */}
-        <Button 
-          onClick={handleGenerate} 
-          className="w-full" 
+        <Button
+          onClick={handleGenerate}
+          className="w-full" "
           disabled={isEnhancing || !options.content && !options.context}
         >
-
-
-
           {isEnhancing ? (
             <>
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />'
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className='mr-2 h-4 w-4' />
+              <Sparkles className='mr-2 h-4 w-4' />'
               Generate Enhanced Content
             </>
           )}
@@ -226,55 +197,40 @@ export function AIEnhancementPanel(): any ({;
             </>;
           )}
         </Button>;
-
         {/* Output area */}
-
         {generatedContent && (
-
-          <div className="space-y-2 mt-4">
-            <div className="flex justify-between items-center">
-              <label className="text-sm font-medium">Generated content</label>
-              <Button 
-                variant="ghost" 
-                size="sm" 
+          <div className="space-y-2 mt-4">"
+            <div className="flex justify-between items-center">"
+              <label className="text-sm font-medium">Generated content</label>"
+              <Button
+                variant="ghost" "
+                size="sm" "
                 onClick={handleCopy}
-                className="h-8"
+                className="h-8""
               >
-
-
                 {copied ? (
-                  <><Check className="h-4 w-4 mr-1" /> Copied</>
+                  <><Check className="h-4 w-4 mr-1" /> Copied</>"
                 ) : (
-                  <><Copy className="h-4 w-4 mr-1" /> Copy</>
+                  <><Copy className="h-4 w-4 mr-1" /> Copy</>"
                 )}
               </Button>;
             </div>;
             <div className='relative'>;
               <Textarea
                 value={generatedContent}
-
-
-                onChange={(e) => setGeneratedContent(e.target.value)}
-                className="min-h-[200px]"
+                onChange={(e) => setGeneratedContent(e.target.value)},
+                className="min-h-[200px]""
               />
-
-
             </div>
           </div>
         )}
-
-
-      
-
-
       {generatedContent && (
-        <CardFooter className='flex justify-between'>
+        <CardFooter className='flex justify-between'>'
           {onClose && (
-            <Button variant='outline' onClick={onClose}>
+            <Button variant='outline' onClick={onClose}>'
               Cancel
             </Button>
       </CardContent>;
-
       {generatedContent && (;
         <CardFooter className='flex justify-between'>;
           {onClose && (;
@@ -282,11 +238,9 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-
     </Card>;
   );
 }
-
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
         <CardTitle className='flex items - center gap - 2'>;
@@ -299,7 +253,7 @@ export function AIEnhancementPanel(): any ({;
         <div className='space - y-2'>;
           <label className='text - sm font - medium'>Content to enhance</label>;
           <Textarea;
-            placeholder='Enter your content to enhance...';
+            placeholder='Enter your content to enhance...';,
             className='min - h-[100px]';
             value={options.content}
             on_change={e => handleInputChange (e, 'content')}          />;
@@ -308,7 +262,7 @@ export function AIEnhancementPanel(): any ({;
         <div className='space - y-2'>;
           <label className='text - sm font - medium'>Context (optional)</label>;
           <Textarea;
-            placeholder='Add any relevant context to guide the AI...';
+            placeholder='Add any relevant context to guide the AI...';,
             className='min - h-[60px]';
             value={options.context}
             on_change={e => handleInputChange (e, 'context')}          />;
@@ -319,10 +273,10 @@ export function AIEnhancementPanel(): any ({;
             <label className='text - sm font - medium'>;
               Special instructions (optional);
             </label>;
-            <Input;
+            <Input ;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'";
               value={options.instructions}
-              on_change={e => handleInputChange (e, 'instructions')}            />;
+              on_change={e = /> handleInputChange (e, 'instructions')}            />;
           </div>)}
         {/* Generate button */}
         <Button;
@@ -362,7 +316,7 @@ export function AIEnhancementPanel(): any ({;
               <Textarea;
                 value={generated_content}
                 on_change={e => setGeneratedContent (e.target.value)}
-                className='min - h-[200px]'              />;
+                className='min - h-[200px]'              />;,
             </div>;
           </div>)}
       </CardContent>;
@@ -376,12 +330,10 @@ export function AIEnhancementPanel(): any ({;
         </CardFooter>)}
     </Card>);
 }
-
       )};
     </Card>;
   );
 };
-
           <Button onClick={handleApply}>;
             Apply to Form;
           </Button>;
@@ -391,3 +343,4 @@ export function AIEnhancementPanel(): any ({;
   );
 }
 ;
+}}

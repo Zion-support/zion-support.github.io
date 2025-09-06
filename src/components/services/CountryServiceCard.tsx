@@ -1,148 +1,126 @@
-// Get region flag based on country name (for demo purposes)
-
-  const getRegionEmoji = (countryName: string | undefined): string => {
-
-
-    if (!countryName) return "🌐",
-    
+// Get region flag based on country name (for demo,  purposes)
+  const getRegionEmoji = (countryName: string |,  undefined): string => {,
+    if (!countryName) return "🌐","
     const emojiMap: Record<string string> = {
-      "United States": "🇺🇸",
-      "United Kingdom": "🇬🇧",
-      "Canada": "🇨🇦",
-      "Australia": "🇦🇺",
-      "Germany": "🇩🇪", 
-      "France": "🇫🇷",
-      "Japan": "🇯🇵",
-      "China": "🇨🇳",
-      "Brazil": "🇧🇷",
-      "India": "🇮🇳",
-      "Russia": "🇷🇺",
-      "Singapore": "🇸🇬",
-      "South Korea": "🇰🇷",
-      "South Africa": "🇿🇦",
+      "United States": "🇺🇸","
+      "United Kingdom": "🇬🇧","
+      "Canada": "🇨🇦","
+      "Australia": "🇦🇺","
+      "Germany": "🇩🇪", "
+      "France": "🇫🇷","
+      "Japan": "🇯🇵","
+      "China": "🇨🇳","
+      "Brazil": "🇧🇷","
+      "India": "🇮🇳","
+      "Russia": "🇷🇺","
+      "Singapore": "🇸🇬","
+      "South Korea": "🇰🇷","
+      "South Africa": "🇿🇦","
       // Default if no flag is found
-      "default": "🌐"
+      "default": "🌐""
     },
-    
-    return emojiMap[countryName] || "🌐"
+    ,
+    return emojiMap[countryName] || "🌐""
   },
-  
   // Get response time estimate based on country
-  const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return "8-24 hours",
-    
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
+  const getResponseTime = (countryName: string |,  undefined): string => {,
+    if (!countryName) return "8-24 hours",",
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],",
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],"
     if (tier1.includes(countryName)) {
-      return "4 hours"
+      return "4 hours""
     } else if (tier2.includes(countryName)) {
-      return "6 hours"
+      return "6 hours""
     } else {
-      return "8-24 hours"
+      return "8-24 hours""
     }
   },
-  
   return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
-    }`}>
-      <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
-            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
-
-
-    if (!countryName) return "🌐",
-    
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${`,
+      isPopular
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" "
+        : "bg-zion-blue-dark border-zion-blue-light""
+    }`}>`
+      <CardHeader className="pb-2">"
+        <div className="flex items-center justify-between">"
+          <div className="flex items-center space-x-2">"
+            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>"
+            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>'
+    if (!countryName) return "🌐","
     const emojiMap: Record<string string> = {
-      "United States": "🇺🇸",
-      "United Kingdom": "🇬🇧",
-      "Canada": "🇨🇦",
-      "Australia": "🇦🇺",
-      "Germany": "🇩🇪", 
-      "France": "🇫🇷",
-      "Japan": "🇯🇵",
-      "China": "🇨🇳",
-      "Brazil": "🇧🇷",
-      "India": "🇮🇳",
-      "Russia": "🇷🇺",
-      "Singapore": "🇸🇬",
-      "South Korea": "🇰🇷",
-      "South Africa": "🇿🇦",
+      "United States": "🇺🇸","
+      "United Kingdom": "🇬🇧","
+      "Canada": "🇨🇦","
+      "Australia": "🇦🇺","
+      "Germany": "🇩🇪", "
+      "France": "🇫🇷","
+      "Japan": "🇯🇵","
+      "China": "🇨🇳","
+      "Brazil": "🇧🇷","
+      "India": "🇮🇳","
+      "Russia": "🇷🇺","
+      "Singapore": "🇸🇬","
+      "South Korea": "🇰🇷","
+      "South Africa": "🇿🇦","
       // Default if no flag is found
-      "default": "🌐"
+      "default": "🌐""
     },
-    
-    return emojiMap[countryName] || "🌐"
+    ,
+    return emojiMap[countryName] || "🌐""
   },
-  
   // Get response time estimate based on country
-  const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return "8-24 hours",
-    
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
-    
+  const getResponseTime = (countryName: string |,  undefined): string => {,
+    if (!countryName) return "8-24 hours",",
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],",
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],"
     if (tier1.includes(countryName)) {
-      return "4 hours"
+      return "4 hours""
     } else if (tier2.includes(countryName)) {
-      return "6 hours"
+      return "6 hours""
     } else {
-      return "8-24 hours"
+      return "8-24 hours""
     }
   },
-  
   return (
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-      isPopular 
-        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" 
-        : "bg-zion-blue-dark border-zion-blue-light"
-    }`}>
-      <CardHeader className="pb-2">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
-            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${`,
+      isPopular
+        ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple" "
+        : "bg-zion-blue-dark border-zion-blue-light""
+    }`}>`
+      <CardHeader className="pb-2">"
+        <div className="flex items-center justify-between">"
+          <div className="flex items-center space-x-2">"
+            <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>"
+            <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>'
           </div>
           {isPopular && (
-            <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
+            <Badge className="bg-zion-purple text-white border-none">Popular</Badge>"
           )}
         </div>
       </CardHeader>
-      <CardContent className="pb-4">
-        <p className="text-3xl font-bold text-zion-cyan mb-4">
+      <CardContent className="pb-4">"
+        <p className="text-3xl font-bold text-zion-cyan mb-4">"
           ${country.pricePerIncident.toFixed(2)}
         </p>
-
-
-        
-        <div className="space-y-2 text-zion-slate-light">
-          <div className="flex items-start">
-            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+        <div className="space-y-2 text-zion-slate-light">"
+          <div className="flex items-start">"
+            <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />"
             <span>Typical response time: {getResponseTime(country.country)}</span>
-
-
           </div>
-          <div className="flex items-start">
-            <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+          <div className="flex items-start">"
+            <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" />"
             <span>Service available in major cities</span>
           </div>
-          <div className="flex items-start">
-            <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+          <div className="flex items-start">"
+            <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" />"
             <span>Hardware & network support</span>
           </div>
-          <div className="flex items-start">
-            <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />
+          <div className="flex items-start">"
+            <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" />"
             <span>First hour included</span>
           </div>
         </div>
       </CardContent>
-
-
 import {;
   Card,;
   CardContent,;
@@ -156,14 +134,14 @@ import { Globe, Server, Clock, MapPin, Check } from 'lucide-react';
 import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryServiceCardProps {;
   country: CountryPricing,;
-  onSelect: (country: CountryPricing) => void,;
-  onQuote?: (country: CountryPricing) => void,;
+  onSelect: (country:,  CountryPricing) => void,;
+  onQuote?: (country:,  CountryPricing) => void,;
   isPopular?: boolean;
 }
 ;
-export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {;
-  // Get region flag based on country name (for demo purposes);
-  const getRegionEmoji = (countryName: string | undefined): string => {;
+export function CountryServiceCard({ country, onSelect, onQuote, isPopular }:,  CountryServiceCardProps) {;
+  // Get region flag based on country name (for demo,  purposes);
+  const getRegionEmoji = (countryName: string |,  undefined): string => {;,
     if (!countryName) return "🌐",;
     const emojiMap: Record<string string> = {;
       "United States": "🇺🇸",;
@@ -182,13 +160,13 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       "South Africa": "🇿🇦",;
       // Default if no flag is found;
       "default": "🌐";
-    },;
+    },;,
     return emojiMap[countryName] || "🌐";
   },;
   // Get response time estimate based on country;
-  const getResponseTime = (countryName: string | undefined): string => {;
-    if (!countryName) return "8-24 hours",;
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;
+  const getResponseTime = (countryName: string |,  undefined): string => {;,
+    if (!countryName) return "8-24 hours",;,
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],;,
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
     if (tier1.includes(countryName)) {;
       return "4 hours";
@@ -199,11 +177,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
     }
   };
   return (;
-    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;
+    <Card className={`h-full transition-all duration-300 hover:shadow-lg ${;`,
       isPopular;
         ? "bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple";
         : "bg-zion-blue-dark border-zion-blue-light";
-    }`}>;
+    }`}>;`
       <CardHeader className="pb-2">;
         <div className="flex items-center justify-between">;
           <div className="flex items-center space-x-2">;
@@ -241,7 +219,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       <CardFooter className='flex flex-col space-y-2'>;
         <Button
           onClick = {() => onSelect(country),}
-          className={`w-full ${;
+          className={`w-full ${;`
             isPopular;
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple';
               : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light';
@@ -253,7 +231,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
               {getRegionEmoji (country.country)}
             </span>;
             <h3 className='text - lg font - semibold text - white truncate'>;
-              {country.country || 'Unknown Country'}
+              {country.country || 'Unknown Country'}'
             </h3>;
           </div>;
           {is_popular && (
@@ -290,26 +268,24 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       <CardFooter className='flex flex - col space - y-2'>;
         <Button;
           on_click = {() => on_select (country), }
-          className={`w - full ${
+          className={`w - full ${`
             is_popular;
               ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
               : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
-          }`}
+          }`}`
         >;
           Select Service;
         </Button>;
-
           className='w-full text-zion-cyan hover:text-zion-purple'>;
-          <Link href='/contact'>Contact Sales</Link>;
+          <Link href='/contact' />Contact Sales</Link>;
         </Button>;
       </CardFooter>;
     </Card>;
   );
 }
-
         <Button;
           variant='outline';
-          className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
+          className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';',
           on_click={() => on_quote?.(country)}        >;
           Get Quote;
         </Button>;
@@ -318,39 +294,36 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           variant='ghost';
           className='w - full text - zion - cyan hover:text - zion - purple';
         >;
-          <Link href='/contact'>Contact Sales</Link>;
+          <Link href='/contact' />Contact Sales</Link>;
         </Button>;
       </CardFooter>;
     </Card>);
 }
-      <CardFooter className="flex flex-col space-y-2">
+      <CardFooter className="flex flex-col space-y-2">"
         <Button
           onClick={() => onSelect(country)}
-          className={`w-full ${
+          className={`w-full ${`
             isPopular
-              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light"
-          }`}
+              ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple""
+              : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light""
+          }`}`
         >
           Select Service
         </Button>
         <Button
-
-          variant="outline"
-          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+          variant="outline""
+          className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"",
           onClick={() => onQuote?.(country)}
         >
-
           Get Quote
         </Button>
         <Button
           asChild
-          variant="ghost"
-          className="w-full text-zion-cyan hover: text-zion-purple"
+          variant="ghost""
+          className="w-full text-zion-cyan hover: text-zion-purple""
         >
-          <Link href="/contact">Contact Sales</Link>
+          <Link href="/contact" />Contact Sales</Link>"
         </Button>
-
       </CardFooter>
     </Card>
   )

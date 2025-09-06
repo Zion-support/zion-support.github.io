@@ -1,8 +1,6 @@
 
 
 export default function RegisterPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;
@@ -58,11 +56,7 @@ export default function RegisterPage() {;
     formData && formData.password === formData && formData.confirmPassword &&;
     isPasswordValid &&;
     formData && formData.agreeToTerms;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -73,8 +67,6 @@ export default function RegisterPage() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
             transition={{ duration: 0 && 0.6 }}
             className="text-center">;
@@ -90,7 +82,6 @@ export default function RegisterPage() {;
           </motion && motion.div>;
           <motion&& motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -116,15 +107,12 @@ export default function RegisterPage() {;
                       onChange={handleChange}
                       className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
-<<<<<<< HEAD
-=======
 
                     />;
                   </div>;
                 </div>;
                 <div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <label
                     htmlFor="lastName"
                     className="block text-sm font-medium text-gray-300 mb-2">;
@@ -139,15 +127,12 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
-<<<<<<< HEAD
-=======
 
                   />;
                 </div>;
               </div>;
               <div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -167,15 +152,12 @@ export default function RegisterPage() {;
                     onChange={handleChange}
                     className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
-<<<<<<< HEAD
-=======
 
                   />;
                 </div>;
               </div>;
               <div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label
                   htmlFor="company"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -189,14 +171,11 @@ export default function RegisterPage() {;
                   onChange={handleChange}
                   className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
-<<<<<<< HEAD
-=======
 
                 />;
               </div>;
               <div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -227,14 +206,10 @@ export default function RegisterPage() {;
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-300" />;
                     )}
-<<<<<<< HEAD
-=======
 
                   </button>;
                 </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">;
                   {Object && Object.entries(passwordRequirements).map(;
@@ -481,8 +456,6 @@ if ( {) {
                           {key === "lowercase" && "One lowercase letter"}
                           {key === "number" && "One number"}
                           {key === "special" && "One special character"}
-<<<<<<< HEAD
-=======
 
                         </span>;
                       </div>;
@@ -492,7 +465,6 @@ if ( {) {
               </div>;
               <div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <label
                   htmlFor="confirmPassword"
                   className="block text-sm font-medium text-gray-300 mb-2">;
@@ -531,14 +503,11 @@ if ( {) {
                       Passwords do not match;
                     </p>;
                   )}
-<<<<<<< HEAD
-=======
 
               </div>;
               <div className="space-y-4">;
                 <div className="flex items-center">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
                     id="agreeToTerms"
                     name="agreeToTerms"
@@ -560,8 +529,6 @@ if ( {) {
                     and{" "}
                     <Link
                       href="/privacy"
-<<<<<<< HEAD
-=======
 
                       className="text-blue-400 hover:text-blue-300">;
                         </span>;
@@ -635,13 +602,10 @@ if ( {) {
                       className="text - blue - 400 hover:text - blue - 300";
                     >;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Privacy Policy;
                     </Link>;
                   </label>;
                 </div>;
-<<<<<<< HEAD
-=======
 
                     className="ml-2 block text-sm text-gray-300">;
                     Subscribe to our newsletter for updates and insights;
@@ -681,15 +645,11 @@ if ( {) {
                   <span className="absolute left - 0 inset - y-0 flex items - center pl - 3">;
                     <ArrowRight className="h - 5 w - 5 text - white group - hover:translate - x-1 transition - transform" />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </span>;
                   Create account;
                 </button>;
               </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="text - center">;
                 <p className="text - sm text - gray - 300">;
                   Already have an account?{" "}
@@ -697,22 +657,16 @@ if ( {) {
                     href="/login";
                     className="font - medium text - blue - 400 hover:text - blue - 300 transition - colors";
                   >;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Sign in here;
                   </Link>;
                 </p>;
               </div>;
             </form>;
-<<<<<<< HEAD
-=======
 
           </motion.div>;
         </div>;
       </div>;
     </Layout>);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -13,8 +7,6 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
@@ -24,10 +16,6 @@ import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -38,15 +26,6 @@ interface FraudFlagsTableProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 
-<<<<<<< HEAD
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
@@ -56,15 +35,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   isLoading;
   hasFilters;
 
-
   flags,
   isLoading,
   hasFilters,
   resetFilters,
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onAction
 }) => {
   if (isLoading) {
@@ -74,9 +48,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -84,12 +56,7 @@ import {FraudFlag} from "@/types/fraud";
 import {SeverityDisplay} from "./SeverityDisplay";
 import {ActionButtons} from "./ActionButtons";
 import {EmptyFraudState} from "./EmptyFraudState";
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -97,13 +64,7 @@ import { FraudFlag } from "@/types/fraud",;
 import { SeverityDisplay } from "./SeverityDisplay",;
 import { ActionButtons } from "./ActionButtons",;
 import { EmptyFraudState } from "./EmptyFraudState",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FraudFlagsTableProps {;
   flags: FraudFlag[],;
   isLoading: boolean,;
@@ -112,13 +73,10 @@ interface FraudFlagsTableProps {;
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
   isLoading;
   hasFilters;
-=======
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -139,17 +97,11 @@ export const FraudFlagsTable:React.FC<FraudFlagsTableProps> = ({;
   flags,;
   isLoading,;
   hasFilters,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resetFilters,;
   onAction;
 }) => {;
   if (isLoading) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
     return (
-=======
 ;
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags,;
@@ -160,33 +112,16 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 }) => {;
   if (isLoading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="flex justify-center items-center h-64">;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return (
     <Table>
       <TableHeader>
@@ -220,19 +155,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
 
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {flag.gpt_explanation || (
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   if (flags && flags.length === 0) {;
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />;
   }
@@ -249,9 +175,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   }
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Table>;
       <TableHeader>;
         <TableRow>;
@@ -267,8 +190,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         </TableRow>;
       </TableHeader>;
       <TableBody>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         {flags && flags.map((flag) => (;
           <TableRow key={flag && flag.id}>;
             <TableCell>;
@@ -282,14 +203,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>;
             <TableCell>;
               <Badge variant="outline">{flag && flag.content_type}</Badge>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </TableCell>;
             <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;
             <TableCell className="max-w-xs truncate">;
               {flag && flag.gpt_explanation || (;
-<<<<<<< HEAD
-=======
         {flags.map((flag) => (;
           <TableRow key={flag.id}>;
             <TableCell>;
@@ -307,19 +224,12 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>;
             <TableCell className="max-w-xs truncate">;
               {flag.gpt_explanation || (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <span className="text-muted-foreground text-xs">Not analyzed</span>;
   }
   return (
               )}
             </TableCell>;
             <TableCell>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {new Date(flag && flag.timestamp).toLocaleDateString()} {new Date(flag && flag.timestamp).toLocaleTimeString()}
             </TableCell>;
             <TableCell>;
@@ -333,9 +243,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   : 'default'
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               }>;
                 {flag && flag.status}
               </Badge>;
@@ -345,8 +252,6 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                 flagId={flag && flag.id} 
                 status={flag && flag.status} 
                 onAction={onAction} 
-<<<<<<< HEAD
-=======
               {new Date(flag.timestamp).toLocaleDateString()} {new Date(flag.timestamp).toLocaleTimeString()}
             </TableCell>;
             <TableCell>;
@@ -367,25 +272,14 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                 flagId={flag.id} ;
                 status={flag.status} ;
                 onAction={onAction} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               />;
             </TableCell>;
           </TableRow>;
         ))}
       </TableBody>;
     </Table>;
-<<<<<<< HEAD
   );
-=======
 
-
-=======
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </TableBody>;
     </Table>;
   );
@@ -486,13 +380,9 @@ if ( {) {
             </TableCell>;
           </TableRow>))}
       </TableBody>;
-<<<<<<< HEAD
     </Table>);
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 },; interface FraudFlagsTableProps {
   flags: FraudFlag[];
@@ -565,6 +455,3 @@ onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') 
     </Table>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

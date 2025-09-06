@@ -23,27 +23,17 @@ function ContractBuilderPage() {
     </ProtectedRoute>
   );
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 ;
-
 
 }
 export default ContractBuilderPage;
 
 ;
 
-
 export default ContractBuilderPage;
-<<<<<<< HEAD
 
-=======
 import React from 'react';
 import {SEO} from '@/components / SEO';
 import {AppHeader} from '@/layout / AppHeader';
@@ -71,9 +61,6 @@ function ContractBuilderPage() {
 }
 export default ContractBuilderPage;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from 'react',;
 import { SEO } from '@/components/SEO',;
@@ -110,6 +97,3 @@ export default ContractBuilderPage;
 
 ;
 export default ContractBuilderPage;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

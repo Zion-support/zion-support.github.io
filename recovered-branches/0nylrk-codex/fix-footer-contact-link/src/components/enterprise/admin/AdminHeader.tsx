@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-=======
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
 import React from "react";
@@ -13,9 +10,7 @@ import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 
 export function AdminHeader() {
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
@@ -29,7 +24,6 @@ export function AdminHeader() {
   const { company } = useCompanyWorkspace(),
 
   return (
-<<<<<<< HEAD
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div>
@@ -83,23 +77,14 @@ export function AdminHeader() {
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 export function AdminHeader() {;
-
-
 
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (
 
-
-<<<<<<< HEAD
-=======
-
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
 import { Button } from "@/components/ui/button",;
@@ -109,16 +94,13 @@ export function AdminHeader() {;
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
   return (;
-<<<<<<< HEAD
 
-=======
 ;
 export function AdminHeader() {;
   const { user } = useAuth(),;
   const { company } = useCompanyWorkspace(),;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;
         <div>;
@@ -134,8 +116,6 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-<<<<<<< HEAD
-=======
 :recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
 import React from './react';
 import { use_auth } from '@/hooks / use_auth';
@@ -165,17 +145,10 @@ function AdminHeader() {
           </Button>;
           <Button variant="outline" size="sm" className="gap - 2">;
             <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Export Data;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 4">;
         <div className="bg - card rounded - lg p - 4 border border - border">;
@@ -212,13 +185,9 @@ function AdminHeader() {
     </div>);
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 
@@ -260,7 +229,4 @@ function AdminHeader() {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

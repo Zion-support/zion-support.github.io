@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface User {
   id: string;
   email: string;
@@ -23,7 +22,6 @@ export function validateUser(userId: string, role: string): User | null {
     role: role as User['role']
   };
 }
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
@@ -33,4 +31,3 @@ export function getUserFromRequest(req: any): User | null {
   }
   return user;
 }
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

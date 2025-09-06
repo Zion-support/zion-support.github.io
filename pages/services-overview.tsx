@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import React from './react';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Brain,
   Network,
   Cloud,
@@ -20,22 +16,15 @@ import {
   Star,
   Award,
   Clock,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   Globe,
 } from './lucide-react';
 import Layout from "../components / Layout";
 ;
 const service_categories = [;
-=======
   Globe,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const serviceCategories = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     title: "AI Services",
     description:;
@@ -117,12 +106,9 @@ const serviceCategories = [
     color: "from - indigo - 500 to - purple - 600",
   },
 ];
-<<<<<<< HEAD
-=======
 ;
 const stats = [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
@@ -183,20 +169,12 @@ const serviceCategories = [
     color: 'from-indigo-500 to-purple-600'
   }
 ];
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
 const benefits = [
 ;
 const benefits = [;
   {
-<<<<<<< HEAD
-=======
 
     title: "Expert Team"
     description: "Experienced professionals with deep industry knowledge"
@@ -210,17 +188,13 @@ const benefits = [;
     icon: Target,
   },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
     title: "Scalable Solutions"
     description: "Solutions that grow with your business"
     icon: Globe
   }
   {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -240,22 +214,14 @@ const benefits = [;
     description: 'Track record of successful implementations',
     icon: Award
   }
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
 ];
 export default function ServicesOverviewPage() {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -382,17 +348,6 @@ const serviceCategories = [;
   },;
 ];
 
-          
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -401,23 +356,13 @@ const serviceCategories = [;
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
-<<<<<<< HEAD
-=======
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </p>
             </motion.div>
           </div>
@@ -479,8 +424,6 @@ function ServicesOverviewPage() {
                 business operations, enhance security, and drive innovation;
                 across all technology domains.;
               </p>;
-<<<<<<< HEAD
-=======
 
             </motion.div>;
           </div>;
@@ -495,20 +438,16 @@ function ServicesOverviewPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text - center";
                 >;
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
-<<<<<<< HEAD
-=======
 
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
 
-=======
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
@@ -516,9 +455,6 @@ function ServicesOverviewPage() {
                     {stat.number}
                   </div>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </motion.div>
               ))}
             </div>
@@ -542,16 +478,9 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
                 We offer a comprehensive range of technology services to meet all your business needs.
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -591,36 +520,12 @@ function ServicesOverviewPage() {
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-                  
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
 
-
-=======
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -634,15 +539,7 @@ function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
-<<<<<<< HEAD
-=======
 
-
-
-=======
-                    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -652,19 +549,9 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -675,12 +562,7 @@ function ServicesOverviewPage() {
                 all your business needs.;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
 
-                    
-
-
-=======
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {serviceCategories && serviceCategories.map((category, index) => (;
                 <motion&& motion.div
@@ -717,20 +599,6 @@ function ServicesOverviewPage() {
                       </ul>;
                     </div>;
 
-
-=======
-                    
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <Link
                       href={category && category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
@@ -740,31 +608,20 @@ function ServicesOverviewPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
 
             </div>;
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
                 We deliver exceptional results through innovation, expertise
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
               </p>
@@ -837,16 +694,9 @@ function ServicesOverviewPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
 
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -891,16 +741,9 @@ function ServicesOverviewPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
                 Let's discuss how our comprehensive services can help you achieve your business goals.
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               transition={{ duration: 0 && 0.8 }}>;
@@ -920,9 +763,6 @@ function ServicesOverviewPage() {
                 </Link>;
                 <Link
                   href="/case-studies"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Case Studies;
                 </Link>;
@@ -931,7 +771,6 @@ function ServicesOverviewPage() {
           </div>;
         </section>;
       </div>;
-=======
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Case Studies
@@ -941,8 +780,6 @@ function ServicesOverviewPage() {
           </div>
         </section>
       </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </Layout>;
   );
                   className="text - center";
@@ -994,7 +831,6 @@ function ServicesOverviewPage() {
       </div>;
     </Layout>);
 }
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -1015,4 +851,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

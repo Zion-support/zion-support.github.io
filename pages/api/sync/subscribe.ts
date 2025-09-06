@@ -3,14 +3,6 @@ import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
 import { v4 as uuidv4 } from "uuid",;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -21,21 +13,11 @@ import { readState, writeState } from "../../../utils/sync/storage",
 import { Peer } from "../../../utils/sync/types",
 import { v4 as uuidv4 } from "uuid",
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const peer = req.body as Partial<Peer>,
   if (!peer.baseUrl) return res.status(400).json({ error: "baseUrl required" }),
-
 
   const id = peer.id || uuidv4(),
   const existing = state.config.peers.find((p) => p.baseUrl === peer.baseUrl),
@@ -44,7 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     existing.paused = typeof peer.paused === "boolean" ? peer.paused : existing.paused
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
-<<<<<<< HEAD
 
   writeState(state),
   return res.status(200).json({ peers: state.config.peers })

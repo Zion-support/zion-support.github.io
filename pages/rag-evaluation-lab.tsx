@@ -29,8 +29,6 @@ import React from 'react';
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
-<<<<<<< HEAD
-=======
 
 import SEO from '../components / SEO';
 import Link from 'next / link';
@@ -133,9 +131,6 @@ function RAGEvaluationLabPage() {
     </>;
   );
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -177,10 +172,6 @@ export default function RAGEvaluationLabPage() {
 	)
 }
 
-<<<<<<< HEAD
-
-=======
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -203,7 +194,6 @@ export default function RAGEvaluationLabPage() {
             ].map (function => (
               <div;
                 key={f.title}
-<<<<<<< HEAD
                 className='rounded - xl border border - white / 10 bg - white / 5 p - 6 backdrop - blur';
               >;
                 <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;
@@ -233,10 +223,4 @@ export default function RAGEvaluationLabPage() {
       </section>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

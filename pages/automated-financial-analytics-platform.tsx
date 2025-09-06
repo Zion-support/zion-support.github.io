@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'automated-financial-analytics-platform' } })
 }
 export default function AutomatedFinancialAnalyticsPlatform(props: any) {
 	return <ServicePage {...props} />
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
 export async function getStaticProps() {
@@ -41,18 +29,4 @@ export default function AutomatedFinancialAnalyticsPlatform(req, res) {
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-=======
-=======
 
 
 			pricePerMonthUSD={3500  } catch (error) {
@@ -16,7 +5,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
@@ -27,7 +15,6 @@
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-
 
 }
 import React from 'react',
@@ -71,8 +58,6 @@ export default function AIAutonomousBusinessOperations() {
 			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on."
 			subtitle="From reactive to autonomous: 24/7 operations with measurable outcomes."
 			pricePerMonthUSD={3500}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -85,39 +70,13 @@ export default function AIAutonomousBusinessOperations() {
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			pricePerMonthUSD={3500  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Average ROI 5–12x within 120 days"
 			features={[
@@ -127,21 +86,13 @@ export default function AIAutonomousBusinessOperations() {
 				"Playbooks for incident response and customer recovery",
 				"Compliance logging and role-based access",
 				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 			]}
 			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	)
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -164,12 +115,4 @@ export default function AIAutonomousBusinessOperations() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

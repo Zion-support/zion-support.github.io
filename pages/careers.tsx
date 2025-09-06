@@ -1,22 +1,13 @@
-<<<<<<< HEAD
-=======
-
 
 
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
-
 
 import React from 'react';
-<<<<<<< HEAD
-
-
 
 import {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Users,
   MapPin,
   Clock,
@@ -33,7 +24,6 @@ import {
   Globe,
   CheckCircle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 const jobOpenings = [
   {
@@ -155,13 +145,6 @@ const values = [
     description:
 ];
 
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -203,35 +186,16 @@ import {;
   GraduationCap,;
   Globe,;
   CheckCircle,;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import {
-<<<<<<< HEAD
   Users
   MapPin
   Clock
@@ -247,7 +211,6 @@ import {
   GraduationCap
   Globe
   CheckCircle
-=======
   Users,
   MapPin,
   Clock,
@@ -263,14 +226,9 @@ import {
   GraduationCap,
   Globe,
   CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 
-
 const Careers: React.FC<CareersProps> = ({ className }) => {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <MainLayout
@@ -289,25 +247,8 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-<<<<<<< HEAD
-=======
 
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -515,8 +456,6 @@ function CareersPage() {
                 We're looking for passionate individuals who want to make a;
                 difference.;
               </p>;
-<<<<<<< HEAD
-=======
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
                   See Benefits;
@@ -526,8 +465,6 @@ function CareersPage() {
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Why Join Us */}
         <section className="py-20 bg-white">;
           <div className="container mx-auto px-4">;
@@ -535,8 +472,6 @@ function CareersPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -555,7 +490,6 @@ function CareersPage() {
                   <motion&& motion.div
                     key={benefit && benefit.title}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow duration-300"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -570,10 +504,7 @@ function CareersPage() {
                     <p className="text-gray-600">{benefit && benefit.description}</p>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
 
-=======
               <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
                 <a;
                   href="#open - positions";
@@ -630,13 +561,10 @@ function CareersPage() {
                     <p className="text - gray - 600">{benefit.description}</p>;
                   </motion.div>))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -654,7 +582,6 @@ function CareersPage() {
                   <motion&& motion.div
                     key={value && value.title}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="bg-white p-6 rounded-lg shadow-lg"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -666,10 +593,7 @@ function CareersPage() {
                     <p className="text-gray-600">{value && value.description}</p>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
 
-=======
         {/* Our Values */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -705,15 +629,11 @@ function CareersPage() {
                     <p className="text - gray - 600">{value.description}</p>;
                   </motion.div>))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Open Positions */}
         <section id="open - positions" className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -723,8 +643,6 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Open Positions;
@@ -739,7 +657,6 @@ function CareersPage() {
                 {job_openings.map ((job, index) => (
                   <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={job.id}
                     className="bg - white border border - gray - 200 rounded - lg p - 6 hover:shadow - lg transition - shadow duration - 300";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -750,8 +667,6 @@ function CareersPage() {
                     <div className="flex items - center justify - between mb - 4">;
                       <span className="bg - blue - 100 text - blue - 800 px - 3 py - 1 rounded - full text - sm font - semibold">;
                         {job.department}
-<<<<<<< HEAD
-=======
 
                       </span>;
                       <span className="text - gray - 500 text - sm">{job.type}</span>;
@@ -764,14 +679,11 @@ function CareersPage() {
                       <div className="flex items - center text - sm text - gray - 600">;
                         <MapPin className="w - 4 h - 4 mr - 2" />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {job.location}
                       </div>;
                       <div className="flex items - center text - sm text - gray - 600">;
                         <Clock className="w - 4 h - 4 mr - 2" />;
                         {job.experience}
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -822,7 +734,6 @@ function CareersPage() {
                           .slice(0, 3);
                           .map((requirement, idx) => (;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                             <li
                               key={idx}
                               className="flex items-center text-sm text-gray-600">;
@@ -830,8 +741,6 @@ function CareersPage() {
                               {requirement}
                             </li>;
                           ))}
-<<<<<<< HEAD
-=======
 
                       </ul>;
                     </div>;
@@ -842,21 +751,16 @@ function CareersPage() {
                       <div className="flex flex-wrap gap-2">;
                         {job && job.benefits.map((benefit, idx) => (;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <span
                             key={idx}
                             className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">;
                             {benefit}
                           </span>;
                         ))}
-<<<<<<< HEAD
-=======
 
                       </div>;
                     </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <a
                       href={`/careers/${job && job.id}`}
                       className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold flex items-center justify-center">;
@@ -865,10 +769,7 @@ function CareersPage() {
                     </a>;
                   </motion && motion.div>;
                 ))}
-<<<<<<< HEAD
-=======
 
-=======
                       </div>;
                     </div>;
                     <div className="mb - 6">;
@@ -911,21 +812,11 @@ function CareersPage() {
                     </a>;
                   </motion.div>))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
 
-<<<<<<< HEAD
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   Learn More About Us;
                 </a>;
@@ -945,9 +836,6 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                 Don't See Your Dream Job?;
@@ -975,7 +863,6 @@ function CareersPage() {
         </section>;
       </div>;
     </MainLayout>);
-=======
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't See Your Dream Job?
@@ -1002,39 +889,17 @@ function CareersPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </MainLayout>
-=======
-<<<<<<< HEAD
     </MainLayout>
-=======
     </Layout>
-<<<<<<< HEAD
     </MainLayout>;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </MainLayout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -1055,4 +920,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

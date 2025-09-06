@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 export default function LinkedInRedirect() {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -21,9 +19,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 
 export default function LinkedInRedirect() {;
   useEffect(() => {;
@@ -56,7 +51,6 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-<<<<<<< HEAD
 export default function LinkedInRedirect(req, res) {
   try {
 	useEffect(() => {;
@@ -67,18 +61,11 @@ export default function LinkedInRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
 }
 	}, []),
-=======
-
-=======
-
 
 }
 
-
-=======
 export default function LinkedInRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -86,7 +73,6 @@ export default function LinkedInRedirect() {
 		}
 }, []);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 	return (
 		<>
 			<Head>
@@ -103,10 +89,7 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 ;
 export default /**
@@ -148,13 +131,3 @@ if ( {) {
     </>);
 ;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

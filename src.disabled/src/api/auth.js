@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Auth utility
 export const Auth = () => {
   // Implementation here
@@ -6,7 +5,6 @@ export const Auth = () => {
 };
 
 export default Auth;
-=======
 const API_URL = import.meta.env.VITE_API_URL || '';
 export {};
   return null}
@@ -50,5 +48,3 @@ export {};
 export { API_URL };
 const API_URL = import.meta.env.VITE_API_URL || ''; ; export {}; return null} const res = await fetch(`${API_URL}/auth/forgot`,{} '; ''; '''; method: 'POST','''; headers: { 'Content-Type': 'application/json' },'; body: JSON.stringify({ email })'';,});'''; if (!res.ok) throw new Error('Failed to send reset code'); return res.json().catch(() => ({}));,} ; export {}; return null} `; const res = await fetch(`${API_URL}/auth/verify-code`,{} '; ''; '''; method: 'POST','''; headers: { 'Content-Type': 'application/json' },'; body: JSON.stringify({ email,code })'';,});'''; if (!res.ok) throw new Error('Invalid code'); return res.json();,} ; export {}; return null} `; const res = await fetch(`${API_URL}/auth/reset`,{} '; ''; '''; method: 'PUT','''; headers: { 'Content-Type': 'application/json' },; body: JSON.stringify({ token,password })';,});''; const data = await res.json().catch(() => ({}));'''; if (!res.ok) throw new Error(data.message || 'Failed to reset password'); return data;,} '`; ; export { API_URL };
 const API_URL = import.meta.env.VITE_API_URL || ''; ; export {}; return null} const res = await fetch(`${API_URL}/auth/forgot`,{} '; ''; '''; method: 'POST','''; headers: { 'Content-Type': 'application/json' },'; body: JSON.stringify({ email })'',});'''; if (!res.ok) throw new Error('Failed to send reset code'); return res.json().catch(() => ({})),} ; export {}; return null} `; const res = await fetch(`${API_URL}/auth/verify-code`,{} '; ''; '''; method: 'POST','''; headers: { 'Content-Type': 'application/json' },'; body: JSON.stringify({ email,code })'',});'''; if (!res.ok) throw new Error('Invalid code'); return res.json(),} ; export {}; return null} `; const res = await fetch(`${API_URL}/auth/reset`,{} '; ''; '''; method: 'PUT','''; headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ token,password })',});''; const data = await res.json().catch(() => ({}));'''; if (!res.ok) throw new Error(data.message || 'Failed to reset password'); return data,} '`; ; export { API_URL };
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> main

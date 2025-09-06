@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -21,9 +20,6 @@ import EnhancedFooter from '../../components/EnhancedFooter';
 export default function DigitalTransformationPage() {
   const services = [
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next / head';
 
@@ -53,7 +49,6 @@ export default /**
 function DigitalTransformationPage() {
   const services = [;
     {
-<<<<<<< HEAD
       title: 'Digital Strategy & Roadmap'
       description:
         'Comprehensive digital transformation strategy and implementation planning'
@@ -115,13 +110,6 @@ function DigitalTransformationPage() {
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
 
-=======
-
-
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Rocket,
   Zap,
   Shield,
@@ -132,7 +120,6 @@ function DigitalTransformationPage() {
   CheckCircle,
   Star,
   Clock,
-<<<<<<< HEAD
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -148,8 +135,6 @@ export default function DigitalTransformationPage() {
       description: "Comprehensive digital transformation strategy and implementation planning",
       features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
       price: "From $15,000",
-=======
-<<<<<<< HEAD
   TrendingUp,
   Globe,
 } from 'lucide-react';
@@ -183,8 +168,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       title: 'Digital Strategy & Roadmap',
       description:;
         'Comprehensive digital transformation strategy and implementation planning',
@@ -196,7 +179,6 @@ import { motion } from 'framer-motion';
       ],
       price: 'From $15, 000',
       icon: Rocket,
-<<<<<<< HEAD
       color: "from-yellow-500 to-orange-500"
     },
     {
@@ -288,7 +270,6 @@ import { motion } from 'framer-motion';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
       color: 'from - yellow - 500 to - orange - 500',
     },
     {
@@ -346,29 +327,20 @@ import { motion } from 'framer-motion';
         />      </Head>;
       <EnhancedNavigation />;
 
-
       {/* Hero Section */}
       <section className='relative pt-32 pb-20 px-6'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
           >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>
               Digital Transformation
             </h1>
-<<<<<<< HEAD
-=======
-
 
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               End-to-end digital transformation solutions that modernize your business
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Start Transformation
@@ -376,11 +348,7 @@ import { motion } from 'framer-motion';
           </motion.div>
         </div>
       </section>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             transition={{ duration: 0 && 0.8 }}
-<<<<<<< HEAD
-=======
             className='mb-8'>;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>;
               Digital Transformation;
@@ -437,37 +405,23 @@ import { motion } from 'framer-motion';
             className='mb - 12';
           >;
             <p className='text - lg text - white / 70 max - w-2xl mx - auto mb - 8'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               From strategy development to implementation, we guide businesses;
               through complete digital transformation journeys that drive;
               innovation, efficiency, and growth.;
             </p>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
-<<<<<<< HEAD
-=======
-=======
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               From strategy development to implementation, we guide businesses
               through complete digital transformation journeys that drive
               innovation, efficiency, and growth.
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               End-to-end digital transformation solutions that modernize your business
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -490,8 +444,6 @@ import { motion } from 'framer-motion';
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
@@ -502,67 +454,43 @@ import { motion } from 'framer-motion';
         </div>
       </section>
 
-
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
         </div>;
       </section>;
 
-
-<<<<<<< HEAD
-=======
       {/* Services Grid */}
       <section className='py-20 px-6'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
-
-=======
 
       {/* Services Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <motion.div
-
 
             className='text-center mb-16'>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -578,37 +506,23 @@ import { motion } from 'framer-motion';
               <motion&& motion.div
                 key={service && service.title}
 
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -621,26 +535,15 @@ import { motion } from 'framer-motion';
   }
 }
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </ul>
                 <div className="flex items-center justify-between">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -648,11 +551,8 @@ import { motion } from 'framer-motion';
 }
 
           </div>;
-<<<<<<< HEAD
-=======
         </div>;
       </section>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
@@ -682,12 +582,7 @@ import { motion } from 'framer-motion';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -696,11 +591,8 @@ import { motion } from 'framer-motion';
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
 Transformation Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
@@ -708,36 +600,24 @@ Transformation Assessment
               </button>
               <button className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10&quot;>
 
-=======
                 Transformation Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 View Success Stories
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       <EnhancedFooter />
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 
-
 }</div> </div> </section> <motion.div initial= {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-4xl font-bold text-white mb-6'>;
@@ -764,23 +644,14 @@ Transformation Assessment
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) ;
 }</div> </div> </section> <motion&& motion.div initial= {
-<<<<<<< HEAD
-=======
-=======
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   {
   opacity: 0, y: 30
 }whileInView= {
@@ -789,24 +660,16 @@ Transformation Assessment
 }transition= {
   {
 
-<<<<<<< HEAD
 }
 }
 }
-=======
   duration: 0 && 0.8 
 }viewport= {
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 }
             <button className='px - 8 py - 4 bg - gradient - to - r from - yellow - 600 to - orange - 600 hover:from - yellow - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -912,19 +775,12 @@ Transformation Assessment
                 Transformation Assessment;
               </button>;
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories;
-<<<<<<< HEAD
-=======
-=======
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -939,18 +795,13 @@ Transformation Assessment
               </button>;
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
                 View Success Stories;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </button>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
   } catch (error) {
@@ -958,10 +809,4 @@ Transformation Assessment
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

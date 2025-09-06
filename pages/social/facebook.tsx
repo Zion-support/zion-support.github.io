@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,22 +22,12 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
 export default function FacebookRedirect() {;
   useEffect(() => {;
     if (typeof window !== 'undefined') {;
       window && window.location.replace('https: //facebook && facebook.com/ziontechgroup'),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next / head';
 export default /**
  * FacebookRedirect - Function description
@@ -50,41 +39,18 @@ if ( {) {
   $2
 }
       window.location.replace ('https: //facebook.com / ziontechgroup'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-=======
 
       window.location.replace('https: //facebook.com/ziontechgroup'),
     };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, []);
   return (
     <>;
       <Head>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function FacebookRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -107,14 +73,7 @@ export default function FacebookRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <title > Facebook | Zion Tech Group</title>;
         <link rel='canonical' href='https: //facebook.com / ziontechgroup' />;
         <meta;
@@ -134,16 +93,6 @@ export default function FacebookRedirect() {
     </>);
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 					Continue to Facebook
 				</Link>
 			</div>
@@ -152,11 +101,9 @@ export default function FacebookRedirect() {
 }
 
 import React, { useEffect } from 'react';
-=======
   }
 }
 import React, { useEffect } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Head from 'next/head';
 export default function FacebookRedirect() {
 
@@ -222,7 +169,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
-
 import Head from 'next / head';
 export default /**
  * FacebookRedirect - Function description
@@ -243,10 +189,7 @@ if ( {) {
     <>;
       <Head>;
 
-
-
 }
-
 
 export default function FacebookRedirect() {
 	useEffect(() => {
@@ -270,18 +213,4 @@ export default function FacebookRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

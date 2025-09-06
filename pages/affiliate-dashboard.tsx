@@ -4,17 +4,11 @@
     if (!code) return
     (async () => {
       try {
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async function requestPayout() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-<<<<<<< HEAD
-=======
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -22,15 +16,12 @@
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message |'Error')
     }
-<<<<<<< HEAD
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-<<<<<<< HEAD
 
 import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {;
@@ -41,14 +32,6 @@ function getRefCode(): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
-
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   }
 }
@@ -100,11 +83,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (!code) {
     return (
       <div className="space-y-4">
@@ -113,14 +91,9 @@ export default function AffiliateDashboard(req, res) {
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-
 
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -134,21 +107,13 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
-<<<<<<< HEAD
-=======
-
 
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
-<<<<<<< HEAD
-=======
-
 
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</Link>
           </div>
@@ -159,9 +124,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </div>
   )
@@ -172,7 +134,6 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-<<<<<<< HEAD
   )
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
@@ -187,15 +148,9 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -264,9 +219,6 @@ if ( {) {
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">Affiliate Dashboard</h1>;
       <div className="grid sm:grid - cols - 2 lg:grid - cols - 4 gap - 4">;
-<<<<<<< HEAD
-=======
-=======
 ;
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
   if (!code) {;
@@ -286,16 +238,11 @@ if ( {) {
     <div className="space-y-6">;
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
         <Stat label="Profile Completions" value={metrics?.total_profile_completions ?? '-'} />;
         <Stat label="Job Creations" value={metrics?.total_job_creations ?? '-'} />;
-<<<<<<< HEAD
-=======
       </div>;
-<<<<<<< HEAD
       <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
         <div className="flex items - center justify - between">;
           <div>;
@@ -312,7 +259,6 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 /**
  * Stat - Function description
  */
@@ -323,14 +269,4 @@ function Stat() {
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

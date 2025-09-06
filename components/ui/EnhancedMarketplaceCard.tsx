@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -133,7 +132,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
 };
 
 export default EnhancedMarketplaceCard;
-=======
         <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;
@@ -251,4 +249,3 @@ interface MarketplaceCardProps {;
 
 }
 export default EnhancedMarketplaceCard;
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

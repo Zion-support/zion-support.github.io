@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -13,7 +12,6 @@ export default function JobApplicantsPage() {
     id ? `/api/applications?jobId=${id}` : null
     fetcher
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
@@ -135,16 +133,11 @@ export default function JobApplicantsPage() {_const _router = useRouter();
     </div>;
   );
 
-=======
-
-
   );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
-
 
   const job = jobData?.job;
   const applications = (appsData?.applications as any[]) |[];
   return (
-
 
 import useSWR from 'swr';
 import {TALENT_PROFILES} from '../../../../data / talent';
@@ -218,4 +211,3 @@ function JobApplicantsPage() {
     </div>;
   );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

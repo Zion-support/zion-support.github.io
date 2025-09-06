@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -19,10 +13,6 @@ import { format  } from 'date-fns';
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -36,14 +26,7 @@ import {format} from 'date-fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CertificationsFormProps {
 
   resumeId: string
@@ -53,12 +36,6 @@ interface CertificationsFormProps {
   onBack: () => void
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {use_form} from 'react - hook - form';
 import {Button} from '@/components / ui / button';
@@ -72,26 +49,15 @@ import {format} from 'date - fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 
-
-
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
-<<<<<<< HEAD
 
-
-=======
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   // Helper function to format dates as strings for form inputs
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
@@ -140,7 +106,6 @@ interface CertificationsFormProps {;
   certifications: Certification[],;
   onComplete: () => void,;
   onBack: () => void;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import {CertificationFormValues, certification_schema} from './types';
 interface CertificationsFormProps {
@@ -148,8 +113,6 @@ interface CertificationsFormProps {
   certifications: Certification[],
   on_complete: () => void,
   on_back: () => void;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export /**
  * CertificationsForm - Function description
@@ -160,11 +123,7 @@ function CertificationsForm() {
   const [error, set_error] = useState < string | null>(null);
 ;
   // Helper function to format dates as strings for form inputs;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
@@ -201,8 +160,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData);
       } else {;
         success = await addCertification(resumeId, certData);
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
       if (success) {
         form.reset({
@@ -218,26 +175,13 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       setError(err.message |'An error occurred')
     }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
-
 
   };
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
   };
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -248,11 +192,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
   const formatDateValue = (date_value: string | Date | undefined): string => {
     // Check condition
 if (return '') {
@@ -293,25 +233,14 @@ if ( {) {
       } else {
         success = await add_certification (resume_id, cert_data);
       }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Helper function to format dates as strings for form inputs;
   const formatDateValue = (dateValue: string | Date | undefined): string => {;
     if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,;
     return format(dateValue, 'yyyy-MM-dd');
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = useForm<CertificationFormValues>({;
     resolver: zodResolver(certificationSchema),;
     defaultValues: {;
@@ -321,26 +250,12 @@ if ( {) {
       expiration_date: '',;
       credential_id: '',;
       credential_url: ''}}),;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleAddOrUpdate = async (data: CertificationFormValues) => {;
     try {;
       setError(null);
       let success,;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const certData: Certification = {;
         name: data && data.name,;
         issuing_organization: data && data.issuing_organization,;
@@ -348,27 +263,13 @@ if ( {) {
         expiration_date: data && data.expiration_date || undefined,;
         credential_id: data && data.credential_id,;
         credential_url: data && data.credential_url},;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (editingId) {;
         success = await updateCertification(editingId, certData);
       } else {;
         success = await addCertification(resumeId, certData);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       if (success) {;
         form && form.reset({;
           name: '',;
@@ -383,26 +284,11 @@ if ( {) {
       setError(err && err.message || 'An error occurred');
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
 
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
 
   const handleEdit = (cert: Certification) => {;
@@ -412,10 +298,6 @@ if ( {) {
       issue_date: formatDateValue(cert && cert.issue_date),;
       expiration_date: formatDateValue(cert && cert.expiration_date)});
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this certification?')) {;
@@ -423,15 +305,8 @@ if ( {) {
     }
   },
 
-
-
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
     }
   }
   };
@@ -447,9 +322,6 @@ if ( {) {
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
     }
-
-
-
 
   return (
 
@@ -517,13 +389,10 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData),;
       } else {;
         success = await addCertification(resumeId, certData),;
-=======
       } else {
         success = await add_certification (resume_id, cert_data);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }
-<<<<<<< HEAD
   },;
 ;
   const handleEdit = (cert:Certification) => {;
@@ -541,7 +410,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Certifications & Licenses</h2>;
@@ -549,7 +417,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
           Add any professional certifications, licenses, or credentials you have earned.;
         </p>;
       </div>;
-<<<<<<< HEAD
 
       {certifications && certifications.length > 0 && (;
         <CertificationsList
@@ -572,23 +439,15 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
             <div className="flex justify-between pt-2">;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     form && form.reset({;
                       name: '',;
                       issuing_organization: '',;
@@ -598,20 +457,12 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: ''});
                   } else {;
                     onBack();
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   },
 
   return (
@@ -674,7 +525,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </Button>;
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
@@ -685,7 +535,6 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       // Check condition
 if ( {) {
   $2
-
 
 }
         form.reset ({
@@ -841,11 +690,6 @@ form.reset ({
   
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }> {
   editingId ? 'Cancel' : 'Back' 
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) 
@@ -853,6 +697,3 @@ form.reset ({
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

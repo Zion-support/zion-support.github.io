@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-=======
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Shield,
   Settings,
   Info,
@@ -83,8 +66,6 @@ export default function CookiePolicyPage() {
   }
   const savePreferences = () => {
     // In a real implementation, this would save to localStorage and update cookie settings
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -128,32 +109,11 @@ export default function CookiePolicyPage() {;
     analytics: false,;
     marketing: false,;
     functional: false;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Shield
   Settings
   Info
@@ -162,7 +122,6 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
-=======
   Shield,
   Settings,
   Info,
@@ -171,24 +130,18 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-<<<<<<< HEAD
     necessary: true
     analytics: false
     marketing: false
     functional: false
-=======
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const cookieTypes = [;
     {;
       id: 'necessary',;
@@ -240,8 +193,6 @@ export default function CookiePolicyPage() {
       keywords="cookie policy, cookies, privacy, data protection, website cookies">;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
 
         <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -251,15 +202,12 @@ export default function CookiePolicyPage() {
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Cookie{' '}
-<<<<<<< HEAD
-=======
 
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">;
                   Policy;
@@ -273,8 +221,6 @@ export default function CookiePolicyPage() {
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Cookie Management */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -282,8 +228,6 @@ export default function CookiePolicyPage() {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -302,7 +246,6 @@ export default function CookiePolicyPage() {
                     <motion&& motion.div
                       key={cookie && cookie.id}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="border border-gray-200 rounded-lg p-6"
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -343,8 +286,6 @@ export default function CookiePolicyPage() {
                               />;
                             </button>;
                           )}
-<<<<<<< HEAD
-=======
 
                         </div>;
                       </div>;
@@ -354,7 +295,6 @@ export default function CookiePolicyPage() {
                           {cookie && cookie.examples.map((example, idx) => (;
                             <li key={idx} className="flex items-center">;
                               <ArrowRight className="w-3 h-3 text-gray-400 mr-2" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               {example}
                             </li>;
                           ))}
@@ -362,8 +302,6 @@ export default function CookiePolicyPage() {
                       </div>;
                     </motion && motion.div>;
                   ))}
-<<<<<<< HEAD
-=======
                 </div>;
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-end">;
                   <button
@@ -373,15 +311,12 @@ export default function CookiePolicyPage() {
                       marketing: false,;
                       functional: false;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
                     Reject All;
                   </button>;
                   <button
-<<<<<<< HEAD
-=======
 
                     onClick={() => setCookiePreferences({;
                       necessary: true,;
@@ -389,7 +324,6 @@ export default function CookiePolicyPage() {
                       marketing: true,;
                       functional: true;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     })}
                     className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors";
                   >;
@@ -397,8 +331,6 @@ export default function CookiePolicyPage() {
                   </button>;
                   <button
                     onClick={savePreferences}
-<<<<<<< HEAD
-=======
 
                     className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
   Shield,
@@ -607,7 +539,6 @@ if (return) {
                     className="px - 6 py - 3 bg - gradient - to - r from - indigo - 500 to - purple - 600 text - white rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
                   >;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Save Preferences;
                   </button>;
                 </div>;
@@ -615,8 +546,6 @@ if (return) {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -688,7 +617,6 @@ if (return) {
                     </li>;
                   </ul>;
                 </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Cookie Information */}
         <section className="py - 20 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -698,8 +626,6 @@ if (return) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 What Are Cookies?;
@@ -772,15 +698,11 @@ if (return) {
                   </ul>;
                 </motion.div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> main
 import { motion } from 'framer-motion';
 import MainLayout from '../src/components/layout/MainLayout';
 
@@ -818,9 +740,7 @@ origin/automation-improvements-final
         </section>;
       </div>;
 
-
 export default function CookiesPage() {
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -848,7 +768,6 @@ export default function CookiesPage() {
                   </p>;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
-=======
         {/* Contact Information */}
         <section className="py - 20 bg - gray - 50">;
           <div className="container mx - auto px - 4">;
@@ -891,34 +810,20 @@ export default function CookiesPage() {
         </section>;
       </div>;
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
         title='Cookie Policy | Zion Tech Group'
         description='Information about cookies used by Zion Tech Group.'
-<<<<<<< HEAD
-=======
-
-=======
-=======
 
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function CookiesPage() {
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
       <div className="container mx-auto px-4 py-24 text-white">
@@ -926,24 +831,12 @@ export default function CookiesPage() {
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
-<<<<<<< HEAD
-=======
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <li>Purpose: performance and security</li>
 <li>Purpose: performance and security</li>
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
-<<<<<<< HEAD
       </Layout>
     </>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -954,26 +847,16 @@ origin/automation-improvements-final
     </>;
   );
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
-=======
-=======
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
     </UltraAdvancedFuturisticBackground>
   )
 }
-<<<<<<< HEAD
 }
 }
       </div>
@@ -984,8 +867,6 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-=======
 
         canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
       />;
@@ -1057,29 +938,16 @@ function CookiesPage() {
         </div>;
       </Layout>;
 
-
-=======
-
-
   );
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
       description="Cookie policy for Zion Tech Group website"
@@ -1093,4 +961,3 @@ function CookiesPage() {
     </MainLayout>
   );
 }
->>>>>>> main

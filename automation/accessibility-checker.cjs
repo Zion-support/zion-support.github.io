@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -178,25 +167,9 @@ if (require.main === module) {
     });
 }
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
 console.log('♿ Running accessibility check...');
 console.log('✅ Accessibility check completed');
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
         
       }
     }},
@@ -219,7 +192,6 @@ console.log('✅ Accessibility check completed');
           interactiveElements += buttons + links + inputs;
         });
 
-        
       }
     }},
   {
@@ -238,7 +210,6 @@ console.log('✅ Accessibility check completed');
           ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
         });
 
-        
       }
     }},
   {
@@ -258,7 +229,6 @@ console.log('✅ Accessibility check completed');
             .length;
         });
 
-        
       }
     }},
   {
@@ -279,7 +249,6 @@ console.log('✅ Accessibility check completed');
           ).length;
         });
 
-        
       }
     }},
 ];
@@ -299,9 +268,6 @@ for (const check of a11yChecks) {
   }
 }
 
-
-
-
 // Generate accessibility report
 const report = {
   "timestamp": new Date().toISOString(),
@@ -318,8 +284,6 @@ if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
 
-=======
->>>>>>> main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -437,59 +401,12 @@ if (require.main === module) {
     });
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
 );
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -500,7 +417,6 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
-<<<<<<< HEAD
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -521,16 +437,4 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-=======
 module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

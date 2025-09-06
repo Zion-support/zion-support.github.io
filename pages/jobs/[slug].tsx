@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -20,15 +14,10 @@ export default function JobDetailsPage() {;
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
 
-
-
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter  } from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -43,16 +32,11 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import useResponsive from '../../hooks/useResponsive';
-<<<<<<< HEAD
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
 export default function JobDetailsPage() {;
@@ -62,20 +46,10 @@ export default function JobDetailsPage() {;
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const onApply = () => {
     notify(
       'Application submitted! We’ll notify you when it’s viewed.'
@@ -100,11 +74,6 @@ export default function JobDetailsPage() {
   const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {useToast} from '../../components/ui/NotificationSystem';
 import {useEffect, useState} from 'react';
@@ -128,15 +97,6 @@ export default function JobDetailsPage() {;
 
     );
   }
-<<<<<<< HEAD
-
-
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
 
@@ -149,11 +109,6 @@ export default function JobDetailsPage() {;
           <EnhancedCard>
             <div className="flex items-start justify-between gap-3">
               <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             </div>
           </EnhancedCard>
@@ -164,12 +119,8 @@ export default function JobDetailsPage() {;
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
 
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <li>3+ years with Python or TypeScript</li>
 
-=======
                 <h1 className='text-xl font-semibold'>
                   {slug?.replace(/-/g, ' ') |'Job Title'}
                 </h1>
@@ -204,26 +155,13 @@ export default function JobDetailsPage() {;
             <ul className=&quot;list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300&quot;>
 
               <li>3+ years with Python or TypeScript</li>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
               <li>3+ years with Python or TypeScript</li>
 
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <li>Experience with ML/AI production systems</li>
               <li>Familiarity with cloud infra and CI/CD</li>
             </ul>
           </EnhancedCard>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
     <div className='relative'>;
       {loading ? (;
@@ -242,8 +180,6 @@ export default function JobDetailsPage() {;
               </div>;
               {!isMobile && (;
                 <EnhancedButton onClick={onApply} variant='primary'>;
-<<<<<<< HEAD
-=======
     <div className='relative'>;
 import {use_router} from 'next / router';
 import EnhancedCard from '../../components / ui / EnhancedCard';
@@ -290,22 +226,11 @@ function JobDetailsPage() {
               </div>;
               {!is_mobile && (
                 <EnhancedButton on_click={on_apply} variant='primary'>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Apply Now;
                 </EnhancedButton>              )}
             </div>;
           </EnhancedCard>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Description</h2>;
             <p className='text - sm text - gray - 700 dark:text - gray - 300'>;
@@ -328,14 +253,7 @@ function JobDetailsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
@@ -343,13 +261,6 @@ function JobDetailsPage() {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <EnhancedCard>;
             <h2 className='font - semibold mb - 2'>Requirements</h2>;
             <ul className='list - disc pl - 5 space - y-1 text - sm text - gray - 700 dark:text - gray - 300'>              <li > 3+ years with Python or TypeScript</li>;
@@ -369,14 +280,7 @@ function JobDetailsPage() {
     </div>);
 ;
 
-
-
 }
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 }
 
@@ -385,11 +289,6 @@ function JobDetailsPage() {
 );
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -402,19 +301,4 @@ function JobDetailsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

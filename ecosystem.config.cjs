@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = {
   apps: [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> main
       name: 'auto-fix',
       script: 'scripts/pm2/auto-fix.js',
       instances: 1,
@@ -45,30 +31,14 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
-<<<<<<< HEAD
       name: 'bolt-zion-app',
       name: 'ci-cd-pipeline',
       name: 'ci-cd-pipeline',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       name: 'bolt-zion-app',
-=======
 module.exports = {
   apps: [
     {
       name: 'ci-cd-pipeline',
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
@@ -77,27 +47,11 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> main
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
-=======
         NODE_ENV: 'production'
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       },
       cron_restart: '0 0 * * *', // Daily restart
       error_file: './logs/ci-cd-error.log',
@@ -106,10 +60,8 @@ module.exports = {
       time: true
     },
     {
-<<<<<<< HEAD
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
-<<<<<<< HEAD
         NODE_ENV: 'production',
       },
       cron_restart: '0 0 * * *', // Daily restart
@@ -250,19 +202,6 @@ module.exports = {
       script: 'npm',
       args: 'run lint',
       cwd: '/workspace',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -271,7 +210,6 @@ module.exports = {
     },
     {
       name: 'auto-fix',
-<<<<<<< HEAD
       script: 'node',
       args: 'scripts/pm2/auto-fix.cjs',
       cron_restart: '0 */6 * * *',
@@ -299,10 +237,7 @@ module.exports = {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.cjs',
-=======
-=======
       name: 'continuous-automation',
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
@@ -311,25 +246,12 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         NODE_ENV: 'production',
-=======
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
         NODE_ENV: 'development',
         PM2_PROCESS_NAME: 'auto-commit-fixes',
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
-=======
         NODE_ENV: 'production'
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
       },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/automation-error.log',
@@ -338,22 +260,10 @@ module.exports = {
       time: true
     },
     {
-<<<<<<< HEAD
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
-=======
         NODE_ENV: 'development',
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
         NODE_ENV: 'development',
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
         PM2_PROCESS_NAME: 'code-quality-monitor',
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
@@ -362,22 +272,8 @@ module.exports = {
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   ]
-=======
-=======
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     },
     {
       name: 'auto-commit-fixes',
@@ -581,7 +477,6 @@ module.exports = {
     },
   ],
 };
-=======
 module.exports = {}
   "apps": [{}]
       name: 'ziontechgroup-web',
@@ -766,25 +661,11 @@ module.exports = {}
       "error_file": 'logs/pm2/type-checker-error.log',
       "out_file": 'logs/pm2/type-checker-out.log'};
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> fe76b9a4284841cc4ea795ce0635075150be4a8b
 };
-=======
 };
->>>>>>> c017c2ce201787a72821f9d4b2713514bd3cdb3a
-=======
 };
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
 };
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
 };
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
       name: 'comprehensive-automation',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
@@ -825,7 +706,6 @@ module.exports = {}
       script: 'npm',
       args: 'audit',
       cwd: '/workspace',
->>>>>>> main
       instances: 1,
       autorestart: true,
       watch: false,
@@ -906,10 +786,6 @@ module.exports = {}
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
-<<<<<<< HEAD
   ];};
-=======
   ]
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

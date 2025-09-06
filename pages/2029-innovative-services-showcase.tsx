@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -30,42 +25,27 @@ export default function InnovativeServicesShowcase2029() {
     ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
-
-=======
 
 import {;
   Brain, Atom, Target, ArrowRight, CheckCircle, Star,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
-<<<<<<< HEAD
-=======
 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-=======
 
 const contactInfo = {;
   mobile: '+1 302 464 0950';
@@ -74,16 +54,13 @@ const contactInfo = {;
   website: 'https://ziontechgroup.com';
 
 };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function InnovativeServicesShowcase2029() {
   const allServices = [
     ...aiAutonomousEcosystemServices2029
     ...emergingTechBreakthroughServices2029
     ...practicalBusinessSolutionServices2029
-<<<<<<< HEAD
       icon: Brain
       color: 'from-violet-600 via-purple-600 to-indigo-600'
-=======
   ];
 
   const serviceCategories = [
@@ -91,20 +68,15 @@ export default function InnovativeServicesShowcase2029() {
       title: '🚀 AI Autonomous Ecosystem',
       icon: Brain,
       color: 'from-violet-600 via-purple-600 to-indigo-600',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       services: aiAutonomousEcosystemServices2029
     }
     {
-<<<<<<< HEAD
-=======
       title: '⚛️ Emerging Tech Breakthroughs',
       icon: Atom,
       color: 'from-indigo-600 via-blue-600 to-cyan-600',
       services: emergingTechBreakthroughServices2029
     };
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -132,7 +104,6 @@ function InnovativeServicesShowcase2029() {
     ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029;
-=======
     {;
       title: '⚛️ Emerging Tech Breakthroughs',;
       icon: Atom,;
@@ -150,10 +121,7 @@ function InnovativeServicesShowcase2029() {
   }
 }
 
-
   ],
-<<<<<<< HEAD
-=======
   const service_categories = [;
     {
       title: '🚀 AI Autonomous Ecosystem',
@@ -174,29 +142,21 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
       services: practicalBusinessSolutionServices2029;
     }
 
-
         {/* Hero Section */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-=======
-=======
   ],
   return (
     <>;
@@ -216,16 +176,11 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 
-=======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-=======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -241,7 +196,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
           </div>
         </section>
 
-=======
             >;
               <h1 className="text - 6xl md:text - 8xl font - bold bg - gradient - to - r from - purple - 400 via - pink - 400 to - blue - 400 bg - clip - text text - transparent mb - 8">;
                 2029 Innovative Services;
@@ -271,7 +225,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-
         {/* Services Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -280,17 +233,13 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
             <motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               animate={{ opacity: 1, y: 0 }  } catch (error) {
-=======
               whileInView={{ opacity: 1, y: 0 }  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -300,7 +249,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
             >
               <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
                 2029 Innovative Services
@@ -381,27 +329,18 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 
-
-
-
                 revolutionize different aspects of business and technology.
               </p>
             </motion.div>
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               {serviceCategories.map((category, index) => (
                 <motion.div
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-
-
-
 
                 revolutionize different aspects of business and technology.
               </p>
@@ -423,17 +362,11 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               {service_categories.map ((category, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={category.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   viewport={{ once: true }} className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
@@ -443,9 +376,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                     <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                     <p className="text-gray-300 mb-6">
 
-
-
-
                       and accelerate your success in the digital age.
                     </p>
                     <div className="text-sm text-gray-400">
@@ -453,11 +383,8 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               transition={{ duration: 0.8 }}
-=======
 
-=======
                   viewport={{ once: true }} className="relative group">;
                   <div className={`absolute inset - 0 bg - gradient - to - br ${category.color} opacity - 20 rounded - 2xl blur - xl group - hover:opacity - 30 transition - opacity duration - 500`}></div>;
                   <div className="relative bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500">;
@@ -486,8 +413,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -519,20 +444,12 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Featured Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-
-
-
 
                 and creating new possibilities for businesses worldwide.
               </p>
@@ -540,8 +457,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
             <div className="grid lg:grid-cols-2 gap-8">
               {allServices.slice(0, 4).map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               viewport={{ once: true }} className="text - center mb - 16">;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
@@ -556,17 +471,11 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               {all_services.slice (0, 4).map ((service, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -585,9 +494,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
 
-
-<<<<<<< HEAD
-=======
                         {cat  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -600,11 +506,7 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>
-
 
                   <div className="flex gap-4">
                     <Link
@@ -618,11 +520,7 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                     </Link>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -645,14 +543,8 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               viewport={{ once: true }} className="text-center mt-16">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                 View All Services
@@ -661,21 +553,16 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
-=======
-
 
         {/* Contact CTA */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -698,22 +585,14 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
                 Join the future of technology with our innovative 2029 services. 
                 Join the future of technology with our innovative 2029 services.
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
-=======
                   viewport={{ once: true }} className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - gray - 500 transition - all duration - 500">;
                   <h3 className="text - 2xl font - bold text - white mb - 4">{service.name}</h3>;
                   <p className="text - gray - 300 mb - 6">{service.description}</p>;
@@ -750,7 +629,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
         {/* Contact CTA */}
@@ -761,9 +639,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
-
-
 
                 Contact us today to discover how we can revolutionize your business operations.
               </p>
@@ -781,11 +656,7 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -800,21 +671,13 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <UltraFuturisticFooter2029 />
       </div>
     </>
-<<<<<<< HEAD
-=======
 
-=======
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Ready to Transform Your Business?;
@@ -845,9 +708,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                 </Link>;
                 <Link;
                   href="/pricing" className="inline - flex items - center px - 8 py - 4 border - 2 border - purple - 500 text - purple - 400 font - semibold rounded - full hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - lg">;
-<<<<<<< HEAD
-=======
-=======
             >;
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">;
                 Ready to Transform Your Business?;
@@ -878,8 +738,6 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
                 </Link>;
                 <Link;
                   href="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   View Pricing;
                 </Link>;
               </div>;
@@ -887,18 +745,8 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
           </div>;
         </section>;
         <UltraFuturisticFooter2029 />;
-<<<<<<< HEAD
 
-
-=======
       </div>;
-<<<<<<< HEAD
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -4,9 +4,6 @@
   name: string;
   category: 'crm' | 'ats';
   description?: string;
-<<<<<<< HEAD
-=======
-
 
 interface ConnectionMap {;
   [providerId: string]: any,;
@@ -18,41 +15,27 @@ function StatusIcon(): any ({;
   const label =;
 
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
-<<<<<<< HEAD
-=======
 
-=======
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 
-
 interface ConnectionMap {;
   [key: string]: boolean,;
 
-
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
-=======
-=======
 
 import { useEffect, useMemo, useState } from 'react';
-=======
 import React, { useState } from 'react';
-=======
 import { useEffect, useMemo, useState } from 'react';
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -72,17 +55,11 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
 
   const [syncRules, setSyncRules] = useState<any>({;
     autoCreateContacts: true,;
@@ -116,14 +93,11 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId, syncRules }),;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
-<<<<<<< HEAD
-=======
 
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
@@ -132,11 +106,9 @@ export default function AdminIntegrationsPage() {
     } finally { setLoading(false) }
   }
 
-
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
-
 
   async function disconnect(): any (providerId: string) {;
     setLoading(true),;
@@ -146,15 +118,11 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
-<<<<<<< HEAD
-=======
-
 
   async function resync(): any (providerId: string) {;
     setLoading(true),;
@@ -164,17 +132,13 @@ export default function AdminIntegrationsPage() {
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
       await refresh();
     } finally {;
       setLoading(false);
     }
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -197,7 +161,6 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-<<<<<<< HEAD
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -242,15 +205,10 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
-<<<<<<< HEAD
     return (
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
         <div className="flex items-center justify-between">
@@ -300,9 +258,6 @@ export default function AdminIntegrationsPage() {
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
     return (
-=======
-=======
-=======
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
@@ -324,13 +279,9 @@ export default function AdminIntegrationsPage() {
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
-
   function RulesModal() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   function RulesModal() {;
     if (!selected) return null;
@@ -338,14 +289,10 @@ export default function AdminIntegrationsPage() {
     const isCrm = provider && provider.category === 'crm';
     return (
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         }
                       />{' '}
                       Auto;
                     </label>;
-<<<<<<< HEAD
-=======
 
                         checked={syncRules && syncRules.pushNotesMode === 'manual'}
                         onChange={() =>;
@@ -354,8 +301,6 @@ export default function AdminIntegrationsPage() {
                             pushNotesMode: 'manual',;
                           });
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -368,8 +313,6 @@ export default function AdminIntegrationsPage() {
                           });
                         }
                       />{' '}
-<<<<<<< HEAD
-=======
                       Manual only;
                     </label>                  </div>;
                 </div>;
@@ -381,7 +324,6 @@ export default function AdminIntegrationsPage() {
                         autoSyncApplicants: e && e.target.checked,;
                       });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -389,12 +331,10 @@ export default function AdminIntegrationsPage() {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
-<<<<<<< HEAD
               <code>
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
-=======
 
                     checked={!!syncRules && syncRules.autoUploadResumes}
                     onChange={e =>;
@@ -510,33 +450,17 @@ export default function AdminIntegrationsPage() {
             </li>
             <li>
               Talent Matched → GET{' '}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
         </section>
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         </section>
       </main>
       <RulesModal />
     </>
-<<<<<<< HEAD
-=======
-
 
               <code>;
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP;
@@ -544,11 +468,8 @@ export default function AdminIntegrationsPage() {
             </li>          </ul>;
         </section>;
 
-=======
   )
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         <section>;
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
@@ -557,18 +478,12 @@ export default function AdminIntegrationsPage() {
       <RulesModal />;
     </>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-<<<<<<< HEAD
-=======
-
 
   async function save() {;
     setMessage('');
@@ -580,16 +495,8 @@ function ManualOverrideForm() {;
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
   } catch (error) {
     console.error("Error:", error);
@@ -610,18 +517,9 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   }
   return (
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
       <div className='grid grid-cols-1 gap-3'>;
         <label className='text-sm'>;
@@ -662,13 +560,7 @@ function ManualOverrideForm() {
     </div>;
   );
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
         <label className="text-sm">Job/Post ID
@@ -794,13 +686,6 @@ function save() {
     </div>);
 ;
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 }
 }
 }
@@ -808,20 +693,10 @@ function save() {
 }
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

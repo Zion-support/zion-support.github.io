@@ -21,15 +21,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 
 import React from './react';
 import SEO from "../components / SEO";
@@ -41,13 +36,10 @@ function ApiPerformanceTestingPage() {
   const features = [;
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
-=======
-
 
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-
 
 import React from "react";
 import SEO from "../components/SEO";
@@ -66,10 +58,6 @@ import { Check, ExternalLink } from 'lucide-react';
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default function ApiPerformanceTestingPage() {
 
@@ -86,10 +74,6 @@ export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
     "SLO-aware latency reports",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -148,9 +132,7 @@ export default function ApiPerformanceTestingPage() {
               className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
             </a>;
           </div>;
         </section>;
@@ -175,20 +157,10 @@ export default function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   return (
->>>>>>> main
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <SEO
         title="API Performance Testing"
@@ -246,20 +218,11 @@ return (
           </div>;
         </section>;
       </main>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 
-
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
     </>);
 }
@@ -303,7 +266,6 @@ return (
   return (
 
   return (
-
 
 return (
   return (
@@ -428,10 +390,7 @@ return (
   );
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             </a>;
           </div>;
         </section>;
       </main>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

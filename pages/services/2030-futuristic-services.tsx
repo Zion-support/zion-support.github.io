@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',;
 import Head from 'next/head',;
 import { motion } from 'framer-motion',;
@@ -33,12 +28,7 @@ export default function FuturisticServices2030Page() {
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -52,60 +42,40 @@ import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutio
 import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
 import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
-<<<<<<< HEAD
-=======
 
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     {
       title: '🚀 Futuristic AI Services 2030',
       icon: Brain,
       color: 'from - cyan - 500 to - blue - 500',
       services: futuristicAIServices2030,
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
       color: 'from - purple - 500 to - indigo - 500',
       services: quantumEmergingTechServices2030,
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       title: '🏢 Enterprise IT Solutions 2030',
       icon: Globe,
       color: 'from - blue - 500 to - cyan - 500',
       services: enterpriseITSolutions2030,
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       title: '🌌 Space & Metaverse Tech 2030',
       icon: Rocket,
       color: 'from - emerald - 500 to - green - 500',
       services: spaceMetaverseTechServices2030,
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     {
       title: '🎯 Innovative Micro SAAS 2030',
       icon: Target,
       color: 'from - yellow - 500 to - orange - 500',
       services: innovativeMicroSaasServices2030,
-<<<<<<< HEAD
-=======
-
 
     {
       title: '🔬 Research & Development 2030',
@@ -125,21 +95,17 @@ color: 'from - red - 500 to - pink - 500',
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 
-
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta property="og:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services/2030-futuristic-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-2030.jpg" />
-
 
         {/* Twitter */  } catch (error) {
     console.error("Error:", error);
@@ -147,8 +113,6 @@ color: 'from - red - 500 to - pink - 500',
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
@@ -189,9 +153,7 @@ color: 'from - red - 500 to - pink - 500',
                 "telephone": "+1-302-464-0950"
                 "contactType": "customer service"
                 "email": "kleber@ziontechgroup.com"
-=======
             __html: JSON.stringify ({
-=======
 
         {/* Additional Meta Tags */  } catch (error) {
     console.error("Error:", error);
@@ -206,21 +168,16 @@ color: 'from - red - 500 to - pink - 500',
   }
 }
 
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               "@context": "https://schema.org",
               "@type": "Service",
               "name": "2030 Futuristic Technology Services",
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ]
-=======
 export default function FuturisticServices2030Page(req, res) {
   try {
   const contactInfo = {;
@@ -284,12 +241,7 @@ export default function FuturisticServices2030Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -298,57 +250,32 @@ export default function FuturisticServices2030Page(req, res) {
         <meta name="keywords" content="2030 technology services, AI consciousness, quantum computing, space mining, metaverse development, neuromorphic computing, DNA computing, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Open Graph */}
-=======
         {/* Open Graph */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <meta property="og:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services/2030-futuristic-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-2030.jpg" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Twitter */}
-=======
         {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image-2030.jpg" />
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
         {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />
         <link rel="canonical" href="https://ziontechgroup.com/services/2030-futuristic-services" />
         {/* Structured Data */}
-=======
         {/* Additional Meta Tags */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -361,24 +288,14 @@ export default function FuturisticServices2030Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               "@context": "https://schema.org"
               "@type": "Service"
               "name": "2030 Futuristic Technology Services"
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               "provider": {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
@@ -392,12 +309,10 @@ export default function FuturisticServices2030Page(req, res) {
                 "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
 
-
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
             <motion.div
-
 
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -410,8 +325,6 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -424,37 +337,28 @@ export default function FuturisticServices2030Page(req, res) {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
 
-
-
-
                 we're building tomorrow's solutions today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
 
-
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
                   Get Started Today
                 </motion.button>
                 <motion.button
 
-
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
@@ -464,8 +368,6 @@ export default function FuturisticServices2030Page(req, res) {
         />;
       </Head>;
       <UltraFuturisticBackground2031>;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               "url": "https://ziontechgroup.com/services/2030-futuristic-services"
               "contactPoint": {
                 "@type": "ContactPoint"
@@ -478,9 +380,7 @@ export default function FuturisticServices2030Page(req, res) {
         />
       </Head>
       <UltraFuturisticBackground2031>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         {/* Ultra Advanced Navigation */}
-<<<<<<< HEAD
         <UltraFuturisticNavigation2031 />
         {/* Hero Section */}
                 } catch (error) {
@@ -509,7 +409,6 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           <div className="max-w-7xl mx-auto relative z-10">
@@ -527,7 +426,6 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
               transition={{ duration: 0.8 }} className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -544,9 +442,6 @@ export default function FuturisticServices2030Page(req, res) {
                 Experience the future with our revolutionary 2030 technology services.
                 From AI consciousness to space mining, quantum computing to metaverse development -
 
-
-
-
                 we're building tomorrow's solutions today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -558,7 +453,6 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
                   Get Started Today
                 </motion.button>
@@ -569,7 +463,6 @@ export default function FuturisticServices2030Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
@@ -643,11 +536,8 @@ export default function FuturisticServices2030Page(req, res) {
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2031 />;
         {/* Hero Section */}
-=======
         <UltraFuturisticNavigation2031 />;
         {/* Hero Section */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 relative overflow - hidden">;
           <div className="absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 900 / 20 to - cyan - 900 / 20"></div>;
           <div className="max - w-7xl mx - auto relative z - 10">;
@@ -697,7 +587,6 @@ export default function FuturisticServices2030Page(req, res) {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
-
                   viewport={{ once: true }} className="text-center">
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
@@ -705,9 +594,6 @@ export default function FuturisticServices2030Page(req, res) {
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
-<<<<<<< HEAD
-=======
-
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -723,17 +609,11 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {serviceCategories.map((category, categoryIndex) => (
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
             <div className="max-w-7xl mx-auto relative z-10">
               <motion.div
-<<<<<<< HEAD
-=======
-
 
                 initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -751,23 +631,17 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                     {category.title}
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
 
-=======
                   viewport={{ once: true }} className="text - center">;
                   <div className={`text - 4xl mb - 2 ${stat.color}`}>;
                     <stat.icon className="w - 12 h - 12 mx - auto mb - 4" />;
@@ -798,9 +672,7 @@ export default function FuturisticServices2030Page(req, res) {
                   </span>;
                 </h2>;
                 <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {category.description}
-
 
                     {category.title  } catch (error) {
     console.error("Error:", error);
@@ -816,18 +688,12 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </p>
               </motion.div>
-
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
-<<<<<<< HEAD
-=======
 
                 </p>;
               </motion.div>;
@@ -835,18 +701,12 @@ export default function FuturisticServices2030Page(req, res) {
                 {category.services.map ((service, service_index) => (
                   <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={service.id}
                     initial={{ opacity: 0, coordinate_y: 30 }}
                     whileInView={{ opacity: 1, coordinate_y: 0 }}
                     transition={{ duration: 0.6, delay: service_index * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -856,9 +716,6 @@ export default function FuturisticServices2030Page(req, res) {
                         <div className="flex items-center justify-between">
                           <span className="text-cyan-400 font-semibold">{service.price}{service.period}</span>
                           <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
-<<<<<<< HEAD
-=======
-
 
                             {service.innovationLevel  } catch (error) {
     console.error("Error:", error);
@@ -866,9 +723,6 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           </span>
                         </div>
                         <div className="flex items-center space-x-4 text-xs text-gray-400">
@@ -886,54 +740,39 @@ export default function FuturisticServices2030Page(req, res) {
                           </div>
                         </div>
                       </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-400">Trial: {service.trialDays} days</span>
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </motion.div>
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }  } catch (error) {
-=======
-
 
                 ))  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-=======
               </div>;
             </div>;
           </section>;
         ))  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               viewport={{ once: true }  } catch (error) {
-=======
 ;
         {/* Contact CTA Section */  } catch (error) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               transition={{ duration: 0.8 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -949,11 +788,7 @@ export default function FuturisticServices2030Page(req, res) {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team of technology experts to discuss how our revolutionary 2030 services 
                 Contact our team of technology experts to discuss how our revolutionary 2030 services
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -961,11 +796,6 @@ export default function FuturisticServices2030Page(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     while_hover={{ coordinate_y: -5 }} className="group cursor - pointer">;
                     <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 60 to - gray - 800 / 60 border border - cyan - 500 / 30 hover:border - cyan - 400 / 50 transition - all duration - 300 backdrop - blur - sm">;
                       <div className="text - 4xl mb - 4">{service.icon}</div>;
@@ -1011,16 +841,10 @@ export default function FuturisticServices2030Page(req, res) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
 
-
-
-
                 can transform your business and propel you into the future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button
-<<<<<<< HEAD
-=======
-
 
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
@@ -1028,16 +852,10 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                   Schedule Consultation
                 </motion.button>
                 <motion.button
-<<<<<<< HEAD
-=======
-
 
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
@@ -1045,18 +863,11 @@ export default function FuturisticServices2030Page(req, res) {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
                   View Pricing
                 </motion.button>
               </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -1075,25 +886,18 @@ export default function FuturisticServices2030Page(req, res) {
           </div>
         </section>
 
-
   );
 };
 
-=======
         {/* Footer */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
-<<<<<<< HEAD
-=======
 
-=======
 }
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >;
               <h2 className="text - 3xl sm:text - 4xl lg:text - 5xl font - bold text - white mb - 6">;
                 Ready to Experience the;
@@ -1138,8 +942,6 @@ export default function FuturisticServices2030Page(req, res) {
         <UltraFuturisticFooter2030 />;
       </UltraFuturisticBackground2031>;
 
-<<<<<<< HEAD
-=======
     </>;
   );
   } catch (error) {
@@ -1149,6 +951,3 @@ export default function FuturisticServices2030Page(req, res) {
 
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

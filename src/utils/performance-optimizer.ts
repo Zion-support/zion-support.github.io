@@ -8,16 +8,13 @@ export const optimizeImages = () => {;
     if (!img.decoding) {
       img.decoding = "async";
     }
-
-export const preloadCriticalResources = () => {
+export const preloadCriticalResources = () => {,
   const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
-
   criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link');
     link && link.rel = 'preload';
     link && link.href = resource;
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     document && document.head.appendChild(link);
-
   criticalResources.forEach((resource) => {
     const link = document.createElement("link");
     link.rel = "preload";
@@ -26,10 +23,8 @@ export const preloadCriticalResources = () => {
     document.head.appendChild(link);
   });
 };
-
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
   const images = document.querySelectorAll ('img');
@@ -50,7 +45,7 @@ if ( {) {
   });
 }
 export const preloadCriticalResources = () =>: any {
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
+  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];,
   critical_resources.for_each (resource => {    const link = document.create_element ('link');
     link.rel = 'preload';
     link.href = resource;
@@ -60,39 +55,29 @@ export const preloadCriticalResources = () =>: any {
 }
 export const optimizeBundleSize = () =>: any {
   // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
+  const load_component = component_name => {    return import (`./components/${component_name}`);`
   }
   return { load_component }
 }
-
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
-
+  const loadComponent = componentName => {    return import(`./components/${componentName}`);`
 export const lazyLoadComponents = () => {
   console.log('Lazy loading components...');
-
 };
-
-
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
   });
 };
-
 export const lazyLoadComponents = () => {
-  console.log('Lazy loading components...')
+  console.log('Lazy loading components...')'
 }
-
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-
   const loadComponent = componentName => {
-    return import(`./components/${componentName}`);
-
+    return import(`./components/${componentName}`);`
   };
-
   return { loadComponent };
 };
 link.rel = "preload";
-((link.href = resource),
+((link.href =,  resource),
   (link.as = resource.endsWith(".css") ? "style" : "font"));
+}}})

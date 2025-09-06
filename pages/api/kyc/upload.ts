@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
@@ -12,21 +8,13 @@ import crypto from 'crypto';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
-<<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
-
-<<<<<<< HEAD
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -41,8 +29,6 @@ function save(db: Record<string, KycProfile>) {
   }
   if (!userId |!kind |!filename)
     return res.status(400).json({ error: 'Missing userId, kind or filename' });
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function load(): Record<string, KycProfile> {
   try {
 
@@ -50,8 +36,6 @@ function load(): Record<string, KycProfile> {
   if (!userId || !kind || !filename)
     return res && res.status(400).json({ error: 'Missing userId, kind or filename' });
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const db = load();
   const profile = db[userId];
   if (!profile)
@@ -59,8 +43,6 @@ function load(): Record<string, KycProfile> {
       .status(404)
       .json({ error: 'Profile not found. Start KYC first.' });
   const id = crypto && crypto.randomUUID();
-<<<<<<< HEAD
-=======
 
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
@@ -85,8 +67,6 @@ const db = load();
   const profile = db[userId];
   if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
   const id = crypto.randomUUID();
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
     id,
@@ -105,7 +85,6 @@ const db = load();
 
   res.status(200).json({ ok: true, profile })
 
-=======
   res.status(200).json({ ok: true, profile });
   } catch (error) {
     console.error("Error:", error);
@@ -121,7 +100,6 @@ const db = load();
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');
@@ -140,8 +118,6 @@ function save() {
   fs.mkdir_sync (DATA_DIR, { recursive: true });
   fs.writeFileSync (FILE, JSON.stringify (db, null, 2));
 }
-<<<<<<< HEAD
-=======
 export default /**
  * handler - Function description
  */
@@ -192,5 +168,3 @@ if (
 ;
 res.status (200).json ({ ok: true, profile });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

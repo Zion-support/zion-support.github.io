@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -33,19 +32,16 @@ function ITService({ title, description, price, features, benefits, icon, href }
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, security, and infrastructure management. Engineered for uptime, efficiency, and scalability.'
-=======
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
   title: 'IT Services | Zion Tech Group - Complete IT Solutions',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and 24/7 support. Transform your IT infrastructure with expert solutions.',
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 };
 
 export default function ITServicesPage() {
   return (
-<<<<<<< HEAD
     <div className="animate-fade-in">
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -519,16 +515,13 @@ function Plan({ name, price, duration, features }: {
 export default function ITServicesPage() {
   return (
     <div className="space-y-16">
-=======
     <div className="max-w-6xl mx-auto px-4 py-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-gray-50 to-blue-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
           IT Services
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
           Complete IT infrastructure, cloud solutions, and digital transformation services to modernize your business operations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -832,10 +825,8 @@ function ContactSection() {
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
           Let's discuss how we can improve your infrastructure's reliability, security, and performance. 
           Our IT experts have managed 200+ enterprise systems.
-=======
           Complete IT infrastructure solutions to modernize, secure, and optimize your technology environment. 
           From cloud migration to cybersecurity, we deliver enterprise-grade IT services.
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -1106,8 +1097,6 @@ function ContactSection() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 function ITServiceCard({ title, description, icon, pricing, features }: {
   title: string;
@@ -1255,4 +1244,3 @@ function MetricCard({ number, label, description }: {
     </div>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-134f

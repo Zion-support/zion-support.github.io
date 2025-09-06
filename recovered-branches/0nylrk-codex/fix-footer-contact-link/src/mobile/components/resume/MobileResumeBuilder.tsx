@@ -13,17 +13,9 @@ import {
 import { Label } from "@/components/ui/label";
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react";
 
-
-<<<<<<< HEAD
-
-=======
-=======
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -37,11 +29,6 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -82,14 +69,8 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
-
 
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
@@ -107,7 +88,6 @@ export function MobileResumeBuilder() {
       default:
         return <BasicsStep />;
     }
-<<<<<<< HEAD
 
   };
 
@@ -117,9 +97,6 @@ export function MobileResumeBuilder() {
         <Button
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics"),;
   const renderStepContent = () => {;
@@ -141,53 +118,36 @@ export function MobileResumeBuilder() {;
         <Button;
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("basics")}
         >;
           Basics;
         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         <Button
           variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("experience")}
         >;
           Experience;
         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
-=======
         <Button;
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         <Button
           variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onClick={() => setCurrentStep("education")}
         >;
           Education;
         </Button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Button
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
@@ -197,7 +157,6 @@ export function MobileResumeBuilder() {;
         </Button>
       </div>
 
-=======
       ;
       {renderStepContent()}
       ;
@@ -205,7 +164,6 @@ export function MobileResumeBuilder() {;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {renderStepContent()}
 
       <Button className="w-full flex gap-2" size="lg">
@@ -255,12 +213,6 @@ function BasicsStep() {;
     </Card>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: "1" }]);
@@ -367,9 +319,6 @@ function ExperienceStep() {
     set_experiences (experiences.filter (exp => exp.id !== id));
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space - y-4">;
       {experiences.map ((exp, index) => (
@@ -439,7 +388,6 @@ function EducationStep() {
   const [educations, setEducations] = useState([{ id: "1" }]);
 
   const addEducation = () => {
-<<<<<<< HEAD
     const newId = (educations.length + 1).toString();
     setEducations([...educations, { id: newId }]);
   };
@@ -526,10 +474,6 @@ function SkillsStep() {
     setSkills(skills.filter((skill) => skill.id !== id));
   };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const updateSkill = (id: string, field: string, value: string) => {
     setSkills(
       skills.map((skill) =>
@@ -538,13 +482,10 @@ function SkillsStep() {
     );
   };
 
-<<<<<<< HEAD
-=======
   }
 
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   return (
     <div className="space-y-4">
       <Card>
@@ -584,10 +525,7 @@ function SkillsStep() {
                   >
                     <Trash2 className="h-4 w-4 text-destructive" />
                   </Button>
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
       <Button;
         variant="outline";
@@ -625,7 +563,6 @@ function EducationStep() {;
                   <Trash2 className="h-5 w-5 text-destructive" />
                 </Button>
               )}
-<<<<<<< HEAD
 
             </div>;
             <div className="space-y-2">;
@@ -644,7 +581,6 @@ function EducationStep() {;
               <div className="space-y-2">;
                 <Label htmlFor={`eduEndDate-${edu && edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu && edu.id}`} type="month" placeholder="Present" />;
-=======
             ;
             <div className="space-y-2">;
             </div>;
@@ -668,43 +604,34 @@ function EducationStep() {;
               <div className="space-y-2">;
                 <Label htmlFor={`eduEndDate-${edu.id}`}>End Date</Label>;
                 <Input id={`eduEndDate-${edu.id}`} type="month" placeholder="Present" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
 
       <Button
         variant="outline" 
         className="w-full gap-2" 
         onClick={addEducation}>;
-=======
 ;
       <Button;
         variant="outline";
         className="w-full gap-2";
         onClick={addEducation}
       >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <Plus className="h-4 w-4" /> Add Another Education;
       </Button>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
     { id: '1', name: "", proficiency: "beginner" }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ]);
 
   return (
-<<<<<<< HEAD
-=======
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -723,17 +650,10 @@ function SkillsStep() {;
     ));
   };
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-4">;
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {skills && skills.map((skill) => (;
               <div key={skill && skill.id} className="flex items-center gap-2">;
                 <Input
@@ -785,7 +705,6 @@ function SkillsStep() {;
                 )}
               </div>;
             ))}
-<<<<<<< HEAD
 
             <Button
               variant="outline"
@@ -829,12 +748,8 @@ function SkillsStep() {;
   );
 }
 
-=======
-
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   ),; import {
   Select;
@@ -884,8 +799,5 @@ return (<div className="space-y-6 px-4 pb-24" > <div className="flex justify-bet
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

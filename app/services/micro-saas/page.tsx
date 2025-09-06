@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -615,7 +614,6 @@ function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radi
 export default function MicroSaaSPage() {
   return (
     <div className="space-y-16">
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -627,7 +625,6 @@ export const metadata = {
 export default function MicroSAASPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       {/* Hero Section */}
       <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg mb-16">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -741,9 +738,7 @@ export default function MicroSAASPage() {
     </div>
   );
 }
-<<<<<<< HEAD
 }
-=======
 
 function MicroSAASCard({ title, description, href, icon, pricing, features, category }: {
   title: string;
@@ -783,4 +778,3 @@ function MicroSAASCard({ title, description, href, icon, pricing, features, cate
     </Link>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-134f

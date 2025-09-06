@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
@@ -7,17 +6,9 @@ import {useRouter} from 'next/router';
 import {useEffect, useState, FormEvent} from 'react';
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
@@ -35,10 +26,6 @@ import {
 import type {;
   AuthError,;
   User,;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   AuthError,
   User,
@@ -50,18 +37,11 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
-=======
 
 import {;
   Card,;
@@ -70,7 +50,6 @@ import {;
   CardHeader,;
   CardTitle,;
 
-=======
 import {
 
   Card,
@@ -79,11 +58,9 @@ import {
   CardHeader,;
   CardTitle,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from '@/components/ui/card';
 const LoginPage = () => {;
 
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import Link from 'next/link';
@@ -91,55 +68,37 @@ import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
 import Head from 'next/head';
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-=======
 import {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/card';
 const LoginPage = () => {
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-<<<<<<< HEAD
-=======
 
-=======
 const LoginPage = () => {;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
-<<<<<<< HEAD
-=======
-
 
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
-
 
   // States for the new proactive resend form;
 
@@ -147,22 +106,18 @@ const LoginPage = () => {;
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
 
-
     type: 'success' | 'error';
 
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-<<<<<<< HEAD
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
-=======
 
     text: string,;
   } | null>(null);
@@ -180,12 +135,10 @@ const LoginPage = () => {;
         setSessionChecked(true); // Mark check as complete even on timeout      }
     }, 5000);
 
-
     const checkSessionAndListen = async () => {;
 
       if (!mounted) return;
       setIsCheckingSession(true);
-
 
           });
           clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
@@ -195,10 +148,8 @@ const LoginPage = () => {;
           setSessionChecked(true);
           logInfo(;
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           );        }
       }
-
 
       // Listener for auth state changes;
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
@@ -231,7 +182,6 @@ const LoginPage = () => {;
 
       };    }
     const unsubscribePromise = checkSessionAndListen();
-
 
       // Prevent redirecting back to auth pages or creating loops;
       const authPages = [;
@@ -269,7 +219,6 @@ const LoginPage = () => {;
       return;
     }
 
-      
       // Ensure returnTo is a relative path to prevent open redirect attacks
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
         returnTo = '/dashboard'
@@ -297,10 +246,8 @@ const LoginPage = () => {;
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
       return
     }
-    
 
     setIsResendingVerification(true);
-
 
     try {;
       const response = await fetch('/api/resend-verification-email', {;
@@ -308,18 +255,10 @@ const LoginPage = () => {;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       });
 
       if (response && response.ok) {;
@@ -333,10 +272,8 @@ const LoginPage = () => {;
         } as AuthError);
       }
 
-
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
-
 
     try {;
       const response = await fetch('/api/resend-verification-email', {;
@@ -344,10 +281,6 @@ const LoginPage = () => {;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: proactiveResendEmail })
@@ -364,11 +297,7 @@ const LoginPage = () => {;
     } finally {
       setIsProactivelyResending(false)
     }
-<<<<<<< HEAD
-=======
   };
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
       const data = await response && response.json();
       if (response && response.ok) {;
@@ -387,11 +316,9 @@ const LoginPage = () => {;
         type: 'error',;
         text: 'An unexpected error occurred. Please try again.',;
 
-
       });
     } finally {;
       setIsProactivelyResending(false);    }
-
 
   };
   const handleLogin = async (e: FormEvent) => {;
@@ -467,7 +394,6 @@ const LoginPage = () => {;
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
         email;
         password});
-=======
         returnTo = '/dashboard';
       }
 
@@ -561,11 +487,8 @@ const LoginPage = () => {;
       });
     } finally {
       setIsProactivelyResending(false);    }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -776,10 +699,6 @@ const LoginPage = () => {;
   }
 }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -789,21 +708,14 @@ const LoginPage = () => {;
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
-<<<<<<< HEAD
-=======
         email,
         password}),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       if (signInError) {
         logErrorToProduction('Supabase sign-in error:', { data: signInError }),
         // Check if error is related to email verification
         const messageIncludesEmailNotConfirmed = signInError.message?.toLowerCase().includes('email not confirmed') ||
                                                  signInError.message?.toLowerCase().includes('email_not_confirmed') ||
                                                  signInError.message?.toLowerCase().includes('verify') ||
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                                                  signInError.message?.toLowerCase().includes('confirm');
         // As per issue description, check for a specific error code "email_not_verified"
         // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
@@ -813,14 +725,11 @@ const LoginPage = () => {;
           setError({ 
             name: 'EmailNotVerifiedError',
 
-
       }
     } catch (catchedError: any) {;
       logErrorToProduction('Exception during Supabase sign-in:', {;
         data: catchedError,;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
       // Check if the caught error is a network error;
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
@@ -836,8 +745,6 @@ const LoginPage = () => {;
         exceptionMessage = catchedError && catchedError.message;
       }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -847,24 +754,6 @@ const LoginPage = () => {;
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
 
-
-
-<<<<<<< HEAD
-
-=======
-=======
-              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
-                  displayMessage = 'Invalid email or password. Please try again.'
-              } else if (signInError.message.toLowerCase().includes('network request failed')) {
-                  displayMessage = 'Network error. Please check your internet connection and try again.'
-              } else if (signInError.message.toLowerCase().includes('user disabled')) {
-                  displayMessage = 'Your account has been disabled. Please contact support.'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -872,9 +761,15 @@ const LoginPage = () => {;
               } else if (signInError.message.toLowerCase().includes('user disabled')) {
                   displayMessage = 'Your account has been disabled. Please contact support.'
   };
-<<<<<<< HEAD
 
-=======
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+  };
+
   const handleLogin = async (e: FormEvent) => {;
     e.preventDefault();
     setIsLoading(true);
@@ -969,17 +864,11 @@ const LoginPage = () => {;
   }
 }
   },;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
-<<<<<<< HEAD
-=======
 
-
-=======
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
           data: { session },
@@ -1340,7 +1229,6 @@ if ( {) {
 }
       const timer = set_timeout (() => {
         router.push (`/verify - status?email=${encodeURIComponent (email)}`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }, 3000);
       return () => clear_timeout (timer);
     }
@@ -1352,12 +1240,7 @@ if ( {) {
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]);
-<<<<<<< HEAD
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
       }, 3000),;
       return () => clearTimeout(timer);
@@ -1368,30 +1251,19 @@ if ( {) {
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
 
-<<<<<<< HEAD
   // --- Rendering Logic ---;
 
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
-=======
-
 
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
   if (isCheckingSession) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     logInfo('LoginPage: Rendering "Checking authentication..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1404,15 +1276,11 @@ if ( {) {
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-=======
-
 
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
   if (sessionChecked && user && !isLoading) {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1423,30 +1291,21 @@ if ( {) {
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-=======
 
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
     logWarn(
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Checking authentication...</p>
-<<<<<<< HEAD
 
     )
     return undefined, // Explicitly return undefined if condition is not met;
@@ -1493,9 +1352,7 @@ if ( {) {
   // This also covers the case where a user was present but a login attempt failed, clearing the user.;
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
-=======
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
-<<<<<<< HEAD
     }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
@@ -1514,8 +1371,6 @@ if ( {) {
 
         </div>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
@@ -1528,7 +1383,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -1541,36 +1395,19 @@ if ( {) {
         <Card className="w-full max-w-md">
           <CardHeader>
 
-
+  return (
 
   return (
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     );
     return null; // Or a minimal loader/empty div  }
   return (
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-=======
-
 
         />;
       </Head>;
@@ -1593,32 +1430,20 @@ if ( {) {
                   Email;
                 </label>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Input
                   id='email'
                   type='email'
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
 
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
-<<<<<<< HEAD
                   Email
                 </label>
                 <Input
-=======
-
 
               )  } catch (error) {
     console.error("Error:", error);
@@ -1632,7 +1457,6 @@ if ( {) {
                 </label>
                 <Input
 
-
                 />;
               </div>;
               <div className='space-y-2'>;
@@ -1640,14 +1464,10 @@ if ( {) {
                   Password;
                 </label>;
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Input
                   id='password'
                   type='password'
                   value={password}
-<<<<<<< HEAD
                   id='email'
                   type='email'
                   value={email}
@@ -1706,12 +1526,8 @@ if ( {) {
 }
                 />
               </div>
-=======
                   onChange={e => setPassword(e && e.target.value)}                  required;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1725,9 +1541,6 @@ if ( {) {
 
                   disabled={isLoading}
 
-<<<<<<< HEAD
-=======
-              
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')  } catch (error) {
     console.error("Error:", error);
@@ -1746,10 +1559,6 @@ if ( {) {
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </Link>
               </p>
             </div>
@@ -1758,18 +1567,9 @@ if ( {) {
       </div>
     </>
 
-
-=======
-
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   )
 },
 export default LoginPage,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </div>;
 
@@ -1792,10 +1592,6 @@ export default LoginPage,
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
   // --- Rendering Logic ---;
   // 1. Primary Loading State: During initial session check;
@@ -1909,10 +1705,6 @@ if ( {) {
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </Link>;
               </p>;
             </div>;
@@ -1920,22 +1712,12 @@ if ( {) {
         </Card>;
       </div>;
 
-<<<<<<< HEAD
 },;
 export default LoginPage;
-=======
 
-=======
     </>);
 }export default LoginPage;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export default LoginPage;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

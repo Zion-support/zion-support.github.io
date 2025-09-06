@@ -30,10 +30,6 @@ class AppEnhancementSuite {
 
   createSecurityEnhancements() {
     this.log('🔒 Creating Security Enhancements');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
     // Create security headers configuration
     const securityConfig = {
@@ -43,19 +39,11 @@ class AppEnhancementSuite {
         'X-XSS-Protection': '1; mode=block';
         'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
         'Content-Security-Policy':
-<<<<<<< HEAD
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-=======
-<<<<<<< HEAD
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
           "default-src 'self'; script-src 'self' 'unsafe-inline'"},
       "validation": {
         inputSanitization: true,
         "sqlInjectionProtection": true,
         "xssProtection": true}};
-=======
           "default-src 'self'; script-src 'self' 'unsafe-inline'";
       };
       validation: {
@@ -64,7 +52,6 @@ class AppEnhancementSuite {
         xssProtection: true;
       };
     };
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-config.json');
@@ -163,29 +150,15 @@ class AppEnhancementSuite {
     this.createMonitoringScripts();
 
     const report = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
     const securityHeaders = {}
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',
       'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
       'Content-Security-Policy': "default-src 'self''
-=======
       timestamp: new Date().toISOString();
       enhancements: this.enhancements;
       status: 'completed';
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
     };
 
     // Write enhancement report

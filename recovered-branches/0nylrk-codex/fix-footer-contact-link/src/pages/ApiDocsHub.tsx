@@ -1,27 +1,15 @@
-<<<<<<< HEAD
 
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiDocsHub() {
 
   const sections = [
@@ -43,9 +31,6 @@ export function ApiDocsHub() {
       icon: Webhook
       path: "/developers/docs/webhooks"
       color: "from-green-500 to-emerald-500"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from './react';
 import { Link } from './react-router-dom';
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from './lucide-react';
@@ -55,8 +40,6 @@ export /**
  */
 function ApiDocsHub() {
   const sections = [;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Sample Code"
       description: "Examples in JavaScript, Python, and Node.js";
@@ -84,21 +67,15 @@ function ApiDocsHub() {
       color: "from - green - 500 to - emerald - 500"},
     {
 
-
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
 
-<<<<<<< HEAD
-=======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
 
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
 
@@ -113,17 +90,11 @@ function ApiDocsHub() {
       color: "from-yellow-500 to-orange-500"}
       title: "Sample Code",;
       description: "Examples in JavaScript, Python, and Node.js";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js",
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
       title: "Error Codes & Rate Limits"
       description: "Understanding API errors and rate limiting"
@@ -161,11 +132,7 @@ function ApiDocsHub() {
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
           </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -193,10 +160,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <Link
             to="/developers/portal"
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
@@ -209,28 +172,14 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
     </ApiDocsLayout>
   )
 
-<<<<<<< HEAD
-
-=======
-=======
 }
 export default ApiDocsHub;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { Link } from "react-router-dom",;
 import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ApiDocsHub() {;
   const sections = [;
     {;
@@ -253,14 +202,8 @@ export function ApiDocsHub() {;
       color: "from-green-500 to-emerald-500"},;
     {;
       title: "Sample Code",;
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: "Examples in JavaScript, Python, and Node && Node.js";
-=======
       description: "Examples in JavaScript, Python, and Node.js",;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: Zap,;
       path: "/developers/docs/samples",;
       color: "from-yellow-500 to-orange-500"},;
@@ -269,12 +212,9 @@ export function ApiDocsHub() {;
       description: "Understanding API errors and rate limiting",;
       icon: AlertCircle,;
       path: "/developers/docs/errors",;
-<<<<<<< HEAD
-<<<<<<< HEAD
       color: "from-red-500 to-rose-500"}],;
 
   return (
-=======
 
 import React from "react",;
 import { Link } from "react-router-dom",;
@@ -317,19 +257,15 @@ export function ApiDocsHub() {;
   return (;
       color: "from-red-500 to-rose-500"}];
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <ApiDocsLayout>;
       <div className="max-w-4xl">;
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>;
         <p className="text-zinc-400 text-lg mb-12">;
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
-<<<<<<< HEAD
 
         <div className="grid gap-6 md:grid-cols-2">;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       icon: Zap,
       path: "/developers / docs / samples",
       color: "from - yellow - 500 to - orange - 500"},
@@ -346,7 +282,6 @@ export function ApiDocsHub() {;
         <p className="text-zinc-400 text-lg mb-12">;
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.;
         </p>;
-<<<<<<< HEAD
         <div className="grid gap - 6 md:grid - cols - 2">;
           {sections.map ((section) => (
             <Link;
@@ -384,15 +319,10 @@ export function ApiDocsHub() {;
 export default ApiDocsHub;
 ;
 
-=======
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           {sections && sections.map((section) => (;
             <Link
               key={section && section.path} 
@@ -408,8 +338,6 @@ export default ApiDocsHub;
           {sections.map((section) => (;
             <Link ;
               key={section.path} ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               to={section.path}
               className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all";
             >;
@@ -440,12 +368,10 @@ export default ApiDocsHub;
           </Link>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </ApiDocsLayout>;
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
-
 
   );}
 ;
@@ -503,6 +429,3 @@ return (<ApiDocsLayout> <div className="max-w-4xl" > <h1 className="text-4xl fon
           {sections.map((section) => (;
             <Link;
               key={section.path} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

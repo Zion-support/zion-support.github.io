@@ -1,23 +1,17 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-=======
->>>>>>> main
 /**
  * Comprehensive Automation Runner
  * Runs all automation scripts and provides comprehensive testing and improvement
  */
-<<<<<<< HEAD
-=======
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
->>>>>>> main
 class ComprehensiveAutomationRunner {
   constructor() {
     this.logDir = path.join(__dirname, 'automation', 'logs');
@@ -130,8 +124,6 @@ class ComprehensiveAutomationRunner {
     this.log('🚀 Starting comprehensive automation...', 'PROGRESS');
     
     try {
-<<<<<<< HEAD
-=======
       // Build the application
       execSync('npm run build', { stdio: 'inherit' });
       // Run tests
@@ -331,7 +323,6 @@ module.exports = HealthCheckAutomation;`;
     this.log('🚀 Starting Comprehensive Automation Runner...');
     try {
       // Run all automation steps
->>>>>>> main
       await this.runSyntaxFixes();
       await this.runBuildProcess();
       await this.runTests();

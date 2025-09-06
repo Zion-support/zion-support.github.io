@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
@@ -7,7 +6,6 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -31,15 +29,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   upsertEvent(state, event);
   writeState(state);
 
-<<<<<<< HEAD
-
-=======
   const body = { ...event, propagate: false };
   const headers: Record<string, string> = {};
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -97,11 +91,9 @@ if (headers["x - zion - signature"] = sig, ) {
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
 
-=======
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -163,14 +155,11 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -239,25 +228,18 @@ export default async function handler(req, res) {
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {
-=======
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {
 
 }
 
-=======
       })),
   return res.status (200).json ({ status: "created", merkle_root, version, event_id: event.event_id });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           // ignore
 
           } catch (error) {

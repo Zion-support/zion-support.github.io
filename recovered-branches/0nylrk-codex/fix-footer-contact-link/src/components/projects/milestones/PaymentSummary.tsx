@@ -20,11 +20,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -55,16 +50,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     </Card>
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 import React from './react';
 import { Milestone  } from '@/hooks / use_milestones';
@@ -115,12 +102,6 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
     </Card>);
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
@@ -186,7 +167,3 @@ export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, payme
 };
 
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

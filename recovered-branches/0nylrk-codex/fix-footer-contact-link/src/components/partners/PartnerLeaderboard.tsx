@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
 
-<<<<<<< HEAD
-=======
 interface LeaderboardEntry {
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -24,28 +18,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LeaderboardEntry {
 
   id: string
   rank: number
   name: string
   avatar?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
   referrals: number
   earnings: number
 
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface LeaderboardEntry {
   id: string,
@@ -54,14 +38,7 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -73,24 +50,13 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       referrals: 178,
       earnings: 4500,
 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       referrals: 178
       earnings: 4500
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       referrals: 178,
       earnings: 4500,
       badges: ["gold", "trending"];
@@ -98,16 +64,10 @@ export function PartnerLeaderboard() {
       badges: ["gold", "trending"]
     }
     },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
       referrals: 178,
       earnings: 4500,
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
 
       id: "2"
@@ -118,22 +78,13 @@ export function PartnerLeaderboard() {
       earnings: 3625
 
       badges: ["silver"]
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
     },
-
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
 
       id: "3"
@@ -144,22 +95,13 @@ export function PartnerLeaderboard() {
       earnings: 3100
 
       badges: ["bronze"]
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     },
 
-
-=======
     },
-
 
     }
     },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {
 
       id: "4"
@@ -170,16 +112,6 @@ export function PartnerLeaderboard() {
       earnings: 2450
 
       badges: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-=======
-
-
 
     }
     {
@@ -192,14 +124,10 @@ export function PartnerLeaderboard() {
       earnings: 2175
 
       badges: ["newcomer"]
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   ];
   // Function to render rank badge
-
 
   return (
     <div className="space-y-6">
@@ -234,50 +162,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from "lucide-react",;
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
 import {Crown, Medal, Trophy} from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
   name: string,;
-<<<<<<< HEAD
-<<<<<<< HEAD
   avatar?: string;
-=======
   avatar?: string,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   avatar?: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   referrals: number,;
   earnings: number,;
   badges: string[];
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -289,15 +192,9 @@ export function PartnerLeaderboard() {;
       referrals: 178,;
       earnings: 4500,;
       badges: ["gold", "trending"];
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
     },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "2",;
       rank: 2,;
@@ -306,15 +203,9 @@ export function PartnerLeaderboard() {;
       referrals: 145,;
       earnings: 3625,;
       badges: ["silver"];
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
     },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "3",;
       rank: 3,;
@@ -323,15 +214,9 @@ export function PartnerLeaderboard() {;
       referrals: 124,;
       earnings: 3100,;
       badges: ["bronze"];
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
     },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "4",;
       rank: 4,;
@@ -340,15 +225,9 @@ export function PartnerLeaderboard() {;
       referrals: 98,;
       earnings: 2450,;
       badges: [];
-<<<<<<< HEAD
-<<<<<<< HEAD
     };
-=======
     },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     {;
       id: "5",;
       rank: 5,;
@@ -358,36 +237,23 @@ export function PartnerLeaderboard() {;
       earnings: 2175,;
       badges: ["newcomer"];
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
 
-=======
   ],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   ];
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;
         return <Medal className="h-5 w-5 text-gray-400" />;
-<<<<<<< HEAD
 
-=======
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;
         return <Medal className="h-5 w-5 text-gray-400" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   referrals: number,
   earnings: number,
   badges: string[];
@@ -459,12 +325,7 @@ function PartnerLeaderboard() {
     }
   }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space - y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -478,14 +339,7 @@ function PartnerLeaderboard() {
         <CardContent>;
           <div className="space - y-4">;
             {leaderboard.length > 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -513,21 +367,15 @@ function PartnerLeaderboard() {
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
                         </Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case 3:;
         return <Medal className="h-5 w-5 text-amber-700" />,;
       default:;
         return <span className="text-sm font-semibold">{rank}</span>;
     }
   };
-<<<<<<< HEAD
 
   return (
-=======
   return (
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -610,7 +458,6 @@ export function PartnerLeaderboard() {;
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -622,7 +469,6 @@ export function PartnerLeaderboard() {;
         </CardHeader>;
         <CardContent>;
           <div className="space-y-4">;
-<<<<<<< HEAD
             {leaderboard && leaderboard.length > 0 ? (;
               leaderboard && leaderboard.map(entry => (;
                 <div
@@ -644,7 +490,6 @@ export function PartnerLeaderboard() {;
                     <div>;
                       <div className="font-medium text-white">{entry && entry.name}</div>;
                       <div className="text-xs text-zion-slate-light">{entry && entry.referrals} referrals</div>;
-=======
             {leaderboard.length > 0 ? (;
               leaderboard.map(entry => (;
                 <div ;
@@ -667,12 +512,10 @@ export function PartnerLeaderboard() {;
                     <div>;
                       <div className="font-medium text-white">{entry.name}</div>;
                       <div className="text-xs text-zion-slate-light">{entry.referrals} referrals</div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </div>;
                   </div>;
                   <div className="flex items-center gap-3">;
                     <div className="text-right">;
-<<<<<<< HEAD
                       <div className="font-semibold text-white">${entry && entry.earnings}</div>;
                       <div className="text-xs text-zion-slate-light">earned</div>;
                     </div>;
@@ -682,17 +525,12 @@ export function PartnerLeaderboard() {;
                           Elite;
                         </Badge>;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       )}
                       {entry && entry.badges.includes("trending") && (;
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">;
                           Trending;
                         </Badge>;
                       )}
-<<<<<<< HEAD
-=======
-=======
                       <div className="font-semibold text-white">${entry.earnings}</div>;
                       <div className="text-xs text-zion-slate-light">earned</div>;
                     </div>;
@@ -702,17 +540,13 @@ export function PartnerLeaderboard() {;
                           Elite;
                         </Badge>;
                       )}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
                           Trending
                         </Badge>
                       )}
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                     </div>
                   </div>
                 </div>
@@ -725,9 +559,6 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard
                 </p>
               </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </div>;
                   </div>;
                 </div>;
@@ -740,21 +571,13 @@ export function PartnerLeaderboard() {;
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
 
           </div>;
         </CardContent>;
       </Card>;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             )}
           </div>
         </CardContent>
@@ -816,12 +639,10 @@ export function PartnerLeaderboard() {;
 }
 ;
             )}
-<<<<<<< HEAD
           </div>;
         </CardContent>;
       </Card>;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
           <CardTitle>Your Ranking</CardTitle>;
@@ -833,8 +654,6 @@ export function PartnerLeaderboard() {;
               Start referring to appear on the leaderboard;
             </p>;
             <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">;
-<<<<<<< HEAD
-=======
               leaderboard.map (entry => (
                 <div;
                   key={entry.id}
@@ -897,17 +716,11 @@ export function PartnerLeaderboard() {;
             </p>;
             <Badge variant="outline" className="bg - zion - purple / 20 border - zion - purple text - zion - purple">;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               New Partner;
             </Badge>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
@@ -941,7 +754,6 @@ export function PartnerLeaderboard() {;
               <li > Custom landing page for your referrals</li>;
               <li > Co - marketing opportunities</li>;
 
-=======
       ;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
@@ -975,26 +787,17 @@ export function PartnerLeaderboard() {;
               <li>Increased commission rate (30%)</li>;
               <li>Custom landing page for your referrals</li>;
               <li>Co-marketing opportunities</li>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </ul>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>);
 }
 
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   ),; interface LeaderboardEntry {
   id: string;
@@ -1045,6 +848,3 @@ return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zi
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -19,8 +19,6 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <AppStoreButtons
                 className="mb-8"
@@ -54,14 +52,6 @@ export const DownloadSection: React.FC = () => {
   );
 };
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 };
 
@@ -69,10 +59,6 @@ export const DownloadSection: React.FC = () => {
 }
 
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 },
 
@@ -83,9 +69,6 @@ export const DownloadSection: React.FC = () => {
               </div>;
             </div>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
@@ -120,18 +103,12 @@ export const DownloadSection:React.FC = () => {;
               </div>;
             </div>;
             ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex-shrink-0 bg-white p-4 rounded-lg">;
               <div className="w-36 h-36 flex items-center justify-center bg-white rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;
                 {/* This would be replaced with an actual QR code in production */}
               </div>;
               <p className="text-center text-xs mt-2 text-zion-blue-dark">Scan to download</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               />;
               <div className="text - sm text - gray - 400">;
                 <p > Compatible with iOS 14+ and Android 8.0+</p>;
@@ -146,18 +123,10 @@ export const DownloadSection:React.FC = () => {;
               <p className="text - center text - xs mt - 2 text - zion - blue - dark">;
                 Scan to download;
               </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 export default DownloadSection;
 
@@ -168,20 +137,9 @@ export default DownloadSection;
 }text-sm text-gray-400" > <p>Compatible with iOS 14+ and Android 8.0+</p> <p>Free download, in-app purchases available</p> </div> </div> </div> <p className="text-center text-xs mt-2 text-zion-blue-dark" >Scan to download</p> </div> </div> </div> </div> </section>) 
 };
 );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 }
 };
 
-<<<<<<< HEAD
-=======
-
 export default DownloadSection;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

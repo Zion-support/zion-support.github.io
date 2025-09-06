@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
 
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -18,8 +16,6 @@ import { motion } from 'framer-motion';
   BarChart3
   Cloud
   Shield
-=======
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -42,20 +38,11 @@ class ErrorBoundary extends React.Component {
 
 import React from 'react';
 
-
-=======
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ArrowRight,
   Phone,
   Mail,
@@ -70,7 +57,6 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
-
 
 } from 'lucide-react';
 const caseStudies = [
@@ -133,9 +119,6 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-<<<<<<< HEAD
-=======
-=======
   ArrowRight,
   Phone,
   Mail,
@@ -150,8 +133,6 @@ const stats = [
   BarChart3,
   Cloud,
   Shield;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from 'lucide-react';
 const caseStudies = [;
   {;
@@ -213,10 +194,8 @@ const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
   { number: "99 && 99.9%", label: "Success Rate" },;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   { number: "24/7", label: "Support Available" }
 ];
-
 
         <section className="relative bg-gradient-to-br from-green-900 via-teal-900 to-blue-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -233,8 +212,6 @@ const stats = [;
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
                 Success{' '}
-<<<<<<< HEAD
-=======
 
                 <span className="bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">;
                   Stories;
@@ -248,8 +225,6 @@ const stats = [;
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Stats Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -268,15 +243,11 @@ const stats = [;
                   <div className="text-gray-600 font-medium">{stat && stat.label}</div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-=======
 
             </div>;
           </div>;
         </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">;
           <div className="container mx-auto px-4">;
@@ -284,7 +255,6 @@ const stats = [;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                     key={study.id}
                     className="bg - white rounded - lg shadow - lg overflow - hidden";
                     initial={{ opacity: 0, coordinate_y: 30 }}
@@ -335,7 +305,6 @@ const stats = [;
                             <Users className="w-4 h-4 mr-2" />
                             {study.team}
 export default function CaseStudiesPage() {
-=======
 
   ArrowRight,
   Phone,
@@ -420,7 +389,6 @@ export default /**
  * CaseStudiesPage - Function description
  */
 function CaseStudiesPage() {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <MainLayout
       title="Case Studies - Zion Tech Group"
@@ -662,18 +630,13 @@ function CaseStudiesPage() {
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-=======
 
                   </motion.div>))}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
 
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -686,7 +649,6 @@ function CaseStudiesPage() {
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-green-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
@@ -694,11 +656,7 @@ function CaseStudiesPage() {
                 </a>;
                 <a
                   href="/services"
-<<<<<<< HEAD
 import Head from 'next/head';
-
-
-=======
 
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
                   Explore Our Services;
@@ -712,24 +670,10 @@ import Head from 'next/head';
 
   );
 }
-<<<<<<< HEAD
 import Head from 'next/head';
 export default function CaseStudiesPage() {;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <Layout>;
       <Head>;
@@ -739,44 +683,17 @@ import Head from 'next/head';
           name='description'
           content='Proven outcomes across AI, IT, and micro SaaS deployments.'
 
-
-<<<<<<< HEAD
+import Head from 'next/head';
 
 import Head from 'next/head';
 
-
-=======
->>>>>>> origin/automation-improvements-final
-=======
-
-=======
 import Head from 'next/head';
 
-
-=======
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import Head from 'next/head';
-
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
  </Head> </section> </Layout>
-=======
 export default function CaseStudiesPage() {
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 	return (
 		<Layout>
 			<Head>
@@ -790,7 +707,6 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
 }
 import React from 'react';
 import Head from 'next/head';
@@ -798,8 +714,6 @@ import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage(req, res) {
   try {
 	return (;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         />;
       </Head>;
@@ -830,12 +744,6 @@ export default function CaseStudiesPage(req, res) {
 	);
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
           <div className="container mx - auto px - 4">;
@@ -876,10 +784,7 @@ export default function CaseStudiesPage(req, res) {
 import Link from 'next / link';
 import Layout from '../components / Layout';
 ;
-<<<<<<< HEAD
 
-
-=======
 export default /**
  * CaseStudiesPage - Function description
  */
@@ -918,14 +823,7 @@ return (
   </section>;
   </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import MainLayout from '../src/components/layout/MainLayout';
 
 const Page = () => {
@@ -945,4 +843,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

@@ -10,7 +10,6 @@ import { Navigate } from "react-router-dom";
 export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
-<<<<<<< HEAD
 
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
@@ -132,24 +131,17 @@ export default function WhitelabelManager() {
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <TabsContent value="tenants" className="space - y-6">;
               <TenantsList />;
@@ -165,7 +157,6 @@ export default function WhitelabelManager() {
                   To use a custom domain with your white - label instance, you need to configure the DNS records.;
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
 
-=======
             ;
             <TabsContent value="tenants" className="space-y-6">;
               <TenantsList />;
@@ -188,35 +179,24 @@ export default function WhitelabelManager() {
                 <p>;
                   To use a custom domain with your white-label instance, you need to configure the DNS records.;
                   Add a CNAME record pointing to <code>ziontechmarketplace.com</code>.;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </p>;
                 <table>;
                   <thead>;
                     <tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <th > Record Type</th>;
                       <th > Name</th>;
                       <th > Value</th>;
                       <th > TTL</th>;
 
-=======
                       <th>Record Type</th>;
                       <th>Name</th>;
                       <th>Value</th>;
                       <th>TTL</th>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </tr>;
                   </thead>;
                   <tbody>;
                     <tr>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <td > CNAME</td>;
                       <td > marketplace</td>;
@@ -241,7 +221,6 @@ export default function WhitelabelManager() {
                 <p>;
                   You can assign tenant administrators who will have access to manage their white - label instance,
 
-=======
                       <td>CNAME</td>;
                       <td>marketplace</td>;
                       <td>ziontechmarketplace.com</td>;
@@ -264,9 +243,6 @@ export default function WhitelabelManager() {
                 <h3>Admin Access</h3>;
                 <p>;
                   You can assign tenant administrators who will have access to manage their white-label instance;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                 </p>;
               </div>;
@@ -276,19 +252,9 @@ export default function WhitelabelManager() {
       </main>;
       <Footer />;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </>);
 }
@@ -304,10 +270,7 @@ including content, users, and analytics. Tenant admins cannot access data from o
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

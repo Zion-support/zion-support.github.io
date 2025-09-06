@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -14,9 +10,6 @@ export function FloatingCTA() {
 
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
-
-<<<<<<< HEAD
-=======
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
@@ -28,7 +21,6 @@ export function FloatingCTA() {;
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
@@ -38,8 +30,6 @@ export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false),
   const [isClosed, setIsClosed] = useState(false),
 
-<<<<<<< HEAD
-
   useEffect(() => {
 
     const handleScroll = () => {
@@ -47,10 +37,7 @@ export function FloatingCTA() {
       const scrollPosition = window.scrollY,
       const threshold = 600, // Show CTA after scrolling 600px
 
-
-
       if (scrollPosition > threshold && !isClosed) {
-=======
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -58,18 +45,12 @@ export function FloatingCTA() {
       const threshold = 600; // Show CTA after scrolling 600px;
 
       if (scrollPosition > threshold && !isClosed) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
-<<<<<<< HEAD
-=======
 
   useEffect(() => {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     };
 
@@ -78,11 +59,9 @@ export function FloatingCTA() {
       window && window.removeEventListener("scroll", handleScroll);
     };
   }, [isClosed]);
-<<<<<<< HEAD
 
   const handleClose = () => {;
 
-=======
   const handleClose = () => {;
   useEffect(() => {
 
@@ -104,20 +83,12 @@ export function FloatingCTA() {
     }
   }, [isClosed]);
   const handleClose = () => {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsClosed(true);
     setIsVisible(false);
   }
   if (!isVisible) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     },
 
@@ -133,10 +104,6 @@ export function FloatingCTA() {
   },
 
   if (!isVisible) return null,
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
@@ -164,26 +131,20 @@ export function FloatingCTA() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
-=======
   )
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   )
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
 import { useState, useEffect } from "react",;
 import { X } from "lucide-react",;
-<<<<<<< HEAD
-=======
 ;
 export function FloatingCTA() {;
   const [isVisible, setIsVisible] = useState(false),;
   const [isClosed, setIsClosed] = useState(false),;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function FloatingCTA() {;
   const [isVisible, setIsVisible] = useState(false),;
   const [isClosed, setIsClosed] = useState(false),;
@@ -208,9 +169,6 @@ export function FloatingCTA() {;
   };
   if (!isVisible) return null;
   return (;
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
       if (scrollPosition > threshold && !isClosed) {;
         setIsVisible(true),;
@@ -233,17 +191,12 @@ export function FloatingCTA() {;
   if (!isVisible) return null,;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">;
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">;
         <div className="mr-4">;
           <p className="text-white font-medium">Ready to explore Zion?</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           <p className="text-zion-slate-light text-sm">;
             Register today to access all features!;
           </p>;
@@ -260,7 +213,6 @@ export function FloatingCTA() {;
             onClick={handleClose}
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close">;
-=======
           <p className="text-zion-slate-light text-sm">Register today to access all features!</p>;
         </div>;
         <div className="flex items-center gap-2">;
@@ -276,8 +228,6 @@ export function FloatingCTA() {;
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap";
             asChild;
           >;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Link to="/signup">Register Now</Link>;
           </Button>;
           <button;
@@ -285,23 +235,13 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1";
             aria-label="Close";
           >;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <X className="w-5 h-5" />;
           </button>;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Button  } from '@/components / ui / button';
 import { Link  } from './react-router-dom';
 import { useState, useEffect  } from './react';
@@ -370,17 +310,11 @@ if (return null) {
         </div>;
       </div>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
 ;
 
@@ -402,7 +336,4 @@ return (<div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

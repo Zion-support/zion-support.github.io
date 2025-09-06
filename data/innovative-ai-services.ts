@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeAIService {
   id: string;
   name: string;
@@ -30,10 +29,6 @@ export interface InnovativeAIService {
     mobile: string;
     email: string;
     address: string;
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   {
 
@@ -74,9 +69,6 @@ export interface InnovativeAIService {
     ],
     popular: true,
 
-<<<<<<< HEAD
-=======
-=======
     color: 'from - blue - 600 to - cyan - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
@@ -119,7 +111,6 @@ export interface InnovativeAIService {
     variant: 'ai - futuristic',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -134,10 +125,7 @@ export interface InnovativeAIService {
     reviews: 12,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'biotech - ai - platform',
     name: 'Biotech AI Platform',
     tagline: 'AI - powered drug discovery and genetic engineering',
@@ -147,7 +135,6 @@ export interface InnovativeAIService {
       'AI - powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI drug discovery algorithms',
       'Genetic sequence analysis',
       'Protein folding prediction',
@@ -160,11 +147,8 @@ export interface InnovativeAIService {
       'Multi - omics data analysis',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🧬',
 
-=======
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / biotech - ai',
@@ -206,7 +190,6 @@ export interface InnovativeAIService {
     variant: 'holographic - matrix',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -221,10 +204,7 @@ export interface InnovativeAIService {
     reviews: 23,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'quantum - financial - trading - platform',
     name: 'Quantum Financial Trading Platform',
     tagline: 'Quantum AI - powered algorithmic trading with nanosecond precision',
@@ -234,7 +214,6 @@ export interface InnovativeAIService {
       'Quantum AI - powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum AI trading algorithms',
       'Nanosecond execution speed',
       'Real - time market analysis',
@@ -247,11 +226,8 @@ export interface InnovativeAIService {
       'API for integration',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '💰',
 
-=======
     color: 'from - yellow - 600 to - orange - 700',
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / quantum - financial - trading',
@@ -293,7 +269,6 @@ export interface InnovativeAIService {
     variant: 'quantum - cyberpunk',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -308,10 +283,7 @@ export interface InnovativeAIService {
     reviews: 9,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'space - technology - platform',
     name: 'Space Technology Platform',
     tagline: 'Complete space mission management and satellite operations',
@@ -321,7 +293,6 @@ export interface InnovativeAIService {
       'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Satellite mission planning',
       'Orbital mechanics calculations',
       'Real - time satellite tracking',
@@ -334,11 +305,8 @@ export interface InnovativeAIService {
       'Multi - satellite operations',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🚀',
 
-=======
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / space - technology',
@@ -380,7 +348,6 @@ export interface InnovativeAIService {
     variant: 'quantum - space',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -395,8 +362,6 @@ export interface InnovativeAIService {
     reviews: 16,
   },
   {
-<<<<<<< HEAD
-=======
 
       'AI-powered world generation',
     id: 'metaverse - ai - development - platform',
@@ -409,7 +374,6 @@ export interface InnovativeAIService {
     features: [;
       'AI - powered world generation',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent NPCs and avatars',
       '3D environment creation',
       'Virtual economy systems',
@@ -421,11 +385,8 @@ export interface InnovativeAIService {
       'Cross - platform support',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🌐',
 
-=======
     color: 'from - pink - 600 to - purple - 700',
     text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / metaverse - ai - development - platform',
@@ -467,7 +428,6 @@ export interface InnovativeAIService {
     variant: 'holographic - neural',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -482,10 +442,7 @@ export interface InnovativeAIService {
     reviews: 42,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'quantum - robotics - platform',
     name: 'Quantum Robotics Platform',
     tagline: 'Quantum AI - powered robotics and automation',
@@ -495,7 +452,6 @@ export interface InnovativeAIService {
       'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum - enhanced robotics.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum AI decision making',
       'Precision robotics control',
       'Industrial automation',
@@ -508,11 +464,8 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🤖',
 
-=======
     color: 'from - indigo - 600 to - purple - 700',
     text_color: 'text - indigo - 400',
     link: 'https://ziontechgroup.com / quantum - robotics',
@@ -550,7 +503,6 @@ export interface InnovativeAIService {
     variant: 'quantum - robotics',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -565,8 +517,6 @@ export interface InnovativeAIService {
     reviews: 15,
   },
   {
-<<<<<<< HEAD
-=======
 
       'Quantum-resistant encryption',
     id: 'quantum - cybersecurity - platform',
@@ -579,7 +529,6 @@ export interface InnovativeAIService {
     features: [;
       'Quantum - resistant encryption',
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'AI threat detection',
       'Real - time monitoring',
       'Incident response',
@@ -591,11 +540,8 @@ export interface InnovativeAIService {
       'Integration APIs',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🔒',
 
-=======
     color: 'from - red - 600 to - orange - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity',
@@ -637,7 +583,6 @@ export interface InnovativeAIService {
     variant: 'quantum - cyberpunk',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -652,10 +597,7 @@ export interface InnovativeAIService {
     reviews: 48,
   },
   {
-<<<<<<< HEAD
-=======
 
-=======
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
     tagline: 'Quantum - secured internet infrastructure',
@@ -665,7 +607,6 @@ export interface InnovativeAIService {
       'Revolutionary quantum - secured internet infrastructure with quantum key distribution, quantum networks, and ultra - secure communications.',
     features: [;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum key distribution',
       'Quantum networks',
       'Ultra - secure communications',
@@ -678,11 +619,8 @@ export interface InnovativeAIService {
       '24 / 7 support',
     ],
     popular: true,
-<<<<<<< HEAD
-=======
     icon: '🌍',
 
-=======
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / quantum - internet - security - platform',
@@ -724,7 +662,6 @@ export interface InnovativeAIService {
     variant: 'quantum - entanglement',
     contact_info: {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -739,7 +676,6 @@ export interface InnovativeAIService {
     reviews: 6,
   },
   {
-<<<<<<< HEAD
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.'
     launchDate: '2024-08-01'
     customers: 67
@@ -753,10 +689,6 @@ export interface InnovativeAIService {
     reviews: 34,
   },;
 
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -780,10 +712,6 @@ export interface InnovativeAIService {
     popular: true,
     icon: '📦',
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - logistics',
@@ -841,10 +769,7 @@ export interface InnovativeAIService {
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -932,7 +857,6 @@ export const innovativeAIServices: InnovativeAIService[] = [
     tagline: 'Revolutionary quantum-enhanced AI with human-like reasoning',
     price: '$2,999',
     period: '/month', description: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     features: [
       'Quantum neural signal processing',
       'Real-time brain activity monitoring',
@@ -1134,25 +1058,18 @@ export const innovativeAIServices: InnovativeAIService[] = [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
   }
 ];
-=======
-<<<<<<< HEAD
     },
     realImplementation: true, implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01', customers: 67,
     rating: 4.7,
     reviews: 34;
 
-=======
-
 export interface InnovativeAIService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

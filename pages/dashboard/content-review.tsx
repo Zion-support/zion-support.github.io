@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
 
@@ -13,16 +12,12 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -32,28 +27,22 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-=======
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return this.props.children;
   }
 }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
@@ -127,8 +116,6 @@ export default function ContentReviewPage(req, res) {
 }
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       }
     );
@@ -136,8 +123,6 @@ import React, { useMemo, useState } from 'react';
     mutate ();  }
   return (
     <EnhancedLayout>;
-<<<<<<< HEAD
-=======
 
             value={filters && filters.status || ''}
             onChange={e =>;
@@ -240,13 +225,11 @@ import React, { useMemo, useState } from 'react';
             Reset;
           </button>;
         </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
             value={filters && filters.status || ''}
             onChange={e =>;
               setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
-<<<<<<< HEAD
             }
             className='border rounded px-2 py-1';
       <div className='max - w-7xl mx - auto'>;
@@ -323,14 +306,11 @@ import React, { useMemo, useState } from 'react';
             Reset;
           </button>;
         </div>;
-=======
     <EnhancedLayout>
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-4">
           <h1 className="text-2xl font-semibold">Admin Content Review</h1>
         </div>
-
-
 
         <div className="mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
           <select value={filters.status || ''} onChange={e => setFilters(f => ({ ...f, status: e.target.value || undefined }))} className="border rounded px-2 py-1">
@@ -352,8 +332,6 @@ import React, { useMemo, useState } from 'react';
           <input placeholder="User email" value={filters.userEmail || ''} onChange={e => setFilters(f => ({ ...f, userEmail: e.target.value || undefined }))} className="border rounded px-2 py-1" />
           <button onClick={() => setFilters({ status: 'pending' })} className="border rounded px-2 py-1">Reset</button>
 
-
-
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -367,7 +345,6 @@ import React, { useMemo, useState } from 'react';
                 <th className="text-left px-3 py-2">Created</th>
                 <th className="text-left px-3 py-2">Status</th>
                 <th className="text-left px-3 py-2">Actions</th>
-<<<<<<< HEAD
 
   const [selected, setSelected] = useState<any | null>(null),
 
@@ -419,21 +396,12 @@ import React, { useMemo, useState } from 'react';
                 <th className=&quot;text-left px-3 py-2&quot;>Status</th>
                 <th className=&quot;text-left px-3 py-2&quot;>Actions</th>
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </tr>
             </thead>
             <tbody>
               {flags.map((f: any) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 <tr key={f.id} className="border-t hover:bg-gray-50/50">
-=======
                 <tr key={f.id} className="border-t hover:bg-gray-50/50">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -445,49 +413,30 @@ import React, { useMemo, useState } from 'react';
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
               ))}
               {flags.length === 0 && (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-
-
 }
 
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </tbody>;
           </table>;
         </div>;
       </div>;
 
       {selected && (;
-<<<<<<< HEAD
-=======
-=======
       {selected && (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
           onAction={handleAction}
         />;
       )}
-
 
         <div className='overflow - auto border rounded'>;
           <table className='min - w-full text - sm'>;
@@ -537,32 +486,19 @@ import React, { useMemo, useState } from 'react';
                     No results;
                   </td>;
                 </tr>              )}
-<<<<<<< HEAD
-=======
-=======
 );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </tbody>;
           </table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {selected && (
         <ModerationModal;
           flag={selected}
@@ -571,21 +507,9 @@ import React, { useMemo, useState } from 'react';
         />)}
     </EnhancedLayout>);
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

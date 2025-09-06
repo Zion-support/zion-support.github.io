@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -32,7 +31,6 @@ class UXOptimizer {
 
 const optimizer = new UXOptimizer();
 optimizer.optimize();
-=======
 const fs = require('fs')
 const path = require('path')
         console.log('⚡ Optimizing loading performance...')
@@ -42,4 +40,3 @@ const path = require('path')
         console.log('� Optimizing mobile experience...')
         this.improvements.push('Mobile optimization completed')
             "recommendations"
->>>>>>> main

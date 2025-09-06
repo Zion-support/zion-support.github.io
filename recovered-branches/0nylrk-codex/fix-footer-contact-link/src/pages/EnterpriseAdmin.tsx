@@ -8,7 +8,6 @@ import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
-<<<<<<< HEAD
 
   // Check if user has enterprise admin role
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
@@ -30,14 +29,6 @@ export default function EnterpriseAdmin() {
     </ProtectedRoute>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 }
   }
@@ -56,7 +47,6 @@ export default /**
 function EnterpriseAdmin() {
   const { user } = use_auth ();
 ;
-<<<<<<< HEAD
   // Check if user has enterprise admin role;
   const isEnterpriseAdmin = user?.role === "enterprise_admin";
 ;
@@ -79,9 +69,6 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  export default function EnterpriseAdmin () {
   const {
@@ -93,6 +80,3 @@ if ( {) {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

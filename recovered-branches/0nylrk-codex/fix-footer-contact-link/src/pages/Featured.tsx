@@ -21,7 +21,6 @@ export default function Featured() {
               Marketplace has to offer.
             </p>
           </div>
-<<<<<<< HEAD
 
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection showTitle={false} />
@@ -33,9 +32,6 @@ export default function Featured() {
 }
 ;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
   ),;}
  export default function Featured () {
@@ -48,8 +44,6 @@ export default function Featured() {
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           {/* Reuse the FeaturedListings component */}
           <FeaturedListingsSection show_title={false} />;
         </div>;
@@ -57,4 +51,3 @@ export default function Featured() {
       <Footer />;
     </>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

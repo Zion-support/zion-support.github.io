@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
@@ -19,12 +17,7 @@ function CaseStudyPage() {
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
 
-
-=======
-
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <>
@@ -36,9 +29,6 @@ function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
-<<<<<<< HEAD
-=======
-
 
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
@@ -46,17 +36,11 @@ function CaseStudyPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
               </Link>
             </nav>
-<<<<<<< HEAD
-=======
-
 
             {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -72,9 +56,6 @@ function CaseStudyPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -84,9 +65,6 @@ function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-<<<<<<< HEAD
-=======
-
 
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
@@ -94,18 +72,12 @@ function CaseStudyPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
-<<<<<<< HEAD
-=======
-
 
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
@@ -113,18 +85,12 @@ function CaseStudyPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
-<<<<<<< HEAD
-=======
-
 
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
@@ -132,21 +98,14 @@ function CaseStudyPage() {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {caseStudy.technologies.map((tech, index) => (
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
-<<<<<<< HEAD
-=======
                   </div>
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -159,12 +118,7 @@ function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -177,11 +131,7 @@ function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -194,40 +144,22 @@ function CaseStudyPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
                   This case study demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
 
-
-
-
-=======
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
-
-
-
 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
@@ -241,14 +173,10 @@ function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
   )
-=======
 
-=======
 }
 
-=======
     results: [;
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs';
     ],
@@ -338,8 +266,6 @@ function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <section className="text-center">;
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>;
@@ -350,26 +276,16 @@ function CaseStudyPage() {
                 <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
                   <Link;
                     href="/contact";
-<<<<<<< HEAD
                     className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
-=======
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     href="/case - studies";
                     className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
-=======
                     href="/case-studies";
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   >;
                     View More Case Studies;
                   </Link>;
@@ -378,18 +294,8 @@ function CaseStudyPage() {
             </section>;
           </div>;
         </main>;
-<<<<<<< HEAD
 
-
-=======
       </div>;
-<<<<<<< HEAD
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

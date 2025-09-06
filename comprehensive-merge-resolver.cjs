@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
 
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
@@ -114,8 +113,6 @@ function pushChanges() {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
->>>>>>> main
 const { execSync } = require('child_process')
 console.log('� Starting Comprehensive Merge Conflict Resolver...')
   log(message, level = 'INFO')
@@ -135,7 +132,6 @@ console.log('� Starting Comprehensive Merge Conflict Resolver...')
       console.log('\n Failed to merge "branches")
   console.error(' Merge conflict resolution "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
 }
 
 if (require.main === module) {
@@ -143,5 +139,3 @@ if (require.main === module) {
 }
 
 module.exports = { resolveConflicts, commitMerge, pushChanges };
-=======
->>>>>>> main

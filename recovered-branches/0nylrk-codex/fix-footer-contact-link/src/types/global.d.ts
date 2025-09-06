@@ -11,12 +11,10 @@ declare module "@/components/FeatureCard" {
 }
 // Extend ListingScoreCardProps to include key for mapping;
 declare module '@/components / ListingScoreCard' {
-<<<<<<< HEAD
 
 // Extend ListingScoreCardProps to include key for mapping
 declare module "@/components/ListingScoreCard" {
   export interface ListingScoreCardProps {
-=======
   export interface ListingScoreCardProps {
 
 import { ReactNode } from 'react';
@@ -36,17 +34,12 @@ declare module '@/components/FeatureCard' {
 // Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
   export interface ListingScoreCardProps {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: string;
     description: string;
     category: string;
     image?: string;
     tags?: string[];
     author?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
     author_image?: string;
     ai_score?: number;
     rating?: number;
@@ -63,7 +56,6 @@ declare module "@/components/ChatAssistant/ChatMessage" {
     message: string;
     timestamp?: Date;
     key?: string | number;
-<<<<<<< HEAD
   }
 }
 
@@ -76,7 +68,6 @@ declare module "@/components/ProductListingCard" {
     key?: string | number;
   }
 }
-=======
 
 import { ReactNode } from 'react',;
 ;
@@ -132,11 +123,8 @@ declare module '@/components/ProductListingCard' {;
     key?: string | number;
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     author_image?: string;
     ai_score?: number;
     rating?: number;
   }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

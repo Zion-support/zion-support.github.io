@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { v4 as uuidv4 } from "uuid";
 
 import {
-
-
 
 import {
   assertClient
@@ -30,10 +27,7 @@ import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -76,7 +70,6 @@ if ( {) {
         return res.json ({ ok: true, offers });
 
       }
-<<<<<<< HEAD
       return bad(res, "Unknown role", 403);
     }
     if (req.method === "POST") {
@@ -177,11 +170,8 @@ if ( {) {
         return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403);
-=======
       return bad (res, "Unknown role", 403);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
-
 
     if (req && req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
@@ -197,8 +187,6 @@ if ( {) {
 
         return bad(res, "Missing required fields");
       }
-<<<<<<< HEAD
-=======
       const offer: Offer = {
 
         id: uuidv4(),
@@ -236,33 +224,26 @@ if ( {) {
         agreement_url,
         status: "SENT",
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-<<<<<<< HEAD
       }
       if (user.role === "talent") {
         const offers = listOffers({ talentSlug: user.talentSlug });
         return res.json({ ok: true, offers });
       }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
-<<<<<<< HEAD
-=======
         return res.json({ ok: true, offers })
       }
       if (user.role === "talent") {
@@ -270,13 +251,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return res.json({ ok: true, offers })
       }
       return bad(res, "Unknown role", 403)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
-<<<<<<< HEAD
-=======
       const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")
@@ -315,7 +293,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       );
       if (action === "accept") {
 
-
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
           summary: existing && existing.scopeSummary,
@@ -323,8 +300,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           talentSlug: existing && existing.talentSlug,
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
-
-
 
           documents: existing.agreementUrl
 
@@ -375,7 +350,6 @@ if ( {) {
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
         const project: Project = {
-
 
   }
 
@@ -434,7 +408,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         status: "SENT"
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       };
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
@@ -467,17 +440,11 @@ if ( {) {
         req && req.headers["x-demo-talent-slug"] as string,
       );
       if (action === "accept") {
-<<<<<<< HEAD
-=======
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         // Create a project upon acceptance
         const project: Project = {
-
 
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
@@ -486,28 +453,21 @@ if ( {) {
           talentSlug: existing && existing.talentSlug,
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
-<<<<<<< HEAD
-=======
 
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           documents: existing.agreementUrl
 
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
-<<<<<<< HEAD
-=======
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
             : [],
 
           notes: []
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         };
         saveProject(project);
         existing.projectId = project.id;
@@ -558,7 +518,6 @@ if ( {) {
         // Create a project upon acceptance;
         const project: Project = {
 
-
   }
 
           id: uuidv4 (),
@@ -593,7 +552,6 @@ if ( {) {
 if ( {) {
   $2
 
-
 }
         if (
           return bad (res, "Only talent can request changes", 403)) {
@@ -601,25 +559,18 @@ if ( {) {
 }
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         saveOffer(existing);
         return res.json({ ok: true, offer: existing })
       }
-<<<<<<< HEAD
-=======
 
       return bad(res, "Unknown action");
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return bad(res, "Method not allowed", 405);
   } catch (e: any) {
     const status = e?.statusCode |500;
     return res
       .status(status)
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
         existing.status = "DECLINED";
         save_offer (existing);
@@ -629,16 +580,12 @@ if ( {) {
     }
     return bad (res, "Method not allowed", 405);
   } catch (e: any) {
-<<<<<<< HEAD
   }
   }
-=======
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 
   } catch (error) {
@@ -652,15 +599,9 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-  }
-}
-=======
-
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
 
->>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

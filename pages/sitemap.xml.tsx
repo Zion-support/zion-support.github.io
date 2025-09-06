@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 function generateSiteMap() {;
@@ -101,15 +98,12 @@ function generateSiteMap() {;
          <priority>${page === "" ? "1 && 1.0" : "0 && 0.8"}</priority>;
        </url>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
      `;
        });
        .join("")}
    </urlset>;
  `;
 }
-<<<<<<< HEAD
-=======
 
 import { GetServerSideProps  } from './next';
 ;
@@ -225,23 +219,16 @@ function generateSiteMap() {
  * SiteMap - Function description
  */
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 function SiteMap() {
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-<<<<<<< HEAD
-=======
-
 
 function SiteMap() {;
   // getServerSideProps will do the heavy lifting;
 }
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   // We generate the XML sitemap with the posts data;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const sitemap = generateSiteMap();
   res.setHeader("Content-Type", "text/xml");
   // we send the XML to the browser
@@ -252,11 +239,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {;
   }
 }
 export default SiteMap;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   // We generate the XML sitemap with the posts data;
   const sitemap = generateSiteMap ();
 ;
@@ -271,7 +254,6 @@ export default SiteMap;
 }
 ;
 export default SiteMap;
-=======
 import { GetServerSideProps } from 'next';
 
 interface SitemapUrl {
@@ -473,4 +455,3 @@ ${staticPages
 };
 
 export default Sitemap;
->>>>>>> main

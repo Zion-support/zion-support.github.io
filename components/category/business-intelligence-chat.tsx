@@ -20,10 +20,6 @@ const BusinessIntelligenceChat: NextPage = () => {;
     </div>
       </Head>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <main>;
         <h1>BusinessIntelligenceChat</h1>;
         <p>Blog content coming soon...</p>;
@@ -33,14 +29,6 @@ const BusinessIntelligenceChat: NextPage = () => {;
   );
 }
 export default BusinessIntelligenceChat;
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -60,14 +48,6 @@ const BusinessIntelligenceChat: NextPage = () => {
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -91,10 +71,6 @@ const BusinessIntelligenceChat: NextPage = () => {
 ;
 export default BusinessIntelligenceChat;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div>
       <Head>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
@@ -111,7 +87,6 @@ export default BusinessIntelligenceChat;
 },
 
 export default BusinessIntelligenceChat
-
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -142,6 +117,3 @@ export default BusinessIntelligenceChat;
 
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
         <title>BusinessIntelligenceChat - Zion Tech Solutions</title>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

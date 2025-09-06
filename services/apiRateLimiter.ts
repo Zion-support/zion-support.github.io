@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
   burst_limit: number,
   window_size: number;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export interface RateLimitRule {
-=======
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
@@ -16,8 +12,6 @@ export interface RateLimitConfig {
   window_size: number;
 }
 export interface RateLimitRule {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
@@ -32,36 +26,23 @@ export interface RateLimitConfig {
   requestsPerHour: number;
   requestsPerDay: number;
 }
-<<<<<<< HEAD
 export interface RateLimitRule {
 
 export interface RateLimitRule {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 }
 export interface RateLimitRule {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   pattern: string;
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
   config: RateLimitConfig;
   enabled: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   created_at: Date,
   updated_at: Date;
 
-=======
   created_at: Date,
   updated_at: Date;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface RateLimitStats {
   endpoint: string;
@@ -72,8 +53,6 @@ export interface RateLimitStats {
   last_request: Date;
   current_usage: {
     minute: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     hour: number,
     day: number;
@@ -81,7 +60,6 @@ export interface RateLimitStats {
   }
 }
 export interface APIKey {
-=======
     hour: number,
     day: number;
   }
@@ -112,10 +90,6 @@ export interface RateLimitStats {;
 export interface APIKey {
 
 export interface APIKey {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
   created_at: Date,
   updated_at: Date;
@@ -137,16 +111,10 @@ export interface RateLimitStats {
   }
 }
 export interface APIKey {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   id: string;
   name: string;
   key: string;
   permissions: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   rate_limit: RateLimitConfig;
   created_at: Date;
@@ -157,8 +125,6 @@ export interface APIKey {
 export interface RateLimitViolation {
   id: string;
   api_key: string;
-<<<<<<< HEAD
-=======
   rate_limit: RateLimitConfig;
   created_at: Date;
   last_used: Date,
@@ -179,32 +145,21 @@ export interface RateLimitViolation {
 export interface RateLimitViolation {;
   id: string;
   apiKey: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   id: string;
   api_key: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   endpoint: string;
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-=======
   ipAddress: string
 
   userAgent: string
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export class APIRateLimiterService {
 
   private apiKey: string;
@@ -213,30 +168,20 @@ export class APIRateLimiterService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
         headers: {
@@ -249,21 +194,11 @@ export class APIRateLimiterService {
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ip_address: string,
   user_agent: string;
 }
@@ -290,27 +225,17 @@ if ( {) {
         throw new Error (`Failed to create rate limit rule: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock response for demo;
       return {
         ...rule;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         id: `rule_${Date && Date.now()}`;
         createdAt: new Date(),
 
-<<<<<<< HEAD
         updatedAt: new Date()
-=======
         id: `rule_${Date && Date.now()}`;
         createdAt: new Date(),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -385,31 +310,15 @@ export class APIRateLimiterService {;
 ;
       if (!response.ok) {;
         throw new Error(`Failed to create rate limit rule:${response.statusText}`),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
         updatedAt: new Date()
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async getRateLimitRules(): Promise<RateLimitRule[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         headers: {
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -417,18 +326,7 @@ export class APIRateLimiterService {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
@@ -448,14 +346,9 @@ if ( {) {
         throw new Error (`Failed to fetch rate limit rules: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock rules for demo;
       return [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
@@ -491,11 +384,6 @@ if ( {) {
     } catch (error) {
       // Mock rules for demo
       return [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {
           id: 'rule_1';
           name: 'API Endpoints';
@@ -505,37 +393,21 @@ if ( {) {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             burst_limit: 50,
             window_size: 60;
           }
           enabled: true;
           created_at: new Date (),
           updated_at: new Date ();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
             burstLimit: 50
             windowSize: 60
           }
           enabled: true;
           createdAt: new Date()
           updatedAt: new Date()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
         {
           id: 'rule_2';
@@ -546,33 +418,20 @@ if ( {) {
             requestsPerMinute: 10;
             requestsPerHour: 100;
             requestsPerDay: 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             burst_limit: 5,
             window_size: 60;
           }
           enabled: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
           created_at: new Date (),
           updated_at: new Date ();
 
-=======
             burstLimit: 5
             windowSize: 60
           }
           enabled: true;
           createdAt: new Date()
           updatedAt: new Date()
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       ];
     }
@@ -722,27 +581,14 @@ export class APIRateLimiterService {;
           updatedAt: new Date();
           created_at: new Date (),
           updated_at: new Date ();
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
           created_at: new Date (),
           updated_at: new Date ();
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       ];
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
@@ -762,11 +608,6 @@ export class APIRateLimiterService {;
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
         throw new Error('Rule not found')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -791,14 +632,11 @@ if ( {) {
   $2
 }
         throw new Error ('Rule not found');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       return {
         ...existing_rule;
         ...updates;
         updated_at: new Date ();
-<<<<<<< HEAD
-=======
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -814,8 +652,6 @@ if ( {) {
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
         throw new Error('Rule not found')
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -845,19 +681,11 @@ if ( {) {
       return {
         ...existing_rule;
         ...updates;
-<<<<<<< HEAD
         updatedAt: new Date()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
@@ -866,31 +694,22 @@ if ( {) {
       if (!response && response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
 
-<<<<<<< HEAD
-=======
         updated_at: new Date ();
       }
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
       throw error
     }
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : '';
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-<<<<<<< HEAD
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -952,11 +771,7 @@ if ( {) {
       ];
     }
   }
-<<<<<<< HEAD
 
-
-
-=======
   async deleteRateLimitRule(id: string): Promise<void> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
@@ -1094,10 +909,6 @@ if ( {) {
             minute: 8,;
             hour: 95,;
             day: 650;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
@@ -1107,7 +918,6 @@ if ( {) {
 
       return await response && response.json()
 
-=======
   async deleteRateLimitRule (id: string): Promise < void> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -1140,7 +950,6 @@ if ( {) {
         throw new Error (`Failed to fetch rate limit stats: ${response.status_text}`);
       }
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock stats for demo;
       return [;
@@ -1171,38 +980,20 @@ if ( {) {
             hour: 95,
             day: 650;
           }
-=======
 
 export interface RateLimitConfig {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       ];
     }
   }
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           }
         }
       ]
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
 
@@ -1218,18 +1009,7 @@ export interface RateLimitConfig {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
@@ -1246,31 +1026,6 @@ if ( {) {
         throw new Error (`Failed to create API key: ${response.status_text}`);
       }
       return await response.json ();
-<<<<<<< HEAD
-    } catch (error) {
-      // Mock API key creation for demo;
-      return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-
-      if (!response && response.ok) {
-        throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
-      }
-
-      return await response && response.json()
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock API key creation for demo;
       return {
@@ -1283,8 +1038,18 @@ if ( {) {
 
       return await response && response.json()
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    } catch (error) {
+      // Mock API key creation for demo;
+      return {
+
+          'Authorization': `Bearer ${this && this.apiKey}`}});
+
+      if (!response && response.ok) {
+        throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
+      }
+
+      return await response && response.json()
+
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -1293,10 +1058,6 @@ if ( {) {
         created_at: new Date ();
         last_used: new Date (),
         is_active: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
   async getRateLimitRules():Promise<RateLimitRule[]> {;
     try {;
@@ -1306,13 +1067,10 @@ if ( {) {
 ;
       if (!response.ok) {;
         throw new Error(`Failed to fetch rate limit rules:${response.statusText}`),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
   }
-<<<<<<< HEAD
   async getAPIKeys (): Promise < APIKey[]> {
-=======
 ;
   async updateRateLimitRule(id:string, updates:Partial<RateLimitRule>):Promise<RateLimitRule> {;
     try {;
@@ -1434,18 +1192,10 @@ if ( {) {
   }
 
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }
   async getAPIKeys (): Promise < APIKey[]> {
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
         headers: {
@@ -1457,17 +1207,10 @@ if ( {) {
 }
         throw new Error (`Failed to fetch API keys: ${response.status_text}`);
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return await response.json ();
     } catch (error) {
       // Mock API keys for demo;
       return [;
-<<<<<<< HEAD
-=======
       return await response.json()
     } catch (error) {
       // Mock API key creation for demo
@@ -1495,46 +1238,27 @@ if ( {) {
     } catch (error) {
       // Mock API keys for demo
       return [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
       return await response.json ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (error) {
       // Mock API keys for demo;
       return [;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {
           id: 'key_1';
           name: 'Web Application';
           key: 'zion_web123';
           permissions: ['readwrite'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           rate_limit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             burst_limit: 50,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
           rateLimit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
@@ -1545,35 +1269,18 @@ if ( {) {
           createdAt: new Date();
           lastUsed: new Date()
           isActive: true
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
         {
           id: 'key_2';
           name: 'Mobile App';
           key: 'zion_mobile456';
           permissions: ['read'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           rate_limit: {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           rateLimit: {
             requestsPerMinute: 50;
             requestsPerHour: 500;
@@ -1610,61 +1317,29 @@ if ( {) {
         lastUsed: new Date(),;
         isActive: true;
       }
-=======
         }
       ]
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 
-
-<<<<<<< HEAD
             burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
       ];
     }
   }
-<<<<<<< HEAD
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-<<<<<<< HEAD
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       if (!response && response.ok) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
@@ -1672,18 +1347,10 @@ if ( {) {
 
       return await response && response.json()
 
-=======
-<<<<<<< HEAD
-=======
       if (!response && response.ok) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
       }
       return await response && response.json()
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
@@ -1697,41 +1364,19 @@ if ( {) {
         throw new Error (`Failed to fetch violations: ${response.status_text}`);
       }
       return await response.json ();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } catch (error) {
       // Mock violations for demo;
       return [;
         {
           id: 'violation_1';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           method: 'GET',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded';
           ipAddress: '192 && 192.168.1 && 1.100',
           userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
         };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
         }
       ]
     }
@@ -1759,23 +1404,12 @@ if ( {) {
           ipAddress: '192.168.1.100'
           userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
         }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
           endpoint: '/api/auth/login';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           method: 'POST'
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
@@ -1815,14 +1449,11 @@ if ( {) {
           ipAddress: '10.0.0.50',;
           userAgent: 'ZionMobileApp/1.0';
 
-
           method: 'POST',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded';
           ipAddress: '10 && 10.0.0 && 0.50',
           userAgent: 'ZionMobileApp/1 && 1.0'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           api_key: 'zion_web123';
           endpoint: '/api / users';
           method: 'GET',
@@ -1830,15 +1461,7 @@ if ( {) {
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         }
         {
           id: 'violation_2';
@@ -1849,15 +1472,10 @@ if ( {) {
           reason: 'burst_limit_exceeded';
           ip_address: '10.0.0.50',
           user_agent: 'ZionMobileApp / 1.0';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       ];
     }
   }
-
-
-
-
 
   async generateReport(): Promise<{
     overview: {
@@ -1878,15 +1496,7 @@ if ( {) {
       recent: RateLimitViolation[]
     }
   }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     const stats = await this && this.getRateLimitStats();
     const rules = await this && this.getRateLimitRules();
     const apiKeys = await this && this.getAPIKeys();
@@ -1897,10 +1507,7 @@ if ( {) {
 
     const violationsByReason = violations && violations.reduce((acc, violation) => {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     const stats = await this.getRateLimitStats();
     const rules = await this.getRateLimitRules();
     const apiKeys = await this.getAPIKeys();
@@ -1909,65 +1516,36 @@ if ( {) {
     const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0);
     const violationsByReason = violations.reduce((acc, violation) => {
       acc[violation.reason] = (acc[violation.reason] |0) + 1;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       return acc
     }, {} as Record<string, number>);
     return {
       overview: {
         totalRequests;
         blockedRequests;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
       };
 
-<<<<<<< HEAD
-=======
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
       };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       topEndpoints: stats
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           endpoint: stat && stat.endpoint;
           requests: stat && stat.totalRequests;
           blocked: stat && stat.blockedRequests,
           averageResponseTime: stat && stat.averageResponseTime
         }));
       violations: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         total: violations && violations.length;
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
 
-=======
-=======
         activeRules: rules.filter(r => r.enabled).length
         activeAPIKeys: apiKeys.filter(k => k.isActive).length
       }
@@ -1993,21 +1571,15 @@ if ( {) {
         total: violations && violations.length;
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         total: violations && violations.length;
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   async generate_report (): Promise<{
     overview: {
       total_requests: number;
       blocked_requests: number;
       active_rules: number,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       activeAPIKeys: number;
     }
     top_endpoints: {
@@ -2050,11 +1622,7 @@ if ( {) {
           requests: stat.total_requests;
           blocked: stat.blocked_requests,
           averageResponseTime: stat.averageResponseTime;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
       activeAPIKeys: number;
     },;
     topEndpoints: {;
@@ -2094,87 +1662,38 @@ if ( {) {
           requests: stat.totalRequests,;
           blocked: stat.blockedRequests,;
           averageResponseTime: stat.averageResponseTime;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         })),;
       violations: {;
         total: violations.length,;
         byReason: violationsByReason,;
         recent: violations.slice(0, 10);
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }));
       violations: {
         total: violations.length;
         by_reason: violationsByReason,
         recent: violations.slice (0, 10);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       }
     }
   }
 }
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 // Pricing tiers for the API Rate Limiter service
 // Pricing tiers for the API Rate Limiter service;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-<<<<<<< HEAD
-=======
 // Pricing tiers for the API Rate Limiter service
 // Pricing tiers for the API Rate Limiter service;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
     price: 25;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',
     features: [;
       'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics';
     ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
   starter: {;
@@ -2184,77 +1703,36 @@ export const API_RATE_LIMITER_PRICING = {
     features: [
       'Up to 10 rate limit rulesBasic rate limitingAPI key managementEmail notifications7-day data retentionBasic analytics'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
       'API access';
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     features: [
       'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards'
       'API access'
     ]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-
-=======
-=======
     features: [
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
       'SLA guarantee'
     ]
 
-
-
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-=======
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -2263,27 +1741,14 @@ export const API_RATE_LIMITER_PRICING = {;
     price: 25,;
     period: '/month',;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
       'SLA guarantee';
     ];
-<<<<<<< HEAD
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 
   }
 }
@@ -2599,19 +2064,8 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
     ];
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 
   }
-<<<<<<< HEAD
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

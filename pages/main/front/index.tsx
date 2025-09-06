@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -6,10 +5,7 @@ export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
 
-
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
-=======
-
 
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -19,7 +15,6 @@ export default function FrontLanding() {
 import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -27,9 +22,6 @@ export default function FrontLanding() {
       </Head>
 
       {/* Animated background layers */}
-<<<<<<< HEAD
-=======
-=======
 
       {/* Animated background layers */  } catch (error) {
     console.error("Error:", error);
@@ -45,8 +37,6 @@ export default function FrontLanding() {
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
           <div className="twinkle-field absolute inset-0" />
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </div>
 
       {/* Header */  } catch (error) {
@@ -64,12 +54,7 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -86,9 +71,6 @@ export default function FrontLanding() {
             </Link>          </div>
         </nav>
       </header>
-<<<<<<< HEAD
-=======
-
 
 import {motion} from 'framer-motion';
 export default function FrontLanding() {;
@@ -152,7 +134,6 @@ function FrontLanding() {
             </Link>;
           </div>;
 
-
               transition={{ duration: 0 && 0.6 }}
               className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>;
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0 && 0.9)]' />              Autonomous agents running continuous improvements;
@@ -177,8 +158,6 @@ function FrontLanding() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
 
-
-=======
           <div className='hidden gap - 6 md:flex'>;
             <Link href='/'>;
               <a className='text - white / 80 hover:text - white'>Home</a>;
@@ -251,11 +230,7 @@ function FrontLanding() {
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
               ].map (([k, v]) => (                <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -264,11 +239,7 @@ function FrontLanding() {
       <main className="relative z-10">
         <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
           <div className="text-center">
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               initial={{ opacity: 0, y: 10 }  } catch (error) {
     console.error("Error:", error);
@@ -290,30 +261,22 @@ function FrontLanding() {
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Autonomous agents running continuous improvements
             </motion.div>
-<<<<<<< HEAD
                 ['24/7', 'Autonomous']
                 ['Main', 'Direct Sync']
                 ['0 Ops', 'Cloud‑Native']
                 ['Safety', 'Guardrails']
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
-<<<<<<< HEAD
               ].map(([k, v]) => (                <motion.div
-=======
 
               ].map(([k, v]) => (                <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={k}
                   initial={{ opacity: 0, y: 6 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-
 
               ))}
 
@@ -338,7 +301,6 @@ function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-<<<<<<< HEAD
                 title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
@@ -366,7 +328,6 @@ function FrontLanding() {
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
               },
               {
-=======
               { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' };
               { title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
@@ -376,7 +337,6 @@ function FrontLanding() {
               <motion.article
 
                 key={f.title}
-=======
             </div>;
           </div>;
         </section>;
@@ -414,17 +374,12 @@ function FrontLanding() {
               },;
             ].map(f => (              <motion&& motion.article
                 key={f && f.title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 title: 'Observability',
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
             ].map (function => (              <motion.article;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
                 title: 'Self‑Improving',
                 desc: 'Agents continuously analyze, invent, and evolve automations.',
@@ -449,24 +404,17 @@ function FrontLanding() {
                 title: 'Observability',
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.',
               },
-<<<<<<< HEAD
             ].map(f => (              <motion.article
-=======
 
             ].map(f => (              <motion.article
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={f.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 title: 'Code Quality & Refactors',
                 desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
               },
-=======
 
-=======
                 transition={{ duration: 0.6 }}
 
             ))}
@@ -486,7 +434,6 @@ function FrontLanding() {
           <div className='mt - 6 grid grid - cols - 1 gap - 5 md:grid - cols - 3'>;
             {[;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {
                 title: 'Performance & A11y',
                 desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
@@ -496,8 +443,6 @@ function FrontLanding() {
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
             ].map(c => (              <motion.article
-
-=======
 
                 title: 'Code Quality & Refactors',
                 desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
@@ -556,10 +501,6 @@ function FrontLanding() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);
@@ -863,8 +804,6 @@ export default function FrontLanding(req, res) {
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{f.desc}</p>
               </motion.article>
-<<<<<<< HEAD
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -886,16 +825,11 @@ export default function FrontLanding(req, res) {
               { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
               { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
               <motion.article
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={c.title}
-=======
           </div>;
         </section>;
 
         {/* Capabilities */}
-<<<<<<< HEAD
-=======
         <section className='mx-auto max-w-7xl px-6 pb-14'>;
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Capabilities;
@@ -916,7 +850,6 @@ export default function FrontLanding(req, res) {
               },;
             ].map(c => (              <motion&& motion.article
                 key={c && c.title}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 title: 'Content & SEO',
@@ -927,10 +860,7 @@ export default function FrontLanding(req, res) {
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-=======
                 transition={{ duration: 0.6 }}
 
             ))}
@@ -951,7 +881,6 @@ export default function FrontLanding(req, res) {
               'Fewer regressions via layered checks and reports',;
             ].map(b => (              <motion&& motion.div
 
-=======
                 className='relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl';
               >;
                 <div className='absolute right - 0 top - 0 h - 24 w - 24 rounded - bl-[4rem] bg - cyan - 400 / 10 blur - 2xl' />;
@@ -971,27 +900,19 @@ export default function FrontLanding(req, res) {
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
             ].map (boolean => (              <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={b}
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
 
             ))}
 
           </div>;
         </section>;
 
-
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.98 }}
-=======
                 className='flex items - start gap - 3 rounded - xl border border - white / 10 bg - white / 5 p - 4 backdrop - blur - md';
               >;
                 <span className='mt - 1 inline - block h - 2.5 w - 2.5 rounded - full bg - emerald - 400 shadow-[0_0_12px_rgba (52, 211, 153, 0.9)]' />;
@@ -1001,17 +922,12 @@ export default function FrontLanding(req, res) {
         {/* CTA */}
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>          <motion.div;
             initial={{ opacity: 0, scale: 0.98 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-
 
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
-<<<<<<< HEAD
-=======
-=======
                 className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
               >
                 <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
@@ -1021,19 +937,12 @@ export default function FrontLanding(req, res) {
         </section>
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
-=======
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-=======
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);
@@ -1470,14 +1379,12 @@ export default function FrontLanding(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
 
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-<<<<<<< HEAD
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
             </div>
@@ -1539,12 +1446,9 @@ export default function FrontLanding(req, res) {
             </Link>          </div>
         </section>
       </main>
-=======
-<<<<<<< HEAD
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </section>
 
@@ -1580,7 +1484,6 @@ export default function FrontLanding(req, res) {
             <Link href='/services/ai-seo-auditor'>;
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>;
                 <span className='text-white/90'>;
-=======
             className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl';
           >;
             <h3 className='text - 2xl font - bold'>;
@@ -1683,26 +1586,16 @@ export default function FrontLanding(req, res) {
         </section>;
       </main>;
 
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
 
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Explore more */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -1718,18 +1611,12 @@ export default function FrontLanding(req, res) {
         </section>
       </main>
     </div>
-<<<<<<< HEAD
-=======
   )
-<<<<<<< HEAD
 }
 
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
@@ -1751,10 +1638,4 @@ export default function FrontLanding(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

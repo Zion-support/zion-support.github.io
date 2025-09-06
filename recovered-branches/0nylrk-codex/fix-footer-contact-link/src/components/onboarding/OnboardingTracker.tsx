@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {CheckCircle, Circle, ArrowRight} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { CheckCircle, Circle, ArrowRight } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -68,13 +54,7 @@ import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
 import { Link } from "react-router-dom",;
-<<<<<<< HEAD
 
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -82,8 +62,6 @@ export interface OnboardingStep {;
   link: string,;
   action?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface OnboardingTrackerProps {;
   steps: OnboardingStep[],;
@@ -92,8 +70,6 @@ interface OnboardingTrackerProps {;
   className?: string;
 }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface OnboardingStep {
   id: string,
   label: string,
@@ -101,15 +77,12 @@ export interface OnboardingStep {
   link: string,
   action?: string
 
-
   title = "Complete Your Profile", 
   className 
 
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
-<<<<<<< HEAD
-=======
 ;
 interface OnboardingTrackerProps {;
   steps: OnboardingStep[],;
@@ -124,12 +97,9 @@ export function OnboardingTracker({
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -139,31 +109,21 @@ export function OnboardingTracker({
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export function OnboardingTracker({;
   steps,;
   title = "Complete Your Profile",;
   className;
 
-<<<<<<< HEAD
   title?: string;
   className?: string;
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function OnboardingTracker(): any ({ ;
   steps;
   title = "Complete Your Profile", ;
@@ -171,11 +131,8 @@ export function OnboardingTracker(): any ({ ;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
-=======
   return (
 
 import React from "react",;
@@ -210,39 +167,19 @@ export function OnboardingTracker({ ;
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}></div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
@@ -250,16 +187,9 @@ export function OnboardingTracker({ ;
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   title?: string;
   className?: string;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step) => (;
@@ -268,10 +198,6 @@ export function OnboardingTracker({ ;
               {step && step.completed ? (;
                 <CheckCircle className="h-5 w-5 text-zion-cyan" />;
               ) : (;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Circle className="h-5 w-5 text-zion-slate-light" />;
               )}
             )}
@@ -301,11 +227,7 @@ function OnboardingTracker() {
   const completed_steps = steps.filter (step => step.completed).length;
   const progress = Math.round ((completed_steps / steps.length) * 100);
 ;
-<<<<<<< HEAD
 
-
-
-=======
       ;
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
@@ -471,6 +393,3 @@ return (<div className= {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

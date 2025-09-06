@@ -4,8 +4,6 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-
-
-
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+})

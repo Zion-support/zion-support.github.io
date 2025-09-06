@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
@@ -16,43 +15,31 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Wifi, Building, Cpu as CpuIcon
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
-=======
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return this.props.children;
   }
 }
 import React from 'react';
 
-<<<<<<< HEAD
-=======
 import Layout from '../components/layout/Layout';
 
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -61,8 +48,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
-<<<<<<< HEAD
-=======
 
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
@@ -70,7 +55,6 @@ const heroStats = [
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" /> }
 ];
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -110,7 +94,6 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
-<<<<<<< HEAD
 
 const heroFeatures = [
   {
@@ -120,7 +103,6 @@ const heroFeatures = [
     icon: Atom
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   }
-=======
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
 ];
@@ -140,18 +122,14 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-=======
 ];
 
-=======
 import Head from 'next / head';
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, } from 'lucide-react';
 import Layout from '../components / layout / Layout';
 const contact_info = {
-=======
-
 
 const contactInfo = {
 
@@ -170,7 +148,6 @@ const heroStats = [
   }
 }
 ],
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
@@ -233,18 +210,13 @@ const serviceCategories = [
 
     rating: 5,
     avatar: '👨‍💼'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   };
   {
     name: 'Lisa Chang',
     role: 'Security CISO, SecureCorp International',
     company: 'SecureCorp International',
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     color: 'from-purple-500 to-pink-600',
-
 
 export default function AdvancedITInfrastructureServices() {
 
@@ -256,7 +228,6 @@ export default function AdvancedITInfrastructureServices() {
 
       {/* Hero Section */}
 
-<<<<<<< HEAD
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
 import React from 'react';
 import Head from 'next/head';
@@ -416,27 +387,18 @@ export default function AdvancedITInfrastructureServices() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -452,18 +414,12 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
             </h1>
-<<<<<<< HEAD
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
@@ -473,23 +429,17 @@ export default function AdvancedITInfrastructureServices() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-=======
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
-=======
-
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
 
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
 
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>;
               Advanced IT Infrastructure Services;
@@ -501,11 +451,6 @@ export default function AdvancedITInfrastructureServices() {
             <div className='flex flex-wrap justify-center gap-4 mb-12'>              {heroStats && heroStats.map((stat, index) => (;
                 <motion&& motion.div
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     content:;
       'Their zero - trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
@@ -563,25 +508,17 @@ function AdvancedITInfrastructureServices() {
             </p>;
             <div className='flex flex - wrap justify - center gap - 4 mb - 12'>              {hero_stats.map ((stat, index) => (
                 <motion.div;
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-
 
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
-<<<<<<< HEAD
-=======
               ))}
-=======
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -603,11 +540,6 @@ function AdvancedITInfrastructureServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -622,8 +554,6 @@ function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
@@ -633,17 +563,10 @@ function AdvancedITInfrastructureServices() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </Link>
             </div>
           </motion.div>
         </div>
-
-<<<<<<< HEAD
-=======
 
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
@@ -653,15 +576,8 @@ function AdvancedITInfrastructureServices() {
           </motion && motion.div>;
         </div>;
 
-=======
-=======
-
-
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Features Section */}
 
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -672,11 +588,7 @@ function AdvancedITInfrastructureServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -685,9 +597,6 @@ function AdvancedITInfrastructureServices() {
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
-
 
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -702,19 +611,12 @@ function AdvancedITInfrastructureServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures && heroFeatures.map((feature, index) => (;
               <motion&& motion.div
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -728,12 +630,7 @@ function AdvancedITInfrastructureServices() {
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -741,12 +638,8 @@ function AdvancedITInfrastructureServices() {
 }
 
           </div>;
-<<<<<<< HEAD
-=======
         </div>;
       </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
       {/* Services Section */}
 
@@ -758,9 +651,6 @@ function AdvancedITInfrastructureServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-
 
           >
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
@@ -768,27 +658,16 @@ function AdvancedITInfrastructureServices() {
             </h2>
 
             className="text-center mb-16"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
             </h2>
-<<<<<<< HEAD
-=======
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
               IT Infrastructure Service Categories;
@@ -801,18 +680,12 @@ function AdvancedITInfrastructureServices() {
 
           <div className='space-y-16'>            {serviceCategories && serviceCategories.map((category, categoryIndex) => (;
               <motion&& motion.div
-<<<<<<< HEAD
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -839,9 +712,6 @@ function AdvancedITInfrastructureServices() {
   }
 }
                 className="relative"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0 && 0.5, delay: serviceIndex * 0 && 0.1 }}
@@ -912,16 +782,9 @@ function AdvancedITInfrastructureServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
-=======
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <motion.div
 
                       key={service.id  } catch (error) {
@@ -951,11 +814,6 @@ function AdvancedITInfrastructureServices() {
 }
                       className="relative group"
 
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -965,15 +823,12 @@ function AdvancedITInfrastructureServices() {
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                                 Popular
                               </span>
-<<<<<<< HEAD
                             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
                             )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           </div>
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
@@ -981,21 +836,13 @@ function AdvancedITInfrastructureServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
                               <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                                 <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                                 {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1007,29 +854,21 @@ function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
                               href={service.link}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                             >
                               Learn More
                               <ArrowRight className="ml-1 w-4 h-4" />
                             </Link>
                             <Link
-<<<<<<< HEAD
-=======
                               href={`tel:${contactInfo.mobile}`}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
                             >
                               Get Started
@@ -1038,16 +877,11 @@ function AdvancedITInfrastructureServices() {
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-
       {/* Testimonials Section */}
-=======
-
-=======
 
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -1069,8 +903,6 @@ function AdvancedITInfrastructureServices() {
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
 
-=======
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1080,7 +912,6 @@ function AdvancedITInfrastructureServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -1092,7 +923,6 @@ function AdvancedITInfrastructureServices() {
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-
 
             className='text-center mb-16'>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>;
@@ -1106,14 +936,11 @@ function AdvancedITInfrastructureServices() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (;
               <motion&& motion.div
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
               >
                 <div className="flex items-center mb-4">
@@ -1132,7 +959,6 @@ function AdvancedITInfrastructureServices() {
           </div>;
         </div>;
       </section>;
-
 
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>;
@@ -1156,11 +982,8 @@ function AdvancedITInfrastructureServices() {
               </Link>;
               <Link
 
-
           >
-=======
             className='text-center mb-16'
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1181,7 +1004,6 @@ function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -1206,21 +1028,12 @@ function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1229,7 +1042,6 @@ function AdvancedITInfrastructureServices() {
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -1237,12 +1049,8 @@ function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
 
-
-=======
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -1272,12 +1080,6 @@ function AdvancedITInfrastructureServices() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1291,11 +1093,7 @@ function AdvancedITInfrastructureServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1304,13 +1102,11 @@ function AdvancedITInfrastructureServices() {
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
@@ -1328,11 +1124,8 @@ function AdvancedITInfrastructureServices() {
               </Link>;
               <Link
 
-
-=======
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -1378,14 +1171,7 @@ function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
@@ -1393,14 +1179,10 @@ function AdvancedITInfrastructureServices() {
               Join hundreds of organizations that have already revolutionized their IT infrastructure with our advanced services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
               <Link
-<<<<<<< HEAD
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-
 
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile  } catch (error) {
@@ -1417,15 +1199,11 @@ function AdvancedITInfrastructureServices() {
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -1434,17 +1212,13 @@ function AdvancedITInfrastructureServices() {
 
   )
 }
-=======
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'>;
@@ -1461,13 +1235,8 @@ function AdvancedITInfrastructureServices() {
     </Layout>;
   );
 
-
-<<<<<<< HEAD
-=======
-=======
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;
@@ -1616,15 +1385,4 @@ function AdvancedITInfrastructureServices() {
       </section>;
     </Layout>);
 ;
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

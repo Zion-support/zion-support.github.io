@@ -21,8 +21,6 @@ interface TabDefinition {
   icon: LucideIcon;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface TabDefinition {;
   id: string,;
   label: string,;
@@ -34,14 +32,6 @@ export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
-=======
-
-
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function DeveloperPortal() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation");
@@ -52,14 +42,9 @@ export function DeveloperPortal() {
 
   const [activeTab, setActiveTab] = useState<string>("documentation");
 
-
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Define the tabs
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -82,20 +67,13 @@ export function DeveloperPortal() {
       </div>
 
       {/* Tabs */}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
 
             const Icon = tab.icon,
 
-<<<<<<< HEAD
-=======
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
@@ -103,7 +81,6 @@ export function DeveloperPortal() {
             const Icon = tab.icon;
 
             const Icon = tab.icon,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             return (
               <button
                 key={tab.id}
@@ -114,10 +91,7 @@ export function DeveloperPortal() {
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Icon size={16} className="mr-2" />
 import { useState } from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -144,38 +118,24 @@ interface TabDefinition {;
 export function DeveloperPortal() {;
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState<string>("documentation"),;
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="border - b border - zinc - 800 mb - 8">;
         <div className="flex flex - wrap -mb - px">;
           {tabs.map ((tab) => {
             const Icon = tab.icon;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Define the tabs;
   const tabs: TabDefinition[] = [;
     { id: "documentation", label: "Documentation", icon: BookOpen },;
     { id: "api-keys", label: "API Keys", icon: Key },;
     { id: "webhooks", label: "Webhooks", icon: Webhook },;
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: "logs", label: "Logs", icon: List }],;
 
   return (
-=======
     { id: "logs", label: "Logs", icon: List }];
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     { id: "logs", label: "Logs", icon: List }];
   return (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">;
       <div className="mb-8">;
         <h1 className="text-3xl font-bold text-white flex items-center">;
@@ -189,11 +149,7 @@ export function DeveloperPortal() {;
       {/* Tabs */}
       <div className="border-b border-zinc-800 mb-8">;
         <div className="flex flex-wrap -mb-px">;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           {tabs.map((tab) => {;
             const Icon = tab.icon;
             return (;
@@ -206,13 +162,7 @@ export function DeveloperPortal() {;
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
@@ -221,26 +171,18 @@ export function DeveloperPortal() {;
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Tab content */}
       <div>;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {tabs && tabs.map((tab) => {;
             const Icon = tab && tab.icon;
             return (
       {/* Tab content */}
       <div>;
-<<<<<<< HEAD
           })}
         </div>
       </div>
       {/* Tab content */}
       <div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -249,12 +191,6 @@ export function DeveloperPortal() {;
     </div>
   );
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 ;
 
@@ -265,21 +201,10 @@ export default function ProtectedDeveloperPortal() {;
     </ProtectedRoute>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 ;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <button;
                 key={tab.id}
                 className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
@@ -313,10 +238,6 @@ function ProtectedDeveloperPortal() {
       <DeveloperPortal />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;
 }
       </div>
@@ -340,6 +261,3 @@ export default function ProtectedDeveloperPortal() {;
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

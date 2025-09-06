@@ -1,8 +1,6 @@
 import crypto from "crypto";
 
-
 }
-=======
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
@@ -56,11 +54,6 @@ export function generateNonce(): string {
 export function hashData(data: string): string {
   return crypto.createHash("sha256").update(data).digest("hex");
 }
-=======
 };
-=======
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

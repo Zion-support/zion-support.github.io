@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
@@ -31,7 +30,6 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
-=======
 interface ProductActions.testProps {
   // Add props here as needed
 }
@@ -42,9 +40,5 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main

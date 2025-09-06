@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 
 import { useState, useEffect } from "react";
@@ -19,38 +10,21 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-<<<<<<< HEAD
 AlertDialogTitle,;
-=======
-<<<<<<< HEAD
 AlertDialogTitle,;
-=======
   AlertDialogTitle,
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "../components/ui/alert-dialog";
 import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
-=======
-=======
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   AlertDialog,;
   AlertDialogAction,;
@@ -59,44 +33,26 @@ import {;
   AlertDialogDescription,;
   AlertDialogFooter,;
   AlertDialogHeader,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   AlertDialogTitle,;
 } from "../components/ui/alert-dialog";
 import {;
   useLanguage,;
   SupportedLanguage,;
   LanguageContextType,;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "../context/LanguageContext";
 
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { changeLanguage, currentLanguage, supportedLanguages } =;
     useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] =;
     useState<SupportedLanguage | null>(null);
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     // Check if this is first visit;
     const hasVisited = localStorage && localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
-<<<<<<< HEAD
 
     // Mark as visited;
     localStorage && localStorage.setItem("zion_has_visitedtrue");
@@ -110,7 +66,6 @@ export function LanguageDetectionPopup() {;
 
     );
     if (isSupported && browserLang !== currentLanguage) {;
-=======
     // Mark as visited;
     localStorage && localStorage.setItem("zion_has_visitedtrue");
     // Get browser language;
@@ -137,25 +92,16 @@ export function LanguageDetectionPopup() {;
       (lang) => lang.code === browserLang
     );
     if (isSupported && browserLang !== currentLanguage) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     );
     if (isSupported && browserLang !== currentLanguage) {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
   }, []);
   if (!detectedLanguage) return null;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
   const handleAccept = async () => {;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
@@ -202,28 +148,21 @@ export function LanguageDetectionPopup() {;
     setOpen(false)
   },
 
-
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const languageName =;
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
 
   const handleAccept = async () => {;
-<<<<<<< HEAD
 
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
-=======
 
-
-=======
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -236,7 +175,6 @@ import {;
   AlertDialogHeader,;
   AlertDialogTitle} from '../components/ui/alert-dialog',;
 import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext',;
-=======
     await changeLanguage(detectedLanguage);
     setOpen(false);
   }
@@ -244,26 +182,20 @@ import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/
   AlertDialogTitle} from '../components/ui/alert-dialog',;
 import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext',;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false),;
   const { t } = useTranslation(),;
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     // Check if this is first visit;
     const hasVisited = localStorage.getItem('zion_has_visited'),;
     if (hasVisited) return,;
-<<<<<<< HEAD
     // Mark as visited;
     localStorage.setItem('zion_has_visitedtrue'),;
     // Get browser language;
     const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,;
-=======
 ;
     // Mark as visited;
     localStorage.setItem('zion_has_visitedtrue'),;
@@ -271,12 +203,10 @@ export function LanguageDetectionPopup() {;
     // Get browser language;
     const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,;
     ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     // Check if browser language is supported and different from current language;
     const isSupported = supportedLanguages.some(lang => lang.code === browserLang),;
     if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang),;
-<<<<<<< HEAD
       setOpen(true);
     }
   }, []),
@@ -285,28 +215,20 @@ export function LanguageDetectionPopup() {;
 
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
     setOpen(false)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
-
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-
 
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
 
-=======
       setOpen(true),;
     }
   }, []),;
@@ -321,12 +243,10 @@ export function LanguageDetectionPopup() {;
   },;
 ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <AlertDialog open={open} onOpenChange={setOpen}>;
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
         <AlertDialogHeader>;
           <AlertDialogTitle className="text-white">;
-<<<<<<< HEAD
             {t("language && language.switch_to_detected", { language: languageName })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
@@ -340,17 +260,12 @@ export function LanguageDetectionPopup() {;
 
           <AlertDialogAction
             onClick={handleAccept}
-=======
 );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
             {t("general && general.yes")}
 
 );
 
-<<<<<<< HEAD
-=======
-=======
           <AlertDialogAction
             onClick={handleAccept}
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
@@ -360,11 +275,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-<<<<<<< HEAD
 );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -372,10 +283,6 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
             {t('language.switch_to_detected', { language:languageName })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text-zion-slate-light">;
@@ -390,16 +297,11 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark";
           >;
             {t('general.yes')}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
@@ -435,19 +337,8 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     // Mark as visited;
     local_storage.set_item ("zion_has_visitedtrue");
@@ -505,11 +396,7 @@ if (return null) {
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
   ),; if (!detectedLanguage) return null;
 > {
   t ('general.yes') 
@@ -521,7 +408,4 @@ if (return null) {
 
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

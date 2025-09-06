@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -8,13 +5,10 @@ const path = require('path')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
   content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
->>>>>>> main
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -51,9 +45,7 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          
+          content = content.replace(/[\s\S]*?[\s\S]*?          content = content.replace(/[\s\S]*?          
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {
@@ -122,7 +114,6 @@ class ComprehensiveSyntaxFixer {
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
-=======
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -377,5 +368,3 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> main

@@ -1,34 +1,18 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { WorkExperience  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useWorkExperience() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useWorkExperience() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,19 +21,10 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
     }
     setIsLoading(true);
     setError(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -63,38 +38,17 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     try {
       const { error } = await supabase
         .from('work_history')
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {WorkExperience} from '@/types / resume';
@@ -125,15 +79,12 @@ if ( {) {
         .insert ({
           resume_id: resume_id;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-<<<<<<< HEAD
 
           company_name: work && work.company_name;
           role_title: work && work.role_title;
@@ -147,8 +98,6 @@ if ( {) {
         });
       if (error) throw error;
 
-<<<<<<< HEAD
-=======
           resume_id: resumeId;
           company_name: work.company_name;
           role_title: work.role_title;
@@ -160,7 +109,6 @@ if ( {) {
           location: work.location
         });
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           resume_id: resumeId,
           company_name: work.company_name,
           role_title: work.role_title,
@@ -173,14 +121,8 @@ if ( {) {
         }),
       
       if (error) throw error,
-      
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           company_logo_url: work.company_logo_url,
           location: work.location;
         });
@@ -190,19 +132,12 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Work experience added", "Your work experience has been added to your resume");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not add work experience');
     } finally {
 
       setIsLoading(false)
 
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Work experience added", "Your work experience has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add work experience')
@@ -211,12 +146,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -246,38 +176,17 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     try {
       const { error } = await supabase
         .from('work_history')
         .update({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const updateWorkExperience = async (work_id: string, work: WorkExperience): Promise < boolean> => {
     // Check condition
@@ -295,15 +204,12 @@ if ( {) {
         .from ('work_history');
         .update ({
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB (work.start_date);
           end_date: work.is_current ? null : formatDateForDB (work.end_date);
           is_current: work.is_current;
           description: work.description;
-<<<<<<< HEAD
 
           company_name: work && work.company_name;
           role_title: work && work.role_title;
@@ -314,13 +220,10 @@ if ( {) {
           company_logo_url: work && work.company_logo_url,
           location: work && work.location
 
-<<<<<<< HEAD
         })
         .eq('id', workId);
       if (error) throw error;
-=======
 
-=======
           company_name: work.company_name;
           role_title: work.role_title;
           start_date: formatDateForDB(work.start_date);
@@ -332,7 +235,6 @@ if ( {) {
         })
         .eq('id', workId);
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           company_name: work.company_name,
           role_title: work.role_title,
           start_date: formatDateForDB(work.start_date),
@@ -345,14 +247,8 @@ if ( {) {
         .eq('id', workId),
       
       if (error) throw error,
-      
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return showSuccessToast("Work experience updated", "Your work experience has been updated")
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           company_logo_url: work.company_logo_url,
           location: work.location;
         });
@@ -363,19 +259,12 @@ if (throw error) {
   $2
 }
       return showSuccessToast ("Work experience updated", "Your work experience has been updated");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e: any) {
       return handleResumeError (e, 'Could not update work experience');
     } finally {
 
       setIsLoading(false)
 
-
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Work experience updated", "Your work experience has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update work experience')
@@ -384,12 +273,7 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -419,51 +303,24 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     try {
       const { error } = await supabase
         .from('work_history')
         .delete()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
         .eq('id', workId);
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .eq('id', workId),
       
       if (error) throw error,
-      
-<<<<<<< HEAD
-
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
-=======
-=======
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete work experience')
@@ -473,11 +330,8 @@ if (throw error) {
         .eq('id', workId),
       
       if (error) throw error,
-      
-
 
       return showSuccessToast("Work experience deleted", "Your work experience has been removed from your resume")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   const deleteWorkExperience = async (work_id: string): Promise < boolean> => {
     // Check condition
@@ -486,9 +340,7 @@ if ( {) {
 }
       set_error ('You must be logged in to delete work experience'),
       return false;
-=======
       setIsLoading (false);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
     } catch (e: any) {
@@ -502,20 +354,12 @@ if ( {) {
     error;
     addWorkExperience;
     updateWorkExperience;
-<<<<<<< HEAD
 
       setIsLoading(false)
 
-
-<<<<<<< HEAD
-=======
-=======
     deleteWorkExperience
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -538,15 +382,9 @@ if ( {) {
     addWorkExperience;
     updateWorkExperience;
     deleteWorkExperience;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
   }
 }
   }
@@ -555,9 +393,6 @@ if ( {) {
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

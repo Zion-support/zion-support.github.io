@@ -130,11 +130,7 @@ ai: 'Advanced AI capabilities and automation',
                   type="text"
                   className="w-full bg-zinc-900/50 border border-white/20 rounded-lg p-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   placeholder="North America"
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 />;
               </div>;
             </div>;
@@ -404,7 +400,6 @@ ai: 'Advanced AI capabilities and automation',
                     : "bg-red-900/20 border border-red-500/20 text-red-400"
                 }`}
               >
-=======
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -792,7 +787,6 @@ export default function AdminDeployPage() {;
                   ? 'bg-green-900/20 border border-green-500/20 text-green-400';
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
-<<<<<<< HEAD
                 {message}
               </div>;
             )}

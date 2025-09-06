@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -342,11 +335,6 @@ monitor.run().catch(error => {
   process.exit(1);
 });
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");const log = (message) => { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] Health Monitor: ${message}`);};const runCommand = (command, description) => { try {` log(`Starting: ${description}`); const output = execSync(command, { " encoding: "utf8", " stdio: "pipe", cwd: process.cwd() });` log(`Completed: ${description}`); return { success: true, output }; } catch (error) {` log(`Failed: ${description} - ${error.message}`); return { success: false, error: error.message }; }};const checkSystemHealth = () => {" log("Checking system health"); / Check if the application is running" const appCheck = runCommand("curl -f http:/localhost:3000 | echo "App not responding"", "Checking application health"); / Check disk space" const diskCheck = runCommand("df -h .", "Checking disk space"); / Check memory usage" const memoryCheck = runCommand("free -m", "Checking memory usage"); return { app: appCheck.success, disk: diskCheck.success, memory: memoryCheck.success, overall: appCheck.success && diskCheck.success && memoryCheck.success };};const generateHealthReport = (results) => { const report = { timestamp: new Date().toISOString(), system: results.system, overall: {" status: results.system.overall ? "HEALTHY" : "UNHEALTHY" } }; / Save report" const reportPath = "logs/pm2/health-report.json"; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));` log(`Health report saved to ${reportPath}`); return report;};const main = async () => {" log("Starting Health Monitor Process"); / Check system health const systemResults = checkSystemHealth(); / Generate comprehensive report const results = { system: systemResults }; const report = generateHealthReport(results); " if (report.overall.status === "HEALTHY") {" log("System health check passed: All systems operational"); } else {" log("System health check failed: Issues detected"); } " log("Health Monitor Process completed");};/ Handle process termination"process.on("SIGINT", () => {" log("Health Monitor Process interrupted"); process.exit(0);});"process.on("SIGTERM", () => {" log("Health Monitor Process terminated"); process.exit(0);});/ Run the main functionmain().catch(error => {` log(`Health Monitor Process failed: ${error.message}`); process.exit(1);});'"`'"`
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 #!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2;
@@ -399,7 +387,6 @@ const checkSystemHealth = () => {}
   };
 };
 
-
 const generateHealthReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -408,8 +395,7 @@ const generateHealthReport = (results) => {}
       status: results.system.overall ? 'HEALTHY' : 'UNHEALTHY'
     };
   };
-  
-  
+
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -430,8 +416,7 @@ const main = async () => {}
   };
   
   const report = generateHealthReport(results);
-  
-  
+
   const report = generateHealthReport(results);
   
   if (report.overall.status === 'HEALTHY') {}
@@ -442,7 +427,6 @@ const main = async () => {}
   log('Health Monitor Process completed');
 };
 
-
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
@@ -450,34 +434,20 @@ process.on('SIGINT', () => {}
 }
 });
 
-
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
 }
 });
 
-
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
 });});
 });});
-=======
-<<<<<<< HEAD
 });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
-=======
 });
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
-=======
 });
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

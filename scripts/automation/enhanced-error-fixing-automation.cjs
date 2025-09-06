@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
@@ -39,8 +38,7 @@ class EnhancedErrorFixingAutomation {
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, "utf8");
-        if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>> ")) {
-          this.log(`Fixing merge conflicts in ${file}`);
+        if (content.includes("") || content.includes("") || content.includes("          this.log(`Fixing merge conflicts in ${file}`);
           
           // Simple merge conflict resolution - keep the HEAD version
           const lines = content.split("\n");
@@ -48,13 +46,12 @@ class EnhancedErrorFixingAutomation {
           let inConflict = false;
           
           for (const line of lines) {
-            if (line.includes("<<<<<<< HEAD")) {
+            if (line.includes("")) {
               inConflict = true;
               continue;
-            } else if (line.includes("=======")) {
+            } else if (line.includes("")) {
               continue;
-            } else if (line.includes(">>>>>>> ")) {
-              inConflict = false;
+            } else if (line.includes("              inConflict = false;
               continue;
             } else if (!inConflict) {
               newLines.push(line);
@@ -140,7 +137,6 @@ if (require.main === module) {
 }
 
 module.exports = EnhancedErrorFixingAutomation;
-=======
 #!/usr/bin/env node;
 #!/usr/bin/env node;
 #!/usr/bin/env node;
@@ -316,4 +312,3 @@ export default function"
         "typescriptFixes": this.fixesApplied.filter(f => f.type === "typescript_error")
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b

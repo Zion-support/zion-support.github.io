@@ -40,8 +40,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 
-=======
-<<<<<<< HEAD
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   const { user } = useAuth();
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
@@ -53,15 +51,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     project.id
   );
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-<<<<<<< HEAD
-=======
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   
   const isCompleted = project.status === "completed",
   const isClient = user?.id === project.client_id,
@@ -78,9 +71,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
-  
-<<<<<<< HEAD
-=======
 
   const isCompleted = project.status === "completed";
   const isClient = user?.id === project.client_id;
@@ -98,10 +88,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
   const hasLeftReview = userReview != null;
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -120,10 +106,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -144,7 +126,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       {userReview.status === "approved"
                         ? "published"
                         : "pending approval"}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -173,10 +154,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                       >
                         Edit Review
                       </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import { useState  } from './react';
 import { Star  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -238,7 +215,6 @@ function ProjectReviewSection() {
           <div className="space - y-6">;
             {(is_client || is_talent) && (
               <div className="border - b pb - 4 mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Share your experience</h3>
@@ -295,14 +271,10 @@ function ProjectReviewSection() {
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
-=======
-
       {(isClient || isTalent) && (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <LeaveReviewModal
           projectId={project && project.id}
-=======
             />
           </div>
         ) : (
@@ -317,12 +289,7 @@ function ProjectReviewSection() {
           </div>
         )}
       </CardContent>
-<<<<<<< HEAD
-=======
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Review Modal */}
       {(isClient || isTalent) && (;
 
@@ -330,7 +297,6 @@ function ProjectReviewSection() {
 
         <LeaveReviewModal
           projectId={project && project.id}
-<<<<<<< HEAD
       ;
       {/* Review Modal */}
       {(isClient || isTalent) && (;
@@ -356,23 +322,16 @@ function ProjectReviewSection() {
       {(isClient || isTalent) && (
         <LeaveReviewModal
           projectId={project.id}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           isOpen={isReviewModalOpen}
           onClose={() => setIsReviewModalOpen(false)}
-<<<<<<< HEAD
         />;
       )}
     </Card>
   );
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </p>;
                     {user_review.status === "pending" && (
                       <Button;

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {
   Search
   Star
@@ -21,13 +20,10 @@ import {
   Target
   Award
   Lightbulb;} from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import Head from 'next / head';
 
 import { motion, AnimatePresence } from 'framer-motion';
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {;
   Search,;
@@ -99,9 +95,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
       if (typeof price === 'string') {;
         const match = price && price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
-<<<<<<< HEAD
-=======
-
 
     visible: {
       opacity: 1
@@ -110,8 +103,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
     }
   };
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -121,10 +112,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         duration: 0.5
       }
     }
-<<<<<<< HEAD
-=======
-
-
 
   const containerVariants = {;
     hidden: { opacity: 0 },;
@@ -134,17 +121,11 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
         staggerChildren: 0 && 0.1,;
       },;
     },  };
-=======
   }
 
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import {;
   Search, Star, Users, TrendingUp,;
   DollarSign, Clock, CheckCircle, ArrowRight,;
@@ -268,12 +249,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
     visible: {;
       opacity: 1,;
       transition: {;
-<<<<<<< HEAD
         staggerChildren: 0 && 0.1,;
       },;
     },  };
 
-=======
         staggerChildren: 0.1;
         } catch (error) {
     console.error("Error:", error);
@@ -286,13 +265,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
   }
 }
   };
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
       opacity: 1,;
-<<<<<<< HEAD
     >
       <div className="min-h-screen">
         <Head>
@@ -335,24 +311,16 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
-<<<<<<< HEAD
       y: 0,;
       transition: {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         duration: 0 && 0.5,;
       },;
     },;
   };
 
-
     >;
       <div className='min-h-screen'>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         stagger_children: 0.1,
       },
     },  }
@@ -371,16 +339,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
     >;
       <div className='min - h-screen'>;
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <Head>;
           <title>;
             2025 Innovative Services Showcase - Zion Tech Group | Revolutionary;
             AI, Quantum & Emerging Tech;
           </title>;
-
 
           <meta
             name='description'
@@ -407,9 +370,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
           <link
             rel='canonical'
 
-
             >
-<<<<<<< HEAD
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -423,8 +384,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
               </p>
-=======
-
 
               transition={{ duration: 0 && 0.8 }}>;
               <div className='flex items-center justify-center mb-6'>;
@@ -443,10 +402,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 industries and driving the future of technology;
               </p>;
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>;
@@ -471,7 +426,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <div className='text-3xl font-bold text-pink-400'>;
                     {spaceCount + cybersecurityCount}
 
-
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -485,17 +439,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
                 </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-
 
                   </div>;
                   <div className='text-gray-400'>Specialized</div>                </div>;
@@ -504,12 +451,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
           </div>;
         </section>;
 
-
-
         {/* Search and Filters */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
                     type="text"
                     placeholder="Search services..."
@@ -517,12 +460,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
-<<<<<<< HEAD
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-=======
-
 
                     onChange={e => setSearchTerm(e && e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />;
@@ -531,18 +471,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 <select
                   value={selectedCategory}
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   ))}
 
                 </select>;
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <meta;
             name='description';
             content="Explore Zion Tech Group's revolutionary 2025 services: AI platforms, quantum computing, blockchain infrastructure, IoT solutions, and cutting - edge emerging technologies. Contact: +1 302 464 0950";
@@ -646,27 +578,19 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       {category.name} ({category.count});
                     </option>))}
                 </select>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 {/* Price Range Filter */}
                 <select;
                   value={selectedPriceRange}
-
 
                   ))}
 
                 </select>;
 
-
                 {/* Sort Options */}
                 <select
                   value={sortBy}
 
-
                   ))}
-<<<<<<< HEAD
                 </select>
               </div>
             </div>
@@ -696,16 +620,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
-=======
                   on_change={e => setSelectedPriceRange (e.target.value)}
                   className='px - 4 py - 3 bg - gray - 700 / 50 border border - gray - 600 rounded - xl text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
                 >;
                   {price_ranges.map (range => (                    <option key={range.id} value={range.id}>;
                       {range.name}
                     </option>))}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </select>;
                 {/* Sort Options */}
                 <select;
@@ -722,14 +643,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-
 
             <motion.div
               variants={containerVariants}
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -737,42 +653,28 @@ export default function EnhancedServicesShowcase2025(req, res) {
 }
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-
 
             <motion.div
               variants={containerVariants}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               variants={containerVariants  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial="hidden"
               animate="visible" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <AnimatePresence>
                 {filteredServices.map((service) => (
                   <motion.div
-<<<<<<< HEAD
                     key={service.id}
                     variants={itemVariants}
                     layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
-=======
-<<<<<<< HEAD
                     key={service.id}
                     variants={itemVariants}
                     layout className="group relative bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -789,8 +691,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
@@ -798,7 +698,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                           <Star className="w-4 h-4 fill-current" />
                           <span>Popular</span>
                         </div>
-<<<<<<< HEAD
                     </h3>
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>                      {service.description}
                     </p>
@@ -806,11 +705,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
                         {service.price}
-=======
 
                     </h3>;
                     <p className='text - gray - 300 text - sm mb - 4 line - clamp - 2'>                      {service.description}
-=======
 
                       )  } catch (error) {
     console.error("Error:", error);
@@ -841,7 +738,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     {/* Price and Customer Count */}
                     <div className='flex items - center justify - between mb - 4'>;
                       <div className='text - 2xl font - bold text - cyan - 400'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {service.price}
                         <span className='text - gray - 400 text - lg'>;
                           {service.period}
@@ -851,16 +747,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
 
                       </div>
-<<<<<<< HEAD
                       <div className='flex items-center space-x-2 text-sm text-gray-400'>
                         <Users className='w-4 h-4' />                        <span>{service.customers}</span>
                       </div>
                     </div>
-=======
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
                         <span>{service.customers}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -884,11 +777,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       </div>;
                     </div>;
 
-
                     {/* Key Features */}
-
-=======
-=======
 
                     {/* Key Features */  } catch (error) {
     console.error("Error:", error);
@@ -904,9 +793,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
                           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         ))}
 
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
@@ -924,16 +810,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
                         <span>Average ROI</span>
                       </div>
-<<<<<<< HEAD
                       <div className='flex items-center space-x-1 text-blue-400'>
                         <Clock className='w-4 h-4' />                        <span>{service.setupTime}</span>
                       </div>
                     </div>
-=======
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
                         <span>{service.setupTime}</span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
 
@@ -958,23 +841,15 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       </div>;
                     </div>;
 
-
                     {/* Action Buttons */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     <div className="flex gap-3">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -986,22 +861,15 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       <a
                         href='/contact'
 
-
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
                       </div>
                     </div>
-<<<<<<< HEAD
-=======
-
 
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'>                        Contact Us;
                       </a>;
                     </div>;
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     {/* Contact Information */}
                     <div className='mt-4 pt-4 border-t border-gray-700'>;
                       <div className='text-xs text-gray-400 mb-2'>;
@@ -1018,15 +886,11 @@ export default function EnhancedServicesShowcase2025(req, res) {
               </AnimatePresence>;
             </motion && motion.div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* No Results Message */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
                 className='text-center py-16'>;
                 <div className='text-6xl mb-4'>🔍</div>;
                 <h3 className='text-2xl font-semibold text-white mb-2'>;
@@ -1036,9 +900,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   Try adjusting your search criteria or filters;
                 </p>              </motion && motion.div>;
 
-=======
-
-=======
                         </span>;
                       </div>;
                       <div className='flex items - center space - x-2 text - sm text - gray - 400'>;
@@ -1106,7 +967,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       </div>;
                     </div>;
                   </motion.div>))}
-=======
                   </motion.div>
 
                 ))  } catch (error) {
@@ -1117,29 +977,23 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
               </AnimatePresence>;
             </motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {/* No Results Message */}
             {filtered_services.length === 0 && (
               <motion.div;
                 initial={{ opacity: 0 }}
-<<<<<<< HEAD
-=======
 
           </div>;
         </section>;
 
-
         {/* Call to Action */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
 
         {/* Call to Action */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1155,12 +1009,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1169,15 +1018,12 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies achieving breakthrough results with our revolutionary services
               </p>
-<<<<<<< HEAD
               {/* Contact Information */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3'>
                   <div className='w-12 h-12 bg-cyan-500/20 rounded-full flex items-center justify-center'>
                     <Target className='w-6 h-6 text-cyan-400' />
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>
                   <span className="text-lg text-white">+1 302 464 0950</span>
                 </div>
@@ -1192,10 +1038,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
                     <Lightbulb className="w-6 h-6 text-green-400" />
                   </div>
               </div>
-<<<<<<< HEAD
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
-=======
 
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
@@ -1230,23 +1074,15 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   </span>                </div>;
               </div>;
 
-
               {/* Action Buttons */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -1254,7 +1090,6 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <Rocket className='ml-2 w-6 h-6' />;
                 </a>;
                 <a
-<<<<<<< HEAD
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
@@ -1316,11 +1151,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   </div>;
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>;
                 </div>;
-=======
                   href='/pricing'
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </motion && motion.div>;
           </div>;
@@ -1329,13 +1161,8 @@ export default function EnhancedServicesShowcase2025(req, res) {
     </EnhancedFuturisticBackground>;
   );
 
-
-<<<<<<< HEAD
-=======
-=======
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 animate={{ opacity: 1 }}
                 className='text - center py - 16';
               >;
@@ -1401,12 +1228,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 >;
                   <span className='relative'>View Pricing</span>;
                   <DollarSign className='ml - 2 w - 6 h - 6' />                </a>;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 );
-=======
   )
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1474,30 +1296,16 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <span className="relative">View Pricing</span>;
                   <DollarSign className="ml-2 w-6 h-6" />;
                 </a>;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>;
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
       </div>;
-<<<<<<< HEAD
     </EnhancedFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

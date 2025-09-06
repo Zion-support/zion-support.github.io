@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Calendar,
   Clock,
   Users,
   CheckCircle,
-=======
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -18,16 +13,13 @@ import {
   Clock, 
   Users, 
   CheckCircle, 
->>>>>>> main
   ArrowRight,
   Phone,
   Mail,
   MapPin,
   Video,
   MessageSquare,
-<<<<<<< HEAD
   Building,;
-
 
 } from "lucide-react";
 const timeSlots = [
@@ -122,9 +114,6 @@ const teamMembers = [
   }
 ];
 export default function CalendarPage() {
-<<<<<<< HEAD
-=======
-=======
 import {;
   Calendar,;
   Clock,;
@@ -137,13 +126,11 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
-=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
   Calendar
   Clock
   Users
@@ -155,7 +142,6 @@ import {
   Video
   MessageSquare
   Building
-=======
   Calendar,
   Clock,
   Users,
@@ -167,8 +153,6 @@ import {
   Video,
   MessageSquare,
   Building,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
@@ -262,7 +246,6 @@ const teamMembers = [;
   },;
 ];
 export default function CalendarPage() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
       <Head>;
@@ -274,22 +257,16 @@ export default function CalendarPage() {;
         <meta
           name="keywords"
           content="schedule, consultation, book call, free consultation, AI experts, IT consulting"
-<<<<<<< HEAD
-=======
 
         />;
       </Head>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Hero Section */}
       <section className="relative py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
             transition={{ duration: 0 && 0.8 }}
             className="text-center">;
@@ -320,8 +297,6 @@ export default function CalendarPage() {;
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Consultation Types */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-7xl mx-auto">;
@@ -374,15 +349,11 @@ export default function CalendarPage() {;
                 </button>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-=======
 
           </div>;
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Team Members */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -427,15 +398,11 @@ export default function CalendarPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-=======
 
           </div>;
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Time Slots */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto">;
@@ -504,7 +471,6 @@ const consultation_types = [;
       "Timeline discussion",
       "Budget estimation",
     ],
-=======
   Building
 } from 'lucide-react';
 
@@ -534,12 +500,10 @@ const consultationTypes = [
     price: "Free",
     icon: MessageSquare,
     features: ["Project assessment", "Solution recommendations", "Timeline discussion", "Budget estimation"]
->>>>>>> main
   },
   {
     title: "Technical Consultation",
     duration: "60 minutes",
-<<<<<<< HEAD
     description:;
       "Deep dive into technical requirements and architecture planning",
     price: "$200",
@@ -550,17 +514,14 @@ const consultationTypes = [
       "Implementation planning",
       "Risk assessment",
     ],
-=======
     description: "Deep dive into technical requirements and architecture planning",
     price: "$200",
     icon: Building,
     features: ["Technical architecture review", "Technology stack recommendations", "Implementation planning", "Risk assessment"]
->>>>>>> main
   },
   {
     title: "Strategy Session",
     duration: "90 minutes",
-<<<<<<< HEAD
     description:;
       "Comprehensive business strategy and digital transformation planning",
     price: "$500",
@@ -575,7 +536,6 @@ const consultationTypes = [
 ];
 ;
 const team_members = [;
-=======
     description: "Comprehensive business strategy and digital transformation planning",
     price: "$500",
     icon: Users,
@@ -584,48 +544,37 @@ const team_members = [;
 ];
 
 const teamMembers = [
->>>>>>> main
   {
     name: "Sarah Johnson",
     role: "CEO & Founder",
     expertise: "Strategic Planning, AI Strategy",
-<<<<<<< HEAD
     image: "/images / team / sarah - johnson.jpg",
     available: true,
-=======
     image: "/images/team/sarah-johnson.jpg",
     available: true
->>>>>>> main
   },
   {
     name: "Michael Chen",
     role: "CTO",
     expertise: "Cloud Architecture, Quantum Computing",
-<<<<<<< HEAD
     image: "/images / team / michael - chen.jpg",
     available: true,
-=======
     image: "/images/team/michael-chen.jpg",
     available: true
->>>>>>> main
   },
   {
     name: "Dr. Emily Rodriguez",
     role: "Head of AI Research",
     expertise: "Machine Learning, AI Research",
-<<<<<<< HEAD
     image: "/images / team / emily - rodriguez.jpg",
     available: false,
-=======
     image: "/images/team/emily-rodriguez.jpg",
     available: false
->>>>>>> main
   },
   {
     name: "David Kim",
     role: "Head of Cybersecurity",
     expertise: "Cybersecurity, Risk Management",
-<<<<<<< HEAD
     image: "/images / team / david - kim.jpg",
     available: true,
   },
@@ -810,15 +759,11 @@ function CalendarPage() {
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-=======
 
           </div>;
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Contact Information */}
       <section className="py-20 px-4 bg-gray-50">;
         <div className="max-w-7xl mx-auto">;
@@ -911,8 +856,6 @@ function CalendarPage() {
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
 
             </motion.div>;
             <motion.div;
@@ -925,7 +868,6 @@ function CalendarPage() {
               <div className="space - y-4">;
                 <div className="flex items - center">;
                   <Clock className="w - 6 h - 6 mr - 4" />;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <div>;
                     <div className="font - semibold">Business Hours</div>;
                     <div className="text - blue - 100">;
@@ -936,18 +878,13 @@ function CalendarPage() {
                 <div className="flex items - center">;
                   <Video className="w - 6 h - 6 mr - 4" />;
                   <div>;
-<<<<<<< HEAD
-=======
                     <div className="font - semibold">Video Calls</div>;
                     <div className="text - blue - 100">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       Zoom, Teams, or Google Meet;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-=======
 
                 <div className="flex items - center">;
                   <MessageSquare className="w - 6 h - 6 mr - 4" />;
@@ -956,13 +893,10 @@ function CalendarPage() {
                     <div className="text - blue - 100">;
                       Available 24 / 7 on our website;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
 
                   className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">;
                   Contact Us Now;
@@ -974,8 +908,6 @@ function CalendarPage() {
         </div>;
       </section>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* CTA Section */}
       <section className="py-20 px-4 bg-white">;
         <div className="max-w-4xl mx-auto text-center">;
@@ -999,9 +931,6 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
                 Learn About Us;
               </Link>;
@@ -1009,8 +938,6 @@ function CalendarPage() {
           </motion && motion.div>;
         </div>;
       </section>;
-=======
-=======
     image: "/images/team/david-kim.jpg",
     available: true
   }
@@ -1295,7 +1222,6 @@ export default function Calendar() {
               </Link>
               <Link
                 href="/about"
->>>>>>> main
                 className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Learn About Us
@@ -1304,9 +1230,6 @@ export default function Calendar() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     </div>;
   );
               <div className="mt - 8">;
@@ -1356,8 +1279,6 @@ export default function Calendar() {
         </div>;
       </section>;
     </div>);
-=======
     </div>
   );
->>>>>>> main
 }

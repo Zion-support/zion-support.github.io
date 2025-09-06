@@ -42,13 +42,7 @@ export function AvailabilityFilter({
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { AvailabilityFilterProps } from "@/types/filters",;
@@ -66,23 +60,14 @@ const AVAILABILITY_OPTIONS = [;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       </button>;
 
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;
             <div key={option && option.id} className="flex items-center">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Checkbox
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
@@ -97,7 +82,6 @@ const AVAILABILITY_OPTIONS = [;
         </div>;
       )}
   );
-=======
     </div>
   );
 }
@@ -110,12 +94,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project - based" },
 ];
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
 export /**
  * AvailabilityFilter - Function description
  */
@@ -203,6 +182,3 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

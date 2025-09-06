@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {render, screen} from '@testing-library/react',;
 import {MemoryRouter} from 'react-router-dom',;
 import {CategoryCard} from '@/components/CategoryCard',;
-=======
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {render, screen} from '@testing-library/react',
 import {MemoryRouter} from 'react-router-dom',
 import {CategoryCard} from '@/components/CategoryCard',
 
-<<<<<<< HEAD
-=======
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
 
-
-
-=======
 import { render, screen  } from '@testing-library/react';
 import { MemoryRouter  } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -43,28 +31,18 @@ import { CategoryCard } from '@/components/CategoryCard',
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 import {render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {CategoryCard} from '@/components/CategoryCard';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
       <CategoryCard title="Test Category" description="desc" icon="*" />
     </MemoryRouter>
   ),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   const link = screen && screen.getByRole('link', { name: /test category/i }),;
   expect(link).toHaveAttribute('href/category/test-category'),;
 }),;
@@ -118,9 +96,6 @@ it ('treats underscores as spaces in slug', () => {
       <CategoryCard title='AI_Tools' description='desc' icon='*' />;
   const link = screen.getByRole ('link', { name: /ai_tools / i });
   expect (link).toHaveAttribute ('href / category / ai - tools');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 it('renders category card with link to slug', () => {;
   render(;
@@ -128,8 +103,6 @@ it('renders category card with link to slug', () => {;
       <CategoryCard title='Test Category' description='desc' icon='*' />;
     </MemoryRouter>;
   ),;
-<<<<<<< HEAD
-
 
 import {render, screen} from '@testing - library / react';
 import {MemoryRouter} from 'react-router-dom';
@@ -155,7 +128,6 @@ it ('treats underscores as spaces in slug', () => {
   const link = screen.getByRole ('link', { name: /ai_tools / i });
   expect (link).toHaveAttribute ('href / category / ai - tools');
 
-=======
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
@@ -186,14 +158,10 @@ it('treats underscores as spaces in slug', () => {
   ),
 
   const link = screen.getByRole('link', { name: /ai_tools/i }),
-<<<<<<< HEAD
 
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import { render, screen } from '@testing-library/react',;
 import { MemoryRouter } from 'react-router-dom',;
 import { CategoryCard } from '@/components/CategoryCard',;
@@ -252,10 +220,6 @@ it ('treats underscores as spaces in slug', () => {
 ;
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   const link = screen.getByRole('link', { name: /test category/i });
   expect(link).toHaveAttribute('href/category/test-category');
@@ -272,8 +236,3 @@ it('treats underscores as spaces in slug', () => {
       <CategoryCard title='AI_Tools' description='desc' icon='*' />
   const link = screen.getByRole('link', { name: /ai_tools/i });
   expect(link).toHaveAttribute('href/category/ai-tools');
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

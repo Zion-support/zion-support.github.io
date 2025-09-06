@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     <>;
@@ -31,10 +26,6 @@
     </>);
 }
 
-
-
-<<<<<<< HEAD
-=======
       </Head>
       <div className=&quot;min-h-screen bg-black text-white&quot;>
         <section className=&quot;container mx-auto px-4 py-20&quot;>
@@ -119,8 +110,3 @@ export default function IndustrySolutions(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

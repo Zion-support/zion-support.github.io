@@ -1,34 +1,19 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
   const [disputeId, setDisputeId] = useState<string | null>(null),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   const [isLoading, setIsLoading] = useState(true);
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isLoading, setIsLoading] = useState(true);
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -38,37 +23,24 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
   const [disputeId, setDisputeId] = useState<string | null>(null),
   const [isLoading, setIsLoading] = useState(true),
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
 
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         setIsLoading(false);
         return
       }
       try {
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
         setIsLoading(false),
         return
       }
       try {
-<<<<<<< HEAD
         setIsLoading(true);
         let query = supabase
           .from("disputes")
           .select("id, status")
           .eq("project_id", projectId);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         setIsLoading(true),
         
         let query = supabase
@@ -76,51 +48,36 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           .select("id, status")
           .eq("project_id", projectId),
         
-<<<<<<< HEAD
-=======
         query = query && query.order("status", { ascending: true });
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
-<<<<<<< HEAD
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
 
         query = query && query.order("status", { ascending: true });
-        
 
         const { data, error } = await query;
         if (error) throw error;
-=======
 
-=======
           query = query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
         query = query.order("status", { ascending: true });
         const { data, error } = await query;
         if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         query = query.order("status", { ascending: true }),
         
         const { data, error } = await query,
         
         if (error) throw error,
-        
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query && query.eq("milestone_id", milestoneId)
         }
         // Order by status priority: open, under_review, resolved, closed
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
@@ -184,29 +141,17 @@ if ( {) {
           setDisputeId (null);
         }
       } catch (err) {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         console.error ("Error checking dispute status:", err);
         setIsUnderDispute (false);
         setDisputeStatus (null);
         setDisputeId (null);
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       } finally {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
           setIsUnderDispute(true),
@@ -218,19 +163,15 @@ if ( {) {
           setDisputeId(null)
         }
       } catch (err) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
         setDisputeId(null)
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
 
     isLoading 
 
-=======
-=======
     isLoading 
 
       }
@@ -244,15 +185,12 @@ if ( {) {
     isLoading
 
     isLoading 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     isLoading
 
     isLoading 
 
     isLoading 
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -266,22 +204,12 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
         setIsLoading(false),;
         return;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     check_dispute ();
   }, [project_id, milestone_id]);
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 ;
       try {;
         setIsLoading(true),;
@@ -294,10 +222,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
           query = query.eq("milestone_id", milestoneId);
         }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         // Order by status priority: open, under_review, resolved, closed;
         query = query.order("status", { ascending: true }),;
         const { data, error } = await query,;
@@ -328,22 +253,14 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
   return {
     isUnderDispute,
     dispute_status,
     dispute_id;
     is_loading;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
@@ -434,7 +351,3 @@ if (error) throw error;
 }
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

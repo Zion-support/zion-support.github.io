@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 }
 
@@ -21,8 +20,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <meta name="description" content={description || 'Leading technology solutions provider'} />
         {keywords && <meta name="keywords" content={keywords} />}
 import Layout from './Layout';
-
-
 
 ;
 interface MainLayoutProps {
@@ -47,7 +44,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
-=======
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
@@ -68,13 +64,11 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
->>>>>>> main
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -94,8 +88,6 @@ export default function MainLayout({
   image = '/og - image.jpg',
   url;
   return (
-
-
 
         {image && <meta property="og:image" content={image} />}
         {url && <meta property="og:url" content={url} />}
@@ -181,7 +173,6 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
-=======
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
@@ -197,4 +188,3 @@ export default MainLayout;
     </>
   );
 }
->>>>>>> main

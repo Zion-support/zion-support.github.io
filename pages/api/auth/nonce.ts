@@ -11,7 +11,6 @@ function randomString(length: number) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
-<<<<<<< HEAD
 
   res.status(200).json({ nonce })
 };

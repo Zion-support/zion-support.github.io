@@ -1,7 +1,5 @@
 
 
-
-
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -9,11 +7,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {useState} from "react";
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -22,14 +16,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useState } from './react';
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 ;
-<<<<<<< HEAD
 
-=======
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -38,29 +25,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
 }
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
@@ -150,9 +121,7 @@ export function PageViewsTable() {
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {formatPathName(page.path)}
                   </div>
                   <div className="flex items-center gap-3">
@@ -175,21 +144,14 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
@@ -319,9 +281,6 @@ export function PageViewsTable() {;
                       <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">;
                         <div;
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           style={{ width: `${percentage}%` }}
                         />;
                       </div>;
@@ -336,24 +295,16 @@ export function PageViewsTable() {;
               No page view data available for this time period;
             </div>;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
   );
 }
 
-=======
-=======
           )}
         </div>;
       </CardContent>;
     </Card>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 export /**
@@ -461,9 +412,6 @@ if (return 'Home Page', ) {
 }= await supabase .from ('analytics events') .select ('path, count') .eq ('event typepage view') .gte ('created at', new Date (Date.now () - days * 24 * 60 * 60 * 1000) .toISOString () ) if (error) throw error;
 return data || [] 
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 });
 //Format path names for better display <div> <CardTitle className="text-white text-lg" >Top Pages</CardTitle> <CardDescription className="text-zion-slate-light" >Most viewed pages on your platform</CardDescription> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light" > <SelectItem value="1d" >Last 24h</SelectItem> <SelectItem value="7d" >Last 7 days</SelectItem> <SelectItem value="30d" >Last 30 days</SelectItem> <SelectItem value="90d" >Last 3 months</SelectItem> <SelectItem value="365d" >Last year</SelectItem> </SelectContent> </Select> </div> </CardHeader> <CardContent> </div> </div> </div>) 
 }) ) : (<div className="text-center py-8 text-zion-slate" > No page view data available for this time period </div>) 
@@ -482,9 +430,6 @@ return data || []
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           )}
 }
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

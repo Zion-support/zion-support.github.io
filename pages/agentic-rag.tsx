@@ -1,37 +1,26 @@
-<<<<<<< HEAD
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
 
-=======
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
+
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-=======
-
 
 	},
 	const plans = [
@@ -47,8 +36,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 
 	return (_<UltraFuturisticMatrixBackground>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -60,15 +47,9 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 					<p className="text-xl text-gray-300">Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.</p>
 					<div className="mt-6 flex justify-center gap-3">
 
-
-<<<<<<< HEAD
-=======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</Link>
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -80,9 +61,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 								{p.items.map((i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
 
-
-<<<<<<< HEAD
-=======
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,9 +74,6 @@ export default function AgenticRAGPage() {_const _contactInfo = {
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -125,11 +100,8 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 					</div>
 					<div className="text-center">
 
-
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</div>
 				</div>
 			</div>
@@ -141,13 +113,8 @@ export default function AgenticRAGPage() {_const _contactInfo = {
   }
 }
 
-=======
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react',
 import Head from 'next / head',
 import UltraFuturisticMatrixBackground from '../components / ui / UltraFuturisticMatrixBackground',
@@ -224,9 +191,6 @@ return (
   </div>;
   </UltraFuturisticMatrixBackground>);
 
-
-<<<<<<< HEAD
-=======
 			<div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
 				<div className=&quot;text-center max-w-4xl mx-auto mb-12&quot;>
 					<h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6&quot;>Agentic RAG</h1>
@@ -245,38 +209,26 @@ return (
 							<ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
 								{p.items.map((i) => (
 									<li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
 	}
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] }
@@ -285,7 +237,6 @@ export default function AgenticRAGPage() {
 
 	return (
 		<UltraFuturisticMatrixBackground>
-=======
 	},
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
@@ -297,9 +248,7 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
 		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (_<UltraFuturisticMatrixBackground>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -310,17 +259,10 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">Agentic RAG</h1>
 					<p className="text-xl text-gray-300">Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.</p>
 					<div className="mt-6 flex justify-center gap-3">
-<<<<<<< HEAD
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</a>
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</a>
-=======
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</Link>
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -331,22 +273,13 @@ export default function AgenticRAGPage() {_const _contactInfo = {
 							<ul className="space-y-2 text-gray-300 text-sm">
 								{p.items.map((i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 								))}
 							</ul>
 						</div>
 					))}
-=======
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-=======
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-<<<<<<< HEAD
     // Split by lines and process
     const lines = content.split('\n');
     const resolvedLines = [];
@@ -23,13 +18,13 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<< HEAD')) {
+      if (line.includes('')) {
         inConflict = true;
         conflictStart = i;
         continue;
       }
       
-      if (line.includes('=======')) {
+      if (line.includes('')) {
         // Skip everything until we find the end marker
         continue;
       }
@@ -75,7 +70,7 @@ function findFilesWithConflicts(dir) {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<< HEAD')) {
+        if (content.includes('')) {
           files.push(fullPath);
         }
       }
@@ -98,13 +93,10 @@ for (const file of filesWithConflicts) {
 }
 
 console.log(`Resolved conflicts in ${resolvedCount} files`);
-=======
-    // Remove all merge conflict markers and keep the content after =======
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n?/g, '');
-    content = content.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
-    
-    // Clean up any remaining ======= markers
-    content = content.replace(/=======\n?/g, '');
+    // Remove all merge conflict markers and keep the content after     content = content.replace(/[\s\S]*?\n?/g, '');
+    content = content.replace(/    
+    // Clean up any remaining  markers
+    content = content.replace(/\n?/g, '');
     
     // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
@@ -129,7 +121,6 @@ files.forEach(file => {
 });
 
 console.log('Merge conflicts resolved!');
-=======
 const { execSync } = require('child_process');
 
 function resolveMergeConflicts() {
@@ -160,5 +151,3 @@ function resolveMergeConflicts() {
 }
 
 resolveMergeConflicts();
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440

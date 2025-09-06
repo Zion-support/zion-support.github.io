@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               Something went wrong on our end. We&apos,re working to fix it.
               Something went wrong on our end. We're working to fix it.
               Something went wrong on our end. We&apos,re working to fix it. 
               Something went wrong on our end. We're working to fix it.
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Please try again in a few moments.
             </p>
           </div>
@@ -25,9 +13,6 @@
               href="/" 
             <Link
               href="/"
-
-
-
 
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
@@ -39,9 +24,6 @@
               <Link
                 href="/about"
 
-
-
-
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
@@ -51,9 +33,6 @@
               <Link
                 href="/services"
 
-
-
-
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
@@ -62,9 +41,6 @@
                 href="/contact" 
               <Link
                 href="/contact"
-
-
-
 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
@@ -76,16 +52,9 @@
       </div>
     </>
   )
-<<<<<<< HEAD
 
-=======
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -94,12 +63,6 @@ export default /**
  */
 function Custom500() {
   return (
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React from 'react';
 import Head from 'next/head';
@@ -107,12 +70,6 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -166,13 +123,7 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
 
 import Head from 'next/head';
@@ -316,10 +267,4 @@ export default function Custom500(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

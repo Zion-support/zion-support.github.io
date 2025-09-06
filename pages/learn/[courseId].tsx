@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import { useRouter  } from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar',
@@ -37,22 +36,15 @@ export default function CourseView() {;
         percent: 0
         completedLessons: []
       }
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
-<<<<<<< HEAD
-=======
 
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold |0;
-=======
-=======
         fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`)
       ]);
@@ -112,8 +104,6 @@ async function onFinalQuizComplete(score: number) {
     setFinalPassed(passed)
   }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -141,10 +131,6 @@ async function onFinalQuizComplete(score: number) {
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
@@ -152,30 +138,21 @@ async function onFinalQuizComplete(score: number) {
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
-<<<<<<< HEAD
-=======
   return (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
-<<<<<<< HEAD
-=======
 
-=======
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -183,7 +160,6 @@ import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
-<<<<<<< HEAD
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -250,19 +226,12 @@ export default function CourseView(req, res) {
   }
 }
   if (!course) return <div>Loading...</div>,
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <h1 className="text-2xl font-semibold">{course.title}</h1>
           <div className="text-gray-500 text-sm">{course.category} • {course.level}</div>
           <div className="mt-3">
@@ -270,7 +239,6 @@ export default function CourseView(req, res) {
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
-<<<<<<< HEAD
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
@@ -293,16 +261,10 @@ export default function CourseView(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
             </ul>;
           </aside>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <section className='lg:col-span-3 space-y-4'>;
             {currentLesson ? (;
               <div className='border rounded p-4'>;
@@ -325,14 +287,11 @@ export default function CourseView(req, res) {
                   >;
                     Mark Complete;
                   </button>;
-<<<<<<< HEAD
-=======
                 )}
               </div>;
             ) : (;
               <div className='text-sm text-gray-500'>Select a lesson</div>;
             )}
-
 
             {course && course.finalQuiz?.questions?.length ? (;
               <div className='border rounded p-4'>;
@@ -348,7 +307,6 @@ export default function CourseView(req, res) {
                   </div>                )}
               </div>;
             ) : null}
-
 
             {finalPassed && <CertificatePreview courseId={courseId} />}          </section>;
         </div>;
@@ -535,13 +493,7 @@ if (return <div > Loading...</div>) {
         </div>;
       </div>;
 
-
-=======
-
           <section className="lg:col-span-3 space-y-4">
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -552,13 +504,9 @@ if (return <div > Loading...</div>) {
                   </div>
                 ) : (
                   <button className="mt-3 px-4 py-2 bg-green-600 text-white rounded" onClick={() => markLessonComplete(currentLesson.id)}>Mark Complete</button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 )}
               </div>
             ) : (
-
 
               <div className="text-sm text-gray-500">Select a lesson</div>
             )  } catch (error) {
@@ -567,16 +515,11 @@ if (return <div > Loading...</div>) {
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             {course.finalQuiz?.questions?.length ? (
               <div className="border rounded p-4">
                 <div className="font-medium mb-2">Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
-<<<<<<< HEAD
-=======
-
 
                   <div className="mt-3 text-green-700">Passed! You can download your certificate below.</div>
                 )  } catch (error) {
@@ -599,19 +542,12 @@ if (return <div > Loading...</div>) {
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           </section>
         </div>
       </div>
 
       <div className="space-y-4">
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -620,36 +556,12 @@ if (return <div > Loading...</div>) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
-
-=======
 
   )
 }
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-=======
 
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

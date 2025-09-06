@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
-=======
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -28,16 +21,9 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
-
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -47,14 +33,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "project-help"
@@ -63,11 +42,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
   }
   {
 
@@ -78,25 +53,15 @@ const categories: ForumCategoryInfo[] = [
 
     icon: "Code"
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
     id: "ai-tools",
     name: "AI Tools Discussion",
     description: "Discuss AI tools, frameworks, and best practices.",
     adminOnly: false,
     icon: "Code"
-<<<<<<< HEAD
   },
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "feedback"
@@ -105,22 +70,13 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
   },
 
-
-=======
   },
-
 
   }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   {
 
     id: "announcements"
@@ -129,8 +85,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -138,29 +92,19 @@ import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 
-=======
-
 ],
 
-
-=======
-
-
 ],
-
 
 ];
 ],
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const iconMap = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone
-<<<<<<< HEAD
-=======
 }
 export const ForumCategories = () => {
   const { user } = useAuth();
@@ -181,10 +125,7 @@ export const ForumCategories = () => {
     category => !category.adminOnly || isAdmin
   ),
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 },
-
 
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
@@ -205,15 +146,12 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-<<<<<<< HEAD
-=======
 
       })}
     </div>
   )
 }
 export default ForumCategories;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -226,32 +164,25 @@ import {;
   Megaphone;
 } from "@/components/icons",;
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
-<<<<<<< HEAD
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
   };
-=======
     description: "Tips, strategies, and questions about getting hired on the platform.",;
     adminOnly: false,;
     icon: "Briefcase";
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
-<<<<<<< HEAD
   };
   {;
     id: "ai-tools",;
@@ -260,7 +191,6 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   };
-=======
   },;
   {;
     id: "ai-tools",;
@@ -269,18 +199,14 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
-<<<<<<< HEAD
   };
-=======
   },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -288,14 +214,9 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
-<<<<<<< HEAD
 ];
 
 const iconMap = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Link } from './react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { use_auth } from '@/hooks / use_auth';
@@ -344,10 +265,7 @@ const icon_map = {
   MessageSquare;
   Code;
   FileText;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   Megaphone;
 };
 
@@ -357,7 +275,6 @@ export const ForumCategories = () => {;
 
   const visibleCategories = categories && categories.filter(;
     category => !category && category.adminOnly || isAdmin;
-<<<<<<< HEAD
 
   );
   return (
@@ -366,15 +283,11 @@ export const ForumCategories = () => {;
       {visibleCategories && visibleCategories.map((category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
 
-=======
   );
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
       {visibleCategories && visibleCategories.map((category) => {;
         const Icon = iconMap[category && category.icon as keyof typeof iconMap],;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
@@ -391,22 +304,16 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>;
   );
 };
 
-
-=======
     </div>;
   );
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default ForumCategories;
 
-=======
   Megaphone;
 }
 ;
@@ -441,9 +348,6 @@ export const ForumCategories = () =>: any {
 ;
 export default ForumCategories;
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
@@ -533,9 +437,5 @@ export const ForumCategories = () => {;
   );
 };
 export default ForumCategories;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
 export default ForumCategories;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React, { useState, useEffect } from 'react';
 
@@ -9,29 +6,16 @@ import Head from 'next / head';
 ;
 
 interface Partner {
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface Partner {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface Partner {;
   id: string;
   code: string;
   name: string;
   status: 'active' | 'inactive' | 'pending';
   commission: number;
-<<<<<<< HEAD
-=======
-
 
 const mockPartners: Partner[] = [;
   {;
@@ -76,31 +60,19 @@ const mockPartners: Partner[] = [;
 ];
 const AdminPartnersPage: React.FC = () => {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
     const json = await res.json();
     setFlags(json.flags |[]);
-<<<<<<< HEAD
 
-=======
-=======
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
   const [selected, setSelected] = useState<string>('');
   const [flags, setFlags] = useState<any[]>([]);
-<<<<<<< HEAD
-
 
 import { useEffect, useState } from 'react';
 export default function AdminPartners(req, res) {
@@ -200,7 +172,6 @@ export default function AdminPartners(req, res) {
 }
                     className="w-24 border rounded px-2 py-1"
 
-
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
@@ -223,7 +194,6 @@ export default function AdminPartners(req, res) {
                 <td className='py-2 pr-4'>{p && p.status}</td>;
                 <td className='py-2 pr-4'>;
                   <input
-
 
                     }
                     className='w-24 border rounded px-2 py-1';
@@ -254,14 +224,11 @@ export default function AdminPartners(req, res) {
                     Approve;
                   </button>;
 
-
                     }
                   >;
                     Reject;
                   </button>;
 
-
-=======
 useEffect(() => {
     (async () => {
       try {
@@ -312,8 +279,6 @@ useEffect(() => {
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
 
-
-
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
@@ -321,10 +286,7 @@ useEffect(() => {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
       <div className='overflow-auto'>;
@@ -347,7 +309,6 @@ useEffect(() => {
                 <td className='py-2 pr-4'>;
                   <input
 
-
                     }
                     className='w-24 border rounded px-2 py-1';
                   />;
@@ -358,7 +319,6 @@ useEffect(() => {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
-=======
                     on_blur={e =>;
                       update_partner (p.code, {
                         commission_rate: Number (e.target.value),
@@ -373,20 +333,16 @@ useEffect(() => {
                     on_click={() =>;
                       update_partner (p.code, { status: 'approved' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }
                   >;
                     Approve;
                   </button>;
-
 
                     }
                   >;
                     Reject;
                   </button>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -395,10 +351,6 @@ useEffect(() => {
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </tbody>;
@@ -441,8 +393,6 @@ useEffect(() => {
           </div>;
         </div>;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -460,8 +410,6 @@ useEffect(() => {
               <label className="block text-sm font-medium mb-2">Filter by Status</label>;
               <select
                 value={statusFilter}
-<<<<<<< HEAD
-=======
 
                   <button;
                     className='px - 2 py - 1 rounded border';
@@ -539,7 +487,6 @@ useEffect(() => {
             <h2 className="text - lg font - semibold">Partners ({filtered_partners.length})</h2>;
           </div>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {loading ? (
             <div className="text - center py - 8">Loading partners...</div>) : filtered_partners.length === 0 ? (
             <div className="text - center py - 8 text - gray - 500">;
@@ -601,8 +548,6 @@ useEffect(() => {
                       <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
                         <div className="flex space - x-2">;
                           {partner.status === 'pending' && (
-<<<<<<< HEAD
-=======
 
                 onChange={(e) => setStatusFilter(e && e.target.value)}
                 className="w-full p-2 border rounded-md";
@@ -685,7 +630,6 @@ useEffect(() => {
                           {partner && partner.status === 'pending' && (;
                             <>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                               <button
                                 onClick={() => handleStatusChange(partner && partner.id, 'active')}
                                 className="text-green-600 hover:text-green-900";
@@ -716,14 +660,12 @@ useEffect(() => {
                               Activate;
                             </button>;
                           )}
-<<<<<<< HEAD
           )}
         </div>
       </main>
     </>
   );
 
-=======
                           <button className="text-blue-600 hover:text-blue-900">;
                             <>;
                               <button;
@@ -764,7 +706,6 @@ useEffect(() => {
     </>;
   );
 
-=======
                     </tr>))}
                 </tbody>;
               </table>;
@@ -773,20 +714,11 @@ useEffect(() => {
       </main>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
 }
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -799,10 +731,4 @@ useEffect(() => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

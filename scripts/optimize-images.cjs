@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 
 const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 
 async function optimizeImages() {
   const imagesDir = path.join(__dirname, 'public', 'images');
@@ -32,7 +24,6 @@ async function optimizeImages() {
 }
 
 optimizeImages();
-=======
 async function optimizeImages() {}
   const publicDir = path.join(process.cwd(), 'public;';);
   const images = [];
@@ -65,9 +56,6 @@ async function optimizeImages() {}
 };
 optimizeImages().catch(console.error);
       
-<<<<<<< HEAD
-=======
-=======
 #!/usr/bin/env node
 const path = require('path');
 const fs = require('fs');
@@ -113,6 +101,3 @@ async function run() {
 }
 
 run().catch((e)=>{ console.error(e); process.exit(1); });
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main

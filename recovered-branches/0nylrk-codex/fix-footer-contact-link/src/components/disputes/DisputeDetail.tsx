@@ -14,28 +14,16 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-react";
 import {useAuth} from "@/hooks/useAuth";
 import {toast} from "sonner";
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function DisputeDetail() {;
   // useParams may be untyped in this environment, so avoid passing a;
-=======
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -56,22 +44,16 @@ export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
 
-<<<<<<< HEAD
   const { disputeId } = useParams() as { disputeId?: string }
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [dispute, setDispute] = useState<any>(null);
   const [messages, setMessages] = useState<DisputeMessage[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [isSending, setIsSending] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const [resolution, setResolution] = useState({;
     summary: "",;
@@ -86,8 +68,6 @@ export function DisputeDetail() {
 
     const loadDisputeData = async () => {;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       setIsLoading(true);
       try {;
         const disputeData = await getDisputeById(disputeId);
@@ -95,11 +75,8 @@ export function DisputeDetail() {
           toast && toast.error("Dispute not found");
           navigate("/dashboard/disputes");
           return;
-<<<<<<< HEAD
         }
         setDispute(disputeData);
-
-
 
         const messagesData = await getDisputeMessages(disputeId);
         setMessages(messagesData);
@@ -118,14 +95,11 @@ export function DisputeDetail() {
   const handleStatusChange = async (status: DisputeStatus) => {;
     if (!disputeId) return,;
 
-
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {;
       setDispute({ ...dispute, status });
     }
 
-
-=======
   const [resolution, setResolution] = useState({;
     summary: "",;
     resolution_type: "compromise"}),;
@@ -193,7 +167,6 @@ export function DisputeDetail() {
   
   useEffect(() => {
     if (!disputeId) return,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     const loadDisputeData = async () => {
       setIsLoading(true),
@@ -204,13 +177,11 @@ export function DisputeDetail() {
           navigate("/dashboard/disputes"),
           return
         }
-<<<<<<< HEAD
 
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
 
-=======
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
@@ -219,19 +190,15 @@ export function DisputeDetail() {
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
 
   };
 
-=======
-=======
   };
 
       }
@@ -243,20 +210,14 @@ export function DisputeDetail() {
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {
       setDispute({ ...dispute, status })
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   const handleResolveDispute = async () => {
     if (!disputeId) return;
   };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   };
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -325,37 +286,20 @@ export function DisputeDetail() {;
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
     }
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-    
     const success = await resolveDispute(disputeId, resolution),
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
       return
     }
-<<<<<<< HEAD
     const success = await resolveDispute(disputeId, resolution);
     
     const success = await resolveDispute(disputeId, resolution),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -365,32 +309,20 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
-<<<<<<< HEAD
 
   };
-
-<<<<<<< HEAD
-=======
-
-=======
 
   }
   const handleSendMessage = async () => {
     if (!disputeId |!message.trim()) return;
     setIsSending(true);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -405,39 +337,21 @@ export function DisputeDetail() {;
       setIsSending(false)
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   },;
 
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
 
-=======
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
 
   };
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!resolution && resolution.summary) {;
       toast && toast.error("Please provide a resolution summary");
       return;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({;
@@ -449,21 +363,14 @@ export function DisputeDetail() {;
       });
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const handleSendMessage = async () => {;
     if (!disputeId || !message && message.trim()) return;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setIsSending(true);
     try {;
       const success = await addDisputeMessage(disputeId, message, isAdmin),;
@@ -478,15 +385,12 @@ export function DisputeDetail() {;
     } finally {;
       setIsSending(false);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   };
 
   if (isLoading) {;
 
     return (
-=======
   };
   if (isLoading) {;
     return (
@@ -538,39 +442,22 @@ export function DisputeDetail() {;
   },;
   if (isLoading) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="p-8 text-center">;
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
         <p>Loading dispute details...</p>;
       </div>;
     );
 
-
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
-
-=======
-=======
   }
-
 
   }
 
   if (!dispute) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
 
   }
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -582,11 +469,7 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       case "open": return "default",
       case "under_review": return "secondary",
 
@@ -596,19 +479,13 @@ export function DisputeDetail() {;
 
 ;
 
-<<<<<<< HEAD
   if (!dispute) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-=======
-=======
 ;
 
   if (!dispute) {;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
     return (
-<<<<<<< HEAD
       case "open": return "default";
       case "under_review": return "secondary"
       case "open": return "default",
@@ -628,9 +505,6 @@ export function DisputeDetail() {;
 ;
   if (!dispute) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="p-8 text-center">;
         <p>Dispute not found</p>;
         <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
@@ -639,24 +513,13 @@ export function DisputeDetail() {;
       </div>;
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const getStatusBadgeVariant = (status: DisputeStatus) => {;
     switch (status) {;
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -790,8 +653,6 @@ if ( {) {
       console.error ("Error sending message:", error);
     } finally {
       setIsSending (false);
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
   }
 ;
@@ -822,14 +683,9 @@ if ( {) {
       case "open": return "default";
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from './success'; to "outline";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       case "closed": return "outline";
       default: return "default";
     }
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
@@ -956,11 +812,7 @@ export function DisputeDetail() {;
       case "closed": return "outline";
       default: return "default";
     }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
   return (;
     <div className="container mx-auto p-4 space-y-6">;
@@ -969,15 +821,7 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -996,10 +840,6 @@ export function DisputeDetail() {;
           )}
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
@@ -1010,7 +850,6 @@ export function DisputeDetail() {;
         </Alert>
       )}
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
   return (
     <div className="container mx - auto p - 4 space - y-6">;
@@ -1036,28 +875,13 @@ export function DisputeDetail() {;
             </Button>)}
         </div>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
           <Check className="h - 4 w - 4" />;
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-      
-
-
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -1106,13 +930,6 @@ export function DisputeDetail() {;
                           <span>Under review</span>
                         </li>
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </AlertDescription>;
         </Alert>)}
       <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
@@ -1161,22 +978,11 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
                           <span > Under review</span>;
                         </li>)}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       {dispute.resolved_at && (
                         <li className="flex gap - 2 items - center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
                             {dispute.status !== "open" ? "3" : "2"}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
@@ -1190,10 +996,7 @@ export function DisputeDetail() {;
             Reported {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
           </p>;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
@@ -1205,10 +1008,7 @@ export function DisputeDetail() {;
           )}
         </div>;
       </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {dispute && dispute.status === "resolved" && dispute && dispute.resolution_summary && (;
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;
           <Check className="h-4 w-4" />;
@@ -1218,9 +1018,7 @@ export function DisputeDetail() {;
           </AlertDescription>;
         </Alert>;
       )}
-<<<<<<< HEAD
 
-=======
   if (!dispute) {;
     return (;
       <div className="p-8 text-center">;
@@ -1279,7 +1077,6 @@ export function DisputeDetail() {;
         </Alert>;
       )}
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -1289,11 +1086,8 @@ export function DisputeDetail() {;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
-<<<<<<< HEAD
 
-=======
             ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -1303,7 +1097,6 @@ export function DisputeDetail() {;
                 <CardContent className="space-y-4">;
                   <div>;
                     <h3 className="font-medium">Reason</h3>;
-<<<<<<< HEAD
                     <p>{disputeReasonLabels[dispute && dispute.reason_code as any] || dispute && dispute.reason_code}</p>;
                   </div>;
 
@@ -1325,7 +1118,6 @@ export function DisputeDetail() {;
                     </div>;
                   )}
 
-=======
                     <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>;
                   </div>;
                   ;
@@ -1347,29 +1139,24 @@ export function DisputeDetail() {;
                     </div>;
                   )}
                   ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <div>;
                     <h3 className="font-medium">Timeline</h3>;
                     <ul className="space-y-2 mt-2">;
                       <li className="flex gap-2 items-center">;
                         <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">1</Badge>;
-<<<<<<< HEAD
                         <span>Created on {format(new Date(dispute && dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
 
                       {dispute && dispute.status !== "open" && (;
-=======
                         <span>Created on {format(new Date(dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
                       ;
                       {dispute.status !== "open" && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         <li className="flex gap-2 items-center">;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
                       )}
-<<<<<<< HEAD
 
                       {dispute && dispute.resolved_at && (;
                         <li className="flex gap-2 items-center">;
@@ -1377,7 +1164,6 @@ export function DisputeDetail() {;
                             {dispute && dispute.status !== "open" ? "3" : "2"}
                           </Badge>;
                           <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-=======
                       ;
                       {dispute.resolved_at && (;
                         <li className="flex gap-2 items-center">;
@@ -1385,26 +1171,21 @@ export function DisputeDetail() {;
                             {dispute.status !== "open" ? "3" :"2"}
                           </Badge>;
                           <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         </li>;
                       )}
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
-<<<<<<< HEAD
 
               {dispute && dispute.status === "resolved" && (;
-=======
               ;
               {dispute.status === "resolved" && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Card>;
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
                   <CardContent>;
-<<<<<<< HEAD
                     <p className="whitespace-pre-wrap">{dispute && dispute.resolution_summary}</p>;
 
                     {dispute && dispute.resolution_type && (;
@@ -1414,19 +1195,11 @@ export function DisputeDetail() {;
                         </Badge>;
                       </div>;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </CardContent>;
                 </Card>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           </Badge>;
                           <span > Resolved on {format (new Date (dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                         </li>)}
@@ -1458,10 +1231,7 @@ export function DisputeDetail() {;
                 </CardHeader>;
                 <CardContent>;
                   <div className="space - y-6 max - h-[600px] overflow - y-auto p - 2">;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     {messages.length === 0 ? (
                       <div className="text - center py - 12">;
                         <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
@@ -1471,11 +1241,8 @@ export function DisputeDetail() {;
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
                           const isCurrentUser = user?.id === msg.user_id;
-<<<<<<< HEAD
-=======
             </TabsContent>;
 
-=======
             </TabsContent>;
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>;
                     ;
@@ -1490,7 +1257,6 @@ export function DisputeDetail() {;
               )}
             </TabsContent>;
             ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <TabsContent value="messages" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -1499,26 +1265,19 @@ export function DisputeDetail() {;
                 </CardHeader>;
                 <CardContent>;
                   <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
-<<<<<<< HEAD
                     {messages && messages.length === 0 ? (;
-=======
                     {messages.length === 0 ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       <div className="text-center py-12">;
                         <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                         <p className="text-muted-foreground">No messages yet</p>;
                       </div>;
-<<<<<<< HEAD
                     ) : (;
                       messages;
                         .filter(msg => !msg && msg.is_admin_note);
                         .map((msg) => {;
                           const isCurrentUser = user?.id === msg && msg.user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           return (
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                                 } p-4 rounded-lg`}>;
                                 <div className="flex items-center gap-2 mb-2">;
                                   <Avatar className="h-6 w-6">;
@@ -1538,10 +1297,8 @@ export function DisputeDetail() {;
                               </div>;
                             </div>;
                           );
-<<<<<<< HEAD
                         });
 
-=======
                     ) :(;
                       messages;
                         .filter(msg => !msg.is_admin_note);
@@ -1578,29 +1335,19 @@ export function DisputeDetail() {;
                             </div>;
                           ),;
                         });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                           return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     )}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Textarea
                       placeholder="Type your message here..."
                       value={message}
                       onChange={(e) => setMessage(e && e.target.value)}
                       className="min-h-[100px]";
                       disabled={isSending}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                             <div;
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}
@@ -1644,8 +1391,6 @@ export function DisputeDetail() {;
                     <div className="flex justify - end">;
                       <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
                         {is_sending ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
-=======
                     <Textarea;
                       placeholder="Type your message here...";
                       value={message}
@@ -1656,14 +1401,12 @@ export function DisputeDetail() {;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>;
                         {isSending ? "Sending..." :"Send Message"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </Button>;
                     </div>;
                   </div>;
                 </CardFooter>;
               </Card>;
             </TabsContent>;
-<<<<<<< HEAD
             <TabsContent value="attachments">;
               <Card>;
                 <CardHeader>;
@@ -1674,7 +1417,6 @@ export function DisputeDetail() {;
                   <div className="text - center py - 12">;
                     <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
                     <p className="text - muted - foreground">No attachments available</p>;
-=======
             ;
             <TabsContent value="attachments">;
               <Card>;
@@ -1686,12 +1428,10 @@ export function DisputeDetail() {;
                   <div className="text-center py-12">;
                     <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
                     <p className="text-muted-foreground">No attachments available</p>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </div>;
                 </CardContent>;
               </Card>;
             </TabsContent>;
-<<<<<<< HEAD
             {is_admin && (
               <TabsContent value="admin" className="space - y-6">;
                 <Card>;
@@ -1706,7 +1446,6 @@ export function DisputeDetail() {;
                         <Button;
                           variant="outline";
                           on_click={() => handleStatusChange ("open")}
-=======
             ;
             {isAdmin && (;
               <TabsContent value="admin" className="space-y-6">;
@@ -1722,43 +1461,33 @@ export function DisputeDetail() {;
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("open")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           disabled={dispute.status === "open"}
                         >;
                           Mark as Open;
                         </Button>;
-<<<<<<< HEAD
                         <Button;
                           variant="outline";
                           on_click={() => handleStatusChange ("under_review")}
-=======
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("under_review")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           disabled={dispute.status === "under_review"}
                         >;
                           Mark as Under Review;
                         </Button>;
-<<<<<<< HEAD
                         <Button;
                           variant="outline";
                           on_click={() => handleStatusChange ("closed")}
-=======
                         <Button ;
                           variant="outline" ;
                           onClick={() => handleStatusChange("closed")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           disabled={dispute.status === "closed"}
                         >;
                           Close Dispute;
                         </Button>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     {dispute.status !== "resolved" && (
                       <div>;
                         <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
@@ -1766,10 +1495,7 @@ export function DisputeDetail() {;
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}
-<<<<<<< HEAD
 
-
-=======
                       {dispute.resolved_at && (
                         <li className="flex gap-2 items-center">
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
@@ -1948,7 +1674,6 @@ export function DisputeDetail() {;
                       </div>
                     )}
 
-
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
@@ -1966,7 +1691,6 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name |'Admin'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
@@ -1985,13 +1709,7 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -2016,13 +1734,7 @@ export function DisputeDetail() {;
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
@@ -2100,9 +1812,6 @@ export function DisputeDetail() {;
                                 className="w-full p-2 border rounded"
                                 value={resolution && resolution.resolution_type}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e && e.target.value })}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                     ;
                     {dispute.status !== "resolved" && (;
                       <div>;
@@ -2122,9 +1831,6 @@ export function DisputeDetail() {;
                                 className="w-full p-2 border rounded";
                                 value={resolution.resolution_type}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type:e.target.value })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               >;
                                 <option value="client_favor">In Client's Favor</option>;
                                 <option value="talent_favor">In Talent's Favor</option>;
@@ -2133,33 +1839,19 @@ export function DisputeDetail() {;
                               </select>;
                             </div>;
                           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                           ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
                     )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                     ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                     ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div>;
                       <h3 className="font-medium mb-2">Admin Notes</h3>;
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
                         {messages;
-<<<<<<< HEAD
-<<<<<<< HEAD
                           .filter(msg => msg && msg.is_admin_note);
                           .map((msg) => (;
                           <div key={msg && msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
@@ -2182,9 +1874,7 @@ export function DisputeDetail() {;
                             <p className="whitespace-pre-wrap text-sm">{msg && msg.message}</p>;
                           </div>;
                         ))}
-=======
                                 getDisputeMessages(disputeId!).then(setMessages);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                                 setMessage("")
                               })
@@ -2250,7 +1940,6 @@ export function DisputeDetail() {;
                                 {format(new Date(msg.created_at), 'MMM d, h:mm a')}
                               </span>;
                             </div>;
-<<<<<<< HEAD
                             <p className="whitespace - pre - wrap text - sm">{msg.message}</p>;
                           </div>))}
                         {!messages.some (msg => msg.is_admin_note) && (
@@ -2272,23 +1961,15 @@ export function DisputeDetail() {;
                                 getDisputeMessages (dispute_id!).then (set_messages);
                                 set_message ("");
                               });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
                                 getDisputeMessages(disputeId!).then(setMessages);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
                                 setMessage("")
                               })
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             }
-=======
-=======
                             <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
                           </div>;
                         ))}
@@ -2296,7 +1977,6 @@ export function DisputeDetail() {;
                         {!messages.some(msg => msg.is_admin_note) && (;
                           <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
                         )}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </div>;
                       ;
                       <div className="mt-4 space-y-4">;
@@ -2391,7 +2071,6 @@ export function DisputeDetail() {;
 }
 ;
                             }
-<<<<<<< HEAD
                           .filter(msg => msg.is_admin_note);
                           .map((msg) => (;
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
@@ -2434,9 +2113,6 @@ export function DisputeDetail() {;
                                 getDisputeMessages(disputeId!).then(setMessages),;
                                 setMessage(""),;
                               }),;                            }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           }}
                         >;
                           Add Admin Note;
@@ -2445,19 +2121,15 @@ export function DisputeDetail() {;
                     </div>;
                   </CardContent>;
                 </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           </Tabs>;
         </div>;
 
-=======
               </TabsContent>;
             )}
           </Tabs>;
         </div>;
         ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="space-y-6">;
           <Card>;
             <CardHeader>;
@@ -2466,17 +2138,13 @@ export function DisputeDetail() {;
             <CardContent className="space-y-6">;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
-<<<<<<< HEAD
                   <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;
-=======
                   <AvatarImage src={dispute.client_profile?.avatar_url} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <AvatarFallback>C</AvatarFallback>;
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Client</p>;
                   <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
                     {dispute && dispute.client_profile?.display_name || "Unknown Client"}
                   </p>;
                 </div>;
@@ -2489,7 +2157,6 @@ export function DisputeDetail() {;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
                   <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;
-=======
                     {dispute.client_profile?.display_name || "Unknown Client"}
                   </p>;
                 </div>;
@@ -2502,15 +2169,12 @@ export function DisputeDetail() {;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
                   <AvatarImage src={dispute.talent_profile?.avatar_url} />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <AvatarFallback>T</AvatarFallback>;
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
                     {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
               </TabsContent>)}
           </Tabs>;
         </div>;
@@ -2545,18 +2209,12 @@ export function DisputeDetail() {;
                   <p className="text - sm text - muted - foreground">;
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
 
-=======
                     {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </p>;
                 </div>;
               </div>;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           <Card>;
             <CardHeader>;
@@ -2581,7 +2239,6 @@ export function DisputeDetail() {;
                 <span className="font - medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
 
-=======
           ;
           <Card>;
             <CardHeader>;
@@ -2605,27 +2262,18 @@ export function DisputeDetail() {;
               <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" :"Talent"}</span>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>;
             </CardContent>;
           </Card>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </div>);
 }
 
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   ),; export function DisputeDetail () {
   //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. const {
@@ -2767,6 +2415,3 @@ formatDistanceToNow (new Date (dispute.created at), {
 }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

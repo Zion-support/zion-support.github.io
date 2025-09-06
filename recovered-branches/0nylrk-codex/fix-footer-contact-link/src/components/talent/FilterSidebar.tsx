@@ -9,15 +9,9 @@ import {RegionFilter} from "./filters/RegionFilter";
 import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function FilterSidebar(): any ({;
 
-=======
 export function FilterSidebar({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -35,18 +29,9 @@ export function FilterSidebar({;
   sortOption;
   setSortOption;
   clearFilters;
-<<<<<<< HEAD
-<<<<<<< HEAD
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
-=======
 
-
-=======
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from "lucide-react",
@@ -60,10 +45,6 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -82,16 +63,12 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   isMobileFilterOpen
 }: FilterSidebarProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Filter header */}
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from "lucide-react",;
@@ -127,8 +104,6 @@ export function FilterSidebar({;
   return (;
     <>;
       {/* Filter header */}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   isMobileFilterOpen
 }: FilterSidebarProps) {
   return (
@@ -148,13 +123,7 @@ export function FilterSidebar({;
           Clear All
         </Button>
       </div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Filter } from "lucide-react",;
@@ -203,15 +172,7 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -266,18 +227,12 @@ export function FilterSidebar({;
       )}
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="flex items-center justify-between mb-6">;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
           Filters;
         </h3>;
-<<<<<<< HEAD
         <Button
           variant="ghost" 
           size="sm" 
@@ -341,7 +296,6 @@ export function FilterSidebar({;
       {isMobileFilterOpen && (;
         <Button
           onClick={() => window && window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-=======
         <Button ;
           variant="ghost" ;
           size="sm" ;
@@ -406,23 +360,17 @@ export function FilterSidebar({;
       {isMobileFilterOpen && (;
         <Button ;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
         >;
           Apply Filters;
         </Button>;
       )}
     </>;
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
   return (
     <>;
       {/* Filter header */}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -456,9 +404,6 @@ function FilterSidebar() {
         </Button>;
       </div>;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  export function FilterSidebar ({
   searchTerm;
@@ -560,6 +505,3 @@ isMobileFilterOpen
 }</>) 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

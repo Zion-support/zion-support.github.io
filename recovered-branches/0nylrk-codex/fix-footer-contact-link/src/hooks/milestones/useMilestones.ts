@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -15,8 +7,6 @@ import {useUpdateMilestone} from './useUpdateMilestone';
 import {useDeleteMilestone} from './useDeleteMilestone';
 import {useUploadDeliverable} from './useUploadDeliverable';
 import {MilestoneStatus} from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
@@ -38,8 +28,6 @@ if (return null, ) {
   }
 ;
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     milestones;
     activities;
@@ -49,8 +37,6 @@ if (return null, ) {
     create_milestone;
     updateMilestoneStatus;
 
-<<<<<<< HEAD
-=======
 export const use_milestones = (project_id?: string) =>: any {
   const { milestones, activities, is_loading, error, refetch } = useLoadMilestones (project_id);
   const { create_milestone, is_submitting: is_creating } = useCreateMilestone (project_id);
@@ -104,25 +90,14 @@ export const useMilestones = (projectId?: string) => {;
     uploadDeliverable: handleUploadDeliverable
     refetch
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     update_milestone;
     delete_milestone;
     upload_deliverable: handleUploadDeliverable,
     refetch;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   }
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -155,15 +130,10 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
-<<<<<<< HEAD
-
 
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
@@ -207,8 +177,5 @@ export const useMilestones = (projectId?:string) => {;
 };
   }
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 };
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

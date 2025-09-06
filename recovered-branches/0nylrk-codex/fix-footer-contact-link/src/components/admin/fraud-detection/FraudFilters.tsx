@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 
 
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from "react";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Search, Filter} from "lucide-react";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -21,10 +13,6 @@ import { Search, Filter } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface FraudFiltersProps {
 
   searchQuery: string
@@ -38,10 +26,6 @@ interface FraudFiltersProps {
 
   resetFilters: () => void
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react";
 import {Input} from "@/components/ui/input";
@@ -63,11 +47,6 @@ interface FraudFiltersProps {;
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   searchQuery;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   searchQuery;
@@ -95,20 +74,9 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
   severity_filter;
   setSeverityFilter;
   contentTypeFilter;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
 
   resetFilters}) => {
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   resetFilters}) => {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   setContentTypeFilter,;
   resetFilters}) => {;
   return (
@@ -118,9 +86,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery;
@@ -160,22 +125,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           className="pl-10"
         />
       </div>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
         </SelectTrigger>
@@ -188,24 +142,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
 
-
-<<<<<<< HEAD
-=======
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-
 
       <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -217,24 +159,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
 
-
-<<<<<<< HEAD
-=======
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-
 
       <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
         </SelectTrigger>
@@ -252,18 +182,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           onChange={(e) => setSearchQuery(e && e.target.value)}
 
 };
 
-<<<<<<< HEAD
-=======
-=======
           onChange={(e) => setSearchQuery(e && e.target.value)}
 
 };
@@ -271,9 +194,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 }
 
 };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -291,7 +211,6 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
-<<<<<<< HEAD
 ;
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
@@ -311,17 +230,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           placeholder="Search by user or content...";
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           className="pl-10";
         />;
       </div>;
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
-<<<<<<< HEAD
-=======
   setContentTypeFilter,
   reset_filters}) => {
   return (
@@ -336,8 +250,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         />;
       </div>;
       <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import React from "react",;
 import { Input } from "@/components/ui/input",;
@@ -380,9 +292,6 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
       </div>;
       ;
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
         </SelectTrigger>;
@@ -394,18 +303,12 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <Select value={severity_filter || ""} onValueChange={value => setSeverityFilter (value || null)}>;
 
-=======
       ;
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
         </SelectTrigger>;
@@ -416,18 +319,12 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter (value || null)}>;
 
-=======
       ;
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
         </SelectTrigger>;
@@ -440,9 +337,7 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
       <Button variant="outline" on_click={reset_filters} className="md: w - auto">;
         <Filter className="h - 4 w - 4 mr - 2" /> Reset Filters;
       </Button>;
@@ -450,16 +345,9 @@ export const FraudFilters:React.FC<FraudFiltersProps> = ({;
 }
 ;
 
-=======
-
 export default FraudFilters;
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default FraudFilters;
-
 
       ;
       <Button variant="outline" onClick={resetFilters} className="md:w-auto">;
@@ -471,6 +359,3 @@ export default FraudFilters;
 };
 
 export default FraudFilters;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

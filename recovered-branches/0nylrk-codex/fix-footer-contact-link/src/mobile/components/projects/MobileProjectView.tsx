@@ -59,22 +59,15 @@ interface ProjectViewProps {
     // Navigate to messaging with this client
   };
 
-=======
-=======
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }),
     // Navigate to messaging with this client
   }
 
-<<<<<<< HEAD
   },
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>
@@ -203,12 +196,7 @@ interface ProjectViewProps {
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   </Badge>;
                 </div>;
                 <div className="pl-7">;
@@ -234,23 +222,13 @@ interface ProjectViewProps {
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           ))}
         </div>
       </section>
     </div>
   );
 }
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -306,10 +284,8 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
     });
     // Navigate to messaging with this client;
   };
-<<<<<<< HEAD
 
   return (
-=======
   return (
 
 import React from "react",;
@@ -369,14 +345,12 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
   },;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-6 px-4 pb-24">;
       <Card>;
         <CardContent className="p-4">;
           <div className="space-y-4">;
             <div className="flex items-center justify-between">;
               <div>;
-<<<<<<< HEAD
                 <h2 className="text-lg font-medium">{project && project.title}</h2>;
                 <div className="flex items-center gap-2 mt-1">;
                   <Avatar className="h-6 w-6">;
@@ -421,7 +395,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
               <p className="text-sm">{project && project.description}</p>;
             </div>;
 
-=======
                 <h2 className="text-lg font-medium">{project.title}</h2>;
                 <div className="flex items-center gap-2 mt-1">;
                   <Avatar className="h-6 w-6">;
@@ -466,12 +439,10 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
               <p className="text-sm">{project.description}</p>;
             </div>;
             ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <div className="flex gap-2">;
               <Button size="sm" variant="outline" className="gap-1 flex-1">;
                 <FileText className="h-4 w-4" /> Contract;
               </Button>;
-<<<<<<< HEAD
               <Button
                 size="sm" 
                 variant="outline" 
@@ -483,7 +454,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
                 size="sm" 
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
                 onClick={startProjectCall}>;
-=======
               <Button ;
                 size="sm" ;
                 variant="outline" ;
@@ -497,14 +467,12 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light";
                 onClick={startProjectCall}
               >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <Video className="h-4 w-4" /> Call;
               </Button>;
             </div>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
 
       <section>;
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;
@@ -547,7 +515,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
                     size="sm" 
                     variant="outline" 
                     className="w-full mt-3 gap-1">;
-=======
       ;
       <section>;
         <h2 className="text-lg font-medium mb-4">Milestones</h2>;
@@ -592,7 +559,6 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
                     variant="outline" ;
                     className="w-full mt-3 gap-1";
                   >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     View Details <ChevronRight className="h-4 w-4" />;
                   </Button>;
                 </div>;
@@ -602,13 +568,8 @@ export function MobileProjectView({ project, milestones } ProjectViewProps) {;
         </div>;
       </section>;
     </div>;
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: string,
       avatar?: string;
     }
@@ -667,9 +628,6 @@ function MobileProjectView() {
         </CardContent>;
       </Card>;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  interface Milestone {
   id: string;
@@ -695,6 +653,3 @@ const messageClient = () => {
 }</div> </section> </div>) 
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

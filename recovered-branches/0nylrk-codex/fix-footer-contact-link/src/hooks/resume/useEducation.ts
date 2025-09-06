@@ -1,34 +1,18 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useEducation() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,19 +21,10 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
     }
     setIsLoading(true);
     setError(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -63,35 +38,16 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     try {
       const { error } = await supabase
         .from('education')
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           institution: education && education.institution;
           degree: education && education.degree;
@@ -105,7 +61,6 @@ export function useEducation() {;
 
         });
       if (error) throw error;
-=======
 
           resume_id: resumeId,
           institution: education.institution,
@@ -120,22 +75,13 @@ export function useEducation() {;
         }),
       
       if (error) throw error,
-      
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Education added", "Your education has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
 
-
-
-=======
-=======
           institution: education && education.institution;
 
           resume_id: resumeId;
@@ -170,7 +116,6 @@ export function useEducation() {;
     } finally {
       setIsLoading(false)
 
-
     }
   }
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
@@ -180,9 +125,6 @@ export function useEducation() {;
     }
     setIsLoading(true);
     setError(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -213,27 +155,16 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     }
     
     setIsLoading(true),
     setError(null),
-    
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -338,18 +269,11 @@ export function useEducation() {;
       setIsLoading(false),;
     }
     
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const { error } = await supabase
         .from('education')
         .update({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           institution: education && education.institution;
           degree: education && education.degree;
           field_of_study: education && education.field_of_study;
@@ -359,14 +283,11 @@ export function useEducation() {;
           description: education && education.description;
           institution_logo_url: education && education.institution_logo_url,
           location: education && education.location
-<<<<<<< HEAD
 
         })
         .eq('id', eduId);
       if (error) throw error;
-=======
 
-=======
           institution: education.institution;
           degree: education.degree;
           field_of_study: education.field_of_study;
@@ -379,7 +300,6 @@ export function useEducation() {;
         })
         .eq('id', eduId);
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           institution: education.institution,
           degree: education.degree,
           field_of_study: education.field_of_study,
@@ -393,26 +313,13 @@ export function useEducation() {;
         .eq('id', eduId),
       
       if (error) throw error,
-      
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Education updated", "Your education has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
-=======
     }
   }
   const deleteEducation = async (eduId: string): Promise<boolean> => {
@@ -422,9 +329,6 @@ export function useEducation() {;
     }
     setIsLoading(true);
     setError(null);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     setIsLoading(true),;
     setError(null),;
@@ -455,66 +359,29 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     setIsLoading(true),
     setError(null),
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
     try {
       const { error } = await supabase
         .from('education')
         .delete()
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
         .eq('id', eduId);
       if (error) throw error;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         .eq('id', eduId),
       
       if (error) throw error,
-      
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return showSuccessToast("Education deleted", "Your education has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Education} from '@/types / resume';
@@ -533,12 +400,10 @@ function use_education() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
       set_error ('You must be logged in to add education'),
       return false;
     }
 
-=======
     }
   }
   return {
@@ -565,7 +430,6 @@ if ( {) {
     } finally {;
       setIsLoading(false);
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },;
   return {;
     isLoading,;
@@ -573,11 +437,6 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   }
 }
@@ -684,11 +543,8 @@ if (throw error) {
     add_education;
     update_education;
     delete_education;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-<<<<<<< HEAD
 }
-=======
   },;
 ;
   return {;
@@ -754,11 +610,8 @@ deleteEducation
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
 }
     setIsLoading (true);
     set_error (null);
 ;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

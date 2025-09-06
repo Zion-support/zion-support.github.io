@@ -4,20 +4,6 @@ import { Check, ExternalLink } from 'lucide-react';
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -62,8 +48,6 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	)
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -86,14 +70,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
-=======
 
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
@@ -141,13 +118,8 @@ export default function BrowserAutomationCloudPage() {;
 			</main>;
 		</>;
 	);
-<<<<<<< HEAD
 }
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default /**
@@ -196,16 +168,9 @@ return (
   </main>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
-
-
 
 export default function BrowserAutomationCloudPage() {_return (
 		<>
@@ -338,11 +303,6 @@ export default function BrowserAutomationCloudPage(req, res) {
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default /**
@@ -391,10 +351,5 @@ return (
   </main>;
   </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

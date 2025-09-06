@@ -1,14 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
@@ -19,20 +10,14 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
     ['MetricValueTrend%'];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -42,8 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
@@ -69,12 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Content-Dispositionattachment, filename="ipo-metrics && metrics.csv"');
   res && res.status(200).send(csv)
 
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { requireSuperadminApi } from '../../../utils / api / auth';
 export default /**
  * handler - Function description
@@ -84,22 +62,11 @@ function handler() {
   $2
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 }
-
 
 }
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,100 +1,84 @@
 return (
     <Card>;
       <CardHeader>;
-
         <CardTitle className='flex items - center gap - 2'>;
           <Gift className='h - 5 w - 5' /> Redeem Rewards;
-
         </CardTitle>;
         <CardDescription>;
           Exchange your ZION$ for rewards and perks;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
-
                 {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
             <div className='space-y-4 py-4'>;
               {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
-
                 <div
                   key={option.id}
-                  className='flex justify-between items-center border-b pb-4'
+                  className='flex justify-between items-center border-b pb-4''
                 >                  <div>
-                    <h3 className='font-medium'>{option.title}</h3>
-                    <p className='text-sm text-muted-foreground'>
+                    <h3 className='font-medium'>{option.title}</h3>'
+                    <p className='text-sm text-muted-foreground'>'
                       {option.description}
                     </p>
                   </div>
-                  <div className='flex flex-col items-end gap-1'>
-                    <span className='text-sm font-bold'>
+                  <div className='flex flex-col items-end gap-1'>'
+                    <span className='text-sm font-bold'>'
                       {option.cost} ZION$
                     </span>
                     <Button
-                      size='sm'
+                      size='sm''
                       variant={
                         wallet && wallet.balance >= option.cost
-                          ? 'default'
-                          : 'outline'
+                          ? 'default''
+                          : 'outline''
                       }
-
                       disabled={!wallet || wallet.balance < option && option.cost}
                       onClick={() => handleRedeem(option)}                    >;
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />;
                     </Button>;
                   </div>;
                 </div>;
-
               ))}
             </div>;
             <div className='flex justify-between'>;
               <Button
-                variant='outline'
-                size='sm'
+                variant='outline''
+                size='sm''
                 onClick={() => setOpen(false)}
-
-
-
-
-
-
-
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Gift className="h-5 w-5" /> Redeem Rewards
+        <CardTitle className="flex items-center gap-2">"
+          <Gift className="h-5 w-5" /> Redeem Rewards"
         </CardTitle>
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>
       </CardHeader>
       <CardContent>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className="w-full">View Available Rewards</Button>
+            <Button className="w-full">View Available Rewards</Button>"
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
-
-
                     </Button>
                   </div>
                 </div>
               ))}
             </div>
-            <div className="flex justify-between">
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
-              <Button variant="ghost" size="sm">
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />
+            <div className="flex justify-between">"
+              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>"
+              <Button variant="ghost" size="sm">"
+                Learn More <ExternalLink className="ml-1 h-3 w-3" />"
               </Button>
             </div>
           </DialogContent>
         </Dialog>
       </CardContent>
     </Card>
-
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
@@ -117,7 +101,7 @@ return (
                     <span className="text-sm font-bold">{option.cost} ZION$</span>;
                     <Button;
                       size="sm";
-                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
+                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}"
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >;
@@ -132,23 +116,16 @@ return (
                 variant='outline';
                 size='sm';
                 on_click={() => set_open (false)}
-
               >;
                 Close;
               </Button>;
               <Button variant='ghost' size='sm'>;
-
                 Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
-
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-
-
-
     </Card>);
 }
-
   )

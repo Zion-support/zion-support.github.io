@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 "use client",;
@@ -32,7 +30,6 @@ interface DeploymentUpdate {;
   governanceType?: string,;
   domain?: string,;
   progress?: number,;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   actions?: {;
     label: string;
     action: 'deploy' | 'view' | 'retry' | 'configure' | 'dismiss';
@@ -92,16 +89,12 @@ export default function DeploymentNotification({updates;
   const handleAction = (updateId: string, action: string) => {if (onAction) {;
       onAction(updateId, action);
     }
-<<<<<<< HEAD
-=======
   },;
   if (updates.length === 0) return null,;
-
 
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
-=======
 "use client",
 import { useState  } from './react';,
 import {
@@ -119,8 +112,6 @@ import {
   Shield,
   Building2,
   Users,
-=======
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import {Rocket;
@@ -137,8 +128,6 @@ import {Rocket;
   Shield;
   Building2;
   Users;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   Zap;
 } from './lucide-react';,
 interface DeploymentUpdate {
@@ -229,9 +218,6 @@ if ( {) {
 }
       on_action (update_id, action);
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   },
   // Check condition
 if (return null, ) {
@@ -240,10 +226,8 @@ if (return null, ) {
   return (
     <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
       {updates.map ((update) => (
-=======
   }
   if (updates.length === 0) return null;
-=======
 "use client",;
 import { useState } from "react",;
 import {;
@@ -345,12 +329,9 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -376,8 +357,6 @@ export default function DeploymentNotification({;
             </button>;
           </div>;
           {/* Instance Details (if available) */}
-<<<<<<< HEAD
-=======
 
           {update.instance_name && (
             <div className="mb - 3 p - 3 bg - white / 10 rounded - lg border border - white / 20">;
@@ -385,12 +364,8 @@ export default function DeploymentNotification({;
                 <div className="p - 1 bg - white / 20 rounded">;
                   {getVerticalIcon (update.vertical || 'GENERAL')}
 
-=======
-
                   {getVerticalIcon(update.vertical || 'GENERAL')}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>;
                 <span className="font - medium text - white text - sm">;
                   {update.instance_name}
@@ -410,17 +385,11 @@ export default function DeploymentNotification({;
                     {update.domain}
                   </span>)}
               </div>;
-<<<<<<< HEAD
-=======
 
             </div>)}
 
-=======
-
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (
             <div className="mb - 3 space - y-2">;
@@ -434,49 +403,33 @@ export default function DeploymentNotification({;
                   style={{ width: `${update.progress}%` }}
                 ></div>;
               </div>;
-<<<<<<< HEAD
-=======
 
             </div>)}
 
-=======
-
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (
             <div className="flex gap - 2 pt - 2 border - t border - white / 20">;
               {update.actions.map ((action, index) => (
                 <button;
                   key={index}
-<<<<<<< HEAD
-=======
 
                   onClick={() => handleAction(update.id, action.action)}
 
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
 
-
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
-=======
                   on_click={() => handle_action (update.id, action.action)}
                   className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
-=======
                   onClick={() => handleAction(update.id, action.action)}
-<<<<<<< HEAD
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
-=======
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';
@@ -487,18 +440,12 @@ export default function DeploymentNotification({;
                   {action.action === 'retry' && <Rocket className="w - 3 h - 3" />}
                   {action.action === 'configure' && <Settings className="w - 3 h - 3" />}
                   <span>{action.label}</span>;
-<<<<<<< HEAD
-=======
 
                 </button>))}
             </div>)}
 
-=======
-
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Timestamp */}
           <div className="absolute bottom - 2 right - 4 text - xs text - white / 60">;
             {format_timestamp (update.timestamp)}
@@ -506,8 +453,6 @@ export default function DeploymentNotification({;
         </div>))}
     </div>);
 }
-<<<<<<< HEAD
-=======
 
 export /**
  * DeploymentNotificationExample - Function description
@@ -525,7 +470,6 @@ function DeploymentNotificationExample() {
       governance_type: "DAO_FULL",
       domain: "health.zion.network",
       progress: 25,
-=======
 
 ;
 // Example usage with mock data;
@@ -575,7 +519,6 @@ export function DeploymentNotificationExample() {;
 
   return (;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <DeploymentNotification;
       updates={updates}
       on_dismiss={handle_dismiss}

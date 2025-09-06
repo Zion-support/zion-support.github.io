@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -18,24 +13,13 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150
     currency: "$"
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -46,14 +30,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 150,
     currency: "$",
     tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     author: {
       name: "Alexandra Chen"
       id: "alexandra-chen"
@@ -64,11 +40,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.9
     reviewCount: 43}
   {
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
     id: "talent-2"
     title: "DevOps Specialist"
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.";
@@ -76,7 +48,6 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135
     currency: "$"
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: "talent-2",
     title: "DevOps Specialist",
     description: "Infrastructure automation expert specializing in containerization, CI/CD pipelines, and cloud-native architectures.",
@@ -84,13 +55,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     price: 135,
     currency: "$",
     tags: ["Kubernetes", "Docker", "AWS", "Terraform"],
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     author: {
       name: "Michael Reynolds"
       id: "michael-reynolds"
@@ -101,11 +66,7 @@ const TALENT_LISTINGS: ProductListing[] = [
     rating: 4.8
     reviewCount: 37}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 // Sample talent listings;
@@ -147,24 +108,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {
     id: "talent - 3",
     title: "Data Scientist",
-<<<<<<< HEAD
 
-=======
     id: "talent-3"
     title: "Data Scientist"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: "PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions.";
     category: "Data Science"
     price: 145
     currency: "$"
     tags: ["Statistical Analysis", "Python", "R", "Tableau"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     id: "talent-3",
     title: "Data Scientist",
@@ -173,18 +124,12 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 145,
     currency: "$",
     tags: ["Statistical Analysis", "Python", "R", "Tableau"],
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
-=======
     author: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     author: {
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       name: "Priya Sharma",
       id: "priya - sharma"},
     images: ["https://images.unsplash.com / photo - 1573497491765 - dccce02b29df?auto = format & fit = crop & w=800 & h=500"],
@@ -193,12 +138,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.9,
     review_count: 29},
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     id: "talent - 4",
     title: "Cybersecurity Expert",
 
-=======
     author: {
       name: "Priya Sharma"
       id: "priya-sharma"}
@@ -210,20 +152,12 @@ const TALENT_LISTINGS: ProductListing[] = [;
   {
     id: "talent-4"
     title: "Cybersecurity Expert"
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.";
     category: "Security"
     price: 165
     currency: "$"
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     id: "talent-4",
     title: "Cybersecurity Expert",
     description: "Certified security professional with 10+ years experience in threat detection, incident response, and security architecture.",
@@ -231,13 +165,9 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 165,
     currency: "$",
     tags: ["Penetration Testing", "Security Analysis", "CISSP", "Risk Management"],
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     author: {
 
-
-=======
     author: {
       name: "James Wilson"
       id: "james-wilson"
@@ -269,7 +199,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
 
     author: {
 
-
     id: "talent-5"
     title: "Full-Stack Developer"
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications."
@@ -277,9 +206,6 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125
     currency: "$"
     tags: ["React", "Node.js", "TypeScript", "MongoDB"];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: "talent-5",
     title: "Full-Stack Developer",
     description: "Versatile developer proficient in both frontend and backend technologies with a focus on building scalable web applications.",
@@ -287,14 +213,7 @@ const TALENT_LISTINGS: ProductListing[] = [;
     price: 125,
     currency: "$",
     tags: ["React", "Node.js", "TypeScript", "MongoDB"],
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     author: {
       name: "David Martinez"
       id: "david-martinez"}
@@ -304,20 +223,14 @@ const TALENT_LISTINGS: ProductListing[] = [;
     rating: 4.8
     reviewCount: 42}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     id: "talent-6"
     title: "AI Ethics Consultant"
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
-<<<<<<< HEAD
     id: "talent-6",
     title: "AI Ethics Consultant",
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.",
@@ -343,7 +256,6 @@ const TALENT_FILTERS = [
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
     author: {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       name: "James Wilson",
       id: "james - wilson",
       avatar_url: "https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?auto = format & fit = crop & w=100 & h=100"},
@@ -371,19 +283,12 @@ const TALENT_FILTERS = [
   {
     id: "talent - 6",
     title: "AI Ethics Consultant",
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     description: "Specialized in ensuring AI systems are developed and deployed in an ethical, transparent and fair manner.";
     category: "Consulting"
     price: 180
     currency: "$"
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     id: "talent-6",
     title: "AI Ethics Consultant",
@@ -393,20 +298,11 @@ const TALENT_FILTERS = [
     currency: "$",
     tags: ["AI Ethics", "Governance", "Responsible AI", "Policy"],
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     author: {
 
-
-
-<<<<<<< HEAD
-=======
 export default function TalentsPage() {
   return (
 
-=======
 export default function TalentsPage() {
   return (
 
@@ -445,15 +341,11 @@ export default function TalentsPage() {
     />
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <DynamicListingPage 
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
@@ -461,13 +353,11 @@ export default function TalentsPage() {
   )
 };
 ;
-=======
     author: {
 
 export default function TalentsPage() {;
   return (
     <DynamicListingPage
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 // Sample talent listings;
@@ -630,9 +520,5 @@ function TalentsPage() {
       initial_price={{ min: 100, max: 200 }}
     />);
 }
-<<<<<<< HEAD
 }/>) 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -15,8 +9,6 @@ import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumPost, ForumCategory} from "@/types/community";
 import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -28,13 +20,7 @@ import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PostFormValues {
 
   title: string
@@ -44,9 +30,7 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -86,18 +70,12 @@ const mockPost: ForumPost = {;
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -117,12 +95,6 @@ const mockPost: ForumPost = {
   isFeatured: true
 },
 
-<<<<<<< HEAD
-
-
-
-
-=======
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -141,8 +113,6 @@ const mockPost: ForumPost = {
   isAnswered: true
   isFeatured: true
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
@@ -150,7 +120,6 @@ export default function EditPostPage() {;
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
 export default function EditPostPage() {
   const { postId } = useParams() as { postId?: string }
   const navigate = useNavigate();
@@ -165,25 +134,13 @@ export default function EditPostPage() {
   const [post, setPost] = useState<ForumPost | null>(mockPost),
   const [isLoading, setIsLoading] = useState(true),
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   }, [postId]),
-  
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (isLoading) {
 
   useEffect(() => {;
@@ -191,25 +148,15 @@ export default function EditPostPage() {
     // For now, we'll just use the mock data;
     setIsLoading(false);
   }, [postId]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   if (isLoading) {;
     return (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (isLoading) {;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-=======
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   if (isLoading) {;
     return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <div className="flex justify-center items-center h-64">;
@@ -217,16 +164,12 @@ export default function EditPostPage() {
           </div>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
-
 
   if (!post) {;
 
     return (
-=======
   if (!post) {;
     return (
     ),;
@@ -234,7 +177,6 @@ export default function EditPostPage() {
   ;
   if (!post) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <AppLayout>;
         <div className="container py-8">;
           <h1>Post not found</h1>;
@@ -243,11 +185,9 @@ export default function EditPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
     );
   }
 
-=======
   }, [postId]);
   }, [postId]),
   
@@ -262,11 +202,8 @@ export default function EditPostPage() {
       </AppLayout>
     )
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     );
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!post) {
     return (
       <AppLayout>
@@ -280,10 +217,7 @@ export default function EditPostPage() {
     )
   }
   // Check if the user is the author or an admin
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
   const isAuthor = user?.id === post.authorId,
@@ -307,11 +241,8 @@ export default function EditPostPage() {
     content: post.content
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
-  
-
 
   if (!isAuthor && !isAdmin) {
 
@@ -320,10 +251,7 @@ export default function EditPostPage() {
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
 
   if (!isAuthor && !isAdmin) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-<<<<<<< HEAD
-=======
     ),;
   }
   ;
@@ -333,10 +261,7 @@ export default function EditPostPage() {
   ;
   if (!isAuthor && !isAdmin) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <AppLayout>;
         <div className="container py-8">;
           <h1 className="text-2xl font-bold mb-4">Permission Denied</h1>;
@@ -346,25 +271,16 @@ export default function EditPostPage() {
           </Button>;
         </div>;
       </AppLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
   }
 
-
   },
 
-
-
-=======
   }
   },
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     );
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -372,24 +288,12 @@ export default function EditPostPage() {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }),
-      
 
-
-<<<<<<< HEAD
-=======
       });
       }),
       
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -398,12 +302,7 @@ export default function EditPostPage() {
         description: "There was a problem updating your post"
         variant: "destructive"
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const initialValues: Partial<PostFormValues> = {;
     title: post && post.title,;
     content: post && post.content,;
@@ -429,26 +328,19 @@ export default function EditPostPage() {
         description: "There was a problem updating your post",;
         variant: "destructive";
       });
-<<<<<<< HEAD
 
     }
   }
-=======
-=======
     }
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
 
   },
-
 
   return (
 
     <AppLayout>;
 
-<<<<<<< HEAD
-=======
   return (
     <AppLayout>;
     }
@@ -457,20 +349,13 @@ export default function EditPostPage() {
 
   return (
     <AppLayout>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
       />
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -486,46 +371,21 @@ export default function EditPostPage() {
         </div>
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         />
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
 
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -645,12 +505,9 @@ export default function EditPostPage() {;
         title="Edit Post | Community Forum | Zion AI Marketplace";
         description="Edit your discussion post in the Zion AI Marketplace community forum.";
         keywords="community, forum, discussion, edit post";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       />;
 
-=======
       />;
     ),;
   }
@@ -692,10 +549,7 @@ export default function EditPostPage() {;
       />;
       ;
       />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       />;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container py-8">;
         <div className="flex items-center gap-3 mb-6">;
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">;
@@ -708,8 +562,6 @@ export default function EditPostPage() {;
           <span className="text-muted-foreground">/</span>;
           <span className="text-sm font-medium">Edit</span>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
 
@@ -722,11 +574,6 @@ export default function EditPostPage() {;
     </AppLayout>;
   );
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState, useEffect } from './react';
 import { Link, use_navigate, use_params } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -762,7 +609,6 @@ const mock_post: ForumPost = {
   is_featured: true;
 }
 ;
-<<<<<<< HEAD
 export default /**
  * EditPostPage - Function description
  */
@@ -880,10 +726,7 @@ if ( {) {
         />;
       </div>;
     </AppLayout>);
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         ;
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>;
         ;
@@ -908,6 +751,3 @@ return (<AppLayout> <SEO title="Edit Post | Community Forum | Zion AI Marketplac
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,23 +1,13 @@
-<<<<<<< HEAD
 
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {;
   onUpdateProfile?: () => void;
 }
 
-
 export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
 
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -35,8 +25,6 @@ export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
   );
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
-<<<<<<< HEAD
-=======
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -44,12 +32,7 @@ interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
 
-
-
-
-
     </Card>;
-
 
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
@@ -72,16 +55,12 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
     </Card>;
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
-<<<<<<< HEAD
-=======
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * NoJobsCard - Function description
  */
@@ -98,10 +77,6 @@ function NoJobsCard() {
   );
 }
 
-
-
-
-
     </Card>;
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -110,12 +85,6 @@ interface NoJobsCardProps {
 }
 
 }
-<<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
 
 }
 
@@ -152,6 +121,3 @@ export function NoJobsCard({ onUpdateProfile } NoJobsCardProps) {;
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

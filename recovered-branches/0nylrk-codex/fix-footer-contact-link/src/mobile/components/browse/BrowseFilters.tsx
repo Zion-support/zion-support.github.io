@@ -158,10 +158,8 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                         <span>20+ years</span>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
                   </>;
                 )}
-<<<<<<< HEAD
 
                 <div className="space-y-2">
                   <Label>Location</Label>
@@ -348,9 +346,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
                   </>)}
                 <div className="space - y-2">;
                   <Label > Location</Label>;
-<<<<<<< HEAD
 
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Slider } from "@/components/ui/slider",;
@@ -447,9 +443,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 ;
                 <div className="space-y-2">;
                   <Label>Location</Label>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -462,8 +455,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className="space - y-2">;
                   <Label > Salary Range</Label>;
@@ -498,7 +489,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           <Select>;
             <SelectTrigger className="w-[120px] h - 8">;
 
-=======
                 ;
                 <div className="space-y-2">;
                   <Label>Salary Range</Label>;
@@ -536,9 +526,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
           ;
           <Select>;
             <SelectTrigger className="w-[120px] h-8">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -547,11 +534,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 className="h-3 w-3 cursor-pointer" 
-=======
           ;
           {activeFilters.map((filter) => (;
             <Badge ;
@@ -562,7 +546,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
               {filter}
               <X ;
                 className="h-3 w-3 cursor-pointer" ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onClick={() => removeFilter(filter)} ;
               />;
             </Badge>;
@@ -570,15 +553,9 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
   );
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -595,10 +572,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  
 }export function BrowseFilters ({
@@ -696,6 +669,3 @@ if (!activeFilters.includes (filter) ) {
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

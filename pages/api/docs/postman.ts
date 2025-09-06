@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toPostman() {
@@ -6,10 +5,7 @@ function toPostman() {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const postmanCollection = {
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     info: {
 
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
@@ -25,7 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         },
       })),
     ),
-<<<<<<< HEAD
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
     item: [
@@ -124,9 +119,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
     variable: [
-<<<<<<< HEAD
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
@@ -159,7 +152,6 @@ item: v1.sections.flat_map ((section) =>;
             },
           ],
           url: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             raw: `{{base_url}}${ep.path}`,
             host: ["{{base_url}}"],
             path: ep.path.replace (/^\//, "").split ("/"),

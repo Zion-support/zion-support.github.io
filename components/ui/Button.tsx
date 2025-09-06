@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -49,7 +48,6 @@ export default function Button({
     </button>
   );
 }
-=======
 import React from "react";
 
 interface ButtonProps {
@@ -145,4 +143,3 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
->>>>>>> fe67bd071a7e77f7ecafdfd89dec983fba1e0332

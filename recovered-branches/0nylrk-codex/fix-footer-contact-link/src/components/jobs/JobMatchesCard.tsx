@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import {;
   Card,;
   CardContent,;
@@ -10,9 +8,6 @@ import {;
   CardDescription,;
   CardFooter,;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react";
 import {
   Card
@@ -29,10 +24,6 @@ import {
   CardTitle,
   CardDescription,
   CardFooter,;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 
 import {;
   Card,;
@@ -42,37 +33,24 @@ import {;
   CardDescription,;
   CardFooter,;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
 interface JobMatchCardProps {;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface JobMatchCardProps {;
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-<<<<<<< HEAD
 interface JobMatchCardProps {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
 export function JobMatchesCard(): any ({;
   match,;
@@ -82,12 +60,8 @@ export function JobMatchesCard(): any ({;
 }: JobMatchCardProps) {;
   const job = match && match.job;
 
-
   if (!job) return null;
 
-=======
-
-=======
 export function JobMatchesCard(): any ({;
   match,;
   onApply,;
@@ -113,23 +87,14 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
 import { format } from "date-fns",
 import { JobMatch } from "@/types/jobs",
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
   if (!job) return null;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
   onDecline: (matchId: string) => void,
   showApplied?: boolean
 }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 export function JobMatchesCard({
   match,
@@ -141,22 +106,12 @@ export function JobMatchesCard({
 
   if (!job) return null;
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
-  
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-=======
   if (!job) return null;
   return (
 
@@ -181,16 +136,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   if (!job) return null,;
   ;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="overflow-hidden border-l-4 border-l-blue-500">;
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <CardTitle className="text-lg">{job && job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job && job.created_at), "MMM d")}
@@ -199,7 +149,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match && match.viewed_at), "MMM d")});
                 </span>;
               )}
-=======
             <CardTitle className="text-lg">{job.title}</CardTitle>;
             <CardDescription>;
               Posted {format(new Date(job.created_at), "MMM d")}
@@ -232,14 +181,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
           {job.description}
         </p>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-
-        
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -248,21 +190,13 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-        
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
             <div className="flex flex-wrap gap-1">
               {match.matched_skills.slice(0, 5).map((skill, i) => (
                 <Badge key={i} variant="secondary" className="text-xs">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -293,17 +227,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
                 </span>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
-<<<<<<< HEAD
             {match && match.match_score}% Match;
-=======
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
@@ -312,16 +240,11 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
           <Badge variant="outline" className="flex items-center">;
             {match.match_score}% Match;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Badge>;
         </div>;
       </CardHeader>;
       <CardContent className="p-4 pt-0">;
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
-<<<<<<< HEAD
-<<<<<<< HEAD
           {job && job.description}
         </p>;
 
@@ -334,11 +257,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   {skill}
                 </Badge>;
               ))}
@@ -351,9 +269,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
-
-
-
           {job.description}
         </p>;
         {match.matched_skills?.length > 0 && (;
@@ -362,8 +277,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <div className="flex flex-wrap gap-1">;
               {match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   {skill}
                 </Badge>
               ))}
@@ -385,8 +298,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
                 <Badge key={i} variant="secondary" className="text-xs">;
 
-
-
                   {skill}
                 </Badge>;
               ))}
@@ -403,28 +314,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
-=======
-        
-        
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -433,47 +328,27 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
         {match.status === 'applied' || showApplied ? (
 
-
-=======
         {match.status === 'applied' || showApplied ? (
-
 
         {match.status === "applied" |showApplied ? (
         {match.status === 'applied' || showApplied ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         ) : match.status === "declined" ? (
-=======
         ) : match.status === 'declined' ? (
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         ) : match.status === 'declined' ? (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
             <XCircle className="h-4 w-4 mr-2" />
             Declined
           </div>
         ) : (
           <div className="flex gap-2 w-full">
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
           <div className="flex items-center text-sm">;
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$;
@@ -482,8 +357,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">;
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />;
             Due: {format(new Date(job && job.deadline), "MMM d, yyyy")}
-<<<<<<< HEAD
-=======
           {job.description}
         </p>;
         ;
@@ -511,37 +384,25 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">;
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />;
             Due:{format(new Date(job.deadline), "MMM d, yyyy")}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </div>;
         </div>;
       </CardContent>;
       <CardFooter className="p-4 pt-0">;
-<<<<<<< HEAD
         {match && match.status === "applied" || showApplied ? (;
-=======
         {match.status === 'applied' || showApplied ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">;
             <CheckCircle className="h-4 w-4 mr-2" />;
             Applied;
           </div>;
-<<<<<<< HEAD
         ) : match && match.status === "declined" ? (;
-=======
         ) :match.status === 'declined' ? (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">;
             <XCircle className="h-4 w-4 mr-2" />;
             Declined;
           </div>;
-<<<<<<< HEAD
         ) : (;
           <div className="flex gap-2 w-full">;
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button
               className="flex-1"
               onClick={() => onApply(match && match.id, job && job.id)}
@@ -550,31 +411,18 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
             <Button
               variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <Button 
               className="flex-1" 
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Button 
               variant="outline" 
 
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
-<<<<<<< HEAD
-=======
         ) :(;
           <div className="flex gap-2 w-full">;
             <Button ;
@@ -587,11 +435,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               variant="outline" ;
               className="flex-1";
               onClick={() => onDecline(match.id)}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
               className="flex-1"
               onClick={() => onDecline(match && match.id)}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             >;
               Decline;
             </Button>;
@@ -599,13 +444,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         )}
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 import { useState  } from './react';
 import {
@@ -715,8 +554,6 @@ if (return null) {
       </CardFooter>;
     </Card>);
 }
-<<<<<<< HEAD
-=======
   ),;}
  interface JobMatchCardProps {
   match: JobMatch;
@@ -754,6 +591,3 @@ return (<Card className="overflow-hidden border-l-4 border-l-blue-500" > <CardHe
     </Card>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

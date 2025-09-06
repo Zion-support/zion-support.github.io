@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -26,10 +24,7 @@ import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
   HelpCircle, MessageCircle, Phone, Mail, Clock,
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   BookOpen, Video, FileText, Search, Filter,
   CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code
@@ -43,12 +38,9 @@ export default function Support() {
       name: 'AI Services',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       description: 'Support for AI consciousness and autonomous systems',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       articles: 25
     }
     {
-<<<<<<< HEAD
-=======
 
       id: 'quantum-solutions',
       name: 'Quantum Solutions',
@@ -86,8 +78,6 @@ export default function Support() {
     }
     {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       id: 'technical',
       name: 'Technical Issues',
       icon: <Code className="w - 8 h - 8 text - orange - 400" />,
@@ -105,51 +95,36 @@ export default function Support() {
       description: 'Get instant help from our support team',
       icon: <MessageCircle className="w - 8 h - 8 text - cyan - 400" />,
       action: 'Start Chat',
-<<<<<<< HEAD
-=======
       color: 'from-cyan-500 to-blue-600',
       available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
-<<<<<<< HEAD
-=======
       icon: <Phone className="w - 8 h - 8 text - green - 400" />,
       action: 'Call Now',
       color: 'from - green - 500 to - emerald - 600',
       available: true;
-=======
       icon: <Phone className="w-8 h-8 text-green-400" />,
       action: 'Call Now',
       color: 'from-green-500 to-emerald-600',
       available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
-<<<<<<< HEAD
-=======
       icon: <Mail className="w - 8 h - 8 text - purple - 400" />,
       action: 'Send Email',
       color: 'from - purple - 500 to - pink - 600',
       available: true;
-=======
       icon: <Mail className="w-8 h-8 text-purple-400" />,
       action: 'Send Email',
       color: 'from-purple-500 to-pink-600',
       available: true
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     },
     {
       title: 'Video Call',
       description: 'Screen share and visual assistance',
-<<<<<<< HEAD
   return (
 
     <div className="min-h-screen bg-black text-white">
@@ -159,7 +134,6 @@ export default function Support() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
       icon: <Video className="w - 8 h - 8 text - orange - 400" />,
       action: 'Schedule Call',
       color: 'from - orange - 500 to - red - 600',
@@ -227,15 +201,11 @@ status: 'Limited';
 
     <div className="min-h-screen bg-black text-white">
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -251,12 +221,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -264,16 +229,11 @@ status: 'Limited';
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
 
-
               Get the support you need for our AI consciousness, quantum computing, 
 
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             {/* Search Bar */}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               Get the support you need for our AI consciousness, quantum computing,
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
@@ -282,22 +242,13 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
-<<<<<<< HEAD
-=======
-
 
                   value={searchQuery  } catch (error) {
     console.error("Error:", error);
@@ -310,9 +261,6 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
@@ -334,8 +282,6 @@ status: 'Limited';
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
             className="text - center max - w-4xl mx - auto";
           >;
@@ -377,7 +323,6 @@ status: 'Limited';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Quick Actions */}
       <section className="py - 20">;
         <div className="container mx - auto px - 4">;
@@ -385,11 +330,7 @@ status: 'Limited';
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Quick Actions */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -413,12 +354,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -429,8 +365,6 @@ status: 'Limited';
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickActions.map((action, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
 
             className="text - center mb - 16";
           >;
@@ -443,21 +377,16 @@ status: 'Limited';
             {quick_actions.map ((action, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={action.title}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - black / 50 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
                   <div className="flex justify - center mb - 4 group - hover:scale - 110 transition - transform duration - 300">;
                     {action.icon}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={action.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -478,52 +407,34 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {action.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${action.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>
-<<<<<<< HEAD
-=======
 
                   </div>;
                   <h3 className="text - xl font - bold text - white mb - 3 text - center">{action.title}</h3>;
                   <p className="text - gray - 300 mb - 4 text - center leading - relaxed">{action.description}</p>;
                   <button className={`w - full py - 3 px - 4 bg - gradient - to - r ${action.color} text - white rounded - xl font - semibold hover:shadow - 2xl transition - all duration - 300`}>;
                     {action.action}
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {action.action  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
                   </button>;
                 </div>;
@@ -532,7 +443,6 @@ status: 'Limited';
         </div>;
       </section>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       {/* Support Categories */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -556,12 +466,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -569,9 +474,7 @@ status: 'Limited';
             </h2>
             <p className="text-xl text-gray-400">Find solutions organized by topic and service area</p>
           </motion.div>
-<<<<<<< HEAD
           {/* Category Filter */}
-=======
 
             className="text - center mb - 16";
           >;
@@ -591,19 +494,13 @@ status: 'Limited';
                     ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
                     : 'bg - gray - 800 / 50 text - gray - 300 hover:bg - gray - 700 / 50';
                 }`}
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           <div className="flex justify-center mb-12">
             <div className="flex flex-wrap gap-3">
               <button
@@ -621,14 +518,11 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
               >;
                 All Categories;
               </button>;
               {supportCategories.map((category) => (;
                 <button;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >;
                 All Categories;
               </button>;
@@ -651,13 +545,10 @@ status: 'Limited';
             {filtered_categories.map ((category, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={category.id}
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 30 to - black / 30 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
@@ -667,8 +558,6 @@ status: 'Limited';
                       <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors duration - 300">;
                         {category.name}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -689,11 +578,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -701,21 +586,13 @@ status: 'Limited';
                     <div className="flex-shrink-0">{category.icon}</div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
@@ -729,14 +606,11 @@ status: 'Limited';
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
         {/* Support Channels */}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
-=======
 
-=======
                       </h3>;
                       <p className="text - gray - 300 text - sm leading - relaxed">{category.description}</p>;
                     </div>;
@@ -759,9 +633,7 @@ status: 'Limited';
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               transition={{ duration: 0.6 }}
-
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -794,9 +666,6 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -809,8 +678,6 @@ status: 'Limited';
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -825,18 +692,14 @@ status: 'Limited';
               {support_channels.map ((channel, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={channel.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                   className="text - center p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
                     {channel.icon}
-
 
                   key={channel.title  } catch (error) {
     console.error("Error:", error);
@@ -867,8 +730,6 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
@@ -888,14 +749,11 @@ status: 'Limited';
                   </div>
                 </motion.div>
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {/* Search and Filter */}
         <section className="py - 12 px - 4">;
           <div className="max - w-6xl mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center">;
               {/* Search Bar */}
-
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -919,15 +777,12 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="flex-1 w-full lg:w-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search for help topics, questions, or solutions..."
-
 
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
@@ -940,8 +795,6 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
@@ -970,13 +823,10 @@ status: 'Limited';
                       selected_category === category.id;
                         ? 'bg - cyan - 500 / 20 border - cyan - 500 / 50 text - cyan - 400';
                         : 'bg - gray - 800 / 50 border - gray - 600 text - gray - 300 hover:bg - cyan - 500 / 20 hover:border - cyan - 500 / 50';
-=======
                   className="text-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex justify-center mb-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     {channel.icon}
-=======
                   key={channel.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1005,11 +855,6 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
@@ -1028,7 +873,6 @@ status: 'Limited';
                     </div>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -1038,7 +882,6 @@ status: 'Limited';
           <div className="max - w-6xl mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center">;
               {/* Search Bar */}
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1060,23 +903,14 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="flex-1 w-full lg:w-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search for help topics, questions, or solutions..."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-=======
                     value={searchTerm  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1087,36 +921,24 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
-<<<<<<< HEAD
               {/* Category Filter */}
               <div className="flex flex - wrap gap - 2">;
                 {support_categories.map ((category) => (
                   <button;
                     key={category.id}
-<<<<<<< HEAD
-=======
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${
                       selectedCategory === category.id
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                         : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     }`}
                   >;
                     {category.icon}
                     {category.name}
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -1147,16 +969,9 @@ status: 'Limited';
                     <span className="text - sm text - gray - 400">({category.count})</span>;
                   </button>))}
 
-
-=======
-
                     <span className="text - sm text - gray - 400">({category.count})</span>;
                   </button>))}
-=======
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1208,28 +1023,18 @@ status: 'Limited';
           </div>;
         </section>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* FAQ Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-=======
-
-
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 question: "What is AI Consciousness Evolution?",
                 answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self - aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence.";
               },
@@ -1259,7 +1064,6 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
@@ -1314,12 +1118,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -1329,10 +1128,6 @@ status: 'Limited';
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="text - center mb - 16";
             >;
               <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
@@ -1343,25 +1138,18 @@ status: 'Limited';
               </p>;
             </motion.div>;
             {filteredFAQs.length === 0 ? (
-<<<<<<< HEAD
-=======
 
                         </span>))}
-=======
               <div className="text-center py-20">
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-semibold text-white mb-4">No results found</h3>
                 <p className="text-gray-300">Try adjusting your search terms or category filter.</p>
               </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             ) : (
               <div className="space-y-6">
                 {filteredFAQs.map((faq, index) => (
                   <motion.div
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1407,10 +1195,6 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     </div>;
                   </motion.div>))}
               </div>)}
@@ -1452,8 +1236,6 @@ status: 'Limited';
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
                 <motion.div
-<<<<<<< HEAD
-=======
 
               className="text - center mb - 16";
             >;
@@ -1468,13 +1250,10 @@ status: 'Limited';
               {resources.map ((resource, index) => (
                 <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   key={resource.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                   className="p - 6 bg - gradient - to - br from - gray - 800 / 30 to - gray - 900 / 30 rounded - 2xl border border - gray - 700 / 30 hover:border - cyan - 500 / 50 transition - all duration - 300";
                 >;
                   <div className="flex justify - center mb - 4">;
@@ -1488,7 +1267,6 @@ status: 'Limited';
                     </span>;
                     <a;
                       href={resource.link}
-
 
                   key={resource.title  } catch (error) {
     console.error("Error:", error);
@@ -1519,17 +1297,12 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {resource.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1542,12 +1315,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                     >
                       Access
@@ -1566,8 +1334,6 @@ status: 'Limited';
           <div className="max-w-4xl mx-auto space-y-4">
             {popularArticles.map((article, index) => (
               <motion.div
-<<<<<<< HEAD
-=======
 
                       className="text - cyan - 400 hover:text - cyan - 300 transition - colors text - sm font - medium";
                     >;
@@ -1587,13 +1353,10 @@ status: 'Limited';
             {popular_articles.map ((article, index) => (
               <motion.div;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 key={article.title}
                 initial={{ opacity: 0, coordinate_x: -20 }}
                 whileInView={{ opacity: 1, coordinate_x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
                 className="group cursor - pointer";
               >;
                 <div className="p - 6 bg - gradient - to - br from - gray - 900 / 50 to - black / 50 rounded - 2xl border border - gray - 800 / 50 hover:border - cyan - 500 / 30 transition - all duration - 300">;
@@ -1606,7 +1369,6 @@ status: 'Limited';
                         <span className="flex items - center gap - 1">;
                           <BookOpen className="w - 4 h - 4" />;
                           {article.category}
-
 
                 key={article.title  } catch (error) {
     console.error("Error:", error);
@@ -1629,36 +1391,24 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         {article.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <BookOpen className="w-4 h-4" />
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                           {article.category  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1672,12 +1422,7 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </span>
                         <span className="flex items-center gap-1">
                           <TrendingUp className="w-4 h-4" />
@@ -1696,8 +1441,6 @@ status: 'Limited';
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-=======
 
                         </span>;
                         <span className="flex items - center gap - 1">;
@@ -1734,7 +1477,6 @@ status: 'Limited';
               whileInView={{ opacity: 1, coordinate_x: 0 }}
               transition={{ duration: 0.8 }}
 
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1749,8 +1491,6 @@ status: 'Limited';
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -1770,18 +1510,11 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-
-
-
 
                 revolutionary technology solutions.
               </p>
@@ -1797,11 +1530,7 @@ status: 'Limited';
                         ? 'bg-green-500/20 text-green-400'
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                       {schedule.status  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1832,33 +1561,20 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
 
-
                   For urgent technical issues or critical support needs,
 
-<<<<<<< HEAD
                   For urgent technical issues or critical support needs, 
                   For urgent technical issues or critical support needs,
-=======
-=======
                   For urgent technical issues or critical support needs, 
-=======
                   For urgent technical issues or critical support needs,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   our team is available around the clock.
                 </p>
                 <div className="space-y-4">
@@ -1882,23 +1598,15 @@ status: 'Limited';
                   >
                     Contact Support
                     <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-=======
-
 
                   </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
             >;
               <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
@@ -1974,15 +1682,12 @@ status: 'Limited';
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
 
-
       {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -2001,18 +1706,11 @@ status: 'Limited';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-
-
-
 
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
@@ -2023,15 +1721,9 @@ status: 'Limited';
               >
                 Get Support
                 <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-=======
-
 
               </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <a
                 href="/resources"
                 className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300"
@@ -2044,8 +1736,6 @@ status: 'Limited';
       </section>
     </div>
   )
-<<<<<<< HEAD
-=======
 
           >;
             <h2 className="text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
@@ -2087,22 +1777,17 @@ export default Support,
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.6 }}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 },
 export default Support,
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact Support */}
         {/* Contact Support */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -2136,15 +1821,9 @@ export default Support,
                 >
                   Contact Support
                   <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-=======
-
 
                 </Link>
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <a
                   href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center"
@@ -2166,7 +1845,6 @@ export default Support,
       </main>
     </Layout>
   )
-<<<<<<< HEAD
 }
 export default SupportPage;
 
@@ -2324,17 +2002,8 @@ export default Support,;
 };
 export default SupportPage;
 
-=======
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -2355,4 +2024,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

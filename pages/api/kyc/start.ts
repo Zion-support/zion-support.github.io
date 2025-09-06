@@ -1,14 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
-
 
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -38,37 +35,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessName
     businessRegistrationNumber
   } = req.body as {
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     role,
     fullLegalName,
     business_name,
     businessRegistrationNumber,
-<<<<<<< HEAD
     userId?: string;
-=======
-
 
     userId?: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } = req.body as {
     user_id?: string;
     role?: KycRole;
     fullLegalName?: string;
     business_name?: string;
     businessRegistrationNumber?: string;
-<<<<<<< HEAD
-=======
 
   };
   if (!userId || !role)
     return res && res.status(400).json({ error: 'Missing userId or role' });
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const db = load();
   const now = new Date().toISOString();
   const existing = db[userId];
@@ -94,8 +79,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now;
   db[userId] = profile;
   save(db);
-<<<<<<< HEAD
-=======
 
   res && res.status(200).json({
     ok: true,
@@ -111,10 +94,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
 
-=======
-
-
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
@@ -128,14 +107,11 @@ function load(): Record<string, KycProfile> {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 }
     } catch (error) {
     console.error("Error:", error);
@@ -201,8 +177,6 @@ export default function handler(req, res) {
     createdAt: now,;
     lastUpdatedAt: now,;
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
   if (businessName) profile.businessName = businessName;
@@ -215,22 +189,16 @@ export default function handler(req, res) {
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
   }
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 
 }
   const db = load ();
@@ -274,7 +242,3 @@ if (
 optional_documents: getOptionalDocuments (role),
   });
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

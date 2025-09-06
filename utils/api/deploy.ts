@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface DeployConfig {
   instanceName: string;
   governanceMode: string;
@@ -46,22 +45,10 @@ export async function deployInstance(config: DeployConfig): Promise<DeployResult
     };
   }
 }
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
 
 function toSlug(name: string): string {;
   return name;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
 function toSlug(name: string): string {;
   return name;
 
@@ -69,8 +56,6 @@ import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 function toSlug(name: string): string {return name;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
@@ -78,36 +63,18 @@ import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 
-
-
 function toSlug(name: string): string {;
   return name;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -156,9 +123,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
   const daoDir = path.join(process.cwd(), "data", "dao"),;
   const tokenDir = path.join(process.cwd(), "data", "token"),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
@@ -179,8 +143,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt");
   const daoDir = path.join(process.cwd(), "data", "dao");
   const tokenDir = path.join(process.cwd(), "data", "token");
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
@@ -194,12 +156,9 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(promptBasePath, promptBase);
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" });
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" });
-<<<<<<< HEAD
-=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 ;
@@ -210,7 +169,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(;
       daoConfigPath,;
       JSON.stringify(;
-<<<<<<< HEAD
         {treasury: `${instanceSlug}-treasury`;
           governanceMode: input.governanceMode;
           quorum: 0.6;
@@ -223,7 +181,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" });
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" });
-=======
         {;
           treasury: `${instanceSlug}-treasury`,;
           governanceMode: input.governanceMode,;
@@ -240,7 +197,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 ;
@@ -250,7 +206,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(;
       tokenConfigPath,;
       JSON.stringify(;
-<<<<<<< HEAD
         {symbol: "ZION$";
           decimals: 18;
           enabled: input.tokenActivation;
@@ -263,7 +218,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" });
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" });
-=======
         {;
           symbol: "ZION$",;
           decimals: 18,;
@@ -280,7 +234,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }
 ;
@@ -307,8 +260,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
-<<<<<<< HEAD
-=======
 
 import fs from './fs';,
 import path from './path';,
@@ -515,8 +466,6 @@ if ( {) {
     summary;
     version}
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
@@ -527,7 +476,6 @@ if ( {) {
   }
 }
 ;
-<<<<<<< HEAD
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
     writeTextFile(;
@@ -558,7 +506,6 @@ if ( {) {
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
-
 
   writeTextFile(;
 
@@ -603,8 +550,6 @@ if ( {) {
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
@@ -660,10 +605,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
   const daoDir = path.join(process.cwd(), "data", "dao"),;
   const tokenDir = path.join(process.cwd(), "data", "token"),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
@@ -757,8 +698,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import fs from './fs';,
 import path from './path';,
@@ -961,28 +900,15 @@ if ( {) {
     config_path,
     assets,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     logs;
     summary;
     version}
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1091,19 +1017,11 @@ if ( {) {
     logs;
     summary;
     version  } catch (error) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   if (input.modules.bookBuilder) {;
     ensureDir(docsDir);
     writeTextFile(;
@@ -1135,8 +1053,6 @@ if ( {) {
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   writeTextFile(;
 
     summitEventPath,;
@@ -1161,24 +1077,11 @@ if ( {) {
     );
   ),;
 
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

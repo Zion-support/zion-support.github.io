@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -16,8 +7,6 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {cn} from "@/lib/utils";
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface Conversation {;
   id: string,;
   name: string,;
@@ -35,9 +24,6 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -60,14 +46,10 @@ interface MobileConversationListProps {;
   conversations: Conversation[],;
 
   activeConversation?: string;
-<<<<<<< HEAD
   onSelectConversation: (id: string) => void
 }
 import { Input } from "@/components/ui/input",
 import { cn } from "@/lib/utils",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Conversation {
   id: string,
   name: string,
@@ -76,14 +58,7 @@ interface Conversation {
   timestamp: string,
   unreadCount: number,
   isTyping?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
 export function MobileConversationList({
 
@@ -116,34 +91,20 @@ interface MobileConversationListProps {;
   onSelectConversation: (id: string) => void;
 }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-
 export function MobileConversationList({
-<<<<<<< HEAD
-=======
 
 export function MobileConversationList(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
 export function MobileConversationList(): any ({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   conversations;
   activeConversation;
   onSelectConversation;
 }: MobileConversationListProps) {;
   return (
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function MobileConversationList({
   conversations,
   activeConversation,
@@ -155,7 +116,6 @@ export function MobileConversationList({
           <div
             key={conversation && conversation.id}
             className={cn(
-<<<<<<< HEAD
 
 import React from "react",;
 import { Card } from "@/components/ui/card",;
@@ -186,12 +146,10 @@ export function MobileConversationList({;
   onSelectConversation;
 } MobileConversationListProps) {;
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;
-<<<<<<< HEAD
           <Input
             placeholder="Search messages..."
             className="pl-9"
@@ -199,7 +157,6 @@ export function MobileConversationList({;
         </div>;
       </div>;
 
-=======
           <Input;
             placeholder="Search messages...";
             className="pl-9";
@@ -207,7 +164,6 @@ export function MobileConversationList({;
         </div>;
       </div>;
       ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="px-4 pb-4 space-y-2">;
         <div className="flex space-x-2">;
           <Badge variant="secondary" className="rounded-full px-3">All</Badge>;
@@ -216,7 +172,6 @@ export function MobileConversationList({;
           <Badge variant="outline" className="rounded-full px-3">Projects</Badge>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
       <div className="space-y-2 pb-24">;
         {conversations && conversations.map((conversation) => (;
@@ -225,17 +180,11 @@ export function MobileConversationList({;
             key={conversation && conversation.id}
             className={cn(
 
-
               "px-4",
 
-
-=======
               "px-4";
 
               "px-4",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -257,24 +206,12 @@ export function MobileConversationList({;
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
                     {conversation.isTyping 
 
-
-<<<<<<< HEAD
-=======
                     {conversation.isTyping 
-
 
                     {conversation.isTyping
                     {conversation.isTyping 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
@@ -282,16 +219,9 @@ export function MobileConversationList({;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
           <div
             key={conversation && conversation.id}
             className={cn(
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               "px-4"
               activeConversation === conversation && conversation.id && "bg-primary/5"
             )}
@@ -317,13 +247,10 @@ export function MobileConversationList({;
                       ? <em>Typing...</em> ;
                       : conversation && conversation.lastMessage}
                   </p>;
-<<<<<<< HEAD
 
                   {conversation && conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
-<<<<<<< HEAD
-=======
       ;
       <div className="space-y-2 pb-24">;
         {conversations.map((conversation) => (;
@@ -361,9 +288,6 @@ export function MobileConversationList({;
                   {conversation.unreadCount > 0 && (;
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation.unreadCount}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Badge>;
                   )}
                 </div>;
@@ -372,21 +296,14 @@ export function MobileConversationList({;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       </div>;
     </div>;
   );
 }
 
-=======
-=======
       </div>;
     </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from './react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -472,10 +389,6 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   ),;}
  interface Conversation {
   id: string;
@@ -522,6 +435,3 @@ onSelectConversation
     </div>
   )
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

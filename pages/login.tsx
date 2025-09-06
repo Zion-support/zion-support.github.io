@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -28,23 +25,18 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-<<<<<<< HEAD
-=======
 
-=======
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import {;
   Mail,;
@@ -224,13 +216,9 @@ import {;
   DizzyFace2,;
 
 } from "lucide-react";
-<<<<<<< HEAD
   DizzyFace2
 } from 'lucide-react';
 origin/automation-improvements-final
-=======
-=======
-<<<<<<< HEAD
   Mail,
   Lock,
   Eye,
@@ -405,23 +393,11 @@ origin/automation-improvements-final
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
-<<<<<<< HEAD
   DizzyFace2,
-=======
   DizzyFace2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
->>>>>>> origin/automation-improvements-final
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   Mail
   Lock
@@ -599,18 +575,14 @@ origin/automation-improvements-final
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-<<<<<<< HEAD
     email: ""
     password: ""
     email: "",
     password: "",;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
   const [error, setError] = useState("");
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -618,8 +590,6 @@ origin/automation-improvements-final
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
-
-=======
 
 } from './lucide-react';
 ;
@@ -642,7 +612,6 @@ function LoginPage() {
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -650,15 +619,7 @@ function LoginPage() {
       [name]: value
       ...prev
       [name]: value
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
 
@@ -669,17 +630,10 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
     setFormData((prev) => ({;
@@ -687,38 +641,24 @@ export default function LoginPage() {
       [name]: value,;
     }));
 
-
     try {;
       // Simulate API call;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     setIsLoading(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     setError("");
     try {
       // Simulate API call
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       await new Promise((resolve) => setTimeout(resolve, 1000));
-<<<<<<< HEAD
-=======
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
         window && window.location.href = "/";
       } else {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         setError("Please fill in all fields");
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     setError('');
 
     try {
@@ -734,35 +674,17 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-<<<<<<< HEAD
-=======
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     } finally {
     } finally {;
       setIsLoading(false);
     }
   }
   return (
-<<<<<<< HEAD
-=======
 
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -779,8 +701,6 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-<<<<<<< HEAD
-=======
 
     <Layout>;
       <Head>;
@@ -806,14 +726,8 @@ export default function LoginPage() {
             <p className="mt-2 text-sm text-gray-600">;
 
               Or{" "}
-=======
               Or{' '}
->>>>>>> origin/automation-improvements-final
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <Link
                 href="/contact"
 
@@ -839,19 +753,11 @@ export default function LoginPage() {
                   {error}
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-=======
 
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
-=======
-
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Email address
                 </label>
                 <div className="relative">
@@ -869,7 +775,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
                     <Mail className="h-5 w-5 text-gray-400" />;
                   </div>;
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Lock, Eye } from 'lucide-react';
@@ -910,28 +815,19 @@ export default function LoginPage() {
                   Email address
                 </label>
                 <div className="mt-1 relative">
->>>>>>> main
                   <input
                     id="email"
                     name="email"
                     type="email"
-<<<<<<< HEAD
                     autoComplete="email"
                     required
                     value={formData && formData.email}
                     onChange={handleInputChange}
                     className="appearance-none relative block w-full pl-10 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
                     placeholder="Enter your email"
-<<<<<<< HEAD
-=======
 
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   Password
                 </label>
                 <div className="relative">
@@ -973,8 +869,6 @@ export default function LoginPage() {
                     ) : (;
                       <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" />;
                     )}
-<<<<<<< HEAD
-=======
 
                   </button>;
                 </div>;
@@ -982,22 +876,14 @@ export default function LoginPage() {
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <input
                     id="remember-me"
                     name="remember-me"
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-<<<<<<< HEAD
-=======
 
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                     Remember me
                   </label>
                 </div>
@@ -1011,9 +897,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   />;
                   <label
                     htmlFor="remember-me"
@@ -1187,11 +1070,6 @@ if ( {) {
 
                   <span className="px-2 bg-white text-gray-500">Or continue with</span>
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1213,8 +1091,6 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-=======
 
                 </button>;
               </div>;
@@ -1250,14 +1126,8 @@ if ( {) {
             <p className="text-sm text-gray-600">;
 
               Don't have an account?{" "}
-=======
               Don't have an account?{' '}
->>>>>>> origin/automation-improvements-final
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;
@@ -1329,7 +1199,6 @@ if ( {) {
         </div>;
       </div>;
     </Layout>);
-=======
                     required
                     className="appearance-none rounded-md relative block w-full px-3 py-2 pl-10 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                     placeholder="Enter your email"
@@ -1379,5 +1248,4 @@ if ( {) {
       </div>
     </Layout>
   );
->>>>>>> main
 }

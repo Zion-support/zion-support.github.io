@@ -7,7 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { q } = req.body || {},
     if (typeof q === 'string' && q.trim()) {
       memoryStore.push({ q: q.trim(), ts: Date.now() })
-<<<<<<< HEAD
     }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,8 +48,6 @@ export default function handler(req, res) {
 }
   if (req.method === 'GET') {
     const counts = new Map<string number>();
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 const memory_store: { q: string, ts: number }[] = [],
@@ -67,10 +64,8 @@ if ( {) {
   $2
 }
       memory_store.push ({ q: q.trim (), ts: Date.now () });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     return res.status (204).end ();
 
   }
@@ -79,9 +74,6 @@ if ( {) {
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
-=======
-
-
 
   }
   return res.status(405).end()

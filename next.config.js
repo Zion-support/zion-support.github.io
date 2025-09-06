@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -71,7 +70,6 @@ const nextConfig = {
     
     return config;
   }
-=======
 	reactStrictMode: false,
 	trailingSlash: true,
 	output: 'export',
@@ -103,7 +101,6 @@ const nextConfig = {
 
 		return config;
 	}
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 };
 
 export default nextConfig;

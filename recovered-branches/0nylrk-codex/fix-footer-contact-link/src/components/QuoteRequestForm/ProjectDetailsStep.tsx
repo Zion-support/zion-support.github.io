@@ -18,18 +18,11 @@ export function ProjectDetailsStep({
           Tell us about your project
         </h3>
 
-=======
-<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
-=======
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -69,11 +62,7 @@ export function ProjectDetailsStep({
           Contact Information
         </h3>
 
-=======
-=======
-
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
-
 
 <div>
 <h3 className="text-xl font-semibold text-white mb-4">
@@ -84,10 +73,6 @@ export function ProjectDetailsStep({
           Contact Information
         </h3>
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -141,15 +126,12 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
-<<<<<<< HEAD
-
 
 value={formData.contactInfo.name}
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
 
-<<<<<<< HEAD
               value={formData.contactInfo.name}
               onChange={(e) =>
                 updateFormData({
@@ -191,8 +173,6 @@ value={formData.contactInfo.name}
               id="email"
               type="email"
               placeholder="Your email address"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               value={formData.contactInfo.email}
               onChange={(e) =>
@@ -235,8 +215,6 @@ value={formData.contactInfo.name}
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div>;
         <h3 className="text - xl font - semibold text - white mb - 4">;
           Contact Information;
@@ -324,26 +302,15 @@ value={formData.contactInfo.name}
       </div>;
 
     </div>);
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
-
 
   )
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
 }
-
-=======
 
   )
 
@@ -376,6 +343,3 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 ;
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

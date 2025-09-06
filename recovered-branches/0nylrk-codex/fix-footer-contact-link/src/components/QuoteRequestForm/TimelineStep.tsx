@@ -24,18 +24,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
           When do you need this?
         </h3>
 
-=======
-<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">When do you need this?</h3>
-=======
         <h3 className="text-xl font-semibold text-white mb-4">
           When do you need this?
         </h3>
 
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <div
@@ -51,8 +44,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 I have specific start and end dates
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -71,18 +62,11 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
           {formData.timeline === "fixed" && (
             <div className="grid grid-cols-1 md: grid-cols-2 gap-4 mt-6">
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div>
                 <Label className="block mb-2 text-zion-slate-light">
                   Start Date
@@ -92,11 +76,8 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark"
                         !formData.startDate && "text-zion-slate-light"
-=======
 import { useState  } from './react';
 import { format  } from './date - fns';
 import { Calendar  } from '@/components / ui / calendar';
@@ -166,7 +147,6 @@ function TimelineStep() {
                       className={cn (
                         "w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark",
                         !form_data.start_date && "text - zion - slate - light",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       )}
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
@@ -371,61 +351,34 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       variant="outline";
                       className={cn(;
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Button;
                       variant="outline";
                       className={cn(;
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         !formData.startDate && "text-zion-slate-light";
                       )}
                     >;
                       <CalendarIcon className="mr-2 h-4 w-4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
-=======
                       {formData.startDate ? format(formData.startDate, "PPP") :<span>Pick a date</span>}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                       {formData.startDate ? format(formData.startDate, "PPP") :<span>Pick a date</span>}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </Button>;
                   </PopoverTrigger>;
                   <PopoverContent className="w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start">;
                     <Calendar;
                       mode="single";
                       selected={formData.startDate}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       onSelect={(date) => updateFormData({ startDate: date })}
 
-=======
                       onSelect={(date) => updateFormData({ startDate:date })}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       initialFocus;
                       className="p-3 pointer-events-auto";
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
               ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div>;
                 <Label className="block mb-2 text-zion-slate-light">End Date</Label>;
                 <Popover>;
@@ -437,13 +390,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
 
                       initialFocus;
                       className="p-3 pointer-events-auto";
-<<<<<<< HEAD
-<<<<<<< HEAD
                       disabled={(date) => date < (formData && formData.startDate || new Date())}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       disabled={(date) => date < (formData.startDate || new Date())}
                       disabled={(date) =>
                         date < (formData.startDate || new Date())
@@ -454,17 +401,10 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
               </div>
             </div>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     >;
                       <CalendarIcon className="mr - 2 h - 4 w - 4" />;
                       {form_data.end_date ? (
@@ -485,10 +425,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       disabled={(date) =>;
                         date < (form_data.start_date || new Date ());
                       }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                     <Button;
                       variant="outline";
                       className={cn(;
@@ -508,56 +445,32 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       initialFocus;
                       className="p-3 pointer-events-auto";
                       disabled={(date) => date < (formData.startDate || new Date())}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   )
-
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 
             </div>)}
         </div>;
       </div>;
     </div>);
-=======
-
-
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 </div>
       </div>
     </div>
 
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 }
 ;
-<<<<<<< HEAD
 
         </div>
       </div>
@@ -567,12 +480,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
       </div>;
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

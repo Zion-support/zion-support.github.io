@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
 origin/automation-improvements-final
-
-
-
 
   Menu
   X
@@ -317,7 +313,6 @@ export default function Navigation() {;
                       </div>;
                     </motion && motion.div>;
                   )}
-
 
                 </AnimatePresence>;
               </div>;
@@ -728,7 +723,6 @@ export default function Navigation() {;
       />;
     </>);
 }
-=======
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { 
@@ -741,7 +735,6 @@ const Navigation = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   ];
-
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
@@ -894,4 +887,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
->>>>>>> main

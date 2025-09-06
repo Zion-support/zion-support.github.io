@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
 import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
 import {extraServices} from '../../data/extra-services';
@@ -12,9 +11,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -38,36 +34,28 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-<<<<<<< HEAD
-=======
 import React from 'react';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     }
     return null;
   } catch {;
     return null;
   }
 
-
 export async function getStaticPaths() {;
   const services = getAllServices();
   const slugs = new Set<string>();
-
 
     // Fall back to normalized id or name to provide a stable URL under /services/*;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
-<<<<<<< HEAD
     paths: Array.from(slugs).map(slug => ({ params: { slug } })),
     fallback: false,
   };
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return {;
     paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
     fallback: false,;
@@ -101,7 +89,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 
 export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
 
-<<<<<<< HEAD
   if (!service) {
     return { notFound: true }
   }
@@ -109,16 +96,12 @@ export default function ServiceDetailPage(): any ({ service }: { service: Servic
     props: { service }
   }
 export default function ServiceDetailPage({ service }: { service: Service }) {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>;
       <Head>;
         <title>{service && service.name} | Zion Tech Group</title>;
         <meta
           name='description'
-<<<<<<< HEAD
-=======
 
 export async /**
  * getStaticPaths - Function description
@@ -282,7 +265,6 @@ function ServiceDetailPage() {
               </div>;
               <div className='mt-6 flex gap-3'>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 <Button
                   href='/contact'
                   className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
@@ -291,8 +273,6 @@ function ServiceDetailPage() {
                 <Button
                   href={service && service.link}
                   variant='outline'
-<<<<<<< HEAD
-=======
 
                   className='flex-1 border border-gray-600 text-gray-200'>;
                   <ExternalLink className='w-4 h-4 mr-2' /> Learn More;
@@ -305,7 +285,6 @@ function ServiceDetailPage() {
                 <div className='flex items-center gap-2 text-cyan-400'>;
                   <Phone className='w-4 h-4' />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   <a
                     href={`tel:${contactInfo && contactInfo.mobile.replace(/[^+\\d]/g, '')}`}
                     className='hover:underline'>;
@@ -401,26 +380,17 @@ import Card from '../../components/ui/Card';
         </div>;
       </div>;
 
-
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-=======
 
 }
 }
 }
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -428,9 +398,6 @@ import { additionalEnhancedServices } from '../../data/additional-real-services'
 import { newRealServices } from '../../data/new-real-services';
 import { marketReadyServices } from '../../data/market-ready-services';
 type Service = typeof enhancedRealMicroSaasServices[number];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
@@ -516,7 +483,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	return {
 		props: { service }
 	}
-=======
 const contactInfo = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -626,9 +592,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
@@ -637,24 +601,18 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				<meta name="description" content={service.tagline || service.description} />
 				<link rel="canonical" href={service.link} />
 			</Head>
-<<<<<<< HEAD
-=======
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
-<<<<<<< HEAD
 						{service.name}
-=======
 						{service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 					</h1>
 					<p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
 				</div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
@@ -670,15 +628,11 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
 									</li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 								))}
 							</ul>
 						</Card>
 					</div>
 <div className="space-y-6">
-=======
 								))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -688,8 +642,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						</Card>
 					</div>
 					<div className="space-y-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
@@ -699,42 +651,26 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								<Button href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
 						</Card>
-<<<<<<< HEAD
-=======
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
-<<<<<<< HEAD
 								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</a></div>
-=======
 								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</Link></div>
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</Link></div>
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-xs hover:underline">{contactInfo.address}</Link></div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 							</div>
 						</Card>
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD
     </UltraFuturisticBackground>);
 ;
 
-
-=======
 	)
-<<<<<<< HEAD
 }
     </UltraFuturisticBackground>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

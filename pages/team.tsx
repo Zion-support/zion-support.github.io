@@ -1,26 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
 
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
-=======
 import {
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   ArrowRight,
   Phone,
   Mail,
@@ -32,7 +23,6 @@ import {
   Users,
   Globe,
   Code,
-<<<<<<< HEAD
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
@@ -40,25 +30,12 @@ const teamMembers = [
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-<<<<<<< HEAD
-=======
 
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -68,7 +45,6 @@ origin/automation-improvements-final
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -129,10 +105,6 @@ origin/automation-improvements-final
     github: "https://github.com/davidkim"
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / klebersantos",
     twitter: "https://twitter.com / klebersantos",
@@ -145,8 +117,6 @@ origin/automation-improvements-final
     ],
   },
   {
-<<<<<<< HEAD
-=======
     id: 2,
     name: "Sarah Johnson",
     position: "CTO",
@@ -208,11 +178,7 @@ origin/automation-improvements-final
     expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
 
   },
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
@@ -240,11 +206,8 @@ origin/automation-improvements-final
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
-<<<<<<< HEAD
-=======
 
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -255,11 +218,7 @@ origin/automation-improvements-final
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-<<<<<<< HEAD
-=======
 
-
-=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -287,9 +246,6 @@ origin/automation-improvements-final
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 
@@ -451,11 +407,6 @@ const teamMembers = [;
   },;
 ];
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -486,7 +437,6 @@ const teamMembers = [;
           </div>;
         </div>;
       </section>;
-
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
@@ -681,7 +631,6 @@ const teamMembers = [;
         </div>;
       </section>;
 
-
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -717,14 +666,7 @@ function TeamPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
 
-
-
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -738,7 +680,6 @@ function TeamPage() {
         </p>
       </div>
     </>
-<<<<<<< HEAD
     </Layout>;
   );
 }
@@ -778,11 +719,7 @@ const teamMembers = [
     description:
       "Leading our development teams with agile methodologies and client-focused delivery."
   }
-=======
 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
               Get Free Consultation;
             </Link>;
@@ -837,7 +774,6 @@ const teamMembers = [
         </div>;
       </section>;
 
-
 const teamMembers = [;
   {;
     name: "Dr. Sarah Johnson",;
@@ -876,29 +812,15 @@ const teamMembers = [;
 export default function TeamPage() {;
 
   return (
-<<<<<<< HEAD
     <>
-=======
-
-
-=======
-
-=======
 
     <>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
 
-<<<<<<< HEAD
-
-
-
     </>;
-=======
       />
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">Our Team</h1>
@@ -907,17 +829,10 @@ export default function TeamPage() {;
         </p>
       </div>
 
-
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </>;
 
     </>;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
   return (
     <>;
@@ -938,17 +853,12 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-<<<<<<< HEAD
     </Layout>);
-=======
 <p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
 			</div>
 		</>
@@ -956,7 +866,6 @@ export default function TeamPage() {
 
 }
 </Layout>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -1031,23 +940,11 @@ function TeamPage() {
     </>);
 ;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
 }
 
 ;
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 
@@ -1068,4 +965,3 @@ const Page = () => {
 };
 
 export default Page;
->>>>>>> main

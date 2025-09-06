@@ -18,22 +18,16 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
         </span>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     </div>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     </div>
 
   )
 }
 ;
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2  } from './lucide-react';
 interface ResultsHeaderProps {
   is_loading: boolean;
@@ -57,17 +51,12 @@ function ResultsHeader() {
         </span>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     </div>
   );
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </div>
   );
 }
@@ -112,6 +101,3 @@ resultCount: number
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

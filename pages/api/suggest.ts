@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -15,13 +11,11 @@ const SAMPLE_QUERIES = [
 ];
 
 const SKILLS = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-<<<<<<< HEAD
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -31,20 +25,16 @@ class ErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-=======
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-=======
     return this.props.children;
   }
 }
@@ -113,11 +103,7 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -136,13 +122,6 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     
     return this.props.children;
   }
@@ -151,19 +130,8 @@ class ErrorBoundary extends React.Component {
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -174,27 +142,12 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "React developers under $50/hr",
   "Part-time DevOps jobs in LATAM",
   "AI/ML engineers for startup",
   "Blockchain developers remote",
   "UI/UX designers available now",
   "Full-stack developers with Next && Next.js",
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import type { NextApiRequest, NextApiResponse } from './next';
 const SAMPLE_QUERIES = [;
   "React developers under $50 / hr",
@@ -203,49 +156,28 @@ const SAMPLE_QUERIES = [;
   "Blockchain developers remote",
   "UI / UX designers available now",
   "Full - stack developers with Next.js",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   "Data scientists with Python",
   "Mobile app developers iOS / Android",
   "Cloud architects AWS / Azure",
   "DevOps engineers with Kubernetes",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
-
 
   if (req.method !== "GET") {;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
 }
-=======
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "GET") {
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {
@@ -254,25 +186,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
 
-<<<<<<< HEAD
-=======
   const { q = "" } = req.query;
   const query = String(q).toLowerCase();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return res && res.status(200).json({ suggestions });
-=======
 
   return res && res.status(200).json({ suggestions });
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
 
   } catch (error) {
@@ -283,10 +206,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
   const query = String(q).toLowerCase();
   if (!query) {
     return res && res.status(200).json({ suggestions: SAMPLE_QUERIES && SAMPLE_QUERIES.slice(0, 5) });
@@ -295,14 +214,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
 return res && res.status(200).json({ suggestions });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
 export default /**
  * handler - Function description
@@ -312,16 +224,7 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
     res.set_header ("Allow", "GET");
     return res.status (405).json ({ error: "Method not allowed" });
   }
@@ -341,8 +244,6 @@ if ( {) {
   return res.status (200).json ({ suggestions });
 
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -386,9 +287,3 @@ function handler() {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

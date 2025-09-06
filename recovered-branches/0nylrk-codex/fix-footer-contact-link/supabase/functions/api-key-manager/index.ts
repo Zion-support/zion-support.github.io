@@ -1,79 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
-<<<<<<< HEAD
-=======
 
-
-=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
-
-
 
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface CreateKeyRequest {
   name: string,
   scopes: string[],
   expiresAt?: string | null
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateKeyRequest {;
   name: string,;
   scopes: string[],;
   expiresAt?: string | null;
-<<<<<<< HEAD
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 interface RegenerateKeyRequest {;
   keyId: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   expiresAt?: string | null
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';,
@@ -86,16 +50,10 @@ interface CreateKeyRequest {
 interface RegenerateKeyRequest {
   key_id: string;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
-<<<<<<< HEAD
-=======
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 
@@ -108,17 +66,11 @@ interface RegenerateKeyRequest {
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const supabase = createClient(supabaseUrl, supabaseKey);
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string,
 const supabase = createClient(supabaseUrl, supabaseKey),
 
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req && req.method === 'OPTIONS') {
@@ -136,10 +88,7 @@ if ( {) {
 }
     return new Response ('ok', {
       headers: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
 
@@ -147,7 +96,6 @@ if ( {) {
     }
     // Verify the token with Supabase auth
 
-<<<<<<< HEAD
     const token = authHeader && authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabase && supabase.auth.getUser(token);
     
@@ -162,8 +110,6 @@ if ( {) {
     const url = new URL(req && req.url);
     const path = url && url.pathname.split('/').pop();
 
-
-=======
         'Access - Control - Allow - Origin': '*Access - Control - Allow - Methods': 'POST, OPTIONSAccess - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}});
   }
   try {
@@ -182,15 +128,12 @@ if ( {) {
     // Parse URL to determine action
     const url = new URL(req && req.url);
     const path = url && url.pathname.split('/').pop();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         headers: { 'Content-Type': 'application/json' }})
     }
     // Verify the token with Supabase auth
         headers: { 'Content-Type': 'application/json' }})
     }
     // Parse URL to determine action
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Handle different actions
     if (req && req.method === 'POST') {
       if (path === 'create') {
@@ -212,12 +155,7 @@ if ( {) {
         return await getApiLogs(user && user.id, limit, offset)
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
@@ -225,9 +163,7 @@ if ( {) {
     console && console.error('Error processing request:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
 
-=======
 serve(async (req) => {
   // Handle CORS for browser requests
   if (req.method === 'OPTIONS') {
@@ -282,17 +218,12 @@ serve(async (req) => {
     console.error('Error processing request:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
   }
 });
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
     // Generate prefix from name (first 4 chars of name + 4 random chars)
-<<<<<<< HEAD
-<<<<<<< HEAD
     const namePrefix = name && name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
     const randomChars = Math && Math.random().toString(36).substring(2, 6);
     const prefix = `${namePrefix}${randomChars}`.substring(0, 8);
@@ -300,14 +231,11 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
 
     const { data: keyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix });
     
-=======
     const { data: keyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (keyGenError || !keyData) {
       console && console.error('Error generating API key:', keyGenError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to generate API key' }), {
         status: 500,
-<<<<<<< HEAD
 
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -315,19 +243,15 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
 
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
     
-=======
         headers: { 'Content-Type': 'application/json' }})
     }
     // Store the key in the database (hash it first)
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: keyData });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (hashError || !hashData) {
       console && console.error('Error hashing API key:', hashError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to process API key' }), {
         status: 500,
-<<<<<<< HEAD
 
-=======
     const namePrefix = name.toLowerCase().replace(/[^a-z0-9]/g, '').substring(0, 4);
     const randomChars = Math.random().toString(36).substring(2, 6);
     const prefix = `${namePrefix}${randomChars}`.substring(0, 8);
@@ -345,9 +269,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       console.error('Error hashing API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process API key' }), {
         status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content-Type': 'application/json' }})
     }
     // Insert the API key record
@@ -355,9 +276,6 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       .from('api_keys')
       .insert({
         user_id: userId;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     // Extract auth token from request;
     const auth_header = req.headers.get ('Authorization');
     // Check condition
@@ -476,34 +394,22 @@ if ( {) {
       .from ('api_keys');
       .insert ({
         user_id: user_id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         key_prefix: prefix;
         key_hash: hash_data;
         name: name;
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (insertError || !insertData) {
       console && console.error('Error inserting API key:', insertError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to save API key' }), {
         status: 500,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         key_prefix: prefix;
         key_hash: hash_data;
         name: name;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the created key (only shown once)
     return new Response(JSON && JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         key_prefix: prefix;
         key_hash: hashData;
         name: name;
@@ -518,9 +424,6 @@ if ( {) {
     }
     // Return the created key (only shown once)
     return new Response(JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...insertData[0];
       key: keyData, // Include the full key (only shown once)
       message: 'API key created successfully. Save this key as it won\'t be shown again.'
@@ -528,23 +431,17 @@ if ( {) {
       status: 201
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     console && console.error('Error in createApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
 
-=======
     console && console.error('Error in createApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
     console.error('Error in createApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -556,11 +453,7 @@ async function getUserApiKeys(userId: string) {
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
     if (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console && console.error('Error fetching API keys:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500,
@@ -574,9 +467,7 @@ async function getUserApiKeys(userId: string) {
     console && console.error('Error in getUserApiKeys:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-<<<<<<< HEAD
 
-=======
       console.error('Error fetching API keys:', error);
       return new Response(JSON.stringify({ error: 'Failed to fetch API keys' }), {
         status: 500
@@ -589,9 +480,6 @@ async function getUserApiKeys(userId: string) {
     console.error('Error in getUserApiKeys:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -604,9 +492,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .single();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
     if (keyError || !keyData) {
       return new Response(JSON && JSON.stringify({ error: 'API key not found or access denied' }), {
@@ -618,7 +503,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
 
     const { data: newKeyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix: keyData && keyData.key_prefix });
     
-=======
     if (keyError || !keyData) {
       return new Response(JSON && JSON.stringify({ error: 'API key not found or access denied' }), {
         status: 404,
@@ -626,12 +510,10 @@ async function regenerateApiKey(userId: string, keyId: string) {
     }
     // Generate a new API key
     const { data: newKeyData, error: keyGenError } = await supabase && supabase.rpc('generate_api_key', { prefix: keyData && keyData.key_prefix });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (keyGenError || !newKeyData) {
       console && console.error('Error generating new API key:', keyGenError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to generate new API key' }), {
         status: 500,
-<<<<<<< HEAD
 
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -639,19 +521,15 @@ async function regenerateApiKey(userId: string, keyId: string) {
 
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: newKeyData });
     
-=======
         headers: { 'Content-Type': 'application/json' }})
     }
     // Hash the new key
     const { data: hashData, error: hashError } = await supabase && supabase.rpc('hash_api_key', { api_key: newKeyData });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (hashError || !hashData) {
       console && console.error('Error hashing new API key:', hashError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to process new API key' }), {
         status: 500,
-<<<<<<< HEAD
 
-=======
     if (keyError |!keyData) {
       return new Response(JSON.stringify({ error: 'API key not found or access denied' }), {
         status: 404
@@ -671,9 +549,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
       console.error('Error hashing new API key:', hashError);
       return new Response(JSON.stringify({ error: 'Failed to process new API key' }), {
         status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content-Type': 'application/json' }})
     }
     // Update the key record with new hash
@@ -685,29 +560,16 @@ async function regenerateApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, key_prefix, scopes, created_at, expires_at, is_active');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (updateError || !updateData) {
       console && console.error('Error updating API key:', updateError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to update API key' }), {
         status: 500,
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content-Type': 'application/json' }})
     }
     // Return the regenerated key
     return new Response(JSON && JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     if (updateError |!updateData) {
       console.error('Error updating API key:', updateError);
       return new Response(JSON.stringify({ error: 'Failed to update API key' }), {
@@ -716,9 +578,6 @@ async function regenerateApiKey(userId: string, keyId: string) {
     }
     // Return the regenerated key
     return new Response(JSON.stringify({
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ...updateData[0];
       key: newKeyData, // Include the full key (only shown once)
       message: 'API key regenerated successfully. Save this key as it won\'t be shown again.'
@@ -726,23 +585,17 @@ async function regenerateApiKey(userId: string, keyId: string) {
       status: 200
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     console && console.error('Error in regenerateApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
 
-=======
     console && console.error('Error in regenerateApiKey:', error);
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
     console.error('Error in regenerateApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -754,16 +607,10 @@ async function revokeApiKey(userId: string, keyId: string) {
       .eq('id', keyId)
       .eq('user_id', userId)
       .select('id, name, is_active');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     if (error || !data || data && data.length === 0) {
       console && console.error('Error revoking API key:', error);
       return new Response(JSON && JSON.stringify({ error: 'Failed to revoke API key or key not found' }), {
-=======
         scopes: scopes,
         expires_at: expires_at});
       .select ('id, name, key_prefix, scopes, created_at, expires_at, is_active');
@@ -919,7 +766,6 @@ if ( {) {
 }
       console.error ('Error revoking API key:', error);
       return new Response (JSON.stringify ({ error: 'Failed to revoke API key or key not found' }), {
-<<<<<<< HEAD
 
         status: error ? 500 : 404,
         headers: { 'Content - Type': 'application / json' }});
@@ -929,7 +775,6 @@ if ( {) {
     return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
 
-=======
         status: error ? 500 : 404,
         headers: { 'Content - Type': 'application / json' }});
     }
@@ -952,9 +797,6 @@ if ( {) {
     console.error('Error in revokeApiKey:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       headers: { 'Content-Type': 'application/json' }})
   }
 }
@@ -966,19 +808,13 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       .select('id')
       .eq('user_id', userId);
     if (keyError) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
 
-=======
       console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500
         headers: { 'Content-Type': 'application/json' }})
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Create a Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string,;
@@ -1234,60 +1070,32 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     if (!keyIds |keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       console && console.error('Error fetching API keys for logs:', keyError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
-=======
     if (!keyIds || keyIds && keyIds.length === 0) {
       return new Response(JSON && JSON.stringify({ logs: [], count: 0 }), {
         status: 200,
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         headers: { 'Content-Type': 'application/json' }})
     }
     // Get logs for those keys
     const ids = keyIds && keyIds.map(k => k && k.id);
-<<<<<<< HEAD
         headers: { 'Content-Type': 'application/json' }})
     }
 
     // Get logs for those keys
     const ids = keyIds.map(k => k.id);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const { data: logs, error: logsError, count } = await supabase
       .from('api_logs')
       .select('*', { count: 'exact' })
@@ -1295,8 +1103,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       .order('created_at', { ascending: false })
       .range(offset, offset + limit - 1);
     if (logsError) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       console && console.error('Error fetching API logs:', logsError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
@@ -1313,9 +1119,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
 
       headers: { 'Content-Type': 'application/json' }})
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return new Response (JSON.stringify ({
       message: 'API key revoked successfully',
       key: data[0];
@@ -1327,13 +1130,8 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-<<<<<<< HEAD
-=======
       headers: { 'Content-Type': 'application/json' }})
 
-
-=======
-=======
       console && console.error('Error fetching API logs:', logsError);
       return new Response(JSON && JSON.stringify({ error: 'Failed to fetch API logs' }), {
         status: 500,
@@ -1359,7 +1157,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
       headers: { 'Content-Type': 'application/json' }})
-
 
       console.error('Error fetching API logs:', logsError);
       return new Response(JSON.stringify({ error: 'Failed to fetch API logs' }), {
@@ -1377,9 +1174,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {;
       headers: { 'Content-Type': 'application/json' }})
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Get logs for those keys;
     const ids = keyIds.map(k => k.id),;
@@ -1417,7 +1211,6 @@ function getApiLogs() {
       .select ('id');
       .eq ('user_id', user_id);
 ;
-<<<<<<< HEAD
     // Check condition
 if ( {) {
   $2
@@ -1461,11 +1254,8 @@ if ( {) {
     return new Response (JSON.stringify ({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content - Type': 'application / json' }});
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-=======
 
 import { serve } from "https://deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0',;
@@ -1840,6 +1630,3 @@ async function createApiKey (userId: string, name: string, scopes: string[], exp
   }
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

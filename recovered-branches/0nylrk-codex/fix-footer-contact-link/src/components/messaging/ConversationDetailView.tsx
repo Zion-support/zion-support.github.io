@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-
-=======
 import React, { useState, useEffect, useRef } from 'react';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
@@ -17,10 +11,6 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -31,14 +21,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const {
     activeConversation;
@@ -54,10 +37,7 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]);
@@ -70,8 +50,6 @@ export function ConversationDetailView() {;
     await sendMessage(activeConversation.id, messageText);
     setMessageText('')
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState, useEffect, useRef } from 'react',;
 import { format } from 'date-fns',;
 import { MessageSquare } from 'lucide-react',;
@@ -97,20 +75,9 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date-fns';
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {format} from 'date - fns';
 import React, { useState, useEffect, useRef } from 'react';
 import {MessageSquare} from 'lucide-react';
@@ -124,24 +91,9 @@ import {DateDivider} from './DateDivider';
 
   }, [activeConversation?.id, loadMessages]),
 
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -154,8 +106,6 @@ import {DateDivider} from './DateDivider';
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     scrollToBottom();
   }, [activeMessages]);
@@ -173,10 +123,8 @@ import {DateDivider} from './DateDivider';
   };
 
   if (!activeConversation) {;
-=======
   
   if (!activeConversation) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />;
@@ -188,14 +136,6 @@ import {DateDivider} from './DateDivider';
     );
   }
 
-<<<<<<< HEAD
-
-  
-
-
-<<<<<<< HEAD
-=======
-  
   if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">
@@ -208,9 +148,6 @@ import {DateDivider} from './DateDivider';
     )
   }
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -225,44 +162,23 @@ import {DateDivider} from './DateDivider';
       })
     }
   });
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
-
-=======
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 
   // Group messages by date;
   const groupedMessages: { date: string, messages: any[] }[] = [],;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   activeMessages && activeMessages.forEach(message => {;
     const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages && groupedMessages.find(group => group && group.date === messageDate);
 
-=======
   activeMessages && activeMessages.forEach(message => {;
     const messageDate = format(new Date(message && message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages && groupedMessages.find(group => group && group.date === messageDate);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (existingGroup) {;
       existingGroup && existingGroup.messages.push(message);
     } else {;
       groupedMessages && groupedMessages.push({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const hasContextData = activeConversation.context_data &&
     (activeConversation.context_data.title |activeConversation.context_data.description);
 ;
@@ -275,33 +191,19 @@ import {DateDivider} from './DateDivider';
       existingGroup.messages.push(message);
     } else {;
       groupedMessages.push({;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         date: messageDate,;
         messages: [message];
       });
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   }),
 
-
-
-  
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-=======
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   }),
   
@@ -311,7 +213,6 @@ import {DateDivider} from './DateDivider';
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-<<<<<<< HEAD
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -335,30 +236,19 @@ import {DateDivider} from './DateDivider';
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
 
-
-<<<<<<< HEAD
-=======
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
@@ -368,7 +258,6 @@ import {DateDivider} from './DateDivider';
             />;
             <AvatarFallback className="bg-zion-blue-dark text-white">;
               {activeConversation && activeConversation.other_user.name && name.charAt(0).toUpperCase()}
-=======
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">;
         <div className="flex items-center gap-3">;
           <Avatar className="h-10 w-10 border border-zion-purple/20">;
@@ -378,19 +267,16 @@ import {DateDivider} from './DateDivider';
             />;
             <AvatarFallback className="bg-zion-blue-dark text-white">;
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             </AvatarFallback>;
           </Avatar>;
           <div>;
             <div className="font-medium text-white">;
-<<<<<<< HEAD
               {activeConversation && activeConversation.other_user.name}
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation && activeConversation.other_user.user_type === 'talent' ? 'Talent' : ;
                activeConversation && activeConversation.other_user.user_type === 'employer' ? 'Employer' : ;
                activeConversation && activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
-=======
 export /**
  * ConversationDetailView - Function description
  */
@@ -466,12 +352,9 @@ if ( {) {
   const hasContextData = active_conversation.context_data &&;
     (active_conversation.context_data.title || active_conversation.context_data.description);
 ;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="flex-1 flex flex-col h-full">;
       {/* Header */}
-<<<<<<< HEAD
       <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 30">;
         <div className="flex items - center gap - 3">;
           <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
@@ -491,29 +374,20 @@ if ( {) {
               {active_conversation.other_user.user_type === 'talent' ? 'Talent' :;
               active_conversation.other_user.user_type === 'employer' ? 'Employer' :;
               active_conversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               {activeConversation.other_user.name}
             </div>;
             <div className="text-xs text-zion-slate">;
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :;
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :;
                activeConversation.other_user.user_type === 'admin' ? 'Admin' :'User'}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     src={activeConversation && activeConversation.context_data.image_url}
                     alt={activeConversation && activeConversation.context_data.title || "Context"}
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     className="object-cover"
                   />;
                 </AspectRatio>;
@@ -565,8 +439,6 @@ if ( {) {
           <textarea
             value={messageText}
 
-<<<<<<< HEAD
-=======
       ;
       {/* Context information (if available) */}
       {hasContextData && (;
@@ -687,26 +559,15 @@ if ( {) {
     </div>
   )
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             onChange={(e) => setMessageText(e && e.target.value)}
 
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
             onChange={(e) => setMessageText(e && e.target.value)}
 
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             placeholder="Type a message...";
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan";
@@ -714,7 +575,6 @@ if ( {) {
           <Button
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
       {/* Context information (if available) */}
       {hasContextData && (
         <div className="p - 4 border - b border - zion - purple / 20 bg - zion - blue - dark / 10">;
@@ -756,7 +616,6 @@ if ( {) {
               <DateDivider date={new Date (group.date)} />;
               <div className="space - y-3">;
                 {group.messages.map ((message) => (
-=======
         {groupedMessages.length === 0 ? (;
           <div className="text-center text-zion-slate py-12">;
             <p>No messages yet. Start the conversation!</p>;
@@ -767,12 +626,10 @@ if ( {) {
               <DateDivider date={new Date(group.date)} />;
               <div className="space-y-3">;
                 {group.messages.map((message) => (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   <MessageBubble;
                     key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-<<<<<<< HEAD
                   />))}
               </div>;
             </div>)))}
@@ -790,7 +647,6 @@ if ( {) {
           <Button;
             type="submit";
             className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-=======
                   />;                ))}
               </div>;
             </div>;
@@ -818,29 +674,15 @@ if ( {) {
           <Button;
             type="submit";
             className="bg-zion-purple hover:bg-zion-purple-dark text-white";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             Send;
           </Button>;
         </form>;
       </div>;
 
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
     </div>);
     </div>;
@@ -878,10 +720,7 @@ if ( {) {
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 ;
     </div>);
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

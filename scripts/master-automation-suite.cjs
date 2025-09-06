@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 #!/usr/bin/env node;
 /**
  * Master Automation Suite;
  * Orchestrates all automation scripts in a comprehensive workflow;
  */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 
     const phases = [{
         "name": 'enhanced-orchestrator',
@@ -130,15 +108,6 @@ if (require.main === module) {
       process.exit(1)})}
 
 module.exports = MasterAutomationSuite;
-=======
-<<<<<<< HEAD
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')

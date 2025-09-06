@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 
 export function LoadingContentSkeleton() {;
 
   return (
-=======
 import React from "react",
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function LoadingContentSkeleton() {
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
@@ -27,15 +21,10 @@ import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
-
 export function LoadingContentSkeleton() {;
-<<<<<<< HEAD
   return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
       <CardHeader>;
         <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />;
@@ -56,14 +45,7 @@ export function LoadingContentSkeleton() {;
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 import React from './react';
 import { Skeleton  } from '@/components / ui / skeleton';
@@ -91,8 +73,6 @@ function LoadingContentSkeleton() {
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-=======
   ),;}
  export function LoadingContentSkeleton () {
   return (<Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden" > h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) 
@@ -106,6 +86,3 @@ function LoadingContentSkeleton() {
     </Card>;
   );
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

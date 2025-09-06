@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 import { createServerClient } from '../../../utils/supabase/server';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       supabase
         .from('profile_views')
@@ -35,39 +30,21 @@ import { createServerClient } from '../../../utils/supabase/server';
         { label: 'node', value: 1 }
         { label: 'ai', value: 1 }
       ]
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     });
 
-
   }
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
   }
 
 }
 
 }
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { createServerClient } from '../../../utils / supabase / server';
 ;
 export default async /**
@@ -155,8 +132,4 @@ function handler() {
   }
 }
 }
-<<<<<<< HEAD
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

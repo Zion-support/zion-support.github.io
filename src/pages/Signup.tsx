@@ -5,40 +5,33 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
-
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
-import * as Yup from 'yup'
-import axios from 'axios'
-import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
-import { AuthButtons } from '@/components/AuthButtons'
-
-import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-
-
-
+import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik''
+import * as Yup from 'yup''
+import axios from 'axios''
+import Link from 'next/link''
+import { Input } from '@/components/ui/input''
+import { Button } from '@/components/ui/button''
+import { LoadingSpinner } from '@/components/ui/enhanced-loading-states''
+import { Alert, AlertDescription } from '@/components/ui/alert''
+import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter''
+import { AuthButtons } from '@/components/AuthButtons''
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react''
   ),
 });
 export default function Signup() {;
-
-
-  const router = useRouter(); // Changed from navigate
-  const [loading, setLoading] = useState(false)
-  const [errorMessage, setErrorMessage] = useState('')
-  const [successMessage, setSuccessMessage] = useState('')
+  const router = useRouter(); // Changed from navigate,
+  const [loading, setLoading] = useState(false),
+  const [errorMessage, setErrorMessage] = useState('')',
+  const [successMessage, setSuccessMessage] = useState('')',
   const [emailVerificationRequired, setEmailVerificationRequired] =
     useState(false)
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true)
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true)
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),
+  const [healthCheckLoading, setHealthCheckLoading] = useState(true),
   const [healthCheckError, setHealthCheckError] = useState<string | null>(null)
   // Check if this is a partner signup
-  const isPartnerSignup = router.query.type === 'partner'
-  const signupSource = (router.query.source as string) |'direct'
+  const isPartnerSignup = router.query.type === 'partner''
+  const signupSource = (router.query.source as,  string) |'direct''
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router'; // Changed from react-router-domimport { use_formik } from 'formik';
 import * as Yup from 'yup';
@@ -55,57 +48,53 @@ import { toast } from '@/hooks / use - toast';
 import { AuthLayout } from '@/layout';
 import { log_info, logErrorToProduction } from '@/utils / production_logger';
 const SignupSchema = Yup.object ({
-  name: Yup.string ().required ('Name is required'),
-  email: Yup.string ().email ('Invalid email').required ('Email is required'),
+  name: Yup.string ().required ('Name is required'),'
+  email: Yup.string ().email ('Invalid email').required ('Email is required'),'
   password: Yup.string ();
-    .min (8, 'Password must be at least 8 characters');
-    .matches (/[A - Z]/, 'Password must include an uppercase letter');
-    .matches (/[a - z]/, 'Password must include a lowercase letter');
+    .min (8, 'Password must be at least 8 characters');,
+    .matches (/[A - Z]/, 'Password must include an uppercase letter');,
+    .matches (/[a - z]/, 'Password must include a lowercase letter');,
     .matches (/[0 - 9]/, 'Password must include a number');
-    .required ('Password is required'),
+    .required ('Password is required'),'
   confirm: Yup.string ();
     .one_of ([Yup.ref ('password')], 'Passwords must match');
-    .required ('Confirm password is required'),
+    .required ('Confirm password is required'),'
   terms: Yup.boolean ().one_of (
     [true],
-    'You must accept the terms and conditions'),
+    'You must accept the terms and conditions'),'
 });
 export default /**
  * Signup - Function description
  */
 function Signup() {
-  const router = use_router (); // Changed from navigate;
-  const [loading, set_loading] = useState (false);
-  const [error_message, setErrorMessage] = useState ('');
-  const [success_message, setSuccessMessage] = useState ('');
+  const router = use_router (); // Changed from navigate;,
+  const [loading, set_loading] = useState (false);,
+  const [error_message, setErrorMessage] = useState ('');,
+  const [success_message, setSuccessMessage] = useState ('');,
   const [emailVerificationRequired, setEmailVerificationRequired] =;
     useState (false);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState (true);
-  const [healthCheckLoading, setHealthCheckLoading] = useState (true);
+  const [authServiceAvailable, setAuthServiceAvailable] = useState (true);,
+  const [healthCheckLoading, setHealthCheckLoading] = useState (true);,
   const [healthCheckError, setHealthCheckError] = useState < string | null>(null);
   // Check if this is a partner signup;
   const isPartnerSignup = router.query.type === 'partner';
-  const signup_source = (router.query.source as string) || 'direct';
+  const signup_source = (router.query.source as,  string) || 'direct';
   const performHealthCheck = async () => {
     setHealthCheckLoading(true)
     setHealthCheckError(null)
     try {
-      const res = await axios.get('/api/auth/health')
+      const res = await axios.get('/api/auth/health')'
       setAuthServiceAvailable(res.status === 200)
       if (res.status !== 200) {
-        setHealthCheckError('Authentication service is experiencing issues')
+        setHealthCheckError('Authentication service is experiencing issues')'
       }
-    } catch (err: any) {
-
-
+    } catch (err:,  any) {,
       if (true) {}
-
-
       ) {
-        setHealthCheckError('Network connection issues detected')
+        setHealthCheckError('Network connection issues detected')'
       } else if (err.response?.status === 500) {
         setHealthCheckError(
-          'Authentication service is temporarily unavailable'
+          'Authentication service is temporarily unavailable''
         )
       logErrorToProduction ('Auth service health check failed', { data: err });
       setAuthServiceAvailable (false);
@@ -123,27 +112,26 @@ if ( {) {
         setHealthCheckError (
           'Authentication service is temporarily unavailable');
       } else {
-        setHealthCheckError('Unable to verify authentication service status')
+        setHealthCheckError('Unable to verify authentication service status')'
       }
     } finally {
       setHealthCheckLoading(false)
     }
   }
-
   useEffect (() => {
     performHealthCheck ();
-  }, []);
+  }, []);,
   const formik = use_formik ({
-    initial_values: {
-      name: '',
-      email: '',
-      password: '',
-      confirm: '',
+    initial_values: {,
+      name: '','
+      email: '','
+      password: '','
+      confirm: '','
       terms: false,
     },
     validation_schema: SignupSchema,
     on_submit: async (values, { set_errors }) => {
-      log_info ('Form submission started with:', {
+      log_info ('Form submission started with:', {'
         name: values.name,        email: values.email,
         has_password: !!values.password,
         isPartnerSignup,
@@ -158,20 +146,20 @@ if ( {) {
           email: values.email,
           password: values.password,
           ...(isPartnerSignup && {
-            user_type: 'partner',
+            user_type: 'partner','
             source: signup_source,
-            metadata: {
+            metadata: {,
               partner_program: true,
-              signup_type: 'partner',
+              signup_type: 'partner','
             },
           }),
         }
-        log_info ('Making API request to /api / auth / register with:', {
+        log_info ('Making API request to /api / auth / register with:', {'
           ...request_data,
-          password: '[REDACTED]',
+          password: '[REDACTED]','
         });
         const res = await axios.post ('/api / auth / register', request_data);
-        log_info ('API response received:', {
+        log_info ('API response received:', {'
           status: res.status,
           data: res.data,
         });
@@ -189,36 +177,36 @@ if ( {) {
             const message = isPartnerSignup;
               ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.';
               : 'Account created! Please check your email to verify your account.';
-            setSuccessMessage (data.message || message);
+            setSuccessMessage (data.message ||,  message);
             toast ({
               title: isPartnerSignup;
                 ? 'Partner application submitted!';
-                : 'Account created!',
+                : 'Account created!','
               description: isPartnerSignup;
                 ? 'Please verify your email. Your partner application will be reviewed after verification.';
-                : 'Please check your email to verify your account before logging in.',
+                : 'Please check your email to verify your account before logging in.','
             });
           } else {
             // Account created and ready to use;
             const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
               : 'Account created successfully!';
-            setSuccessMessage (data.message || message);
+            setSuccessMessage (data.message ||,  message);
             toast ({
               title: isPartnerSignup;
                 ? 'Partner application submitted!';
-                : 'Account created successfully!',
+                : 'Account created successfully!','
               description: isPartnerSignup;
                 ? 'Welcome to the partner program. You can now log in.';
-                : 'Welcome to the platform. You can now log in.',
+                : 'Welcome to the platform. You can now log in.','
             });
             // Redirect to appropriate page after a short delay;
             set_timeout (() => {
               router.push (isPartnerSignup ? '/partners' : '/login');
             }, 2000) }
         }
-      } catch (err: any) {
-        logErrorToProduction ('Signup error details:', {
+      } catch (err:,  any) {,
+        logErrorToProduction ('Signup error details:', {'
           message: err.message,
           response: err.response;
             ? {
@@ -226,40 +214,35 @@ if ( {) {
                 status_text: err.response.status_text,
                 data: err.response.data,
               }
-            : 'No response',
-          request: err.request ? 'Request made but no response' : 'No request',
+            : 'No response','
+          request: err.request ? 'Request made but no response' : 'No request','
           config: err.config;
-
             ? {
-                url: err.config.url
+                url: err.config.url,
                 method: err.config.method
               }
-
-
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
-
-
-          'Signup failed. Please try again.'
-        logInfo('Processed error message:', { data: errorMsg })
+          'Signup failed. Please try again.''
+        logInfo('Processed error message:', { data: errorMsg })'
         if (status === 409) {
           // Handle duplicate email specifically
           setErrorMessage(errorMsg)
           setErrors({ email: errorMsg })
           // Show toast notification
           toast({
-            title: 'Signup failed'
-            description: errorMsg
-            variant: 'destructive'
+            title: 'Signup failed'',
+            description: errorMsg,
+            variant: 'destructive''
           })
         } else if (status === 400) {
           // Handle validation errors (weak password, etc.)
           setErrorMessage(errorMsg)
-          // Set the error on password field if it's password-related
-          if (errorMsg.toLowerCase().includes('password')) {
+          // Set the error on password field if it's password-related'
+          if (errorMsg.toLowerCase().includes('password')) {'
             setErrors({ password: errorMsg })
-            : 'No config',
+            : 'No config','
         });
         const status = err.response?.status;
         // Try both 'error' and 'message' fields for compatibility;
@@ -277,9 +260,9 @@ if ( {) {
           set_errors ({ email: error_msg });
           // Show toast notification;
           toast ({
-            title: 'Signup failed',
+            title: 'Signup failed','
             description: error_msg,
-            variant: 'destructive',
+            variant: 'destructive','
           });
         } else // Check condition
 if ( {) {
@@ -288,18 +271,17 @@ if ( {) {
           // Handle validation errors (weak password, etc.);
           setErrorMessage (error_msg);
           // Set the error on password field if it's password - related;
-          if (.includes ('password')) {) {
+          if (.includes ('password')) {) {'
   $2
 }
             set_errors ({ password: error_msg });
           } else {
             setErrors({ confirm: errorMsg })
           }
-
           toast ({
-            title: 'Signup failed',
+            title: 'Signup failed','
             description: error_msg,
-            variant: 'destructive',
+            variant: 'destructive','
           });
         } else {
           // Handle other errors (network, server, etc.);
@@ -307,20 +289,18 @@ if ( {) {
           set_errors ({ confirm: error_msg });
           // Show toast notification for other errors;
           toast ({
-            title: 'Signup failed',
+            title: 'Signup failed','
             description: error_msg,
-            variant: 'destructive',
+            variant: 'destructive','
           });
-
         }
       } finally {
-        logInfo('Form submission completed, setting loading to false')
+        logInfo('Form submission completed, setting loading to false')'
         setLoading(false)
       }
-
     },
   });
-  const handleFormSubmit = async (e: React.FormEvent < HTMLFormElement>) => {
+  const handleFormSubmit = async (e: React.FormEvent < HTMLFormElement>) => {,
     e.prevent_default ();    formik.set_touched ({
       name: true,
       email: true,
@@ -329,7 +309,6 @@ if ( {) {
       terms: true,
     });
     await formik.handle_submit (e);
-
   }
   // After successful registration, guide the user to the verification screen;
   useEffect ((, ) => {
@@ -339,7 +318,7 @@ if ( {) {
 }
       const timer = set_timeout (() => {
         router.push (
-          `/verify - status?email=${encodeURIComponent (formik.values.email)}`);
+          `/verify - status?email=${encodeURIComponent (formik.values.email)}`);`
       }, 3000);
       return () => clear_timeout (timer) }
     return undefined;
@@ -350,29 +329,28 @@ if ( {) {
   $2
 }
     return (
-
 const SignupSchema = Yup && Yup.object({;
   name: Yup && Yup.string().required('Name is required'),;
   email: Yup && Yup.string().email('Invalid email').required('Email is required'),;
   password: Yup && Yup.string();
-    .min(8, 'Password must be at least 8 characters');
-    .matches(/[A-Z]/, 'Password must include an uppercase letter');
-    .matches(/[a-z]/, 'Password must include a lowercase letter');
+    .min(8, 'Password must be at least 8 characters');,
+    .matches(/[A-Z]/, 'Password must include an uppercase letter');,
+    .matches(/[a-z]/, 'Password must include a lowercase letter');,
     .matches(/[0-9]/, 'Password must include a number');
     .required('Password is required'),;
   confirm: Yup.string();
     .oneOf([Yup.ref('password')], 'Passwords must match');
-    .required('Confirm password is required'),;
+    .required('Confirm password is required'),;,
   terms: Yup.boolean().oneOf([true], 'You must accept the terms and conditions');
 }),;
 export default function Signup() {;
-  const router = useRouter(), // Changed from navigate;
-  const [loading, setLoading] = useState(false),;
-  const [errorMessage, setErrorMessage] = useState(''),;
-  const [successMessage, setSuccessMessage] = useState(''),;
-  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false),;
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true),;
+  const router = useRouter(), // Changed from navigate;,
+  const [loading, setLoading] = useState(false),;,
+  const [errorMessage, setErrorMessage] = useState(''),;,
+  const [successMessage, setSuccessMessage] = useState(''),;,
+  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false),;,
+  const [authServiceAvailable, setAuthServiceAvailable] = useState(true),;,
+  const [healthCheckLoading, setHealthCheckLoading] = useState(true),;,
   const [healthCheckError, setHealthCheckError] = useState<string | null>(null),;
   // Check if this is a partner signup;
   const isPartnerSignup = router.query.type === 'partner',;
@@ -386,7 +364,7 @@ export default function Signup() {;
       if (res.status !== 200) {;
         setHealthCheckError('Authentication service is experiencing issues');
       }
-    } catch (err: any) {;
+    } catch (err:,  any) {;,
       logErrorToProduction('Auth service health check failed', { data: err }),;
       setAuthServiceAvailable(false),;
       // Set a more specific error message based on the error type;
@@ -405,7 +383,7 @@ export default function Signup() {;
     performHealthCheck();
   }, []),;
   const formik = useFormik({;
-    initialValues: {;
+    initialValues: {;,
       name: '',;
       email: '',;
       password: '',;
@@ -432,14 +410,14 @@ export default function Signup() {;
           ...(isPartnerSignup && {;
             userType: 'partner',;
             source: signupSource,;
-            metadata: {;
+            metadata: {;,
               partnerProgram: true,;
               signupType: 'partner';
             }
           });
         },;
         logInfo('Making API request to /api/auth/register with:', {;
-          ...requestData,;
+          ...requestData,;,
           password: '[REDACTED]';
         }),;
         const res = await axios.post('/api/auth/register', requestData),;
@@ -455,7 +433,7 @@ export default function Signup() {;
             const message = isPartnerSignup;
               ? 'Partner application submitted! Please check your email to verify your account. Once verified, your partner application will be reviewed.';
               : 'Account created! Please check your email to verify your account.',;
-            setSuccessMessage(data.message || message),;
+            setSuccessMessage(data.message ||,  message),;
             toast({;
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created!',;
               description: isPartnerSignup;
@@ -466,7 +444,7 @@ export default function Signup() {;
             const message = isPartnerSignup;
               ? 'Partner application submitted successfully! You can now log in and your application will be reviewed.';
               : 'Account created successfully!',;
-            setSuccessMessage(data.message || message),;
+            setSuccessMessage(data.message ||,  message),;
             toast({;
               title: isPartnerSignup ? 'Partner application submitted!' : 'Account created successfully!',;
               description: isPartnerSignup;
@@ -478,16 +456,16 @@ export default function Signup() {;
             }, 2000);
           }
         }
-      } catch (err: any) {;
+      } catch (err:,  any) {;,
         logErrorToProduction('Signup error details:', {;
           message: err.message,;
-          response: err.response ? {;
+          response: err.response ? {;,
             status: err.response.status,;
             statusText: err.response.statusText,;
             data: err.response.data;
           } : 'No response',;
           request: err.request ? 'Request made but no response' : 'No request',;
-          config: err.config ? {;
+          config: err.config ? {;,
             url: err.config.url,;
             method: err.config.method;
           } : 'No config';
@@ -535,7 +513,7 @@ export default function Signup() {;
       }
     }
   }),;
-  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {;
+  const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {;,
     e.preventDefault(),;
     formik.setTouched({;
       name: true,;
@@ -546,8 +524,6 @@ export default function Signup() {;
     });
     await formik && formik.handleSubmit(e);
   };
-
-
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -573,7 +549,6 @@ export default function Signup() {;
               </p>;
             </div>;
           )}
-
       <AuthLayout>;
         <div className='flex min - h-screen items - center justify - center p - 4'>;
           <div className='text - center space - y-4'>;
@@ -585,23 +560,23 @@ export default function Signup() {;
   }
   return (
     <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-sm space-y-4">
+      <div className="flex min-h-screen items-center justify-center p-4">"
+        <div className="w-full max-w-sm space-y-4">"
           {isPartnerSignup && (
-            <div className="text-center mb-6">
-              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>
-              <p className="text-sm text-muted-foreground mt-2">
+            <div className="text-center mb-6">"
+              <h1 className="text-2xl font-bold text-foreground">Partner Application</h1>"
+              <p className="text-sm text-muted-foreground mt-2">"
                 Join the Zion AI Partner Program and start earning rewards
               </p>
             </div>
           )}
               <Button
-                type="button"
-                variant="ghost"
-                className="w-full text-sm"
+                type="button""
+                variant="ghost""
+                className="w-full text-sm""
                 onClick={() => {
                   setEmailVerificationRequired(false),
-                  setSuccessMessage('')
+                  setSuccessMessage('')'
                 }}
               >;
                 Try Different Email;
@@ -611,12 +586,11 @@ export default function Signup() {;
 ;
           {/* Additional help text when service issues are detected */}
           {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
+            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">"
               <p>⚠️ We detected some authentication service issues.</p>
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-
           </form>;
           {!emailVerificationRequired && (;
             <div className='mt-6'>;
@@ -627,24 +601,21 @@ export default function Signup() {;
       </div>;
     </AuthLayout>;
   );
-
 }) ;
 };
 toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
-setSuccessMessage (data && data.message || message);
+  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';',
+setSuccessMessage (data && data.message ||,  message);
 toast ({';
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' ;
 });
 //Redirect to appropriate page after a short delay ;
-
-}catch (err: unknown) {';
+}catch (err:,  unknown) {';',
   logErrorToProduction ('Signup error details:', {;
-  message: err && err.message, response: err && err.response ? {;
+  message: err && err.message, response: err && err.response ? {;,
   status: err && err.response.status,  statusText: err && err.response.statusText, data: err && err.response.data ';
 }: 'No response';';
 request: err && err.request ? 'Request made but no response': 'No request';
-
 });
 }return undefined;
 }, [emailVerificationRequired, formik && formik.values.email, router]);
@@ -659,16 +630,14 @@ request: err && err.request ? 'Request made but no response': 'No request';
 }<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {;
   formik && formik.values.email ;
 }</strong>. </AlertDescription> </Alert>) ";
-
-}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
-}</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
-}</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-
-              </div>)}
+}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input ) ""
+}</div /> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input ) ""
+}</div /> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input ) ""
+}</div /> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input ) ""
+              </div />)}
           </form>;
           {!emailVerificationRequired && (
-            <div className='mt - 6'>;
+            <div className='mt - 6'>;,
               <AuthButtons providers={['google', 'github']} />;
             </div>)}
         </div>;
@@ -677,15 +646,15 @@ request: err && err.request ? 'Request made but no response': 'No request';
 });
 }
 toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
-setSuccessMessage (data.message || message);
+  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';',
+setSuccessMessage (data.message ||,  message);
 toast ({';
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.';
 });
 //Redirect to appropriate page after a short delay;
-}catch (err: unknown) {';
-  logErrorToProduction ('Signup error details:', {
-  message: err.message, response: err.response ? {
+}catch (err:,  unknown) {';',
+  logErrorToProduction ('Signup error details:', {'
+  message: err.message, response: err.response ? {,
   status: err.response.status,  status_text: err.response.status_text, data: err.response.data ';
 }: 'No response';';
 request: err.request ? 'Request made but no response': 'No request';
@@ -695,7 +664,6 @@ request: err.request ? 'Request made but no response': 'No request';
 //Show loading state only during initial health check // Check condition
 if ( {) {
   $2
-
 }
   return (<AuthLayout> <div className="flex min - h-screen items - center justify - center p - 4" > <div className="text - center space - y-4" > <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto" ></div> <p className="text - muted - foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
 }> {';
@@ -707,19 +675,19 @@ if ( {) {
 }<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
   formik.values.email;
 }</strong>. </AlertDescription> </Alert>) ";
-}<div> <label html_for="name" className="block text - sm font - medium" > Full Name </label> <Input) ";
-}</div> <div> <label html_for="email" className="block text - sm font - medium" > Email address </label> <Input) ";
-}</div> <div> <label html_for="password" className="block text - sm font - medium" > Password </label> <Input) ";
-}</div> <div> <label html_for="confirm" className="block text - sm font - medium" > Confirm Password </label> <Input) ";
-}</div> <div className="flex items - center space - x-2" > <input);
+}<div> <label html_for="name" className="block text - sm font - medium" > Full Name </label> <Input ) ";
+}</div /> <div> <label html_for="email" className="block text - sm font - medium" > Email address </label> <Input ) ";
+}</div /> <div> <label html_for="password" className="block text - sm font - medium" > Password </label> <Input ) ";
+}</div /> <div> <label html_for="confirm" className="block text - sm font - medium" > Confirm Password </label> <Input ) ";
+}</div /> <div className="flex items - center space - x-2" > <input);
 }{";
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
+  !emailVerificationRequired ? (<Button type="submit" disabled= {"
   loading;
 }> {'";
   loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account');
-}</Button> > Go to Login </Button> <Button router.push (`/verify - status?email=$ {
+}</Button> > Go to Login </Button> <Button router.push (`/verify - status?email=$ {`
   encodeURIComponent (formik.values.email);
-}`);
+}`);`
 }> Check Verification Status </Button> <Button > Try Different Email </Button> </div>);
 }<p>⚠️ We detected some authentication service issues.</p> <p > If signup fails, please try again in a few minutes or contact support.</p> </div>);
 }</form> </div>);
@@ -741,19 +709,15 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
-
-
-      displayName: ",
-      email: ",
-      password: ",
-      confirmPassword: ",
+      displayName: ","
+      email: ","
+      password: ","
+      confirmPassword: ","
       termsAccepted: false,,
 },,;
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
-  const onSubmit = async (data: SignupFormValues) => {;
-
-
+  const onSubmit = async (data:,  SignupFormValues) => {;,
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -763,15 +727,15 @@ import {
         data.password
       )
       // Handle duplicate email error from API
-      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-        form.setError('email', { message: resData.message })
-        toast.error('Email already registered – please login.')
+      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {'
+        form.setError('email', { message: resData.message })'
+        toast.error('Email already registered – please login.')'
         return;
 }
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
         // Successful registration
-        safeStorage.setItem('authToken', resData.token)
+        safeStorage.setItem('authToken', resData.token)'
         setUser(resData.user)
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken |null })
       // Handle email verification required case
@@ -782,8 +746,7 @@ import {
         // Set the session directly if verification is not required
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
-          console.error("Error setting session:", sessionError)
-
+          console.error("Error setting session:", sessionError)"
   Form,
   FormControl,
   FormField,
@@ -794,21 +757,21 @@ import {
 // Form validation schema;
 const signup_schema = z;
   .object ({
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email"),
+    display_name: z.string ().min (2, "Name must be at least 2 characters"),"
+    email: z.string ().email ("Please enter a valid email"),"
     password: z.string ();
-      .min (8, "Password must be at least 8 characters");
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
-      .regex (/[0 - 9]/, "Password must contain at least one number"),
+      .min (8, "Password must be at least 8 characters");,
+      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");,
+      .regex (/[a - z]/, "Password must contain at least one lowercase letter");,
+      .regex (/[0 - 9]/, "Password must contain at least one number"),"
     confirm_password: z.string (),
     terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,
+      message: "You must accept the terms and conditions", ,"
 }), ,
 });
   .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"], ,
+    message: "Passwords do not match",",
+    path: ["confirm_password"], ,"
 });
 type SignupFormValues = z.infer < typeof signup_schema>;
 export default /**
@@ -817,7 +780,7 @@ export default /**
 function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
   const navigate = use_navigate ();
-  const [show_password, setShowPassword] = useState (false);
+  const [show_password, setShowPassword] = useState (false);,
   const [showConfirmPassword, setShowConfirmPassword] = useState (false);
   // Track confirm password locally to prevent it from clearing on blur;
   const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
@@ -826,16 +789,16 @@ function Signup() {
   // Initialize react - hook - form;
   const form = use_form ({
     resolver: zod_resolver (signup_schema),
-    default_values: {
-      display_name: ",
-      email: ",
-      password: ",
-      confirm_password: ",
+    default_values: {,
+      display_name: ","
+      email: ","
+      password: ","
+      confirm_password: ","
       terms_accepted: false, ,
 }, ,
 }) as UseFormReturn < SignupFormValues>;
   // Form submission handler;
-  const on_submit = async (data: SignupFormValues) => {
+  const on_submit = async (data:,  SignupFormValues) => {
     // Check condition
 if (return) {
   $2
@@ -850,12 +813,9 @@ if (return) {
       // Check condition
 if ( {) {
   $2
-
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })"
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.")"
           return;
-
-
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -895,53 +855,50 @@ if ( {) {
         // The onAuthStateChange listener in AuthProvider should now handle
         // updating user state and navigating if necessary for other cases.
         // For direct signup with session, we can navigate.
-        toast.success("Welcome to ZionAI 🎉")
-        navigate("/dashboard")
+        toast.success("Welcome to ZionAI 🎉")"
+        navigate("/dashboard")"
 } else {
         // This case might indicate an unexpected response from the API
-        console.error("Registration response did not include session or emailVerificationRequired flag.", resData)
-        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })
-        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")
+        console.error("Registration response did not include session or emailVerificationRequired flag.", resData)"
+        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })"
+        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")"
         // Potentially navigate to login or show a more specific error
         return;
 }
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending,  verification);
       // Check condition
 if ( {) {
   $2
 }
-
         try {
           await mailchimp_service.add_subscriber ({
             email: data.email,
             merge_fields: { FNAME: data.display_name }
           });
           await mailchimp_service.sendWelcomeEmail (data.email, 'NEW10');
-
 } catch (err) {
-          console.error('Mailchimp subscription failed', err)
-          // Non-critical error, don't block user flow
+          console.error('Mailchimp subscription failed', err)'
+          // Non-critical error, don't block user flow'
 }
       }
       // Toast and navigation are handled above if session is present
       // If emailVerificationRequired, no toast/navigation here, message is shown
-} catch (err: any) {
-      const message = err.message ?? "Registration failed"
-      form.setError("root", { message })
+} catch (err:,  any) {,
+      const message = err.message ?? "Registration failed""
+      form.setError("root", { message })"
       toast.error(message)
 } finally {
       setIsSubmitting(false) }
   }
-
-}</div> <div className="flex items-center space-x-2" > <input) 
-}{"
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading 
+}</div> <div className="flex items-center space-x-2" > <input) "
+}{""
+  !emailVerificationRequired ? (<Button type="submit" disabled= {"
+  loading
 }> {'";
   loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account') ;
-}</Button> > Go to Login </Button> <Buttonrouter && router.push (`/verify-status?email=$ {
-  encodeURIComponent (formik && formik.values.email) 
-}`) 
+}</Button> > Go to Login </Button> <Buttonrouter && router.push (`/verify-status?email=$ {`
+  encodeURIComponent (formik && formik.values.email)
+}`) `
 }> Check Verification Status </Button> <Button > Try Different Email </Button> </div>) ;
 }<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) ;
 }</form> </div>) ;
@@ -976,9 +933,9 @@ const signupSchema = z;
     displayName: z && z.string().min(2, "Name must be at least 2 characters"),;
     email: z && z.string().email("Please enter a valid email"),;
     password: z && z.string();
-      .min(8, "Password must be at least 8 characters");
-      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
-      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
+      .min(8, "Password must be at least 8 characters");,
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");,
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter");,
       .regex(/[0-9]/, "Password must contain at least one number"),;
     confirmPassword: z && z.string(),;
     termsAccepted: z && z.boolean().refine(val => val === true, {;
@@ -986,14 +943,14 @@ const signupSchema = z;
 }),,;
 });
   .refine(data => data && data.password === data && data.confirmPassword, {;
-    message: "Passwords do not match",;
+    message: "Passwords do not match",;,
     path: ["confirmPassword"],,;
 });
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);,
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   // Track confirm password locally to prevent it from clearing on blur;
   const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
@@ -1002,7 +959,7 @@ export default function Signup() {;
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(signupSchema),;
-    defaultValues: {;
+    defaultValues: {;,
       displayName: ",;
       email: ",;
       password: ",;
@@ -1011,9 +968,8 @@ export default function Signup() {;
 },,;
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
-  const onSubmit = async (data: SignupFormValues) => {;
+  const onSubmit = async (data:,  SignupFormValues) => {;,
     if (isSubmitting) return; // Prevent multiple submissions;
-
     setIsSubmitting(true);
     try {;
       const { res, data: resData } = await register(;
@@ -1027,7 +983,6 @@ export default function Signup() {;
         toast && toast.error('Email already registered – please login.');
         return;
 }
-
       // Check for successful response;
       if (res && res.ok && resData && resData.token && resData && resData.user) {;
         // Successful registration;
@@ -1060,8 +1015,7 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
-
-      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification);
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending,  verification);
       if (data && data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {;
         try {;
           await mailchimpService && mailchimpService.addSubscriber({;
@@ -1076,20 +1030,19 @@ export default function Signup() {;
       }
       // Toast and navigation are handled above if session is present;
       // If emailVerificationRequired, no toast/navigation here, message is shown;
-} catch (err: any) {;
+} catch (err:,  any) {;,
       const message = err && err.message ?? "Registration failed";
       form && form.setError("root", { message });
       toast && toast.error(message);
 } finally {;
       setIsSubmitting(false);    }
   };
-  const onInvalid = (errors: any) => {;
-    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;
+  const onInvalid = (errors:,  any) => {;,
+    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;,
     if (firstError) {;
       form && form.setFocus(firstError);
-
-  const on_invalid = (errors: any) =>: any {
-    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
+  const on_invalid = (errors:,  any) =>: any {,
+    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;,
     // Check condition
 if ( {) {
   $2
@@ -1099,11 +1052,9 @@ if ( {) {
   }
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
+    return <Navigate to="/" />"
 }
-
-
-import React from "react";
+import React from 'react';
 import Head from "next/head";
 import Link from "next/link";
 const Signup = () => {;
@@ -1137,11 +1088,8 @@ const Signup = () => {;
                 <ul className="text-gray-600 space-y-2">;
     return <Navigate to="/" />;
 }
-
-
 }};
 };
-
         </div>;
       </div>;
     </AuthLayout>;

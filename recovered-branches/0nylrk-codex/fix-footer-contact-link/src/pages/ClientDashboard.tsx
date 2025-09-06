@@ -30,11 +30,6 @@ function ClientDashboardContent() {
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
   // Set the first job as selected when jobs are loaded (if any);
   useEffect(() => {;
@@ -44,15 +39,8 @@ function ClientDashboardContent() {
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
-<<<<<<< HEAD
 
-
-
-=======
 import { useIsMobile } from "@/hooks/use-mobile",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -67,9 +55,7 @@ function ClientDashboardContent() {
       setSelectedJobTitle(jobs[0].title)
     }
 
-<<<<<<< HEAD
   }, [jobs, selectedJobId]),
-
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     (setSelectedJobId(jobId), setSelectedJobTitle(jobTitle));
@@ -80,10 +66,7 @@ function ClientDashboardContent() {
     setSelectedJobTitle(jobTitle)
   }
   },
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <SEO
@@ -179,14 +162,7 @@ function ClientDashboardContent() {
 
           <div>
             <div className="sticky top-4 space-y-6">
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -217,28 +193,22 @@ function ClientDashboardContent() {;
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]),;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleJobSelect = (jobId: string, jobTitle: string) => {;
     setSelectedJobId(jobId),;
     setSelectedJobTitle(jobTitle);
   };
-<<<<<<< HEAD
 
   return (
     <>;
       <SEO
         title="Client Dashboard | Zion AI Marketplace" 
         description="Manage your jobs and talent requests in the Zion AI Marketplace." 
-=======
   return (;
     <>;
       <SEO;
         title="Client Dashboard | Zion AI Marketplace";
         description="Manage your jobs and talent requests in the Zion AI Marketplace.";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       />;
       <AppHeader />;
       <main className="container mx-auto px-4 py-8">;
@@ -249,8 +219,6 @@ function ClientDashboardContent() {;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' : ''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' : ''}>;
-<<<<<<< HEAD
-=======
 
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader", ;
@@ -305,15 +273,11 @@ function ClientDashboardContent() {;
           </div>;
           <div className={`flex gap-2 ${isMobile ? 'flex-col' :''}`}>;
             <Button variant="outline" asChild className={isMobile ? 'w-full justify-center' :''}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <Link to="/hiring-tracker">;
                 <Kanban className="h-4 w-4 mr-2" /> Hiring Pipeline;
               </Link>;
             </Button>;
-<<<<<<< HEAD
-=======
             <Button asChild className={isMobile ? 'w-full justify-center' :''}>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link to="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
@@ -321,19 +285,13 @@ function ClientDashboardContent() {;
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         {/* New Onboarding Steps */}
         <div className="mb-8">;
           <ClientOnboardingSteps />;
         </div>;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="lg:col-span-2">;
             <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>;
@@ -344,9 +302,7 @@ function ClientDashboardContent() {;
                 <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
               </TabsList>;
-<<<<<<< HEAD
 
-=======
 ;
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="lg:col-span-2">;
@@ -359,7 +315,6 @@ function ClientDashboardContent() {;
                 <TabsTrigger value="closed" className={isMobile ? 'flex-1' :''}>Closed</TabsTrigger>;
               </TabsList>;
               ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <TabsContent value="all" className="mt-0">;
                 <JobsList onSelectJob={handleJobSelect} />;
               </TabsContent>;
@@ -377,29 +332,19 @@ function ClientDashboardContent() {;
               </TabsContent>;
             </Tabs>;
           </div>;
-<<<<<<< HEAD
 
           <div>;
             <div className="sticky top-4 space-y-6">;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* Active Projects Card */}
               <ActiveProjectsCard />
 
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />
 
-<<<<<<< HEAD
-=======
           ;
           <div>;
             <div className="sticky top-4 space-y-6">;
-
-
 
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
@@ -407,9 +352,6 @@ function ClientDashboardContent() {;
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
               ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {/* AI Talent Suggestions */}
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
@@ -452,10 +394,6 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               </div>;
             </div>;
           </div>;
@@ -483,6 +421,3 @@ export default function ClientDashboard() {;
 }
 ;
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
