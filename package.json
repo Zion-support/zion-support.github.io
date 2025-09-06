@@ -20,7 +20,7 @@
     "test:coverage": "jest --coverage --config jest.config.ts",
     "verify": "npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
-    "clean": "rm -rf .next out dist",
+    "clean": "rm -rf .next out dist"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
