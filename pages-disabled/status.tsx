@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Server, Database, Cloud, Shield } from 'lucide-react';
 import Layout from '../components/Layout';
 
 const services = []

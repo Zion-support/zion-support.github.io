@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
@@ -43,6 +44,9 @@ export default function SMBSolutionsPage() {
       <div className="min-h-screen bg-gray-50">";
   ];
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -80,18 +84,21 @@ const smbServices = [
 
 export default function SMBSolutionsPage() {
   return (
-    <Layout
-      title="SMB Solutions - Zion Tech Group"
-      description="Tailored technology solutions for small and medium businesses to drive growth and efficiency."
-    >
+    <>
+      <Head>
+        <title>SMB Solutions - Zion Tech Group</title>
+        <meta name="description" content="Technology solutions designed for small and medium businesses." />
+      </Head>
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">"
-          <div className="container mx-auto px-4">";
-            <motion.div;
-              initial={{ opacity: 0, y: 30 }}
+        <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -104,18 +111,18 @@ export default function SMBSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
               className="text-center"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                SMB Solutions
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>
+              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
                 Technology solutions designed specifically for small and medium businesses.
-                Get enterprise-level capabilities at SMB-friendly prices.
               </p>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/smb.tsx
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -157,6 +164,8 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/smb.tsx
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -193,25 +202,38 @@ export default function SMBSolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
-          <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Grow Your Business Today;
-            </h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">";
-              Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;
-            </p>;
-            <motion.a;
-              href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
-              whileHover={{ scale: 1.05 }}
-            >,
-              Get SMB Consultation;
-              <ArrowRight className="w-5 h-5 ml-2" />";
-            </motion.a>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
+        <section className="py-20 bg-purple-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Grow Your Business?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our SMB solutions can help your business succeed.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Sales
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/solutions"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"
+                >
+                  View Solutions
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

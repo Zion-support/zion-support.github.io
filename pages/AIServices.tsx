@@ -1,17 +1,29 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
 import Head from 'next/head';
 import Link from 'next/link';
-import Layout from '../components/Layout';
+import { motion } from 'framer-motion';
+import MainLayout from '../src/components/layout/MainLayout';
 import { 
   Brain, 
   Bot, 
   Eye, 
   MessageSquare, 
+<<<<<<< HEAD
   BarChart3, 
   Zap, 
   Shield, 
   ArrowRight, 
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
   Star,
   Clock,
   Users,
@@ -26,6 +38,7 @@ import {
 
 const aiServices = [
   {
+<<<<<<< HEAD
     title: "Machine Learning Models",
     description: "Custom ML models tailored to your business needs with advanced algorithms and real-time processing",
     icon: Brain,
@@ -86,53 +99,36 @@ const aiServices = [
     id: 6,
     name: 'Conversational AI & Chatbots',
     description: 'Intelligent virtual assistants and customer service automation',
+=======
+    title: 'Natural Language Processing',
+    description: 'Advanced text analysis and language understanding for your business.',
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
     icon: MessageSquare,
-    features: [
-      'Natural language understanding',
-      'Multi-channel deployment',
-      'Context-aware conversations',
-      'Integration with CRM systems',
-      'Analytics and reporting'
-    ],
-    price: '$1,500 - $5,000/month',
-    benefits: [
-      '24/7 customer support',
-      'Reduced support costs',
-      'Improved customer satisfaction',
-      'Scalable customer service'
-    ],
-    marketPrice: '$2,500 - $8,000/month',
-    setupTime: '2-4 weeks',
-    targetUsers: 'E-commerce, SaaS, Customer Service, Healthcare'
+    features: ['Text analysis', 'Sentiment analysis', 'Language translation', 'Content generation'],
+    price: '$1,500/month',
+    benefits: ['Better customer insights', 'Automated content', 'Multilingual support', 'Cost efficiency']
   },
   {
-    id: 7,
-    name: 'Quantum AI & Machine Learning',
-    description: 'Next-generation AI powered by quantum computing principles',
-    icon: Cpu,
-    features: [
-      'Quantum machine learning algorithms',
-      'Quantum neural networks',
-      'Optimization problems solving',
-      'Quantum data processing',
-      'Hybrid classical-quantum systems'
-    ],
-    price: '$5,500 - $15,000/month',
-    benefits: [
-      'Exponential processing power',
-      'Complex problem solving',
-      'Advanced optimization',
-      'Future-proof technology'
-    ],
-    marketPrice: '$8,000 - $25,000/month',
-    setupTime: '6-12 weeks',
-    targetUsers: 'Research Institutions, Pharmaceutical, Financial Services'
+    title: 'Computer Vision Solutions',
+    description: 'Image and video analysis powered by cutting-edge AI technology.',
+    icon: Eye,
+    features: ['Object detection', 'Image classification', 'Video analysis', 'Custom models'],
+    price: '$2,000/month',
+    benefits: ['Automated visual analysis', 'Quality control', 'Security monitoring', 'Process optimization']
   },
   {
-    id: 8,
-    name: 'AI Drug Discovery & Development',
-    description: 'Accelerated pharmaceutical research using AI and machine learning',
+    title: 'AI Chatbots & Virtual Assistants',
+    description: 'Intelligent conversational agents for customer service and support.',
+    icon: Bot,
+    features: ['24/7 availability', 'Natural conversations', 'Multi-language support', 'Integration ready'],
+    price: '$800/month',
+    benefits: ['Improved customer service', 'Reduced support costs', 'Scalable solutions', 'Better user experience']
+  },
+  {
+    title: 'Machine Learning Models',
+    description: 'Custom ML models tailored to your specific business needs.',
     icon: Brain,
+<<<<<<< HEAD
     features: [
       'Molecular property prediction',
       'Drug-target interaction modeling',
@@ -196,6 +192,11 @@ const aiServices = [
     marketPrice: '$5,500 - $20,000/month',
     setupTime: '6-12 weeks',
     targetUsers: 'Space Agencies, Satellite Companies, Research Institutions'
+=======
+    features: ['Predictive analytics', 'Custom algorithms', 'Data training', 'Model optimization'],
+    price: '$3,000/month',
+    benefits: ['Data-driven decisions', 'Predictive insights', 'Competitive advantage', 'Scalable intelligence']
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
   }
 ];
 
@@ -206,8 +207,9 @@ const stats = [
   { number: "48hrs", label: "Average Response Time" }
 ];
 
-export default function AIServices() {
+export default function AIServicesPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, NLP, and cutting-edge quantum AI solutions."
@@ -244,68 +246,100 @@ export default function AIServices() {
                 </motion.button>
               </div>
             </motion.div>
+=======
+    <MainLayout
+      title="AI Services - Zion Tech Group"
+      description="Cutting-edge AI solutions including natural language processing, computer vision, chatbots, and machine learning models."
+      keywords="AI services, machine learning, natural language processing, computer vision, chatbots, artificial intelligence"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From natural language processing to computer vision, we deliver AI that works.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </motion.div>
+            ))}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           </div>
-        </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">Our AI Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to solve complex business challenges and drive innovation.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                    className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {aiServices.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                </div>
+                
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <Star className="h-4 w-4 text-yellow-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-bold text-blue-400">{service.price}</div>
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
                   >
-                    <div className="flex items-center mb-4">
-                      <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white mr-4">
-                        <IconComponent size={24} />
-                      </div>
-                      <h3 className="text-2xl font-bold">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle size={16} className="text-green-500 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-semibold text-gray-900">{service.pricing}</span>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
-                      >
-                        Learn More
-                      </motion.button>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+                    Get Started
+                    <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
@@ -369,11 +403,37 @@ export default function AIServices() {
                 >
                   Schedule Demo
                 </motion.button>
+=======
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="bg-blue-600 rounded-xl p-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your AI needs and get a custom solution.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <div className="flex items-center text-white">
+                <Phone className="h-5 w-5 mr-2" />
+                <span>+1 302 464 0950</span>
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
               </div>
-            </motion.div>
-          </div>
-        </section>
+              <div className="flex items-center text-white">
+                <Mail className="h-5 w-5 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-white">
+                <MapPin className="h-5 w-5 mr-2" />
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </Layout>
+    </MainLayout>
   );
 }

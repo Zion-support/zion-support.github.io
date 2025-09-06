@@ -59,6 +59,22 @@ const seoContent = fs.readFileSync('src/components/SEO.tsx', 'utf8');
 const seoFixed = seoContent.split('  );')[0] + '  );';
 fs.writeFileSync('src/components/SEO.tsx', seoFixed, 'utf8');
 console.log('✅ Fixed SEO.tsx');
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
 // Fix TalentCard.jsx - fix malformed JSX
 const talentContent = fs.readFileSync('src/components/talent/TalentCard.jsx', 'utf8');
 const talentFixed = talentContent
@@ -93,6 +109,22 @@ const toastContent = fs.readFileSync('src/components/ui/use-toast.ts', 'utf8');
 const toastFixed = toastContent.replace('  return { showToast };\n}', '  return { showToast };\n}');
 fs.writeFileSync('src/components/ui/use-toast.ts', toastFixed, 'utf8');
 console.log('✅ Fixed use-toast.ts');
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
 // Fix enhancedServices.ts - fix malformed object properties
 const servicesContent = fs.readFileSync('src/data/enhancedServices.ts', 'utf8');
 const servicesFixed = servicesContent
@@ -131,6 +163,17 @@ if ( {
 console.log('✨ Final comprehensive fixes completed!');
   }} else {
   }
+<<<<<<< HEAD:backup-problematic-files/final-comprehensive-fix.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:final-comprehensive-fix.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
     return match.replace(/,\s*$/, '')

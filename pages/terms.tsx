@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
       ]
     },
@@ -1819,3 +1820,20 @@ export default Terms,;
   );
 };
 export default TermsPage;
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function TermsPage() {
+  return (
+    <MainLayout title="Terms of Service - Zion Tech Group">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the terms of service page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

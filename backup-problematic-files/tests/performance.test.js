@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface Performance.testProps {
   // Add props here as needed
 }
-
 export default function Performance.test({ }: Performance.testProps) {
   return (
     <div>
@@ -11,6 +9,11 @@ export default function Performance.test({ }: Performance.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/tests/performance.test.js
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tests/performance.test.js
 }
 }
-}
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

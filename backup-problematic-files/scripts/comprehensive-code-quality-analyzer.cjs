@@ -1,3 +1,13 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-code-quality-analyzer.cjs
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -38,7 +48,21 @@
     process.exit(1)}
 }
 
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-quality-analyzer.cjs
 main();#!/usr/bin/env node;
+=======
+main();
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+#!/usr/bin/env node;
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/comprehensive-code-quality-analyzer.cjs
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

@@ -1,9 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  Calendar, 
   Clock, 
   Users, 
   CheckCircle, 
@@ -92,7 +91,7 @@ const teamMembers = [
   }
 ];
 
-export default function CalendarPage() {
+export default function Calendar() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Head>

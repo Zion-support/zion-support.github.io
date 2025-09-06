@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/security-audit.cjs
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -34,6 +35,27 @@ class SecurityAuditor {;
     } catch (error) {;
       this.log(`❌ ${description} faile:d:${error.message}`, 'error');
       return { succes:s:false, erro:r:error.message };
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const { execSync } = require("child_process")
+const fs = require("fs")
+const path = require("path")
+function log(msg, level = "INFO")
+    execSync(cmd, { "stdio": "inherit"})
+    return { "ok"}
+    return { "ok": false, "error"}
+  log("� Starting security audit...")
+  log("Running npm audit (moderate)..."
+  const audit = tryExec("npm audit --audit-level=moderate")
+    log("Vulnerabilities found, attempting npm audit fix", "WARN")
+    tryExec("npm audit fix")
+  const sensitive = [".env", ".env.local", ".env.production", "config.json", "secrets.json"]
+    log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
+    log("No sensitive files found in repo root")
+  log(" Security audit completed")
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-audit.cjs
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
@@ -252,3 +274,7 @@ auditor.run().catch(console.error);
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
+<<<<<<< HEAD:backup-problematic-files/scripts/security-audit.cjs
+=======
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:scripts/security-audit.cjs

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
 import Layout from '../../components/Layout';
 import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
 import React from 'react';
@@ -31,6 +32,9 @@ const features = [;
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
 import React from 'react';
+=======
+import * as React from 'react';
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -47,29 +51,20 @@ const features = [
   {
     icon: ShoppingCart,
     title: 'E-commerce Platform',
-    description: 'Complete online shopping experience with advanced features'
+    description: 'Complete online store solution with payment processing'
   },
   {
     icon: Users,
-    title: 'Customer Management',
-    description: 'Comprehensive customer relationship management system'
+    title: 'Customer Analytics',
+    description: 'Deep insights into customer behavior and preferences'
   },
   {
     icon: BarChart3,
-    title: 'Analytics & Insights',
-    description: 'Advanced analytics for sales, inventory, and customer behavior'
-  },
-  {
-    icon: Smartphone,
-    title: 'Mobile Commerce',
-    description: 'Mobile-first shopping experience and mobile app solutions'
-  },
-  {
-    icon: CheckCircle,
     title: 'Inventory Management',
     description: 'Real-time inventory tracking and automated reordering'
   },
   {
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -151,6 +146,8 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -159,58 +156,66 @@ export default function RetailSolutions() {
 
 export default function RetailSolutionsPage() {
   return (
-    <Layout
-      title="Retail Solutions - Zion Tech Group"
-      description="Comprehensive retail technology solutions for e-commerce, omnichannel retail, and customer experience optimization."
-      keywords="retail solutions, e-commerce, omnichannel retail, customer experience, inventory management, retail analytics"
-    >
-      <div className="min-h-screen bg-white">
+    <>
+      <Head>
+        <title>Retail Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive retail technology solutions for modern commerce." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Retail Solutions
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Transform your retail business with modern e-commerce, omnichannel,
-                and customer experience solutions.
+        <section className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">Retail Solutions</h1>
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Transform your retail business with cutting-edge technology solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  View Demo
-                </button>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Retail Technology Features
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive solutions designed to enhance every aspect of your retail business.
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Retail Features</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Everything you need to succeed in modern retail.
               </p>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                    <feature.icon className="w-6 h-6 text-purple-600" />
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 text-center"
+                >
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -335,6 +340,8 @@ export default function RetailSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
@@ -344,29 +351,44 @@ export default function RetailSolutionsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Retail Business?
-            </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact our retail solutions team to discuss your specific requirements
-              and discover how we can help grow your retail business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                Contact Retail Team
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors">
-                Download Retail Brochure
-              </button>
-            </div>
+        <section className="py-20 bg-green-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Retail Business?
+              </h2>
+              <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our retail solutions can boost your sales.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Sales
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/solutions"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-colors font-semibold"
+                >
+                  View Solutions
+                </Link>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD:backup-problematic-files/pages_backup/solutions/retail.tsx
     </Layout>
     </Layout>
     </>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:pages_backup/solutions/retail.tsx
     </>
   );
 }

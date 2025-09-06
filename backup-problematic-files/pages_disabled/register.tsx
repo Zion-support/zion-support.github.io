@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -31,11 +29,27 @@ export default function RegisterPage() {
   };
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
     <Layout
       title="Register - Zion Tech Group"
       description="Create your Zion Tech Group account to access our comprehensive technology solutions and services."
       keywords="register, sign up, account, Zion Tech Group, technology solutions"
     >
+<<<<<<< HEAD
+=======
+=======
+    <>
+>>>>>>> main:pages_disabled/register.tsx
+      <Head>
+        <title>Register - Zion Tech Group</title>
+        <meta name="description" content="Create your Zion Tech Group account to access our comprehensive technology solutions and services." />
+      </Head>
+
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <motion.div
@@ -244,6 +258,18 @@ export default function RegisterPage() {
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
     </Layout>
+=======
+<<<<<<< HEAD
+    </Layout>
+=======
+<<<<<<< HEAD:pages/register.tsx
+    </div>
+=======
+    </>
+>>>>>>> main:pages_disabled/register.tsx
+>>>>>>> origin/cursor/add-new-services-and-deploy-updates-0b97
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   );
 }

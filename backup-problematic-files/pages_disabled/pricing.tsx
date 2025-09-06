@@ -1,8 +1,113 @@
+import Head from 'next/head'
+import Link from 'next/link'
+import { 
+  CheckCircle,
+  X,
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  BarChart3
+} from 'lucide-react'
+
+const plans = [
+  {
+    name: 'Starter',
+    price: '$99',
+    period: 'per month',
+    description: 'Perfect for small businesses getting started',
+    features: [
+      'Basic AI integration',
+      'Cloud hosting',
+      'Email support',
+      'Standard security',
+      'Basic analytics'
+    ],
+    limitations: [
+      'Limited customization',
+      'No priority support'
+    ],
+    popular: false
+  },
+  {
+    name: 'Professional',
+    price: '$299',
+    period: 'per month',
+    description: 'Ideal for growing businesses',
+    features: [
+      'Advanced AI capabilities',
+      'Custom integrations',
+      'Priority support',
+      'Enhanced security',
+      'Advanced analytics',
+      'API access',
+      'Custom branding'
+    ],
+    limitations: [],
+    popular: true
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: 'contact us',
+    description: 'For large organizations with complex needs',
+    features: [
+      'Full AI suite',
+      'Custom development',
+      '24/7 dedicated support',
+      'Enterprise security',
+      'Custom analytics',
+      'Unlimited integrations',
+      'White-label solutions',
+      'Dedicated account manager'
+    ],
+    limitations: [],
+    popular: false
+  }
+]
+
+const addOns = [
+  {
+    name: 'Additional Storage',
+    price: '$10',
+    period: 'per 100GB/month',
+    description: 'Extra cloud storage for your data'
+  },
+  {
+    name: 'Premium Support',
+    price: '$50',
+    period: 'per month',
+    description: '24/7 priority support and faster response times'
+  },
+  {
+    name: 'Custom Integrations',
+    price: '$200',
+    period: 'per integration',
+    description: 'Custom API integrations with third-party services'
+  }
+]
+
+export default function Pricing() {
+  return (
+    <>
+      <Head>
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Transparent pricing for our technology solutions and services." />
+      </Head>
+
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include our core features with no hidden fees.
 import React from 'react';
 import Head from 'next/head';
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Choose the perfect plan for your business needs
+>>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
             </p>
           </div>
 

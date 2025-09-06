@@ -10,13 +10,8 @@
     "baseUrl": ".",
     "outDir": "dist",
     "rootDir": "src",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "src/server",
-    "src/shared"
-  ]
+  "include": ["src/server", "src/shared"]
 }

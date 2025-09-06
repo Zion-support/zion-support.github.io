@@ -1,4 +1,5 @@
 import OpenAI from 'openai';
+<<<<<<< HEAD
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
@@ -16,3 +17,28 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text;
 }
+=======
+
+type OpenAIClient = OpenAI;
+
+export function createOpenAIClient(apiKey: string): OpenAIClient {
+  return new OpenAI({ apiKey });
+}
+
+export async function generateJobPost(
+  openai: OpenAIClient,
+  role: string,
+  opts: any
+): Promise<string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'}
+Add responsibilities, requirements, and benefits in bullet points.`;
+  const completion = await openai.responses.create({
+    model: 'gpt-4o-mini',
+    input: prompt,
+  });
+  return completion.output_text;
+}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

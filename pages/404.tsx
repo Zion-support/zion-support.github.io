@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import MainLayout from '../components/layout/MainLayout';
 
+<<<<<<< HEAD
 export default function Custom404() {
   return (
     <>
@@ -21,9 +21,24 @@ export default function Custom404() {
           >
             Go Home
           </Link>
+=======
+const Page = () => {
+  return (
+    <MainLayout
+      title="404 - Page Not Found"
+      description="Page not found"
+    >
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+          <p className="text-xl text-gray-600 mb-8">Page not found</p>
+          <a href="/" className="text-blue-600 hover:text-blue-800">
+            Go back home
+          </a>
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
         </div>
       </div>
-    </>
+    </MainLayout>
   );
 }
 import type { NextPage } from 'next';
@@ -45,6 +60,7 @@ const NotFoundPage: NextPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default NotFoundPage;
 import React from 'react',;
 import Head from 'next/head',;
@@ -75,3 +91,6 @@ export default function Custom404() {;
     </>;
   );
 }
+=======
+export default Page;
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

@@ -11,7 +11,10 @@ export default function Basic.spec({ }: Basic.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup-problematic-files/tests/e2e/basic.spec.ts
 }
 }
 }
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tests/e2e/basic.spec.ts
 }

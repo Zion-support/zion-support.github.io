@@ -1,3 +1,10 @@
+<<<<<<< HEAD:backup-problematic-files/tools/repair-syntax.cjs
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:tools/repair-syntax.cjs
 #!/usr/bin/env node;
 /*
   Automated syntax repair for widespread mangling and merge markers.

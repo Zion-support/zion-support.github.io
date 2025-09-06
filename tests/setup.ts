@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import { cleanup } from '@testing-library/react';
 import { vi, afterEach } from 'vitest';
@@ -40,3 +41,19 @@ afterEach(() => {;
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
   // We expose it so imports compile even if we don't use it.;
   SnapshotSerializer: () => {}};
+=======
+import React from 'react';
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705

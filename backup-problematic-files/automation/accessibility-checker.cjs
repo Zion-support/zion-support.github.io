@@ -1,3 +1,126 @@
+<<<<<<< HEAD
+        
+      }
+    }},
+  {
+    "name": 'Keyboard Navigation Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let interactiveElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          const buttons = (content.match(/<button[^>]*>/g) || []).length;
+          const links = (content.match(/<a[^>]*>/g) || []).length;
+          const inputs = (content.match(/<input[^>]*>/g) || []).length;
+          interactiveElements += buttons + links + inputs;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'ARIA Labels Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let ariaElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Focus Management Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let focusElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
+            .length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Screen Reader Support Check',
+    "action": () => {
+      
+      const pagesDir = path.join(process.cwd(), 'pages');
+      if (fs.existsSync(pagesDir)) {
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let srElements = 0;
+
+        pages.forEach(page => {
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          srElements += (
+            content.match(/role=|aria-label=|aria-describedby=/g) || []
+          ).length;
+        });
+
+        
+      }
+    }},
+];
+
+// Run accessibility checks
+let successCount = 0;
+let totalCount = a11yChecks.length;
+
+for (const check of a11yChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
+
+
+
+
+// Generate accessibility report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": a11yChecks.map(check => ({
+    name: check.name,
+    "status": 'completed'})),
+  "summary": {
+    total: totalCount,
+    "successful": successCount,
+    "failed": totalCount - successCount}};
+
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });
+}
+
+=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -10,7 +133,7 @@ class AccessibilityChecker {
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursiv: e: true });
+      fs.mkdirSync(this.logsDir, { recursive: true });
     }
   }
 
@@ -25,17 +148,17 @@ class AccessibilityChecker {
 
   async runCommand(command, description) {
     try {
-      this.log(`Runnin: g: ${description}`);
+      this.log(`Running: ${description}`);
       const output = execSync(command, {
-        encodin: g: 'utf8',
-        cw: d: '/workspace',
-        stdi: o: 'pipe',
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
       });
       this.log(`✅ ${description} completed successfully`);
-      return { succes: s: true, output };
+      return { success: true, output };
     } catch (error) {
-      this.log(`❌ ${description} faile: d: ${error.message}`, 'error');
-      return { succes: s: false, erro: r: error.message };
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
+      return { success: false, error: error.message };
     }
   }
 
@@ -44,10 +167,10 @@ class AccessibilityChecker {
 
     const checks = [
       {
-        comman: d: 'npm run: test:accessibility',
-        descriptio: n: 'Accessibility tests',
+        command: 'npm run test:accessibility',
+        description: 'Accessibility tests',
       },
-      { comman: d: 'npm run lint', descriptio: n: 'Linting for accessibility' },
+      { command: 'npm run lint', description: 'Linting for accessibility' },
     ];
 
     const results = [];
@@ -116,4 +239,43 @@ if (require.main === module) {
     });
 }
 
+<<<<<<< HEAD:backup-problematic-files/automation/accessibility-checker.cjs
 module.exports = AccessibilityChecker;
+=======
+<<<<<<< HEAD
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+const reportFile = path.join(
+  reportsDir,
+  `accessibility-report-${Date.now()}.json`
+);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log('♿ Accessibility Checker Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
+<<<<<<< HEAD
+=======
+=======
+module.exports = AccessibilityChecker;
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705:automation/accessibility-checker.cjs

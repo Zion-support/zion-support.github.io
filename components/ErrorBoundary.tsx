@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
@@ -90,6 +91,8 @@ class ErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
           </div>
         </div>
       );
@@ -99,6 +102,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
                 className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold text-white transition-colors";
               >;
                 <RefreshCw className="w-4 h-4" />;
@@ -122,3 +126,5 @@ class ErrorBoundary extends Component<Props, State> {
 }
 ;
 export default ErrorBoundary;
+=======
+>>>>>>> 3f460500b361cb7cf5c95e8c53ca967467908705
