@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
-    extend: {
-      colors: {
-=======
+
 /** @type {import('tailwindcss').Config} */;
 module.exports = {;
   darkMode:"class",;
@@ -565,7 +554,7 @@ module.exports = {;
     extend: {
       colors: {
         'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -577,10 +566,7 @@ module.exports = {;
           700: '#1d4ed8',
           800: '#1e40af',
           900: '#1e3a8a',
-<<<<<<< HEAD
-        },
-        secondary: {
-=======
+
           950: '#172554'},
         // Extended color palette
         gray: {
@@ -620,7 +606,7 @@ module.exports = {;
           900: '#312e81',
           950: '#1e1b4b'},
         purple: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
           50: '#faf5ff',
           100: '#f3e8ff',
           200: '#e9d5ff',
@@ -631,33 +617,7 @@ module.exports = {;
           700: '#7c3aed',
           800: '#6b21a8',
           900: '#581c87',
-<<<<<<< HEAD
-        },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'bounce-slow': 'bounce 2s infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
-    },
-  },
-  plugins: [],
-}
-=======
+
           950: '#3b0764'},
         cyan: {
           50: '#ecfeff',
@@ -1079,4 +1039,3 @@ module.exports = {;
   theme: {
     extend: {}},  plugins: []}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5

@@ -167,67 +167,6 @@ if (typeof window !== 'undefined') {
     });
   });
 
-<<<<<<< HEAD
-// Create advanced caching system
-function createAdvancedCaching() {
-  console.log('\n💾 Creating advanced caching system...');
-  
-  const cachingFiles = {
-    'cache/redis-cache.js': `// Redis-based caching system
-class RedisCache {
-  constructor(redisClient) {
-    this.client = redisClient;
-    this.defaultTTL = 3600; // 1 hour
-  }
-
-  async get(key) {
-    try {
-      const value = await this.client.get(key);
-      return value ? JSON.parse(value) : null;
-    } catch (error) {
-      console.error('Cache get error:', error);
-      return null;
-    }
-  }
-
-  async set(key, value, ttl = this.defaultTTL) {
-    try {
-      await this.client.setex(key, ttl, JSON.stringify(value));
-      return true;
-    } catch (error) {
-      console.error('Cache set error:', error);
-      return false;
-    }
-  }
-
-  async del(key) {
-    try {
-      await this.client.del(key);
-      return true;
-    } catch (error) {
-      console.error('Cache delete error:', error);
-      return false;
-    }
-  }
-
-  async clear() {
-    try {
-      await this.client.flushdb();
-      return true;
-    } catch (error) {
-      console.error('Cache clear error:', error);
-      return false;
-    }
-  }
-}`,
-    
-    'cache/memory-cache.js': `// In-memory caching system
-class MemoryCache {
-  constructor(maxSize = 1000) {
-    this.cache = new Map();
-    this.maxSize = maxSize;
-    this.accessTimes = new Map();
-=======
   window.addEventListener('unhandledrejection', (event) => {
     errorTracker.trackError(new Error(event.reason), {
       type: 'unhandledrejection'
@@ -240,7 +179,7 @@ export class AnalyticsTracker {
   constructor() {
     this.events = [];
     this.sessionId = this.generateSessionId();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   }
 
   generateSessionId() {
@@ -311,22 +250,9 @@ export function lazyLoadImages() {
   images.forEach(img => imageObserver.observe(img));
 }
 
-<<<<<<< HEAD
-const redisCache = new RedisCache();
-  `,
-    
-    'cache/memory-cache.js': `// Memory-based caching system
-class MemoryCache {
-  constructor(maxSize = 1000) {
-    this.cache = new Map();
-    this.accessTimes = new Map();
-    this.maxSize = maxSize;
-  }
-=======
 export function lazyLoadComponents(componentLoader) {
   return React.lazy(componentLoader);
 }`,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
 
     'utils/memoization.js': `// Memoization utilities
 export function memoize(fn) {
@@ -342,10 +268,6 @@ export function memoize(fn) {
   };
 }
 
-<<<<<<< HEAD
-const memoryCache = new MemoryCache();
-  `,
-=======
 export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -403,7 +325,7 @@ export function preloadCriticalResources() {
     document.head.appendChild(link);
   });
 }`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   };
 
   Object.entries(optimizationFiles).forEach(([filename, content]) => {
@@ -417,123 +339,7 @@ export function preloadCriticalResources() {
 // Create accessibility improvements
 function createAccessibilityImprovements() {
   console.log('\n♿ Creating accessibility improvements...');
-  
-<<<<<<< HEAD
-  const apiFiles = {
-    'api/rate-limiter.js': `// Rate limiting middleware
-class RateLimiter {
-  constructor(options = {}) {
-    this.windowMs = options.windowMs || 60000; // 1 minute
-    this.maxRequests = options.maxRequests || 100;
-    this.requests = new Map();
-  }
 
-  isAllowed(identifier) {
-    const now = Date.now();
-    const windowStart = now - this.windowMs;
-    
-    if (!this.requests.has(identifier)) {
-      this.requests.set(identifier, []);
-    }
-    
-    const userRequests = this.requests.get(identifier);
-    
-    // Remove old requests
-    const recentRequests = userRequests.filter(time => time > windowStart);
-    this.requests.set(identifier, recentRequests);
-    
-    if (recentRequests.length >= this.maxRequests) {
-      return false;
-    }
-    
-    recentRequests.push(now);
-    return true;
-  }
-
-  getRemainingRequests(identifier) {
-    const now = Date.now();
-    const windowStart = now - this.windowMs;
-    const userRequests = this.requests.get(identifier) || [];
-    const recentRequests = userRequests.filter(time => time > windowStart);
-    
-    return Math.max(0, this.maxRequests - recentRequests.length);
-  }
-}
-
-const rateLimiter = new RateLimiter();`,
-    
-    'api/response-optimizer.js': `// API response optimization
-class ResponseOptimizer {
-  constructor() {
-    this.compressionThreshold = 1024; // 1KB
-  }
-
-  optimizeResponse(data, options = {}) {
-    const {
-      compress = true,
-      minify = true,
-      cache = true,
-      ttl = 3600
-    } = options;
-
-    let response = { ...data };
-
-    // Add caching headers
-    if (cache) {
-      response.headers = {
-        ...response.headers,
-        'Cache-Control': \`public, max-age=\${ttl}\`,
-        'ETag': this.generateETag(data)
-      };
-    }
-
-    // Add compression info
-    if (compress && JSON.stringify(data).length > this.compressionThreshold) {
-      response.headers = {
-        ...response.headers,
-        'Content-Encoding': 'gzip'
-      };
-    }
-
-    return response;
-  }
-
-  generateETag(data) {
-    const str = JSON.stringify(data);
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      const char = str.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
-      hash = hash & hash; // Convert to 32-bit integer
-    }
-    return \`"\${Math.abs(hash).toString(16)}"\`;
-  }
-}
-
-const responseOptimizer = new ResponseOptimizer();
-  };
-
-  Object.entries(apiFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
-    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
-    fs.writeFileSync(fullPath, content);
-    console.log(`[OK] Created ${filename}`);
-  });
-});
-}
-
-// Create database optimization utilities
-function createDatabaseOptimization() {
-  console.log('\n🗄️ Creating database optimization utilities...');
-  
-  const dbFiles = {
-    'database/query-optimizer.js': `// Database query optimization
-class QueryOptimizer {
-  constructor() {
-    this.queryCache = new Map();
-    this.slowQueries = [];
-  }
-=======
   const accessibilityFiles = {
     'utils/accessibility.js': `// Accessibility utilities
 export function improveAccessibility() {
@@ -551,7 +357,6 @@ export function improveAccessibility() {
   // Improve color contrast
   improveColorContrast();
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
 
 function addSkipLinks() {
   const skipLink = document.createElement('a');
@@ -633,31 +438,12 @@ function handleKeyboardNavigation(event) {
   }
 }
 
-<<<<<<< HEAD
-const queryOptimizer = new QueryOptimizer();`,
-    
-    'database/connection-pool.js': `// Database connection pooling
-class ConnectionPool {
-  constructor(options = {}) {
-    this.maxConnections = options.maxConnections || 10;
-    this.minConnections = options.minConnections || 2;
-    this.connections = [];
-    this.availableConnections = [];
-    this.usedConnections = new Set();
-  }
-
-  async getConnection() {
-    if (this.availableConnections.length > 0) {
-      const connection = this.availableConnections.pop();
-      this.usedConnections.add(connection);
-      return connection;
-=======
 function closeModals() {
   const modals = document.querySelectorAll('[role="dialog"]');
   modals.forEach(modal => {
     if (modal.style.display !== 'none') {
       modal.style.display = 'none';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
     }
   });
 }
@@ -680,9 +466,6 @@ function handleTabNavigation(event) {
   }
 }
 
-<<<<<<< HEAD
-const connectionPool = new ConnectionPool();
-=======
 function handleArrowNavigation(event) {
   // Implement arrow key navigation for custom components
   const currentElement = document.activeElement;
@@ -714,7 +497,7 @@ function handleArrowNavigation(event) {
     }
   }
 }`
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-19d5
+
   };
 
   Object.entries(accessibilityFiles).forEach(([filename, content]) => {

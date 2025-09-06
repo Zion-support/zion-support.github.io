@@ -127,11 +127,6 @@ temp/
 *.sln
 *.sw?
 
-<<<<<<< HEAD
-# Test results
-test-results/
-coverage/
-=======
 # Generated reports
 automation-reports/
 health-check-report-*.json
@@ -187,4 +182,4 @@ backups/
 health-check-report.json
 performance-metrics.json
 security-scan-report.json
->>>>>>> 85a24a5832d22cc1b8236f1030ea13f0376bea60
+
