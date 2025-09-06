@@ -57,7 +57,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Compute simple risk score
-  let riskScore = 10, // base low risk
+  let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
   if (flags.has('fraud_risk')) riskScore += 20;
   if (flags.has('duplicate_ip')) riskScore += 15;
