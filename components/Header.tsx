@@ -40,7 +40,11 @@ const servicesDropdown = [
     title: 'Digital Transformation',
     description: 'Complete digital overhaul of your business processes',
     href: '/services',
+<<<<<<< HEAD
   },
+=======
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
@@ -103,6 +107,10 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
             >
               Home
             </Link>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
             <div className="relative">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
@@ -115,6 +123,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                   isServicesOpen ? 'rotate-180' : ''
                 }`} />
               </button>
+<<<<<<< HEAD
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
@@ -140,10 +149,40 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                         ))}
                       </div>
                     </div>
+=======
+              
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                  >
+                    {servicesDropdown.map((service) => (
+                      <button
+                        key={service.title}
+                        onClick={() => handleServiceClick(service.href)}
+                        className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors"
+                      >
+                        <div className="flex items-start space-x-3">
+                          <service.icon className="h-5 w-5 text-blue-600 mt-0.5" />
+                          <div>
+                            <div className="font-medium text-gray-900">{service.title}</div>
+                            <div className="text-sm text-gray-500">{service.description}</div>
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
             <Link
               href="/about"
               className={`font-medium transition-colors duration-200 ${
@@ -152,6 +191,10 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
             >
               About
             </Link>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
             <Link
               href="/contact"
               className={`font-medium transition-colors duration-200 ${
@@ -162,6 +205,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
             </Link>
           </nav>
 
+<<<<<<< HEAD
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -267,6 +311,81 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           )}
         </AnimatePresence>
       </div>
+=======
+          {/* Mobile menu button */}
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="lg:hidden bg-white border-t border-gray-200"
+          >
+            <div className="px-4 py-2 space-y-1">
+              <Link
+                href="/"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+              
+              <div className="px-3 py-2">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform ${
+                    isServicesOpen ? 'rotate-180' : ''
+                  }`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="mt-2 space-y-1">
+                    {servicesDropdown.map((service) => (
+                      <button
+                        key={service.title}
+                        onClick={() => handleServiceClick(service.href)}
+                        className="block w-full text-left px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                      >
+                        {service.title}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              <Link
+                href="/about"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+              
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
     </header>
   );
 };

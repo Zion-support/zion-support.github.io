@@ -25,7 +25,6 @@ import {
   MapPin,
   Building2,
 } from 'lucide-react';
-,
 const navigation = {
   'Services': [
     { name: 'AI Services', href: '/ai-services' },
@@ -35,6 +34,7 @@ const navigation = {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Blockchain', href: '/blockchain' },
+<<<<<<< HEAD
     { name: 'IoT Solutions', href: '/iot-solutions' },
   ],
   'Solutions': [
@@ -72,13 +72,60 @@ const navigation = {
     { name: 'Partners', href: '/partners' },
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
+=======
+    { name: 'IoT Solutions', href: '/iot-solutions' }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
   ],
+  'Solutions': [
+    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+    { name: 'Startup Solutions', href: '/solutions/startup' },
+    { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Custom Development', href: '/solutions/custom' }
+  ],
+  'Industries': [
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Finance', href: '/industries/finance' },
+    { name: 'Education', href: '/industries/education' },
+    { name: 'Government', href: '/industries/government' },
+    { name: 'Manufacturing', href: '/industries/manufacturing' },
+    { name: 'Retail', href: '/industries/retail' },
+    { name: 'Agriculture', href: '/industries/agriculture' },
+    { name: 'Energy', href: '/industries/energy' }
+  ],
+  'Resources': [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Documentation', href: '/docs/api' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Training', href: '/training' },
+    { name: 'FAQ', href: '/faq' }
+  ],
+  'Company': [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'News', href: '/news' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' }
+  ]
 };
+<<<<<<< HEAD
 ,
 const quickLinks = [
   { name: 'Free Consultation', href: '/consultation' },
   { name: 'Get Quote', href: '/quote' },
   { name: 'Support', href: '/support' },
+=======
+
+const quickLinks = [
+  { name: 'Free Consultation', href: '/consultation' },
+  { name: 'Get Quote', href: '/quote' },
+  { name: 'Support', href: '/support' }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
 ];
 
 interface SidebarProps {
@@ -103,7 +150,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
+<<<<<<< HEAD
 ,
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
   return (
     <AnimatePresence>
       {isOpen && (
@@ -147,7 +198,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <button
                       onClick={() => handleDropdownToggle(title)}
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover:text-blue-600 transition-colors"
+<<<<<<< HEAD
                     >
+=======
+                    >,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
                       <span>{title}</span>
                       <ChevronDown className={`w-5 h-5 transition-transform ${
                         activeDropdown === title ? 'rotate-180' : ''
@@ -219,4 +274,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       )}
     </AnimatePresence>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-b0f2
