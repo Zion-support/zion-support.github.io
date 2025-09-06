@@ -1,30 +1,29 @@
 
-import { useState } from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
-import { toast } from "sonner",;
-import { JobApplication } from "@/types/jobs",;
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { supabase } from "@/integrations/supabase/client";
+import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
-  onScoreUpdated?: (updatedApplication: JobApplication) => void
+  onScoreUpdated?: (updatedApplication: JobApplication,) => void
 }
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false),
+  const [isScoring, setIsScoring] = useState(false);
 
   // Determine if application has been scored
-  const hasScore = typeof application.match_score === 'number',
+  const hasScore = typeof application.match_score === 'number';
   
-  // Format the date when the application was scored
-  const scoredDate = application.scored_at 
-    ? new Date(application.scored_at).toLocaleDateString() 
-    : null,
+      
+      let attempts = 0;
+      const maxAttempts = 10;
+      
 
   // Get suggestion color
-  const getSuggestionColor = (suggestion: string | undefined) => {
+  const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
       case "Strongly Recommended": return "bg-green-100 text-green-800",
       case "Recommended for Review":
@@ -204,8 +203,8 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
               Analyze how well this resume matches your job requirements.
             </p>
             <Button 
-              onClick={handleScore} 
-              disabled={isScoring}
+              onClick = {handleScore,}
+              disabled = {isScoring,}
               className="w-full"
             >
               {isScoring ? (

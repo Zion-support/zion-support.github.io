@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { ReactNode } from "react";
+import {ReactNode} from "react";
 
 type ModernLayoutProps = {
-  children: ReactNode;
+  children: ReactNode,
   title?: string;
   description?: string;
   keywords?: string;
@@ -10,11 +10,11 @@ type ModernLayoutProps = {
 };
 
 const ModernLayout = ({
-  children,
-  title = "Zion Tech Group - Revolutionary AI Services & IT Solutions",
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.",
-  keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity",
-  canonical,
+  children;
+  title = "Zion Tech Group - Revolutionary AI Services & IT Solutions";
+  description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.";
+  keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
+  canonical;
 }: ModernLayoutProps) => {
   return (
     <>
@@ -26,7 +26,7 @@ const ModernLayout = ({
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         {canonical ? <link rel="canonical" href={canonical} /> : null}
-        <meta property="og:type" content="website" />
+        <meta property="og: type" content="website" />
         <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -43,8 +43,8 @@ const ModernLayout = ({
       <div className="min-h-screen bg-white text-gray-900">
         {children}
       </div>
-    </>;
-  );
+</>
+  ),;
 };
 
 export default ModernLayout;

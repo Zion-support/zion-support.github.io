@@ -1,53 +1,46 @@
 
-import { useState } from "react",;
-import { useParams, Link } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { SEO } from "@/components/SEO",;
-import { AppLayout } from "@/layout/AppLayout",;
-import PostCard from "@/components/community/PostCard",;
-import { ForumPost, ForumCategoryInfo } from "@/types/community",;
-import { Badge } from "@/components/ui/badge",;
-import { useAuth } from "@/hooks/useAuth",;
-import {
-  MessageSquare,
-  Briefcase,
-  Code,
-  FileText,
-  Megaphone,
-  Search
-} from "@/components/icons",
+import {useState} from "react";
+import {useParams, Link} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {SEO} from "@/components/SEO";
+import {AppLayout} from "@/layout/AppLayout";
+import PostCard from "@/components/community/PostCard";
+import {ForumPost, ForumCategoryInfo} from "@/types/community";
+import {Badge} from "@/components/ui/badge";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
 
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired",
     name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.",
+    description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,
     icon: "Briefcase"
-  },
+  };
   "project-help": {
     id: "project-help",
     name: "Project Help",
     description: "Get help with your ongoing projects and collaboration.",
     adminOnly: false,
     icon: "MessageSquare"
-  },
+  };
   "ai-tools": {
     id: "ai-tools",
     name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.",
+    description: "Discuss AI tools, frameworks, and best practices.";
     adminOnly: false,
     icon: "Code"
-  },
+  };
   "feedback": {
     id: "feedback",
     name: "Feedback & Feature Requests",
     description: "Share your feedback and suggest new features.",
     adminOnly: false,
     icon: "FileText"
-  },
+  };
   "announcements": {
     id: "announcements",
     name: "Announcements",
@@ -55,7 +48,7 @@ const categoriesInfo: Record<string, ForumCategoryInfo> = {
     adminOnly: true,
     icon: "Megaphone"
   }
-},
+};
 
 // Mock data for posts by category
 const postsByCategory: Record<string, ForumPost[]> = {
@@ -68,7 +61,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Sarah Chen",
       authorAvatar: "https://i.pravatar.cc/150?img=5",
       categoryId: "getting-hired",
-      tags: ["profile", "tips", "hiring"],
+      tags: ["profile", "tips", "hiring"];
       createdAt: "2025-04-03T09:15:00Z",
       updatedAt: "2025-04-03T09:15:00Z",
       upvotes: 32,
@@ -76,22 +69,22 @@ const postsByCategory: Record<string, ForumPost[]> = {
       replyCount: 8,
       isPinned: true,
       isFeatured: true
-    },
+    };
     {
       id: "6",
       title: "Portfolio pieces that clients actually care about",
-      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...",
+      content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
       authorId: "user6",
       authorName: "James Wilson",
       categoryId: "getting-hired",
-      tags: ["portfolio", "projects", "examples"],
+      tags: ["portfolio", "projects", "examples"];
       createdAt: "2025-04-07T11:30:00Z",
       updatedAt: "2025-04-07T11:30:00Z",
       upvotes: 19,
       downvotes: 2,
       replyCount: 6
     }
-  ],
+  ];
   "project-help": [
     {
       id: "3",
@@ -100,13 +93,13 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorId: "user3",
       authorName: "Michael Wong",
       categoryId: "project-help",
-      tags: ["testing", "automation", "ci-cd"],
+      tags: ["testing", "automation", "ci-cd"];
       createdAt: "2025-04-10T14:30:00Z",
       updatedAt: "2025-04-10T14:30:00Z",
       upvotes: 5,
       downvotes: 0,
       replyCount: 2
-    },
+    };
     {
       id: "5",
       title: "How to handle client scope creep?",
@@ -114,7 +107,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorId: "user5",
       authorName: "David Lin",
       categoryId: "project-help",
-      tags: ["client-management", "scope", "projects"],
+      tags: ["client-management", "scope", "projects"];
       createdAt: "2025-04-08T10:20:00Z",
       updatedAt: "2025-04-08T10:20:00Z",
       upvotes: 24,
@@ -122,7 +115,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       replyCount: 7,
       isAnswered: true
     }
-  ],
+  ];
   "ai-tools": [
     {
       id: "1",
@@ -133,7 +126,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorAvatar: "https://i.pravatar.cc/150?img=3",
       authorRole: "Verified Talent",
       categoryId: "ai-tools",
-      tags: ["machine-learning", "fine-tuning", "gpt"],
+      tags: ["machine-learning", "fine-tuning", "gpt"];
       createdAt: "2025-04-01T12:00:00Z",
       updatedAt: "2025-04-01T12:00:00Z",
       upvotes: 48,
@@ -141,7 +134,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       replyCount: 12,
       isAnswered: true,
       isFeatured: true
-    },
+    };
     {
       id: "7",
       title: "Comparing different vector embedding models",
@@ -149,14 +142,14 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorId: "user7",
       authorName: "Lisa Park",
       categoryId: "ai-tools",
-      tags: ["embeddings", "vectors", "similarity-search"],
+      tags: ["embeddings", "vectors", "similarity-search"];
       createdAt: "2025-04-05T16:40:00Z",
       updatedAt: "2025-04-05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
       replyCount: 9
     }
-  ],
+  ];
   "feedback": [
     {
       id: "4",
@@ -165,13 +158,13 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorId: "user4",
       authorName: "Emma Davis",
       categoryId: "feedback",
-      tags: ["feature-request", "teams", "collaboration"],
+      tags: ["feature-request", "teams", "collaboration"];
       createdAt: "2025-04-09T18:45:00Z",
       updatedAt: "2025-04-09T18:45:00Z",
       upvotes: 12,
       downvotes: 1,
       replyCount: 3
-    },
+    };
     {
       id: "8",
       title: "Suggestion for improving the jobs matching algorithm",
@@ -179,14 +172,14 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorId: "user8",
       authorName: "Ryan Mitchell",
       categoryId: "feedback",
-      tags: ["matching", "jobs", "algorithm"],
+      tags: ["matching", "jobs", "algorithm"];
       createdAt: "2025-04-04T08:10:00Z",
       updatedAt: "2025-04-04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
       replyCount: 5
     }
-  ],
+  ];
   "announcements": [
     {
       id: "9",
@@ -196,14 +189,14 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Zion Team",
       authorRole: "Admin",
       categoryId: "announcements",
-      tags: ["update", "matching", "algorithm"],
+      tags: ["update", "matching", "algorithm"];
       createdAt: "2025-04-02T15:00:00Z",
       updatedAt: "2025-04-02T15:00:00Z",
       upvotes: 42,
       downvotes: 0,
       replyCount: 11,
       isPinned: true
-    },
+    };
     {
       id: "10",
       title: "Maintenance Scheduled: April 15th",
@@ -212,7 +205,7 @@ const postsByCategory: Record<string, ForumPost[]> = {
       authorName: "Zion Team",
       authorRole: "Admin",
       categoryId: "announcements",
-      tags: ["maintenance", "downtime"],
+      tags: ["maintenance", "downtime"];
       createdAt: "2025-04-10T09:00:00Z",
       updatedAt: "2025-04-10T09:00:00Z",
       upvotes: 8,
@@ -221,22 +214,22 @@ const postsByCategory: Record<string, ForumPost[]> = {
       isPinned: true
     }
   ]
-},
+};
 
 const iconMap = {
-  "Briefcase": Briefcase,
-  "MessageSquare": MessageSquare,
-  "Code": Code,
-  "FileText": FileText,
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
   "Megaphone": Megaphone
-},
+};
 
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const { categoryId } = useParams(),
-  const { user } = useAuth(),
-  const [searchQuery, setSearchQuery] = useState(""),
+  const { categoryId } = useParams();
+  const { user } = useAuth();
+  const [searchQuery, setSearchQuery] = useState("");
   
   if (!categoryId || !categoriesInfo[categoryId]) {
     return (
@@ -251,9 +244,9 @@ export default function ForumCategoryPage() {
     )
   }
   
-  const category = categoriesInfo[categoryId],
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
-  const posts = postsByCategory[categoryId] || [],
+  const category = categoriesInfo[categoryId];
+  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare;
+  const posts = postsByCategory[categoryId] || [];
   
   // Filter posts based on search query
   const filteredPosts = searchQuery
@@ -262,10 +255,10 @@ export default function ForumCategoryPage() {
         post.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
-    : posts,
+    : posts;
   
   // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
+  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin');
   
   return (
     <AppLayout>

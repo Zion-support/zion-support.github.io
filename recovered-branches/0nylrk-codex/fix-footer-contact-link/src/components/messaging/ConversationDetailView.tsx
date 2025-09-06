@@ -1,46 +1,46 @@
 
-import React, { useState, useEffect, useRef } from 'react',;
-import { format } from 'date-fns',;
-import { MessageSquare } from 'lucide-react',;
-import { useMessaging } from '@/context/MessagingContext',;
-import { Button } from '@/components/ui/button',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
-import { AspectRatio } from '@/components/ui/aspect-ratio',;
-import { useAuth } from '@/hooks/useAuth',;
-import { MessageBubble } from './MessageBubble',;
-import { DateDivider } from './DateDivider',;
+import React, { useState, useEffect, useRef } from 'react';
+import {format} from 'date-fns';
+import {MessageSquare} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {Button} from '@/components/ui/button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
+import {AspectRatio} from '@/components/ui/aspect-ratio';
+import {useAuth} from '@/hooks/useAuth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {
-  const { user } = useAuth(),
+  const { user } = useAuth();
   const { 
-    activeConversation,
+    activeConversation;
     activeMessages, 
     sendMessage, 
     loadMessages
-  } = useMessaging(),
-  const [messageText, setMessageText] = useState(''),
-  const messagesEndRef = useRef<HTMLDivElement>(null),
+  } = useMessaging();
+  const [messageText, setMessageText] = useState('');
+  const messagesEndRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
     if (activeConversation) {
       loadMessages(activeConversation.id)
     }
-  }, [activeConversation?.id, loadMessages]),
+  }, [activeConversation?.id, loadMessages]);
   
   useEffect(() => {
     scrollToBottom()
-  }, [activeMessages]),
+  }, [activeMessages]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  },
+  };
   
   const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (!messageText.trim() || !activeConversation) return,
     
-    await sendMessage(activeConversation.id, messageText),
+    await sendMessage(activeConversation.id, messageText);
     setMessageText('')
-  },
+  };
   
   if (!activeConversation) {
     return (
@@ -58,8 +58,8 @@ export function ConversationDetailView() {
   const groupedMessages: { date: string, messages: any[] }[] = [],
   
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd'),
-    const existingGroup = groupedMessages.find(group => group.date === messageDate),
+    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
+    const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
     if (existingGroup) {
       existingGroup.messages.push(message)
@@ -69,10 +69,10 @@ export function ConversationDetailView() {
         messages: [message]
       })
     }
-  }),
+  });
   
   const hasContextData = activeConversation.context_data && 
-    (activeConversation.context_data.title || activeConversation.context_data.description),
+    (activeConversation.context_data.title || activeConversation.context_data.description);
 
   return (
     <div className="flex-1 flex flex-col h-full">

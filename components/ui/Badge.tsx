@@ -2,7 +2,18 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
-// HTMLDivElement is available globally
+// Define HTML element types
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
+}
+
+interface HTMLDivElement extends HTMLElement {
+  tagName: 'DIV';
+}
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",

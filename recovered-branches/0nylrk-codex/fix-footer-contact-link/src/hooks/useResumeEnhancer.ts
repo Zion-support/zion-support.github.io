@@ -1,18 +1,18 @@
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general',
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+type EnhancementType = 'summary' | 'work-description' | 'skill-categorization' | 'general';
 
 export function useResumeEnhancer() {
-  const [isEnhancing, setIsEnhancing] = useState(false),
-  const [error, setError] = useState<string | null>(null),
+  const [isEnhancing, setIsEnhancing] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const enhanceContent = async (
     content: string, 
-    type: EnhancementType = 'general',
+    type: EnhancementType = 'general';
     context?: string
   ): Promise<string | null> => {
-    setIsEnhancing(true),
+    setIsEnhancing(true);
     setError(null),
     
     try {
@@ -22,7 +22,7 @@ export function useResumeEnhancer() {
           enhancementType: type,
           context
         }
-      }),
+      });
       
       if (error) {
         throw new Error(error.message)
@@ -31,16 +31,16 @@ export function useResumeEnhancer() {
       return data.enhancedContent
     } catch (err: any) {
       setError(err.message || 'Failed to enhance content'),
-      console.error('Enhancement error:', err),
+      console.error('Enhancement error:', err);
       return null
     } finally {
       setIsEnhancing(false)
     }
-  },
+  };
   
   return {
-    enhanceContent,
-    isEnhancing,
+    enhanceContent;
+    isEnhancing;
     error
   }
 }

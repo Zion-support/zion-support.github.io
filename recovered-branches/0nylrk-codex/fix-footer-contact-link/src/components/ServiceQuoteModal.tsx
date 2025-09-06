@@ -1,20 +1,20 @@
 
-import { useState } from 'react',;
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
-import { Calendar } from "@/components/ui/calendar",;
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { format } from "date-fns",;
-import { CalendarIcon } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { ProductListing } from "@/types/listings",;
-import { toast } from '@/hooks/use-toast',;
-import { supabase } from "@/integrations/supabase/client",;
+import {useState} from 'react';
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
+import {Calendar} from "@/components/ui/calendar";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {format} from "date-fns";
+import {CalendarIcon} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {ProductListing} from "@/types/listings";
+import {toast} from '@/hooks/use-toast';
+import {supabase} from "@/integrations/supabase/client";
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -40,18 +40,18 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     email: '',
     budget: BUDGET_RANGES[0].value,
     timeframe: TIMELINE_OPTIONS[0].value}),
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
+  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
+  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
+    const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }))
-  },
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(),
+    e.preventDefault();
     setIsSubmitting(true),
 
     try {
@@ -67,9 +67,9 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
-      }),
+      });
 
-      if (error) throw error,
+      if (error) throw error;
 
       // Show success message
       toast({
@@ -77,17 +77,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         description: "We've sent your request to the service provider. They will contact you soon."}),
 
       // Close the modal and reset form
-      onOpenChange(false),
+      onOpenChange(false);
       setFormData({
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
-      setStartDate(new Date()),
-      setEndDate(undefined),
+      setStartDate(new Date());
+      setEndDate(undefined);
       setCurrentStep('details')
     } catch (error) {
-      console.error("Error submitting quote:", error),
+      console.error("Error submitting quote:", error);
       toast({
         title: "Error",
         description: "There was an error submitting your quote request. Please try again.",
@@ -95,17 +95,17 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   const nextStep = () => {
-    if (currentStep === 'details') setCurrentStep('timeline'),
+    if (currentStep === 'details') setCurrentStep('timeline');
     else if (currentStep === 'timeline') setCurrentStep('contact')
-  },
+  };
 
   const prevStep = () => {
-    if (currentStep === 'timeline') setCurrentStep('details'),
+    if (currentStep === 'timeline') setCurrentStep('details');
     else if (currentStep === 'contact') setCurrentStep('timeline')
-  },
+  };
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -190,7 +190,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
+                          "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >
@@ -217,7 +217,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full",
+                          "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
                       >

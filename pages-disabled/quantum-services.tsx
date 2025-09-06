@@ -1,17 +1,8 @@
-import React from 'react',;
-import Layout from '../components/layout/Layout',;
-import SEO from '../components/SEO',;
-import { motion } from 'framer-motion',;
-import { 
-  Atom, Brain, Rocket, Shield, Zap, Target, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe
-} from 'lucide-react',
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import SEO from '../components/SEO';
+import {motion} from 'framer-motion';
+import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe} from 'lucide-react';
 
 const QuantumServicesPage: React.FC = () => {
   const quantumServices = [
@@ -20,95 +11,95 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Neural Networks',
       description: 'Next-generation neural networks powered by quantum computing',
       features: ['Quantum SuperpositionEntanglement ProcessingQuantum MemoryHybrid Classical-Quantum'],
-      price: '$3,999',
+      price: '$3,999';
       period: 'month',
       popular: true,
       icon: <Brain className="w-8 h-8" />
-    },
+    };
     {
       id: 'quantum-financial-trading',
       name: 'Quantum Financial Trading',
       description: 'Quantum-powered algorithmic trading and risk management',
       features: ['Quantum Risk AssessmentPortfolio OptimizationMarket PredictionReal-time Analysis'],
-      price: '$2,999',
+      price: '$2,999';
       period: 'month',
       popular: false,
       icon: <TrendingUp className="w-8 h-8" />
-    },
+    };
     {
       id: 'quantum-materials-discovery',
       name: 'Quantum Materials Discovery',
       description: 'Accelerated materials research using quantum simulation',
       features: ['Quantum SimulationMolecular ModelingProperty PredictionDiscovery Automation'],
-      price: '$2,499',
+      price: '$2,499';
       period: 'month',
       popular: false,
       icon: <Atom className="w-8 h-8" />
-    },
+    };
     {
       id: 'quantum-bio-computing',
       name: 'Quantum Bio-Computing',
       description: 'Quantum computing for biological and pharmaceutical research',
       features: ['Protein FoldingDrug DiscoveryGenetic AnalysisBioinformatics'],
-      price: '$2,799',
+      price: '$2,799';
       period: 'month',
       popular: false,
       icon: <Heart className="w-8 h-8" />
-    },
+    };
     {
       id: 'quantum-internet-security',
       name: 'Quantum Internet Security',
       description: 'Unbreakable quantum encryption and secure communications',
       features: ['Quantum Key DistributionPost-Quantum CryptographySecure NetworksQuantum Authentication'],
-      price: '$1,999',
+      price: '$1,999';
       period: 'month',
       popular: false,
       icon: <Shield className="w-8 h-8" />
-    },
+    };
     {
       id: 'quantum-cloud-infrastructure',
       name: 'Quantum Cloud Infrastructure',
       description: 'Quantum-ready cloud computing infrastructure',
       features: ['Quantum Processing UnitsHybrid ComputingScalable ArchitecturePerformance Optimization'],
-      price: '$3,499',
+      price: '$3,499';
       period: 'month',
       popular: false,
       icon: <Cloud className="w-8 h-8" />
     }
-  ],
+  ];
 
   const quantumCapabilities = [
     {
       title: 'Quantum Computing',
       description: 'Advanced quantum processing for complex calculations',
       icon: <Atom className="w-6 h-6" />
-    },
+    };
     {
       title: 'Quantum Simulation',
       description: 'Accurate simulation of quantum systems',
       icon: <Network className="w-6 h-6" />
-    },
+    };
     {
       title: 'Quantum Cryptography',
       description: 'Unbreakable encryption using quantum principles',
       icon: <Lock className="w-6 h-6" />
-    },
+    };
     {
       title: 'Quantum Machine Learning',
       description: 'AI enhanced by quantum computing power',
       icon: <Brain className="w-6 h-6" />
-    },
+    };
     {
       title: 'Quantum Sensing',
       description: 'Ultra-sensitive quantum measurement systems',
       icon: <Eye className="w-6 h-6" />
-    },
+    };
     {
       title: 'Quantum Communication',
       description: 'Secure quantum information transfer',
       icon: <Globe className="w-6 h-6" />
     }
-  ],
+  ];
 
 export default function QuantumServices() {
   return (
@@ -301,7 +292,6 @@ export default function QuantumServices() {
       </main>
     </Layout>
   )
-},
+};
 
-export default QuantumServicesPage,
-;
+export default QuantumServicesPage;

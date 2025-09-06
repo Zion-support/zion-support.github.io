@@ -1,8 +1,8 @@
 
-import { ProductListingCard } from "@/components/ProductListingCard",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Link } from "react-router-dom",;
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }
@@ -16,7 +16,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 4999,
       currency: "$",
       category: "AI Models",
-      tags: ["AI", "NLP", "Machine Learning"],
+      tags: ["AI", "NLP", "Machine Learning"];
       images: ["https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-11-15T14:48:00.000Z",
       rating: 4.8,
@@ -26,7 +26,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "tech-ai-labs",
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       }
-    },
+    };
     {
       id: "image-generation-service",
       title: "AI Image Generation Service",
@@ -34,7 +34,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 2499,
       currency: "$",
       category: "Content Creation",
-      tags: ["AI", "Images", "Generation"],
+      tags: ["AI", "Images", "Generation"];
       images: ["https://images.unsplash.com/photo-1579403124614-197f69d8187b?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-10-20T11:15:00.000Z",
       rating: 4.7,
@@ -43,7 +43,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "VisualAI",
         id: "visual-ai"
       }
-    },
+    };
     {
       id: "fullstack-ai-dev",
       title: "Full-Stack AI Development",
@@ -51,7 +51,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: null, // Custom pricing
       currency: "$",
       category: "Services",
-      tags: ["Development", "Full-stack", "AI"],
+      tags: ["Development", "Full-stack", "AI"];
       images: ["https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2023-12-15T09:45:00.000Z",
       rating: 4.9,
@@ -60,7 +60,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "DataMinds Consulting",
         id: "dataminds-consulting"
       }
-    },
+    };
     {
       id: "sentiment-analysis-api",
       title: "Sentiment Analysis API",
@@ -68,7 +68,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       price: 1299,
       currency: "$",
       category: "APIs",
-      tags: ["API", "Sentiment", "Analytics"],
+      tags: ["API", "Sentiment", "Analytics"];
       images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
       createdAt: "2024-01-05T11:15:00.000Z",
       rating: 4.6,
@@ -77,7 +77,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "SocialAI",
         id: "social-ai"
       }
-    }],
+    }];
 
   return (
     <section id="featured" className="py-12 px-4 bg-zion-blue-dark">

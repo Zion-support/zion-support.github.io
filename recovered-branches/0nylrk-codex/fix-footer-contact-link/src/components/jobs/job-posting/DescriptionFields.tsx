@@ -1,16 +1,26 @@
-
-import React from 'react',;
-import { Control } from 'react-hook-form',;
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-import { JobSchemaType } from './validation',;
+import React from "react";
+import { Control } from "react-hook-form";
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+} from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
+import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {
-  control: Control<JobSchemaType>,
-  handleEditorChange: (content: string) => void,
-  editorContent: string
+  control: Control<JobSchemaType>;
+  handleEditorChange: (content: string) => void;
+  editorContent: string;
 }
 
-export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {
+export function DescriptionFields({
+  control,
+  handleEditorChange,
+  editorContent,
+}: DescriptionFieldsProps) {
   return (
     <>
       <FormField
@@ -20,11 +30,11 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-              <Textarea 
+              <Textarea
                 value={editorContent}
                 onChange={(e) => {
-                  handleEditorChange(e.target.value),
-                  field.onChange(e.target.value)
+                  handleEditorChange(e.target.value);
+                  field.onChange(e.target.value);
                 }}
                 className="min-h-[200px]"
                 placeholder="Enter a detailed description of the job role"
@@ -122,5 +132,5 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
         )}
       />
     </>
-  )
+  );
 }

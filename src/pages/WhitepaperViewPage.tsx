@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react',;
+export default WhitepaperViewPage;import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
-import { supabase } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
-import { Button } from '@/components/ui/button',;
+import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link', // For a back button, changed from react-router-dom
-import {logErrorToProduction} from '@/utils/productionLogger',;
+import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
 const useAuth = () => {
@@ -35,7 +35,7 @@ const WhitepaperViewPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null),
   const { isAdmin } = useAuth(), // Get admin status
 
-  useEffect(() => {
+  useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
         setError("No whitepaper ID provided."),
@@ -122,10 +122,10 @@ const WhitepaperViewPage: React.FC = () => {
             )}
         </div>
       <WhitepaperPreviewPanel
-        sections={whitepaper.sections}
-        distributionChartData={whitepaper.distributionChartData}
-        tokenName={whitepaper.tokenName}
-        tokenSupply={whitepaper.tokenSupply}
+        sections = {whitepaper.sections,}
+        distributionChartData = {whitepaper.distributionChartData,}
+        tokenName = {whitepaper.tokenName,}
+        tokenSupply = {whitepaper.tokenSupply,}
       />
     </div>
   )

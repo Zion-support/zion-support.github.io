@@ -1,7 +1,7 @@
-import React from 'react',;
+export default ActiveFiltersBar;import React from 'react';
 import { X } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
   types: string[],
   category: string,
@@ -13,7 +13,7 @@ interface SearchFilters {
 
 interface ActiveFiltersBarProps {
   filters: SearchFilters,
-  onFiltersChange: (filters: SearchFilters) => void,
+  onFiltersChange: (filters: SearchFilters,) => void,
   onClearAll: () => void,
   className?: string
 }
@@ -23,7 +23,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   onFiltersChange,
   onClearAll,
   className = ''
-}) => {
+},) => {
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],
 
   // Add type filters
@@ -83,7 +83,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     })
   }
 
-  const removeFilter = (filterKey: string) => {
+  const removeFilter = (filterKey: string,) => {
     if (filterKey.startsWith('type-')) {
       const typeToRemove = filterKey.replace('type-', ''),
       const newTypes = filters.types.filter(t => t !== typeToRemove),
@@ -109,7 +109,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       
       {activeFilters.map(filter => (
         <Badge 
-          key={filter.key} 
+          key = {filter.key,}
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -120,7 +120,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
-            onClick={() => removeFilter(filter.key)}
+            onClick = {(,) => removeFilter(filter.key),}
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -131,7 +131,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <Button
         variant="ghost"
         size="sm"
-        onClick={onClearAll}
+        onClick = {onClearAll,}
         className="text-xs h-6 px-2"
       >
         Clear all
@@ -141,4 +141,22 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 },
 
 export default ActiveFiltersBar,
-;
+interface Filter {
+  key: string;
+  value: string;
+  label: string;
+}
+
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {;
+
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+
+        className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>;
+  )}
+'";

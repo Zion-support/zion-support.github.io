@@ -1,15 +1,14 @@
-import fs from 'fs',;
-import path from 'path',;
+</div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
-
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datanews-digest.json'),
-  let items: NewsItem[] = [],
-  let generatedAt = '',
+  const file = path.join(process.cwd(), 'datanews-digest.json');
+  let items: NewsItem[] = [];  let generatedAt = '';
   try {
-    const raw = fs.readFileSync(file, 'utf-8'),
-    const json = JSON.parse(raw),
-    items = json.items || [],
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    items = json.items || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { items, generatedAt } }
@@ -35,5 +34,5 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
         ))}
       </div>
     </div>
-  )
-};
+);
+}

@@ -1,33 +1,33 @@
 
-import { Button } from "@/components/ui/button",;
-import { HireRequestModal } from "./hire-request",;
-import { useState } from "react",;
-import { TalentProfile } from "@/types/talent",;
+import {Button} from "@/components/ui/button";
+import {HireRequestModal} from "./hire-request";
+import {useState} from "react";
+import {TalentProfile} from "@/types/talent";
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
-    full_name?: string,
-    professional_title?: string,
+    full_name?: string;
+    professional_title?: string;
     hourly_rate?: number
   }
 }
 
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
-  const [modalOpen, setModalOpen] = useState(false),
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleOpenModal = () => {
     setModalOpen(true)
-  },
+  };
 
   const handleCloseModal = () => {
     setModalOpen(false)
-  },
+  };
 
   // Check if we have minimum required data
-  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
 
   // Calculate talent profile completeness (simplified)
-  const profileCompleteness = calculateProfileCompleteness(talentProfile),
+  const profileCompleteness = calculateProfileCompleteness(talentProfile);
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
@@ -82,14 +82,14 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
-  if (!profile) return 0,
+  if (!profile) return 0;
   
   const fields = [
-    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience',
+    'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type'
-  ],
+  ];
   
-  let completedFields = 0,
+  let completedFields = 0;
   let totalFields = 0,
   
   fields.forEach(field => {
@@ -97,7 +97,7 @@ function calculateProfileCompleteness(profile: any) {
       completedFields++
     }
     totalFields++
-  }),
+  });
   
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
 }

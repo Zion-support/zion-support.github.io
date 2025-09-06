@@ -1,7 +1,26 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
-// HTML element types are available globally
+// Define HTML element types
+interface HTMLElement {
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
+}
+
+interface HTMLDivElement extends HTMLElement {
+  tagName: 'DIV';
+}
+
+interface HTMLParagraphElement extends HTMLElement {
+  tagName: 'P';
+}
+
+interface HTMLHeadingElement extends HTMLElement {
+  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
+}
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -77,8 +96,6 @@ const CardFooter = React.forwardRef<
 ));
 CardFooter.displayName = "CardFooter";
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-=======
 import React from 'react',;
 interface CardProps {
   children: React.ReactNode,
@@ -123,5 +140,7 @@ const Card: React.FC<CardProps> = ({
 },
 
 export default Card,
->>>>>>> pr-11992
 ;
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+

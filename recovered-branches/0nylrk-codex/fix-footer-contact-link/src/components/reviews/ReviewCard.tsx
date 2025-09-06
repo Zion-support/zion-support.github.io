@@ -1,45 +1,38 @@
 
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from "lucide-react",;
-import { Review } from "@/types/reviews",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog",
-import { Textarea } from "@/components/ui/textarea",;
+import {useState} from "react";
+import {formatDistanceToNow} from "date-fns";
+import {Star, Flag, User} from "lucide-react";
+import {Review} from "@/types/reviews";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Textarea} from "@/components/ui/textarea";
 interface ReviewCardProps {
   review: Review,
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
-  const [reportReason, setReportReason] = useState(""),
-  const [isReporting, setIsReporting] = useState(false),
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false),
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
   
   const handleReport = async () => {
-    if (!reportReason.trim()) return,
+    if (!reportReason.trim()) return;
     
-    setIsReporting(true),
-    const success = await onReport(review.id, reportReason),
-    setIsReporting(false),
+    setIsReporting(true);
+    const success = await onReport(review.id, reportReason);
+    setIsReporting(false);
     
     if (success) {
-      setReportReason(""),
+      setReportReason("");
       setIsReportDialogOpen(false)
     }
-  },
+  };
   
   const renderStars = (rating?: number) => {
-    if (!rating) return null,
+    if (!rating) return null;
     
     return (
       <div className="flex">
@@ -51,7 +44,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         ))}
       </div>
     )
-  },
+  };
   
   const getInitials = (name: string) => {
     return name
@@ -60,7 +53,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .join("")
       .toUpperCase()
       .substring(0, 2)
-  },
+  };
   
   return (
     <div className="border rounded-lg p-4 bg-card">

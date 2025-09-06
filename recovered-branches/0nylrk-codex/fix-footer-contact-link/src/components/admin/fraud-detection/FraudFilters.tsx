@@ -1,10 +1,9 @@
 
-import React from "react",;
-import { Input } from "@/components/ui/input",;
-import { Button } from "@/components/ui/button",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Search, Filter } from "lucide-react",
-;
+import React from "react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Search, Filter} from "lucide-react";
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -18,13 +17,13 @@ interface FraudFiltersProps {
 }
 
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  severityFilter;
+  setSeverityFilter;
+  contentTypeFilter;
   setContentTypeFilter,
   resetFilters}) => {
   return (
@@ -83,5 +82,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
-},
-;
+};

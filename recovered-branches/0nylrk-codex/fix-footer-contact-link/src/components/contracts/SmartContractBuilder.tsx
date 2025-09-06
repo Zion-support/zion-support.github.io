@@ -1,16 +1,16 @@
 
-import { useState } from "react",;
-import { Dialog, DialogContent } from "@/components/ui/dialog",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Button } from "@/components/ui/button",;
-import { Save } from "lucide-react",;
-import { TalentProfile } from "@/types/talent",;
-import { ContractForm, ContractFormValues } from "./components/ContractForm",;
-import { ContractPreview } from "./components/ContractPreview",;
-import { TemplateManager } from "./templates/TemplateManager",;
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",;
-import { useSmartContracts } from "@/hooks/useSmartContracts",;
-import { toast } from "sonner",;
+import {useState} from "react";
+import {Dialog, DialogContent} from "@/components/ui/dialog";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {Save} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {ContractForm, ContractFormValues} from "./components/ContractForm";
+import {ContractPreview} from "./components/ContractPreview";
+import {TemplateManager} from "./templates/TemplateManager";
+import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from "@/types/smart-contracts";
+import {useSmartContracts} from "@/hooks/useSmartContracts";
+import {toast} from "sonner";
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -21,70 +21,70 @@ interface SmartContractBuilderProps {
 }
 
 export function SmartContractBuilder({
-  isOpen,
-  onClose,
-  talent,
-  clientName,
-  onContractGenerated,
+  isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated;
   onDeploy
 }: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
-  ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
-  }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
+  });
+  const [deployStatus, setDeployStatus] = useState<string>('');
+  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
   
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),
+  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts();
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
-  },
+  };
 
   // Convert ContractFormValues to contract content string
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return,
     try {
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
-      setGeneratedContract(generatedContractText),
-      setActiveTab("preview"),
+      const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
+      setGeneratedContract(generatedContractText);
+      setActiveTab("preview");
       if (onContractGenerated) {
         onContractGenerated(generatedContractText)
       }
     } catch (error) {
-      console.error("Error generating contract:", error),
+      console.error("Error generating contract:", error);
       toast.error("Failed to generate smart contract")
     }
-  },
+  };
   
   const handleDeployContract = async () => {
-    if (!generatedContract) return,
+    if (!generatedContract) return;
     
     try {
-      setDeployStatus('deploying'),
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),
+      setDeployStatus('deploying');
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
       
       if (contractInfo) {
-        setDeploymentInfo(contractInfo),
-        setDeployStatus('deployed'),
+        setDeploymentInfo(contractInfo);
+        setDeployStatus('deployed');
         toast.success("Smart contract deployed successfully!")
       } else {
-        setDeployStatus('error'),
+        setDeployStatus('error');
         toast.error("Failed to deploy smart contract")
       }
     } catch (error) {
-      console.error("Error deploying contract:", error),
-      setDeployStatus('error'),
+      console.error("Error deploying contract:", error);
+      setDeployStatus('error');
       toast.error("Failed to deploy smart contract")
     }
-  },
+  };
 
   // Modified to match the expected interface
   const handleFormSubmit = (contract: string) => {
@@ -93,9 +93,9 @@ export function SmartContractBuilder({
     if (onContractGenerated) {
       onContractGenerated(contract)
     }
-    setGeneratedContract(contract),
+    setGeneratedContract(contract);
     setActiveTab("preview")
-  },
+  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

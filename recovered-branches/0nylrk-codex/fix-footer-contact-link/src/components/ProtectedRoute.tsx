@@ -1,27 +1,27 @@
 
-import React from 'react',;
-import { Navigate } from 'react-router-dom',;
-import { useAuth } from '@/hooks/useAuth',;
-import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
+import React from 'react';
+import {Navigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
+import {useWhitelabel} from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
   children: React.ReactNode,
-  adminOnly?: boolean,
-  tenantAdminAllowed?: boolean,
+  adminOnly?: boolean;
+  tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
-  children,
-  adminOnly = false,
+  children;
+  adminOnly = false;
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
-  const { user, isLoading } = useAuth(),
-  const { tenant } = useWhitelabel(),
+  const { user, isLoading } = useAuth();
+  const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
   
-  const isCheckingPermissions = isLoading || isCheckingTenantAdmin,
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
@@ -37,7 +37,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   // Check for admin access if required
   if (adminOnly) {
-    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin);
     
     if (!hasAdminAccess) {
       return <Navigate to="/unauthorized" />
@@ -50,7 +50,6 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   }
 
   return <>{children}</>
-},
+};
 
-export default ProtectedRoute,
-;
+export default ProtectedRoute;

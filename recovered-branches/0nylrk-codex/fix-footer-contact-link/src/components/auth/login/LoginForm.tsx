@@ -1,32 +1,26 @@
 
-import { useState } from "react",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { LogIn, User, Eye, EyeOff } from "lucide-react",
-;
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Link } from "react-router-dom",;
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {LogIn, User, Eye, EyeOff} from "lucide-react";
+
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Link} from "react-router-dom";
 // Form validation schema
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1, "Email is required"),
-  password: z.string().min(6, "Password must be at least 6 characters")}),
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
 
-type LoginFormValues = z.infer<typeof loginSchema>,
+type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const { login, isLoading } = useAuth(),
-  const [showPassword, setShowPassword] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
@@ -35,7 +29,7 @@ export function LoginForm() {
       password: ""}}),
 
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return,
+    if (isSubmitting) return;
     
     try {
       setIsSubmitting(true),
@@ -43,7 +37,7 @@ export function LoginForm() {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
 
   return (
     <Form {...form}>

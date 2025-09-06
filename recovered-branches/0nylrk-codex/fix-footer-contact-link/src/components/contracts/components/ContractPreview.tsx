@@ -1,34 +1,34 @@
 
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { TalentProfile } from "@/types/talent",;
-import { SmartContractInfo } from "@/types/smart-contracts",;
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+import {SmartContractInfo} from "@/types/smart-contracts";
 interface ContractPreviewProps {
-  contractContent?: string,
+  contractContent?: string;
   generatedContract?: string, // Added to support both naming conventions
-  status?: 'draft' | 'ready' | 'pending',
-  talent?: TalentProfile,
-  onDeploy?: () => void,
-  onSign?: () => void,
-  onClose?: () => void,
-  deployStatus?: string,
+  status?: 'draft' | 'ready' | 'pending';
+  talent?: TalentProfile;
+  onDeploy?: () => void;
+  onSign?: () => void;
+  onClose?: () => void;
+  deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null
 }
 
 export function ContractPreview({ 
-  contractContent,
+  contractContent;
   generatedContract, 
   status = 'ready', 
   onDeploy, 
-  onSign,
-  onClose,
-  deployStatus,
+  onSign;
+  onClose;
+  deployStatus;
   deploymentInfo
 }: ContractPreviewProps) {
   
   // Use either contractContent or generatedContract, whichever is provided
-  const displayContent = contractContent || generatedContract || "",
+  const displayContent = contractContent || generatedContract || "";
   
   return (
     <div className="space-y-4">

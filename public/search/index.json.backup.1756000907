@@ -1,5 +1,21 @@
 [
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/2025-advanced-services-showcase",
     "title": "",
     "h1": ""
@@ -64,11 +80,60 @@
     "title": "{service.name} - Zion Tech Group",
     "h1": "Service not found"
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b00
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "route": "/_app",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/_document",
+    "title": "",
+    "h1": ""
+  },
+  {
+    "route": "/comprehensive-2025-services-showcase",
   {    "route": "/comprehensive-2025-services-showcase",
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  {    "route": "/comprehensive-2025-services-showcase",
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  {    "route": "/comprehensive-2025-services-showcase",
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "title": "Comprehensive 2025 Innovative Services Showcase — Zion Tech Group",
     "h1": "2025 Innovative Services Showcase"
   },
   {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/comprehensive-pricing",
     "title": "Comprehensive Pricing | Zion Tech Group - Micro SaaS Services Pricing & Plans",
     "h1": ""
@@ -198,5 +263,33 @@
     "title": "",
     "h1": ""
   },
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+  {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b00
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+    "route": "/",
+    "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
+    "h1": "Zion Tech Group"
+  },
+  {
+  }
   {  }
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  {  }
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  {  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ]

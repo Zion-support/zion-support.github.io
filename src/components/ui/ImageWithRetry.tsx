@@ -1,13 +1,21 @@
-import React, { useState } from 'react',;
-import Image, { type ImageProps } from 'next/image',;
-import { cn } from '@/lib/utils',;
+import React, { useState } from 'react';
+import Image, { type ImageProps } from 'next/image';
+import { cn } from '@/lib/utils';
+
+interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string;  alt?: string;
+  /** Source to use if the main src fails */
+  fallbackSrc?: string;
+  /** CSS class for the retry button */
+  retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+  src: string,
 interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string,
-  alt?: string,
+  alt?: string;
   /** Source to use if the main src fails */
-  fallbackSrc?: string,
+  fallbackSrc?: string;
   /** CSS class for the retry button */
-  retryClassName?: string
+  retryClassName?: string;  retryClassName?: string
 }
 
 /**
@@ -19,35 +27,45 @@ export function ImageWithRetry({
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
-  ...props
 }: ImageWithRetryProps) {
-  const [currentSrc, setCurrentSrc] = useState(src),
-  const [failed, setFailed] = useState(false),
+  const [currentSrc, setCurrentSrc] = useState(src);
+  const [failed, setFailed] = useState(false);
 
   const handleError = () => {
-    setFailed(true),
-    setCurrentSrc(fallbackSrc)
-  },
+    setFailed(true);
+    setCurrentSrc(fallbackSrc);  };
 
   const handleRetry = () => {
-    setFailed(false),
-    setCurrentSrc(src)
-  },
+    setFailed(false);
+    setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc)
+  };
 
-  const fill = !('width' in props) && !('height' in props),
+  const handleRetry = () => {
+    setFailed(false);
+    setCurrentSrc(src);    setCurrentSrc(src)
+  };
+
+  const fill = !('width' in props) && !('height' in props);
 
   return (
-    <div className="relative inline-block">
+    <div className='relative inline-block'>      <Image    <div className="relative inline-block">
       <Image
         {...props}
-        src={currentSrc}
-        alt={alt}
-        onError={handleError}
-        className={cn(className)}
-        fill={fill}
+        src = {currentSrc,}
+        alt = {alt,}
+        onError = {handleError,}
+        className = {cn(className),}
+        fill = {fill,}
       />
       {failed && (
         <button
+          type='button'
+          onClick={handleRetry}
+          className={cn(
+            'absolute bottom-1 right-1 text-xs underline',
+            retryClassName
+          )}        >          onClick = {handleRetry,}
+          className = {cn('absolute bottom-1 right-1 text-xs underline', retryClassName),}
           type="button"
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
@@ -56,8 +74,6 @@ export function ImageWithRetry({
         </button>
       )}
     </div>
-  )
-}
+  );
 
-export default ImageWithRetry,
-;
+export default ImageWithRetry;

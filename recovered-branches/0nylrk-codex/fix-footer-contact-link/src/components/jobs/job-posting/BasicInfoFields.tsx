@@ -1,28 +1,28 @@
-import React, { useState } from "react",;
-import { Control } from "react-hook-form",;
-import { 
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+import {
   FormField,
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormMessage 
-} from "@/components/ui/form",
-import { Input } from "@/components/ui/input",;
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
-import { Card, CardContent } from "@/components/ui/card",
-;
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
+import { Card, CardContent } from "@/components/ui/card";
 interface BasicInfoFieldsProps {
-  control: Control<any>
+  control: Control<any>;
 }
 
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>(""),
-  const [maxBudget, setMaxBudget] = useState<string>(""),
+export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
+  control,
+}) => {
+  const [minBudget, setMinBudget] = useState<string>("");
+  const [maxBudget, setMaxBudget] = useState<string>("");
 
   const handleSuggestionApplied = (min: number, max: number) => {
-    setMinBudget(min.toString()),
-    setMaxBudget(max.toString())
-  },
+    (setMinBudget(min.toString()), setMaxBudget(max.toString()));
+  };
 
   return (
     <div className="space-y-4">
@@ -53,7 +53,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           </FormItem>
         )}
       />
-      
+
       <FormField
         control={control}
         name="category"
@@ -92,9 +92,9 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                   type="number"
                   placeholder="e.g. 30"
                   value={minBudget || rest.value}
-                  onChange={e => {
-                    setMinBudget(e.target.value),
-                    onChange(e)
+                  onChange={(e) => {
+                    setMinBudget(e.target.value);
+                    onChange(e);
                   }}
                   {...rest}
                 />
@@ -115,9 +115,9 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                   type="number"
                   placeholder="e.g. 60"
                   value={maxBudget || rest.value}
-                  onChange={e => {
-                    setMaxBudget(e.target.value),
-                    onChange(e)
+                  onChange={(e) => {
+                    setMaxBudget(e.target.value);
+                    onChange(e);
                   }}
                   {...rest}
                 />
@@ -127,7 +127,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           )}
         />
       </div>
-      
+
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -146,13 +146,15 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
-              <Input placeholder="e.g. Remote, San Francisco, etc." {...field} />
+              <Input
+                placeholder="e.g. Remote, San Francisco, etc."
+                {...field}
+              />
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
     </div>
-  )
-},
-;
+);
+};

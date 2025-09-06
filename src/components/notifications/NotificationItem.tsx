@@ -1,19 +1,36 @@
-import React from 'react',;
+import {
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from '@/components/ui/tooltip';
+import { useRouter } from 'next/router';
+import { Notification, NotificationType } from '@/context/notifications';
+      return <span className="text-blue-500">💬</span>;
+      return <span className="text-orange-500">📦</span>;
+    default:
+      return <span className="text-gray-500">📣</span>;
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
+  onMarkAsRead,
+  onDismiss
+}) => {
+      className={cn(
+                  onMarkAsRead(notification.id);import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { formatDistanceToNow } from 'date-fns',;
-import { cn } from '@/lib/utils',;
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { formatDistanceToNow } from 'date-fns';
+import { cn } from '@/lib/utils';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger} from '@/components/ui/tooltip',
-import { useRouter } from 'next/router',;
-import { Notification, NotificationType } from '@/context/notifications',
-;
-export const getTypeIcon = (type: NotificationType) => {
+import { useRouter } from 'next/router';
+import { Notification, NotificationType } from '@/context/notifications';
+export const getTypeIcon = (type: NotificationType,) => {
   switch (type) {
     case 'message':
       return <span className="text-blue-500">💬</span>,
@@ -40,14 +57,14 @@ export const getTypeIcon = (type: NotificationType) => {
 
 interface NotificationItemProps {
   notification: Notification,
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  onMarkAsRead: (id: string,) => Promise<void>,
+  onDismiss: (id: string,) => Promise<void>
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
   onMarkAsRead,
-  onDismiss}) => {
+  onDismiss},) => {
   const router = useRouter(), // Changed from useNavigate to useRouter
 
   const handleClick = () => {
@@ -61,9 +78,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   },
 
   return (<div
-      className={cn(
+      className = {cn(
         'p-3 border-b border-zion-blue-light relative group',
-        !notification.read ? 'bg-zion-blue-dark/30' : '')}
+        !notification.read ? 'bg-zion-blue-dark/30' : ''),}
     >
       <div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
@@ -92,7 +109,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-                onClick={handleClick}
+                onClick = {handleClick,}
               >
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
@@ -111,7 +128,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e) => {
+                onClick={(e,) => {
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -133,7 +150,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
-                onClick={(e) => {
+                onClick={(e,) => {
                   e.stopPropagation(),
                   onDismiss(notification.id)
                 }}

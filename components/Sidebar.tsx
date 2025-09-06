@@ -1,19 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  X,
-  ChevronDown,
-  LogOut,
-  Building2,
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
   Phone,
   Mail,
-  MapPin,
+  ExternalLink
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean, onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
@@ -71,13 +79,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-          {/* Sidebar */}
+
+          
           <motion.div
-            initial={{ x: '-100%' }}
+            initial={{ x: -300 }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
-          >
+            exit={{ x: -300 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
@@ -90,7 +100,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -101,47 +110,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors py-2"
-                    >
-                      {title}
-                      <motion.div
-                        animate={{ rotate: openDropdowns.includes(title) ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </motion.div>
-                    </button>
-                    <AnimatePresence>
-                      {openDropdowns.includes(title) && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="ml-4 space-y-2 mt-2">
-                            {links.map((link) => (
-                              <Link
-                                key={link.name}
-                                href={link.href}
-                                className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors py-1"
-                                onClick={onClose}
-                              >
-                                <link.icon className="w-4 h-4" />
-                                <span>{link.name}</span>
-                              </Link>
-                            ))}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ))}
-              </nav>
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
 
-              {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                 <div className="space-y-2">
@@ -180,7 +150,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                     <span>Get Started</span>
                     <ExternalLink className="w-4 h-4" />
                   </Link>
-                </div>
               </div>
             </div>
           </motion.div>

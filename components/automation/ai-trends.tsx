@@ -1,5 +1,6 @@
-import fs from 'fs',;
-import path from 'path',;
+</div> </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
 export type Trend = {
   id: string,
   date: string,
@@ -7,16 +8,15 @@ export type Trend = {
   highlights: string[],
   summary: string,
   tags: string[]
-},
+};
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'dataai-trends.json'),
-  let items: Trend[] = [],
-  try {
-    const raw = fs.readFileSync(file, 'utf-8'),
+  const file = path.join(process.cwd(), 'dataai-trends.json');
+  let items: Trend[] = [];  try {
+    const raw = fs.readFileSync(file, 'utf-8');
     items = JSON.parse(raw)
   } catch {}
-  items.sort((a, b) => (a.date < b.date ? 1 : -1)),
+  items.sort((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
 
@@ -43,5 +43,5 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
         ))}
       </div>
     </div>
-  )
-};
+);
+}

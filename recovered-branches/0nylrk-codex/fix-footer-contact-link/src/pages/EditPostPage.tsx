@@ -1,13 +1,13 @@
 
-import { useState, useEffect } from "react",;
-import { Link, useNavigate, useParams } from "react-router-dom",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { SEO } from "@/components/SEO",;
-import { Button } from "@/components/ui/button",;
-import PostForm from "@/components/community/PostForm",;
-import { useToast } from "@/hooks/use-toast",;
-import { ForumPost, ForumCategory } from "@/types/community",;
-import { useAuth } from "@/hooks/useAuth",;
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumPost, ForumCategory} from "@/types/community";
+import {useAuth} from "@/hooks/useAuth";
 interface PostFormValues {
   title: string,
   content: string,
@@ -25,7 +25,7 @@ const mockPost: ForumPost = {
   authorAvatar: "https://i.pravatar.cc/150?img=3",
   authorRole: "Verified Talent",
   categoryId: "ai-tools",
-  tags: ["machine-learning", "fine-tuning", "gpt"],
+  tags: ["machine-learning", "fine-tuning", "gpt"];
   createdAt: "2025-04-01T12:00:00Z",
   updatedAt: "2025-04-01T12:00:00Z",
   upvotes: 48,
@@ -33,21 +33,21 @@ const mockPost: ForumPost = {
   replyCount: 12,
   isAnswered: true,
   isFeatured: true
-},
+};
 
 export default function EditPostPage() {
-  const { postId } = useParams() as { postId?: string },
-  const navigate = useNavigate(),
-  const { toast } = useToast(),
-  const { user } = useAuth(),
-  const [post, setPost] = useState<ForumPost | null>(mockPost),
-  const [isLoading, setIsLoading] = useState(true),
+  const { postId } = useParams() as { postId?: string };
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const { user } = useAuth();
+  const [post, setPost] = useState<ForumPost | null>(mockPost);
+  const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
-  }, [postId]),
+  }, [postId]);
   
   if (isLoading) {
     return (
@@ -75,8 +75,8 @@ export default function EditPostPage() {
   }
   
   // Check if the user is the author or an admin
-  const isAuthor = user?.id === post.authorId,
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAuthor = user?.id === post.authorId;
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
   
   if (!isAuthor && !isAdmin) {
     return (
@@ -97,7 +97,7 @@ export default function EditPostPage() {
     content: post.content,
     categoryId: post.categoryId as ForumCategory,
     tags: post.tags.join(", ")
-  },
+  };
 
   const handleSubmit = async (values: PostFormValues) => {
     try {
@@ -107,7 +107,7 @@ export default function EditPostPage() {
       toast({
         title: "Post updated",
         description: "Your post has been updated successfully"
-      }),
+      });
       
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
@@ -118,7 +118,7 @@ export default function EditPostPage() {
         variant: "destructive"
       })
     }
-  },
+  };
 
   return (
     <AppLayout>

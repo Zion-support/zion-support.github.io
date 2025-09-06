@@ -1,9 +1,8 @@
-
-import React from "react",;
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
-import { cn } from "@/lib/utils",;
-import { Button } from "@/components/ui/button",;
-import Link from "next/link",;
+title = "Complete Your Profile", 
+import React from "react";
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 export interface OnboardingStep {
   id: string,
   label: string,
@@ -14,17 +13,17 @@ export interface OnboardingStep {
 
 interface OnboardingTrackerProps {
   steps: OnboardingStep[],
-  title?: string,
+  title?: string;
   className?: string
 }
 
 export function OnboardingTracker({ 
-  steps,
+  steps;
   title = "Complete Your Profile", 
   className 
 }: OnboardingTrackerProps) {
-  const completedSteps = steps.filter(step => step.completed).length,
-  const progress = Math.round((completedSteps / steps.length) * 100),
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
 
   return (
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
@@ -43,7 +42,7 @@ export function OnboardingTracker({
       
       {/* Steps list */}
       <div className="space-y-3">
-        {steps.map((step) => (
+        {steps.map((step,) => (
           <div key={step.id} className="flex items-center">
             <div className="mr-3">
               {step.completed ? (
@@ -71,6 +70,19 @@ export function OnboardingTracker({
         ))}
       </div>
     </div>
-  )
-}
-;
+);
+
+}></div> </div> {;
+  /* Steps list */ ";
+}<div className="space-y-3" > {;
+  steps.map ( (step) => (<div key= {;
+  step.id ";
+}className="flex items-center" > <div className="mr-3" > {";
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) ;
+}</div> </div> {";
+  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {;
+  step.link ;
+}> </Link> </Button>) ;
+}</div>) ) ;
+}</div> </div>) ;
+}"}

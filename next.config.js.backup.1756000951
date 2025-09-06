@@ -1,4 +1,20 @@
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 let withSentryConfig = (cfg) => cfg;
 try {
@@ -7,7 +23,34 @@ try {
   withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
 } catch {}
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+const baseConfig = {
+=======
+const os = require('os');
+
+const nextConfig = {
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+  poweredByHeader: false,
 const baseConfig = {  poweredByHeader: false,
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+const baseConfig = {  poweredByHeader: false,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+const baseConfig = {  poweredByHeader: false,
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,

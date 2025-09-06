@@ -1,9 +1,9 @@
-import { useState } from "react",;
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",;
-import { Input } from "@/components/ui/input",;
-import { Card } from "@/components/ui/card",;
-import { Search } from "lucide-react",;
-import { ListingScoreCard } from "@/components/ListingScoreCard",;
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -19,11 +19,11 @@ const SAMPLE_LISTINGS: ListingItem[] = [
   { id: "equipment-2", title: "Server Rack", category: "Equipment", image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format" }],
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState("");
   
   const handleTypeSelect = (type: ServiceType) => {
     updateFormData({ serviceType: type })
-  },
+  };
   
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({ 
@@ -31,19 +31,19 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       serviceCategory: item.category,
       serviceType: item.category.toLowerCase() as ServiceType
     })
-  },
+  };
   
   const filteredListings = SAMPLE_LISTINGS.filter(item => {
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
-      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase(),
+      const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
       if (!categoryMatch) return false
     }
     
-    if (searchQuery.trim() === "") return true,
+    if (searchQuery.trim() === "") return true;
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  }),
+  });
 
   return (
     <div className="space-y-6">

@@ -1,39 +1,32 @@
 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { 
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogOverlay
-} from "@/components/ui/dialog",
-import { DisputeForm } from "./DisputeForm",;
-import { useNavigate } from "react-router-dom",;
-import { ShieldAlert } from "lucide-react",;
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
+import {DisputeForm} from "./DisputeForm";
+import {useNavigate} from "react-router-dom";
+import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {
   projectId: string,
-  milestoneId?: string,
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
+  milestoneId?: string;
+  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
+  size?: "default" | "sm" | "lg" | "icon";
   className?: string
 }
 
 export function RaiseDisputeButton({ 
-  projectId,
+  projectId;
   milestoneId, 
   variant = "outline", 
-  size,
+  size;
   className 
 }: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const navigate = useNavigate(),
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const navigate = useNavigate();
   
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
     navigate(`/dashboard/disputes/${disputeId}`)
-  },
+  };
   
   return (
     <>

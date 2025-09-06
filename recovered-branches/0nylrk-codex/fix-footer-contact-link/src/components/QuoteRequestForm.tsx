@@ -1,25 +1,25 @@
 
-import { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress",;
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep",;
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep",;
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep",;
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep",;
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep",;
-import { QuoteFormData } from "@/types/quotes",;
-import { Sparkles } from "lucide-react",;
-export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary",
+import {useState} from "react";
+import {useToast} from "@/hooks/use-toast";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {GradientHeading} from "@/components/GradientHeading";
+import {StepProgress} from "@/components/QuoteRequestForm/StepProgress";
+import {ServiceTypeStep} from "@/components/QuoteRequestForm/ServiceTypeStep";
+import {ProjectDetailsStep} from "@/components/QuoteRequestForm/ProjectDetailsStep";
+import {TimelineStep} from "@/components/QuoteRequestForm/TimelineStep";
+import {BudgetStep} from "@/components/QuoteRequestForm/BudgetStep";
+import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
+import {QuoteFormData} from "@/types/quotes";
+import {Sparkles} from "lucide-react";
+export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
 export function QuoteRequestForm() {
-  const navigate = useNavigate(),
-  const { toast } = useToast(),
-  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
-  const [isSubmitting, setIsSubmitting] = useState(false),
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: "",
@@ -33,67 +33,67 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0,
       type: "fixed"
-    },
+    };
     contactInfo: {
       name: "",
       email: "",
       phone: "",
       company: ""
     }
-  }),
+  });
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev,
       ...data
     }))
-  },
+  };
   
   const handleNext = () => {
     switch (currentStep) {
-      case "service": setCurrentStep("details"),
-        break,
+      case "service": setCurrentStep("details");
+        break;
       case "details":
-        setCurrentStep("timeline"),
-        break,
+        setCurrentStep("timeline");
+        break;
       case "timeline":
-        setCurrentStep("budget"),
-        break,
+        setCurrentStep("budget");
+        break;
       case "budget":
-        setCurrentStep("summary"),
-        break,
+        setCurrentStep("summary");
+        break;
       default:
         break
     }
-  },
+  };
   
   const handleBack = () => {
     switch (currentStep) {
-      case "details": setCurrentStep("service"),
-        break,
+      case "details": setCurrentStep("service");
+        break;
       case "timeline":
-        setCurrentStep("details"),
-        break,
+        setCurrentStep("details");
+        break;
       case "budget":
-        setCurrentStep("timeline"),
-        break,
+        setCurrentStep("timeline");
+        break;
       case "summary":
-        setCurrentStep("budget"),
-        break,
+        setCurrentStep("budget");
+        break;
       default:
         break
     }
-  },
+  };
   
   const handleSubmit = async () => {
-    setIsSubmitting(true),
+    setIsSubmitting(true);
     
     try {
       // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData),
+      console.log("Submitting form data:", formData);
       
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500)),
+      await new Promise(resolve => setTimeout(resolve, 1500));
       
       toast({
         title: "Quote Request Submitted",
@@ -109,23 +109,23 @@ export function QuoteRequestForm() {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
   
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
-        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />,
+        return <ServiceTypeStep formData={formData} updateFormData={updateFormData} />;
       case "details":
-        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />,
+        return <ProjectDetailsStep formData={formData} updateFormData={updateFormData} />;
       case "timeline":
-        return <TimelineStep formData={formData} updateFormData={updateFormData} />,
+        return <TimelineStep formData={formData} updateFormData={updateFormData} />;
       case "budget":
-        return <BudgetStep formData={formData} updateFormData={updateFormData} />,
+        return <BudgetStep formData={formData} updateFormData={updateFormData} />;
       case "summary":
-        return <SummaryStep formData={formData} updateFormData={updateFormData} />,
+        return <SummaryStep formData={formData} updateFormData={updateFormData} />;
       default: return null
     }
-  },
+  };
   
   return (
     <div className="container mx-auto px-4 py-12">

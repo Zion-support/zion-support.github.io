@@ -1,24 +1,24 @@
 
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import { Link } from "react-router-dom",;
-import { Calendar, Clock, Video } from "lucide-react",;
-import { Avatar } from "@/components/ui/avatar",;
+import React, { useEffect, useState } from "react";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {format, isPast, parseISO} from "date-fns";
+import {Link} from "react-router-dom";
+import {Calendar, Clock, Video} from "lucide-react";
+import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {
-  const { fetchInterviews } = useInterviews(),
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const loadInterviews = async () => {
-      setIsLoading(true),
+      setIsLoading(true);
       try {
-        const interviews = await fetchInterviews(),
-        const now = new Date(),
+        const interviews = await fetchInterviews();
+        const now = new Date();
         
         // Filter for confirmed interviews in the future
         const upcoming = interviews
@@ -37,10 +37,10 @@ export function UpcomingInterviewsCard() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     loadInterviews()
-  }, []),
+  }, []);
 
   if (isLoading) {
     return (
@@ -101,15 +101,15 @@ export function UpcomingInterviewsCard() {
       <CardContent>
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
-            const interviewDate = parseISO(interview.scheduled_date),
-            const formattedDate = format(interviewDate, 'EEE, MMM d'),
+            const interviewDate = parseISO(interview.scheduled_date);
+            const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a'),
             
             // Determine if interview is happening soon (within 30 minutes)
-            const now = new Date(),
+            const now = new Date();
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime(),
+              interviewDate.getTime() > now.getTime();
             
             return (
               <div key={interview.id} className="flex items-center gap-3">

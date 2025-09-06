@@ -1,13 +1,18 @@
 import React from 'react';
 
-// Define HTMLAnchorElement type if not available
+// Define HTMLAnchorElement if not available
 interface HTMLElement {
-  className?: string;
+  className: string;
+  id: string;
+  innerHTML: string;
+  textContent: string | null;
+  style: { [key: string]: string };
 }
 
 interface HTMLAnchorElement extends HTMLElement {
+  tagName: 'A';
   href: string;
-  className?: string;
+  target: string;
 }
 
 type Href = string | { pathname?: string; href?: string };

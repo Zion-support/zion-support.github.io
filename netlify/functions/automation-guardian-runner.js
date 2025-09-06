@@ -1,4 +1,3 @@
-const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
@@ -39,4 +38,4 @@ exports.handler = async () => {
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
   return { statusCode: 200, body: logs.join('\n') }
-},;
+},

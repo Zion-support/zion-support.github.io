@@ -1,28 +1,27 @@
 
-import { useState } from "react",;
-import { useParams } from "react-router-dom",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Star, MessageSquare, Brain, Shield } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",;
-import { toast } from "@/hooks/use-toast",;
-import { PaymentButton } from "@/components/transactions/PaymentButton",;
-import { AppLayout } from "@/layout/AppLayout",;
-import { ProfileContact } from "@/components/profile/ProfileContact",;
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-;
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Star, MessageSquare, Brain, Shield} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {AppLayout} from "@/layout/AppLayout";
+import {ProfileContact} from "@/components/profile/ProfileContact";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { id } = useParams() as { id?: string },
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
-  const [isLoading, setIsLoading] = useState(false),
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
+  const { id } = useParams() as { id?: string };
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
   // Find the listing from our shared data source - now also checking equipment listings
-  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
 
   if (!listing) {
     return (
@@ -44,7 +43,7 @@ export default function ListingDetail() {
 
   const handleContact = () => {
     setIsContactDialogOpen(true)
-  },
+  };
 
   return (
     <AppLayout>
@@ -61,7 +60,7 @@ export default function ListingDetail() {
                       alt={listing.title} 
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        const target = e.target as HTMLImageElement,
+                        const target = e.target as HTMLImageElement;
                         target.src = "/placeholder.svg"
                       }}
                     />
@@ -79,7 +78,7 @@ export default function ListingDetail() {
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
-                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
                       >
@@ -88,7 +87,7 @@ export default function ListingDetail() {
                           alt={`${listing.title} - image ${index + 1}`} 
                           className="w-full h-full object-cover"
                           onError={(e) => {
-                            const target = e.target as HTMLImageElement,
+                            const target = e.target as HTMLImageElement;
                             target.src = "/placeholder.svg"
                           }}
                         />
@@ -165,7 +164,7 @@ export default function ListingDetail() {
                         <Star
                           key={i}
                           className={cn(
-                            "h-5 w-5",
+                            "h-5 w-5";
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
@@ -237,7 +236,7 @@ export default function ListingDetail() {
                         alt={listing.author.name} 
                         className="h-12 w-12 rounded-full"
                         onError={(e) => {
-                          const target = e.target as HTMLImageElement,
+                          const target = e.target as HTMLImageElement;
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
                       />

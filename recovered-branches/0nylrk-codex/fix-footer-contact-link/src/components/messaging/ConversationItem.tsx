@@ -1,10 +1,9 @@
 
-import React from 'react',;
-import { format } from 'date-fns',;
-import { cn } from '@/lib/utils',;
-import { Conversation } from '@/types/messaging',;
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',
-;
+import React from 'react';
+import {format} from 'date-fns';
+import {cn} from '@/lib/utils';
+import {Conversation} from '@/types/messaging';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components/ui/avatar';
 interface ConversationItemProps {
   conversation: Conversation,
   isActive: boolean,
@@ -15,8 +14,8 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
   return (
     <div 
       className={cn(
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

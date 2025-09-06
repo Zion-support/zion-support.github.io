@@ -1,6 +1,8 @@
-const fs = require('fs'),
-const path = require('path'),
+ 
+}else {
+  console.warn ('Missing artifact for', name) 
 
+}main ();
 function main() {
   const outDir = path.join(__dirname, '../abi'),
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir),
@@ -25,4 +27,4 @@ function main() {
   }
 }
 
-main(),;
+}main ();main(),

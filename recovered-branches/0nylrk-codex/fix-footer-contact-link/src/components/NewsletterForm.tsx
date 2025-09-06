@@ -1,22 +1,22 @@
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { useState } from "react",;
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {useState} from "react";
 export function NewsletterForm() {
-  const [email, setEmail] = useState(""),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
+    e.preventDefault();
+    setIsSubmitting(true);
     
     // Simulate API call
     setTimeout(() => {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
       setIsSubmitted(true),
       setEmail("")
     }, 1000)
-  },
+  };
 
   return (
     <div className="w-full max-w-md mx-auto">

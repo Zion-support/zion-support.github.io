@@ -1,13 +1,13 @@
 
-import React, { forwardRef } from "react",;
-import { ChevronDown } from "lucide-react",;
-import { cn } from "@/lib/utils",;
-import { SafeRef } from "@/types/ref-types",;
+import React, { forwardRef } from "react";
+import {ChevronDown} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {SafeRef} from "@/types/ref-types";
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
-  icon?: React.ReactNode,
-  active?: boolean,
-  href?: string,
-  target?: string,
+  icon?: React.ReactNode;
+  active?: boolean;
+  href?: string;
+  target?: string;
   badge?: React.ReactNode
 }
 
@@ -20,7 +20,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
             active && "bg-accent font-medium text-accent-foreground",
             className
           )}
@@ -39,7 +39,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         ref={ref}
         type="button"
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
           active && "bg-accent font-medium text-accent-foreground",
           className
         )}
@@ -53,9 +53,9 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
       </button>
     )
   }
-),
+);
 
-SidebarMenuItem.displayName = "SidebarMenuItem",
+SidebarMenuItem.displayName = "SidebarMenuItem";
 
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string,
@@ -69,7 +69,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-},
+};
 
-export { SidebarMenuItem, SidebarMenuGroup },
-;
+export { SidebarMenuItem, SidebarMenuGroup };

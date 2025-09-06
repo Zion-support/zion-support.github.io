@@ -1,7 +1,7 @@
 
-import { GradientHeading } from "./GradientHeading",;
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
-import { Button } from "./ui/button",;
+import {GradientHeading} from "./GradientHeading";
+import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
+import {Button} from "./ui/button";
 const services = [
   {
     title: "Servers",
@@ -13,7 +13,7 @@ const services = [
     icon: <HardDrive className="h-10 w-10" />},
   {
     title: "Networking",
-    description: "Connectivity solutions including switches, routers, and network security devices",
+    description: "Connectivity solutions including switches, routers, and network security devices";
     icon: <Network className="h-10 w-10" />},
   {
     title: "24x7x365 Support",

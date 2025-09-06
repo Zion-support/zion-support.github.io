@@ -1,4 +1,4 @@
-import { format } from 'date-fns',;
+import {format} from 'date-fns';
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -12,7 +12,7 @@ export function formatDate(date: Date | string | undefined): string {
     }
     return format(date, 'MMM d, yyyy')
   } catch (e) {
-    console.error('Error formatting date:', e),
+    console.error('Error formatting date:', e);
     return '-'
   }
 }
@@ -21,16 +21,16 @@ export function formatDate(date: Date | string | undefined): string {
  * Stores referral code in localStorage when detected in URL
  */
 export function checkUrlForReferralCode(): string | null {
-  if (typeof window === 'undefined') return null,
+  if (typeof window === 'undefined') return null;
   
-  const url = new URL(window.location.href),
-  const refCode = url.searchParams.get('ref'),
+  const url = new URL(window.location.href);
+  const refCode = url.searchParams.get('ref');
   
   if (refCode) {
-    localStorage.setItem('referral_code', refCode),
+    localStorage.setItem('referral_code', refCode);
     // Remove it from URL to keep it clean
-    url.searchParams.delete('ref'),
-    window.history.replaceState({}, document.title, url.toString()),
+    url.searchParams.delete('ref');
+    window.history.replaceState({}, document.title, url.toString());
     return refCode
   }
   
@@ -42,20 +42,20 @@ export function checkUrlForReferralCode(): string | null {
  */
 export async function trackReferral(userId: string, email: string) {
   try {
-    const refCode = localStorage.getItem('referral_code'),
+    const refCode = localStorage.getItem('referral_code');
     if (!refCode) return,
     
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'},
+        'Content-Type': 'application/json'};
       body: JSON.stringify({
-        refCode,
-        userId,
+        refCode;
+        userId;
         email,
         ipAddress: '', // This will be captured by the server
-      })}),
+      })});
     
     if (response.ok) {
       // Clear the stored referral code

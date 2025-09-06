@@ -1,8 +1,8 @@
 
-import React from "react",;
-import { Link } from "react-router-dom",;
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",;
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 export function ApiDocsHub() {
   const sections = [
     {
@@ -25,7 +25,7 @@ export function ApiDocsHub() {
       color: "from-green-500 to-emerald-500"},
     {
       title: "Sample Code",
-      description: "Examples in JavaScript, Python, and Node.js",
+      description: "Examples in JavaScript, Python, and Node.js";
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"},
@@ -82,5 +82,4 @@ export function ApiDocsHub() {
   )
 }
 
-export default ApiDocsHub,
-;
+export default ApiDocsHub;

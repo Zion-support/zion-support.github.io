@@ -1,49 +1,5 @@
-import { useState } from 'react',;
-import { Header } from '@/components/Header',;
-import { SEO } from '@/components/SEO',;
-import { GradientHeading } from '@/components/GradientHeading',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
-import { Card } from '@/components/ui/card',;
-import { toast } from '@/components/ui/use-toast',;
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger',;
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
-import z from 'zod',;
-import { ChatAssistant } from '@/components/ChatAssistant',;
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
-import Link from 'next/link',;
-import { motion, AnimatePresence } from 'framer-motion',
-;
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [errors, setErrors] = useState<{
-    name?: string,
-    email?: string,
-    message?: string
-  }>({}),
-  const [isChatOpen, setIsChatOpen] = useState(false),
-  const [submitted, setSubmitted] = useState(false),
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
-    setFormData((prev) => ({ ...prev, [name]: value })),
-    setErrors((prev) => ({ ...prev, [name]: undefined }))
-  },
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    logInfo('[ContactForm] handleSubmit triggered.'),
-    logInfo('[ContactForm] formData:', { data: formData }),
-
+description:
+              "We've received your message and will get back to you soon."});
     const schema = z.object({
       name: z.string().min(2, 'Name must be at least 2 characters'),
       email: z.string().email('Invalid email address'),
@@ -68,7 +24,6 @@ export default function Contact() {
         variant: 'destructive'}),
       return
     }
-
     setErrors({}),
     setIsSubmitting(true),
     logInfo('[ContactForm] Starting form submission (fetch to /api/contact).'),
@@ -78,7 +33,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)})
-        .then(async (res) => {
+        .then(async (res,) => {
           logInfo('[ContactForm] API response status:', { data: res.status }),
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
           logInfo('[ContactForm] API response body:', { data: responseBody }),
@@ -106,10 +61,10 @@ export default function Contact() {
             description:
               "We've received your message and will get back to you soon."}),
           setSubmitted(true),
-          setTimeout(() => setSubmitted(false), 2000),
+          setTimeout((,) => setSubmitted(false), 2000),
           setFormData({ name: '', email: '', message: '' })
         })
-        .catch((err) => {
+        .catch((err,) => {
           // This catches errors from the fetch promise (network, res.ok is false, or manual throw)
           logErrorToProduction('[ContactForm] Fetch promise chain error:', { data: err }),
           setIsSubmitting(false),
@@ -130,314 +85,152 @@ export default function Contact() {
     }
   },
 
-  // Handle sending messages to the AI chat assistant
-  const handleSendMessage = async (message: string): Promise<void> => {
-    try {
-      const response = await fetch(
-        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            messages: [{ role: 'user', content: message }]})},
-      ),
-
-      if (!response.ok) {
-        throw new Error('Failed to get response from AI assistant')
-      }
-
-      return Promise.resolve()
-    } catch (error) {
-      logErrorToProduction('Error in AI chat', error),
-      toast({
-        title: 'Chat Error',
+        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat';
         description:
-          'There was an error communicating with our AI assistant. Please try again.',
+          'There was an error communicating with our AI assistant. Please try again.';
         variant: 'destructive'}),
-      return Promise.resolve()
-    }
-  },
-
-  const offices = [
-    {
-      name: 'Headquarters',
-      address: '123 Tech Avenue, San Francisco, CA 94105',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com'},
-    {
-      name: 'East Coast Office',
-      address: '456 Innovation Street, New York, NY 10001',
-      phone: '+1 302 464 0950',
-      email: 'commercial@ziontechgroup.com'}],
-
-  return (
-    <>
-      <SEO
-        title="Contact Us - Get Help from Zion Tech Marketplace"
-        description="Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime."
-        keywords="contact Zion, AI marketplace support, tech platform contact"
-        canonical="https://app.ziontechgroup.com/contact"
-      />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Contact Us</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Have questions or want to learn more? We'd love to hear from you.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-zion-slate-light text-lg mb-8">
-                Whether you have a question about our platform, pricing, or
-                anything else, our team is ready to answer all your questions.
-              </p>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-white mb-2">
-                      Your Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.name ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder="John Doe"
-                      required
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-                    )}
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-white mb-2">
-                      Email Address
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={`bg-zion-blue-dark border-zion-blue-light text-white ${errors.email ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                      placeholder="john@example.com"
-                      required
-                    />
-                    {errors.email && (
-                      <p className="mt-1 text-sm text-red-500">
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-white mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={`bg-zion-blue-dark border-zion-blue-light text-white min-h-[150px] ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
-                    placeholder="Tell us what you'd like to know..."
-                    required
-                  />
-                  {errors.message && (
-                    <p className="mt-1 text-sm text-red-500">
-                      {errors.message}
-                    </p>
-                  )}
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-                <AnimatePresence>
-                  {submitted && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      className="mt-4 text-center space-y-1"
-                    >
-                      <h3 className="text-green-500 text-lg font-bold">
-                        Message Sent!
-                      </h3>
-                      <p className="text-zion-slate-light">
-                        Thanks for reaching out. Our team received your message
-                        and will respond with helpful info as soon as possible
-                        shortly.
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </form>
-            </div>
-
-            <div>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <h2 className="text-3xl font-bold text-white mb-6">
-                      Our Offices
-                    </h2>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    We list several offices so you can connect with the team
-                    closest to your region for faster support.
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <div className="grid grid-cols-1 gap-6">
-                {offices.map((office, index) => (
-                  <Card
-                    key={index}
-                    className="bg-zion-blue-dark border border-zion-blue-light p-6"
-                  >
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {office.name}
-                    </h3>
-                    <div className="space-y-3">
-                      <div className="flex items-start">
-                        <MapPin className="w-5 h-5 text-zion-cyan mr-3 mt-1 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.address}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Phone className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <span className="text-zion-slate-light">
-                          {office.phone}
-                        </span>
-                      </div>
-                      <div className="flex items-center">
-                        <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                        <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
-                        >
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
-
-              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12615.297199052566!2d-122.41941455!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858080b9b0a169%3A0x1ac94fe0532d9e81!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1651234567890!5m2!1sen!2suk"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Zion Office Locations"
-                ></iframe>
-              </div>
-
-              <div className="mt-8">
-                <Card className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 p-6">
-                  <div className="flex items-center">
-                    <div className="bg-zion-purple/20 p-3 rounded-full mr-4">
-                      <MessageSquare className="h-6 w-6 text-zion-purple" />
-                    </div>
-                    <div>
-                      <h3 className="text-white text-lg font-bold">
-                        Live AI Support
-                      </h3>
-                      <p className="text-zion-slate-light">
-                        Get instant answers to your questions
-                      </p>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={() => setIsChatOpen(true)}
-                    className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                  >
-                    Chat With Our AI Assistant
-                  </Button>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Need immediate assistance?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
-              Our customer support team is available 24/7 to help you with any
-              questions.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button
-                onClick={() => setIsChatOpen(true)}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-              >
-                <MessageSquare className="mr-2 h-5 w-5" />
-                Chat With AI
-              </Button>
-              <Button
-                variant="outline"
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                asChild
-              >
-                <a href="mailto:support@ziontechgroup.com">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Email Support
-                </a>
-              </Button>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-zion-slate-light text-lg">
-              Looking for more details about our platform? Visit our{' '}
-              <Link href="/services" className="text-zion-cyan underline">
-                services page
-              </Link>{' '}
-              or explore the{' '}
-              <Link href="/blog" className="text-zion-cyan underline">
-                Zion blog
-              </Link>{' '}
-              for additional insights.
-            </p>
-          </div>
-        </div>
-      </main>
-
-      {/* Chat Assistant Modal */}
-      {isChatOpen && (
-        <ChatAssistant
-          isOpen={isChatOpen}
-          onClose={() => setIsChatOpen(false)}
-          recipient={{
-            id: 'ai-assistant',
-            name: 'AI Assistant',
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Support Bot'}}
-          onSendMessage={handleSendMessage}
-          starterQuestions={[
-            'How do I list a product?What services does Zion offer?Where can I view pricing plans?How do I create an account?Can I talk to a human representative?']}
-        />
-      )}
-    </>
-  )
+}
+          <motion.div ;
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";
+            variants={containerVariants}
+            initial="hidden";
+            whileInView="visible";
+            viewport={{ once: true }}
+          >;
+            <motion.div ;
+              className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center";
+              variants={itemVariants}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >;
+              <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">;
+                <Globe className="w-8 h-8 text-white" />;
+              </div>;
+              <h3 className="text-xl font-bold text-white mb-4">Live Chat</h3>;
+              <p className="text-zion-slate-light text-sm mb-6">Chat with our team in real-time during business hours</p>;
+              <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">;
+                Start Chat    </div>;
+  );
+}
+            </form>;
+          {/* comment */}";
+            <h2 className="text - 3xl font-bold text-gray-900 mb-8">Contact Information</h2>",";
+            <div: className = "space-y-8">"," {/* comment */}";
+                <h3 className="text - xl font-semibold text-gray-900 mb-4">Get in Touch</h3>",";
+                <div: className = "space-y-4">"," {contactMethods.map((method, index) => (";
+                    <div: key="{index}" className="flex items - start space-x-4">",";
+                      <div: className="text - 2xl">{method.icon}</div>",";
+                        <h4: className="font - medium text-gray-900">{method.title}</h4>",";
+                        <a: href = "{method.link}">;
+                          target = {method.link.startsWith("http") ? "_blank" : "_self"}",
+                          rel = {method.link.startsWith("http") ? "noopener: noreferrer" : ""}",";
+                          className="text - blue-600: hover: text-blue-700: hover:underline">{method.detail,s}",";
+            <h2 className="&apos;text-3xl" font-bold text-gray-900 mb-8&apos;>Contact Information&apos;</h2>";
+            <div className="&apos;space-y-8&apos;">;
+              {/* comment */}&apos;";
+                <h3 className="&apos;text-xl" font-semibold text-gray-900 mb-4&apos;>Get in Touch&apos;</h3>";
+                <div className="&apos;space-y-4&apos;">;
+                  {contactMethods.map((method, index) => (&apos}";
+                    <div key="{index}" className="&apos;flex" items-start space-x-4&apos;>&apos,";
+                      <div className="&apos;text-2xl&apos;">{method.icon}&apos;</div>";
+                        <h4 className="&apos;font-medium" text-gray-900&apos;>{method.title}&apos;</h4>";
+                        <a target="{method.link.startsWith(&apos;http&apos)" ? &apos;_blank&apos; : &apos;_self&apos}";
+                          rel="{method.link.startsWith(&apos;http&apos)" ? &apos;noopener noreferrer&apos; : &apos;&apos}";
+                          className="&apos;text-blue-600" hover:text-blue-700 hove,r: underline&apos,>{method.details}&apos;&apos;
+                        </a>;
+              {/* comment */}";
+                <h3 className="text - xl font-semibold text-gray-900 mb-4">Office Hours</h3>",";
+                <div: className = "space-y-2">"," {officeHours.map((schedule, index) => (";
+                    <div: key="{index}" className="flex justify - between">",";
+                      <span: className="text - gray-600">{schedule.day}</span>",";
+                      <span: className="font-medium text-gray-900">{schedule.hours}</span>";
+              </div> {/* comment */}";
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Office Hours</h3>;";
+                <div className="space-y-2"> {officeHours.map((schedule, index) => (;";
+                    <div key="{index}" className="flex justify-between">;";
+                      <span className="text-gray-600">{schedule.day}</span>;";
+                      <span className="font-medium text-gray-900">{schedule.hours}</span>;";
+                <h3 className="&apos;text-xl" font-semibold text-gray-900 mb-4&apos;>Office Hours&apos;</h3>";
+                <div className="&apos;space-y-2&apos;">;
+                  {officeHours.map((schedule, index) => (&apos}";
+                    <div key="{index}" className="&apos;flex" justify-between&apos;>&apos,";
+                      <span className="&apos;text-gray-600&apos;">{schedule.day}&apos;</span>";
+                      <span className="&apos;font-medium" text-gray-900&apos;>{schedule.hours}&apos;</span>;
+              {/* comment */}";
+                <h3 className="text - xl font-semibold text-gray-900 mb-4">Quick Links</h3>",";
+                <div: className = "space-y-2">",",";
+                  <Link: to="/services" className="block text-blue-600 hover: text-blue-700: hover:underline">",
+                    View: Our Services,
+                  </Link>",
+                  <Link to="/case-studies" className="block text-blue-600 hover: text-blue-700: hover:underline">",
+                    Case: Studies",
+                  <Link to="/about" className="block text-blue-600 hover: text-blue-700: hover:underline">",
+                    About: Zion Tech Group",
+                  <Link to="/pricing" className="block text-blue-600 hover: text-blue-700: hover:underline">",
+                    Pricing: Information,
+              </div> {/* comment */}";
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>;";
+                <div className="space-y-2">;";
+                  <Link to="/services" className="block text-blue-600 hover: text-blue-700 hover:underline">;
+                    View Our Services;
+                  </Link>;";
+                  <Link to="/case-studies" className="block text-blue-600 hover:text-blue-700 hover:underline">;
+                    Case Studies,";
+                  <Link to="/about" className="block text-blue-600 hover:text-blue-700 hover:underline">,
+                    About Zion Tech Group,",
+                  <Link to = "/pricing" className="block text-blue-600 hover:text-blue-700 hover:underline">,
+                    Pricing Information,
+              </div> {/* comment */}";
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;";
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>;";
+                <p className="text-blue-800 mb-4">;
+                  For urgent technical issues or system emergencies, contact our 24 / 7 support team.,
+                  href="tel: +13024640950",",
+                  className = "inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">,";
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">,";
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"  />;
+                  Call Now;
+      <Footer  />;
+  )}";
+                <h3 className="&apos;text-xl" font-semibold text-gray-900 mb-4&apos;>Quick Links&apos;</h3>";
+                <div className="&apos;space-y-2&apos;">&apos,";
+                  <Link to="&apos;/services&apos;" className="&apos;block" text-blue-600 hover: text-blue-700 hover:underline&apos;>;
+                    View Our Services&apos;";
+                <h3 className = "text-xl font-semibold text-gray-900 mb-4">Quick Links</h3>";
+                <div className="space-y-2">";
+                  <Link to="/services" className="block text-blue-600 hover: text-blue-700 hover:underline">;
+                    View Our Services";
+                  <Link to="&apos;/case-studies&apos;" className="&apos;block" text-blue-600 hover:text-blue-700 hover:underline&apos;>;
+                    Case Studies&apos;";
+                  <Link to="&apos;/about&apos;" className="&apos,block" text-blue-600 hover:text-blue-700 hover:underline&apos,>;
+                    About Zion Tech Group&apos,",
+                  <Link to="&apos;/pricing&apos," className = "&apos,block" text-blue-600 hover:text-blue-700 hove,r: underline&apos,>;
+                    Pricing Information&apos,
+              {/* comment */}";
+              <div className="bg - blue-50 border border-blue-200 rounded-lg p-6">",";
+                <h3: className="text-lg font-semibold text-blue-900 mb-2">Need Immediate Support?</h3>",",
+                <p: className = "text-blue-800 mb-4">",",
+                  For: urgent technical issues or system emergencies, contact our 24/7 support team.;
+                  href="tel: +13024640950",",";";
+                  className="inline-flex: items-center bg-blue-600 hover: bg-blue-700: text-white px-4 py-2 rounded-lg font-medium transition-colors">",";";
+                  <svg: className = "w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">",",";
+                    <path: strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M3 5a2 2 0 012 - 2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />",";
+              <div className="&apos;bg-blue-50" border border-blue-200 rounded-lg p-6&apos;>&apos,";
+                <h3 className="&apos;text-lg" font-semibold text-blue-900 mb-2&apos;>Need Immediate Support?&apos;</h3>";
+                <p className="&apos;text-blue-800" mb-4&apos;>;
+                  For urgent technical issues or system emergencies, contact our 24/7 support team.&apos;";
+                  href="&apos;tel:" +13024640950",";
+                  className="&apos,inline-flex" items-center bg-blue-600 hove,r: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors&apos,>&apos,";
+                  <svg className="&apos;w-4" h-4 mr-2&apos; fill="&apos;none&apos;" stroke="&apos;currentColor&apos;" viewBox="&apos;0" 0 24 24&apos;>&apos,",
+                    <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M3" 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z&apos;       />&apos,
+                  href = "tel: +13024640950",";
+                  className="inline-flex items-center bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">";
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"  />;
+                  Call: Now,
+      <Footer  />";
+<Head> <title> Contact - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group" / /"> </Head> <main className="min - h-screen bg - white"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20"> <div className="text - center mb - 16"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 6"> Contact Us </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto"> Get in touch with our team. </p> </div> <div className="grid md:grid - cols - 2 gap - 12"> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 6">Contact Information</h2> <div className="space - y-4"> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Phone</h3> <p className="text - gray - 600">+1 302 464 0950</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Email</h3> <p className="text - gray - 600">kleber@ziontechgroup.com</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Address</h3> <p className="text - gray - 600">364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 6">Business Hours</h2> <div className="space - y-2 text - gray - 600"> <p> Monday - Friday: 9:00 AM - 6:00 PM EST</p> <p> Saturday: 10:00 AM - 2:00 PM EST</p> <p> Sunday: Closed</p> </div> <div className="mt - 8"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Ready to Get Started?</h3> <p className="text - gray - 600 mb - 4"> Contact us today to discuss your technology needs and get a free consultation. </p> <a href="mailto:kleber@ziontechgroup.com" className="inline - block bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors""> Send Email </a> </div> </div> </div> </div> </main> </>) }""";"  ];
+export default React.memo(function Contact () { return (<>;
+<Head> <title> Contact - Zion Tech Group</title> <meta name = "description" content="Get in touch with Zion Tech Group" / /"> </Head> <main className="min - h-screen bg - white"> <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20"> <div className="text - center mb - 16"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 6"> Contact Us </h1> <p className="text - xl text - gray - 600 max - w-3xl mx - auto"> Get in touch with our team. </p> </div> <div className="grid md:grid - cols - 2 gap - 12"> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 6">Contact Information</h2> <div className="space - y-4"> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Phone</h3> <p className="text - gray - 600">+1 302 464 0950</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Email</h3> <p className="text - gray - 600">kleber@ziontechgroup.com</p> </div> <div> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Address</h3> <p className="text - gray - 600">364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className="text - 2xl font - semibold text - gray - 900 mb - 6">Business Hours</h2> <div className="space - y-2 text - gray - 600"> <p> Monday - Friday: 9:00 AM - 6:00 PM EST</p> <p> Saturday: 10:00 AM - 2:00 PM EST</p> <p> Sunday: Closed</p> </div> <div className="mt - 8"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Ready to Get Started?</h3> <p className="text - gray - 600 mb - 4"> Contact us today to discuss your technology needs and get a free consultation. </p> <a href="mailto:kleber@ziontechgroup.com" className="inline - block bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors""> Send Email </a> </div> </div> </div> </div> </main> </>) }"'";
+))))))))))))
 }
 ;

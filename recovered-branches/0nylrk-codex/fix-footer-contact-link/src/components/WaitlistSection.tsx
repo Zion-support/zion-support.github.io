@@ -1,18 +1,18 @@
 
-import { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { useToast } from "@/hooks/use-toast",;
-import { Checkbox } from "@/components/ui/checkbox",;
+import {useState} from "react";
+import {Button} from "@/components/ui/button";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {useToast} from "@/hooks/use-toast";
+import {Checkbox} from "@/components/ui/checkbox";
 export function WaitlistSection() {
-  const [email, setEmail] = useState(""),
-  const [name, setName] = useState(""),
-  const [role, setRole] = useState(""),
-  const [agreeTerms, setAgreeTerms] = useState(false),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { toast } = useToast(),
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [role, setRole] = useState("");
+  const [agreeTerms, setAgreeTerms] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -25,20 +25,20 @@ export function WaitlistSection() {
       return
     }
     
-    setIsSubmitting(true),
+    setIsSubmitting(true);
     
     try {
       // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000)),
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
         title: "Success!",
         description: "Thank you for registering with Zion. We'll be in touch soon."}),
       
       // Reset form
-      setEmail(""),
-      setName(""),
-      setRole(""),
+      setEmail("");
+      setName("");
+      setRole("");
       setAgreeTerms(false)
     } catch (error) {
       toast({
@@ -48,7 +48,7 @@ export function WaitlistSection() {
     } finally {
       setIsSubmitting(false)
     }
-  },
+  };
   
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">

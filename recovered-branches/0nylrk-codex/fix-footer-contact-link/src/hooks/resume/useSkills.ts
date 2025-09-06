@@ -1,14 +1,13 @@
 
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Skill } from '@/types/resume',;
-import { useAuth } from '@/hooks/useAuth',;
-import { handleResumeError, showSuccessToast } from './useResumeUtils',
-;
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Skill} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {
-  const { user } = useAuth(),
-  const [isLoading, setIsLoading] = useState(false),
-  const [error, setError] = useState<string | null>(null),
+  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
@@ -16,21 +15,21 @@ export function useSkills() {
       return false
     }
     
-    setIsLoading(true),
-    setError(null),
+    setIsLoading(true);
+    setError(null);
     
     try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
-          resume_id: resumeId,
-          name: skill.name,
-          proficiency: skill.proficiency,
+          resume_id: resumeId;
+          name: skill.name;
+          proficiency: skill.proficiency;
           category: skill.category,
           years_experience: skill.years_experience
-        }),
+        });
       
-      if (error) throw error,
+      if (error) throw error;
       
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
@@ -38,7 +37,7 @@ export function useSkills() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
   
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
@@ -46,16 +45,16 @@ export function useSkills() {
       return false
     }
     
-    setIsLoading(true),
-    setError(null),
+    setIsLoading(true);
+    setError(null);
     
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
-        .eq('id', skillId),
+        .eq('id', skillId);
       
-      if (error) throw error,
+      if (error) throw error;
       
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
@@ -63,12 +62,12 @@ export function useSkills() {
     } finally {
       setIsLoading(false)
     }
-  },
+  };
 
   return {
-    isLoading,
-    error,
-    addSkill,
+    isLoading;
+    error;
+    addSkill;
     deleteSkill
   }
 }

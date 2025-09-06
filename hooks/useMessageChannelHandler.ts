@@ -1,25 +1,34 @@
 import { useEffect, useCallback } from 'react';
 
-// Define MessageEvent type if not available
+// Define MessageEvent if not available
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 
+type EventListener = (event: Event) => void;
+
 interface EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void;
-  removeEventListener(type: string, listener: (event: Event) => void): void;
+  addEventListener(type: string, listener: EventListener): void;
+  removeEventListener(type: string, listener: EventListener): void;
 }
 
-interface Window extends EventTarget {
-  addEventListener(type: string, listener: (event: Event) => void): void;
-  removeEventListener(type: string, listener: (event: Event) => void): void;
+interface MessageEventSource {
+  postMessage(message: any, targetOrigin: string): void;
 }
 
-interface MessageEvent<T = unknown> extends Event {
+interface MessagePort {
+  postMessage(message: any): void;
+  start(): void;
+  close(): void;
+}
+
+interface MessageEvent<T = any> extends Event {
   data: T;
   origin: string;
-  source: Window | null;
+  lastEventId: string;
+  source: MessageEventSource | null;
+  ports: ReadonlyArray<MessagePort>;
 }
 
 interface MessageChannelHandlerProps {

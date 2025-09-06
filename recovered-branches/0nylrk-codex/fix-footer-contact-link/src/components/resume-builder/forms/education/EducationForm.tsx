@@ -1,27 +1,27 @@
 
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Education} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+import {format} from 'date-fns';
+import {EducationFormProps} from './types';
+import {EducationList} from './EducationList';
+import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({ 
-  resumeId,
+  resumeId;
   educationEntries, 
   onComplete, 
   onBack 
 }: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),
-  const [editingId, setEditingId] = useState<string | null>(null),
+  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
+  const [editingId, setEditingId] = useState<string | null>(null);
   
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '',
+    if (!dateValue) return '';
     if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
-  },
+  };
 
   const handleAddOrUpdate = async (data: any) => {
     const educationData: Education = {
@@ -34,7 +34,7 @@ export function EducationForm({
       description: data.description,
       location: data.location},
 
-    let success,
+    let success;
     if (editingId) {
       success = await updateEducation(editingId, educationData)
     } else {
@@ -44,18 +44,18 @@ export function EducationForm({
     if (success) {
       setEditingId(null)
     }
-  },
+  };
 
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!),
     // Form reset happens in the child component
-  },
+  };
 
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this education entry?')) {
       await deleteEducation(id)
     }
-  },
+  };
 
   const handleCancel = () => {
     if (editingId) {
@@ -63,7 +63,7 @@ export function EducationForm({
     } else {
       onBack()
     }
-  },
+  };
 
   return (
     <div className="space-y-6">

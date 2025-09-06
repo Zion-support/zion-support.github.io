@@ -1,16 +1,10 @@
 
-import { useState } from "react",;
-import { Link } from "react-router-dom",;
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button",;
-import { Eye, ChevronDown, Loader2 } from "lucide-react",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-;
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from "lucide-react";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
 interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
@@ -19,9 +13,9 @@ interface ApplicationActionsProps {
 }
 
 export function ApplicationActions({
-  application,
-  processingId,
-  onViewApplication,
+  application;
+  processingId;
+  onViewApplication;
   onStatusChange
 }: ApplicationActionsProps) {
   return (

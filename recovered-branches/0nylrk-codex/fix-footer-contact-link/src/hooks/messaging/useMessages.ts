@@ -1,30 +1,30 @@
 
-import { UserProfile, UserDetails } from '@/types/auth',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Message, Conversation } from '@/types/messaging',;
-import { toast } from '@/hooks/use-toast',;
+import {UserProfile, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Message, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null,
+type UserWithProfile = UserProfile | UserDetails | null;
 
 /**
  * Hook to handle message operations
  */
 export function useMessages(
-  user: UserWithProfile,
-  activeConversation: Conversation | null,
-  activeMessages: Message[],
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
-  conversations: Conversation[],
-  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,
-  setUnreadCount: (updater: (prev: number) => number) => void,
-  setIsLoading: (loading: boolean) => void,
+  user: UserWithProfile;
+  activeConversation: Conversation | null;
+  activeMessages: Message[];
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  conversations: Conversation[];
+  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
+  setUnreadCount: (updater: (prev: number) => number) => void;
+  setIsLoading: (loading: boolean) => void;
   fetchConversations: () => Promise<void>
 ) {
   /**
    * Fetch messages for a conversation
    */
   const loadMessages = async (conversationId: string) => {
-    if (!user) return,
+    if (!user) return;
     
     setIsLoading(true),
     
@@ -33,17 +33,17 @@ export function useMessages(
         .from('messages')
         .select('*')
         .eq('conversation_id', conversationId)
-        .order('created_at', { ascending: true }),
+        .order('created_at', { ascending: true });
         
-      if (error) throw error,
+      if (error) throw error;
       
       // Use updater function for setActiveMessages
-      setActiveMessages(() => data as Message[]),
+      setActiveMessages(() => data as Message[]);
       
       // Mark messages as read
       const unreadMessages = data.filter(
         msg => !msg.read && msg.recipient_id === user.id
-      ),
+      );
       
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
@@ -53,13 +53,13 @@ export function useMessages(
     } finally {
       setIsLoading(false)
     }
-  },
+  };
 
   /**
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
-    if (!user || !content.trim() || !conversationId) return,
+    if (!user || !content.trim() || !conversationId) return;
     
     try {
       const conversation = conversations.find(c => c.id === conversationId),
@@ -71,17 +71,17 @@ export function useMessages(
       const { data, error } = await supabase
         .from('messages')
         .insert({
-          conversation_id: conversationId,
-          sender_id: user.id,
-          recipient_id: conversation.user_id,
-          content,
+          conversation_id: conversationId;
+          sender_id: user.id;
+          recipient_id: conversation.user_id;
+          content;
           created_at: new Date().toISOString(),
           read: false
         })
         .select('*')
-        .single(),
+        .single();
         
-      if (error) throw error,
+      if (error) throw error;
       
       // Update active messages if this conversation is selected
       if (activeConversation && activeConversation.id === conversationId) {
@@ -89,19 +89,19 @@ export function useMessages(
       }
       
       // Update conversations list
-      await fetchConversations(),
+      await fetchConversations();
       
       // Return the sent message
       return data
     } catch (error) {
-      console.error('Error sending message:', error),
+      console.error('Error sending message:', error);
       toast({
-        title: "Failed to send message",
+        title: "Failed to send message";
         description: "Please try again later",
         variant: "destructive"
       })
     }
-  },
+  };
 
   /**
    * Mark messages as read
@@ -115,16 +115,16 @@ export function useMessages(
         .update({ read: true })
         .eq('conversation_id', conversationId)
         .eq('recipient_id', user.id)
-        .eq('read', false),
+        .eq('read', false);
         
-      if (error) throw error,
+      if (error) throw error;
       
       // Update active messages to show they've been read
       setActiveMessages(prev => 
         prev.map(msg => 
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
         )
-      ),
+      );
       
       // Update conversations to reflect read messages
       setConversations(prev => 
@@ -133,7 +133,7 @@ export function useMessages(
             ? { ...conv, unread_count: 0 }
             : conv
         )
-      ),
+      );
       
       // Recalculate unread count
       setUnreadCount(prev => {
@@ -141,7 +141,7 @@ export function useMessages(
           conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
             : conv
-        ),
+        );
         
         return updatedConversations.reduce(
           (total, conv) => total + (conv.unread_count || 0), 
@@ -151,11 +151,11 @@ export function useMessages(
     } catch (error) {
       console.error('Error marking messages as read:', error)
     }
-  },
+  };
 
   return {
-    loadMessages,
-    sendMessage,
+    loadMessages;
+    sendMessage;
     markAsRead
   }
 }

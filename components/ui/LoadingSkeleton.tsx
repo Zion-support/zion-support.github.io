@@ -1,12 +1,10 @@
-import React from 'react',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import { motion } from 'framer-motion';
 interface SkeletonProps {
-  className?: string,
-  height?: string,
-  width?: string,
-  rounded?: string
-}
-
+  className?: string;
+  height?: string;
+  width?: string;
+  rounded?: string;
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '',
   height = 'h-4', 
@@ -24,7 +22,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
         ease: "easeInOut"}}
     />
   )
-},
+};
 
 interface ServiceCardSkeletonProps {
   className?: string
@@ -45,7 +43,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />
     </div>
   )
-},
+};
 
 interface HeroSkeletonProps {
   className?: string
@@ -65,7 +63,7 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
       </div>
     </div>
   )
-},
+};
 
 interface StatsSkeletonProps {
   className?: string
@@ -77,16 +75,21 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[...Array(4)].map((_, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className='text-center'>
+              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
+              <Skeleton className='h-10 w-20 mx-auto mb-2' />
+              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
-            </div>
           ))}
         </div>
       </div>
     </div>
-  )
-},
+  );
+};
 
-export default Skeleton,;
+export default Skeleton;  )
+};
+
+export default Skeleton;

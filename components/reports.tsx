@@ -1,30 +1,41 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { 
-  FileText,
-  Download, 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  TrendingUp,
-  BarChart3,
-  Brain,
-  Atom,
-  Globe,
-  Shield,
-  Zap,
-  Eye,
-  Clock,
-  Award
-} from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+  reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
+  index 
+}</span>) ) 
+}</div> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <Download className="w-5 h-5" /> <span>Download Full Report</span> </button> <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2" > <Eye className="w-5 h-5" /> <span>Preview Report</span> </button> </div> </motion.div>) ) 
+}</div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > All Reports </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive research across different technology domains </p> </motion.div> {
+  /* Category Pills */ 
+}<motion.div > {
+  categories.map ( (category, index) => (<button key= {
+  index 
+}className= {
+  `px-6 py-3 rounded-full font-medium transition-all duration-200 $ {
+  category.active ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50' 
+}` 
+}> {
+  category.name 
+}({
+  category.count 
+}) </button>) ) 
+}</motion.div> > <div className= {
+  `w-16 h-16 bg-gradient-to-br $ {
+  report.color 
+}rounded-xl flex items-center justify-center text-white mb-6` 
+}> {
+  report.icon 
+}</div> </span> <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 inline-flex items-center space-x-1" > <span>Download</span> <Download className="w-4 h-4" /> </button> </div> </motion.article>) ) 
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" > Need Custom Research? </h2> <p className="text-xl text-gray-300 mb-8" > Our research team can conduct custom studies and analysis tailored to your specific industry needs and challenges. </p> <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2" > <span>Request Custom Research</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/services" className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200" > View Research Services </a> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
+};
+export default ReportsPage;import React from 'react';
+import Head from 'next/head';
+import {motion} from 'framer-motion';
+import {FileText, Download, Calendar, User, Tag, ArrowRight, TrendingUp, BarChart3, Brain, Atom, Globe, Shield, Zap, Eye, Clock, Award} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 const ReportsPage: React.FC = () => {
   const reports = [
     {
       title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
-      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
       date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
@@ -35,10 +46,10 @@ const ReportsPage: React.FC = () => {
       featured: true,
       icon: <Atom className="w-8 h-8" />,
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
       title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
-      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.',
+      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
       date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
@@ -49,10 +60,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Brain className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
       title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
-      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.',
+      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.';
       date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
@@ -63,10 +74,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Shield className="w-8 h-8" />,
       color: 'from-red-500 to-orange-500'
-    },
+    };
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
-      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.',
+      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
       date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
@@ -77,10 +88,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <TrendingUp className="w-8 h-8" />,
       color: 'from-green-500 to-emerald-500'
-    },
+    };
     {
       title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
-      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.',
+      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.';
       date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
@@ -91,10 +102,10 @@ const ReportsPage: React.FC = () => {
       featured: false,
       icon: <Zap className="w-8 h-8" />,
       color: 'from-yellow-500 to-orange-500'
-    },
+    };
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact',
-      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.',
+      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
       date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
@@ -106,7 +117,7 @@ const ReportsPage: React.FC = () => {
       icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'
     }
-  ],
+  ];
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -375,6 +386,6 @@ const ReportsPage: React.FC = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-},
+};
 
-export default ReportsPage,;
+export default ReportsPage;

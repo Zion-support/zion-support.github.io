@@ -1,38 +1,38 @@
 
-import { cn } from "@/lib/utils",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { StarIcon } from "lucide-react",;
+import {cn} from "@/lib/utils";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {StarIcon} from "lucide-react";
 interface ListingScoreCardProps {
   title: string,
   description: string,
-  image?: string,
+  image?: string;
   category: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
   className?: string
 }
 
 export function ListingScoreCard({ 
-  title,
+  title;
   description, 
   image, 
   category, 
-  tags,
+  tags;
   author, 
-  authorImage,
-  aiScore = 0,
-  rating = 0,
-  reviewCount = 0,
+  authorImage;
+  aiScore = 0;
+  rating = 0;
+  reviewCount = 0;
   className 
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
       className
     )}>
       {image && (

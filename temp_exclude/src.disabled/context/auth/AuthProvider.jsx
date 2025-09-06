@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+=======
+' \' \' \' \' \' \''\''\";\";
+" " " " " " """"";";'"'"
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';''
+=======
+import React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';''
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

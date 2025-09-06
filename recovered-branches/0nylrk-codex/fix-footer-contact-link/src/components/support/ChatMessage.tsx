@@ -1,9 +1,9 @@
 
-import React from "react",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { cn } from "@/lib/utils",;
-import { format } from "date-fns",;
-import { useTheme } from "@/hooks/useTheme",;
+import React from "react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {cn} from "@/lib/utils";
+import {format} from "date-fns";
+import {useTheme} from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -11,7 +11,7 @@ interface ChatMessageProps {
 }
 
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme(),
+  const { theme } = useTheme();
   
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -33,7 +33,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
       </Avatar>
       
       <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
         isUser 
           ? "bg-zion-purple text-white" 
           : theme === "dark"
@@ -42,7 +42,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-          "text-xs mt-1",
+          "text-xs mt-1";
           isUser 
             ? "text-white/70" 
             : theme === "dark"
@@ -63,7 +63,7 @@ function formatMessageWithLinks(message: string): string {
   let formattedMessage = message.replace(
     urlRegex, 
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  ),
+  );
   
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g,

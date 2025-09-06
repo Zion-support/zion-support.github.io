@@ -1,33 +1,33 @@
 
 export interface FilterSidebarProps {
-  searchTerm: string,
-  setSearchTerm: (term: string) => void,
-  selectedSkills: string[],
-  toggleSkill: (skill: string) => void,
-  selectedAvailability: string[],
-  toggleAvailability: (availability: string) => void,
-  selectedRegions: string[],
+  searchTerm: string;
+  setSearchTerm: (term: string) => void;
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (availability: string) => void;
+  selectedRegions: string[];
   toggleRegion: (region: string) => void,
-  priceRange: [number, number],
-  setPriceRange: (range: [number, number]) => void,
-  experienceRange: [number, number],
-  setExperienceRange: (range: [number, number]) => void,
+  priceRange: [number, number];
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number];
+  setExperienceRange: (range: [number, number]) => void;
   expandedSections: {
-    skills: boolean,
-    availability: boolean,
-    region: boolean,
+    skills: boolean;
+    availability: boolean;
+    region: boolean;
     experience: boolean,
     price: boolean
-  },
-  toggleSection: (sectionName: string) => void,
-  sortOption: string,
-  setSortOption: (option: string) => void,
+  };
+  toggleSection: (sectionName: string) => void;
+  sortOption: string;
+  setSortOption: (option: string) => void;
   clearFilters: () => void,
   isMobileFilterOpen?: boolean
 }
 
 export interface FilterComponentProps {
-  expanded: boolean,
+  expanded: boolean;
   toggleSection: () => void,
   isMobileFilterOpen?: boolean
 }
@@ -48,12 +48,12 @@ export interface RegionFilterProps extends FilterComponentProps {
 }
 
 export interface ExperienceFilterProps extends FilterComponentProps {
-  experienceRange: [number, number],
+  experienceRange: [number, number];
   setExperienceRange: (range: [number, number]) => void
 }
 
 export interface PriceFilterProps extends FilterComponentProps {
-  priceRange: [number, number],
+  priceRange: [number, number];
   setPriceRange: (range: [number, number]) => void
 }
 

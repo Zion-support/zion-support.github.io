@@ -1,6 +1,6 @@
-import { QuoteFormData } from "@/types/quotes",;
-import { Label } from "@/components/ui/label",;
-import { Slider } from "@/components/ui/slider",;
+import {QuoteFormData} from "@/types/quotes";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
 interface BudgetStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -11,7 +11,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
         budget: {
-          ...formData.budget,
+          ...formData.budget;
           type,
           maxAmount: formData.budget.amount + 5000
         }
@@ -24,7 +24,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
         }
       })
     }
-  },
+  };
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -32,7 +32,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       currency: 'USD',
       maximumFractionDigits: 0
     }).format(value)
-  },
+  };
 
   return (
     <div className="space-y-6">
@@ -131,8 +131,8 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   max={50000}
                   step={500}
                   onValueChange={(value) => {
-                    const newAmount = value[0],
-                    const maxAmount = formData.budget.maxAmount || 50000,
+                    const newAmount = value[0];
+                    const maxAmount = formData.budget.maxAmount || 50000;
                     
                     updateFormData({
                       budget: { 

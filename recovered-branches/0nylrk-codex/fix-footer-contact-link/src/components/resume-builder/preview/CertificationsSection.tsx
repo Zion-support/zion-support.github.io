@@ -1,6 +1,6 @@
 
-import { Certification } from '@/types/resume',;
-import { format } from 'date-fns',;
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
 }
@@ -12,9 +12,9 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
       return format(new Date(date), 'MMM yyyy')
     }
     return format(date, 'MMM yyyy')
-  },
+  };
 
-  if (certifications.length === 0) return null,
+  if (certifications.length === 0) return null;
   
   return (
     <div>

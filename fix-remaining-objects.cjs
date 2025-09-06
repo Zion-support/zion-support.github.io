@@ -8,8 +8,8 @@ function fixRemainingObjects(filePath) {;
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2');
-;
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
     // Fix semicolons in array elements;    content = content.replace(/"([^"]*)";/g, '"$1",');
     content = content.replace(/"([^"]*)",;/g, '"$1",');
     content = content.replace(/"([^"]*)";/g, '"$1"');
@@ -50,8 +50,8 @@ function fixRemainingObjects(filePath) {;
 ;
     // Fix semicolons in object properties;
     content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2');
-;
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
     // Fix semicolons in array elements;    content = content.replace(/"([^"]*)";/g, '"$1",');
     content = content.replace(/"([^"]*)",;/g, '"$1",');
     content = content.replace(/"([^"]*)";/g, '"$1"');
