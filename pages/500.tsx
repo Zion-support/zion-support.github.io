@@ -85,7 +85,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <div className="space-y-4">
             <Link 
               href="/" 
-              className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
@@ -118,7 +118,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </>
-  );
+  ),
   )
 }
   )

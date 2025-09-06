@@ -19,7 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
-        if (c.isFree !== freeVal) return false;
+        if (c.isFree !== freeVal) return false,
         if (c.isFree !== freeVal) return false
 ursor/integrate-build-improve-and-re-verify-b76c
       }

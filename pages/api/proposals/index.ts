@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const item = {
-      id: body.id;
+      id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,
       regionalScope: body.regionalScope,

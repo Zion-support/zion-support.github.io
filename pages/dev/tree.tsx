@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Tree, { TreeNode } from '../../components/ui/Tree';
 
 interface ApiResponse {
-  nodes: TreeNode[];
+  nodes: TreeNode[],
 status: {
   gitConnected: boolean, gitBranch?: string 
 import React, { useEffect, useState } from "react";
@@ -42,7 +42,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       setNodes(data.nodes);
       setGit(data.status)
     } catch (e: any) {
-      setError(e.message || 'Failed to load');
+      setError(e.message || 'Failed to load'),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null);
   const [adminToken, setAdminToken] = useState<string>("");
 
@@ -96,7 +96,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         method: "POST",
 ursor/integrate-build-improve-and-re-verify-b76c
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "x-admin-token": adminToken};
         body: JSON.stringify({ path: p })}),
       if (!resp.ok) {
@@ -105,12 +105,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
       }
       await fetchTree(adminToken)
     } catch (e: any) {
-      setError(e.message || 'Deploy failed');
+      setError(e.message || 'Deploy failed'),
       const resp = await fetch("/api/dev/source-map", {
         method: "POST",
         headers: {
       
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "x-admin-token": adminToken
     },
     body: JSON.stringify({ path: p })}),

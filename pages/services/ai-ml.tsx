@@ -1,24 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  Cpu,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-import { 
-  Brain, Cpu, Database, Zap, Shield, Rocket, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, Cpu, Database, Zap, Shield, Rocket, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp,, import, {, Brain, Cpu, Database, Zap, Shield, Rocket, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AIMLServicesPage() {
@@ -81,10 +64,7 @@ export default function AIMLServicesPage() {
           content='Cutting-edge AI and machine learning solutions that drive business growth and innovation.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/services/ai-ml' />
-import { 
-  Brain, Cpu, Database, Zap, Shield, Rocket, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {Brain, Cpu, Database, Zap, Shield, Rocket, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AIMLServicesPage() {
@@ -402,7 +382,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {

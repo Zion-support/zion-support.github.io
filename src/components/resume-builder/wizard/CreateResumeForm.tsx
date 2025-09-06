@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
-import { CreateResumeFormProps } from './types';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types";
+import {useState} from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Loader2} from 'lucide-react'
+import {CreateResumeFormProps} from "./types";
 export const CreateResumeForm = ({ 
   onCreateResume;
   onCancel;
@@ -48,16 +39,12 @@ export const CreateResumeForm = ({
               Create
             </Button>
           </div>
-<<<<<<< HEAD
 
-          <Button variant='ghost' onClick={onCancel} className='mt-4'>
-=======
-
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types";
+import {useState} from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Loader2} from 'lucide-react'
+import {CreateResumeFormProps} from "./types";
 export const CreateResumeForm = ({ 
   onCreateResume,
   onCancel;
@@ -95,41 +82,20 @@ export const CreateResumeForm = ({
               Create
             </Button>
           </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           
           <Button
             variant="ghost"
             onClick={onCancel}
             className="mt-4"
           >
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Cancel
           </Button>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={;
-  handleSubmit ;
-}disabled= {;
-  !newResumeTitle.trim () || isLoading ;
-}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>) ;
-};
-'"
-=======
   )
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

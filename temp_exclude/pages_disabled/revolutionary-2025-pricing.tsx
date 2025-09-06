@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Star, Check, Mail, Phone, MapPin, Sparkles, Brain, Cpu, Zap, Rocket, Crown, ExternalLink, BookOpen } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Star,, Check,, Mail,, Phone,, MapPin,, Sparkles,, Brain,, Cpu,, Zap,, Rocket,, Crown,, ExternalLink,, BookOpen} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import Layout from '../components/layout/Layout';
-import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
-import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
-import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+import {revolutionaryAI2025Services} from '../data/revolutionary-2025-ai-services';
+import {revolutionaryITInfrastructure2025Services} from '../data/revolutionary-2025-it-infrastructure';
+import {revolutionary2025MicroSaasServices} from '../data/revolutionary-2025-micro-saas';
 
 export default function Revolutionary2025Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -515,7 +515,7 @@ export default function Revolutionary2025Pricing() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Button
                     variant="primary"
                     size="lg"
@@ -539,5 +539,5 @@ export default function Revolutionary2025Pricing() {
         </div>
       </UltraQuantumHolographicBackground>
     </Layout>
-  );
+  ),
 }

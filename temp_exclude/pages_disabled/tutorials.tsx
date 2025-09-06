@@ -1,41 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Play, 
-  Clock, 
-  User, 
-  Tag, 
-  ArrowRight,
-  BookOpen,
-  Code,
-  Brain,
-  Shield,
-  Cloud,
-  BarChart3,
-  Target,
-  CheckCircle,
-  Star,
-  MessageSquare,
-  FileText,
-  Building,
-  Heart,
-  DollarSign,
-  Settings,
-  Network,
-  Lock,
-  Eye,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Award,
-  Users,
-  Globe,
-  TrendingUp,
-  Calendar,
-  Download,
-  ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Play,, Clock,, User,, Tag,, ArrowRight,, BookOpen,, Code,, Brain,, Shield,, Cloud,, BarChart3,, Target,, CheckCircle,, Star,, MessageSquare,, FileText,, Building,, Heart,, DollarSign,, Settings,, Network,, Lock,, Eye,, Phone,, Mail,, MapPin,, Zap,, Award,, Users,, Globe,, TrendingUp,, Calendar,, Download,, ExternalLink} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const tutorialCategories = [
@@ -394,7 +359,7 @@ export default function TutorialsPage() {
 
         {/* Newsletter Signup */}
         <section className="py-20 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold mb-6">Stay Learning</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Get notified when we publish new tutorials and learning content
@@ -416,5 +381,5 @@ export default function TutorialsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

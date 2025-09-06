@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Users, 
-  MessageSquare, 
-  Calendar, 
-  BookOpen, 
-  Trophy, 
-  ArrowRight,
-  Search,
-  Filter,
-  Star,
-  Clock,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users,, MessageSquare,, Calendar,, BookOpen,, Trophy,, ArrowRight,, Search,, Filter,, Star,, Clock,, MapPin,, ExternalLink} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const communityStats = [
@@ -161,12 +148,12 @@ export default function CommunityPage() {
                 Connect with developers, share knowledge, attend events, and grow together;
                 in our vibrant technology community.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/register" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Join Community;
                 </Link>
                 <Link href="/events" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View Events;
+                  View Events,
                 </Link>
               </div>
             </motion.div>
@@ -183,8 +170,8 @@ export default function CommunityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Community by the Numbers;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Community by the Numbers,
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
                 Our growing community of developers, engineers, and technology enthusiasts.
@@ -221,8 +208,8 @@ export default function CommunityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Upcoming Events;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Upcoming Events,
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
                 Join our workshops, meetups, and webinars to learn and network with peers.
@@ -272,8 +259,8 @@ export default function CommunityPage() {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                    Register Now;
+                  <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors font-medium">
+                    Register Now,
                   </button>
                 </motion.div>
               ))};
@@ -291,8 +278,8 @@ export default function CommunityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Community Discussions;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Community Discussions,
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
                 Engage in meaningful conversations and share your knowledge with the community.
@@ -379,8 +366,8 @@ export default function CommunityPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Community Resources;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Community Resources,
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
                 Access exclusive resources, documentation, and learning materials.
@@ -410,13 +397,13 @@ export default function CommunityPage() {
                     </p>
                     <Link
                       href={resource.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-medium"
                     >
                       Learn More;
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </Link>
                   </motion.div>
-                );
+                ),
               })};
             </div>
           </div>
@@ -438,7 +425,7 @@ export default function CommunityPage() {
                 Connect with like-minded professionals, share knowledge, and grow your career;
                 in our vibrant technology community.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/register" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   Join Now;
                 </Link>
@@ -451,5 +438,5 @@ export default function CommunityPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 };

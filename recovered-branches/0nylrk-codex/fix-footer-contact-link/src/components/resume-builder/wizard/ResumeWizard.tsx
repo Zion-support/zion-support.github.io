@@ -1,22 +1,22 @@
 
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useResume } from '@/hooks/useResume';
-import { Tabs } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Resume } from '@/types/resume';
+import {useState, useEffect} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {useResume} from '@/hooks/useResume';
+import {Tabs} from '@/components/ui/tabs';
+import {Card, CardContent} from '@/components/ui/card';
+import {Alert, AlertDescription, AlertTitle} from '@/components/ui/alert';
+import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Resume} from '@/types/resume';
 // Import components
-import { ResumeProgress } from './ResumeProgress';
-import { EmptyResumeState } from './EmptyResumeState';
-import { CreateResumeForm } from './CreateResumeForm';
-import { ResumeSteps } from './ResumeSteps';
-import { ResumeStepContent } from './ResumeStepContent';
-import { useResumeProgress } from './useResumeProgress';
-import { ResumeVersionSelector } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
+import {ResumeProgress} from './ResumeProgress';
+import {EmptyResumeState} from './EmptyResumeState';
+import {CreateResumeForm} from './CreateResumeForm';
+import {ResumeSteps} from './ResumeSteps';
+import {ResumeStepContent} from './ResumeStepContent';
+import {useResumeProgress} from './useResumeProgress';
+import {ResumeVersionSelector} from './ResumeVersionSelector';
+import {RESUME_STEPS} from './constants';
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 

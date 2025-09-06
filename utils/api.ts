@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-}};
-export const apiClient = new ApiClient();
-};
-export const apiClient = new ApiClient();
-export type { ApiResponse, RequestOptions };
-;
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
-=======
-interface ApiResponse<T = unknown> {
-  data?: T;
-  error?: string;
-  success: boolean;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }
 
 interface RequestOptions extends RequestInit {
@@ -31,49 +18,27 @@ interface RequestInit {
 }
 
 interface AbortSignal {
-<<<<<<< HEAD
   aborted: boolean,
   addEventListener(type: string, listener: () => void): void,
   removeEventListener(type: string, listener: () => void): void,
 }
 
 class AbortController {
-  signal: AbortSignal, abort(): void,
-}
-
-class ApiClient {
-  private baseUrl: string, private defaultTimeout: number,
-
-  constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
-    this.baseUrl = baseUrl,
-    this.defaultTimeout = defaultTimeout
-  }
-
-  private async request<T>(
-    endpoint: string,
-=======
-  aborted: boolean;
-  addEventListener(type: string, listener: () => void): void;
-  removeEventListener(type: string, listener: () => void): void;
-}
-
-class AbortController {
   signal: AbortSignal;
-  abort(): void;
+  abort(): void,
 }
 
 class ApiClient {
   private baseUrl: string;
-  private defaultTimeout: number;
+  private defaultTimeout: number,
 
   constructor(baseUrl: string = '', defaultTimeout: number = 10000) {
     this.baseUrl = baseUrl;
-    this.defaultTimeout = defaultTimeout;
+    this.defaultTimeout = defaultTimeout,
   }
 
   private async request<T>(
-    endpoint: string;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    endpoint: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const { timeout = this.defaultTimeout, ...fetchOptions } = options;
@@ -84,19 +49,11 @@ class ApiClient {
 
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
         ...fetchOptions;
-<<<<<<< HEAD
-        signal: controller.signal,
-        headers: {
-    'Content-Type': 'application/json',
-    ...fetchOptions.headers
-  };
-=======
         signal: controller.signal;
         headers: {
           'Content-Type': 'application/json';
-          ...fetchOptions.headers;
+          ...fetchOptions.headers,
         };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
 
       clearTimeout(timeoutId);
@@ -111,12 +68,8 @@ class ApiClient {
       // eslint-disable-next-line no-console
       console.error('API request failed:', error);
       return {
-<<<<<<< HEAD
-        error: error instanceof Error ? error.message : 'Unknown error occurred', success: false,
-=======
         error: error instanceof Error ? error.message : 'Unknown error occurred';
-        success: false;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        success: false,
       };
     }
   }
@@ -128,24 +81,16 @@ class ApiClient {
   async post<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options;
-<<<<<<< HEAD
-      method: 'POST', body: data ? JSON.stringify(data) : undefined,
-=======
       method: 'POST';
-      body: data ? JSON.stringify(data) : undefined;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
   async put<T>(endpoint: string, data?: unknown, options?: RequestOptions): Promise<ApiResponse<T>> {
     return this.request<T>(endpoint, {
       ...options;
-<<<<<<< HEAD
-      method: 'PUT', body: data ? JSON.stringify(data) : undefined,
-=======
       method: 'PUT';
-      body: data ? JSON.stringify(data) : undefined;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      body: data ? JSON.stringify(data) : undefined,
     });
   }
 
@@ -155,8 +100,4 @@ class ApiClient {
 }
 
 export const apiClient = new ApiClient();
-<<<<<<< HEAD
 export type { ApiResponse, RequestOptions };
-=======
-export type { ApiResponse, RequestOptions };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,15 +1,15 @@
 
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { useMessaging } from "@/context/MessagingContext";
-import { toast } from "@/hooks/use-toast";
-import { ResumeSelector, ResumeOption } from "../resume-selector";
-import { MessageTab } from "./MessageTab";
-import { ResumeTab } from "./ResumeTab";
-import { Job } from "./types";
+import {Button} from "@/components/ui/button";
+import {Loader2} from "lucide-react";
+import {Tabs,, TabsContent,, TabsList,, TabsTrigger} from "@/components/ui/tabs";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useMessaging} from "@/context/MessagingContext";
+import {toast} from "@/hooks/use-toast";
+import {ResumeSelector,, ResumeOption} from "../resume-selector";
+import {MessageTab} from "./MessageTab";
+import {ResumeTab} from "./ResumeTab";
+import {Job} from "./types";
 interface ApplyFormProps {
   job: Job,
   onClose: () => void,
@@ -29,7 +29,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
   
   const handleResumeSelected = (resume: ResumeOption) => {
-    setSelectedResume(resume);
+    setSelectedResume(resume),
     setSelectedResumeId(resume.id)
   };
   

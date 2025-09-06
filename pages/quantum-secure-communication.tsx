@@ -1,38 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Lock,
-  Brain,
-  Database,
-  TrendingUp as TrendingUpIcon,
-  Users,
-  Target,
-  BarChart,
-  PieChart,
-  Activity,
-  Eye,
-  Key,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Lock;
-  Brain, Database, TrendingUp as TrendingUpIcon, Users;
-  Target, BarChart, PieChart, Activity, Eye, Key
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Lock, Brain, Database, TrendingUp, as, TrendingUpIcon, Users, Target, BarChart, PieChart, Activity, Eye, Key,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Lock, Brain, Database, TrendingUp, as, TrendingUpIcon, Users, Target, BarChart, PieChart, Activity, Eye, Key, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';

@@ -1,37 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;
+import {Building,, Shield,, Users,, CheckCircle,, ArrowRight,, Globe,, BarChart3,, FileText,, Lock,, Database,, Phone,, Mail} from 'lucide-react';;
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Building, 
-  Shield, 
-  Users, 
+import {motion} from 'framer-motion';
+import {Building,, Shield,, Users,, =======, import, React, from, 'react',, import, Link, from, 'next/link',',, import, {, motion} from 'framer-motion';
 =======
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import {
-  Building,
-  Shield,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Globe,
-  BarChart3,
-  FileText,
-  Lock,
-  Database,
-  Phone,
-  Mail;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Building,, Shield,, Users,, CheckCircle,, ArrowRight,, Globe,, BarChart3,, FileText,, Lock,, Database,, Phone,, Mail,} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import Layout from '../../components/Layout';';
@@ -278,11 +259,11 @@ export default function GovernmentPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
 <<<<<<< HEAD
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
+                  className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
                   <ul className="space-y-3">";
@@ -407,7 +388,7 @@ export default function GovernmentPage() {
 =======
 =======
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Transform Government?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
@@ -427,5 +408,5 @@ export default function GovernmentPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

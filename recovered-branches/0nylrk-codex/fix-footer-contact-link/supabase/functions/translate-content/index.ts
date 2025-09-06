@@ -1,11 +1,11 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY");
 
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -44,7 +44,7 @@ serve(async (req) => {
       }
       
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST";
+        method: "POST",
         headers: {
           "Authorization": `Bearer ${OPENAI_API_KEY}`;
           "Content-Type": "application/json"};
@@ -52,10 +52,10 @@ serve(async (req) => {
           model: "gpt-4o-mini";
           messages: [
             {
-              role: "system";
+              role: "system",
               content: systemPrompt};
             {
-              role: "user";
+              role: "user",
               content: `Translate the following ${contentType || "content"} from ${sourceLanguage} to ${targetLang}: 
               
               ${content}
@@ -85,7 +85,7 @@ serve(async (req) => {
       JSON.stringify({
         error: error.message});
       {
-        status: 500;
+        status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   }

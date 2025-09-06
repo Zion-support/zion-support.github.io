@@ -18,7 +18,7 @@ export default function CaseStudyPage() {
 ursor/integrate-build-improve-and-re-verify-b76c
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
-    ];
+    ],
     technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics'],
     duration: '6 months',
     teamSize: '8 engineers',
@@ -27,7 +27,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
-    ];
+    ],
     technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics'],
     duration: '6 months',
     teamSize: '8 engineers',
@@ -274,7 +274,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </div>
     </>
-  );
+  ),
   )
 }
   )

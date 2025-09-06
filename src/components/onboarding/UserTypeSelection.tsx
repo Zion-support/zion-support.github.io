@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Briefcase, Star, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { Briefcase, Star, User } from 'lucide-react'
-import { Button } from "@/components/ui/button";
+import {useState} from "react";
+import {Briefcase, Star, User} from 'lucide-react'
+import {Button} from "@/components/ui/button";
 interface UserTypeOption {
   id: "serviceProvider" | "talent" | "client",
   name: string,
@@ -55,7 +48,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
           const Icon = type.icon;
-          const isSelected = selectedType === type.id;
+          const isSelected = selectedType === type.id,
           
           return (
             <Button
@@ -83,15 +76,5 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-          const Icon = type.icon;
-          const isSelected = selectedType === type.id;
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

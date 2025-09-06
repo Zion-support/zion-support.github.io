@@ -3,7 +3,7 @@
 ursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+import {Check, ExternalLink} from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
 	return (

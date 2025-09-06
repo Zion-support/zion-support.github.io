@@ -1,61 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  ExternalLink,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Lightbulb,
-  Flame,
-  Zap as ZapIcon,
-  X,
-  Sliders,
-  SortAsc,
-  SortDesc,;
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc,} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -555,8 +508,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             return a.title.localeCompare(b.title);
           case 'status':
             return a.status.localeCompare(b.status);
-          default:
-            return 0;
+          default: return 0,
           default: return 0
           default: return 0
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -576,7 +528,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      performSearch();
+      performSearch(),
       performSearch()
       performSearch()
 ursor/integrate-build-improve-and-re-verify-b76c

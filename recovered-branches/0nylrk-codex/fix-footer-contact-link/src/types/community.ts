@@ -10,7 +10,7 @@ export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
-  adminOnly: boolean;
+  adminOnly: boolean,
   icon: string
 }
 
@@ -31,7 +31,7 @@ export interface ForumPost {
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean;
+  isLocked?: boolean,
   isFeatured?: boolean
 }
 
@@ -47,7 +47,7 @@ export interface ForumReply {
   createdAt: string;
   updatedAt: string;
   upvotes: number;
-  downvotes: number;
+  downvotes: number,
   isAnswer?: boolean
 }
 
@@ -55,13 +55,13 @@ export interface Badge {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  icon: string,
   color: string
 }
 
 export interface UserBadge {
   userId: string;
-  badgeId: string;
+  badgeId: string,
   awardedAt: string
 }
 
@@ -74,6 +74,6 @@ export interface CommunityUser {
   postCount: number;
   replyCount: number;
   badges: Badge[];
-  isVerified: boolean;
+  isVerified: boolean,
   isModerator: boolean
 }

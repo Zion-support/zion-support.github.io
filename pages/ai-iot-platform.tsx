@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Cpu,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-iot-platform')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-iot-platform'));
@@ -128,7 +120,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             Build smart, connected systems with our AI-powered IoT platform for seamless device management and automation.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover:bg-violet-700">
+            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover: bg-violet-700">
               Get Started
             </a>
             <a href="/about" className="border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">
@@ -138,7 +130,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </main>
     </Layout>
-  );
+  ),
       </div>
     </Layout>
   )

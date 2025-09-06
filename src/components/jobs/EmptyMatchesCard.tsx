@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Sparkles, RefreshCcw } from 'lucide-react';
-=======
 
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Sparkles, RefreshCcw } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Card} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Sparkles, RefreshCcw} from 'lucide-react'
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
@@ -33,14 +26,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
       >
         {isProcessing ? (
           <>
-<<<<<<< HEAD
-            <RefreshCcw className='mr-2 h-4 w-4 animate-spin' />
-=======
 
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Sparkles, RefreshCcw } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import {Card} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Sparkles, RefreshCcw} from 'lucide-react'
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
@@ -65,34 +55,18 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
         {isProcessing ? (
           <>
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Processing...
           </>
         ) : (
           <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Sparkles className='mr-2 h-4 w-4' />
-=======
             <Sparkles className="mr-2 h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Sparkles className="mr-2 h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Find AI Matches
           </>
         )}
       </Button>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Mail,, Lock,, Eye,, EyeOff} from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function Login() {
@@ -20,7 +20,7 @@ export default function Login() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle login logic here
     console.log('Login attempt:', formData);
   };

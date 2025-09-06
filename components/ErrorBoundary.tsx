@@ -1,21 +1,21 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import {AlertTriangle, RefreshCw, Home} from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   level?: string;
-  fallback?: ReactNode;
+  fallback?: ReactNode,
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+  errorInfo?: ErrorInfo,
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props),
     this.state = { hasError: false };
   }
 
@@ -111,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-white/50 text-sm">
                 If this problem persists, please contact our support team at{' '}
                 <a 
-                  href="mailto:support@ziontechgroup.com" 
+                  href="mailto: support@ziontechgroup.com" 
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   support@ziontechgroup.com
@@ -120,7 +120,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      ),
     }
 
     return this.props.children;

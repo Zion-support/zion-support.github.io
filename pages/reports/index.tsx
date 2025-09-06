@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]);

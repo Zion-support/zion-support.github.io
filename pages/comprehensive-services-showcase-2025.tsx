@@ -1,50 +1,17 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,
-  Award,
-  Zap,
-  Cloud,
-  Target,
-  Search,
-  Filter,
-  Grid,
-  List,
-  DollarSign,
-  Users,
-  Clock,
-  Eye,
-  Heart,;
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+import {comprehensiveRealServices2025} from '../data/2025-comprehensive-real-services';
 
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart} from 'lucide-react';
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
-  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
-} from 'lucide-react';
+import {comprehensiveRealServices2025} from '../data/2025-comprehensive-real-services';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart} from 'lucide-react';
 
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+import {comprehensiveRealServices2025} from '../data/2025-comprehensive-real-services';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -166,8 +133,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         return b.rating - a.rating;
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default:
-        return 0;
+      default: return 0,
       default: return 0
       default: return 0
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -187,7 +153,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
-    );
+    ),
     return categoryData ? categoryData.icon : Globe
   };
 
@@ -195,21 +161,21 @@ ursor/integrate-build-improve-and-re-verify-b76c
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600',
     return '$800+'
   };
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
-    );
+    ),
     return categoryData ? categoryData.icon : Globe
   };
 
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat => 
       category.toLowerCase().includes(cat.id.toLowerCase())
-    );
+    ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
 ursor/integrate-build-improve-and-re-verify-b76c

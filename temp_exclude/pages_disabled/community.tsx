@@ -1,24 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  MessageSquare, 
-  Calendar, 
-  Award, 
-  Star, 
-  ThumbsUp, 
-  Share2, 
-  ExternalLink,
-  Search,
-  Filter,
-  Clock,
-  MapPin,
-  Video,
-  BookOpen,
-  Code,
-  Lightbulb
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users,, MessageSquare,, Calendar,, Award,, Star,, ThumbsUp,, Share2,, ExternalLink,, Search,, Filter,, Clock,, MapPin,, Video,, BookOpen,, Code,, Lightbulb} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const communityStats = [
@@ -461,7 +444,7 @@ export default function Community() {
               <p className="text-xl text-blue-100 mb-8">
                 Connect with thousands of professionals, share your knowledge, and learn from the best in the industry.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex flex-col sm: flex-row justify-center gap-4">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Join Now - It's Free
                 </button>
@@ -474,5 +457,5 @@ export default function Community() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

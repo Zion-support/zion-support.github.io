@@ -1,14 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import Link from 'next/link';
 
 type Member = {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'manager' | 'recruiter' | 'viewer';
+  role: 'admin' | 'manager' | 'recruiter' | 'viewer',
 };
 
-type Usage = { monthlyJobPosts: number; budgetCapUsd: number };
+type Usage = { monthlyJobPosts: number, budgetCapUsd: number };
 
 type Invoice = {
   id: string;
@@ -16,7 +16,7 @@ type Invoice = {
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
-  status: string;
+  status: string,
 };
 type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
 type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
@@ -137,7 +137,7 @@ function MembersTab({
   setMembers,
 }: {
   members: Member[];
-  setMembers: (m: Member[]) => void;
+  setMembers: (m: Member[]) => void,
 }) {
       {tab === 'activity' && (
         <ActivityTab events={activity} />

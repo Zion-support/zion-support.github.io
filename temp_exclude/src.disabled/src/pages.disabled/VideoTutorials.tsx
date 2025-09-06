@@ -1,89 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Play, 
-  Clock, 
-  Users, 
-  Star, 
-  ArrowRight,
-  Search,
-  Filter,
-  BookOpen,
-  Video,
-  FileText,
-  Code,
-  Database,
-  Shield,
-  Cloud,
-  Brain,
-  Network,
-  Zap,
-  TrendingUp,
-  CheckCircle,
-  Eye,
-  Bookmark,
-  Share2,
-  Download,
-  ExternalLink,
-  Filter as FilterIcon,
-  CalendarDays,
-  Clock2,
-  MapPin2,
-  User,
-  Users2,
-  Award,
-  Trophy,
-  Gift,
-  Coffee,
-  Wifi,
-  Car,
-  Plane,
-  Train,
-  Bus,
-  Bike,
-  Walk,
-  Home,
-  Building,
-  Factory,
-  City,
-  Mountain,
-  Tree,
-  Leaf,
-  Flower,
-  Sun,
-  Moon,
-  Cloud as CloudIcon,
-  Rain,
-  Snow,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  Sunglasses,
-  Snowflake,
-  CloudRain,
-  CloudLightning,
-  CloudSnow,
-  CloudFog,
-  CloudDrizzle,
-  CloudHail,
-  CloudSleet,
-  CloudRainWind,
-  CloudLightningRain,
-  CloudSnowRain,
-  CloudFogRain,
-  CloudDrizzleRain,
-  CloudHailRain,
-  CloudSleetRain,
-  CloudRainWindRain,
-  CloudLightningRainWind,
-  CloudSnowRainWind,
-  CloudFogRainWind,
-  CloudDrizzleRainWind,
-  CloudHailRainWind,
-  CloudSleetRainWind
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Play,, Clock,, Users,, Star,, ArrowRight,, Search,, Filter,, BookOpen,, Video,, FileText,, Code,, Database,, Shield,, Cloud,, Brain,, Network,, Zap,, TrendingUp,, CheckCircle,, Eye,, Bookmark,, Share2,, Download,, ExternalLink,, Filter, as, FilterIcon,, CalendarDays,, Clock2,, MapPin2,, User,, Users2,, Award,, Trophy,, Gift,, Coffee,, Wifi,, Car,, Plane,, Train,, Bus,, Bike,, Walk,, Home,, Building,, Factory,, City,, Mountain,, Tree,, Leaf,, Flower,, Sun,, Moon,, Cloud, as, CloudIcon,, Rain,, Snow,, Wind,, Thermometer,, Droplets,, Umbrella,, Sunglasses,, Snowflake,, CloudRain,, CloudLightning,, CloudSnow,, CloudFog,, CloudDrizzle,, CloudHail,, CloudSleet,, CloudRainWind,, CloudLightningRain,, CloudSnowRain,, CloudFogRain,, CloudDrizzleRain,, CloudHailRain,, CloudSleetRain,, CloudRainWindRain,, CloudLightningRainWind,, CloudSnowRainWind,, CloudFogRainWind,, CloudDrizzleRainWind,, CloudHailRainWind,, CloudSleetRainWind} from 'lucide-react';
 
 export default function VideoTutorials() {
   const tutorialCategories = [
@@ -524,7 +442,7 @@ export default function VideoTutorials() {
               your technology skills today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/training"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-red-500/25"
@@ -544,5 +462,5 @@ export default function VideoTutorials() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

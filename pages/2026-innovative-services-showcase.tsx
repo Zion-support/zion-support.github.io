@@ -1,30 +1,14 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Zap,
-  Brain,
-  Globe,
-  Shield,
-  Phone,
-  Mail,;
-} from 'lucide-react';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail,} from 'lucide-react';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail} from 'lucide-react';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
+import {innovative2026MicroSaasServicesV4} from '../data/innovative-2026-micro-saas-v4';
+import {emergingTech2026ServicesV4} from '../data/emerging-tech-2026-services-v4';
+import {enterpriseIT2026ServicesV4} from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 
@@ -150,8 +134,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               service.category?.includes('Neuromorphic') ||
               service.category?.includes('Synthetic')
             );
-          default:
-            return true;
+          default: return true,
         }
       });
             return service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic');
@@ -176,8 +159,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             return price >= 500 && price <= 1000;
           case 'high':
             return price > 1000;
-          default:
-            return true;
+          default: return true,
         }
       });
           default: return true
@@ -219,8 +201,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           return b.rating - a.rating;
         case 'popularity':
           return b.customers - a.customers;
-        default:
-          return a.name.localeCompare(b.name);
+        default: return a.name.localeCompare(b.name),
       }
     });
 
@@ -785,7 +766,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              <h2 className='text-4xl md: text-5xl font-bold text-white mb-6'>
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?
@@ -852,7 +833,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
   )
 }
   )

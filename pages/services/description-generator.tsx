@@ -33,7 +33,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setAccepted(false);
+    setAccepted(false),
 
     try {
       const response = await fetch('/api/generate-service-description', {

@@ -24,7 +24,7 @@ export interface AdvancedITService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const advancedITServices: AdvancedITService[] = [{
+reviews: number,export const advancedITServices: AdvancedITService[] = [{
     id:,
   quantum-cloud-platform',
     "name": 'Quantum Cloud Platform,

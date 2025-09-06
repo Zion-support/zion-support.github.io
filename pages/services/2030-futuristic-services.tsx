@@ -1,36 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Clock,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  Atom,
-  Globe,
-  Target,
-  Microscope,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin,} from 'lucide-react';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin} from 'lucide-react';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
-import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services';
-import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech';
-import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions';
-import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
-import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
-import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
+import {futuristicAIServices2030} from '../../data/2030-futuristic-ai-services';
+import {quantumEmergingTechServices2030} from '../../data/2030-quantum-emerging-tech';
+import {enterpriseITSolutions2030} from '../../data/2030-enterprise-it-solutions';
+import {spaceMetaverseTechServices2030} from '../../data/2030-space-metaverse-tech';
+import {innovativeMicroSaasServices2030} from '../../data/2030-innovative-micro-saas';
+import {researchDevelopmentServices2030} from '../../data/2030-research-development';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function FuturisticServices2030Page() {
@@ -235,10 +218,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https: //schema.org", "@type": "Service",
-              "@context": "https://schema.org";
+              "@context": "https: //schema.org";
               "@type": "Service";
 ursor/integrate-build-improve-and-re-verify-b76c
-              "name": "2030 Futuristic Technology Services";
+              "name": "2030 Futuristic Technology Services",
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
               "provider": {
                 "@type": "Organization";
@@ -246,12 +229,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 "url": "https://ziontechgroup.com"
               };
               "url": "https: //ziontechgroup.com/services/2030-futuristic-services",
-              "url": "https://ziontechgroup.com/services/2030-futuristic-services";
+              "url": "https: //ziontechgroup.com/services/2030-futuristic-services";
 ursor/integrate-build-improve-and-re-verify-b76c
               "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";
-                "contactType": "customer service";
+                "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               }
             })

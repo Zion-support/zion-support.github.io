@@ -9,18 +9,14 @@ const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerC
   transition: {
   staggerChildren: 0.1 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Rocket, Globe, Cpu, Database, 
-  TrendingUp, Users, Star, Zap, Lock, Target;
-  ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, Shield, Rocket, Globe, Cpu, Database, TrendingUp, Users, Star, Zap, Lock, Target, ArrowRight, Phone, Mail, MapPin, ExternalLink} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 // Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+import {innovativeMicroSaasExpansionV32025} from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovativeITServicesExpansion2025V3} from '../data/2025-innovative-it-services-expansion-v3';
+import {innovativeAIServicesExpansion2025V3} from '../data/2025-innovative-ai-services-expansion-v3';
 const Innovative2025ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -460,17 +456,13 @@ autonomous systems, and innovative micro SAAS services that are transforming ind
 }<motion.footer > <div> <div className="flex items-center space-x-2 mb-4" > <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center" > <Zap className="w-5 h-5 text-white" /> </div> <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Zion Tech Group </span> </div> <p className="text-gray-400 text-sm" > Transforming businesses with innovative technology solutions for the future. </p> </div> <div> <h3 className="text-white font-semibold mb-4" >Services</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/services" className="hover:text-white transition-colors" >AI Services</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >IT Infrastructure</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >Micro SAAS</Link></li> <li><Link href="/services" className="hover:text-white transition-colors" >Cybersecurity</Link></li> </ul> </div> <div> <h3 className="text-white font-semibold mb-4" >Company</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/about" className="hover:text-white transition-colors" >About Us</Link></li> <li><Link href="/team" className="hover:text-white transition-colors" >Our Team</Link></li> <li><Link href="/careers" className="hover:text-white transition-colors" >Careers</Link></li> <li><Link href="/news" className="hover:text-white transition-colors" >News</Link></li> </ul> </div> <div> <h3 className="text-white font-semibold mb-4" >Connect</h3> <ul className="space-y-2 text-sm text-gray-400" > <li><Link href="/contact" className="hover:text-white transition-colors" >Contact</Link></li> <li><Link href="/support" className="hover:text-white transition-colors" >Support</Link></li> <li><Link href="/blog" className="hover:text-white transition-colors" >Blog</Link></li> <li><Link href="/resources" className="hover:text-white transition-colors" >Resources</Link></li> </ul> </div> </div> <div className="mt-12 pt-8 border-t border-gray-800 text-center" > <p className="text-gray-400 text-sm" > © 2025 Zion Tech Group. All rights reserved. | <Link href="/privacy" className="hover:text-white transition-colors ml-2" >Privacy Policy</Link> | <Link href="/terms" className="hover:text-white transition-colors ml-2" >Terms of Service</Link> </p> </div> </div> </motion.footer> </div> </div> </>) 
 };
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Shield, Rocket, Globe, Cpu, Database, 
-  TrendingUp, Users, Star, Zap, Lock, Target;
-  ArrowRight, Phone, Mail, MapPin, ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, Shield, Rocket, Globe, Cpu, Database, TrendingUp, Users, Star, Zap, Lock, Target, ArrowRight, Phone, Mail, MapPin, ExternalLink} from 'lucide-react';
 
 // Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+import {innovativeMicroSaasExpansionV32025} from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovativeITServicesExpansion2025V3} from '../data/2025-innovative-it-services-expansion-v3';
+import {innovativeAIServicesExpansion2025V3} from '../data/2025-innovative-ai-services-expansion-v3';
 const Innovative2025ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');

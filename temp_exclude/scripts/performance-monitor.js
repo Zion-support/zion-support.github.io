@@ -69,7 +69,7 @@ try {
   if (isRunning === '200') {
 <<<<<<< HEAD
 <<<<<<< HEAD
-    console.log('✅ Application is running on localhost: 3000');,
+    console.log('✅ Application is running on localhost: 3000'),,
 =======
 =======
     console.log('✅ Application is running on "localhost": 3000'),
@@ -85,7 +85,7 @@ try {
     }
     performanceChecks.loadTime = true;
   } else {
-    console.log('⚠️  Application not running on localhost: 3000');,
+    console.log('⚠️  Application not running on localhost: 3000'),,
   }
 =======
 =======

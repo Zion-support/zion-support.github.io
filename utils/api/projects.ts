@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-  Project,
-  Milestone,
-  MilestoneStatus,
-  isMilestoneStatus,;
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-=======
 export interface Project {
   id: string;
   title: string;
@@ -20,9 +7,8 @@ export interface Project {
   talentId: string;
   createdAt: string;
   updatedAt: string;
-  milestones: Milestone[];
+  milestones: Milestone[],
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export interface Milestone {
   id: string;
@@ -33,14 +19,14 @@ export interface Milestone {
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 // Mock storage
 const projects: Project[] = [];
 
 export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) || null;
+  return projects.find(p => p.id === id) || null,
 }
 
 export function getAllProjects(): Project[] {
@@ -60,7 +46,7 @@ export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updat
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
   const project = projects.find(p => p.id === id);
-  if (!project) return null;
+  if (!project) return null,
   
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project;
@@ -74,14 +60,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
-<<<<<<< HEAD
-  project.milestones[idx] = next;
-  project.updatedAt = now;
-  saveProject(project);
-  return next;
-=======
 // Project management utilities
-import { v4 as uuidv4 } from 'uuid';
+import {v4, as, uuidv4} from 'uuid';
 
 export interface Project {
   id: string;
@@ -96,22 +76,22 @@ export interface Project {
     title: string;
     amount: number;
     dueDate?: string;
-    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE';
+    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE',
   }>;
   documents: Array<{
     id: string;
     name: string;
     url: string;
-    uploadedAtIso: string;
+    uploadedAtIso: string,
   }>;
   notes: Array<{
     id: string;
     content: string;
     authorId: string;
-    createdAtIso: string;
+    createdAtIso: string,
   }>;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface Milestone {
@@ -123,7 +103,7 @@ export interface Milestone {
   dueDate?: string;
   status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE';
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface ProjectMember {
@@ -131,7 +111,7 @@ export interface ProjectMember {
   projectId: string;
   userId: string;
   role: 'CLIENT' | 'TALENT' | 'ADMIN';
-  joinedAt: string;
+  joinedAt: string,
 }
 
 // In-memory storage for demo purposes
@@ -140,7 +120,7 @@ const milestones: Milestone[] = [];
 const projectMembers: ProjectMember[] = [];
 
 export function saveProject(project: Project): void {
-  const existingIndex = projects.findIndex(p => p.id === project.id);
+  const existingIndex = projects.findIndex(p => p.id === project.id),
   if (existingIndex >= 0) {
     projects[existingIndex] = { ...project, updatedAt: new Date().toISOString() };
   } else {
@@ -149,15 +129,15 @@ export function saveProject(project: Project): void {
 }
 
 export function getProject(projectId: string): Project | null {
-  return projects.find(p => p.id === projectId) || null;
+  return projects.find(p => p.id === projectId) || null,
 }
 
 export function getProjectsByClient(clientId: string): Project[] {
-  return projects.filter(p => p.clientId === clientId);
+  return projects.filter(p => p.clientId === clientId),
 }
 
 export function getProjectsByTalent(talentSlug: string): Project[] {
-  return projects.filter(p => p.talentSlug === talentSlug);
+  return projects.filter(p => p.talentSlug === talentSlug),
 }
 
 export function getAllProjects(): Project[] {
@@ -165,7 +145,7 @@ export function getAllProjects(): Project[] {
 }
 
 export function deleteProject(projectId: string): boolean {
-  const index = projects.findIndex(p => p.id === projectId);
+  const index = projects.findIndex(p => p.id === projectId),
   if (index >= 0) {
     projects.splice(index, 1);
     // Also delete related milestones and members
@@ -199,7 +179,7 @@ export function createProject(data: {
   timeline?: Array<{
     title: string;
     amount: number;
-    dueDate?: string;
+    dueDate?: string,
   }>;
 }): Project {
   const project: Project = {
@@ -229,7 +209,7 @@ export function createProject(data: {
 
 export function updateProject(projectId: string, updates: Partial<Project>): Project | null {
   const project = getProject(projectId);
-  if (!project) return null;
+  if (!project) return null,
   
   const updatedProject = {
     ...project,
@@ -243,7 +223,7 @@ export function updateProject(projectId: string, updates: Partial<Project>): Pro
 
 export function addProjectNote(projectId: string, content: string, authorId: string): boolean {
   const project = getProject(projectId);
-  if (!project) return false;
+  if (!project) return false,
   
   const note = {
     id: uuidv4(),
@@ -260,7 +240,7 @@ export function addProjectNote(projectId: string, content: string, authorId: str
 
 export function addProjectDocument(projectId: string, name: string, url: string): boolean {
   const project = getProject(projectId);
-  if (!project) return false;
+  if (!project) return false,
   
   const document = {
     id: uuidv4(),
@@ -277,7 +257,7 @@ export function addProjectDocument(projectId: string, name: string, url: string)
 
 // Milestone functions
 export function saveMilestone(milestone: Milestone): void {
-  const existingIndex = milestones.findIndex(m => m.id === milestone.id);
+  const existingIndex = milestones.findIndex(m => m.id === milestone.id),
   if (existingIndex >= 0) {
     milestones[existingIndex] = { ...milestone, updatedAt: new Date().toISOString() };
   } else {
@@ -286,11 +266,11 @@ export function saveMilestone(milestone: Milestone): void {
 }
 
 export function getMilestone(milestoneId: string): Milestone | null {
-  return milestones.find(m => m.id === milestoneId) || null;
+  return milestones.find(m => m.id === milestoneId) || null,
 }
 
 export function getMilestonesByProject(projectId: string): Milestone[] {
-  return milestones.filter(m => m.projectId === projectId);
+  return milestones.filter(m => m.projectId === projectId),
 }
 
 export function createMilestone(data: {
@@ -298,7 +278,7 @@ export function createMilestone(data: {
   title: string;
   description?: string;
   amount: number;
-  dueDate?: string;
+  dueDate?: string,
 }): Milestone {
   const milestone: Milestone = {
     id: uuidv4(),
@@ -318,7 +298,7 @@ export function createMilestone(data: {
 
 export function updateMilestone(milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = getMilestone(milestoneId);
-  if (!milestone) return null;
+  if (!milestone) return null,
   
   const updatedMilestone = {
     ...milestone,
@@ -331,7 +311,7 @@ export function updateMilestone(milestoneId: string, updates: Partial<Milestone>
 }
 
 export function deleteMilestone(milestoneId: string): boolean {
-  const index = milestones.findIndex(m => m.id === milestoneId);
+  const index = milestones.findIndex(m => m.id === milestoneId),
   if (index >= 0) {
     milestones.splice(index, 1);
     return true;
@@ -354,11 +334,11 @@ export function addProjectMember(projectId: string, userId: string, role: Projec
 }
 
 export function getProjectMembers(projectId: string): ProjectMember[] {
-  return projectMembers.filter(m => m.projectId === projectId);
+  return projectMembers.filter(m => m.projectId === projectId),
 }
 
 export function removeProjectMember(projectId: string, userId: string): boolean {
-  const index = projectMembers.findIndex(m => m.projectId === projectId && m.userId === userId);
+  const index = projectMembers.findIndex(m => m.projectId === projectId && m.userId === userId),
   if (index >= 0) {
     projectMembers.splice(index, 1);
     return true;
@@ -370,14 +350,14 @@ export function updateProjectMemberRole(projectId: string, userId: string, role:
   const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
   if (member) {
     member.role = role;
-    return true;
+    return true,
   }
   return false;
 }
 
 // Utility functions
 export function isClient(project: Project, userId: string): boolean {
-  return project.clientId === userId;
+  return project.clientId === userId,
 }
 
 export function isTalent(project: Project, user: { talentSlug?: string }): boolean {
@@ -385,19 +365,19 @@ export function isTalent(project: Project, user: { talentSlug?: string }): boole
 }
 
 export function isProjectMember(projectId: string, userId: string): boolean {
-  return projectMembers.some(m => m.projectId === projectId && m.userId === userId);
+  return projectMembers.some(m => m.projectId === projectId && m.userId === userId),
 }
 
 export function getProjectRole(projectId: string, userId: string): ProjectMember['role'] | null {
   const member = projectMembers.find(m => m.projectId === projectId && m.userId === userId);
-  return member ? member.role : null;
+  return member ? member.role : null,
 }
 
-export function canEditProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
+export function canEditProject(project: Project, user: { id: string, talentSlug?: string }): boolean {
   return isClient(project, user.id) || isTalent(project, user) || isProjectMember(project.id, user.id);
 }
 
-export function canViewProject(project: Project, user: { id: string; talentSlug?: string }): boolean {
+export function canViewProject(project: Project, user: { id: string, talentSlug?: string }): boolean {
   return canEditProject(project, user);
 }
 
@@ -412,14 +392,14 @@ export function getProjectStatus(project: Project): string {
   );
   
   if (overdueMilestones.length > 0) return 'Overdue';
-  return 'Active';
+  return 'Active',
 }
 
 export function calculateProjectProgress(project: Project): number {
   if (project.timeline.length === 0) return 0;
   
   const completedMilestones = project.timeline.filter(m => m.status === 'COMPLETED').length;
-  return Math.round((completedMilestones / project.timeline.length) * 100);
+  return Math.round((completedMilestones / project.timeline.length) * 100),
 }
 
 export function getProjectStats(project: Project): {
@@ -427,7 +407,7 @@ export function getProjectStats(project: Project): {
   completedAmount: number;
   pendingAmount: number;
   progress: number;
-  overdueCount: number;
+  overdueCount: number,
 } {
   const totalAmount = project.timeline.reduce((sum, m) => sum + m.amount, 0);
   const completedAmount = project.timeline
@@ -474,7 +454,7 @@ export function getProjectTimeline(projectId: string): Array<{
   title: string;
   description?: string;
   timestamp: string;
-  author?: string;
+  author?: string,
 }> {
   const project = getProject(projectId);
   if (!project) return [];
@@ -518,8 +498,6 @@ export function getProjectTimeline(projectId: string): Array<{
   
   return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
@@ -529,7 +507,7 @@ export function getProjectTimeline(projectId: string): Array<{
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = project.milestones.find(m => m.id === milestoneId);
-  if (!milestone) return null;
+  if (!milestone) return null,
   
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
@@ -539,11 +517,10 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
   const index = project.milestones.findIndex(m => m.id === milestoneId);
-  if (index === -1) return false;
+  if (index === -1) return false,
   
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
   
   return true;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,13 +1,8 @@
 import React from 'react';
-import { format } from 'date-fns';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { PaperclipIcon } from 'lucide-react';
-=======
-import { PaperclipIcon } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
+import {format} from 'date-fns';
+import {PaperclipIcon} from 'lucide-react'
+import {cn} from '@/lib/utils';
+import {Message} from '@/types/messaging';
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean
@@ -38,13 +33,9 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             {message.attachment_name || 'Attachment'}
           </a>
         )}
-<<<<<<< HEAD
-
-        <div className='text-xs opacity-70 text-right mt-1'>
-=======
-import { PaperclipIcon } from 'lucide-react'
-import { cn } from '@/lib/utils';
-import { Message } from '@/types/messaging';
+import {PaperclipIcon} from 'lucide-react'
+import {cn} from '@/lib/utils';
+import {Message} from '@/types/messaging';
 interface MessageBubbleProps {
   message: Message,
   isUserMessage: boolean
@@ -77,23 +68,13 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         )}
         
         <div className="text-xs opacity-70 text-right mt-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         
         <div className="text-xs opacity-70 text-right mt-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

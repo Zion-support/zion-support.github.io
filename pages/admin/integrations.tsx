@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
@@ -11,12 +11,12 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
 }
 
 interface ConnectionMap {
-  [providerId: string]: any;
+  [providerId: string]: any,
 
 function StatusIcon({
   status,
 }: {
-  status: 'connected' | 'warning' | 'disconnected';
+  status: 'connected' | 'warning' | 'disconnected',
 }) {
   const label =
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
@@ -27,10 +27,10 @@ function StatusIcon({
   );
 
 interface ConnectionMap {
-  [key: string]: boolean;
+  [key: string]: boolean,
 
 const AdminIntegrationsPage: React.FC = () => {
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
@@ -81,7 +81,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
 
   async function connect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
       // Open mock oauth popup
       window.open(
@@ -113,7 +113,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function disconnect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
       await fetch('/api/integrations/disconnect', {
         method: 'POST',
@@ -134,7 +134,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function resync(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
       await fetch('/api/integrations/resync', {
         method: 'POST',
@@ -447,7 +447,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </main>
       <RulesModal />
     </>
-  );
+  ),
   )
 }
   )

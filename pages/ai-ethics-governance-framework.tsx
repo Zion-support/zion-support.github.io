@@ -21,7 +21,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 			implementationWeeks="Implementation: 3–6 weeks"
 			roiNote="Reduce compliance risk and accelerate approvals"
 			features={[
-				"AI risk register and DPIA templates";
+				"AI risk register and DPIA templates",
 				"Bias/fairness tests, red-teaming workflows";
 				"Model cards, data sheets, and change logs";
 				"Prompt governance and access controls";

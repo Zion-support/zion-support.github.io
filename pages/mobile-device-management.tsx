@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
+import {Smartphone, CheckCircle, ExternalLink, Shield} from 'lucide-react';
 
 export default function MDMPage() {
   const features = [

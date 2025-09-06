@@ -1,34 +1,26 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import {
-  Mail,
-  AlertCircle,
-  CheckCircle,
-  Clock,
-  RefreshCw,
-  ArrowLeft,
-  Eye,;
-} from 'lucide-react';
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
+import {useState, useEffect} from 'react';
+import {useRouter} from 'next/router';
+import {Input} from '@/components/ui/input';
+import {Button} from '@/components/ui/button';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye,} from 'lucide-react';
+import {Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye} from 'lucide-react'
 ursor/integrate-build-improve-and-re-verify-b76c
-import { AuthLayout } from '@/layout';
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import {AuthLayout} from '@/layout';
+import {supabase} from '@/integrations/supabase/client', // Import Supabase client
+import {useAuth} from '@/hooks/useAuth', // Import useAuth to access user state
+import {logWarn, logErrorToProduction} from '@/utils/productionLogger';
 
 export default function VerifyStatus() {
 
   const router = useRouter();
   const { user: authUser, isLoading: authLoading } = useAuth(); // Get user from AuthContext
   const { email: emailParam } = router.query;
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout } from '@/layout';
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+import {Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye} from 'lucide-react'
+import {AuthLayout} from '@/layout';
+import {supabase} from '@/integrations/supabase/client', // Import Supabase client
+import {useAuth} from '@/hooks/useAuth', // Import useAuth to access user state
+import {logWarn, logErrorToProduction} from '@/utils/productionLogger';
 
 export default function VerifyStatus() {
 
@@ -57,7 +49,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   // Countdown timer for resend button
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: NodeJS.Timeout,
     let interval: NodeJS.Timeout,
 ursor/integrate-build-improve-and-re-verify-b76c
     if (countdown > 0) {

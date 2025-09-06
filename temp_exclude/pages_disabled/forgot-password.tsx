@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowLeft, Mail, CheckCircle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowLeft,, Mail,, CheckCircle} from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 export default function ForgotPassword() {
@@ -11,7 +11,7 @@ export default function ForgotPassword() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -130,7 +130,7 @@ export default function ForgotPassword() {
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm">
                 Remember your password?{' '}
-                <Link href="/login" className="text-blue-400 hover:text-blue-300 font-medium">
+                <Link href="/login" className="text-blue-400 hover: text-blue-300 font-medium">
                   Sign in here
                 </Link>
               </p>
@@ -139,5 +139,5 @@ export default function ForgotPassword() {
         </div>
       </div>
     </MainLayout>
-  );
+  ),
 }

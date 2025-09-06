@@ -1,28 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { format } from 'date-fns';
-import { Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { useState } from 'react';
-import { EducationFormFieldsProps } from './types';
-import { Education } from '@/types/resume';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {format} from 'date-fns';
+import {Loader2} from 'lucide-react'
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
+import {useState} from 'react';
+import {EducationFormFieldsProps} from './types';
+import {Education} from '@/types/resume';
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
@@ -54,7 +44,7 @@ export function EducationFormFields({
       location: ''}}),
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true);
-    setError(null);
+    setError(null),
     try {
       await onSubmit(data)
     } catch (err: any) {
@@ -222,23 +212,5 @@ export function EducationFormFields({
       </form>
     </Form>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-  end_date: z.string().optional(),
-  is_current: z.boolean().default(false),
-  description: z.string().optional(),
-  location: z.string().optional()}),
-
-type EducationFormValues = z.infer<typeof educationSchema>;
-
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

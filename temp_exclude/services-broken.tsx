@@ -56,7 +56,7 @@ export default function Services() {
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">
 					<div className=\"grid gap-8 lg:grid-cols-2\">
 						{/* AI Autonomous Systems */}
-						<div id=\"ai\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300\">
+						<div id=\"ai\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-blue-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors\">
 									<Brain className=\"h-7 w-7 text-white\" />
@@ -67,7 +67,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className=\"text-gray-600 mb-6\">
-								Transform your operations with intelligent automation and AI-powered decision making.;
+								Transform your operations with intelligent automation and AI-powered decision making.,
 							</p>
 							<ul className=\"space-y-3 mb-6\">
 								<li className=\"flex items-center gap-x-3\">
@@ -150,7 +150,7 @@ export default function Services() {
 							</div>
 						</div>
 						{/* Cybersecurity */}
-						<div id=\"cybersecurity\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-purple-300\">
+						<div id=\"cybersecurity\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-purple-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-purple-600 group-hover:bg-purple-700 transition-colors\">
 									<Shield className=\"h-7 w-7 text-white\" />
@@ -161,7 +161,7 @@ export default function Services() {
 								</div>
 							</div>
 							<p className=\"text-gray-600 mb-6\">
-								Protect your business with enterprise-grade security frameworks and compliance automation.;
+								Protect your business with enterprise-grade security frameworks and compliance automation.,
 							</p>
 							<ul className=\"space-y-3 mb-6\">
 								<li className=\"flex items-center gap-x-3\">
@@ -197,7 +197,7 @@ export default function Services() {
 							</div>
 						</div>
 						{/* Micro SaaS */}
-						<div id=\"saas\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-orange-300\">
+						<div id=\"saas\" className=\"group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300 hover:border-orange-300\">
 							<div className=\"flex items-center gap-x-3 mb-6\">
 								<div className=\"flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover:bg-orange-700 transition-colors\">
 									<Code className=\"h-7 w-7 text-white\" />
@@ -246,7 +246,7 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-;
+,
 			{/* Process Section */}
 			<section className=\"py-24 sm:py-32 bg-gray-50\">
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">
@@ -256,7 +256,7 @@ export default function Services() {
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.;
 						</p>
 					</div>
-					<div className=\"grid grid-cols-1 md:grid-cols-4 gap-8\">
+					<div className=\"grid grid-cols-1 md: grid-cols-4 gap-8\">
 						<div className=\"text-center group\">
 							<div className=\"mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4\">
 								<span className=\"text-2xl font-bold text-blue-600\">1</span>
@@ -288,9 +288,9 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-;
+,
 			{/* CTA Section */}
-			<section className=\"bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32\">
+			<section className=\"bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32\">
 				<div className=\"mx-auto max-w-7xl px-6 lg:px-8\">
 					<div className=\"mx-auto max-w-2xl text-center\">
 						<h2 className=\"text-3xl font-bold tracking-tight text-white sm:text-4xl\">Ready to get started?</h2>
@@ -319,5 +319,5 @@ export default function Services() {
 				</div>
 			</section>
 		</>
-	);
+	),
 }

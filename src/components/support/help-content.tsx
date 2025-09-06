@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { HelpCategory } from './types';
-import {
-  HelpCircle,
-  CreditCard,
-  Users,
-  Calendar,
-  Briefcase,;
-} from 'lucide-react';
-=======
 
 import React from "react";
-import { HelpCategory } from "./types";
-import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
-import { Star, Calendar } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {HelpCategory} from "./types";
+import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from 'lucide-react'
+import {Star, Calendar} from 'lucide-react';
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
@@ -121,7 +108,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         id: "payment-methods",
         title: "Accepted payment methods",
-        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method:\n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.";
+        content: "Zion AI Marketplace supports a variety of payment methods to accommodate users worldwide. Currently accepted payment methods include:\n\n• Credit Cards (Visa, Mastercard, American Express, Discover)\n• PayPal\n• Bank Transfers (ACH for US, SEPA for Europe)\n• Wire Transfers for international payments\n• Cryptocurrency (Bitcoin, Ethereum)\n\nTo add or update your payment method: \n1. Go to Settings > Billing & Payments\n2. Select 'Add Payment Method'\n3. Follow the prompts to enter your information\n4. Set your preferred default payment method\n\nAll payment information is securely encrypted and stored in compliance with PCI DSS standards.",
         lastUpdated: "2023-11-01",
         tags: ["payment", "billing", "finance"]
       };
@@ -171,12 +158,11 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 ];
-=======
 
 import React from "react";
-import { HelpCategory } from "./types";
-import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
-import { Star, Calendar } from 'lucide-react';
+import {HelpCategory} from "./types";
+import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from 'lucide-react'
+import {Star, Calendar} from 'lucide-react';
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
@@ -336,4 +322,3 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 ];
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

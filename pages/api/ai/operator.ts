@@ -6,7 +6,7 @@ const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const RATE_LIMIT_MAX_REQUESTS = 15;
 const ipToRequests: Record<string, { timestamps: number[] }> = {};
 function isRateLimited(ip: string): boolean {
-  const now = Date.now();
+  const now = Date.now(),
   const bucket = ipToRequests[ip] || { timestamps: [] };
   // Drop old timestamps
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);

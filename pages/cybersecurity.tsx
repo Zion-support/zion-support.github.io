@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+import {Shield, CheckCircle, Lock, Activity} from 'lucide-react';
 
 export default function CybersecurityPage() {
   const features = [
@@ -173,7 +173,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </Layout>
-  );
+  ),
   )
 }
   )

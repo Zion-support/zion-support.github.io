@@ -1,12 +1,7 @@
 
 import React from "react";
-import { Quote } from "lucide-react";
-import {
-  Carousel;
-  CarouselContent;
-  CarouselItem;
-  CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel";
+import {Quote} from "lucide-react";
+import {Carousel,, CarouselContent,, CarouselItem,, CarouselNext,, CarouselPrevious} from "@/components/ui/carousel";
 
 const testimonials = [
   {

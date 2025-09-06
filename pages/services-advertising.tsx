@@ -258,7 +258,7 @@ export default function ServicesAdvertisingPage() {
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling';
     'Flexible deployment: SaaS or self-hosted options'
-  ];
+  ],
 
 				{/* New: Core micro SaaS and AI additions */}
 				<section className="space-y-6">

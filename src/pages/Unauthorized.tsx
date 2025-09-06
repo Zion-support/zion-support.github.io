@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Header } from '@/components/Header';
-import { ShieldAlert } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from "react-i18next";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {ShieldAlert} from 'lucide-react'
+import {useTranslation} from "react-i18next";
 export default function Unauthorized() {
   const { t } = useTranslation();
   return (
@@ -31,16 +22,12 @@ export default function Unauthorized() {
           </p>
           <div className="flex flex-col gap-3">
             <Link
-<<<<<<< HEAD
-              href='/'
-              className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'
-=======
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from "react-i18next";
+import {Button} from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {ShieldAlert} from 'lucide-react'
+import {useTranslation} from "react-i18next";
 
 export default function Unauthorized() { const { t  } = useTranslation(),
 
@@ -62,27 +49,16 @@ export default function Unauthorized() { const { t  } = useTranslation(),
             <Link
               href="/"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               href="/"
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               {t('errors.return_home')}
             </Link>
             <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
-              href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'
-=======
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               {t('errors.login_different_account')}
             </Link>
@@ -91,11 +67,5 @@ export default function Unauthorized() { const { t  } = useTranslation(),
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

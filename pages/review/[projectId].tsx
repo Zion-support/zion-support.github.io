@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
+import {findProjectById} from '../../utils/dataStore';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 type Props = {

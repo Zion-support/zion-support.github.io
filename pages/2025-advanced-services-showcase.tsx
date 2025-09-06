@@ -1,56 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowRight,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  ChevronRight,
-  ExternalLink,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Star as StarIcon,
-  Eye,
-  Heart,
-  Share2,
-  DollarSign,
-  Calendar,
-  Users as UsersIcon,
-  Zap as ZapIcon,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Search, Filter, Grid, List, Star, as, StarIcon, Eye, Heart, Share2, DollarSign, Calendar, Users, as, UsersIcon, Zap, as, ZapIcon,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Search, Filter, Grid, List, Star, as, StarIcon, Eye, Heart, Share2, DollarSign, Calendar, Users, as, UsersIcon, Zap, as, ZapIcon, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
+import {advancedInnovativeServices} from '../data/2025-advanced-innovative-services-expansion';
+import {emergingTechInnovations} from '../data/2025-emerging-tech-innovations';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function AdvancedServicesShowcase2025() {
@@ -213,8 +168,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
-        default:
-          return 0;
+        default: return 0,
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;
@@ -268,7 +222,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
-    return categoryData?.icon || '🚀';
+    return categoryData?.icon || '🚀',
     return categoryData?.icon || '🚀'
 ursor/integrate-build-improve-and-re-verify-b76c
   };
@@ -975,7 +929,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent'>
+            <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?
@@ -1024,7 +978,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
   )
 }
   )

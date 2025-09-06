@@ -3,7 +3,7 @@ import type { NextApiRequest } from 'next';
 export interface User {
   id: string;
   email: string;
-  role: string;
+  role: string,
 }
 
 export function parseUserFromRequest(req: NextApiRequest): User | null {
@@ -23,7 +23,7 @@ export function ensureAdmin(user: User | null): void {
   if (!user || user.role !== 'admin') {
     const error = new Error('Forbidden');
     (error as any).statusCode = 403;
-    throw error;
+    throw error,
   }
 }
 

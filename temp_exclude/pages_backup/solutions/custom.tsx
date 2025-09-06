@@ -1,15 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Settings, Code, Zap, Users } from 'lucide-react';
+import {Settings,, Code,, Zap,, Users} from 'lucide-react';
 =======
 =======
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Settings,, Code,, Zap,, Users,, ArrowRight,, CheckCircle,, Clock,, Target,, Wrench} from 'lucide-react';
 import Layout from "../../components/Layout";";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,10 +247,10 @@ export default function CustomDevelopmentPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300""
+                  className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300""
                 >;
                   <div className="flex items-center mb-4">";
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">";
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">",
                       <span className="text-white font-bold text-lg">{index + 1}</span>"
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900">{step.step}</h3>"

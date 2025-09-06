@@ -1,16 +1,16 @@
 
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Loader, Sparkles } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useForm } from "react-hook-form";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card,, CardContent,, CardHeader,, CardTitle,, CardDescription,, CardFooter} from "@/components/ui/card";
+import {Loader,, Sparkles} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {Form,, FormControl,, FormField,, FormItem,, FormLabel,, FormMessage} from "@/components/ui/form";
+import {useForm} from "react-hook-form";
 import z from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
+import {zodResolver} from "@hookform/resolvers/zod";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z.string(),
@@ -34,7 +34,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       targetAudience: ""}}),
 
   const handleSubmit = async (data: FormData) => {
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {

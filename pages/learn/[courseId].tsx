@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
+import {useEffect, useMemo, useState} from 'react';
+import {useRouter} from 'next/router';
 import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
@@ -73,7 +73,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     const percent = Math.round(
       (completedCount / (course?.lessons?.length || 1)) * 100
     );
-    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
+    const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100),
 ursor/integrate-build-improve-and-re-verify-b76c
     const resp = await fetch('/api/learn/progress', {
       method: 'POST',
@@ -105,7 +105,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   async function onFinalQuizComplete(score: number) {
     const needed = course?.finalQuiz?.passThreshold || 0;
     const passed = score >= needed;
-    setFinalPassed(passed);
+    setFinalPassed(passed),
     setFinalPassed(passed)
     setFinalPassed(passed)
 ursor/integrate-build-improve-and-re-verify-b76c

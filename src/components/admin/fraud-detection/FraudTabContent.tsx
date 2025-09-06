@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-=======
 
 import React from "react";
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {AlertTriangle, AlertCircle, CheckCircle} from 'lucide-react'
 
 interface FraudTabContentProps {
   tabValue: string
@@ -45,21 +39,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
-      );
+      ),
     
     default:
       return null
   }
 };
-=======
 
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-    
-    default:
-      return null
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

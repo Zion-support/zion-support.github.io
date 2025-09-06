@@ -5,9 +5,9 @@ interface FraudItem {
   userId: string | null;
   source: string;
   createdAt: string;
-  heuristic: { reasons: string[]; severity: string };
-  gpt?: { label: string; reason: string; confidence: number };
-  status: string;
+  heuristic: { reasons: string[], severity: string };
+  gpt?: { label: string; reason: string, confidence: number };
+  status: string,
 ursor/integrate-build-improve-and-re-verify-b76c
   id: string,
   userId: string | null,
@@ -78,7 +78,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
+        'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})};
       body: JSON.stringify({ fraudId: id, action })});
     const json = await res.json();
@@ -164,7 +164,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
+        'Content-Type': 'application/json',
         ...(adminToken ? { 'x-admin-token': adminToken } : {})};
       body: JSON.stringify({ fraudId: id, action })});
     const json = await res.json();

@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type {
@@ -6,15 +6,11 @@ import type {
   MediaAsset,
   PressReleaseType,;
 } from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
-  buildPressRelease,
-  buildTimeline,;
-} from '../../utils/mediaKit';
+import {getDefaultAssets, buildPressRelease, buildTimeline,} from '../../utils/mediaKit';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+import {getDefaultAssets, buildPressRelease, buildTimeline} from '../../utils/mediaKit';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+import {getDefaultAssets, buildPressRelease, buildTimeline} from '../../utils/mediaKit';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 const KitPage = () => {
@@ -23,7 +19,7 @@ const KitPage = () => {
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-  const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
+  const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),

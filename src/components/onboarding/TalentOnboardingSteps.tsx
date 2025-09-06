@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-=======
 
 import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {useAuth} from "@/hooks/useAuth";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from 'lucide-react'
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 export function TalentOnboardingSteps() {
   const { user } = useAuth();
@@ -44,14 +35,12 @@ export function TalentOnboardingSteps() {
       link: "/talent-dashboard",
       action: "View Matches"}],
   return <OnboardingTracker steps={steps} />;
-<<<<<<< HEAD
-=======
 
 import React from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+import {useAuth} from "@/hooks/useAuth";
+import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
+import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from 'lucide-react'
+import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 
 export function TalentOnboardingSteps() { const { user  } = useAuth(),
@@ -87,7 +76,4 @@ export function TalentOnboardingSteps() { const { user  } = useAuth(),
   return <OnboardingTracker steps={steps} />
 
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

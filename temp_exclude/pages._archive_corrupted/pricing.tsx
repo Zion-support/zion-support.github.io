@@ -21,7 +21,7 @@ export default function PricingPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react';
+import {CheckCircle,, ArrowRight,, Users,, Zap,, Shield} from 'lucide-react';
 const "PricingPage": React.FC = () => {
   const pricingPlans = [{
       name: 'Starter',
@@ -35,9 +35,9 @@ const "PricingPage": React.FC = () => {
         'Basic SEO optimization',
         'Email support',
         '3 months maintenance included'
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight} from 'lucide-react';
 export default function PricingPage() {
   const plans = [
     {
@@ -243,7 +243,7 @@ export default function PricingPage() {
             <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\">
               <Link
                 href=\"/contact\"
-                className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
+                className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors\"
               >
                 Get Free Consultation
               </Link>
@@ -258,7 +258,7 @@ export default function PricingPage() {
         </div>
       </div>
     </>
-  );
+  ),
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -268,8 +268,8 @@ export default function PricingPage() {
 export default PricingPage;
 }
 <<<<<<< HEAD
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import {CheckCircle,ArrowRight,Users,Zap,Shield} from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import {Helmet} from 'react-helmet-async'; import {Link} from 'react-router-dom'; import {Check,Star,Zap,Shield,Users,Clock,ArrowRight} from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 =======
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import {CheckCircle,ArrowRight,Users,Zap,Shield} from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import {Helmet} from 'react-helmet-async'; import {Link} from 'react-router-dom'; import {Check,Star,Zap,Shield,Users,Clock,ArrowRight} from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 =======
 =======

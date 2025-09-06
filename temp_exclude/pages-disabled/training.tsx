@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import { }
   GraduationCap, 
   BookOpen, 
@@ -107,8 +107,8 @@ export default function TrainingPage() {}
               className="text-center"
             >
               <GraduationCap className="w-16 h-16 mx-auto mb-6 text-blue-400" />
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Professional;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
+                Professional,
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   {' '}Training;
                 </span>
@@ -117,12 +117,12 @@ export default function TrainingPage() {}
                 Advance your career with our comprehensive training programs in cutting-edge technologies. 
                 Learn from industry experts and get certified in AI, cloud computing, cybersecurity, and more.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                   Enroll Now;
                 </Link>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Learn More;
+                  Learn More,
                 </Link>
               </div>
             </motion.div>
@@ -139,11 +139,11 @@ export default function TrainingPage() {}
               transition={{ duration: 0.8 }};
               viewport={{ once: true }};
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Training Programs;
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Choose from our comprehensive range of training programs designed by industry experts;
+                Choose from our comprehensive range of training programs designed by industry experts,
                 to help you master the latest technologies and advance your career.
               </p>
             </motion.div>
@@ -199,9 +199,9 @@ export default function TrainingPage() {}
                   
                   <Link;
                     href="/contact"
-                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold text-center block group-hover:from-purple-500 group-hover:to-blue-600"
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-lg hover: shadow-lg transition-all duration-300 font-semibold text-center block group-hover:from-purple-500 group-hover:to-blue-600"
                   >
-                    Enroll Now;
+                    Enroll Now,
                   </Link>
                 </motion.div>
               ))};
@@ -219,11 +219,11 @@ export default function TrainingPage() {}
               transition={{ duration: 0.8 }};
               viewport={{ once: true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">
                 Certification Paths;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Follow structured learning paths to earn industry-recognized certifications;
+                Follow structured learning paths to earn industry-recognized certifications,
                 and advance your career in technology.
               </p>
             </motion.div>
@@ -258,9 +258,9 @@ export default function TrainingPage() {}
                   
                   <Link;
                     href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center"
+                    className="text-blue-600 hover: text-blue-700 font-semibold inline-flex items-center"
                   >
-                    Learn More;
+                    Learn More,
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </motion.div>
@@ -290,7 +290,7 @@ export default function TrainingPage() {}
                   Enroll Now;
                 </Link>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
-                  Learn About Us;
+                  Learn About Us,
                 </Link>
               </div>
             </motion.div>

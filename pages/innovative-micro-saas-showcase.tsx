@@ -1,52 +1,11 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Zap,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Cpu,
-  Target,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Play,
-  Pause,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  BookOpen,
-  Code,
-  Palette,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target;
-  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink;
-  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target, Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target, Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+import {innovativeRealMicroSaasServices2025} from '../data/2025-innovative-real-micro-saas-services';
+import {emergingTechServicesEnhanced2025} from '../data/2025-emerging-tech-services-enhanced';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
@@ -201,8 +160,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         return (
           new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         );
-      default:
-        return 0;
+      default: return 0,
         return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
       case 'price-high':
         return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
@@ -211,7 +169,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
       default: return 0
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       default: return 0
 ursor/integrate-build-improve-and-re-verify-b76c
     }
@@ -882,7 +840,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
   )
 }
   )

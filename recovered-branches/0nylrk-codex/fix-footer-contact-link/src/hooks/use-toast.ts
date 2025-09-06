@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  useToast as useToastHook;
-  Toast} from "@/components/ui/toast";
+import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
@@ -39,6 +37,6 @@ baseToast.success = (message: string) => {
 export const toast = baseToast as typeof baseToast & {
   title: (title: string) => void;
   description: (description: string) => void;
-  error: (error: string) => void;
+  error: (error: string) => void,
   success: (message: string) => void
 };

@@ -1,50 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-exports.handler = async function () {
-  try {
-    const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
-    const coursesPath = path.join(
-      process.cwd(),
-      'data',
-      'learn',
-      'courses.json'
-    );
-    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));
-=======
 exports.handler = async function() {
   try {
-=======
 exports.handler = async function() {
   try {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
     const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const summary = {
       updatedAt: Date.now(),
       totals: {
         users: Object.keys(users).length,
         courses: courses.length,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        completions: Object.values(users).reduce(
-          (acc, u) => acc + (u.certifications?.length || 0),
-          0
-        ),
-=======
         completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       },
       topBadges: Object.values(users).reduce((map, u) => {
         (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
@@ -66,9 +37,6 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
         completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
       },
       topBadges: Object.values(users).reduce((map, u) => {
@@ -92,7 +60,4 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

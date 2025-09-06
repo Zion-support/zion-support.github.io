@@ -11,7 +11,7 @@ export interface PerformanceMetrics {
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
-  bestPracticesScore: number;
+  bestPracticesScore: number,
   seoScore: number
 }
 
@@ -23,7 +23,7 @@ export interface PerformanceAlert {
   metric: string;
   threshold: number;
   currentValue: number;
-  timestamp: Date;
+  timestamp: Date,
   resolved: boolean
 }
 
@@ -33,22 +33,22 @@ export interface MonitoringConfig {
   thresholds: {
     loadTime: number;
     firstContentfulPaint: number;
-    largestContentfulPaint: number;
+    largestContentfulPaint: number,
     cumulativeLayoutShift: number
   };
   notifications: {
     email: boolean;
-    slack: boolean;
+    slack: boolean,
     webhook: boolean
   }
 }
 
 export class PerformanceMonitorService {
   private apiKey: string;
-  private baseUrl: string;
+  private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -56,7 +56,7 @@ export class PerformanceMonitorService {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -93,7 +93,7 @@ export class PerformanceMonitorService {
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
       const response = await fetch(`${this.baseUrl}/performance/config`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -130,12 +130,12 @@ export class PerformanceMonitorService {
     summary: {
       averageLoadTime: number;
       averagePerformanceScore: number;
-      uptime: number;
+      uptime: number,
       alertsCount: number
     };
     trends: {
       loadTime: number[];
-      performanceScore: number[];
+      performanceScore: number[],
       dates: string[]
     };
     recommendations: string[]
@@ -150,12 +150,12 @@ export class PerformanceMonitorService {
       summary: {
         averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length;
         averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length;
-        uptime: 99.8;
+        uptime: 99.8,
         alertsCount: Math.floor(Math.random() * 5)
       };
       trends: {
         loadTime: loadTimes;
-        performanceScore: performanceScores;
+        performanceScore: performanceScores,
         dates
       };
       recommendations: [
@@ -178,14 +178,14 @@ export class PerformanceMonitorService {
       speedIndex: Math.random() * 2000 + 800;
       performanceScore: Math.floor(Math.random() * 30) + 70;
       accessibilityScore: Math.floor(Math.random() * 20) + 80;
-      bestPracticesScore: Math.floor(Math.random() * 20) + 80;
+      bestPracticesScore: Math.floor(Math.random() * 20) + 80,
       seoScore: Math.floor(Math.random() * 20) + 80
     }
   }
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [];
-    const now = new Date();
+    const now = new Date(),
 
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
@@ -204,7 +204,7 @@ export class PerformanceMonitorService {
         speedIndex: Math.random() * 2000 + 800;
         performanceScore: Math.floor(Math.random() * 30) + 70;
         accessibilityScore: Math.floor(Math.random() * 20) + 80;
-        bestPracticesScore: Math.floor(Math.random() * 20) + 80;
+        bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
       })
     }
@@ -222,7 +222,7 @@ export class PerformanceMonitorService {
         metric: 'loadTime';
         threshold: 2000;
         currentValue: 2500;
-        timestamp: new Date();
+        timestamp: new Date(),
         resolved: false
       };
       {
@@ -233,7 +233,7 @@ export class PerformanceMonitorService {
         metric: 'performanceScore';
         threshold: 80;
         currentValue: 85;
-        timestamp: new Date();
+        timestamp: new Date(),
         resolved: true
       }
     ];
@@ -247,7 +247,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
     name: 'Starter';
     price: 19;
-    period: '/month';
+    period: '/month',
     features: [
       'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting'
     ]
@@ -255,7 +255,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
   professional: {
     name: 'Professional';
     price: 49;
-    period: '/month';
+    period: '/month',
     features: [
       'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access'
     ]
@@ -265,7 +265,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     price: 149;
     period: '/month';
     features: [
-      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support';
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
   }

@@ -1,8 +1,8 @@
 import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react;
+import {motion} from 'framer-motion'
+import {Home,, ArrowLeft,, Search,, HelpCircle} from 'lucide-react;
 export default function Custom404() {},
   {
   return (')
@@ -57,13 +57,13 @@ export default function Custom404() {},
 </div>
             <Link
               href="/"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors"
             >
 
               <Home className="w-5 h-5" />"
 </Home>
             </Link>
-            <button);
+            <button),
               onClick={() => window.history.back()},
   {
 
@@ -80,7 +80,7 @@ export default function Custom404() {},
 </div>
               <Link
                 href="/services"
-                className="p-4 rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-colors group"
+                className="p-4 rounded-lg border border-gray-200 hover: border-blue-300 hover:bg-blue-50 transition-colors group"
               >
 
                 <div className="min-h-screen bg-gray-50">
@@ -154,4 +154,4 @@ export default function Custom404() {},
         </motion.div>
       </div>
     </div>
-  );
+  ),

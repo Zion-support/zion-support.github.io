@@ -72,7 +72,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
@@ -107,7 +107,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       // Refresh meta
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {
       setLoading(false);
@@ -131,7 +131,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',

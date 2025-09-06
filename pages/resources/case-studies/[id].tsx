@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function CaseStudyResourcePage() {
@@ -46,13 +46,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
-        <p>We implemented a comprehensive AI automation system that included:</p>
-        and reducing operational costs. They required a solution that could adapt to changing production demands;
+        <p>We implemented a comprehensive AI automation system that included: </p>
+        and reducing operational costs. They required a solution that could adapt to changing production demands,
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included: </p>
-        and reducing operational costs. They required a solution that could adapt to changing production demands;
+        and reducing operational costs. They required a solution that could adapt to changing production demands,
         minimize human intervention, and provide real-time insights into their operations.</p>
         
         <h2>Solution</h2>
@@ -272,7 +272,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
               <Link
                 href='/resources'
-                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+                className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
         <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
           <main className="container mx-auto px-6 py-12">
             <div className="max-w-4xl mx-auto text-center">
@@ -301,7 +301,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </main>
         </div>
       </>
-    );
+    ),
     )
     )
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -410,7 +410,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </div>
     </>
-  );
+  ),
   )
 }
   )

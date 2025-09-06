@@ -1,13 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Brain, Atom, Cpu, Shield, Database, Cloud;
-  ArrowRight, CheckCircle, Zap, Sparkles
-} from 'lucide-react';
-import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
+import {motion} from 'framer-motion';
+import {Search,, Filter,, Star,, Users,, TrendingUp,, Brain,, Atom,, Cpu,, Shield,, Database,, Cloud,, ArrowRight,, CheckCircle,, Zap,, Sparkles} from 'lucide-react';
+import {realMicroSaasServices2024} from '../data/2024-real-micro-saas-services';
+import {innovativeITServices2024} from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
 const Services2024Page: React.FC = () => {
@@ -89,7 +85,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('cloud')) return Cloud;
     if (variant.includes('marketing')) return TrendingUp;
     if (variant.includes('project')) return Users;
-    if (variant.includes('customer')) return CheckCircle;
+    if (variant.includes('customer')) return CheckCircle,
     return Sparkles
   };
 
@@ -101,7 +97,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   };
 

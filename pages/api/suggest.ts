@@ -40,7 +40,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const q = ((req.query.q as string) || '').toLowerCase();
-  const suggestions = new Set<string>();
+  const suggestions = new Set<string>(),
 
   res
     .status(200)

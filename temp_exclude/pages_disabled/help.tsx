@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  ChevronRight,
-  ArrowRight
-} from 'lucide-react';
+import {motion,, AnimatePresence} from 'framer-motion';
+import {Search,, HelpCircle,, BookOpen,, MessageCircle,, Phone,, Mail,, FileText,, Video,, Download,, ExternalLink,, ChevronDown,, ChevronRight,, ArrowRight} from 'lucide-react';
 const helpCategories = [
   {
     name: 'Getting Started',
@@ -246,7 +232,7 @@ export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');',
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const toggleCategory = (categoryTitle: string) => {
-    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
+    setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle),
   };
   return (
     <div className="min-h-screen bg-gray-50">
@@ -375,12 +361,12 @@ export default function HelpPage() {
                     
                     <Link
                       href={`/help/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center block"
+                      className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors font-semibold text-center block"
                     >
                       View All Articles
                     </Link>
                   </motion.div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -472,7 +458,7 @@ export default function HelpPage() {
             <p className="text-xl text-blue-100 mb-8">
               Our support team is here to help you succeed
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               <div className="bg-white/10 rounded-lg p-6">
                 <Mail className="w-8 h-8 text-white mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
@@ -508,5 +494,5 @@ export default function HelpPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

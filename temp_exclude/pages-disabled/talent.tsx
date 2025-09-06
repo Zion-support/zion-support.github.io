@@ -1,7 +1,7 @@
 import React from "react";
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {MapPin,, Clock,, Users,, ArrowRight,, CheckCircle,, Star} from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 const jobOpenings = [{}]
@@ -150,7 +150,7 @@ export default function TalentPage() {}
               transition={{ "duration": 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
                 Join Our Team;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
@@ -161,7 +161,7 @@ export default function TalentPage() {}
                   View Open Positions;
                 </Link>
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  Get In Touch;
+                  Get In Touch,
                 </Link>
               </div>
             </motion.div>
@@ -178,11 +178,11 @@ export default function TalentPage() {}
               transition={{ "duration": 0.8 }};
               viewport={{ "once": true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Why Work With Us?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We&apos;re building a culture of innovation, collaboration, and growth where talented individuals can thrive;
+                We&apos,re building a culture of innovation, collaboration, and growth where talented individuals can thrive;
               </p>
             </motion.div>
 
@@ -224,11 +224,11 @@ export default function TalentPage() {}
               transition={{ "duration": 0.8 }};
               viewport={{ "once": true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Our Values;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                The principles that guide our work and shape our company culture;
+                The principles that guide our work and shape our company culture,
               </p>
             </motion.div>
 
@@ -262,11 +262,11 @@ export default function TalentPage() {}
               transition={{ "duration": 0.8 }};
               viewport={{ "once": true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Open Positions;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore current job openings and find the perfect role for your skills and career goals;
+                Explore current job openings and find the perfect role for your skills and career goals,
               </p>
             </motion.div>
 
@@ -305,9 +305,9 @@ export default function TalentPage() {}
                     </div>
                     <Link;
                       href={`/talent/${job.id}`};
-                      className="mt-4 lg:mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
+                      className="mt-4 lg: mt-0 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold inline-flex items-center"
                     >
-                      Apply Now;
+                      Apply Now,
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
@@ -355,7 +355,7 @@ export default function TalentPage() {}
               transition={{ "duration": 0.8 }};
               viewport={{ "once": true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Don&apos;t See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -369,5 +369,5 @@ export default function TalentPage() {}
         </section>
       </div>
     </MainLayout>
-  );
+  ),
 };

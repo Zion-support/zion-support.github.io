@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
-import { Phone, Mail } from 'lucide-react';
+import {Phone, Mail} from 'lucide-react';
 
 export default function Revolutionary2026ServicesPage() {
   return (
@@ -105,11 +105,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group";
               "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
-              "@context": "https://schema.org";
+              "@context": "https: //schema.org";
               "@type": "Organization";
               "name": "Zion Tech Group";
               "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "logo": "https://ziontechgroup.com/logo.png",
 ursor/integrate-build-improve-and-re-verify-b76c
               "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
               "address": {
@@ -306,7 +306,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             {/* Call to Action */}
             <div className='text-center'>
               <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>
-                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+                <h3 className='text-3xl md: text-4xl font-bold text-white mb-6'>
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -363,7 +363,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </main>
     </>
-  );
+  ),
   )
 }
   )

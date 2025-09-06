@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Head from 'next/head';
 import MilestoneForm from '../../../components/monetization/MilestoneForm';
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
-import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone,
-  fetchMilestones,
-  updateMilestoneStatus,;
-} from '../../../utils/api/milestones-client';
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
-import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+import {Milestone} from '../../../utils/types/milestones';
+import {createMilestone, fetchMilestones, updateMilestoneStatus,} from '../../../utils/api/milestones-client';
+import {createMilestone, fetchMilestones, updateMilestoneStatus} from '../../../utils/api/milestones-client';
+import {createMilestone, fetchMilestones, updateMilestoneStatus} from '../../../utils/api/milestones-client';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
@@ -118,7 +114,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestoneId: string
   ) => {
-    if (!projectId) return;
+    if (!projectId) return,
     const map: Record<string, string> = {
       in_progress: 'In Progress',
       submitted: 'Submitted',
@@ -227,7 +223,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
-  );
+  ),
         <div className="mt-12 text-xs text-gray-500">
           Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
         </div>

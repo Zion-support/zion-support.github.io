@@ -1,43 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- > Report abuse </button> </div>) 
-}</div> </div>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
-import { Star } from 'lucide-react';
+import {Star} from 'lucide-react';
 type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='enhanced-card hover:shadow-lg transition-shadow'>
-      <div className='flex items-center justify-between mb-2'>
-        <div className='flex items-center gap-2'>
-          <StarRating
-            value={review.rating}
-            onChange={() => {}}
-            readOnly
-            size={18}
-          />
-          <span className='text-sm text-gray-500'>
-            {new Date(review.createdAt).toLocaleDateString()}
-          </span>
-        </div>
-        <button
-          className='text-xs text-red-500 hover:underline'
-=======
     <div className="enhanced-card hover: shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
@@ -46,8 +17,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         </div>
         <button
           className="text-xs text-red-500 hover:underline"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="enhanced-card hover: shadow-lg transition-shadow">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
@@ -56,20 +25,13 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         </div>
         <button
           className="text-xs text-red-500 hover:underline"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           onClick={() => onReport && onReport(review.id)}
         >
           Report abuse
         </button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='flex items-center gap-2 mb-3'>
-        <span className='text-sm font-medium'>{review.authorName}</span>
-=======
       <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {review.categories?.wouldWorkWithAgain && (
           <span className="pill pill-success">Would work again</span>
         )}
@@ -91,9 +53,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   )
 };
 
-<<<<<<< HEAD
-export default ReviewCard;
-=======
       <div className="flex items-center gap-2 mb-3">
         <span className="text-sm font-medium">{review.authorName}</span>
         {review.categories?.wouldWorkWithAgain && (
@@ -118,7 +77,4 @@ export default ReviewCard;
 };
 
 export default ReviewCard;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default ReviewCard;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { HELP_CATEGORIES } from './help-content';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast";
-import { HELP_CATEGORIES } from "./help-content";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {ThumbsUp, ThumbsDown} from 'lucide-react'
+import {toast} from "@/components/ui/use-toast";
+import {HELP_CATEGORIES} from "./help-content";
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -37,7 +27,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   }
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type);
+    setFeedbackGiven(type),
     
     // In a real implementation, this would send feedback to the server
     toast({
@@ -110,26 +100,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 }
 
 function formatDate(date: string): string {
-<<<<<<< HEAD
-  return new Date(date).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
 
-}'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric", });
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

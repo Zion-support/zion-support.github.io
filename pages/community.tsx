@@ -35,7 +35,7 @@ export default function CommunityPage() {
               or email{' '}
               <a
                 className='text-purple-400'
-                href='mailto:kleber@ziontechgroup.com'
+                href='mailto: kleber@ziontechgroup.com'
               >
                 kleber@ziontechgroup.com
               </a>
@@ -90,7 +90,7 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 export default function CommunityPage() {
 export default function CommunityPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

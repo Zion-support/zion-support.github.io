@@ -1,9 +1,9 @@
 
-import { useState, useCallback } from 'react';
-import { PortfolioProject } from '@/types/resume';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
+import {useState,, useCallback} from 'react';
+import {PortfolioProject} from '@/types/resume';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +41,7 @@ export function usePortfolio() {
   
   const addProject = async (project: PortfolioProject): Promise<string | null> => {
     if (!user) {
-      setError('You must be logged in to add a portfolio project');
+      setError('You must be logged in to add a portfolio project'),
       return null
     }
     
@@ -86,7 +86,7 @@ export function usePortfolio() {
   
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update a portfolio project');
+      setError('You must be logged in to update a portfolio project'),
       return false
     }
     
@@ -130,7 +130,7 @@ export function usePortfolio() {
   
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete a portfolio project');
+      setError('You must be logged in to delete a portfolio project'),
       return false
     }
     

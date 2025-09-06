@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 
 ursor/integrate-build-improve-and-re-verify-b76c

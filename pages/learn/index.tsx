@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import CourseCard, { Course } from '../../components/learn/CourseCard';
 import FilterBar from '../../components/learn/FilterBar';
 

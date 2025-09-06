@@ -4,12 +4,12 @@
 ursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import AdvancedSEO from '@/components/seo/AdvancedSEO';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import { AuthorBio } from '@/components/blog/AuthorBio';
-import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
-import { CommentsSection } from '@/components/blog/CommentsSection';
+import {BLOG_POSTS} from '@/data/blog-posts';
+import {AuthorBio} from '@/components/blog/AuthorBio';
+import {SocialShareButtons} from '@/components/blog/SocialShareButtons';
+import {CommentsSection} from '@/components/blog/CommentsSection';
 import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
@@ -32,7 +32,7 @@ interface BlogPostPageProps {
   /**
    * Preloaded blog post for static generation. Can be null if not found.
    */
-  initialPost: BlogPost | null;
+  initialPost: BlogPost | null,
   initialPost: BlogPost | null
 }
   initialPost: BlogPost | null
@@ -67,12 +67,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
         // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-        // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps:
-        setPost(null);
+        // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null);
         setError('Article not found');
       const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null;
       if (directFallback) {
-        setPost(directFallback);
+        setPost(directFallback),
         setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)

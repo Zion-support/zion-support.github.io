@@ -13,7 +13,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   switch (preset) {
     case 'dark':
       return {
-        primaryColor;
+        primaryColor,
         backgroundColor: '#0f172a', textColor: '#e2e8f0',
         accentColor: primaryColor, buttonColor: primaryColor,
         cardBackground: '#1e293b'};
@@ -36,9 +36,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         accentColor: '#ff7f50', buttonColor: primaryColor,
         cardBackground: '#1e2127'};
     case 'light':
-    default:
-      return {
-        primaryColor;
+    default: return {
+        primaryColor,
         backgroundColor: '#ffffff', textColor: '#0f172a',
         accentColor: primaryColor, buttonColor: primaryColor,
         cardBackground: '#f8fafc'}
@@ -47,7 +46,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-  const root = document.documentElement;
+  const root = document.documentElement,
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);

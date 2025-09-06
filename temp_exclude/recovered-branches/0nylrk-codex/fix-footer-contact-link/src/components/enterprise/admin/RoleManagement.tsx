@@ -1,21 +1,11 @@
 
 import React from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
-import { toast } from "@/hooks/use-toast";
-import { InfoIcon } from "lucide-react";
-import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip";
+import {Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Switch} from "@/components/ui/switch";
+import {toast} from "@/hooks/use-toast";
+import {InfoIcon} from "lucide-react";
+import {Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger} from "@/components/ui/tooltip";
 
 export function RoleManagement() {
   // Mock team members data

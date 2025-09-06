@@ -1,8 +1,8 @@
 import NextHead from 'next/head';
-import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import {DollarSign, Check, Phone, Mail, MapPin} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-import { innovativeAIServices } from '../data/innovative-ai-services';
+import {innovativeAIServices} from '../data/innovative-ai-services';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function AIFinancialRiskPage() {

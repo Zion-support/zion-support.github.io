@@ -1,33 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 
 import React from "react";
-import { Star } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {Star} from 'lucide-react'
 
 import React from "react";
-import { Star } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Star } from 'lucide-react';
+import {Star} from 'lucide-react'
+import {Star} from 'lucide-react';
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { value: '4.8', label: 'App Store Rating' },
-    { value: '50K+', label: 'Downloads' },
-    { value: '96%', label: 'User Satisfaction' },
-    { value: '12M+', label: 'Matches Made' },
-=======
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
@@ -62,11 +47,6 @@ export const CommunityTrust: React.FC = () => {
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
           </blockquote>
-<<<<<<< HEAD
-          <div className='text-center'>
-            <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>
-            <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>
-=======
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
@@ -108,30 +88,16 @@ export const CommunityTrust: React.FC = () => {
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
             <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}</div>) ) ;
-}</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
-};
-'"
-=======
   )
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

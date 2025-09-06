@@ -1,30 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
-import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-import {
-  Search,
-  Filter,
-  Star,
-  Users,
-  TrendingUp,
-  Clock,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Database,
-  Globe,
-  Robot,
-  Cube,
-  Sparkles,;
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Clock, Zap, Shield, Cloud, Brain, 
-  Database, Globe, Robot, Cube, Sparkles
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {innovativeMicroSaasServices2026} from '../data/2026-innovative-micro-saas-expansion';
+import {specializedITSolutions2026} from '../data/2026-specialized-it-solutions';
+import {emergingTechServices2026} from '../data/2026-emerging-tech-services';
+import {Search, Filter, Star, Users, TrendingUp, Clock, Zap, Shield, Cloud, Brain, Database, Globe, Robot, Cube, Sparkles,, import, {, Search, Filter, Star, Users, TrendingUp, Clock, Zap, Shield, Cloud, Brain, Database, Globe, Robot, Cube, Sparkles, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 interface Service {
   id: string,
@@ -63,12 +42,8 @@ interface Service {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  Clock, Zap, Shield, Cloud, Brain, 
-  Database, Globe, Robot, Cube, Sparkles
-} from 'lucide-react';
+  reviews: number,
+import {Search, Filter, Star, Users, TrendingUp, Clock, Zap, Shield, Cloud, Brain, Database, Globe, Robot, Cube, Sparkles} from 'lucide-react';
 
 interface Service {
   id: string,
@@ -206,8 +181,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             return price > 400 && price <= 600;
           case '600+':
             return price > 600;
-          default:
-            return true;
+          default: return true,
         }
       })();
 
@@ -268,8 +242,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         return b.rating - a.rating;
       case 'customers':
         return b.customers - a.customers;
-      default:
-        return 0;
+      default: return 0,
       default: return 0
       default: return 0
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -452,7 +425,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 Email Us
               </a>
@@ -484,7 +457,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       'Internet of Things (IoT)': <Zap className="w-5 h-5" />;
       'Edge Computing & 5G': <Globe className="w-5 h-5" />;
       'AR/VR & Immersive Technology': <Cube className="w-5 h-5" />;
-      'Robotics & Automation': <Robot className="w-5 h-5" />;
+      'Robotics & Automation': <Robot className="w-5 h-5" />,
       'Digital Twin & Simulation': <Cube className="w-5 h-5" />
     };
     return iconMap[category] || <Sparkles className="w-5 h-5" />
@@ -757,7 +730,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
-  );
+  ),
 };
 
   /* Category Filter */ 

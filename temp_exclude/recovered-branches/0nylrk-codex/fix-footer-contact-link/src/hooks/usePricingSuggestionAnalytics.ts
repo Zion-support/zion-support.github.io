@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { supabase } from "@/integrations/supabase/client";
+import {useState,, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
   totalSuggestions: number, acceptanceRate: number,
   averagePriceGap: number,

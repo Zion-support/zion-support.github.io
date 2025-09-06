@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion;
+import {motion,, AnimatePresence} from 'framer-motion;
 import {}
   // TODO: Implement,
 };
@@ -192,9 +192,9 @@ export default function HelpPage() {}
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">"
 </h2>
             </h2>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">"
 </div>
-                <motion.a;
+                <motion.a,
                   key={index};
                   href={link.href};
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group"
@@ -261,9 +261,9 @@ export default function HelpPage() {}
 </motion>"
                         <div className="px-6 pb-6">"
 </div>"
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
+                          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
-                              <motion.div;
+                              <motion.div,
                                 key={articleIndex};
                                 className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-colors group"
                                 whileHover={{ y: -2 }};
@@ -342,7 +342,7 @@ export default function HelpPage() {}
 </p>
             </p>
             "
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">"
 </div>"
               <div className="bg-white/10 rounded-lg p-6">"
 </div>"
@@ -364,7 +364,7 @@ export default function HelpPage() {}
 </Phone>"
                 <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>"
                 <p className="text-blue-100 mb-4">Call us directly</p>"
-                <a;"
+                <a,"
                   href="tel:+15551234567"
                   className="text-white hover:text-blue-200 font-medium"
                 >

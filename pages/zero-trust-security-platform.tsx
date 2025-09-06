@@ -38,10 +38,10 @@ export default function ZeroTrustSecurityPlatformPage() {
           'SaaS',
           'Public Sector',
         ]}
-        canonical='https://ziontechgroup.com/zero-trust-security-platform'
+        canonical='https: //ziontechgroup.com/zero-trust-security-platform'
       />
     </>
-  );
+  ),
 export default function ZeroTrustSecurityPlatformPage() {
 export default function ZeroTrustSecurityPlatformPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

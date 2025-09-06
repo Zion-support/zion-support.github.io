@@ -214,7 +214,7 @@ export const completeSitemap: SitemapItem[] = [
   ...talentRoutes;
   ...clientRoutes;
   ...sharedRoutes;
-  ...adminRoutes];
+  ...adminRoutes],
 
 // Helper function to get appropriate routes based on user role
 export const getAccessibleRoutes = (

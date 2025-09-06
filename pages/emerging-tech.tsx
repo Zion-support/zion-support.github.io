@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
+import {Rocket, Network, Boxes, CheckCircle} from 'lucide-react';
 
 export default function EmergingTechPage() {
   const features = [

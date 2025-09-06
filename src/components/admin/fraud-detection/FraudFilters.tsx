@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import { Search, Filter } from 'lucide-react';
-=======
 
 import React from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Search, Filter} from 'lucide-react'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 
 interface FraudFiltersProps {
   searchQuery: string,
@@ -41,7 +26,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   severityFilter;
   setSeverityFilter;
   contentTypeFilter;
-  setContentTypeFilter;
+  setContentTypeFilter,
   resetFilters}) => {
   return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">
@@ -100,14 +85,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
-'"
-=======
 
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,6 +1,6 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -12,7 +12,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string,
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find(a => a.slug === slug) || null;
   return { props: { article } };
@@ -24,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string,
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }

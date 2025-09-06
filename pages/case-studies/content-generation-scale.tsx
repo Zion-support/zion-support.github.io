@@ -16,7 +16,7 @@ export default function CaseStudyPage() {
 ursor/integrate-build-improve-and-re-verify-b76c
     results: [
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
-    ];
+    ],
     technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics'],
     duration: '4 months',
     teamSize: '5 engineers + 3 content specialists',
@@ -24,7 +24,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
     results: [
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
-    ];
+    ],
     technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics'],
     duration: '4 months',
     teamSize: '5 engineers + 3 content specialists',
@@ -271,7 +271,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </div>
     </>
-  );
+  ),
   )
 }
   )

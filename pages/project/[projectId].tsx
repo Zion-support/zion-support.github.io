@@ -16,8 +16,8 @@ const [note, setNote] = useState ("");
   setError (e.message) 
 }finally {
   setLoading (false) 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = useRouter();
@@ -83,8 +83,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }userHeaders= {
   headers 
 }/> </div>) 
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = useRouter();

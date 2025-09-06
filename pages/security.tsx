@@ -1,25 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Server,
-  Key,
-  CheckCircle,
-  Mail,
-  Phone,
-  MapPin,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin,} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -566,7 +555,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <EnhancedFooter />
       </div>
     </>
-  );
+  ),
   )
 }
   )

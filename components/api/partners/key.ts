@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {
-  authenticateRequest,
-  listApiKeys,
-  saveApiKeys,;
-} from '../../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res.status(401).json({ error: 'Unauthorized' });
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
+import {authenticateRequest, listApiKeys, saveApiKeys} from "../../../utils/api/partnerAuth";
+import {v4, as, uuidv4} from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -31,11 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
+import {authenticateRequest, listApiKeys, saveApiKeys} from "../../../utils/api/partnerAuth";
+import {v4, as, uuidv4} from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -44,37 +20,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const { apiKey } = auth;
   const keys = await listApiKeys();
   // Deactivate old key
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const existing = keys.find(k => k.id === apiKey.id);
-=======
   const existing = keys.find((k) => k.id === apiKey.id);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const existing = keys.find((k) => k.id === apiKey.id);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
   const newKey = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: uuidv4(),
-    partnerId: auth.partner.id,
-    key: uuidv4(),
-    active: true,
-    createdAt: now,
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
-  };
-  keys.push(newKey as any);
-  await saveApiKeys(keys);
-  return res.status(201).json({ apiKey: newKey.key });
-=======
     id: uuidv4(), partnerId: auth.partner.id,
     key: uuidv4(), active: true,
     createdAt: now,
@@ -83,16 +38,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    id: uuidv4();
-    partnerId: auth.partner.id;
-    key: uuidv4();
-    active: true;
-    createdAt: now;
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
+    uuidv4();
+    auth.partner.id;
+    uuidv4();
+    true;
+    now;
+    apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any);
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

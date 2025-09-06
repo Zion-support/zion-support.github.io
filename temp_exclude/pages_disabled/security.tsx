@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield,, Lock,, Eye,, Database,, Users,, AlertTriangle,, CheckCircle,, Clock,, ArrowRight} from 'lucide-react';
 
 const securityFeatures = [
   {
@@ -229,7 +229,7 @@ export default function SecurityPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Secure Your Business Today
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -255,5 +255,5 @@ export default function SecurityPage() {
         </section>
       </div>
     </>
-  );
+  ),
 }

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const AIEvaluationOrchestrator: React.FC = () => {
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIEvaluationOrchestratorPage() {
 ursor/integrate-build-improve-and-re-verify-b76c
   return (
@@ -32,14 +32,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
 
         <div className="text-center">
-          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:opacity-90">
+          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90">
             Talk to Sales
           </a>
         </div>
       </main>
     </Layout>
   );
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIEvaluationOrchestratorPage() {
   return (
     <>

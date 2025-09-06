@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '../../../utils/fsdb';
-import { parseUserFromRequest } from '../../../utils/auth';
-import { DisputeCase, DisputeReason } from '../../../types/disputes';
-import { generateCaseId } from '../../../utils/fsdb';
+import {createDispute, readAllDisputes} from '../../../utils/fsdb';
+import {parseUserFromRequest} from '../../../utils/auth';
+import {DisputeCase, DisputeReason} from '../../../types/disputes';
+import {generateCaseId} from '../../../utils/fsdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
   if (req.method === 'GET') {
     const all = await readAllDisputes();
-    let filtered = all;
+    let filtered = all,
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }

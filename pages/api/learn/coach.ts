@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { OpenAI } = await import('openai');
       const openai = new OpenAI({ apiKey });
       const resp = await openai.chat.completions.create({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' };
           { role: 'user', content: String(prompt) }

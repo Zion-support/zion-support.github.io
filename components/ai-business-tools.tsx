@@ -2,60 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Brain,
-  MessageSquare,
-  Image,
-  Video,
-  FileText,
-  BarChart3,
-  Users,
-  Zap,
-  ArrowRight,
-  Star,
-  Check,
-  ExternalLink,
-  TrendingUp,
-  Shield,
-  Globe,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Brain;
-  MessageSquare, 
-  Image, 
-  Video, 
-  FileText, 
-  BarChart3, 
-  Users, 
-  Zap;
-  ArrowRight;
-  Star;
-  Check;
-  ExternalLink;
-  TrendingUp;
-  Shield;
-  Globe
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {Brain, MessageSquare, Image, Video, FileText, BarChart3, Users, Zap, ArrowRight, Star, Check, ExternalLink, TrendingUp, Shield, Globe} from 'lucide-react';
 
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
       name: 'ChatGPT',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description:
-        'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
-=======
       description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
       rating: 4.8,
@@ -64,7 +17,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Natural language processingCode generation & debuggingContent creationData analysisCreative writingMulti-language support'
-      ];
+      ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.';
       pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
@@ -82,7 +35,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rightsCommunity featuresDiscord integration'
-      ];
+      ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.';
       pros: ['High-quality outputCreative controlCommercial rightsActive community'],
@@ -100,7 +53,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
         'Marketing copy generationBlog post writingSocial media contentSEO optimizationBrand voice trainingTeam collaboration'
-      ];
+      ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.';
       pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
@@ -109,10 +62,6 @@ export default function AIBusinessToolsPage() {
     };
     {
       name: 'Synthesia',
-<<<<<<< HEAD
-      description:
-        'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
-=======
       description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
     category: 'AI Assistant',
       pricing: 'Free - $20/month',
@@ -122,7 +71,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Natural language processingCode generation & debuggingContent creationData analysisCreative writingMulti-language support'
-      ];
+      ],
       website: 'https://chat.openai.com',
       useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
     pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
@@ -140,7 +89,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rightsCommunity featuresDiscord integration'
-      ];
+      ],
       website: 'https://midjourney.com',
       useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
     pros: ['High-quality outputCreative controlCommercial rightsActive community'],
@@ -158,7 +107,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
         'Marketing copy generationBlog post writingSocial media contentSEO optimizationBrand voice trainingTeam collaboration'
-      ];
+      ],
       website: 'https://jasper.ai',
       useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
     pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
@@ -168,24 +117,16 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Synthesia',
       description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI Video',
       pricing: '$30 - $89/month',
       rating: 4.5,
       users: '50K+',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Video className='w-8 h-8 text-red-400' />,
-=======
       icon: <Video className="w-8 h-8 text-red-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       features: [
         'AI avatar generationText-to-speechVideo templatesMulti-language supportCustom brandingAPI access'
-      ];
+      ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.';
       pros: ['Professional qualityMultiple languagesCustom avatarsEasy to use'],
@@ -203,7 +144,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         'Marketing copy generationProduct descriptionsSocial media postsEmail campaignsBlog contentFree tier available'
-      ];
+      ],
       website: 'https://copy.ai',
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.';
       pros: ['Free tierEasy to useGood templatesAffordable'],
@@ -221,7 +162,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detectionBrowser extensionMobile apps'
-      ];
+      ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.';
       pros: ['Excellent accuracyMultiple platformsFree tierUser-friendly'],
@@ -230,15 +171,11 @@ export default function AIBusinessToolsPage() {
     };
     {
       name: 'Lumen5',
-<<<<<<< HEAD
-      description:
-        'AI video maker that transforms text content into engaging videos for social media and marketing.',
-=======
       icon: <Video className="w-8 h-8 text-red-400" />,
       color: 'bg-gradient-to-br from-red-500 to-pink-600',
       features: [
         'AI avatar generationText-to-speechVideo templatesMulti-language supportCustom brandingAPI access'
-      ];
+      ],
       website: 'https://synthesia.io',
       useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
     pros: ['Professional qualityMultiple languagesCustom avatarsEasy to use'],
@@ -256,7 +193,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
         'Marketing copy generationProduct descriptionsSocial media postsEmail campaignsBlog contentFree tier available'
-      ];
+      ],
       website: 'https://copy.ai',
       useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
     pros: ['Free tierEasy to useGood templatesAffordable'],
@@ -274,7 +211,7 @@ export default function AIBusinessToolsPage() {
       color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
         'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detectionBrowser extensionMobile apps'
-      ];
+      ],
       website: 'https://grammarly.com',
       useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
     pros: ['Excellent accuracyMultiple platformsFree tierUser-friendly'],
@@ -284,24 +221,16 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Lumen5',
       description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI Video',
       pricing: 'Free - $79/month',
       rating: 4.3,
       users: '100K+',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Video className='w-8 h-8 text-blue-400' />,
-=======
       icon: <Video className="w-8 h-8 text-blue-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
         'Text-to-video conversionVideo templatesMusic libraryBrand customizationSocial media formatsFree tier available'
-      ];
+      ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.';
       pros: ['Free tierEasy to useGood templatesAffordable'],
@@ -310,15 +239,11 @@ export default function AIBusinessToolsPage() {
     };
     {
       name: 'Surfer SEO',
-<<<<<<< HEAD
-      description:
-        'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',
-=======
       icon: <Video className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
         'Text-to-video conversionVideo templatesMusic libraryBrand customizationSocial media formatsFree tier available'
-      ];
+      ],
       website: 'https://lumen5.com',
       useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
     pros: ['Free tierEasy to useGood templatesAffordable'],
@@ -328,24 +253,16 @@ export default function AIBusinessToolsPage() {
     {
       name: 'Surfer SEO',
       description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI SEO',
       pricing: '$59 - $199/month',
       rating: 4.6,
       users: '25K+',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <TrendingUp className='w-8 h-8 text-green-400' />,
-=======
       icon: <TrendingUp className="w-8 h-8 text-green-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Content optimizationKeyword researchCompetitor analysisSERP analysisContent editorRank tracking'
-      ];
+      ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.';
       pros: ['Data-driven insightsContent optimizationCompetitor analysisGood support'],
@@ -357,17 +274,11 @@ export default function AIBusinessToolsPage() {
   const categories = ['AllAI AssistantAI ArtAI WritingAI VideoAI CopywritingAI SEO'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-<<<<<<< HEAD
-  const filteredTools =
-    selectedCategory === 'All'
-      ? aiTools
-      : aiTools.filter(tool => tool.category === selectedCategory);
-=======
       icon: <TrendingUp className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Content optimizationKeyword researchCompetitor analysisSERP analysisContent editorRank tracking'
-      ];
+      ],
       website: 'https://surferseo.com',
       useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
     pros: ['Data-driven insightsContent optimizationCompetitor analysisGood support'],
@@ -382,84 +293,14 @@ export default function AIBusinessToolsPage() {
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
     : aiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const filteredTools = selectedCategory === 'All' 
     ? aiTools 
     : aiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <>
       <Head>
         <title>AI Business Tools - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta
-          name='description'
-          content='Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services.'
-        />
-        <meta
-          property='og:title'
-          content='AI Business Tools - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Expert-curated selection of AI-powered business tools and SaaS services.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-=======
-        <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
-        <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
-        <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
-        <meta name="twitter:card" content="summary_large_image" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      </Head>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
-        </div>
-
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-20 animate-fade-in">
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6 animate-scale-in">
-                <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Business Solutions
-              </div>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
-              AI Business Tools
-            </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-              Transform your business with cutting-edge AI tools. 
-              Expert-curated selection of the best AI-powered SaaS services for modern enterprises.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              <Button
-                href="#tools"
-                size="lg"
-                className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40"
-                style={{ animationDelay: '0.2s' }}
-              >
-                Explore AI Tools
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-<<<<<<< HEAD
-                href='/contact'
-                variant='outline'
-                size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-=======
         <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
         <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
         <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
@@ -504,16 +345,54 @@ export default function AIBusinessToolsPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
+        <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
+        <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
+        </div>
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-20 animate-fade-in">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6 animate-scale-in">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Business Solutions
+              </div>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
+              AI Business Tools
+            </h1>
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+              Transform your business with cutting-edge AI tools. 
+              Expert-curated selection of the best AI-powered SaaS services for modern enterprises.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+              <Button
+                href="#tools"
+                size="lg"
+                className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40"
+                style={{ animationDelay: '0.2s' }}
+              >
+                Explore AI Tools
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
                 href="/contact"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 style={{ animationDelay: '0.4s' }}
               >
                 Get AI Consultation
@@ -522,19 +401,9 @@ export default function AIBusinessToolsPage() {
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-          >
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {aiTools.length}+
               </div>
               <div className="text-gray-400 text-sm">AI Tools</div>
@@ -555,9 +424,6 @@ export default function AIBusinessToolsPage() {
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
                 130M+
               </div>
-<<<<<<< HEAD
-              <div className='text-gray-400 text-sm'>Total Users</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
@@ -582,33 +448,17 @@ export default function AIBusinessToolsPage() {
                 130M+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-gray-400 text-sm">Total Users</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-16 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-wrap justify-center gap-4'>
-            {categories.map(category => (
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -626,102 +476,6 @@ export default function AIBusinessToolsPage() {
       </section>
 
       {/* Tools Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section id='tools' className='py-24 bg-black'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              {selectedCategory === 'All'
-                ? 'All AI Tools'
-                : `${selectedCategory} Tools`}
-=======
-      <section id="tools" className="py-24 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
-              {selectedCategory === 'All' ? 'All AI Tools' : `${selectedCategory} Tools`}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              {selectedCategory === 'All' 
-                ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
-                : `Explore the best ${selectedCategory.toLowerCase()} tools to enhance your business capabilities.`
-              }
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredTools.map((tool, index) => (
-              <Card
-                key={index}
-                className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="relative">
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
-                      {tool.icon}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
-                        {tool.name}
-                      </h3>
-                      <div className="flex items-center space-x-2">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-300">{tool.rating}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
-                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
-                      <span>{tool.users} users</span>
-                      <span className="text-green-400">{tool.pricing}</span>
-                    </div>
-
-                    <p className="text-gray-400 leading-relaxed mb-4">
-                      {tool.description}
-                    </p>
-
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
-                      <div className="grid grid-cols-2 gap-2">
-                        {tool.features.slice(0, 4).map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                            <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
-                      <p className="text-sm text-gray-400">{tool.bestFor}</p>
-                    </div>
-
-                    <div className="flex items-center justify-between">
-                      <Button
-                        href={tool.website}
-                        variant="outline"
-                        size="sm"
-                        className="group-hover:border-green-500 group-hover:text-green-400"
-                      >
-                        Visit Website
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
-<<<<<<< HEAD
-
-                      <div className='text-right'>
-                        <div className='text-xs text-gray-500 mb-1'>
-                          Use Case:
-                        </div>
-                        <div className='text-sm text-gray-300 max-w-xs'>
-                          {tool.useCase}
-                        </div>
-=======
       <section id="tools" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -797,16 +551,85 @@ export default function AIBusinessToolsPage() {
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <section id="tools" className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+              {selectedCategory === 'All' ? 'All AI Tools' : `${selectedCategory} Tools`}
+            </h2>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              {selectedCategory === 'All' 
+                ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
+                : `Explore the best ${selectedCategory.toLowerCase()} tools to enhance your business capabilities.`
+              }
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredTools.map((tool, index) => (
+              <Card
+                key={index}
+                className="group border border-gray-800 hover:border-green-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="relative">
+                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
+                      {tool.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-2">
+                      <h3 className="text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300">
+                        {tool.name}
+                      </h3>
+                      <div className="flex items-center space-x-2">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-gray-300">{tool.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center space-x-4 mb-3 text-sm text-gray-400">
+                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
+                      <span>{tool.users} users</span>
+                      <span className="text-green-400">{tool.pricing}</span>
+                    </div>
+
+                    <p className="text-gray-400 leading-relaxed mb-4">
+                      {tool.description}
+                    </p>
+
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {tool.features.slice(0, 4).map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-400">
+                            <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
+                      <p className="text-sm text-gray-400">{tool.bestFor}</p>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <Button
+                        href={tool.website}
+                        variant="outline"
+                        size="sm"
+                        className="group-hover:border-green-500 group-hover:text-green-400"
+                      >
+                        Visit Website
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </Button>
                       
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                     </div>
                   </div>
@@ -818,18 +641,10 @@ export default function AIBusinessToolsPage() {
       </section>
 
       {/* AI Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Why Choose AI Tools?
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -862,14 +677,6 @@ export default function AIBusinessToolsPage() {
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <Users className="w-8 h-8 text-white" />
               </div>
-<<<<<<< HEAD
-              <h3 className='text-xl font-bold mb-4 text-white'>
-                Enhanced Customer Experience
-              </h3>
-              <p className='text-gray-400'>
-                AI-powered chatbots, personalization, and automation create
-                seamless, personalized experiences for your customers.
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -909,12 +716,9 @@ export default function AIBusinessToolsPage() {
               <h3 className="text-xl font-bold mb-4 text-white">Enhanced Customer Experience</h3>
               <p className="text-gray-400">
                 AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <h3 className="text-xl font-bold mb-4 text-white">Enhanced Customer Experience</h3>
               <p className="text-gray-400">
                 AI-powered chatbots, personalization, and automation create seamless, personalized experiences for your customers.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </Card>
           </div>
@@ -922,40 +726,6 @@ export default function AIBusinessToolsPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-=======
-      <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            Ready to Transform Your Business with AI?
-          </h2>
-          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
-              href="/contact"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
-            >
-              Get AI Strategy Session
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-<<<<<<< HEAD
-              href='/saas-marketplace'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'
-=======
       <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -976,16 +746,30 @@ export default function AIBusinessToolsPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <section className="py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
+            Ready to Transform Your Business with AI?
+          </h2>
+          <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Our AI experts can help you identify the right tools, implement them effectively, and maximize their impact on your business.
+          </p>
+          <div className="flex flex-col sm: flex-row gap-6 justify-center">
+            <Button
+              href="/contact"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl"
+            >
+              Get AI Strategy Session
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
               href="/saas-marketplace"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Explore More Tools
             </Button>
@@ -993,12 +777,6 @@ export default function AIBusinessToolsPage() {
         </div>
       </section>
     </>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

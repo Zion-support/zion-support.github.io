@@ -1,6 +1,6 @@
 import React from 'react';
 export default function Page() {
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
   const router = useRouter();
@@ -13,7 +13,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <CertificatePreview courseId={courseId} />
     </div>
   );
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
   const router = useRouter();

@@ -1,39 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { BlogPost } from '@/utils/types/blog';
-import { readPosts, writePosts } from '@/utils/data/blogStore';
-import { requireAdmin } from '@/utils/api/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {v4, as, uuidv4} from 'uuid';
+import {BlogPost} from '@/utils/types/blog';
+import {readPosts, writePosts} from '@/utils/data/blogStore';
+import {requireAdmin} from '@/utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (status && typeof status === 'string')
-      posts = posts.filter(p => p.status === status);
-    if (topic && typeof topic === 'string')
-      posts = posts.filter(p => (p.topics || []).includes(topic));
-    if (tag && typeof tag === 'string')
-      posts = posts.filter(p => (p.tags || []).includes(tag));
-    if (author && typeof author === 'string')
-      posts = posts.filter(p => p.author === author);
-    posts = posts.sort(
-      (a, b) =>
-        new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
-    );
-    const o = parseInt(String(offset || 0), 10) || 0;
-    const l = parseInt(String(limit || 20), 10) || 20;
-    return res
-      .status(200)
-      .json({ items: posts.slice(o, o + l), total: posts.length });
-=======
     if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics || []).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags || []).includes(tag));
@@ -42,8 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const o = parseInt(String(offset || 0), 10) || 0;
     const l = parseInt(String(limit || 20), 10) || 20;
     return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status);
     if (topic && typeof topic === 'string') posts = posts.filter((p) => (p.topics || []).includes(topic));
     if (tag && typeof tag === 'string') posts = posts.filter((p) => (p.tags || []).includes(tag));
@@ -52,19 +23,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const o = parseInt(String(offset || 0), 10) || 0;
     const l = parseInt(String(limit || 20), 10) || 20;
     return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
     if (!requireAdmin(req, res)) return;
     const body = req.body as Partial<BlogPost>;
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return res.status(400).json({ error: 'Missing required fields' });
-=======
       return res.status(400).json({ error: 'Missing required fields' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     const posts = readPosts();
     if (posts.some((p) => p.slug === body.slug)) {
@@ -81,10 +46,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       topics: body.topics || [];
       seo: {
         metaTitle: body.seo?.metaTitle || body.title!;
-        metaDescription: body.seo?.metaDescription || '';
+        metaDescription: body.seo?.metaDescription || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || ''};
       body: body.body || '';
-      status: body.status || 'draft';
+      status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 }};
     posts.unshift(post);
     writePosts(posts);
@@ -92,8 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).end();
-<<<<<<< HEAD
-=======
       return res.status(400).json({ error: 'Missing required fields' })
     }
     const posts = readPosts();
@@ -119,7 +82,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).end();
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

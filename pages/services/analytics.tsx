@@ -1,24 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  BarChart3,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  Cpu,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-import { 
-  BarChart3, Database, Zap, Shield, Rocket, Cpu, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp,, import, {, BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
@@ -84,10 +67,7 @@ export default function AnalyticsServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/analytics'
         />
-import { 
-  BarChart3, Database, Zap, Shield, Rocket, Cpu, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
@@ -405,7 +385,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {

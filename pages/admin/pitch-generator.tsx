@@ -3,8 +3,8 @@ import React, { useCallback, useMemo, useState } from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps } from 'next';
-import { requireAdminRole } from '../../utils/auth';
+import {GetServerSideProps} from 'next';
+import {requireAdminRole} from '../../utils/auth';
 export type Slide = {
   id: string,
   title: string,
@@ -40,7 +40,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
-  if ('redirect' in result) return result;
+  if ('redirect' in result) return result,
   return result
 };
 
@@ -56,8 +56,8 @@ export default function PitchGenerator() {
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps } from 'next';
-import { requireAdminRole } from '../../utils/auth';
+import {GetServerSideProps} from 'next';
+import {requireAdminRole} from '../../utils/auth';
 export type Slide = {
   id: string,
   title: string,
@@ -93,7 +93,7 @@ function SlidePreview({ slide, isActive, onClick }: { slide: Slide, isActive: bo
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
-  if ('redirect' in result) return result;
+  if ('redirect' in result) return result,
   return result
 };
 
@@ -106,7 +106,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
   const [history, setHistory] = useState<
-    { id: string; createdAt: string; version: string }[]
+    { id: string; createdAt: string, version: string }[]
   >([]);
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
   const [history, setHistory] = useState<{ id: string, createdAt: string, version: string }[]>([]),
@@ -116,7 +116,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   const onAssetDrop = useCallback((e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
-    const files = Array.from(e.dataTransfer.files || []);
+    const files = Array.from(e.dataTransfer.files || []),
     setBuilder(b => ({ ...b, assets: [...b.assets, ...files] }));
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
     setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
@@ -125,7 +125,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   const prevent = (e: React.DragEvent) => {
     e.preventDefault();
-    e.stopPropagation();
+    e.stopPropagation(),
   };
 
   const operatorPrompt = useMemo(
@@ -180,7 +180,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           metrics})});
       const json = await res.json();
       const newSlides: Slide[] = json.slides || [];
-          operatorPrompt;
+          operatorPrompt,
           inputs: builder,
           metrics})});
       const json = await res.json();
@@ -207,7 +207,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const rephraseSlide = useCallback(
     async (idx: number) => {
       if (!slides[idx]) return;
-      setLoading(true);
+      setLoading(true),
       try {
         const res = await fetch('/api/admin/pitch/rewrite', {
           method: 'POST',
@@ -244,7 +244,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
   const rephraseSlide = useCallback(async (idx: number) => {
     if (!slides[idx]) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/admin/pitch/rewrite', {
         method: 'POST',
@@ -360,7 +360,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null;
+    if (!slide.chart) return null,
     const { type, data } = slide.chart;
     return (
       <div className='mt-3'>

@@ -11,7 +11,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <Head>
         <title>API Docs | Zion Tech Group</title>
         <meta name='description' content='API reference and guides.' />
-        <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+        <link rel='canonical' href='https: //ziontechgroup.com/api-docs' />
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -21,7 +21,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
     </Layout>
-  );
+  ),
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>

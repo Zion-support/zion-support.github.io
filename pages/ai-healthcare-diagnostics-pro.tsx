@@ -1,53 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import {
-  Stethoscope,
-  Brain,
-  Eye,
-  Heart,
-  Microscope,
-  Shield,
-  BarChart3,
-  TrendingUp,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Clock,
-  DollarSign,
-  PieChart,
-  Activity,
-  Zap,
-  Pill,
-  Syringe,
-  Hospital,
-  Ambulance,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
 import Link from 'next/link';
 
-import { 
-  Stethoscope, Brain, Eye, Heart, 
-  Microscope, Shield, BarChart3, 
-  TrendingUp, Target, Users, CheckCircle, 
-  ArrowRight, Cpu, Network, Database, 
-  Lock, Clock, DollarSign, PieChart;
-  Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance} from 'lucide-react';
 import Link from 'next/link';
-import { 
-  Stethoscope, Brain, Eye, Heart, 
-  Microscope, Shield, BarChart3, 
-  TrendingUp, Target, Users, CheckCircle, 
-  ArrowRight, Cpu, Network, Database, 
-  Lock, Clock, DollarSign, PieChart;
-  Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance} from 'lucide-react';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-b76c
 const AIHealthcareDiagnosticsPro: React.FC = () => {
@@ -307,7 +267,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "White-label solutions";
         "On-premise deployment";
         "Custom compliance features"
-      ];
+      ],
       color: "from-green-500 to-emerald-500",
       popular: false
     }
@@ -1239,7 +1199,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </a>{' '}
                 or email{' '}
                 <a
-                  href='mailto:kleber@ziontechgroup.com'
+                  href='mailto: kleber@ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'
                 >
                   kleber@ziontechgroup.com
@@ -1272,7 +1232,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
 };
 
 export default AIHealthcareDiagnosticsPro;

@@ -1,11 +1,5 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-exports.handler = async function () {
-=======
 exports.handler = async function() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [
@@ -53,9 +47,6 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -105,7 +96,4 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

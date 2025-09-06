@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { v4 as uuidv4 } from "uuid";
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+import {v4, as, uuidv4} from "uuid";
+import {assertClient, assertTalentOrClientForOffer, getDemoUser} from "../../../utils/marketplace/auth";
+import {getOfferById, listOffers, saveOffer, saveProject} from "../../../utils/marketplace/store";
+import {Offer, PaymentTerms, Project} from "../../../utils/marketplace/types";
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
@@ -10,7 +10,7 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method === "GET") {
-      const user = getDemoUser(req);
+      const user = getDemoUser(req),
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id }),
         return res.json({ ok: true, offers })
@@ -31,7 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       const offer: Offer = {
-        id: uuidv4();
+        id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
         talentSlug,
@@ -56,7 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4();
+          id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
@@ -99,7 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
-    const status = e?.statusCode || 500;
+    const status = e?.statusCode || 500,
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }

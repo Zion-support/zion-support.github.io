@@ -7,7 +7,7 @@ export interface ModerationFlag {
   reason: string;
   status: ModerationStatus;
   createdAt: string;
-  adminNotes?: string;
+  adminNotes?: string,
 }
 
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';

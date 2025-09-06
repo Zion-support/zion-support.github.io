@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- setIsMobile (isMobileDevice);
-setIsTablet (isTabletDevice);
-//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
-  checkDevice ();
-window.addEventListener ('resize', checkDevice);
-=======
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, Tablet, Monitor, RotateCcw, 
-  Wifi, WifiOff, Signal, SignalHigh, 
-  Mouse, Hand
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion, AnimatePresence} from 'framer-motion';
+import {Smartphone, Tablet, Monitor, RotateCcw, Wifi, WifiOff, Signal, SignalHigh, Mouse, Hand} from 'lucide-react';
 
 // TouchEvent types are already defined in DOM
 
@@ -36,7 +23,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children;
   showDebugInfo = false;
   enableTouchGestures = true;
-  enableMobileLayout = true;
+  enableMobileLayout = true,
   enablePerformanceMode = true
 }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -201,7 +188,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         
         // Update performance metrics
         setPerformanceMetrics(prev => ({
-          ...prev;
+          ...prev,
           fps: fpsRef.current
         }))
       }
@@ -227,7 +214,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       (navigator as any).getBattery().then((battery: any) => {
         const updateBatteryLevel = () => {
           setPerformanceMetrics(prev => ({
-            ...prev;
+            ...prev,
             batteryLevel: Math.round(battery.level * 100)
           }))
         };
@@ -445,7 +432,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   const getDeviceIcon = (type: string) => {
     switch (type) {
       case 'mobile': return <Smartphone className="w-5 h-5" />;
-      case 'tablet': return <Tablet className="w-5 h-5" />;
+      case 'tablet': return <Tablet className="w-5 h-5" />,
       default: return <Monitor className="w-5 h-5" />
     }
   };
@@ -454,7 +441,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     switch (status) {
       case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
-      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />,
       default: return <CheckCircle className="w-4 h-4 text-gray-400" />
     }
   };
@@ -596,10 +583,10 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         }
 
         @media (max-width: 768px) {
-          .mobile-optimized button;
+          .mobile-optimized button,
           .mobile-optimized a {
             min-height: 44px,
-            min-width: 44px;
+            min-width: 44px,
           }
           
           .mobile-optimized input;
@@ -612,32 +599,9 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     </>
   )
 };
-<<<<<<< HEAD
-children 
-}{
-  /* Mobile Optimization Panel */ 
-}<AnimatePresence> {
-  showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) ) 
-}</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> {
-  /* Mobile Toggle Button */ 
-}<button </svg> </button> {
-  /* Global Mobile Styles */ 
-}<style jsx global> {
-  `.mobile-optimized * {
-  
-}` 
-}</style> </>) 
-};
-export default MobileOptimizer;
-=======
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, Tablet, Monitor, RotateCcw, 
-  Wifi, WifiOff, Signal, SignalHigh, 
-  Mouse, Hand
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Smartphone, Tablet, Monitor, RotateCcw, Wifi, WifiOff, Signal, SignalHigh, Mouse, Hand} from 'lucide-react';
 
 // TouchEvent types are already defined in DOM
 
@@ -660,7 +624,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   children;
   showDebugInfo = false;
   enableTouchGestures = true;
-  enableMobileLayout = true;
+  enableMobileLayout = true,
   enablePerformanceMode = true
 }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -825,7 +789,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         
         // Update performance metrics
         setPerformanceMetrics(prev => ({
-          ...prev;
+          ...prev,
           fps: fpsRef.current
         }))
       }
@@ -851,7 +815,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       (navigator as any).getBattery().then((battery: any) => {
         const updateBatteryLevel = () => {
           setPerformanceMetrics(prev => ({
-            ...prev;
+            ...prev,
             batteryLevel: Math.round(battery.level * 100)
           }))
         };
@@ -1069,7 +1033,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
   const getDeviceIcon = (type: string) => {
     switch (type) {
       case 'mobile': return <Smartphone className="w-5 h-5" />;
-      case 'tablet': return <Tablet className="w-5 h-5" />;
+      case 'tablet': return <Tablet className="w-5 h-5" />,
       default: return <Monitor className="w-5 h-5" />
     }
   };
@@ -1078,7 +1042,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     switch (status) {
       case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
-      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />,
       default: return <CheckCircle className="w-4 h-4 text-gray-400" />
     }
   };
@@ -1220,7 +1184,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         }
 
         @media (max-width: 768px) {
-          .mobile-optimized button;
+          .mobile-optimized button,
           .mobile-optimized a {
             min-height: 44px,
             min-width: 44px,
@@ -1238,8 +1202,5 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 };
 
 export default MobileOptimizer;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default MobileOptimizer;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

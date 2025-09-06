@@ -1,94 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Zap, 
-  Brain, 
-  Cpu, 
-  Database, 
-  Network, 
-  Globe, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Shield,
-  Lock,
-  Eye,
-  Server,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Rocket,
-  Star,
-  Award,
-  MessageSquare,
-  Video,
-  Play,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
-  CheckCircle2,
-  ArrowUpRight,
-  MailIcon,
-  Phone,
-  MapPin,
-  Search,
-  Filter,
-  BarChart3,
-  PieChart,
-  Activity,
-  Target,
-  Crosshair,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  Binoculars,
-  Camera,
-  Video2,
-  Film,
-  Tv,
-  Radio,
-  Speaker,
-  Headphones,
-  Mic,
-  Phone2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Watch,
-  Clock2,
-  Calendar,
-  Calendar2,
-  User,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Atom,, Zap,, Brain,, Cpu,, Database,, Network,, Globe,, Users,, TrendingUp,, CheckCircle,, ArrowRight,, Shield,, Lock,, Eye,, Server,, Cloud,, Smartphone,, Monitor,, Rocket,, Star,, Award,, MessageSquare,, Video,, Play,, Settings,, Key,, Globe2,, ShieldCheck,, Leaf,, Scale,, Building2,, Car,, Home,, Factory,, City,, CheckCircle2,, ArrowUpRight,, MailIcon,, Phone,, MapPin,, Search,, Filter,, BarChart3,, PieChart,, Activity,, Target,, Crosshair,, Radar,, Satellite,, Telescope,, Microscope,, Binoculars,, Camera,, Video2,, Film,, Tv,, Radio,, Speaker,, Headphones,, Mic,, Phone2,, Smartphone2,, Tablet,, Laptop,, Watch,, Clock2,, Calendar,, Calendar2,, User,, Users2,, UserCheck,, UserX,, UserPlus,, UserMinus,, UserCog,, UserEdit,, UserSearch,, UserVoice,, UserCheck2,, UserX2,, UserPlus2,, UserMinus2,, UserCog2,, UserEdit2,, UserSearch2,, UserVoice2} from 'lucide-react';
 
 export default function QuantumComputing() {
   const features = [
@@ -413,7 +326,7 @@ export default function QuantumComputing() {
               computing to solve the world's most complex problems.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
@@ -433,5 +346,5 @@ export default function QuantumComputing() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

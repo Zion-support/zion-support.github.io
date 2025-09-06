@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
+import {motion} from 'framer-motion;
 import {},
   {
   // TODO: Implement
@@ -224,7 +224,7 @@ export default function SolutionsPage() {},
                         <Link
                           href={solution.href},
   {
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                          className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                         >
 </Link>
                           <span>Learn More
@@ -233,7 +233,7 @@ export default function SolutionsPage() {},
                         </Link>
                       </div>
                     </div>
-                  </motion.div>);
+                  </motion.div>),
                 )
   })},
   {
@@ -369,7 +369,7 @@ export default function SolutionsPage() {},
   {
             >
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
               
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
@@ -389,4 +389,4 @@ export default function SolutionsPage() {},
         </section>
       </div>
     </div>
-  );
+  ),

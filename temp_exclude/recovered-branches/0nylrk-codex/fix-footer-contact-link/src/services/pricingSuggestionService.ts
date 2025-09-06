@@ -175,7 +175,7 @@ export async function trackPricingSuggestion(data: {
     
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
-    //  .insert([data]);
+    //  .insert([data]),
     
     return true
   } catch (error) {

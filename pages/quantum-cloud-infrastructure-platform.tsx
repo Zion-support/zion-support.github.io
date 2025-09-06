@@ -38,10 +38,10 @@ export default function QuantumCloudInfrastructurePlatformPage() {
           'Energy',
           'Media',
         ]}
-        canonical='https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
+        canonical='https: //ziontechgroup.com/quantum-cloud-infrastructure-platform'
       />
     </>
-  );
+  ),
 export default function QuantumCloudInfrastructurePlatformPage() {
 export default function QuantumCloudInfrastructurePlatformPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

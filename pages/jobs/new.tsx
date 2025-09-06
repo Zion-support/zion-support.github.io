@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
+import {useToast} from '../../components/ui/NotificationSystem';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function NewJobPage() {
@@ -13,7 +13,7 @@ export default function NewJobPage() {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
-      setLoading(false);
+      setLoading(false),
       notify('Job posted! Invite talent to get responses.', 'success');
     }, 800);
       notify('Job posted! Invite talent to get responses.success')

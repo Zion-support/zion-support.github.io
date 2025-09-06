@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { HelpCircle, ChevronDown, ChevronUp, Search, Mail, Phone, MessageSquare } from 'lucide-react';
+import {motion,, AnimatePresence} from 'framer-motion';
+import {HelpCircle,, ChevronDown,, ChevronUp,, Search,, Mail,, Phone,, MessageSquare} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const faqCategories = [
@@ -312,7 +312,7 @@ export default function FAQ() {
                   <p className="text-gray-600 mb-4">Get instant help online</p>
                   <a 
                     href="/contact"
-                    className="text-purple-600 hover:text-purple-800 font-medium"
+                    className="text-purple-600 hover: text-purple-800 font-medium"
                   >
                     Start Chat
                   </a>
@@ -323,5 +323,5 @@ export default function FAQ() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

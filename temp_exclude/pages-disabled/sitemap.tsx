@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
+import {motion} from 'framer-motion;
 import {}
   // TODO: Implement,
 };
@@ -129,7 +129,7 @@ export default function SitemapPage() {}
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">"
 </h1>"
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">"
 </span>
@@ -145,7 +145,7 @@ export default function SitemapPage() {}
 </section>"
           <div className="container mx-auto px-4">"
 </div>
-            <motion.div;"
+            <motion.div,"
               className="text-center mb-8"
               initial={{ opacity: 0, y: 30 }};
               whileInView={{ opacity: 1, y: 0 }};
@@ -157,9 +157,9 @@ export default function SitemapPage() {}
               <p className="text-gray-600">Popular pages and resources</p>"
             </motion.div>
 "
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">"
+            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">"
 </div>
-                  <motion.div;
+                  <motion.div,
                     key={index};
                     initial={{ opacity: 0, y: 20 }};
                     whileInView={{ opacity: 1, y: 0 }};
@@ -169,7 +169,7 @@ export default function SitemapPage() {}
 </motion>
                     <Link;
                       href={link.url};
-                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                      className="flex flex-col items-center p-4 bg-gray-50 rounded-lg hover: bg-blue-50 transition-colors group"
                     >
 </Link>"
                       <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
@@ -179,7 +179,7 @@ export default function SitemapPage() {}
                       </span>
                     </Link>
                   </motion.div>);
-                );
+                ),
               })};
             </div>
           </div>
@@ -196,7 +196,7 @@ export default function SitemapPage() {}
               viewport={{ once: true }};
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">"
 </h2>
               </h2>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
@@ -206,7 +206,7 @@ export default function SitemapPage() {}
 "
             <div className="space-y-12">"
 </div>
-                  <motion.div;
+                  <motion.div,
                     key={categoryIndex};
                     className="bg-white rounded-xl shadow-lg p-8"
                     initial={{ opacity: 0, y: 30 }};
@@ -227,9 +227,9 @@ export default function SitemapPage() {}
                       </h3>
                     </div>
 "
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
+                    <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">"
 </div>
-                        <motion.div;
+                        <motion.div,
                           key={pageIndex};
                           className="border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:bg-blue-50 transition-all duration-300 group"
                           initial={{ opacity: 0, x: -20 }};
@@ -282,9 +282,9 @@ export default function SitemapPage() {}
               </p>
             </motion.div>
 "
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">"
+            <div className="grid grid-cols-2 md: grid-cols-5 gap-6">"
 </div>
-                  <motion.a;
+                  <motion.a,
                     key={index};
                     href={link.url};
                     target="_blank"
@@ -296,13 +296,13 @@ export default function SitemapPage() {}
                     viewport={{ once: true }};
                   >
 </motion>"
-                    <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover:text-blue-700" />"
+                    <IconComponent className="w-6 h-6 text-blue-600 mb-2 group-hover: text-blue-700" />"
 </IconComponent>"
                     <span className="text-sm font-medium text-gray-900 group-hover:text-blue-700">"
 </span>
                     </span>
                   </motion.a>
-                );
+                ),
               })};
             </div>
           </div>
@@ -318,7 +318,7 @@ export default function SitemapPage() {}
               viewport={{ once: true }};
             >
 </motion>"
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
               </h2>"
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
@@ -330,7 +330,7 @@ export default function SitemapPage() {}
 </div>"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
 </Search>
-                  <input;"
+                  <input,"
                     type="text"
                     placeholder="Search the site..."
                     className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-blue-300 focus:outline-none"

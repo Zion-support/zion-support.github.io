@@ -1,24 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Atom,
-  Cpu,
-  Shield,
-  Rocket,
-  Zap,
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-import { 
-  Atom, Cpu, Shield, Rocket, Zap, Database, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Atom, Cpu, Shield, Rocket, Zap, Database, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp,, import, {, Atom, Cpu, Shield, Rocket, Zap, Database, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
@@ -84,10 +67,7 @@ export default function QuantumServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/quantum'
         />
-import { 
-  Atom, Cpu, Shield, Rocket, Zap, Database, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {Atom, Cpu, Shield, Rocket, Zap, Database, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
@@ -405,7 +385,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Quantum Computing Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Cutting-edge quantum solutions designed to solve complex problems and secure the future </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {

@@ -296,9 +296,9 @@ class HealthDashboard {
   }
         .header { background: #2c3e50, color: white, padding: 20px, border-radius: 8px, margin-bottom: 20px
   }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px
+        .grid { display: grid, grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px
   }
-        .card { background: white, padding: 20px, border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card { background: white, padding: 20px, border-radius: 8px, box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .card h3 { margin-bottom: 15px, color: #2c3e50, }
         .metric { display: flex, justify-content: space-between, margin-bottom: 10px
   }

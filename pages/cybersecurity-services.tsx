@@ -1,43 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Lock,
-  Eye,
-  AlertTriangle,
-  Cpu,
-  Globe,
-  Cloud,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target,
-  Zap,
-  Users,
-  BarChart3,
-  Settings,
-  Database,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+import {advancedCybersecurityServices2025} from '../data/2025-advanced-cybersecurity-services';
 
-import { 
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Zap, Users, BarChart3, Settings, Database
-} from 'lucide-react';
+import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
-import { 
-  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Zap, Users, BarChart3, Settings, Database
-} from 'lucide-react';
+import {advancedCybersecurityServices2025} from '../data/2025-advanced-cybersecurity-services';
+import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+import {advancedCybersecurityServices2025} from '../data/2025-advanced-cybersecurity-services';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -857,7 +831,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
   )
 }
   )

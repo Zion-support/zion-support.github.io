@@ -1,6 +1,6 @@
 
 import React from "react";
-import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+import {getBadgeMeta,, BadgeKey} from "./badgeConfig";
 
 interface BadgeEarnedProps {
   badge: BadgeKey,
@@ -14,7 +14,7 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge;
   size = 44;
   showName = true;
-  showDesc = false;
+  showDesc = false,
   earnedDate}) => {
   const meta = getBadgeMeta(badge);
   if (!meta) return null;

@@ -38,13 +38,13 @@ export default function AIPoweredCybersecurityPage() {
           'Public Sector',
           'Critical Infrastructure',
         ]}
-        canonical='https://ziontechgroup.com/ai-powered-cybersecurity'
+        canonical='https: //ziontechgroup.com/ai-powered-cybersecurity'
       />
     </>
   );
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredCybersecurityPage() {
-import ServiceLanding from '../components/sections/ServiceLanding';
+import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredCybersecurityPage() {
 ursor/integrate-build-improve-and-re-verify-b76c
 	return (

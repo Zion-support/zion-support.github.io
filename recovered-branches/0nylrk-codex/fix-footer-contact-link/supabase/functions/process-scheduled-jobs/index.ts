@@ -1,7 +1,7 @@
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -64,7 +64,7 @@ serve(async (req) => {
       await supabaseAdmin
         .from('scheduled_jobs')
         .update({
-          status: 'completed';
+          status: 'completed',
           completed_at: new Date().toISOString()
         })
         .eq('id', job.id)
@@ -88,7 +88,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       skills_added: "Add your skills to get better job matches";
       availability_set: "Set your availability to receive project offers";
       job_posted: "Post your first job to start finding talent";
-      match_viewed: "Check out your AI matched talent recommendations";
+      match_viewed: "Check out your AI matched talent recommendations",
       talent_invited: "Invite talent to your job posting to get responses"
     };
     
@@ -100,7 +100,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       user_id: userId;
       title;
       message;
-      type: 'onboarding_reminder';
+      type: 'onboarding_reminder',
       read: false
     });
     
@@ -120,7 +120,7 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST";
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON.stringify({ applicationId })}
     );
@@ -150,10 +150,10 @@ async function processResumeScoring(supabase, applicationId) {
         // Create notification for the client
         await supabase.from("notifications").insert({
           user_id: job.client_id;
-          title: "Application Scored";
+          title: "Application Scored",
           message: `An application for "${job.title}" has been scored and is ready for review.`;
           type: "application_scored";
-          related_id: applicationId;
+          related_id: applicationId,
           read: false
         })
       }
@@ -173,11 +173,11 @@ async function processContentGeneration(supabase, contentType) {
       {
         method: "POST";
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON.stringify({ 
           contentType;
-          autoPublish: contentType === 'blog' ? true : false;
+          autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
         })}
     );
@@ -208,13 +208,13 @@ async function processContentGeneration(supabase, contentType) {
           {
             method: "POST";
             headers: {
-              "Content-Type": "application/json";
+              "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
             body: JSON.stringify({
               subject: contentData.subject;
               previewText: contentData.previewText;
               body: contentData.body;
-              testMode: true;
+              testMode: true,
               testEmail: adminEmail
             })}
         );
@@ -224,7 +224,7 @@ async function processContentGeneration(supabase, contentType) {
           user_id: null, // System notification visible to admins
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
-          type: "system";
+          type: "system",
           read: false
         })
       }

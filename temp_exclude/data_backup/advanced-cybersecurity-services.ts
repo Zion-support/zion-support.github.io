@@ -24,7 +24,7 @@ export interface AdvancedCybersecurityService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [// Advanced Threat Intelligence Platform
+reviews: number,export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [// Advanced Threat Intelligence Platform
   {
     id:,
   advanced-threat-intelligence-platform',

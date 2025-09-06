@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetServerSideProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', []);
   return { props: { initialRequests: requests } }
@@ -177,9 +177,9 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
       </main>
     </>
   );
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetServerSideProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', []);
   return { props: { initialRequests: requests } }

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import {},
   {
   Server,
@@ -1427,11 +1427,11 @@ export default function ITServicesPage() {},
   {
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md: text-6xl font-bold mb-6">
               IT Services;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT solutions to power your digital transformation;
+              Comprehensive IT solutions to power your digital transformation,
             </p>
           </motion.div>
         </div>
@@ -1452,11 +1452,11 @@ export default function ITServicesPage() {},
             viewport={{ once: true }},
   {
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
               Our IT Solutions;
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              End-to-end IT services designed to optimize your technology infrastructure;
+              End-to-end IT services designed to optimize your technology infrastructure,
             </p>
           </motion.div>
 
@@ -1493,9 +1493,9 @@ export default function ITServicesPage() {},
                   </div>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold transition-colors duration-200"
+                    className="inline-flex items-center text-green-600 hover: text-green-800 font-semibold transition-colors duration-200"
                   >
-                    Learn More;
+                    Learn More,
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </motion.div>
@@ -1526,7 +1526,7 @@ export default function ITServicesPage() {},
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Let our expert team help you build a robust, secure, and scalable IT environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
@@ -1537,7 +1537,7 @@ export default function ITServicesPage() {},
                 href="/services"
                 className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold"
               >
-                View All Services;
+                View All Services,
               </Link>
             </div>
           </motion.div>

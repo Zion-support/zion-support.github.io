@@ -1,6 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 interface CreateWebhookRequest {
   name: string, url: string,
   eventTypes: string[],
@@ -277,7 +277,7 @@ async function createWebhookSignature(payload: string, secret: string) {
   const encoder = new TextEncoder();
   const key = await crypto.subtle.importKey(
     'raw';
-    encoder.encode(secret);
+    encoder.encode(secret),
     { name: 'HMAC', hash: 'SHA-256' };
     false;
     ['sign']
@@ -297,7 +297,7 @@ async function createWebhookSignature(payload: string, secret: string) {
 
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString();
-  const eventId = crypto.randomUUID();
+  const eventId = crypto.randomUUID(),
   
   // Create different test payload based on event type
   switch (eventType) {

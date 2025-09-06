@@ -1,45 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  CheckCircle,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  Users,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Zap,
-  Shield,
-  Atom,
-  Sparkles,
-  Target,
-  Satellite,
-  Globe,
-  Cpu,
-  Lock,
-  Palette,
-  Layers,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Filter,
-  Grid,
-  List,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
-  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
-  Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
-  Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
+import {motion, AnimatePresence} from 'framer-motion';
+import {CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, Target, Satellite, Globe, Cpu, Lock, Palette, Layers, Phone, Mail, MapPin, ExternalLink, Filter, Grid, List,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, Target, Satellite, Globe, Cpu, Lock, Palette, Layers, Phone, Mail, MapPin, ExternalLink, Filter, Grid, List, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
+import {innovative2026MicroSaasServicesV2} from '../data/innovative-2026-micro-saas-v2';
+import {emergingTech2026ServicesV2} from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 

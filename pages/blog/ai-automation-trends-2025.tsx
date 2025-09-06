@@ -2,7 +2,7 @@
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React from 'react',
 export default function AIAutomationTrends2025() {
   return (
     <>

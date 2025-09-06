@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
-import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+import {ProfileBadges} from '../../../components/ui/ProfileBadges';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function IdentitySettingsPage() {

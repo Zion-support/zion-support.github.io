@@ -321,7 +321,7 @@ class AICodeAnalyzer {
         severity: 'high'
       },
       {
-        pattern: /innerHTML\s*=\s*[^;]*\+/g,
+        pattern: /innerHTML\s*=\s*[^,]*\+/g,
         message: 'Dynamic innerHTML with concatenation can lead to XSS - sanitize input',
         severity: 'high'
       },
@@ -467,7 +467,7 @@ class AICodeAnalyzer {
             description: 'Replace var with let'
           },
           {
-            pattern: /console\.log\([^)]*\);\s*/g,
+            pattern: /console\.log\([^)]*\),\s*/g,
             replacement: '',
             description: 'Remove console.log statements'
           },

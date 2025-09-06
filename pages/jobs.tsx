@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Seo from '../components/seo/Seo';
-import { JobPostingJsonLd } from 'next-seo';
+import {JobPostingJsonLd} from 'next-seo';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 const Jobs: NextPage = () => {

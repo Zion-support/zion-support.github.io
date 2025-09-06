@@ -1,13 +1,13 @@
 
-import { useState } from 'react';
-import { Skill } from '@/types/resume';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { useResume } from '@/hooks/useResume';
-import { SkillsFormProps } from './types';
-import { SkillsList } from './SkillsList';
-import { AddSkillForm } from './AddSkillForm';
-import { BulkAddSkills } from './BulkAddSkills';
+import {useState} from 'react';
+import {Skill} from '@/types/resume';
+import {Button} from '@/components/ui/button';
+import {Alert,, AlertDescription} from '@/components/ui/alert';
+import {useResume} from '@/hooks/useResume';
+import {SkillsFormProps} from './types';
+import {SkillsList} from './SkillsList';
+import {AddSkillForm} from './AddSkillForm';
+import {BulkAddSkills} from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
   const { addSkill, deleteSkill, fetchResume } = useResume();
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +15,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
   
   const handleAddSkill = async (data: Skill) => {
     try {
-      setError(null);
+      setError(null),
       const success = await addSkill(resumeId, data);
       if (success) {
         // Refresh the skills list
@@ -23,14 +23,14 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       }
       return success
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred'),
       return false
     }
   };
 
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
     if (confirm('Are you sure you want to delete this skill?')) {
-      const success = await deleteSkill(id);
+      const success = await deleteSkill(id),
       if (success) {
         // Update local state
         setLocalSkills(localSkills.filter(skill => skill.id !== id))

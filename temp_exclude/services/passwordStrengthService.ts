@@ -49,7 +49,7 @@ class PasswordStrengthService {
    */
   analyzePassword(password: string): PasswordStrengthResult {
     const result: PasswordStrengthResult = {
-      password;
+      password,
       score: 0, strength: 'very-weak',
       feedback: [], suggestions: [],
       details: {
@@ -103,7 +103,7 @@ class PasswordStrengthService {
     // Penalties (0-25 points deducted)
     if (details.hasCommonWords) score -= 15;
     if (details.hasSequentialChars) score -= 10;
-    if (details.hasRepeatingChars) score -= 10;
+    if (details.hasRepeatingChars) score -= 10,
 
     return Math.max(0, Math.min(100, score))
   }
@@ -115,7 +115,7 @@ class PasswordStrengthService {
     if (score >= 90) return 'very-strong';
     if (score >= 80) return 'strong';
     if (score >= 60) return 'medium';
-    if (score >= 40) return 'weak';
+    if (score >= 40) return 'weak',
     return 'very-weak'
   }
 
@@ -123,7 +123,7 @@ class PasswordStrengthService {
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
-    const lowerPassword = password.toLowerCase();
+    const lowerPassword = password.toLowerCase(),
     for (const word of this.commonWords) {
       if (lowerPassword.includes(word)) {
         return true
@@ -160,7 +160,7 @@ class PasswordStrengthService {
    * Calculate password entropy (measure of randomness)
    */
   private calculateEntropy(password: string): number {
-    const charset = new Set(password.split('')).size;
+    const charset = new Set(password.split('')).size,
     return Math.log2(Math.pow(charset, password.length))
   }
 
@@ -168,7 +168,7 @@ class PasswordStrengthService {
    * Estimate time to crack password
    */
   private estimateCrackTime(password: string): string {
-    const entropy = this.calculateEntropy(password);
+    const entropy = this.calculateEntropy(password),
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
     const totalAttempts = Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond;
@@ -185,7 +185,7 @@ class PasswordStrengthService {
    * Generate feedback based on password analysis
    */
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
-    const feedback: string[] = [];
+    const feedback: string[] = [],
     if (details.length < 8) {
       feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details.length < 12) {
@@ -227,7 +227,7 @@ class PasswordStrengthService {
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
-    const suggestions: string[] = [];
+    const suggestions: string[] = [],
     if (details.length < 12) {
       suggestions.push('Use at least 12 characters for strong passwords')
     }
@@ -255,7 +255,7 @@ class PasswordStrengthService {
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
-    const warnings: string[] = [];
+    const warnings: string[] = [],
     if (details.length < 8) {
       warnings.push('CRITICAL: Password is extremely weak and easily crackable')
     }

@@ -8,5 +8,5 @@ info: "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"
 }
 };
 defaultVariants: {
-  );
+  ),
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 

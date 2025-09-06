@@ -105,7 +105,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
   )
 }
   )

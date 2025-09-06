@@ -1,35 +1,29 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState, FormEvent } from 'react';
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
 import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react';
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react'
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
+import {signIn} from 'next-auth/react';
+import {supabase} from '@/utils/supabase/client';
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import {logInfo, logWarn, logErrorToProduction} from '@/utils/productionLogger';
+import {useTranslation} from 'react-i18next';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle,} from '@/components/ui/card';
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react'
 import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
+import {signIn} from 'next-auth/react';
+import {supabase} from '@/utils/supabase/client';
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {logInfo, logWarn, logErrorToProduction} from '@/utils/productionLogger';
+import {useTranslation} from 'react-i18next';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 const LoginPage = () => {
@@ -62,7 +56,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{
     type: 'success' | 'error';
-    text: string;
+    text: string,
   } | null>(null);
 
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
@@ -73,7 +67,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-    logInfo('LoginPage: Initial session check effect runs.');
+    logInfo('LoginPage: Initial session check effect runs.'),
 
     logInfo('LoginPage: Initial session check effect runs.'),
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -101,7 +95,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       setIsCheckingSession(true);
       try {
-        logInfo('LoginPage: Calling supabase.auth.getSession()');
+        logInfo('LoginPage: Calling supabase.auth.getSession()'),
         const {
           data: { session },
           error: sessionError,
@@ -152,7 +146,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           setSessionChecked(true);
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
-          );
+          ),
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -160,10 +154,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
       }
 
       // Listener for auth state changes
-      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange(
         (event: AuthChangeEvent, session: Session | null) => {
-          if (!mounted) return;
+          if (!mounted) return,
           logInfo('LoginPage: onAuthStateChange event:', {
             event,
             userId: session?.user?.id,
@@ -175,7 +169,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             setSessionChecked(true);
             logInfo(
               'LoginPage: onAuthStateChange updated sessionChecked to true.'
-            );
+            ),
           }
         }
       );
@@ -183,11 +177,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
       return () => {
         // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
-        authListener?.subscription?.unsubscribe();
+        authListener?.subscription?.unsubscribe(),
       };
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return;
+        if (!mounted) return,
         logInfo('LoginPage: onAuthStateChange event:', { 
           event;
           userId: session?.user?.id 
@@ -201,7 +195,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         }
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return;
+        if (!mounted) return,
         logInfo('LoginPage: onAuthStateChange event:', { 
           event;
           userId: session?.user?.id 
@@ -390,7 +384,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const handleProactiveResendVerification = async (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (!proactiveResendEmail) {
       setProactiveResendMessage({
         type: 'error',
@@ -449,7 +443,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     setIsLoading(true);
     setError(null);
     setIsEmailUnverified(false);
-    setVerificationEmailSent(false);
+    setVerificationEmailSent(false),
 
 ursor/integrate-build-improve-and-re-verify-b76c
     try {
@@ -616,7 +610,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-    logInfo('LoginPage: Rendering "Checking authentication..."');
+    logInfo('LoginPage: Rendering "Checking authentication..."'),
     logInfo('LoginPage: Rendering "Checking authentication..."'),
 ursor/integrate-build-improve-and-re-verify-b76c
     return (
@@ -645,7 +639,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
-    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
 ursor/integrate-build-improve-and-re-verify-b76c
     return (
@@ -844,7 +838,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </Card>
       </div>
     </>
-  );
+  ),
 };
   )
 };

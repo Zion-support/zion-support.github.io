@@ -4,13 +4,13 @@ export interface TokenTransaction {
   userId: string;
   amount: number;
   reason: string;
-  timestamp: number;
+  timestamp: number,
 }
 
 const transactions: TokenTransaction[] = [];
 
 export function getAllTransactions(): TokenTransaction[] {
-  return transactions;
+  return transactions,
 }
 
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {

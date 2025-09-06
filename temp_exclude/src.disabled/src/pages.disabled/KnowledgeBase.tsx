@@ -1,81 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  BookOpen, 
-  FileText, 
-  Video, 
-  Users, 
-  MessageSquare, 
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  Eye,
-  Download,
-  Share2,
-  Bookmark,
-  Tag,
-  Filter,
-  TrendingUp,
-  Star,
-  Calendar,
-  User,
-  FolderOpen,
-  Database,
-  Cpu,
-  Network,
-  Shield,
-  Cloud,
-  Brain,
-  Zap,
-  Globe,
-  Settings,
-  Code,
-  BarChart3,
-  PieChart,
-  Activity,
-  Target,
-  Crosshair,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  Binoculars,
-  Camera,
-  Video2,
-  Film,
-  Tv,
-  Radio,
-  Speaker,
-  Headphones,
-  Mic,
-  Phone2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Watch,
-  Clock2,
-  Calendar2,
-  User2,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Search,, BookOpen,, FileText,, Video,, Users,, MessageSquare,, ArrowRight,, CheckCircle,, Clock,, Eye,, Download,, Share2,, Bookmark,, Tag,, Filter,, TrendingUp,, Star,, Calendar,, User,, FolderOpen,, Database,, Cpu,, Network,, Shield,, Cloud,, Brain,, Zap,, Globe,, Settings,, Code,, BarChart3,, PieChart,, Activity,, Target,, Crosshair,, Radar,, Satellite,, Telescope,, Microscope,, Binoculars,, Camera,, Video2,, Film,, Tv,, Radio,, Speaker,, Headphones,, Mic,, Phone2,, Smartphone2,, Tablet,, Laptop,, Watch,, Clock2,, Calendar2,, User2,, Users2,, UserCheck,, UserX,, UserPlus,, UserMinus,, UserCog,, UserEdit,, UserSearch,, UserVoice,, UserCheck2,, UserX2,, UserPlus2,, UserMinus2,, UserCog2,, UserEdit2,, UserSearch2,, UserVoice2} from 'lucide-react';
 
 export default function KnowledgeBase() {
   const categories = [
@@ -436,7 +362,7 @@ export default function KnowledgeBase() {
               Our support team is here to help. Get in touch for personalized assistance.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
@@ -456,5 +382,5 @@ export default function KnowledgeBase() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

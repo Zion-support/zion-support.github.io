@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import {GetServerSideProps} from 'next';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export const getServerSideProps: GetServerSideProps = async () => {

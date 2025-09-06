@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
+import {readState, filterEventsByScope} from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status($1).json({$2});
   const state = readState();

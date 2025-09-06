@@ -1,21 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Award,
-  Users,
-  Globe,
-  Code,
-  Shield
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight,, Phone,, Mail,, MapPin,, Linkedin,, Twitter,, Github,, Award,, Users,, Globe,, Code,, Shield} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const teamMembers = [

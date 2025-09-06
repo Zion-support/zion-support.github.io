@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
+import {Server, CheckCircle, Database, Cloud} from 'lucide-react';
 
 export default function EnterpriseITPage() {
   const features = [

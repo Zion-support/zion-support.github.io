@@ -8,7 +8,7 @@ type ProposalListItem = {
   regionalScope: string;
   type: string;
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
-  createdAt: string;
+  createdAt: string,
 type ProposalListItem = {
 type ProposalListItem = {
 ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,23 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import {
-  Heart, 
-  Brain, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Calendar,
-  Stethoscope,
-  Activity,
-  Database,
-  Camera,
-  FileText
-} from 'lucide-react'
+import {motion} from 'framer-motion'
+import {Heart,, Brain,, Shield,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Phone,, Mail,, Calendar,, Stethoscope,, Activity,, Database,, Camera,, FileText} from 'lucide-react'
 import Layout from '../../components/Layout'
 
 const services = [

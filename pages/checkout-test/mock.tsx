@@ -1,10 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { CheckCircle, ArrowRight } from 'lucide-react'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import {Button} from '@/components/ui/button';
+import {CheckCircle, ArrowRight} from 'lucide-react';
+import {CheckCircle, ArrowRight} from 'lucide-react'
+import {CheckCircle, ArrowRight} from 'lucide-react'
 ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function MockCheckoutPage() {
@@ -78,7 +78,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
           <div className='space-y-4'>
             <div className='text-zion-slate-light text-sm'>
-              <p>To test with real Stripe:</p>
+              <p>To test with real Stripe: </p>
               <ol className='list-decimal list-inside space-y-1 mt-2'>
                 <li>
                   Configure real Stripe test keys in environment variables
@@ -134,7 +134,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
-  );
+  ),
   )
 } 
   )

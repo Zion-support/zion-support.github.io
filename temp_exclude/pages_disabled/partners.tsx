@@ -1,39 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Globe, 
-  Award, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Building,
-  Shield,
-  Zap,
-  Target,
-  Star,
-  Handshake,
-  TrendingUp,
-  Briefcase,
-  Heart,
-  DollarSign,
-  Settings,
-  BarChart3,
-  Code,
-  Cloud,
-  Brain,
-  Network,
-  Lock,
-  Eye,
-  MessageSquare,
-  Calendar,
-  FileText,
-  BookOpen,
-  ShoppingCart,
-  Home,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Globe,, Award,, Users,, CheckCircle,, ArrowRight,, Building,, Shield,, Zap,, Target,, Star,, Handshake,, TrendingUp,, Briefcase,, Heart,, DollarSign,, Settings,, BarChart3,, Code,, Cloud,, Brain,, Network,, Lock,, Eye,, MessageSquare,, Calendar,, FileText,, BookOpen,, ShoppingCart,, Home,, Phone,, Mail,, MapPin} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const partnerTypes = [
@@ -246,7 +213,7 @@ export default function PartnersPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Partner with Us?</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
               Join our partner ecosystem and unlock new opportunities for growth and innovation
@@ -270,5 +237,5 @@ export default function PartnersPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

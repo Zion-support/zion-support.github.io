@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir),
   return items.map((name) => {
     const full = path.join(dir, name);
     const rel = path.relative(baseDir, full);
@@ -12,7 +12,7 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() };
   });
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir),
   return items.map((name) => {
     const full = path.join(dir, name);
     const rel = path.relative(baseDir, full);

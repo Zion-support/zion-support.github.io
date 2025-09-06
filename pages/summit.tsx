@@ -1,7 +1,7 @@
  const partners: Partner[] = [ {
   name: 'Gov Partner' 
 import Head from 'next/head';
-import React from 'react';
+import React from 'react',
 type Speaker = {
   name: string,
   title: string,
@@ -160,7 +160,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setResult(null);
+    setResult(null),
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
@@ -675,7 +675,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </form>
       </section>
 
-      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
         </h2>
@@ -684,7 +684,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </p>
       </section>
     </>
-  );
+  ),
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>

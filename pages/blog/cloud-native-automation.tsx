@@ -2,7 +2,7 @@
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react';
+import React from 'react',
 export default function CloudNativeAutomation() {
   return (
     <>
@@ -92,7 +92,7 @@ export default function CloudNativeAutomation() {
                   approach provides several key benefits: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Consistent runtime environments across development;
+                    • Consistent runtime environments across development,
                     staging, and production
                   </li>
                   <li>

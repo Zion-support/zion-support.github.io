@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Certification } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Certification} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 
 export function useCertifications() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export function useCertifications() {
   
   const addCertification = async (resumeId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to add certifications');
+      setError('You must be logged in to add certifications'),
       return false
     }
     
@@ -28,7 +28,7 @@ export function useCertifications() {
           issuing_organization: cert.issuing_organization;
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
           expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id;
+          credential_id: cert.credential_id,
           credential_url: cert.credential_url
         });
       
@@ -44,7 +44,7 @@ export function useCertifications() {
   
   const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update certifications');
+      setError('You must be logged in to update certifications'),
       return false
     }
     
@@ -59,7 +59,7 @@ export function useCertifications() {
           issuing_organization: cert.issuing_organization;
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
           expiration_date: cert.expiration_date ? formatDateForDB(cert.expiration_date) : null;
-          credential_id: cert.credential_id;
+          credential_id: cert.credential_id,
           credential_url: cert.credential_url
         })
         .eq('id', certId);
@@ -76,7 +76,7 @@ export function useCertifications() {
   
   const deleteCertification = async (certId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete certifications');
+      setError('You must be logged in to delete certifications'),
       return false
     }
     

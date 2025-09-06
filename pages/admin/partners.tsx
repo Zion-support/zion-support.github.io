@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function AdminPartners() {
@@ -14,7 +14,7 @@ export default function AdminPartners() {
       setPartners(mockPartners);
       setLoading(false);
     }, 1000);
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]);
@@ -54,7 +54,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function viewFlags(code: string) {
-    setSelected(code);
+    setSelected(code),
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );

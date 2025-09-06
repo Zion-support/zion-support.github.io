@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-import { getBadgeLabels } from '../utils/kyc';
+import {getBadgeLabels} from '../utils/kyc';
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
-import { VerifiedBadge } from '../components/ui/VerifiedBadge';
+import {VerifiedBadge} from '../components/ui/VerifiedBadge';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function VerifyPage() {
@@ -309,7 +309,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
             <section>
               <h2 className='font-semibold mb-2'>Required documents</h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+              <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                 {requiredDocs.map(k => {
                   const hasIt = (profile.documents || []).some(
                     d => d.kind === k
@@ -319,7 +319,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                  const hasIt = (profile.documents || []).some((d) => d.kind === k),
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -333,7 +333,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
-                  const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                  const hasIt = (profile.documents || []).some((d) => d.kind === k),
                   return (
                     <div key={k} className="flex items-center justify-between border rounded p-3">
                       <div>
@@ -352,7 +352,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             {optionalDocs.length > 0 && (
               <section>
                 <h2 className='font-semibold mb-2'>Optional documents</h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+                <div className='grid grid-cols-1 md: grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
                     const hasIt = (profile.documents || []).some(
                       d => d.kind === k
@@ -362,7 +362,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -376,7 +376,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
-                    const hasIt = (profile.documents || []).some((d) => d.kind === k);
+                    const hasIt = (profile.documents || []).some((d) => d.kind === k),
                     return (
                       <div key={k} className="flex items-center justify-between border rounded p-3">
                         <div>

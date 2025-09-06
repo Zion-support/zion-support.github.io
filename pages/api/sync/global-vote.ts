@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
-import { signPayload } from "../../../utils/sync/signature";
+import {readState, writeState, upsertEvent} from "../../../utils/sync/storage";
+import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
+import {signPayload} from "../../../utils/sync/signature";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
+import {v4, as, uuidv4} from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status($1).json({$2});
   const state = readState();
@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes);
   const version = (state.latestVersionByEntityId[proposalId] || 0) + 1;
   const event = {
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes };
     originInstanceId: state.config.instanceId,

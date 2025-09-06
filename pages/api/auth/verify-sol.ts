@@ -4,7 +4,7 @@ import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end();
+  if (req.method !== 'POST') return res.status(405).end(),
   const { message, signature, publicKey } = req.body || {};
   if (!message || !signature || !publicKey) return res.status(400).json({ error: 'Missing required fields' });
   try {

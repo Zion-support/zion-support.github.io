@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import {
-  BookOpen,
-  Code,
-  Key,
-  List,
-  LucideIcon,
-  Terminal,
-  Webhook,;
-} from 'lucide-react';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from 'lucide-react'
 
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
+import {WebhooksManager} from "@/components/developers/WebhooksManager";
+import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
+import {ApiLogs} from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string,
   label: string,
@@ -83,18 +68,16 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook} from 'lucide-react'
 
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {ApiKeysManager} from "@/components/developers/ApiKeysManager";
+import {WebhooksManager} from "@/components/developers/WebhooksManager";
+import {ApiDocumentation} from "@/components/developers/ApiDocumentation";
+import {ApiLogs} from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string,
   label: string,
@@ -157,10 +140,7 @@ export function DeveloperPortal() { const { user  } = useAuth(),
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ProtectedDeveloperPortal() {
   return (
@@ -168,11 +148,5 @@ export default function ProtectedDeveloperPortal() {
       <DeveloperPortal />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

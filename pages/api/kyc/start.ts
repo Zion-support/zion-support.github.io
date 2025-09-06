@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
+import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';

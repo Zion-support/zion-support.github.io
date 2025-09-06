@@ -1,22 +1,8 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Users, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  Heart,
-  Zap,
-  Globe,
-  Award,
-  Coffee,
-  Laptop,
-  BookOpen,
-  Target
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users,, MapPin,, Clock,, CheckCircle,, ArrowRight,, Heart,, Zap,, Globe,, Award,, Coffee,, Laptop,, BookOpen,, Target} from 'lucide-react';
 
 const benefits = [
   {

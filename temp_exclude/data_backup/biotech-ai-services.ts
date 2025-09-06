@@ -24,7 +24,7 @@ export interface BiotechAIService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const biotechAIServices: BiotechAIService[] = [{
+reviews: number,export const biotechAIServices: BiotechAIService[] = [{
     id:,
   ai-drug-discovery-platform',
     "name": 'AI Drug Discovery Platform,

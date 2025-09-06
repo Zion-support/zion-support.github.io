@@ -3,8 +3,8 @@
 
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -16,8 +16,8 @@ export default function Services() {
     return () => clearTimeout(timer);
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 export default function Services() {
@@ -47,7 +47,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       color: 'blue',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
-      ];
+      ],
       href: '/micro-saas'
     };
     {
@@ -57,7 +57,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       color: 'purple',
       services: [
         'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice AnalyticsAI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
-      ];
+      ],
       href: '/ai-services'
     };
     {
@@ -88,7 +88,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       color: 'blue',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
-      ];
+      ],
       href: '/micro-saas'
     };
     {
@@ -98,7 +98,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       color: 'purple',
       services: [
         'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice AnalyticsAI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
-      ];
+      ],
       href: '/ai-services'
     };
     {
@@ -109,7 +109,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       services: [
 ursor/integrate-build-improve-and-re-verify-b76c
         'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data PlatformHigh-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
-      ];
+      ],
       href: '/it-services'
     }
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -544,7 +544,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </ErrorBoundary>
     </>
-  );
+  ),
             </div>
           </section>
         </main>

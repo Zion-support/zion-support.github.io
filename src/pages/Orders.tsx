@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
-=======
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import {FileText, CheckCircle2, Clock, ShieldAlert} from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
+import {useAuth} from '@/hooks/useAuth';
+import {useGetOrdersQuery} from '@/hooks/useOrders';
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from '@/components/ui/table';
+import {Badge} from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
+import {EmptyState} from '@/components/ui/empty-state';
 export default function OrdersPage() {
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
@@ -43,7 +31,7 @@ export default function OrdersPage() {
           <Badge variant="destructive" className="flex items-center gap-1">
             <ShieldAlert className="h-3 w-3" /> Disputed
           </Badge>
-        );
+        ),
       default:
         return status
     }
@@ -114,14 +102,5 @@ export default function OrdersPage() {
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

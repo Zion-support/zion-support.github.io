@@ -1,11 +1,11 @@
 
 import React from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { FraudFlag } from "@/types/fraud";
-import { SeverityDisplay } from "./SeverityDisplay";
-import { ActionButtons } from "./ActionButtons";
-import { EmptyFraudState } from "./EmptyFraudState";
+import {Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {FraudFlag} from "@/types/fraud";
+import {SeverityDisplay} from "./SeverityDisplay";
+import {ActionButtons} from "./ActionButtons";
+import {EmptyFraudState} from "./EmptyFraudState";
 interface FraudFlagsTableProps {
   flags: FraudFlag[],
   isLoading: boolean,
@@ -18,7 +18,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
   hasFilters;
-  resetFilters;
+  resetFilters,
   onAction
 }) => {
   if (isLoading) {

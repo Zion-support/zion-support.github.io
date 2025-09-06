@@ -1,47 +1,8 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import {
-  GraduationCap,
-  Users,
-  Clock,
-  Award,
-  BookOpen,
-  Video,
-  Headphones,
-  Code,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Zap,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  Play,
-  Download,
-  ExternalLink,
-  Calendar,
-  MapPin,
-  DollarSign,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Building,
-  Globe,
-  Server,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  GraduationCap, Users, Clock, Award, BookOpen, Video, 
-  Headphones, Code, Brain, Atom, Rocket, Shield, Zap;
-  Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp;
-  Play, Download, ExternalLink, Calendar, MapPin, DollarSign;
-  TrendingUp, Target, Lightbulb, Building, Globe, Server
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {GraduationCap, Users, Clock, Award, BookOpen, Video, Headphones, Code, Brain, Atom, Rocket, Shield, Zap, Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp, Play, Download, ExternalLink, Calendar, MapPin, DollarSign, TrendingUp, Target, Lightbulb, Building, Globe, Server,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, GraduationCap, Users, Clock, Award, BookOpen, Video, Headphones, Code, Brain, Atom, Rocket, Shield, Zap, Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp, Play, Download, ExternalLink, Calendar, MapPin, DollarSign, TrendingUp, Target, Lightbulb, Building, Globe, Server, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 export default function TrainingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -557,7 +518,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const toggleProgram = (id: number) => {
-    setExpandedProgram(expandedProgram === id ? null : id);
+    setExpandedProgram(expandedProgram === id ? null : id),
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -1435,7 +1396,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </Layout>
-  );
+  ),
 
   {
   opacity: 0, y: 20 

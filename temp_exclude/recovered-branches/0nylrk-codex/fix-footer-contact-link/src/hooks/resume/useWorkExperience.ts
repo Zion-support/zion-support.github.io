@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { WorkExperience } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {WorkExperience} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB,, handleResumeError,, showSuccessToast} from './useResumeUtils';
 
 export function useWorkExperience() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export function useWorkExperience() {
   
   const addWorkExperience = async (resumeId: string, work: WorkExperience): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update work experience');
+      setError('You must be logged in to update work experience'),
       return false
     }
     
@@ -42,7 +42,7 @@ export function useWorkExperience() {
   
   const updateWorkExperience = async (workId: string, work: WorkExperience): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update work experience');
+      setError('You must be logged in to update work experience'),
       return false
     }
     
@@ -73,7 +73,7 @@ export function useWorkExperience() {
   
   const deleteWorkExperience = async (workId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete work experience');
+      setError('You must be logged in to delete work experience'),
       return false
     }
     

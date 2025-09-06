@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { MapPin } from 'lucide-react';
-import { PaymentButton } from '@/components/transactions/PaymentButton';
-import { CountryPricing } from '@/data/onsiteServicePricing';
-import { toast } from '@/hooks/use-toast';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { MapPin } from 'lucide-react'
-import { PaymentButton } from "@/components/transactions/PaymentButton";
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
+import {MapPin} from 'lucide-react'
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+import {toast} from "@/hooks/use-toast";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing
 }
@@ -47,15 +39,5 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       </p>
     </div>
   );
-<<<<<<< HEAD
 
-}"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

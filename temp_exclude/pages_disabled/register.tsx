@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { User, Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {User,, Mail,, Lock,, Eye,, EyeOff,, ArrowRight} from 'lucide-react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -25,7 +25,7 @@ export default function RegisterPage() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Handle registration logic here
     console.log('Registration attempt:', formData);
   };
@@ -234,7 +234,7 @@ export default function RegisterPage() {
                   Already have an account?{' '}
                   <Link
                     href="/login"
-                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                    className="font-medium text-blue-400 hover: text-blue-300 transition-colors"
                   >
                     Sign in here
                   </Link>
@@ -245,5 +245,5 @@ export default function RegisterPage() {
         </div>
       </div>
     </Layout>
-  );
+  ),
 }

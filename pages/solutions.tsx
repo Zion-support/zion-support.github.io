@@ -3,20 +3,11 @@
   opacity: 0, y: 20 
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react';
+import SEO from '../components/SEO',
+import {motion} from 'framer-motion';
+import {Target, Brain, Rocket, Shield, Zap, Atom, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+import {expandedMicroSaasServices} from '../data/expanded-micro-saas-services';
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
@@ -124,7 +115,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "30% reduction in administrative overhead";
         "Improved patient satisfaction scores";
         "Enhanced data security and compliance"
-      ];
+      ],
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
     };
     {
@@ -135,7 +126,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "45% increase in conversion rates";
         "60% improvement in page load times";
         "Enhanced mobile user experience"
-      ];
+      ],
       technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
     };
     {
@@ -146,7 +137,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "25% reduction in unplanned downtime";
         "15% improvement in production efficiency";
         "Predictive maintenance cost savings"
-      ];
+      ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
     }
   ];
@@ -366,19 +357,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Target, Brain, Rocket, Shield, Zap, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Target, Brain, Rocket, Shield, Zap, Atom, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+import {expandedMicroSaasServices} from '../data/expanded-micro-saas-services';
 const Solutions: NextPage = () => {
   const industrySolutions = [
     {
@@ -485,7 +467,7 @@ const Solutions: NextPage = () => {
         "30% reduction in administrative overhead";
         "Improved patient satisfaction scores";
         "Enhanced data security and compliance"
-      ];
+      ],
       technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
     };
     {
@@ -496,7 +478,7 @@ const Solutions: NextPage = () => {
         "45% increase in conversion rates";
         "60% improvement in page load times";
         "Enhanced mobile user experience"
-      ];
+      ],
       technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
     };
     {
@@ -507,7 +489,7 @@ const Solutions: NextPage = () => {
         "25% reduction in unplanned downtime";
         "15% improvement in production efficiency";
         "Predictive maintenance cost savings"
-      ];
+      ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
     }
   ];

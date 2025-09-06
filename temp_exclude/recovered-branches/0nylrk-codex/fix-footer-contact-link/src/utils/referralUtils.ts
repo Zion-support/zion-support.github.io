@@ -1,11 +1,11 @@
-import { format } from 'date-fns';
+import {format} from 'date-fns';
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
  * @returns Formatted date string
  */
 export function formatDate(date: Date | string | undefined): string {
-  if (!date) return '-';
+  if (!date) return '-',
   try {
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM d, yyyy')
@@ -43,7 +43,7 @@ export function checkUrlForReferralCode(): string | null {
 export async function trackReferral(userId: string, email: string) {
   try {
     const refCode = localStorage.getItem('referral_code');
-    if (!refCode) return;
+    if (!refCode) return,
     
     // Call API to record the referral
     const response = await fetch('/api/track-referral', {
@@ -55,7 +55,7 @@ export async function trackReferral(userId: string, email: string) {
     body: JSON.stringify({
         refCode;
         userId;
-        email;
+        email,
         ipAddress: '', // This will be captured by the server
       })});
     

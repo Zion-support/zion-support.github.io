@@ -2,7 +2,7 @@
   if (typeof props === 'string') {
   return globalToastManager.showToast ({
   case 'success': type = ToastType.SUCCESS;
-break;
+break,
 default: // Enhanced useToast hook with global toast manager integration export const useToast = () => ({
   toast: toastAdapter, dismiss: (toastId?: string) => {
   if (toastId) {

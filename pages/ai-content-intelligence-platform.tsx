@@ -1,47 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  BarChart3,
-  Target,
-  Zap,
-  Shield,
-  Globe,
-  Users,
-  Award,
-  Clock,
-  DollarSign,
-  Check,
-  ArrowUpRight,
-  Play,
-  BookOpen,
-  Code,
-  ShoppingCart,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award;
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
-  ShoppingCart
-} from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, 
-  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award;
-  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code;
-  ShoppingCart
-} from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
@@ -927,7 +893,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
   )
 }
   )

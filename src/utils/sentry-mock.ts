@@ -1,78 +1,28 @@
-<<<<<<< HEAD
-// Mock implementation for Sentry to prevent Node.js module import issues during build
-// This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
-const noop = () => {};
-const noopReturn = () => null;
-const noopPromise = () => Promise.resolve();
-
-// Mock Sentry instance with all common methods
-const mockSentry = {
-  // Core Sentry methods
-  init: noop;
-  captureException: noop;
-  captureMessage: noop;
-  captureEvent: noop;
-  addBreadcrumb: noop;
-  configureScope: noop;
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope);
-  setUser: noop;
-  setTag: noop;
-  setTags: noop;
-  setExtra: noop;
-  setExtras: noop;
-  setContext: noop;
-  getCurrentHub: () => mockHub;
-  getClient: noopReturn;
-  
-  // Transaction and performance monitoring
-<<<<<<< HEAD
-  startTransaction: () => mockTransaction,
-  finishTransaction: noop,
-
-=======
-
-<<<<<<< HEAD
-  init: noop, captureException: noop,
-  captureMessage: noop, captureEvent: noop,
-  addBreadcrumb: noop, configureScope: noop,
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope), setUser: noop,
-  setTag: noop, setTags: noop,
-  setExtra: noop, setExtras: noop,
-  setContext: noop, getCurrentHub: () => mockHub,
-  getClient: noopReturn,
-  // Transaction and performance monitoring
-  startTransaction: () => mockTransaction,
-  finishTransaction: noop,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   // Error boundary and React integration
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
-<<<<<<< HEAD
-
-=======
   startTransaction: () => mockTransaction;
-  finishTransaction: noop;
+  finishTransaction: noop,
   
   // Error boundary and React integration
   ErrorBoundary: ({ children }: any) => children;
   withErrorBoundary: (component: any) => component;
   showReportDialog: noop;
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Browser-specific methods
   onLoad: noop;
-  wrap: (fn: (...args: any[]) => any) => fn;
+  wrap: (fn: (...args: any[]) => any) => fn,
   
   // Server-specific methods (Node.js)
   Handlers: {
-    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next();
-    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next();
+    requestHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next(),
+    errorHandler: () => (_err: any, _req: any, _res: any, next: (...args: any[]) => any) => next(),
     tracingHandler: () => (_req: any, _res: any, next: (...args: any[]) => any) => next()};
   
   // Next.js specific
-  withSentryConfig: (config: any) => config;
+  withSentryConfig: (config: any) => config,
   SentryWebpackPlugin: class SentryWebpackPlugin {
     constructor() {}
     apply() {}
@@ -112,7 +62,7 @@ const mockSentry = {
     Fatal: 'fatal';
     Error: 'error';
     Warning: 'warning';
-    Info: 'info';
+    Info: 'info',
     Debug: 'debug'}};
 
 // Mock scope
@@ -125,7 +75,7 @@ const mockScope = {
   setContext: noop;
   setLevel: noop;
   setFingerprint: noop;
-  clear: noop;
+  clear: noop,
   addEventProcessor: noop};
 
 // Mock transaction
@@ -136,7 +86,7 @@ const mockTransaction = {
   finish: noop;
   startChild: () => mockTransaction;
   setStatus: noop;
-  setHttpStatus: noop;
+  setHttpStatus: noop,
   toContext: () => ({});
   updateWithContext: noop};
 
@@ -155,7 +105,7 @@ const mockHub = {
   setExtras: noop;
   setContext: noop;
   configureScope: noop;
-  withScope: (callback: (...args: any[]) => any) => callback(mockScope);
+  withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction};
 
 // Export default mock that covers all Sentry packages
@@ -197,40 +147,8 @@ export const Severity = mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry };
 
-<<<<<<< HEAD
-// All exports are already defined above
-=======
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
   
-<<<<<<< HEAD
-
-  
-
-<<<<<<< HEAD
-
-  setName: noop, setTag: noop,
-  setData: noop, finish: noop,
-  startChild: () => mockTransaction, setStatus: noop,
-  setHttpStatus: noop,
-  toContext: () => ({});
-  updateWithContext: noop};
-
-// Mock hub
-const mockHub = {
-  getClient: noopReturn, getScope: () => mockScope,
-  captureException: noop, captureMessage: noop,
-  captureEvent: noop, addBreadcrumb: noop,
-  setUser: noop, setTag: noop,
-  setTags: noop, setExtra: noop,
-  setExtras: noop, setContext: noop,
-  configureScope: noop, withScope: (callback: (...args: any[]) => any) => callback(mockScope),
-  startTransaction: () => mockTransaction};
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 // All exports are already defined above
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-import { signPayload } from "../../../utils/sync/signature";
+import {readState, writeState, upsertEvent} from "../../../utils/sync/storage";
+import {signPayload} from "../../../utils/sync/signature";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
-import { nextVersionFor } from "../../../utils/sync/versioning";
+import {v4, as, uuidv4} from "uuid";
+import {nextVersionFor} from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status($1).json({$2});
   const state = readState();
@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
   const version = nextVersionFor(state, milestoneId);
   const event = {
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
     originInstanceId: state.config.instanceId,

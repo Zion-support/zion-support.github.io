@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-import { readJson } from '../../../utils/fsDb';
-import { HelpArticle, matchIntent } from '../../../utils/support';
-import { logSupportEventToOperator } from '../../../utils/operator';
+import {readJson} from '../../../utils/fsDb';
+import {HelpArticle, matchIntent} from '../../../utils/support';
+import {logSupportEventToOperator} from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const context = matchedArticles
     .map((a) => `- ${a.title}: /help/${a.slug}`)
     .join('\n');
-  const sysMessage = { role: 'system' as const; content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
+  const sysMessage = { role: 'system' as const, content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
   try {
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini',

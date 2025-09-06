@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { cn } from '@/lib/utils';
-import { CheckIcon } from 'lucide-react';
-=======
 
 import React from "react";
-import { cn } from "@/lib/utils";
-import { CheckIcon } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {cn} from "@/lib/utils";
+import {CheckIcon} from 'lucide-react'
 
 interface StepProps {
   status: "incomplete" | "current" | "complete",
@@ -103,18 +96,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
-}/> </div> </div> </div>) ;
-}"
-=======
-
-<<<<<<< HEAD
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

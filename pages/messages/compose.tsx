@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-import { useCurrentUser } from '../../hooks/useCurrentUser';
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
 
 export default function ComposePage() {
   const router = useRouter();
@@ -60,7 +60,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
     setSending(true);
-    let attachmentBase64: string | undefined;
+    let attachmentBase64: string | undefined,
     let attachmentBase64: string | undefined,
     let attachmentBase64: string | undefined,
 ursor/integrate-build-improve-and-re-verify-b76c

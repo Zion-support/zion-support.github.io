@@ -1,17 +1,17 @@
 
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
-import { toast } from "@/hooks/use-toast";
-import { PaymentButton } from "@/components/transactions/PaymentButton";
-import { AppLayout } from "@/layout/AppLayout";
-import { ProfileContact } from "@/components/profile/ProfileContact";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Star, MessageSquare, Brain, Shield} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData";
+import {toast} from "@/hooks/use-toast";
+import {PaymentButton} from "@/components/transactions/PaymentButton";
+import {AppLayout} from "@/layout/AppLayout";
+import {ProfileContact} from "@/components/profile/ProfileContact";
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a

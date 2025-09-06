@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import {execSync} from 'child_process';
 
 console.log('🚀 Starting Advanced App Improvements...');
 
@@ -14,13 +14,8 @@ function createAdvancedMonitoring() {
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
   constructor() {
-<<<<<<< HEAD
-    this.checks = new Map();
-    this.results = new Map();
-=======
     this.checks = new Map(),
     this.results = new Map()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 
   addCheck(name, checkFunction) {
@@ -29,31 +24,17 @@ export class HealthChecker {
 
   async runAllChecks() {
     const results = {};
-<<<<<<< HEAD
-<<<<<<< HEAD
-    for (const [name, check] of this.checks) {
-      try {
-        const result = await check();
-=======
     for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         results[name] = { status: 'healthy', result };
       } catch (error) {
         results[name] = { status: 'unhealthy', error: error.message };
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.results = results;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return results;
   }
 }
@@ -143,7 +124,6 @@ export class ErrorTracker {
   constructor() {
     this.errors = [];
     this.errorCounts = new Map();
-=======
     return results;
   }
 }
@@ -233,18 +213,12 @@ export class ErrorTracker {
   constructor() {
     this.errors = [],
     this.errorCounts = new Map()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
       stack: error.stack,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      context,
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       timestamp: new Date().toISOString(),
       context,
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
@@ -262,9 +236,6 @@ export class ErrorTracker {
     const recentErrors = this.errors.filter(
       error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
     );
-<<<<<<< HEAD
-    
-=======
       timestamp: new Date().toISOString(),
       context,
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
@@ -283,21 +254,13 @@ export class ErrorTracker {
       error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
     );
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     return {
       total: this.errors.length,
       recent: recentErrors.length,
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .slice(0, 10)
-=======
         .slice(0, 10),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
   }
 }
@@ -519,7 +482,7 @@ function addSkipLinks() {
     padding: 8px;
     text-decoration: none;
     z-index: 1000;
-  \`;
+  \`,
   
   skipLink.addEventListener('focus', () => {
     skipLink.style.top = '6px';
@@ -538,7 +501,7 @@ function improveFocusManagement() {
   style.textContent = \`
     *:focus {
       outline: 2px solid #007acc;
-      outline-offset: 2px;
+      outline-offset: 2px,
     }
   \`;
   document.head.appendChild(style);
@@ -546,7 +509,7 @@ function improveFocusManagement() {
 
 function addAriaLabels() {
   // Add ARIA labels to interactive elements without labels
-  const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+  const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
   buttons.forEach(button => {
     if (!button.textContent.trim()) {
       button.setAttribute('aria-label', 'Button');
@@ -653,9 +616,6 @@ function handleArrowNavigation(event) {
     fs.writeFileSync(fullPath, content);
     console.log(`OK Created ${filename}`);
   });
-<<<<<<< HEAD
-});
-=======
         .slice(0, 10),
     };
   }
@@ -1007,31 +967,21 @@ function handleArrowNavigation(event) {
     console.log(`OK Created ${filename}`);
   });
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Main execution
 async function main() {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('🚀 Starting advanced app improvements...');
-    
-    // Create all improvement systems
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     createAdvancedMonitoring();
     createPerformanceOptimizations();
     createAccessibilityImprovements();
     
     console.log('\n✅ Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary:');
+    console.log('\n📋 Summary: ');
     console.log('  - Advanced monitoring system created');
     console.log('  - Performance optimization utilities added');
     console.log('  - Accessibility improvements implemented');
-    console.log('\n🚀 Your app is now enhanced with advanced features!');
+    console.log('\n🚀 Your app is now enhanced with advanced features!'),
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
@@ -1039,9 +989,6 @@ async function main() {
   }
 }
 
-<<<<<<< HEAD
-main();
-=======
     createAdvancedMonitoring();
     createPerformanceOptimizations();
     createAccessibilityImprovements();
@@ -1058,16 +1005,9 @@ main();
   }
 }
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-<<<<<<< HEAD
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

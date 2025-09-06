@@ -1,41 +1,16 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Zap,
-  Brain,
-  Code,
-  Shield,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target,
-  Cpu,
-  Rocket,
-  Globe,
-  BarChart3,
-  Settings,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { 
-  Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
-import { 
-  Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
+import {advancedAIAutomationServices2025} from '../data/2025-advanced-ai-automation-services';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import {advancedAIAutomationServices2025} from '../data/2025-advanced-ai-automation-services';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -842,7 +817,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
   )
 }
   )

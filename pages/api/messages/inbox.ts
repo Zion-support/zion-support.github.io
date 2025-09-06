@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../utils/auth';
-import { listConversations } from '../../../utils/messaging/storage';
+import {NextApiRequest, NextApiResponse} from 'next';
+import {requireUser} from '../../../utils/auth';
+import {listConversations} from '../../../utils/messaging/storage';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;

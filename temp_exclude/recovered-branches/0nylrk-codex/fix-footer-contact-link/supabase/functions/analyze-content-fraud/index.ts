@@ -1,7 +1,7 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
-import { corsHeaders } from "../_shared/cors.ts";
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",
+import {corsHeaders} from "../_shared/cors.ts";
 interface AnalyzeRequest {
   content: string, contentType: string,
   flagId?: string
@@ -70,7 +70,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openaiApiKey}`};
       body: JSON.stringify({
         model: "gpt-4o-mini",
@@ -121,7 +121,7 @@ const updateFraudFlag = async (
   classification: string, 
   explanation: string
 ): Promise<void> => {
-  if (!flagId) return;
+  if (!flagId) return,
   
   const { error } = await supabase
     .from("fraud_flags")

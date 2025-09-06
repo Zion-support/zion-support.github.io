@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../../components/Layout";"
-import { motion } from 'framer-motion'
-import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react;
+import {motion} from 'framer-motion'
+import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react;
 export default function DigitalTransformationPage() {},
   {
   const transformationServices = []
@@ -120,13 +120,13 @@ export default function DigitalTransformationPage() {},
 </section>"
           <div className="container mx-auto px-4 text-center">"
 </div>"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
             </h2>"
             <p className="text-xl mb-8 max-w-2xl mx-auto">"
 </p>
             </p>
-            <motion.a;"
+            <motion.a,"
               href="/contact"
               className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
               whileHover={{ scale: 1.05 }},

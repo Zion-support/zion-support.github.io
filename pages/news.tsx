@@ -2,22 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 ursor/integrate-build-improve-and-re-verify-b76c
-import { motion } from 'framer-motion';
-import { 
-  Newspaper;
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
-  Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink, TrendingUp, Award, Rocket, Globe, Brain, Atom, Zap} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -192,7 +178,7 @@ const NewsPage: React.FC = () => {
   });
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric',
       month: 'long',
@@ -215,22 +201,8 @@ export default function NewsPage() {
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-import { motion } from 'framer-motion';
-import { 
-  Newspaper;
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight, 
-  ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
-  Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink, TrendingUp, Award, Rocket, Globe, Brain, Atom, Zap} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -405,7 +377,7 @@ const NewsPage: React.FC = () => {
   });
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', { 
       year: 'numeric',
       month: 'long',
@@ -470,11 +442,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
-  ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Newspaper, Globe, Award, Users, Rocket, Brain, ArrowRight, ExternalLink, Calendar, Tag, Star} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function NewsPage() {
@@ -830,11 +799,8 @@ export default function NewsPage() {
 import React, { useState } from 'react';
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Newspaper, Globe, Award, Users, Rocket, Brain, 
-  ArrowRight, ExternalLink, Calendar, Tag, Star
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Newspaper, Globe, Award, Users, Rocket, Brain, ArrowRight, ExternalLink, Calendar, Tag, Star} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function NewsPage() {
@@ -1597,7 +1563,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 For press inquiries, media interviews, or additional information;
                 please contact our communications team.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -1620,7 +1586,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
 ursor/integrate-build-improve-and-re-verify-b76c
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

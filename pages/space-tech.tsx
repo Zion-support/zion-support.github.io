@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
+import {Satellite, CheckCircle, Globe2} from 'lucide-react';
 
 export default function SpaceTechPage() {
   const features = [
@@ -96,7 +96,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <section className='text-center'>
             <a
               href='/space-technology'
-              className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'
+              className='inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200'
             >
               <Globe2 className='w-4 h-4' />
           <section className="text-center">
@@ -112,7 +112,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </Layout>
-  );
+  ),
   )
 }
   )

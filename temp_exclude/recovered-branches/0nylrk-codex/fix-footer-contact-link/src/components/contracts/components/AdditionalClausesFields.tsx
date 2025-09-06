@@ -1,14 +1,8 @@
 
-import { UseFormReturn } from "react-hook-form";
-import { 
-  FormField;
-  FormItem, 
-  FormLabel, 
-  FormControl, 
-  FormDescription 
-} from "@/components/ui/form";
-import { Checkbox } from "@/components/ui/checkbox";
-import { ContractFormValues } from "./ContractForm";
+import {UseFormReturn} from "react-hook-form";
+import {FormField,, FormItem,, FormLabel,, FormControl,, FormDescription} from "@/components/ui/form";
+import {Checkbox} from "@/components/ui/checkbox";
+import {ContractFormValues} from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>
 }

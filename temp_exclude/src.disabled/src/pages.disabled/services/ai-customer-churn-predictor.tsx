@@ -1,27 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Star,
-  Award,
-  Target,
-  Zap,
-  Clock,
-  DollarSign,
-  Globe,
-  Database,
-  Cpu,
-  Lock
-} from 'lucide-react';
+import {Brain,, TrendingUp,, Shield,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Phone,, Mail,, MapPin,, Star,, Award,, Target,, Zap,, Clock,, DollarSign,, Globe,, Database,, Cpu,, Lock} from 'lucide-react';
 
 const AICustomerChurnPredictor: React.FC = () => {
   const features = [
@@ -326,7 +305,7 @@ const AICustomerChurnPredictor: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Start your 14-day free trial today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link 
               href="/contact" 
               className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
@@ -344,7 +323,7 @@ const AICustomerChurnPredictor: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  ),
 };
 
 export default AICustomerChurnPredictor;

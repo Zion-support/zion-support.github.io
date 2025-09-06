@@ -1,29 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const EquipmentDetail: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter(),
   const { slug } = router.query as { slug?: string };
   const items = equipment as any[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const item = items.find(e => e.slug === slug);
-=======
   const item = items.find((e) => e.slug === slug);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const item = items.find((e) => e.slug === slug);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   if (!item) {
     return (
@@ -31,32 +17,18 @@ const EquipmentDetail: NextPage = () => {
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='space-y-4'>
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>
-          <Link href='/products'>
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
-          </Link>
-        </div>
-      </EnhancedLayout>
-    );
-=======
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="space-y-4">
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
       </EnhancedLayout>
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -64,20 +36,9 @@ const EquipmentDetail: NextPage = () => {
       <Head>
         <title>{item.name} - Zion Tech Solutions</title>
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2 space-y-4'>
-          <img
-            src={`https://picsum.photos/seed/${encodeURIComponent(item.slug)}/1200/600`}
-            alt={item.name}
-            className='w-full rounded-lg border border-gray-200 dark:border-gray-800'
-          />
-=======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <img src={`https://picsum.photos/seed/${encodeURIComponent(item.slug)}/1200/600`} alt={item.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <div>
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
@@ -99,8 +60,6 @@ const EquipmentDetail: NextPage = () => {
     </EnhancedLayout>
   )
 };
-<<<<<<< HEAD
-=======
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <img src={`https://picsum.photos/seed/${encodeURIComponent(item.slug)}/1200/600`} alt={item.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
@@ -126,8 +85,5 @@ const EquipmentDetail: NextPage = () => {
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EquipmentDetail;

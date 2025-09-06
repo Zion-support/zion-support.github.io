@@ -1,30 +1,20 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Mail,
-  Phone,
-  MapPin,
-  MessageSquare,
-  Globe,;
-} from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe,} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe} from 'lucide-react';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe} from 'lucide-react';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+import {revolutionary2027AIServices} from '../data/revolutionary-2027-ai-services';
+import {revolutionary2027ITServices} from '../data/revolutionary-2027-it-services';
+import {revolutionary2027MicroSaasServices} from '../data/revolutionary-2027-micro-saas';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function Revolutionary2027ServicesShowcase() {
@@ -233,8 +223,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
-        default:
-          return a.name.localeCompare(b.name);
+        default: return a.name.localeCompare(b.name),
       }
     });
 
@@ -951,7 +940,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </UltraQuantumHolographicBackground>
-  );
+  ),
   )
 }
   )

@@ -72,7 +72,7 @@ export class AICustomerServiceService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -112,7 +112,7 @@ export class AICustomerServiceService {
         createdAt: new Date(data.createdAt), updatedAt: new Date(data.updatedAt),
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg;
+          ...msg,
           timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error getting ticket:', error);
@@ -138,7 +138,7 @@ export class AICustomerServiceService {
         createdAt: new Date(data.createdAt), updatedAt: new Date(data.updatedAt),
         resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg;
+          ...msg,
           timestamp: new Date(msg.timestamp)}))}
     } catch (error) {
       console.error('Error updating ticket:', error);
@@ -239,11 +239,11 @@ export class AICustomerServiceService {
 
       const data = await response.json();
       return data.tickets.map((ticket: any) => ({
-        ...ticket;
+        ...ticket,
         createdAt: new Date(ticket.createdAt), updatedAt: new Date(ticket.updatedAt),
         resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,
         conversationHistory: ticket.conversationHistory.map((msg: any) => ({
-          ...msg;
+          ...msg,
           timestamp: new Date(msg.timestamp)}))}))
     } catch (error) {
       console.error('Error searching tickets:', error);

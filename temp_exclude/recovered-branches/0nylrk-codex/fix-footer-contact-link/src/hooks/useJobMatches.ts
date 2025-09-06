@@ -1,8 +1,8 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { JobMatch } from "@/types/jobs";
+import {useState,, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +15,7 @@ export function useJobMatches(jobId: string) {
         .from("job_talent_matches")
         .select(`
           *;
-          talent_profile:talent_id(
+          talent_profile: talent_id(
             id;
             user_id;
             full_name;
@@ -24,7 +24,7 @@ export function useJobMatches(jobId: string) {
             hourly_rate;
             bio;
             years_experience;
-            key_projects;
+            key_projects,
             skills
           )
         `)

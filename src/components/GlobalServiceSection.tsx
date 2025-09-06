@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
-import {
-  Server,
-  HardDrive,
-  Network,
-  Clock,
-  Recycle,
-  Truck,;
-} from 'lucide-react';
-import { Button } from './ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { GradientHeading } from "./GradientHeading";
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
-import { Button } from "./ui/button";
+import {GradientHeading} from "./GradientHeading";
+import {Server, HardDrive, Network, Clock, Recycle, Truck} from 'lucide-react'
+import {Button} from "./ui/button";
 const services = [
   {
     title: "Servers",
@@ -54,23 +40,10 @@ export function GlobalServiceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-<<<<<<< HEAD
-            <div
-              key={index}
-              className='bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300'
-            >
-              <div className='text-zion-cyan mb-4'>{service.icon}</div>
-              <h3 className='text-xl font-bold text-white mb-2'>
-                {service.title}
-              </h3>
-              <p className='text-zion-slate-light mb-4'>
-                {service.description}
-              </p>
-=======
 
-import { GradientHeading } from "./GradientHeading";
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
-import { Button } from "./ui/button";
+import {GradientHeading} from "./GradientHeading";
+import {Server, HardDrive, Network, Clock, Recycle, Truck} from 'lucide-react'
+import {Button} from "./ui/button";
 const services = [
   {
     title: "Servers",
@@ -111,45 +84,25 @@ export function GlobalServiceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='flex justify-center mt-12'>
-          <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>
-=======
         <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="flex justify-center mt-12">
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Get Your Free Commercial Proposal
           </Button>
         </div>
       </div>
     </section>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

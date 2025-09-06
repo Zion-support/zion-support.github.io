@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 type Note = {
@@ -14,7 +14,7 @@ type Note = {
 
 export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true);
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 type Note = {
   id: string,

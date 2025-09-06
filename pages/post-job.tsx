@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import {useState} from 'react';
+import {useRouter} from 'next/router';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function PostJobPage() {
@@ -21,7 +21,7 @@ export default function PostJobPage() {
 
     if (!title || !description || !category || !clientEmail) {
       setError('Please fill in all required fields.');
-      return;
+      return,
       return
       return
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -43,7 +43,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           requiredSkills: skills
             .split()
             .map((s) => s.trim())
-            .filter(Boolean);
+            .filter(Boolean),
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
           deliveryDeadlineIso: deliveryDeadlineIso || undefined,
@@ -56,7 +56,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           requiredSkills: skills
             .split()
             .map((s) => s.trim())
-            .filter(Boolean);
+            .filter(Boolean),
           budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
           budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
           deliveryDeadlineIso: deliveryDeadlineIso || undefined,

@@ -1,6 +1,6 @@
 
-import { WorkExperience } from '@/types/resume';
-import { format } from 'date-fns';
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
 interface WorkExperienceSectionProps {
   workExperience: WorkExperience[]
 }
@@ -17,7 +17,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   });
 
   const formatDate = (date: Date | string | undefined) => {
-    if (!date) return '';
+    if (!date) return '',
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
     }

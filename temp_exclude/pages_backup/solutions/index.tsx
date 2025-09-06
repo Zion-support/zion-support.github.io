@@ -1,18 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Rocket, 
-  BarChart3, 
-  Settings,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Building,
-  Target,
-  Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield,, Rocket,, BarChart3,, Settings,, ArrowRight,, CheckCircle,, Users,, Building,, Target,, Zap} from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
 
 const solutions = [
@@ -202,7 +191,7 @@ export default function SolutionsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
@@ -225,5 +214,5 @@ export default function SolutionsPage() {
         </section>
       </div>
     </MainLayout>
-  );
+  ),
 }

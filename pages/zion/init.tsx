@@ -3,7 +3,7 @@
   instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
   logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' 
 ursor/integrate-build-improve-and-re-verify-b76c
-import { useState } from 'react';
+import {useState} from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 
@@ -55,7 +55,7 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'global-map': false;
   'franchise-onboarding': false;
   'referral-ambassadors': false;
-  'grant-portal': false;
+  'grant-portal': false,
   trailer: false,
   'book-store': false,
 };
@@ -70,7 +70,7 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   'global-map': false;
   'franchise-onboarding': false;
   'referral-ambassadors': false;
-  'grant-portal': false;
+  'grant-portal': false,
   trailer: false,
   'book-store': false};
   'book-store': false};
@@ -121,7 +121,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     e.preventDefault();
     setSubmitting(true);
     setError(null);
-    setResult(null);
+    setResult(null),
     try {
       const res = await fetch('/api/deploy/genesis', {
         method: 'POST',

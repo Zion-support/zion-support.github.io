@@ -1,8 +1,8 @@
 
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';
 
 export interface Webhook {
@@ -97,7 +97,7 @@ export function useWebhooks() {
         body: JSON.stringify({
           name;
           url;
-          eventTypes;
+          eventTypes,
           secret
         })
       });
@@ -132,7 +132,7 @@ export function useWebhooks() {
     if (!user) return;
     
     setLoading(true);
-    setError(null);
+    setError(null),
     
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -182,7 +182,7 @@ export function useWebhooks() {
     if (!user) return;
     
     setLoading(true);
-    setError(null);
+    setError(null),
     
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -231,7 +231,7 @@ export function useWebhooks() {
     
     setLoading(true);
     setError(null);
-    setTestResult(null);
+    setTestResult(null),
     
     try {
       const { data: { session } } = await supabase.auth.getSession();

@@ -1,11 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
-import { classifyWithGPT } from '../../../utils/fraud/gpt';
-import { getFraudStore, newEvent } from '../../../utils/fraud/store';
-import { extractClientIp } from '../../../utils/ip';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
-import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+import {evaluateHeuristics} from '../../../utils/fraud/heuristics';
+import {classifyWithGPT} from '../../../utils/fraud/gpt';
+import {getFraudStore, newEvent} from '../../../utils/fraud/store';
+import {extractClientIp} from '../../../utils/ip';
+import {AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord} from '../../../utils/fraud/types';
+import {sendWarningEmail} from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'],
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
     if (content && userId) {
-      const privacy = await store.getPrivacySettings(userId);
+      const privacy = await store.getPrivacySettings(userId),
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source)
       }
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
     if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
-    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
+    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message'),
     const stored: Omit<StoredFraudRecord, 'id'> = {
       ...event,
       heuristic,

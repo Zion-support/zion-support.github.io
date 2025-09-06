@@ -1,16 +1,7 @@
 import React from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion } from 'framer-motion'
-import {
-  Shield, 
-  Settings, 
-  CheckCircle, 
-  AlertCircle,
-  Cookie,
-  Eye,
-  Lock,
-  Globe
-} from 'lucide-react'
+import {motion} from 'framer-motion'
+import {Shield,, Settings,, CheckCircle,, AlertCircle,, Cookie,, Eye,, Lock,, Globe} from 'lucide-react'
 
 const cookieTypes = [
   {

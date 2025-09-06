@@ -27,7 +27,7 @@ body: JSON.stringify (body)
 ursor/integrate-build-improve-and-re-verify-b76c
 import React, { useEffect, useMemo, useState } from 'react';
 import DatePicker from 'react-datepicker';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 type PaymentType = 'hourly' | 'fixed';
 
 export default function ContractBuilderPage() {
@@ -83,7 +83,7 @@ export default function ContractBuilderPage() {
       const body = {
         talentName;
         projectName;
-        scopeSummary;
+        scopeSummary,
         startDate: startDate?.toISOString().slice(0, 10);
         endDate: endDate?.toISOString().slice(0, 10);
         payment:
@@ -101,7 +101,7 @@ export default function ContractBuilderPage() {
                 milestoneSummary: milestoneSummary || undefined,
                 paymentSchedule};
         clauses: {
-          nda;
+          nda,
           ipTransfer};
         governingLaw;
         revisionRounds};

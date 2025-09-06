@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Home, ArrowLeft, Search, HelpCircle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Home,, ArrowLeft,, Search,, HelpCircle} from 'lucide-react';
 
 export default function Custom404() {
   return (
@@ -24,7 +24,7 @@ export default function Custom404() {
           <p className="text-gray-600 mb-8">
             The page you're looking for doesn't exist or has been moved.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link
               href="/"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
@@ -43,5 +43,5 @@ export default function Custom404() {
         </motion.div>
       </div>
     </>
-  );
+  ),
 }

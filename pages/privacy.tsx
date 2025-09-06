@@ -3,26 +3,8 @@ import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  User,
-  Settings,
-  AlertTriangle,
-  CheckCircle,
-  Mail,;
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail,, import, {, Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail, import, {, Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -880,7 +862,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </main>
       </Layout>
     </ErrorBoundary>
-  );
+  ),
   )
 ursor/integrate-build-improve-and-re-verify-b76c
 };

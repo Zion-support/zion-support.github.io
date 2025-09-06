@@ -23,7 +23,7 @@ export interface CuttingEdgeInnovativeService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [// AI-POWERED INNOVATIVE SERVICES
+reviews: number,export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] = [// AI-POWERED INNOVATIVE SERVICES
   {
     id:,
   ai-autonomous-business-manager',
@@ -710,7 +710,7 @@ export const serviceCategories2025: string[] = Array.from(
       .map((s) => s.category)
       .filter((v): v is string = > Boolean(v));
   );
-).sort();
+).sort(),
 export const getServicesByCategory2025 = (category: string) => {,
   if (!category || category ===
   'All') return cuttingEdgeInnovativeServices2025;

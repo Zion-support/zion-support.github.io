@@ -1,10 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036ITServices } from '../data/real-2036-it-services';
-import { real2036AIServices } from '../data/real-2036-ai-services';
-import { motion } from 'framer-motion';
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036ITServices} from '../data/real-2036-it-services';
+import {real2036AIServices} from '../data/real-2036-ai-services';
+import {motion} from 'framer-motion';
 
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
@@ -24,7 +24,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
-  const categories = [...new Set(allServices.map(service => service.category))];
+  const categories = [...new Set(allServices.map(service => service.category))],
 
   return (
     <Layout>
@@ -540,7 +540,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </Layout>
-  );
+  ),
 };
 
 export default ComprehensiveServicesShowcase2036;

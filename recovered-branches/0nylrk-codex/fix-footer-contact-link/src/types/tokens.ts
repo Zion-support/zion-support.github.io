@@ -1,7 +1,7 @@
 
 export interface Wallet {
   user_id: string;
-  balance: number;
+  balance: number,
   updated_at: string
 }
 
@@ -12,6 +12,6 @@ export interface TokenTransaction {
   user_id: string;
   amount: number;
   transaction_type: TransactionType;
-  reason: string | null;
+  reason: string | null,
   created_at: string
 }

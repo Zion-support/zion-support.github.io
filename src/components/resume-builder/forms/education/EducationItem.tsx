@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
-=======
 
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {format} from 'date-fns';
+import {Edit, Trash2} from 'lucide-react'
 
-import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
-import { EducationItemProps } from './types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function EducationItem({
-  education,
-  onEdit,
-  onDelete,
-}: EducationItemProps) {
-=======
+import {format} from 'date-fns';
+import {Edit, Trash2} from 'lucide-react'
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Education} from '@/types/resume';
+import {EducationItemProps} from './types';
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return (
     <Card className="bg-muted/40">
       <CardContent className="pt-6">
@@ -65,9 +47,6 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               onClick={() => onDelete(education.id!)}
               aria-label="Delete education"
             >
-<<<<<<< HEAD
-              <Trash2 className='h-4 w-4' />
-=======
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">
@@ -108,32 +87,16 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
               aria-label="Delete education"
             >
               <Trash2 className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Trash2 className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
         {education.description && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>
-=======
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         )}
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

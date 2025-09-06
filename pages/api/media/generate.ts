@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { buildPressRelease } from '../../../utils/mediaKit';
+import {buildPressRelease} from '../../../utils/mediaKit';
 
 export default async function handler(
   req: NextApiRequest,
@@ -28,7 +28,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         const client = new OpenAI({ apiKey });
         const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`;
         const completion = await client.chat.completions.create({
-          model: 'gpt-4o-mini';
+          model: 'gpt-4o-mini',
           messages: [
             { role: 'system', content: 'You are a seasoned tech PR writer.' },
             { role: 'user', content: prompt },

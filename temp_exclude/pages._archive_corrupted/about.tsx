@@ -7,7 +7,7 @@ import React from 'react';
 import Link from 'next/link';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Users, Target, Award, Globe, Shield, Zap } from 'lucide-react';
+import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
 const "About": NextPage = () => {
 <<<<<<< HEAD
 =======
@@ -482,7 +482,7 @@ export default function AboutPage() {
             <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\">
               <a
                 href=\"/contact\"
-                className=\"inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300\"
+                className=\"inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 transition-all duration-300\"
               >
                 Get Started Today
               </a>
@@ -497,7 +497,7 @@ export default function AboutPage() {
         </section>
       </div>
     </>
-  );
+  ),
 <<<<<<< HEAD
 <<<<<<< HEAD
 }

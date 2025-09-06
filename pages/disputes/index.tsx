@@ -2,7 +2,7 @@ import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 const fetcher = (url: string) => fetch(url).then(r => r.json()),

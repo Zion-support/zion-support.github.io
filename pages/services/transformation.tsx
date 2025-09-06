@@ -1,24 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Rocket,
-  Zap,
-  Shield,
-  Cpu,
-  Database,
-  Users,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  TrendingUp,
-  Globe,;
-import { 
-  Rocket, Zap, Shield, Cpu, Database, Users, 
-  ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket, Zap, Shield, Cpu, Database, Users, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe,, import, {, Rocket, Zap, Shield, Cpu, Database, Users, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function DigitalTransformationPage() {
@@ -84,10 +67,7 @@ export default function DigitalTransformationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/transformation'
         />
-import { 
-  Rocket, Zap, Shield, Cpu, Database, Users, 
-  ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
-} from 'lucide-react';
+import {Rocket, Zap, Shield, Cpu, Database, Users, ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function DigitalTransformationPage() {
@@ -405,7 +385,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {

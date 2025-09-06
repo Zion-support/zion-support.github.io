@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
-import { QuoteFormData } from "@/types/quotes";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { toast } from "@/hooks/use-toast";
+import {useEffect,, useState} from "react";
+import {QuoteFormData} from "@/types/quotes";
+import {Card,, CardContent} from "@/components/ui/card";
+import {Label} from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {AIMatchingResults} from "@/components/AIMatchingResults";
+import {findMatches,, MatchResult} from "@/lib/ai-matchmaking";
+import {toast} from "@/hooks/use-toast";
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -71,7 +71,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id);
+    const matchResult = matches.find(match => match.item.id === item.id),
     if (matchResult) {
       handleSelectMatch(matchResult)
     }

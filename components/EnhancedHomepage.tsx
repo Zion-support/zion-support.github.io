@@ -1,40 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
-=======
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next/link';
-import { 
-  ArrowRight;
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles;
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin;
-  ArrowUpRight
-} from 'lucide-react';
+import {ArrowRight, TrendingUp, Brain, Shield, Rocket, Atom, Sparkles, Building, Phone, Mail, MapPin, ArrowUpRight} from 'lucide-react';
 import Head from 'next/head';
 // Import our enhanced components
 import EnhancedNavigation from './layout/EnhancedNavigation';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import {revolutionary2044AdvancedMicroSaas} from '../data/revolutionary-2044-advanced-micro-saas';
+import {revolutionary2044ITServices} from '../data/revolutionary-2044-it-services';
+import {revolutionary2044AIServices} from '../data/revolutionary-2044-ai-services';
+import {realEnterpriseMicroSaas2025} from '../data/2025-real-enterprise-micro-saas';
+import {innovativeITServicesExpansion2025V3} from '../data/2025-innovative-it-services-expansion-v3';
+import {innovativeAIServicesExpansion2025V3} from '../data/2025-innovative-ai-services-expansion-v3';
+import {innovative2025ITInfrastructureServices} from '../data/2025-innovative-it-infrastructure-services';
+import {innovative2025AIAutonomousServices} from '../data/2025-innovative-ai-autonomous-services';
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -151,7 +133,7 @@ const EnhancedHomepage: React.FC = () => {
 
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    const category = categories.find(cat => cat.id === categoryId);
+    const category = categories.find(cat => cat.id === categoryId),
     if (category) {
       setColorScheme(category.scheme)
     }
@@ -513,33 +495,10 @@ const EnhancedHomepage: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
-};
-
-};
-
-};
-
-};
-export default EnhancedHomepage;
-=======
 import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next/link';
-import { 
-  ArrowRight;
-  TrendingUp, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Atom, 
-  Sparkles;
-  Building, 
-  Phone, 
-  Mail, 
-  MapPin;
-  ArrowUpRight
-} from 'lucide-react';
+import {ArrowRight, TrendingUp, Brain, Shield, Rocket, Atom, Sparkles, Building, Phone, Mail, MapPin, ArrowUpRight} from 'lucide-react';
 import Head from 'next/head';
 // Import our enhanced components
 import EnhancedNavigation from './layout/EnhancedNavigation';
@@ -547,14 +506,14 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 // Import service data
-import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025 } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+import {revolutionary2044AdvancedMicroSaas} from '../data/revolutionary-2044-advanced-micro-saas';
+import {revolutionary2044ITServices} from '../data/revolutionary-2044-it-services';
+import {revolutionary2044AIServices} from '../data/revolutionary-2044-ai-services';
+import {realEnterpriseMicroSaas2025} from '../data/2025-real-enterprise-micro-saas';
+import {innovativeITServicesExpansion2025V3} from '../data/2025-innovative-it-services-expansion-v3';
+import {innovativeAIServicesExpansion2025V3} from '../data/2025-innovative-ai-services-expansion-v3';
+import {innovative2025ITInfrastructureServices} from '../data/2025-innovative-it-infrastructure-services';
+import {innovative2025AIAutonomousServices} from '../data/2025-innovative-ai-autonomous-services';
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -671,7 +630,7 @@ const EnhancedHomepage: React.FC = () => {
 
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
-    const category = categories.find(cat => cat.id === categoryId);
+    const category = categories.find(cat => cat.id === categoryId),
     if (category) {
       setColorScheme(category.scheme)
     }
@@ -1034,7 +993,4 @@ const EnhancedHomepage: React.FC = () => {
 };
 
 export default EnhancedHomepage;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default EnhancedHomepage;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

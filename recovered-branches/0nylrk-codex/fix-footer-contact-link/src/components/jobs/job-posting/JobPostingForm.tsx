@@ -1,17 +1,17 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from "sonner";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { useJobForm } from './useJobForm';
-import { BasicInfoFields } from './BasicInfoFields';
-import { DateFields } from './DateFields';
-import { DescriptionFields } from './DescriptionFields';
-import { useJobs } from "@/hooks/useJobs";
-import { JobSchemaType } from './validation';
+import {useNavigate} from 'react-router-dom';
+import {toast} from "sonner";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+import {Form} from "@/components/ui/form";
+import {useJobForm} from './useJobForm';
+import {BasicInfoFields} from './BasicInfoFields';
+import {DateFields} from './DateFields';
+import {DescriptionFields} from './DescriptionFields';
+import {useJobs} from "@/hooks/useJobs";
+import {JobSchemaType} from './validation';
 interface JobPostingFormProps {
   jobId?: string;
   onSuccess?: () => void
@@ -79,7 +79,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   }, [jobId, getJobById, setValue, setStartDate, setEndDate, setIsRemote]);
 
   const handleEditorChange = useCallback((value: string) => {
-    setEditorContent(value);
+    setEditorContent(value),
     setValue('description', value)
   }, [setValue]);
 
@@ -87,7 +87,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     setIsFormLoading(true);
 
     try {
-      const jobData = await submitJob(values);
+      const jobData = await submitJob(values),
       
       if (jobId) {
         await updateJob(jobId, jobData);

@@ -1,14 +1,14 @@
 
-import { useState } from "react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save } from "lucide-react";
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
+import {useState} from "react";
+import {Dialog,, DialogContent} from "@/components/ui/dialog";
+import {Tabs,, TabsList,, TabsTrigger,, TabsContent} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {Save} from "lucide-react";
+import {TalentProfile} from "@/types/talent";
+import {ContractForm,, ContractFormValues} from "./components/ContractForm";
+import {ContractPreview} from "./components/ContractPreview";
+import {TemplateManager} from "./templates/TemplateManager";
+import {SmartContractBuilder} from "./SmartContractBuilder";
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -38,7 +38,7 @@ export function ContractBuilder({
 
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract);
-    setActiveTab("preview");
+    setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
     }

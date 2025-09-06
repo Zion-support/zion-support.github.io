@@ -1,33 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  BarChart3,
-  TrendingUp,
-  Users,
-  Target,
-  Zap,
-  Shield,
-  Database,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star,} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-import { 
-  Brain, BarChart3, TrendingUp, Users, Target, Zap, 
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react';
+import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { 
-  Brain, BarChart3, TrendingUp, Users, Target, Zap, 
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
-} from 'lucide-react';
+import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -200,7 +181,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Standard reporting";
         "Email support";
         "Up to 10 users"
-      ];
+      ],
       popular: false
     };
     {
@@ -216,7 +197,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Up to 50 users";
         "API access";
         "Custom integrations"
-      ];
+      ],
       popular: true
     };
     {
@@ -232,7 +213,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "On-premise deployment";
         "Custom training";
         "SLA guarantees"
-      ];
+      ],
       popular: false
     }
   ];
@@ -272,7 +253,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Standard reporting";
         "Email support";
         "Up to 10 users"
-      ];
+      ],
       popular: false
     };
     {
@@ -288,7 +269,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Up to 50 users";
         "API access";
         "Custom integrations"
-      ];
+      ],
       popular: true
     };
     {
@@ -304,7 +285,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "On-premise deployment";
         "Custom training";
         "SLA guarantees"
-      ];
+      ],
       popular: false
     }
   ];
@@ -828,7 +809,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </>
-  );
+  ),
   )
 }
   )

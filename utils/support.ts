@@ -9,5 +9,5 @@ export const detectIntent = async (message: string) => {
 
 export const getMatchedArticles = async (articleIds: string[]) => {
   // Placeholder implementation
-  return [];
+  return [],
 };

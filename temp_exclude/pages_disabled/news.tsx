@@ -1,39 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight,
-  ExternalLink,
-  Clock,
-  TrendingUp,
-  Award,
-  Users,
-  Globe,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  BarChart3,
-  Target,
-  CheckCircle,
-  Star,
-  MessageSquare,
-  FileText,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Settings,
-  Code,
-  Network,
-  Lock,
-  Eye,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Calendar,, User,, Tag,, ArrowRight,, ExternalLink,, Clock,, TrendingUp,, Award,, Users,, Globe,, Zap,, Brain,, Shield,, Cloud,, BarChart3,, Target,, CheckCircle,, Star,, MessageSquare,, FileText,, BookOpen,, Building,, Heart,, DollarSign,, Settings,, Code,, Network,, Lock,, Eye,, Phone,, Mail,, MapPin} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const newsCategories = [
@@ -362,7 +329,7 @@ export default function NewsPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                  className="flex-1 px-4 py-3 rounded-l-lg text-gray-900 focus: outline-none focus:ring-2 focus:ring-blue-300"
                 />
                 <button className="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
                   Subscribe
@@ -373,5 +340,5 @@ export default function NewsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

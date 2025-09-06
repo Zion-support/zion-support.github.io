@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Film,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIVideoEditingPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-video-editing')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIVideoEditingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));

@@ -1,12 +1,12 @@
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
-import { toast } from "sonner";
-import { JobApplication } from "@/types/jobs";
+import {useState} from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card,, CardHeader,, CardTitle,, CardContent,, CardFooter} from "@/components/ui/card";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2,, Star,, BarChart2,, Lightbulb} from "lucide-react";
+import {toast} from "sonner";
+import {JobApplication} from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -30,7 +30,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800";
       case "Low Match":
-        return "bg-orange-100 text-orange-800";
+        return "bg-orange-100 text-orange-800",
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -87,7 +87,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       setTimeout(checkScore, 3000)
       
     } catch (error: any) {
-      setIsScoring(false);
+      setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)
     }
   };

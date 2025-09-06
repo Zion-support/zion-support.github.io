@@ -1,19 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
-import { formatDistanceToNow } from "date-fns";
+import {formatDistanceToNow} from "date-fns";
 import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { logInfo } from '@/utils/productionLogger';
+import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from 'lucide-react'
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {ForumPost} from "@/types/community";
+import {logInfo} from '@/utils/productionLogger';
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean
@@ -25,8 +21,8 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 
   return (
     <Card data-testid="post-card" className={cn(
-      "transition-shadow hover:shadow-md";
-      post.isPinned && "border-zion-purple/50";
+      "transition-shadow hover: shadow-md";
+      post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <p>DEBUG: PostCard ID: {post?.id}</p>
@@ -102,20 +98,5 @@ export const PostCard = React.memo(PostCardComponent);
 PostCard.displayName = 'PostCard';
 
 export default PostCard;
-<<<<<<< HEAD
-'"
-=======
 
       "transition-shadow hover: shadow-md",
-<<<<<<< HEAD
-
-
-export const PostCard = React.memo(PostCardComponent);
-PostCard.displayName = 'PostCard';
-
-
-export default PostCard;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

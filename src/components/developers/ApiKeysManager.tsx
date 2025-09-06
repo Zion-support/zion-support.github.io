@@ -1,27 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react';
-import { format } from 'date-fns';
-import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns";
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
+import {useState} from "react";
+import {Check, Clock, Key, MoreVertical, RefreshCw, X} from 'lucide-react'
+import {format} from "date-fns";
+import {useApiKeys, type, ApiKeyScope} from "@/hooks/useApiKeys";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 
 import CodeBlock from "./CodeBlock";
 export function ApiKeysManager() {
@@ -54,26 +46,22 @@ export function ApiKeysManager() {
     
     await createApiKey(keyName, selectedScopes);
     setShowCreateDialog(false);
-<<<<<<< HEAD
-    setKeyName('');
-    setSelectedScopes([]);
-=======
 
-import { useState } from "react";
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-import { format } from "date-fns";
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys";
+import {useState} from "react";
+import {Check, Clock, Key, MoreVertical, RefreshCw, X} from 'lucide-react'
+import {format} from "date-fns";
+import {useApiKeys, type, ApiKeyScope} from "@/hooks/useApiKeys";
 
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { Badge } from "@/components/ui/badge";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Input} from "@/components/ui/input";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Label} from "@/components/ui/label";
+import {Badge} from "@/components/ui/badge";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 
 import CodeBlock from "./CodeBlock";
 
@@ -111,25 +99,17 @@ export function ApiKeysManager() { const {
     setShowCreateDialog(false);
     setKeyName("");
     setSelectedScopes([])
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setKeyName("");
     setSelectedScopes([])
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const handleRegenerateKey = async (keyId: string) => {
-    await regenerateApiKey(keyId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setShowRegenerateConfirm(null);
-=======
+    await regenerateApiKey(keyId),
     setShowRegenerateConfirm(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
   
   const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId);
+    await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   };
   
@@ -152,14 +132,11 @@ export function ApiKeysManager() { const {
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
-<<<<<<< HEAD
-  -H "Content-Type: application/json"`;
-=======
     setShowRegenerateConfirm(null)
   };
   
   const handleRevokeKey = async (keyId: string) => {
-    await revokeApiKey(keyId);
+    await revokeApiKey(keyId),
     setShowDeleteConfirm(null)
   };
   
@@ -183,20 +160,12 @@ export function ApiKeysManager() { const {
     return `curl -X GET "https: //api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   -H "Content-Type: application/json"`
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   // Reset form when dialog closes
   const handleDialogClose = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setKeyName('');
-=======
     setKeyName("");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     setSelectedScopes([]);
     setShowCreateDialog(false)
   };
@@ -244,16 +213,6 @@ export function ApiKeysManager() { const {
                 
                 <div className="space-y-2">
                   <Label>Scopes</Label>
-<<<<<<< HEAD
-                  <div className='grid gap-2 pt-2'>
-                    {scopeOptions.map(scope => (
-                      <div
-                        key={scope.value}
-                        className='flex items-center space-x-2'
-                      >
-                        <Checkbox
-                          id={scope.value}
-=======
     setKeyName("");
     setSelectedScopes([]);
     setShowCreateDialog(false)
@@ -303,85 +262,45 @@ export function ApiKeysManager() { const {
                 
                 <div className="space-y-2">
                   <Label>Scopes</Label>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
                         <Checkbox 
                           id={scope.value} 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
                         <Label
                           htmlFor={scope.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-                        >
-                          {scope.label}
-                          <span className='block text-xs text-zinc-400 mt-1'>
-                            {scope.description}
-                          </span>
-=======
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                         >
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </Label>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <DialogFooter>
-                <Button variant='outline' onClick={handleDialogClose}>
-                  Cancel
-                </Button>
-                <Button
-                  onClick={handleCreateKey}
-                  disabled={
-                    keyName.trim() === '' || selectedScopes.length === 0
-                  }
-                >
-=======
               
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Create Key
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {/* New API Key Alert */}
         {newApiKey && (
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">
@@ -390,11 +309,6 @@ export function ApiKeysManager() { const {
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='icon'
-                className='h-6 w-6'
-=======
         
         {/* New API Key Alert */}
         {newApiKey && (
@@ -407,23 +321,15 @@ export function ApiKeysManager() { const {
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={clearNewApiKey}
               >
                 <X size={14} />
               </Button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <p className='text-sm text-zinc-300 mb-2'>
-=======
             <p className="text-sm text-zinc-300 mb-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               This key will only be displayed once. Please save it securely.
             </p>
             <CodeBlock code={newApiKey} className="mb-3" />
@@ -456,14 +362,6 @@ export function ApiKeysManager() { const {
                         {key.is_active ? (
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
-<<<<<<< HEAD
-                          <Badge
-                            variant='secondary'
-                            className='bg-red-900 text-white border-red-800'
-                          >
-                            Revoked
-                          </Badge>
-=======
             <p className="text-sm text-zinc-300 mb-2">
               This key will only be displayed once. Please save it securely.
             </p>
@@ -498,20 +396,12 @@ export function ApiKeysManager() { const {
                           <Badge className="bg-green-700 text-white">Active</Badge>
                         ) : (
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         )}
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
                   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" size="icon" aria-label="More options">
@@ -531,9 +421,6 @@ export function ApiKeysManager() { const {
                         className="cursor-pointer text-red-500"
                         disabled={!key.is_active}
                       >
-<<<<<<< HEAD
-                        <X size={14} className='mr-2' /> Revoke
-=======
                   
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -555,26 +442,11 @@ export function ApiKeysManager() { const {
                         disabled={!key.is_active}
                       >
                         <X size={14} className="mr-2" /> Revoke
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <X size={14} className="mr-2" /> Revoke
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <div className='mt-3 flex flex-wrap gap-2'>
-                  {key.scopes.map(scope => (
-                    <Badge
-                      key={scope}
-                      variant='secondary'
-                      className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
@@ -582,44 +454,11 @@ export function ApiKeysManager() { const {
                       key={scope} 
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     >
                       {scope}
                     </Badge>
                   ))}
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-                <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
-                  <span>
-                    Created: {format(new Date(key.created_at), 'MMM d, yyyy')}
-                  </span>
-=======
-                
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
-                      <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at 
-                        ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
-                        : 'Never'}
-                    </PopoverTrigger>
-<<<<<<< HEAD
-                    <PopoverContent className='bg-zinc-900 border-zinc-800 text-white w-64 p-3'>
-                      <p className='text-sm mb-1'>Last Used</p>
-                      <p className='text-xs text-zinc-400'>
-                        {key.last_used_at
-                          ? format(
-                              new Date(key.last_used_at),
-                              'MMM d, yyyy HH:mm:ss'
-                            )
-=======
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
@@ -630,33 +469,28 @@ export function ApiKeysManager() { const {
                         ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
                         : 'Never'}
                     </PopoverTrigger>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                
+                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
+                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
+                  <Popover>
+                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
+                      <Clock size={12} className="mr-1" />
+                      Last used: {key.last_used_at 
+                        ? format(new Date(key.last_used_at), 'MMM d, yyyy') 
+                        : 'Never'}
+                    </PopoverTrigger>
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
                       <p className="text-sm mb-1">Last Used</p>
                       <p className="text-xs text-zinc-400">
                         {key.last_used_at 
                           ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           : 'This API key has never been used'}
                       </p>
                     </PopoverContent>
                   </Popover>
                   {key.expires_at && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <span>
-                      Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}
-                    </span>
-=======
                     <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <span>Expires: {format(new Date(key.expires_at), 'MMM d, yyyy')}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   )}
                 </div>
               </div>
@@ -664,46 +498,26 @@ export function ApiKeysManager() { const {
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <CardFooter className='justify-between border-t border-zinc-800 py-4'>
-        <div className='text-xs text-zinc-500'>
-          Keep your API keys secure. They have the same permissions as your
-          account.
-        </div>
-        <Button variant='outline' size='sm' onClick={fetchApiKeys}>
-=======
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
           Keep your API keys secure. They have the same permissions as your account.
         </div>
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           Refresh
         </Button>
       </CardFooter>
 
       {/* Regenerate Key Confirmation Dialog */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <AlertDialog
-        open={showRegenerateConfirm !== null}
-        onOpenChange={open => !open && setShowRegenerateConfirm(null)}
-=======
       <AlertDialog 
         open={showRegenerateConfirm !== null} 
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -717,14 +531,6 @@ export function ApiKeysManager() { const {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-<<<<<<< HEAD
-            <AlertDialogAction
-              onClick={() =>
-                showRegenerateConfirm &&
-                handleRegenerateKey(showRegenerateConfirm)
-              }
-              className='bg-blue-600 hover:bg-blue-700'
-=======
       <AlertDialog 
         open={showRegenerateConfirm !== null} 
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
@@ -744,12 +550,9 @@ export function ApiKeysManager() { const {
             <AlertDialogAction 
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <AlertDialogAction 
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Regenerate
             </AlertDialogAction>
@@ -758,16 +561,9 @@ export function ApiKeysManager() { const {
       </AlertDialog>
 
       {/* Delete Key Confirmation Dialog */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <AlertDialog
-        open={showDeleteConfirm !== null}
-        onOpenChange={open => !open && setShowDeleteConfirm(null)}
-=======
       <AlertDialog 
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
@@ -781,13 +577,6 @@ export function ApiKeysManager() { const {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-<<<<<<< HEAD
-            <AlertDialogAction
-              onClick={() =>
-                showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
-              }
-              className='bg-red-600 hover:bg-red-700'
-=======
       <AlertDialog 
         open={showDeleteConfirm !== null} 
         onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
@@ -807,12 +596,9 @@ export function ApiKeysManager() { const {
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Revoke
             </AlertDialogAction>
@@ -820,12 +606,6 @@ export function ApiKeysManager() { const {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

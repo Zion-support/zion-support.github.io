@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
-=======
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Button} from "@/components/ui/button";
+import {Eye, Info, AlertTriangle, Ban} from 'lucide-react'
 
 interface ActionButtonsProps {
   flagId: string,
@@ -60,14 +53,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       </Button>
       {status === 'pending' && (
         <Button
-<<<<<<< HEAD
-          variant='ghost'
-          size='sm'
-=======
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {Eye, Info, AlertTriangle, Ban} from 'lucide-react'
 
 interface ActionButtonsProps {
   flagId: string,
@@ -121,29 +110,17 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Button
           variant="ghost"
           size="sm"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           variant="ghost"
           size="sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
         </Button>
       )}
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-'"
-=======
   )
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

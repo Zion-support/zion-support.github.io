@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Search,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Search,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Search} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-market-research')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Search} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIMarketResearchPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
@@ -128,7 +120,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             Get comprehensive market insights with our AI-powered research and analysis platform.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">
+            <a href="/contact" className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover: bg-indigo-700">
               Get Started
             </a>
             <a href="/about" className="border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50">
@@ -138,7 +130,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </main>
     </Layout>
-  );
+  ),
       </div>
     </Layout>
   )

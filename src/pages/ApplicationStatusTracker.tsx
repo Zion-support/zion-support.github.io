@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { ApplicationsTracker } from '@/components/jobs/applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from 'lucide-react'
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
   
@@ -35,18 +25,13 @@ function ApplicationStatusTrackerContent() {
 
         <div className="grid grid-cols-1 gap-6">
           <Card>
-<<<<<<< HEAD
-            <CardHeader className='border-b bg-muted/50'>
-              <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications
-=======
 
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from 'lucide-react'
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
 
@@ -71,12 +56,9 @@ function ApplicationStatusTrackerContent() {
             <CardHeader className="border-b bg-muted/50">
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <CardHeader className="border-b bg-muted/50">
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
@@ -87,14 +69,8 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ApplicationStatusTracker() {
   return (
@@ -102,11 +78,5 @@ export default function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

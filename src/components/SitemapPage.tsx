@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
-import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import {completeSitemap, dynamicPaths} from '@/config/sitemap';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react'
-import { SEO } from './SEO';
+import {ChevronRight} from 'lucide-react'
+import {SEO} from './SEO';
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure
 const pathMap: Record<string, string> = {
@@ -167,11 +163,5 @@ export const SitemapPage: React.FC = () => {
     </>
   )
 };
-<<<<<<< HEAD
-'"
-=======
 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

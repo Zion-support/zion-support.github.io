@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState } from "../../../utils/sync/storage";
-import { filterEventsByScope } from "../../../utils/sync/storage";
+import {readState} from "../../../utils/sync/storage";
+import {filterEventsByScope} from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState();
   if (req.method === "GET") {
-    const scope = state.config.scope;
+    const scope = state.config.scope,
     const scopedEvents = filterEventsByScope(state.events, scope);
     return res.status(200).json({
       status: "ok",

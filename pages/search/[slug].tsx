@@ -1,23 +1,23 @@
-import { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react';
-import { Search, Filter, Grid, List } from 'lucide-react'
-import { Search, Filter, Grid, List } from 'lucide-react'
+import {GetServerSideProps} from 'next';
+import {useRouter} from 'next/router';
+import {useState, useEffect} from 'react';
+import {useAuth} from '@/context/auth/AuthProvider';
+import {Search, Filter, Grid, List} from 'lucide-react';
+import {Search, Filter, Grid, List} from 'lucide-react'
+import {Search, Filter, Grid, List} from 'lucide-react'
 ursor/integrate-build-improve-and-re-verify-b76c
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import {SEO} from '@/components/SEO';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
 import ProductCard from '@/components/ProductCard';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { CategoryCard } from '@/components/CategoryCard';
-import { SearchEmptyState } from '@/components/marketplace/EmptyState';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import { useDebounce } from '@/hooks/useDebounce';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import {TalentCard} from '@/components/talent/TalentCard';
+import {CategoryCard} from '@/components/CategoryCard';
+import {SearchEmptyState} from '@/components/marketplace/EmptyState';
+import {MARKETPLACE_LISTINGS} from '@/data/listingData';
+import {TALENT_PROFILES} from '@/data/talentData';
+import {BLOG_POSTS} from '@/data/blog-posts';
+import {useDebounce} from '@/hooks/useDebounce';
+import {logInfo, logErrorToProduction} from '@/utils/productionLogger';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 interface BaseSearchResult {
@@ -67,7 +67,7 @@ interface SearchResultsPageProps {
   initialResults: SearchResult[];
   query: string;
   slug: string;
-  totalCount: number;
+  totalCount: number,
 
 interface BaseSearchResult {
   id: string,
@@ -110,7 +110,7 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
   result.type === 'product' || result.type === 'equipment';
 
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+  result.type === 'product' || result.type === 'equipment' || result.type === 'talent',
 
 interface SearchResultsPageProps {
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -136,7 +136,7 @@ function offlineSearch(
   page = 1;
   limit = 12;
   filters: OfflineFilters = {}
-): { results: SearchResult[]; totalCount: number } {
+): { results: SearchResult[], totalCount: number } {
   minRating?: number
 }
 
@@ -498,7 +498,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   // Handle search input change
   const handleSearch = (newQuery: string) => {
-    setSearchQuery(newQuery);
+    setSearchQuery(newQuery),
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
         shallow: true,
@@ -1103,7 +1103,7 @@ export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
 > = async (context: any) => {
   const params = context.params;
-  const slug = params?.slug as string;
+  const slug = params?.slug as string,
 
   // Convert slug back to query term
   const query = slug ? slug.replace(/-/g, ' ') : '';
@@ -1111,7 +1111,7 @@ export const getServerSideProps: GetServerSideProps<
   try {
     // In production, replace with your actual API base URL
     const apiBaseUrl =
-      process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
 
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
 

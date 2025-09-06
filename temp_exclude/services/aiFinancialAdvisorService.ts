@@ -122,7 +122,7 @@ export interface FinancialResponse {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-    analysis?: MarketAnalysis;
+    analysis?: MarketAnalysis,
     goals?: FinancialGoal[]
   
     },
@@ -135,7 +135,7 @@ export class AIFinancialAdvisorService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 

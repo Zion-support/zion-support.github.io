@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { AccessToken } from 'livekit-server-sdk';
+import {AccessToken} from 'livekit-server-sdk';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
@@ -15,11 +15,11 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 ursor/integrate-build-improve-and-re-verify-b76c
   }

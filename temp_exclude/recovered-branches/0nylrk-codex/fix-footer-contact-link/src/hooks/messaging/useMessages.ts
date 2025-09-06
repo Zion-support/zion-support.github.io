@@ -1,8 +1,8 @@
 
-import { UserProfile, UserDetails } from '@/types/auth';
-import { supabase } from '@/integrations/supabase/client';
-import { Message, Conversation } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
+import {UserProfile,, UserDetails} from '@/types/auth';
+import {supabase} from '@/integrations/supabase/client';
+import {Message,, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null;
 
@@ -22,7 +22,7 @@ export function useMessages(
   const loadMessages = async (conversationId: string) => {
     if (!user) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase
@@ -58,7 +58,7 @@ export function useMessages(
     if (!user || !content.trim() || !conversationId) return;
     
     try {
-      const conversation = conversations.find(c => c.id === conversationId);
+      const conversation = conversations.find(c => c.id === conversationId),
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -100,7 +100,7 @@ export function useMessages(
    * Mark messages as read
    */
   const markAsRead = async (conversationId: string) => {
-    if (!user || !conversationId) return;
+    if (!user || !conversationId) return,
     
     try {
       const { error } = await supabase

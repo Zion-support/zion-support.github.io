@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 
 const AIAssistant: React.FC = () => {
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIAssistantPage() {
 ursor/integrate-build-improve-and-re-verify-b76c
   return (
@@ -37,7 +37,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             Experience the power of AI assistance for your business operations.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:bg-blue-700">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
               Request a Demo
             </a>
             <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
@@ -48,7 +48,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </Layout>
   );
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIAssistantPage() {
   return (
     <>

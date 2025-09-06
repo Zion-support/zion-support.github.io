@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+import {Check, ExternalLink} from 'lucide-react';
 
 export default function ApiPerformanceTestingPage() {
   const features = [
@@ -80,7 +80,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   );
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	];
+	],
 
 	return (
 		<div className="relative isolate">

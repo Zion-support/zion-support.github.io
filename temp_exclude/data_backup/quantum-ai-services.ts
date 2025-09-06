@@ -24,7 +24,7 @@ export interface QuantumAIService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const quantumAIServices: QuantumAIService[] = [{
+reviews: number,export const quantumAIServices: QuantumAIService[] = [{
     id:,
   quantum-ai-brain-computer-interface',
     "name": 'Quantum AI Brain-Computer Interface,

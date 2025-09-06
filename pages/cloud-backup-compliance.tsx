@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  ShieldCheck,
-  Star,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function CloudBackupCompliancePage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/cloud-backup-compliance')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, ShieldCheck, Star} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function CloudBackupCompliancePage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-backup-compliance'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cloud-backup-compliance'));

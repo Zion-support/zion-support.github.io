@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  ReactNode,;
-} from 'react';
-=======
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
+import {toast} from '@/hooks/use-toast';
+import {Button} from '@/components/ui/button';
+import {RefreshCw, AlertTriangle, Wifi, WifiOff, Shield} from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface ErrorContextType {
@@ -65,7 +54,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
         label: "Try Again",
         onClick: () => {
           setRetryCount(prev => ({
-            ...prev;
+            ...prev,
             [errorKey]: currentRetryCount + 1
           }));
           retryAction()
@@ -80,7 +69,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
       title: isOnline ? "Connection Issue" : "No Internet Connection",
       description: isOnline 
         ? "Unable to connect to our servers. Please check your connection and try again."
-        : "You appear to be offline. Please check your internet connection.";
+        : "You appear to be offline. Please check your internet connection.",
       variant: "destructive",
       action: retryAction ? {
         label: "Retry",
@@ -108,7 +97,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
     reportError;
     showRetryableError;
     showNetworkError;
-    showAuthError;
+    showAuthError,
     clearAllErrors};
 
   return (
@@ -128,7 +117,7 @@ export function useGlobalErrorHandler(): ErrorContextType {
 
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
-  const message = error.message.toLowerCase();
+  const message = error.message.toLowerCase(),
 
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
@@ -195,7 +184,7 @@ export function useErrorHandler() {
       
       return result
     } catch (error: any) {
-      reportError(error);
+      reportError(error),
       
       if (options?.onError) {
         options.onError(error)
@@ -208,28 +197,8 @@ export function useErrorHandler() {
   }, [reportError, handleApiError]);
 
   return {
-<<<<<<< HEAD
-    reportError,
-    handleApiError,
-    handleAsyncOperation,
-  };
-=======
 
-<<<<<<< HEAD
-
-    const errorKey = error.message;
-    const currentRetryCount = retryCount[errorKey] || 0;
-
-    reportError(error, { retryCount: currentRetryCount }),
-
-
-<<<<<<< HEAD
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     reportError;
     handleApiError;
     handleAsyncOperation}
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

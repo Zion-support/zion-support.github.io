@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
+import {useState} from "react";
+import {QuoteFormData,, ListingItem,, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
 interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void

@@ -1,16 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
+import {useRouter} from 'next/router';
+import {useState} from 'react';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 
 const TalentProfile: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter(),
   const { slug } = router.query;
 
   const [responseLog, setResponseLog] = useState<
-    Array<{ action: 'Accept' | 'Decline' | 'Negotiate'; at: string }>
+    Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>
   >([]);
 
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),

@@ -5,7 +5,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add skip link for keyboard navigation
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
+    skipLink.textContent = 'Skip to main content',
     skipLink.className = 'sr-only focus: not-sr-only',
     skipLink.style.cssText = `
       position: absolute, top: -40px,
@@ -21,7 +21,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        document.body.classList.remove('using-mouse');
+        document.body.classList.remove('using-mouse'),
       }
     };
 
@@ -40,7 +40,7 @@ const AccessibilityEnhancer: React.FC = () => {
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
-        liveRegion.textContent = message;
+        liveRegion.textContent = message,
       }
     };
 

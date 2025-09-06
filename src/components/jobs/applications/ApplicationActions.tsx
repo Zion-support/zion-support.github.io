@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
-import { Eye, ChevronDown, Loader2 } from 'lucide-react';
-import { JobApplication, ApplicationStatus } from '@/types/jobs';
-=======
 
 import Link from "next/link";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from 'lucide-react'
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
 interface ApplicationActionsProps {
   application: JobApplication,
@@ -78,24 +59,13 @@ export function ApplicationActions({
           >
             Hire
           </DropdownMenuItem>
-<<<<<<< HEAD
-          <DropdownMenuItem
-            onClick={() => onStatusChange(application.id, 'rejected')}
-            className='text-red-600'
-=======
 
 import Link from "next/link";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
-} from "@/components/ui/dropdown-menu",
-
-import { Button } from "@/components/ui/button";
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Eye, ChevronDown, Loader2} from 'lucide-react'
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
 interface ApplicationActionsProps {
   application: JobApplication,
@@ -154,45 +124,25 @@ export function ApplicationActions({
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <Button variant='default' size='sm' asChild>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       
       <Button 
         variant="default" 
         size="sm"
         asChild
       >
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <Link href={`/messages?talentId=${application.talent_id}`}>
           Contact
         </Link>
       </Button>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

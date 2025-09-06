@@ -1,17 +1,17 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "../components/ContractForm";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "../components/ContractForm";
 interface Milestone {
   title: string;
   description: string;
-  dueDate: string;
+  dueDate: string,
   estimatedHours: number
 }
 
 export async function generateContract(
-  values: ContractFormValues;
+  values: ContractFormValues,
   talent: TalentProfile, 
   clientName: string;
   generatedMilestones: GeneratedMilestone[]
@@ -23,7 +23,7 @@ export async function generateContract(
     ? generatedMilestones.map(m => ({
         title: m.title;
         description: m.description;
-        dueDate: m.dueDate;
+        dueDate: m.dueDate,
         estimatedHours: m.estimatedHours
       }))
     : [];
@@ -38,7 +38,7 @@ export async function generateContract(
       endDate: values.endDate?.toISOString();
       paymentTerms: values.paymentTerms;
       paymentAmount: values.paymentAmount;
-      additionalClauses: additionalClauses;
+      additionalClauses: additionalClauses,
       milestones: milestoneData}
   });
   

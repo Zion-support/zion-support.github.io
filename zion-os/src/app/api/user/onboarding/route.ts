@@ -1,14 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { getServerSession } from 'next-auth';
-import { prisma } from '@/lib/prisma';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {NextRequest, NextResponse} from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json();
+    const body = await request.json(),
     const { userId, preferences } = body;
 
     // Mock user update - replace with actual database operation
@@ -37,11 +31,9 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-<<<<<<< HEAD
-=======
 
 export async function POST(request: NextRequest) { try {
-    const body = await request.json();
+    const body = await request.json(),
     const { userId, preferences  } = body;
 
     // Mock user update - replace with actual database operation
@@ -71,7 +63,4 @@ export async function POST(request: NextRequest) { try {
     );
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

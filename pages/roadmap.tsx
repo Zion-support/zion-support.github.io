@@ -4,7 +4,7 @@ import React, { useMemo, useState } from 'react';
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
-  priorities: string;
+  priorities: string,
   milestones: string,
   keywords: string,
   priorities: string
@@ -162,7 +162,7 @@ Risks:
 - ...
 Validation:
 - ...
-`;
+`,
 `
 }
 ursor/integrate-build-improve-and-re-verify-b76c

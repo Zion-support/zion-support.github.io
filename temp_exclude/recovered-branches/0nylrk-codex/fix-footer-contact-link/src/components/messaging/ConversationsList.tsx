@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
+import {User} from 'lucide-react';
+import {Conversation} from '@/types/messaging';
+import {ConversationItem} from './ConversationItem';
 interface ConversationsListProps {
   conversations: Conversation[],
   activeConversation: Conversation | null,

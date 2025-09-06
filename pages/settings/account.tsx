@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{
     address: string;
-    chain: 'evm' | 'sol';
+    chain: 'evm' | 'sol',
   } | null>(null);
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -44,7 +44,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const saveDisplayPref = (val: boolean) => {
-    setDisplayWeb3(val);
+    setDisplayWeb3(val),
     if (typeof window !== 'undefined')
       window.localStorage.setItem('zion-web3-display', String(val));
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-display', String(val))
@@ -152,7 +152,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       setStatus('Backup saved to decentralized storage')
     } catch (e: any) {
       setStatus(e?.message || 'Backup failed');
-        user;
+        user,
         preferences: { displayWeb3 },
         did: {
        ens, lens, ceramic, farcaster 
@@ -199,7 +199,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       }
       setStatus('Profile restored from backup')
     } catch (e: any) {
-      setStatus(e?.message || 'Restore failed');
+      setStatus(e?.message || 'Restore failed'),
         setFarcaster(did.farcaster || '')
       }
       setStatus('Profile restored from backup')

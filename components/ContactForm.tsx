@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    try {;
+    try {,
       // Simulate form submission,
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');

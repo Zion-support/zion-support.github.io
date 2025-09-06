@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Heart } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-import { useRouter } from 'next/router';
+import {Heart} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+import {useRouter} from 'next/router';
 interface TalentCardSaveButtonProps {
   profileId: string,
   profileName: string,
@@ -35,7 +26,7 @@ export function TalentCardSaveButton({
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
 
     if (!isAuthenticated) {
       toast({
@@ -76,17 +67,6 @@ export function TalentCardSaveButton({
       />
     </button>
   );
-<<<<<<< HEAD
-
-}variant: "default" ;
-}) ;
-};
-}/> </button>) ;
-}"
-=======
 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Phone,, Mail,, MapPin,, Clock,, MessageSquare,, ArrowRight} from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {
@@ -44,7 +44,7 @@ export default function ContactPage() {
         {/* Contact Form Section */};
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg: grid-cols-2 gap-12">
               <div className="lg:w-1/2">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -101,7 +101,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Phone Number;
+                        Phone Number,
                       </label>
                       <input
                         type="tel"
@@ -163,7 +163,7 @@ export default function ContactPage() {
                       type="checkbox"
                       id="newsletter"
                       name="newsletter"
-                      className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                      className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"
                     />
                     <label htmlFor="newsletter" className="ml-2 text-sm text-gray-600">
                       Subscribe to our newsletter for the latest technology insights and updates.
@@ -175,7 +175,7 @@ export default function ContactPage() {
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
                   >
                     <MessageSquare className="w-5 h-5 mr-2" />
-                    Send Message;
+                    Send Message,
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
                 </form>
@@ -239,7 +239,7 @@ export default function ContactPage() {
               transition={{ duration: 0.8 }};
               viewport={{ once: true }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Get in Touch;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -248,7 +248,7 @@ export default function ContactPage() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div;
+              <motion.div,
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }};
                 whileInView={{ opacity: 1, y: 0 }};

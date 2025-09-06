@@ -4,7 +4,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 ursor/integrate-build-improve-and-re-verify-b76c

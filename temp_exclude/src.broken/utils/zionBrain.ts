@@ -1,5 +1,5 @@
 export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant';
-const triggers: ReflexTrigger[] = [];
+const triggers: ReflexTrigger[] = [],
 if ( (metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
   
 }return triggers 

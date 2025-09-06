@@ -1,37 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 
 import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-import { Check, Copy, ExternalLink } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {toast} from "sonner";
+import {Check, Copy, ExternalLink} from 'lucide-react'
+import {Badge} from '@/components/ui/badge';
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
+import {Zap} from 'lucide-react';
 
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
-<<<<<<< HEAD
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-
-=======
 
 import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-import { Check, Copy, ExternalLink } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {toast} from "sonner";
+import {Check, Copy, ExternalLink} from 'lucide-react'
+import {Badge} from '@/components/ui/badge';
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
+import {Zap} from 'lucide-react';
 
 export function ZapierIntegration() {
 
@@ -39,21 +30,13 @@ export function ZapierIntegration() {
   const [ apiKey ] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
 
   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    toast.success('API key copied to clipboard');
-=======
     toast.success("API key copied to clipboard")
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
   
   return (
@@ -80,18 +63,6 @@ export function ZapierIntegration() {
                     readOnly 
                     className="font-mono text-sm" 
                   />
-<<<<<<< HEAD
-                  <Button
-                    size='sm'
-                    variant='outline'
-                    onClick={handleCopyApiKey}
-                  >
-                    {copied ? (
-                      <Check className='h-4 w-4' />
-                    ) : (
-                      <Copy className='h-4 w-4' />
-                    )}
-=======
     toast.success("API key copied to clipboard")
   };
 
@@ -122,41 +93,24 @@ export function ZapierIntegration() {
                   />
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </Button>
                 </div>
               </div>
             </div>
           </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <CardFooter className='flex flex-col items-start'>
-            <Button variant='outline' className='gap-2'>
-              <ExternalLink className='h-4 w-4' />
-=======
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Open Zapier Dashboard
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -175,10 +129,6 @@ export function ZapierIntegration() {
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Sync completed projects to accounting</span>
               </li>
-<<<<<<< HEAD
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-=======
         
         <Card>
           <CardHeader>
@@ -200,39 +150,23 @@ export function ZapierIntegration() {
               </li>
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Button variant='outline' className='w-full gap-1'>
-              <ExternalLink className='h-4 w-4' />
-=======
             <Button variant="outline" className="w-full gap-1">
               <ExternalLink className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Button variant="outline" className="w-full gap-1">
               <ExternalLink className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -264,11 +198,6 @@ export function ZapierIntegration() {
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a contract is signed by all parties.
               </p>
-<<<<<<< HEAD
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>
-=======
       
       <Card>
         <CardHeader>
@@ -302,21 +231,12 @@ export function ZapierIntegration() {
                 Triggers when a contract is signed by all parties.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

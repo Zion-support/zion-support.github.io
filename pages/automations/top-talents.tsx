@@ -7,7 +7,7 @@ type TalentItem = {
   talentSlug: string;
   talentName: string;
   averageRating: number;
-  totalReviews: number;
+  totalReviews: number,
 };
 
 type Props = { items: TalentItem[] };
@@ -70,7 +70,7 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
-  let items: TalentItem[] = [];
+  let items: TalentItem[] = [],
   try {
     const raw = fs.readFileSync(p, 'utf8');
     const data = JSON.parse(raw);

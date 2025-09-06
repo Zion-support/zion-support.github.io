@@ -4,13 +4,13 @@ export interface Job {
   title: string;
   description: string;
   company_name?: string;
-  budget?: string;
+  budget?: string,
   client_id: string
 }
 
 export interface ApplyToJobModalProps {
   job: Job;
   isOpen: boolean;
-  onClose: () => void;
+  onClose: () => void,
   onApplySuccess?: (jobId: string) => Promise<void>
 }

@@ -1,7 +1,7 @@
  useEffect ( () => {
   async function load () {
 ursor/integrate-build-improve-and-re-verify-b76c
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 type Holder = { address: string, amount: string },
 type Metrics = {

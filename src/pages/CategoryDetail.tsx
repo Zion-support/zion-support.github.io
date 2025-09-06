@@ -1,33 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from '@/components/GradientHeading';
-import { ProductListingCard } from '@/components/ProductListingCard';
-import { useState, useEffect, useRef, Suspense } from 'react';
-import {
-  Brain,
-  PenLine,
-  BarChart,
-  Eye,
-  Bot,
-  Mic,
-  Code,
-  Briefcase,;
-} from 'lucide-react';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { ProductListing } from '@/types/listings';
-=======
-import { GradientHeading } from "@/components/GradientHeading";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { useState, useEffect, useRef, Suspense } from "react";
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
-import { MARKETPLACE_LISTINGS } from "@/data/listingData";
-import { ProductListing } from "@/types/listings";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useRouter } from 'next/router';
+import {GradientHeading} from "@/components/GradientHeading";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {useState, useEffect, useRef, Suspense} from "react";
+import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from 'lucide-react'
+import {MARKETPLACE_LISTINGS} from "@/data/listingData";
+import {ProductListing} from "@/types/listings";
+import {useRouter} from 'next/router';
 import Link from 'next/link';
-import { toast } from "@/hooks/use-toast";
-import { NextSeo } from '@/components/NextSeo';
-import { Header } from "@/components/Header";
+import {toast} from "@/hooks/use-toast";
+import {NextSeo} from '@/components/NextSeo';
+import {Header} from "@/components/Header";
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const AUTO_SERVICE_TITLES = [
@@ -42,7 +23,7 @@ const AUTO_SERVICE_TITLES = [
 ];
 
 function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
   const reviewCount = Math.floor(Math.random() * 50) + 10;
@@ -166,7 +147,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
           title: slug
             ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ') || 'Category';
+            .join(' ') || 'Category',
           description: 'Explore our collection in this category',
           icon: <Bot className="w-6 h-6" />},
 
@@ -228,7 +209,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
+    const listing = listings.find(item => item.id === listingId),
     
     if (listing) {
       toast({
@@ -301,83 +282,5 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       </Suspense>
     </>
   );
-<<<<<<< HEAD
 
-};
-return (<> <NextSeo title= {;
-  seoTitle ;
-}description= {;
-  seoDescription ;
-}/> <Header /> ← Back to Categories </Link> </div> </p> </div> {;
-  isLoading ? (<ListingGridSkeleton /> />) ) ;
-}</div>) ;
-}</div> </div> </Suspense> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-
-      icon: <Briefcase className="w-6 h-6" />
-    };
-    'talents': {
-      title: "Talents",
-      description: "Connect with AI experts, developers, and tech specialists";
-      icon: <Brain className="w-6 h-6" />
-    };
-    'equipment': {
-      title: "Equipment",
-      description: "Rent or buy specialized hardware, servers, and devices";
-      icon: <Code className="w-6 h-6" />
-    };
-    'innovation': {
-      title: "Innovation",
-      description: "Discover cutting-edge solutions and tech breakthroughs",
-      icon: <Bot className="w-6 h-6" />
-    };
-    'ai-models-apis': {
-      title: "AI Models & APIs",
-      description: "Access cutting-edge AI models with easy integration",
-      icon: <Brain className="w-6 h-6" />
-    };
-    'content-creation': {
-      title: "Content Creation",
-      description: "Generate high-quality content for your projects",
-      icon: <PenLine className="w-6 h-6" />
-    };
-    'data-analysis': {
-      title: "Data Analysis",
-      description: "Extract insights from complex datasets",
-      icon: <BarChart className="w-6 h-6" />
-    };
-    'computer-vision': {
-      title: "Computer Vision",
-      description: "Image and video processing solutions",
-      icon: <Eye className="w-6 h-6" />
-    };
-    'virtual-assistants': {
-      title: "Virtual Assistants",
-      description: "Intelligent automation for your workflow",
-      icon: <Bot className="w-6 h-6" />
-    };
-    'voice-speech': {
-      title: "Voice & Speech",
-      description: "Speech recognition and synthesis tools",
-      icon: <Mic className="w-6 h-6" />
-    };
-    'developer-tools': {
-      title: "Developer Tools",
-      description: "AI-powered coding assistance and automation",
-      icon: <Code className="w-6 h-6" />
-    };
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-      
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -3,13 +3,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import React, { useState } from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
-import { motion } from 'framer-motion';
-import { 
-  HelpCircle, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Search, Filter;
-  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
-  Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {HelpCircle, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Search, Filter, CheckCircle, ArrowRight, Brain, Atom, Rocket, Shield, Zap, Users, Star, TrendingUp, Code} from 'lucide-react';
 
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -223,13 +218,8 @@ export default function Support() {
               </p>
             </motion.div>
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  HelpCircle, MessageCircle, Phone, Mail, Clock, 
-  BookOpen, Video, FileText, Search, Filter;
-  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
-  Shield, Zap, Users, Star, TrendingUp, Code
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {HelpCircle, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Search, Filter, CheckCircle, ArrowRight, Brain, Atom, Rocket, Shield, Zap, Users, Star, TrendingUp, Code} from 'lucide-react';
 
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -1440,7 +1430,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
 ursor/integrate-build-improve-and-re-verify-b76c
       </main>
     </Layout>

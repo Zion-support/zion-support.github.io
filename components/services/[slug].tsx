@@ -1,30 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-}function getAllServices () : Service[] {
-  return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) 
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newlyAddedServices} from '../../data/newly-added-services';
+import {curatedMarketServices} from '../../data/curated-market-services';
+import {new2025Services} from '../../data/new-2025-services';
+import {marketValidatedServices} from '../../data/market-validated-services';
+import {moreRealServices2025} from '../../data/more-real-services-2025';
+import {verified2025Additions} from '../../data/verified-2025-additions';
+import {realServicesQ12025} from '../../data/real-services-q1-2025';
+import {newVerifiedServicesQ22025} from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -63,7 +52,7 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
+		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
@@ -114,7 +103,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
+		const fromLink = extractServiceSlugFromLink(s.link),
 		return fromLink === incomingSlug
 	});
 
@@ -143,17 +132,17 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						__html: JSON.stringify(
 							{
 								"@context": "https://schema.org";
-								"@type": "Service";
+								"@type": "Service",
 								name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
-									"@type": "Organization";
+									"@type": "Organization",
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
 								};
 								offers: {
-									"@type": "Offer";
+									"@type": "Offer",
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
@@ -253,15 +242,15 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</Layout>
-	);
+	),
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import services from '@/data/services/services.json';
 const ServiceDetail: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter(),
   const { slug } = router.query as { slug?: string };
   const items = services as any[];
   const service = items.find((s) => s.slug === slug);
@@ -311,24 +300,21 @@ const ServiceDetail: NextPage = () => {
     </EnhancedLayout>
   )
 };
-<<<<<<< HEAD
-export default ServiceDetail 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025';
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newlyAddedServices} from '../../data/newly-added-services';
+import {curatedMarketServices} from '../../data/curated-market-services';
+import {new2025Services} from '../../data/new-2025-services';
+import {marketValidatedServices} from '../../data/market-validated-services';
+import {moreRealServices2025} from '../../data/more-real-services-2025';
+import {verified2025Additions} from '../../data/verified-2025-additions';
+import {realServicesQ12025} from '../../data/real-services-q1-2025';
+import {newVerifiedServicesQ22025} from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
@@ -368,7 +354,7 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
+		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
@@ -419,7 +405,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
+		const fromLink = extractServiceSlugFromLink(s.link),
 		return fromLink === incomingSlug
 	});
 
@@ -453,13 +439,13 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								url: service.link,
 								provider: {
       
-									"@type": "Organization";
+									"@type": "Organization",
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
 								
     },
     offers: {
-									"@type": "Offer";
+									"@type": "Offer",
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
@@ -559,15 +545,15 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</Layout>
-	);
+	),
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import services from '@/data/services/services.json';
 const ServiceDetail: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter(),
   const { slug } = router.query as { slug?: string };
   const items = services as any[];
   const service = items.find((s) => s.slug === slug);
@@ -620,9 +606,6 @@ const ServiceDetail: NextPage = () => {
 
 export default ServiceDetail
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default ServiceDetail
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

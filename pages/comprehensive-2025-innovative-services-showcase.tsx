@@ -1,28 +1,11 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Search,
-  Grid,
-  List,
-  Star as StarIcon,
-  Phone,
-  Mail,
-  MapPin,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  ArrowRight, CheckCircle, Globe;
-  Search, Grid, List, Star as StarIcon;
-  Phone, Mail, MapPin
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight, CheckCircle, Globe, Search, Grid, List, Star, as, StarIcon, Phone, Mail, MapPin,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, ArrowRight, CheckCircle, Globe, Search, Grid, List, Star, as, StarIcon, Phone, Mail, MapPin, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
-import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
+import {comprehensiveInnovativeServices} from '../data/comprehensive-2025-innovative-services-expansion';
+import {specializedEnterpriseServices} from '../data/specialized-2025-enterprise-services';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function Comprehensive2025InnovativeServicesShowcase() {
@@ -136,8 +119,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
-        default:
-          return 0;
+        default: return 0,
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
         case 'rating':
           return b.rating - a.rating;

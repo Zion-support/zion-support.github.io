@@ -191,14 +191,14 @@ class SecurityMonitor {
         },
         {
           name: 'innerHTML with user input',
-          regex: /\.innerHTML\s*=\s*[^;]*\+/g,
+          regex: /\.innerHTML\s*=\s*[^,]*\+/g,
           severity: 'high',
           description: 'innerHTML with concatenation can lead to XSS attacks',
           recommendation: 'Use textContent or sanitize input before setting innerHTML'
         },
         {
           name: 'dangerous URLs',
-          regex: /window\.location\s*=\s*[^;]*\+/g,
+          regex: /window\.location\s*=\s*[^,]*\+/g,
           severity: 'high',
           description: 'Dynamic URL assignment can lead to open redirects',
           recommendation: 'Validate URLs before assignment'

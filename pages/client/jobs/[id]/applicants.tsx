@@ -1,12 +1,12 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import useSWR from 'swr';
-import { TALENT_PROFILES } from '../../../../data/talent';
+import {TALENT_PROFILES} from '../../../../data/talent';
 import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 
 export default function JobApplicantsPage() {
-  const router = useRouter();
+  const router = useRouter(),
   const { id } = router.query;
   const { data: appsData } = useSWR(
     id ? `/api/applications?jobId=${id}` : null,

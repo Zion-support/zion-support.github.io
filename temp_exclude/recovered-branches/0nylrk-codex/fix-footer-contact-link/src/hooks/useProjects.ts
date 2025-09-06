@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Project, ProjectStatus } from "@/types/projects";
-import { toast } from "sonner";
+import {useState,, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Project,, ProjectStatus} from "@/types/projects";
+import {toast} from "sonner";
 export function useProjects() {
   const { user } = useAuth();
   const [projects, setProjects] = useState<Project[]>([]);
@@ -45,7 +45,7 @@ export function useProjects() {
       const transformedData = data.map((project: any) => ({
         ...project;
         talent_profile: project.talent_profile ? {
-          ...project.talent_profile;
+          ...project.talent_profile,
           full_name: project.talent_profile.display_name
         } : undefined
       }));
@@ -80,7 +80,7 @@ export function useProjects() {
       const transformedProject = {
         ...data;
         talent_profile: data.talent_profile ? {
-          ...data.talent_profile;
+          ...data.talent_profile,
           full_name: data.talent_profile.display_name
         } : undefined
       };

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {MapPin,, Clock,, Users,, ArrowRight,, CheckCircle,, Star} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -687,7 +687,7 @@ export default function TalentPage() {
 =======
 =======
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Don't See the Right Role?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -701,5 +701,5 @@ export default function TalentPage() {
         </section>
       </div>
     </MainLayout>
-  );
+  ),
 }

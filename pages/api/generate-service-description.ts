@@ -8,7 +8,7 @@ export type GenerateServiceDescriptionRequest = {
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'
 };
 export type GenerateServiceDescriptionResponse = {
-  description: string;
+  description: string,
 };
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export default async function handler(

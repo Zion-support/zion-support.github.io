@@ -1,27 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-=======
 import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
-import { useFeatureUsage } from "@/hooks/useFeatureUsage";
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import {useFeatureUsage} from "@/hooks/useFeatureUsage";
+import {useAdvancedOnboardingStatus} from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT');
   const schema = {
-    "@context": "https://schema.org";
+    "@context": "https: //schema.org";
     "@type": "WebPage";
     "name": "AI Content Generation";
-    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.";
+    "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
     "url": "https://app.ziontechgroup.com/features/ai-content-generation"
   };
 
@@ -75,19 +66,14 @@ export default function AIPoweredContent() {
               <p className="text-zion-slate-light">Yes, you can review and modify all suggestions before publishing.</p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/open-app'>Try ZionGPT Now</Link>
-=======
 import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
-import { useFeatureUsage } from "@/hooks/useFeatureUsage";
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import {useFeatureUsage} from "@/hooks/useFeatureUsage";
+import {useAdvancedOnboardingStatus} from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
   useFeatureUsage('ZionGPT');
   const schema = {
@@ -156,23 +142,14 @@ export default function AIPoweredContent() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

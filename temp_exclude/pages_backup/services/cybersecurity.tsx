@@ -4,9 +4,9 @@ import React from 'react';
 =======
 <<<<<<< HEAD
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
+import {Eye,, Shield,, Lock,, AlertTriangle} from 'lucide-react';
 export default function CybersecurityPage() {
   const securityServices = [;
     {}
@@ -117,7 +117,7 @@ export default function CybersecurityPage() {
       </div>;
     </Layout>;
 import Layout from '../../components/Layout';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import {Shield,, Lock,, Eye,, AlertTriangle,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [
   {
     icon: Shield,
@@ -135,8 +135,8 @@ const features = [
 =======
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Eye, Shield, Lock, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Eye,, Shield,, Lock,, AlertTriangle,, CheckCircle,, ArrowRight} from 'lucide-react';
 
 const securityServices = [
 <<<<<<< HEAD
@@ -313,7 +313,7 @@ export default function CybersecurityPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Protect Your Business?
             </h2>
@@ -342,5 +342,5 @@ export default function CybersecurityPage() {
     </>
 =======
     </>
-  );
+  ),
 }

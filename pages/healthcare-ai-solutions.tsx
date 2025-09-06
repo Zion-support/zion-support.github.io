@@ -22,7 +22,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 				"Diagnostic support with literature grounding";
 				"Prior auth automation and appeals drafts";
 				"Capacity forecasting and staffing optimization";
-				"HIPAA-compliant data pipelines and audit";
+				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}

@@ -1,141 +1,31 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Zap as ZapIcon2,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon2,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon,
-  MessageSquare as MessageSquareIcon,
-  FileText as FileTextIcon,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Zap as ZapIcon3,
-  Code as CodeIcon,
-  BookOpen as BookOpenIcon,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon3,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2 as Globe2Icon,
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,;
-} from 'lucide-react';
+import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap, as, ZapIcon, Code, BookOpen, Activity, Database, as, DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap, as, ZapIcon2, Shield, as, ShieldIcon, Users, as, UsersIcon, Globe, as, GlobeIcon, Cpu, as, CpuIcon, Database, as, DatabaseIcon2, Cloud, as, CloudIcon, Smartphone, as, SmartphoneIcon, Palette, as, PaletteIcon, Search, as, SearchIcon, MessageSquare, as, MessageSquareIcon, FileText, as, FileTextIcon, Calendar, as, CalendarIcon, CreditCard, as, CreditCardIcon, BarChart3, as, BarChart3Icon, Settings, as, SettingsIcon, Zap, as, ZapIcon3, Code, as, CodeIcon, BookOpen, as, BookOpenIcon, Activity, as, ActivityIcon, Database, as, DatabaseIcon3, Play, as, PlayIcon, Mail, as, MailIcon, Phone, as, PhoneIcon, MapPin, as, MapPinIcon, Filter, as, FilterIcon, Grid, as, GridIcon, List, as, ListIcon, ChevronDown, as, ChevronDownIcon, ChevronUp, as, ChevronUpIcon, Sparkles, as, SparklesIcon, FlaskConical, as, FlaskConicalIcon, Dna, as, DnaIcon, Car, as, CarIcon, Leaf, as, LeafIcon, Factory, as, FactoryIcon, Truck, as, TruckIcon, Microscope, as, MicroscopeIcon, GraduationCap, as, GraduationCapIcon, ShieldCheck, as, ShieldCheckIcon, Brain, as, BrainIcon, Atom, as, AtomIcon, Globe2, as, Globe2Icon, Bot, as, BotIcon, ChevronRight, as, ChevronRightIcon,} from 'lucide-react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap, as, ZapIcon, Code, BookOpen, Activity, Database, as, DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap, as, ZapIcon2, Shield, as, ShieldIcon, Users, as, UsersIcon, Globe, as, GlobeIcon, Cpu, as, CpuIcon, Database, as, DatabaseIcon2, Cloud, as, CloudIcon, Smartphone, as, SmartphoneIcon, Palette, as, PaletteIcon, Search, as, SearchIcon, MessageSquare, as, MessageSquareIcon, FileText, as, FileTextIcon, Calendar, as, CalendarIcon, CreditCard, as, CreditCardIcon, BarChart3, as, BarChart3Icon, Settings, as, SettingsIcon, Zap, as, ZapIcon3, Code, as, CodeIcon, BookOpen, as, BookOpenIcon, Activity, as, ActivityIcon, Database, as, DatabaseIcon3, Play, as, PlayIcon, Mail, as, MailIcon, Phone, as, PhoneIcon, MapPin, as, MapPinIcon, Filter, as, FilterIcon, Grid, as, GridIcon, List, as, ListIcon, ChevronDown, as, ChevronDownIcon, ChevronUp, as, ChevronUpIcon, Sparkles, as, SparklesIcon, FlaskConical, as, FlaskConicalIcon, Dna, as, DnaIcon, Car, as, CarIcon, Leaf, as, LeafIcon, Factory, as, FactoryIcon, Truck, as, TruckIcon, Microscope, as, MicroscopeIcon, GraduationCap, as, GraduationCapIcon, ShieldCheck, as, ShieldCheckIcon, Brain, as, BrainIcon, Atom, as, AtomIcon, Globe2, as, Globe2Icon, Bot, as, BotIcon, ChevronRight, as, ChevronRightIcon} from 'lucide-react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap, as, ZapIcon, Code, BookOpen, Activity, Database, as, DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap, as, ZapIcon2, Shield, as, ShieldIcon, Users, as, UsersIcon, Globe, as, GlobeIcon, Cpu, as, CpuIcon, Database, as, DatabaseIcon2, Cloud, as, CloudIcon, Smartphone, as, SmartphoneIcon, Palette, as, PaletteIcon, Search, as, SearchIcon, MessageSquare, as, MessageSquareIcon, FileText, as, FileTextIcon, Calendar, as, CalendarIcon, CreditCard, as, CreditCardIcon, BarChart3, as, BarChart3Icon, Settings, as, SettingsIcon, Zap, as, ZapIcon3, Code, as, CodeIcon, BookOpen, as, BookOpenIcon, Activity, as, ActivityIcon, Database, as, DatabaseIcon3, Play, as, PlayIcon, Mail, as, MailIcon, Phone, as, PhoneIcon, MapPin, as, MapPinIcon, Filter, as, FilterIcon, Grid, as, GridIcon, List, as, ListIcon, ChevronDown, as, ChevronDownIcon, ChevronUp, as, ChevronUpIcon, Sparkles, as, SparklesIcon, FlaskConical, as, FlaskConicalIcon, Dna, as, DnaIcon, Car, as, CarIcon, Leaf, as, LeafIcon, Factory, as, FactoryIcon, Truck, as, TruckIcon, Microscope, as, MicroscopeIcon, GraduationCap, as, GraduationCapIcon, ShieldCheck, as, ShieldCheckIcon, Brain, as, BrainIcon, Atom, as, AtomIcon, Globe2, as, Globe2Icon, Bot, as, BotIcon, ChevronRight, as, ChevronRightIcon} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import {
-  enhancedRealMicroSaasServices,
-  getServicesByCategory,
-  getPopularServices,;
-} from '../data/enhanced-real-micro-saas-services';
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices,} from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices} from '../data/enhanced-real-micro-saas-services';
 ursor/integrate-build-improve-and-re-verify-b76c
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import {nextGenerationAIServices} from '../data/next-generation-ai-services';
+import {cuttingEdgeITServices} from '../data/cutting-edge-it-services';
+import {innovativeMicroSaasV2Services} from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import {enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices} from '../data/enhanced-real-micro-saas-services';
+import {nextGenerationAIServices} from '../data/next-generation-ai-services';
+import {cuttingEdgeITServices} from '../data/cutting-edge-it-services';
+import {innovativeMicroSaasV2Services} from '../data/innovative-micro-saas-v2';
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
@@ -1263,7 +1153,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </Layout>
-  );
+  ),
 
     </UltraFuturisticBackground>
   )

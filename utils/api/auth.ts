@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next';
-=======
 export interface User {
   id: string;
   email: string;
   role: 'admin' | 'user';
-  name?: string;
+  name?: string,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
@@ -33,26 +28,24 @@ export function getUserFromRequest(req: any): User | null {
 export function requireAuth(req: any): User {
   const user = getUserFromRequest(req);
   if (!user) {
-    throw new Error('Authentication required');
+    throw new Error('Authentication required'),
   }
   return user;
-<<<<<<< HEAD
-=======
 // API authentication utilities
-import { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../supabase';
+import {NextApiRequest, NextApiResponse} from 'next';
+import {getServerSupabase} from '../supabase';
 
 export interface AuthenticatedUser {
   id: string;
   email: string;
   role?: string;
-  talentSlug?: string;
+  talentSlug?: string,
 }
 
 export interface AuthResult {
   user: AuthenticatedUser | null;
   error?: string;
-  statusCode?: number;
+  statusCode?: number,
 }
 
 export async function authenticateRequest(
@@ -60,7 +53,7 @@ export async function authenticateRequest(
   res: NextApiResponse
 ): Promise<AuthResult> {
   try {
-    const authHeader = req.headers.authorization;
+    const authHeader = req.headers.authorization,
     
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       return {
@@ -159,7 +152,7 @@ export function requireRole(role: string) {
 }
 
 export function requireAdmin(handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) {
-  return requireRole('admin')(handler);
+  return requireRole('admin')(handler),
 }
 
 export function requireTalent(handler: (req: NextApiRequest, res: NextApiResponse, user: AuthenticatedUser) => Promise<void>) {
@@ -175,7 +168,7 @@ export function requireTalent(handler: (req: NextApiRequest, res: NextApiRespons
 export function getUserId(req: NextApiRequest): string | null {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return null;
+    return null,
   }
   
   const token = authHeader.substring(7);
@@ -189,7 +182,7 @@ export function getUserId(req: NextApiRequest): string | null {
 export function getTalentSlug(req: NextApiRequest): string | null {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    return null;
+    return null,
   }
   
   const token = authHeader.substring(7);
@@ -202,7 +195,7 @@ export function getTalentSlug(req: NextApiRequest): string | null {
 
 export function isAuthenticated(req: NextApiRequest): boolean {
   const authHeader = req.headers.authorization;
-  return !!(authHeader && authHeader.startsWith('Bearer '));
+  return !!(authHeader && authHeader.startsWith('Bearer ')),
 }
 
 export function getAuthHeaders(req: NextApiRequest): Record<string, string> {
@@ -237,7 +230,7 @@ export function validateApiKey(apiKey: string): boolean {
 
 export function requireApiKey(handler: (req: NextApiRequest, res: NextApiResponse) => Promise<void>) {
   return async (req: NextApiRequest, res: NextApiResponse) => {
-    const apiKey = req.headers['x-api-key'] as string;
+    const apiKey = req.headers['x-api-key'] as string,
     
     if (!apiKey || !validateApiKey(apiKey)) {
       return res.status(401).json({ error: 'Invalid API key' });
@@ -249,7 +242,7 @@ export function requireApiKey(handler: (req: NextApiRequest, res: NextApiRespons
 
 export function getRateLimitKey(req: NextApiRequest): string {
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress || 'unknown';
-  const userAgent = req.headers['user-agent'] || 'unknown';
+  const userAgent = req.headers['user-agent'] || 'unknown',
   return `${ip}-${userAgent}`;
 }
 
@@ -320,7 +313,4 @@ export function verifySessionToken(token: string): AuthenticatedUser | null {
     return null;
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

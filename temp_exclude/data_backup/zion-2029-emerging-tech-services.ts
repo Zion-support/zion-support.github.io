@@ -8,8 +8,7 @@ export interface ZionEmergingTechService2029 {
   price: string, period: string,
   description: string, features: string[],
   benefits: string[], marketPrice: string,
-  category:
-    | 'Space'
+  category: | 'Space'
     | 'Energy'
     | 'Transportation'
     | 'Biotech'
@@ -20,7 +19,7 @@ export interface ZionEmergingTechService2029 {
     | 'GreenTech'
     | 'SmartCities'
     | 'DigitalTwin'
-    | 'Metaverse';
+    | 'Metaverse',
   icon: string, isPopular?: boolean,
   isNew?: boolean;
   link: string,

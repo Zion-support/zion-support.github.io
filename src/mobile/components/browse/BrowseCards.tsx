@@ -1,27 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
-  Bookmark,
-  BookmarkCheck,
-  ChevronRight,
-  MapPin,
-  Clock,
-  DollarSign,;
-} from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-=======
 
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from 'lucide-react'
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string,
@@ -91,19 +74,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
-<<<<<<< HEAD
-                  <Badge
-                    key={index}
-                    variant='outline'
-                    className='text-xs font-normal'
-=======
 
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from 'lucide-react'
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 interface BrowseItem {
   id: string,
@@ -176,33 +153,19 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
               
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   >
                     {badge}
                   </Badge>
                 ))}
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-
-              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
-=======
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -225,9 +188,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
                 
                 {item.match && (
-<<<<<<< HEAD
-                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>
-=======
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
@@ -255,33 +215,19 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 
                 {item.match && (
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {item.match}% match
                   </div>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            <div className='border-t border-border p-3 flex justify-end'>
-              <Button
-                size='sm'
-=======
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
               >
-<<<<<<< HEAD
-                View Details <ChevronRight className='h-4 w-4' />
-=======
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
@@ -290,10 +236,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 className="gap-1"
               >
                 View Details <ChevronRight className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 View Details <ChevronRight className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Button>
             </div>
           </CardContent>
@@ -301,11 +244,5 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

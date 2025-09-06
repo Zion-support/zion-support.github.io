@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  Users,
-  Clock,
-  Target,
-  Star,
-  FileText,
-  Video,
-  Code,
-  Globe,
-  Building,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Rocket, CheckCircle, ArrowRight, Brain, Atom, 
-  Shield, Zap, Users, Clock, Target, Star;
-  FileText, Video, Code, Globe, Building
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket, CheckCircle, ArrowRight, Brain, Atom, Shield, Zap, Users, Clock, Target, Star, FileText, Video, Code, Globe, Building,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Rocket, CheckCircle, ArrowRight, Brain, Atom, Shield, Zap, Users, Clock, Target, Star, FileText, Video, Code, Globe, Building, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 export default function GetStarted() {
   const [selectedPath, setSelectedPath] = useState<string>('');
@@ -88,7 +65,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
       features: [
         'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
-      ];
+      ],
       useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
       timeline: '6-12 months',
       complexity: 'Advanced'
@@ -100,7 +77,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
         'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
-      ];
+      ],
       useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
       timeline: '8-18 months',
       complexity: 'Expert'
@@ -112,7 +89,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       features: [
         'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
-      ];
+      ],
       useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
       timeline: '3-9 months',
       complexity: 'Intermediate'
@@ -124,7 +101,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Building className="w-8 h-8 text-blue-400" />,
       features: [
         'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
-      ];
+      ],
       useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
       timeline: '4-12 months',
       complexity: 'Intermediate',
@@ -133,7 +110,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       features: [
         'AI consciousness developmentEmotional intelligence trainingSelf-aware neural networksAutonomous decision making'
-      ];
+      ],
       useCases: ['Customer SuccessHR AnalyticsMental HealthEducation'],
       timeline: '6-12 months',
       complexity: 'Advanced'
@@ -145,7 +122,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
         'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
-      ];
+      ],
       useCases: ['Financial ServicesHealthcareResearchCybersecurity'],
       timeline: '8-18 months',
       complexity: 'Expert'
@@ -157,7 +134,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Rocket className="w-8 h-8 text-green-400" />,
       features: [
         'Process automationSelf-healing infrastructurePredictive maintenanceAutonomous operations'
-      ];
+      ],
       useCases: ['ManufacturingDevOpsCustomer ServiceSupply Chain'],
       timeline: '3-9 months',
       complexity: 'Intermediate'
@@ -169,7 +146,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icon: <Building className="w-8 h-8 text-blue-400" />,
       features: [
         'Cloud migrationMicroservices architectureAI-powered analyticsSecurity automation'
-      ];
+      ],
       useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
       timeline: '4-12 months',
       complexity: 'Intermediate'
@@ -252,7 +229,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   const handlePathSelection = (pathId: string) => {
     setSelectedPath(pathId);
-    setCurrentStep(2);
+    setCurrentStep(2),
     setCurrentStep(2)
     setCurrentStep(2)
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -902,7 +879,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </div>
-  );
+  ),
 
 }whileInView= {
   {

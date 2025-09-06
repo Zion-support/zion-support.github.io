@@ -1,31 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Atom,
-  Brain,
-  Cpu,
-  Zap,
-  Shield,
-  Globe,
-  Rocket,
-  Target,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Clock,
-  DollarSign,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Atom, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle;
-  ArrowRight, Star, Award, Clock, DollarSign
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Atom, Brain, Cpu, Zap, Shield, Globe, Rocket, Target, TrendingUp, Users, CheckCircle, ArrowRight, Star, Award, Clock, DollarSign,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Atom, Brain, Cpu, Zap, Shield, Globe, Rocket, Target, TrendingUp, Users, CheckCircle, ArrowRight, Star, Award, Clock, DollarSign, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
@@ -481,7 +458,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+              <h2 className='text-3xl md: text-4xl font-bold text-white mb-6'>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Experience the Future?
@@ -520,7 +497,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
 };
   )
 };

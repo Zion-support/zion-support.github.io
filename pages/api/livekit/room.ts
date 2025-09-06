@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
+import {RoomServiceClient, CreateRoomOptions} from 'livekit-server-sdk';
 
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
@@ -14,11 +14,11 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
 ursor/integrate-build-improve-and-re-verify-b76c
   }
@@ -57,7 +57,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
 ursor/integrate-build-improve-and-re-verify-b76c
       const opts: CreateRoomOptions = {
-        name: roomName;
+        name: roomName,
         emptyTimeout: 60 * 10, // 10 minutes
         maxParticipants: 24,
         metadata: JSON.stringify({

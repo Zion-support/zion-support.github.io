@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { TalentCard } from "@/components/talent/TalentCard";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { TalentProfile } from "@/types/talent";
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
+import {useState, useEffect} from "react";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {TalentCard} from "@/components/talent/TalentCard";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/components/ui/use-toast";
+import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
@@ -86,7 +86,7 @@ export default function SavedTalentsPage() {
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
-        console.warn("User not authenticated.");
+        console.warn("User not authenticated."),
         return
       }
   

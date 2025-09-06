@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Heart,, Building,, ShoppingCart,, Settings,, BookOpen,, Shield,, ArrowRight,, CheckCircle,, Star,, Zap,, Users,, Globe,, BarChart3,, Brain,, Network,, Cloud} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const industries = [
@@ -159,7 +159,7 @@ export default function IndustriesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Transform Your Industry?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -180,5 +180,5 @@ export default function IndustriesPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

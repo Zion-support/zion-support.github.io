@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Sparkles, Loader2} from 'lucide-react'
+import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
   currentContent: string,
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
@@ -62,13 +58,11 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   );
-<<<<<<< HEAD
-=======
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sparkles, Loader2 } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Sparkles, Loader2} from 'lucide-react'
+import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
   currentContent: string,
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
@@ -126,7 +120,4 @@ export function AIEnhancementButton({
     </Button>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -27,7 +27,7 @@ export default function Reports() {
         </div>
       </div>
     </div>
-  );
+  ),
 export default function Reports() {
   return (
     <div className="space-y-6">

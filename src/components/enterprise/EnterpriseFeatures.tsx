@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react';
-=======
 
 import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Users, Shield, Briefcase, Award, Settings, Globe} from 'lucide-react'
 
 const features = [
   {
@@ -50,18 +44,14 @@ export function EnterpriseFeatures() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover: shadow-md"
             >
               <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
                 <feature.icon className="h-6 w-6 text-primary" />
               </div>
-<<<<<<< HEAD
-              <h3 className='font-bold text-xl mb-3'>{feature.title}</h3>
-              <p className='text-muted-foreground'>{feature.description}</p>
-=======
 
-import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
+import React from "react",
+import {Users, Shield, Briefcase, Award, Settings, Globe} from 'lucide-react'
 
 const features = [
   {
@@ -114,22 +104,13 @@ export function EnterpriseFeatures() {
               </div>
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

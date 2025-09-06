@@ -1,55 +1,17 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  Globe,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Star,
-  TrendingUp,
-  Users,
-  Building,
-  Lightbulb,
-  ArrowRight,
-  Filter,
-  Search,
-  Grid,
-  List,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+import {motion} from 'framer-motion';
+import {Brain, Rocket, Shield, Zap, Target, Atom, Globe, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Star, TrendingUp, Users, Building, Lightbulb, ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin,} from 'lucide-react';
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036SpecializedServices} from '../data/real-2036-specialized-services';
 
-import { 
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
-  Star, TrendingUp, Users, Building, Lightbulb;
-  ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
-import { 
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe, 
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock, 
-  Star, TrendingUp, Users, Building, Lightbulb;
-  ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
-} from 'lucide-react';
-import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
-import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+import {Brain, Rocket, Shield, Zap, Target, Atom, Globe, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Star, TrendingUp, Users, Building, Lightbulb, ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin} from 'lucide-react';
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036SpecializedServices} from '../data/real-2036-specialized-services';
+import {Brain, Rocket, Shield, Zap, Target, Atom, Globe, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Star, TrendingUp, Users, Building, Lightbulb, ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin} from 'lucide-react';
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036SpecializedServices} from '../data/real-2036-specialized-services';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -158,8 +120,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') -
           parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0')
         );
-      default:
-        return a.name.localeCompare(b.name);
+      default: return a.name.localeCompare(b.name),
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
       case 'rating':
         return (b.rating || 0) - (a.rating || 0);
@@ -859,7 +820,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'
+                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -871,7 +832,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
 
 };
 const itemVariants = {
@@ -899,7 +860,7 @@ top: `$ {
 
 }/>) ) 
 }</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion.h1 > 2036 Innovative Services </motion.h1> <motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
-AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services;
+AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services,
 AI platforms, and cutting-edge technology solutions designed for the future. </p> </motion.div> {
   /* Filters and Controls */ 
 }<motion.div /> </div> <div className="flex gap-4 items-center" > <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="rating" >Sort by Rating</option> <option value="marketSize" >Sort by Market Size</option> </select> <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1" > <button onClick= {

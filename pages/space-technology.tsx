@@ -5,18 +5,9 @@
   opacity: 0, y: 20 
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Shield, Zap, Target, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
-} from 'lucide-react';
+import SEO from '../components/SEO',
+import {motion} from 'framer-motion';
+import {Rocket, Brain, Shield, Zap, Target, Atom, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 const SpaceTechnologyPage: React.FC = () => {
@@ -313,17 +304,8 @@ export default SpaceTechnologyPage;
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Rocket, Brain, Shield, Zap, Target, Atom, Cpu, 
-  Lock, Cloud, Settings, Eye, Award, Clock, Heart, 
-  Lightbulb, Search, Grid, List, TrendingUp, 
-  User, ShoppingCart, Bell, HelpCircle, FileText, 
-  Video, Headphones, Code, Database, Network, Server, 
-  Monitor, Smartphone, Camera, Gamepad2, Palette, 
-  Music, Film, BookOpenCheck, Building, MessageCircle, 
-  Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket, Brain, Shield, Zap, Target, Atom, Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb, Search, Grid, List, TrendingUp, User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building, MessageCircle, Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite} from 'lucide-react';
 
 const SpaceTechnologyPage: React.FC = () => {
   const spaceServices = [

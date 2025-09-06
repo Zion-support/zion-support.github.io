@@ -14,7 +14,7 @@ export default function JobSuccessPage() {
         <Link href="/talent"><a className="px-4 py-2 rounded-md border">Browse Talent</a></Link>
       </div>
     </div>
-  );
+  ),
 export default function JobSuccessPage() {
   return (
     <div className="max-w-xl text-center mx-auto py-16">

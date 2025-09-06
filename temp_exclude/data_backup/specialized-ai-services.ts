@@ -24,7 +24,7 @@ export interface SpecializedAIService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const specializedAIServices: SpecializedAIService[] = [{
+reviews: number,export const specializedAIServices: SpecializedAIService[] = [{
     id:,
   ai-powered-legal-contract-analyzer',
     "name": 'AI-Powered Legal Contract Analyzer,

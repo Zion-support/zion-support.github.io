@@ -1,5 +1,5 @@
 
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",
 interface ServiceProfileData {
   name: string, title: string,
   bio: string, services?: string[],
@@ -55,9 +55,8 @@ serve(async (req) => {
       : "No services listed yet."}
     
     Focus on highlighting their unique value proposition, expertise, and professionalism.
-    Only respond with JSON in this exact format:
-    {
-      "summary": "Professional summary goes here...";
+    Only respond with JSON in this exact format: {
+      "summary": "Professional summary goes here...",
       "services": ["Service 1", "Service 2", "Service 3", ...]
     }
     `;
@@ -117,7 +116,7 @@ serve(async (req) => {
         error: "Internal server error"});
       { 
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
       }

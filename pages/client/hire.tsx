@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import FeedbackModal from '../../components/ui/FeedbackModal';
 
-import { useState } from "react";
+import {useState} from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function ClientHirePage() {
@@ -12,7 +12,7 @@ export default function ClientHirePage() {
   const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
   const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
   const [agreementUrl, setAgreementUrl] = useState('');
-import { useState } from "react";
+import {useState} from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ClientHirePage() {
   const [talentSlug, setTalentSlug] = useState("ava-chen");

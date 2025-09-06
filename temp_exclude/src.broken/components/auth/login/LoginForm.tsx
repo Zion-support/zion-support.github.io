@@ -12,7 +12,7 @@ password: z.string () .min (6, "Password must be at least 6 characters")
 const onSubmit = async (data: LoginFormValues) => {
   if (isSubmitting) return;
 try {
-  setIsSubmitting (true);
+  setIsSubmitting (true),
 const {
   res, data: resData 
 }= await loginUser (data.email, data.password);

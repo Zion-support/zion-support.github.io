@@ -1,54 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Zap, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Star, 
-  DollarSign, 
-  Award, 
-  Globe, 
-  Lock, 
-  Cpu as CpuIcon, 
-  Bot, 
-  FileText, 
-  Image, 
-  Video, 
-  Mic, 
-  Code, 
-  Settings, 
-  Monitor, 
-  Smartphone, 
-  Server, 
-  Network,
-  Database, 
-  Car, 
-  Rocket, 
-  Heart, 
-  Building, 
-  Sprout,
-  Mail,
-  MessageSquare,
-  Search,
-  Eye,
-  Target,
-  TrendingUp,
-  Package,
-  Calendar,
-  BookOpen,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  HardDrive
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cloud,, Zap,, Shield,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Clock,, Star,, DollarSign,, Award,, Globe,, Lock,, Cpu, as, CpuIcon,, Bot,, FileText,, Image,, Video,, Mic,, Code,, Settings,, Monitor,, Smartphone,, Server,, Network,, Database,, Car,, Rocket,, Heart,, Building,, Sprout,, Mail,, MessageSquare,, Search,, Eye,, Target,, TrendingUp,, Package,, Calendar,, BookOpen,, ShoppingCart,, Home,, Trash2,, Camera,, HardDrive} from 'lucide-react';
 
 const microSaaSProducts = [{
     title: 'Cloud Cost Guard (FinOps Assistant)',

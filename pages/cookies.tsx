@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
@@ -45,14 +45,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </ul>
           <p className='text-gray-400 text-sm'>
             Questions?{' '}
-            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
+            <a className='text-cyan-400' href='mailto: kleber@ziontechgroup.com'>
               kleber@ziontechgroup.com
             </a>
           </p>
         </div>
       </Layout>
     </>
-  );
+  ),
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> 
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>

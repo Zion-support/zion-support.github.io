@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  FileText,
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,;
-} from 'lucide-react';
-import { FileText, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+import {FileText, Phone, Mail, MapPin, Check, ArrowRight, Star,} from 'lucide-react';
+import {FileText, Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function PdfRenderApiPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/pdf-render-api')
   );
-import { FileText, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
+import {FileText, Phone, Mail, MapPin, Check, ArrowRight, Star} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function PdfRenderApiPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/pdf-render-api'));

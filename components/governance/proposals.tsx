@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-=======
 import fs from 'fs'
 import path from 'path'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export async function getStaticProps(){
   try{
@@ -34,8 +28,6 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
       </ul>
     </div>
   );
-<<<<<<< HEAD
-=======
 import fs from 'fs'
 import path from 'path'
 
@@ -67,7 +59,4 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

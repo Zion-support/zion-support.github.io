@@ -1,20 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Users, 
-  Zap, 
-  Target, 
-  Heart,
-  Award,
-  Globe,
-  Code,
-  Database,
-  Cloud,
-  Smartphone
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, Shield, Users, Zap, Target, Heart, Award, Globe, Code, Database, Cloud, Smartphone} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -205,7 +192,7 @@ const AboutPage: React.FC = () => {
                 href="/services"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 font-semibold rounded-lg transition-all duration-300"
+                className="px-8 py-3 border border-cyan-500 text-cyan-400 hover: bg-cyan-500/10 font-semibold rounded-lg transition-all duration-300"
               >
                 View Services
               </motion.a>
@@ -214,7 +201,7 @@ const AboutPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ),
 };
 
 export default AboutPage;

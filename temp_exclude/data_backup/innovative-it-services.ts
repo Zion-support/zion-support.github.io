@@ -24,7 +24,7 @@ export interface InnovativeITService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const innovativeITServices: InnovativeITService[] = [{
+reviews: number,export const innovativeITServices: InnovativeITService[] = [{
     id:,
   quantum-cloud-orchestrator',
     "name": 'Quantum Cloud Orchestrator,

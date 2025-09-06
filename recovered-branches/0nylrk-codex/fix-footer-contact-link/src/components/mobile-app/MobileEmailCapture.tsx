@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -11,7 +11,7 @@ export const MobileEmailCapture: React.FC = () => {
     e.preventDefault();
     if (!email || isSubmitting) return;
 
-    setIsSubmitting(true);
+    setIsSubmitting(true),
 
     try {
       // In a real implementation, this would connect to a backend service

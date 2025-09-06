@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Users, Check } from 'lucide-react';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {Briefcase, Users, Check} from 'lucide-react'
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 
 type UserRole = "talent" | "client" | null;
 
@@ -23,7 +15,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRole, setSelectedRole] = useState<UserRole>(null);
 
   const handleSelect = (role: UserRole) => {
-    setSelectedRole(role);
+    setSelectedRole(role),
     onSelect(role)
   };
 
@@ -61,7 +53,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40";
+              : "border-border hover: border-primary/40",
           }`}
           onClick={() => handleSelect('client')}
         >
@@ -83,11 +75,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

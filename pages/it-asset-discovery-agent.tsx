@@ -25,7 +25,7 @@ export default function ITAssetDiscoveryAgentPage() {
           Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB
           export and drift alerts.
         </p>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
           <Card className='p-6 bg-black/40 border border-gray-800'>
             <h2 className='font-semibold mb-2'>Features</h2>
             <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>
@@ -81,7 +81,7 @@ export default function ITAssetDiscoveryAgentPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
+  ),
 export default function ITAssetDiscoveryAgentPage() {
 export default function ITAssetDiscoveryAgentPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

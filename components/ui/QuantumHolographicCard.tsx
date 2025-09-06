@@ -1,22 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Star,
-  Zap,
-  Shield,
-  TrendingUp,
-  ArrowRight,
-  ExternalLink,
-  Check,
-  Users,
-  Clock,
-  DollarSign,;
-} from 'lucide-react';
-=======
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion} from 'framer-motion';
+import {Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign} from 'lucide-react';
 
 interface QuantumHolographicCardProps {
   service: {
@@ -65,10 +49,7 @@ interface QuantumHolographicCardProps {
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
-<<<<<<< HEAD
-    visible: {
-=======
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+import {Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign} from 'lucide-react';
 
 interface QuantumHolographicCardProps {
   service: {
@@ -120,66 +101,34 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: { 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     visible: { 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ease: 'easeOut' as const,
-      },
-    },
-=======
         ease: "easeOut" as const
       }
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ease: "easeOut" as const
       }
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     hover: {
       y: -10,
       scale: 1.02,
       transition: {
         duration: 0.3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ease: 'easeInOut' as const,
-      },
-    },
-=======
         ease: "easeInOut" as const
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ease: "easeInOut" as const
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const glowVariants = {
     initial: { opacity: 0.5, scale: 1 },
     animate: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      opacity: [0.5, 1, 0.5],
-      scale: [1, 1.05, 1],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut' as const,
-      },
-    },
-=======
       opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
       transition: {
@@ -188,8 +137,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeInOut" as const
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       opacity: [0.5, 1, 0.5];
       scale: [1, 1.05, 1];
       transition: {
@@ -198,7 +145,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
         ease: "easeInOut" as const
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const featureVariants = {
@@ -209,16 +155,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
       transition: {
         delay: i * 0.1,
         duration: 0.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ease: 'easeOut' as const,
-      },
-    }),
-=======
         ease: "easeOut" as const
       }
     })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -265,9 +204,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-<<<<<<< HEAD
-                <Star className='w-3 h-3 fill-current' />
-=======
         ease: "easeOut" as const
       }
     })
@@ -318,28 +254,13 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 whileTap={{ scale: 0.95 }}
               >
                 <Star className="w-3 h-3 fill-current" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Star className="w-3 h-3 fill-current" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>Popular</span>
               </motion.div>
             )}
           </div>
 
           {/* Price and trial */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='flex items-center justify-between mb-4'>
-            <div className='flex items-center space-x-2'>
-              <span className='text-3xl font-bold text-white'>
-                {service.price}
-              </span>
-              <span className='text-gray-400'>{service.period}</span>
-            </div>
-            <div className='flex items-center space-x-2 text-sm text-gray-300'>
-              <Clock className='w-4 h-4' />
-=======
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -347,8 +268,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -356,20 +275,12 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <span>{service.trialDays} days free</span>
             </div>
           </div>
 
           {/* Description */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <p className='text-gray-300 mb-6 leading-relaxed'>
-            {service.description}
-          </p>
-=======
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
           {/* Key metrics */}
           <div className="grid grid-cols-2 gap-4 mb-6">
@@ -386,11 +297,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 <span>Rating</span>
               </div>
-<<<<<<< HEAD
-              <div className='text-xl font-bold text-white'>
-                {service.rating}/5.0
-              </div>
-=======
           <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
           {/* Key metrics */}
@@ -409,24 +315,14 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 <span>Rating</span>
               </div>
               <div className="text-xl font-bold text-white">{service.rating}/5.0</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-xl font-bold text-white">{service.rating}/5.0</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
 
           {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='mb-6'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Zap className='w-4 h-4 text-yellow-400' />
-=======
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <span>Key Features</span>
             </h4>
             <div className="space-y-2">
@@ -440,9 +336,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                   whileInView="visible"
                   viewport={{ once: true }}
                 >
-<<<<<<< HEAD
-                  <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-=======
           <div className="mb-6">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Zap className="w-4 h-4 text-yellow-400" />
@@ -460,10 +353,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                   viewport={{ once: true }}
                 >
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <span>{feature}</span>
                 </motion.div>
               ))}
@@ -471,100 +361,47 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
           </div>
 
           {/* Market data */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
-            <div className='flex items-center justify-between mb-2'>
-              <span className='text-sm font-semibold text-blue-300'>
-                Market Position
-              </span>
-              <TrendingUp className='w-4 h-4 text-green-400' />
-            </div>
-            <p className='text-xs text-gray-300 leading-relaxed'>
-              {service.marketPosition}
-            </p>
-            <div className='flex items-center justify-between mt-2 text-xs'>
-              <span className='text-cyan-300'>{service.marketSize}</span>
-              <span className='text-green-300'>
-                {service.growthRate} growth
-              </span>
-=======
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
               <TrendingUp className="w-4 h-4 text-green-400" />
             </div>
-=======
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
               <TrendingUp className="w-4 h-4 text-green-400" />
             </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <p className="text-xs text-gray-300 leading-relaxed">{service.marketPosition}</p>
             <div className="flex items-center justify-between mt-2 text-xs">
               <span className="text-cyan-300">{service.marketSize}</span>
               <span className="text-green-300">{service.growthRate} growth</span>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
 
           {/* ROI and competitors */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='grid grid-cols-2 gap-4 mb-6'>
-            <div className='bg-green-900/20 rounded-lg p-3 border border-green-700/30'>
-              <div className='text-sm font-semibold text-green-300 mb-1'>
-                ROI
-              </div>
-              <div className='text-xs text-gray-300'>{service.roi}</div>
-            </div>
-
-            <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30'>
-              <div className='text-sm font-semibold text-orange-300 mb-1'>
-                Competitors
-              </div>
-              <div className='text-xs text-gray-300'>
-=======
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
               <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
               <div className="text-xs text-gray-300">{service.roi}</div>
             </div>
-=======
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
               <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
               <div className="text-xs text-gray-300">{service.roi}</div>
             </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
               <div className="text-xs text-gray-300">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {service.competitors.slice(0, 2).join(', ')}
               </div>
             </div>
           </div>
 
           {/* Contact information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Shield className='w-4 h-4 text-blue-400' />
-=======
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <span>Contact & Support</span>
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
@@ -576,11 +413,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
                 <span className="text-green-400">✉️</span>
                 <span>{service.contactInfo.email}</span>
               </div>
-<<<<<<< HEAD
-              <div className='flex items-center space-x-2'>
-                <span className='text-purple-400'>📍</span>
-                <span className='text-xs'>{service.contactInfo.address}</span>
-=======
           <div className="bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50">
             <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
               <Shield className="w-4 h-4 text-blue-400" />
@@ -598,12 +430,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -611,12 +440,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
           {/* CTA Button */}
           <motion.a
             href={service.link}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-=======
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -634,9 +458,6 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
               className="inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
             >
               <span>Learn more about {service.name}</span>
-<<<<<<< HEAD
-              <ExternalLink className='w-3 h-3' />
-=======
             className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -656,30 +477,17 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
             >
               <span>Learn more about {service.name}</span>
               <ExternalLink className="w-3 h-3" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <ExternalLink className="w-3 h-3" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </a>
           </div>
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-
-export default QuantumHolographicCard;
-=======
   )
 };
 
 export default QuantumHolographicCard;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default QuantumHolographicCard;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

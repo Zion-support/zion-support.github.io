@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
-import { isMilestoneStatus } from '../../../../../utils/types/milestones';
+import {requireUser} from '../../../../../utils/api/auth';
+import {getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent} from '../../../../../utils/api/projects';
+import {isMilestoneStatus} from '../../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -32,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||
         (status === 'Approved' && isClientUser) ||
-        (status === 'Paid' && isClientUser);
+        (status === 'Paid' && isClientUser),
       if (!allowed && user.role !== 'admin') {
         res.status(403).json({ error: 'Not allowed to set this status' }),
         return

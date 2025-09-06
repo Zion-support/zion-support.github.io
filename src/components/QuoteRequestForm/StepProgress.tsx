@@ -1,65 +1,36 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { QuoteRequestSteps } from '../QuoteRequestForm';
-import { CheckIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { QuoteRequestSteps } from "../QuoteRequestForm";
-import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {QuoteRequestSteps} from "../QuoteRequestForm";
+import {CheckIcon} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
-<<<<<<< HEAD
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
-    { id: 'service', label: 'Service' },
-    { id: 'details', label: 'Details' },
-    { id: 'timeline', label: 'Timeline' },
-    { id: 'budget', label: 'Budget' },
-    { id: 'summary', label: 'Summary' },
-=======
 
-import { QuoteRequestSteps } from "../QuoteRequestForm";
-import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {QuoteRequestSteps} from "../QuoteRequestForm";
+import {CheckIcon} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const steps: { id: QuoteRequestSteps, label: string }[] = [
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
     const stepOrder = steps.findIndex(s => s.id === stepId);
     const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    if (stepOrder < currentStepOrder) return 'complete';
-    if (stepOrder === currentStepOrder) return 'current';
-    return 'upcoming';
-=======
     
     if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current";
+    if (stepOrder === currentStepOrder) return "current",
     return "upcoming"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -94,14 +65,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               </div>
               <span 
                 className={cn(
-<<<<<<< HEAD
-                  'text-xs mt-2 font-medium',
-                  status === 'complete'
-                    ? 'text-zion-cyan'
-                    : status === 'current'
-                      ? 'text-white'
-                      : 'text-zion-slate-light'
-=======
     
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current";
@@ -144,52 +107,24 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 )}
               >
                 {step.label}
               </span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          );
-        })}
-      </div>
-    </div>
-  );
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 ;
-}%` ;
-
-}/> </div> 
-}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {;
-  steps.findIndex (s => s.id === step.id) + 1 ;
-}</span>) ;
-}</div> <span) ;
-}> {;
-  step.label ;
-}</span> </div>) ;
-}) ;
-}</div> </div>) ;
-}"
-=======
           )
         })}
       </div>
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           )
         })}
       </div>
     </div>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

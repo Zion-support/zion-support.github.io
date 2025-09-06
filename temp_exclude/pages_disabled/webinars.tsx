@@ -1,35 +1,11 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  Calendar, 
-import React, { useState } from 'react';
+import {Calendar,, import, React,, {, useState} from 'react';
 import Head from 'next/head';';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import {
-  Calendar, 
-  Clock, 
-  User, 
-  ArrowRight, 
-  Play, 
-  Download, 
-  Share2, 
-  Tag,
-  ExternalLink,
-  Video,
-  Mic,
-  Users,
-  Star,
-  Award,
-  Globe,
-  BookOpen,
-  MessageSquare,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Calendar,, Clock,, User,, ArrowRight,, Play,, Download,, Share2,, Tag,, ExternalLink,, Video,, Mic,, Users,, Star,, Award,, Globe,, BookOpen,, MessageSquare,, Search,, Filter,, ChevronDown,, ChevronUp} from 'lucide-react';
 
 const webinars = [
   {
@@ -133,20 +109,7 @@ const webinars = [
     image: "/images/webinars/devops.jpg",
     tags: ["DevOps", "CI/CD", "Automation"],
     description: "Master DevOps practices and tools to streamline your software development process. Learn about CI/CD pipelines, automation, monitoring, and how to build a culture of continuous improvement."
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Play, 
-  ArrowRight,
-  ExternalLink,
-  Download,
-  Share2,
-  BookOpen,
-  Brain,
-  Cloud,
-  Shield
-} from 'lucide-react';
+import {Calendar,, Clock,, User,, Play,, ArrowRight,, ExternalLink,, Download,, Share2,, BookOpen,, Brain,, Cloud,, Shield} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const upcomingWebinars = [
@@ -689,7 +652,7 @@ export default function WebinarsPage() {
                         <div className="flex gap-2">
                           <a
                             href={webinar.registrationUrl}
-                            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors"
+                            className="flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors"
                           >
                             Register Now
                           </a>
@@ -699,7 +662,7 @@ export default function WebinarsPage() {
                         </div>
                       </div>
                     </motion.div>
-                  );
+                  ),
                 })}
               </div>
             )}
@@ -759,7 +722,7 @@ export default function WebinarsPage() {
                           </a>
                           <a
                             href={webinar.slidesUrl}
-                            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                            className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover: bg-gray-50 transition-colors"
                             title="Download Slides"
                           >
                             <Download className="w-4 h-4" />
@@ -767,7 +730,7 @@ export default function WebinarsPage() {
                         </div>
                       </div>
                     </motion.div>
-                  );
+                  ),
                 })}
               </div>
             )}
@@ -794,7 +757,7 @@ export default function WebinarsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Stay Updated with Our Webinars
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -840,5 +803,5 @@ export default function WebinarsPage() {
       </div>
     </MainLayout>
     </Layout>
-  );
+  ),
 }

@@ -14,11 +14,11 @@
 }//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
   name: 'Your Name', contact: {
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
-import { GetServerSideProps } from 'next';
+import {GetServerSideProps} from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
+import {createServerClient} from '../../utils/supabase/server';
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
@@ -30,11 +30,11 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id || 'current'
   );
-import { GetServerSideProps } from 'next';
+import {GetServerSideProps} from 'next';
 import React, { useMemo, useRef, useState } from 'react';
 import PdfExportButton from '../../components/ui/PdfExportButton';
 import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
+import {createServerClient} from '../../utils/supabase/server';
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
@@ -135,7 +135,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
-  // Simple auth guard for talent users; adjust with real roles when available
+  // Simple auth guard for talent users, adjust with real roles when available
       <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
 
       <div className="mx-auto">
@@ -225,7 +225,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     ],
   };
 
-  const versions = [] as Array<{ id: string; label: string; data: ResumeData }>;
+  const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 
   return { props: { initialData, versions } };
 };

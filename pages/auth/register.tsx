@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons } from '@/components/AuthButtons';
-import { fireEvent } from '@/lib/analytics';
-import { logInfo } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
+import {AuthButtons} from '@/components/AuthButtons';
+import {fireEvent} from '@/lib/analytics';
+import {logInfo} from '@/utils/productionLogger';
+import {useRouter} from 'next/router';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 const RegisterPage = () => {
@@ -169,7 +169,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </>
-  );
+  ),
 };
   )
 };

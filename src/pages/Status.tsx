@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { useState, useEffect } from 'react';
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-=======
-import { SEO } from "@/components/SEO";
-import { useState, useEffect } from "react";
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button";
+import {SEO} from "@/components/SEO";
+import {useState, useEffect} from "react";
+import {AlertCircle, CheckCircle, Clock, ExternalLink} from 'lucide-react'
+import {Button} from "@/components/ui/button";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { logWarn } from '@/utils/productionLogger';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {logWarn} from '@/utils/productionLogger';
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
@@ -96,7 +80,7 @@ export default function Status() {
       case 'outage':
         return <AlertCircle className="h-5 w-5 text-red-500" />;
       case 'maintenance':
-        return <Clock className="h-5 w-5 text-blue-500" />;
+        return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />
     }
@@ -111,7 +95,7 @@ export default function Status() {
       case 'outage':
         return 'Service Outage';
       case 'maintenance':
-        return 'Scheduled Maintenance';
+        return 'Scheduled Maintenance',
       default:
         return 'Unknown'
     }
@@ -126,7 +110,7 @@ export default function Status() {
       case 'outage':
         return 'text-red-500';
       case 'maintenance':
-        return 'text-blue-500';
+        return 'text-blue-500',
       default:
         return 'text-gray-500'
     }
@@ -135,7 +119,7 @@ export default function Status() {
   const formatUptime = (seconds: number) => {
     const days = Math.floor(seconds / 86400);
     const hours = Math.floor((seconds % 86400) / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
+    const minutes = Math.floor((seconds % 3600) / 60),
     const parts: string[] = [],
     if (days > 0) parts.push(`${days}d`);
     if (hours > 0) parts.push(`${hours}h`);
@@ -287,37 +271,6 @@ export default function Status() {
         </div>
       </main>
     </>
-  );
-<<<<<<< HEAD
+  ),
 
-};
-switch (status) {';
-  case 'operational': return 'Operational';';
-case 'degraded': return 'Degraded Performance';';
-case 'outage': return 'Service Outage';';
-case 'maintenance': return 'Scheduled Maintenance';';
-default: const getStatusColor = (status: ServiceStatus['status']) => {;
-  switch (status) {';
-  case 'operational': return 'text-green-500';';
-case 'degraded': return 'text-yellow-500';';
-case 'outage': return 'text-red-500';';
-case 'maintenance': return 'text-blue-500';";
-default: return (<> <SEO title="API Status" description="View real-time service availability and uptime statistics." canonical="https://app.ziontechgroup.com/status" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-white mb-4" >System Status</h1> <p className="text-zion-slate-light text-lg" > Real-time monitoring of Zion platform services </p> <CardHeader> <CardTitle className="text-white flex items-center gap-2" > <ExternalLink className="h-5 w-5" /> Live Status Dashboard </CardTitle> <CardDescription> Loading detailed status information... </CardDescription> </CardHeader> <CardContent> <iframe src= {;
-  statusUrl ";
-}/> <div className="mt-4 text-center" > <Button > View Simplified Status </Button> </div> </CardContent> </Card> </div>) ";
-}<CardHeader> <CardTitle className="text-white" >Service Status Overview</CardTitle> <CardDescription> Current status of core platform services </CardDescription> </CardHeader> <CardContent className="space-y-4" > {;
-  FALLBACK SERVICES.map ( (service) => (</div> </div> </div>) ) ";
-}</CardContent> </Card> </div> <div className="text-center" > <p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <a > <ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) '";
-}<div className="mt-12 text-center" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4" > <p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10" > <a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-
-        return <CheckCircle className="h-5 w-5 text-green-500" />;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

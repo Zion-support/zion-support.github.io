@@ -1,5 +1,5 @@
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -121,7 +121,7 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON.stringify({ applicationId })}
     );
@@ -172,10 +172,10 @@ async function processContentGeneration(supabase, contentType) {
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/json";
+          "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
         body: JSON.stringify({ 
-          contentType;
+          contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
         })}
@@ -207,7 +207,7 @@ async function processContentGeneration(supabase, contentType) {
           {
             method: "POST",
             headers: {
-              "Content-Type": "application/json";
+              "Content-Type": "application/json",
               "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
             body: JSON.stringify({
               subject: contentData.subject, previewText: contentData.previewText,

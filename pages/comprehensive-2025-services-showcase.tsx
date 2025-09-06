@@ -10,16 +10,11 @@ visible: {
   staggerChildren: 0.1 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Search, Filter, Grid, List, Star, as, StarIcon, Eye, Heart, Share2} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovative2025MicroSaasExpansionV3} from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -185,16 +180,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }> Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Schedule Consultation <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Search, Filter, Grid, List, Star, as, StarIcon, Eye, Heart, Share2} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovative2025MicroSaasExpansionV3} from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,6 +1,6 @@
 import React from "react";
-import { motion } from 'framer-motion';
-import { CheckCircle, AlertCircle, XCircle, Clock, Server, Database, Cloud, Shield } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {CheckCircle,, AlertCircle,, XCircle,, Clock,, Server,, Database,, Cloud,, Shield} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const services = []
@@ -130,11 +130,11 @@ export default function StatusPage() {}
                     <Server className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                <h1 className="text-4xl md: text-6xl font-bold mb-6">
                   System Status;
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                  Real-time monitoring of all our services and systems;
+                  Real-time monitoring of all our services and systems,
                 </p>
                 <div className="flex items-center justify-center space-x-4">
                   <div className="flex items-center">
@@ -309,7 +309,7 @@ export default function StatusPage() {}
                   If you're experiencing issues or have questions about our services, 
                   please don't hesitate to contact our support team.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a;
                     href="/support"
                     className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium"
@@ -329,5 +329,5 @@ export default function StatusPage() {}
         </section>
       </div>
     </Layout>
-  );
+  ),
 };

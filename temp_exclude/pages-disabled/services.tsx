@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 import { }
   Cloud, 
@@ -161,8 +161,8 @@ export default function ServicesPage() {}
                   Services;
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to transform your business and drive growth;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Comprehensive technology solutions designed to transform your business and drive growth,
               </p>
             </motion.div>
           </div>
@@ -177,8 +177,8 @@ export default function ServicesPage() {}
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                What We Offer;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+                What We Offer,
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 From AI-powered solutions to cloud infrastructure, we provide end-to-end technology services;
@@ -225,9 +225,9 @@ export default function ServicesPage() {}
                   
                   <Link;
                     href={service.href};
-                    className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 font-semibold flex items-center justify-center"
+                    className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-all duration-300 font-semibold flex items-center justify-center"
                   >
-                    Learn More;
+                    Learn More,
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </motion.div>
@@ -245,11 +245,11 @@ export default function ServicesPage() {}
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We combine technical expertise with business acumen to deliver solutions that drive real results;
+                We combine technical expertise with business acumen to deliver solutions that drive real results,
               </p>
             </motion.div>
 
@@ -283,11 +283,11 @@ export default function ServicesPage() {}
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 Our Process;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                A proven methodology that ensures successful project delivery;
+                A proven methodology that ensures successful project delivery,
               </p>
             </motion.div>
 
@@ -320,11 +320,11 @@ export default function ServicesPage() {}
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
                 What You Get;
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive benefits that ensure your success;
+                Comprehensive benefits that ensure your success,
               </p>
             </motion.div>
 
@@ -359,7 +359,7 @@ export default function ServicesPage() {}
               whileInView={{ opacity: 1, y: 0 }};
               transition={{ duration: 0.8 }};
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md: text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -378,5 +378,5 @@ export default function ServicesPage() {}
         </section>
       </div>
     </Layout>
-  );
+  ),
 };

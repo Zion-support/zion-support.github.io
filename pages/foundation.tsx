@@ -115,7 +115,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         <section className='space-y-4' id='mou'>
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
-          <p className='text-gray-600 dark:text-gray-300'>
+          <p className='text-gray-600 dark: text-gray-300'>
             Public archive of Memoranda of Understanding (MOUs). Redactions may
             apply where legally required.
           </p>
@@ -125,7 +125,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>

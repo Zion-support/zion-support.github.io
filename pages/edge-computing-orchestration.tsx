@@ -1,19 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Cpu,
-  Network,
-  Zap,
-  Shield,
-  Database,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Users,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cpu, Network, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, TrendingUp, Users,} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -198,7 +186,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Email support";
         "Basic security features";
         "Up to 100 IoT devices"
-      ];
+      ],
       popular: false
     };
     {
@@ -215,7 +203,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Advanced security";
         "Up to 1000 IoT devices";
         "Custom integrations"
-      ];
+      ],
       popular: true
     };
     {
@@ -246,7 +234,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Email support";
         "Basic security features";
         "Up to 100 IoT devices"
-      ];
+      ],
       popular: false
     };
     {
@@ -263,7 +251,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "Advanced security";
         "Up to 1000 IoT devices";
         "Custom integrations"
-      ];
+      ],
       popular: true
     };
     {
@@ -281,7 +269,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         "On-premise deployment";
         "Custom training";
         "SLA guarantees"
-      ];
+      ],
       popular: false
     }
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -936,7 +924,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </>
-  );
+  ),
   )
 }
   )

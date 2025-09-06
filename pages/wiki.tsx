@@ -1,11 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-  operatorPrompt,
-  slugify,;
-} from '../utils/data/zionContent';
+import {generateZionWiki, buildMarkdownFromWiki, buildWikitextFromWiki, operatorPrompt, slugify,} from '../utils/data/zionContent';
   generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;

@@ -1,17 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Cloud,
-  Shield,
-  Globe,
-  Server,
-  Database,
-  ArrowRight,
-  Check,;
-} from 'lucide-react';
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
+import {Cloud, Shield, Globe, Server, Database, ArrowRight, Check,} from 'lucide-react';
+import {Cloud, Shield, Globe, Server, Database, ArrowRight, Check} from 'lucide-react';
 
-import { Cloud, Shield, Globe, Server, Database, ArrowRight, Check } from 'lucide-react';
+import {Cloud, Shield, Globe, Server, Database, ArrowRight, Check} from 'lucide-react';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 
@@ -309,7 +301,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -353,7 +345,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-  );
+  ),
   )
 }
   )

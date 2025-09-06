@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import {glob} from 'glob';
 
 // Common syntax fixes
 const fixes = [
@@ -23,7 +23,7 @@ const fixes = [
   },
   // Fix malformed JSX expressions
   {
-    pattern: /;\s*{/g,
+    pattern: /,\s*{/g,
     replacement: ' {'
   },
   // Fix malformed return statements

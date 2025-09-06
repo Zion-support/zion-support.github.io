@@ -1,48 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-=======
+import {createServerClient} from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const supabase = createServerClient();
-    const talentId = (req.query.talentId as string) || null;
+    const talentId = (req.query.talentId as string) || null,
 
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
-<<<<<<< HEAD
-<<<<<<< HEAD
-      supabase
-        .from('profile_views')
-        .select('id, talent_id')
-        .eq('talent_id', talentId),
-      supabase
-        .from('quotes')
-        .select('id, talent_id, status')
-        .eq('talent_id', talentId),
-      supabase
-        .from('applications')
-        .select('id, talent_id, status')
-        .eq('talent_id', talentId),
-      supabase
-        .from('search_matches')
-        .select('talent_id, tag')
-        .eq('talent_id', talentId),
-    ]);
-=======
       supabase.from('profile_views').select('id, talent_id').eq('talent_id', talentId);
       supabase.from('quotes').select('id, talent_id, status').eq('talent_id', talentId);
       supabase.from('applications').select('id, talent_id, status').eq('talent_id', talentId);
       supabase.from('search_matches').select('talent_id, tag').eq('talent_id', talentId)]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const views = viewsR.status === 'fulfilled' && viewsR.value.data ? viewsR.value.data as any[] : [];
     const invites = invitesR.status === 'fulfilled' && invitesR.value.data ? invitesR.value.data as any[] : [];
@@ -72,14 +40,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       profileViews: 27;
       quoteInvites: 6;
       jobApplications: 9;
-      successRate: 33.3;
+      successRate: 33.3,
       topTags: [
         { label: 'react', value: 2 };
         { label: 'node', value: 1 };
         { label: 'ai', value: 1 }]})
   }
-<<<<<<< HEAD
-=======
       supabase.from('profile_views').select('id, talent_id').eq('talent_id', talentId);
       supabase.from('quotes').select('id, talent_id, status').eq('talent_id', talentId);
       supabase.from('applications').select('id, talent_id, status').eq('talent_id', talentId);
@@ -118,7 +84,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'ai', value: 1 }]})
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

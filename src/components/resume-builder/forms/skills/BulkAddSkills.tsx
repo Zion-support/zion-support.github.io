@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2, Sparkles } from 'lucide-react'
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-import { useResume } from '@/hooks/useResume';
-import { BulkAddSkillsProps } from './types';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Textarea } from '@/components/ui/textarea';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Loader2, Sparkles} from 'lucide-react'
+import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
+import {useResume} from '@/hooks/useResume';
+import {BulkAddSkillsProps} from './types';
+import {Alert, AlertDescription} from '@/components/ui/alert';
+import {Textarea} from '@/components/ui/textarea';
 export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const [bulkSkills, setBulkSkills] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -97,18 +93,4 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     </div>
   )
 };
-<<<<<<< HEAD
-'"
-=======
 
-<<<<<<< HEAD
-
-          
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

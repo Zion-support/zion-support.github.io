@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+import {getProposal, updateProposalMeta, updateArtifacts} from '../../../utils/data/proposals';
 async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT || 587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
   const from = process.env.EMAIL_FROM || user;
-  if (!host || !user || !pass) throw new Error('Email not configured');
+  if (!host || !user || !pass) throw new Error('Email not configured'),
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
   await transporter.sendMail({ from, to, subject, text, attachments })
 }

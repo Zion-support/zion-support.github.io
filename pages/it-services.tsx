@@ -3,8 +3,8 @@ import Head from 'next/head';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,8 +15,8 @@ export default function ITServices() {
     return () => clearTimeout(timer);
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -808,7 +808,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Enhance Your IT Infrastructure?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -834,7 +834,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </Layout>
-  );
+  ),
 
             </div>
             </div>

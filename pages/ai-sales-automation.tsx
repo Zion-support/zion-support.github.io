@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  ChartBar,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-sales-automation')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, ChartBar} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'));

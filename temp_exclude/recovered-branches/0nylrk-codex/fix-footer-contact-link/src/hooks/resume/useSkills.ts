@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Skill } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { handleResumeError, showSuccessToast } from './useResumeUtils';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Skill} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {handleResumeError,, showSuccessToast} from './useResumeUtils';
 
 export function useSkills() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export function useSkills() {
   
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to add skills');
+      setError('You must be logged in to add skills'),
       return false
     }
     
@@ -40,7 +40,7 @@ export function useSkills() {
   
   const deleteSkill = async (skillId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete skills');
+      setError('You must be logged in to delete skills'),
       return false
     }
     

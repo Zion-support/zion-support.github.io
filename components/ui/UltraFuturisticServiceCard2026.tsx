@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
 
 interface Service {
   id: string;
@@ -12,7 +12,7 @@ interface Service {
     yearly?: number;
     currency?: string;
     trialDays?: number;
-    setupTime?: string;
+    setupTime?: string,
   };
   period?: string;
   pricing?: any;
@@ -22,13 +22,13 @@ interface Service {
   icon?: React.ReactNode;
   badge?: string;
   href?: string;
-  onClick?: () => void;
+  onClick?: () => void,
 }
 
 interface UltraFuturisticServiceCard2026Props {
   service: Service;
   className?: string;
-  onClick?: () => void;
+  onClick?: () => void,
 }
 
 const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props> = React.memo(({ 
@@ -45,7 +45,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
   };
 
   const formatPrice = (price: any) => {
-    if (typeof price === 'string') return price;
+    if (typeof price === 'string') return price,
     if (typeof price === 'object' && price.monthly) {
       return `$${price.monthly}/mo`;
     }
@@ -137,9 +137,9 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       </div>
       
       {/* Enhanced Hover Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover:from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
     </motion.div>
-  );
+  ),
 });
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';

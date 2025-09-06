@@ -35,7 +35,7 @@ export default function RAGEvaluationLabPage() {
               },
               {
                 title: 'CI/CD Quality Gates',
-                desc: 'Fail builds on regressions; compare models and versions.',
+                desc: 'Fail builds on regressions, compare models and versions.',
               },
               {
                 title: 'Offline & Canary',
@@ -67,7 +67,7 @@ export default function RAGEvaluationLabPage() {
               Start Evaluating
             </Link>
             <a
-              href='mailto:kleber@ziontechgroup.com'
+              href='mailto: kleber@ziontechgroup.com'
               className='px-5 py-3 rounded-lg border border-white/20'
             >
               Email: kleber@ziontechgroup.com
@@ -77,7 +77,7 @@ export default function RAGEvaluationLabPage() {
         </div>
       </section>
     </>
-  );
+  ),
 export default function RAGEvaluationLabPage() {
 export default function RAGEvaluationLabPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

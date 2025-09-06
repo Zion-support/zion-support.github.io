@@ -96,7 +96,7 @@ export interface AIRecommendation {
 class AICustomerSupportService {
   private tickets: SupportTicket[] = []; private customers: Customer[] = [];
   private agents: SupportAgent[] = []; private chatbotSessions: ChatbotSession[] = [];
-  private knowledgeBase: KnowledgeBaseArticle[] = []; private analytics: SupportAnalytics,
+  private knowledgeBase: KnowledgeBaseArticle[] = [], private analytics: SupportAnalytics,
 
   constructor() {
     this.initializeSampleData();
@@ -210,7 +210,7 @@ class AICustomerSupportService {
     if (ticket) {
       ticket.assignedAgentId = agentId;
       ticket.status = 'in_progress';
-      ticket.updatedAt = new Date();
+      ticket.updatedAt = new Date(),
       this.updateAnalytics()
     }
   }
@@ -222,7 +222,7 @@ class AICustomerSupportService {
       ticket.updatedAt = new Date();
       
       if (status === 'resolved') {
-        ticket.resolvedAt = new Date();
+        ticket.resolvedAt = new Date(),
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
@@ -317,7 +317,7 @@ class AICustomerSupportService {
       session.endTime = new Date();
       session.resolved = resolved;
       session.escalated = escalated;
-      session.satisfaction = satisfaction;
+      session.satisfaction = satisfaction,
       this.updateAnalytics()
     }
   }
@@ -336,7 +336,7 @@ class AICustomerSupportService {
   }
 
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
-    const lowerQuery = query.toLowerCase();
+    const lowerQuery = query.toLowerCase(),
     return this.knowledgeBase.filter(article => 
       article.title.toLowerCase().includes(lowerQuery) ||
       article.content.toLowerCase().includes(lowerQuery) ||
@@ -349,7 +349,7 @@ class AICustomerSupportService {
     // Ticket prioritization recommendation
     const highPriorityOpenTickets = this.tickets.filter(t => 
       t.priority === 'high' && t.status === 'open'
-    ).length;
+    ).length,
 
     if (highPriorityOpenTickets > 5) {
       recommendations.push({

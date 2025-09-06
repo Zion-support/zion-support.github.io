@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = | 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-kind: "document" | 'government id back' | 'selfie' | 'business registration' | 'tax certificate' | 'proof of address' `) 
-=======
 export type KycRole = 'individual' | 'enterprise';
 
 export interface KycDocumentMeta {
   id: string;
   kind: string;
   filename: string;
-  uploadedAt: string;
+  uploadedAt: string,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export interface KycProfile {
   userId: string;
@@ -34,7 +26,7 @@ export interface KycProfile {
     at: string;
     by: string;
     action: string;
-    details?: any;
+    details?: any,
   }>;
 }
 
@@ -54,11 +46,11 @@ export function getOptionalDocuments(role: KycRole): string[] {
   }
 }
 
-export function validateKycSubmission(profile: KycProfile): { ok: boolean; missing: string[] } {
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
   
   if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
+    missing.push('name'),
   }
   
   if (!profile.country) {
@@ -68,9 +60,6 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean; missi
   if (profile.role === 'individual' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
-<<<<<<< HEAD
-  return { ok: missing.length === 0, missing };
-=======
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
   userId: string;
@@ -85,7 +74,7 @@ export interface KycProfile {
   expiresAt?: string;
   reviewerId?: string;
   rejectionReason?: string;
-  notes?: string;
+  notes?: string,
 }
 
 export interface KycDocument {
@@ -99,7 +88,7 @@ export interface KycDocument {
   status: 'pending' | 'approved' | 'rejected';
   rejectionReason?: string;
   verifiedAt?: string;
-  verifiedBy?: string;
+  verifiedBy?: string,
 }
 
 export interface KycRequirements {
@@ -114,7 +103,7 @@ export interface KycRequirements {
     minRevenue?: number;
     requiredYears?: number;
     allowedIndustries?: string[];
-    restrictedIndustries?: string[];
+    restrictedIndustries?: string[],
   };
 }
 
@@ -123,7 +112,7 @@ export interface KycVerificationResult {
   score: number; // 0-100
   issues: string[];
   recommendations: string[];
-  nextSteps: string[];
+  nextSteps: string[],
 }
 
 class KycManager {
@@ -197,12 +186,12 @@ class KycManager {
   }
 
   async getProfile(userId: string): Promise<KycProfile | null> {
-    return this.profiles.get(userId) || null;
+    return this.profiles.get(userId) || null,
   }
 
   async updateProfile(userId: string, updates: Partial<KycProfile>): Promise<KycProfile | null> {
     const profile = this.profiles.get(userId);
-    if (!profile) return null;
+    if (!profile) return null,
 
     const updatedProfile = { ...profile, ...updates };
     this.profiles.set(userId, updatedProfile);
@@ -210,7 +199,7 @@ class KycManager {
   }
 
   async deleteProfile(userId: string): Promise<boolean> {
-    return this.profiles.delete(userId);
+    return this.profiles.delete(userId),
   }
 
   // Document methods
@@ -234,7 +223,7 @@ class KycManager {
     if (!profile) return null;
 
     const documentIndex = profile.documents.findIndex(doc => doc.id === documentId);
-    if (documentIndex === -1) return null;
+    if (documentIndex === -1) return null,
 
     profile.documents[documentIndex] = { ...profile.documents[documentIndex], ...updates };
     this.profiles.set(userId, profile);
@@ -246,7 +235,7 @@ class KycManager {
     if (!profile) return false;
 
     const documentIndex = profile.documents.findIndex(doc => doc.id === documentId);
-    if (documentIndex === -1) return false;
+    if (documentIndex === -1) return false,
 
     profile.documents.splice(documentIndex, 1);
     this.profiles.set(userId, profile);
@@ -255,7 +244,7 @@ class KycManager {
 
   // Verification methods
   async verifyProfile(userId: string): Promise<KycVerificationResult> {
-    const profile = this.profiles.get(userId);
+    const profile = this.profiles.get(userId),
     if (!profile) {
       return {
         isValid: false,
@@ -284,7 +273,7 @@ class KycManager {
 
     // Check required documents
     const submittedTypes = profile.documents.map(doc => doc.type);
-    const missingRequired = requirements.requiredDocuments.filter(type => !submittedTypes.includes(type));
+    const missingRequired = requirements.requiredDocuments.filter(type => !submittedTypes.includes(type)),
     
     if (missingRequired.length > 0) {
       issues.push(`Missing required documents: ${missingRequired.join(', ')}`);
@@ -356,7 +345,7 @@ class KycManager {
     if (!verification.isValid) return false;
 
     profile.status = 'pending_review';
-    profile.submittedAt = new Date().toISOString();
+    profile.submittedAt = new Date().toISOString(),
     this.profiles.set(userId, profile);
     return true;
   }
@@ -389,7 +378,7 @@ class KycManager {
 
   // Utility methods
   async getRequirements(role: KycProfile['role']): Promise<KycRequirements | null> {
-    return this.requirements.get(role) || null;
+    return this.requirements.get(role) || null,
   }
 
   async getAllProfiles(): Promise<KycProfile[]> {
@@ -397,7 +386,7 @@ class KycManager {
   }
 
   async getProfilesByStatus(status: KycProfile['status']): Promise<KycProfile[]> {
-    return Array.from(this.profiles.values()).filter(profile => profile.status === status);
+    return Array.from(this.profiles.values()).filter(profile => profile.status === status),
   }
 
   async clearAll(): Promise<void> {
@@ -433,15 +422,13 @@ export function generateKycDocumentId(): string {
 export function isKycProfileComplete(profile: KycProfile): boolean {
   return profile.status === 'approved' && 
          profile.documents.length > 0 && 
-         profile.fullLegalName.length > 0;
+         profile.fullLegalName.length > 0,
 }
 
 export function isKycProfileExpired(profile: KycProfile): boolean {
   if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
+  return new Date(profile.expiresAt) < new Date(),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
     missing.push('businessRegistrationNumber');
@@ -452,4 +439,3 @@ export function isKycProfileExpired(profile: KycProfile): boolean {
     missing
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

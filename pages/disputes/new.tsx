@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
+import {useCurrentUser} from '../../utils/auth';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 const REASONS = [
@@ -63,7 +63,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
 ursor/integrate-build-improve-and-re-verify-b76c
-    setSubmitting(true);
+    setSubmitting(true),
     try {
       const res = await fetch('/api/disputes', {
         method: 'POST',

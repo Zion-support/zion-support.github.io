@@ -1,20 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import {
-  DollarSign, 
-  Brain, 
-  Shield, 
-  BarChart3, 
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Lock,
-  CreditCard,
-  Database,
-  FileText,
-  Users
-} from 'lucide-react'
+import {motion} from 'framer-motion'
+import {DollarSign,, Brain,, Shield,, BarChart3,, CheckCircle,, ArrowRight,, TrendingUp,, Lock,, CreditCard,, Database,, FileText,, Users} from 'lucide-react'
 import Layout from '../../components/Layout'
 
 const services = [

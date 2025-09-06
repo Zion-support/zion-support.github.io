@@ -1,26 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Building, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight,
-  Award,
-  Clock,
-  DollarSign,
-  Target,
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  TrendingUp
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Building,, Shield,, Zap,, BarChart3,, Users,, Globe,, CheckCircle,, ArrowRight,, Award,, Clock,, DollarSign,, Target,, Settings,, Database,, Cloud,, Lock,, TrendingUp} from 'lucide-react';
 
 const enterpriseFeatures = [
   {
@@ -374,7 +356,7 @@ export default function EnterpriseSolutionsPage() {
                 <p className="text-xl text-blue-100 mb-8">
                   Let's discuss how our enterprise solutions can drive your business forward
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
                     href="/contact"
                     className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -394,5 +376,5 @@ export default function EnterpriseSolutionsPage() {
         </section>
       </div>
     </>
-  );
+  ),
 }

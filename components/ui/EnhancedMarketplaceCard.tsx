@@ -5,7 +5,7 @@ export type MarketplaceCardProps = {
   title: string;
   subtitle?: string;
   description?: string;
-  footer?: React.ReactNode;
+  footer?: React.ReactNode,
 };
 
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {

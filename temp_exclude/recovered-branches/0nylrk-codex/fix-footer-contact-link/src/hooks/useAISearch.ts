@@ -1,8 +1,8 @@
 
-import { useState } from "react";
-import { TALENT_PROFILES } from "@/data/talentData";
-import { JOB_POSTS } from "@/data/jobsData";
-import { PROJECTS } from "@/data/projectsData";
+import {useState} from "react";
+import {TALENT_PROFILES} from "@/data/talentData";
+import {JOB_POSTS} from "@/data/jobsData";
+import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {
   id: string, type: "talent" | "job" | "project",
   title: string,
@@ -22,7 +22,7 @@ export function useAISearch() {
   const [loading, setLoading] = useState(false);
 
   const search = async (query: string) => {
-    setLoading(true);
+    setLoading(true),
     try {
       const response = await fetch(
         "https: //ziontechgroup.functions.supabase.co/functions/v1/ai-search",
@@ -38,7 +38,7 @@ export function useAISearch() {
 
       const items: SearchResult[] = [];
       const matchSkill = (skills: string[] | undefined) => {
-        if (!filters.skills || filters.skills.length === 0) return true;
+        if (!filters.skills || filters.skills.length === 0) return true,
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Search, Filter, ArrowRight, Clock, User, Tag } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Search,, Filter,, ArrowRight,, Clock,, User,, Tag} from 'lucide-react';
 
 const searchResults = [
   {
@@ -91,7 +91,7 @@ export default function SearchPage() {
   }, [query, selectedCategory, selectedType]);
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     router.push(`/search?q=${encodeURIComponent(query)}`);
   };
 

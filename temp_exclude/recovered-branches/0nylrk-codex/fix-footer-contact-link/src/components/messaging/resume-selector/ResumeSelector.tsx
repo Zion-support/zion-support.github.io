@@ -1,16 +1,16 @@
 
 import React, { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { Plus, Loader2 } from 'lucide-react';
-import { useResume } from "@/hooks/useResume";
-import { exportResumeToPDF } from "@/utils/pdfExport";
-import { toast } from "@/components/ui/use-toast";
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { UploadSection } from './UploadSection';
-import { SelectResumeSection } from './SelectResumeSection';
-import { ResumeOption, ResumeSelectorProps } from './types';
+import {Button} from "@/components/ui/button";
+import {RadioGroup,, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Plus,, Loader2} from 'lucide-react';
+import {useResume} from "@/hooks/useResume";
+import {exportResumeToPDF} from "@/utils/pdfExport";
+import {toast} from "@/components/ui/use-toast";
+import {ResumePreviewCard} from './ResumePreviewCard';
+import {UploadSection} from './UploadSection';
+import {SelectResumeSection} from './SelectResumeSection';
+import {ResumeOption,, ResumeSelectorProps} from './types';
 
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
@@ -62,7 +62,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
     setSelectedOption(value);
     
     if (value === 'recent' && resumeOptions.length > 0) {
-      setSelectedResume(resumeOptions[0]);
+      setSelectedResume(resumeOptions[0]),
       onResumeSelected(resumeOptions[0])
     } else if (value === 'select') {
       // Reset selection until user chooses
@@ -76,7 +76,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const handleResumeSelect = (resumeId: string) => {
     const selected = resumeOptions.find(opt => opt.id === resumeId);
     if (selected) {
-      setSelectedResume(selected);
+      setSelectedResume(selected),
       onResumeSelected(selected)
     }
   };
@@ -84,7 +84,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
+      const file = e.target.files[0],
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {

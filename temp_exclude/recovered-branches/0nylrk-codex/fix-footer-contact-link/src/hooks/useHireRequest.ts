@@ -1,8 +1,8 @@
 
-import { useState } from 'react';
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
+import {useState} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {TalentProfile} from "@/types/talent";
 export interface HireRequestData {
   talent: {
       
@@ -28,7 +28,7 @@ export function useHireRequest() {
 
   const submitHireRequest = async (requestData: HireRequestData) => {
     setIsSubmitting(true);
-    setError(null);
+    setError(null),
     
     try {
       // Call the edge function to process the hire request

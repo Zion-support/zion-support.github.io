@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Eye,, EyeOff,, Mail,, Lock,, User,, ArrowRight,, Check} from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function RegisterPage() {}
@@ -65,9 +65,9 @@ export default function RegisterPage() {}
       description="Create your Zion Tech Group account to access our services, dashboard, and exclusive resources."
       keywords="register, sign up, create account, Zion Tech Group, new user"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
-          <motion.div;
+          <motion.div,
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -107,7 +107,7 @@ export default function RegisterPage() {}
                       required;
                       value={formData.firstName};
                       onChange={handleChange};
-                      className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="First name"
                     />
                   </div>
@@ -121,10 +121,10 @@ export default function RegisterPage() {}
                     id="lastName"
                     name="lastName"
                     type="text"
-                    required;
+                    required,
                     value={formData.lastName};
                     onChange={handleChange};
-                    className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Last name"
                   />
                 </div>
@@ -143,10 +143,10 @@ export default function RegisterPage() {}
                     name="email"
                     type="email"
                     autoComplete="email"
-                    required;
+                    required,
                     value={formData.email};
                     onChange={handleChange};
-                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -156,13 +156,13 @@ export default function RegisterPage() {}
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company (optional);
                 </label>
-                <input;
+                <input,
                   id="company"
                   name="company"
                   type="text"
                   value={formData.company};
                   onChange={handleChange};
-                  className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="block w-full px-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 />
               </div>
@@ -175,7 +175,7 @@ export default function RegisterPage() {}
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-                  <input;
+                  <input,
                     id="password"
                     name="password"
                     type={showPassword ? 'text' : 'password'};
@@ -183,10 +183,10 @@ export default function RegisterPage() {}
                     required;
                     value={formData.password};
                     onChange={handleChange};
-                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Create a password"
                   />
-                  <button;
+                  <button,
                     type="button"
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                     onClick={() => setShowPassword(!showPassword)};
@@ -232,10 +232,10 @@ export default function RegisterPage() {}
                     required;
                     value={formData.confirmPassword};
                     onChange={handleChange};
-                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Confirm your password"
                   />
-                  <button;
+                  <button,
                     type="button"
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)};
@@ -265,24 +265,24 @@ export default function RegisterPage() {}
                   />
                   <label htmlFor="agreeToTerms" className="ml-2 block text-sm text-gray-300">
                     I agree to the{' '};
-                    <Link href="/terms" className="text-blue-400 hover:text-blue-300">
-                      Terms of Service;
+                    <Link href="/terms" className="text-blue-400 hover: text-blue-300">
+                      Terms of Service,
                     </Link>{' '};
                     and{' '};
-                    <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
+                    <Link href="/privacy" className="text-blue-400 hover: text-blue-300">
                       Privacy Policy;
                     </Link>
                   </label>
                 </div>
 
                 <div className="flex items-center">
-                  <input;
+                  <input,
                     id="subscribeNewsletter"
                     name="subscribeNewsletter"
                     type="checkbox"
                     checked={formData.subscribeNewsletter};
                     onChange={handleChange};
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
+                    className="h-4 w-4 text-blue-600 focus: ring-blue-500 border-gray-600 rounded bg-white/10"
                   />
                   <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-300">
                     Subscribe to our newsletter for updates and insights;
@@ -291,15 +291,15 @@ export default function RegisterPage() {}
               </div>
 
               <div>
-                <button;
+                <button,
                   type="submit"
                   disabled={!isFormValid};
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
-                  Create account;
+                  Create account,
                 </button>
               </div>
 
@@ -308,7 +308,7 @@ export default function RegisterPage() {}
                   Already have an account?{' '};
                   <Link;
                     href="/login"
-                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                    className="font-medium text-blue-400 hover: text-blue-300 transition-colors"
                   >
                     Sign in here;
                   </Link>
@@ -319,5 +319,5 @@ export default function RegisterPage() {}
         </div>
       </div>
     </Layout>
-  );
+  ),
 };

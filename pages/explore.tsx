@@ -1,55 +1,14 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  ChevronRight,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Lightbulb,
-  Flame,
-  Zap as ZapIcon,;
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon,} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-import { 
-  Search, Filter, Grid, List, ArrowRight, ChevronRight;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-import { 
-  Search, Filter, Grid, List, ArrowRight, ChevronRight;
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ChevronRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -313,8 +272,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         return a.name.localeCompare(b.name);
       case 'featured':
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      default:
-        return 0;
+      default: return 0,
       default: return 0
       default: return 0
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -997,7 +955,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+            <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Explore?
@@ -1046,7 +1004,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <SmartFooter />
     </div>
-  );
+  ),
   )
 }
   )

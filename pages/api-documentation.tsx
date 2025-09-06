@@ -9,7 +9,7 @@ export default function APIDocumentationPage() {
         <title>API Documentation | Zion Tech Group</title>
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/api-documentation'
+          href='https: //ziontechgroup.com/api-documentation'
         />
       </Head>
       <section className='container mx-auto px-4 py-24'>
@@ -19,7 +19,7 @@ export default function APIDocumentationPage() {
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
     </Layout>
-  );
+  ),
 export default function APIDocumentationPage() {
 export default function APIDocumentationPage() {
 ursor/integrate-build-improve-and-re-verify-b76c

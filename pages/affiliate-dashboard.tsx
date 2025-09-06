@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 function getRefCode(): string {
@@ -22,7 +22,7 @@ export default function AffiliateDashboard() {
       setReferrals(mockReferrals);
       setLoading(false);
     }, 1000);
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 function getRefCode(): string {
   if (typeof window === 'undefined') return '';

@@ -22,7 +22,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 				"Credit risk models with explainability";
 				"KYC/AML case automation and SAR drafts";
 				"Collections optimization and next-best-action";
-				"Realtime rules with feature store integration";
+				"Realtime rules with feature store integration",
 				"Integrations: Core banking, KYC, payments, CRMs"
 			]}
 			industries={["Fintech", "Banking", "Lending", "Payments"]}

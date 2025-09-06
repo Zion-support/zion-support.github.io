@@ -1,51 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Shield,
-  Globe,
-  Database,
-  Cloud,
-  Lock,
-  Palette,
-  Target,
-  Layers,
-  Sparkles,
-  Atom,
-  Microscope,
-  Satellite,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Users,
-  BarChart3,
-  Award,
-  Clock,
-  DollarSign,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
-  Globe, Database, Cloud, Lock, Palette, Target, Layers, 
-  Sparkles, Atom, Microscope, Satellite, CheckCircle, 
-  ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
-  BarChart3, Award, Clock, DollarSign
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Globe, Database, Cloud, Lock, Palette, Target, Layers, Sparkles, Atom, Microscope, Satellite, CheckCircle, ArrowRight, Phone, Mail, MapPin, Rocket, Users, BarChart3, Award, Clock, DollarSign,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Globe, Database, Cloud, Lock, Palette, Target, Layers, Sparkles, Atom, Microscope, Satellite, CheckCircle, ArrowRight, Phone, Mail, MapPin, Rocket, Users, BarChart3, Award, Clock, DollarSign, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
-import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
+import {nextGenAIServices2026} from '../data/next-gen-ai-services-2026';
+import {revolutionaryITInfrastructure2026} from '../data/revolutionary-it-infrastructure-2026';
+import {innovativeMicroSaas2026} from '../data/innovative-micro-saas-2026';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function Comprehensive2026ServicesShowcase() {
@@ -170,8 +132,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           return b.rating - a.rating;
         case 'customers':
           return b.customers - a.customers;
-        default:
-          return a.popular ? -1 : 1;
+        default: return a.popular ? -1 : 1,
         default: return a.popular ? -1 : 1
         default: return a.popular ? -1 : 1
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -848,14 +809,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     setSearchTerm('');
                     setSelectedCategory('all')
                   }}
-                  className='bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'
+                  className='bg-cyan-600 hover: bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(''),
                     setSelectedCategory('all')
                   }}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"

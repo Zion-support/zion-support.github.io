@@ -1,50 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  DollarSign,
-  TrendingUp,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  BarChart3,
-  Target,
-  Microscope,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowUpRight,
-  Play,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-import { 
-  Brain, DollarSign, TrendingUp, Shield, Zap, 
-  CheckCircle, ArrowRight, Star, Users, Award;
-  Clock, Globe, BarChart3, Target, Microscope;
-  Phone, Mail, MapPin, ArrowUpRight, Play;
-  BarChart, PieChart, LineChart, Activity
-} from 'lucide-react';
+import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { 
-  Brain, DollarSign, TrendingUp, Shield, Zap, 
-  CheckCircle, ArrowRight, Star, Users, Award;
-  Clock, Globe, BarChart3, Target, Microscope;
-  Phone, Mail, MapPin, ArrowUpRight, Play;
-  BarChart, PieChart, LineChart, Activity
-} from 'lucide-react';
+import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
@@ -926,7 +889,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       </section>
 
       {/* Contact CTA */}
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>
+      <section className='py-20 px-4 sm: px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-3xl p-12 text-center'>
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -999,7 +962,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
     </Layout>
-  );
+  ),
 };
 
 export default NeuralFinanceAI;

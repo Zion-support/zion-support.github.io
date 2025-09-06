@@ -1,25 +1,17 @@
 import React from 'react';
 import Head from 'next/head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Scale,;
-} from 'lucide-react';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Scale,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Scale} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-legal-contract-analyzer')
   );
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Scale } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Scale} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AILegalContractAnalyzerPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-legal-contract-analyzer'));
@@ -128,7 +120,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             Accelerate your legal work with AI-powered contract analysis and document review tools.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-amber-600 text-white px-6 py-3 rounded-lg hover:bg-amber-700">
+            <a href="/contact" className="bg-amber-600 text-white px-6 py-3 rounded-lg hover: bg-amber-700">
               Get Started
             </a>
             <a href="/about" className="border border-amber-600 text-amber-600 px-6 py-3 rounded-lg hover:bg-amber-50">
@@ -138,7 +130,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </main>
     </Layout>
-  );
+  ),
       </div>
     </Layout>
   )

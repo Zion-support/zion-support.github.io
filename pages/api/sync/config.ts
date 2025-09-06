@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState } from "../../../utils/sync/storage";
-import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
+import {readState, writeState} from "../../../utils/sync/storage";
+import {InstanceConfig, Peer, SyncScope} from "../../../utils/sync/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState();
+  const state = readState(),
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }

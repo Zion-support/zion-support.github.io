@@ -19,7 +19,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </main>
     </Layout>
-  );
+  ),
 export default function AICustomerService() {
   return (
     <>

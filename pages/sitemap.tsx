@@ -1,25 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Home,
-  Search,
-  Rocket,
-  FileText,
-  Users,
-  Mail,
-  Map,
-  ArrowRight,
-  ExternalLink,
-  ChevronRight,
-  Globe,
-  Building,;
-import { 
-  Home, Search, Rocket, FileText, Users, Mail, Map, 
-  ArrowRight, ExternalLink, ChevronRight, Globe, Building
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Home, Search, Rocket, FileText, Users, Mail, Map, ArrowRight, ExternalLink, ChevronRight, Globe, Building,, import, {, Home, Search, Rocket, FileText, Users, Mail, Map, ArrowRight, ExternalLink, ChevronRight, Globe, Building, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {
@@ -78,10 +61,7 @@ export default function SitemapPage() {
       label: 'System Status',
       description: 'Real-time system status and uptime',
     },
-import { 
-  Home, Search, Rocket, FileText, Users, Mail, Map, 
-  ArrowRight, ExternalLink, ChevronRight, Globe, Building
-} from 'lucide-react';
+import {Home, Search, Rocket, FileText, Users, Mail, Map, ArrowRight, ExternalLink, ChevronRight, Globe, Building} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 export default function SitemapPage() {
@@ -766,7 +746,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+            <h2 className='text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Need Help Finding Something?
@@ -818,7 +798,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <SmartFooter />
     </div>
-  );
+  ),
 
 }animate= {
   {

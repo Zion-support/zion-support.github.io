@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-
-export function extractClientIp(req: NextApiRequest): string | null {
-  const xff = (req.headers['x-forwarded-for'] as string) || '';
-  const ip =
-    xff.split(',')[0]?.trim() ||
-    (req.headers['x-real-ip'] as string) ||
-    (req.socket?.remoteAddress ?? null);
-  if (!ip) return null;
-  if (ip.startsWith('::ffff:')) return ip.substring(7);
-  return ip;
-=======
 // IP address utilities
 export interface IpInfo {
   ip: string;
@@ -25,7 +11,7 @@ export interface IpInfo {
   as?: string;
   query?: string;
   status?: string;
-  message?: string;
+  message?: string,
 }
 
 export interface IpReputation {
@@ -41,7 +27,7 @@ export interface IpReputation {
     isBot?: boolean;
     isSpam?: boolean;
     isMalicious?: boolean;
-    isBlacklisted?: boolean;
+    isBlacklisted?: boolean,
   };
 }
 
@@ -59,11 +45,11 @@ export interface GeolocationResult {
   isp: string;
   org: string;
   as: string;
-  query: string;
+  query: string,
 }
 
 class IpManager {
-  private cache: Map<string, { data: any; timestamp: number }> = new Map();
+  private cache: Map<string, { data: any, timestamp: number }> = new Map();
   private cacheTimeout = 24 * 60 * 60 * 1000; // 24 hours
 
   // Extract client IP from request
@@ -72,12 +58,12 @@ class IpManager {
     const forwardedFor = req.headers['x-forwarded-for'];
     const realIp = req.headers['x-real-ip'];
     const cfConnectingIp = req.headers['cf-connecting-ip'];
-    const xClientIp = req.headers['x-client-ip'];
+    const xClientIp = req.headers['x-client-ip'],
     
     if (forwardedFor) {
       // X-Forwarded-For can contain multiple IPs, take the first one
       const ips = forwardedFor.split(',').map((ip: string) => ip.trim());
-      return ips[0];
+      return ips[0],
     }
     
     if (realIp) return realIp;
@@ -94,7 +80,7 @@ class IpManager {
   // Get IP information (geolocation, ISP, etc.)
   async getIpInfo(ip: string): Promise<IpInfo | null> {
     if (!this.isValidIp(ip)) {
-      return null;
+      return null,
     }
 
     // Check cache first
@@ -140,7 +126,7 @@ class IpManager {
   // Check IP reputation
   async getIpReputation(ip: string): Promise<IpReputation | null> {
     if (!this.isValidIp(ip)) {
-      return null;
+      return null,
     }
 
     // Check cache first
@@ -223,7 +209,7 @@ class IpManager {
 
   // Validate IP address
   isValidIp(ip: string): boolean {
-    if (!ip || ip === 'unknown') return false;
+    if (!ip || ip === 'unknown') return false,
     
     // IPv4 validation
     const ipv4Regex = /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
@@ -238,7 +224,7 @@ class IpManager {
 
   // Check if IP is private
   isPrivateIp(ip: string): boolean {
-    if (!this.isValidIp(ip)) return false;
+    if (!this.isValidIp(ip)) return false,
     
     // Private IP ranges
     const privateRanges = [
@@ -249,22 +235,22 @@ class IpManager {
       /^169\.254\./,              // 169.254.0.0/16 (link-local)
       /^::1$/,                    // IPv6 loopback
       /^fc00:/,                   // IPv6 unique local
-      /^fe80:/                    // IPv6 link-local
+      /^fe80: /                    // IPv6 link-local
     ];
     
-    return privateRanges.some(range => range.test(ip));
+    return privateRanges.some(range => range.test(ip)),
   }
 
   // Check if IP is likely a proxy/VPN
   async isProxyOrVpn(ip: string): Promise<boolean> {
     const reputation = await this.getIpReputation(ip);
-    return reputation?.details.isProxy || reputation?.details.isVpn || false;
+    return reputation?.details.isProxy || reputation?.details.isVpn || false,
   }
 
   // Get IP geolocation
   async getGeolocation(ip: string): Promise<GeolocationResult | null> {
     if (!this.isValidIp(ip)) {
-      return null;
+      return null,
     }
 
     try {
@@ -303,7 +289,7 @@ class IpManager {
   }
 
   // Get cache stats
-  getCacheStats(): { size: number; entries: string[] } {
+  getCacheStats(): { size: number, entries: string[] } {
     return {
       size: this.cache.size,
       entries: Array.from(this.cache.keys())
@@ -316,32 +302,32 @@ export const ipManager = new IpManager();
 
 // Main function for external use
 export function extractClientIp(req: any): string {
-  return ipManager.extractClientIp(req);
+  return ipManager.extractClientIp(req),
 }
 
 // Utility functions
 export function isValidIp(ip: string): boolean {
-  return ipManager.isValidIp(ip);
+  return ipManager.isValidIp(ip),
 }
 
 export function isPrivateIp(ip: string): boolean {
-  return ipManager.isPrivateIp(ip);
+  return ipManager.isPrivateIp(ip),
 }
 
 export async function getIpInfo(ip: string): Promise<IpInfo | null> {
-  return ipManager.getIpInfo(ip);
+  return ipManager.getIpInfo(ip),
 }
 
 export async function getIpReputation(ip: string): Promise<IpReputation | null> {
-  return ipManager.getIpReputation(ip);
+  return ipManager.getIpReputation(ip),
 }
 
 export async function isProxyOrVpn(ip: string): Promise<boolean> {
-  return ipManager.isProxyOrVpn(ip);
+  return ipManager.isProxyOrVpn(ip),
 }
 
 export async function getGeolocation(ip: string): Promise<GeolocationResult | null> {
-  return ipManager.getGeolocation(ip);
+  return ipManager.getGeolocation(ip),
 }
 
 // Common IP patterns
@@ -363,11 +349,9 @@ export const PRIVATE_IP_RANGES = [
   '127.0.0.0/8',
   '169.254.0.0/16'
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'];
-  const remoteAddress = req.socket?.remoteAddress;
+  const remoteAddress = req.socket?.remoteAddress,
   
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
@@ -375,4 +359,3 @@ export function getClientIp(req: any): string {
   
   return remoteAddress || 'unknown';
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

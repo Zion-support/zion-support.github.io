@@ -1,4 +1,4 @@
-import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const ComprehensivePricingShowcase2025 = () => {}}; const [selectedCategory,setSelectedCategory] = useState('all'); const [priceRange,setPriceRange] = useState('all'); const allServices = [
+import _React,{ useState } from 'react';'''; import {Link} from 'react-router-dom'; const ComprehensivePricingShowcase2025 = () => {}}; const [selectedCategory,setSelectedCategory] = useState('all'); const [priceRange,setPriceRange] = useState('all'); const allServices = [
     ; ...advancedInnovativeServices2025V3.map(service => ({ ...service,"type": 'Micro SAAS' })),; ...advancedITServices2025.map(service => ({ ...service,"type": 'IT Service' })),,
     ...advancedAIServices2025.map(service => ({ ...service,"type": 'AI Service' }))
   ]; const categories = [

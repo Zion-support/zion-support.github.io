@@ -1,24 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Handshake,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,
-  ArrowRight,
-  ExternalLink,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-import { 
-  Handshake, Globe, Rocket, Brain, Atom, Shield, 
-  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Handshake, Globe, Rocket, Brain, Atom, Shield, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp,, import, {, Handshake, Globe, Rocket, Brain, Atom, Shield, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
@@ -89,10 +72,7 @@ export default function PartnersPage() {
       icon: Brain,
       color: 'from-indigo-500 to-purple-500',
     },
-import { 
-  Handshake, Globe, Rocket, Brain, Atom, Shield, 
-  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {Handshake, Globe, Rocket, Brain, Atom, Shield, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
@@ -666,7 +646,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <EnhancedFooter />
     </div>
-  );
+  ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 

@@ -12,7 +12,7 @@ function writeUsers(data: any) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const users = readUsers();
+    const users = readUsers(),
     if (req.method === 'GET') {
       const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];

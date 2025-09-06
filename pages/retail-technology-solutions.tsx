@@ -20,7 +20,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 			features={[
 				"Demand forecasting and dynamic pricing";
 				"Assortment optimization and store clustering";
-				"Customer 360 and propensity modeling";
+				"Customer 360 and propensity modeling",
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration";
 				"Integrations: POS, eCom, WMS, ESP, CDP"

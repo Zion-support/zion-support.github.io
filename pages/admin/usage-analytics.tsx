@@ -3,13 +3,13 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react';
 ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps } from 'next';
-import { requireAdminRole } from '../../utils/auth';
+import {GetServerSideProps} from 'next';
+import {requireAdminRole} from '../../utils/auth';
 import DatePicker from 'react-datepicker';
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
-  if ('redirect' in result) return result;
+  if ('redirect' in result) return result,
   return result
 };
 
@@ -30,13 +30,13 @@ function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { GetServerSideProps } from 'next';
-import { requireAdminRole } from '../../utils/auth';
+import {GetServerSideProps} from 'next';
+import {requireAdminRole} from '../../utils/auth';
 import DatePicker from 'react-datepicker';
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx);
   // @ts-ignore
-  if ('redirect' in result) return result;
+  if ('redirect' in result) return result,
   return result
 };
 
@@ -148,7 +148,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const [loading, setLoading] = useState(false);
   const [pagesMostUsed, setPagesMostUsed] = useState<Datum[]>([]);
   const [events, setEvents] = useState<Datum[]>([]);
-  const [line, setLine] = useState<{ date: string; value: number }[]>([]);
+  const [line, setLine] = useState<{ date: string, value: number }[]>([]);
   const [line, setLine] = useState<{ date: string, value: number }[]>([]),
   const [line, setLine] = useState<{ date: string, value: number }[]>([]),
 ursor/integrate-build-improve-and-re-verify-b76c

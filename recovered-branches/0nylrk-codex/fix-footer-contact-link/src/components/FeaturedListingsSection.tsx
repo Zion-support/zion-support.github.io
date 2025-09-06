@@ -1,8 +1,8 @@
 
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import {ProductListingCard} from "@/components/ProductListingCard";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
+import {Link} from "react-router-dom";
 interface FeaturedListingsSectionProps {
   showTitle?: boolean
 }

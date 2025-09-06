@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
 
@@ -10,7 +10,7 @@ export type LandingPayload = {
   bodyHtml: string,
   region?: string;
   service?: string;
-  faq: Array<{ q: string; a: string }>;
+  faq: Array<{ q: string, a: string }>;
 export type LandingPayload = {
   title: string,
   h1: string,

@@ -1,7 +1,7 @@
 
 import React from "react";
-import { QuoteRequestCard } from "./QuoteRequestCard";
-import { EmptyStateCard } from "./EmptyStateCard";
+import {QuoteRequestCard} from "./QuoteRequestCard";
+import {EmptyStateCard} from "./EmptyStateCard";
 import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
@@ -17,7 +17,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   isLoading;
   isArchived;
   onViewDetails;
-  onMarkAsResponded;
+  onMarkAsResponded,
   onToggleArchive
 }) => {
   if (isLoading) {

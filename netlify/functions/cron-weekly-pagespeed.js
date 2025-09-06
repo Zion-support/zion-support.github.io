@@ -1,9 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
@@ -45,9 +40,6 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
 async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
@@ -90,7 +82,4 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

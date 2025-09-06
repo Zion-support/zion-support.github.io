@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from '@/integrations/supabase/client';
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';
-import { toast } from '@/components/ui/use-toast';
+import {useState} from 'react';
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from '@/integrations/supabase/client';
+import {Interview,, InterviewRequest,, InterviewResponse} from '@/types/interview';
+import {toast} from '@/components/ui/use-toast';
 export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -215,7 +215,7 @@ export function useInterviews() {
     if (!user?.id) return false;
 
     setIsLoading(true);
-    setError(null);
+    setError(null),
 
     try {
       // Get the interview first to check permissions and get IDs for notifications

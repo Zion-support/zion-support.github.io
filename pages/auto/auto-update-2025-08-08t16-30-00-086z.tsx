@@ -22,7 +22,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <p>This page is under construction.</p>
       </main>
     </div>
-  );
+  ),
 };
 
 export default AutoUpdate20250808t163000086z;

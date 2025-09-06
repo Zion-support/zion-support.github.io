@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
+import {ensureAdminFromApi} from '../../../../utils/auth';
 import OpenAI from 'openai';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,7 +49,7 @@ function extractSection(body: string, title: string): string {
   if (!body) return '';
   // naive split by headings
   const lines = body.split('\n');
-  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
+  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase())),
   if (matchIdx >= 0) {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
     return snippet.trim()

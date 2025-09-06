@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { NextApiRequest } from 'next';
-=======
 export interface User {
   id: string;
   email: string;
   role: 'client' | 'talent' | 'admin';
-  name?: string;
+  name?: string,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
@@ -30,24 +25,6 @@ export function getUserFromRequest(req: any): User | null {
   return null;
 }
 
-<<<<<<< HEAD
-export function assertTalentOrClientForOffer(
-  req: NextApiRequest,
-  offer: { clientId: string; talentSlug: string },
-  talentSlugHeader?: string
-): DemoUser {
-  const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
-  if (
-    u.role === 'talent' &&
-    (u.talentSlug || talentSlugHeader) === offer.talentSlug
-  )
-    return u;
-  const err = new Error('Not authorized for this offer');
-  // @ts-ignore
-  err.statusCode = 403;
-  throw err;
-=======
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -62,28 +39,28 @@ export interface MarketplaceUser {
     experience?: string;
     portfolio?: string[];
     hourlyRate?: number;
-    availability?: 'available' | 'busy' | 'unavailable';
+    availability?: 'available' | 'busy' | 'unavailable',
   };
   business?: {
     name: string;
     industry: string;
     size: 'startup' | 'small' | 'medium' | 'large' | 'enterprise';
-    website?: string;
+    website?: string,
   };
   createdAt: string;
-  lastActiveAt: string;
+  lastActiveAt: string,
 }
 
 export interface AuthContext {
   user: MarketplaceUser | null;
   isAuthenticated: boolean;
   permissions: string[];
-  sessionId?: string;
+  sessionId?: string,
 }
 
 class MarketplaceAuth {
   private users: Map<string, MarketplaceUser> = new Map();
-  private sessions: Map<string, { userId: string; expiresAt: number }> = new Map();
+  private sessions: Map<string, { userId: string, expiresAt: number }> = new Map();
 
   // User management
   async createUser(userData: Omit<MarketplaceUser, 'id' | 'createdAt' | 'lastActiveAt'>): Promise<MarketplaceUser> {
@@ -99,13 +76,13 @@ class MarketplaceAuth {
   }
 
   async getUser(id: string): Promise<MarketplaceUser | null> {
-    return this.users.get(id) || null;
+    return this.users.get(id) || null,
   }
 
   async getUserByEmail(email: string): Promise<MarketplaceUser | null> {
     for (const user of this.users.values()) {
       if (user.email === email) {
-        return user;
+        return user,
       }
     }
     return null;
@@ -114,7 +91,7 @@ class MarketplaceAuth {
   async getUserBySlug(slug: string): Promise<MarketplaceUser | null> {
     for (const user of this.users.values()) {
       if (user.slug === slug) {
-        return user;
+        return user,
       }
     }
     return null;
@@ -122,7 +99,7 @@ class MarketplaceAuth {
 
   async updateUser(id: string, updates: Partial<MarketplaceUser>): Promise<MarketplaceUser | null> {
     const user = this.users.get(id);
-    if (!user) return null;
+    if (!user) return null,
 
     const updatedUser = {
       ...user,
@@ -135,13 +112,13 @@ class MarketplaceAuth {
   }
 
   async deleteUser(id: string): Promise<boolean> {
-    return this.users.delete(id);
+    return this.users.delete(id),
   }
 
   // Authentication
   async authenticateUser(email: string, password: string): Promise<MarketplaceUser | null> {
     const user = await this.getUserByEmail(email);
-    if (!user) return null;
+    if (!user) return null,
 
     // In a real app, you would verify the password hash here
     // For now, we'll just check if the user exists
@@ -160,14 +137,14 @@ class MarketplaceAuth {
     const session = this.sessions.get(sessionId);
     if (!session || Date.now() > session.expiresAt) {
       this.sessions.delete(sessionId);
-      return null;
+      return null,
     }
 
     return this.getUser(session.userId);
   }
 
   async destroySession(sessionId: string): Promise<boolean> {
-    return this.sessions.delete(sessionId);
+    return this.sessions.delete(sessionId),
   }
 
   // Authorization
@@ -176,11 +153,11 @@ class MarketplaceAuth {
     if (!user) return false;
 
     const permissions = this.getUserPermissions(user);
-    return permissions.includes(permission);
+    return permissions.includes(permission),
   }
 
   private getUserPermissions(user: MarketplaceUser): string[] {
-    const basePermissions = ['read:profile', 'update:own_profile'];
+    const basePermissions = ['read:profile', 'update: own_profile'],
     
     switch (user.role) {
       case 'client':
@@ -194,8 +171,8 @@ class MarketplaceAuth {
           'update:own_offers',
           'read:talent_profiles',
           'create:message',
-          'read:messages'
-        ];
+          'read: messages'
+        ],
       case 'talent':
         return [
           ...basePermissions,
@@ -207,8 +184,8 @@ class MarketplaceAuth {
           'update:own_offers',
           'create:message',
           'read:messages',
-          'update:availability'
-        ];
+          'update: availability'
+        ],
       case 'admin':
         return [
           ...basePermissions,
@@ -222,10 +199,10 @@ class MarketplaceAuth {
           'read:all_users',
           'update:all_users',
           'delete:all_users',
-          'moderate:content'
+          'moderate: content'
         ];
       default:
-        return basePermissions;
+        return basePermissions,
     }
   }
 
@@ -265,7 +242,7 @@ class MarketplaceAuth {
   }
 
   async requireRole(sessionId: string, requiredRole: MarketplaceUser['role']): Promise<MarketplaceUser> {
-    const user = await this.requireAuth(sessionId);
+    const user = await this.requireAuth(sessionId),
     if (user.role !== requiredRole) {
       throw new Error(`Role '${requiredRole}' required`);
     }
@@ -273,7 +250,7 @@ class MarketplaceAuth {
   }
 
   async requirePermission(sessionId: string, permission: string): Promise<MarketplaceUser> {
-    const user = await this.requireAuth(sessionId);
+    const user = await this.requireAuth(sessionId),
     const hasPermission = await this.hasPermission(user.id, permission);
     if (!hasPermission) {
       throw new Error(`Permission '${permission}' required`);
@@ -315,7 +292,7 @@ export async function createSession(userId: string, expiresInHours?: number): Pr
 }
 
 export async function validateSession(sessionId: string): Promise<MarketplaceUser | null> {
-  return marketplaceAuth.validateSession(sessionId);
+  return marketplaceAuth.validateSession(sessionId),
 }
 
 export async function getAuthContext(sessionId?: string): Promise<AuthContext> {
@@ -362,22 +339,19 @@ export function generateUserSlug(name: string): string {
 }
 
 export function isUserVerified(user: MarketplaceUser): boolean {
-  return user.isVerified;
+  return user.isVerified,
 }
 
 export function canUserAccessProject(user: MarketplaceUser, project: any): boolean {
   if (user.role === 'admin') return true;
   if (user.role === 'client' && project.clientId === user.id) return true;
   if (user.role === 'talent' && project.talentSlug === user.slug) return true;
-  return false;
+  return false,
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export function requireAuth(req: any): User {
   const user = getUserFromRequest(req);
   if (!user) {
-    throw new Error('Authentication required');
+    throw new Error('Authentication required'),
   }
   return user;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

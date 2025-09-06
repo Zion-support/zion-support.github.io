@@ -24,7 +24,7 @@ export interface EnterpriseAIService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const enterpriseAIServices: EnterpriseAIService[] = [// Enterprise AI Solutions
+reviews: number,export const enterpriseAIServices: EnterpriseAIService[] = [// Enterprise AI Solutions
   {
     id:,
   enterprise-ai-orchestrator',

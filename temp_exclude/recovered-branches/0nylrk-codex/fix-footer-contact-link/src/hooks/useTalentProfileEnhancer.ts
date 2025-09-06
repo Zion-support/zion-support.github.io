@@ -1,6 +1,6 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {
   name: string, title: string,
   bio: string, skills: string[],
@@ -24,7 +24,7 @@ export function useTalentProfileEnhancer() {
   
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
-    setError(null);
+    setError(null),
     
     try {
       // Call the Supabase Edge Function
@@ -38,7 +38,7 @@ export function useTalentProfileEnhancer() {
       
       return data as EnhancedProfile
     } catch (err: any) {
-      setError(err.message || 'Failed to enhance profile');
+      setError(err.message || 'Failed to enhance profile'),
       return null
     } finally {
       setIsGenerating(false)

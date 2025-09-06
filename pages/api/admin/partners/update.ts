@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../../utils/supabase/server';
+import {getServerSupabase} from '../../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { code, status, commission_rate } = req.body || {};

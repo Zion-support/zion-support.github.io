@@ -1,38 +1,9 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Monitor,
-  Cpu,
-  Zap,
-  Database,
-  Cloud,
-  Lock,
-  Code,
-  Sparkles,
-  Target,
-  Award,
-  Lightbulb,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Search, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight;
-  Rocket, Monitor, Cpu, 
-  Zap, Database, Cloud, Lock, Code;
-  Sparkles, Target, Award, Lightbulb
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Monitor, Cpu, Zap, Database, Cloud, Lock, Code, Sparkles, Target, Award, Lightbulb,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Monitor, Cpu, Zap, Database, Cloud, Lock, Code, Sparkles, Target, Award, Lightbulb, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
+import {innovative2025Services} from '../data/innovative-2025-services';
+import {emergingTech2025Services} from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -147,7 +118,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
-      if (typeof price === 'number') return price;
+      if (typeof price === 'number') return price,
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
@@ -856,7 +827,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </div>
 
               {/* Action Buttons */}
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'
@@ -895,7 +866,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </EnhancedFuturisticBackground>
-  );
+  ),
   )
 }
   )

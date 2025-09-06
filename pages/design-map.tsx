@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
-import { getZionDesignMap } from '../utils/design-map';
+import {getZionDesignMap} from '../utils/design-map';
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
-import { getZionDesignMap } from '../utils/design-map'
+import {getZionDesignMap} from '../utils/design-map'
 ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function DesignMapPage() {
@@ -19,7 +19,7 @@ export default function DesignMapPage() {
     setSuggestion(null);
 import React, { useMemo, useState } from 'react'
 import Head from 'next/head'
-import { getZionDesignMap } from '../utils/design-map'
+import {getZionDesignMap} from '../utils/design-map'
 
 export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), [])

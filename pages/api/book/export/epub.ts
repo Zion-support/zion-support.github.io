@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
-import { promises as fs } from 'fs';
+import {randomUUID} from 'crypto';
+import {promises, as, fs} from 'fs';
 const Epub = require('epub-gen');
 export const config = {
   api: {
@@ -39,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 function chapterToHtml(text: string): string {
-  if (!text) return '';
+  if (!text) return '',
   return text
     .split(/\n\n+/)
     .map((p) => `<p>${escapeHtml(p)}</p>`)

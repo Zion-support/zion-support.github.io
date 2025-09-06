@@ -1,7 +1,7 @@
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -57,7 +57,7 @@ serve(async (req) => {
 
     // 2. Fetch resume details if a resume_id is provided
     let resumeContent = "";
-    let resumeSkills: string[] = [];
+    let resumeSkills: string[] = [],
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
@@ -145,13 +145,12 @@ serve(async (req) => {
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
             
-            Respond in JSON format with the following structure:
-            {
+            Respond in JSON format with the following structure: {
               "score": 75;
               "summary": "Good match with relevant experience in required technologies.";
               "breakdown": {
                 "skills_match": {
-                  "score": 80;
+                  "score": 80,
                   "matching": ["skill1", "skill2"];
                   "missing": ["skill3"]
                 };

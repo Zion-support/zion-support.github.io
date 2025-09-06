@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useWishlist } from '@/hooks/useWishlist';
-=======
 import React from "react";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useWishlist } from "@/hooks/useWishlist";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useCart } from '@/context/CartContext';
-import { logWarn } from '@/utils/productionLogger';
-import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {useWishlist} from "@/hooks/useWishlist";
+import {useCart} from '@/context/CartContext';
+import {logWarn} from '@/utils/productionLogger';
+import {Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User} from 'lucide-react'
 
 interface MobileBottomNavProps {
   unreadCount?: number
@@ -102,7 +92,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             href={item.href}
             aria-label={item.name}
             className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"
@@ -122,20 +112,5 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       </div>
     </nav>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
-
-
-  const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

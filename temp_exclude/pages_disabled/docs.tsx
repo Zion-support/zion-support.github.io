@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import { BookOpen, Code, Settings, Shield, Users, Zap, ChevronRight, Search, Clock, ExternalLink, FileText, CheckCircle } from 'lucide-react';
+import {BookOpen,, Code,, Settings,, Shield,, Users,, Zap,, ChevronRight,, Search,, Clock,, ExternalLink,, FileText,, CheckCircle} from 'lucide-react';
 
 const categories = [
   {
@@ -206,7 +206,7 @@ export default function DocsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Need More Help?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -232,5 +232,5 @@ export default function DocsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

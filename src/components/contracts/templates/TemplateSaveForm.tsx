@@ -1,39 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useForm, type ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Loader2 } from 'lucide-react';
-import { ContractFormValues } from '@/components/contracts/components/ContractForm';
-import { ContractTemplate } from '@/types/contracts';
-import { useContractTemplates } from '@/hooks/useContractTemplates';
-import { Button } from '@/components/ui/button';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Switch } from '@/components/ui/switch';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { useForm, type ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Loader2 } from 'lucide-react'
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-import { ContractTemplate } from "@/types/contracts";
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
+import {useState} from "react";
+import {useForm, type, ControllerRenderProps} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Loader2} from 'lucide-react'
+import {ContractFormValues} from "@/components/contracts/components/ContractForm";
+import {ContractTemplate} from "@/types/contracts";
+import {useContractTemplates} from "@/hooks/useContractTemplates";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean()}),
@@ -141,29 +118,5 @@ export function TemplateSaveForm({
       </form>
     </Form>
   );
-<<<<<<< HEAD
 
-setSaving (true);
-try {;
-  if (editTemplate) {;
-  await updateTemplate.mutateAsync ({;
-  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {;
-  ...field ";
-}placeholder="Enter template name" /> ;
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {";
-  editTemplate ? "Update" : "Save" ;
-}Template`) ;
-}</Button> </div> </form> </Form>) ;
-}"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 ursor/integrate-build-improve-and-re-verify-b76c
 export default function FrontLanding() {
@@ -175,12 +175,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             {/* Quick stats */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm: grid-cols-4">
               {[
 ursor/integrate-build-improve-and-re-verify-b76c
                 ['24/7Autonomous'];
                 ['MainDirect Sync'];
-                ['0 OpsCloud‑Native'];
+                ['0 OpsCloud‑Native'],
                 ['SafetyGuardrails']].map(([k, v]) => (
 ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
@@ -442,7 +442,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Explore more
           </h2>
-          <div className='mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+          <div className='mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
             <Link href='/services/ai-seo-auditor'>
               <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
                 <span className='text-white/90'>
@@ -516,7 +516,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </main>
     </div>
-  );
+  ),
   )
 }
   )

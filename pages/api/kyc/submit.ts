@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
-import { validateKycSubmission } from '../../../utils/kyc';
-import { getAmlProvider } from '../../../utils/aml';
+import {validateKycSubmission} from '../../../utils/kyc';
+import {getAmlProvider} from '../../../utils/aml';
 import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
@@ -32,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Simple AML check
   const aml = getAmlProvider();
   const amlResult = profile.role === 'enterprise'
-    ? await aml.checkBusiness({ businessName: profile.businessName || ''; country: profile.country })
+    ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
     : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth }),
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   // Flags and risk scoring
@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
     const sameIpCount = Object.values(db).filter((p) =>
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)
-    ).length;
+    ).length,
     if (sameIpCount >= 2) flags.add('duplicate_ip')
   }
 

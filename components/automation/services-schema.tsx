@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ServicesSchemaPage() {
   return (
     <div className="py-10">
@@ -12,9 +6,4 @@ export default function ServicesSchemaPage() {
       <p className="text-white/70 mt-2">This runs daily and auto-PRs updates.</p>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

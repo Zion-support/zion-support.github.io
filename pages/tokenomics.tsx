@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
-type DistributionItem = { label: string; percent: number };
+type DistributionItem = { label: string, percent: number };
 type DistributionItem = { label: string, percent: number },
 type DistributionItem = { label: string, percent: number },
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -125,7 +125,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           distribution;
           governance;
           jurisdiction;
-          operatorPrompt;
+          operatorPrompt,
           legalReview})});
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
@@ -144,7 +144,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           distribution;
           governance;
           jurisdiction;
-          operatorPrompt;
+          operatorPrompt,
           legalReview})});
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
@@ -162,7 +162,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
       const blob = new Blob([previewMarkdown], {
-        type: 'text/markdown;charset=utf-8',
+        type: 'text/markdown,charset=utf-8',
       });
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
@@ -216,7 +216,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
 ursor/integrate-build-improve-and-re-verify-b76c
-      const copy = [...prev];
+      const copy = [...prev],
       const item = { ...copy[index] };
       if (key === 'percent') item.percent = Number(value);
       if (key === 'label') item.label = value;
@@ -618,7 +618,7 @@ function jurisdictionalNote(j: string) {
     case 'US':
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
     case 'EU':
-      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.';
+      return 'Designed for utility under EU frameworks; subject to MiCA and local guidelines as applicable.',
       return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
 ursor/integrate-build-improve-and-re-verify-b76c
     case 'SG':
@@ -664,7 +664,7 @@ function MarkdownPreview({
   activeSection,
 }: {
   markdown: string;
-  activeSection: string;
+  activeSection: string,
 }) {
     <div className="space-y-1 text-sm">
       {data.map((d, idx) => (
@@ -684,7 +684,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 ursor/integrate-build-improve-and-re-verify-b76c
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
-    const sections = markdown.split(/\n## /g);
+    const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {};
     sections.forEach((s, i) => {
       if (i === 0) return; // first is H1

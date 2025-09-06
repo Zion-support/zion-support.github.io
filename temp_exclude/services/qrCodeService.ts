@@ -258,7 +258,7 @@ class QRCodeService {
 
   private generateMailtoString(data: any): string {
     let mailto = `mailto:${data.to}`;
-    const params: string[] = [];
+    const params: string[] = [],
     if (data.subject) params.push(`subject=${encodeURIComponent(data.subject)}`);
     if (data.body) params.push(`body=${encodeURIComponent(data.body)}`);
     

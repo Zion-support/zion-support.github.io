@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
-=======
 
-import { GradientHeading } from "./GradientHeading";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from 'lucide-react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import {GradientHeading} from "./GradientHeading";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {FileText} from 'lucide-react'
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
 
 const faqs = [
   {
@@ -70,18 +61,11 @@ export function FaqSection() {
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
                 </AccordionTrigger>
-<<<<<<< HEAD
-                <AccordionContent className='text-zion-slate-light'>
-=======
 
-import { GradientHeading } from "./GradientHeading";
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from 'lucide-react'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import {GradientHeading} from "./GradientHeading";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import {FileText} from 'lucide-react'
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
 
 const faqs = [
   {
@@ -142,10 +126,7 @@ export function FaqSection() {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <AccordionContent className="text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -155,11 +136,5 @@ export function FaqSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

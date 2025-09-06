@@ -1,9 +1,9 @@
 
 import React from 'react';
-import { MilestonesList } from '../MilestonesList';
-import { PaymentSummary } from '../PaymentSummary';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { toast } from "sonner";
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
+import {Milestone,, MilestoneStatus,, MilestoneActivity} from '@/hooks/useMilestones';
+import {toast} from "sonner";
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],

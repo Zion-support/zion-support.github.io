@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import {ServiceVariant} from '../types/service-variants';
 
 export interface ComprehensiveMicroSaasService {
   id: string;
@@ -31,7 +31,7 @@ export interface ComprehensiveMicroSaasService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string,
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -41,7 +41,7 @@ export interface ComprehensiveMicroSaasService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
+  marketAdvantage: string,
 }
 
 const contact = {

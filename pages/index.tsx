@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect, Suspense } from 'react';
-import { ContactInfo, AnimationState } from '../types';
+import {useState, useEffect, Suspense} from 'react';
+import {ContactInfo, AnimationState} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -29,7 +29,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-    );
+    ),
   };
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
@@ -254,7 +254,7 @@ export default function Home() {
     </>
   )
 }
-import { Button } from '../src/components/ui/button';
+import {Button} from '../src/components/ui/button';
 
   return (
     <>
@@ -265,18 +265,8 @@ import { Button } from '../src/components/ui/button';
         <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Users, 
-  CheckCircle;
-  Star;
-  ChevronRight
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight, Zap, Shield, Brain, Globe, Users, CheckCircle, Star, ChevronRight} from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import AnimatedBackground from '../components/ui/AnimatedBackground';

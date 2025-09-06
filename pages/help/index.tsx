@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { readJson } from '../../utils/fsDb';
+import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
 
 ursor/integrate-build-improve-and-re-verify-b76c

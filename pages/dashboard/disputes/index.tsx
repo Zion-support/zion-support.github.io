@@ -4,7 +4,7 @@ import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -55,7 +55,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const disputes = useMemo(() => {
     const list = data?.disputes || [];
     if (statusFilter === 'All') return list;
-    return list.filter((d: any) => d.status === statusFilter);
+    return list.filter((d: any) => d.status === statusFilter),
     return list.filter((d: any) => d.status === statusFilter)
     return list.filter((d: any) => d.status === statusFilter)
 ursor/integrate-build-improve-and-re-verify-b76c

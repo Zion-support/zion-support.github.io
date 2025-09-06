@@ -26,8 +26,8 @@ const AIEvals: React.FC = () => {
             </a>
           </div>
         </div>
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
+import {Gauge, Check, Phone, Mail, MapPin, Rocket} from 'lucide-react';
 ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function AIEvalsPage() {
@@ -153,7 +153,7 @@ export default function AIEvalsPage() {
     </QuantumHolographicMatrixBackground>
   );
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import {Gauge, Check, Phone, Mail, MapPin, Rocket} from 'lucide-react';
 
 export default function AIEvalsPage() {
 	const contactInfo = {

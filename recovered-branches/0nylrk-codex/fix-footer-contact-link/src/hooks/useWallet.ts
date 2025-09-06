@@ -1,7 +1,7 @@
 
-import { useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
+import {useEffect, useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 
 export function useWallet() {
@@ -67,7 +67,7 @@ export function useWallet() {
         user_id: user.id;
         amount;
         transaction_type: 'earn';
-        reason: reason || null;
+        reason: reason || null,
         created_at: new Date().toISOString()};
       ...prev])
   }
@@ -83,7 +83,7 @@ export function useWallet() {
         user_id: user.id;
         amount;
         transaction_type: 'burn';
-        reason: reason || null;
+        reason: reason || null,
         created_at: new Date().toISOString()};
       ...prev])
   }

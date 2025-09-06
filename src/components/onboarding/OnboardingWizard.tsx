@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useAuth } from '@/hooks/useAuth';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/utils';
+import {useState, useEffect} from 'react';
+import {useRouter} from 'next/router';
+import {useAuth} from '@/hooks/useAuth';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+import {Rocket, FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react'
+import {cn} from '@/lib/utils';
 interface WizardStep {
   title: string,
   description: string,
@@ -192,19 +188,5 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-        url: "/profile?tab=skills"
-      };
-<<<<<<< HEAD
-  ];
-  
-  const steps = type === 'client' ? clientSteps : talentSteps;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

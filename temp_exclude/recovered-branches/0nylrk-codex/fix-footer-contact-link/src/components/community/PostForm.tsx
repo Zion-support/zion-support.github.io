@@ -1,25 +1,12 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { 
-  Card;
-  CardContent;
-  CardFooter;
-  CardHeader;
-  CardTitle
-} from "@/components/ui/card";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { ForumCategory } from "@/types/community";
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card,, CardContent,, CardFooter,, CardHeader,, CardTitle} from "@/components/ui/card";
+import {Form,, FormControl,, FormField,, FormItem,, FormLabel,, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
 interface PostFormValues {
   title: string,
   content: string,
@@ -50,7 +37,7 @@ export const PostForm = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (values: PostFormValues) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       await onSubmit(values)
     } finally {

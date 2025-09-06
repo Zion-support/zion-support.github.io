@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useMemo } from 'react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { cn } from '@/lib/utils';
-import { format } from 'date-fns';
-=======
 import React, { useMemo } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {cn} from "@/lib/utils";
+import {format} from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
-import { useTheme } from "@/hooks/useTheme";
+import {useTheme} from "@/hooks/useTheme";
 interface ChatMessageProps {
   message: string,
   isUser: boolean,
@@ -21,7 +13,7 @@ interface ChatMessageProps {
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message;
-  isUser;
+  isUser,
   timestamp}: ChatMessageProps) => {
   const { theme } = useTheme();
   
@@ -105,20 +97,8 @@ function formatMessageWithLinks(message: string): string {
   formattedMessage = formattedMessage.replace(
     helpCenterRegex;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  );
-
-<<<<<<< HEAD
-  return formattedMessage;
-=======
-
-<<<<<<< HEAD
-
-      <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+  ),
 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return formattedMessage
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
