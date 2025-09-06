@@ -1,5 +1,5 @@
-import { ApiDocsSpec } from './types',
-const baseUrl = 'https: //api.zion.os',
+import { ApiDocsSpec } from './types';
+const baseUrl = 'https://api.zion.os';
 
 const v1: ApiDocsSpec = {
   product: 'Zion OS',
@@ -191,6 +191,7 @@ const v1: ApiDocsSpec = {
             { language: 'curl', code: `curl '${baseUrl}/v1/nation/stats' -H 'Authorization: Bearer <token>'` },
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` },
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }],
-          versions: ['v1']}]}]},
+          versions: ['v1']}]}]}
+};
 
-export default v1,
+export default v1;

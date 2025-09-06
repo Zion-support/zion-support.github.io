@@ -18,8 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const browser = await puppeteer.launch({
-    headless: true;
-    args: ['--no-sandbox--disable-setuid-sandbox']});
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
   try {
     const page = await browser.newPage();

@@ -1,5 +1,5 @@
-import { ProviderConnection, SyncLogEntry } from './types',
-import { v4 as uuidv4 } from 'uuid',
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
 export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
@@ -11,7 +11,7 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId,
     level: 'info',
     action,
-    details},
+    details};
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T }
 }
@@ -26,7 +26,8 @@ export const crm = {
   },
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
-  }},
+  }
+};
 
 // ATS actions
 export const ats = {
@@ -38,4 +39,5 @@ export const ats = {
   },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change })
-  }},
+  }
+};

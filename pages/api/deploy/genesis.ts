@@ -2,8 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
-    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`);
-    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)];
+    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
+    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)
+  ];
   return active.length ? active.sort().join() : 'None'
 }
 
@@ -20,14 +21,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const body = req.body || {};
     const {
-      instanceName;
-      defaultLanguage;
-      deploymentRegion;
-      tokenActivation;
-      governanceMode;
-      branding;
-      modules = {};
-      bonusModules = {}} = body;
+      instanceName,
+      defaultLanguage,
+      deploymentRegion,
+      tokenActivation,
+      governanceMode,
+      branding,
+      modules = {},
+      bonusModules = {}
+    } = body;
 
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
