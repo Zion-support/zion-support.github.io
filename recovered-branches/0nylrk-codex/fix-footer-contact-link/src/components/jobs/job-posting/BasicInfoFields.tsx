@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Control } from "react-hook-form";
 
-import {
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-=======
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-=======
+
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -34,43 +17,15 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface BasicInfoFieldsProps {
   control: Control<any>
 }
-<<<<<<< HEAD
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control
-}) => {
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-  const handleSuggestionApplied = (min: number, max: number) => {
-    (setMinBudget(min.toString()), setMaxBudget(max.toString()));
-  }
-=======
-
-<<<<<<< HEAD
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
-  control,
-}) => {;
-  const [minBudget, setMinBudget] = useState<string>("");
-  const [maxBudget, setMaxBudget] = useState<string>("");
-=======
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {
-  const [minBudget, setMinBudget] = useState<string>(""),
-  const [maxBudget, setMaxBudget] = useState<string>(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSuggestionApplied = (min: number, max: number) => {
     setMinBudget(min.toString()),
     setMaxBudget(max.toString())
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <FormField
@@ -84,49 +39,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
-=======
-import React, { useState } from "react",;
-import { Control } from "react-hook-form",;
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
-import { Card, CardContent } from "@/components/ui/card",;
-interface BasicInfoFieldsProps {;
-  control: Control<any>;
-}
-;
-export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => {;
-  const [minBudget, setMinBudget] = useState<string>(""),;
-  const [maxBudget, setMaxBudget] = useState<string>(""),;
-  const handleSuggestionApplied = (min: number, max: number) => {;
-    setMinBudget(min.toString()),;
-    setMaxBudget(max.toString());
-  },;
-  return (;
-    <div className="space-y-4">;
-      <FormField;
-        control={control}
-        name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Job Title</FormLabel>
-            <FormControl>
-              <Input placeholder="e.g. Senior React Developer" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         )}
       />
       <FormField
@@ -141,17 +54,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-      />
-      <FormField
-=======
-      />;
-      <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         control={control}
         name="category"
         render={({ field }) => (
@@ -187,26 +90,9 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                 <Input
                   type="number"
                   placeholder="e.g. 30"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  value={minBudget |rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-=======
+
                   value={minBudget || rest.value}
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                  value={minBudget || rest.value}
-<<<<<<< HEAD
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-=======
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     onChange(e);
                   }}
                   {...rest}
@@ -226,22 +112,9 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
                 <Input
                   type="number"
                   placeholder="e.g. 60"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  value={maxBudget |rest.value}
-                  onChange={(e) => {
-=======
+
                   value={maxBudget || rest.value}
-                  onChange={e => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                  value={maxBudget || rest.value}
-<<<<<<< HEAD
-                  onChange={(e) => {
-=======
-                  onChange={e => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     setMaxBudget(e.target.value);
                     onChange(e);
                   }}
@@ -253,26 +126,14 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
           )}
         />
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Card>
-        <CardContent className="pt-4">
-          <ClientBudgetRecommender
-            jobTitle={control._formValues.title |""}
-            category={control._formValues.category |""}
-            experienceLevel={control._formValues.experienceLevel |""}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
@@ -289,23 +150,10 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-      />
-    </div>
-<<<<<<< HEAD
-  );
-}
 
-=======
-);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       />;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

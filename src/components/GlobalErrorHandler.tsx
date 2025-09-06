@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, {
   createContext
   useContext
@@ -93,130 +89,7 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
             label: 'Log In'
             onClick: loginAction
           }
-<<<<<<< HEAD
-        : undefined
-    })
-  }, [])
-  const clearAllErrors = useCallback(() => {
-    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
-  }, [])
-  const contextValue: ErrorContextType = {
-    reportError
-    showRetryableError
-    showNetworkError
-    showAuthError
-    clearAllErrors
-  }
-  return (
-    <ErrorContext.Provider value={contextValue}>
-      {children}
-    </ErrorContext.Provider>
-  )
-export function useGlobalErrorHandler(): ErrorContextType {
-  const context = useContext(ErrorContext)
-  if (!context) {
-    throw new Error(
-      'useGlobalErrorHandler must be used within a GlobalErrorHandler'
-    )
-  }
-  return context
-// Helper function to convert technical errors to user-friendly messages
-function getErrorMessage(error: Error): string {
-  const message = error.message.toLowerCase()
-  if (
-    message.includes('fetch') |
-    message.includes('network') |
-    message.includes('connection')
-  ) {
-    return 'Unable to connect to our servers. Please check your internet connection.'
-  }
-  if (
-    message.includes('auth') |
-    message.includes('unauthorized') |
-    message.includes('401')
-  ) {
-    return 'Your session has expired. Please log in again.'
-  }
-  if (message.includes('forbidden') |message.includes('403')) {
-    return "You don't have permission to perform this action."
-  }
-  if (message.includes('not found') |message.includes('404')) {
-    return 'The requested information could not be found.'
-  }
-  if (message.includes('timeout')) {
-    return 'Request timed out. Please try again.'
-  }
-  if (message.includes('validation') |message.includes('invalid')) {
-    return 'Please check your input and try again.'
-  }
-  if (message.includes('server') |message.includes('500')) {
-    return 'Our servers are experiencing issues. Please try again in a moment.'
-  }
-  // Fallback for unknown errors
-  return 'An unexpected error occurred. Please try again.'
-// Utility hook for common error scenarios
-export function useErrorHandler() {
-  const { reportError, showRetryableError, showNetworkError, showAuthError } =
-    useGlobalErrorHandler()
-  const handleApiError = useCallback(
-    (error: any, retryAction?: () => void) => {
-      if (error.response?.status === 401 |error.response?.status === 403) {
-        showAuthError()
-      } else if (error.code === 'NETWORK_ERROR' |!navigator.onLine) {
-        showNetworkError(retryAction) } else {
-        showRetryableError(error, retryAction)
-      }
-    }
-    [showRetryableError, showNetworkError, showAuthError]
-  )
-  const handleAsyncOperation = useCallback(
-    async <T,>(
-      operation: () => Promise<T>
-      options?: {
-        onError?: (error: Error) => void
-        retryAction?: () => void
-        successMessage?: string
-      }
-    ): Promise<T | null> => {
-      try {
-        const result = await operation()
-        if (options?.successMessage) {
-          toast({
-            title: 'Success'
-            description: options.successMessage
-          })
-        }
-        return result
-      } catch (error: any) {
-        reportError(error)
-        if (options?.onError) {
-          options.onError(error)
-        } else {
-          handleApiError(error, options?.retryAction)
-        }
-        return null
-      }
-    }
-    [reportError, handleApiError]
-  )
-  return {
-    reportError
-    handleApiError
-    handleAsyncOperation
-  };    reportError
-    handleApiError
 
-    handleAsyncOperation}
-}
-=======
-        : undefined,;
-    });
-  }, []);
-  const clearAllErrors = useCallback(() => {;
-    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
-  }, [])
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
@@ -309,35 +182,12 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     // Clear any active toasts would go here if the toast system supports it
   }, []),
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const contextValue: ErrorContextType = {
     reportError,
     showRetryableError,
     showNetworkError,
     showAuthError,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    clearAllErrors,
-  }
-  return (
-    <ErrorContext.Provider value={contextValue}>
-      {children}
-    </ErrorContext.Provider>
-  )
-export function useGlobalErrorHandler(): ErrorContextType {
-  const context = useContext(ErrorContext)
-  if (!context) {
-    throw new Error(
-      'useGlobalErrorHandler must be used within a GlobalErrorHandler'
-    )
-  }
-  return context
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     clearAllErrors},
 
   return (
@@ -355,115 +205,10 @@ export function useGlobalErrorHandler(): ErrorContextType {;
   return context;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Helper function to convert technical errors to user-friendly messages
 function getErrorMessage(error: Error): string {
   const message = error.message.toLowerCase(),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  if (
-    message.includes('fetch') ||
-    message.includes('network') ||
-    message.includes('connection')
-  ) {
-    return 'Unable to connect to our servers. Please check your internet connection.'
-  }
-
-  if (
-    message.includes('auth') ||
-    message.includes('unauthorized') ||
-    message.includes('401')
-  ) {
-    return 'Your session has expired. Please log in again.'
-  }
-
-  if (message.includes('forbidden') || message.includes('403')) {
-    return "You don't have permission to perform this action."
-  }
-
-  if (message.includes('not found') || message.includes('404')) {
-    return 'The requested information could not be found.'
-  }
-
-  if (message.includes('timeout')) {
-    return 'Request timed out. Please try again.'
-  }
-
-  if (message.includes('validation') || message.includes('invalid')) {
-    return 'Please check your input and try again.'
-  }
-
-  if (message.includes('server') || message.includes('500')) {
-    return 'Our servers are experiencing issues. Please try again in a moment.'
-  }
-
-  // Fallback for unknown errors
-  return 'An unexpected error occurred. Please try again.'
-// Utility hook for common error scenarios
-export function useErrorHandler() {
-  const { reportError, showRetryableError, showNetworkError, showAuthError } =
-    useGlobalErrorHandler()
-  const handleApiError = useCallback(
-    (error: any, retryAction?: () => void) => {
-      if (error.response?.status === 401 || error.response?.status === 403) {
-        showAuthError()
-      } else if (error.code === 'NETWORK_ERROR' || !navigator.onLine) {
-        showNetworkError(retryAction) } else {
-        showRetryableError(error, retryAction)
-      }
-    },
-    [showRetryableError, showNetworkError, showAuthError]
-  )
-  const handleAsyncOperation = useCallback(
-    async <T,>(
-      operation: () => Promise<T>,
-      options?: {
-        onError?: (error: Error) => void
-        retryAction?: () => void
-        successMessage?: string
-      }
-    ): Promise<T | null> => {
-      try {
-        const result = await operation()
-        if (options?.successMessage) {
-          toast({
-            title: 'Success',
-            description: options.successMessage,
-          })
-        }
-
-        return result
-      } catch (error: any) {
-        reportError(error)
-        if (options?.onError) {
-          options.onError(error)
-        } else {
-          handleApiError(error, options?.retryAction)
-        }
-
-        return null
-      }
-    },
-    [reportError, handleApiError]
-  )
-  return {
-    reportError,
-    handleApiError,;
-    handleAsyncOperation;
-  };    reportError
-    handleApiError
-    handleAsyncOperation}
-}
-
-}
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (message.includes('fetch') || message.includes('network') || message.includes('connection')) {
     return "Unable to connect to our servers. Please check your internet connection."
   }
@@ -552,8 +297,4 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

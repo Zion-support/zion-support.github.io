@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-import {
-  addJSON,
-  publishManifesto,;
-  OFFWORLD_TOPICS,;
-} from '@/utils/offworld/ipfs';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   addJSON
@@ -14,13 +6,7 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-=======
-  req: NextApiRequest,
-  res: NextApiResponse;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;
@@ -51,7 +37,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

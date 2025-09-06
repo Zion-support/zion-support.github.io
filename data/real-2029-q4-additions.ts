@@ -1,82 +1,4 @@
-<<<<<<< HEAD
-import { RealMarketService } from './real-market-services';
 
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-export const real2029Q4Additions: RealMarketService[] = [
-  {
-    id: 'ai-email-triage-copilot'
-    name: 'AI Email Triage Copilot'
-    tagline: 'Auto-categorize, summarize, and draft replies for inbound email'
-    price: '$99'
-    period: '/month'
-    description:
-      'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.'
-    features: [
-<<<<<<< HEAD
-      'Intent classification and priority scoring'
-      'One-click reply drafts with tone controls'
-      'Auto-tagging and routing to teams'
-      'PII redaction and allowlist domains'
-      'SLA-aware escalations and summaries'
-      'Analytics: response time, CSAT impact, volume by topic'
-    ]
-    popular: true
-    icon: '✉️'
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-300'
-    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
-    marketPosition:
-      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.'
-    targetAudience: 'Support teams, sales ops, founders'
-    trialDays: 14
-    setupTime: '1 day'
-    category: 'AI & Data'
-    realService: true
-    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL']
-    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365']
-    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk']
-    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.'
-    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
-    marketSize: 'Helpdesk software $20B+'
-    growthRate: '25% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-=======
-      'Intent classification and priority scoring',
-      'One-click reply drafts with tone controls',
-      'Auto-tagging and routing to teams',
-      'PII redaction and allowlist domains',
-      'SLA-aware escalations and summaries',
-      'Analytics: response time, CSAT impact, volume by topic',
-    ],
-    popular: true,
-    icon: '✉️',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
-    marketPosition:;
-      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.',
-    targetAudience: 'Support teams, sales ops, founders',
-    trialDays: 14,
-    setupTime: '1 day',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL'],
-    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
-    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
-    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.',
-    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI'],
-    marketSize: 'Helpdesk software $20B+',
-    growthRate: '25% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
     launchDate: '2029-10-12'
@@ -94,51 +16,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.'
     features: [
-<<<<<<< HEAD
-      'Branching logic and progress-save'
-      'Question bank: CSAT, NPS, PMF, churn'
-      'Anonymous or identified responses'
-      'Webhooks and Zapier integration'
-      'Real-time charts and cohort filters'
-      'GDPR/CCPA consent and deletion tools'
-    ]
-    popular: false
-    icon: '📱'
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-300'
-    link: 'https://ziontechgroup.com/services/mobile-survey-studio'
-    marketPosition:
-      'Lightweight alternative to enterprise survey suites; optimized for mobile.'
-    targetAudience: 'Growth teams, product managers, agencies'
-    trialDays: 7
-    setupTime: 'Same day'
-    category: 'Developer Tools'
-    realService: true
-    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
-    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
-=======
-      'Branching logic and progress-save',
-      'Question bank: CSAT, NPS, PMF, churn',
-      'Anonymous or identified responses',
-      'Webhooks and Zapier integration',
-      'Real-time charts and cohort filters',
-      'GDPR/CCPA consent and deletion tools',
-    ],
-    popular: false,
-    icon: '📱',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/mobile-survey-studio',
-    marketPosition:;
-      'Lightweight alternative to enterprise survey suites; optimized for mobile.',
-    targetAudience: 'Growth teams, product managers, agencies',
-    trialDays: 7,
-    setupTime: 'Same day',
-    category: 'Developer Tools',
-    realService: true,
-    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
-    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -532,77 +410,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     features: [
-<<<<<<< HEAD
-      'Goal trees and KPI ownership'
-      'Weekly executive summaries'
-      'Alerting on thresholds and trends'
-      'Warehouse connectors'
-      'Shareable links with permissions'
-      'Annotations and change logs'
-    ]
-    popular: false
-    icon: '📊'
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-300'
-    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio'
-    marketPosition: 'Simple executive dashboards without BI bloat.'
-    targetAudience: 'Founders, execs, ops'
-    trialDays: 7
-    setupTime: 'Same day'
-    category: 'Business Intelligence'
-    realService: true
-    technology: ['Next.js', 'Supabase', 'BigQuery']
-    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)']
-    useCases: ['OKRs/scorecards', 'Exec reporting']
-    roi: 'Improve visibility and accountability.'
-    competitors: ['Grid', 'Grow']
-    marketSize: 'BI $30B+'
-    growthRate: '11% YoY'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Metrics ingestion and templated reporting.'
-    launchDate: '2029-10-20'
-    customers: 36
-    rating: 4.4
-    reviews: 16
-  }
-=======
-      'Goal trees and KPI ownership',
-      'Weekly executive summaries',
-      'Alerting on thresholds and trends',
-      'Warehouse connectors',
-      'Shareable links with permissions',
-      'Annotations and change logs',
-    ],
-    popular: false,
-    icon: '📊',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-300',
-    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
-    marketPosition: 'Simple executive dashboards without BI bloat.',
-    targetAudience: 'Founders, execs, ops',
-    trialDays: 7,
-    setupTime: 'Same day',
-    category: 'Business Intelligence',
-    realService: true,
-    technology: ['Next.js', 'Supabase', 'BigQuery'],
-    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
-    useCases: ['OKRs/scorecards', 'Exec reporting'],
-    roi: 'Improve visibility and accountability.',
-    competitors: ['Grid', 'Grow'],
-    marketSize: 'BI $30B+',
-    growthRate: '11% YoY',
-    variant: 'ai-futuristic',
-    contactInfo: contact,
-    realImplementation: true,
-    implementationDetails: 'Metrics ingestion and templated reporting.',
-    launchDate: '2029-10-20',
-    customers: 36,
-    rating: 4.4,
-    reviews: 16,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];	{
 		id: 'ai-email-triage-copilot';
 		name: 'AI Email Triage Copilot'
@@ -1009,13 +817,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		customers: 36;
 		rating: 4.4
 		reviews: 16
-<<<<<<< HEAD
-	}
-];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1430,10 +1232,7 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

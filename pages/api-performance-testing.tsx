@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-=======
-  const features = [
-    'k6/Gatling-compatible test runner',
-    'SLO-aware latency reports',
-    'Regression baselines per endpoint',
-    'CI checks and PR annotations',
-    'Synthetic traffic for staging',;
-  ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const features = [
     'k6/Gatling-compatible test runner'
@@ -160,14 +144,7 @@ export default function ApiPerformanceTestingPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
-=======
 
-}
-=======
-import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -295,8 +272,4 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

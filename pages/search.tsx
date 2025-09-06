@@ -1,67 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 import React, { useState } from 'react';
-=======
+
 import React, { useState, useEffect } from 'react',
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 import {
-<<<<<<< HEAD
-  Search
-  Filter
-  ArrowRight
-  Clock
-  Star
-  FileText
-  Code
-  Database
-  Cloud
-  Shield
-  Brain
-  Users
-  Settings
-  Globe
-  CheckCircle
-  X
-  ChevronDown
-  ChevronUp
-=======
-  Search,
-  Filter,
-  ArrowRight,
-  Clock,
-  Star,
-  FileText,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Brain,
-  Users,
-  Settings,
-  Globe,
-  CheckCircle,
-  X,
-  ChevronDown,
-  ChevronUp;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';
 const searchResults = [
   {
@@ -143,74 +92,15 @@ const filters = [
   { name: 'Recent', count: 4 }
   { name: 'Popular', count: 2 }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function SearchPage() {
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
+
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  ExternalLink,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Lightbulb,
-  Flame,
-  Zap as ZapIcon,
-  X,
-  Sliders,
-  SortAsc,
-  SortDesc,;
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
 export default function SearchPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
 export default function SearchPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -222,13 +112,7 @@ export default function SearchPage() {;
     const matchesFilter = selectedFilter === 'All' |result.type === selectedFilter;
     return matchesQuery && matchesCategory && matchesFilter;
   });
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -556,18 +440,14 @@ export default function SearchPage(req, res) {
     }),
     setSortBy('relevance')
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return (
     <Layout>
       <Head>
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -586,61 +466,7 @@ export default function SearchPage(req, res) {
               </p>
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-=======
-      <SmartHeader />
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
-              Search Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Find the perfect AI and technology solutions for your business needs.
-              Search across our comprehensive service catalog with advanced filtering options.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-      {/* Search Interface */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-            {/* Search Bar */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
-              <div className="flex-1 max-w-2xl">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
@@ -652,71 +478,12 @@ export default function SearchPage(req, res) {
                   />
                 </div>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {/* Filters Section */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-              <div className="flex flex-wrap gap-4">
-<<<<<<< HEAD
-=======
-=======
-              {/* View Mode Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div className="flex items-center gap-2">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
-<<<<<<< HEAD
-                  <Filter className="w-4 h-4 mr-2" />
-                  Filters
-=======
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`p-2 rounded-lg transition-all duration-300 ${;
-                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
-            {/* Filters and Sort */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-              <div className="flex items-center gap-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
                 <button
                   onClick={() => setShowFilters(!showFilters)  } catch (error) {
     console.error("Error:", error);
@@ -727,29 +494,7 @@ export default function SearchPage(req, res) {
                 >
                   <Sliders className="w-4 h-4" />
                   Filters
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  {showFilters ? <ChevronUp className="w-4 h-4 ml-2" /> : <ChevronDown className="w-4 h-4 ml-2" />}
-                </button>
-                {categories.map((category) => (
-                  <button
-                    key={category.name}
-                    onClick={() => setSelectedCategory(category.name)}
-                    className={`px-4 py-2 rounded-lg transition-colors ${
-                      selectedCategory === category.name
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
 
-                  >
-                    {term}
-                  </button>
-                ))}
-              </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="text-sm text-gray-600">
                 {filteredResults.length} results found
               </div>
@@ -760,80 +505,7 @@ export default function SearchPage(req, res) {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-=======
-=======
-                  {Object.values(filters).some(f => f !== 'all') && (
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </button>;
-                <select;
-                  value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                >
-                  <option value="relevance">Sort by Relevance</option>
-                  <option value="price-low">Sort by Price: Low to High</option>
-                  <option value="price-high">Sort by Price: High to Low</option>
-                  <option value="name">Sort by Name</option>
-                  <option value="status">Sort by Status</option>
-                </select>
-              </div>
-              {Object.values(filters).some(f => f !== 'all') && (
-                <button
-                  onClick={clearFilters  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <X className="w-4 h-4" />
-                  Clear Filters
-                </button>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </div>;
-            {/* Expanded Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            {showFilters && (;
-              <motion.div;
-                initial={{ opacity: 0, height: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                animate={{ opacity: 1, height: 'auto' }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                exit={{ opacity: 0, height: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="mt-6 pt-6 border-t border-white/20"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
@@ -846,28 +518,16 @@ export default function SearchPage(req, res) {
                           : 'bg-white text-gray-700 hover:bg-gray-100'
                       }`}
                     >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       {filter.name} ({filter.count})
                     </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                   ))}
                 </div>
-=======
-                  ))}                </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-                  ))}
-                </div>
->>>>>>> origin/automation-improvements-final
-=======
+
 ))}
                 </div>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
               </motion.div>
             )}
           </div>
@@ -884,262 +544,7 @@ export default function SearchPage(req, res) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-=======
-                      {categories.map(category => (
-                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
-                          {category.icon} {category.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </option>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </select>;
-                  </div>;
-                  {/* Status Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div>
-                    <label className="block text-white font-medium mb-2">Status</label>
-                    <select
-                      value={filters.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {statuses.map(status => (
-                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
-                          {status.icon} {status.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </option>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </select>;
-                  </div>;
-                  {/* Price Range Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div>
-                    <label className="block text-white font-medium mb-2">Price Range</label>
-                    <select
-                      value={filters.priceRange  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {priceRanges.map(range => (
-                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
-                          {range.icon} {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </option>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </select>;
-                  </div>;
-                  {/* Technology Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div>
-                    <label className="block text-white font-medium mb-2">Technology</label>
-                    <select
-                      value={filters.technology  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {technologies.map(tech => (
-                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
-                          {tech.icon} {tech.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </option>;
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </select>;
-                  </div>;
-                </div>;
-              </motion.div>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </div>;
-      </section>;
-      {/* Search Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Results Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </h2>
-            <p className="text-white/60">
-              {isSearching ? 'Searching...' : `${searchResults.length} services found`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </p>;
-          </div>;
-          {/* Loading State */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {isSearching && (
-            <div className="text-center py-20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-              <p className="text-white/60">Searching our services...</p>
-            </div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* No Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {!isSearching && searchTerm && searchResults.length === 0 && (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-              <p className="text-white/60 mb-6">
-                Try adjusting your search terms or filters
-              </p>
-              <button
-                onClick={clearFilters  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
-              >
-                Clear All Filters
-              </button>
-            </div>
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Search Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          {!isSearching && searchResults.length > 0 && (
-            <AnimatePresence mode="wait">
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-                {searchResults.map((service, index) => (
-                  <motion.div
-                    key={service.id  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className={`group relative ${;
-                      viewMode === 'grid';
-                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
-                        : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300';
-                    }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -1149,10 +554,7 @@ export default function SearchPage(req, res) {
                           <span className="mx-2 text-gray-300">•</span>
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                           <Link
                             href={result.url}
@@ -1178,31 +580,9 @@ export default function SearchPage(req, res) {
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                       </Link>
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                      </Link>
-<<<<<<< HEAD
-=======
-=======
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filters, setFilters] = useState({
-    category: 'all',
-    status: 'all',
-    priceRange: 'all',
-<<<<<<< HEAD
-    technology: 'all',
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
         </div>
       </section>
 
@@ -1344,36 +724,17 @@ export default function SearchPage(req, res) {
                           Get Quote
                         </a>
                       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
 </Link>
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-</Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
                     </div>
-=======
+
                       </Link>                    </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
             ) : (
               <motion.div
                 className="text-center py-16"
@@ -1448,107 +809,9 @@ export default function SearchPage(req, res) {
   );
 }  )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-=======
-)
-=======
-                        <div className="flex flex-col items-end gap-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                            service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                            'bg-blue-500/20 text-blue-300'
-                          }`}>
-                            {service.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
-                          </span>
-                          <span className="text-xs text-white/40">{service.technology}</span>
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      {/* Price */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      </div>
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
-                        <div className="space-y-2">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </div>
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </div>
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <a
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
-                        >
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </Link>
-                        <a
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
-                        >
-                          Get Quote
-                        </Link>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            </AnimatePresence>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Initial State - Show all services when no search */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
             </AnimatePresence>
           )}
 
@@ -1591,41 +854,9 @@ export default function SearchPage(req, res) {
       <SmartFooter />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  )
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
 )
 }
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-)
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

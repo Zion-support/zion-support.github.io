@@ -1,43 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GetStaticPaths, GetStaticProps  } from 'next';
-import { useState  } from 'react';
-import { readJson  } from '../../utils/fsDb';
-=======
-import {GetStaticPaths, GetStaticProps} from 'next';
-import {useState} from 'react';
-import {readJson} from '../../utils/fsDb';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { HelpArticle } from '../../utils/support';
 
 export const getStaticPaths: GetStaticPaths = async () => {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
-<<<<<<< HEAD
-    paths: articles.map(a => ({ params: { slug: a.slug } }))
-    fallback: false
-  }
-}
-export const getStaticProps: GetStaticProps = async ctx => {
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) |null;
-  return { props: { article } };}
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {
-=======
-    paths: articles.map(a => ({ params: { slug: a.slug } })),
-    fallback: false,
-  };
-};
 
-export const getStaticProps: GetStaticProps = async ctx => {;
-  const slug = ctx.params?.slug as string;
-  const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  const article = articles.find(a => a.slug === slug) || null;
-  return { props: { article } };};
-
-export default function HelpArticlePage({ article }: { article: HelpArticle }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -45,13 +12,7 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
-<<<<<<< HEAD
-    setVoted(helpful);
 
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -84,25 +45,13 @@ export default function HelpArticlePage(req, res) {
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
       body: JSON.stringify({ articleId: article.id, helpful })});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -116,22 +65,11 @@ export default function HelpArticlePage(req, res) {
         </div>
       </div>
     </article>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

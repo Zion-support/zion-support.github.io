@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,12 +10,6 @@ export default async function handler(
   function isAuthorized(req: NextApiRequest): boolean {
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
-<<<<<<< HEAD
-    return !superToken |token === superToken;
-=======
-    return !superToken || token === superToken;
-  }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   }
   export default async function handler(

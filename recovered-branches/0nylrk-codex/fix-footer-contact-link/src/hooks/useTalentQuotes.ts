@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
-=======
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-import {useAuth} from '@/hooks/useAuth';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -35,7 +24,7 @@ export const useTalentQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false
-=======
+
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -64,11 +53,7 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
@@ -77,23 +62,7 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false
     }
-<<<<<<< HEAD
-    return true
-  });
-  // Mark as viewed/responded mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
-=======
-    
-    return true
-  }),
 
-  // Mark as viewed/responded mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-      quoteRequestService.updateStatus(id, status),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     onSuccess: (_, variables) => {
       let message = "Status updated",
       if (variables.status === 'in_review') {
@@ -106,36 +75,7 @@ export const useTalentQuotes = () => {;
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
-    }
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update status: " + error.message
-        variant: "destructive"
-      })
-    }
-  });
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
-      quoteRequestService.toggleArchive(id, isArchived);
-=======
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error",
-        description: "Failed to update status: " + error.message,
-        variant: "destructive"
-      })
-    }
-  }),
 
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
-      quoteRequestService.toggleArchive(id, isArchived),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
@@ -144,12 +84,7 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -171,12 +106,7 @@ export const useTalentQuotes = () => {;
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
-<<<<<<< HEAD
-    toggleArchive: (id: string, isArchived: boolean) =>
-=======
-    toggleArchive: (id: string, isArchived: boolean) => 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
     },
     onError: (error: Error) => {
       toast({
@@ -248,11 +178,7 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

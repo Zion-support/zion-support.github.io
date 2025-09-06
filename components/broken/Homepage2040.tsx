@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-//Enhanced animation variants for better performance const containerVariants = {
-  hidden: {
-  opacity: 0
-}
-=======
-//Enhanced animation variants for better performance const containerVariants = {
-  hidden: {
-  opacity: 0 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import React from 'react';
 
 interface Homepage2040Props {
@@ -24,12 +13,9 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -112,12 +98,7 @@ const Homepage2040: React.FC = () => {
         delayChildren: 0.2
       }
     }
-<<<<<<< HEAD
-  }
-=======
-  };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -196,15 +177,7 @@ const Homepage2040: React.FC = () => {
       color: "from-purple-500 to-indigo-600"
     }
     {
-<<<<<<< HEAD
-      name: "Cybersecurity"
-      icon: Shield
-      count: allServices.filter(s => s.category.includes('Security') |s.category.includes('Cyber')).length
-=======
-      name: "Cybersecurity",
-      icon: Shield,
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       color: "from-green-500 to-emerald-600"
     }
   ];
@@ -220,11 +193,7 @@ const Homepage2040: React.FC = () => {
           {/* Enhanced Futuristic Background Elements */}
           <div className="absolute inset-0 pointer-events-none">
             {/* Animated geometric shapes */}
-<<<<<<< HEAD
-            <motion.div
-=======
-            <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               variants={floatingVariants}
               animate="float"
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg"
@@ -248,26 +217,14 @@ const Homepage2040: React.FC = () => {
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
                   style={{
-<<<<<<< HEAD
-                    left: `${Math.random() * 100}%`
-                    top: `${Math.random() * 100}%`
-=======
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     animationDelay: `${Math.random() * 3}s`;
                   }}
                   animate={{
                     scale: [0, 1, 0];
                     opacity: [0, 1, 0]}}
                   transition={{
-<<<<<<< HEAD
-                    duration: 3
-                    repeat: Infinity
-=======
-                    duration: 3,
-                    repeat: Infinity,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     delay: Math.random() * 3
                   }}
                 />
@@ -292,39 +249,23 @@ const Homepage2040: React.FC = () => {
                 <span>Innovation Leader 2040</span>
                 <Sparkles className="w-5 h-5 animate-pulse" aria-hidden="true" />
               </motion.div>
-<<<<<<< HEAD
-              <motion.h1
-=======
-              <motion.h1 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
-<<<<<<< HEAD
-              <motion.p
-=======
-              <motion.p 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {/* Enhanced CTA Section */}
-              <motion.div
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-              
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
               {/* Enhanced CTA Section */}
               <motion.div 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
               >
@@ -347,14 +288,7 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
-<<<<<<< HEAD
-=======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -411,14 +345,7 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -469,14 +396,7 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -544,18 +464,10 @@ const Homepage2040: React.FC = () => {
                           {service.price}
                         </span>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      {/* CTA Button */}
-                      <Link
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* CTA Button */}
                       <Link 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -565,14 +477,7 @@ const Homepage2040: React.FC = () => {
                     </motion.div>
                   ))}
                 </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* View All Services Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -593,14 +498,7 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -623,11 +521,7 @@ const Homepage2040: React.FC = () => {
               >
                 Join thousands of companies already leveraging our revolutionary technology solutions
               </motion.p>
-<<<<<<< HEAD
-              <motion.div
-=======
-              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >
@@ -668,7 +562,3 @@ const Homepage2040: React.FC = () => {
 }
 export default Homepage2040;
 
-<<<<<<< HEAD
-=======
-export default Homepage2040;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

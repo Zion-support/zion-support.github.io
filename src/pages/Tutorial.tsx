@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { TUTORIALS } from '@/data/tutorials'
-import { SEO } from '@/components/SEO'
-import { Button } from '@/components/ui/button'
-import { ArrowLeft } from 'lucide-react'
-<<<<<<< HEAD
-import ReactMarkdown from "react-markdown";
-import type { Tutorial as TutorialType } from "@/types/tutorial";
-=======
-import ReactMarkdown from 'react-markdown'
-import type { Tutorial as TutorialType } from '@/types/tutorial'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
+
 import Link from "next/link",
 import { useRouter } from "next/router",
 import { TUTORIALS } from "@/data/tutorials",
@@ -21,18 +8,7 @@ import { Button } from "@/components/ui/button",
 import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from "react-markdown",
 import type { Tutorial as TutorialType } from "@/types/tutorial",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-interface TutorialPageProps {
-  tutorial?: TutorialType
-export default function Tutorial({
-  tutorial: initialTutorial
-}: TutorialPageProps) {
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 interface TutorialPageProps {
   tutorial?: TutorialType
 export default function Tutorial({
@@ -41,7 +17,7 @@ export default function Tutorial({
   const router = useRouter();
   const slug = router.query.slug as string | undefined;
   const tutorial = initialTutorial || TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
@@ -77,25 +53,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             <ReactMarkdown>{tutorial.content}</ReactMarkdown>
           </div>
           {tutorial.author && (
-<<<<<<< HEAD
-            <p className='mt-8 text-white font-semibold'>
-              —{' '}
-              {typeof tutorial.author === 'string'
-                ? tutorial.author
-                : tutorial.author.name}
-            </p>
-          )}
-        </div>
-      </div>
-    </>
-  );
-};
-}
-<<<<<<< HEAD
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;
 import { useRouter } from "next/router",;
@@ -150,8 +108,4 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

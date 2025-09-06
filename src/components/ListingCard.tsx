@@ -1,79 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react'
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';interface ListingCardProps {
-<<<<<<< HEAD
-  id?: string
-  title: string
-  description: string
-  images?: string[]
-  category: string
-  tags?: string[]
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
-  className?: string
-  profileType?: 'service' | 'talent'
-=======
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import Image from "next/image",
-interface ListingCardProps {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  id?: string,
-  title: string,
-  description: string,
-  images?: string[],
-  category: string,
-  tags?: string[],
-  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
-  className?: string,
-  profileType?: 'service' | 'talent'
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-interface ListingCardProps {
-  id?: string
-  title: string
-  description: string
-  images?: string[]
-  category: string
-  tags?: string[]
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
-  className?: string
-  profileType?: 'service' | 'talent'
-export function ListingCard({
-  id
-  title
-  description
-  images
-  category
-  tags
-  author
-  className
-  profileType = 'service'
-}: ListingCardProps) {
-  // Generate a profile ID based on the listing data
-  // In a real app, this would be a proper ID from the database
-<<<<<<< HEAD
-  const profileId =
-    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
-      >
 
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import Image from "next/image",
-interface ListingCardProps {
   id?: string,
   title: string,
   description: string,
@@ -83,12 +14,7 @@ interface ListingCardProps {
   author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string,
   profileType?: 'service' | 'talent'
-=======
-  const profileId = null;
-    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1')
-      >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
@@ -129,28 +55,13 @@ export function ListingCard({;
         className
       )}
     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
-<<<<<<< HEAD
-            className='object-cover transition-transform duration-300 group-hover:scale-105'
-            loading='lazy'          />
-=======
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -159,56 +70,16 @@ export function ListingCard({;
             {category}
           </Badge>
         </div>
-<<<<<<< HEAD
-        <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
-          {title}
-        </h3>
-        <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
-        {tags && tags.length > 0 && (
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {tags.map((tag, i) => (
-              <Badge
-                key={i}
-                variant='outline'
-                className='border-zion-slate-dark text-zion-slate-light'
-              >                {tag}              <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
-=======
-        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-        <p className="text-zion-slate mb-4 flex-grow">{description}</p>
-        
-        {tags && tags.length > 0 && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
-              </Badge>
-=======
-              </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             ))}
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
-        
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -216,27 +87,7 @@ export function ListingCard({;
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
-<<<<<<< HEAD
-            <span className='text-sm text-zion-slate-light'>{author.name}</span>          </div>        {author && (
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
-            {author.avatarUrl ? (
-              <Image src={author.avatarUrl} alt={author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />
-            ) : (
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
-            )}
-            <span className="text-sm text-zion-slate-light">{author.name}</span>
-          </div>
-        )}
-      </div>
-    </Link>
-  );
-};"}) })"
-}
-<<<<<<< HEAD
-;"}) })"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -245,8 +96,4 @@ export function ListingCard({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

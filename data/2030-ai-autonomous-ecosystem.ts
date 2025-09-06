@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [ // AI Autonomous Business Management realImplementation: true;
 implementationDetails: 'Fully autonomous business management system with AI-powered decision making, strategic planning, and operational optimization.';
 launchDate: '2024-11-15';
@@ -50,20 +46,7 @@ reviews: 12
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
   // AI Autonomous Business Management
   {
-<<<<<<< HEAD
 
-    id: 'ai-autonomous-business-manager', name: 'AI Autonomous Business Manager'
-    tagline: 'Fully autonomous business operations and decision making'
-    price: '$12,999'
-    period: '/month'
-    description: 'Revolutionary AI system that autonomously manages entire business operations including strategy, operations, finance, marketing, and customer relationships without human intervention.',    features: [
-=======
-    id: 'ai-autonomous-business-manager', name: 'AI Autonomous Business Manager',
-    tagline: 'Fully autonomous business operations and decision making',
-    price: '$12,999',
-    period: '/month',
-    description: 'Revolutionary AI system that autonomously manages entire business operations including strategy, operations, finance, marketing, and customer relationships without human intervention.',    features: [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimization';
       'Market trend analysisCompetitive intelligence'
     ];
@@ -258,12 +241,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.9
 
     reviews: 12
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AIAutonomousEcosystem2030 {;
   id: string,;
@@ -568,10 +546,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     customers: 23,;
     rating: 4.9;
     reviews: 12;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

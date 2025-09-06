@@ -1,10 +1,5 @@
 import Link from "next/link";
-<<<<<<< HEAD
-export default function CommunityPage() {return (;
-=======
-export default function CommunityPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}

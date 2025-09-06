@@ -1,44 +1,26 @@
 
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-import { Star } from "lucide-react";
 
-=======
-import React from "react",
-import { Star } from "lucide-react",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
-=======
+
 import {Star} from "lucide-react";
-=======
+
 import React from "react",
 import { Star } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
-<<<<<<< HEAD
-    { value: "12M+", label: "Matches Made" };
-  ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    { value: "12M+", label: "Matches Made" }
-<<<<<<< HEAD
-  ];
-=======
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    { value: "12M+", label: "Matches Made" }
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -64,41 +46,7 @@ export const CommunityTrust: React.FC = () => {
               </div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
-<<<<<<< HEAD
-=======
-import React from "react",;
-import { Star } from "lucide-react",;
-export const CommunityTrust: React.FC = () => {;
-  // Stats display with social proof;
-  const stats = [;
-    { value: "4.8", label: "App Store Rating" },;
-    { value: "50K+", label: "Downloads" },;
-    { value: "96%", label: "User Satisfaction" },;
-    { value: "12M+", label: "Matches Made" }
-  ];
-  return (;
-    <section className="py-16 bg-zion-blue">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-12">;
-          <h2 className="text-3xl md:text-4xl font-bold text-white">;
-            Trusted by the <span className="text-zion-cyan">Tech Community</span>;
-          </h2>;
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-            Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work;
-          </p>;
-        </div>;
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">;
-          {stats.map((stat, index) => (;
-            <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
-              <div className="text-zion-slate-light">{stat.label}</div>;
-            </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           ))}
         </div>
         {/* Rating display */}
@@ -123,19 +71,4 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
 
-=======
-  )
-<<<<<<< HEAD
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-};
-=======
-},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

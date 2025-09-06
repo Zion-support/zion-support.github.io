@@ -3,13 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 import {
-<<<<<<< HEAD
-  getSessionFromReq
-  isInternalAgentRequest;
-=======
-  getSessionFromReq,;
-  isInternalAgentRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const session = getSessionFromReq(req);
@@ -30,7 +24,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     : { items: [], updatedAt: null }
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

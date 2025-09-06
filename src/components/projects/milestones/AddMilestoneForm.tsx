@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type MilestoneFormValues = z.infer<typeof formSchema>
 import React from 'react'
 import { useForm } from 'react-hook-form'
@@ -52,17 +48,7 @@ export function AddMilestoneForm({
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-<<<<<<< HEAD
-      title: ''
-      description: ''
-      amount: 0}})
-  const handleSubmit = (values: MilestoneFormValues) => {
-=======
-      title: '',;
-      description: '',;
-      amount: 0}});
-  const handleSubmit = (values: MilestoneFormValues) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -76,13 +62,7 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
-<<<<<<< HEAD
-        return
-      }
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -152,12 +132,11 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
         return;
       }
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -167,54 +146,18 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<< HEAD
-  }
-  const handleAddMilestone = (milestone: GeneratedMilestone,) => {
-=======
-  },
 
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     onSubmit({
       title: milestone.title
       description: milestone.description
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
-<<<<<<< HEAD
-      {projectScope && projectStartDate && (
-        <AIMilestoneGenerator
-          scope = {projectScope,}
-          startDate = {projectStartDate,}
-          endDate = {projectEndDate,}
-          projectType = {projectType,}
-          onAddMilestones = {handleAddMilestones,}
-          onAddMilestone = {handleAddMilestone,}
-        />
-<<<<<<< HEAD
-      )}
-=======
-=======
-=======
-  },
 
-  return (
-    <div className="space-y-6">
-      {/* AI Milestone Generator */}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -224,13 +167,9 @@ export function AddMilestoneForm({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
           <FormField
@@ -245,23 +184,7 @@ export function AddMilestoneForm({;
                 <FormMessage />
               </FormItem>
             )}
-<<<<<<< HEAD
-          />
-          <FormField
-            control = {form.control,}
-            name="description"
-            render={({ field }: { field: any },) => (
-=======
-          />;
-          <FormField;
-            control={form.control}
-            name="description"
-            render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -303,43 +226,7 @@ export function AddMilestoneForm({;
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
                         mode="single"
-<<<<<<< HEAD
-                        selected = {field.value,}
-                        onSelect = {field.onChange,}
-                        disabled = {(date,) => date < new Date(),}
-                        initialFocus
-                      />
-                    </PopoverContent>
-                  </Popover>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control = {form.control,}
-              name="amount"
-              render={({ field }: { field: any },) => (
-=======
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        disabled={(date) => date < new Date()}
-                        initialFocus;
-                      />;
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-            <FormField;
-              control={form.control}
-              name="amount"
-              render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
@@ -361,23 +248,7 @@ export function AddMilestoneForm({;
               <Button
                 type="button"
                 variant="outline"
-<<<<<<< HEAD
-                onClick = {onCancel,}
-                disabled = {isSubmitting,}
-              >
-                Cancel
-              </Button>
-=======
-                onClick={onCancel}
-                disabled={isSubmitting}
-              >;
-                Cancel;
-              </Button>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             )}
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
@@ -388,50 +259,4 @@ export function AddMilestoneForm({;
               ) : (
                 "Add Milestone"
               )}
-<<<<<<< HEAD
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-}//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {
-  projectScope
-}startDate= {
-  projectStartDate
-}endDate= {
-  projectEndDate
-}projectType= {
-  projectType
-}onAddMilestones= {
-  handleAddMilestones
-}onAddMilestone= {
-  handleAddMilestone
-}/>)
-}</FormControl> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) "
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) "
-}/> </div> <Button type="button" variant="outline" onClick={
-  onCancel
-}disabled= {
-  isSubmitting
-}> Cancel </Button>) "
-}<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone")
-}</Button> </div> </form> </Form> </div>)
-}'"}
-=======
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

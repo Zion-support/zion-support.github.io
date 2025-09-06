@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface MarketTrend {
-=======
-export interface MarketTrend {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   keyword: string;
   searchVolume: number;
@@ -16,12 +10,7 @@ export interface MarketTrend {;
 
   timestamp: Date
 }
-<<<<<<< HEAD
-export interface CompetitorAnalysis {
-=======
 
-export interface CompetitorAnalysis {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   competitorName: string;
   website: string;
@@ -37,12 +26,7 @@ export interface CompetitorAnalysis {;
 
   lastUpdated: Date
 }
-<<<<<<< HEAD
-export interface MarketSegment {
-=======
 
-export interface MarketSegment {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   size: number;
@@ -55,12 +39,7 @@ export interface MarketSegment {;
 
   solutions: string[]
 }
-<<<<<<< HEAD
-export interface MarketReport {
-=======
 
-export interface MarketReport {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   industry: string;
@@ -75,12 +54,7 @@ export interface MarketReport {;
 
   expiresAt: Date
 }
-<<<<<<< HEAD
-export interface MarketResearchRequest {
-=======
 
-export interface MarketResearchRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   industry: string;
   targetMarket: string;
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -90,12 +64,7 @@ export interface MarketResearchRequest {;
 
   customMetrics?: string[]
 }
-<<<<<<< HEAD
-export interface MarketResearchResponse {
-=======
 
-export interface MarketResearchResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -110,12 +79,7 @@ export interface MarketResearchResponse {;
 
   estimatedROI: number
 }
-<<<<<<< HEAD
-export class AIMarketResearchService {
-=======
 
-export class AIMarketResearchService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   private apiKey: string;
 
   private baseUrl: string
@@ -249,11 +213,6 @@ export class AIMarketResearchService {;
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
-=======
-<<<<<<< HEAD
-export interface MarketTrend {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -474,9 +433,6 @@ export class AIMarketResearchService {;
   }
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

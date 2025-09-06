@@ -1,22 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react'
-import FocusLock from 'react-focus-lock'
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-=======
-import React from 'react'
-import FocusLock from 'react-focus-lock'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,;
-  DialogTitle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -211,7 +193,7 @@ export function ContactPublisherModal({  isOpen,  isOpen
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown = {handleKeyDown,}          aria-modal="true"
-=======
+
 import React from 'react',;
 import FocusLock from 'react-focus-lock',;
 import {;
@@ -310,11 +292,7 @@ export function ContactPublisherModal({;
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
           onKeyDown={handleKeyDown}
           aria-modal="true"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -329,32 +307,7 @@ export function ContactPublisherModal({;
             <span className="block">Email:</span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
-<<<<<<< HEAD
-            </a>
-          </div>
-        )}
-        <Form {...form}>
-          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
-            <FormField
-              control = {form.control,}
-              name="subject"
-              render={({ field }: { field: any },) => (                <FormItem>
-=======
-            </Link>
-          </div>
-        )}
-        <Form {...form}>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
-            <FormField
-              control={form.control}
-              name="subject"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -366,24 +319,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-<<<<<<< HEAD
-            />
-            <FormField
-              control = {form.control,}
-              name="message"
-              render={({ field }: { field: any },) => (                <FormItem>
-=======
-            />;
-            <FormField;
-              control={form.control}
-              name="message"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -395,33 +331,7 @@ export function ContactPublisherModal({;
                   <FormMessage className="text-red-500" />
                 </FormItem>
               )}
-<<<<<<< HEAD
-            />
-            <Button
-              onClick = {handleSend,}
-              className="w-full"
-              disabled = {!form.formState.isValid |isSubmitting,}            >
-              <SendIcon className="mr-2" />
-              {isSubmitting ? 'Sending...' : 'Send Message'}
-            </Button>
-          </form>
-        </Form>
-        </DialogContent>
-      </FocusLock>
-    </Dialog>
-    <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-<<<<<<< HEAD
-    </>
-  ) </>
-  )
-}
-=======
-    </>;
-  ) </>;
-  );
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
             />;
             <Button;
               onClick={handleSend}
@@ -441,8 +351,4 @@ export function ContactPublisherModal({;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

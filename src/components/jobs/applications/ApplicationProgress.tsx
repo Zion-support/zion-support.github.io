@@ -1,24 +1,9 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ApplicationStatus } from "@/types/jobs"
-import { Progress } from "@/components/ui/progress"
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-=======
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface ApplicationProgressProps {
 
   status: ApplicationStatus
@@ -30,42 +15,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
   const getProgressValue = () => {
     switch (status) {
-<<<<<<< HEAD
-      case "new": return 20
-      case "viewed": return 40
-      case "shortlisted": return 60
-      case "interview": return 80
-      case "hired": return 100
-      case "rejected": return 100
-      default: return 0
-    }
-  }
-  const progressValue = getProgressValue()
-  return (
-    <div className={cn("w-full space-y-2", className)}>
-      <Progress value={progressValue} className="h-2" />
-=======
-      case "new": return 20,
-      case "viewed": return 40,
-      case "shortlisted": return 60,
-      case "interview": return 80,
-      case "hired": return 100,
-      case "rejected": return 100,
-      default: return 0
-    }
-  },
 
-  const progressValue = getProgressValue(),
-  
-  return (
-    <div className={cn("w-full space-y-2", className)}>
-      <Progress value={progressValue} className="h-2" />
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -93,43 +43,9 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 }
 function StatusIcon({ status, current }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is active, completed, or inactive
-<<<<<<< HEAD
-  const statusRank: Record<ApplicationStatus, number> = {
-    new: 1
-    viewed: 2
-    shortlisted: 3
-    interview: 4
-    hired: 5
-    rejected: 5}
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
-=======
-  const statusRank: Record<ApplicationStatus number> = {
-    new: 1,
-    viewed: 2,
-    shortlisted: 3,
-    interview: 4,
-    hired: 5,
-    rejected: 5},
 
-  const currentRank = statusRank[current],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const statusRank_ = statusRank[status]
-  const currentRank = statusRank[current]
-  const statusRank_ = statusRank[status]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const statusRank_ = statusRank[status],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />
@@ -137,21 +53,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     // This is the current step
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
-<<<<<<< HEAD
-    // This step is upcoming;
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
-  };
-};
-=======
-    // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { ApplicationStatus } from "@/types/jobs",;
 import { Progress } from "@/components/ui/progress",;
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
@@ -227,8 +129,4 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

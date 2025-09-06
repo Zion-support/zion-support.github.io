@@ -1,21 +1,5 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {useForm, type, UseFormReturn} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Mail} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { useForm, type UseFormReturn } from "react-hook-form",
@@ -23,60 +7,11 @@ import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
 import { Mail } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-=======
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage} from "@/components/ui/form",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
-<<<<<<< HEAD
-  email: z.string().email("Please enter a valid email")})
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-=======
-  email: z.string().email("Please enter a valid email")}),
 
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
-
-<<<<<<< HEAD
-export default function ForgotPassword() {;
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-=======
-export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth(),
-  const [submitted, setSubmitted] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema)
@@ -86,11 +21,6 @@ export default function ForgotPassword() {
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email)
     setSubmitted(true)
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <>
@@ -165,33 +95,7 @@ export default function ForgotPassword() {
                     </div>
                   </form>
                 </Form>
-<<<<<<< HEAD
-              )}
-            </div>
-          </div>
-        </div>
-        <div className="hidden lg: block relative w-0 flex-1">
-          <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
-            <div className="flex flex-col justify-center items-center h-full px-8">
-              <div className="max-w-md text-center">
-                <h3 className="text-3xl font-bold text-white mb-4">Account Recovery</h3>
-                <p className="text-lg text-white/80">
-                  We'll help you get back into your account so you can continue your journey in the Zion marketplace.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { useForm, type UseFormReturn } from "react-hook-form",;
@@ -264,8 +168,4 @@ export default function ForgotPassword() {;
                 <Form {...form}>;
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;
                     <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

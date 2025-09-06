@@ -1,9 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export async function getStaticProps() {
   try {;
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
@@ -13,15 +10,7 @@ export async function getStaticProps() {
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 export default function Proposals({
-<<<<<<< HEAD
-  data
-}: {
-  data: { updatedAt: string | null; proposals: any[] }
-=======
-  data,
-}: {;
-  data: { updatedAt: string | null; proposals: any[] };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }) {
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-4'>
@@ -61,10 +50,7 @@ export async function getStaticProps(){
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Proposals({ data }: { data: { updatedAt: string|null, proposals: any[] } }){
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-4">
@@ -80,26 +66,4 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         ))}
         {(!data.proposals |data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-);
-}
-=======
-  );
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </div>;
-);
-}
 
-}
-}
-=======
-    </div>
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

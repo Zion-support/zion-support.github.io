@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
@@ -35,11 +30,7 @@ export function ProjectOfferBanner() {
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
 
     return null
-<<<<<<< HEAD
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -88,25 +79,15 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
-<<<<<<< HEAD
-          <Card
-            key = {offer.id,}
-=======
-          <Card 
-            key={offer.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             className="border-2 border-primary bg-primary/5"
             onClick={() => handleViewOffer(offer.id)}
           >
@@ -122,14 +103,7 @@ export function ProjectOfferBanner() {;
                   </p>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
-              
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               <div className="flex items-center gap-2">
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
@@ -145,37 +119,4 @@ export function ProjectOfferBanner() {;
             </CardContent>
           </Card>
         ))}
-<<<<<<< HEAD
-    </div>
-  )
-}, [projects, isLoading])
-const handleDismiss = (projectId: string, e: React.MouseEvent) => {
-  e.stopPropagation ()
-setDismissed (prev => {
-  const updated = new Set (prev)
-updated.add (projectId)
-return updated
-})
-}
-const handleViewOffer = (projectId: string) => {
-  router.push (`/project/$ {
-  projectId
-}`)
-}
-if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
-  return null
-}return (<div className="mb-6 space-y-3" > {
-  pendingOffers offer.id "
-}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
-}</div>)
-}'"}
-=======
-    </div>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

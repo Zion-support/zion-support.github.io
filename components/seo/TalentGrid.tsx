@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -22,23 +19,12 @@ function matchesService(profile: TalentProfile, service?: string) {
     profile.skills.some((sk) => sk.toLowerCase().includes(s))
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-<<<<<<< HEAD
-        (p) => matchesRegion(p, region) && matchesService(p, service)
-      )
-    [region, service]
-=======
-        (p) => matchesRegion(p, region) && matchesService(p, service),
-      ),
-    [region, service],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   );
 
   if (items.length === 0) {
@@ -86,8 +72,4 @@ export default function TalentGrid({ region, service }: Props) {
       ))}
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

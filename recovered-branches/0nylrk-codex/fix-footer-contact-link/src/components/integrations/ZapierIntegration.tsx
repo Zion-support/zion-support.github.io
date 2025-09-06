@@ -1,62 +1,8 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardFooter
-  CardHeader
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-
-import { toast } from "sonner";
-import { Check, Copy, ExternalLink } from "lucide-react";
-export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard");
-  }
-
-=======
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-<<<<<<< HEAD
-  CardHeader,;
-=======
-  CardHeader,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export function ZapierIntegration() {;
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-    toast.success("API key copied to clipboard");
-  };
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
@@ -76,12 +22,7 @@ export function ZapierIntegration() {
     setTimeout(() => setCopied(false), 2000),
     toast.success("API key copied to clipboard")
   },
-  
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -96,14 +37,7 @@ export function ZapierIntegration() {
             <p className="text-sm text-muted-foreground mb-4">
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.
             </p>
-<<<<<<< HEAD
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
@@ -127,14 +61,7 @@ export function ZapierIntegration() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -167,14 +94,7 @@ export function ZapierIntegration() {
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -183,14 +103,7 @@ export function ZapierIntegration() {
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
-<<<<<<< HEAD
-=======
-          
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -199,14 +112,7 @@ export function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-<<<<<<< HEAD
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -214,14 +120,7 @@ export function ZapierIntegration() {
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-<<<<<<< HEAD
-=======
-            
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -233,13 +132,7 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
   )
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -360,11 +253,8 @@ export function ZapierIntegration() {;
         </CardContent>;
       </Card>;
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

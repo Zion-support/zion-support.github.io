@@ -1,112 +1,4 @@
-<<<<<<< HEAD
-import { ServiceVariant } from '../types/service-variants';
 
-
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-
-    website: string;
-  }
-
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number
-}
-export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
-  // 🔒 Next-Generation Cybersecurity Services
-  {
-
-    id: 'quantum-cybersecurity-platform'
-    name: 'Quantum Cybersecurity Platform'
-    tagline:
-      'Unhackable Security with Quantum Encryption & AI Threat Detection'
-    price: '$899'
-    period: '/month'
-    description:
-      'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.'
-    features: [
-      'Quantum encryption algorithms'
-      'AI-powered threat detection'
-      'Zero-trust architecture'
-      'Real-time threat response'
-      'Quantum key distribution'
-      'Advanced malware protection'
-      'Compliance automation'
-      'Security orchestration'
-    ]
-    popular: true
-    icon: '🔒'
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform'
-    marketPosition:
-      'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors'
-    trialDays: 30
-    setupTime: '8 hours'
-    category: 'Cybersecurity & Quantum Security'
-    realService: true
-    technology: [
-      'Quantum Computing'
-      'AI/ML'
-      'Zero Trust'
-      'Python'
-      'Quantum APIs'
-      'Cloud Security'
-    ]
-    integrations: [
-      'SIEM systems'
-      'Firewalls'
-      'Identity providers'
-      'Security tools'
-    ]
-    useCases: [
-      'Enterprise security'
-      'Government security'
-      'Financial security'
-      'Healthcare security'
-      'Defense security'
-    ]
-    roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.'
-    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne']
-    marketSize: '$200B cybersecurity market',    features: [
-<<<<<<< HEAD
-
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
-=======
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ];
     popular: true;
     icon: '🔒';
@@ -1115,7 +1007,6 @@ export default revolutionary2025ITServices;
 ];
 export default revolutionary2025ITServices;
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2025ITService {;
   id: string,;
@@ -1537,9 +1428,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [;
     reviews: 52;
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export default revolutionary2025ITServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

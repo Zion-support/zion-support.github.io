@@ -2,67 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Brain
-  Rocket
-  Dna
-  Globe
-  Shield
-  Wifi
-  Package
-  Bot
-  Car
-  Building2
-  DollarSign
-  Monitor
-  Users
-  Cpu
-  Zap
-  Atom
-  Database
-  Cloud
-  Lock
-  Code;
-} from 'lucide-react';
-import Link from 'next/link';import {
-=======
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Rocket,
-  Dna,
-  Globe,
-  Shield,
-  Wifi,
-  Package,
-  Bot,
-  Car,
-  Building2,
-  DollarSign,
-  Monitor,
-  Users,
-  Cpu,
-  Zap,
-  Atom,
-  Database,
-  Cloud,
-  Lock,;
-  Code,;
-} from 'lucide-react';
-import Link from 'next/link';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -320,10 +260,7 @@ import Link from 'next/link';
     },  ];      icon: null
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -344,14 +281,7 @@ import Link from 'next/link';
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex items-center'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -423,21 +353,10 @@ import Link from 'next/link';
                   >
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  </Link>
-                )}
-=======
 
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </Link>
                 )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -448,14 +367,7 @@ import Link from 'next/link';
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <div className='p-4'>
                           <div className='text-sm text-gray-400 mb-3'>
@@ -492,14 +404,7 @@ import Link from 'next/link';
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
@@ -509,14 +414,7 @@ import Link from 'next/link';
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -564,14 +462,7 @@ import Link from 'next/link';
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -635,29 +526,12 @@ import Link from 'next/link';
                       onClick={() => setIsOpen(false)}
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
-<<<<<<< HEAD
-                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-                    >
-                      {item.icon && <item.icon className="w-5 h-5" />}
-                      <span>{item.name}</span>
-=======
-                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
-                      <span>{item.name}</span>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Link>
                   )}
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-800/50'>
                 <div className='space-y-3 text-sm text-gray-400'>
@@ -715,24 +589,10 @@ import Link from 'next/link';
       </AnimatePresence>
     </nav>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedNavigation;  )
 }
 export default UltraAdvancedNavigation;
 
-<<<<<<< HEAD
-=======
 export default UltraAdvancedNavigation;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default UltraAdvancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+

@@ -1,43 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {Wallet} from "@/components/icons";
-import {toast} from "sonner";
-export function Web3Login() {;
-  const { loginWithWeb3 } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-import { Wallet } from "@/components/icons";
-import { toast } from "sonner";
-=======
-import { Wallet } from "@/components/icons",
-import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleWeb3Login = async () => {
     try {
-<<<<<<< HEAD
-      setIsLoading(true);
-=======
-      setIsLoading(true),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Check if wallet is available
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
@@ -53,11 +26,6 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Button
@@ -80,15 +48,7 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      )}
-    </Button>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -138,13 +98,10 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       )}
     </Button>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

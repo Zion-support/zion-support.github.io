@@ -1,12 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-import {
-  getTrustWeights,
-  setTrustWeights,;
-  getDefaultWeights,;
-} from '../../../utils/trust/weights';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   getTrustWeights
@@ -36,8 +28,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET, PUT');
 
   return res.status(405).json({ error: 'Method not allowed' })
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+

@@ -1,47 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react',
-=======
-import React, { useState, useMemo } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Atom
-  Sparkles
-  Target;
-=======
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Atom,
-  Sparkles,;
-  Target,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
@@ -199,21 +161,7 @@ export default function ServicesShowcase2026() {;
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
-<<<<<<< HEAD
-        {/* Navigation */}
-        <UltraAdvancedNavigation />
-=======
 
-        </Head>
-
-        {/* Navigation */}
-        <UltraAdvancedNavigation />
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -337,14 +285,7 @@ export default function ServicesShowcase2026() {;
                     ))}
                   </select>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -394,14 +335,7 @@ export default function ServicesShowcase2026() {;
                         </span>
                       )}
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -420,85 +354,12 @@ export default function ServicesShowcase2026() {;
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
-<<<<<<< HEAD
-                        <span className='text-gray-400 text-lg font-normal'>
-                          {service.period}
-                        </span>
-                      </div>
-                      <div className='flex items-center space-x-1'>
-                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
-                        <span className='text-white text-sm'>
-                          {service.rating}
-                        </span>
-                        <span className='text-gray-400 text-sm'>
-                          ({service.reviews})
-                        </span>                      </div>
-                    </div>
-                    {/* Description */}
-                    <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                      {service.description}
-                    </p>
-                    {/* Features */}                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-white text-sm">{service.rating}</span>
-                        <span className="text-gray-400 text-sm">({service.reviews})</span>
-                    </div>
-                    {/* Description */}
-                    <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                      {service.description}
-                    </p>
-                    {/* Features */}
-                    <div className='mb-4'>
-                      <h4 className='text-white font-semibold mb-2 text-sm'>
-                        Key Features:
-                      </h4>
-                      <ul className='space-y-1'>
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li
-                            key={idx}
-                            className='text-gray-400 text-xs flex items-center'
-                          >
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="text-gray-400 text-xs flex items-center">
-                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-=======
 
-                      {service.name}
-                    </h3>
-
-                    {/* Tagline */}
-
-                      {service.tagline}
-                    </p>
-
-                    {/* Price */}
-
-                      {service.description}
-                    </p>
-
-                    {/* Features */}
-
-                            {feature}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -511,23 +372,7 @@ export default function ServicesShowcase2026() {;
                       <span className="text-xs text-gray-500">
                       </span>
                     </div>
-<<<<<<< HEAD
-                    {/* CTA Button */}
-                    <a
-                      href={service.link}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
-=======
 
-                    {/* CTA Button */}
-                    <a
-                      href={service.link}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       Learn More
                     </a>
@@ -535,14 +380,7 @@ export default function ServicesShowcase2026() {;
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -556,42 +394,13 @@ export default function ServicesShowcase2026() {;
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search terms or filters
-<<<<<<< HEAD
-                </p>              </motion.div>                className="text-center py-16"
-              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search terms or filters</p>
-            )}
-          </div>
-        </section>
-=======
-                </p>              </motion.div>
 
-              </motion.div>
-
-            )}
-          </div>
-        </section>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -668,21 +477,14 @@ export default function ServicesShowcase2026() {;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 }
 
 }
 }
 }
 }
-=======
+
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }

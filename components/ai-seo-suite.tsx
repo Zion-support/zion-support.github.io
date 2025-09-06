@@ -1,75 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  Search
-  TrendingUp
-  Target
-  BarChart3
-  Globe
-  Zap
-  Users
-  CheckCircle
-  ArrowRight
-  Play
-  Star
-  Eye
-  Brain
-  Shield
-  Lock
-  Sparkles
-  ChartBar
-  Lightbulb
-  Rocket
-  Settings;
-} from 'lucide-react';
-export default function AISeosuitePage() {
-  const features = [
-    {
-<<<<<<< HEAD
-      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-=======
-  Search,
-  TrendingUp,
-  Target,
-  BarChart3,
-  Globe,
-  Zap,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Star,
-  Eye,
-  Brain,
-  Shield,
-  Lock,
-  Sparkles,
-  ChartBar,
-  Lightbulb,
-  Rocket,;
-  Settings,;
-} from 'lucide-react';
-export default function AISeosuitePage() {
-  const features = [
-<<<<<<< HEAD
-    {;
-      icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
-=======
-    {
-      icon: <Search className='w-8 h-8 text-white' />,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AISeosuitePage() {
   const features = [
     {
@@ -116,21 +49,7 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
-<<<<<<< HEAD
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
-      gradient: 'from-pink-400 to-rose-500'
-    }
-  ];
-=======
-        'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
-      color: 'bg-gradient-to-br from-pink-500 to-rose-600',
-      gradient: 'from-pink-400 to-rose-500',
-    },;
-  ];
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const seoTools = [
     {
       category: 'Keyword Research'
@@ -230,19 +149,13 @@ export default function AISeosuitePage() {
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
-=======
-<<<<<<< HEAD
-      icon: <Search className='w-8 h-8 text-white' />,
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function AISeosuitePage() {
   const features = [
     {
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const pricingPlans = [
     {
@@ -408,15 +321,6 @@ export default function AISeosuitePage() {
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
-<<<<<<< HEAD
-=======
-  ];
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -581,54 +485,14 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
-<<<<<<< HEAD
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to dominate search rankings and drive organic traffic
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-              >
-                <div className="relative">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
-                    {feature.icon}
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
-=======
-                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
 
-                  {feature.description}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -648,50 +512,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {seoTools.map((tool, index) => (
-              <Card
-                key={index}
-                className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'
-              >
-                <div className='flex items-start space-x-4'>
-                  <div className='flex-shrink-0'>{tool.icon}</div>
-                  <div className='flex-1'>
-                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300'>
-                      {tool.category}
-                    </h3>
-                    <div className='grid grid-cols-1 gap-2'>
-                      {tool.tools.map((toolName, toolIndex) => (
-                        <div
-                          key={toolIndex}
-                          className='flex items-center text-sm text-gray-300'
-                        >
-                          <CheckCircle className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {toolName}            {seoTools.map((tool, index) => (
-              <Card
-                key={index}
-                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">{tool.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {tool.category}
-                    </h3>
-                    <div className="grid grid-cols-1 gap-2">
-                      {tool.tools.map((toolName, toolIndex) => (
-                        <div key={toolIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {toolName}
-=======
 
-                          {toolName}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -702,14 +523,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -729,51 +543,12 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            {successMetrics.map((metric, index) => (
-              <Card
-                key={index}
-                className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'
-              >
-                <div className='text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
-                  {metric.value}
-                </div>
-                <h3 className='text-xl font-bold mb-2 text-white'>
-                  {metric.metric}
-                </h3>
-                <p className='text-gray-400 text-sm'>{metric.description}</p>              </Card>            {successMetrics.map((metric, index) => (
-              <Card
-                key={index}
-                className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="text-4xl font-bold mb-4 text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                  {metric.value}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
-                <p className="text-gray-400 text-sm">{metric.description}</p>
-              </Card>
-=======
 
-              </Card>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -793,56 +568,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {useCases.map((useCase, index) => (
-              <Card
-                key={index}
-                className='group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'
-              >
-                <div className='flex items-start space-x-4'>
-                  <div className='text-4xl'>{useCase.icon}</div>
-                  <div className='flex-1'>
-                    <h3 className='text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300'>
-                      {useCase.title}
-                    </h3>
-                    <p className='text-gray-400 mb-4 leading-relaxed'>
-                      {useCase.description}
-                    </p>
-                    <div className='grid grid-cols-2 gap-2'>
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div
-                          key={benefitIndex}
-                          className='flex items-center text-sm text-gray-300'
-                        >
-                          <TrendingUp className='w-4 h-4 text-blue-400 mr-2 flex-shrink-0' />                          {benefit}            {useCases.map((useCase, index) => (
-              <Card
-                key={index}
-                className="group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl">{useCase.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors duration-300">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4 leading-relaxed">
-                      {useCase.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {useCase.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {benefit}
-=======
 
-                          {benefit}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -853,14 +579,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -900,46 +619,9 @@ export default function AISeosuitePage() {
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {plan.name}
-                  </h3>
-                  <div className='text-4xl font-bold text-white mb-2'>
-                    {plan.price}
-                    <span className='text-lg text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -960,14 +642,7 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -987,66 +662,18 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
-            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className='text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300'
-              >
-                <div className='text-4xl mb-4 group-hover:scale-110 transition-transform duration-300'>
-                  {integration.icon}
-                </div>
-                <h3 className='font-semibold text-white mb-2'>
-                  {integration.name}
-                </h3>
-                <p className='text-sm text-gray-400'>
-                  {integration.description}
-                </p>              </Card>            {integrations.map((integration, index) => (
-              <Card
-                key={index}
-                className="text-center group border border-gray-700 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300"
-              >
-                <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {integration.icon}
-                </div>
-                <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
-                <p className="text-sm text-gray-400">{integration.description}</p>
-              </Card>
-=======
 
-              </Card>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1097,13 +724,7 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+
 }
 
 }
@@ -1111,8 +732,7 @@ export default function AISeosuitePage() {
 }
 }
 }
-=======
+
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }

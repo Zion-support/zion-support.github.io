@@ -1,22 +1,13 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import {Star} from "lucide-react";
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
-=======
+
 import React from "react",
 import { Star } from "lucide-react",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const testimonials = [
   {
     name: "Alex Johnson"
@@ -24,25 +15,7 @@ const testimonials = [
     text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!"
     rating: 5
     avatar: "/placeholder.svg"
-<<<<<<< HEAD
-  }
-  {
-    name: "Sarah Williams"
-    role: "Tech Recruiter"
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
-    rating: 5
-    avatar: "/placeholder.svg"
-  }
-=======
-  },
-  {
-    name: "Sarah Williams",
-    role: "Tech Recruiter",
-    text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.",
-    rating: 5,
-    avatar: "/placeholder.svg"
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   {
     name: "Michael Chen"
     role: "Full Stack Developer"
@@ -50,12 +23,7 @@ const testimonials = [
     rating: 4
     avatar: "/placeholder.svg"
   }
-<<<<<<< HEAD
-];
-=======
-],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const AppTestimonials: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -92,18 +60,7 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-}
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -170,7 +127,7 @@ export const AppTestimonials: React.FC = () => {;
         </div>;
       </div>;
     </section>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   );
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
