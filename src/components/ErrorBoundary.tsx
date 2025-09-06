@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
-=======
 import React, { Component, ReactNode, ErrorInfo } from 'react';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 interface Props {
   children: ReactNode;
@@ -15,11 +8,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   errorInfo?: ErrorInfo;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -32,14 +21,9 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-<<<<<<< HEAD
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-=======
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 
   render() {
@@ -57,23 +41,13 @@ class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
-=======
-    if (this.state.hasError) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </div>
         </div>
       );
     }
-<<<<<<< HEAD
 
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
-export default ErrorBoundary;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
