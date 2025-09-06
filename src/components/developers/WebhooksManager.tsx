@@ -175,7 +175,7 @@ export function WebhooksManager() {
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false),
-                  resetWebhookForm()
+                  resetWebhookForm();
                 }}>
                   Cancel
                 </Button>

@@ -137,7 +137,7 @@ export default function Contact() {
         title: 'Chat Error',
         description: 'There was an error communicating with our AI assistant. Please try again.',
         variant: 'destructive'}),
-      return Promise.resolve()
+      return Promise.resolve();
     };
   };
   const offices = [

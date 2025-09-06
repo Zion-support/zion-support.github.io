@@ -118,7 +118,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"})
+        variant: "destructive"});
     };
   },
   // Ensure all translations are available

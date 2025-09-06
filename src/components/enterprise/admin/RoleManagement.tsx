@@ -228,7 +228,7 @@ export function RoleManagement() {
                     aria-label="View billing"
                     checked={member.permissions.viewBilling}
                     onCheckedChange={(checked) =>
-                      handlePermissionChange(member.id, "viewBilling", checked)
+                      handlePermissionChange(member.id, "viewBilling", checked);
                     }
                   />
                 </TableCell>

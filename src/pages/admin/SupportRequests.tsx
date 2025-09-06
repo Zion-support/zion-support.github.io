@@ -119,7 +119,7 @@ export default function SupportRequests() {
     
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false
+      return false;
     }
     
     return true;
@@ -291,7 +291,7 @@ export default function SupportRequests() {
                               ? 'destructive' 
                               : request.priority === 'medium' 
                               ? 'default' 
-                              : 'outline'
+                              : 'outline';
                           }>
                             {request.priority}
                           </Badge>

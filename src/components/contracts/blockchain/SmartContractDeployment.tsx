@@ -35,7 +35,7 @@ export function SmartContractDeployment({
     try {
       await onDeploy(deploymentOptions)
     } catch (error) {
-      logErrorToProduction('Deployment error:', { data: error })
+      logErrorToProduction('Deployment error:', { data: error });
     };
   },
   const handleDownloadSolidity = () => {
@@ -122,8 +122,7 @@ export function SmartContractDeployment({
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions,
-                    useEscrow: checked
-                  })}
+                    useEscrow: checked, })}
                 />
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>
               </div>

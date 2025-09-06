@@ -217,7 +217,7 @@ export default function ForumPostPage() {
     if (!isAdminOrMod) return, setPost({ ...post, isLocked: !post.isLocked }),
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"});
   },
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),

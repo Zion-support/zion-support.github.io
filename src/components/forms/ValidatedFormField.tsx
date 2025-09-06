@@ -8,6 +8,8 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 interface ValidationRule {
   required?: boolean, minLength?: number, maxLength?: number, pattern?: RegExp, custom?: (value: any) => string | null
 }
@@ -23,8 +25,7 @@ interface ValidatedFormFieldProps {
 
 export function ValidatedFormField({
   name, label, type = 'text';
-  placeholder, description, validation = {};
-  options = [], form, className, disabled = false, showValidIcon = true, debounceMs = 300}: ValidatedFormFieldProps) {
+  placeholder, description, validation = {}, options = [], form, className, disabled = false, showValidIcon = true, debounceMs = 300}: ValidatedFormFieldProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
   const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
@@ -49,7 +50,7 @@ export function ValidatedFormField({
     }, debounceMs);
     setDebounceTimer(timer);
     return () => {
-      if (timer) clearTimeout(timer)
+      if (timer) clearTimeout(timer);
     };
   }, [fieldValue, isTouched, debounceMs]);
   const validateField = (value: any): string | null => {
@@ -72,7 +73,7 @@ export function ValidatedFormField({
     }
 
     if (validation.custom) {
-      return validation.custom(value)
+      return validation.custom(value);
     }
 
     return null;
@@ -85,7 +86,7 @@ export function ValidatedFormField({
         return <CheckCircle className="h-4 w-4 text-green-500" />;
       case 'invalid':
         return <AlertCircle className="h-4 w-4 text-red-500" />;
-      default: return null
+      default: return null;
     };
   },
   const getFieldClasses = () => {
@@ -95,7 +96,7 @@ export function ValidatedFormField({
         return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',
       case 'invalid':
         return 'border-red-500 focus: border-red-500 focus:ring-red-500/20',
-      default: return ''
+      default: return '';
     };
   },
   const renderField = () => {
@@ -223,7 +224,7 @@ export function ValidatedFormField({
           </FormItem>
         )}
       />
-    )
+    );
   }
 
   return (
@@ -284,7 +285,7 @@ export const commonValidations = {
       if (value && !validationPatterns.strongPassword.test(value)) {
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
       }
-      return null
+      return null;
     };
   };
   phone: {
@@ -293,6 +294,6 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
-      return null
+      return null;
     };
   }},

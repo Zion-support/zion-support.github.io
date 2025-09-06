@@ -43,7 +43,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     if (isPast(interviewDate)) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`
     } else {
-      return `Starts in ${formatDistanceToNow(interviewDate)}`
+      return `Starts in ${formatDistanceToNow(interviewDate)}`;
     };
   };
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
@@ -109,7 +109,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     if (isClient) {
       return interview.talent_name || 'Talent'
     } else {
-      return interview.client_name || 'Client'
+      return interview.client_name || 'Client';
     };
   };
   return (

@@ -18,7 +18,7 @@ export function Logo({ customLogo }: LogoProps) {
       <Link href="/" className="flex items-center">
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
       </Link>
-    )
+    );
   }
   
   return (

@@ -36,7 +36,7 @@ export default function EquipmentRecommendations() {
           </Button>
         </DialogContent>
       </Dialog>
-    )
+    );
   }
 
   return (

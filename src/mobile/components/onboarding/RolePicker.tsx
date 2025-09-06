@@ -49,7 +49,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-border hover:border-primary/40";
           }`}
           onClick={() => handleSelect('client')}
         >

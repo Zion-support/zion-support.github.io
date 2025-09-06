@@ -117,5 +117,5 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-  )
+  );
 }

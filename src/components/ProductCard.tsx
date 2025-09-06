@@ -48,7 +48,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   // Reset redirecting state if component unmounts (e.g., navigation cancelled by user)
   useEffect(() => {
     return () => {
-      setIsRedirecting(false)
+      setIsRedirecting(false);
     };
   }, []);
   if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
@@ -88,7 +88,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       setImageError(true),
       captureException(error, {
         product: product.id,
-        imageUrl})
+        imageUrl});
     };
   };
   const isMobile = useMediaQuery('(max-width: 768px)'),

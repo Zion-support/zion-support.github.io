@@ -73,7 +73,7 @@ const tsHelpers = {
         for (let p in s) if (Object.prototype.hasOwnProperty.call(s, p))
           t[p] = s[p]
       }
-      return t
+      return t;
     };
   }();
   __rest: function (s: any, e: string[]) {
@@ -101,7 +101,7 @@ const tsHelpers = {
       function rejected(value: any) { try { step(generator["throw"](value)) } catch (e) { reject(e) } }
       function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected) }
       step((generator = generator.apply(thisArg, _arguments || [])).next())
-    })
+    });
   };
 };
 // Inject TypeScript helpers into global scope
@@ -146,7 +146,7 @@ if (typeof window !== 'undefined') {
     
     // Call original error handler for other errors
     if (originalOnError) {
-      return originalOnError.call(this, message, source, lineno, colno, error)
+      return originalOnError.call(this, message, source, lineno, colno, error);
     }
     return false;
   };
@@ -184,7 +184,7 @@ if (typeof global !== 'undefined' && typeof window === 'undefined') {
     if (typeof (global as any)[helper] === 'undefined') {
       (global as any)[helper] = (tsHelpers as any)[helper]
     }
-  })
+  });
 }
 
 // Export a verification function for testing

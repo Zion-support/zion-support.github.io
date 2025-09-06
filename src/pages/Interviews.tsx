@@ -166,7 +166,7 @@ function InterviewsContent() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }
 
 export default function Interviews() {

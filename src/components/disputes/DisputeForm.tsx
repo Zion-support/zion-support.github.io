@@ -10,6 +10,8 @@ import { useDisputes } from "@/hooks/useDisputes";
 import { toast } from "sonner";
 import { FileText } from 'lucide-react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 
 const formSchema = z.object({
   reason_code: z.string()

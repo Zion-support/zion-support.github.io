@@ -81,7 +81,7 @@ export function ReviewsModerationTable({
     updateReviewStatus({ reviewId, status: "approved" })
   },
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
+    updateReviewStatus({ reviewId, status: "rejected" });
   },
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),

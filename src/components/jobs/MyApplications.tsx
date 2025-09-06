@@ -56,7 +56,7 @@ export function MyApplications() {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (

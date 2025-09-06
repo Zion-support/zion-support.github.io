@@ -82,7 +82,7 @@ export function DisputeDetail() {
         resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()})
     } else {
-      toast.error("Failed to resolve dispute")
+      toast.error("Failed to resolve dispute");
     };
   },
   const handleSendMessage = async () => {
@@ -107,7 +107,7 @@ export function DisputeDetail() {
         <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>
         <p>Loading dispute details...</p>
       </div>
-    )
+    );
   }
 
   if (!dispute) {
@@ -277,8 +277,7 @@ export function DisputeDetail() {
                         .filter(msg => !msg.is_admin_note)
                         .map((msg) => {
                           const isCurrentUser = user?.id === msg.user_id,
-                          return (
-                            <div
+                          return(<div
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
                             >
@@ -286,8 +285,7 @@ export function DisputeDetail() {
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
-                                    : 'bg-muted'
-                                } p-4 rounded-lg`}
+                                    : 'bg-muted', } p-4 rounded-lg`}
                               >
                                 <div className="flex items-center gap-2 mb-2">
                                   <Avatar className="h-6 w-6">

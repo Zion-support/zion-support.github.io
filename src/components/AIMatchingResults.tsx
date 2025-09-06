@@ -42,7 +42,7 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-    )
+    );
   }
   
   if (matches.length === 0) {
@@ -144,7 +144,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-                )
+                );
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">

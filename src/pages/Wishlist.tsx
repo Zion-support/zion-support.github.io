@@ -108,7 +108,7 @@ export default function WishlistPage() {
                   </p>
                 )}
               </div>
-            ) : null
+            ) : null;
           })}
         </div>
       )}

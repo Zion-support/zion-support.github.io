@@ -47,7 +47,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
-      router.push(notification.action_url), // Changed to router.push
+      router.push(notification.action_url), // Changed to router.push;
     };
   };
   return(<div

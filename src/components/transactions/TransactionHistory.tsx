@@ -132,12 +132,12 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown
           </Badge>
-        )
+        );
     };
   },
   const { formatPrice } = useCurrency();
   const formatCurrency = (amount: number) => {
-    return formatPrice(amount)
+    return formatPrice(amount);
   },
   if (error) {
     return (
@@ -313,7 +313,7 @@ export function TransactionHistory() {
                     )}
                   </CardFooter>
                 </Card>
-              )
+              );
             })}
           </div>
         ) : (

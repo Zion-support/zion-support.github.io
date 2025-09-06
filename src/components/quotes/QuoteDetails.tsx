@@ -22,7 +22,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     try {
       return format(new Date(dateString), 'PPP')
     } catch (e) {
-      return dateString
+      return dateString;
     };
   };
   return (

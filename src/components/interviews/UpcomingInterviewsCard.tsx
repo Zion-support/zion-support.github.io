@@ -63,7 +63,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   if (upcomingInterviews.length === 0) {
@@ -139,7 +139,7 @@ export function UpcomingInterviewsCard() {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
         

@@ -213,7 +213,7 @@ export default function Signup() {
       const timer = setTimeout(() => {
         router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
       }, 3000);
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     }
     return undefined;
   }, [emailVerificationRequired, formik.values.email, router]);
@@ -431,7 +431,7 @@ export default function Signup() {
                 className="w-full text-sm"
                 onClick={() => {
                   setEmailVerificationRequired(false),
-                  setSuccessMessage('')
+                  setSuccessMessage('');
                 }}
               >
                 Try Different Email

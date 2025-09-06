@@ -36,7 +36,7 @@ export function SafeImage({
       >
         <ImageIcon className="w-6 h-6" />
       </div>
-    )
+    );
   }
 
   return (

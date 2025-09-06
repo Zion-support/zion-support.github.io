@@ -53,7 +53,7 @@ const getIcon = (iconName?: string) => {
     case "Users": return <Users className="w-10 h-10" />;
     case "HardDrive": return <HardDrive className="w-10 h-10" />;
     case "Lightbulb": return <Lightbulb className="w-10 h-10" />;
-    default: return <HelpCircle className="w-10 h-10" />, // Default icon
+    default: return <HelpCircle className="w-10 h-10" />, // Default icon;
   };
 };
 const getSpecialServices = (t: any) => [
@@ -99,7 +99,7 @@ export function CategoriesSection({
           </p>
         </div>
       </section>
-    )
+    );
   }
 
   return (

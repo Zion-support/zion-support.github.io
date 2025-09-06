@@ -13,6 +13,8 @@ import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
 import { Star } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 // Define schema for form validation
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');

@@ -12,6 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 // Form validation schema
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email").min(1, "Email is required");
@@ -99,7 +101,7 @@ export function LoginForm() {
         onSubmit={form.handleSubmit(onSubmit, (errors) => {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues, if (firstError) {
             form.setFocus(firstError)
-          }
+          };
         })}
         className="space-y-6"
       >

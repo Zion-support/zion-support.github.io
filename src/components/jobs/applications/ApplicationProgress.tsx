@@ -12,7 +12,7 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   // Define the progress value based on status
   const getProgressValue = () => {
     switch (status) {
-      case "new": return 20, case "viewed": return 40, case "shortlisted": return 60, case "interview": return 80, case "hired": return 100, case "rejected": return 100, default: return 0
+      case "new": return 20, case "viewed": return 40, case "shortlisted": return 60, case "interview": return 80, case "hired": return 100, case "rejected": return 100, default: return 0;
     };
   },
   const progressValue = getProgressValue();
@@ -65,6 +65,6 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
     // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   };
 }

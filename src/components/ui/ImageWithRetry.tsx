@@ -15,8 +15,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
  */
 export function ImageWithRetry({
   src, alt = '';
-  fallbackSrc = '/images/image-placeholder.svg';
-  className, retryClassName, ...props
+  fallbackSrc = '/images/image-placeholder.svg', className, retryClassName, ...props
 }: ImageWithRetryProps) {
   const [currentSrc, setCurrentSrc] = useState(src);
   const [failed, setFailed] = useState(false);

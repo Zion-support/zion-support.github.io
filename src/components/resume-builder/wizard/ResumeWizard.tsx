@@ -90,7 +90,7 @@ export function ResumeWizard() {
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />
-    )
+    );
   }
   
   return (

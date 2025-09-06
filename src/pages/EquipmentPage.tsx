@@ -307,7 +307,7 @@ function EquipmentPageContent() {
           case 'rating':
             return (b.rating || 0) - (a.rating || 0);
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
         };
       }),
       // Slice for pagination
@@ -318,7 +318,7 @@ function EquipmentPageContent() {
       }
     } catch (error) {
       logErrorToProduction('Error in fetchEquipment:', { data: error }),
-      throw new Error('Failed to load equipment data. Please try again.')
+      throw new Error('Failed to load equipment data. Please try again.');
     };
   }, [sortBy, filterCategory, showRecommended, dataSeed]);
   const {
@@ -487,7 +487,7 @@ function EquipmentPageContent() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }
 
 // Main export with error boundary

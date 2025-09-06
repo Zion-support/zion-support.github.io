@@ -35,7 +35,7 @@ export function ApiLogs() {
     } else if (statusCode >= 500) {
       return <Badge className="bg-red-700">Server Error</Badge>
     } else {
-      return <Badge className="bg-blue-700">Other</Badge>
+      return <Badge className="bg-blue-700">Other</Badge>;
     };
   },
   // Calculate pagination info

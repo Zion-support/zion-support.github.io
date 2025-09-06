@@ -79,7 +79,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       }
     });
     return () => {
-      Object.values(timeouts).forEach(clearTimeout)
+      Object.values(timeouts).forEach(clearTimeout);
     };
   }, [watchedFields, touchedFields, trigger, errors]);
   const getFieldValidationIcon = (fieldName: string) => {
@@ -94,7 +94,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     if (state?.error) {
-      return <AlertCircle className="h-4 w-4 text-red-500" />
+      return <AlertCircle className="h-4 w-4 text-red-500" />;
     }
     
     return null;
@@ -112,7 +112,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     if (state?.error) {
-      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
+      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20';
     }
     
     return '';
@@ -130,7 +130,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     return {
       strength, label: labels[strength - 1] || '',
       color: colors[strength - 1] || 'bg-gray-300',
-      percentage: (strength / 5) * 100
+      percentage: (strength / 5) * 100;
     };
   },
   const passwordStrength = getPasswordStrength(watchedFields.password || '');
@@ -397,5 +397,5 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         )}
       </Button>
     </form>
-  )
+  );
 }

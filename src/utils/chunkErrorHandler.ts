@@ -105,7 +105,7 @@ class ChunkErrorHandler {
       case 2: return 'cache-clear-retry',
       case 3: return 'hard-refresh',
       default: return 'fatal-error'
-    }
+    };
   }
 
   private async clearCaches(): Promise<void> {
@@ -224,7 +224,7 @@ class ChunkErrorHandler {
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
-      this.reloadPage()
+      this.reloadPage();
     });
   }
 

@@ -16,6 +16,8 @@ import { CalendarIcon, Loader2 } from 'lucide-react'
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { Star, Calendar } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 // Define form schema
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
@@ -243,7 +245,7 @@ export function WorkExperienceItemForm({
                       options={{
                         enhancementType: "work-description",
                         content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
+                        context: `${watchRoleTitle} at ${watchCompanyName}`;
                       }}
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"

@@ -33,7 +33,7 @@ const getNotificationIcon = (type: NotificationType,
     case 'order_status':
       return <Package className={cn(className, 'text-orange-500')} />;
     default:
-      return <Bell className={cn(className, 'text-gray-500')} />
+      return <Bell className={cn(className, 'text-gray-500')} />;
   };
 };
 const getNotificationTypeBadge = (type: NotificationType) => {
@@ -57,7 +57,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'order_status':
       return <Badge className="bg-orange-500">Order</Badge>;
     default: return <Badge variant="outline">Notification</Badge>
-  }
+  };
 },
 const NotificationCard: React.FC<{
   notification: {

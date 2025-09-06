@@ -90,7 +90,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-  )
+  );
 }
 
 export default function ReviewsModeration() {

@@ -67,7 +67,7 @@ export function MobileResumeBuilder() {
         Save & Preview
       </Button>
     </div>
-  )
+  );
 }
 
 function BasicsStep() {

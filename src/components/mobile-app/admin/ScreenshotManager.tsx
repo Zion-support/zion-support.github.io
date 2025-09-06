@@ -58,7 +58,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         URL.revokeObjectURL(removed.url)
       }
       
-      return filtered
+      return filtered;
     });
   };
   const handleDragOver = (e: React.DragEvent) => {
@@ -114,7 +114,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
           }
         </div>
         

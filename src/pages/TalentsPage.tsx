@@ -256,14 +256,14 @@ export default function TalentsPage() {
         case 'verified':
           return (b.is_verified ? 1 : 0) - (a.is_verified ? 1 : 0);
         case 'newest':
-        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime()
+        default: return new Date(b.id || '').getTime() - new Date(a.id || '').getTime();
       };
     }),
     // Paginate results
     const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const items = filteredTalents.slice(startIndex, endIndex);
     return {
       items, hasMore: endIndex < filteredTalents.length || page < 12, // Allow up to 12 pages
-      total: filteredTalents.length
+      total: filteredTalents.length;
     };
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
   // Use infinite scroll hook
@@ -324,7 +324,7 @@ export default function TalentsPage() {
           <Button onClick={refresh}>Try Again</Button>
         </div>
       </div>
-    )
+    );
   }
 
   // Main render

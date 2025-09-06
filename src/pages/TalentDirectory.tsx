@@ -125,7 +125,7 @@ export default function TalentDirectory() {
           </Link>
         </div>
       </div>
-    )
+    );
   }
 
   if (error) {

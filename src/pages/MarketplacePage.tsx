@@ -180,7 +180,7 @@ function MarketplacePageContent() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0);
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
         };
       }),
       // Slice for pagination
@@ -191,7 +191,7 @@ function MarketplacePageContent() {
       }
     } catch (error) {
       logErrorToProduction('Error in fetchProducts:', { data: error }),
-      throw new Error('Failed to load marketplace data. Please try again.')
+      throw new Error('Failed to load marketplace data. Please try again.');
     };
   }, [sortBy, filterCategory, showRecommended]);
   const {
@@ -208,7 +208,7 @@ function MarketplacePageContent() {
   const marketStats = useMemo(() => {
     if (products.length === 0) return null, return {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length, averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length, totalProducts: products.length,
-      availableCount: products.filter(p => p.availability === "Available").length
+      availableCount: products.filter(p => p.availability === "Available").length;
     };
   }, [products]);
   const categories = useMemo(() => {
@@ -391,7 +391,7 @@ function MarketplacePageContent() {
       </AnimatePresence>
     </div>
     </>
-  )
+  );
 }
 
 // Main export

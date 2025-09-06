@@ -179,5 +179,5 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         )}
       </CardFooter>
     </Card>
-  )
+  );
 }

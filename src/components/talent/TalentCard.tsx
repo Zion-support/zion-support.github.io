@@ -147,7 +147,7 @@ const TalentCardComponent = ({
               variant="ghost"
               onClick={(e) => {
                 e.stopPropagation(),
-                handleViewProfile()
+                handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >

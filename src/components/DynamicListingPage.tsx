@@ -143,7 +143,7 @@ export function DynamicListingPage({
             new Date(a.createdAt).getTime()
           )
       }
-    })
+    });
   } catch (error) {
     captureException(error),
     logErrorToProduction('Listing filter error:', { data: error });
@@ -332,7 +332,7 @@ export function DynamicListingPage({
                       size="sm"
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating)
+                        setSelectedRating(rating);
                       }}
                       aria-pressed={selectedRating === rating}
                       className={`{

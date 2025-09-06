@@ -113,7 +113,7 @@ export function SupportChatbot() {
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
-    )
+    );
   }
 
   return (

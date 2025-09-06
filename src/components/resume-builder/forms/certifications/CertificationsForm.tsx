@@ -12,6 +12,8 @@ import { format } from 'date-fns';
 import { CertificationsList } from './CertificationsList';
 import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
@@ -123,7 +125,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                       credential_url: ''})
                   } else {
                     onBack()
-                  }
+                  };
                 }}
               >
                 {editingId ? 'Cancel' : 'Back'}

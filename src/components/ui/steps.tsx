@@ -18,8 +18,7 @@ export function Step({
       )}
     >
       <div
-        className={cn("shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium";
-          {
+        className={cn("shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium", {
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete", "bg-zion-blue border-zion-cyan text-white":
               status === "current", "bg-zion-purple border-zion-purple text-white":
@@ -65,7 +64,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete";
           if (index === currentStep) status = "current";
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status})
+            status});
         })}
       </ol>
       

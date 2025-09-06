@@ -103,7 +103,7 @@ export default function GlobalMapPage() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-              )
+              );
             })}
           </div>
           <div className="flex-1 space-y-6">

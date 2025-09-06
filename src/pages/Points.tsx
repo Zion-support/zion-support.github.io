@@ -148,7 +148,7 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    )
+    );
   }
 
   return (

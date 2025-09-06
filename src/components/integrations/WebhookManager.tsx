@@ -47,7 +47,7 @@ export function WebhookManager() {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
-    })
+    });
   },
   const handleCreateWebhook = async () => {
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {

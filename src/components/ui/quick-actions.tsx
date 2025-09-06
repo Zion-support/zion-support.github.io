@@ -176,7 +176,7 @@ export function QuickActions() {
           Quick Actions
         </Button>
       </div>
-    )
+    );
   }
 
   return (

@@ -91,7 +91,7 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const { whitepaper_data: whitepaper } = sharedData,

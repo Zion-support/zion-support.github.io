@@ -76,8 +76,7 @@ export default function ContentGenerator() {
           previewText: previewContent.previewText,
           body: previewContent.body,
           testMode: true,
-          testEmail
-        }, });
+          testEmail, }, });
       if (error) throw error, toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       logErrorToProduction('Error sending test newsletter:', { data: error }),
@@ -136,7 +135,7 @@ export default function ContentGenerator() {
                         contentType === 'blog' ? "e.g., Benefits of AI in Marketing" :
                         contentType === 'serviceDescription' ? "e.g., AI-Powered Chatbot Solutions" :
                         contentType === 'faq' ? "e.g., How does AI improve customer service?" :
-                        "e.g., May Platform Updates" // Newsletter or default
+                        "e.g., May Platform Updates" // Newsletter or default;
                       }
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       value={topic}

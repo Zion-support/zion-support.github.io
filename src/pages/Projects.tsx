@@ -57,7 +57,7 @@ function ProjectsContent() {
         )}
       </main>
     </>
-  )
+  );
 }
 
 export default function Projects() {

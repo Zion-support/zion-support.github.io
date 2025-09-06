@@ -98,7 +98,7 @@ function CategoryContent({
     if (isFollowed(categoryId)) {
       unfollow(categoryId)
     } else {
-      follow(categoryId)
+      follow(categoryId);
     };
   };
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
@@ -221,7 +221,7 @@ export default function ForumCategoryPage() {
   }
 
   if (!IconComponent) {
-    return <NotFound />
+    return <NotFound />;
   }
 
   return (

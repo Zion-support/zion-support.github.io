@@ -49,13 +49,11 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   }
 
   if (jobs.length === 0) {
-    return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">
+    return(<div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
           {filter 
             ? `No jobs with status "${filter}" found.` 
-            : "You haven't posted any jobs yet."
-          }
+            : "You haven't posted any jobs yet.", }
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
@@ -82,7 +80,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         <Card 
           key={job.id} 
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
-            onSelectJob ? "cursor-pointer" : ""
+            onSelectJob ? "cursor-pointer" : "";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >

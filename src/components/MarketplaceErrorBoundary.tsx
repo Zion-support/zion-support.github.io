@@ -61,7 +61,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 interface MarketplaceErrorBoundaryProps {

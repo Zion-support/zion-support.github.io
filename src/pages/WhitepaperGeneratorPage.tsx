@@ -441,7 +441,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 <Input type="text" value={shareableLink} readOnly className="flex-grow bg-white text-xs"/>
                 <Button variant="outline" size="sm" onClick={() => {
                     navigator.clipboard.writeText(shareableLink),
-                    toast.success("Link copied to clipboard!")
+                    toast.success("Link copied to clipboard!");
                 }}>Copy</Button>
               </div>
                {currentSharedWhitepaperIsPublic !== null && (

@@ -61,7 +61,7 @@ export function IntegrationCard({
         )}
       </CardFooter>
     </Card>
-  )
+  );
 }
 
 export function IntegrationCards() {

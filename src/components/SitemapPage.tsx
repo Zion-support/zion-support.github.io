@@ -138,7 +138,7 @@ export const SitemapPage: React.FC = () => {
                       {route.label}
                     </Link>
                   </li>
-                ))
+                ));
               }
             </ul>
           </div>

@@ -136,7 +136,7 @@ function ClientDashboardContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function ClientDashboard() {

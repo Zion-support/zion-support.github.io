@@ -322,5 +322,5 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

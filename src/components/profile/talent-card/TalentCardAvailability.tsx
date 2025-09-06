@@ -16,7 +16,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'bg-yellow-500/20 text-yellow-400';
       case 'project-based':
         return 'bg-blue-500/20 text-blue-400';
-      default: return 'bg-gray-500/20 text-gray-400'
+      default: return 'bg-gray-500/20 text-gray-400';
     };
   },
   // Format availability label
@@ -29,7 +29,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       case 'project-based':
         return 'Project';
       default: return status
-    }
+    };
   },
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>

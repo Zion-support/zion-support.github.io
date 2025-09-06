@@ -37,8 +37,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
     }
 
     onSubmit({
-      title, category, keyFeatures, targetAudience
-    });
+      title, category, keyFeatures, targetAudience, });
   };
   return (
     <div className="space-y-4">

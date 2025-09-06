@@ -68,7 +68,7 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
             <div 
               key={reward.id}
               className={`flex justify-between items-start ${
-                index !== rewards.length - 1 ? "border-b pb-3" : ""
+                index !== rewards.length - 1 ? "border-b pb-3" : "";
               }`}
             >
               <div>

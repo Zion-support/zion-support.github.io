@@ -130,7 +130,7 @@ const useNetworkStatus = () => {
     return () => {
       window.removeEventListener('online', updateOnlineStatus)
       window.removeEventListener('offline', updateOnlineStatus)
-    }
+    };
   }, [])
 
   return isOnline;
@@ -288,7 +288,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     )
   }
 
-  return null
+  return null;
 }
 
 // HOC for creating dynamic components easily

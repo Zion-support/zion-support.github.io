@@ -72,8 +72,7 @@ export function ApiDocumentation() {
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs?limit=10&category=development', {
   method: 'GET',
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  }, }),
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json', }, }),
 const data = await response.json();
 logInfo(data),`;
                 python: `import requests
@@ -830,7 +829,7 @@ function EndpointSection({
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang 
                       ? "bg-zinc-700 text-white" 
-                      : "text-zinc-400 hover:bg-zinc-800"
+                      : "text-zinc-400 hover:bg-zinc-800";
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >

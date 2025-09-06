@@ -60,7 +60,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     }
 
     return () => {
-      observerRef.current?.disconnect()
+      observerRef.current?.disconnect();
     };
   }, [lazy, priority, isInView]);
   // Start load time tracking
@@ -96,7 +96,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         })
       }),
       observer.observe({ entryTypes: ['resource'] }),
-      return () => observer.disconnect()
+      return () => observer.disconnect();
     }
     
     return () => {}, // Return empty cleanup function for the else case;
@@ -136,15 +136,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           clearInterval(interval);
           return prev
         }
-        return prev + Math.random() * 15
+        return prev + Math.random() * 15;
       });
     }, 100);
     return () => clearInterval(interval);
   }, [isLoading, showLoadingProgress]);
   // Generate placeholder based on type
   const generatePlaceholder = () => {
-    if (placeholder === 'none') return null, const placeholderClassName = cn('absolute inset-0 flex items-center justify-center';
-      placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse', placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50', placeholder === 'color' && 'bg-gray-200'
+    if (placeholder === 'none') return null, const placeholderClassName = cn('absolute inset-0 flex items-center justify-center', placeholder === 'shimmer' && 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse', placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50', placeholder === 'color' && 'bg-gray-200'
     );
     if (placeholder === 'color') {
       return (
@@ -152,7 +151,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           className={placeholderClassName}
           style={{ backgroundColor: placeholderColor }}
         />
-      )
+      );
     }
 
     return (
@@ -238,7 +237,7 @@ interface ImageGalleryProps {
   images: Array<{
     src: string,
     alt: string,
-    caption?: string
+    caption?: string;
   }>;
   columns?: number, aspectRatio?: string, className?: string, onImageClick?: (index: number) => void
 }
@@ -264,7 +263,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       <div 
         className={`grid gap-4`}
         style={{ 
-          gridTemplateColumns: `repeat(${columns}, 1fr)` 
+          gridTemplateColumns: `repeat(${columns}, 1fr)` ;
         }}
       >
         {images.map((image, index) => (

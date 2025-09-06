@@ -76,8 +76,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         } : null
       },
       // Create conversation with the job client
-      await createConversation(job.client_id, fullMessage;
-        'job', job.id, contextData
+      await createConversation(job.client_id, fullMessage, 'job', job.id, contextData
       );
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {

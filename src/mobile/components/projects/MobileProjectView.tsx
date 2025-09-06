@@ -146,7 +146,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   <Badge 
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
-                      milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+                      milestone.paymentStatus === "overdue" ? "destructive" : "outline";
                     }
                   >
                     {milestone.paymentStatus}

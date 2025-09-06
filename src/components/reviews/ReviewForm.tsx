@@ -7,6 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 import { Star } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 interface ReviewFormValues {
   rating?: number, review_text?: string, communication_rating?: number, quality_rating?: number, timeliness_rating?: number, would_work_again?: boolean, is_anonymous?: boolean
 }
@@ -80,7 +82,7 @@ export function ReviewForm({
                         className={`h-10 w-10 ${
                           star <= (hoveredStar || field.value || 0)
                             ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
+                            : "text-gray-300";
                         } transition-colors`}
                       />
                     </button>

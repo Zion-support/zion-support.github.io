@@ -59,7 +59,7 @@ export function InvoiceHistory() {
       case "overdue":
         return <Badge variant="destructive">Overdue</Badge>;
       default: return <Badge variant="outline">{status}</Badge>
-    }
+    };
   },
   return (
     <div className="space-y-6">

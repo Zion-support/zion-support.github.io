@@ -34,7 +34,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   }
 
   if (!suggestion) {
-    return null
+    return null;
   }
 
   const confidenceColor = {

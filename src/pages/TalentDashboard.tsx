@@ -190,7 +190,7 @@ function TalentDashboardContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function TalentDashboard() {

@@ -63,7 +63,7 @@ export function AIMilestoneGenerator({
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString
+      return dateString;
     };
   };
   return (
@@ -134,7 +134,7 @@ export function AIMilestoneGenerator({
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
+                        handleAddSingleMilestone(milestone);
                       }}
                       className="mr-2"
                     >

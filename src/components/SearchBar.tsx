@@ -60,7 +60,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         if (Array.isArray(data)) {
           setSuggestions(data.slice(0, 5))
         } else {
-          setSuggestions([])
+          setSuggestions([]);
         }
         setHighlightedIndex(-1);
       })

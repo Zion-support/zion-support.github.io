@@ -34,7 +34,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   }
 
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
-    return <NoJobsCard />
+    return <NoJobsCard />;
   }
   
   return (

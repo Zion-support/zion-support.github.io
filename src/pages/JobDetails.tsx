@@ -40,7 +40,7 @@ export default function JobDetails() {
     return `$${budget.min} - $${budget.max}`;
   };
   if (isLoading) {
-    return <JobDetailsSkeleton />
+    return <JobDetailsSkeleton />;
   }
 
   if (error || !job) {

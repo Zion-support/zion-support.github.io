@@ -74,8 +74,7 @@ export function PartnerLeaderboard() {
       default: return <span className="text-sm font-semibold">{rank}</span>
     }
   },
-  return (
-    <div className="space-y-6">
+  return(<div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -92,8 +91,7 @@ export function PartnerLeaderboard() {
                   key={entry.id} 
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' : 
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-                  }`}
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10', }`}
                 >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center h-8 w-8 rounded-full bg-zion-blue-light">

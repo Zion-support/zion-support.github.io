@@ -76,7 +76,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    )
+    );
   }
 
   return (

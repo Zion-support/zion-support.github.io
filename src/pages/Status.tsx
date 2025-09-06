@@ -78,7 +78,7 @@ export default function Status() {
         return <AlertCircle className="h-5 w-5 text-red-500" />;
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />;
-      default: return <AlertCircle className="h-5 w-5 text-gray-500" />
+      default: return <AlertCircle className="h-5 w-5 text-gray-500" />;
     };
   },
   const getStatusText = (status: ServiceStatus['status']) => {
@@ -91,7 +91,7 @@ export default function Status() {
         return 'Service Outage';
       case 'maintenance':
         return 'Scheduled Maintenance';
-      default: return 'Unknown'
+      default: return 'Unknown';
     };
   },
   const getStatusColor = (status: ServiceStatus['status']) => {
@@ -104,7 +104,7 @@ export default function Status() {
         return 'text-red-500';
       case 'maintenance':
         return 'text-blue-500';
-      default: return 'text-gray-500'
+      default: return 'text-gray-500';
     };
   },
   const formatUptime = (seconds: number) => {

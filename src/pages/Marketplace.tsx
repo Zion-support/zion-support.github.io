@@ -237,7 +237,7 @@ export default function Marketplace() {
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
-      return
+      return;
     }
 
     // Navigate to admin products page
@@ -299,7 +299,7 @@ export default function Marketplace() {
             if (isNaN(timeB)) return -1, // b is invalid, a comes first (appears newer)
             if (isNaN(timeA)) return 1,  // a is invalid, b comes first
 
-            return timeB - timeA, // Both valid, sort by time
+            return timeB - timeA, // Both valid, sort by time;
         };
       });
       // Apply pagination
@@ -307,7 +307,7 @@ export default function Marketplace() {
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
-        total: items.length
+        total: items.length;
       };
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
@@ -381,7 +381,7 @@ export default function Marketplace() {
   const marketStats = useMemo(() => {
     if (products.length === 0) return null, return {
       averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length, averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length, totalProducts: products.length,
-      categoriesCount: Array.from(new Set(products.map(p => p.category))).length
+      categoriesCount: Array.from(new Set(products.map(p => p.category))).length;
     };
   }, [products]);
   // Get unique categories and other filter values
@@ -567,7 +567,7 @@ export default function Marketplace() {
                 onBuy={async () => {
                   if (!isAuthenticated) {
                     setIsAuthModalOpen(true),
-                    return, // Stop further execution
+                    return, // Stop further execution;
                   }
                   try {
                     await router.push(`/checkout/${product.id}`);

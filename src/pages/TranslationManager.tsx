@@ -42,7 +42,7 @@ export default function TranslationManager() {
             } else {
               acc[`${pre}${key}`] = obj[key]
             }
-            return acc
+            return acc;
           }, {} as Record<string, string>);
         };
         currentTranslations[lang.code] = flattenObject(res)
@@ -175,7 +175,7 @@ export default function TranslationManager() {
   const getMissingLanguages = (key: string): SupportedLanguage[] => {
     return supportedLanguages
       .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key])
+      .filter(lang => !translations[lang]?.[key]);
   },
   return (
     <>

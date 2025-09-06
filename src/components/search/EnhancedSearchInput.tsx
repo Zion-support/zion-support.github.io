@@ -96,7 +96,7 @@ export function EnhancedSearchInput({
         if (Array.isArray(data)) {
           setFilteredSuggestions(data.slice(0, 8))
         } else {
-          setFilteredSuggestions([])
+          setFilteredSuggestions([]);
         }
         setHighlightedIndex(-1);
       })

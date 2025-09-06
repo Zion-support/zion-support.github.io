@@ -22,7 +22,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       const timer = setTimeout(() => {
         setIsVisible(true)
       }, delay);
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     }
     return undefined;
   }, [isMobile, delay]);

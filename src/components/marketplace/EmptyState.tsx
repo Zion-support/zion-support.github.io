@@ -102,7 +102,7 @@ export function ProductsEmptyState({
   onRetry,
   onAddProduct, isAuthenticated = false
 }: {
-  onRetry?: () => void, onAddProduct?: () => void, isAuthenticated?: boolean
+  onRetry?: () => void, onAddProduct?: () => void, isAuthenticated?: boolean;
 }) {
   const action = onAddProduct
     ? { 
@@ -166,7 +166,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       type="network"
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
     />
-  )
+  );
 }
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {

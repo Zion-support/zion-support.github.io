@@ -65,7 +65,7 @@ export function DeveloperPortal() {
         {activeTab === "logs" && <ApiLogs />}
       </div>
     </div>
-  )
+  );
 }
 
 export default function ProtectedDeveloperPortal() {

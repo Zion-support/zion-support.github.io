@@ -222,7 +222,7 @@ export default function ProfilePage() {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                hourly_rate: profileData?.hourly_rate || 0;
               }}
             />
             {/* Placeholder for other sidebar elements */}

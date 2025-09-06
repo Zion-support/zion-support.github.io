@@ -69,7 +69,7 @@ export const ForumCategories = () => {
               </CardContent>
             </Card>
           </Link>
-        )
+        );
       })}
     </div>
   );

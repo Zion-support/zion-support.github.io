@@ -51,7 +51,7 @@ export default function ListingDetail() {
     if (user) {
       setIsChatOpen(true)
     } else {
-      setIsContactDialogOpen(true)
+      setIsContactDialogOpen(true);
     };
   };
   return (
@@ -291,5 +291,5 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

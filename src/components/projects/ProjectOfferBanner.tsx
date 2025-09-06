@@ -24,14 +24,14 @@ export function ProjectOfferBanner() {
     setDismissed(prev => {
       const updated = new Set(prev);
       updated.add(projectId);
-      return updated
+      return updated;
     });
   };
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`)
   },
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-    return null
+    return null;
   }
   
   return (

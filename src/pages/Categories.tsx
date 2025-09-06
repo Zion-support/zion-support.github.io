@@ -24,7 +24,7 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {
     return Array.isArray(data) && data.length > 0 ? data : CATEGORIES as CategoryType[]
   } catch (err) {
     logErrorToProduction('Categories API fetch failed:', { data: err }),
-    return CATEGORIES as CategoryType[]
+    return CATEGORIES as CategoryType[];
   };
 };
 export interface CategoriesProps {
@@ -83,7 +83,7 @@ export default function Categories({ categories: initialCategories = [] }: Categ
                     description={`Explore ${category.name.toLowerCase()} in our marketplace`}
                     icon={<Folder className="w-6 h-6" />}
                   />
-                )
+                );
               })}
             </div>
           )}

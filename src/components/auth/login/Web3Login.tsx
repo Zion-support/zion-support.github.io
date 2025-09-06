@@ -30,7 +30,7 @@ export function Web3Login() {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction('Web3 login error:', { data: error })
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     };
   },
   const buttonDisabled = isLoading || !isWalletSystemAvailable, const buttonTitle = !isWalletSystemAvailable

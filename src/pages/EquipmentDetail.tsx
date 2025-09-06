@@ -59,7 +59,7 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
-    returnPolicy: '30-day return policy'
+    returnPolicy: '30-day return policy';
   };
 }
 
@@ -121,7 +121,7 @@ export default function EquipmentDetail() {
               return
             }
           } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError })
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
           };
         }
 
@@ -330,7 +330,7 @@ export default function EquipmentDetail() {
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!) 
                               ? 'text-yellow-400 fill-current' 
-                              : 'text-zion-slate-light'
+                              : 'text-zion-slate-light';
                           }`}
                         />
                       ))}

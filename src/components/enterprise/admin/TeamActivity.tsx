@@ -65,7 +65,7 @@ export function TeamActivity() {
     } else if (diffDays < 7) {
       return `${diffDays} days ago`
     } else {
-      return date.toLocaleDateString()
+      return date.toLocaleDateString();
     };
   };
   const getCategoryBadge = (category: string) => {

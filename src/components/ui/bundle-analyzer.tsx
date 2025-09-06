@@ -108,7 +108,7 @@ export function BundleAnalyzer() {
           Bundle Analyzer
         </Button>
       </div>
-    )
+    );
   }
 
   return (

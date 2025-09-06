@@ -58,7 +58,7 @@ export default function TalentProfilePage() {
     }
   }, [error]);
   if (isLoading) {
-    return <ProfileLoadingState />
+    return <ProfileLoadingState />;
   }
 
   if (error || !profile) {

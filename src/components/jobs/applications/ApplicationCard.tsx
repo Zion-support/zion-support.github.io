@@ -47,7 +47,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
         );
       default: return null
-    }
+    };
   },
   return (
     <Card className="overflow-hidden">

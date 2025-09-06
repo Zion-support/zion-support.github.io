@@ -10,8 +10,7 @@ interface OptimizedImageProps {
 }
 
 export function OptimizedImage({
-  src, alt, width, height, className, priority = false, placeholder = 'empty';
-  blurDataURL, quality = 75, sizes, onLoad, onError, fallbackSrc, lazy = true, ...props
+  src, alt, width, height, className, priority = false, placeholder = 'empty', blurDataURL, quality = 75, sizes, onLoad, onError, fallbackSrc, lazy = true, ...props
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -40,7 +39,7 @@ export function OptimizedImage({
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's already optimized or external, return as-is
     if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
-      return originalSrc
+      return originalSrc;
     }
     
     // For internal images, Next.js will handle optimization
@@ -147,7 +146,7 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
         alt={alt}
         {...(otherProps as any)}
       />
-    )
+    );
   };
 }
 

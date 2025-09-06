@@ -117,7 +117,7 @@ export function ChatBotPanel() {
       return {
         success: false,
         message: "I'm experiencing technical difficulties. Please try again later."
-      }
+      };
     };
   },
   const suggestEscalation = () => {

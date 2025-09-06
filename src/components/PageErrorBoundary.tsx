@@ -125,7 +125,7 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
 
 interface PageErrorBoundaryProps {
   children: React.ReactNode,
-  pageName?: string, fallback?: React.ComponentType<FallbackProps>
+  pageName?: string, fallback?: React.ComponentType<FallbackProps>;
 }
 
 export default function PageErrorBoundary({ 
@@ -148,7 +148,7 @@ export default function PageErrorBoundary({
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`);
       }}
     >
       {children}

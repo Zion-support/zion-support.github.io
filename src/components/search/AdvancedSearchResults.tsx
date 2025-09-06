@@ -250,7 +250,7 @@ const FilterSidebar: React.FC<{
         </Select>
       </div>
     </div>
-  )
+  );
 },
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
@@ -559,7 +559,7 @@ export const AdvancedSearchResults: React.FC = () => {
                 {/* Results Grid/List */}
                 <div className={viewMode === 'grid' 
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
-                  : "space-y-4 mb-6"
+                  : "space-y-4 mb-6";
                 }>
                   {results.map((result) => (
                     <SearchResultCard

@@ -98,7 +98,7 @@ export function PerformanceDashboard() {
             }
             if (entry.entryType === 'first-input') {
               vitals.fid = (entry as any).processingStart - entry.startTime
-            }
+            };
           });
         });
         observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
@@ -123,7 +123,7 @@ export function PerformanceDashboard() {
       size: entry.transferSize || entry.encodedBodySize || 0,
       loadTime: entry.responseEnd - entry.requestStart,
       cached: entry.transferSize === 0,
-      type: categorizeChunk(entry.name)
+      type: categorizeChunk(entry.name);
     })).sort((a, b) => b.size - a.size);
   };
   const categorizeChunk = (filename: string): string => {

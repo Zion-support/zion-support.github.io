@@ -22,7 +22,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     try {
       return format(new Date(dateString), 'PP')
     } catch (e) {
-      return dateString
+      return dateString;
     };
   };
   return (

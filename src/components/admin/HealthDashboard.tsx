@@ -68,7 +68,7 @@ const HealthDashboard: React.FC = () => {
     fetchHealthData();
     if (autoRefresh) {
       const interval = setInterval(fetchHealthData, 30000), // Refresh every 30 seconds
-      return () => clearInterval(interval)
+      return () => clearInterval(interval);
     }
     
     return undefined;
@@ -82,7 +82,7 @@ const HealthDashboard: React.FC = () => {
       case 'critical':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default: return <Activity className="w-5 h-5 text-gray-500" />
-    }
+    };
   },
   const getStatusBadge = (status: string) => {
     const variant = status === 'healthy' ? 'default' : 
@@ -122,7 +122,7 @@ const HealthDashboard: React.FC = () => {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   if (!healthData) return null,

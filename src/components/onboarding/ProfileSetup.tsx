@@ -7,6 +7,8 @@ import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 const profileSchema = z.object({
   displayName: z.string().min(2, "Full Name must be at least 2 characters");
   bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
@@ -102,7 +104,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     placeholder={`Tell us about your ${
                       userType === "serviceProvider" ? "services and expertise" :
                       userType === "talent" ? "skills and experience" :
-                      "business and needs"
+                      "business and needs";
                     }`}
                     className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple min-h-[120px]"
                     {...field}

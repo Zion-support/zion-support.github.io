@@ -139,7 +139,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
-    )
+    );
   }
   
   if (!project) {
@@ -612,7 +612,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function ProjectDetails() {

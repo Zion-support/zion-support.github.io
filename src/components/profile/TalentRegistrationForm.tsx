@@ -17,6 +17,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 // Define form schema
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Full Name must be at least 2 characters long");
@@ -135,8 +137,7 @@ export function TalentRegistrationForm() {
           categorizedSkills: {
             programming: ["JavaScript", "TypeScript", "React"];
             devops: ["Docker", "CI/CD", "AWS"];
-            platforms: ["Node.js", "Next.js", "Vercel"];
-            softSkills: ["Communication", "Problem Solving", "Team Leadership"], other: ["Project Management", "Technical Writing"]
+            platforms: ["Node.js", "Next.js", "Vercel"], softSkills: ["Communication", "Problem Solving", "Team Leadership"], other: ["Project Management", "Technical Writing"]
           }
         });
         toast({
@@ -208,7 +209,7 @@ export function TalentRegistrationForm() {
       })
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', { data: error })
-    }
+    };
   },
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {

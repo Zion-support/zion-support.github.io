@@ -14,8 +14,7 @@ interface AIEnhancementButtonProps {
 
 export function AIEnhancementButton({
   options, onEnhanced, buttonText = "Enhance with AI";
-  className, variant = "ghost";
-  size = "sm", contentLength = 10
+  className, variant = "ghost", size = "sm", contentLength = 10
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useAIContentEnhancer();
   const [showActions, setShowActions] = useState(false);
@@ -93,7 +92,7 @@ export function AIEnhancementButton({
           Cancel
         </Button>
       </div>
-    )
+    );
   }
   
   return (

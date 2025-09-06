@@ -61,7 +61,7 @@ export function CategoryListingPage({
       if (mounted) setIsLoading(false)
     }, 300);
     return () => {
-      mounted = false, clearTimeout(timeout)
+      mounted = false, clearTimeout(timeout);
     };
   }, [searchQuery, selectedSort, selectedFilter]);
   // Process listings based on filters and search
@@ -200,7 +200,7 @@ export function CategoryListingPage({
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
+                    setSelectedFilter(filterOptions[0]?.value || 'all');
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                 >

@@ -27,7 +27,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
-                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
                   }`}
                 />
               ))}

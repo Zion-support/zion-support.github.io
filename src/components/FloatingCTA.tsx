@@ -19,7 +19,7 @@ export function FloatingCTA() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isClosed]);
   const handleClose = () => {

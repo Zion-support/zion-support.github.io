@@ -88,7 +88,7 @@ export function MobileJobPost() {
       
       <BottomNavigation />
     </div>
-  )
+  );
 }
 
 function DetailsStep() {
@@ -322,7 +322,7 @@ function BudgetStep() {
         />
       </div>
     </div>
-  )
+  );
 }
 
 function PreviewStep() {

@@ -37,7 +37,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible" 
                   ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
               onClick={() => updateFormData({ timeline: "flexible" })}
             >

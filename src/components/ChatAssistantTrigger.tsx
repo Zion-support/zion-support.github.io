@@ -23,7 +23,7 @@ export function ChatAssistantTrigger() {
       return Promise.resolve()
     } catch (error) {
       logErrorToProduction('Error in AI chat:', { data: error }),
-      return Promise.resolve()
+      return Promise.resolve();
     };
   };
   return (
@@ -46,7 +46,7 @@ export function ChatAssistantTrigger() {
             id: 'ai-assistant',
             name: 'AI Assistant',
             avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Virtual Assistant'
+            role: 'Virtual Assistant';
           }}
           onSendMessage={handleSendMessage}
         />

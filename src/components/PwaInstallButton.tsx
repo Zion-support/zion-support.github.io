@@ -20,7 +20,7 @@ export const PwaInstallButton: React.FC = () => {
     return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
   if (!promptEvent || window.matchMedia('(display-mode: standalone)').matches) {
-    return null
+    return null;
   }
 
   const onClick = async () => {

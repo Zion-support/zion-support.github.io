@@ -11,6 +11,8 @@ import { ProjectDetailsField } from "./ProjectDetailsField";
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,

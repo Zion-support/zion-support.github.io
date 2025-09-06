@@ -131,7 +131,7 @@ export default function CartPage() {
           </motion.div>
         </div>
       </div>
-    )
+    );
   }
 
   return (

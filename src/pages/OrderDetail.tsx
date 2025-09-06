@@ -59,7 +59,7 @@ export default function OrderDetailPage() {
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
       </div>
-    )
+    );
   }
 
   return (

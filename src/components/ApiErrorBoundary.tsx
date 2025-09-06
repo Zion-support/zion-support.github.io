@@ -189,7 +189,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       )
     }
 
-    return this.props.children
+    return this.props.children;
   };
 }
 

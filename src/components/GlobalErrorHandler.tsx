@@ -123,7 +123,7 @@ function getErrorMessage(error: Error): string {
   }
 
   if (message.includes('server') || message.includes('500')) {
-    return "Our servers are experiencing issues. Please try again in a moment."
+    return "Our servers are experiencing issues. Please try again in a moment.";
   }
 
   // Fallback for unknown errors
@@ -166,7 +166,7 @@ export function useErrorHandler() {
         handleApiError(error, options?.retryAction)
       }
       
-      return null
+      return null;
     };
   }, [reportError, handleApiError]);
   return {

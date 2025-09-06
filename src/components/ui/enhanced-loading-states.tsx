@@ -98,7 +98,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
         ))}
       </div>
     </div>
-  )
+  );
 },
 // Enhanced skeleton loader
 interface SkeletonProps {
@@ -131,8 +131,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         {Array.from({ length: lines }).map((_, i) => (
           <div
             key={i}
-            className={cn(baseClasses, variantClasses.text, animationClasses[animation];
-              i === lines - 1 ? 'w-3/4' : 'w-full', className
+            className={cn(baseClasses, variantClasses.text, animationClasses[animation], i === lines - 1 ? 'w-3/4' : 'w-full', className
             )}
           />
         ))}
@@ -142,8 +141,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 
   return(<div
       className={cn(
-        baseClasses, variantClasses[variant];
-        animationClasses[animation], className
+        baseClasses, variantClasses[variant], animationClasses[animation], className
       )}
     />
   )
@@ -214,7 +212,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           title: title || 'Something went wrong',
           description: description || 'An unexpected error occurred. Please try again.',
           color: 'text-red-500'
-        }
+        };
     };
   },
   const config = getErrorConfig();
@@ -359,7 +357,7 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
         <LoadingSpinner size="sm" />
         <span className="ml-1">Loading...</span>
       </Badge>
-    )
+    );
   }
 
   return (

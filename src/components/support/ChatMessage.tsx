@@ -60,7 +60,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         </div>
       </div>
     </div>
-  )
+  );
 },
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical

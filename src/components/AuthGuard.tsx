@@ -44,7 +44,7 @@ export function AuthGuard({
         }
         router.push('/dashboard'), // Redirect to dashboard instead of login
         return
-      }
+      };
     };
   }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
   // Show loading state while auth is being determined
@@ -56,7 +56,7 @@ export function AuthGuard({
           <span>Loading...</span>
         </div>
       </div>
-    )
+    );
   }
 
   // Show unauthorized state if auth is required but user is not authenticated
@@ -107,7 +107,7 @@ export function withAuthGuard<P extends object>(
       <AuthGuard {...guardOptions}>
         <Component {...props} />
       </AuthGuard>
-    )
+    );
   };
 }
 
@@ -128,7 +128,7 @@ export function useAuthGuard() {
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),
-      return false
+      return false;
     }
 
     return true;
@@ -148,7 +148,7 @@ export function useAuthGuard() {
       }
 
       router.push(options?.redirectTo || '/dashboard'),
-      return false
+      return false;
     }
 
     return true;

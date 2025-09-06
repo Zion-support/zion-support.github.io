@@ -102,8 +102,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       >
         <div
           id="main-navbar-collapse"
-          className={cn("navbar-collapse";
-            { "open": isMobileMenuOpen }, "w-full md:flex md:w-auto", // Handles visibility and desktop layout
+          className={cn("navbar-collapse", { "open": isMobileMenuOpen }, "w-full md:flex md:w-auto", // Handles visibility and desktop layout
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile
           )}
         >

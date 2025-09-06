@@ -41,7 +41,7 @@ export function MilestoneSuggestions({
     try {
       return format(parseISO(dateString), 'MMM dd, yyyy')
     } catch (error) {
-      return dateString
+      return dateString;
     };
   };
   return (

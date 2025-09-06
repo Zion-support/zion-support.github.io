@@ -161,13 +161,13 @@ export default function ServicesPage() {
           return (b.rating || 0) - (a.rating || 0);
         case 'ai-score':
           return (b.aiScore || 0) - (a.aiScore || 0);
-        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+        default: return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime();
       };
     }),
     const startIndex = (page - 1) * limit, const endIndex = startIndex + limit, const items = filteredServices.slice(startIndex, endIndex);
     return {
       items, hasMore: endIndex < filteredServices.length || page < 10,
-      total: filteredServices.length
+      total: filteredServices.length;
     };
   }, [sortBy, filterCategory, showRecommended, totalGenerated]);
   const {
@@ -212,7 +212,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
       </div>
-    )
+    );
   }
 
   return (

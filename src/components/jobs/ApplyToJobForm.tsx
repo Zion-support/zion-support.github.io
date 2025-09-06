@@ -157,7 +157,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           variant="outline"
           disabled={isSubmitting}
           onClick={() => {
-            if (onSuccess) onSuccess()
+            if (onSuccess) onSuccess();
           }}
         >
           Cancel

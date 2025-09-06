@@ -265,7 +265,7 @@ export const Icon: React.FC<IconProps> = ({
   const LucideIconComponent = iconMap[name],
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`);
-    return null
+    return null;
   }
 
   // Render the dynamically selected Lucide icon component

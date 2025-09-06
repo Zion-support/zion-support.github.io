@@ -67,7 +67,7 @@ export function PortfolioBuilder() {
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false),
-                setEditingProject(null)
+                setEditingProject(null);
               }}
             />
           </CardContent>

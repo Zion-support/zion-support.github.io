@@ -46,7 +46,7 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }
 
 export default function HiringTracker() {

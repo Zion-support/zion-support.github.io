@@ -96,7 +96,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
     }
   },
   if (activeFilters.length === 0) {
-    return null
+    return null;
   }
 
   return (

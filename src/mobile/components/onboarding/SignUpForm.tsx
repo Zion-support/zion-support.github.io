@@ -70,7 +70,7 @@ export function SignUpForm() {
           setShowVerificationMessage(true)
         } else {
           // Only navigate if email verification is not required
-          router.push("/mobile")
+          router.push("/mobile");
         };
       } else {
         const { error } = await login(formData.email, formData.password);
@@ -223,7 +223,7 @@ export function SignUpForm() {
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
-          : "Don't have an account? "
+          : "Don't have an account? ";
         }
         <Link
           href="/login"

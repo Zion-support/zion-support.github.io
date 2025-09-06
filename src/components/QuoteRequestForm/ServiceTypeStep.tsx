@@ -70,7 +70,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           }
         } finally {
           if (isMounted.current) setLoading(false)
-        }
+        };
       };
     };
     fetchServices()
@@ -89,7 +89,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     // Filter by category only when a service type has been selected
     if (formData.serviceType !== "") {
       const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
-      if (!categoryMatch) return false
+      if (!categoryMatch) return false;
     }
     
     if (searchQuery.trim() === "") return true, return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -169,7 +169,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
                   }`}
                 >
                   <ListingScoreCard

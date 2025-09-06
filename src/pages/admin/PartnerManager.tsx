@@ -247,7 +247,7 @@ export default function PartnerManager() {
       case '10k-50k': return '10,000 - 50,000';
       case '50k-100k': return '50,000 - 100,000';
       case 'over100k': return 'Over 100,000';
-      default: return size
+      default: return size;
     };
   },
   const getStatusBadge = (status: string) => {
@@ -259,7 +259,7 @@ export default function PartnerManager() {
       case 'rejected':
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>;
       default: return <Badge variant="outline">{status}</Badge>
-    }
+    };
   },
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null,
@@ -604,7 +604,7 @@ function PartnerTable({
           className="border-none bg-transparent text-center"
         />
       </div>
-    )
+    );
   }
   
   return (

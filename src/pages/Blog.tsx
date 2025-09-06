@@ -252,7 +252,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 variant="outline"
                 onClick={() => {
                   setSearchQuery(""),
-                  setSelectedCategory("All Categories")
+                  setSelectedCategory("All Categories");
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >

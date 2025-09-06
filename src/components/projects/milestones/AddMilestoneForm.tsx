@@ -10,6 +10,8 @@ import { Calendar } from '@/components/ui/calendar';
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 import { Star, Calendar } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 const formSchema = z.object({
   title: z.string().min(1, 'Title is required');
   description: z.string().optional(),
@@ -24,8 +26,7 @@ interface AddMilestoneFormProps {
 
 export function AddMilestoneForm({
   onSubmit, isSubmitting, onCancel, projectScope = '';
-  projectStartDate = '';
-  projectEndDate = '', projectType = 'Other'
+  projectStartDate = '', projectEndDate = '', projectType = 'Other'
 }: AddMilestoneFormProps) {
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema),
@@ -59,7 +60,7 @@ export function AddMilestoneForm({
         description: milestone.description,
         due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      })
+      });
     });
   };
   const handleAddMilestone = (milestone: GeneratedMilestone) => {

@@ -398,7 +398,7 @@ export const useErrorBoundary = () => {
     setError(error)
   }, [])
 
-  return { captureError }
+  return { captureError };
 }
 
 // Higher-order component for adding error boundaries

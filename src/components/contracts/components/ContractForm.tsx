@@ -16,6 +16,8 @@ import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 import { Star } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -62,7 +64,7 @@ export function ContractForm({
       const subscription = form.watch((value) => {
         onFormValuesChange(value as ContractFormValues)
       });
-      return () => subscription.unsubscribe()
+      return () => subscription.unsubscribe();
     }
     return undefined;
   }, [form, onFormValuesChange]);

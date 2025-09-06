@@ -37,7 +37,7 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 export default function ApplicationStatusTracker() {

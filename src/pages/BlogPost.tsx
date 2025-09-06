@@ -77,7 +77,7 @@ export default function BlogPost() {
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
       </div>
-    )
+    );
   }
 
   // If post is still null after loading, show not found
@@ -102,7 +102,7 @@ export default function BlogPost() {
         return `https: //twitter.com/intent/tweet?url=${url}&text=${title}`,
       case 'linkedin':
         return `https: //www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
-      default: return '#'
+      default: return '#';
     };
   },
   const articleLd = {

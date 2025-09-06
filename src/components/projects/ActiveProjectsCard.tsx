@@ -59,7 +59,7 @@ export function ActiveProjectsCard() {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (

@@ -48,7 +48,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
-    )
+    );
   }
 
   // useRequireAuth will handle redirect if user is not authenticated
@@ -205,7 +205,7 @@ export default function Dashboard() {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
-                        }
+                        };
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />

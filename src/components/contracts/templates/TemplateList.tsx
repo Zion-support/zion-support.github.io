@@ -58,7 +58,7 @@ export function TemplateList({
         <p className="text-muted-foreground">No templates found.</p>
         <p className="text-sm text-muted-foreground">Save a contract as a template to reuse it later.</p>
       </div>
-    )
+    );
   }
 
   return (
