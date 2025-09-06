@@ -1,12 +1,4 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
-const Contact = () => {
-=======
-import { useToast } from '../components/ui/use-toast';
-import { useNotifications } from '../context/NotificationContext';
-import { motion } from 'framer-motion';
+import React from "react";
 
 const Contact: React.FC = () => {
   const { toast } = useToast();

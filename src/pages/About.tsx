@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Card from '../components/Card';
+import React from "react";
 
 const About: React.FC = () => {
   const [activeTab, setActiveTab] = useState('mission');
@@ -59,101 +57,37 @@ const About: React.FC = () => {
   };
 
   return (
-    <motion.div 
-      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen"
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      <div className="container mx-auto px-4 py-16">
-        <motion.div className="text-center mb-16" variants={itemVariants}>
-          <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            About Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI solutions, cybersecurity, 
-            and cloud infrastructure. Our mission is to transform businesses through 
-            innovative technology solutions.
+    <div className="min-h-screen bg-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
+        <div className="prose max-w-4xl">
+          <p className="text-lg text-gray-600 mb-6">
+            Zion Tech is a leading technology company specializing in innovative
+            solutions for businesses of all sizes. We combine cutting-edge
+            technology with deep industry expertise to deliver exceptional
+            results.
           </p>
-        </motion.div>
-
-        {/* Tab Navigation */}
-        <motion.div className="flex flex-wrap justify-center mb-12" variants={itemVariants}>
-          {[
-            { id: 'mission', label: 'Our Mission' },
-            { id: 'team', label: 'Our Team' },
-            { id: 'values', label: 'Our Values' }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg transition-all duration-300 ${
-                activeTab === tab.id
-                  ? 'bg-cyan-600 text-white'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </motion.div>
-
-        {/* Tab Content */}
-        <motion.div className="max-w-6xl mx-auto" variants={itemVariants}>
-          {activeTab === 'mission' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-8" variants={itemVariants}>
-              <Card
-                title="Our Mission"
-                description="To empower businesses with cutting-edge AI and technology solutions that drive innovation, efficiency, and growth in the digital age."
-                icon="🎯"
-              />
-              <Card
-                title="Our Vision"
-                description="To be the global leader in AI-powered technology solutions, transforming industries and creating a smarter, more connected world."
-                icon="🚀"
-              />
-            </motion.div>
-          )}
-
-          {activeTab === 'team' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" variants={itemVariants}>
-              {teamMembers.map((member, index) => (
-                <Card
-                  key={index}
-                  title={member.name}
-                  description={member.description}
-                  icon={member.image}
-                  className="text-center"
-                >
-                  <div className="mt-4">
-                    <p className="text-cyan-400 font-semibold">{member.role}</p>
-                    <p className="text-sm text-gray-400">{member.expertise}</p>
-                  </div>
-                </Card>
-              ))}
-            </motion.div>
-          )}
-
-          {activeTab === 'values' && (
-            <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={itemVariants}>
-              <Card
-                title="Innovation"
-                description="We constantly push the boundaries of what's possible with technology, always seeking new and better ways to solve complex problems."
-                icon="💡"
-              />
-              <Card
-                title="Excellence"
-                description="We maintain the highest standards in everything we do, from our code quality to our customer service and support."
-                icon="⭐"
-              />
-              <Card
-                title="Integrity"
-                description="We conduct business with honesty, transparency, and ethical practices, building trust with our clients and partners."
-                icon="🤝"
-              />
-            </motion.div>
-          )}
-        </motion.div>
+          <p className="text-lg text-gray-600">
+            Our team of experienced professionals is dedicated to helping our
+            clients achieve their technology goals and drive business growth.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+              <p className="text-gray-600">
+                To empower businesses with AI-driven solutions that automate processes, enhance productivity, 
+                and drive exponential growth through innovative technology.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+              <p className="text-gray-600">
+                To be the world's leading provider of intelligent business solutions that transform 
+                how companies operate and compete in the digital age.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

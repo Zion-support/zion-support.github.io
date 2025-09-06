@@ -1,74 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from './react';
-import { UseFormReturn  } from './react - hook - form';
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from '@/components / ui / form';
-import { Textarea  } from '@/components / ui / textarea';
-import { FormValues  } from './useHireRequestForm';
-
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn < FormValues>;
-}
-
-=======
-
-
-
-import {UseFormReturn} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Textarea} from "@/components/ui/textarea";
-import {FormValues} from "./useHireRequestForm";
-
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-
-=======
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { FormValues } from "./useHireRequestForm",
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-import React from "react",;
-import { UseFormReturn } from "react-hook-form",;
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
 =======
@@ -94,42 +33,20 @@ function ProjectDetailsField() {
       name="project_overview";
 
       render={({ field }) => (
-        <FormItem>;
-          <FormLabel className="text - white">Project Overview</FormLabel>;
-          <FormControl>;
-            <Textarea;
-              placeholder="Describe your project, goals, and requirements";
-              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
-              {...field}
-
-      render={({ field }) => (;
-        <FormItem>;
-          <FormLabel className="text-white">Project Overview</FormLabel>;
-          <FormControl>;
+        <FormItem>
+          <FormLabel className="text-white">Project Overview</FormLabel>
+          <FormControl>
             <Textarea
-              placeholder="Describe your project, goals, and requirements" 
+              placeholder="Describe your project, goals, and requirements"
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
-              {...field} 
-            />;
-          </FormControl>;
-          <FormMessage className="text-red-400" />;
-        </FormItem>;
+              {...field}
+            />
+          </FormControl>
+          <FormMessage className="text-red-400" />
+        </FormItem>
       )}
-    />;
+    />
   );
-}
-
-=======
-            />;
-          </FormControl>;
-          <FormMessage className="text - red - 400" />;
-        </FormItem>)}
-    />);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
 }
 ;
 

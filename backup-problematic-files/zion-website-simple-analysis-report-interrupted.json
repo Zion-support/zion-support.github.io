@@ -215,42 +215,27 @@
     "details": [
       {
         "url": "https://ziontechgroup.com",
-        "issues": [
-          "Missing navigation",
-          "No images found"
-        ],
+        "issues": ["Missing navigation", "No images found"],
         "depth": 0
       },
       {
         "url": "https://ziontechgroup.com/request-quote/",
-        "issues": [
-          "Missing navigation",
-          "No images found"
-        ],
+        "issues": ["Missing navigation", "No images found"],
         "depth": 1
       },
       {
         "url": "https://ziontechgroup.com/services",
-        "issues": [
-          "Missing navigation",
-          "No images found"
-        ],
+        "issues": ["Missing navigation", "No images found"],
         "depth": 1
       },
       {
         "url": "https://ziontechgroup.com/request-quote",
-        "issues": [
-          "Missing navigation",
-          "No images found"
-        ],
+        "issues": ["Missing navigation", "No images found"],
         "depth": 2
       },
       {
         "url": "https://ziontechgroup.com/quantum-cybersecurity",
-        "issues": [
-          "Missing navigation",
-          "No images found"
-        ],
+        "issues": ["Missing navigation", "No images found"],
         "depth": 2
       }
     ]
@@ -285,10 +270,7 @@
         "Cybersecurity",
         "Micro SaaS"
       ],
-      "content_issues": [
-        "Missing navigation",
-        "No images found"
-      ]
+      "content_issues": ["Missing navigation", "No images found"]
     },
     "https://ziontechgroup.com/request-quote/": {
       "url": "https://ziontechgroup.com/request-quote/",
@@ -301,13 +283,8 @@
       "image_count": 0,
       "form_count": 0,
       "link_count": 0,
-      "headings": [
-        "Request a Quote"
-      ],
-      "content_issues": [
-        "Missing navigation",
-        "No images found"
-      ]
+      "headings": ["Request a Quote"],
+      "content_issues": ["Missing navigation", "No images found"]
     },
     "https://ziontechgroup.com/services": {
       "url": "https://ziontechgroup.com/services",
@@ -331,10 +308,7 @@
         "Innovative AI Services",
         "Why Zion Tech Group"
       ],
-      "content_issues": [
-        "Missing navigation",
-        "No images found"
-      ]
+      "content_issues": ["Missing navigation", "No images found"]
     },
     "https://ziontechgroup.com/request-quote": {
       "url": "https://ziontechgroup.com/request-quote",
@@ -347,13 +321,8 @@
       "image_count": 0,
       "form_count": 0,
       "link_count": 0,
-      "headings": [
-        "Request a Quote"
-      ],
-      "content_issues": [
-        "Missing navigation",
-        "No images found"
-      ]
+      "headings": ["Request a Quote"],
+      "content_issues": ["Missing navigation", "No images found"]
     },
     "https://ziontechgroup.com/quantum-cybersecurity": {
       "url": "https://ziontechgroup.com/quantum-cybersecurity",
@@ -366,13 +335,8 @@
       "image_count": 0,
       "form_count": 0,
       "link_count": 0,
-      "headings": [
-        "Quantum Cybersecurity"
-      ],
-      "content_issues": [
-        "Missing navigation",
-        "No images found"
-      ]
+      "headings": ["Quantum Cybersecurity"],
+      "content_issues": ["Missing navigation", "No images found"]
     }
   },
   "link_hierarchy": {
